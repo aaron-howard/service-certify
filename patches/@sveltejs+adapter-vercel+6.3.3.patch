@@ -1,0 +1,71 @@
+diff --git a/node_modules/@sveltejs/adapter-vercel/index.js b/node_modules/@sveltejs/adapter-vercel/index.js
+index d6213e5..98c02fd 100644
+--- a/node_modules/@sveltejs/adapter-vercel/index.js
++++ b/node_modules/@sveltejs/adapter-vercel/index.js
+@@ -22,6 +22,21 @@ import { VERSION } from '@sveltejs/kit';
+ const name = '@sveltejs/adapter-vercel';
+ const INTERNAL = '![-]'; // this name is guaranteed not to conflict with user routes
+ 
++/**
++ * On Windows, unprivileged symlink creation often fails with EPERM; directory junctions
++ * work without Developer Mode and match the adapter's directory-to-directory links.
++ * Vercel builds run on Linux and still use normal symlinks.
++ * @param {string} relativeTarget
++ * @param {string} linkPath
++ */
++function linkFuncDir(relativeTarget, linkPath) {
++	if (process.platform === 'win32') {
++		fs.symlinkSync(path.resolve(path.dirname(linkPath), relativeTarget), linkPath, 'junction');
++	} else {
++		fs.symlinkSync(relativeTarget, linkPath);
++	}
++}
++
+ const [kit_major, kit_minor] = VERSION.split('.');
+ 
+ // https://vercel.com/docs/functions/edge-functions/edge-runtime#compatible-node.js-modules
+@@ -397,7 +412,7 @@ const plugin = function (defaults = {}) {
+ 
+ 				const relative = path.relative(path.dirname(remote_symlink_path), target);
+ 
+-				fs.symlinkSync(relative, remote_symlink_path);
++				linkFuncDir(relative, remote_symlink_path);
+ 
+ 				static_config.routes.push({
+ 					src: `/${app_path}/remote/.+`,
+@@ -423,8 +438,8 @@ const plugin = function (defaults = {}) {
+ 
+ 					// create a symlink to the actual function, but use the
+ 					// route name so that we can derive the correct URL
+-					fs.symlinkSync(relative, `${base}.func`);
+-					fs.symlinkSync(`../${relative}`, `${base}/__data.json.func`);
++					linkFuncDir(relative, `${base}.func`);
++					linkFuncDir(`../${relative}`, `${base}/__data.json.func`);
+ 
+ 					const pathname = get_pathname(route);
+ 					const json = JSON.stringify(
+@@ -474,8 +489,8 @@ const plugin = function (defaults = {}) {
+ 					const relative_for_data = path.relative(path.dirname(data_symlink_path), target); // This is path.relative(base_dir, target)
+ 
+ 					// Create symlinks
+-					fs.symlinkSync(relative_for_main, main_symlink_path); // Creates functions/index.func -> ![-].func
+-					fs.symlinkSync(relative_for_data, data_symlink_path); // Creates functions/index/__data.json.func -> ../![-].func
++					linkFuncDir(relative_for_main, main_symlink_path); // Creates functions/index.func -> ![-].func
++					linkFuncDir(relative_for_data, data_symlink_path); // Creates functions/index/__data.json.func -> ../![-].func
+ 
+ 					// Add route to the config
+ 					static_config.routes.push({
+@@ -789,7 +804,12 @@ async function create_function_bundle(builder, entry, dir, config) {
+ 
+ 		if (source !== realpath) {
+ 			const realdest = path.join(dir, path.relative(ancestor, realpath));
+-			fs.symlinkSync(path.relative(path.dirname(dest), realdest), dest, is_dir ? 'dir' : 'file');
++			const rel = path.relative(path.dirname(dest), realdest);
++			if (process.platform === 'win32' && is_dir) {
++				fs.symlinkSync(path.resolve(path.dirname(dest), rel), dest, 'junction');
++			} else {
++				fs.symlinkSync(rel, dest, is_dir ? 'dir' : 'file');
++			}
+ 		} else if (!is_dir) {
+ 			fs.copyFileSync(source, dest);
+ 		}

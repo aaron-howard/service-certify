@@ -1,0 +1,40 @@
+node_modules
+
+# Output
+.output
+.vercel
+.netlify
+.wrangler
+/.svelte-kit
+/build
+dist
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env (keep .env.example committed)
+.env
+.env.*
+!.env.example
+!.env.test
+
+# Tooling / caches
+.eslintcache
+*.tsbuildinfo
+
+# Editors (optional — remove if you commit shared IDE config)
+.idea
+
+# Vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*

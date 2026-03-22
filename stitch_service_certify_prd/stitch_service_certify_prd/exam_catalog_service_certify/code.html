@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Service Certify | Community-Driven ServiceNow Training</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed": "#d8e2ff",
+              "tertiary-fixed": "#cee5fa",
+              "surface-container-low": "#f3f4f5",
+              "on-tertiary-fixed": "#051e2c",
+              "on-surface-variant": "#434750",
+              "surface-container-highest": "#e1e3e4",
+              "primary": "#001b44",
+              "secondary-fixed": "#c0f452",
+              "on-secondary-fixed-variant": "#374e00",
+              "secondary": "#4a6700",
+              "outline-variant": "#c4c6d2",
+              "error": "#ba1a1a",
+              "primary-container": "#002f6c",
+              "error-container": "#ffdad6",
+              "secondary-container": "#bdf14f",
+              "surface": "#f8f9fa",
+              "on-secondary": "#ffffff",
+              "on-secondary-container": "#4e6c00",
+              "tertiary-fixed-dim": "#b2c9dd",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-fixed-variant": "#224583",
+              "on-primary-fixed": "#001a42",
+              "on-primary": "#ffffff",
+              "tertiary": "#061f2e",
+              "surface-tint": "#3c5d9c",
+              "surface-container": "#edeeef",
+              "surface-dim": "#d9dadb",
+              "on-tertiary-container": "#869caf",
+              "on-error-container": "#93000a",
+              "background": "#f8f9fa",
+              "tertiary-container": "#1e3444",
+              "inverse-on-surface": "#f0f1f2",
+              "surface-bright": "#f8f9fa",
+              "on-primary-container": "#7999dc",
+              "inverse-surface": "#2e3132",
+              "surface-variant": "#e1e3e4",
+              "secondary-fixed-dim": "#a5d736",
+              "outline": "#747781",
+              "on-tertiary": "#ffffff",
+              "inverse-primary": "#aec6ff",
+              "on-error": "#ffffff",
+              "on-tertiary-fixed-variant": "#33495a",
+              "on-secondary-fixed": "#141f00",
+              "primary-fixed-dim": "#aec6ff",
+              "on-surface": "#191c1d",
+              "on-background": "#191c1d",
+              "surface-container-high": "#e7e8e9"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Manrope', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Independent Platform Disclaimer Banner -->
+<div class="bg-primary text-on-primary-fixed py-2 px-4 text-center text-[0.7rem] font-medium tracking-wide border-b border-primary-container/20">
+    Service Certify is an independent training provider and is not affiliated with, authorized, or endorsed by ServiceNow, Inc.
+</div>
+<!-- TopNavBar -->
+<header class="bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl docked full-width top-0 sticky z-50 shadow-[0px_20px_40px_rgba(25,28,29,0.06)] font-['Manrope'] antialiased tracking-tight">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-8xl mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-xl font-extrabold tracking-tighter text-[#001b44] dark:text-white">Service Certify</span>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="text-[#4a6700] dark:text-[#bdf14f] font-bold border-b-2 border-[#4a6700] pb-1" href="#">Practice Exams</a>
+<a class="text-[#191c1d] dark:text-slate-300 hover:text-[#002f6c] transition-colors" href="#">Curriculum</a>
+<a class="text-[#191c1d] dark:text-slate-300 hover:text-[#002f6c] transition-colors" href="#">Certification Paths</a>
+<a class="text-[#191c1d] dark:text-slate-300 hover:text-[#002f6c] transition-colors" href="#">Community</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-[#191c1d] dark:text-slate-300 hover:text-[#002f6c] transition-colors font-medium px-4 py-2">Sign In</button>
+<button class="bg-secondary text-on-secondary px-6 py-2.5 rounded-md font-bold hover:opacity-90 active:scale-95 transform transition-all duration-300 shadow-lg">Join Membership</button>
+</div>
+</div>
+<div class="bg-slate-100 dark:bg-slate-800 h-[1px] w-full"></div>
+</header>
+<main class="max-w-7xl mx-auto px-6 md:px-12 pt-12">
+<!-- Search & Header Section -->
+<section class="mb-16">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div class="max-w-2xl">
+<span class="text-secondary font-label text-[0.75rem] uppercase tracking-[0.05em] font-bold mb-3 block">Independent Practice Exams</span>
+<h1 class="text-4xl md:text-5xl font-extrabold text-primary tracking-tight mb-4">Validate Your Expertise</h1>
+<p class="text-on-surface-variant text-lg leading-relaxed">Prepare with confidence using our comprehensive practice exam catalog, featuring real-world scenarios and verified answers.</p>
+</div>
+<div class="relative w-full md:w-96 group">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</div>
+<input class="w-full bg-surface-container-high border-none rounded-xl py-4 pl-12 pr-4 text-on-surface placeholder:text-outline focus:ring-2 focus:ring-secondary transition-all outline-none" placeholder="Search practice exams..." type="text"/>
+</div>
+</div>
+</section>
+<div class="flex flex-col md:flex-row gap-12">
+<!-- Sidebar Filters -->
+<aside class="w-full md:w-64 shrink-0 space-y-10">
+<div>
+<h3 class="font-headline font-bold text-lg mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="filter_list">filter_list</span>
+                        Certification Track
+                    </h3>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-5 h-5 rounded border-outline text-secondary focus:ring-secondary" type="checkbox"/>
+<span class="text-on-surface-variant group-hover:text-primary transition-colors">CIS-ITSM</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 rounded border-outline text-secondary focus:ring-secondary" type="checkbox"/>
+<span class="text-on-surface-variant group-hover:text-primary transition-colors">CAD</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 rounded border-outline text-secondary focus:ring-secondary" type="checkbox"/>
+<span class="text-on-surface-variant group-hover:text-primary transition-colors">CIS-HR</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 rounded border-outline text-secondary focus:ring-secondary" type="checkbox"/>
+<span class="text-on-surface-variant group-hover:text-primary transition-colors">CIS-Discovery</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 rounded border-outline text-secondary focus:ring-secondary" type="checkbox"/>
+<span class="text-on-surface-variant group-hover:text-primary transition-colors">CSA</span>
+</label>
+</div>
+</div>
+<div>
+<h3 class="font-headline font-bold text-lg mb-6">Exam Level</h3>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 border-outline text-secondary focus:ring-secondary" name="level" type="radio"/>
+<span class="text-on-surface-variant group-hover:text-primary">Associate</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-5 h-5 border-outline text-secondary focus:ring-secondary" name="level" type="radio"/>
+<span class="text-on-surface-variant group-hover:text-primary">Professional</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 border-outline text-secondary focus:ring-secondary" name="level" type="radio"/>
+<span class="text-on-surface-variant group-hover:text-primary">Expert</span>
+</label>
+</div>
+</div>
+<div>
+<h3 class="font-headline font-bold text-lg mb-6">Question Count</h3>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 rounded border-outline text-secondary focus:ring-secondary" type="checkbox"/>
+<span class="text-on-surface-variant group-hover:text-primary">Under 60</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 rounded border-outline text-secondary focus:ring-secondary" type="checkbox"/>
+<span class="text-on-surface-variant group-hover:text-primary">60 - 120</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 rounded border-outline text-secondary focus:ring-secondary" type="checkbox"/>
+<span class="text-on-surface-variant group-hover:text-primary">120+ Questions</span>
+</label>
+</div>
+</div>
+</aside>
+<!-- Course Grid -->
+<div class="flex-1">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Course Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden group hover:translate-y-[-4px] transition-all duration-300 flex flex-col">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Technical data visualization on a modern computer screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7h-Vq5xCyltt7wTwKFW7oQX9Gaqahw8WD60mTF8oYwmM5wiekChtgqv3UBmpoIbN8wiaoSll3qLbAGpgW1lxcF1eNOk1fzgsxl11yUml7U_7AYm_3R8Sd7n3La5AZU8nTJaWoUgqh1UQQ1JrIpI3uWFti0tWiH4Esuh5nC4pnZdZ65lO9glpaVyshB-CHVC18_fnc5OxMu_Nq2VCAQBrPPkYuthMHToHCx9YI9NSZ2TnBWCubozDBwsxxG5TuyyG5Xm3MJpybH4E"/>
+<div class="absolute top-4 right-4 bg-white/80 backdrop-blur px-3 py-1.5 rounded-full text-[0.65rem] font-bold text-primary shadow-sm uppercase tracking-wider">
+                                85 Questions
+                            </div>
+</div>
+<div class="p-8 flex flex-col flex-1 bg-surface-container-low/50">
+<div class="flex items-center gap-2 mb-4">
+<span class="bg-secondary-container text-on-secondary-container text-[0.7rem] px-2.5 py-1 rounded font-bold uppercase tracking-wide">ITSM</span>
+<span class="text-outline text-xs">•</span>
+<span class="text-on-surface-variant text-xs font-medium">CIS Practice Exam</span>
+</div>
+<h4 class="text-xl font-bold text-primary mb-2 leading-tight group-hover:text-secondary transition-colors">CIS-ITSM Implementation Exam Simulator</h4>
+<p class="text-on-surface-variant text-sm mb-6">Domains: Incident, Problem, Change, Release, and Request Management automation.</p>
+<div class="mt-auto space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container text-xs font-bold">SM</div>
+<span class="text-sm font-semibold text-primary">Sarah Miller, CIS Expert</span>
+</div>
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[18px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold">4.9</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/20">
+<span class="text-xs text-outline font-medium">1,240 students prepared</span>
+<span class="text-sm font-extrabold text-secondary tracking-tight uppercase">Subscription Access</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Course Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden group hover:translate-y-[-4px] transition-all duration-300 flex flex-col">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Cloud computing server room with neon blue lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCu1oVhYFvNYmHcw2i8tgHdxkTNtg0oLNUa1i3MVXh2bVwIwzmYJiQfjyTvK756X8QukoGlLPJ6UhsafSHCS83gim37Z7JgzH6XclCEiHzvbcfsvc_sKmC3F3FRjvrr-1h7DfqyeO6rDfZH_D8D1EmzgRyMAF1N7JLWq3aNU9xCrBmrODZWXou9hPXiOxzg88btj2hxxy1Hg5SzXDZscL6kd7gHU5tkD7iMK2ECabyMsUh4U5IZdh4qPW61X5hpeDrQbZjAiWDun5k"/>
+<div class="absolute top-4 right-4 bg-white/80 backdrop-blur px-3 py-1.5 rounded-full text-[0.65rem] font-bold text-primary shadow-sm uppercase tracking-wider">
+                                110 Questions
+                            </div>
+</div>
+<div class="p-8 flex flex-col flex-1 bg-surface-container-low/50">
+<div class="flex items-center gap-2 mb-4">
+<span class="bg-secondary-container text-on-secondary-container text-[0.7rem] px-2.5 py-1 rounded font-bold uppercase tracking-wide">ITOM</span>
+<span class="text-outline text-xs">•</span>
+<span class="text-on-surface-variant text-xs font-medium">Technical Validation</span>
+</div>
+<h4 class="text-xl font-bold text-primary mb-2 leading-tight group-hover:text-secondary transition-colors">CIS-Cloud Provisioning &amp; Governance Exam</h4>
+<p class="text-on-surface-variant text-sm mb-6">Domains: Cloud Resource Lifecycle, Multi-Cloud Governance (AWS/Azure), and Catalog items.</p>
+<div class="mt-auto space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container text-xs font-bold">DK</div>
+<span class="text-sm font-semibold text-primary">David Kim, SN Dev</span>
+</div>
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[18px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold">4.8</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/20">
+<span class="text-xs text-outline font-medium">856 students prepared</span>
+<span class="text-sm font-extrabold text-secondary tracking-tight uppercase">Subscription Access</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Course Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden group hover:translate-y-[-4px] transition-all duration-300 flex flex-col">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Diverse professional team working in a bright office space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5dnLGQkUSy8xEdy7NanSSL_XmydDFs4op3r2ZDRXAj1lCEl04bqj3zYQpUuB8nUd093Q3cU56I4rvtYmv335uh8F83SYLB4UcXT_WxZWdUwrRtfLRpOIXDzS61bKxIFps1NPhiR77NPR-TK6RHyVPsd_BidVUZcv-eOfK8VLo1F3tqbaaBJCKCVqbJP0TqjfMy7MpQGywNX3ow9C_DdObxYjZLGdnrpctBiK693hkTNMYBph-vZJgPIAYunH3Rb1IWNgJYNXqRIY"/>
+<div class="absolute top-4 right-4 bg-white/80 backdrop-blur px-3 py-1.5 rounded-full text-[0.65rem] font-bold text-primary shadow-sm uppercase tracking-wider">
+                                65 Questions
+                            </div>
+</div>
+<div class="p-8 flex flex-col flex-1 bg-surface-container-low/50">
+<div class="flex items-center gap-2 mb-4">
+<span class="bg-secondary-container text-on-secondary-container text-[0.7rem] px-2.5 py-1 rounded font-bold uppercase tracking-wide">CAD</span>
+<span class="text-outline text-xs">•</span>
+<span class="text-on-surface-variant text-xs font-medium">Developer Track</span>
+</div>
+<h4 class="text-xl font-bold text-primary mb-2 leading-tight group-hover:text-secondary transition-colors">Certified Application Developer (CAD) Prep</h4>
+<p class="text-on-surface-variant text-sm mb-6">Domains: Application Creation, Server/Client Side Scripting, Data Integration, and Security.</p>
+<div class="mt-auto space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container text-xs font-bold">AL</div>
+<span class="text-sm font-semibold text-primary">Anna Lopez, Senior Dev</span>
+</div>
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[18px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold">4.7</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/20">
+<span class="text-xs text-outline font-medium">543 students prepared</span>
+<span class="text-sm font-extrabold text-secondary tracking-tight uppercase">Subscription Access</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Course Card 4 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden group hover:translate-y-[-4px] transition-all duration-300 flex flex-col">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Strategic planning charts and laptop on a desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhzWzI5oUtuRRqdtoIcmzUXsgfs9I_3mYO6kJjZy5AzQcS-SpGz9PyfK_ytY_ivTH8sc6x_u5MynKfKqUupL9CUnCdyWrK6CNFwWzwKtNTYwPofzo4ZW6Y5MQ4HPQq7py7yAMkSVvzmkdWAVJsGqOd-Tyb5ACCfItwv3lNCi2wdZVUwQyF0rA1fGUjt61Loatz1OJLmgaCH-Beg5U1HQsDszSBdiASSRKu17qH5jGxpiaR7s5DQ_0XJ2Cg3IRXKS4gW2AV1wBrMiw"/>
+<div class="absolute top-4 right-4 bg-white/80 backdrop-blur px-3 py-1.5 rounded-full text-[0.65rem] font-bold text-primary shadow-sm uppercase tracking-wider">
+                                90 Questions
+                            </div>
+</div>
+<div class="p-8 flex flex-col flex-1 bg-surface-container-low/50">
+<div class="flex items-center gap-2 mb-4">
+<span class="bg-secondary-container text-on-secondary-container text-[0.7rem] px-2.5 py-1 rounded font-bold uppercase tracking-wide">SPM</span>
+<span class="text-outline text-xs">•</span>
+<span class="text-on-surface-variant text-xs font-medium">Portfolio Track</span>
+</div>
+<h4 class="text-xl font-bold text-primary mb-2 leading-tight group-hover:text-secondary transition-colors">CIS-Strategic Portfolio Management Simulator</h4>
+<p class="text-on-surface-variant text-sm mb-6">Domains: Strategic Alignment, Investment Funding, Resource Management, and PPM.</p>
+<div class="mt-auto space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container text-xs font-bold">RB</div>
+<span class="text-sm font-semibold text-primary">Robert Brown, SPM Lead</span>
+</div>
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[18px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold">5.0</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/20">
+<span class="text-xs text-outline font-medium">312 students prepared</span>
+<span class="text-sm font-extrabold text-secondary tracking-tight uppercase">Subscription Access</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-16 flex items-center justify-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container-high text-on-surface hover:bg-secondary hover:text-on-secondary transition-all">
+<span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-secondary text-on-secondary font-bold">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container-high text-on-surface hover:bg-secondary-container transition-all">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container-high text-on-surface hover:bg-secondary-container transition-all">3</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container-high text-on-surface hover:bg-secondary hover:text-on-secondary transition-all">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-24 bg-[#f3f4f5] dark:bg-slate-900 font-['Inter'] text-sm leading-relaxed text-[#001b44] dark:text-slate-100">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12 px-12 py-16 max-w-7xl mx-auto">
+<div class="col-span-2 md:col-span-1">
+<span class="text-lg font-bold text-[#002F6C] dark:text-blue-400 block mb-6">Service Certify</span>
+<p class="text-slate-600 dark:text-slate-400 max-w-xs mb-6">The independent community destination for professional certification mastery and shared knowledge.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-outline cursor-pointer hover:text-secondary" data-icon="public">public</span>
+<span class="material-symbols-outlined text-outline cursor-pointer hover:text-secondary" data-icon="share">share</span>
+<span class="material-symbols-outlined text-outline cursor-pointer hover:text-secondary" data-icon="mail">mail</span>
+</div>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-primary">Practice Exams</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-600 dark:text-slate-400 hover:text-[#001b44] dark:hover:text-white underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="#">CIS-ITSM</a></li>
+<li><a class="text-slate-600 dark:text-slate-400 hover:text-[#001b44] dark:hover:text-white underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="#">CIS-HR</a></li>
+<li><a class="text-slate-600 dark:text-slate-400 hover:text-[#001b44] dark:hover:text-white underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="#">CAD Exam</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-primary">Platform</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-600 dark:text-slate-400 hover:text-[#001b44] dark:hover:text-white underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-600 dark:text-slate-400 hover:text-[#001b44] dark:hover:text-white underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="#">Terms of Service</a></li>
+<li><a class="text-slate-600 dark:text-slate-400 hover:text-[#001b44] dark:hover:text-white underline-offset-4 transition-opacity duration-200 hover:opacity-80" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-primary">Exam Insights</h4>
+<p class="text-xs text-slate-500 mb-4">Get architect-level exam tips delivered weekly.</p>
+<div class="flex gap-2">
+<input class="bg-white border-none rounded-lg px-3 py-2 text-xs focus:ring-1 focus:ring-secondary w-full" placeholder="Email" type="email"/>
+<button class="bg-primary text-white p-2 rounded-lg hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="send">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-12 py-8 border-t border-outline-variant/10">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-slate-500 text-[0.7rem] text-center md:text-left leading-relaxed max-w-2xl">
+            © 2024 Service Certify. <span class="font-semibold italic">Service Certify is an independent training provider and is not affiliated with, authorized, or endorsed by ServiceNow, Inc.</span>
+</p>
+<span class="text-slate-500 text-xs shrink-0">Built by the Community.</span>
+</div>
+</div>
+</footer>
+</body></html>
