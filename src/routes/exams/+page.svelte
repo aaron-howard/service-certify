@@ -2,7 +2,7 @@
 	import MaterialIcon from '$lib/components/MaterialIcon.svelte';
 	import { exams } from '$lib/data/exams';
 	import { browser } from '$app/environment';
-	import { PUBLIC_CONVEX_URL } from '$env/static/public';
+	import { env } from '$env/dynamic/public';
 	import { useQuery } from 'convex-svelte';
 	import { api } from '$convex/_generated/api.js';
 
@@ -10,7 +10,7 @@
 
 	const tracksLive = useQuery(
 		api.tracks.list,
-		() => (browser && PUBLIC_CONVEX_URL ? {} : 'skip')
+		() => (browser && env.PUBLIC_CONVEX_URL ? {} : 'skip')
 	);
 
 	let search = $state('');
