@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
-	import { PUBLIC_CONVEX_URL } from '$env/static/public';
+	import { env } from '$env/dynamic/public';
 	import MaterialIcon from '$lib/components/MaterialIcon.svelte';
 	import { useQuery } from 'convex-svelte';
 	import { api } from '$convex/_generated/api.js';
@@ -10,7 +10,7 @@
 
 	const bank = useQuery(
 		api.practiceQuestions.listByTrackCode,
-		() => (browser && PUBLIC_CONVEX_URL ? { trackCode: exam.code } : 'skip')
+		() => (browser && env.PUBLIC_CONVEX_URL ? { trackCode: exam.code } : 'skip')
 	);
 
 	type Q = {

@@ -5,7 +5,7 @@
 	import AppNav from '$lib/components/AppNav.svelte';
 	import AppFooter from '$lib/components/AppFooter.svelte';
 	import { browser } from '$app/environment';
-	import { PUBLIC_CONVEX_URL } from '$env/static/public';
+	import { env } from '$env/dynamic/public';
 	import { ConvexClient } from 'convex/browser';
 	import { setConvexClientContext } from 'convex-svelte';
 
@@ -16,9 +16,9 @@
 	 * must exist during SSR. Match setupConvex(): disabled when not in browser or when no URL.
 	 */
 	const convexConfigured =
-		typeof PUBLIC_CONVEX_URL === 'string' && PUBLIC_CONVEX_URL.length > 0;
+		typeof env.PUBLIC_CONVEX_URL === 'string' && env.PUBLIC_CONVEX_URL.length > 0;
 	const convexUrl = convexConfigured
-		? PUBLIC_CONVEX_URL
+		? env.PUBLIC_CONVEX_URL
 		: 'https://placeholder.invalid.convex.cloud';
 	const convexClient = new ConvexClient(convexUrl, {
 		disabled: !browser || !convexConfigured
