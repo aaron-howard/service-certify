@@ -1,0 +1,14 @@
+# Phase 2B — Dependabot (CVE remediation)
+# Security updates: enabled by default; Dependabot opens CVE PRs outside this schedule.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 10
+    groups:
+      npm-minor-patch:
+        update-types:
+          - minor
+          - patch
