@@ -7,8 +7,13 @@
 	"engines": {
 		"node": ">=20"
 	},
+	"overrides": {
+		"cookie": "0.7.0",
+		"ws": "8.20.1"
+	},
 	"scripts": {
 		"dev": "vite dev",
+		"audit": "npm audit --audit-level=moderate",
 		"build": "vite build",
 		"preview": "vite preview",
 		"postinstall": "patch-package",
