@@ -11,14 +11,10 @@
 
 	let { children } = $props();
 
-	/**
-	 * convex-svelte's useQuery() calls useConvexClient() before "skip" is evaluated, so the client
-	 * must exist during SSR. Match setupConvex(): disabled when not in browser or when no URL.
-	 */
 	const convexConfigured =
 		typeof env.PUBLIC_CONVEX_URL === 'string' && env.PUBLIC_CONVEX_URL.length > 0;
-	const convexUrl = convexConfigured
-		? env.PUBLIC_CONVEX_URL
+	const convexUrl: string = convexConfigured
+		? env.PUBLIC_CONVEX_URL!
 		: 'https://placeholder.invalid.convex.cloud';
 	const convexClient = new ConvexClient(convexUrl, {
 		disabled: !browser || !convexConfigured

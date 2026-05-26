@@ -38,7 +38,7 @@
 		"vite": "^7.3.1"
 	},
 	"dependencies": {
-		"convex": "^1.34.0",
+		"convex": "^1.39.1",
 		"convex-svelte": "^0.0.12"
 	}
 }
