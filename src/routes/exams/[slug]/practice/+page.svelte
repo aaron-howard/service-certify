@@ -2,11 +2,12 @@
 	import { browser } from '$app/environment';
 	import { env } from '$env/dynamic/public';
 	import MaterialIcon from '$lib/components/MaterialIcon.svelte';
-	import { useQuery } from 'convex-svelte';
+	import { useConvexClient, useQuery } from 'convex-svelte';
 	import { api } from '$convex/_generated/api.js';
 
 	let { data } = $props();
 	const exam = $derived(data.exam);
+	const convex = useConvexClient();
 
 	const bank = useQuery(
 		api.practiceQuestions.listByTrackCode,
@@ -17,7 +18,13 @@
 		id: number;
 		prompt: string;
 		choices: string[];
+	};
+
+	type GradeResult = {
+		order: number;
+		selectedIndex: number;
 		correctIndex: number;
+		isCorrect: boolean;
 		explanation: string;
 	};
 
@@ -27,17 +34,17 @@
 		return rows.map((r) => ({
 			id: r.order,
 			prompt: r.prompt,
-			choices: r.choices,
-			correctIndex: r.correctIndex,
-			explanation: r.explanation
+			choices: r.choices
 		}));
 	});
 
-	/** ~4 minutes per question, minimum 10 minutes */
-	const totalSeconds = $derived(Math.max(600, questions.length * 240));
 	let remaining = $state(600);
 	let selected = $state<Record<number, number>>({});
 	let submitted = $state(false);
+	let grading = $state(false);
+	let gradeError = $state<string | null>(null);
+	let score = $state<{ correct: number; total: number } | null>(null);
+	let gradedByOrder = $state<Record<number, GradeResult>>({});
 	let interval: ReturnType<typeof setInterval> | null = null;
 
 	$effect(() => {
@@ -71,26 +78,39 @@
 		return `${m}:${r.toString().padStart(2, '0')}`;
 	}
 
-	const score = $derived.by(() => {
-		if (!submitted || questions.length === 0) return null;
-		let correct = 0;
-		for (const q of questions) {
-			if (selected[q.id] === q.correctIndex) correct++;
-		}
-		return { correct, total: questions.length };
-	});
-
 	const progressPct = $derived(
 		questions.length === 0
 			? 0
 			: Math.round((Object.keys(selected).length / questions.length) * 100)
 	);
 
-	function submit() {
-		submitted = true;
-		if (interval) {
-			clearInterval(interval);
-			interval = null;
+	function resultFor(order: number): GradeResult | undefined {
+		return gradedByOrder[order];
+	}
+
+	async function submit() {
+		if (!browser || !env.PUBLIC_CONVEX_URL || grading) return;
+		grading = true;
+		gradeError = null;
+		try {
+			const graded = await convex.mutation(api.practiceQuestions.gradeAnswers, {
+				trackCode: exam.code,
+				answers: questions.map((q) => ({
+					order: q.id,
+					selectedIndex: selected[q.id]!
+				}))
+			});
+			score = { correct: graded.correct, total: graded.total };
+			gradedByOrder = Object.fromEntries(graded.results.map((r) => [r.order, r]));
+			submitted = true;
+			if (interval) {
+				clearInterval(interval);
+				interval = null;
+			}
+		} catch (e) {
+			gradeError = e instanceof Error ? e.message : 'Could not grade answers';
+		} finally {
+			grading = false;
 		}
 	}
 </script>
@@ -145,6 +165,7 @@
 			</p>
 		{:else}
 			{#each questions as q, i}
+				{@const graded = resultFor(q.id)}
 				<article
 					class="mb-10 rounded-xl bg-surface-container-lowest p-8 shadow-[0px_4px_24px_rgba(0,0,0,0.04)]"
 				>
@@ -159,9 +180,13 @@
 							<li>
 								<label
 									class="flex cursor-pointer items-start gap-3 rounded-lg bg-surface-container-high/80 p-4 transition-colors hover:bg-surface-container-high {submitted &&
-									idx === q.correctIndex
+									graded &&
+									idx === graded.correctIndex
 										? 'ring-2 ring-secondary'
-										: ''} {submitted && selected[q.id] === idx && idx !== q.correctIndex
+										: ''} {submitted &&
+									graded &&
+									selected[q.id] === idx &&
+									idx !== graded.correctIndex
 										? 'ring-2 ring-error'
 										: ''}"
 								>
@@ -169,7 +194,7 @@
 										type="radio"
 										name="q{q.id}"
 										class="mt-1 border-outline text-secondary focus:ring-secondary"
-										disabled={submitted}
+										disabled={submitted || grading}
 										checked={selected[q.id] === idx}
 										onchange={() => {
 											selected = { ...selected, [q.id]: idx };
@@ -180,16 +205,20 @@
 							</li>
 						{/each}
 					</ul>
-					{#if submitted}
+					{#if submitted && graded}
 						<div
 							class="mt-6 rounded-lg border border-secondary-container/40 bg-secondary-container/15 p-4 text-sm text-on-surface-variant"
 						>
 							<p class="font-bold text-primary">Explanation</p>
-							<p class="mt-1 leading-relaxed">{q.explanation}</p>
+							<p class="mt-1 leading-relaxed">{graded.explanation}</p>
 						</div>
 					{/if}
 				</article>
 			{/each}
+		{/if}
+
+		{#if gradeError}
+			<p class="mb-4 text-center text-sm text-error">{gradeError}</p>
 		{/if}
 
 		<div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
@@ -200,10 +229,10 @@
 				<button
 					type="button"
 					class="rounded-md bg-secondary px-10 py-3 font-bold text-on-secondary transition-opacity hover:opacity-90 disabled:opacity-40"
-					disabled={Object.keys(selected).length < questions.length}
+					disabled={Object.keys(selected).length < questions.length || grading}
 					onclick={submit}
 				>
-					Submit answers
+					{grading ? 'Grading…' : 'Submit answers'}
 				</button>
 			{:else if score}
 				<div class="rounded-xl bg-primary px-8 py-4 text-center text-white shadow-lg">

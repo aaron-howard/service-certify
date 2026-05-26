@@ -1,7 +1,7 @@
 <script lang="ts">
 	import MaterialIcon from '$lib/components/MaterialIcon.svelte';
 	import { exams } from '$lib/data/exams';
-	import { browser } from '$app/environment';
+	import { browser, dev } from '$app/environment';
 	import { env } from '$env/dynamic/public';
 	import { useQuery } from 'convex-svelte';
 	import { api } from '$convex/_generated/api.js';
@@ -62,12 +62,14 @@
 					Prepare with confidence using our comprehensive practice exam catalog, featuring
 					real-world scenarios and verified answers.
 				</p>
-				{#if tracksLive.data}
-					<p class="mt-3 text-sm font-medium text-secondary">
-						Convex: {tracksLive.data.length} certification tracks in database
-					</p>
-				{:else if tracksLive.error}
-					<p class="mt-3 text-sm text-outline">Convex: could not load track list.</p>
+				{#if dev}
+					{#if tracksLive.data}
+						<p class="mt-3 text-sm font-medium text-secondary">
+							Convex (dev): {tracksLive.data.length} certification tracks in database
+						</p>
+					{:else if tracksLive.error}
+						<p class="mt-3 text-sm text-outline">Convex (dev): could not load track list.</p>
+					{/if}
 				{/if}
 			</div>
 			<div class="group relative w-full md:w-96">
