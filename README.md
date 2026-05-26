@@ -35,6 +35,8 @@ npm run seed:dev:questions  # dev practice question bank
 
 More detail for Convex workflows and agent-driven question generation: [`AGENTS.md`](./AGENTS.md).
 
+Authentication (Clerk/Auth0/WorkOS) is documented in [`docs/auth-setup.md`](./docs/auth-setup.md).
+
 ## Environment variables
 
 | Variable | Required | Description |
