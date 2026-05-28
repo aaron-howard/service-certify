@@ -8,6 +8,7 @@
 	import { env } from '$env/dynamic/public';
 	import { ConvexClient } from 'convex/browser';
 	import { setConvexClientContext } from 'convex-svelte';
+	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 
 	let { children } = $props();
 
@@ -20,6 +21,8 @@
 		disabled: !browser || !convexConfigured
 	});
 	setConvexClientContext(convexClient);
+
+	injectSpeedInsights();
 
 	$effect(() => () => convexClient.close());
 </script>
