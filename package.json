@@ -41,6 +41,6 @@
 	"dependencies": {
 		"@vercel/speed-insights": "^2.0.0",
 		"convex": "^1.41.0",
-		"convex-svelte": "^0.0.12"
+		"convex-svelte": "^0.14.0"
 	}
 }
