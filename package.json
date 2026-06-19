@@ -9,7 +9,8 @@
 	},
 	"overrides": {
 		"cookie": "0.7.0",
-		"ws": "8.20.1"
+		"ws": "8.20.1",
+		"esbuild": "0.28.1"
 	},
 	"scripts": {
 		"dev": "vite dev",
