@@ -27,16 +27,16 @@
 		"convex:codegen": "convex codegen"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-vercel": "^6.3.3",
-		"@sveltejs/kit": "^2.60.1",
+		"@sveltejs/adapter-vercel": "^6.3.4",
+		"@sveltejs/kit": "^2.66.0",
 		"@sveltejs/vite-plugin-svelte": "^7.1.2",
-		"@tailwindcss/vite": "^4.3.0",
+		"@tailwindcss/vite": "^4.3.1",
 		"patch-package": "^8.0.1",
-		"svelte": "^5.55.7",
-		"svelte-check": "^4.4.2",
+		"svelte": "^5.56.3",
+		"svelte-check": "^4.6.0",
 		"tailwindcss": "^4.1.18",
 		"typescript": "^6.0.3",
-		"vite": "^8.0.14"
+		"vite": "^8.0.16"
 	},
 	"dependencies": {
 		"@vercel/speed-insights": "^2.0.0",
