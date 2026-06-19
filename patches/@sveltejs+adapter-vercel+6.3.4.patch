@@ -1,5 +1,5 @@
 diff --git a/node_modules/@sveltejs/adapter-vercel/index.js b/node_modules/@sveltejs/adapter-vercel/index.js
-index d6213e5..98c02fd 100644
+index 9369f8c..5a2735c 100644
 --- a/node_modules/@sveltejs/adapter-vercel/index.js
 +++ b/node_modules/@sveltejs/adapter-vercel/index.js
 @@ -22,6 +22,21 @@ import { VERSION } from '@sveltejs/kit';
@@ -55,7 +55,7 @@ index d6213e5..98c02fd 100644
  
  					// Add route to the config
  					static_config.routes.push({
-@@ -789,7 +804,12 @@ async function create_function_bundle(builder, entry, dir, config) {
+@@ -793,7 +808,12 @@ async function create_function_bundle(builder, entry, dir, config) {
  
  		if (source !== realpath) {
  			const realdest = path.join(dir, path.relative(ancestor, realpath));
