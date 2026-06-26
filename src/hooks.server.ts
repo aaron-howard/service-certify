@@ -1,8 +1,12 @@
 import { initSentry } from '$lib/sentry';
+import { initRateLimit, rateLimit } from '$lib/rateLimit';
 import type { Handle } from '@sveltejs/kit';
 
 // Initialize Sentry for server-side error tracking
 initSentry();
+
+// Initialize rate limiting (requires UPSTASH_REDIS_REST_URL and token)
+initRateLimit();
 
 export const handle: Handle = async ({ event, resolve }) => {
 	const response = await resolve(event);

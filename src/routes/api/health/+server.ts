@@ -1,3 +1,4 @@
+import { rateLimit } from '$lib/rateLimit';
 import type { RequestHandler } from '@sveltejs/kit';
 
 interface HealthResponse {
@@ -15,6 +16,25 @@ interface HealthResponse {
 
 export const GET: RequestHandler = async ({ request }): Promise<Response> => {
 	const startTime = Date.now();
+
+	// Rate limit: 1000 requests per minute per IP (generous for monitoring)
+	const clientIp = request.headers.get('x-forwarded-for') || 'unknown';
+	try {
+		await rateLimit(clientIp, {
+			windowSeconds: 60,
+			maxRequests: 1000,
+			keyPrefix: 'health:'
+		});
+	} catch (error) {
+		// Rate limit exceeded
+		return new Response(JSON.stringify({ error: 'Too many requests' }), {
+			status: 429,
+			headers: {
+				'Content-Type': 'application/json',
+				'Retry-After': '60'
+			}
+		});
+	}
 
 	// @ts-expect-error: process is available in Node.js but not in browser types
 	const uptime = globalThis.process?.uptime ? Math.floor(globalThis.process.uptime()) : 0;
