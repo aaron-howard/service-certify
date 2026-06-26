@@ -1,0 +1,77 @@
+import type { RequestHandler } from '@sveltejs/kit';
+
+interface HealthResponse {
+	status: 'ok' | 'degraded' | 'error';
+	timestamp: string;
+	uptime: number;
+	environment: string;
+	checks: {
+		convex: {
+			status: 'ok' | 'error';
+			message?: string;
+		};
+	};
+}
+
+export const GET: RequestHandler = async ({ request }): Promise<Response> => {
+	const startTime = Date.now();
+
+	// @ts-expect-error: process is available in Node.js but not in browser types
+	const uptime = globalThis.process?.uptime ? Math.floor(globalThis.process.uptime()) : 0;
+	// @ts-expect-error: process.env only in Node.js
+	const nodeEnv = globalThis.process?.env?.NODE_ENV || 'unknown';
+	// @ts-expect-error: process.env only in Node.js
+	const convexUrl = globalThis.process?.env?.PUBLIC_CONVEX_URL;
+
+	const response: HealthResponse = {
+		status: 'ok',
+		timestamp: new Date().toISOString(),
+		uptime,
+		environment: nodeEnv,
+		checks: {
+			convex: { status: 'ok' }
+		}
+	};
+
+	// Try to verify Convex connectivity by checking for the deployment URL
+	if (!convexUrl) {
+		response.checks.convex.status = 'error';
+		response.checks.convex.message = 'CONVEX_URL not configured';
+		response.status = 'degraded';
+	} else {
+		// Basic connectivity check: try to reach Convex (non-blocking)
+		try {
+			const controller = new AbortController();
+			const timeoutId = setTimeout(() => controller.abort(), 2000); // 2 second timeout
+
+			const result = await fetch(`${convexUrl}/version`, {
+				method: 'GET',
+				signal: controller.signal
+			});
+
+			clearTimeout(timeoutId);
+
+			if (!result.ok) {
+				response.checks.convex.status = 'error';
+				response.checks.convex.message = `HTTP ${result.status}`;
+				response.status = 'degraded';
+			}
+		} catch (error) {
+			response.checks.convex.status = 'error';
+			response.checks.convex.message = error instanceof Error ? error.message : 'Unknown error';
+			response.status = 'degraded';
+		}
+	}
+
+	const elapsed = Date.now() - startTime;
+	const statusCode = response.status === 'ok' ? 200 : 503;
+
+	return new Response(JSON.stringify(response), {
+		status: statusCode,
+		headers: {
+			'Content-Type': 'application/json',
+			'Cache-Control': 'no-cache, no-store, must-revalidate',
+			'X-Response-Time': `${elapsed}ms`
+		}
+	});
+};

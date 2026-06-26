@@ -5,6 +5,9 @@ import { v } from 'convex/values';
 export const listByTrackCode = query({
 	args: { trackCode: v.string() },
 	handler: async (ctx, { trackCode }) => {
+		if (!trackCode || trackCode.length < 3 || trackCode.length > 10) {
+			throw new Error('Invalid trackCode: must be 3-10 characters');
+		}
 		const rows = await ctx.db
 			.query('practiceQuestions')
 			.withIndex('by_trackCode', (q) => q.eq('trackCode', trackCode))
@@ -32,6 +35,21 @@ export const gradeAnswers = mutation({
 		answers: v.array(answerValidator)
 	},
 	handler: async (ctx, { trackCode, answers }) => {
+		// Validate inputs
+		if (!trackCode || trackCode.length < 3 || trackCode.length > 10) {
+			throw new Error('Invalid trackCode: must be 3-10 characters');
+		}
+		if (!Array.isArray(answers) || answers.length < 1 || answers.length > 1000) {
+			throw new Error('Invalid answers: must have 1-1000 items');
+		}
+		for (const answer of answers) {
+			if (answer.order < 0 || answer.order > 10000) {
+				throw new Error(`Invalid order ${answer.order}: must be 0-10000`);
+			}
+			if (answer.selectedIndex < 0 || answer.selectedIndex > 5) {
+				throw new Error(`Invalid selectedIndex ${answer.selectedIndex}: must be 0-5`);
+			}
+		}
 		const rows = await ctx.db
 			.query('practiceQuestions')
 			.withIndex('by_trackCode', (q) => q.eq('trackCode', trackCode))
