@@ -66,8 +66,7 @@ export const POST: RequestHandler = async ({ request }) => {
 	// Call Convex mutation
 	// Note: In Phase C, you'll wire this to your auth context
 	try {
-		// @ts-expect-error: process is available in Node.js
-		const convexUrl = globalThis.process?.env?.PUBLIC_CONVEX_URL;
+		const convexUrl = ((globalThis as any).process?.env?.PUBLIC_CONVEX_URL as string);
 		if (!convexUrl) {
 			return new Response(JSON.stringify({ error: 'Convex not configured' }), {
 				status: 503,

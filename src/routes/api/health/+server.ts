@@ -36,12 +36,10 @@ export const GET: RequestHandler = async ({ request }): Promise<Response> => {
 		});
 	}
 
-	// @ts-expect-error: process is available in Node.js but not in browser types
-	const uptime = globalThis.process?.uptime ? Math.floor(globalThis.process.uptime()) : 0;
-	// @ts-expect-error: process.env only in Node.js
-	const nodeEnv = globalThis.process?.env?.NODE_ENV || 'unknown';
-	// @ts-expect-error: process.env only in Node.js
-	const convexUrl = globalThis.process?.env?.PUBLIC_CONVEX_URL;
+	const proc = (globalThis as any).process;
+	const uptime = proc?.uptime ? Math.floor(proc.uptime()) : 0;
+	const nodeEnv = proc?.env?.NODE_ENV || 'unknown';
+	const convexUrl = proc?.env?.PUBLIC_CONVEX_URL;
 
 	const response: HealthResponse = {
 		status: 'ok',

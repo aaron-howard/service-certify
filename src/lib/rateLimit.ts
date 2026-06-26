@@ -13,10 +13,8 @@ let redis: Redis | null = null;
  * Call this once on server startup.
  */
 export function initRateLimit() {
-	// @ts-expect-error: process is available in Node.js but not in browser types
-	const url = globalThis.process?.env?.UPSTASH_REDIS_REST_URL;
-	// @ts-expect-error: process is available in Node.js but not in browser types
-	const token = globalThis.process?.env?.UPSTASH_REDIS_REST_TOKEN;
+	const url = (globalThis as any).process?.env?.UPSTASH_REDIS_REST_URL;
+	const token = (globalThis as any).process?.env?.UPSTASH_REDIS_REST_TOKEN;
 
 	if (!url || !token) {
 		console.warn('Rate limiting disabled: UPSTASH_REDIS_REST_URL or UPSTASH_REDIS_REST_TOKEN not configured');
