@@ -17,8 +17,7 @@ export function initSentry() {
 
 	// Fallback for server-side: read from global if available
 	if (!dsn) {
-		// @ts-expect-error: process is available in Node.js but not in browser
-		const proc = typeof globalThis !== 'undefined' ? globalThis.process : undefined;
+		const proc = typeof globalThis !== 'undefined' ? (globalThis as any).process : undefined;
 		if (proc?.env) {
 			dsn = proc.env.SENTRY_DSN || '';
 			environment = proc.env.NODE_ENV || 'development';
