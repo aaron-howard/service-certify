@@ -76,9 +76,9 @@ export function createMockTrack(overrides = {}) {
 }
 
 /**
- * Create mock practice answers for testing.
+ * Create mock practice answer for testing.
  */
-export function createMockAnswer(overrides = {}) {
+export function createMockAnswer(overrides: { order?: number; selectedIndex?: number } = {}) {
 	return {
 		order: 0,
 		selectedIndex: 1,
