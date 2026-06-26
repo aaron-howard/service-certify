@@ -2,6 +2,23 @@ import { defineSchema, defineTable } from 'convex/server';
 import { v } from 'convex/values';
 
 export default defineSchema({
+	users: defineTable({
+		// WorkOS user ID (unique, immutable)
+		workosId: v.string(),
+		// User email from WorkOS
+		email: v.string(),
+		// User full name from OAuth profile
+		name: v.optional(v.string()),
+		// Profile picture URL from OAuth provider
+		profileImage: v.optional(v.string()),
+		// OAuth provider (google, microsoft, github, facebook)
+		provider: v.optional(v.string()),
+		// Account creation date
+		createdAt: v.number()
+	})
+		.index('by_workosId', ['workosId'])
+		.index('by_email', ['email']),
+
 	certificationTracks: defineTable({
 		// Track code (e.g., "CAD", "CIS") — expected 3-10 chars
 		code: v.string(),
@@ -28,5 +45,22 @@ export default defineSchema({
 		sourceUrls: v.array(v.string()),
 		// Question difficulty level (currently only 'dev' for development)
 		difficulty: v.optional(v.literal('dev'))
-	}).index('by_trackCode', ['trackCode'])
+	}).index('by_trackCode', ['trackCode']),
+
+	userProgress: defineTable({
+		// Reference to user
+		userId: v.id('users'),
+		// Certification track code
+		trackCode: v.string(),
+		// Total practice sessions completed
+		sessionsCompleted: v.number(),
+		// Best score percentage
+		bestScore: v.number(),
+		// Average score percentage
+		averageScore: v.number(),
+		// Last attempted date
+		lastAttemptedAt: v.number()
+	})
+		.index('by_userId', ['userId'])
+		.index('by_userId_and_trackCode', ['userId', 'trackCode'])
 });
