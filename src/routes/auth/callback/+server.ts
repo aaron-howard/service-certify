@@ -1,10 +1,19 @@
-import { WorkOS } from '@workos-inc/node';
 import { redirect } from '@sveltejs/kit';
 import type { RequestHandler } from '@sveltejs/kit';
-
-const workos = new WorkOS(process.env.WORKOS_API_KEY);
+import { getWorkOS, getWorkOSClientId, isWorkOSConfigured } from '$lib/workos.server';
 
 export const GET: RequestHandler = async ({ url, cookies }) => {
+	if (!isWorkOSConfigured()) {
+		throw redirect(302, '/auth/signin?error=workos_not_configured');
+	}
+
+	const workos = getWorkOS();
+	const clientId = getWorkOSClientId();
+
+	if (!workos || !clientId) {
+		throw redirect(302, '/auth/signin?error=workos_not_configured');
+	}
+
 	const code = url.searchParams.get('code');
 	const error = url.searchParams.get('error');
 
@@ -18,38 +27,35 @@ export const GET: RequestHandler = async ({ url, cookies }) => {
 		throw redirect(302, '/auth/signin?error=no_code');
 	}
 
+	const secure = url.protocol === 'https:';
+
 	try {
-		// Exchange code for token
 		const token = await workos.userManagement.authenticateWithCode({
 			code,
-			clientId: process.env.WORKOS_CLIENT_ID!
+			clientId
 		});
 
-		// Store token in cookie (will be used by Convex)
 		cookies.set('workos_token', token.accessToken, {
 			httpOnly: true,
-			secure: true,
-			sameSite: 'lax',
-			path: '/',
-			maxAge: 7 * 24 * 60 * 60 // 7 days
-		});
-
-		// Get user info
-		const user = await workos.userManagement.getUser(token.user.id);
-
-		// Store user ID for Convex
-		cookies.set('workos_user_id', user.id, {
-			httpOnly: true,
-			secure: true,
+			secure,
 			sameSite: 'lax',
 			path: '/',
 			maxAge: 7 * 24 * 60 * 60
 		});
 
-		// Redirect to dashboard or home
+		const user = await workos.userManagement.getUser(token.user.id);
+
+		cookies.set('workos_user_id', user.id, {
+			httpOnly: true,
+			secure,
+			sameSite: 'lax',
+			path: '/',
+			maxAge: 7 * 24 * 60 * 60
+		});
+
 		throw redirect(302, '/dashboard');
-	} catch (error) {
-		console.error('Token exchange error:', error);
-		throw redirect(302, `/auth/signin?error=${encodeURIComponent('authentication_failed')}`);
+	} catch (err) {
+		console.error('Token exchange error:', err);
+		throw redirect(302, '/auth/signin?error=authentication_failed');
 	}
 };

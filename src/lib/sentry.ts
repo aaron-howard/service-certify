@@ -29,7 +29,7 @@ export function initSentry() {
 	Sentry.init({
 		dsn,
 		environment,
-		tracesSampleRate: 0.1, // 10% of transactions for performance monitoring
+		tracesSampleRate: 0.1,
 		release: '0.0.1',
 		ignoreErrors: [
 			// Browser extension errors
