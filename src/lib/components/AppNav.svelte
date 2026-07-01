@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
+	import logo from '$lib/assets/logo.svg';
 	import MaterialIcon from './MaterialIcon.svelte';
 
 	let menuOpen = $state(false);
@@ -18,7 +19,10 @@
 	aria-label="Primary"
 >
 	<div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-8">
-		<a href="/" class="text-xl font-extrabold tracking-tighter text-primary">Service Certify</a>
+		<a href="/" class="flex items-center gap-2.5">
+			<img src={logo} alt="" class="h-8 w-8 shrink-0" aria-hidden="true" />
+			<span class="text-xl font-extrabold tracking-tighter text-primary">Service Certify</span>
+		</a>
 
 		<div class="hidden items-center gap-8 md:flex">
 			<a class={linkClass('/exams')} href="/exams">Exam Catalog</a>
