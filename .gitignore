@@ -27,6 +27,7 @@ Thumbs.db
 .env.*
 !.env.example
 !.env.test
+!.env.convex
 
 # Tooling / caches
 .eslintcache
