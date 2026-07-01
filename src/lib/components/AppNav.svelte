@@ -31,12 +31,12 @@
 		</div>
 
 		<div class="hidden items-center gap-4 md:flex">
-			<button
-				type="button"
+			<a
+				href="/auth/signin"
 				class="text-sm font-medium text-on-surface-variant transition-transform hover:text-primary active:scale-95"
 			>
 				Sign In
-			</button>
+			</a>
 			<a
 				href="/membership"
 				class="rounded-md bg-secondary px-6 py-2.5 text-sm font-bold text-on-secondary transition-transform active:scale-95"
@@ -70,6 +70,9 @@
 			>
 			<a class="font-medium text-primary" href="/dashboard" onclick={() => (menuOpen = false)}
 				>Dashboard</a
+			>
+			<a class="font-medium text-primary" href="/auth/signin" onclick={() => (menuOpen = false)}
+				>Sign In</a
 			>
 			<a
 				href="/membership"

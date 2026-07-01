@@ -1,56 +1,25 @@
 <script lang="ts">
-	// WorkOS Client ID from environment (if configured)
-	const clientId = import.meta.env.VITE_WORKOS_CLIENT_ID || '';
-	const notConfigured = !clientId || clientId === 'client_...';
+	import type { PageData } from './$types';
 
-	// WorkOS OAuth providers
+	let { data }: { data: PageData } = $props();
+
 	const providers = [
-		{
-			id: 'google',
-			name: 'Google',
-			icon: '🔍'
-		},
-		{
-			id: 'microsoft',
-			name: 'Microsoft',
-			icon: '◻️'
-		},
-		{
-			id: 'github',
-			name: 'GitHub',
-			icon: '🐙'
-		},
-		{
-			id: 'facebook',
-			name: 'Facebook',
-			icon: 'f'
-		}
-	];
+		{ id: 'google', name: 'Google', icon: '🔍' },
+		{ id: 'microsoft', name: 'Microsoft', icon: '◻️' },
+		{ id: 'github', name: 'GitHub', icon: '🐙' }
+	] as const;
 
-	function getOAuthUrl(provider: string): string {
-		if (notConfigured) {
-			return '#';
-		}
+	const errorMessages: Record<string, string> = {
+		workos_not_configured: 'WorkOS is not configured on the server. Add WORKOS_API_KEY and WORKOS_CLIENT_ID to .env.local.',
+		invalid_provider: 'That sign-in provider is not supported.',
+		no_code: 'Sign-in was cancelled or no authorization code was returned.',
+		authentication_failed: 'Sign-in failed. Check WorkOS redirect URIs and enabled providers.',
+		access_denied: 'Sign-in was cancelled.'
+	};
 
-		const baseUrl = 'https://api.workos.com/oauth/authorize';
-		const redirectUri = `${window.location.origin}/auth/callback`;
-
-		const params = new URLSearchParams({
-			response_type: 'code',
-			client_id: clientId,
-			redirect_uri: redirectUri,
-			provider
-		});
-
-		return `${baseUrl}?${params.toString()}`;
-	}
-
-	function handleClick(e: Event) {
-		if (notConfigured) {
-			e.preventDefault();
-			alert('WorkOS is not configured. See docs/AUTH-WORKOS.md for setup instructions.');
-		}
-	}
+	const errorMessage = $derived(
+		data.error ? (errorMessages[data.error] ?? `Sign-in error: ${data.error}`) : null
+	);
 </script>
 
 <svelte:head>
@@ -64,17 +33,29 @@
 			<p class="text-on-surface-variant mb-8">Sign in to access your practice sessions</p>
 
 			<div class="space-y-3">
-				{#if notConfigured}
+				{#if errorMessage}
 					<div class="p-4 bg-error-container text-on-error-container rounded-lg">
-						<p class="font-medium">WorkOS Not Configured</p>
-						<p class="text-sm mt-1">See <a href="/docs/AUTH-WORKOS.md" class="underline">AUTH-WORKOS.md</a> for setup instructions.</p>
+						<p class="font-medium">Sign-in problem</p>
+						<p class="text-sm mt-1">{errorMessage}</p>
 					</div>
 				{/if}
+
+				{#if !data.configured}
+					<div class="p-4 bg-error-container text-on-error-container rounded-lg">
+						<p class="font-medium">WorkOS Not Configured</p>
+						<p class="text-sm mt-1">
+							Add <code class="text-xs">WORKOS_API_KEY</code> and
+							<code class="text-xs">WORKOS_CLIENT_ID</code> to <code class="text-xs">.env.local</code>,
+							then restart <code class="text-xs">npm run dev</code>.
+						</p>
+					</div>
+				{/if}
+
 				{#each providers as provider (provider.id)}
 					<a
-						href={getOAuthUrl(provider.id)}
-						on:click={handleClick}
-						class="w-full flex items-center justify-center gap-3 px-4 py-3 bg-primary-container text-on-primary-container rounded-lg hover:bg-primary hover:text-on-primary transition-colors font-medium {notConfigured ? 'opacity-50 cursor-not-allowed' : ''}"
+						href="/auth/login?provider={provider.id}"
+						class="w-full flex items-center justify-center gap-3 px-4 py-3 bg-primary-container text-on-primary-container rounded-lg hover:bg-primary hover:text-on-primary transition-colors font-medium {!data.configured ? 'pointer-events-none opacity-50' : ''}"
+						aria-disabled={!data.configured}
 					>
 						<span>{provider.icon}</span>
 						<span>Sign in with {provider.name}</span>
@@ -85,8 +66,6 @@
 			<div class="mt-6 text-center text-sm text-on-surface-variant">
 				<p>We use OAuth for secure authentication</p>
 				<p class="mt-1 text-xs">
-					<a href="/privacy" class="text-primary hover:underline">Privacy</a>
-					•
 					<a href="/" class="text-primary hover:underline">Home</a>
 				</p>
 			</div>
