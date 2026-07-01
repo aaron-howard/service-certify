@@ -27,9 +27,10 @@
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"seed:dev": "convex run --push internal.seed.apply",
-		"seed:dev:questions": "convex run --push internal.seed.devQuestions",
-		"convex:dev": "convex dev",
+		"seed:dev": "convex run --push --env-file .env.convex internal.seed.apply",
+		"seed:dev:questions": "convex run --push --env-file .env.convex internal.seed.devQuestions",
+		"convex:dev": "convex dev --env-file .env.convex",
+		"convex:select-dev": "convex deployment select gregarious-iguana-339",
 		"convex:codegen": "convex codegen"
 	},
 	"devDependencies": {
