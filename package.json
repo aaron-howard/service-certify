@@ -52,6 +52,7 @@
 		"vitest": "^4.1.9"
 	},
 	"dependencies": {
+		"@fontsource-variable/material-symbols-outlined": "^5.2.45",
 		"@sentry/svelte": "^10.61.0",
 		"@sentry/tracing": "^7.120.4",
 		"@upstash/redis": "^1.38.0",
