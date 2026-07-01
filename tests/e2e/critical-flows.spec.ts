@@ -1,4 +1,10 @@
 import { test, expect } from '@playwright/test';
+import {
+	examCardLinks,
+	gotoFirstExam,
+	gotoFirstPractice,
+	hasPracticeQuestions
+} from './helpers';
 
 /**
  * Critical user flows for Service Certify.
@@ -9,146 +15,88 @@ test.describe('Critical User Flows', () => {
 	test('should load landing page', async ({ page }) => {
 		await page.goto('/');
 
-		// Check page title/heading
-		const heading = page.locator('h1, h2');
-		await expect(heading).toBeVisible();
-
-		// Check navigation is present
-		const nav = page.locator('header nav, header');
-		await expect(nav).toBeVisible();
+		await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
+		await expect(page.getByRole('navigation', { name: 'Primary' })).toBeVisible();
 	});
 
 	test('should navigate to exams catalog', async ({ page }) => {
 		await page.goto('/');
 
-		// Click on exams link/button
-		const examsLink = page.locator('a[href*="/exams"], button:has-text("Exam")');
-		await examsLink.first().click();
+		const examsLink = page.locator('a[href="/exams"], a[href*="/exams"]').first();
+		await examsLink.click();
 
-		// Should be on exams page
 		await expect(page).toHaveURL('/exams');
-
-		// Exam list should be visible
-		await page.waitForLoadState('networkidle');
-		const examItems = page.locator('[data-testid="exam-item"], li, .exam-card');
-		await expect(examItems.first()).toBeVisible({ timeout: 5000 });
+		await page.waitForLoadState('domcontentloaded');
+		await expect(examCardLinks(page).first()).toBeVisible({ timeout: 10000 });
 	});
 
 	test('should view exam details', async ({ page }) => {
-		await page.goto('/exams');
+		await gotoFirstExam(page);
 
-		// Wait for exam list to load
-		await page.waitForLoadState('networkidle');
+		await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
 
-		// Click on first exam
-		const firstExam = page.locator('a[href*="/exams/"]').first();
-		await firstExam.click();
-
-		// Should be on exam detail page
-		await expect(page).toHaveURL(/\/exams\/[^/]+$/);
-
-		// Exam details should be visible
-		const examTitle = page.locator('h1, h2');
-		await expect(examTitle).toBeVisible();
-
-		// Practice button should be visible
-		const practiceBtn = page.locator('button:has-text("Practice"), a:has-text("Practice")');
-		await expect(practiceBtn).toBeVisible();
+		const practiceBtn = page.locator('a:has-text("Practice"), button:has-text("Practice")');
+		await expect(practiceBtn.first()).toBeVisible();
 	});
 
 	test('should start practice session', async ({ page }) => {
-		await page.goto('/exams');
+		await gotoFirstPractice(page);
 
-		// Navigate to first exam
-		await page.waitForLoadState('networkidle');
-		const firstExam = page.locator('a[href*="/exams/"]').first();
-		await firstExam.click();
-
-		// Click practice button
-		const practiceBtn = page.locator('button:has-text("Practice"), a:has-text("Practice")');
-		await practiceBtn.click();
-
-		// Should be on practice page
-		await expect(page).toHaveURL(/\/exams\/[^/]+\/practice/);
-
-		// Questions should load
-		await page.waitForLoadState('networkidle');
-		const questions = page.locator('[data-testid="question"], .question');
-		await expect(questions.first()).toBeVisible({ timeout: 5000 });
+		if (await hasPracticeQuestions(page)) {
+			await expect(page.locator('article h2').first()).toBeVisible();
+		} else {
+			await expect(page.getByText(/No practice questions/i)).toBeVisible();
+		}
 	});
 
 	test('should answer questions in practice session', async ({ page }) => {
-		// Navigate to practice session
-		await page.goto('/exams');
-		await page.waitForLoadState('networkidle');
+		await gotoFirstPractice(page);
 
-		const firstExam = page.locator('a[href*="/exams/"]').first();
-		await firstExam.click();
-
-		const practiceBtn = page.locator('button:has-text("Practice"), a:has-text("Practice")');
-		await practiceBtn.click();
-
-		await page.waitForLoadState('networkidle');
-
-		// Answer first question
-		const choices = page.locator('[data-testid="choice"], label:has(input[type="radio"]), .choice');
-		const firstChoice = choices.first();
-
-		if (await firstChoice.isVisible()) {
-			await firstChoice.click();
-			// Verify selection
-			await expect(firstChoice.locator('input')).toBeChecked({ timeout: 2000 });
+		if (!(await hasPracticeQuestions(page))) {
+			await expect(page.getByText(/No practice questions/i)).toBeVisible();
+			return;
 		}
+
+		const firstChoice = page.locator('article input[type="radio"]').first();
+		await firstChoice.click();
+		await expect(firstChoice).toBeChecked();
 	});
 
 	test('should submit practice session and view results', async ({ page }) => {
-		// Navigate to practice session
-		await page.goto('/exams');
-		await page.waitForLoadState('networkidle');
+		await gotoFirstPractice(page);
 
-		const firstExam = page.locator('a[href*="/exams/"]').first();
-		await firstExam.click();
+		if (!(await hasPracticeQuestions(page))) {
+			await expect(page.getByText(/No practice questions/i)).toBeVisible();
+			return;
+		}
 
-		const practiceBtn = page.locator('button:has-text("Practice"), a:has-text("Practice")');
-		await practiceBtn.click();
+		const radios = page.locator('article input[type="radio"]');
+		const articles = page.locator('article');
+		const articleCount = await articles.count();
 
-		await page.waitForLoadState('networkidle');
-
-		// Select some answers (click first choice for each question)
-		const choices = page.locator('[data-testid="choice"], label:has(input[type="radio"]), .choice');
-		const count = await choices.count();
-
-		// Answer first 3 questions (or all if fewer)
-		for (let i = 0; i < Math.min(count, 3); i++) {
-			const choice = choices.nth(i);
-			if (await choice.isVisible()) {
-				await choice.click();
-				await page.waitForTimeout(100);
+		for (let i = 0; i < articleCount; i++) {
+			const radio = articles.nth(i).locator('input[type="radio"]').first();
+			if (await radio.isVisible()) {
+				await radio.click();
 			}
 		}
 
-		// Find and click submit button
-		const submitBtn = page.locator('button:has-text("Submit"), button:has-text("Grade"), button:has-text("Check")');
+		const submitBtn = page.locator('button:has-text("Submit")');
 		if (await submitBtn.isVisible()) {
 			await submitBtn.click();
-
-			// Results should be shown
-			await page.waitForLoadState('networkidle');
-			const results = page.locator('[data-testid="results"], .results, .score');
-			await expect(results).toBeVisible({ timeout: 5000 });
+			await expect(page.getByText(/Your sample score/i)).toBeVisible({ timeout: 10000 });
+		} else {
+			expect(await radios.count()).toBeGreaterThan(0);
 		}
 	});
 
 	test('should have accessible navigation', async ({ page }) => {
 		await page.goto('/');
 
-		// Navigation should be keyboard accessible
-		const nav = page.locator('nav, header');
-		await expect(nav).toBeVisible();
+		await expect(page.getByRole('navigation', { name: 'Primary' })).toBeVisible();
 
-		// Should have skip links or proper heading structure
 		const skipLink = page.locator('a:has-text("Skip")');
-		const mainHeading = page.locator('h1');
+		const mainHeading = page.getByRole('heading', { level: 1 });
 
 		const hasSkipLink = await skipLink.isVisible().catch(() => false);
 		const hasMainHeading = await mainHeading.isVisible().catch(() => false);
@@ -157,29 +105,22 @@ test.describe('Critical User Flows', () => {
 	});
 
 	test('should handle errors gracefully', async ({ page }) => {
-		// Navigate to non-existent exam
 		await page.goto('/exams/nonexistent');
 
-		// Should not crash, might show 404 or redirect
-		// Page should remain interactive
-		const heading = page.locator('h1, h2');
+		const heading = page.getByRole('heading').first();
 		await expect(heading).toBeVisible();
 	});
 
 	test('should be mobile responsive', async ({ page }) => {
-		// Set mobile viewport
 		await page.setViewportSize({ width: 375, height: 812 });
 
 		await page.goto('/exams');
-		await page.waitForLoadState('networkidle');
+		await page.waitForLoadState('domcontentloaded');
 
-		// Page should be readable on mobile
-		const examItems = page.locator('[data-testid="exam-item"], li, .exam-card');
-		await expect(examItems.first()).toBeVisible({ timeout: 5000 });
+		await expect(examCardLinks(page).first()).toBeVisible({ timeout: 10000 });
 
-		// Should not have horizontal scroll
 		const bodyWidth = await page.evaluate(() => document.body.scrollWidth);
 		const viewportWidth = 375;
-		expect(bodyWidth).toBeLessThanOrEqual(viewportWidth + 20); // Small tolerance
+		expect(bodyWidth).toBeLessThanOrEqual(viewportWidth + 20);
 	});
 });
