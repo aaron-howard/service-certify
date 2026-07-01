@@ -8,6 +8,7 @@
  * @module
  */
 
+import type * as auth from "../auth.js";
 import type * as catalog_tracksCanonical from "../catalog/tracksCanonical.js";
 import type * as practiceQuestions from "../practiceQuestions.js";
 import type * as seed from "../seed.js";
@@ -21,6 +22,7 @@ import type {
 } from "convex/server";
 
 declare const fullApi: ApiFromModules<{
+  auth: typeof auth;
   "catalog/tracksCanonical": typeof catalog_tracksCanonical;
   practiceQuestions: typeof practiceQuestions;
   seed: typeof seed;

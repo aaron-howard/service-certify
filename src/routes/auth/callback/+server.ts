@@ -52,10 +52,10 @@ export const GET: RequestHandler = async ({ url, cookies }) => {
 			path: '/',
 			maxAge: 7 * 24 * 60 * 60
 		});
-
-		throw redirect(302, '/dashboard');
 	} catch (err) {
 		console.error('Token exchange error:', err);
 		throw redirect(302, '/auth/signin?error=authentication_failed');
 	}
+
+	throw redirect(302, '/dashboard');
 };
