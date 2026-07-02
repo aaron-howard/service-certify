@@ -1,4 +1,5 @@
 import { Redis } from '@upstash/redis';
+import { env } from '$env/dynamic/private';
 
 /**
  * Rate limiter using Upstash Redis with sliding window algorithm.
@@ -7,17 +8,27 @@ import { Redis } from '@upstash/redis';
  */
 
 let redis: Redis | null = null;
+let warnedMissingCredentials = false;
+
+function isProductionEnvironment(): boolean {
+	return env.VERCEL_ENV === 'production';
+}
 
 /**
  * Initialize the rate limiter with Upstash Redis credentials.
  * Call this once on server startup.
  */
 export function initRateLimit() {
-	const url = (globalThis as any).process?.env?.UPSTASH_REDIS_REST_URL;
-	const token = (globalThis as any).process?.env?.UPSTASH_REDIS_REST_TOKEN;
+	const url = env.UPSTASH_REDIS_REST_URL;
+	const token = env.UPSTASH_REDIS_REST_TOKEN;
 
 	if (!url || !token) {
-		console.warn('Rate limiting disabled: UPSTASH_REDIS_REST_URL or UPSTASH_REDIS_REST_TOKEN not configured');
+		if (isProductionEnvironment() && !warnedMissingCredentials) {
+			warnedMissingCredentials = true;
+			console.warn(
+				'Rate limiting disabled: UPSTASH_REDIS_REST_URL or UPSTASH_REDIS_REST_TOKEN not configured'
+			);
+		}
 		return;
 	}
 
