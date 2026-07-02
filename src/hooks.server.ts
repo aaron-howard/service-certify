@@ -1,5 +1,5 @@
 import { initSentry } from '$lib/sentry';
-import { initRateLimit, rateLimit } from '$lib/rateLimit';
+import { initRateLimit } from '$lib/rateLimit';
 import type { Handle } from '@sveltejs/kit';
 
 // Initialize Sentry for server-side error tracking

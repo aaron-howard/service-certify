@@ -1,7 +1,6 @@
 <script lang="ts">
 	import './layout.css';
 	import '@fontsource-variable/material-symbols-outlined/full.css';
-	import favicon from '$lib/assets/favicon.svg';
 	import DisclaimBanner from '$lib/components/DisclaimBanner.svelte';
 	import AppNav from '$lib/components/AppNav.svelte';
 	import AppFooter from '$lib/components/AppFooter.svelte';
@@ -29,7 +28,6 @@
 </script>
 
 <svelte:head>
-	<link rel="icon" href={favicon} />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
 	<link
