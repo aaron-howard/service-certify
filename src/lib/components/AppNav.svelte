@@ -1,9 +1,21 @@
 <script lang="ts">
 	import { page } from '$app/state';
+	import type { SessionUser } from '$lib/auth.server';
 	import logo from '$lib/assets/logo.svg';
 	import MaterialIcon from './MaterialIcon.svelte';
 
+	let { user = null }: { user: SessionUser | null } = $props();
+
 	let menuOpen = $state(false);
+
+	const userInitials = $derived(
+		user?.name
+			.split(/\s+/)
+			.filter(Boolean)
+			.slice(0, 2)
+			.map((part) => part[0]?.toUpperCase() ?? '')
+			.join('') || '?'
+	);
 
 	function linkClass(href: string) {
 		const path = page.url.pathname;
@@ -31,12 +43,32 @@
 		</div>
 
 		<div class="hidden items-center gap-4 md:flex">
-			<a
-				href="/auth/signin"
-				class="text-sm font-medium text-on-surface-variant transition-transform hover:text-primary active:scale-95"
-			>
-				Sign In
-			</a>
+			{#if user}
+				<div class="flex items-center gap-3">
+					<span
+						class="flex h-9 w-9 items-center justify-center rounded-full bg-primary-container text-xs font-bold text-on-primary-container"
+						aria-hidden="true"
+					>
+						{userInitials}
+					</span>
+					<span class="max-w-[12rem] truncate text-sm font-medium text-on-surface" title={user.email}>
+						{user.name}
+					</span>
+				</div>
+				<a
+					href="/auth/signout"
+					class="text-sm font-medium text-on-surface-variant transition-transform hover:text-primary active:scale-95"
+				>
+					Sign Out
+				</a>
+			{:else}
+				<a
+					href="/auth/signin"
+					class="text-sm font-medium text-on-surface-variant transition-transform hover:text-primary active:scale-95"
+				>
+					Sign In
+				</a>
+			{/if}
 			<a
 				href="/membership"
 				class="rounded-md bg-secondary px-6 py-2.5 text-sm font-bold text-on-secondary transition-transform active:scale-95"
@@ -71,9 +103,24 @@
 			<a class="font-medium text-primary" href="/dashboard" onclick={() => (menuOpen = false)}
 				>Dashboard</a
 			>
-			<a class="font-medium text-primary" href="/auth/signin" onclick={() => (menuOpen = false)}
-				>Sign In</a
-			>
+			{#if user}
+				<div class="flex items-center gap-3">
+					<span
+						class="flex h-9 w-9 items-center justify-center rounded-full bg-primary-container text-xs font-bold text-on-primary-container"
+						aria-hidden="true"
+					>
+						{userInitials}
+					</span>
+					<span class="font-medium text-primary">{user.name}</span>
+				</div>
+				<a class="font-medium text-primary" href="/auth/signout" onclick={() => (menuOpen = false)}
+					>Sign Out</a
+				>
+			{:else}
+				<a class="font-medium text-primary" href="/auth/signin" onclick={() => (menuOpen = false)}
+					>Sign In</a
+				>
+			{/if}
 			<a
 				href="/membership"
 				class="rounded-md bg-secondary py-3 text-center font-bold text-on-secondary"

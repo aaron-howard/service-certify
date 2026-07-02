@@ -28,6 +28,9 @@
 		explanation: string;
 	};
 
+	const convexConfigured =
+		typeof env.PUBLIC_CONVEX_URL === 'string' && env.PUBLIC_CONVEX_URL.length > 0;
+
 	const questions = $derived.by((): Q[] => {
 		const rows = bank.data;
 		if (!rows?.length) return [];
@@ -157,11 +160,15 @@
 			<p class="text-center text-on-surface-variant">Loading practice questions…</p>
 		{:else if bank.error}
 			<p class="text-center text-error">Could not load questions. Check Convex configuration.</p>
+		{:else if !convexConfigured}
+			<p class="text-center text-on-surface-variant">
+				Practice questions require Convex. Set <code class="text-primary">PUBLIC_CONVEX_URL</code> in
+				<code class="text-primary">.env.local</code> (or Vercel env) and redeploy.
+			</p>
 		{:else if questions.length === 0}
 			<p class="text-center text-on-surface-variant">
-				No practice questions for this track yet. Set <code class="text-primary">PUBLIC_CONVEX_URL</code> in
-				<code class="text-primary">.env.local</code> and run
-				<code class="text-primary">npm run seed:dev:questions</code>.
+				No practice questions for <code class="text-primary">{exam.code}</code> yet. An admin can load the
+				dev bank with <code class="text-primary">npm run seed:dev:questions</code>.
 			</p>
 		{:else}
 			{#each questions as q, i}

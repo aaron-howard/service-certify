@@ -119,7 +119,7 @@
 								<div class="h-full w-[15%] rounded-full bg-secondary"></div>
 							</div>
 							<a
-								href="/exams/cis-cloud/practice"
+								href="/exams/cis-disco/practice"
 								class="inline-block rounded-md bg-primary-fixed px-6 py-2 text-sm font-bold text-on-primary-fixed transition-opacity hover:opacity-90"
 							>
 								Resume Practice Test
