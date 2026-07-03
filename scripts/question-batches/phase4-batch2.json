@@ -1,0 +1,242 @@
+[
+	{
+		"trackCode": "CPOA",
+		"order": 10,
+		"prompt": "In the ServiceNow upgrade lifecycle, which activity should occur first for a platform owner?",
+		"choices": [
+			"Schedule production cutover immediately",
+			"Assess release notes, feature impacts, and prerequisite changes",
+			"Merge skipped updates directly in production",
+			"Disable all custom applications before planning"
+		],
+		"correctIndex": 1,
+		"explanation": "Lifecycle execution starts with assessment to understand impact, effort, and risk before timelines and environments are committed.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade/concept/upgrade-planning.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 11,
+		"prompt": "Why is validating customizations in sub-production a core lifecycle requirement?",
+		"choices": [
+			"Because production upgrades do not support rollback windows",
+			"Because only sub-production can process family upgrades",
+			"Because it identifies regressions in configurations and custom code before production impact",
+			"Because skipped updates are generated only in development instances"
+		],
+		"correctIndex": 2,
+		"explanation": "Testing customizations across lower tiers reduces production defects and confirms business-critical behavior after upgrade.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade/task/test-instance-upgrade.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 12,
+		"prompt": "Which governance artifact best supports an auditable upgrade lifecycle?",
+		"choices": [
+			"Personal notes from the lead admin",
+			"Unstructured chat transcripts",
+			"Only final release notes",
+			"Documented plan with risks, test evidence, and approval checkpoints"
+		],
+		"correctIndex": 3,
+		"explanation": "An auditable lifecycle includes formal plans and evidence for readiness, controls, and stakeholder approvals.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade/concept/upgrade-governance.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 13,
+		"prompt": "During release execution, what is the main purpose of a predefined outage communication plan?",
+		"choices": [
+			"To ensure stakeholders receive consistent status, impact, and recovery updates",
+			"To bypass change approvals during emergency upgrades",
+			"To replace upgrade testing in lower environments",
+			"To automate skipped update acceptance decisions"
+		],
+		"correctIndex": 0,
+		"explanation": "Communication plans improve coordination and user trust by setting expectations before and during maintenance windows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade/task/prepare-upgrade-communications.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 14,
+		"prompt": "What is the best post-upgrade lifecycle practice after production validation is complete?",
+		"choices": [
+			"Freeze all platform changes for the next family release",
+			"Capture lessons learned and update runbooks and standards",
+			"Delete upgrade logs to reduce storage",
+			"Clone production to development immediately without review"
+		],
+		"correctIndex": 1,
+		"explanation": "Lifecycle maturity improves when teams codify what worked, what failed, and how procedures should evolve for future upgrades.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade/concept/continuous-upgrade-improvement.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 10,
+		"prompt": "What does a skipped update indicate during a ServiceNow upgrade?",
+		"choices": [
+			"A plugin failed to activate in the target release",
+			"A base system record with local modifications was not automatically overwritten",
+			"A failed clone process interrupted dictionary updates",
+			"A subscription entitlement is missing for an application"
+		],
+		"correctIndex": 1,
+		"explanation": "Skipped updates occur when local customizations conflict with upgraded baseline records, requiring review and merge decisions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade/concept/skipped-updates.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 11,
+		"prompt": "Why should skipped update remediation happen in lower environments before production?",
+		"choices": [
+			"To verify merge outcomes and prevent production regressions",
+			"To reduce table index rebuild duration",
+			"To avoid creating change requests",
+			"To remove upgrade logs from production history"
+		],
+		"correctIndex": 0,
+		"explanation": "Pre-production remediation validates behavior and minimizes service risk when final merge actions are applied in production.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade/task/review-skipped-updates.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 12,
+		"prompt": "Which operational role is most critical when resolving high-impact skipped updates?",
+		"choices": [
+			"Catalog manager only",
+			"Security admin only",
+			"Platform owner coordinating developers, testers, and process owners",
+			"Requester approver"
+		],
+		"correctIndex": 2,
+		"explanation": "High-impact conflicts require cross-functional coordination to balance technical merge decisions with business process integrity.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade/concept/skipped-updates-governance.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 13,
+		"prompt": "Which approach best supports repeatable skipped update handling over multiple upgrade cycles?",
+		"choices": [
+			"Accept all baseline versions by default",
+			"Avoid documenting merge rationale",
+			"Resolve conflicts directly in production to save time",
+			"Maintain standardized triage criteria and decision logs for each conflict"
+		],
+		"correctIndex": 3,
+		"explanation": "Documented triage and rationale improve consistency, traceability, and future maintenance decisions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade/task/manage-skipped-update-records.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 14,
+		"prompt": "A skipped update touches a heavily customized business rule. What is the most appropriate first action?",
+		"choices": [
+			"Assess business impact and compare baseline versus customized logic before choosing merge direction",
+			"Delete the customized rule and rely on baseline behavior immediately",
+			"Ignore the skipped update until the next family release",
+			"Move the rule to a different domain to avoid conflict"
+		],
+		"correctIndex": 0,
+		"explanation": "Impact-based analysis determines whether to keep custom logic, adopt baseline changes, or refactor safely.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade/task/evaluate-skipped-update-conflicts.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 10,
+		"prompt": "For enterprise platform strategy, what is the main benefit of building in scoped applications?",
+		"choices": [
+			"Scoped apps automatically bypass ACLs",
+			"Scoped apps isolate artifacts and reduce unintended cross-app impact",
+			"Scoped apps can only run in domain-separated instances",
+			"Scoped apps eliminate the need for source control"
+		],
+		"correctIndex": 1,
+		"explanation": "Scoping creates modular boundaries that improve governance, upgrade safety, and lifecycle management at scale.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-application-development/page/build/applications/concept/c_ApplicationScopes.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 11,
+		"prompt": "When multiple enterprise teams deliver capabilities on one instance, which model is preferred?",
+		"choices": [
+			"Global-only development with unrestricted access",
+			"Single monolithic scoped app for all teams",
+			"Domain-separated update sets without app scopes",
+			"Distinct scoped apps with defined interfaces and ownership"
+		],
+		"correctIndex": 3,
+		"explanation": "Separate scoped apps with clear contracts support team autonomy while preserving platform consistency and control.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-application-development/page/build/applications/concept/scoped-app-governance.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 12,
+		"prompt": "What is a key enterprise risk of excessive cross-scope privileges?",
+		"choices": [
+			"Increased coupling that weakens isolation and complicates upgrades",
+			"Inability to create dictionary entries",
+			"Skipped updates are permanently disabled",
+			"Clone duration increases by default"
+		],
+		"correctIndex": 0,
+		"explanation": "Loose cross-scope access can blur ownership boundaries and cause unintentional dependencies across applications.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-application-development/page/build/applications/concept/c_CrossScopePrivileges.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 13,
+		"prompt": "Which governance control helps maintain secure scoped app adoption across business units?",
+		"choices": [
+			"Allow any developer to publish to production directly",
+			"Use app review standards, source control, and controlled deployment pipelines",
+			"Disable app versioning after initial release",
+			"Rely only on update set naming conventions"
+		],
+		"correctIndex": 1,
+		"explanation": "Formal review and pipeline controls ensure quality and security while enabling predictable enterprise delivery.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-application-development/page/build/applications/concept/application-lifecycle-management.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 14,
+		"prompt": "Why should platform owners standardize shared utility APIs instead of duplicating logic across scoped apps?",
+		"choices": [
+			"Duplicated logic is required for app certification",
+			"Shared APIs reduce maintenance overhead and improve consistency across teams",
+			"Shared APIs prevent all upgrade conflicts automatically",
+			"Shared APIs are available only in global scope"
+		],
+		"correctIndex": 1,
+		"explanation": "Reusable shared services limit redundant code paths and make enterprise maintenance and governance more sustainable.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-application-development/page/build/applications/task/create-and-share-script-includes.html"
+		]
+	}
+]

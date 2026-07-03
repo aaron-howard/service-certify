@@ -10,6 +10,11 @@
 	const mode = $derived(data.mode as 'sample' | 'full');
 	const isFullMock = $derived(mode === 'full');
 	const convex = useConvexClient();
+	const sessionSeed = $state(
+		typeof crypto !== 'undefined' && 'randomUUID' in crypto
+			? crypto.randomUUID()
+			: `mock-${Date.now()}`
+	);
 
 	const bank = useQuery(
 		api.practiceQuestions.listByTrackCode,
@@ -117,6 +122,7 @@
 			const payload = {
 				trackCode: exam.code,
 				mode,
+				...(isFullMock ? { sessionSeed } : {}),
 				answers: questions.map((q) => ({
 					order: q.id,
 					selectedIndex: selected[q.id]!

@@ -1,0 +1,242 @@
+[
+	{
+		"trackCode": "CIS-DF",
+		"order": 60,
+		"prompt": "What is the primary objective of a data health scan in a governed data platform?",
+		"choices": [
+			"To detect quality, completeness, and conformance issues early",
+			"To replace all ETL jobs",
+			"To prevent metadata capture",
+			"To remove stewardship roles"
+		],
+		"correctIndex": 0,
+		"explanation": "Health scans surface data reliability risks so remediation can occur before downstream consumers are impacted.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 61,
+		"prompt": "Which metric is most useful in a recurring data health scan program?",
+		"choices": [
+			"Color theme usage",
+			"Rule pass/fail trend by dataset over time",
+			"Number of dashboard viewers",
+			"Count of inactive users"
+		],
+		"correctIndex": 1,
+		"explanation": "Trend-based pass/fail metrics show whether data quality posture is improving or degrading across scan cycles.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 62,
+		"prompt": "Why should health scan findings be linked to ownership metadata?",
+		"choices": [
+			"Ownership is unrelated to remediation",
+			"It routes issues to accountable teams for timely correction",
+			"It auto-deletes failing rows",
+			"It removes need for SLAs"
+		],
+		"correctIndex": 1,
+		"explanation": "Assigning findings to dataset owners is essential for measurable and accountable issue resolution.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 63,
+		"prompt": "How should critical health scan failures be handled for certified data products?",
+		"choices": [
+			"Ignore until annual review",
+			"Trigger incident-style remediation workflows with defined timelines",
+			"Hide the dataset immediately without notice",
+			"Archive all scan history"
+		],
+		"correctIndex": 1,
+		"explanation": "Critical failures on trusted datasets need structured, time-bound response to protect consumer confidence.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 64,
+		"prompt": "What is the best reason to retain historical health scan results?",
+		"choices": [
+			"To support root-cause analysis and evidence-based quality improvements",
+			"To reduce storage costs",
+			"To prevent audits",
+			"To avoid stakeholder reporting"
+		],
+		"correctIndex": 0,
+		"explanation": "Historical scan evidence helps teams identify recurring defect patterns and validate sustained remediation outcomes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 60,
+		"prompt": "What is the purpose of advanced breakdowns in Performance Analytics?",
+		"choices": [
+			"To segment indicators across complex, multi-level dimensions for deeper analysis",
+			"To disable drilldowns",
+			"To replace all indicators",
+			"To configure MID capabilities"
+		],
+		"correctIndex": 0,
+		"explanation": "Advanced breakdowns enable richer slicing paths that reveal where performance drivers differ across segments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 61,
+		"prompt": "When should a breakdown source be optimized for cardinality?",
+		"choices": [
+			"When dimensions contain many unique values that could degrade query performance",
+			"Only when building incident forms",
+			"Never, cardinality is irrelevant",
+			"Only for catalog tasks"
+		],
+		"correctIndex": 0,
+		"explanation": "High-cardinality dimensions can impact analytics performance, so design should balance detail and usability.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 62,
+		"prompt": "How do element filtering and advanced breakdowns work together?",
+		"choices": [
+			"Filtering narrows analysis to relevant segments within the breakdown hierarchy",
+			"Filtering removes all historical values",
+			"They cannot be combined",
+			"They only apply to SLA records"
+		],
+		"correctIndex": 0,
+		"explanation": "Element filters focus analysis on meaningful slices while preserving the overall breakdown model.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 63,
+		"prompt": "Why should advanced breakdown definitions be governed with naming standards?",
+		"choices": [
+			"Standards make reusable analytics artifacts easier to find and maintain",
+			"Names do not affect maintainability",
+			"Standards block dashboard sharing",
+			"Standards disable data collection jobs"
+		],
+		"correctIndex": 0,
+		"explanation": "Clear naming and governance reduce duplicate artifacts and improve long-term analytics maintainability.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 64,
+		"prompt": "What is a common validation step before promoting advanced breakdowns to production?",
+		"choices": [
+			"Confirm trend and score widgets still resolve correctly with expected drilldowns",
+			"Delete indicator history",
+			"Disable threshold logic",
+			"Remove role-based access checks"
+		],
+		"correctIndex": 0,
+		"explanation": "Promotion validation ensures dashboards and drilldowns behave as expected after advanced breakdown changes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 60,
+		"prompt": "In Service Mapping, what is the intent of proactive workflows?",
+		"choices": [
+			"To automatically detect and address mapping/data issues before major impact",
+			"To replace CMDB entirely",
+			"To stop all discovery runs",
+			"To approve change requests"
+		],
+		"correctIndex": 0,
+		"explanation": "Proactive workflows focus on early detection and automation to reduce service mapping disruption risk.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 61,
+		"prompt": "Which event is a strong trigger for a proactive service mapping workflow?",
+		"choices": [
+			"Repeated pattern execution failure on critical business services",
+			"A user changing theme preferences",
+			"Creation of a non-IT catalog item",
+			"A one-time successful discovery result"
+		],
+		"correctIndex": 0,
+		"explanation": "Repeated failures on critical services indicate systemic risk and should trigger automated response workflows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 62,
+		"prompt": "How can proactive workflows improve mapping reliability?",
+		"choices": [
+			"By correlating health signals and launching guided remediation tasks",
+			"By disabling alerts",
+			"By removing service entry points",
+			"By forcing manual-only updates"
+		],
+		"correctIndex": 0,
+		"explanation": "Signal correlation plus automated tasking helps teams respond quickly and consistently to mapping degradation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 63,
+		"prompt": "Why should proactive workflows include stakeholder notifications?",
+		"choices": [
+			"To ensure service owners are informed of topology risk and remediation status",
+			"Notifications are unnecessary for mapping issues",
+			"Only admins should know about failures",
+			"To suppress operational dashboards"
+		],
+		"correctIndex": 0,
+		"explanation": "Transparent communication keeps service owners aligned on impact, risk, and remediation progress.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 64,
+		"prompt": "What governance measure best supports sustainable proactive workflow automation?",
+		"choices": [
+			"Define runbooks, ownership, and success metrics for each automated response",
+			"Create workflows without documentation",
+			"Disable audit logging",
+			"Use one workflow for every failure type"
+		],
+		"correctIndex": 0,
+		"explanation": "Documented runbooks and measurable success criteria keep automation reliable, auditable, and continuously improvable.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+		]
+	}
+]

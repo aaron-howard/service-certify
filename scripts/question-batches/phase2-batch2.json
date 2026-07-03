@@ -1,0 +1,246 @@
+[
+	{
+		"trackCode": "CSA",
+		"order": 35,
+		"prompt": "A user says they can find a module by searching in the filter navigator, but they do not know which application owns it. Which interface behavior helps identify the owning application before opening the module?",
+		"choices": [
+			"Checking the module entry shown under its application section in the navigator results",
+			"Opening System Logs and searching for the module label",
+			"Reviewing the MID Server capability table",
+			"Exporting the Application Picker choices to XML"
+		],
+		"correctIndex": 0,
+		"explanation": "Navigator search surfaces matching modules within their application grouping, so users can see which application contains the module before they click it.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/navigation-and-search/filter-navigator.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 36,
+		"prompt": "An analyst needs to work only in the Service Desk application and avoid modules from other apps cluttering the menu. What should they do?",
+		"choices": [
+			"Set the Application Picker to Service Desk so navigator content scopes to that app",
+			"Enable elevated privileges with security_admin",
+			"Delete modules from other applications",
+			"Switch the list layout to compact mode"
+		],
+		"correctIndex": 0,
+		"explanation": "The Application Picker controls which application's navigation items are shown, helping users focus on relevant modules.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/navigation-and-search/application-picker.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 37,
+		"prompt": "A module is available to a role, but a user still cannot see it in the navigation menu. Which condition is most likely causing this?",
+		"choices": [
+			"The module's application menu is inactive or not visible to the user context",
+			"The user has too many records in sys_user",
+			"The instance has no active SLA definitions",
+			"The module has more than one list layout"
+		],
+		"correctIndex": 0,
+		"explanation": "Even with role access, users need the module's parent application/menu context to be available and visible in navigation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/application-menus-and-modules/configure-application-menus-and-modules.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 38,
+		"prompt": "What is the main purpose of an application menu in the platform navigator?",
+		"choices": [
+			"To group related modules for a functional area or app",
+			"To store encrypted credentials for integrations",
+			"To execute background scripts on schedule",
+			"To replace ACL evaluation for table access"
+		],
+		"correctIndex": 0,
+		"explanation": "Application menus organize related modules so users can find and launch app functionality from a single logical grouping.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/application-menus-and-modules/configure-application-menus-and-modules.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 39,
+		"prompt": "A fulfillment lead opens Records > Incidents repeatedly throughout the day and wants one-click access from the left navigator. Which action best meets this need?",
+		"choices": [
+			"Mark the module as a favorite so it appears in Favorites",
+			"Create a new table extension for incident",
+			"Disable all other navigation modules",
+			"Change the incident number format"
+		],
+		"correctIndex": 0,
+		"explanation": "Favoriting frequently used modules adds quick access shortcuts without changing the underlying application or module configuration.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/navigation-and-search/use-favorites-in-the-application-navigator.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 35,
+		"prompt": "A before business rule is configured with no Condition and Active = true. What does the platform do when records on that table are inserted or updated?",
+		"choices": [
+			"Runs the rule for every matching operation because no condition limits execution",
+			"Runs the rule only when the admin role opens the record",
+			"Runs the rule once per day at midnight",
+			"Skips the rule unless a UI Policy sets a field mandatory"
+		],
+		"correctIndex": 0,
+		"explanation": "Active business rules with the selected timing/operations execute whenever those operations occur unless a condition script or filter restricts them.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/business-rules/create-a-business-rule.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 36,
+		"prompt": "Which setting helps developers see useful debugging output from server-side scripts such as business rules during testing?",
+		"choices": [
+			"Writing messages with gs.info/gs.debug and reviewing them in System Logs",
+			"Using g_form.addInfoMessage in a server script",
+			"Changing the table label to include debug text",
+			"Editing list personalization for the syslog table"
+		],
+		"correctIndex": 0,
+		"explanation": "Server-side debugging commonly uses GlideSystem logging methods, then developers inspect the resulting entries in system logs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/server-side-scripting/glidesystem-api.html",
+			"https://www.servicenow.com/docs/r/platform-administration/monitoring-and-logging/system-logs.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 37,
+		"prompt": "A developer needs counts of incidents by assignment group without iterating every incident record. Which API is designed for this?",
+		"choices": [
+			"GlideAggregate with groupBy and aggregate functions",
+			"GlideDateTime with addDays",
+			"RESTMessageV2 with execute",
+			"GlideImportSetTransformer"
+		],
+		"correctIndex": 0,
+		"explanation": "GlideAggregate performs grouped aggregate queries (such as COUNT by field) efficiently on the database.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/server-side-scripting/glideaggregate-api.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 38,
+		"prompt": "When troubleshooting a business rule that updates records unexpectedly, which approach is most appropriate first?",
+		"choices": [
+			"Temporarily narrow the rule condition and add targeted log statements to trace execution",
+			"Delete all related business rules and recreate from memory",
+			"Disable ACLs so the rule can run unrestricted",
+			"Move the logic into a client script and retest"
+		],
+		"correctIndex": 0,
+		"explanation": "A safe first step is to limit when the rule fires and instrument execution paths with logs so root cause can be observed without broad platform disruption.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/business-rules/create-a-business-rule.html",
+			"https://www.servicenow.com/docs/r/application-development/server-side-scripting/glidesystem-api.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 39,
+		"prompt": "In a GlideAggregate query, what is the effect of calling groupBy('priority') before query()?",
+		"choices": [
+			"Returns aggregate results partitioned by each priority value",
+			"Forces the script to sort records alphabetically by caller name",
+			"Converts the query into a deleteMultiple operation",
+			"Restricts output to only priority 1 incidents"
+		],
+		"correctIndex": 0,
+		"explanation": "groupBy defines the dimension for aggregate buckets, so results are returned per distinct priority rather than as one overall total.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/server-side-scripting/glideaggregate-api.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 35,
+		"prompt": "A customer orders a laptop through the Service Catalog. Which record tracks the overall request while still allowing multiple requested items under it?",
+		"choices": [
+			"The Request record on sc_request",
+			"A single Incident record",
+			"A Change record in normal state",
+			"A CMDB CI class record"
+		],
+		"correctIndex": 0,
+		"explanation": "The sc_request record represents the parent request and can contain one or many requested items submitted in the same cart checkout.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/service-catalog-management/request-fulfillment.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 36,
+		"prompt": "What is the role of `sc_task` in request fulfillment?",
+		"choices": [
+			"It represents fulfillment work assigned to groups or individuals for a requested item",
+			"It stores only catalog item images",
+			"It replaces approvals on all request items",
+			"It archives closed requests to external storage"
+		],
+		"correctIndex": 0,
+		"explanation": "Catalog tasks (`sc_task`) are the actionable fulfillment tasks generated to complete work for requested items.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/service-catalog-management/request-fulfillment.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 37,
+		"prompt": "A catalog item requires approvals and then provisioning tasks. Where is this sequence typically orchestrated in modern implementations?",
+		"choices": [
+			"In Flow Designer request fulfillment flows associated with the catalog item",
+			"In list personalization rules",
+			"In the sys_user table business logic only",
+			"In dashboard widgets without backend actions"
+		],
+		"correctIndex": 0,
+		"explanation": "Catalog workflows are commonly implemented with Flow Designer to coordinate approval gates and fulfillment task generation for request items.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/service-catalog-management/request-fulfillment.html",
+			"https://www.servicenow.com/docs/r/process-automation/flow-designer/flow-designer.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 38,
+		"prompt": "If one request contains three requested items, what should fulfillment managers expect regarding task creation?",
+		"choices": [
+			"Tasks can be created per requested item based on each item's workflow requirements",
+			"Only one task is ever allowed per request",
+			"Tasks are created only after the request is closed",
+			"Tasks are replaced automatically by incidents"
+		],
+		"correctIndex": 0,
+		"explanation": "Each requested item can drive its own fulfillment path, so multiple `sc_task` records may be generated according to item-specific flow logic.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/service-catalog-management/request-fulfillment.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 39,
+		"prompt": "A catalog workflow should route software-access tasks to one group and hardware-delivery tasks to another. Which design supports this best?",
+		"choices": [
+			"Use conditional flow logic that creates and assigns `sc_task` records to different groups by request data",
+			"Hard-code all tasks to Service Desk regardless of item type",
+			"Disable assignment groups on catalog tasks",
+			"Convert all catalog requests to problem records"
+		],
+		"correctIndex": 0,
+		"explanation": "Conditional branching in request fulfillment flows allows task assignment to vary by variables, item type, or other request context.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/service-catalog-management/request-fulfillment.html",
+			"https://www.servicenow.com/docs/r/process-automation/flow-designer/flow-designer.html"
+		]
+	}
+]

@@ -1,0 +1,242 @@
+[
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 15,
+		"prompt": "What is the primary purpose of Discovery credential records?",
+		"choices": [
+			"To provide protocol-specific authentication used by probes and patterns to access target devices",
+			"To define event severity mapping for connector sources",
+			"To assign hardware assets to stockrooms automatically",
+			"To replace MID Server service account validation"
+		],
+		"correctIndex": 0,
+		"explanation": "Discovery credentials store the authentication details needed for protocol access across discovered endpoints.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/discovery-credentials.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 16,
+		"prompt": "A credential test succeeds for SSH but Linux devices still fail classification. What should be checked next?",
+		"choices": [
+			"Whether credential order, IP ranges, and classification pattern conditions align with the target devices",
+			"Whether stockroom transfer rules are enabled",
+			"Whether event rules create incidents automatically",
+			"Whether hardware models have depreciation schedules"
+		],
+		"correctIndex": 0,
+		"explanation": "Credential success alone is not enough; matching logic and pattern prerequisites must align with the discovery target profile.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/troubleshoot-discovery-credentials.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 17,
+		"prompt": "Which credential governance approach is most appropriate for enterprise Discovery?",
+		"choices": [
+			"Use one shared root account for all protocols and domains",
+			"Store discovery credentials in update set XML files for audit",
+			"Segment credentials by environment or domain and apply least-privilege with controlled rotation",
+			"Disable credential testing to reduce MID Server overhead"
+		],
+		"correctIndex": 2,
+		"explanation": "Segmentation and least privilege improve security and reduce blast radius while supporting compliant operations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_CredentialsAndSecrets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 18,
+		"prompt": "When multiple credentials are configured for a schedule, why is credential affinity or ordering important?",
+		"choices": [
+			"It forces all probes to run on one MID Server",
+			"It prevents CMDB identification from creating duplicates",
+			"It allows event connectors to reuse discovery accounts",
+			"It can reduce failed attempts and scan time by trying likely-valid credentials first"
+		],
+		"correctIndex": 3,
+		"explanation": "Ordered credential execution improves efficiency and lowers failed authentication attempts during scans.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/configure-credential-affinity.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 19,
+		"prompt": "Which metric most directly indicates improving Discovery credential quality over time?",
+		"choices": [
+			"Higher credential success rates with fewer authentication failures per scan",
+			"Increased number of model categories in HAM",
+			"Greater total event volume in EM",
+			"Reduced number of stockroom locations"
+		],
+		"correctIndex": 0,
+		"explanation": "Credential effectiveness is best measured by successful authentications and reduced failed login attempts in discovery jobs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/view-discovery-status-and-logs.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 15,
+		"prompt": "In Event Management, what is a listener primarily responsible for?",
+		"choices": [
+			"It receives inbound event streams and forwards normalized payloads into the event ingestion pipeline",
+			"It enriches hardware model records with procurement cost",
+			"It schedules Discovery scans by subnet",
+			"It runs stockroom reconciliation jobs"
+		],
+		"correctIndex": 0,
+		"explanation": "Listeners provide the inbound interface for external events, enabling them to enter EM processing workflows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-listeners.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 16,
+		"prompt": "An event source sends data but no alerts are generated. Which listener check should come first?",
+		"choices": [
+			"Whether listener endpoint/protocol configuration is active and receiving expected payload format",
+			"Whether CMDB CI class manager is active",
+			"Whether stockroom inventory falls below threshold",
+			"Whether discovery credentials include WMI access"
+		],
+		"correctIndex": 0,
+		"explanation": "If listener configuration is inactive or payload format does not match expected parsing, events may never enter rule evaluation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/task/troubleshoot-event-ingestion.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 17,
+		"prompt": "Why should listener capacity and throughput be monitored in high-volume environments?",
+		"choices": [
+			"To ensure event ingestion keeps pace and prevents delayed alert creation during spikes",
+			"To disable deduplication for critical events",
+			"To force one connector per business service",
+			"To bypass event rules when source tools are unavailable"
+		],
+		"correctIndex": 0,
+		"explanation": "Throughput monitoring reveals bottlenecks that can delay detection and response when event rates increase.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-management-monitoring.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 18,
+		"prompt": "Which listener deployment strategy improves resilience?",
+		"choices": [
+			"Keep one listener endpoint with no failover to simplify operations",
+			"Turn off TLS to reduce listener overhead",
+			"Use redundant listener paths and health checks aligned with expected source load",
+			"Bind all listeners to a single non-production MID Server"
+		],
+		"correctIndex": 2,
+		"explanation": "Redundancy and health monitoring reduce ingestion outage risk and maintain event flow continuity.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/high-availability-for-event-ingestion.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 19,
+		"prompt": "What is a common governance control for listener changes in production?",
+		"choices": [
+			"Allow runtime endpoint edits without validation",
+			"Store listener credentials in plain text comments",
+			"Disable change tracking for listener records",
+			"Require change approval, test evidence, and rollback planning before listener reconfiguration"
+		],
+		"correctIndex": 3,
+		"explanation": "Listener changes affect ingestion reliability and security, so controlled change processes reduce outage and compliance risk.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/change-management/concept/change-management-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 15,
+		"prompt": "What does an asset lifecycle state represent in HAM?",
+		"choices": [
+			"It reflects where an asset is in its managed process (for example in stock, in use, retired) and drives workflow behavior",
+			"It stores the CI relationship type for service mapping",
+			"It controls event severity for connector alerts",
+			"It identifies which MID Server discovered the asset"
+		],
+		"correctIndex": 0,
+		"explanation": "Lifecycle states track progression through operational and financial handling stages and often gate allowed actions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/asset-lifecycle.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 16,
+		"prompt": "A retired asset is still allocated to a user and appears in active inventory reports. Which control likely failed?",
+		"choices": [
+			"Lifecycle transition governance and reconciliation between state/substate and assignment data",
+			"Connector endpoint mapping",
+			"Discovery credential affinity",
+			"Event listener health checks"
+		],
+		"correctIndex": 0,
+		"explanation": "State transition controls should enforce consistency so retired assets are not treated as active assigned inventory.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/task/manage-asset-state-transitions.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 17,
+		"prompt": "Why should lifecycle state changes be tied to governed workflows rather than ad hoc manual edits?",
+		"choices": [
+			"Manual edits always improve auditability",
+			"Workflows enforce approvals, required data updates, and audit traceability for state transitions",
+			"Manual state updates are required for stock transfers",
+			"Workflow-based changes prevent integration with procurement"
+		],
+		"correctIndex": 1,
+		"explanation": "Governed workflows ensure lifecycle transitions occur with policy-compliant controls and complete audit records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/asset-process-controls.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 18,
+		"prompt": "Which KPI best indicates lifecycle process maturity?",
+		"choices": [
+			"Total number of models in the product catalog",
+			"Average number of listeners per connector",
+			"Percentage of assets following expected state transitions with low exception rework",
+			"Count of discovery schedules per month"
+		],
+		"correctIndex": 2,
+		"explanation": "Transition conformance and low exception rates show lifecycle governance is operating consistently.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/asset-management-kpis.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 19,
+		"prompt": "What is the biggest risk of allowing direct state changes to \"Retired\" without prerequisite checks?",
+		"choices": [
+			"It improves financial close timelines too much",
+			"It prevents all transfer orders from closing",
+			"It can skip required recovery, data wipe, or disposal controls and create compliance exposure",
+			"It causes event connectors to stop ingesting alerts"
+		],
+		"correctIndex": 2,
+		"explanation": "Retirement often requires mandatory controls; bypassing them can produce audit, security, and compliance issues.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/disposition-and-retirement.html"
+		]
+	}
+]

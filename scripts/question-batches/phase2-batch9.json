@@ -1,0 +1,114 @@
+[
+	{
+		"trackCode": "CSA",
+		"order": 70,
+		"prompt": "What is the primary value of Admin Center for ServiceNow administrators?",
+		"choices": [
+			"It centralizes administrative insights and guided tasks so admins can quickly monitor instance posture and take action",
+			"It replaces Flow Designer for all workflow automation",
+			"It stores only discovery patterns and probes",
+			"It disables role-based access controls during setup"
+		],
+		"correctIndex": 0,
+		"explanation": "Admin Center provides a consolidated administrative experience that helps platform owners track key setup, health, and governance activities.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-platform-administration/page/administer/admin-center/concept/admin-center.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 71,
+		"prompt": "How does Setup Hub help new instance administrators accelerate platform readiness?",
+		"choices": [
+			"It offers guided setup experiences and recommended configuration steps for foundational platform capabilities",
+			"It automatically migrates all update sets to production without review",
+			"It removes the need for users, groups, and roles",
+			"It runs client-side scripts to enforce browser compatibility"
+		],
+		"correctIndex": 0,
+		"explanation": "Setup Hub organizes essential onboarding and configuration work so administrators can establish core platform capabilities in a structured way.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-platform-administration/page/administer/setup-hub/concept/setup-hub.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 70,
+		"prompt": "In ITSM, what does Predictive Intelligence primarily provide for ticket operations?",
+		"choices": [
+			"Machine learning predictions such as assignment group, category, and priority recommendations based on historical records",
+			"A replacement for CMDB data model governance",
+			"Automatic closure of all incidents without analyst review",
+			"Mandatory change approval policy enforcement"
+		],
+		"correctIndex": 0,
+		"explanation": "Predictive Intelligence applies trained ML solutions to incoming records to help standardize and speed ticket triage.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/administer/predictive-intelligence/concept/predictive-intelligence.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 71,
+		"prompt": "Why is quality historical incident data important before training a Predictive Intelligence solution?",
+		"choices": [
+			"Because ML model accuracy depends on consistent, representative labeled data from prior records",
+			"Because Predictive Intelligence can only train on closed problem records",
+			"Because training requires disabling business rules on incident",
+			"Because the model uses only MID Server logs"
+		],
+		"correctIndex": 0,
+		"explanation": "Well-labeled and representative training data directly improves prediction quality and reliability for production routing use cases.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/administer/predictive-intelligence/task/train-a-solution.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 72,
+		"prompt": "What is a practical benefit of using ML-based assignment group prediction for incidents?",
+		"choices": [
+			"It can reduce manual triage effort and misroutes by recommending the most likely resolver group at intake",
+			"It eliminates the need for assignment groups entirely",
+			"It routes all incidents to major incident management",
+			"It forces every ticket to be categorized as low priority"
+		],
+		"correctIndex": 0,
+		"explanation": "Assignment prediction helps route tickets faster and more consistently, improving response flow and reducing reassignment churn.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/administer/predictive-intelligence/concept/classification-solutions.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 73,
+		"prompt": "When introducing Predictive Intelligence routing recommendations, what governance practice is most appropriate?",
+		"choices": [
+			"Monitor model performance and retrain periodically as ticket patterns and support ownership evolve",
+			"Disable all assignment rules permanently",
+			"Train once and never review confidence or outcomes",
+			"Use ML only for catalog variables, not ITSM records"
+		],
+		"correctIndex": 0,
+		"explanation": "Ongoing monitoring and retraining keeps predictions aligned with real operational patterns and organizational changes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/administer/predictive-intelligence/task/monitor-solution-performance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 74,
+		"prompt": "How should ITSM teams use low-confidence routing predictions from Predictive Intelligence?",
+		"choices": [
+			"Use confidence thresholds so uncertain predictions are reviewed by analysts instead of auto-routed blindly",
+			"Ignore confidence and auto-assign every ticket",
+			"Delete low-confidence incidents from the queue",
+			"Convert low-confidence incidents directly into change requests"
+		],
+		"correctIndex": 0,
+		"explanation": "Confidence-aware handling supports safer automation by blending ML recommendations with human oversight when certainty is low.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/administer/predictive-intelligence/task/configure-solution-definition.html"
+		]
+	}
+]

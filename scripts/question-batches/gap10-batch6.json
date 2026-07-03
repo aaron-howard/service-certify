@@ -1,0 +1,427 @@
+[
+  {
+    "trackCode": "CIS-SM",
+    "order": 85,
+    "prompt": "Which validation activity most improves trust in a newly onboarded service map?",
+    "choices": [
+      "Comparing discovered dependencies with known architecture and owner feedback",
+      "Reviewing only CI class names",
+      "Waiting for the first outage to test map usefulness",
+      "Publishing the map without service owner sign-off"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cross-checking discovered topology with documented design and owner knowledge verifies practical accuracy.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_MaintainServiceMap.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 85,
+    "prompt": "What is the best way to reduce surprise true-up costs in SAM?",
+    "choices": [
+      "Run periodic reconciliations and remediate shortfalls before renewal events",
+      "Reconcile only when vendor audit notices arrive",
+      "Exclude cloud subscriptions from SAM scope",
+      "Treat exceptions as permanent by default"
+    ],
+    "correctIndex": 0,
+    "explanation": "Frequent reconciliation and proactive remediation reduce financial shock at audit or renewal time.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/software-asset-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 85,
+    "prompt": "A vendor is business-critical but currently medium residual risk. What is the best TPRM action?",
+    "choices": [
+      "Lower monitoring frequency because residual risk is not high",
+      "Increase reassessment cadence and monitor remediation milestones with business owner visibility",
+      "Close all open findings and revisit at contract renewal",
+      "Remove the vendor from executive reporting"
+    ],
+    "correctIndex": 1,
+    "explanation": "Business criticality can justify heightened monitoring even when residual risk is moderate.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 85,
+    "prompt": "Which practice best reduces recurrence of critical vulnerabilities in VR?",
+    "choices": [
+      "Prioritize closure count over root-cause analysis",
+      "Limit remediation to temporary compensating controls",
+      "Track recurring patterns and feed lessons into patch/process hardening",
+      "Ignore vulnerabilities on non-production assets"
+    ],
+    "correctIndex": 2,
+    "explanation": "Recurring-risk analysis supports durable fixes rather than repeated short-term remediation cycles.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-prioritization.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 85,
+    "prompt": "What is the most useful CSM metric for evaluating customer effort?",
+    "choices": [
+      "Average number of internal assignment group transfers per resolved case",
+      "Total number of active users in workspace",
+      "Count of open knowledge articles",
+      "Daily inbound email volume"
+    ],
+    "correctIndex": 0,
+    "explanation": "Excessive handoffs usually increase friction, delay resolution, and raise customer effort.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/case-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 86,
+    "prompt": "Why is service ownership metadata important for Service Mapping operations?",
+    "choices": [
+      "It determines CMDB table inheritance",
+      "It enables accountable map validation, change approvals, and remediation routing",
+      "It replaces discovery credentials",
+      "It removes the need for business services"
+    ],
+    "correctIndex": 1,
+    "explanation": "Clear ownership supports governed decisions and faster correction when mapping issues are found.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/c_CMDB.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 86,
+    "prompt": "Which SAM reporting perspective is most useful for remediation planning?",
+    "choices": [
+      "Compliance position segmented by publisher, business unit, and risk severity",
+      "Total number of software models created this month",
+      "List of all non-SAM requests in service catalog",
+      "Count of CMDB classes with installed software"
+    ],
+    "correctIndex": 0,
+    "explanation": "Segmentation by publisher and business ownership helps target the highest-impact compliance remediation actions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 86,
+    "prompt": "What is the strongest reason to tie TPRM findings to issue management workflows?",
+    "choices": [
+      "To avoid assigning accountable owners",
+      "To convert all findings into informational records",
+      "To track remediation accountability, due dates, and closure evidence consistently",
+      "To eliminate reassessment requirements"
+    ],
+    "correctIndex": 2,
+    "explanation": "Issue workflows create traceability and governance for third-party risk remediation lifecycle.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 86,
+    "prompt": "Which triage behavior most improves prioritization quality in VR?",
+    "choices": [
+      "Prioritize strictly by CVSS score without asset context",
+      "Triage by record creation time only",
+      "Combine technical severity with exploit intelligence and business criticality",
+      "Route all items to one resolver team"
+    ],
+    "correctIndex": 2,
+    "explanation": "Risk-informed triage requires both technical and business context to focus limited remediation capacity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-prioritization.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-response.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 86,
+    "prompt": "A case is solved, but the customer reports the issue recurring weekly. What should CSM teams do first?",
+    "choices": [
+      "Close the case permanently after one response",
+      "Open root-cause follow-up using case history and related records before final closure",
+      "Reassign to a random queue",
+      "Disable customer update notifications"
+    ],
+    "correctIndex": 1,
+    "explanation": "Recurring issues require root-cause investigation and structured follow-up to prevent repeat contacts.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/case-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/continual-improvement-management/concept/continual-improvement-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 87,
+    "prompt": "Which governance signal suggests Service Mapping configuration drift?",
+    "choices": [
+      "Stable map freshness and low dependency correction backlog",
+      "Growing number of emergency map edits and unresolved topology discrepancies",
+      "Regular owner reviews after major releases",
+      "Documented onboarding checklists for new services"
+    ],
+    "correctIndex": 1,
+    "explanation": "Frequent emergency edits and unresolved gaps indicate weak change governance and accumulating drift.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_MaintainServiceMap.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 87,
+    "prompt": "Why should SAM exception records have expiration and revalidation requirements?",
+    "choices": [
+      "To increase short-term compliance dashboards",
+      "To ensure temporary risk acceptance does not become permanent control bypass",
+      "To reduce the need for entitlement records",
+      "To avoid annual internal audits"
+    ],
+    "correctIndex": 1,
+    "explanation": "Time-bound exceptions force periodic review and prevent long-term governance erosion.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/concept/policy-and-compliance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 87,
+    "prompt": "Which dashboard dimension is most important for prioritizing third-party remediation workload?",
+    "choices": [
+      "Vendor creation date",
+      "Number of questionnaire sections completed",
+      "Residual risk tier and remediation aging",
+      "Country of headquarters only"
+    ],
+    "correctIndex": 2,
+    "explanation": "Risk tier combined with aging exposes where unresolved third-party issues create the highest urgency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 87,
+    "prompt": "What is the primary risk of closing vulnerability records without verification evidence?",
+    "choices": [
+      "Increased dashboard load times",
+      "False risk reduction reporting and unresolved exposure in production",
+      "Reduced number of assignment groups",
+      "Longer scanner import duration"
+    ],
+    "correctIndex": 1,
+    "explanation": "Without verification, closed records may misstate risk posture while vulnerabilities remain exploitable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 87,
+    "prompt": "Which CSM process control most improves consistency in multi-team handoffs?",
+    "choices": [
+      "Mandatory transfer reason codes and next-action ownership fields",
+      "Free-text handoff notes only",
+      "Optional assignment group updates",
+      "Manual escalation through chat threads"
+    ],
+    "correctIndex": 0,
+    "explanation": "Structured transfer controls preserve context and accountability during cross-team case progression.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/case-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/data-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 88,
+    "prompt": "Which metric is most meaningful for measuring Service Mapping maintenance discipline?",
+    "choices": [
+      "Number of maps created this quarter",
+      "Percentage of business-critical maps reviewed and updated within defined cadence",
+      "Count of CIs by operating system",
+      "Average incident resolution time across all services"
+    ],
+    "correctIndex": 1,
+    "explanation": "Cadence-based review compliance directly measures whether map governance practices are being followed.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_MaintainServiceMap.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 88,
+    "prompt": "Which action best supports SaaS optimization in SAM?",
+    "choices": [
+      "Review usage patterns and reclaim or down-tier underutilized subscriptions through approved workflows",
+      "Increase all SaaS subscriptions to enterprise tier",
+      "Ignore role-based ownership for SaaS products",
+      "Track SaaS only in procurement spreadsheets"
+    ],
+    "correctIndex": 0,
+    "explanation": "Usage-driven optimization with governance controls reduces spend while preserving service outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/software-asset-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 88,
+    "prompt": "What is the best reason to map TPRM controls to policy requirements?",
+    "choices": [
+      "To shorten questionnaires by removing evidence fields",
+      "To improve traceability from risk findings to governance obligations",
+      "To avoid remediation ownership assignments",
+      "To eliminate need for residual risk scoring"
+    ],
+    "correctIndex": 1,
+    "explanation": "Policy-control traceability strengthens auditability and clarifies why remediation actions are required.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/concept/policy-and-compliance.html",
+      "https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 88,
+    "prompt": "Which VR operating model most effectively supports enterprise-scale remediation?",
+    "choices": [
+      "Central policy with decentralized execution by accountable service teams",
+      "Single remediation queue for every business unit and platform",
+      "No ownership model until quarterly reviews",
+      "Ad hoc prioritization by individual analysts"
+    ],
+    "correctIndex": 0,
+    "explanation": "Central standards with local accountable execution balances consistency and delivery speed at scale.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 88,
+    "prompt": "Which indicator most clearly shows CSM knowledge deflection is working?",
+    "choices": [
+      "Higher portal login count with no case trend changes",
+      "Increase in unresolved backlog age",
+      "Reduction in repeat low-complexity case volume for topics covered by high-use knowledge",
+      "More manual case reassignments"
+    ],
+    "correctIndex": 2,
+    "explanation": "Deflection value appears when repetitive, knowledge-addressable issues generate fewer assisted cases.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/csm-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 89,
+    "prompt": "A newly acquired system must be mapped quickly without degrading quality. What approach is best?",
+    "choices": [
+      "Skip validation and accept first discovered topology",
+      "Use phased onboarding with minimum governance checks, owner validation, and post-go-live review",
+      "Wait one year before creating a map",
+      "Map only infrastructure, not service dependencies"
+    ],
+    "correctIndex": 1,
+    "explanation": "Phased onboarding enables timely coverage while preserving quality and accountability controls.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_MaintainServiceMap.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 89,
+    "prompt": "Which scenario most strongly indicates SAM process maturity?",
+    "choices": [
+      "Reconciliations complete on schedule, exceptions revalidated, and renewal decisions based on usage/compliance data",
+      "Compliance reports generated only when requested by auditors",
+      "Frequent emergency admin overrides in production",
+      "Persistent unmatched discovery titles with no owner"
+    ],
+    "correctIndex": 0,
+    "explanation": "Maturity is reflected by predictable operations, governed exceptions, and data-driven financial decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 89,
+    "prompt": "Which enterprise KPI set best demonstrates TPRM program health?",
+    "choices": [
+      "Vendors by country and questionnaire length",
+      "High-risk vendor count, overdue remediation aging, and on-time reassessment rate",
+      "Number of users with admin role",
+      "Daily volume of vendor profile edits"
+    ],
+    "correctIndex": 1,
+    "explanation": "These measures capture risk exposure, remediation discipline, and assessment lifecycle reliability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 89,
+    "prompt": "Which outcome best shows a VR program is becoming proactive rather than reactive?",
+    "choices": [
+      "Most remediation starts only after SLA breaches",
+      "Critical vulnerability backlog steadily declines while repeat findings are reduced",
+      "Exception volume grows faster than closures",
+      "Teams postpone ownership assignment until weekly meetings"
+    ],
+    "correctIndex": 1,
+    "explanation": "Sustained backlog and recurrence reduction indicates preventive control and faster risk response.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 89,
+    "prompt": "Which operating practice most improves long-term CSM service quality?",
+    "choices": [
+      "Case-by-case process customization with no baseline governance",
+      "Quarterly disablement of all SLA alerts",
+      "Regular KPI-driven reviews with corrective actions on breach, reopen, and escalation trends",
+      "Closing customer feedback channels after major incidents"
+    ],
+    "correctIndex": 2,
+    "explanation": "Continuous, metric-based governance drives targeted improvements and stable customer outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/csm-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html"
+    ]
+  }
+]

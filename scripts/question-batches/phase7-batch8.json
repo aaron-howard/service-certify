@@ -1,0 +1,172 @@
+[
+  {
+    "trackCode": "CIS-SAM",
+    "order": 40,
+    "prompt": "In SAM, what is the primary goal of software optimization activities?",
+    "choices": [
+      "Reduce cost and compliance risk by aligning entitlements to real usage",
+      "Increase software deployment volume regardless of demand",
+      "Replace reconciliation with yearly manual audits",
+      "Disable all reclamation notifications"
+    ],
+    "correctIndex": 0,
+    "explanation": "Optimization ensures software spend and risk posture reflect actual business consumption.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 41,
+    "prompt": "Which optimization tactic usually delivers the fastest measurable SAM savings?",
+    "choices": [
+      "Disable software model governance",
+      "Reclaim low-usage licenses and reallocate them before purchasing new rights",
+      "Ignore renewal dates until the procurement deadline",
+      "Move all software contracts to one shared vendor account"
+    ],
+    "correctIndex": 1,
+    "explanation": "Reclaim-and-reuse workflows produce direct avoidable-cost savings quickly.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-reclamation.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_ReclaimUnusedSoftware.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 42,
+    "prompt": "Why should optimization opportunities be segmented by publisher and business unit?",
+    "choices": [
+      "To avoid stakeholder accountability",
+      "To route all actions through service desk incidents",
+      "To target highest-impact savings and remediation where exposure is concentrated",
+      "To eliminate the need for entitlement data"
+    ],
+    "correctIndex": 2,
+    "explanation": "Segmentation focuses optimization on areas with the largest financial or compliance leverage.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-compliance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 43,
+    "prompt": "Which anti-pattern most undermines continuous SAM optimization?",
+    "choices": [
+      "Operating with recurring KPI reviews and action tracking",
+      "Using quarterly reclaim campaigns with defined owners",
+      "Monitoring renewal risk against effective position trends",
+      "Treating optimization as a one-time project instead of an ongoing process"
+    ],
+    "correctIndex": 3,
+    "explanation": "Optimization requires sustained governance cadence, not a single cleanup event.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 44,
+    "prompt": "Which KPI set best demonstrates successful software optimization governance?",
+    "choices": [
+      "Lower true-up exposure, reduced unused entitlements, and measurable realized savings",
+      "Higher number of unresolved software requests",
+      "Increase in unmatched discovery records",
+      "Longer remediation cycle times"
+    ],
+    "correctIndex": 0,
+    "explanation": "These metrics link optimization efforts to both financial and compliance outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-compliance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 40,
+    "prompt": "In SPM, what is the main purpose of roadmap management?",
+    "choices": [
+      "Sequence strategic initiatives over time with dependency and capacity awareness",
+      "Replace demand management and portfolio governance controls",
+      "Track software entitlement metrics",
+      "Manage only completed projects"
+    ],
+    "correctIndex": 0,
+    "explanation": "Roadmaps translate strategy into a time-phased execution plan across portfolios.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/concept/spm-workspace.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 41,
+    "prompt": "Which roadmap practice most improves executive decision quality?",
+    "choices": [
+      "Maintain dependency-aware milestones linked to strategic objectives and forecast updates",
+      "Plan all initiatives at the same priority level",
+      "Hide delivery risks until release dates",
+      "Freeze roadmap updates for the fiscal year"
+    ],
+    "correctIndex": 0,
+    "explanation": "Dependency-aware, objective-linked roadmaps support realistic trade-off decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/program-management/concept/program-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 42,
+    "prompt": "A major roadmap milestone is at risk due to a shared team bottleneck. What is the best SPM action?",
+    "choices": [
+      "Ignore the risk until the quarter closes",
+      "Shift funding to unrelated initiatives",
+      "Update roadmap scenarios and re-sequence dependent work using governance review",
+      "Convert affected initiatives to low priority automatically"
+    ],
+    "correctIndex": 2,
+    "explanation": "Scenario-based re-sequencing preserves transparency and helps minimize downstream delivery impact.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/concept/spm-workspace.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 43,
+    "prompt": "Which anti-pattern most weakens roadmap credibility?",
+    "choices": [
+      "Regularly reforecasting milestones with variance commentary",
+      "Linking roadmap items to strategic outcomes",
+      "Capturing dependency risks in governance reviews",
+      "Keeping roadmap dates static even when delivery evidence changes"
+    ],
+    "correctIndex": 3,
+    "explanation": "Roadmaps must reflect current execution evidence to remain useful for governance decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/program-management/concept/program-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 44,
+    "prompt": "Which KPI combination best indicates roadmap governance maturity?",
+    "choices": [
+      "High milestone predictability, reduced dependency-driven slippage, and objective-linked delivery progress",
+      "Increased count of unscored demand submissions",
+      "More roadmap items without owners",
+      "Longer decision cycle time for priority changes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mature roadmap governance combines forecast reliability, dependency control, and strategic traceability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html"
+    ]
+  }
+]

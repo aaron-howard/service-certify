@@ -1,0 +1,162 @@
+[
+	{
+		"trackCode": "CIS-SAM",
+		"order": 10,
+		"prompt": "In SAM, what does an entitlement record primarily represent?",
+		"choices": [
+			"A discovered installation awaiting normalization",
+			"A right to use software, typically derived from purchases, agreements, or subscriptions",
+			"A workflow task for license reclamation only",
+			"A one-time approval to install software on a single device"
+		],
+		"correctIndex": 1,
+		"explanation": "Entitlements represent use rights and are the foundation for comparing license position against installed and consumed software.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/software-entitlements-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 11,
+		"prompt": "A true-up is approaching and the publisher questions available license rights. Which entitlement attribute is most critical to verify first?",
+		"choices": [
+			"UI policy names on the entitlement form",
+			"License metric and quantity aligned to contract terms",
+			"Short description color settings",
+			"Number of attachments on unrelated software models"
+		],
+		"correctIndex": 1,
+		"explanation": "License metric and quantity define the legal measurement basis and total rights, which directly drive compliance calculations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/manage-software-entitlements.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 12,
+		"prompt": "What is a common reason to split rights into multiple entitlement records for the same software model?",
+		"choices": [
+			"To increase discovery scan frequency",
+			"To separate rights by metric, term, or restriction so reconciliation applies the correct rules",
+			"To avoid using contracts in SAM",
+			"To convert named user licenses into hardware assets"
+		],
+		"correctIndex": 1,
+		"explanation": "Different terms and metrics require separate entitlement records to preserve accurate compliance logic and audit traceability.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/software-entitlement-best-practices.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 13,
+		"prompt": "Which action best improves confidence that entitlements are audit-ready?",
+		"choices": [
+			"Store purchase proof and contractual evidence linked to entitlement records",
+			"Delete expired entitlements immediately without history",
+			"Move entitlement quantities into custom text fields",
+			"Disable reconciliation jobs during quarter close"
+		],
+		"correctIndex": 0,
+		"explanation": "Attaching clear entitlement evidence supports defensible license positions and reduces audit response time.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/entitlement-audit-preparation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 14,
+		"prompt": "When an organization moves to subscription licensing, what SAM update is most important?",
+		"choices": [
+			"Disable publisher data management",
+			"Map subscriptions to the correct entitlement structures and terms so renewals and consumption are tracked accurately",
+			"Treat all subscriptions as perpetual rights",
+			"Exclude subscription installs from reconciliation"
+		],
+		"correctIndex": 1,
+		"explanation": "Subscription licensing introduces term-based rights, so entitlement structure and renewal tracking must reflect subscription conditions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/subscription-entitlements.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 10,
+		"prompt": "What is the purpose of the Strategic Execution Dashboard in SPM?",
+		"choices": [
+			"To monitor strategic objective progress and execution health in one place for portfolio decisions",
+			"To replace all project workbench functionality",
+			"To manage discovery patterns for CMDB",
+			"To run monthly software reconciliation jobs"
+		],
+		"correctIndex": 0,
+		"explanation": "The dashboard consolidates objective, investment, and delivery indicators so leadership can evaluate strategy execution effectively.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/strategic-portfolio-management/strategic-planning/strategic-execution-dashboard.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 11,
+		"prompt": "A CIO asks why a strategic objective is off track. Which dashboard capability should a portfolio analyst use first?",
+		"choices": [
+			"Delete low-performing investments from the plan",
+			"Drill from objective scorecards into contributing initiatives and their status indicators",
+			"Export all data to spreadsheets and stop using SPM",
+			"Hide cost and resource metrics for simplicity"
+		],
+		"correctIndex": 1,
+		"explanation": "Drill-down analysis links objective performance to underlying work items, helping identify where execution risks are occurring.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/strategic-portfolio-management/strategic-planning/use-strategic-execution-dashboard.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 12,
+		"prompt": "Which KPI combination is most useful on a strategic execution dashboard?",
+		"choices": [
+			"Only number of open incidents",
+			"Only total active users in the platform",
+			"Objective progress, investment health, and milestone delivery trends",
+			"Hardware lifecycle end dates"
+		],
+		"correctIndex": 2,
+		"explanation": "Combining strategic progress and execution metrics creates a balanced view for portfolio steering conversations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/strategic-portfolio-management/strategic-planning/strategic-dashboard-kpis.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 13,
+		"prompt": "How does dashboard filtering improve governance meetings in SPM?",
+		"choices": [
+			"It removes the need for strategic objectives",
+			"It ensures all initiatives are always marked green",
+			"It lets leaders focus by portfolio, business unit, or timeframe to prioritize corrective action",
+			"It automatically approves all investment changes"
+		],
+		"correctIndex": 2,
+		"explanation": "Targeted filtering helps decision-makers isolate issues quickly and act on the highest-priority strategy execution gaps.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/strategic-portfolio-management/strategic-planning/configure-strategic-execution-dashboard.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 14,
+		"prompt": "If objective progress looks healthy but delivery dates keep slipping, what is the best interpretation?",
+		"choices": [
+			"Dashboard data is always wrong when dates slip",
+			"The strategic plan should be deleted",
+			"There may be reporting lag or weak milestone discipline, requiring deeper execution review",
+			"Financial planning is no longer required"
+		],
+		"correctIndex": 2,
+		"explanation": "Divergence between strategic score and delivery timelines is a signal to inspect milestone tracking quality and execution dependencies.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/strategic-portfolio-management/strategic-planning/analyze-strategic-execution-variance.html"
+		]
+	}
+]

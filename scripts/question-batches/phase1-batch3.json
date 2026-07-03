@@ -1,0 +1,243 @@
+[
+	{
+		"trackCode": "CSA",
+		"order": 15,
+		"prompt": "What is a primary goal of form administration for platform administrators?",
+		"choices": [
+			"To customize form layouts, sections, and field presentation for users",
+			"To replace all list views with gauges",
+			"To disable the data dictionary globally",
+			"To run discovery on network devices"
+		],
+		"correctIndex": 0,
+		"explanation": "Form administration lets admins configure how forms display fields, sections, and related lists for efficient data entry.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/form-administration/form-administration.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 16,
+		"prompt": "When configuring a form layout, what does adding a related list typically provide?",
+		"choices": [
+			"A view of child or associated records linked through reference fields",
+			"Automatic admin role assignment to the viewer",
+			"Encryption of all fields on the parent form",
+			"A replacement for update set tracking"
+		],
+		"correctIndex": 0,
+		"explanation": "Related lists show connected records from other tables based on reference relationships on the form.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/exploring-forms.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 17,
+		"prompt": "An administrator splits a long form into multiple sections. What is the main benefit?",
+		"choices": [
+			"Improved usability by grouping related fields into logical sections",
+			"Elimination of all ACL requirements on the table",
+			"Automatic translation of every field label",
+			"Prevention of any client scripts from running"
+		],
+		"correctIndex": 0,
+		"explanation": "Form sections organize fields logically, making complex forms easier to navigate and complete.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/form-layout.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 18,
+		"prompt": "A mandatory field on a form should be configured when:",
+		"choices": [
+			"The business requires the value before the record can be saved",
+			"The field is a reference to the User table only",
+			"The table extends cmdb_ci",
+			"The form uses the Next Experience framework exclusively"
+		],
+		"correctIndex": 0,
+		"explanation": "Mandatory fields enforce required data entry so critical information is captured before save.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/form-administration/form-administration.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 19,
+		"prompt": "When a user reports that a field is hidden on a form, what should an administrator check first?",
+		"choices": [
+			"UI Policies, form layout, and field visibility settings",
+			"The MID Server JVM heap size",
+			"The software discovery schedule",
+			"The PA job queue exclusively"
+		],
+		"correctIndex": 0,
+		"explanation": "Field visibility is commonly controlled by form layout, UI Policies, and role-based form configurations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/exploring-forms.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 15,
+		"prompt": "What is the primary purpose of a Script Include in application development?",
+		"choices": [
+			"To encapsulate reusable server-side logic callable from other server scripts",
+			"To render Service Portal widgets in the browser",
+			"To schedule discovery probes",
+			"To define inbound email actions only"
+		],
+		"correctIndex": 0,
+		"explanation": "Script Includes store reusable server-side functions or classes invoked by business rules, script actions, and other server code.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/c_ScriptIncludes.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 16,
+		"prompt": "A Business Rule configured as Before update runs at which point?",
+		"choices": [
+			"Before the record update is written to the database",
+			"Only after the user closes the browser tab",
+			"During inbound email parsing exclusively",
+			"After all workflow activities complete in every case"
+		],
+		"correctIndex": 0,
+		"explanation": "Before rules execute prior to the database operation, allowing validation or field changes before commit.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/c_BusinessRules.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 17,
+		"prompt": "Which GlideRecord method is commonly used to retrieve a single matching record when you expect at most one result?",
+		"choices": [
+			"addQuery() followed by query() only, with no get",
+			"get() after setting encoded query or sys_id",
+			"deleteMultiple() before insert",
+			"setWorkflow(false) on the client"
+		],
+		"correctIndex": 1,
+		"explanation": "After constraining the query, get() retrieves a single record when one match is expected.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/c_UsingGlideRecordToQueryTables.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 18,
+		"prompt": "Why might a developer call setWorkflow(false) on a GlideRecord in a server script?",
+		"choices": [
+			"To prevent business rules and workflow from firing during that operation",
+			"To enable client scripts on import sets",
+			"To grant admin access to the current user",
+			"To convert the table to a fulfillment table"
+		],
+		"correctIndex": 0,
+		"explanation": "Disabling workflow on GlideRecord operations prevents cascading business rules and workflow during controlled updates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/c_UsingGlideRecordToQueryTables.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 19,
+		"prompt": "An After business rule is most appropriate when the script must:",
+		"choices": [
+			"Run after the database operation completes, such as to act on committed data",
+			"Block the transaction before any validation occurs",
+			"Execute only in the user's browser",
+			"Replace ACL evaluation entirely"
+		],
+		"correctIndex": 0,
+		"explanation": "After rules run following the database operation when logic depends on the record being saved.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/c_BusinessRules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 15,
+		"prompt": "What is the Configuration Management Database (CMDB) primarily used for?",
+		"choices": [
+			"Storing and managing configuration items and their relationships to support IT processes",
+			"Replacing the service catalog for all requests",
+			"Scheduling employee onboarding tasks only",
+			"Managing software subscription invoices exclusively"
+		],
+		"correctIndex": 0,
+		"explanation": "The CMDB holds CIs and relationships that underpin incident, change, and other ITSM processes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/configuration-management-database/configuration-management-database.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 16,
+		"prompt": "In CSDM, why is foundation data such as services and locations important?",
+		"choices": [
+			"It provides consistent reference data that underpins CMDB and process alignment",
+			"It eliminates the need for discovery",
+			"It replaces all incident categories",
+			"It stores only user password history"
+		],
+		"correctIndex": 0,
+		"explanation": "CSDM foundation data establishes common services, locations, and related entities for accurate CMDB and ITSM alignment.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/configuration-management-database/csdm-foundation-data.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 17,
+		"prompt": "What is the purpose of CI identification and reconciliation?",
+		"choices": [
+			"To match incoming data to existing CIs and maintain accurate CMDB records",
+			"To approve catalog requests automatically",
+			"To close incidents after 24 hours",
+			"To assign problem tasks to the CAB only"
+		],
+		"correctIndex": 0,
+		"explanation": "Identification and reconciliation rules determine how discovered or imported data maps to authoritative CI records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/configuration-management-database/ci-identification-and-reconciliation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 18,
+		"prompt": "An incident references a configuration item. What benefit does that association provide?",
+		"choices": [
+			"Context about the affected asset or service for diagnosis and impact analysis",
+			"Automatic admin access for the caller",
+			"Immediate conversion to a normal change",
+			"Removal of the need for assignment groups"
+		],
+		"correctIndex": 0,
+		"explanation": "Linking incidents to CIs provides asset and service context for troubleshooting and reporting.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/configuration-management-database/configuration-management-database.html",
+			"https://www.servicenow.com/docs/r/it-service-management/incident-management/c_IncidentManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 19,
+		"prompt": "Duplicate CI records in the CMDB are most commonly addressed by:",
+		"choices": [
+			"Identification and reconciliation rules that match and merge authoritative data",
+			"Deleting all relationships and rediscovering weekly only",
+			"Converting duplicates to catalog tasks",
+			"Disabling the incident table"
+		],
+		"correctIndex": 0,
+		"explanation": "Identification and reconciliation processes reduce duplicates by matching incoming sources to existing CIs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/configuration-management-database/ci-identification-and-reconciliation.html"
+		]
+	}
+]

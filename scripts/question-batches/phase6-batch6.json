@@ -1,0 +1,242 @@
+[
+  {
+    "trackCode": "CIS-RC",
+    "order": 30,
+    "prompt": "When launching a new risk assessment cycle, what should be completed first?",
+    "choices": [
+      "Define assessment methodology, scoring criteria, and in-scope entities",
+      "Mark inherited controls as effective by default",
+      "Skip stakeholder reviews to accelerate publishing",
+      "Assign all risks to one enterprise owner"
+    ],
+    "correctIndex": 0,
+    "explanation": "A defined methodology and scope create consistent, comparable risk assessments across business units.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-risk/concept/risk-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 31,
+    "prompt": "Which factor most improves reliability of inherent and residual risk scoring?",
+    "choices": [
+      "Using only qualitative comments without scoring guidance",
+      "Applying calibrated likelihood and impact scales with documented rationale",
+      "Restricting assessments to annual reviews only",
+      "Excluding control effectiveness from residual scoring"
+    ],
+    "correctIndex": 1,
+    "explanation": "Calibrated scales and documented rationale reduce subjectivity and improve repeatability of risk ratings.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-risk/task/configure-risk-scoring.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 32,
+    "prompt": "A business unit disputes a high residual risk score. What is the best governance response?",
+    "choices": [
+      "Lower the score immediately to maintain stakeholder confidence",
+      "Close the risk record and reopen next quarter",
+      "Review control evidence, assumptions, and scoring rationale with accountable owners before adjusting",
+      "Move the risk to accepted with no approval"
+    ],
+    "correctIndex": 2,
+    "explanation": "Transparent review of evidence and assumptions supports fair recalibration while preserving governance rigor.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-risk/task/manage-risk-assessments.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 33,
+    "prompt": "Which reporting output is most useful after completing a risk assessment campaign?",
+    "choices": [
+      "Raw list of all risk records with no grouping",
+      "Count of users who edited risk forms",
+      "Inventory of inactive assignment groups",
+      "Heatmaps and trend views highlighting top residual risks, control gaps, and overdue treatments"
+    ],
+    "correctIndex": 3,
+    "explanation": "Decision-makers need prioritized trend insights to direct mitigation resources effectively.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-risk/concept/risk-workspace.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 34,
+    "prompt": "Why should periodic risk reassessment be scheduled instead of only performed after incidents?",
+    "choices": [
+      "Risk posture changes with business, technology, and control drift even without a triggering incident",
+      "Scheduled reassessments automatically eliminate all high risks",
+      "Incidents are not relevant to risk governance",
+      "Scheduled reviews replace remediation planning"
+    ],
+    "correctIndex": 0,
+    "explanation": "Regular reassessment catches evolving exposure before incidents occur and improves proactive governance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-risk/concept/risk-management-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 30,
+    "prompt": "In SIR workflow design, what is the main purpose of predefined incident tasks?",
+    "choices": [
+      "Increase manual note-taking effort",
+      "Standardize response actions and accountability for repeatable incident handling",
+      "Replace playbooks with ad hoc analyst decisions",
+      "Bypass severity determination"
+    ],
+    "correctIndex": 1,
+    "explanation": "Predefined tasks ensure consistent response execution and clearer ownership during investigations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response-workflow.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 31,
+    "prompt": "Which task type should be prioritized immediately for a suspected active compromise?",
+    "choices": [
+      "Quarterly control attestation request",
+      "Dashboard layout update",
+      "Initial triage and containment validation tasks aligned to incident severity",
+      "Archive closed incident attachments"
+    ],
+    "correctIndex": 2,
+    "explanation": "Early triage and containment tasks reduce blast radius and establish response momentum for critical incidents.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/respond-to-security-incident.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 32,
+    "prompt": "A team misses SLA targets because tasks are manually reassigned. What should be implemented?",
+    "choices": [
+      "Remove due dates from all SIR tasks",
+      "Create one universal assignment group for every task",
+      "Use random assignment to balance workload",
+      "Use rule-based task assignment and escalation tied to severity and ownership"
+    ],
+    "correctIndex": 3,
+    "explanation": "Automated assignment and escalation reduce delays and improve adherence to response objectives.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/configure-security-incident-response.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 33,
+    "prompt": "Why should closure tasks include post-incident documentation requirements?",
+    "choices": [
+      "They support lessons learned, audit readiness, and future playbook improvement",
+      "They prevent the use of threat intelligence feeds",
+      "They remove the need for parent incident records",
+      "They automatically reduce incident severity"
+    ],
+    "correctIndex": 0,
+    "explanation": "Structured closure evidence improves organizational learning and strengthens defensible response records.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response-reporting.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 34,
+    "prompt": "Which KPI best reflects healthy SIR task orchestration?",
+    "choices": [
+      "Higher volume of reopened tasks each month",
+      "Lower mean time per critical task phase with clear completion evidence and fewer handoff delays",
+      "More tasks created per incident regardless outcome",
+      "Count of task comments only"
+    ],
+    "correctIndex": 1,
+    "explanation": "Good orchestration improves speed and quality of execution, not just task quantity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-operations-kpis.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 30,
+    "prompt": "For Service Mapping, what is meant by defining entry points?",
+    "choices": [
+      "Disabling all probes on shared subnets",
+      "Identifying starting URLs, hostnames, load balancers, or connection endpoints used to discover service topology",
+      "Assigning every CI to the same business service",
+      "Creating incident categories for mapping teams"
+    ],
+    "correctIndex": 1,
+    "explanation": "Entry points guide mapping discovery to the right application components and dependency paths.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/create-entry-point.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 31,
+    "prompt": "An application has multiple internet-facing domains behind one load balancer. How should entry points be configured?",
+    "choices": [
+      "Use one generic DNS record only",
+      "Map each domain as a separate business service regardless architecture",
+      "Configure representative entry points per unique service path and validate discovered dependencies",
+      "Skip entry points and rely on manual CI relationships"
+    ],
+    "correctIndex": 2,
+    "explanation": "Representative entry points help Service Mapping discover accurate topologies for shared infrastructure patterns.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping-patterns.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 32,
+    "prompt": "Which issue most commonly indicates poor entry point governance?",
+    "choices": [
+      "Maps render faster during low traffic windows",
+      "Discovery logs include expected probe execution",
+      "Business service owners are defined",
+      "Maps miss critical tiers because entry points are stale, duplicated, or undocumented"
+    ],
+    "correctIndex": 3,
+    "explanation": "Outdated or duplicate entry points frequently cause incomplete maps and inaccurate service impact analysis.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/troubleshoot-service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 33,
+    "prompt": "Why should entry points be reviewed during major application changes?",
+    "choices": [
+      "Topology starting conditions may change, affecting map completeness and dependency accuracy",
+      "Entry points are immutable once approved",
+      "Major changes do not affect discovered services",
+      "It prevents CMDB reconciliation from running"
+    ],
+    "correctIndex": 0,
+    "explanation": "Application architecture changes can invalidate existing starting points and degrade mapping quality.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 34,
+    "prompt": "What control best improves long-term entry point quality?",
+    "choices": [
+      "Allow unrestricted edits by all itil users",
+      "Implement ownership, change review, and periodic validation for entry point records",
+      "Convert all entry points to one default template",
+      "Remove metadata fields to simplify forms"
+    ],
+    "correctIndex": 1,
+    "explanation": "Governed ownership and recurring validation keep entry points accurate as services evolve.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping-best-practices.html"
+    ]
+  }
+]

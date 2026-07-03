@@ -1,0 +1,402 @@
+[
+  {
+    "trackCode": "CPOE",
+    "order": 100,
+    "prompt": "When defining platform strategy, what should be established first to guide investment decisions?",
+    "choices": [
+      "A catalog of personal admin preferences",
+      "An enterprise capability roadmap tied to business outcomes",
+      "A list of deprecated report colors",
+      "A fixed schedule for all upgrades regardless readiness"
+    ],
+    "correctIndex": 1,
+    "explanation": "A capability roadmap aligned to outcomes helps prioritize initiatives by value, risk, and strategic fit.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/concept/platform-strategy.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 101,
+    "prompt": "Which model best supports sustainable platform demand management across many business units?",
+    "choices": [
+      "Intake governance with prioritization criteria and decision forums",
+      "First-come-first-served backlog execution",
+      "Direct production changes by requestors",
+      "Separate platform instances per team by default"
+    ],
+    "correctIndex": 0,
+    "explanation": "Structured intake and prioritization ensures demand is evaluated consistently against enterprise objectives and constraints.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/task/manage-demand-intake.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 102,
+    "prompt": "A platform owner wants to minimize long-term technical debt. Which policy helps most?",
+    "choices": [
+      "Favor custom scripts over configurable features",
+      "Require architectural review for non-standard implementation patterns",
+      "Disable all plugin updates",
+      "Avoid documenting integration contracts"
+    ],
+    "correctIndex": 1,
+    "explanation": "Architecture review reduces unnecessary customization and keeps solutions maintainable through release cycles.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/concept/architecture-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 103,
+    "prompt": "What is the primary strategic reason to define product ownership for platform domains?",
+    "choices": [
+      "To eliminate release notes",
+      "To ensure accountability for backlog, quality, and outcome delivery",
+      "To bypass CAB approvals",
+      "To decentralize security controls"
+    ],
+    "correctIndex": 1,
+    "explanation": "Clear ownership clarifies decision rights and accountability for delivery quality and business impact.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/concept/platform-operating-model.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 104,
+    "prompt": "Which KPI set best reflects enterprise platform strategy execution?",
+    "choices": [
+      "Login count and homepage views only",
+      "Customization count only",
+      "Value realization, cycle time, reliability, and adoption metrics",
+      "Number of update sets created per week"
+    ],
+    "correctIndex": 2,
+    "explanation": "Balanced KPIs connect delivery speed and stability to business outcomes and user adoption.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/task/define-platform-kpis.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 105,
+    "prompt": "Why should platform standards include a configuration-over-customization principle?",
+    "choices": [
+      "Configuration cannot be audited",
+      "It helps preserve upgradeability and reduce maintenance burden",
+      "Customization is required for all enterprise features",
+      "Configuration prevents role-based access"
+    ],
+    "correctIndex": 1,
+    "explanation": "Using platform-native capabilities where possible lowers complexity and upgrade risk over time.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/concept/configuration-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 106,
+    "prompt": "During annual planning, which artifact best helps sequence platform initiatives?",
+    "choices": [
+      "A capability heat map with dependencies and risk",
+      "A list of unresolved incidents",
+      "A collection of personal notes",
+      "An unscored enhancement backlog"
+    ],
+    "correctIndex": 0,
+    "explanation": "Capability and dependency mapping enables realistic sequencing and highlights initiative risk early.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/task/build-platform-roadmap.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 107,
+    "prompt": "What is the best way to prevent redundant app development across departments?",
+    "choices": [
+      "Allow each team to publish duplicate tables",
+      "Operate a reusable service and data model review process",
+      "Disable scoped apps",
+      "Require all workflows in global scope"
+    ],
+    "correctIndex": 1,
+    "explanation": "Reuse governance identifies existing capabilities and avoids fragmented implementations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-application-development/page/build/applications/concept/reuse-platform-components.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 108,
+    "prompt": "A strategic objective is faster enterprise onboarding for new teams. Which approach supports this most?",
+    "choices": [
+      "Create a platform blueprint with guardrails, templates, and onboarding runbooks",
+      "Grant admin rights to all new developers",
+      "Delay standards until post go-live",
+      "Disable CI/CD for early projects"
+    ],
+    "correctIndex": 0,
+    "explanation": "Blueprints and guardrails improve consistency and accelerate delivery without sacrificing governance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/task/create-platform-standards.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 109,
+    "prompt": "Which governance body typically resolves cross-domain prioritization conflicts?",
+    "choices": [
+      "Personal developer channel",
+      "Platform steering committee",
+      "Individual assignment groups",
+      "Discovery schedules"
+    ],
+    "correctIndex": 1,
+    "explanation": "A steering committee provides enterprise-level decision making for competing demand and strategic trade-offs.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/concept/governance-boards.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 110,
+    "prompt": "Why should platform owners maintain a formal deprecation policy?",
+    "choices": [
+      "To avoid documenting integrations",
+      "To keep unsupported customizations from accumulating operational risk",
+      "To prevent any plugin activation",
+      "To remove test environments"
+    ],
+    "correctIndex": 1,
+    "explanation": "Deprecation planning helps retire obsolete solutions safely and reduces long-term support burden.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/task/manage-feature-deprecation.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 111,
+    "prompt": "Enterprise leaders ask for innovation without reliability loss. Which strategy is most appropriate?",
+    "choices": [
+      "Use release trains with defined quality gates and pilot cohorts",
+      "Deploy directly to production for faster feedback",
+      "Skip regression testing for minor changes",
+      "Allow each team to define its own release process"
+    ],
+    "correctIndex": 0,
+    "explanation": "Release trains with quality gates balance speed and control, supporting predictable and safe innovation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/concept/release-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 112,
+    "prompt": "Which metric best indicates a healthy enterprise operating model for the platform?",
+    "choices": [
+      "Number of emergency fixes rising each quarter",
+      "Backlog aging and lead times decreasing while stability is maintained",
+      "Increase in unmanaged local scripts",
+      "Reduction in peer review coverage"
+    ],
+    "correctIndex": 1,
+    "explanation": "Improving flow metrics with stable operations signals that governance and delivery practices are maturing.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/task/monitor-operating-model-performance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 113,
+    "prompt": "A business unit requests a one-off architecture exception. What should happen first?",
+    "choices": [
+      "Approve to preserve relationship",
+      "Reject all exceptions categorically",
+      "Assess risk, rationale, and time-bound remediation plan",
+      "Move request to production backlog without review"
+    ],
+    "correctIndex": 2,
+    "explanation": "Exception governance evaluates necessity and risk while requiring an explicit path back to standard.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/task/manage-architecture-exceptions.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 114,
+    "prompt": "What strategic benefit comes from standardized data definitions across platform products?",
+    "choices": [
+      "It removes need for ACLs",
+      "It simplifies cross-workflow reporting and integration consistency",
+      "It guarantees zero data quality defects",
+      "It eliminates all transformation logic"
+    ],
+    "correctIndex": 1,
+    "explanation": "Common data definitions improve interoperability and reduce reconciliation issues across teams and tools.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/concept/enterprise-data-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 115,
+    "prompt": "Which action most improves strategic transparency for executive stakeholders?",
+    "choices": [
+      "Publishing a platform scorecard with roadmap progress and risks",
+      "Sending ad hoc technical logs",
+      "Sharing only sprint-level subtasks",
+      "Limiting updates to incident spikes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Executive scorecards translate technical delivery into strategic progress, risk, and value outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/task/create-platform-scorecards.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 116,
+    "prompt": "What is the best reason to define reference architectures for common platform patterns?",
+    "choices": [
+      "To increase per-team customization",
+      "To accelerate delivery with proven, governable designs",
+      "To avoid documenting dependencies",
+      "To force all apps into one scope"
+    ],
+    "correctIndex": 1,
+    "explanation": "Reference architectures provide repeatable patterns that reduce design churn and improve implementation quality.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/concept/reference-architectures.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 117,
+    "prompt": "If demand exceeds platform capacity, which response aligns with strategy governance?",
+    "choices": [
+      "Pause all security work",
+      "Apply objective prioritization and defer low-value initiatives",
+      "Split all epics into incidents",
+      "Create shadow IT instances"
+    ],
+    "correctIndex": 1,
+    "explanation": "Capacity constraints should be managed through value-based prioritization, not ungoverned workaround paths.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/task/prioritize-demand.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 118,
+    "prompt": "What is the main advantage of standard release calendars for enterprise platform strategy?",
+    "choices": [
+      "They eliminate testing requirements",
+      "They create predictable planning windows and reduce change collision",
+      "They prevent emergency changes",
+      "They remove CAB participation"
+    ],
+    "correctIndex": 1,
+    "explanation": "Standard calendars improve coordination among teams and lower the risk of conflicting high-impact changes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/change-management/concept/release-calendar-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 119,
+    "prompt": "Which practice best supports enterprise platform skills maturity?",
+    "choices": [
+      "Role-based learning paths and capability communities",
+      "One-time onboarding without refresh",
+      "Admin access before training",
+      "Skipping peer reviews for experienced staff"
+    ],
+    "correctIndex": 0,
+    "explanation": "Structured training and communities of practice build consistent expertise and reduce implementation variance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/task/enable-platform-center-of-excellence.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 120,
+    "prompt": "A platform owner wants to compare business value across epics. Which approach is most effective?",
+    "choices": [
+      "Estimate by story point total only",
+      "Use weighted scoring with value, risk reduction, and effort dimensions",
+      "Prioritize by requester title",
+      "Select items with smallest update sets"
+    ],
+    "correctIndex": 1,
+    "explanation": "Weighted scoring introduces transparent trade-off criteria and supports objective portfolio decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/task/use-portfolio-scoring.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 121,
+    "prompt": "Why should enterprise platform strategy include service ownership boundaries?",
+    "choices": [
+      "To reduce accountability overlap and handoff confusion",
+      "To allow uncontrolled changes",
+      "To disable incident escalation",
+      "To avoid dependency mapping"
+    ],
+    "correctIndex": 0,
+    "explanation": "Clear ownership boundaries improve operating clarity for delivery, support, and risk management.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/concept/service-ownership-model.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 122,
+    "prompt": "What should be the first response when strategic KPIs fall below target for two consecutive quarters?",
+    "choices": [
+      "Ignore variance until next annual plan",
+      "Run a governance review to adjust roadmap scope, sequencing, and constraints",
+      "Freeze all enhancements permanently",
+      "Disable integration monitoring"
+    ],
+    "correctIndex": 1,
+    "explanation": "Persistent KPI variance should trigger structured strategy review and corrective portfolio decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/task/review-platform-strategy.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 123,
+    "prompt": "What is the strategic value of maintaining an enterprise platform service catalog?",
+    "choices": [
+      "It replaces CMDB reconciliation",
+      "It clarifies reusable services, ownership, and request pathways",
+      "It eliminates enhancement requests",
+      "It prevents plugin upgrades"
+    ],
+    "correctIndex": 1,
+    "explanation": "A defined service catalog reduces ambiguity and helps teams consume platform capabilities consistently.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/concept/platform-service-catalog.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 124,
+    "prompt": "Which condition most clearly signals platform strategy drift?",
+    "choices": [
+      "Roadmap initiatives mapped to business capabilities",
+      "Stable governance meetings with documented decisions",
+      "Improved release success rate",
+      "Growing volume of urgent, unplanned work that bypasses prioritization"
+    ],
+    "correctIndex": 3,
+    "explanation": "Unplanned work that bypasses governance indicates strategy execution is being displaced by reactive demand.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/concept/strategy-risk-indicators.html"
+    ]
+  }
+]

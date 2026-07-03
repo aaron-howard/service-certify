@@ -1,0 +1,354 @@
+[
+  {
+    "trackCode": "CPOP",
+    "order": 200,
+    "prompt": "Why should platform owners favor scoped applications for new custom capabilities?",
+    "choices": [
+      "They provide stronger isolation and controlled dependency boundaries",
+      "They automatically grant global admin permissions",
+      "They remove the need for ACLs and role design",
+      "They can only be used in personal developer instances"
+    ],
+    "correctIndex": 0,
+    "explanation": "Scoped apps isolate artifacts and support safer governance of custom development.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-application-development/page/build/applications/concept/scoped-applications.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 201,
+    "prompt": "What is the best governance step before approving cross-scope privileges?",
+    "choices": [
+      "Approve all cross-scope requests to reduce delays",
+      "Review required access paths and enforce least-privilege alternatives",
+      "Move the app to global scope first",
+      "Disable update set promotion for the app"
+    ],
+    "correctIndex": 1,
+    "explanation": "Cross-scope access should be tightly governed because it can expand data exposure.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-application-development/page/build/applications/concept/scoped-applications.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 202,
+    "prompt": "Which release practice best supports scoped app deployment integrity?",
+    "choices": [
+      "Direct script edits in production for urgent fixes",
+      "One shared update set across unrelated apps",
+      "Controlled promotion with versioned app artifacts and validation checkpoints",
+      "Skipping lower-environment testing for minor updates"
+    ],
+    "correctIndex": 2,
+    "explanation": "Versioned promotion and checkpoints keep scoped app releases auditable and predictable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-application-development/page/build/system-update-sets/concept/update-set-procedures.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 203,
+    "prompt": "What is the key security benefit of limiting script includes to the app scope when possible?",
+    "choices": [
+      "Faster UI rendering in all portals",
+      "Automatic role assignment for app users",
+      "Elimination of all dependency reviews",
+      "Reduced unintended access from other applications"
+    ],
+    "correctIndex": 3,
+    "explanation": "Scope-limited artifacts lower unintended coupling and reduce cross-application exposure.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-application-development/page/build/applications/concept/scoped-applications.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 204,
+    "prompt": "Which governance model best supports multiple teams building scoped apps?",
+    "choices": [
+      "Shared standards for naming, access, packaging, and lifecycle ownership",
+      "Independent standards by each team with no central review",
+      "All scoped apps owned by one rotating developer",
+      "No architecture review unless production issues occur"
+    ],
+    "correctIndex": 0,
+    "explanation": "Common standards and ownership patterns improve maintainability across app portfolios.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 205,
+    "prompt": "A scoped app needs outbound API access. Which control should be required?",
+    "choices": [
+      "Hard-coded credentials in script includes",
+      "Managed credentials and endpoint controls with reviewable configuration",
+      "Global admin execution for all outbound calls",
+      "Manual credential updates by each developer"
+    ],
+    "correctIndex": 1,
+    "explanation": "Managed credentials and endpoint controls reduce key exposure and change risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/web-services/concept/c_RESTAPI.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 206,
+    "prompt": "Which anti-pattern most increases scoped app governance risk?",
+    "choices": [
+      "Documented app ownership and support model",
+      "Scope-specific roles and ACLs",
+      "Untracked scope overrides added during emergency fixes",
+      "Versioned deployment records"
+    ],
+    "correctIndex": 2,
+    "explanation": "Untracked overrides undermine scope boundaries and complicate auditability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 207,
+    "prompt": "What should a platform owner require before promoting a scoped app to production?",
+    "choices": [
+      "Only unit test completion by one developer",
+      "A verbal sign-off from product owner",
+      "Automatic deployment without approvals",
+      "Evidence of functional validation, access review, and rollback readiness"
+    ],
+    "correctIndex": 3,
+    "explanation": "Promotion should require evidence that functionality, security, and recoverability controls are in place.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 208,
+    "prompt": "Which KPI most directly indicates scoped app governance health?",
+    "choices": [
+      "Percent of app releases meeting policy gates and passing security checks",
+      "Total number of app records by table",
+      "Count of form sections in each app",
+      "Number of developer comments in update sets"
+    ],
+    "correctIndex": 0,
+    "explanation": "Policy-gate compliance and security pass rates show governance controls are effective in delivery.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 209,
+    "prompt": "How should shared libraries used by multiple scoped apps be governed?",
+    "choices": [
+      "Allow direct modification by any app team",
+      "Use ownership, versioning, and compatibility policies with change review",
+      "Copy library code into each app to avoid dependency governance",
+      "Retire shared libraries after each release"
+    ],
+    "correctIndex": 1,
+    "explanation": "Governed shared libraries reduce regressions and improve coordinated upgrades across apps.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/table-administration/concept/c_TableAdministration.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 210,
+    "prompt": "What is the best response when a scoped app repeatedly requests broad cross-scope access?",
+    "choices": [
+      "Approve all requests to maintain velocity",
+      "Move the app to global scope permanently",
+      "Refactor architecture to minimize scope crossings and enforce least privilege",
+      "Suspend all app development"
+    ],
+    "correctIndex": 2,
+    "explanation": "Repeated broad access requests often signal architectural coupling that should be redesigned.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-application-development/page/build/applications/concept/scoped-applications.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 211,
+    "prompt": "Which rollout model best reduces risk for a major scoped app enhancement?",
+    "choices": [
+      "Big-bang deployment with no staged validation",
+      "Production-first deployment to shorten timelines",
+      "Skip rollback planning to reduce overhead",
+      "Staged rollout with checkpoints and hypercare monitoring"
+    ],
+    "correctIndex": 3,
+    "explanation": "Staged rollout allows controlled exposure and fast rollback if issues appear.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 212,
+    "prompt": "What is the best governance treatment for deprecated scoped app features?",
+    "choices": [
+      "Use deprecation policy with communication, migration plan, and retirement timeline",
+      "Leave deprecated features active indefinitely",
+      "Remove features without stakeholder notice",
+      "Retire features only when storage limits are reached"
+    ],
+    "correctIndex": 0,
+    "explanation": "Governed deprecation protects user adoption while reducing long-term platform complexity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 213,
+    "prompt": "Which practice best supports secure delegated development for scoped apps?",
+    "choices": [
+      "Permanent admin for all delegated developers",
+      "Time-bound delegated roles with scope-limited permissions and review",
+      "Use shared credentials during release week",
+      "Allow delegated developers direct production access"
+    ],
+    "correctIndex": 1,
+    "explanation": "Time-bound and scope-limited delegation reduces privilege creep and improves traceability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-application-development/page/build/applications/concept/scoped-applications.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 214,
+    "prompt": "Which evidence package is strongest for scoped app compliance audits?",
+    "choices": [
+      "Only app store metadata",
+      "Only developer test notes",
+      "Release approvals, security review records, and traceable deployment evidence",
+      "A screenshot of app forms from production"
+    ],
+    "correctIndex": 2,
+    "explanation": "Audit readiness depends on traceable evidence across review, approval, and deployment controls.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 215,
+    "prompt": "What is the strongest signal that scoped app boundaries are weakening?",
+    "choices": [
+      "Consistent release gate adherence",
+      "Stable ownership model",
+      "Reduced exception backlog",
+      "Increasing volume of undocumented global dependencies"
+    ],
+    "correctIndex": 3,
+    "explanation": "Undocumented global dependencies often indicate erosion of scope isolation and governance discipline.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-application-development/page/build/applications/concept/scoped-applications.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 216,
+    "prompt": "How should platform owners prioritize remediation for scoped app security findings?",
+    "choices": [
+      "Risk-tier findings and remediate by exploitability and business impact",
+      "Fix issues by alphabetical order",
+      "Address only UI-related findings first",
+      "Delay all remediation to annual hardening cycle"
+    ],
+    "correctIndex": 0,
+    "explanation": "Risk-based prioritization ensures resources focus on highest-impact vulnerabilities first.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 217,
+    "prompt": "What is the best strategy for managing scoped app exceptions in production?",
+    "choices": [
+      "Permit indefinite exceptions if no outage occurs",
+      "Use exception lifecycle governance with owner, controls, and expiration",
+      "Hide exception data from dashboards",
+      "Store exception decisions in private email threads"
+    ],
+    "correctIndex": 1,
+    "explanation": "Lifecycle governance keeps exceptions visible, bounded, and reviewable over time.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 218,
+    "prompt": "Which release safeguard most helps prevent scoped app regressions in production?",
+    "choices": [
+      "Deploy directly from development without rehearsals",
+      "Use one approval for all apps each quarter",
+      "Critical-path regression tests and controlled rollback checkpoints",
+      "Disable monitoring during deployment windows"
+    ],
+    "correctIndex": 2,
+    "explanation": "Targeted regression and rollback checkpoints reduce customer-facing risk during promotion.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 219,
+    "prompt": "Which operating model best supports a large scoped app portfolio?",
+    "choices": [
+      "One centralized developer handling all app ownership",
+      "No shared standards to preserve autonomy",
+      "Manual reporting only after incidents",
+      "Portfolio governance with standard controls, app-level ownership, and KPI review"
+    ],
+    "correctIndex": 3,
+    "explanation": "Portfolio governance balances consistency and distributed ownership across many applications.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 220,
+    "prompt": "What is the strongest long-term outcome of disciplined scoped app governance?",
+    "choices": [
+      "Safer customization at scale with clear boundaries, ownership, and release predictability",
+      "Faster releases by bypassing policy gates",
+      "Elimination of all integration dependencies",
+      "No need for security reviews in future releases"
+    ],
+    "correctIndex": 0,
+    "explanation": "Disciplined governance enables sustainable app growth without sacrificing security or reliability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-application-development/page/build/applications/concept/scoped-applications.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 221,
+    "prompt": "Which KPI set is most useful for scoped app governance reporting?",
+    "choices": [
+      "Number of catalog item categories",
+      "Policy gate adherence, exception aging, release success, and security remediation closure",
+      "Average app icon update frequency",
+      "Total comments in development stories"
+    ],
+    "correctIndex": 1,
+    "explanation": "This KPI set balances control conformance, risk exposure, delivery quality, and remediation effectiveness.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+    ]
+  }
+]

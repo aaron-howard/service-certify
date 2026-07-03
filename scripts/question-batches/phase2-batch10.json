@@ -1,0 +1,88 @@
+[
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 75,
+		"prompt": "Why is integrating asset management data with ITSM incident workflows important?",
+		"choices": [
+			"It gives agents visibility into ownership, lifecycle, and support context to improve diagnosis and routing",
+			"It automatically closes all incidents linked to retired devices",
+			"It removes the need for assignment groups",
+			"It replaces change management approvals for hardware updates"
+		],
+		"correctIndex": 0,
+		"explanation": "Asset context in incidents helps support teams understand what is affected, who owns it, and how it should be handled.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/incident-management/concept/incident-management.html",
+			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/asset-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 76,
+		"prompt": "When a user reports a laptop issue, what is the best reason to relate the incident to the corresponding hardware asset?",
+		"choices": [
+			"To maintain traceability for support history, warranty status, and lifecycle decisions",
+			"To prevent the incident from being assigned",
+			"To bypass CMDB relationships entirely",
+			"To convert the incident into a problem automatically every time"
+		],
+		"correctIndex": 0,
+		"explanation": "Linking incidents to hardware assets preserves an operational history that supports informed repair, replacement, and escalation decisions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/c_HardwareAssetManagement.html",
+			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/incident-management/concept/incident-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 77,
+		"prompt": "How does software asset information most directly support ITSM request fulfillment?",
+		"choices": [
+			"It helps verify entitlement and availability before software is approved or delivered",
+			"It eliminates approval workflows for all catalog items",
+			"It disables license compliance reporting",
+			"It forces all requests to be treated as major incidents"
+		],
+		"correctIndex": 0,
+		"explanation": "Integrating software asset data with request workflows helps teams fulfill requests while remaining aligned to licensing and compliance needs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-asset-management.html",
+			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/request-management/concept/request-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 78,
+		"prompt": "What is a key operational benefit of aligning hardware asset lifecycle states with ITSM processes?",
+		"choices": [
+			"It prevents active support work from being routed to devices that are retired, lost, or pending disposal",
+			"It guarantees zero incidents for all managed endpoints",
+			"It removes the need for CMDB governance",
+			"It replaces service level definitions"
+		],
+		"correctIndex": 0,
+		"explanation": "Lifecycle alignment reduces support waste and improves service quality by ensuring ITSM workflows target valid, in-service assets.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/c_HardwareAssetManagement.html",
+			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/service-desk/concept/service-desk.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 79,
+		"prompt": "In an ITSM practice, why should incident and request records be tied to both CI and asset records when applicable?",
+		"choices": [
+			"To combine service impact visibility with financial and lifecycle accountability for better decision-making",
+			"To duplicate records and increase ticket volume",
+			"To avoid using assignment rules",
+			"To disable reporting on asset consumption"
+		],
+		"correctIndex": 0,
+		"explanation": "CI relationships provide service context while asset records provide ownership and lifecycle context, together enabling stronger operational and governance outcomes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/c_CMDB.html",
+			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/asset-management.html",
+			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/incident-management/concept/incident-management.html"
+		]
+	}
+]

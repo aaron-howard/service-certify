@@ -1,0 +1,242 @@
+[
+	{
+		"trackCode": "CPOA",
+		"order": 20,
+		"prompt": "What is the primary value of IntegrationHub for a platform owner?",
+		"choices": [
+			"To provide governed, reusable integrations without custom middleware for every use case",
+			"To replace all inbound REST APIs with email-based imports",
+			"To bypass credential management requirements",
+			"To eliminate the need for flow testing"
+		],
+		"correctIndex": 0,
+		"explanation": "IntegrationHub supports standardized integration patterns that reduce custom code and improve maintainability.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/administer/integrationhub/concept/integrationhub.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 21,
+		"prompt": "When implementing IntegrationHub spokes, which approach best supports secure operations?",
+		"choices": [
+			"Store credentials in script includes for easier reuse",
+			"Use Connection & Credential aliases with least-privilege accounts",
+			"Embed secrets directly in flow actions",
+			"Reuse production credentials in all sub-prod instances"
+		],
+		"correctIndex": 1,
+		"explanation": "Connection and credential management centralizes secret handling and enforces safer account-scoping practices.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/administer/integrationhub/task/configure-connections-and-credentials.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 22,
+		"prompt": "Why should platform owners standardize reusable subflows for common integration patterns?",
+		"choices": [
+			"They automatically remove all API rate limits",
+			"They eliminate the need for error handling",
+			"They improve consistency and reduce duplicated logic across teams",
+			"They convert all asynchronous calls to synchronous execution"
+		],
+		"correctIndex": 2,
+		"explanation": "Reusable subflows create consistent design patterns and reduce maintenance burden for enterprise integration automation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/administer/flow-designer/concept/subflows.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 23,
+		"prompt": "Which control should be implemented to reduce impact from external API outages in IntegrationHub flows?",
+		"choices": [
+			"Disable all retries for failed calls",
+			"Force every integration to run as a single transaction",
+			"Skip logging to preserve performance",
+			"Use robust error handling, retry logic, and alerting for failed actions"
+		],
+		"correctIndex": 3,
+		"explanation": "Resilience patterns such as retries, exception paths, and alerts help contain failures and improve recovery times.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/administer/flow-designer/task/handle-flow-errors.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 24,
+		"prompt": "What metric best indicates healthy IntegrationHub operations at associate platform-owner level?",
+		"choices": [
+			"Successful execution rate with low incident-causing flow failures",
+			"Total number of flow versions created monthly",
+			"Count of outbound REST steps per flow",
+			"Number of personal developer integrations"
+		],
+		"correctIndex": 0,
+		"explanation": "Execution success and failure impact provide direct operational signals about integration reliability.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/administer/flow-designer/task/monitor-flow-executions.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 20,
+		"prompt": "What is the goal of integration governance for operational platform ownership?",
+		"choices": [
+			"Allow unrestricted point-to-point integrations to speed delivery",
+			"Establish standards for security, lifecycle, ownership, and monitoring",
+			"Replace change management for all external connections",
+			"Prevent use of IntegrationHub spokes"
+		],
+		"correctIndex": 1,
+		"explanation": "Governance creates repeatable controls so integrations remain secure, supportable, and aligned to enterprise standards.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/administer/integrationhub/concept/integration-governance.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 21,
+		"prompt": "Which operational control best reduces unmanaged external dependency risk?",
+		"choices": [
+			"Maintain a centralized integration inventory with owners and support contacts",
+			"Let each team maintain private integration records",
+			"Disable audit history for integration configuration tables",
+			"Use production credentials for all testing"
+		],
+		"correctIndex": 0,
+		"explanation": "An owned integration inventory improves accountability, incident response, and change impact analysis.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/administer/integrationhub/task/manage-integration-inventory.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 22,
+		"prompt": "Why are environment-specific endpoints and credentials important in integration governance?",
+		"choices": [
+			"They reduce update set collisions only",
+			"They prevent accidental non-prod to production data exchange",
+			"They eliminate all REST API authentication requirements",
+			"They make clone operations unnecessary"
+		],
+		"correctIndex": 1,
+		"explanation": "Segregating environment connections prevents unintended data movement and reduces operational and compliance risks.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/administer/integrationhub/task/manage-environment-connections.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 23,
+		"prompt": "What should happen when a critical external API version deprecation is announced?",
+		"choices": [
+			"Wait until failures occur in production",
+			"Disable all related flows immediately",
+			"Treat as an operational change event with impact analysis and remediation timeline",
+			"Migrate directly in production without testing"
+		],
+		"correctIndex": 2,
+		"explanation": "Version deprecations require controlled change planning, testing, and communication to avoid service disruption.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/administer/integrationhub/concept/integration-lifecycle-management.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 24,
+		"prompt": "Which result best demonstrates mature integration governance operations?",
+		"choices": [
+			"High number of emergency integration changes",
+			"No ownership records for third-party connectors",
+			"Ad hoc credential updates by individual developers",
+			"Documented standards, clear ownership, and measurable reliability improvements"
+		],
+		"correctIndex": 3,
+		"explanation": "Maturity is visible through clear controls, accountability, and improved reliability outcomes over time.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/administer/integrationhub/concept/integration-operating-model.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 20,
+		"prompt": "Why is CMDB relationship governance critical at enterprise scale?",
+		"choices": [
+			"It preserves accurate dependency mapping for impact analysis and service health decisions",
+			"It eliminates the need for discovery data sources",
+			"It replaces CI identification rules",
+			"It prevents all duplicate CIs by default"
+		],
+		"correctIndex": 0,
+		"explanation": "High-quality relationship data is foundational for understanding service impact, risk, and change outcomes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/product/configuration-management/concept/cmdb-relationships.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 21,
+		"prompt": "Which governance practice most improves trust in CMDB relationship data?",
+		"choices": [
+			"Allow manual edits without validation rules",
+			"Define ownership, quality policies, and automated reconciliation controls",
+			"Disable relationship types not used by one team",
+			"Store dependency maps outside the CMDB"
+		],
+		"correctIndex": 1,
+		"explanation": "Governed ownership and policy-driven controls improve consistency and confidence in relationship accuracy.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/product/configuration-management/concept/cmdb-governance.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 22,
+		"prompt": "What is the enterprise risk of stale application-to-infrastructure relationships in CMDB?",
+		"choices": [
+			"Increase in skipped updates",
+			"Reduced flow designer performance",
+			"Inaccurate impact analysis leading to poor change and incident decisions",
+			"Loss of subscription entitlement records"
+		],
+		"correctIndex": 2,
+		"explanation": "Outdated dependency data can mislead change approvals and outage triage, increasing business disruption risk.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/product/configuration-management/task/improve-cmdb-data-quality.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 23,
+		"prompt": "Which model best supports CMDB relationship governance across federated teams?",
+		"choices": [
+			"One central team manually maintaining every relationship",
+			"No data steward model to maximize speed",
+			"Only quarterly manual audits with no automation",
+			"Federated stewardship with central standards and quality KPIs"
+		],
+		"correctIndex": 3,
+		"explanation": "Federated stewardship balances local ownership with enterprise standards, improving data quality and sustainability.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/product/configuration-management/concept/cmdb-operating-model.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 24,
+		"prompt": "Which KPI best indicates progress in CMDB relationship governance maturity?",
+		"choices": [
+			"Higher relationship completeness and fewer critical services with unknown dependencies",
+			"Number of manual relationship edits per admin",
+			"Total count of relationship types created",
+			"Percentage of CIs without ownership"
+		],
+		"correctIndex": 0,
+		"explanation": "Completeness and dependency clarity directly reflect whether governance controls are improving decision-quality data.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/product/configuration-management/task/track-cmdb-quality-metrics.html"
+		]
+	}
+]

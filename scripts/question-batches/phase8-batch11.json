@@ -1,0 +1,402 @@
+[
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 55,
+    "prompt": "Which role is typically accountable for overall TPRM program governance?",
+    "choices": [
+      "TPRM program owner defining policy, standards, and oversight cadence",
+      "Any requester who submits a vendor onboarding form",
+      "Only procurement interns",
+      "No defined role is required"
+    ],
+    "correctIndex": 0,
+    "explanation": "A designated program owner ensures consistent policy execution and accountability across vendor lifecycles.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/vendor-risk-management/concept/vendor-risk-management-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 56,
+    "prompt": "What is the best role separation in TPRM assessment workflows?",
+    "choices": [
+      "Assessor also self-approves all findings",
+      "Distinct roles for assessor, control owner, and approver",
+      "Only one role for all activities",
+      "Approvals delegated to unrelated users"
+    ],
+    "correctIndex": 1,
+    "explanation": "Segregation of duties reduces bias and strengthens review integrity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 57,
+    "prompt": "Which TPRM role should own remediation execution for vendor issues?",
+    "choices": [
+      "Vendor manager or assigned issue owner with due-date accountability",
+      "Any read-only user",
+      "Portal guest account",
+      "System diagnostics user"
+    ],
+    "correctIndex": 0,
+    "explanation": "Named ownership with due dates ensures issues move from identification to closure.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/vendor-risk-management/task/manage-vendor-issues.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 58,
+    "prompt": "How should access be granted for TPRM reporting consumers?",
+    "choices": [
+      "Grant full admin rights to all viewers",
+      "Use least-privilege role groups aligned to data sensitivity and reporting needs",
+      "Share raw tables without ACL controls",
+      "Disable role-based access for dashboards"
+    ],
+    "correctIndex": 1,
+    "explanation": "Least-privilege access protects vendor risk data while enabling appropriate visibility.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_AccessControls.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 59,
+    "prompt": "Which sign of role-model maturity is most meaningful in TPRM?",
+    "choices": [
+      "Frequent reassignment of issue ownership",
+      "Clear RACI coverage with minimal approval bottlenecks",
+      "Untracked exceptions approved by email",
+      "No distinction between assessors and approvers"
+    ],
+    "correctIndex": 1,
+    "explanation": "A clear RACI with efficient handoffs indicates sustainable governance and execution.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/risk-management/concept/risk-management-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 55,
+    "prompt": "Which role is primarily responsible for VR policy and operational governance?",
+    "choices": [
+      "Vulnerability response manager or program owner",
+      "Any business user with portal access",
+      "Only CMDB data steward",
+      "No ownership role is needed"
+    ],
+    "correctIndex": 0,
+    "explanation": "Program ownership is needed to maintain lifecycle standards, SLAs, and remediation accountability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/concept/vulnerability-response-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 56,
+    "prompt": "What role should approve high-impact vulnerability exceptions?",
+    "choices": [
+      "Scanner integration user",
+      "Designated risk approver with security governance authority",
+      "Any technician assigned to the item",
+      "Service desk trainee"
+    ],
+    "correctIndex": 1,
+    "explanation": "Exception approval for high risk requires formal authority and risk accountability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/manage-risk-exceptions.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 57,
+    "prompt": "Which role should typically own remediation tasks in VR?",
+    "choices": [
+      "Application or infrastructure owner responsible for affected assets",
+      "Only platform administrators",
+      "Unassigned queue with no owner",
+      "Security auditors only"
+    ],
+    "correctIndex": 0,
+    "explanation": "Asset and application owners are best positioned to execute and validate remediation changes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/remediate-vulnerabilities.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 58,
+    "prompt": "How should read access be handled for vulnerability data with sensitive findings?",
+    "choices": [
+      "Open to all authenticated users",
+      "Role-based access with constraints for sensitive CI and exploit details",
+      "Shared through public reports",
+      "No ACLs needed when dashboards exist"
+    ],
+    "correctIndex": 1,
+    "explanation": "Sensitive vulnerability details require controlled visibility based on operational need.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_AccessControls.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 59,
+    "prompt": "What indicates healthy VR role alignment?",
+    "choices": [
+      "Remediation, approval, and review duties are clearly separated with low reassignment churn",
+      "All responsibilities assigned to one responder",
+      "No role ownership captured on records",
+      "Frequent overdue items with unknown owners"
+    ],
+    "correctIndex": 0,
+    "explanation": "Clear ownership and segregation improve throughput, auditability, and risk control.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 55,
+    "prompt": "Which role is typically accountable for CSM process governance?",
+    "choices": [
+      "CSM process owner defining case policies and service standards",
+      "Any customer contact at random",
+      "Only procurement manager",
+      "No formal role ownership"
+    ],
+    "correctIndex": 0,
+    "explanation": "A process owner ensures consistent operational standards across case lifecycle workflows.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/customer-service-management-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 56,
+    "prompt": "What role should own entitlement policy decisions in CSM?",
+    "choices": [
+      "Contract/service owner with governance authority",
+      "Any case agent editing the case",
+      "Guest user from portal",
+      "Catalog item approver only"
+    ],
+    "correctIndex": 0,
+    "explanation": "Entitlement policy ownership should map to contractual and service accountability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/task/configure-entitlements.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 57,
+    "prompt": "How should escalated CSM cases be role-assigned?",
+    "choices": [
+      "Leave in original queue without ownership change",
+      "Route to designated escalation roles with decision authority",
+      "Assign to inactive users",
+      "Close automatically when escalated"
+    ],
+    "correctIndex": 1,
+    "explanation": "Escalation roles should have the authority and context to resolve high-impact customer issues quickly.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/task/manage-case-escalations.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 58,
+    "prompt": "What access model is best for CSM account data?",
+    "choices": [
+      "Broad read/write access for all case agents",
+      "Role and account-based access controls aligned to assigned customer portfolios",
+      "Public dashboards with customer details",
+      "No differentiation between internal and external users"
+    ],
+    "correctIndex": 1,
+    "explanation": "Account-scoped access reduces confidentiality risk while enabling effective support operations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_AccessControls.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 59,
+    "prompt": "Which symptom suggests CSM role design needs improvement?",
+    "choices": [
+      "Frequent manual reassignment due to unclear ownership boundaries",
+      "Stable ownership and low escalation delay",
+      "Consistent entitlement enforcement",
+      "Low backlog for high-priority cases"
+    ],
+    "correctIndex": 0,
+    "explanation": "Repeated reassignment is a common indicator of role ambiguity and poor process routing.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/case-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 55,
+    "prompt": "In FSM mobile, what is the key value of offline capability?",
+    "choices": [
+      "Technicians can complete assigned work and capture updates without network connectivity",
+      "It disables all task forms on mobile",
+      "It only works for dispatchers in office",
+      "It prevents attachment capture"
+    ],
+    "correctIndex": 0,
+    "explanation": "Offline mode enables uninterrupted field execution in low-connectivity environments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/use-mobile-apps-for-field-service.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 56,
+    "prompt": "What should be configured first for reliable FSM mobile offline operations?",
+    "choices": [
+      "The company newsletter feed",
+      "Data synchronization rules for required records and task updates",
+      "Desktop browser cache settings",
+      "Only UI themes and icons"
+    ],
+    "correctIndex": 1,
+    "explanation": "Sync scope determines what data is available and what updates can be safely queued offline.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-mobile/page/administer/mobile/concept/offline-mobile.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 57,
+    "prompt": "How should conflict handling work when offline updates sync back online?",
+    "choices": [
+      "Discard all offline edits automatically",
+      "Apply conflict resolution rules and surface exceptions for review",
+      "Overwrite master data without controls",
+      "Force technician logout permanently"
+    ],
+    "correctIndex": 1,
+    "explanation": "Controlled conflict handling preserves data integrity when concurrent edits occur.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-mobile/page/administer/mobile/task/configure-offline-data-sync.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 58,
+    "prompt": "Which offline KPI is most useful for FSM support teams?",
+    "choices": [
+      "Percentage of successful sync retries after reconnection",
+      "Number of desktop bookmarks",
+      "Count of inactive user photos",
+      "Average email size"
+    ],
+    "correctIndex": 0,
+    "explanation": "Sync retry success reflects offline reliability and recovery quality in the field.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-mobile/page/administer/mobile/concept/mobile-analytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 59,
+    "prompt": "What administrative control improves security for FSM offline data?",
+    "choices": [
+      "Disable device authentication",
+      "Enforce mobile security policies, encryption, and role-based data scope",
+      "Store all field data in public folders",
+      "Allow shared credentials across technicians"
+    ],
+    "correctIndex": 1,
+    "explanation": "Offline data must remain protected through strong device and access controls.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-mobile/page/administer/mobile/concept/mobile-security.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 55,
+    "prompt": "In HRSD, what is the primary role of the service catalog for employees?",
+    "choices": [
+      "To provide a structured entry point for HR services and requests",
+      "To replace HR case management entirely",
+      "To hide available services from employees",
+      "To manage only IT incidents"
+    ],
+    "correctIndex": 0,
+    "explanation": "The HR service catalog standardizes request intake and improves employee self-service.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-hr-service-delivery/page/product/human-resources/task/configure-hr-service-catalog-items.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 56,
+    "prompt": "Which configuration best supports targeted HR services by population?",
+    "choices": [
+      "Publish all items to everyone",
+      "Use HR criteria to control catalog item visibility and eligibility",
+      "Hide all items by default with no criteria",
+      "Use assignment groups only for visibility"
+    ],
+    "correctIndex": 1,
+    "explanation": "HR criteria ensure employees see relevant services based on role, location, and policy context.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-hr-service-delivery/page/product/human-resources/task/configure-hr-criteria.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 57,
+    "prompt": "How should HR catalog items be designed for fulfillment efficiency?",
+    "choices": [
+      "Require many free-text fields for all requests",
+      "Use guided forms with necessary data and mapped fulfillment workflows",
+      "Avoid using templates",
+      "Create one generic item for every HR need"
+    ],
+    "correctIndex": 1,
+    "explanation": "Guided, data-complete requests reduce triage effort and improve fulfillment accuracy.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/service-catalog-management/concept/c_ServiceCatalogManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 58,
+    "prompt": "Which metric best evaluates HR catalog effectiveness?",
+    "choices": [
+      "Number of catalog categories created",
+      "Request completion rate without manual rework",
+      "Count of inactive users",
+      "Average browser session duration"
+    ],
+    "correctIndex": 1,
+    "explanation": "High completion without rework indicates clear forms and strong workflow alignment.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 59,
+    "prompt": "What governance practice keeps the HR service catalog healthy over time?",
+    "choices": [
+      "Leave outdated items active indefinitely",
+      "Perform periodic catalog reviews for usage, policy alignment, and content quality",
+      "Disable all employee feedback",
+      "Allow duplicate items for each team"
+    ],
+    "correctIndex": 1,
+    "explanation": "Regular governance prevents stale content and preserves service relevance and compliance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/service-catalog-management/task/maintain-catalog-content.html"
+    ]
+  }
+]

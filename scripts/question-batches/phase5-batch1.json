@@ -1,0 +1,242 @@
+[
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 5,
+		"prompt": "A Discovery admin needs to classify Windows servers reliably across segmented networks. Which MID Server design choice has the biggest impact on successful classification?",
+		"choices": [
+			"Deploy at least one validated MID Server in each required network zone with routing to target subnets",
+			"Run all discovery from the instance node to avoid MID Server latency",
+			"Assign the MID Server to the Service Desk group for faster approvals",
+			"Disable MID Server capabilities so probes execute only from schedules"
+		],
+		"correctIndex": 0,
+		"explanation": "Discovery depends on network reachability from MID Servers to target IP ranges, so zone-aligned placement is essential for classification and identification.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/mid-server-for-discovery.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 6,
+		"prompt": "What is the primary purpose of validating a MID Server after installation?",
+		"choices": [
+			"To generate hardware CI records before credentials are configured",
+			"To confirm connectivity, version compatibility, and required capabilities between instance and MID Server",
+			"To assign CMDB ownership to the MID Server service account",
+			"To enable Event Management connector packs automatically"
+		],
+		"correctIndex": 1,
+		"explanation": "Validation confirms the MID Server can communicate with the instance and is ready to execute Discovery workloads with the expected capabilities.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/mid-server/task/validate-a-mid-server.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 7,
+		"prompt": "During Discovery troubleshooting, the status for a subnet stays in \"Scanning\" with no probes returning. Which record type should be reviewed first?",
+		"choices": [
+			"sys_ui_module",
+			"alm_asset",
+			"ECC Queue entries for probe/output activity tied to the run",
+			"sys_documentation"
+		],
+		"correctIndex": 2,
+		"explanation": "Probe and sensor activity is exchanged through ECC Queue, making it the quickest way to identify execution or communication failures during a run.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/troubleshoot-discovery-status.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 8,
+		"prompt": "Why is configuring MID Server service accounts with least privilege considered a best practice for CIS-Discovery implementations?",
+		"choices": [
+			"It forces all probes to run in simulation mode",
+			"It removes the need for credential aliases",
+			"It guarantees every sensor will classify cloud resources",
+			"It reduces security exposure while still allowing protocol-level access required for discovery patterns"
+		],
+		"correctIndex": 3,
+		"explanation": "Least-privilege service accounts lower risk and audit burden while preserving the access needed for successful probe and pattern execution.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/least-privilege-access.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 9,
+		"prompt": "A customer asks whether one MID Server can cover all datacenters globally. What is the most accurate response?",
+		"choices": [
+			"A single MID Server can work, but resilient Discovery design typically uses multiple MID Servers for locality, scale, and failover",
+			"Discovery requires one MID Server per CI class",
+			"MID Servers cannot be load balanced across Discovery schedules",
+			"MID Server clustering is mandatory before any schedule can run"
+		],
+		"correctIndex": 0,
+		"explanation": "While one MID Server may function in small environments, enterprise reliability and performance usually require geographically and logically distributed MID Servers.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/mid-server/concept/mid-server-clusters.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 5,
+		"prompt": "In Event Management, what is the first major objective of the event pipeline after receiving raw events?",
+		"choices": [
+			"Create incident tasks immediately for every event",
+			"Normalize and evaluate incoming events so they can be correlated and prioritized",
+			"Archive all events to sys_audit before processing",
+			"Convert events into CMDB updates without rule evaluation"
+		],
+		"correctIndex": 1,
+		"explanation": "The pipeline standardizes event data and applies processing logic so downstream correlation and alerting are meaningful.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-processing.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 6,
+		"prompt": "Which event pipeline outcome directly reduces alert noise in a mature implementation?",
+		"choices": [
+			"Allowing duplicate events to open separate alerts by default",
+			"Running only one connector with all source systems",
+			"Deduplication and correlation based on event key fields and rule logic",
+			"Disabling severity mapping from source tools"
+		],
+		"correctIndex": 2,
+		"explanation": "Deduplication and correlation prevent redundant alerts and group related signals into actionable alert context.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-correlation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 7,
+		"prompt": "A team sees high-volume warning events that should not trigger operational action. What pipeline-level control is most appropriate?",
+		"choices": [
+			"Delete the source CI records",
+			"Disable all event connectors",
+			"Set every event to critical for visibility",
+			"Use event rules to filter or lower impact before alert creation"
+		],
+		"correctIndex": 3,
+		"explanation": "Pipeline filtering and severity control through event rules helps suppress low-value noise while preserving signal for actionable conditions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/task/configure-event-rules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 8,
+		"prompt": "Why is CI binding important during event pipeline processing?",
+		"choices": [
+			"It links events and alerts to affected configuration items so impact and ownership can be determined",
+			"It replaces connector credentials with CMDB IDs",
+			"It bypasses alert aggregation logic",
+			"It allows events to skip normalization"
+		],
+		"correctIndex": 0,
+		"explanation": "Binding to a CI provides service context, enabling better triage, routing, and business impact analysis.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-binding.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 9,
+		"prompt": "What best describes a healthy event pipeline KPI for CIS-EM operations?",
+		"choices": [
+			"Maximum raw event volume per minute regardless of quality",
+			"High signal-to-noise ratio with timely alert generation for actionable conditions",
+			"No correlation so operators can see every duplicate event",
+			"All events mapped to a single CI for easier dashboards"
+		],
+		"correctIndex": 1,
+		"explanation": "Effective pipelines prioritize actionable signal and reduce noise, enabling faster response with less operational fatigue.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-management-best-practices.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 5,
+		"prompt": "In Hardware Asset Management, why are hardware models foundational to lifecycle governance?",
+		"choices": [
+			"They define standardized product metadata used for procurement, stock, and asset normalization",
+			"They replace all model categories and classes",
+			"They auto-close stale asset tasks",
+			"They restrict CI discovery from network scans"
+		],
+		"correctIndex": 0,
+		"explanation": "Hardware models provide the normalized catalog definitions that support consistent purchasing, receiving, and tracking behavior.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-model-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 6,
+		"prompt": "Which configuration most improves reporting accuracy for laptop refresh planning?",
+		"choices": [
+			"Using free-text model names on each asset record",
+			"Associating each asset to a normalized hardware model with consistent manufacturer and model category",
+			"Setting all assets to one depreciation schedule",
+			"Disabling model normalization to preserve imported values"
+		],
+		"correctIndex": 1,
+		"explanation": "Normalized model references make lifecycle and refresh analytics more reliable than ad hoc model text.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/task/normalize-hardware-models.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 7,
+		"prompt": "A receiving team creates duplicate model records for the same vendor SKU. What is the best remediation approach?",
+		"choices": [
+			"Keep duplicates and map stockrooms separately",
+			"Convert all duplicates to consumable models",
+			"Consolidate to a governed model record and map assets to the canonical model",
+			"Delete all historical assets tied to duplicate models"
+		],
+		"correctIndex": 2,
+		"explanation": "Maintaining a canonical model record avoids fragmented reporting and inconsistent lifecycle controls across equivalent hardware.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/task/manage-hardware-model-records.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 8,
+		"prompt": "What is a common governance risk when model categories are misconfigured?",
+		"choices": [
+			"Stock rules cannot be configured for any location",
+			"Asset tags are not generated for serialized assets",
+			"CMDB relationships are permanently deleted",
+			"Assets may follow incorrect workflows, approvals, or financial treatment due to wrong model classification"
+		],
+		"correctIndex": 3,
+		"explanation": "Model category drives process behavior and controls, so misclassification can cause downstream operational and financial errors.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/model-categories.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 9,
+		"prompt": "Which practice best supports long-term hardware model quality in enterprise HAM?",
+		"choices": [
+			"Implement a model governance process with ownership, deduplication review, and intake standards",
+			"Allow requesters to create model records directly in production",
+			"Track models only in procurement attachments",
+			"Avoid manufacturer references to simplify imports"
+		],
+		"correctIndex": 0,
+		"explanation": "Governed model maintenance preserves data integrity and keeps asset lifecycle workflows predictable at scale.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-management-best-practices.html"
+		]
+	}
+]

@@ -1,0 +1,342 @@
+[
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 70,
+    "prompt": "Which governance element is most critical when launching an enterprise TPRM program?",
+    "choices": [
+      "A documented policy with defined risk ownership, review cadence, and escalation paths",
+      "An open intake queue with no ownership assignments",
+      "Manual vendor review only when incidents occur",
+      "Decentralized templates with no common controls"
+    ],
+    "correctIndex": 0,
+    "explanation": "TPRM governance starts with explicit accountability, policy, and escalation structure to drive consistent risk decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/concept/policy-and-compliance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 71,
+    "prompt": "For enterprise TPRM governance, what is the best way to standardize vendor risk assessments?",
+    "choices": [
+      "Use a common control framework and scoring model across business units",
+      "Allow each department to define unrelated scoring scales",
+      "Score only critical vendors and skip the rest",
+      "Replace assessments with annual email attestations"
+    ],
+    "correctIndex": 0,
+    "explanation": "A shared framework and scoring method enables comparable risk posture and enterprise-level reporting.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 72,
+    "prompt": "Which KPI best reflects maturity in TPRM program governance?",
+    "choices": [
+      "Reduction in overdue vendor remediation tasks with tracked exception approvals",
+      "Increase in unassigned assessment records",
+      "Higher count of unmanaged spreadsheet inventories",
+      "Fewer governance meetings regardless of risk levels"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mature TPRM programs demonstrate disciplined remediation follow-through and governed exception handling.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 73,
+    "prompt": "A global business unit wants to bypass central TPRM controls for speed. What is the best governance response?",
+    "choices": [
+      "Enforce baseline controls while allowing approved regional extensions under central oversight",
+      "Allow full local autonomy with no central reporting",
+      "Suspend all third-party onboarding until year-end",
+      "Move all assessments to ad hoc email requests"
+    ],
+    "correctIndex": 0,
+    "explanation": "Federated execution with mandatory baseline controls balances agility and enterprise risk consistency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 74,
+    "prompt": "Which governance practice most improves executive visibility in TPRM?",
+    "choices": [
+      "A recurring board-level dashboard for inherent risk, residual risk, and remediation aging",
+      "One-time annual exports without trend history",
+      "Vendor lists sorted only by creation date",
+      "Risk scores hidden from non-analyst stakeholders"
+    ],
+    "correctIndex": 0,
+    "explanation": "Executives need trend-based risk and remediation transparency to steer third-party risk decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 70,
+    "prompt": "Which approach best supports enterprise remediation in Vulnerability Response?",
+    "choices": [
+      "Risk-based prioritization that combines exploitability, asset criticality, and business context",
+      "Patch every finding in strict discovery order",
+      "Remediate only vulnerabilities from one scanner",
+      "Focus on low-risk findings first to increase closure counts"
+    ],
+    "correctIndex": 0,
+    "explanation": "Enterprise remediation is most effective when risk context directs effort to the highest-impact exposures first.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-prioritization.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 71,
+    "prompt": "What is the most important governance mechanism for enterprise VR remediation teams?",
+    "choices": [
+      "Standard SLA policies by risk tier with accountable assignment groups and escalation",
+      "Optional due dates set by individual analysts",
+      "No distinction between critical and low findings",
+      "Remediation ownership left undefined until audits"
+    ],
+    "correctIndex": 0,
+    "explanation": "Clear tiered SLAs and ownership reduce remediation drift and create consistent enterprise execution.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 72,
+    "prompt": "Which metric set best shows progress in enterprise VR remediation?",
+    "choices": [
+      "Critical vulnerability aging, SLA attainment by business service, and reopened remediation rate",
+      "Total number of scanners integrated",
+      "Weekly count of all discovered IP addresses",
+      "Number of dashboard widgets in use"
+    ],
+    "correctIndex": 0,
+    "explanation": "These measures demonstrate remediation speed, accountability, and quality across enterprise domains.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-response.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 73,
+    "prompt": "When multiple teams dispute ownership of a critical vulnerability, what should happen first?",
+    "choices": [
+      "Use CMDB and service ownership mapping to assign accountable remediation ownership",
+      "Close the item until teams reach consensus",
+      "Assign ownership to the last team that commented",
+      "Convert the record to informational with no due date"
+    ],
+    "correctIndex": 0,
+    "explanation": "Accurate ownership mapping is foundational for timely remediation and escalation governance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/c_CMDB.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-response.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 74,
+    "prompt": "What indicates an enterprise VR remediation program is becoming operationally mature?",
+    "choices": [
+      "Consistent reduction of high-risk backlog and fewer recurring critical findings",
+      "More exception requests with no expiration",
+      "Longer approval times for patch windows",
+      "Higher volume of manually updated tickets"
+    ],
+    "correctIndex": 0,
+    "explanation": "Maturity is visible through sustained risk reduction and prevention of repeat high-impact exposures.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 70,
+    "prompt": "Which strategy best supports enterprise CSM rollout across multiple business units?",
+    "choices": [
+      "Deploy a common case model with phased domain onboarding and shared governance",
+      "Launch all channels and geographies simultaneously without standards",
+      "Keep each business unit on isolated workflows indefinitely",
+      "Prioritize branding before process and data alignment"
+    ],
+    "correctIndex": 0,
+    "explanation": "Enterprise rollout succeeds with standardized foundations and phased adoption under common governance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/csm-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/case-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 71,
+    "prompt": "During CSM enterprise rollout, what should be standardized first?",
+    "choices": [
+      "Case lifecycle states, assignment model, and priority definitions",
+      "Regional color themes for workspace",
+      "Individual team naming conventions only",
+      "Ad hoc SLAs per agent preference"
+    ],
+    "correctIndex": 0,
+    "explanation": "Shared lifecycle and prioritization rules create consistent customer outcomes and reporting quality.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/case-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/service-level-management/concept/service-level-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 72,
+    "prompt": "Which KPI combination best measures enterprise CSM rollout success?",
+    "choices": [
+      "First-contact resolution, case resolution SLA attainment, and customer effort trend",
+      "Total number of users with admin role",
+      "Count of knowledge categories created",
+      "Daily number of inbound emails without resolution context"
+    ],
+    "correctIndex": 0,
+    "explanation": "These KPIs capture service quality, operational performance, and customer experience during rollout.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/csm-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 73,
+    "prompt": "A business unit requests custom CSM processes that conflict with enterprise standards. What is the best response?",
+    "choices": [
+      "Apply a governance review to allow only justified extensions that preserve core global process controls",
+      "Approve all local customizations immediately",
+      "Reject all change requests without analysis",
+      "Fork the platform into separate instances"
+    ],
+    "correctIndex": 0,
+    "explanation": "Governed extensibility keeps enterprise consistency while supporting legitimate regional or product needs.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/csm-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 74,
+    "prompt": "Which operating model most improves long-term CSM enterprise rollout sustainability?",
+    "choices": [
+      "Central product team with regional champions and a managed release cadence",
+      "Independent regional admins deploying unreviewed updates",
+      "No backlog prioritization process",
+      "Quarterly pauses on all defect and enhancement work"
+    ],
+    "correctIndex": 0,
+    "explanation": "A product operating model enables scalable governance, controlled change, and continual service improvement.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/csm-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/continual-improvement-management/concept/continual-improvement-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 70,
+    "prompt": "Which foundation is most important for enterprise FSM operations?",
+    "choices": [
+      "Standardized work order lifecycle, dispatch rules, and mobile execution standards",
+      "Technician-specific manual workflows with no central model",
+      "Scheduling based only on technician preference",
+      "No link between work orders and assets"
+    ],
+    "correctIndex": 0,
+    "explanation": "Enterprise FSM needs consistent process and execution standards to coordinate field operations at scale.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/field-service-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/work-order-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 71,
+    "prompt": "For enterprise FSM, what is the best method to improve dispatch efficiency?",
+    "choices": [
+      "Use skills, territory, and availability constraints in automated scheduling policies",
+      "Assign all work orders in first-in-first-out order only",
+      "Allow each dispatcher to use private rules",
+      "Disable appointment windows to maximize flexibility"
+    ],
+    "correctIndex": 0,
+    "explanation": "Constraint-based scheduling aligns field assignments with capability and service commitments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/scheduling-dispatch.html",
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/field-service-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 72,
+    "prompt": "Which KPI set best reflects enterprise FSM operational health?",
+    "choices": [
+      "First-time fix rate, on-time arrival, and work order cycle time by region",
+      "Total number of dispatch boards created",
+      "Count of mobile users logged in once",
+      "Number of catalog items tied to field teams"
+    ],
+    "correctIndex": 0,
+    "explanation": "These KPIs track service effectiveness, punctuality, and throughput across distributed field operations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/field-service-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 73,
+    "prompt": "A region has high repeat visits for the same issue type. What enterprise FSM action is best?",
+    "choices": [
+      "Analyze repeat-work patterns and update playbooks, parts strategy, and technician enablement",
+      "Increase appointment windows without root-cause review",
+      "Close repeat work orders as duplicates only",
+      "Route all similar work to a single dispatcher"
+    ],
+    "correctIndex": 0,
+    "explanation": "Reducing repeat visits requires root-cause correction across process, inventory, and execution practices.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/knowledge-and-playbooks.html",
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/work-order-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 74,
+    "prompt": "Which governance practice most improves enterprise FSM operations over time?",
+    "choices": [
+      "Monthly operational reviews by region using common KPIs and corrective action tracking",
+      "Local reporting formats with no shared scorecard",
+      "Annual review only after customer escalations",
+      "No formal review once mobile adoption is complete"
+    ],
+    "correctIndex": 0,
+    "explanation": "Regular KPI-driven governance ensures continuous improvement and cross-region operational consistency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/field-service-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html"
+    ]
+  }
+]

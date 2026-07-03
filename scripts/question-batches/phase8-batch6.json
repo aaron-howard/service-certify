@@ -1,0 +1,402 @@
+[
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 30,
+    "prompt": "What is the primary objective of continuous monitoring in Third-Party Risk Management?",
+    "choices": [
+      "Freeze risk ratings after onboarding",
+      "Detect vendor risk posture changes quickly and trigger timely reassessment actions",
+      "Replace all periodic assessments with contract renewals",
+      "Limit monitoring to financial risk only"
+    ],
+    "correctIndex": 1,
+    "explanation": "Continuous monitoring helps teams identify emerging risks between assessment cycles and act before exposure grows.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/concept/continuous-monitoring.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 31,
+    "prompt": "Which event should most likely trigger an out-of-cycle third-party reassessment?",
+    "choices": [
+      "A vendor logo update",
+      "A material control failure, breach notification, or major compliance change",
+      "A new marketing campaign launch",
+      "A routine invoice approval"
+    ],
+    "correctIndex": 1,
+    "explanation": "Significant control or compliance events indicate changed risk and justify reassessment outside the normal cadence.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/task/manage-third-party-monitoring-events.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 32,
+    "prompt": "How should monitoring signals be prioritized in TPRM operations?",
+    "choices": [
+      "By alphabetical vendor name",
+      "By risk impact, criticality tier, and confidence of the monitoring evidence",
+      "By age of the vendor relationship only",
+      "By the number of open support tickets"
+    ],
+    "correctIndex": 1,
+    "explanation": "Risk-based prioritization ensures teams focus first on signals with the greatest potential business impact.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-tiering.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 33,
+    "prompt": "What process outcome indicates healthy TPRM monitoring governance?",
+    "choices": [
+      "Signals are logged but never dispositioned",
+      "Monitoring alerts are triaged, documented, and linked to reassessment or mitigation workflows",
+      "All alerts are auto-closed weekly",
+      "Monitoring is paused during contract periods"
+    ],
+    "correctIndex": 1,
+    "explanation": "Governance requires clear triage and auditable follow-through from signal detection to risk treatment.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management-workspace.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 34,
+    "prompt": "Which KPI best reflects effective third-party continuous monitoring?",
+    "choices": [
+      "Average vendor contract length",
+      "Mean time to review and disposition high-risk monitoring alerts",
+      "Total number of users with TPRM roles",
+      "Count of archived questionnaires"
+    ],
+    "correctIndex": 1,
+    "explanation": "Response timeliness for high-risk alerts is a direct indicator of monitoring operational effectiveness.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-performance-metrics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 30,
+    "prompt": "What is the main purpose of vulnerability groups in Vulnerability Response?",
+    "choices": [
+      "Store scanner credentials",
+      "Aggregate related vulnerable items so remediation can be coordinated at scale",
+      "Replace CI ownership records",
+      "Disable assignment rules for security teams"
+    ],
+    "correctIndex": 1,
+    "explanation": "Grouping vulnerabilities streamlines triage and remediation when many similar findings affect multiple assets.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/c_VulnerabilityGroups.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 31,
+    "prompt": "Which grouping strategy generally improves remediation efficiency?",
+    "choices": [
+      "Group by random import batch",
+      "Group by common remediation action, affected software, and responsible assignment group",
+      "Group only by discovery date",
+      "Group by scanner user account"
+    ],
+    "correctIndex": 1,
+    "explanation": "Operationally meaningful groups help teams execute one remediation pattern across many related findings.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/task/t_CreateVulnerabilityGroups.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 32,
+    "prompt": "When should a vulnerability group be split into smaller groups?",
+    "choices": [
+      "When there are different owners, SLAs, or remediation approaches within the same group",
+      "When group size is exactly ten items",
+      "When all items share the same patch process",
+      "When vulnerabilities are already closed"
+    ],
+    "correctIndex": 0,
+    "explanation": "Groups should remain actionable; mixed ownership or remediation paths can reduce execution clarity and accountability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/c_RemediationWorkflows.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 33,
+    "prompt": "What is a key governance benefit of vulnerability groups?",
+    "choices": [
+      "They eliminate risk scoring",
+      "They provide a manageable unit for assigning ownership, tracking progress, and reporting outcomes",
+      "They remove CI context from findings",
+      "They prevent integration with change management"
+    ],
+    "correctIndex": 1,
+    "explanation": "Group-level ownership and progress tracking improve accountability and status visibility across large remediation programs.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/vulnerability-response-dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 34,
+    "prompt": "Which metric best indicates that vulnerability groups are configured effectively?",
+    "choices": [
+      "Count of scanner connectors",
+      "High group closure rate with low reopen percentage and clear owner accountability",
+      "Number of inactive CIs",
+      "Total imported findings regardless of status"
+    ],
+    "correctIndex": 1,
+    "explanation": "Sustained closure with low rework suggests groups are actionable and routed to the right teams.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/vr-performance-analytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 30,
+    "prompt": "What is the central purpose of CSM Case Workspace?",
+    "choices": [
+      "Provide a unified agent workspace for case triage, collaboration, and resolution actions",
+      "Replace customer records with temporary notes",
+      "Restrict agents to email-only case handling",
+      "Remove entitlement visibility from agents"
+    ],
+    "correctIndex": 0,
+    "explanation": "Case Workspace consolidates context and actions so agents can resolve issues with fewer tool switches.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/case-workspace.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 31,
+    "prompt": "Which workspace configuration most helps reduce average handle time?",
+    "choices": [
+      "Hide related records and interaction history",
+      "Configure contextual tabs, quick actions, and visible SLA indicators for agents",
+      "Disable activity stream updates",
+      "Force all cases into one generic assignment group"
+    ],
+    "correctIndex": 1,
+    "explanation": "Contextual layout and quick actions reduce navigation overhead and support faster decision making.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/task/configure-case-workspace.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 32,
+    "prompt": "What should be emphasized when designing CSM workspace forms?",
+    "choices": [
+      "Expose every field from all related tables",
+      "Show the minimum critical data needed for triage, ownership, and next-best action",
+      "Remove account and contact information",
+      "Disable UI policies for consistency"
+    ],
+    "correctIndex": 1,
+    "explanation": "Focused forms reduce cognitive load and help agents complete high-value tasks more efficiently.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/build/workspace/concept/workspaces.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 33,
+    "prompt": "How do workspace playbooks improve CSM execution?",
+    "choices": [
+      "By disabling assignment rules",
+      "By guiding agents through consistent, role-appropriate steps for common case scenarios",
+      "By forcing every case to the same priority",
+      "By replacing SLA definitions"
+    ],
+    "correctIndex": 1,
+    "explanation": "Playbooks standardize response behavior and reduce variability in complex or recurring case types.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/csm-playbooks.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 34,
+    "prompt": "Which indicator best signals successful Case Workspace adoption?",
+    "choices": [
+      "Agents complete fewer updates per case",
+      "Higher first-contact resolution and lower average case age after workspace rollout",
+      "Increased manual spreadsheet usage",
+      "Reduced visibility into account health"
+    ],
+    "correctIndex": 1,
+    "explanation": "Improved resolution outcomes and cycle times indicate that workspace design is positively impacting agent performance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/c_CSMAnalyticsAndDashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 30,
+    "prompt": "Why is asset information essential in Field Service Management?",
+    "choices": [
+      "It allows dispatch to ignore technician skills",
+      "It provides service history and configuration context needed for accurate work execution",
+      "It replaces work orders with purchase requests",
+      "It is used only for annual audits"
+    ],
+    "correctIndex": 1,
+    "explanation": "Reliable asset context helps technicians diagnose issues faster and perform the correct field procedures.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/asset-centric-service.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 31,
+    "prompt": "Which practice improves first-time fix rates for asset-based work orders?",
+    "choices": [
+      "Dispatch without referencing asset model details",
+      "Ensure work orders include asset model, install base history, and known issue context",
+      "Remove asset serial number tracking",
+      "Schedule work solely by technician seniority"
+    ],
+    "correctIndex": 1,
+    "explanation": "Including actionable asset context before dispatch increases the chance technicians arrive prepared with the right approach.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/create-work-orders.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 32,
+    "prompt": "How should FSM teams handle recurring failures on the same asset class?",
+    "choices": [
+      "Treat each failure as unrelated",
+      "Analyze asset performance trends and update preventive maintenance or knowledge guidance",
+      "Close work orders without resolution codes",
+      "Delete completed service appointments"
+    ],
+    "correctIndex": 1,
+    "explanation": "Trend analysis across asset classes enables proactive service improvements and reduced repeat failures.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/preventive-maintenance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 33,
+    "prompt": "What data quality focus is most important for FSM asset operations?",
+    "choices": [
+      "Only maintain asset display names",
+      "Keep ownership, location, lifecycle state, and service history accurate and current",
+      "Purge all closed asset records monthly",
+      "Use free-text fields instead of references"
+    ],
+    "correctIndex": 1,
+    "explanation": "Accurate asset master data supports dispatch quality, entitlement decisions, and field execution efficiency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/c_AssetManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 34,
+    "prompt": "Which KPI best reflects healthy asset-enabled field service performance?",
+    "choices": [
+      "Number of assets with no category",
+      "First-time fix rate and repeat-visit reduction for asset-linked work orders",
+      "Count of inactive assignment groups",
+      "Average password reset completion time"
+    ],
+    "correctIndex": 1,
+    "explanation": "First-time fix and repeat-visit trends directly show whether asset context is improving field outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/fsm-analytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 30,
+    "prompt": "In HR Service Delivery, what is the primary goal of onboarding lifecycle events?",
+    "choices": [
+      "Create ad hoc tasks without owners",
+      "Coordinate cross-department tasks to deliver a consistent and timely new hire experience",
+      "Replace HR profiles with manual spreadsheets",
+      "Limit communication to hiring managers only"
+    ],
+    "correctIndex": 1,
+    "explanation": "Onboarding lifecycle events orchestrate work across HR, IT, facilities, and managers for smooth day-one readiness.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/hr-service-delivery/concept/onboarding-lifecycle-events.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 31,
+    "prompt": "Which setup step is most important when implementing HR onboarding journeys?",
+    "choices": [
+      "Disable task templates to increase flexibility",
+      "Define role-based activity sets, due dates, and dependencies aligned to onboarding milestones",
+      "Route all tasks to one HR general queue",
+      "Prevent manager participation in onboarding tasks"
+    ],
+    "correctIndex": 1,
+    "explanation": "Structured templates and dependencies ensure predictable, accountable delivery across multiple stakeholders.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/hr-service-delivery/task/configure-onboarding-activities.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 32,
+    "prompt": "What is a strong indicator of onboarding process health?",
+    "choices": [
+      "Number of inactive HR templates",
+      "Percentage of required onboarding tasks completed on time before start date",
+      "Volume of unrelated IT incidents",
+      "Count of archived knowledge articles"
+    ],
+    "correctIndex": 1,
+    "explanation": "Timely completion of prerequisite tasks directly measures whether onboarding execution is meeting readiness targets.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/hr-service-delivery/concept/hr-analytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 33,
+    "prompt": "How should exceptions be handled in HR onboarding workflows?",
+    "choices": [
+      "Ignore missed tasks until after start date",
+      "Escalate overdue critical tasks with ownership visibility and remediation deadlines",
+      "Close all pending tasks automatically at midnight",
+      "Convert all onboarding tasks to catalog requests"
+    ],
+    "correctIndex": 1,
+    "explanation": "Proactive exception management keeps onboarding on track and reduces first-day service failures.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/hr-service-delivery/task/manage-lifecycle-event-tasks.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 34,
+    "prompt": "Why should onboarding content be surfaced through Employee Center?",
+    "choices": [
+      "To hide onboarding status from new hires",
+      "To provide a single place for tasks, guidance, and progress visibility during the journey",
+      "To avoid using lifecycle event templates",
+      "To eliminate approvals for sensitive actions"
+    ],
+    "correctIndex": 1,
+    "explanation": "Centralized onboarding experience improves clarity, engagement, and completion rates for new employees.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/employee-center/concept/employee-center.html"
+    ]
+  }
+]

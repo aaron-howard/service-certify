@@ -1,0 +1,257 @@
+[
+  {
+    "trackCode": "CPOA",
+    "order": 50,
+    "prompt": "What is the main goal of running HealthScan in a platform owner governance cycle?",
+    "choices": [
+      "Identify architectural, performance, and maintainability risks before they become operational incidents",
+      "Replace all code review activities across teams",
+      "Automatically remediate every issue without ownership",
+      "Generate deployment approvals with no human validation"
+    ],
+    "correctIndex": 0,
+    "explanation": "HealthScan supports proactive governance by highlighting risk patterns that require prioritized remediation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 51,
+    "prompt": "How should HealthScan findings be converted into actionable governance outcomes?",
+    "choices": [
+      "Map findings to accountable owners, remediation deadlines, and risk severity thresholds",
+      "Archive reports without review to preserve historical records",
+      "Treat all findings as informational with no follow-up",
+      "Delegate remediation ownership to external users"
+    ],
+    "correctIndex": 0,
+    "explanation": "Findings only create value when they are tracked with ownership, priority, and closure criteria.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/problem-management/concept/problem-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 52,
+    "prompt": "Which cadence is most appropriate for enterprise HealthScan governance?",
+    "choices": [
+      "Run on a recurring schedule aligned to release milestones and major architectural changes",
+      "Run once after initial go-live only",
+      "Run only when incidents breach SLA",
+      "Run daily in production without analyzing trends"
+    ],
+    "correctIndex": 0,
+    "explanation": "Regular scanning aligned with change velocity enables trend analysis and early intervention.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 53,
+    "prompt": "What is a strong indicator that HealthScan governance is improving platform quality?",
+    "choices": [
+      "A sustained reduction in high-risk findings across consecutive scans",
+      "An increase in exempted findings with no justification",
+      "More emergency changes to address recurring architecture issues",
+      "Higher backlog age for critical remediation tasks"
+    ],
+    "correctIndex": 0,
+    "explanation": "Downward risk trends across scans show that remediation controls are effective and durable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 54,
+    "prompt": "How should platform owners handle repeated HealthScan findings that span multiple teams?",
+    "choices": [
+      "Create a cross-team remediation program with common standards and executive visibility",
+      "Close all repeated findings as accepted risk",
+      "Assign all items to one developer for faster completion",
+      "Defer remediation until the next platform upgrade"
+    ],
+    "correctIndex": 0,
+    "explanation": "Shared recurring issues require coordinated governance and standardization, not isolated fixes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 50,
+    "prompt": "Which control is foundational to instance security hardening governance?",
+    "choices": [
+      "Define and enforce a baseline configuration standard for roles, ACLs, integrations, and encryption",
+      "Allow each team to harden according to local preference",
+      "Disable audit logs to improve instance performance",
+      "Use shared admin credentials for operational convenience"
+    ],
+    "correctIndex": 0,
+    "explanation": "A formal hardening baseline ensures consistent security posture and measurable compliance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Hardening.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/roles/concept/c_Roles.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 51,
+    "prompt": "What is the best governance approach for privileged access in hardened instances?",
+    "choices": [
+      "Enforce least privilege with periodic certification and break-glass controls",
+      "Grant permanent admin to all integration developers",
+      "Allow role inheritance without documented approvals",
+      "Disable MFA for internal users to simplify operations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Privileged access hardening requires tightly controlled entitlements and recurring recertification.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_MultiFactorAuthentication.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/roles/concept/c_Roles.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 52,
+    "prompt": "How should security hardening exceptions be managed in a professional governance model?",
+    "choices": [
+      "Track exceptions with risk rationale, expiration date, and explicit owner accountability",
+      "Permit undocumented exceptions during peak release periods",
+      "Treat all exceptions as permanent configuration",
+      "Store exception approvals in informal chat threads"
+    ],
+    "correctIndex": 0,
+    "explanation": "Exception governance must be auditable, time-bound, and risk-aware to avoid permanent control drift.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Hardening.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 53,
+    "prompt": "Which hardening metric is most valuable for executive governance reporting?",
+    "choices": [
+      "Percentage of controls compliant with baseline and time-to-remediate critical gaps",
+      "Number of custom UI actions in production",
+      "Total count of update sets deployed monthly",
+      "Average comments added to incident records"
+    ],
+    "correctIndex": 0,
+    "explanation": "Compliance coverage and remediation speed provide direct visibility into real security posture.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Hardening.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 54,
+    "prompt": "What should happen after major platform changes to preserve hardening posture?",
+    "choices": [
+      "Run post-change security validation against baseline controls before final closure",
+      "Assume prior controls remain valid without testing",
+      "Skip validation if no incidents are reported",
+      "Delay all validation until annual audits"
+    ],
+    "correctIndex": 0,
+    "explanation": "Change activity can introduce drift, so baseline validation is required to confirm control integrity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Hardening.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 50,
+    "prompt": "What is the primary data residency governance objective in global ServiceNow architectures?",
+    "choices": [
+      "Ensure regulated data is stored and processed in approved geographic jurisdictions",
+      "Replicate all data globally to maximize analytics speed",
+      "Ignore regional requirements for internal systems",
+      "Classify residency as a legal-only concern outside architecture"
+    ],
+    "correctIndex": 0,
+    "explanation": "Data residency governance aligns technical architecture with legal and regulatory location requirements.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/security/concept/c_DataProtectionAndPrivacy.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 51,
+    "prompt": "Which architecture practice best supports residency controls for integrations?",
+    "choices": [
+      "Apply data classification and regional routing policies before cross-border transfer",
+      "Allow unrestricted data replication between environments",
+      "Use one global endpoint for all regulated data flows",
+      "Defer residency checks until audit season"
+    ],
+    "correctIndex": 0,
+    "explanation": "Classification plus routing controls prevent unauthorized movement of regulated data.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/integrationhub/concept/IntegrationHub.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/security/concept/c_DataProtectionAndPrivacy.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 52,
+    "prompt": "How should platform experts govern residency-related exceptions for enterprise programs?",
+    "choices": [
+      "Use formal exception workflows with legal sign-off, risk scoring, and expiration dates",
+      "Approve exceptions via verbal agreement during incidents",
+      "Treat all cross-border transfers as automatically compliant",
+      "Rely on integration team discretion without controls"
+    ],
+    "correctIndex": 0,
+    "explanation": "Residency exceptions are high risk and must be governed through auditable, time-bound controls.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_AuditManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 53,
+    "prompt": "Which evidence package best supports residency compliance audits?",
+    "choices": [
+      "Data flow maps, classification policies, transfer controls, and exception records",
+      "Only high-level architecture diagrams without system mappings",
+      "A one-time spreadsheet of integration owners",
+      "Notification templates used by support teams"
+    ],
+    "correctIndex": 0,
+    "explanation": "Audits require traceable proof of how data is classified, routed, and controlled across jurisdictions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/security/concept/c_DataProtectionAndPrivacy.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 54,
+    "prompt": "What is the best way to reduce residency risk during rapid expansion into new regions?",
+    "choices": [
+      "Embed residency impact assessments into architecture review and release governance gates",
+      "Launch first and classify data after go-live",
+      "Delegate residency decisions to each project team independently",
+      "Pause all integrations indefinitely"
+    ],
+    "correctIndex": 0,
+    "explanation": "Early residency review prevents non-compliant designs and costly rework after deployment.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/security/concept/c_DataProtectionAndPrivacy.html"
+    ]
+  }
+]

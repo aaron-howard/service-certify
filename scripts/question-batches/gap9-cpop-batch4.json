@@ -1,0 +1,402 @@
+[
+  {
+    "trackCode": "CPOP",
+    "order": 150,
+    "prompt": "What is the primary objective of an instance strategy for platform ownership?",
+    "choices": [
+      "Define environment purpose, data policy, and promotion pathways across the lifecycle",
+      "Keep all development and production work in one instance",
+      "Eliminate the need for clone and refresh planning",
+      "Allow each team to manage independent production instances"
+    ],
+    "correctIndex": 0,
+    "explanation": "A clear instance strategy aligns environment usage, controls, and release flow to reduce operational risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/instance-clone.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 151,
+    "prompt": "Which practice best reduces risk when refreshing lower environments from production?",
+    "choices": [
+      "Run clones without stakeholder communication",
+      "Use clone schedules, data preservation, and post-clone sanitization controls",
+      "Disable all lower environments before each refresh",
+      "Keep clone jobs ad hoc to maximize flexibility"
+    ],
+    "correctIndex": 1,
+    "explanation": "Planned clone governance protects sensitive data and keeps non-production environments usable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/c_CloneManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 152,
+    "prompt": "A platform owner must retain key test records during routine clones. Which feature should be used?",
+    "choices": [
+      "Scheduled script executions only",
+      "Manual record export/import before each clone",
+      "Clone data preservation policies",
+      "Global table ACL overrides"
+    ],
+    "correctIndex": 2,
+    "explanation": "Data preservation policies keep defined records in target instances across clone operations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/clone-data-preservation.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 153,
+    "prompt": "Why should outbound integrations usually be disabled immediately after a production-to-test clone?",
+    "choices": [
+      "To improve database indexing speed",
+      "To reduce update set conflicts",
+      "To avoid re-running skipped update resolution",
+      "To prevent accidental calls to live external systems"
+    ],
+    "correctIndex": 3,
+    "explanation": "Cloned data can trigger automation, so outbound controls prevent unintended external impact.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/task/t_PrepareTargetInstanceForClone.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 154,
+    "prompt": "What should guide environment sizing and role assignment in an instance strategy?",
+    "choices": [
+      "Business criticality, workload profile, and ownership responsibilities",
+      "Only current storage utilization",
+      "Number of developers requesting access",
+      "Theme and branding requirements"
+    ],
+    "correctIndex": 0,
+    "explanation": "Sizing and ownership should align to operational criticality and expected workload patterns.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 155,
+    "prompt": "Which approach best supports safe production support while preserving development velocity?",
+    "choices": [
+      "Run emergency fixes directly in production without traceability",
+      "Separate support and delivery pathways with controlled promotion gates",
+      "Deploy all fixes from local branches to production",
+      "Use a single shared update set for all teams"
+    ],
+    "correctIndex": 1,
+    "explanation": "Distinct pathways with controls balance urgent support and governed feature delivery.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-application-development/page/build/system-update-sets/concept/update-set-procedures.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 156,
+    "prompt": "What is the best way to govern instance drift across environments?",
+    "choices": [
+      "Allow environment-specific changes without documentation",
+      "Rely on memory of senior administrators",
+      "Use baseline comparison and managed remediation workflows",
+      "Run full clones weekly regardless of impact"
+    ],
+    "correctIndex": 2,
+    "explanation": "Baseline and remediation workflows keep environment differences visible and controllable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/table-administration/concept/c_TableAdministration.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 157,
+    "prompt": "Which scenario signals an unhealthy instance strategy?",
+    "choices": [
+      "Defined refresh cadence and post-clone validation",
+      "Documented role boundaries per environment",
+      "Published environment-specific integration rules",
+      "Frequent direct production changes to compensate for non-prod gaps"
+    ],
+    "correctIndex": 3,
+    "explanation": "Frequent direct production edits often indicate weak non-production fidelity and poor promotion discipline.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/instance-clone.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 158,
+    "prompt": "How should instance strategy address sensitive data in lower environments?",
+    "choices": [
+      "Use masking, cleanup scripts, and restricted access models",
+      "Allow broad access to improve test realism",
+      "Disable all compliance checks outside production",
+      "Copy production exports into local developer machines"
+    ],
+    "correctIndex": 0,
+    "explanation": "Data protection in lower environments requires both technical masking and strict access controls.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/task/t_CreateCloneCleanupScript.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 159,
+    "prompt": "Which governance control best supports reliable environment refresh planning?",
+    "choices": [
+      "Ad hoc refreshes based on individual requests",
+      "A published refresh calendar with approvals and communication checkpoints",
+      "Refreshes only after audit findings",
+      "Permanent refresh freeze during release windows"
+    ],
+    "correctIndex": 1,
+    "explanation": "A governed refresh calendar reduces disruption and aligns teams around predictable environment availability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/c_CloneManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 160,
+    "prompt": "What is the strongest reason to maintain instance-specific integration endpoint controls?",
+    "choices": [
+      "To increase endpoint counts for audit reports",
+      "To simplify role naming conventions",
+      "To prevent non-production traffic from reaching production-connected services",
+      "To avoid documenting integration dependencies"
+    ],
+    "correctIndex": 2,
+    "explanation": "Endpoint controls prevent accidental cross-environment traffic and unintended business impact.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/web-services/concept/c_RESTAPI.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 161,
+    "prompt": "Which practice most improves cutover confidence in a multi-instance release model?",
+    "choices": [
+      "Production-only validation",
+      "Skipping pre-prod sign-off when timelines are tight",
+      "Using one shared account for all deployment roles",
+      "Defined entry/exit criteria for each environment in the release path"
+    ],
+    "correctIndex": 3,
+    "explanation": "Environment-specific criteria provide objective control before promotion to the next stage.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 162,
+    "prompt": "What should happen after each major clone to keep lower environments usable?",
+    "choices": [
+      "Run post-clone validation checklist and environment reconfiguration tasks",
+      "Resume all outbound integrations automatically",
+      "Reset all user passwords to default values",
+      "Disable all custom applications temporarily"
+    ],
+    "correctIndex": 0,
+    "explanation": "Structured post-clone validation ensures environment health, safety, and readiness for teams.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/task/t_PrepareTargetInstanceForClone.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 163,
+    "prompt": "Which anti-pattern most harms long-term instance governance?",
+    "choices": [
+      "Environment purpose definitions",
+      "Untracked one-off instance customizations",
+      "Documented clone and refresh standards",
+      "Periodic access recertification"
+    ],
+    "correctIndex": 1,
+    "explanation": "Untracked customizations create drift and unpredictable behavior across environments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 164,
+    "prompt": "A platform owner wants better non-production stability for testing. What is the best action?",
+    "choices": [
+      "Increase clone frequency without communication",
+      "Share production credentials with testers",
+      "Define environment stability windows and freeze periods for critical testing",
+      "Allow direct schema edits during UAT"
+    ],
+    "correctIndex": 2,
+    "explanation": "Stability windows help preserve test integrity and reduce concurrent change noise.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 165,
+    "prompt": "How should a platform owner treat environment-specific emergency fixes?",
+    "choices": [
+      "Keep them local to avoid extra documentation",
+      "Move fixes directly to production from any instance",
+      "Apply fixes in personal developer instances only",
+      "Track, reconcile, and promote through governed pathways"
+    ],
+    "correctIndex": 3,
+    "explanation": "Governed reconciliation prevents divergence and protects release integrity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-application-development/page/build/system-update-sets/concept/update-set-procedures.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 166,
+    "prompt": "Which operating KPI best reflects instance strategy effectiveness?",
+    "choices": [
+      "Environment availability, drift rate, and promotion success rate",
+      "Total number of cloned records",
+      "Count of inactive users",
+      "Portal page view totals"
+    ],
+    "correctIndex": 0,
+    "explanation": "These KPIs reflect whether environment governance supports reliable delivery and operations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 167,
+    "prompt": "What is the best way to manage competing requests for shared test environments?",
+    "choices": [
+      "First-come, first-served with no governance",
+      "Use a published allocation model tied to release and risk priorities",
+      "Assign environments permanently to one team",
+      "Block all environment access during each sprint"
+    ],
+    "correctIndex": 1,
+    "explanation": "Allocation governance improves fairness and aligns environment usage with enterprise priorities.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 168,
+    "prompt": "Which dependency should be explicitly mapped in an instance strategy?",
+    "choices": [
+      "Only UI themes and portal branding",
+      "Only retired legacy applications",
+      "Integration endpoints, data policies, and ownership per environment",
+      "Only custom list layouts"
+    ],
+    "correctIndex": 2,
+    "explanation": "Mapping dependencies supports safer planning, clone controls, and issue triage.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/table-administration/concept/c_TableAdministration.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 169,
+    "prompt": "When should an instance strategy be re-baselined?",
+    "choices": [
+      "Only when support contracts renew",
+      "Never, once the initial model is approved",
+      "After every daily standup",
+      "After major organizational, architecture, or compliance changes"
+    ],
+    "correctIndex": 3,
+    "explanation": "Major business and technical changes can invalidate prior environment assumptions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 170,
+    "prompt": "What is the key benefit of documenting environment entry and exit criteria?",
+    "choices": [
+      "Consistent promotion decisions and clearer release accountability",
+      "Longer maintenance windows by default",
+      "Removal of peer review requirements",
+      "Automatic closure of test defects"
+    ],
+    "correctIndex": 0,
+    "explanation": "Objective criteria reduce ambiguity and strengthen governance across release stages.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 171,
+    "prompt": "Which control best limits accidental production impact from non-production testing?",
+    "choices": [
+      "Use production credentials in test",
+      "Enforce endpoint segregation and outbound communication safeguards per instance",
+      "Disable all integration testing",
+      "Allow unrestricted integration calls from dev"
+    ],
+    "correctIndex": 1,
+    "explanation": "Segregated endpoints and safeguards prevent non-production workflows from affecting live systems.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/web-services/concept/c_RESTAPI.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 172,
+    "prompt": "A team requests direct production access because non-prod data is stale. What is the best response?",
+    "choices": [
+      "Grant temporary admin without approval",
+      "Allow access if team lead agrees by chat",
+      "Improve refresh governance and data controls instead of bypassing production protections",
+      "Require the team to stop testing"
+    ],
+    "correctIndex": 2,
+    "explanation": "The right fix is better environment hygiene, not weakening production controls.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/c_CloneManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 173,
+    "prompt": "Which governance pattern best supports long-lived instance strategy execution?",
+    "choices": [
+      "One-time strategy publication with no metrics",
+      "Owner decisions recorded in private notes",
+      "Quarterly review only when incidents increase",
+      "Recurring strategy reviews with KPIs, exceptions, and remediation ownership"
+    ],
+    "correctIndex": 3,
+    "explanation": "Ongoing reviews with measurable outcomes keep strategy aligned and effective over time.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 174,
+    "prompt": "What is the strongest end-state for instance strategy maturity?",
+    "choices": [
+      "Predictable environment operations with controlled data, access, and promotion pathways",
+      "Frequent emergency clones and undocumented fixes",
+      "Environment ownership spread across rotating volunteers",
+      "No distinction between development and production responsibilities"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mature instance strategy delivers predictability, governance, and lower operational risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/instance-clone.html"
+    ]
+  }
+]

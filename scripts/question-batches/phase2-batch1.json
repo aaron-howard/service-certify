@@ -1,0 +1,245 @@
+[
+	{
+		"trackCode": "CSA",
+		"order": 30,
+		"prompt": "Before activating a plugin in production, what should an administrator validate first?",
+		"choices": [
+			"Whether the plugin can be selectively activated for one assignment group only",
+			"Plugin dependencies, potential data model impacts, and required roles",
+			"That all inactive users are deleted from the instance",
+			"Whether the plugin automatically disables update sets"
+		],
+		"correctIndex": 1,
+		"explanation": "Plugin activation can introduce dependent functionality and schema changes, so admins should review dependencies, impacts, and role requirements before enabling it.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/australia/plugins/concept/c_Plugins.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 31,
+		"prompt": "Which statement best describes plugin deactivation behavior in ServiceNow?",
+		"choices": [
+			"Any plugin can be safely deactivated after one business day",
+			"Deactivation is automatic when no records use plugin tables",
+			"Many plugins are intended as one-way activations and are not routinely deactivated",
+			"Deactivating a plugin only hides menus and never affects configuration"
+		],
+		"correctIndex": 2,
+		"explanation": "ServiceNow treats many plugins as one-way activations because enabling them can add artifacts and dependencies that are not designed for routine rollback.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/australia/plugins/concept/c_Plugins.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 32,
+		"prompt": "What is the recommended naming convention for a custom system property created by an administrator?",
+		"choices": [
+			"Use a unique, app-specific prefix such as x_company_app.setting_name",
+			"Reuse a global glide.* property name to keep naming simple",
+			"Name it after the admin user who created it",
+			"Use uppercase only and include spaces for readability"
+		],
+		"correctIndex": 0,
+		"explanation": "Custom properties should use a unique namespace-style prefix so they are distinguishable from baseline properties and easier to govern across environments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/australia/system-administration/system-properties/concept/c_SystemProperties.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 33,
+		"prompt": "When storing an integration credential in a system property, which property type is most appropriate?",
+		"choices": [
+			"String",
+			"Integer",
+			"True/False",
+			"Password (2 Way Encrypted)"
+		],
+		"correctIndex": 3,
+		"explanation": "Sensitive secrets should be stored in an encrypted password property type rather than plain text values.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/australia/system-administration/system-properties/concept/c_SystemProperties.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 34,
+		"prompt": "How does instance time zone configuration affect date/time values in ServiceNow?",
+		"choices": [
+			"It converts stored values from UTC to local time permanently in the database",
+			"It affects how date/time values are displayed, while values are stored in UTC",
+			"It changes only SLA schedules and nothing else",
+			"It applies only to reports, not forms or lists"
+		],
+		"correctIndex": 1,
+		"explanation": "ServiceNow stores date/time in UTC and applies time zone settings for user-facing display and interpretation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/australia/system-administration/reference/r_DateAndTime.html",
+			"https://www.servicenow.com/docs/r/platform-administration/australia/system-administration/concept/c_TimeZones.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 30,
+		"prompt": "Why is application scope important when building a custom app?",
+		"choices": [
+			"It forces all scripts to run only on client side",
+			"It removes the need for role-based access control",
+			"It namespaces app artifacts to reduce collisions and control cross-scope access",
+			"It automatically publishes the app to the Store"
+		],
+		"correctIndex": 2,
+		"explanation": "Scope provides namespace isolation for app artifacts and supports governance of how resources are shared across applications.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/australia/developing-applications/concept/c_ApplicationScope.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 31,
+		"prompt": "In Studio, what does the Application Files list primarily represent?",
+		"choices": [
+			"The configuration records that belong to the current application",
+			"Only update set metadata from all applications",
+			"All records in the global scope tables",
+			"A list of active user sessions in the instance"
+		],
+		"correctIndex": 0,
+		"explanation": "Application Files shows artifacts owned by the current app, helping developers manage and package app-specific records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/australia/developing-applications/task/t_ViewApplicationFiles.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 32,
+		"prompt": "Which table setting allows developers in other application scopes to create business rules or client scripts on that table?",
+		"choices": [
+			"Can read",
+			"Accessible from = This application scope only",
+			"Allow configuration",
+			"Allow access to this table via web services"
+		],
+		"correctIndex": 2,
+		"explanation": "Allow configuration governs design-time artifact creation on the table from outside the owning scope.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/australia/developing-applications/concept/c_ApplicationAccessDatabaseSettings.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 33,
+		"prompt": "A script include must be callable from another scope. Which setting should a developer configure?",
+		"choices": [
+			"Set the script include to client callable only",
+			"Disable protection policy",
+			"Mark the script include as Active = false",
+			"Set Accessible from to All application scopes"
+		],
+		"correctIndex": 3,
+		"explanation": "Cross-scope use of a script include requires its accessibility to include other application scopes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/australia/developing-applications/task/t_CreateAScriptInclude.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 34,
+		"prompt": "What is the purpose of design-time application access controls on app data tables?",
+		"choices": [
+			"To define whether other scopes can create and modify configuration artifacts on those tables",
+			"To schedule nightly table re-index operations",
+			"To encrypt all columns by default",
+			"To prevent all runtime GlideRecord operations"
+		],
+		"correctIndex": 0,
+		"explanation": "Design-time controls manage how other scopes can configure artifacts against a table, complementing runtime data access controls.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/australia/developing-applications/concept/c_ApplicationAccessDatabaseSettings.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 30,
+		"prompt": "What is the main purpose of declaring an incident as a major incident?",
+		"choices": [
+			"To bypass incident state transitions permanently",
+			"To trigger prioritized coordination and communication for high business impact disruptions",
+			"To convert all related incidents into service requests",
+			"To disable SLA tracking while the incident is open"
+		],
+		"correctIndex": 1,
+		"explanation": "Major Incident Management formalizes urgent, high-impact response with coordinated communication and accelerated handling.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/australia/incident-management/concept/c_MajorIncidentManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 31,
+		"prompt": "How are incident tasks typically used during major incident response?",
+		"choices": [
+			"They break response work into assignable, trackable activities under the parent incident",
+			"They replace the need for assignment groups",
+			"They are created only after the incident is resolved",
+			"They are limited to knowledge article approvals"
+		],
+		"correctIndex": 0,
+		"explanation": "Incident tasks allow teams to coordinate parallel technical actions while maintaining traceability to the parent incident.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/australia/incident-management/task/t_UseIncidentTasks.html",
+			"https://www.servicenow.com/docs/r/it-service-management/australia/incident-management/concept/c_MajorIncidentManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 32,
+		"prompt": "Which configuration determines when an incident SLA pauses or resumes?",
+		"choices": [
+			"The incident category dictionary attributes",
+			"The update set state",
+			"The pause conditions defined on the SLA definition",
+			"The major incident proposal workflow"
+		],
+		"correctIndex": 2,
+		"explanation": "SLA definitions include explicit start, stop, and pause conditions that control SLA timing behavior on tasks.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/australia/service-level-management/concept/c_ServiceLevelAgreements.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 33,
+		"prompt": "Which statement about SLAs and incident tasks is accurate?",
+		"choices": [
+			"SLAs can target only the Incident table, not child tasks",
+			"Incident task SLAs are controlled only by assignment rules",
+			"SLA timers always stop when a related problem record is created",
+			"SLAs can be defined for incident tasks when conditions match that task type"
+		],
+		"correctIndex": 3,
+		"explanation": "Task SLAs are condition-based and can be applied to incident tasks as well as incidents when definitions and criteria align.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/australia/service-level-management/concept/c_TaskSLA.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 34,
+		"prompt": "During a major incident, why is maintaining timely work notes and updates critical?",
+		"choices": [
+			"It supports coordinated response, stakeholder communication, and auditability of actions",
+			"It allows agents to skip incident closure requirements",
+			"It automatically shortens all active SLAs",
+			"It prevents creation of child incident tasks"
+		],
+		"correctIndex": 0,
+		"explanation": "Consistent updates provide a shared operational timeline for responders, stakeholders, and post-incident review.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/australia/incident-management/concept/c_MajorIncidentManagement.html",
+			"https://www.servicenow.com/docs/r/it-service-management/australia/incident-management/c_IncidentManagement.html"
+		]
+	}
+]

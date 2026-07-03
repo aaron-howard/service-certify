@@ -1,0 +1,402 @@
+[
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 20,
+    "prompt": "In TPRM, what does residual risk represent?",
+    "choices": [
+      "Risk before any controls are reviewed",
+      "Risk remaining after evaluating control effectiveness and mitigation actions",
+      "Risk assigned only to terminated vendors",
+      "The number of open questionnaires"
+    ],
+    "correctIndex": 1,
+    "explanation": "Residual risk reflects post-control exposure and informs acceptance, monitoring, or additional remediation decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/concept/residual-risk.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 21,
+    "prompt": "What outcome indicates that control evidence materially reduced vendor risk?",
+    "choices": [
+      "Residual risk score decreases from inherent baseline with documented rationale",
+      "Inherent risk is deleted",
+      "Questionnaires are archived without review",
+      "All vendors are set to medium risk"
+    ],
+    "correctIndex": 0,
+    "explanation": "Residual scoring should show measurable reduction when controls are validated and effective.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/calculate-residual-risk.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 22,
+    "prompt": "When residual risk remains above tolerance, what is the best governance action?",
+    "choices": [
+      "Close the assessment as complete with no follow-up",
+      "Document and approve risk treatment plans or formal acceptance through authorized stakeholders",
+      "Reset the vendor to low risk manually",
+      "Disable risk scoring for that vendor"
+    ],
+    "correctIndex": 1,
+    "explanation": "High residual risk requires governed decisions: additional mitigation, escalation, or explicit risk acceptance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/manage-risk-treatment-plans.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 23,
+    "prompt": "Why should residual risk evaluations be time-bound and revisited?",
+    "choices": [
+      "Vendor contexts and threats change, so accepted risk posture can become outdated",
+      "Residual risk never changes after first assessment",
+      "Annual reassessment is prohibited",
+      "Only procurement can review risk"
+    ],
+    "correctIndex": 0,
+    "explanation": "Risk is dynamic, so residual decisions require periodic validation against changing control and threat conditions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/schedule-residual-risk-reviews.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 24,
+    "prompt": "What reporting view best supports executive oversight of residual vendor risk?",
+    "choices": [
+      "List of inactive users",
+      "Dashboard showing residual risk distribution, exceptions, and aging treatment plans",
+      "Hardware warranty expiration report",
+      "Knowledge article feedback trend"
+    ],
+    "correctIndex": 1,
+    "explanation": "Leadership needs visibility into residual concentration, unresolved exceptions, and mitigation progress.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/report-on-residual-vendor-risk.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 20,
+    "prompt": "What is the primary value of integrating Vulnerability Response with Security Operations?",
+    "choices": [
+      "It isolates vulnerability data from incident response",
+      "It connects vulnerability findings with active threat and incident workflows for coordinated action",
+      "It removes need for remediation ownership",
+      "It disables threat intelligence updates"
+    ],
+    "correctIndex": 1,
+    "explanation": "SecOps integration aligns preventive vulnerability management with active detection and response operations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/concept/security-operations-integration.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 21,
+    "prompt": "How does VR-SecOps integration improve risk prioritization?",
+    "choices": [
+      "By ignoring incident context",
+      "By elevating vulnerabilities linked to active incidents, campaigns, or exploitation indicators",
+      "By converting all vulnerabilities to low priority",
+      "By removing CI relationships"
+    ],
+    "correctIndex": 1,
+    "explanation": "Operational threat signals from SecOps help focus remediation on vulnerabilities with immediate attack relevance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/task/use-security-operations-context-in-vr.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 22,
+    "prompt": "What workflow benefit comes from linking vulnerability groups to SecOps investigations?",
+    "choices": [
+      "Shared context and coordinated ownership between remediation and incident response teams",
+      "Automatic closure of security incidents",
+      "Suppression of all notifications",
+      "Deletion of duplicate CIs"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cross-linked records reduce context switching and speed coordinated decision-making during active threats.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/task/link-vulnerabilities-to-security-incidents.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 23,
+    "prompt": "A SOC analyst flags exploitation in the wild. Which VR action should be automated?",
+    "choices": [
+      "Downgrade all related items to low",
+      "Pause vulnerability imports",
+      "Create priority overrides or escalation tasks for affected high-value assets",
+      "Remove remediation due dates"
+    ],
+    "correctIndex": 2,
+    "explanation": "Threat-driven escalation ensures vulnerable critical assets are remediated faster under active risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/task/automate-threat-driven-escalations.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 24,
+    "prompt": "Which KPI best reflects successful VR and SecOps integration?",
+    "choices": [
+      "Number of inactive scanner connectors",
+      "Mean time from exploit signal to remediation assignment on critical vulnerabilities",
+      "Total count of knowledge articles",
+      "Dashboard refresh frequency"
+    ],
+    "correctIndex": 1,
+    "explanation": "Time from threat signal to assigned remediation captures integration speed and operational responsiveness.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/task/measure-secops-vr-outcomes.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 20,
+    "prompt": "What is the purpose of a CSM dashboard for service leaders?",
+    "choices": [
+      "Track customer case volume, SLA performance, and resolution trends in a single operational view",
+      "Replace all queue management workflows",
+      "Store encrypted passwords",
+      "Configure field technician routing"
+    ],
+    "correctIndex": 0,
+    "explanation": "CSM dashboards consolidate key service metrics to support coaching, staffing, and process improvement decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/concept/csm-dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 21,
+    "prompt": "Which dashboard metric is most useful for detecting customer backlog risk?",
+    "choices": [
+      "Aging open cases by priority and queue",
+      "Number of active HR profiles",
+      "Count of CMDB classes",
+      "Monthly update set exports"
+    ],
+    "correctIndex": 0,
+    "explanation": "Case aging by priority highlights where queues are accumulating unresolved customer impact.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/configure-csm-kpis.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 22,
+    "prompt": "How do dashboard filters improve CSM operational reviews?",
+    "choices": [
+      "They hide all breach data",
+      "They prevent drilldowns",
+      "They replace assignment rules",
+      "They let leaders isolate trends by account, channel, or product line for targeted action"
+    ],
+    "correctIndex": 3,
+    "explanation": "Filtered views help teams detect segment-specific issues and assign focused remediation actions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/customize-csm-dashboard-filters.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 23,
+    "prompt": "A manager wants to improve first contact resolution. Which dashboard combination is most relevant?",
+    "choices": [
+      "Case reopen rate and first response-to-resolution performance",
+      "Number of update sets",
+      "Asset retirement trend",
+      "Discovery schedule duration"
+    ],
+    "correctIndex": 0,
+    "explanation": "Reopen and resolution timing metrics indicate whether issues are being solved effectively on initial engagement.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/measure-agent-performance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 24,
+    "prompt": "What practice keeps CSM dashboards trustworthy over time?",
+    "choices": [
+      "Frequent KPI definition reviews and consistent case data hygiene controls",
+      "Allowing free-form status values across teams",
+      "Disabling closed case archiving",
+      "Removing SLA fields from forms"
+    ],
+    "correctIndex": 0,
+    "explanation": "Dashboard quality depends on stable metric definitions and disciplined data capture.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/govern-csm-reporting.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 20,
+    "prompt": "What is the key benefit of the FSM mobile experience for technicians?",
+    "choices": [
+      "It provides job details, navigation, and status updates directly in the field",
+      "It replaces all desktop admin functions",
+      "It blocks offline work entry",
+      "It disables photo attachments"
+    ],
+    "correctIndex": 0,
+    "explanation": "FSM mobile gives technicians contextual tools needed to execute and update work on site.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/concept/fsm-mobile-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 21,
+    "prompt": "Why is offline capability important in FSM mobile deployments?",
+    "choices": [
+      "It allows technicians to continue updating task progress when connectivity is limited",
+      "It removes all need for synchronization",
+      "It prevents dispatch changes",
+      "It disables parts tracking"
+    ],
+    "correctIndex": 0,
+    "explanation": "Offline support preserves execution continuity in low-connectivity environments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/configure-offline-mobile-capabilities.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 22,
+    "prompt": "Which mobile data capture improves first-time fix and auditability?",
+    "choices": [
+      "Skipping completion notes",
+      "Capturing parts used, photos, signatures, and structured completion details on site",
+      "Updating status only at day end",
+      "Entering work notes in external apps"
+    ],
+    "correctIndex": 1,
+    "explanation": "Rich in-field documentation supports quality control, billing proof, and repeat service context.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/use-mobile-work-completion.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 23,
+    "prompt": "What mobile governance action improves technician adoption?",
+    "choices": [
+      "Deploying role-based forms with only required fields for each job type",
+      "Using one long generic form for all scenarios",
+      "Disabling in-app guidance",
+      "Blocking push notifications"
+    ],
+    "correctIndex": 0,
+    "explanation": "Role-tailored mobile forms reduce friction and improve data quality during execution.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/configure-mobile-forms-for-fsm.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 24,
+    "prompt": "Which KPI best reflects successful FSM mobile usage?",
+    "choices": [
+      "Percentage of field updates completed in mobile at point of work",
+      "Number of inactive dashboard tabs",
+      "Count of email-only dispatches",
+      "Total admin users"
+    ],
+    "correctIndex": 0,
+    "explanation": "Point-of-work mobile update rate indicates real adoption and fresher operational visibility.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/track-mobile-adoption-metrics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 20,
+    "prompt": "In HRSD, why are document templates used?",
+    "choices": [
+      "To generate consistent, compliant HR communications and forms",
+      "To replace case workflows",
+      "To disable approvals",
+      "To remove employee profiles"
+    ],
+    "correctIndex": 0,
+    "explanation": "Templates standardize wording and structure for recurring HR documents, reducing errors and compliance risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/create-hr-document-templates.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 21,
+    "prompt": "What is the primary benefit of using data placeholders in HR document templates?",
+    "choices": [
+      "They avoid case linkage",
+      "They auto-populate employee and case-specific details accurately at generation time",
+      "They prevent localization",
+      "They disable versioning"
+    ],
+    "correctIndex": 1,
+    "explanation": "Dynamic placeholders improve efficiency and reduce manual entry mistakes in generated HR documents.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/use-template-variables-in-hr-documents.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 22,
+    "prompt": "How do template approval workflows support HR compliance?",
+    "choices": [
+      "By allowing any user to edit legal language directly in production",
+      "By enforcing controlled review and publication of official HR document content",
+      "By bypassing legal review",
+      "By disabling audit tracking"
+    ],
+    "correctIndex": 1,
+    "explanation": "Approval workflows ensure template changes are governed and legally reviewed before use.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/govern-hr-template-approvals.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 23,
+    "prompt": "A global HR team needs regional policy differences. Which template strategy works best?",
+    "choices": [
+      "Use localized template variants by region and language with controlled fallback",
+      "Maintain one template in one language only",
+      "Store regional edits in personal notes",
+      "Disable document versioning"
+    ],
+    "correctIndex": 0,
+    "explanation": "Regionalized templates maintain policy accuracy while supporting multilingual employee communications.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/localize-hr-document-templates.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 24,
+    "prompt": "What control helps validate that HR document templates remain current?",
+    "choices": [
+      "Periodic template review schedules with ownership and version history",
+      "Removing change history from templates",
+      "Allowing unrestricted edits by all employees",
+      "Publishing documents without metadata"
+    ],
+    "correctIndex": 0,
+    "explanation": "Scheduled review and version traceability keep HR content current, accountable, and auditable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/manage-hr-document-template-versions.html"
+    ]
+  }
+]

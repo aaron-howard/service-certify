@@ -1,0 +1,257 @@
+[
+  {
+    "trackCode": "CIS-RC",
+    "order": 50,
+    "prompt": "What does risk treatment represent in an IRM implementation lifecycle?",
+    "choices": [
+      "Selecting and executing an approved response strategy such as mitigate, transfer, accept, or avoid",
+      "Closing all risk records once they are assessed",
+      "Converting every risk into an audit finding",
+      "Deferring treatment until policy attestation is complete"
+    ],
+    "correctIndex": 0,
+    "explanation": "Risk treatment operationalizes risk decisions and links them to accountable actions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/task/t_ManageRiskResponses.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 51,
+    "prompt": "Which factor should most influence whether a risk is mitigated versus accepted?",
+    "choices": [
+      "Residual risk compared with organization risk appetite and control implementation feasibility",
+      "Number of dashboards available for the risk domain",
+      "Preference of whichever analyst opened the record",
+      "Whether the risk has a short description under 100 characters"
+    ],
+    "correctIndex": 0,
+    "explanation": "Treatment choice is driven by residual exposure versus tolerance and practical control options.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-scoring.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 52,
+    "prompt": "How should risk treatment plans be connected to enterprise change governance?",
+    "choices": [
+      "Link treatment tasks to approved implementation work and validate control effectiveness after deployment",
+      "Run treatment as undocumented emergency work outside change management",
+      "Treat risk by creating informational incidents only",
+      "Delay treatment updates until quarterly board reporting"
+    ],
+    "correctIndex": 0,
+    "explanation": "Treatment requires governed implementation and post-change control validation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/task/t_CreateRiskTreatmentTasks.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 53,
+    "prompt": "Which status pattern indicates risk treatment execution is healthy?",
+    "choices": [
+      "On-time completion of treatment tasks with measurable reduction in residual risk scores",
+      "High volume of overdue treatment tasks with unchanged risk ratings",
+      "Frequent reassignment of owners without due dates",
+      "Many accepted risks without documented rationale"
+    ],
+    "correctIndex": 0,
+    "explanation": "Healthy treatment programs show execution discipline and reduced residual exposure.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/task/t_UseDashboardsAndReports.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 54,
+    "prompt": "What is the best handling strategy when a planned mitigation is delayed by budget constraints?",
+    "choices": [
+      "Document a time-bound risk acceptance with compensating controls and escalation to risk governance",
+      "Close the risk as complete because treatment was attempted",
+      "Delete the treatment plan and recreate later",
+      "Ignore the delay until external audit discovers it"
+    ],
+    "correctIndex": 0,
+    "explanation": "Delayed mitigations require governed acceptance and compensating safeguards until full treatment resumes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/task/t_ManageRiskAcceptances.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/audit-management/concept/audit-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 50,
+    "prompt": "Which metric best reflects SIR detection effectiveness?",
+    "choices": [
+      "Mean time to detect from threat occurrence to case creation with quality triage context",
+      "Total number of analyst comments per incident",
+      "Count of closed incidents without severity classification",
+      "Number of notification templates configured"
+    ],
+    "correctIndex": 0,
+    "explanation": "Detection effectiveness is measured by how quickly and reliably threats become actionable incidents.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 51,
+    "prompt": "How is mean time to contain (MTTC) used in SIR program management?",
+    "choices": [
+      "Track speed from incident identification to successful containment to evaluate response process efficiency",
+      "Measure elapsed time from annual policy review to control attestation",
+      "Calculate number of open vulnerabilities grouped by assignment",
+      "Estimate how long it takes to archive completed incidents"
+    ],
+    "correctIndex": 0,
+    "explanation": "MTTC indicates operational containment performance and process bottlenecks.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_ManageSecurityIncidents.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 52,
+    "prompt": "Which metric pairing is most useful for evaluating SIR triage quality?",
+    "choices": [
+      "False-positive rate and percentage of incidents correctly prioritized at first assignment",
+      "Number of dashboard widgets and report exports",
+      "Count of emails sent during major incidents",
+      "Volume of historical incidents older than two years"
+    ],
+    "correctIndex": 0,
+    "explanation": "Good triage should minimize false positives and improve first-pass prioritization accuracy.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response-workspace.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_DefinePrioritiesForSecurityIncidents.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 53,
+    "prompt": "What does repeated growth in incident reopen rates usually indicate?",
+    "choices": [
+      "Containment or eradication actions are incomplete and closure criteria need stronger validation",
+      "SOC staffing is oversized for current alert volume",
+      "Threat intelligence feeds are too comprehensive",
+      "Case templates contain too many optional fields"
+    ],
+    "correctIndex": 0,
+    "explanation": "High reopen rates often signal weak closure controls or unresolved root issues.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_CloseSecurityIncident.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_CreateTasksForSecurityIncident.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 54,
+    "prompt": "Which reporting approach best supports executive review of SIR metrics?",
+    "choices": [
+      "Trend MTTD, MTTC, MTTR, severity distribution, and repeat-incident rates with narrative risk context",
+      "Show only raw incident counts by month with no segmentation",
+      "Report solely on analyst workload by shift",
+      "Use one-time screenshots instead of trend dashboards"
+    ],
+    "correctIndex": 0,
+    "explanation": "Executive metrics should show response performance trends and risk impact context.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 50,
+    "prompt": "What is the purpose of map suggestions in Service Mapping?",
+    "choices": [
+      "Recommend likely service dependencies from discovery signals to accelerate map creation and validation",
+      "Automatically close all map-related tasks without review",
+      "Replace CMDB identification rules with manual tags",
+      "Disable map health scoring for new services"
+    ],
+    "correctIndex": 0,
+    "explanation": "Map suggestions speed implementation by proposing dependencies that teams validate.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_CreateAndMaintainServiceMaps.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 51,
+    "prompt": "How should teams evaluate map suggestions before accepting them?",
+    "choices": [
+      "Validate against known application architecture, traffic patterns, and service owner confirmation",
+      "Accept every suggestion to maximize map size quickly",
+      "Reject all suggestions and rely only on manual drawing",
+      "Approve suggestions based on CI name length"
+    ],
+    "correctIndex": 0,
+    "explanation": "Suggestions improve speed, but accuracy requires architectural and ownership validation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_ValidateServiceMap.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_TroubleshootServiceMapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 52,
+    "prompt": "Which condition most improves map suggestion quality over time?",
+    "choices": [
+      "High-quality CMDB data, stable identifiers, and continuous feedback on accepted versus rejected suggestions",
+      "Frequent deletion of service maps after each release",
+      "Suppressing discovery during maintenance windows permanently",
+      "Removing application owners from map governance"
+    ],
+    "correctIndex": 0,
+    "explanation": "Suggestion accuracy depends on trustworthy data and iterative validation feedback.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/cmdb-landing.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 53,
+    "prompt": "What is the biggest implementation risk when map suggestions are consumed without governance?",
+    "choices": [
+      "Incorrect dependencies can propagate into incident impact, change risk, and outage communication decisions",
+      "All service maps become immutable and cannot be edited",
+      "MID Servers stop discovering network infrastructure",
+      "Event Management no longer creates alerts"
+    ],
+    "correctIndex": 0,
+    "explanation": "Unchecked suggestions can undermine downstream operational decisions that depend on map accuracy.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_UseServiceMapsForImpactAnalysis.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 54,
+    "prompt": "Which KPI best demonstrates effective use of map suggestions?",
+    "choices": [
+      "Reduced time to onboard new services with sustained map accuracy and fewer post-go-live corrections",
+      "Higher number of unreviewed suggestions accepted weekly",
+      "More duplicate application services in CMDB",
+      "Longer delay between discovery runs and map updates"
+    ],
+    "correctIndex": 0,
+    "explanation": "Effective use balances faster onboarding with reliable topology quality.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_CreateAndMaintainServiceMaps.html"
+    ]
+  }
+]

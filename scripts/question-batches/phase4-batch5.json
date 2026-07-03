@@ -1,0 +1,242 @@
+[
+	{
+		"trackCode": "CPOA",
+		"order": 25,
+		"prompt": "When launching a platform adoption blueprint, what should a platform owner define first to guide all later enablement work?",
+		"choices": [
+			"Scoped app naming conventions for all development teams",
+			"Business outcomes, success measures, and adoption personas",
+			"Update set naming prefixes by assignment group",
+			"Database maintenance windows for non-production clones"
+		],
+		"correctIndex": 1,
+		"explanation": "Adoption blueprints should begin with clear outcomes and measurable user adoption goals so enablement activities stay aligned with value delivery.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/use/digital-portfolio-management/concept/adoption-and-value-roadmap.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 26,
+		"prompt": "Which KPI set is most appropriate for monitoring adoption performance after a new workflow goes live?",
+		"choices": [
+			"Unique active users, completion rate, cycle time, and deflection trend",
+			"Only node memory usage and JVM thread count",
+			"Plugin activation count and number of update sets",
+			"Total number of ACL records in the instance"
+		],
+		"correctIndex": 0,
+		"explanation": "Adoption performance should combine usage and business process outcomes, not only technical administration statistics.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/use/performance-analytics/concept/performance-metrics-and-kpis.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 27,
+		"prompt": "A platform owner needs to enforce multi-domain data policies across departments. What is the best governance action?",
+		"choices": [
+			"Disable domain separation so all teams can view all records",
+			"Use domain separation rules and role-based data access controls",
+			"Move sensitive data to client-side local storage",
+			"Require all users to have admin privileges during audits"
+		],
+		"correctIndex": 1,
+		"explanation": "Domain separation and role-aware controls support policy boundaries while allowing shared platform governance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/company-and-domain-separation/concept/domain-separation.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 28,
+		"prompt": "Why should a platform owner baseline process performance before publishing an adoption blueprint?",
+		"choices": [
+			"To auto-generate all stories in Agile Development",
+			"To avoid creating user training artifacts",
+			"To compare post-release gains against known pre-adoption metrics",
+			"To bypass stakeholder sign-off requirements"
+		],
+		"correctIndex": 2,
+		"explanation": "A baseline enables objective measurement of whether adoption efforts improved targeted outcomes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/use/performance-analytics/task/create-baselines.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 29,
+		"prompt": "Which operating rhythm best supports continuous adoption monitoring in a platform administration team?",
+		"choices": [
+			"Quarterly review only after all projects close",
+			"Daily emergency CAB sessions for every enhancement",
+			"No cadence; react only to incidents",
+			"Regular scorecard reviews with action owners for lagging indicators"
+		],
+		"correctIndex": 3,
+		"explanation": "Recurring scorecard reviews with assigned owners keep adoption objectives visible and drive corrective action.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/use/performance-analytics/task/use-scorecards.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 25,
+		"prompt": "In a product-led adoption blueprint, what is the main purpose of outcome-based milestones?",
+		"choices": [
+			"They tie roadmap delivery to measurable value realization",
+			"They replace backlog prioritization completely",
+			"They eliminate the need for release notes",
+			"They force all teams to deploy on the same day"
+		],
+		"correctIndex": 0,
+		"explanation": "Outcome-based milestones help product owners track whether delivered capabilities produce intended business results.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-strategic-portfolio-management/page/product/agile-development/concept/outcome-based-planning.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 26,
+		"prompt": "A product owner is reviewing weak adoption in one business domain. Which action is best first?",
+		"choices": [
+			"Archive all low-usage stories immediately",
+			"Segment analytics by persona and domain to identify friction points",
+			"Deactivate the application in that domain",
+			"Clone production to all lower environments"
+		],
+		"correctIndex": 1,
+		"explanation": "Domain and persona segmentation helps identify where adoption barriers occur before deciding on remediation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/use/performance-analytics/concept/breakdowns.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 27,
+		"prompt": "How does product instrumentation support performance monitoring for adoption goals?",
+		"choices": [
+			"It replaces all user research interviews",
+			"It tracks feature usage events that feed KPI dashboards",
+			"It automatically resolves all incidents",
+			"It removes the need for governance approvals"
+		],
+		"correctIndex": 1,
+		"explanation": "Instrumentation provides data points that can be turned into indicators for ongoing adoption analysis.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/use/performance-analytics/concept/indicator-sources.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 28,
+		"prompt": "What is the best way to align multi-domain data policy requirements with product prioritization?",
+		"choices": [
+			"Treat policy work as technical debt with no roadmap visibility",
+			"Document policy constraints as backlog criteria and acceptance checks",
+			"Move all policy discussions to ad hoc chat threads",
+			"Postpone policy controls until after broad rollout"
+		],
+		"correctIndex": 1,
+		"explanation": "Capturing policy constraints in backlog definitions ensures compliance is delivered as part of the product, not after it.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/administer/grc/concept/policy-and-compliance-management.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 29,
+		"prompt": "Which review artifact most helps a product owner communicate adoption progress to executive stakeholders?",
+		"choices": [
+			"Raw syslog export from all application nodes",
+			"List of all active plugins in the instance",
+			"Dashboard summarizing adoption KPIs, targets, and variance commentary",
+			"Table dictionary export for custom fields"
+		],
+		"correctIndex": 2,
+		"explanation": "An executive dashboard that pairs KPI trends with target variance provides clear and actionable adoption status.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/use/performance-analytics/task/create-dashboards.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 25,
+		"prompt": "For platform operating excellence, what is the strongest reason to standardize an adoption blueprint template across domains?",
+		"choices": [
+			"It guarantees zero incidents after release",
+			"It improves comparability of outcomes and governance decisions",
+			"It allows teams to skip change approvals",
+			"It removes the need for data classification"
+		],
+		"correctIndex": 1,
+		"explanation": "A common blueprint format creates repeatability and easier cross-domain performance assessment.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-now-platform/page/administer/portfolio-management/concept/operating-model-governance.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 26,
+		"prompt": "Which control most directly supports reliable performance monitoring in an enterprise platform operating model?",
+		"choices": [
+			"Defining metric ownership, collection cadence, and threshold actions",
+			"Restricting dashboards to admin users only",
+			"Collecting metrics once per fiscal year",
+			"Disabling trend visualizations to reduce noise"
+		],
+		"correctIndex": 0,
+		"explanation": "Clear ownership and collection standards ensure monitoring remains actionable and sustained over time.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/use/performance-analytics/concept/data-collection-jobs.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 27,
+		"prompt": "A Center of Excellence is reviewing data exposure risk between subsidiaries. Which approach best enforces multi-domain policy?",
+		"choices": [
+			"Allow unrestricted cross-domain queries for all product teams",
+			"Apply domain-aware ACL strategy and periodic access reviews",
+			"Create one shared admin account per subsidiary",
+			"Disable auditing to improve query speed"
+		],
+		"correctIndex": 1,
+		"explanation": "Domain-aware ACLs plus recurring access reviews help maintain least privilege and policy compliance at scale.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/security/concept/access-controls.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 28,
+		"prompt": "What is the most effective way to detect adoption regressions after a major process redesign?",
+		"choices": [
+			"Freeze all enhancements for 12 months",
+			"Compare only anecdotal feedback from one team",
+			"Track leading and lagging indicators against pre-change baselines",
+			"Remove target thresholds from scorecards"
+		],
+		"correctIndex": 2,
+		"explanation": "Using leading and lagging indicators against baseline values reveals whether adoption is improving or declining.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/use/performance-analytics/concept/indicators-and-targets.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 29,
+		"prompt": "Which governance behavior best sustains long-term platform adoption excellence?",
+		"choices": [
+			"Treat adoption data as optional in release retrospectives",
+			"Evaluate only technical uptime and ignore user workflow health",
+			"Set annual goals without mid-year adjustment",
+			"Run regular value realization reviews and update blueprints from evidence"
+		],
+		"correctIndex": 3,
+		"explanation": "Continuous evidence-based reviews help teams refine adoption strategy and maintain value over time.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-now-platform/page/administer/continuous-improvement/concept/value-realization.html"
+		]
+	}
+]

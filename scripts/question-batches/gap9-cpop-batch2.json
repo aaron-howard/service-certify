@@ -1,0 +1,402 @@
+[
+  {
+    "trackCode": "CPOP",
+    "order": 100,
+    "prompt": "Which access strategy best supports least privilege for platform operations teams?",
+    "choices": [
+      "Role-based access with periodic entitlement recertification",
+      "Shared admin accounts for all production support engineers",
+      "Permanent elevated rights for all release contributors",
+      "Granting admin to any user who submits a request"
+    ],
+    "correctIndex": 0,
+    "explanation": "Role-based access and regular recertification reduce over-privileged access and improve security accountability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 101,
+    "prompt": "A security review finds inactive privileged users. What should a platform owner implement?",
+    "choices": [
+      "Keep inactive privileged accounts for incident surge capacity",
+      "Automated deprovisioning and periodic privileged access reviews",
+      "Convert inactive users to integration accounts",
+      "Leave accounts unchanged if MFA is enabled"
+    ],
+    "correctIndex": 1,
+    "explanation": "Automated deprovisioning and reviews remove unnecessary privilege and lower insider risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/security/concept/security-center.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 102,
+    "prompt": "Which control is most important for securing production integrations?",
+    "choices": [
+      "Store credentials in update set descriptions",
+      "Use one shared password for all external systems",
+      "Use managed credentials with rotation and scoped execution context",
+      "Run all integration jobs as admin for reliability"
+    ],
+    "correctIndex": 2,
+    "explanation": "Managed credentials and scoped execution reduce credential exposure and blast radius.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/integrationhub/concept/IntegrationHub.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 103,
+    "prompt": "What is the best way to govern elevated access during production incidents?",
+    "choices": [
+      "Grant permanent access to speed future incidents",
+      "Allow emergency elevation without any approval",
+      "Use direct database access for troubleshooting",
+      "Use time-bound elevation with approval and audit logging"
+    ],
+    "correctIndex": 3,
+    "explanation": "Time-bound elevated access with auditing balances rapid response and security control.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 104,
+    "prompt": "Which evidence is strongest for proving security control effectiveness to auditors?",
+    "choices": [
+      "Control execution logs tied to owner and remediation outcomes",
+      "A policy document with no implementation records",
+      "A one-time security presentation slide deck",
+      "A screenshot of user roles from six months ago"
+    ],
+    "correctIndex": 0,
+    "explanation": "Auditors need evidence that controls execute in practice and that failures are remediated.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 105,
+    "prompt": "A team requests cross-scope access for a new app. What should happen first?",
+    "choices": [
+      "Auto-approve to avoid delivery delays",
+      "Review necessity, data exposure, and least-privilege alternatives",
+      "Grant global read/write to all app tables",
+      "Disable scope boundaries in sub-production first"
+    ],
+    "correctIndex": 1,
+    "explanation": "Cross-scope access should be justified and minimized because it expands potential data exposure.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-application-development/page/build/applications/concept/scoped-applications.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 106,
+    "prompt": "Which pattern most improves security for outbound web service calls?",
+    "choices": [
+      "Use hard-coded endpoints and credentials in scripts",
+      "Run all calls from global scripts only",
+      "Centralize endpoint configuration and credential aliasing with controlled updates",
+      "Allow developers to change production endpoints directly"
+    ],
+    "correctIndex": 2,
+    "explanation": "Centralized endpoint and credential management reduces misconfiguration risk and supports secure change control.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/web-services/concept/c_RESTAPI.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 107,
+    "prompt": "What is the primary benefit of separating duties for development and production approvals?",
+    "choices": [
+      "Faster deployment windows",
+      "Smaller update set size",
+      "Fewer clone operations",
+      "Reduced conflict of interest and stronger change integrity"
+    ],
+    "correctIndex": 3,
+    "explanation": "Separation of duties reduces the risk of unauthorized or insufficiently reviewed production changes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 108,
+    "prompt": "How should a platform owner handle repeated failed login attempts on privileged accounts?",
+    "choices": [
+      "Trigger alerting and incident workflows tied to identity controls",
+      "Ignore if no outage is reported",
+      "Temporarily disable all user authentication",
+      "Reset all user passwords manually every day"
+    ],
+    "correctIndex": 0,
+    "explanation": "Automated alerting and response workflows improve detection and containment of account compromise attempts.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 109,
+    "prompt": "Which security governance practice best controls integration sprawl?",
+    "choices": [
+      "Allow each team to create independent connectors",
+      "Require integration registration with ownership and risk classification",
+      "Route all integrations through email parsing",
+      "Use only manual file imports for all data exchanges"
+    ],
+    "correctIndex": 1,
+    "explanation": "Integration registration provides visibility, ownership, and policy enforcement across the integration landscape.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/integrationhub/concept/IntegrationHub.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 110,
+    "prompt": "A security exception allows temporary broad access. What must be present before approval?",
+    "choices": [
+      "A verbal agreement from product owners",
+      "A promise to revisit after year-end",
+      "A compensating control, owner, and expiration date",
+      "A rollback plan for update sets only"
+    ],
+    "correctIndex": 2,
+    "explanation": "Compensating controls with clear accountability and expiry keep temporary risk bounded.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 111,
+    "prompt": "Which activity best validates role design after a major reorganization?",
+    "choices": [
+      "Increase role inheritance depth for flexibility",
+      "Disable all custom roles and use only admin",
+      "Keep legacy role mappings to avoid disruption",
+      "Run access recertification against updated job responsibilities"
+    ],
+    "correctIndex": 3,
+    "explanation": "Recertification aligns privileges with current duties and removes stale access from old structures.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/security/concept/security-center.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 112,
+    "prompt": "What is the best way to secure non-production clones containing sensitive records?",
+    "choices": [
+      "Apply data masking and clone cleanup controls before user access",
+      "Open access temporarily for faster testing",
+      "Share cloned data exports through collaboration tools",
+      "Skip clone cleanup when timeline is tight"
+    ],
+    "correctIndex": 0,
+    "explanation": "Masking and cleanup reduce exposure of sensitive records in lower environments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/task/t_CreateCloneCleanupScript.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 113,
+    "prompt": "Which model is most secure for managing platform-owned API keys?",
+    "choices": [
+      "Store keys in local script includes",
+      "Use centralized secret management with controlled rotation workflows",
+      "Embed keys in update set names for visibility",
+      "Distribute keys by email to integration developers"
+    ],
+    "correctIndex": 1,
+    "explanation": "Centralized secret management and rotation limit exposure and improve operational control.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/integrationhub/concept/IntegrationHub.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 114,
+    "prompt": "What security objective is most directly improved by audit logging of admin actions?",
+    "choices": [
+      "Reducing update set collisions",
+      "Improving portal search relevance",
+      "Strengthening accountability and forensic traceability",
+      "Eliminating the need for approvals"
+    ],
+    "correctIndex": 2,
+    "explanation": "Auditable admin activity is essential for investigations and control verification.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 115,
+    "prompt": "Which approach best secures service accounts used by integrations?",
+    "choices": [
+      "Share one account across all integrations and environments",
+      "Give service accounts interactive login access for debugging",
+      "Assign service accounts admin role to avoid permission issues",
+      "Use dedicated non-interactive accounts with minimal scoped permissions"
+    ],
+    "correctIndex": 3,
+    "explanation": "Dedicated non-interactive accounts reduce lateral risk and support precise access control.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/web-services/concept/c_RESTAPI.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 116,
+    "prompt": "How should a platform owner prioritize remediation from recurring security findings?",
+    "choices": [
+      "Risk-tier findings and sequence remediation by business impact and exploitability",
+      "Fix only findings that are easiest to close",
+      "Close findings without validation to improve KPIs",
+      "Wait for annual review before remediation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Risk-based prioritization ensures limited capacity is focused on the highest-impact exposures first.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 117,
+    "prompt": "What is the strongest control for approving third-party app access to platform data?",
+    "choices": [
+      "Approve by vendor reputation alone",
+      "Require documented data access scope, legal review, and periodic reassessment",
+      "Approve once and never revisit",
+      "Allow direct table access during pilots without controls"
+    ],
+    "correctIndex": 1,
+    "explanation": "Third-party access requires explicit scope control and recurring governance to manage ongoing risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 118,
+    "prompt": "Which security measure most reduces unintended data exposure in reporting?",
+    "choices": [
+      "Publish all reports globally for transparency",
+      "Use hard-coded filters in personal reports",
+      "Apply role and domain-aware access controls on report data sources",
+      "Move reporting to spreadsheets outside the platform"
+    ],
+    "correctIndex": 2,
+    "explanation": "Data-source access controls ensure report visibility aligns with authorized access boundaries.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-security/c_DomainSeparation.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 119,
+    "prompt": "A production fix is urgent, and a team asks to skip peer review. What is the best response?",
+    "choices": [
+      "Allow the skip and document later",
+      "Permit skip for senior developers only",
+      "Require peer review in all cases including emergency paths",
+      "Use emergency path with compensating controls and mandatory post-review"
+    ],
+    "correctIndex": 3,
+    "explanation": "Emergency changes can proceed faster, but compensating controls and post-review preserve governance integrity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-application-development/page/build/system-update-sets/concept/update-set-procedures.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 120,
+    "prompt": "Which practice best secures platform telemetry used for security monitoring?",
+    "choices": [
+      "Restrict write access, preserve retention, and protect log integrity",
+      "Allow all admins to delete logs for privacy",
+      "Retain logs only during business hours",
+      "Disable logging during upgrades"
+    ],
+    "correctIndex": 0,
+    "explanation": "Integrity and retention controls are required for reliable detection and investigation workflows.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 121,
+    "prompt": "How should a platform owner govern delegated development rights in sub-production?",
+    "choices": [
+      "Grant broad rights without expiration",
+      "Use scoped delegation with time limits and periodic review",
+      "Mirror all production rights in dev permanently",
+      "Disallow all delegated development"
+    ],
+    "correctIndex": 1,
+    "explanation": "Scoped, time-bound delegation enables productivity while controlling security exposure.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-application-development/page/build/applications/concept/scoped-applications.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 122,
+    "prompt": "What control is most effective against configuration drift that weakens security?",
+    "choices": [
+      "Increase manual audits once per year",
+      "Track drift in personal spreadsheets",
+      "Use baseline comparison and controlled remediation workflow",
+      "Accept drift if incidents remain low"
+    ],
+    "correctIndex": 2,
+    "explanation": "Automated baseline comparison and controlled remediation keep security posture consistent over time.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 123,
+    "prompt": "Which approach best protects platform data during integration testing?",
+    "choices": [
+      "Use production records in all partner sandboxes",
+      "Disable ACL checks temporarily",
+      "Share database snapshots with vendors",
+      "Use masked datasets and least-privilege test accounts"
+    ],
+    "correctIndex": 3,
+    "explanation": "Masked data and minimal test privileges reduce disclosure risk during test cycles.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/clone-data-preservation.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 124,
+    "prompt": "What is the most effective long-term security operating model for platform ownership?",
+    "choices": [
+      "Embed recurring control testing, risk review, and measurable remediation tracking",
+      "Run one annual security review and freeze standards",
+      "Prioritize delivery speed over control evidence",
+      "Delegate all platform security responsibilities to vendors"
+    ],
+    "correctIndex": 0,
+    "explanation": "Continuous control validation and remediation tracking sustain platform security as the environment changes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  }
+]

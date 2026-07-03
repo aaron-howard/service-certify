@@ -1,0 +1,162 @@
+[
+  {
+    "trackCode": "CPOE",
+    "order": 200,
+    "prompt": "Which action best validates that enterprise security controls are operating as designed?",
+    "choices": [
+      "Rely only on policy documents",
+      "Increase admin account count",
+      "Run periodic control testing with evidence capture",
+      "Disable role recertification"
+    ],
+    "correctIndex": 2,
+    "explanation": "Control testing verifies real operating effectiveness and creates evidence for governance and audit requirements.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/security/concept/security-compliance-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 201,
+    "prompt": "A platform roadmap has too many parallel initiatives and rising delivery risk. What should happen first?",
+    "choices": [
+      "Expand scope to include all requests",
+      "Reprioritize using capacity limits and strategic scoring",
+      "Pause all governance meetings",
+      "Deploy unfinished work to meet timelines"
+    ],
+    "correctIndex": 1,
+    "explanation": "Capacity-aware reprioritization reduces delivery risk and keeps roadmap commitments realistic.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/task/prioritize-demand.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 202,
+    "prompt": "What is the strongest operational reason to maintain service ownership metadata in CMDB?",
+    "choices": [
+      "It improves theme personalization",
+      "It eliminates the need for runbooks",
+      "It replaces integration monitoring",
+      "It accelerates incident routing and accountability"
+    ],
+    "correctIndex": 3,
+    "explanation": "Accurate ownership metadata speeds assignment and escalation during incidents and service disruptions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/product/configuration-management/concept/cmdb-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 203,
+    "prompt": "Which integration practice best supports secure onboarding of a new third-party provider?",
+    "choices": [
+      "Use shared production admin credentials",
+      "Define least-privilege access, contract tests, and monitoring before go-live",
+      "Skip non-production verification",
+      "Store provider secrets in script variables"
+    ],
+    "correctIndex": 1,
+    "explanation": "Secure onboarding requires controlled access, validated behavior, and operational observability from day one.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/integrate/integration-security/concept/integration-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 204,
+    "prompt": "What signals a mature enterprise platform change process?",
+    "choices": [
+      "Frequent emergency changes with no post-review",
+      "High change success rate with defined rollback plans and stakeholder communication",
+      "No test evidence for standard changes",
+      "Production fixes outside change records"
+    ],
+    "correctIndex": 1,
+    "explanation": "Mature change processes combine predictable execution, preparedness for failure, and clear communications.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-it-service-management/page/product/change-management/concept/change-management-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 205,
+    "prompt": "Why should platform owners standardize incident severity criteria enterprise-wide?",
+    "choices": [
+      "To ensure consistent escalation and response expectations",
+      "To reduce incident creation volume only",
+      "To avoid major incident management",
+      "To eliminate resolver groups"
+    ],
+    "correctIndex": 0,
+    "explanation": "Consistent severity definitions align response urgency, communications, and executive visibility.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-it-service-management/page/product/incident-management/task/define-priority-matrix.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 206,
+    "prompt": "What is the key governance value of integration ownership assignments?",
+    "choices": [
+      "Ownership is optional when APIs are stable",
+      "It clarifies accountability for uptime, changes, and incident response",
+      "It reduces need for credential controls",
+      "It removes dependency tracking"
+    ],
+    "correctIndex": 1,
+    "explanation": "Named ownership ensures every interface has accountable parties for operations and lifecycle decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/task/manage-integration-portfolio.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 207,
+    "prompt": "A quarterly review shows high control compliance but poor adoption of platform standards. What should be adjusted?",
+    "choices": [
+      "Remove standards documentation",
+      "Improve enablement with training, templates, and feedback loops",
+      "Grant global admin to all teams",
+      "Delay governance meetings indefinitely"
+    ],
+    "correctIndex": 1,
+    "explanation": "Adoption improves when teams receive practical guidance, reusable assets, and iterative support channels.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/task/enable-platform-center-of-excellence.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 208,
+    "prompt": "Which control best limits impact from compromised integration credentials?",
+    "choices": [
+      "Long-lived shared secrets across all interfaces",
+      "Anonymous API access",
+      "Scoped service accounts with secret rotation and monitoring",
+      "Disabling integration logs"
+    ],
+    "correctIndex": 2,
+    "explanation": "Scoped identities, rotation, and monitoring reduce credential misuse exposure and speed detection.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/integrate/integration-security/task/rotate-integration-credentials.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 209,
+    "prompt": "What final outcome best demonstrates CPOE readiness at enterprise scale?",
+    "choices": [
+      "Independent local practices with minimal shared governance",
+      "Rapid customization growth without standards",
+      "Escalating incident and change failure trends",
+      "Aligned security, strategy, operations, and integration controls with measurable performance"
+    ],
+    "correctIndex": 3,
+    "explanation": "Enterprise readiness is evidenced by integrated governance domains and measurable, sustained operational performance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/concept/platform-operating-model.html"
+    ]
+  }
+]

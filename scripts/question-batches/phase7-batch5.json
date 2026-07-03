@@ -1,0 +1,172 @@
+[
+  {
+    "trackCode": "CIS-SAM",
+    "order": 25,
+    "prompt": "What is the primary purpose of a software reclamation campaign in SAM?",
+    "choices": [
+      "Identify unused or low-usage software so entitlements can be recovered and reused",
+      "Automatically renew all publisher agreements before renewal date",
+      "Delete historical software installation records to improve performance",
+      "Replace reconciliation with manual spreadsheet tracking"
+    ],
+    "correctIndex": 0,
+    "explanation": "Reclamation improves license efficiency by recovering unused rights and reducing unnecessary spend.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-reclamation.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_ReclaimUnusedSoftware.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 26,
+    "prompt": "Which data point is most important when prioritizing users for software reclamation?",
+    "choices": [
+      "Employee office location",
+      "Last usage activity compared to reclaim threshold policy",
+      "Count of incidents assigned to the user's group",
+      "Number of catalog requests submitted this quarter"
+    ],
+    "correctIndex": 1,
+    "explanation": "Reclamation targeting should be based on measurable inactivity and policy-defined thresholds.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-reclamation.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 27,
+    "prompt": "Why should SAM teams define exception workflows for reclamation requests?",
+    "choices": [
+      "To let software remain installed indefinitely without review",
+      "To prevent all software from being reclaimed",
+      "To document approved business justifications and maintain governance traceability",
+      "To route reclamation only through incident management"
+    ],
+    "correctIndex": 2,
+    "explanation": "Exception governance keeps reclamation fair and auditable while allowing valid business retention cases.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-reclamation.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 28,
+    "prompt": "What financial outcome is most directly improved by successful reclamation execution?",
+    "choices": [
+      "Reduced need for new license purchases due to reharvested entitlements",
+      "Higher number of emergency software requests",
+      "Increased duplicate software model creation",
+      "Longer reconciliation cycle times"
+    ],
+    "correctIndex": 0,
+    "explanation": "Recovered entitlements lower purchase demand and improve realized SAM savings.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_ReclaimUnusedSoftware.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 29,
+    "prompt": "Which KPI best indicates that reclamation governance is working over time?",
+    "choices": [
+      "Number of knowledge articles published",
+      "Ratio of reclaimed licenses to successfully reallocated licenses",
+      "Count of closed incidents by priority",
+      "Volume of unchanged software models"
+    ],
+    "correctIndex": 1,
+    "explanation": "A strong reclaim-to-reuse ratio shows reclaimed rights are being effectively converted into business value.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-reclamation.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 25,
+    "prompt": "In SPM, what is the main purpose of investment funding governance?",
+    "choices": [
+      "Allocate budget based on strategic value, risk, and expected outcomes",
+      "Fund every demand item equally regardless of alignment",
+      "Approve investments only by submission date",
+      "Move all funding decisions to spreadsheet tools outside SPM"
+    ],
+    "correctIndex": 0,
+    "explanation": "Funding governance ensures limited capital is directed toward the highest-value strategic outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 26,
+    "prompt": "Which practice most improves confidence in investment funding decisions?",
+    "choices": [
+      "Applying a consistent scoring model tied to strategic objectives and benefit metrics",
+      "Skipping demand scoring for executive-submitted requests",
+      "Basing decisions only on prior-year spend",
+      "Funding initiatives without dependency review"
+    ],
+    "correctIndex": 0,
+    "explanation": "Consistent scoring enables transparent, repeatable funding decisions across portfolios.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/demand-management/concept/demand-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 27,
+    "prompt": "What should portfolio leaders review before approving incremental funding for an in-flight initiative?",
+    "choices": [
+      "Only the initiative name and owner",
+      "Strategic alignment, forecast variance, and expected incremental benefit",
+      "Incident backlog trends for unrelated services",
+      "Total number of completed catalog requests"
+    ],
+    "correctIndex": 1,
+    "explanation": "Incremental funding should be evidence-based and linked to measurable strategic impact.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/concept/spm-workspace.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 28,
+    "prompt": "Which anti-pattern most weakens investment funding discipline in SPM?",
+    "choices": [
+      "Using stage-gate reviews before release of additional funds",
+      "Maintaining benefit realization checkpoints",
+      "Funding initiatives without objective mapping or measurable outcomes",
+      "Capturing reforecast rationale in portfolio reviews"
+    ],
+    "correctIndex": 2,
+    "explanation": "Without objective linkage and outcomes, funding decisions cannot be justified against strategy.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 29,
+    "prompt": "Which metric best indicates that investment funding is aligned to strategic intent?",
+    "choices": [
+      "Percentage of funded initiatives mapped to top-priority strategic objectives",
+      "Total number of active users in the platform",
+      "Count of closed incidents in the month",
+      "Average catalog request fulfillment time"
+    ],
+    "correctIndex": 0,
+    "explanation": "Objective-mapped funding demonstrates direct alignment between capital allocation and strategic priorities.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-planning.html"
+    ]
+  }
+]

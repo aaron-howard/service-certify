@@ -1,0 +1,242 @@
+[
+	{
+		"trackCode": "CIS-DF",
+		"order": 55,
+		"prompt": "Why are reference data loads often handled separately from transactional loads?",
+		"choices": [
+			"Reference data usually changes slowly and drives consistent lookups across datasets",
+			"Transactional data does not require keys",
+			"Separate loads are only for UI reasons",
+			"Reference data should never be versioned"
+		],
+		"correctIndex": 0,
+		"explanation": "Reference datasets provide controlled lookup values and are typically managed with different cadence and governance than transactions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 56,
+		"prompt": "What is the main benefit of assigning surrogate keys during reference data loads?",
+		"choices": [
+			"To remove all uniqueness constraints",
+			"To create stable internal identifiers independent of source system codes",
+			"To prevent dimension joins",
+			"To avoid lineage tracking"
+		],
+		"correctIndex": 1,
+		"explanation": "Surrogate keys decouple internal models from volatile source codes and improve integration resilience.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 57,
+		"prompt": "How should ETL processes treat retired or deprecated reference values?",
+		"choices": [
+			"Hard delete immediately with no audit",
+			"Track effective dating or status flags for controlled deprecation",
+			"Continue using retired values forever",
+			"Convert to random new values"
+		],
+		"correctIndex": 1,
+		"explanation": "Effective dating and status controls preserve history while guiding consumers toward current reference values.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 58,
+		"prompt": "Which validation is most important before publishing reference data to downstream consumers?",
+		"choices": [
+			"Verify conformance to approved domains and uniqueness rules",
+			"Confirm dark mode is enabled",
+			"Disable source attribution",
+			"Skip stewardship review"
+		],
+		"correctIndex": 0,
+		"explanation": "Reference data must conform to governed domains and uniqueness constraints to prevent downstream semantic drift.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 59,
+		"prompt": "Why should reference data load jobs include change impact notifications?",
+		"choices": [
+			"So consumers can assess model and mapping effects before values are used in production",
+			"Because notifications replace testing",
+			"Because only DBAs need awareness",
+			"To avoid maintaining metadata"
+		],
+		"correctIndex": 0,
+		"explanation": "Communicating value additions or deprecations helps dependent teams update mappings and avoid report inconsistencies.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 55,
+		"prompt": "Which visualization is generally best for showing KPI trend over time?",
+		"choices": [
+			"Single value widget only",
+			"Time series chart",
+			"Static image",
+			"Pivot list without dates"
+		],
+		"correctIndex": 1,
+		"explanation": "Time series views are designed to represent directional change and seasonality across periods.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 56,
+		"prompt": "When should a score visualization be preferred over a detailed trend chart?",
+		"choices": [
+			"When stakeholders need quick current-state status at a glance",
+			"When trend analysis is required",
+			"When collecting breakdown values",
+			"When exporting raw logs"
+		],
+		"correctIndex": 0,
+		"explanation": "Score widgets highlight present performance quickly, while trend charts are better for temporal analysis.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 57,
+		"prompt": "How do breakdown-based visualizations improve dashboard usefulness?",
+		"choices": [
+			"They enable slicing indicator values by dimensions like group, service, or region",
+			"They remove historical context",
+			"They disable drilldowns",
+			"They only apply to catalog items"
+		],
+		"correctIndex": 0,
+		"explanation": "Breakdown visuals let users compare segments and identify where performance variance originates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 58,
+		"prompt": "What is a key design rule for effective PA dashboard visualization layouts?",
+		"choices": [
+			"Use as many chart types as possible",
+			"Align each widget to a clear decision question and audience",
+			"Hide labels to reduce clutter",
+			"Avoid threshold coloring"
+		],
+		"correctIndex": 1,
+		"explanation": "Dashboards are most effective when each visualization directly supports a decision the audience must make.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 59,
+		"prompt": "Why should visualization filters be tested against role-specific audiences?",
+		"choices": [
+			"Filters can expose or hide critical context depending on access and scope",
+			"Filters have no effect on displayed data",
+			"Only admins can use filters",
+			"Filters disable data collection"
+		],
+		"correctIndex": 0,
+		"explanation": "Role-aware filter testing ensures users see relevant and authorized analytics views for their responsibilities.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 55,
+		"prompt": "What is the purpose of maintaining TNI inventory data for service mapping programs?",
+		"choices": [
+			"To provide current infrastructure context used to map service dependencies",
+			"To replace all CMDB classes with one table",
+			"To stop discovery schedules",
+			"To avoid MID Server usage"
+		],
+		"correctIndex": 0,
+		"explanation": "TNI inventory gives mapping processes reliable component context that supports accurate dependency modeling.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 56,
+		"prompt": "Why is inventory normalization important before TNI data is consumed by mapping logic?",
+		"choices": [
+			"Normalization is optional for topology accuracy",
+			"Consistent naming and attributes improve CI matching and relationship quality",
+			"It removes identifier rules",
+			"It only affects dashboard colors"
+		],
+		"correctIndex": 1,
+		"explanation": "Normalized inventory values reduce ambiguity and help reconciliation identify the correct CIs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 57,
+		"prompt": "Which risk is most likely when TNI inventory freshness is poor?",
+		"choices": [
+			"Service maps may miss recent changes in infrastructure topology",
+			"All probes run faster",
+			"Credential rotation is automated",
+			"PA indicators stop collecting"
+		],
+		"correctIndex": 0,
+		"explanation": "Outdated inventory can produce stale maps that no longer match the live environment.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 58,
+		"prompt": "How should teams handle conflicting attributes between TNI inventory and existing CMDB records?",
+		"choices": [
+			"Ignore conflicts permanently",
+			"Apply reconciliation policies to determine source-of-truth precedence",
+			"Delete both records",
+			"Disable discovery"
+		],
+		"correctIndex": 1,
+		"explanation": "Reconciliation policy ensures attribute updates follow governed precedence rather than random overwrite behavior.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 59,
+		"prompt": "What governance control best improves confidence in TNI inventory ingestion?",
+		"choices": [
+			"Periodic completeness and accuracy audits with exception tracking",
+			"One-time import with no monitoring",
+			"Manual renaming in spreadsheets only",
+			"Turning off identification rules"
+		],
+		"correctIndex": 0,
+		"explanation": "Recurring audits and exception workflows keep inventory ingestion measurable and continuously improvable.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+		]
+	}
+]

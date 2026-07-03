@@ -1,0 +1,172 @@
+[
+  {
+    "trackCode": "CIS-SAM",
+    "order": 70,
+    "prompt": "Which administrative control is most important for stable SAM operations?",
+    "choices": [
+      "Role-based access with clear separation between data stewards, analysts, and approvers",
+      "Global admin access for all asset coordinators",
+      "No approval process for publisher-specific rule changes",
+      "Direct production edits by any itil user"
+    ],
+    "correctIndex": 0,
+    "explanation": "SAM administration depends on governed access to protect data integrity and accountability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 70,
+    "prompt": "Which SPM report best supports executive steering committee decisions?",
+    "choices": [
+      "Portfolio health dashboard with strategy alignment, benefit status, and financial variance",
+      "A list of all pending catalog requests",
+      "A CMDB class count by table name",
+      "Incident assignment group heat map only"
+    ],
+    "correctIndex": 0,
+    "explanation": "Steering decisions require integrated views of value, risk, and financial performance across portfolios.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 71,
+    "prompt": "How should SAM administrators manage normalization and reconciliation rule changes?",
+    "choices": [
+      "Test in lower environments, document impacts, and promote through change control",
+      "Apply changes directly in production during business hours",
+      "Let each analyst maintain separate private rule sets",
+      "Disable historical data comparisons after updates"
+    ],
+    "correctIndex": 0,
+    "explanation": "Controlled promotion preserves trust in license positions and avoids unintended compliance shifts.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/software-normalization.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 71,
+    "prompt": "Which reporting design principle most improves SPM data consumption?",
+    "choices": [
+      "Use role-specific dashboards with consistent definitions for value, risk, and status",
+      "Expose one large raw table to all stakeholders",
+      "Rename KPIs differently on each dashboard",
+      "Exclude target values from scorecards"
+    ],
+    "correctIndex": 0,
+    "explanation": "Role-aligned reporting and consistent metric definitions improve clarity and decision quality.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-portfolio-management/concept/spm-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 72,
+    "prompt": "Which KPI set best indicates mature SAM administration?",
+    "choices": [
+      "Lower unresolved compliance risk, timely reconciliations, and reduced exception aging",
+      "Higher count of emergency access grants",
+      "More duplicate software model records",
+      "Increased manual spreadsheet reconciliations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Operational maturity appears in controlled risk, repeatable processing, and exception discipline.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 72,
+    "prompt": "A VP asks for one report to compare investment performance across portfolios. What is best?",
+    "choices": [
+      "A normalized portfolio scorecard with baseline, current forecast, and benefit realization variance",
+      "A list of projects sorted by sys_id",
+      "An incident SLA report for service desk teams",
+      "A static screenshot of last quarter budget totals"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cross-portfolio comparison requires standardized measures against baseline and realized outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/financial-planning/concept/financial-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 73,
+    "prompt": "What is the best administrative approach for managing SAM exceptions?",
+    "choices": [
+      "Require documented business justification, owner assignment, and scheduled revalidation",
+      "Allow permanent exceptions with no expiry review",
+      "Store exception decisions only in email",
+      "Approve all exceptions automatically by workflow"
+    ],
+    "correctIndex": 0,
+    "explanation": "Exception governance needs traceability, ownership, and periodic challenge to prevent control drift.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/concept/policy-and-compliance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 73,
+    "prompt": "Which reporting pattern helps detect strategic drift early in SPM?",
+    "choices": [
+      "Trend views showing objective alignment and benefit forecast movement over time",
+      "One-time quarterly PDF with no historical comparison",
+      "Project name listings without KPI context",
+      "Budget totals without objective mapping"
+    ],
+    "correctIndex": 0,
+    "explanation": "Time-series tracking reveals deviation earlier than static snapshots, enabling timely governance actions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 74,
+    "prompt": "Which SAM administration activity most improves audit readiness?",
+    "choices": [
+      "Maintain evidence trails for entitlement sources, reconciliation logic, and approval history",
+      "Purge historical compliance records every month",
+      "Allow manual entitlement edits without logging",
+      "Restrict reporting access to prevent reviewer questions"
+    ],
+    "correctIndex": 0,
+    "explanation": "Auditable SAM operations require traceable evidence for how compliance positions were produced and approved.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/audit-management/concept/audit-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/software-asset-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 74,
+    "prompt": "Which KPI combination is most useful in an SPM reporting cadence?",
+    "choices": [
+      "Strategic alignment score, forecast-to-actual spend variance, and benefit realization rate",
+      "Number of reopened incidents and problem tickets",
+      "Count of software installs by operating system",
+      "Mean time to acknowledge security incidents"
+    ],
+    "correctIndex": 0,
+    "explanation": "These KPIs together show strategic fit, financial control, and delivered value.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/financial-planning/concept/financial-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html"
+    ]
+  }
+]

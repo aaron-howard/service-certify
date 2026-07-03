@@ -1,0 +1,257 @@
+[
+  {
+    "trackCode": "CPOA",
+    "order": 45,
+    "prompt": "What is the strongest governance control for outbound email in a ServiceNow platform owner model?",
+    "choices": [
+      "Define approved sender domains, templates, and notification ownership with periodic audits",
+      "Allow any admin to create production email notifications directly",
+      "Disable notification logs to reduce storage usage",
+      "Route all outbound email through personal mailboxes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Email governance relies on controlled templates, sender policies, and accountable ownership to reduce risk and inconsistency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/notification/concept/c_Notifications.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_EmailSecurity.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 46,
+    "prompt": "Why should a platform owner establish notification design standards across business apps?",
+    "choices": [
+      "To prevent duplicate, conflicting, or low-value notifications that degrade user trust",
+      "To eliminate all event-driven communications",
+      "To require every team to build custom mail scripts",
+      "To bypass approval for emergency communication changes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Consistent standards reduce noise and support a predictable notification experience for users and stakeholders.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/notification/concept/c_Notifications.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/system-properties/concept/c_SystemProperties.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 47,
+    "prompt": "Which metric best signals notification governance health in production?",
+    "choices": [
+      "Stable delivery success with reduced duplicate sends and lower opt-out complaints",
+      "Highest possible number of notifications sent per day",
+      "Maximum use of custom scripts in every notification",
+      "Number of email templates created without review"
+    ],
+    "correctIndex": 0,
+    "explanation": "Governance effectiveness is reflected in reliable delivery and reduced communication fatigue, not raw volume.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/notification/concept/c_Notifications.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 48,
+    "prompt": "How should emergency notification changes be governed to balance speed and control?",
+    "choices": [
+      "Use expedited change procedures with post-implementation review and rollback readiness",
+      "Permit direct edits in production without records for faster resolution",
+      "Delay all urgent updates until the next monthly release window",
+      "Allow each support analyst to publish independent templates"
+    ],
+    "correctIndex": 0,
+    "explanation": "Expedited but documented change control protects reliability while enabling rapid response when communication must change quickly.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/notification/concept/c_Notifications.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 49,
+    "prompt": "What ownership model most improves long-term notification governance?",
+    "choices": [
+      "Assign business service owners to notification portfolios with defined review cadences",
+      "Centralize all notifications under a single ungoverned global script",
+      "Disable role-based access controls for notification administration",
+      "Treat notification content as purely technical configuration"
+    ],
+    "correctIndex": 0,
+    "explanation": "Named ownership with scheduled reviews aligns communication quality with business outcomes and compliance obligations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/roles/concept/c_Roles.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/notification/concept/c_Notifications.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 45,
+    "prompt": "What is the primary governance objective of delegated development in enterprise ServiceNow environments?",
+    "choices": [
+      "Enable controlled local innovation while preserving platform standards and security boundaries",
+      "Allow unrestricted production access for all delegated developers",
+      "Replace centralized platform ownership with independent team governance",
+      "Eliminate code review to accelerate delivery"
+    ],
+    "correctIndex": 0,
+    "explanation": "Delegated development is successful when empowerment is paired with guardrails, standards, and clear accountability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/delegated-development/concept/delegated-development.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_AccessControls.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 46,
+    "prompt": "Which control most effectively limits risk in delegated development programs?",
+    "choices": [
+      "Scope delegated roles to specific apps and enforce policy-based approvals for elevated actions",
+      "Grant admin to all delegated developers during sprint windows",
+      "Allow direct update set promotion from development to production",
+      "Disable ACL testing for delegated apps"
+    ],
+    "correctIndex": 0,
+    "explanation": "Least-privilege role design with gated approvals reduces blast radius and maintains governance discipline.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/roles/concept/c_Roles.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/delegated-development/concept/delegated-development.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 47,
+    "prompt": "How should delegated development teams handle configuration standards across multiple business units?",
+    "choices": [
+      "Adopt a shared engineering standard with architecture review checkpoints before promotion",
+      "Let each unit define independent naming and security conventions",
+      "Skip documentation if the change is scoped",
+      "Require all work to bypass source control systems"
+    ],
+    "correctIndex": 0,
+    "explanation": "Shared standards and review checkpoints keep distributed development maintainable and auditable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-application-development/page/build/team-development/concept/c_TeamDevelopment.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/delegated-development/concept/delegated-development.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 48,
+    "prompt": "Which evidence best demonstrates delegated development governance maturity?",
+    "choices": [
+      "Documented role matrices, review outcomes, and trend metrics for policy exceptions",
+      "A high count of emergency fixes pushed directly to production",
+      "No separation between development and admin duties",
+      "Only verbal agreements for app ownership"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mature governance is visible in measurable controls, documented decisions, and exception management.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/roles/concept/c_Roles.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 49,
+    "prompt": "What is the recommended escalation path when delegated teams repeatedly violate platform policies?",
+    "choices": [
+      "Temporarily reduce delegated permissions, enforce remediation plans, and re-certify access",
+      "Grant broader permissions to avoid future blockers",
+      "Ignore violations if delivery deadlines are met",
+      "Delete all delegated apps without impact analysis"
+    ],
+    "correctIndex": 0,
+    "explanation": "Governance requires corrective controls, targeted remediation, and formal recertification of access before restoration.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_AccessControls.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/delegated-development/concept/delegated-development.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 45,
+    "prompt": "Which high availability design principle is most critical for ServiceNow ecosystem integrations?",
+    "choices": [
+      "Design for graceful degradation and automated recovery across dependent services",
+      "Assume all upstream systems are always available",
+      "Centralize all traffic through a single non-redundant endpoint",
+      "Disable monitoring to reduce operational overhead"
+    ],
+    "correctIndex": 0,
+    "explanation": "HA architecture depends on failure-tolerant design and rapid automated recovery to preserve service continuity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 46,
+    "prompt": "How should platform owners validate high availability readiness before peak periods?",
+    "choices": [
+      "Run failover simulations and recovery drills with clear RTO and RPO acceptance criteria",
+      "Rely only on vendor status pages for assurance",
+      "Postpone resilience testing until an outage occurs",
+      "Disable retry logic to simplify transaction tracing"
+    ],
+    "correctIndex": 0,
+    "explanation": "Resilience testing with explicit recovery targets verifies operational readiness under realistic failure conditions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/incident-management/concept/major-incident-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 47,
+    "prompt": "What architecture choice best supports HA for asynchronous processing workloads?",
+    "choices": [
+      "Queue-based decoupling with retry controls, idempotency, and dead-letter handling",
+      "Direct synchronous chaining across all downstream dependencies",
+      "Manual re-entry of failed transactions without audit logs",
+      "Single-threaded processing with no backpressure controls"
+    ],
+    "correctIndex": 0,
+    "explanation": "Decoupled queue patterns absorb faults and traffic spikes while preserving processing integrity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/integrationhub/concept/IntegrationHub.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/web-services/concept/c_RESTAPI.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 48,
+    "prompt": "Which KPI set is most meaningful for enterprise HA governance?",
+    "choices": [
+      "Service availability, incident MTTR, and percentage of successful automated recoveries",
+      "Number of custom business rules created monthly",
+      "Total notifications sent by workflow",
+      "Count of inactive update sets in development"
+    ],
+    "correctIndex": 0,
+    "explanation": "These metrics directly quantify resilience performance and recovery effectiveness.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 49,
+    "prompt": "What governance mechanism best prevents recurring HA regressions after major changes?",
+    "choices": [
+      "Mandatory resilience review gates in release governance with post-release reliability scoring",
+      "Optional postmortems only when executives request them",
+      "Independent team-specific HA definitions without shared criteria",
+      "Permanent freeze on all platform enhancements"
+    ],
+    "correctIndex": 0,
+    "explanation": "Embedding resilience checks in delivery governance ensures reliability remains a non-negotiable release criterion.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html"
+    ]
+  }
+]
