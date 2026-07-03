@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CSA",
+		"order": 40,
+		"prompt": "What is Workflow Studio used for?",
+		"choices": [
+			"Designing and managing flows that automate processes across the platform",
+			"Editing CMDB class icons only",
+			"Running Discovery schedules",
+			"Managing payroll deductions"
+		],
+		"correctIndex": 0,
+		"explanation": "Workflow Studio provides a design environment for building and maintaining automated workflows and flows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-platform/workflow-studio.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 41,
+		"prompt": "How does Virtual Agent support self-service?",
+		"choices": [
+			"Conversational chat that can answer questions and initiate catalog or case flows",
+			"By replacing all ACLs",
+			"By deleting incident records automatically",
+			"By disabling the Service Catalog"
+		],
+		"correctIndex": 0,
+		"explanation": "Virtual Agent provides chat-based self-service that can deflect to knowledge, catalog, or live agents.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-platform/virtual-agent.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 42,
+		"prompt": "What is a record producer in the Service Catalog?",
+		"choices": [
+			"A catalog item that creates a task record instead of a requested item",
+			"A scheduled Discovery probe",
+			"An update set container",
+			"A MID Server probe"
+		],
+		"correctIndex": 0,
+		"explanation": "Record producers use catalog-style forms to create records directly on target tables such as incidents.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/record-producers.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 43,
+		"prompt": "Which knowledge feature lets users rate whether an article was helpful?",
+		"choices": [
+			"Article feedback and voting",
+			"Transform map coalesce",
+			"Import set coalesce preview",
+			"Plugin activation log"
+		],
+		"correctIndex": 0,
+		"explanation": "Knowledge articles support feedback mechanisms so authors and owners can measure usefulness.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/knowledge-management/knowledge-feedback.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 44,
+		"prompt": "What does a catalog fulfillment flow typically automate?",
+		"choices": [
+			"Approval, provisioning tasks, and notifications after a catalog order",
+			"CMDB identification only",
+			"MID Server installation",
+			"Payroll processing"
+		],
+		"correctIndex": 0,
+		"explanation": "Catalog fulfillment flows route approvals and create tasks to deliver the ordered service.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/catalog-fulfillment.html"
+		]
+	}
+]

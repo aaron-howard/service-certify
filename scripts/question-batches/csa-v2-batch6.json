@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CSA",
+		"order": 25,
+		"prompt": "Which list feature lets a user export the currently displayed rows to a spreadsheet format?",
+		"choices": [
+			"Export to Excel or CSV from the list context menu",
+			"Commit a migration update set",
+			"Enable a licensed plugin module",
+			"Run an import field map"
+		],
+		"correctIndex": 0,
+		"explanation": "Lists support exporting filtered results to Excel or CSV for offline analysis.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/lists.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 26,
+		"prompt": "What does the Activity stream on a form display?",
+		"choices": [
+			"Journal entries, work notes, and field changes for the record",
+			"Only CMDB relationships",
+			"Import set row errors",
+			"Plugin dependency trees"
+		],
+		"correctIndex": 0,
+		"explanation": "The activity stream shows comments, work notes, and audit-style updates related to the record.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/activity-stream.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 27,
+		"prompt": "Which configuration controls mandatory fields on a form without scripting?",
+		"choices": [
+			"Dictionary attribute Mandatory or UI Policy",
+			"Import field map script",
+			"Coalesce field matcher",
+			"MID Server credential"
+		],
+		"correctIndex": 0,
+		"explanation": "Fields can be required via the dictionary Mandatory attribute or a UI Policy that sets mandatory true.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/ui-policies.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 28,
+		"prompt": "What information does the Timeline related list on task records show?",
+		"choices": [
+			"Shows SLA stages, approvals, and state changes over time",
+			"Stores import set staging rows",
+			"Lists plugin dependencies",
+			"Replaces the CMDB"
+		],
+		"correctIndex": 0,
+		"explanation": "The timeline visualizes task history including SLAs, approvals, and workflow states chronologically.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/timeline.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 29,
+		"prompt": "Which modules help users track work assigned directly to them?",
+		"choices": [
+			"My Work and My Tasks modules",
+			"Import field mapping module",
+			"Configuration update packages",
+			"Plugin Management"
+		],
+		"correctIndex": 0,
+		"explanation": "My Work and related modules show tasks and items assigned to the logged-in user.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/my-work-modules.html"
+		]
+	}
+]

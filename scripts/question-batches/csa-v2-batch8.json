@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CSA",
+		"order": 35,
+		"prompt": "What does the Service Catalog provide to end users?",
+		"choices": [
+			"A structured way to browse and order services and products",
+			"A CMDB reconciliation engine",
+			"A MID Server configuration tool",
+			"A plugin activation wizard only"
+		],
+		"correctIndex": 0,
+		"explanation": "The Service Catalog presents orderable items with variables and fulfillment workflows for standardized service delivery.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/service-catalog-overview.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 36,
+		"prompt": "Multiple Choice, Single Line Text, and Select Box are examples of what in ServiceNow?",
+		"choices": [
+			"Catalog variable types",
+			"Order guide stages",
+			"Related list types",
+			"CMDB relationship types"
+		],
+		"correctIndex": 0,
+		"explanation": "These are catalog variable types used on catalog items and record producers to collect user input.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/service-catalog-variables.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 37,
+		"prompt": "Which catalog artifact lets a user order several related items in one request?",
+		"choices": [
+			"Order Guide",
+			"Field mapping Transform Map",
+			"Migration Update Set",
+			"Visual Task Board"
+		],
+		"correctIndex": 0,
+		"explanation": "An order guide groups multiple catalog items so one request creates several requested items.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/order-guides.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 38,
+		"prompt": "What record is created when a user submits a catalog item?",
+		"choices": [
+			"A Request with one or more Requested Items (RITMs)",
+			"A CMDB CI only",
+			"An import set header record",
+			"A plugin dependency"
+		],
+		"correctIndex": 0,
+		"explanation": "Catalog checkout creates a Request header and Requested Item records that drive fulfillment tasks.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/request-and-requested-item.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 39,
+		"prompt": "Which variable types are commonly used on catalog items? (Choose two.)",
+		"choices": [
+			"Single Line Text",
+			"Multiple Choice",
+			"CMDB Relationship",
+			"Plugin Dependency"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"questionType": "multi",
+		"explanation": "Catalog items use variable types such as Single Line Text and Multiple Choice; CMDB relationships and plugin dependencies are not catalog variable types.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/service-catalog-variables.html"
+		]
+	}
+]

@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CSA",
+		"order": 0,
+		"prompt": "Which application is available to all users by default for browsing services and submitting requests?",
+		"choices": [
+			"Self Service",
+			"Change Management",
+			"Incident Management",
+			"Facilities Management"
+		],
+		"correctIndex": 0,
+		"explanation": "Self Service is the default end-user application for catalog browsing and request submission; ITSM apps like Change and Incident are role-restricted.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/self-service-application.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 1,
+		"prompt": "What does the Application Navigator provide on a ServiceNow instance?",
+		"choices": [
+			"A hierarchical menu of applications and modules for navigating the platform",
+			"A database backup scheduler",
+			"A MID Server configuration panel",
+			"A CMDB reconciliation dashboard only"
+		],
+		"correctIndex": 0,
+		"explanation": "The Application Navigator lists applications and their modules, giving users entry points to lists, forms, and other content.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/application-navigator.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 2,
+		"prompt": "In Next Experience Unified Navigation, how do users switch between applications?",
+		"choices": [
+			"Through the unified header and application picker without leaving the workspace shell",
+			"By logging out and back in for each application",
+			"Only through direct URL bookmarks",
+			"By editing sys_properties manually"
+		],
+		"correctIndex": 0,
+		"explanation": "Next Experience provides unified navigation with an application picker in the header so users move between apps within one shell.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/next-experience-unified-navigation.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 3,
+		"prompt": "Which statement best describes a ServiceNow instance?",
+		"choices": [
+			"A dedicated environment with its own database, applications, and configuration",
+			"A single shared table across all customers with no isolation",
+			"A desktop client installed on each user's laptop",
+			"A read-only documentation portal"
+		],
+		"correctIndex": 0,
+		"explanation": "An instance is an isolated ServiceNow environment containing its own data, apps, and settings.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-platform/service-now-instances.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 4,
+		"prompt": "Which platform capabilities are core services provided on every instance? (Choose two.)",
+		"choices": [
+			"Workflow and automation",
+			"Reporting and dashboards",
+			"GPU ray tracing",
+			"Offline-only file storage"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"questionType": "multi",
+		"explanation": "ServiceNow instances include workflow, automation, reporting, and dashboards as platform services; GPU rendering and offline-only storage are not platform capabilities.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-platform/platform-overview.html"
+		]
+	}
+]
