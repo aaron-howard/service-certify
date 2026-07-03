@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-VR",
+		"order": 20,
+		"prompt": "Before importing Qualys vulnerability detections, which integration sequence does Vulnerability Response documentation recommend?",
+		"choices": [
+			"Run NVD and CWE integrations first to enrich vulnerability libraries before third-party scanner imports",
+			"Import Qualys detections first, then disable NVD integrations to prevent duplicate CVE records",
+			"Skip NVD imports entirely because third-party libraries never reference CVE identifiers",
+			"Run scanner imports before any NVD job so CI lookup rules can create NVD entries automatically"
+		],
+		"correctIndex": 0,
+		"explanation": "NVD and CWE data should be imported before third-party scanner products so third-party library entries can reference enriched CVE, CWE, and CPE metadata.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/nvd-vuln-integration.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 21,
+		"prompt": "After a Tenable.io integration runs, where are Tenable plugin definitions stored in the Vulnerability Response data model?",
+		"choices": [
+			"Third-Party Vulnerability Entries table as vendor library records referenced by vulnerable items",
+			"Incident table as child tasks linked to every configuration item in the CMDB automatically",
+			"Knowledge table as published articles that replace all scanner import sets on the instance",
+			"Change Request table as standard changes created for each plugin ID returned by the scan"
+		],
+		"correctIndex": 0,
+		"explanation": "Third-party scanners populate the Third-Party Vulnerability Entries table; vulnerable items reference those library entries when detections are imported.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/tenableIntegration.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 22,
+		"prompt": "An analyst opens a Qualys-sourced vulnerable item and drills into the related third-party library entry. What relationship should they expect to find when NVD integration has run successfully?",
+		"choices": [
+			"The third-party entry references a CVE in the NVD library that enriches the vulnerable item context",
+			"The third-party entry stores only a hostname string with no link to any vulnerability library tables",
+			"The third-party entry replaces the configuration item and removes all CMDB relationships permanently",
+			"The third-party entry is identical to the NVD entry and cannot coexist in the same instance"
+		],
+		"correctIndex": 0,
+		"explanation": "Third-party identifiers such as Qualys QIDs reference vendor library entries that in turn map to NVD CVE records when NVD integration data is present.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/nvd-vuln-integration.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 23,
+		"prompt": "During initial VR setup, an administrator schedules CWE data import alongside NVD jobs. Why is CWE enrichment valuable before scanner detections arrive?",
+		"choices": [
+			"CWE records describe weakness categories that enrich prioritization and reference context for imported findings",
+			"CWE imports replace all third-party scanner integrations so Qualys and Tenable connectors are disabled",
+			"CWE data is stored only in HR profiles and is unrelated to vulnerability remediation workflows",
+			"CWE scheduling must run after every scanner import or vulnerable items cannot be created"
+		],
+		"correctIndex": 0,
+		"explanation": "CWE integration imports weakness enumeration data that enriches vulnerability context, especially for Application Vulnerability Response and third-party library cross-references.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/nvd-vuln-integration.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 24,
+		"prompt": "Microsoft TVM machine data is imported and must be tied to existing servers in the CMDB. Which configuration determines how asset identifiers map to configuration items?",
+		"choices": [
+			"CI lookup rules that define how third-party asset attributes match configuration items during import",
+			"Business rules on the incident table that auto-assign TVM findings to the service desk queue",
+			"UI policies on the change form that hide the configuration item field from remediation owners",
+			"Discovery patterns for SNMP printers that translate TVM hostnames into procurement asset tags"
+		],
+		"correctIndex": 0,
+		"explanation": "Vulnerability Response uses CI lookup rules to match scanner-reported asset data with CMDB configuration items when vulnerable items are created.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/mstvm-integration.html"
+		]
+	}
+]

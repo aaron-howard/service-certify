@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-VR",
+		"order": 15,
+		"prompt": "Leadership asks how Vulnerability Response reduces manual handoffs between security analysts and IT remediation teams. Which platform behavior best answers that question?",
+		"choices": [
+			"Automated workflow from integration intake through grouping, prioritization, assignment, and remediation verification",
+			"Manual CSV exports of scanner results that operators email to patch teams outside the platform",
+			"Standalone spreadsheet tracking that replaces all vulnerability records in the ServiceNow instance",
+			"Automatic deletion of CMDB configuration items whenever a scanner reports a new detection"
+		],
+		"correctIndex": 0,
+		"explanation": "Vulnerability Response automates the end-to-end flow from data ingestion and enrichment through remediation task assignment and post-fix verification.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 16,
+		"prompt": "An analyst receives thousands of duplicate scanner observations for the same flaw on multiple assets. Which Vulnerability Response capability addresses this volume problem?",
+		"choices": [
+			"Grouping rules that aggregate related vulnerable items so remediation can be coordinated at scale",
+			"Incident Management parent-child linking that converts every detection into a priority 1 incident",
+			"Knowledge Management article publishing that archives scanner output without creating VR records",
+			"Service Catalog record producers that open laptop refresh requests for each reported vulnerability"
+		],
+		"correctIndex": 0,
+		"explanation": "Vulnerability Response applies grouping and correlation rules to consolidate related vulnerable items and reduce redundant remediation effort.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 17,
+		"prompt": "A remediation task cannot be completed within the standard SLA because patching requires an approved change window. Which Vulnerability Response process should the remediation owner initiate?",
+		"choices": [
+			"Coordinated change or exception management to document controlled deferral or extended remediation",
+			"Immediate closure of the vulnerable item without verification or follow-up scanner confirmation",
+			"Deletion of the third-party vulnerability entry so the finding disappears from all related lists",
+			"Conversion of the vulnerable item into a hardware asset lease record for procurement tracking"
+		],
+		"correctIndex": 0,
+		"explanation": "Vulnerability Response supports change and exception management when remediation requires approved maintenance windows or formal risk acceptance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 18,
+		"prompt": "After a patch is applied, how does Vulnerability Response confirm that a previously open finding is resolved?",
+		"choices": [
+			"Subsequent scanner detections automatically update vulnerable item state when the flaw is no longer reported",
+			"The vulnerable item remains open indefinitely until an agent manually sets state to Closed without rescan data",
+			"All related configuration items are retired from the CMDB regardless of whether the flaw persists",
+			"Remediation tasks auto-close only when the parent incident record reaches the Resolved state"
+		],
+		"correctIndex": 0,
+		"explanation": "VR verifies remediation by processing updated detections from integrated scanner products and reflecting fixed findings on vulnerable item records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 19,
+		"prompt": "A new VR administrator is preparing to import Qualys detections. Which data model distinction must they understand before the first scanner import runs?",
+		"choices": [
+			"A vulnerability describes the flaw in a library, while a vulnerable item links that flaw to a specific configuration item",
+			"A vulnerable item is the same record type as a third-party vulnerability entry with no relationship between them",
+			"A vulnerability record always includes a CMDB CI, while a vulnerable item stores only CVE text with no asset link",
+			"A third-party vulnerability entry replaces NVD entries and cannot reference CVE identifiers from the NVD library"
+		],
+		"correctIndex": 0,
+		"explanation": "Scanner libraries store vulnerability definitions (such as QIDs referencing CVEs), while vulnerable items represent a specific flaw detected on a particular configuration item.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/nvd-vuln-integration.html"
+		]
+	}
+]

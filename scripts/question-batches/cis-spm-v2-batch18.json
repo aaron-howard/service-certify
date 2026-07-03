@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-SPM",
+		"order": 85,
+		"prompt": "A roadmap owner arranges demands and projects on a timeline for executive review. Which APW view presents that schedule-oriented plan?",
+		"choices": [
+			"Timeline roadmap view showing planning items across time horizons",
+			"Diagnostics panel listing open issues on the active project record",
+			"Time Sheet Portal dashboard reporting analyst hour utilization",
+			"Gantt dependency editor for predecessor lag on a single task only"
+		],
+		"correctIndex": 0,
+		"explanation": "Timeline roadmap views in Portfolio Planning Workspace display planning items across time so executives see when work is scheduled to deliver.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/portfolio-planning/demand-form-ppw.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 86,
+		"prompt": "A PMO leader needs a consolidated view of investments, intake pipeline, and key calendar dates. Which dashboard fulfills that need?",
+		"choices": [
+			"PMO dashboard showing investments, pipeline, and calendar overviews",
+			"Employee profile planning attribute editor for skill certification",
+			"Demand assessment template configuration for weighted scoring",
+			"Resource assignment soft-booking panel on the allocation timeline"
+		],
+		"correctIndex": 0,
+		"explanation": "The PMO dashboard provides consolidated views of investment financials, demand and project pipeline, and calendar dates for portfolio oversight.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/ppm-collaboration/project-portfolio-content-pack.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 87,
+		"prompt": "An administrator enables preconfigured PPM analytics for portfolio steering meetings. Which solution provides those dashboards with minimal setup?",
+		"choices": [
+			"Platform Analytics PPM Standard content pack and guided setup",
+			"Manual creation of incident assignment group heat maps only",
+			"Discovery credential rotation schedule for subnet classification",
+			"Custom transform map on an import set without indicator definitions"
+		],
+		"correctIndex": 0,
+		"explanation": "The Platform Analytics PPM Standard content pack delivers preconfigured dashboards through guided setup with minimal Performance Analytics configuration.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/ppm-collaboration/project-portfolio-content-pack.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 88,
+		"prompt": "A transformation office wants project delivery data to inform security remediation prioritization. Which SPM integration pattern supports cross-module visibility?",
+		"choices": [
+			"Better Together integrations linking SPM with other ServiceNow applications",
+			"Disabling all demand states to prevent intake during the fiscal freeze",
+			"Replacing project tasks with catalog variables for fulfillment tracking",
+			"Archiving every baseline before the first status report is generated"
+		],
+		"correctIndex": 0,
+		"explanation": "SPM Better Together integrations connect portfolio planning and delivery with complementary ServiceNow applications for unified operational visibility.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/scenario-planning-in-spw/better-together-with-other-apps-spw.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 89,
+		"questionType": "multi",
+		"prompt": "Which two ServiceNow security applications commonly integrate with SPM for vulnerability and incident visibility? (Choose two.)",
+		"choices": [
+			"Vulnerability Response for grouping and remediating vulnerable items",
+			"Security Incident Response for managing security incident workflows",
+			"Hardware Asset Management for disposal certificate generation only",
+			"Discovery for MID Server heartbeat interval configuration tuning"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "SPM Better Together integrations include Security Operations applications such as Vulnerability Response and Security Incident Response for cross-domain visibility.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/scenario-planning-in-spw/better-together-with-other-apps-spw.html"
+		]
+	}
+]

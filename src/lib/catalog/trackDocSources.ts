@@ -351,12 +351,17 @@ export const PHASE7_TRACK_DOC_SOURCES: TrackDocSource[] = [
 	{
 		trackCode: 'CIS-SPM',
 		officialName: 'Certified Implementation Specialist - Strategic Portfolio Management',
-		publications: ['it-business-management'],
+		publications: ['it-business-management', 'strategic-portfolio-management'],
 		domains: [
-			{ name: 'Strategic planning', weight: '28%', publications: ['it-business-management'] },
-			{ name: 'Portfolio and investment funding', weight: '26%', publications: ['it-business-management'] },
-			{ name: 'Demand and resource management', weight: '24%', publications: ['it-business-management'] },
-			{ name: 'Execution and roadmaps', weight: '22%', publications: ['it-business-management'] }
+			{ name: 'SPM Implementation Overview', weight: '2%', publications: ['it-business-management'] },
+			{ name: 'SPM Financials', weight: '10%', publications: ['it-business-management'] },
+			{ name: 'Resource Management', weight: '23%', publications: ['it-business-management'] },
+			{ name: 'Idea and Demand', weight: '18%', publications: ['it-business-management'] },
+			{ name: 'Project Management', weight: '30%', publications: ['it-business-management'] },
+			{ name: 'Timecard Management', weight: '5%', publications: ['it-business-management'] },
+			{ name: 'Portfolio Planning Workspace', weight: '8%', publications: ['it-business-management'] },
+			{ name: 'SPM Platform Analytics and Dashboards', weight: '2%', publications: ['it-business-management'] },
+			{ name: 'SPM Better Together', weight: '2%', publications: ['it-business-management'] }
 		]
 	}
 ];
@@ -365,23 +370,70 @@ export const PHASE8_TRACK_DOC_SOURCES: TrackDocSource[] = [
 	{
 		trackCode: 'CIS-TPRM',
 		officialName: 'Certified Implementation Specialist - Third-Party Risk Management',
-		publications: ['governance-risk-compliance'],
+		publications: ['governance-risk-compliance', 'third-party-risk-management'],
 		domains: [
-			{ name: 'Vendor risk assessments', weight: '28%', publications: ['governance-risk-compliance'] },
-			{ name: 'Inherent and residual risk', weight: '24%', publications: ['governance-risk-compliance'] },
-			{ name: 'Questionnaires and evidence', weight: '24%', publications: ['governance-risk-compliance'] },
-			{ name: 'Continuous monitoring', weight: '24%', publications: ['governance-risk-compliance'] }
+			{
+				name: 'TPRM Fundamentals and Review',
+				weight: '23%',
+				publications: ['governance-risk-compliance', 'third-party-risk-management']
+			},
+			{
+				name: 'Core Configuration',
+				weight: '14%',
+				publications: ['third-party-risk-management']
+			},
+			{
+				name: 'Assessment Configuration',
+				weight: '33%',
+				publications: ['third-party-risk-management']
+			},
+			{
+				name: 'Third-party Portal',
+				weight: '12%',
+				publications: ['third-party-risk-management']
+			},
+			{
+				name: 'Third-party Supporting Processes',
+				weight: '12%',
+				publications: ['third-party-risk-management']
+			},
+			{
+				name: 'Other Application Relationships',
+				weight: '6%',
+				publications: ['governance-risk-compliance']
+			}
 		]
 	},
 	{
 		trackCode: 'CIS-VR',
 		officialName: 'Certified Implementation Specialist - Vulnerability Response',
-		publications: ['security-management'],
+		publications: ['vulnerability-response', 'security-management', 'now-intelligence'],
 		domains: [
-			{ name: 'Vulnerability intake', weight: '26%', publications: ['security-management'] },
-			{ name: 'Prioritization and scoring', weight: '26%', publications: ['security-management'] },
-			{ name: 'Remediation workflows', weight: '24%', publications: ['security-management'] },
-			{ name: 'Integration with ITSM/SecOps', weight: '24%', publications: ['security-management'] }
+			{
+				name: 'VR Applications and Modules',
+				weight: '25%',
+				publications: ['vulnerability-response', 'security-management']
+			},
+			{
+				name: 'Getting Data into Vulnerability Response',
+				weight: '25%',
+				publications: ['vulnerability-response']
+			},
+			{
+				name: 'Tools to Manage Vulnerability Response',
+				weight: '23%',
+				publications: ['vulnerability-response']
+			},
+			{
+				name: 'Automating Vulnerability Response',
+				weight: '20%',
+				publications: ['vulnerability-response']
+			},
+			{
+				name: 'VR Dashboards and Reports',
+				weight: '7%',
+				publications: ['vulnerability-response', 'now-intelligence']
+			}
 		]
 	},
 	{

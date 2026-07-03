@@ -24,7 +24,7 @@ export const OFFICIAL_EXAM_QUESTION_COUNTS: Record<string, number> = {
 	'CIS-SAM': 60,
 	'CIS-SPM': 60,
 	'CIS-TPRM': 60,
-	'CIS-VR': 60,
+	'CIS-VR': 45,
 	'CIS-CSM': 60,
 	'CIS-FSM': 60,
 	'CIS-HR': 60

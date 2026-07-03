@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 20,
+		"prompt": "A TPRM administrator is building the third-party portfolio from scratch. Which record type should they create first for each vendor organization?",
+		"choices": [
+			"Company record on core_company representing the third-party organization in the vendor portfolio",
+			"Incident record on incident capturing an IT service disruption ticket for internal tracking purposes",
+			"Change request on change_request documenting an infrastructure deployment awaiting CAB approval",
+			"Hardware asset on alm_hardware tracking laptop procurement and retirement lifecycle events"
+		],
+		"correctIndex": 0,
+		"explanation": "Third-party portfolio management begins with company records; engagements, contacts, and assessments reference these organization records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 21,
+		"prompt": "After creating a third-party company record, what is the next configuration step before sending an external assessment?",
+		"choices": [
+			"Create third-party contacts, designate a primary contact, and grant vendor_contact portal access",
+			"Deploy discovery credentials to scan the vendor network and populate CMDB configuration items",
+			"Convert the company record into a hardware asset and assign depreciation categories immediately",
+			"Route the vendor through employee onboarding workflows for internal badge and desk provisioning"
+		],
+		"correctIndex": 0,
+		"explanation": "Contacts must be configured with primary contact designation and portal roles before external assessments can be distributed to vendor liaisons.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-tp-contact-config.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 22,
+		"prompt": "Which table stores individual third-party contact records linked to vendor organizations in TPRM?",
+		"choices": [
+			"Vendor contact (vm_dr_contact) storing external user details, portal credentials, and primary contact designation",
+			"Sys user (sys_user) exclusively for internal employees with full platform authentication access",
+			"Incident (incident) for IT service disruption tickets submitted by internal organizational staff",
+			"Task (task) for generic work items unrelated to external vendor collaboration activities"
+		],
+		"correctIndex": 0,
+		"explanation": "Third-party contacts are stored on the vendor contact table with standard contact fields, portal credentials, and primary contact designation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 23,
+		"questionType": "multi",
+		"prompt": "Which two contact form fields help personalize the Third-party Portal experience for external users? (Choose two.)",
+		"choices": [
+			"Language preference for displaying portal content in the contact's preferred locale",
+			"Time Zone setting for scheduling assessment reminders and due date notifications",
+			"Depreciation method for calculating hardware asset value over the procurement lifecycle",
+			"Change type for categorizing infrastructure deployment requests in the CAB approval queue"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Language and Time Zone fields on the contact form configure the portal experience and notification timing for external third-party users.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-tp-contact-config.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 24,
+		"prompt": "A TPRM admin wants the organization name displayed consistently on the Third-party Portal. Which property controls this setting?",
+		"choices": [
+			"sn_vdr_risk_asmt.company.name property defining the name third-party contacts see in portal references",
+			"glide.ui.theme.style property controlling the color scheme of internal employee workspace pages",
+			"com.snc.change_management.default_group property assigning CAB members to change approvals",
+			"alm.hardware.default_depreciation property setting asset value calculation for procurement items"
+		],
+		"correctIndex": 0,
+		"explanation": "The company.name TPRM property sets the organization name displayed to third-party contacts across all Third-party Portal references.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-properties-configure.html"
+		]
+	}
+]

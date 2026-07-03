@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-SPM",
+		"order": 30,
+		"prompt": "A resource manager exports allocation data before a portfolio review meeting. Which workspace feature provides a consolidated view of staffing across investments?",
+		"choices": [
+			"Resource Management Workspace portfolio allocation dashboard",
+			"Demand Workbench pipeline chart by approval stage",
+			"Idea Portal analytics showing submission trends",
+			"Financial planning budget versus actual comparison report"
+		],
+		"correctIndex": 0,
+		"explanation": "Resource Management Workspace dashboards aggregate allocation and utilization data so leaders can assess staffing across the portfolio in one view.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-management-workspace.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 31,
+		"prompt": "Which outcome indicates that planning attributes are configured effectively for resource matching?",
+		"choices": [
+			"Resource plans filter to qualified employees based on skill and location attributes",
+			"All expense lines default to Capex regardless of spend category",
+			"Every demand record skips assessment and auto-approves on submit",
+			"Idea submissions bypass scoring and convert directly to projects"
+		],
+		"correctIndex": 0,
+		"explanation": "Effective planning attributes enable accurate staff filtering when building resource plans, reducing manual searches and mismatched assignments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/planning-attributes.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 32,
+		"prompt": "An organization wants employees to submit improvement concepts and track them through evaluation before portfolio intake. Which application provides the central hub for that process?",
+		"choices": [
+			"Idea Portal for employee idea collection and evaluation",
+			"Resource Management Workspace for allocation conflict resolution",
+			"Financial planning module for cost plan variance analysis",
+			"Timecard Management for weekly hour submission and approval"
+		],
+		"correctIndex": 0,
+		"explanation": "Idea Portal is the central application where employees submit ideas, participate in evaluation, and follow progress before ideas convert to demands or investments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/idea-management/idea-portal.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 33,
+		"prompt": "A portfolio analyst opens Demand Workbench to compare intake items before a funding committee meeting. What is the primary purpose of that workspace?",
+		"choices": [
+			"Prioritize and manage demand records through assessment and approval stages",
+			"Assign hourly rates to contractor roles on active projects",
+			"Configure employee planning attributes for resource matching",
+			"Approve timecards submitted against project task records"
+		],
+		"correctIndex": 0,
+		"explanation": "Demand Workbench gives portfolio teams a unified view to rank, assess, and disposition demand items through the intake pipeline.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/demand-management/demand-workbench.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 34,
+		"prompt": "A demand record moves from Submitted to Assessment In Progress after a portfolio manager begins scoring. Which object governs that lifecycle progression?",
+		"choices": [
+			"Demand state model defining allowed transitions and stage gates",
+			"Rate model specifying labor charges by resource role",
+			"Resource schedule template for employee working hours",
+			"Cost type table classifying Capex and Opex entries"
+		],
+		"correctIndex": 0,
+		"explanation": "Demand states control the intake workflow, moving records through assessment, qualification, approval, and conversion stages with defined transitions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/demand-management/demand-states.html"
+		]
+	}
+]

@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 85,
+		"prompt": "Leadership asks how Third-party Risk Management fits within the broader ServiceNow GRC product suite. Which description is accurate?",
+		"choices": [
+			"TPRM is a Governance, Risk, and Compliance application for third-party assessment and monitoring",
+			"TPRM is a standalone ITSM module replacing incident and problem management",
+			"TPRM is an HR application for employee performance review cycles",
+			"TPRM is a discovery plugin that maps network topology without risk records"
+		],
+		"correctIndex": 0,
+		"explanation": "Third-party Risk Management is delivered as part of the GRC suite alongside risk, compliance, and policy capabilities.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-reference.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 86,
+		"prompt": "A risk manager wants vendor findings registered in the enterprise risk register for consolidated reporting. How are those risks represented in GRC?",
+		"choices": [
+			"Risk Statement records on sn_risk_risk linked from third-party engagements",
+			"Incident records on incident with priority one for every vendor finding",
+			"Catalog items on sc_cat_item representing each vendor contract line",
+			"User preference rows on sys_user_preference storing risk scores"
+		],
+		"correctIndex": 0,
+		"explanation": "The TPRM data model relates engagements to Risk records so third-party exposure rolls into enterprise risk management.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 87,
+		"prompt": "Which GRC integration points help TPRM teams monitor vendor risk and control compliance over time? (Choose two.)",
+		"choices": [
+			"Risk Management risk statements tied to third-party engagements",
+			"Policy and Compliance controls on sn_compliance_control linked to engagements",
+			"Facilities space management floor plans for office seating assignments",
+			"Project portfolio cost plan lines for capital expenditure forecasting"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"questionType": "multi",
+		"explanation": "Engagements connect to Risk and Control components so teams monitor residual risk and control compliance alongside assessments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 88,
+		"prompt": "Compliance wants to verify that a vendor engagement satisfies mapped internal controls after assessment. Which related GRC record should they review?",
+		"choices": [
+			"Control record on sn_compliance_control associated with the engagement",
+			"OAuth application registry entry for REST integration consumers",
+			"Email filter definition on sys_email_filter for inbound routing",
+			"Widget instance on sp_widget for employee portal branding"
+		],
+		"correctIndex": 0,
+		"explanation": "Engagements relate to Control records from Policy and Compliance Management for control testing and attestation alignment.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 89,
+		"prompt": "Continuous monitoring detects a vendor control regression between assessment cycles. Which integrated response best aligns with GRC practice?",
+		"choices": [
+			"Create or update risk and issue records and trigger reassessment or compliance review workflows",
+			"Delete the vendor from core_company and purge all historical assessments",
+			"Disable all ACLs on external tables so vendors can self-remediate silently",
+			"Convert monitoring alerts into catalog items for unrelated software orders"
+		],
+		"correctIndex": 0,
+		"explanation": "Monitoring signals should feed GRC risk and issue processes with governed reassessment and compliance follow-up.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-reference.html"
+		]
+	}
+]

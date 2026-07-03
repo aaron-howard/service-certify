@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 40,
+		"prompt": "After a third-party contact submits questionnaire responses, how does TPRM calculate the assessment rating?",
+		"choices": [
+			"Metric scores aggregate from individual question responses using the template scoring parameters and rollup method",
+			"An analyst manually assigns a random numeric score without reference to questionnaire response data",
+			"The assessment rating copies directly from the vendor's most recent hardware asset depreciation value",
+			"All submitted responses receive an automatic passing score regardless of control evidence quality"
+		],
+		"correctIndex": 0,
+		"explanation": "Assessment ratings are calculated from metric-level scores on questionnaire responses, aggregated according to configured scoring and rollup rules.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/rm-assessment-integration.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 41,
+		"prompt": "Which qualitative risk ratings can appear on an internal assessment form after scores are calculated?",
+		"choices": [
+			"Critical, High, Moderate, Low, and Minor based on configured risk rating scale ranges",
+			"New, In Progress, On Hold, and Closed based on ITSM incident state model transitions",
+			"Draft, Assess, Review, and Complete based on change management approval workflow stages",
+			"Pending, Approved, Rejected, and Cancelled based on employee travel reimbursement statuses"
+		],
+		"correctIndex": 0,
+		"explanation": "The risk rating field maps numeric assessment scores to qualitative tiers: Critical, High, Moderate, Low, and Minor.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/create-int-assess-form.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 42,
+		"prompt": "An internal assessment completed during due diligence can influence which subsequent TPRM activity?",
+		"choices": [
+			"Determining which external questionnaires are sent to the third party or engagement based on inherent risk results",
+			"Automatically converting the vendor record into a hardware asset with an assigned depreciation schedule",
+			"Permanently closing all open incidents linked to the vendor without analyst review or approval",
+			"Routing the vendor through employee onboarding workflows for internal badge and desk provisioning"
+		],
+		"correctIndex": 0,
+		"explanation": "Internal assessments evaluate inherent risk and can affect which questionnaires are later distributed to the third party or engagement.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-create-int-assessment.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 43,
+		"prompt": "Which table should an implementer reference when building reports on third-party risk assessment records and their states?",
+		"choices": [
+			"Third-party risk assessment (sn_vdr_risk_asmt_assessment) as the primary reporting table for assessment data",
+			"Incident (incident) for IT service disruption ticket volume and mean-time-to-resolution metrics",
+			"Change Request (change_request) for infrastructure deployment approval cycle time reporting",
+			"Sys User (sys_user) for internal employee login frequency and session duration analytics"
+		],
+		"correctIndex": 0,
+		"explanation": "The sn_vdr_risk_asmt_assessment table is the primary source for third-party risk assessment reporting including states, scores, and dates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 44,
+		"prompt": "A TPRM program needs event-driven generation rules that automatically create due diligence requests when engagement criteria are met. Which table stores these rules?",
+		"choices": [
+			"Event-driven management rule (sn_tprm_dd_generation_rule) defining conditions that trigger due diligence requests",
+			"Discovery schedule (discovery_schedule) controlling network scan job frequency on target IP address ranges",
+			"Business rule (sys_script) executing server-side logic on unrelated platform table record updates",
+			"Catalog client script (catalog_script_client) validating employee-facing service catalog form inputs"
+		],
+		"correctIndex": 0,
+		"explanation": "Event-driven management generation rules define conditions that automatically create due diligence requests when engagement or portfolio criteria are met.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	}
+]

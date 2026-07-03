@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-SPM",
+		"order": 25,
+		"prompt": "A resource manager groups employees by department and job profile before bulk-updating planning attributes. Which table stores the employee data used in resource planning?",
+		"choices": [
+			"Employee profile records linked to user accounts",
+			"Expense line records on the investment cost plan",
+			"Idea records submitted through the employee portal",
+			"Timecard rows approved by the project manager"
+		],
+		"correctIndex": 0,
+		"explanation": "Resource Management uses Employee profile records to maintain planning attributes, schedules, and role information for staffing decisions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-management-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 26,
+		"prompt": "When building a cross-portfolio capacity forecast, which data source reflects both committed and tentative staffing?",
+		"choices": [
+			"Resource plans and assignments aggregated across investments",
+			"Idea portal submissions grouped by business unit",
+			"Demand assessment scores from the intake workbench",
+			"Budget plan totals by fiscal period and portfolio"
+		],
+		"correctIndex": 0,
+		"explanation": "Capacity forecasts combine resource plan requirements with assignment data to show both planned demand and confirmed staffing across the portfolio.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/capacity-planning.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 27,
+		"prompt": "An administrator enables group-based resource planning for a shared testing team. Which approach assigns the group rather than named individuals?",
+		"choices": [
+			"Create a resource group assignment on the resource plan",
+			"Add a single Opex expense line for the entire team cost",
+			"Submit one consolidated idea through the employee portal",
+			"Set the demand state to Approved without a resource plan"
+		],
+		"correctIndex": 0,
+		"explanation": "Group assignments allow resource plans to reserve capacity from a team before specific members are named in individual assignments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-assignment.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 28,
+		"prompt": "A PMO lead wants Resource Management Workspace users to adjust allocations but not edit financial cost plans. Which design supports that separation?",
+		"choices": [
+			"Assign RM Workspace role without financial planning admin access",
+			"Grant itil_admin to all resource managers for full table access",
+			"Disable resource plans and rely on spreadsheet tracking",
+			"Route all staffing changes through incident assignment rules"
+		],
+		"correctIndex": 0,
+		"explanation": "Role separation limits resource managers to allocation tasks in RM Workspace while financial administrators maintain cost and budget plans.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-management-workspace.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 29,
+		"prompt": "After a merger, two resource schedule templates must coexist for different regions with distinct holiday calendars. How should the administrator configure this?",
+		"choices": [
+			"Maintain separate resource schedule templates and assign each to the appropriate employees",
+			"Use one global schedule and ignore regional holiday differences",
+			"Delete all schedules and calculate capacity from cost plan hours",
+			"Convert regional holidays into demand records for tracking"
+		],
+		"correctIndex": 0,
+		"explanation": "Multiple resource schedule templates support regional working patterns; each employee inherits the schedule matching their location or business unit.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-schedules.html"
+		]
+	}
+]

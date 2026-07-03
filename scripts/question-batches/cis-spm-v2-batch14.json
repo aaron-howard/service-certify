@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-SPM",
+		"order": 65,
+		"prompt": "A steering committee tracks whether key delivery checkpoints were met on time. Which project object represents those checkpoints?",
+		"choices": [
+			"Milestone records marking significant delivery checkpoints",
+			"Resource schedule entries blocking employee vacation periods",
+			"Demand collaborators authorized to edit intake submissions",
+			"Planning item tables configured for Portfolio Planning Workspace"
+		],
+		"correctIndex": 0,
+		"explanation": "Milestones mark significant delivery checkpoints on the project schedule and are tracked for on-time completion during governance reviews.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/project-management/t_CreateAProject.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 66,
+		"prompt": "A compliance initiative must produce a signed document before closure. Which project component tracks that required output?",
+		"choices": [
+			"Deliverable record linked to the project with acceptance criteria",
+			"Time sheet policy week start day defining the reporting calendar",
+			"Expense line marked as Opex on the quarterly financial rollup",
+			"Scenario simulation comparing two alternative funding allocations"
+		],
+		"correctIndex": 0,
+		"explanation": "Deliverables document required outputs with acceptance criteria so teams verify that contractual or compliance artifacts are produced before closure.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/project-management/t_CreateAProject.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 67,
+		"prompt": "A project includes a dedicated phase for quality validation before release. Which project configuration adds that validation phase?",
+		"choices": [
+			"Test phase defined on the project for validation activities",
+			"Lens configuration enabling high-level program planning items",
+			"Soft resource allocation converted to hard assignment after approval",
+			"Investment portal board widget showing pipeline budget totals"
+		],
+		"correctIndex": 0,
+		"explanation": "Projects can include a test phase when the Test Management plugin is active, providing a dedicated stage for quality validation activities.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/project-management/t_CreateAProject.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 68,
+		"prompt": "Agile Development 2.0 is active and the team wants iterative delivery tracking. Which project type should they select at creation?",
+		"choices": [
+			"Agile or Hybrid project type when creating the project record",
+			"Classic demand record promoted without a resource plan attached",
+			"Confidential project with allowed users restricted to executives",
+			"Program-level status report generated from the PMO dashboard"
+		],
+		"correctIndex": 0,
+		"explanation": "Agile and Hybrid project types require the Agile Development 2.0 plugin and support iterative delivery tracking within Project Workspace.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/project-management/t_CreateAProject.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 69,
+		"prompt": "A scope change requires formal review before modifying the approved schedule. Which RIDAC item initiates that controlled change?",
+		"choices": [
+			"Change request record associated with the project RIDAC set",
+			"Demand deferral with documented rationale in the workbench",
+			"Baseline comparison limited to financial data without schedule",
+			"Timecard merge operation combining duplicate entries for one task"
+		],
+		"correctIndex": 0,
+		"explanation": "Change requests within the RIDAC framework document scope changes that require review before the approved schedule or deliverables are modified.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/project-management/ppm-collab-overview.html"
+		]
+	}
+]

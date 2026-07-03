@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-SPM",
+		"order": 35,
+		"prompt": "A demand intake team uses weighted scoring to compare business value, risk, and strategic alignment. Which configuration artifact defines those evaluation criteria?",
+		"choices": [
+			"Demand assessment template with scored criteria",
+			"Resource schedule entry blocking employee vacation",
+			"Rate type record for contractor hourly billing",
+			"Budget plan header for the portfolio fiscal year"
+		],
+		"correctIndex": 0,
+		"explanation": "Demand assessment templates define scored criteria so intake teams evaluate and compare demand items consistently during portfolio reviews.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/demand-management/demand-assessments.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 36,
+		"prompt": "An employee submits an idea through the portal and receives status updates as reviewers evaluate it. Which Idea Portal capability supports that visibility?",
+		"choices": [
+			"Idea tracking dashboard showing submission status and feedback",
+			"Resource allocation timeline for project staffing conflicts",
+			"Cost plan rollup showing planned versus actual spend",
+			"Time sheet policy configuration for weekly hour entry"
+		],
+		"correctIndex": 0,
+		"explanation": "Idea Portal provides submitters with visibility into idea status, reviewer feedback, and progression through evaluation stages.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/idea-management/idea-portal.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 37,
+		"prompt": "After an idea passes evaluation, the portfolio team converts it to formal intake. Which record type typically receives the converted work item?",
+		"choices": [
+			"Demand record entering the demand management pipeline",
+			"Resource assignment on an active project task",
+			"Expense line on the portfolio budget plan",
+			"Timecard row awaiting project manager approval"
+		],
+		"correctIndex": 0,
+		"explanation": "Approved ideas convert to demand records so they enter the governed intake, assessment, and funding workflow managed in Demand Workbench.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/demand-management/demand-management-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 38,
+		"questionType": "multi",
+		"prompt": "Which two demand states indicate that intake evaluation is underway but funding has not yet been approved? (Choose two.)",
+		"choices": [
+			"Assessment In Progress",
+			"Qualified",
+			"Closed Complete",
+			"Cancelled"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Assessment In Progress and Qualified are mid-pipeline states where demand items are being evaluated before final approval and conversion.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/demand-management/demand-states.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 39,
+		"prompt": "A portfolio manager filters Demand Workbench to show only high-priority items aligned to a strategic objective. Which demand field supports that filter?",
+		"choices": [
+			"Strategic alignment and priority score from the assessment",
+			"Resource schedule template assigned to the submitter",
+			"Rate type applied to planned labor on the cost plan",
+			"Expense type classification on the budget plan line"
+		],
+		"correctIndex": 0,
+		"explanation": "Demand assessments capture strategic alignment and priority scores that workbench views use to rank and filter intake for portfolio decisions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/demand-management/demand-workbench.html"
+		]
+	}
+]

@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-VR",
+		"order": 70,
+		"prompt": "Which dashboard view helps vulnerability managers track open risk by severity and aging?",
+		"choices": [
+			"Vulnerability Response overview dashboards with severity breakdowns and age metrics",
+			"Hardware asset lifecycle dashboards for procurement renewal forecasting by cost center",
+			"Employee onboarding journey analytics for HR case completion rates by department",
+			"Change collision detection reports for normal change scheduling across maintenance windows"
+		],
+		"correctIndex": 0,
+		"explanation": "VR overview dashboards surface severity distribution and aging so managers can spot backlog concentration and SLA risk.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/vulnerability-response/vr-dashboards.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 71,
+		"prompt": "How does Performance Analytics support continuous improvement in a Vulnerability Response program?",
+		"choices": [
+			"It trends KPIs such as mean time to remediate, SLA attainment, and backlog reduction over time",
+			"It replaces all vulnerability assignment rules with manual analyst triage queues permanently",
+			"It imports scanner findings directly without requiring integration credentials or field mapping",
+			"It eliminates the need for exception management when indicator scores fall below threshold"
+		],
+		"correctIndex": 0,
+		"explanation": "Performance Analytics provides time-series visibility into remediation velocity and policy adherence for program tuning.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/vulnerability-response/vr-performance-analytics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 72,
+		"prompt": "Which report best helps security leadership compare remediation progress across business services?",
+		"choices": [
+			"Vulnerability status by business service with SLA breach and aging metrics by owner group",
+			"Count of active UI themes configured on the instance segmented by department code",
+			"Total number of MID Server JVM heap allocations per discovery schedule on each subnet",
+			"List of unassigned hardware asset tags exported without any vulnerability context included"
+		],
+		"correctIndex": 0,
+		"explanation": "Service-level vulnerability reporting shows where risk concentrates and which owner groups need escalation support.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/vulnerability-response/vr-reporting.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 73,
+		"prompt": "The CISO wants executive visibility into VR program health without operational detail overload. Which dashboard design choices meet that need? (Choose two.)",
+		"choices": [
+			"High-level overview tiles summarizing critical exposure and remediation trend direction",
+			"Single clear health indicators such as overdue critical backlog or SLA attainment rate",
+			"Full editable remediation task lists with every technical field exposed on one screen",
+			"Raw scanner export files attached as the primary visualization on the landing page"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"questionType": "multi",
+		"explanation": "Executive consumers need concise overview tiles and a small set of decisive health indicators rather than operational record-level detail.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/vulnerability-response/ciso-dashboards.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 74,
+		"prompt": "Which visualization best communicates whether the organization is reducing critical vulnerability exposure over time?",
+		"choices": [
+			"Trend lines showing open critical and high findings with closure velocity overlays",
+			"Pie chart of scanner vendor names without severity or age context on the dashboard",
+			"Table of inactive user accounts who have never logged into the VR application module",
+			"Single static count of total CMDB configuration items regardless of vulnerability state"
+		],
+		"correctIndex": 0,
+		"explanation": "Time-based severity trends combined with closure velocity show whether remediation capacity is outpacing newly discovered critical risk.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/vulnerability-response/vr-dashboards.html"
+		]
+	}
+]
