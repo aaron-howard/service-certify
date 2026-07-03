@@ -52,9 +52,31 @@ export const GET: RequestHandler = async ({ url, cookies }) => {
 			path: '/',
 			maxAge: 7 * 24 * 60 * 60
 		});
+
+		const { syncUserToConvex } = await import('$lib/convex.server');
+		const displayName =
+			[user.firstName, user.lastName].filter(Boolean).join(' ').trim() || user.email;
+
+		try {
+			await syncUserToConvex({
+				workosId: user.id,
+				email: user.email,
+				name: displayName,
+				profileImage: user.profilePictureUrl ?? undefined
+			});
+		} catch (syncError) {
+			// OAuth succeeded; log sync failure but still sign the user in.
+			console.error('Convex user sync failed after OAuth:', syncError);
+		}
 	} catch (err) {
 		console.error('Token exchange error:', err);
 		throw redirect(302, '/auth/signin?error=authentication_failed');
+	}
+
+	const postAuthRedirect = cookies.get('auth_redirect');
+	if (postAuthRedirect?.startsWith('/')) {
+		cookies.delete('auth_redirect', { path: '/' });
+		throw redirect(302, postAuthRedirect);
 	}
 
 	throw redirect(302, '/dashboard');

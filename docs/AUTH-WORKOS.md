@@ -292,6 +292,40 @@ After setup:
 - WorkOS: [Documentation](https://workos.com/docs)
 - OAuth: [RFC 6749](https://tools.ietf.org/html/rfc6749)
 
+---
+
+## Admin access and full mock exams
+
+Admins can take **full mock exams** (all questions in the Convex bank). Anonymous users get a **sample** of up to 3 questions per track.
+
+### Bootstrap an admin account
+
+1. Set the Convex environment variable (Convex dashboard → Settings → Environment Variables, or CLI):
+
+```bash
+npx convex env set ADMIN_EMAILS you@example.com,partner@example.com
+```
+
+Use a **single** variable with comma-separated emails (not one variable per admin).
+
+2. Ensure **`PUBLIC_CONVEX_URL`** is set in **SvelteKit** env (`.env.local` locally, Vercel project env for production). Without it, OAuth sign-in works but users are never written to the Convex `users` table.
+
+3. Sign in at `/auth/signin` with an allowlisted email.
+4. Confirm in the [Convex dashboard](https://dashboard.convex.dev) → **Data** → `users` that your row has `role: "admin"`.
+5. Open any exam detail page — you should see **Start Full Mock**.
+
+### How roles work
+
+- `role` is stored on the Convex `users` table (`user` or `admin`).
+- `ADMIN_EMAILS` only **bootstraps** admins on login; promote or demote users later in the Convex dashboard without redeploying.
+- Full-mode access is enforced in Convex (`listByTrackCode`, `gradeAnswers`), not only in the UI.
+
+### Convex auth wiring
+
+The browser Convex client calls `/api/auth/convex-token` to attach your WorkOS session to Convex requests. Practice `mode=full` requires a valid admin session.
+
+---
+
 ## Implementation Status
 
 - ✅ WorkOS SDK installed
@@ -299,8 +333,9 @@ After setup:
 - ✅ Convex schema with users table
 - ✅ Auth mutations (create/update user)
 - ✅ Sign-in UI with social buttons
-- ⏳ Client-side auth state management (coming: Svelte store)
-- ⏳ Protected route middleware (coming: +layout.server.ts)
+- ✅ Convex client auth via `/api/auth/convex-token`
+- ✅ Admin role on `users` table with `ADMIN_EMAILS` bootstrap
+- ✅ Full mock practice (`mode=full`) gated to admins in Convex
 - ⏳ User profile page (coming: future phase)
 
 ## Note

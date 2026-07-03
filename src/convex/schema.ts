@@ -13,6 +13,8 @@ export default defineSchema({
 		profileImage: v.optional(v.string()),
 		// OAuth provider (google, microsoft, github, facebook)
 		provider: v.optional(v.string()),
+		// Application role (default user; admin unlocks full practice)
+		role: v.optional(v.union(v.literal('user'), v.literal('admin'))),
 		// Account creation date
 		createdAt: v.number()
 	})

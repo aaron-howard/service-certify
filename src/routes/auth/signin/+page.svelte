@@ -9,6 +9,12 @@
 		{ id: 'github', name: 'GitHub', icon: '🐙' }
 	] as const;
 
+	const loginHref = (providerId: string) => {
+		const params = new URLSearchParams({ provider: providerId });
+		if (data.redirect) params.set('redirect', data.redirect);
+		return `/auth/login?${params.toString()}`;
+	};
+
 	const errorMessages: Record<string, string> = {
 		workos_not_configured: 'WorkOS is not configured on the server. Add WORKOS_API_KEY and WORKOS_CLIENT_ID to .env.local.',
 		invalid_provider: 'That sign-in provider is not supported.',
@@ -53,7 +59,7 @@
 
 				{#each providers as provider (provider.id)}
 					<a
-						href="/auth/login?provider={provider.id}"
+						href={loginHref(provider.id)}
 						class="w-full flex items-center justify-center gap-3 px-4 py-3 bg-primary-container text-on-primary-container rounded-lg hover:bg-primary hover:text-on-primary transition-colors font-medium {!data.configured ? 'pointer-events-none opacity-50' : ''}"
 						aria-disabled={!data.configured}
 					>

@@ -1,6 +1,6 @@
 import { mutation, query } from './_generated/server';
 import { v } from 'convex/values';
-import type { Doc, Id } from './_generated/dataModel';
+import { isAdminEmail, isAdminUser, resolveUserRole } from './lib/authorization';
 
 /**
  * Get or create user from WorkOS identity.
@@ -15,35 +15,46 @@ export const createOrUpdateUser = mutation({
 		provider: v.optional(v.string())
 	},
 	handler: async (ctx, args) => {
-		// Validate input
 		if (!args.workosId || !args.email) {
 			throw new Error('Missing required fields: workosId, email');
 		}
 
-		// Check if user exists
 		const existing = await ctx.db
 			.query('users')
 			.withIndex('by_workosId', (q) => q.eq('workosId', args.workosId))
 			.unique();
 
 		if (existing) {
-			// Update existing user
-			await ctx.db.patch(existing._id, {
+			const patch: {
+				email: string;
+				name?: string;
+				profileImage?: string;
+				provider?: string;
+				role?: 'admin';
+			} = {
 				email: args.email,
 				name: args.name,
 				profileImage: args.profileImage,
 				provider: args.provider
-			});
+			};
+
+			// Promote allowlisted emails; never downgrade admins on profile sync.
+			if (!isAdminUser(existing) && isAdminEmail(args.email)) {
+				patch.role = 'admin';
+			}
+
+			await ctx.db.patch(existing._id, patch);
 			return existing._id;
 		}
 
-		// Create new user
+		const role = isAdminEmail(args.email) ? 'admin' : 'user';
 		const userId = await ctx.db.insert('users', {
 			workosId: args.workosId,
 			email: args.email,
 			name: args.name,
 			profileImage: args.profileImage,
 			provider: args.provider,
+			role,
 			createdAt: Date.now()
 		});
 
@@ -53,7 +64,7 @@ export const createOrUpdateUser = mutation({
 
 /**
  * Get current authenticated user.
- * Uses tokenIdentifier from JWT token.
+ * Uses WorkOS subject from JWT token.
  */
 export const getCurrentUser = query({
 	args: {},
@@ -61,13 +72,15 @@ export const getCurrentUser = query({
 		const identity = await ctx.auth.getUserIdentity();
 		if (!identity) return null;
 
-		// Get user by WorkOS ID (stored in token identifier)
 		const user = await ctx.db
 			.query('users')
 			.withIndex('by_workosId', (q) => q.eq('workosId', identity.subject))
 			.unique();
 
-		return user;
+		if (!user) return null;
+
+		const role = resolveUserRole(user.role);
+		return { ...user, role, isAdmin: role === 'admin' };
 	}
 });
 
@@ -82,7 +95,10 @@ export const getUserByEmail = query({
 			.withIndex('by_email', (q) => q.eq('email', args.email))
 			.unique();
 
-		return user;
+		if (!user) return null;
+
+		const role = resolveUserRole(user.role);
+		return { ...user, role, isAdmin: role === 'admin' };
 	}
 });
 
@@ -98,7 +114,6 @@ export const deleteAccount = mutation({
 			throw new Error('Not authenticated');
 		}
 
-		// Get user
 		const user = await ctx.db
 			.query('users')
 			.withIndex('by_workosId', (q) => q.eq('workosId', identity.subject))
@@ -108,7 +123,6 @@ export const deleteAccount = mutation({
 			throw new Error('User not found');
 		}
 
-		// Delete user progress
 		const progress = await ctx.db
 			.query('userProgress')
 			.withIndex('by_userId', (q) => q.eq('userId', user._id))
@@ -118,7 +132,6 @@ export const deleteAccount = mutation({
 			await ctx.db.delete(p._id);
 		}
 
-		// Delete user
 		await ctx.db.delete(user._id);
 
 		return true;

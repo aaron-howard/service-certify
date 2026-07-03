@@ -7,11 +7,16 @@
 
 	let { data } = $props();
 	const exam = $derived(data.exam);
+	const mode = $derived(data.mode as 'sample' | 'full');
+	const isFullMock = $derived(mode === 'full');
 	const convex = useConvexClient();
 
 	const bank = useQuery(
 		api.practiceQuestions.listByTrackCode,
-		() => (browser && env.PUBLIC_CONVEX_URL ? { trackCode: exam.code } : 'skip')
+		() =>
+			browser && env.PUBLIC_CONVEX_URL
+				? { trackCode: exam.code, mode }
+				: 'skip'
 	);
 
 	type Q = {
@@ -98,6 +103,7 @@
 		try {
 			const graded = await convex.mutation(api.practiceQuestions.gradeAnswers, {
 				trackCode: exam.code,
+				mode,
 				answers: questions.map((q) => ({
 					order: q.id,
 					selectedIndex: selected[q.id]!
@@ -128,7 +134,9 @@
 	>
 		<div class="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-4 px-6 py-4">
 			<div>
-				<p class="text-xs font-bold uppercase tracking-widest text-secondary">Practice</p>
+				<p class="text-xs font-bold uppercase tracking-widest text-secondary">
+					{isFullMock ? 'Full mock' : 'Sample practice'}
+				</p>
 				<p class="font-headline font-bold text-primary">{exam.code} — {exam.shortTitle}</p>
 			</div>
 			<div class="flex items-center gap-6">
@@ -244,20 +252,26 @@
 			{:else if score}
 				<div class="rounded-xl bg-primary px-8 py-4 text-center text-white shadow-lg">
 					<p class="font-label text-xs uppercase tracking-widest text-on-primary-container">
-						Your sample score
+						{isFullMock ? 'Your mock score' : 'Your sample score'}
 					</p>
 					<p class="font-headline text-3xl font-extrabold">
 						{score.correct}/{score.total}
 					</p>
-					<p class="mt-2 text-sm text-on-primary-container">
-						Full timed mocks and deeper analytics are included with membership.
-					</p>
-					<a
-						href="/membership"
-						class="mt-4 inline-block rounded-md bg-secondary px-6 py-2 text-sm font-bold text-on-secondary"
-					>
-						View membership
-					</a>
+					{#if isFullMock}
+						<p class="mt-2 text-sm text-on-primary-container">
+							Full mock complete. Review explanations below to reinforce weak areas.
+						</p>
+					{:else}
+						<p class="mt-2 text-sm text-on-primary-container">
+							Full timed mocks and deeper analytics are included with membership.
+						</p>
+						<a
+							href="/membership"
+							class="mt-4 inline-block rounded-md bg-secondary px-6 py-2 text-sm font-bold text-on-secondary"
+						>
+							View membership
+						</a>
+					{/if}
 				</div>
 			{/if}
 		</div>
