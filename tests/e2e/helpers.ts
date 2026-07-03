@@ -1,4 +1,4 @@
-import type { Page } from '@playwright/test';
+import { expect, type Page } from '@playwright/test';
 
 /** Exam catalog cards link to `/exams/{slug}` (not the catalog index). */
 export function examCardLinks(page: Page) {
@@ -19,11 +19,28 @@ export async function gotoFirstPractice(page: Page) {
 	const practiceBtn = page.locator('a:has-text("Practice"), button:has-text("Practice")').first();
 	await practiceBtn.click();
 	await page.waitForURL(/\/exams\/[^/]+\/practice/);
+	await waitForPracticeContent(page);
+}
+
+export function practiceQuestionHeading(page: Page) {
+	return page.locator('article h2').first();
+}
+
+/** Practice page empty state when Convex is missing or the track has no seeded questions. */
+export function practiceEmptyState(page: Page) {
+	return page.getByText(/No practice questions|Practice questions require Convex/i);
+}
+
+/** Wait until the practice page shows questions or a documented empty state. */
+export async function waitForPracticeContent(page: Page) {
+	await expect(practiceQuestionHeading(page).or(practiceEmptyState(page))).toBeVisible({
+		timeout: 10000
+	});
 }
 
 /** Practice page shows Convex questions or a documented empty state when Convex is not configured. */
 export async function hasPracticeQuestions(page: Page) {
-	const empty = page.getByText(/No practice questions/i);
-	if (await empty.isVisible().catch(() => false)) return false;
-	return page.locator('article h2').first().isVisible().catch(() => false);
+	await waitForPracticeContent(page);
+	if (await practiceEmptyState(page).isVisible().catch(() => false)) return false;
+	return practiceQuestionHeading(page).isVisible().catch(() => false);
 }
