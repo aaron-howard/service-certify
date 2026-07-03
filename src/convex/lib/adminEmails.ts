@@ -6,6 +6,8 @@ export function parseAdminEmailAllowlist(raw: string): string[] {
 		.filter(Boolean);
 }
 
+declare const process: { env: Record<string, string | undefined> };
+
 /** Check whether an email is in the ADMIN_EMAILS Convex env allowlist. */
 export function isAdminEmail(email: string): boolean {
 	const allowlist = parseAdminEmailAllowlist(process.env.ADMIN_EMAILS ?? '');
