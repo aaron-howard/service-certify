@@ -3,7 +3,8 @@ import {
 	examCardLinks,
 	gotoFirstExam,
 	gotoFirstPractice,
-	hasPracticeQuestions
+	hasPracticeQuestions,
+	practiceEmptyState
 } from './helpers';
 
 /**
@@ -45,7 +46,7 @@ test.describe('Critical User Flows', () => {
 		if (await hasPracticeQuestions(page)) {
 			await expect(page.locator('article h2').first()).toBeVisible();
 		} else {
-			await expect(page.getByText(/No practice questions/i)).toBeVisible();
+			await expect(practiceEmptyState(page)).toBeVisible();
 		}
 	});
 
@@ -53,7 +54,7 @@ test.describe('Critical User Flows', () => {
 		await gotoFirstPractice(page);
 
 		if (!(await hasPracticeQuestions(page))) {
-			await expect(page.getByText(/No practice questions/i)).toBeVisible();
+			await expect(practiceEmptyState(page)).toBeVisible();
 			return;
 		}
 
@@ -66,7 +67,7 @@ test.describe('Critical User Flows', () => {
 		await gotoFirstPractice(page);
 
 		if (!(await hasPracticeQuestions(page))) {
-			await expect(page.getByText(/No practice questions/i)).toBeVisible();
+			await expect(practiceEmptyState(page)).toBeVisible();
 			return;
 		}
 
