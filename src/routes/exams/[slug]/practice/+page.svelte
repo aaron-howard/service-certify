@@ -2,6 +2,12 @@
 	import { browser } from '$app/environment';
 	import { env } from '$env/dynamic/public';
 	import MaterialIcon from '$lib/components/MaterialIcon.svelte';
+	import { getPracticeTimeSeconds } from '$lib/catalog/examQuestionPolicy';
+	import {
+		displayIndexToOriginal,
+		originalIndexToDisplay,
+		shuffleChoicesForDisplay
+	} from '$lib/practice/choiceShuffle';
 	import { useConvexClient, useQuery } from 'convex-svelte';
 	import { api } from '$convex/_generated/api.js';
 
@@ -10,10 +16,11 @@
 	const mode = $derived(data.mode as 'sample' | 'full');
 	const isFullMock = $derived(mode === 'full');
 	const convex = useConvexClient();
-	const sessionSeed = $state(
-		typeof crypto !== 'undefined' && 'randomUUID' in crypto
-			? crypto.randomUUID()
-			: `mock-${Date.now()}`
+	const sessionSeed = $derived(
+		data.sessionSeed ??
+			(typeof crypto !== 'undefined' && 'randomUUID' in crypto
+				? crypto.randomUUID()
+				: `mock-${Date.now()}`)
 	);
 
 	const bank = useQuery(
@@ -28,6 +35,7 @@
 		id: number;
 		prompt: string;
 		choices: string[];
+		permutation: number[];
 	};
 
 	type GradeResult = {
@@ -41,22 +49,27 @@
 	const convexConfigured =
 		typeof env.PUBLIC_CONVEX_URL === 'string' && env.PUBLIC_CONVEX_URL.length > 0;
 
+	function toDisplayQuestions(
+		rows: { order: number; prompt: string; choices: string[] }[]
+	): Q[] {
+		return rows.map((r) => {
+			const { choices, permutation } = shuffleChoicesForDisplay(
+				r.choices,
+				sessionSeed,
+				r.order
+			);
+			return { id: r.order, prompt: r.prompt, choices, permutation };
+		});
+	}
+
 	const questions = $derived.by((): Q[] => {
 		if (isFullMock && data.serverQuestions) {
-			return data.serverQuestions.map((r) => ({
-				id: r.order,
-				prompt: r.prompt,
-				choices: r.choices
-			}));
+			return toDisplayQuestions(data.serverQuestions);
 		}
 
 		const rows = bank.data;
 		if (!rows?.length) return [];
-		return rows.map((r) => ({
-			id: r.order,
-			prompt: r.prompt,
-			choices: r.choices
-		}));
+		return toDisplayQuestions(rows);
 	});
 
 	const questionsLoadError = $derived(
@@ -64,7 +77,7 @@
 	);
 	const questionsLoading = $derived(isFullMock ? false : bank.isLoading);
 
-	let remaining = $state(600);
+	let remaining = $state(90 * 60);
 	let selected = $state<Record<number, number>>({});
 	let submitted = $state(false);
 	let grading = $state(false);
@@ -76,7 +89,11 @@
 	$effect(() => {
 		const n = questions.length;
 		if (n === 0) return;
-		remaining = Math.max(600, n * 240);
+		remaining = getPracticeTimeSeconds({
+			trackCode: exam.code,
+			questionCount: n,
+			mode
+		});
 	});
 
 	$effect(() => {
@@ -114,6 +131,10 @@
 		return gradedByOrder[order];
 	}
 
+	function displayCorrectIndex(q: Q, graded: GradeResult): number {
+		return originalIndexToDisplay(graded.correctIndex, q.permutation);
+	}
+
 	async function submit() {
 		if (!browser || !env.PUBLIC_CONVEX_URL || grading) return;
 		grading = true;
@@ -125,7 +146,7 @@
 				...(isFullMock ? { sessionSeed } : {}),
 				answers: questions.map((q) => ({
 					order: q.id,
-					selectedIndex: selected[q.id]!
+					selectedIndex: displayIndexToOriginal(selected[q.id]!, q.permutation)
 				}))
 			};
 
@@ -247,12 +268,12 @@
 								<label
 									class="flex cursor-pointer items-start gap-3 rounded-lg bg-surface-container-high/80 p-4 transition-colors hover:bg-surface-container-high {submitted &&
 									graded &&
-									idx === graded.correctIndex
+									idx === displayCorrectIndex(q, graded)
 										? 'ring-2 ring-secondary'
 										: ''} {submitted &&
 									graded &&
 									selected[q.id] === idx &&
-									idx !== graded.correctIndex
+									idx !== displayCorrectIndex(q, graded)
 										? 'ring-2 ring-error'
 										: ''}"
 								>
