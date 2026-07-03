@@ -39,6 +39,8 @@ export const devQuestions = internalMutation({
 				prompt: q.prompt,
 				choices: [...q.choices],
 				correctIndex: q.correctIndex,
+				...(q.questionType ? { questionType: q.questionType } : {}),
+				...(q.correctIndexes ? { correctIndexes: [...q.correctIndexes] } : {}),
 				explanation: q.explanation,
 				sourceUrls: q.sourceUrls,
 				difficulty: 'dev'

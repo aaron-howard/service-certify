@@ -1,0 +1,485 @@
+[
+  {
+    "trackCode": "CSA",
+    "order": 30,
+    "prompt": "Before activating a plugin in production, what should an administrator validate first?",
+    "choices": [
+      "Operationally, whether the plugin can be selectively activated for one assignment group only",
+      "From an implementation standpoint, whether the plugin through configured automation disables update sets",
+      "In most deployments, that all inactive users are deleted from the instance",
+      "From a governance perspective, plugin dependencies, potential data model impacts, and required roles"
+    ],
+    "correctIndex": 3,
+    "explanation": "Plugin activation can introduce dependent functionality and schema changes, so admins should review dependencies, impacts, and role requirements before enabling it.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/australia/plugins/concept/c_Plugins.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 31,
+    "prompt": "Which statement best describes plugin deactivation behavior in ServiceNow?",
+    "choices": [
+      "Practically speaking, deactivating a plugin only hides menus and does not affects configuration",
+      "From an admin perspective, any plugin can be safely deactivated after one business day",
+      "Typically, many plugins are intended as one-way activations and are not routinely deactivated",
+      "In platform terms, deactivation is automatic when no records use plugin tables"
+    ],
+    "correctIndex": 2,
+    "explanation": "ServiceNow treats many plugins as one-way activations because enabling them can add artifacts and dependencies that are not designed for routine rollback.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/australia/plugins/concept/c_Plugins.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 32,
+    "prompt": "What is the recommended naming convention for a custom system property created by an administrator?",
+    "choices": [
+      "In this scenario, use a unique, app-specific prefix such as x_company_app.setting_name",
+      "Practically speaking, reuse a global glide.* property name to keep naming simple",
+      "From an admin perspective, use uppercase only and include spaces for readability",
+      "In platform terms, name it after the admin user who created it"
+    ],
+    "correctIndex": 0,
+    "explanation": "Custom properties should use a unique namespace-style prefix so they are distinguishable from baseline properties and easier to govern across environments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/australia/system-administration/system-properties/concept/c_SystemProperties.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 33,
+    "prompt": "When storing an integration credential in a system property, which property type is most appropriate?",
+    "choices": [
+      "In most deployments, string for consistent administration",
+      "In practice, integer for consistent administration",
+      "Operationally, password (2 Way Encrypted)",
+      "From an implementation standpoint, true/False"
+    ],
+    "correctIndex": 2,
+    "explanation": "Sensitive secrets should be stored in an encrypted password property type rather than plain text values.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/australia/system-administration/system-properties/concept/c_SystemProperties.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 34,
+    "prompt": "How does instance time zone configuration affect date/time values in ServiceNow?",
+    "choices": [
+      "Typically, this approach changes only SLA schedules and nothing else for consistent administration for governed delivery",
+      "In practice, this approach applies only to reports, not forms or lists under expected controls",
+      "Operationally, this approach converts stored values from UTC to local time permanently in the database",
+      "From an implementation standpoint, this approach affects how date/time values are displayed, while values are stored in UTC"
+    ],
+    "correctIndex": 3,
+    "explanation": "ServiceNow stores date/time in UTC and applies time zone settings for user-facing display and interpretation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/australia/system-administration/reference/r_DateAndTime.html",
+      "https://www.servicenow.com/docs/r/platform-administration/australia/system-administration/concept/c_TimeZones.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 35,
+    "prompt": "A user says they can find a module by searching in the filter navigator, but they do not know which application owns it. Which interface behavior helps identify the owning application before opening the module?",
+    "choices": [
+      "In this scenario, checking the module entry shown under its application section in the navigator results",
+      "In platform terms, opening System Logs and searching for the module label for stable outcomes",
+      "Practically speaking, reviewing the MID Server capability table in standard operations",
+      "From a governance perspective, exporting the Application Picker choices to XML for consistent administration"
+    ],
+    "correctIndex": 0,
+    "explanation": "Navigator search surfaces matching modules within their application grouping, so users can see which application contains the module before they click it.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-user-interface/navigation-and-search/filter-navigator.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 36,
+    "prompt": "An analyst needs to work only in the Service Desk application and avoid modules from other apps cluttering the menu. What should they do?",
+    "choices": [
+      "Typically, set the Application Picker to Service Desk so navigator content scopes to that app",
+      "Operationally, delete modules from other applications in standard operations",
+      "From an implementation standpoint, switch the list layout to compact mode",
+      "In practice, enable elevated privileges with security_admin under normal policy constraints"
+    ],
+    "correctIndex": 0,
+    "explanation": "The Application Picker controls which application's navigation items are shown, helping users focus on relevant modules.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-user-interface/navigation-and-search/application-picker.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 37,
+    "prompt": "A module is available to a role, but a user still cannot see it in the navigation menu. Which condition is most likely causing this?",
+    "choices": [
+      "Typically, that instance has no active SLA definitions in standard operations",
+      "From an admin perspective, that user has too many records in sys_user",
+      "Operationally, that module's application menu is inactive or not visible to the user context",
+      "In practice, that module has more than one list layout for governed delivery"
+    ],
+    "correctIndex": 2,
+    "explanation": "Even with role access, users need the module's parent application/menu context to be available and visible in navigation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/application-menus-and-modules/configure-application-menus-and-modules.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 38,
+    "prompt": "What is the main purpose of an application menu in the platform navigator?",
+    "choices": [
+      "In this scenario, to replace ACL evaluation for table access",
+      "From a governance perspective, to execute background scripts on schedule",
+      "In most deployments, to group related modules for a functional area or app",
+      "In platform terms, to store encrypted credentials for integrations"
+    ],
+    "correctIndex": 2,
+    "explanation": "Application menus organize related modules so users can find and launch app functionality from a single logical grouping.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/application-menus-and-modules/configure-application-menus-and-modules.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 39,
+    "prompt": "A fulfillment lead opens Records > Incidents repeatedly throughout the day and wants one-click access from the left navigator. Which action best meets this need?",
+    "choices": [
+      "From a governance perspective, change the incident number format",
+      "In this scenario, disable all other navigation modules",
+      "In most deployments, mark the module as a favorite so it appears in Favorites",
+      "From an implementation standpoint, create a new table extension for incident"
+    ],
+    "correctIndex": 2,
+    "explanation": "Favoriting frequently used modules adds quick access shortcuts without changing the underlying application or module configuration.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-user-interface/navigation-and-search/use-favorites-in-the-application-navigator.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 40,
+    "prompt": "Which artifact defines retention, classification, and handling requirements for data records in ServiceNow?",
+    "choices": [
+      "In this scenario, a transform map run history",
+      "Operationally, a documented data policy",
+      "From a governance perspective, a business rule script include",
+      "In platform terms, a UI policy under expected controls"
+    ],
+    "correctIndex": 1,
+    "explanation": "Data policies establish governance requirements such as classification, retention, and handling controls that support compliance obligations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/security/concept/c_DataPolicies.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 41,
+    "prompt": "In Edge Encryption, what is the primary security benefit of encrypting sensitive fields before data reaches the instance?",
+    "choices": [
+      "In most deployments, this approach allows unauthenticated API access to those fields",
+      "In this scenario, this approach replaces all role-based access controls through configured automation",
+      "From a governance perspective, this approach disables ACL evaluation for encrypted columns",
+      "In platform terms, this approach protects data confidentiality in transit and at rest in the tenant"
+    ],
+    "correctIndex": 3,
+    "explanation": "Client-side encryption ensures protected values are encrypted before transmission, reducing exposure while preserving platform processing for authorized use cases.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/product/edge-encryption/concept/edge-encryption.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 42,
+    "prompt": "Which approach best supports regulatory audits for personally identifiable information (PII) in ServiceNow?",
+    "choices": [
+      "Typically, disable activity auditing to reduce storage usage for stable outcomes",
+      "Operationally, store all PII in free-text journal fields in standard operations",
+      "In practice, grant admin role to all approvers for stable outcomes for consistent administration",
+      "From an admin perspective, track access and change history on PII fields with audit controls"
+    ],
+    "correctIndex": 3,
+    "explanation": "Compliance audits require traceability. Field and record audit history helps demonstrate who viewed or changed sensitive data and when.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/security/concept/c_AuditingInServiceNow.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 43,
+    "prompt": "When implementing field-level encryption, which role should own encryption key lifecycle controls?",
+    "choices": [
+      "Typically, any fulfiller role with table write access in standard operations",
+      "In practice, all end users with self-service access for consistent administration",
+      "Practically speaking, a designated security administrator or key custodian role",
+      "From an admin perspective, only catalog admins for governed delivery"
+    ],
+    "correctIndex": 2,
+    "explanation": "Segregation of duties is a core control: key management should be restricted to trusted security custodians, not broad operational roles.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/security/concept/encryption-support.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 44,
+    "prompt": "What is the most appropriate action when a data policy conflicts with a legal hold requirement?",
+    "choices": [
+      "In this scenario, delete all matching records without delay for stable outcomes for consistent administration",
+      "From an implementation standpoint, pause retention disposition for affected records per legal hold governance",
+      "In most deployments, convert records to attachments to avoid retention checks for governed delivery",
+      "From a governance perspective, ignore the legal hold and keep normal retention under expected controls"
+    ],
+    "correctIndex": 1,
+    "explanation": "Legal hold requirements take precedence over standard retention schedules to prevent improper destruction of records subject to litigation or investigation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/security/concept/c_DataPolicies.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 45,
+    "prompt": "What is the primary role of a MID Server in ServiceNow?",
+    "choices": [
+      "Operationally, to act as a secure agent that communicates between the ServiceNow instance and resources inside a private network",
+      "In most deployments, to render Service Portal widgets on the client for governed delivery",
+      "From an implementation standpoint, to store update set history for all applications under expected controls",
+      "From a governance perspective, to replace ACL evaluation for all tables for stable outcomes"
+    ],
+    "correctIndex": 0,
+    "explanation": "A MID Server runs in the customer network and securely executes discovery, orchestration, and integration tasks on behalf of the instance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/mid-server/mid-server.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 46,
+    "prompt": "Why is validating MID Server status important before running Discovery?",
+    "choices": [
+      "Practically speaking, because Discovery through configured automation ignores all network credentials for governed delivery",
+      "Typically, because MID Servers are required only for email notifications under normal policy constraints under expected controls",
+      "From an admin perspective, because Discovery depends on a validated, up MID Server to execute probes and patterns against target infrastructure",
+      "In platform terms, because Discovery can only run from a client browser tab in standard operations"
+    ],
+    "correctIndex": 2,
+    "explanation": "Discovery schedules require operational MID Servers to communicate with devices and return results to the instance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html",
+      "https://www.servicenow.com/docs/r/platform-administration/mid-server/mid-server.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 47,
+    "prompt": "In a multi-node ServiceNow instance, what does clustering awareness help administrators understand?",
+    "choices": [
+      "In most deployments, this approach means every user session is permanently bound to one MID Server under expected controls",
+      "From a governance perspective, this approach requires separate update sets per cluster node for stable outcomes",
+      "Operationally, this approach helps them understand that processing is distributed across nodes for scale and availability rather than tied to one app server",
+      "From an implementation standpoint, this approach disables load balancing during peak usage for consistent administration"
+    ],
+    "correctIndex": 2,
+    "explanation": "ServiceNow instances run on clustered application nodes, and workload distribution improves reliability and performance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-administration/page/administer/instances/concept/c_InstanceArchitecture.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 48,
+    "prompt": "What is a practical reason to deploy multiple MID Servers for production integrations?",
+    "choices": [
+      "In most deployments, to provide redundancy and workload distribution so integrations continue if one MID Server is unavailable",
+      "In practice, to ensure each MID Server can connect to only one table in standard operations",
+      "Operationally, to eliminate the need for credentials in Discovery for consistent administration",
+      "From an implementation standpoint, to bypass ECC Queue processing under normal policy constraints"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using more than one MID Server supports high availability and better throughput for integration and discovery workloads.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/mid-server/mid-server-clusters.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 49,
+    "prompt": "How does the ECC Queue relate to MID Server operations?",
+    "choices": [
+      "In this scenario, this approach stores only CMDB relationship records in standard operations",
+      "In platform terms, this approach replaces import set tables during data loads for consistent administration",
+      "Practically speaking, this approach is the message framework used for commands and responses between the instance and MID Servers",
+      "From an admin perspective, this approach is a UI policy engine for catalog forms for governed delivery"
+    ],
+    "correctIndex": 2,
+    "explanation": "The ECC Queue is the communication channel where the instance sends work to MID Servers and receives execution results.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/mid-server/ecc-queue.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 50,
+    "prompt": "A platform owner wants a visual that immediately shows whether open P1 incidents are above or below target. Which report visualization is best?",
+    "choices": [
+      "Operationally, list report grouped by assignment group",
+      "In most deployments, gauge with warning and critical thresholds",
+      "From a governance perspective, calendar report",
+      "From an implementation standpoint, single score report"
+    ],
+    "correctIndex": 1,
+    "explanation": "A gauge is designed to compare a metric to target thresholds and quickly communicate status with color bands.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/reports-and-dashboards/gauges.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 51,
+    "prompt": "Which statement correctly describes a homepage in classic ServiceNow UI?",
+    "choices": [
+      "Practically speaking, this approach replaces update sets for migrating records under normal policy constraints",
+      "In platform terms, this approach is the only place where ACL rules can be configured for governed delivery",
+      "Typically, this approach is a collection of report widgets and content blocks users can view for operational monitoring",
+      "From an admin perspective, this approach is required to run scripted REST APIs for stable outcomes"
+    ],
+    "correctIndex": 2,
+    "explanation": "Homepages provide role-based at-a-glance views by arranging reports, gauges, and other widgets in one place.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/reports-and-dashboards/homepages.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 52,
+    "prompt": "An admin needs a chart showing incidents opened by priority during the last 30 days and refreshed daily. What should they configure first?",
+    "choices": [
+      "Practically speaking, a UI policy on the incident form for governed delivery",
+      "In platform terms, a business rule on sys_user under expected controls",
+      "In this scenario, a scheduled import set transform for stable outcomes",
+      "From an admin perspective, a report with a date filter and grouping by priority"
+    ],
+    "correctIndex": 3,
+    "explanation": "The core requirement is reporting logic: define the report data source, filter window, and grouping to visualize incident volume by priority.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/reports-and-dashboards/create-a-report.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 53,
+    "prompt": "Why would an administrator add multiple gauges to the same homepage?",
+    "choices": [
+      "From an implementation standpoint, to track several KPIs with separate thresholds in one operational view",
+      "In most deployments, to replace assignment rules for incidents for stable outcomes",
+      "Operationally, to enforce ACLs on tables used by reports in standard operations",
+      "In practice, to prevent users from creating personal reports for consistent administration"
+    ],
+    "correctIndex": 0,
+    "explanation": "Each gauge can represent a different KPI with distinct warning/critical limits, giving teams a compact health overview.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/reports-and-dashboards/gauges.html",
+      "https://www.servicenow.com/docs/r/platform-administration/reports-and-dashboards/homepages.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 54,
+    "prompt": "A manager says, \"I only need one number: currently open high-priority incidents.\" Which report type is most appropriate?",
+    "choices": [
+      "Typically, pivot report for governed delivery",
+      "From an implementation standpoint, calendar report",
+      "Operationally, single score report for consistent administration",
+      "In practice, trend report under normal policy constraints"
+    ],
+    "correctIndex": 2,
+    "explanation": "Single score reports are intended to display one aggregate metric, such as count of open high-priority incidents.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/reports-and-dashboards/single-score-reports.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 55,
+    "prompt": "In a basic LDAP integration, what does an LDAP server definition primarily provide to ServiceNow?",
+    "choices": [
+      "In this scenario, a client-side script library for form validation in standard operations",
+      "Practically speaking, connection and query settings used to import users and groups from the directory",
+      "From a governance perspective, a replacement for all ACL role checks under normal policy constraints",
+      "In platform terms, a workflow approval matrix for change requests for governed delivery"
+    ],
+    "correctIndex": 1,
+    "explanation": "LDAP server definitions store the host, bind, and search configuration required for ServiceNow to read directory data.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/ldap-integration/ldap-server.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 56,
+    "prompt": "Why are LDAP OU definitions important in user and group imports?",
+    "choices": [
+      "Typically, they scope searches to targeted directory paths so imports pull the right records",
+      "In this scenario, they set incident priority based on caller role",
+      "From a governance perspective, they encrypt all outbound REST messages through configured automation",
+      "In platform terms, they define catalog variable sets for request items"
+    ],
+    "correctIndex": 0,
+    "explanation": "OU definitions control where ServiceNow searches in the directory, helping administrators target and optimize imports.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/ldap-integration/ldap-organizational-units.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 57,
+    "prompt": "What is the primary purpose of LDAP transform maps in ServiceNow?",
+    "choices": [
+      "In practice, to replace all business rules on sys_user under normal policy constraints",
+      "Operationally, to schedule CMDB discovery probes for governed delivery",
+      "Typically, to map LDAP attributes to ServiceNow user or group fields during import",
+      "From an admin perspective, to render workspace list layouts for stable outcomes"
+    ],
+    "correctIndex": 2,
+    "explanation": "LDAP transform maps define how inbound directory attributes populate target fields such as name, email, and manager.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/ldap-integration/ldap-transform-maps.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 58,
+    "prompt": "In ServiceNow SSO administration, what does an Identity Provider (IdP) record represent?",
+    "choices": [
+      "In most deployments, a MID Server cluster policy for consistent administration",
+      "In platform terms, a dependency mapping relationship in CMDB under expected controls",
+      "In this scenario, that external authentication service that issues assertions used for user sign-in",
+      "From a governance perspective, a local table rotation strategy for syslog in standard operations"
+    ],
+    "correctIndex": 2,
+    "explanation": "IdP records configure trust and authentication metadata so ServiceNow can accept federated login assertions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/single-sign-on/sso-identity-providers.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 59,
+    "prompt": "What is a common administrative validation after enabling SSO?",
+    "choices": [
+      "In most deployments, delete LDAP import schedules to avoid duplicates under expected controls",
+      "In this scenario, test IdP-initiated and SP-initiated login flows to confirm users map correctly to accounts",
+      "From an implementation standpoint, convert all notifications to SMS-only in standard operations",
+      "From a governance perspective, disable all local admin accounts permanently for consistent administration"
+    ],
+    "correctIndex": 1,
+    "explanation": "SSO rollout should include both login flow tests and user-mapping verification to avoid authentication and access issues.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/single-sign-on/single-sign-on.html"
+    ]
+  }
+]

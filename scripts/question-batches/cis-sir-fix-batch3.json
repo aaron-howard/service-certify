@@ -1,0 +1,512 @@
+[
+  {
+    "trackCode": "CIS-SIR",
+    "order": 60,
+    "prompt": "Which role is primarily accountable for coordinating end-to-end response actions during an active security incident?",
+    "choices": [
+      "Matches the scenario in which security incident coordinator or incident commander.",
+      "Reflects the condition that procurement specialist.",
+      "Describes the outcome where cMDB data steward.",
+      "Represents the approach that change advisory board chair."
+    ],
+    "correctIndex": 0,
+    "explanation": "The incident coordinator drives response orchestration, communication, and decision pacing.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_AssignSecurityIncidentRoles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 61,
+    "prompt": "What is the core responsibility of a Tier 1 SOC analyst in the SIR role model?",
+    "choices": [
+      "Describes the outcome where own final incident closure sign-off for legal review.",
+      "Captures the choice stating perform initial triage, enrichment, and prioritization before escalation.",
+      "Reflects the condition that approve all risk acceptances for the organization.",
+      "Matches the scenario in which manage CMDB class hierarchy changes."
+    ],
+    "correctIndex": 1,
+    "explanation": "Tier 1 analysts focus on fast, accurate triage and routing to the right responders.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response-workspace.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_DefinePrioritiesForSecurityIncidents.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 62,
+    "prompt": "How should SIR implementations enforce role separation between responders and approvers?",
+    "choices": [
+      "Reflects the condition that restrict approvals to manual email only.",
+      "Corresponds to the option where allow all responders full administrative permissions by default.",
+      "Matches the scenario in which use role-based access controls and workflow approvals to separate execution from oversight decisions.",
+      "Captures the choice stating assign one shared account to all SOC roles."
+    ],
+    "correctIndex": 2,
+    "explanation": "Role separation improves accountability and reduces governance risk in high-impact incidents.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_AssignSecurityIncidentRoles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 63,
+    "prompt": "Which role typically validates technical eradication before case closure?",
+    "choices": [
+      "Reflects the condition that service catalog manager.",
+      "Corresponds to the option where assigned resolver or containment owner with required reviewer sign-off.",
+      "Captures the choice stating knowledge base contributor.",
+      "Represents the approach that payroll systems administrator."
+    ],
+    "correctIndex": 1,
+    "explanation": "Technical owners verify eradication outcomes, while governance sign-off confirms closure readiness.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_CreateTasksForSecurityIncident.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_CloseSecurityIncident.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 64,
+    "prompt": "Which KPI most directly indicates healthy SIR role clarity?",
+    "choices": [
+      "Corresponds to the option where more incidents reopened due to unclear ownership.",
+      "Describes the outcome where longer approval wait times for routine decisions.",
+      "Represents the approach that higher number of incidents with no assignment group.",
+      "Captures the choice stating lower reassignment churn and faster handoff times between triage, containment, and recovery roles."
+    ],
+    "correctIndex": 3,
+    "explanation": "Clear roles reduce handoff friction and improve response continuity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 65,
+    "prompt": "What is the primary purpose of war room operations during a high-severity security incident?",
+    "choices": [
+      "Corresponds to the option where limit communication to one analyst to reduce message volume.",
+      "Matches the scenario in which coordinate cross-functional responders in real time using a shared timeline, decisions, and action ownership.",
+      "Describes the outcome where pause all containment actions until a final root cause is known.",
+      "Represents the approach that track decisions outside the incident record to preserve flexibility."
+    ],
+    "correctIndex": 1,
+    "explanation": "War room operations align stakeholders and actions quickly to contain and recover from major security incidents.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/major-incident-management/concept/major-incident-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 66,
+    "prompt": "Which role is most important to assign explicitly in SIR war room operations?",
+    "choices": [
+      "Describes the outcome where a procurement approver for all containment actions.",
+      "Reflects the condition that a rotating note-taker with no authority.",
+      "Represents the approach that only technical analysts with identical responsibilities.",
+      "Matches the scenario in which an incident commander responsible for prioritization, decision cadence, and escalation."
+    ],
+    "correctIndex": 3,
+    "explanation": "An incident commander provides clear authority and coordination across response teams.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/major-incident-management/concept/major-incident-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 67,
+    "prompt": "What communication model best supports effective SIR war room execution?",
+    "choices": [
+      "Describes the outcome where silence until containment is fully complete.",
+      "Reflects the condition that continuous unstructured chat without decision summaries.",
+      "Matches the scenario in which time-boxed update intervals with structured status, blockers, and next actions.",
+      "Captures the choice stating email-only communication with end-of-day status notes."
+    ],
+    "correctIndex": 2,
+    "explanation": "Structured cadence prevents confusion and keeps responders aligned on immediate priorities.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/collaboration/concept/collaboration-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 68,
+    "prompt": "How should SIR teams handle conflicting containment recommendations in a war room?",
+    "choices": [
+      "Reflects the condition that apply all recommendations simultaneously without validation.",
+      "Corresponds to the option where let the loudest stakeholder decide.",
+      "Captures the choice stating wait for unanimous agreement before any action.",
+      "Matches the scenario in which use impact-based decision criteria, document trade-offs, and record the approved action with owner."
+    ],
+    "correctIndex": 3,
+    "explanation": "Decision traceability and impact-based criteria reduce risk while preserving accountability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/respond-security-incident.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/task-table/concept/task-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 69,
+    "prompt": "Which metric best reflects war room effectiveness for security incidents?",
+    "choices": [
+      "Corresponds to the option where increased volume of unassigned tasks.",
+      "Represents the approach that reduced time to containment and clear ownership completion rates for critical response tasks.",
+      "Reflects the condition that higher number of participants invited to calls.",
+      "Captures the choice stating longer discussion duration per meeting."
+    ],
+    "correctIndex": 1,
+    "explanation": "Effective war rooms shorten containment timelines and drive accountable execution of critical work.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 70,
+    "prompt": "What is the primary objective of SIR administration?",
+    "choices": [
+      "Captures the choice stating allow each analyst to define ad hoc response states.",
+      "Corresponds to the option where confirm incident response setup, roles, and workflows are governed for consistent security operations.",
+      "Represents the approach that route all incidents to one resolver group by default.",
+      "Describes the outcome where disable severity models to speed ticket intake."
+    ],
+    "correctIndex": 1,
+    "explanation": "SIR administration establishes a controlled operating model for repeatable and accountable incident response.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 71,
+    "prompt": "Which administrative setup is most important for reliable SIR assignment and escalation?",
+    "choices": [
+      "Represents the approach that manual assignment by whichever analyst is available.",
+      "Describes the outcome where role-based group ownership, defined severity-to-priority mapping, and maintained escalation paths.",
+      "Matches the scenario in which escalations handled only through external chat tools.",
+      "Corresponds to the option where single priority level for all security incidents."
+    ],
+    "correctIndex": 1,
+    "explanation": "Consistent assignment and escalation require explicit ownership structures and severity governance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/configure-security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/incident-management/concept/incident-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 72,
+    "prompt": "How should SIR administrators handle updates to playbooks and response tasks?",
+    "choices": [
+      "Represents the approach that edit playbooks live during active incidents.",
+      "Matches the scenario in which disable approval requirements for response workflow changes.",
+      "Reflects the condition that test changes in lower environments, validate with responders, and promote through change oversight.",
+      "Describes the outcome where permit local teams to fork uncontrolled playbook variants."
+    ],
+    "correctIndex": 2,
+    "explanation": "Controlled promotion and user validation prevent operational disruption during critical incidents.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/automation/concept/flow-designer.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 73,
+    "prompt": "Which governance practice most improves SIR data quality and reporting trust?",
+    "choices": [
+      "Matches the scenario in which close incidents automatically when any task is completed.",
+      "Describes the outcome where enforce mandatory taxonomy fields, closure codes, and post-incident validation reviews.",
+      "Captures the choice stating allow free-text categorization with no required fields.",
+      "Reflects the condition that exclude low-severity incidents from all reporting."
+    ],
+    "correctIndex": 1,
+    "explanation": "Consistent required data and review controls make SIR analytics more reliable and actionable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/data-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 74,
+    "prompt": "Which KPI set best indicates mature SIR administration?",
+    "choices": [
+      "Captures the choice stating longer incident queue times before triage.",
+      "Reflects the condition that consistent SLA adherence, lower reassignment churn, and high-quality closure data across incident tiers.",
+      "Matches the scenario in which higher count of unclassified incidents.",
+      "Corresponds to the option where more emergency workflow edits in production."
+    ],
+    "correctIndex": 1,
+    "explanation": "Administrative maturity appears in operational consistency, governance discipline, and dependable reporting.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 75,
+    "prompt": "What is the primary purpose of severity models in Security Incident Response?",
+    "choices": [
+      "Corresponds to the option where to align triage urgency and response actions to business impact.",
+      "Represents the approach that to classify only phishing incidents.",
+      "Captures the choice stating to prevent assignment to resolver groups.",
+      "Reflects the condition that to replace indicator thresholds in PA."
+    ],
+    "correctIndex": 0,
+    "explanation": "Severity models standardize how response teams prioritize incidents based on impact and urgency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/configure-security-incident-response.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 76,
+    "prompt": "Which data practice most improves SIR analytics quality?",
+    "choices": [
+      "Captures the choice stating auto-close incidents when one task completes.",
+      "Describes the outcome where allow free-text category values for flexibility.",
+      "Represents the approach that enforce required incident taxonomy and closure fields.",
+      "Corresponds to the option where hide low-severity incidents from reports."
+    ],
+    "correctIndex": 2,
+    "explanation": "Standardized taxonomy and required closure data improve reporting consistency and trend analysis.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/c_DataManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 77,
+    "prompt": "Why do SIR teams use playbooks with defined response tasks?",
+    "choices": [
+      "Represents the approach that to replace integration with threat intelligence feeds.",
+      "Corresponds to the option where to eliminate analyst decision making in every case.",
+      "Matches the scenario in which to bypass approval and escalation controls.",
+      "Describes the outcome where to execute repeatable containment and investigation workflows."
+    ],
+    "correctIndex": 3,
+    "explanation": "Playbooks help teams perform consistent, auditable actions during high-pressure security investigations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/configure-security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/automation/concept/flow-designer.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 78,
+    "prompt": "What should happen before a major update to SIR response workflows is promoted to production?",
+    "choices": [
+      "Matches the scenario in which change approval can be skipped for security apps.",
+      "Describes the outcome where the workflow should be tested in lower environments and validated by responders.",
+      "Represents the approach that the update should be made during an active incident.",
+      "Reflects the condition that existing incidents should be deleted first."
+    ],
+    "correctIndex": 1,
+    "explanation": "Testing and responder validation reduce operational risk before workflow changes affect live investigations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 79,
+    "prompt": "Which KPI combination best reflects mature SIR operations?",
+    "choices": [
+      "Reflects the condition that higher volume of emergency workflow edits.",
+      "Captures the choice stating longer analyst handoff chains.",
+      "Matches the scenario in which more incidents without assignment group.",
+      "Describes the outcome where lower mean time to contain and consistent high-quality closure evidence."
+    ],
+    "correctIndex": 3,
+    "explanation": "Mature response programs reduce containment time while maintaining reliable, auditable closure records.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 80,
+    "prompt": "What is the best way to improve consistency in initial SIR triage?",
+    "choices": [
+      "Reflects the condition that disable CI/context enrichment.",
+      "Corresponds to the option where use standardized severity criteria and assignment rules.",
+      "Matches the scenario in which let responders set severity after closure.",
+      "Captures the choice stating route all alerts to one analyst."
+    ],
+    "correctIndex": 1,
+    "explanation": "Standard triage criteria and assignment logic reduce variance and speed up appropriate response routing.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/configure-security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 81,
+    "prompt": "Why should SIR teams track containment and eradication milestones separately?",
+    "choices": [
+      "Reflects the condition that to avoid using playbooks.",
+      "Corresponds to the option where to distinguish immediate control actions from root-cause cleanup work.",
+      "Captures the choice stating to replace closure notes.",
+      "Represents the approach that to increase number of task states."
+    ],
+    "correctIndex": 1,
+    "explanation": "Separating milestones improves operational visibility and helps teams manage short-term and long-term response tasks.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/automation/concept/flow-designer.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 82,
+    "prompt": "Which control most improves SIR escalation reliability?",
+    "choices": [
+      "Corresponds to the option where manual paging through personal email.",
+      "Describes the outcome where closing incidents before escalation.",
+      "Represents the approach that documented on-call groups with severity-based routing.",
+      "Captures the choice stating optional assignment groups for major incidents."
+    ],
+    "correctIndex": 2,
+    "explanation": "Defined on-call ownership and severity mapping ensures escalations happen predictably during high-impact events.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/configure-security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 83,
+    "prompt": "What should be required before closing a high-severity security incident?",
+    "choices": [
+      "Describes the outcome where validated closure details and supporting investigation evidence.",
+      "Matches the scenario in which no related tasks were created.",
+      "Corresponds to the option where no analyst notes were captured.",
+      "Represents the approach that the incident was reassigned at least once."
+    ],
+    "correctIndex": 0,
+    "explanation": "High-severity closures need complete evidence and documentation for auditability and lessons learned.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/c_DataManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 84,
+    "prompt": "Which metric best signals improvement in SIR response execution?",
+    "choices": [
+      "Reflects the condition that rising volume of emergency workflow edits.",
+      "Represents the approach that increasing number of unclassified incidents.",
+      "Describes the outcome where more unresolved incidents in pending state.",
+      "Matches the scenario in which decreasing mean time to contain for comparable incident types."
+    ],
+    "correctIndex": 3,
+    "explanation": "Containment time is a core effectiveness measure when normalized across similar incident categories.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 85,
+    "prompt": "What is the strongest reason to integrate threat observables into SIR records?",
+    "choices": [
+      "Describes the outcome where to close low-priority incidents automatically.",
+      "Matches the scenario in which to avoid assignment to incident response groups.",
+      "Reflects the condition that to improve correlation, enrichment, and investigative context.",
+      "Captures the choice stating to replace severity definitions."
+    ],
+    "correctIndex": 2,
+    "explanation": "Observable context strengthens investigation quality and supports more accurate incident correlation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/configure-security-incident-response.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 86,
+    "prompt": "Which control helps keep SIR playbooks operationally effective over time?",
+    "choices": [
+      "Reflects the condition that allow uncontrolled team-specific playbook forks.",
+      "Captures the choice stating review and test playbooks periodically with responder feedback.",
+      "Corresponds to the option where restrict all playbooks to manual tasks only.",
+      "Matches the scenario in which update playbooks only after major audits."
+    ],
+    "correctIndex": 1,
+    "explanation": "Periodic testing and feedback keep playbooks aligned with real incident handling needs.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/configure-security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/automation/concept/flow-designer.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 87,
+    "prompt": "What is the best way to reduce reassignment churn in high-severity SIR cases?",
+    "choices": [
+      "Reflects the condition that route incidents randomly among available analysts.",
+      "Corresponds to the option where use clear ownership rules tied to severity and incident type.",
+      "Represents the approach that disable severity categories for all incidents.",
+      "Captures the choice stating assign every case to the same queue first."
+    ],
+    "correctIndex": 1,
+    "explanation": "Defined ownership routing reduces handoffs and speeds response during high-impact incidents.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 88,
+    "prompt": "Which outcome demonstrates effective SIR post-incident review practice?",
+    "choices": [
+      "Corresponds to the option where removal of incident taxonomy fields for faster closure.",
+      "Captures the choice stating documented lessons learned that update controls or playbooks.",
+      "Describes the outcome where immediate closure of all linked tasks regardless evidence.",
+      "Represents the approach that suppressing review findings from leadership dashboards."
+    ],
+    "correctIndex": 1,
+    "explanation": "Post-incident reviews are valuable when lessons are captured and translated into measurable control improvements.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 89,
+    "prompt": "Which KPI pairing gives leadership the clearest SIR maturity signal?",
+    "choices": [
+      "Corresponds to the option where lower mean time to contain with high closure data completeness.",
+      "Represents the approach that higher number of open severity-1 incidents.",
+      "Describes the outcome where longer average time before initial triage.",
+      "Matches the scenario in which more emergency changes during active incidents."
+    ],
+    "correctIndex": 0,
+    "explanation": "Containment speed plus data completeness shows both operational responsiveness and governance quality.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  }
+]

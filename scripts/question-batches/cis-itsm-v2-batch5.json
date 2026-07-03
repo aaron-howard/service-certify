@@ -1,0 +1,85 @@
+[
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 20,
+		"prompt": "What defines when a problem record can automatically move from the New to the Assess state?",
+		"choices": [
+			"Problem state UI action",
+			"ProblemUtils script include",
+			"Update Problem State to Assess business rule",
+			"Problem state UI policy"
+		],
+		"correctIndex": 2,
+		"explanation": "The Update Problem State to Assess business rule controls automatic transition from New to Assess when configured conditions are met on the Problem table.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/problem-management/problem-mgmt-lifecycle.html",
+			"https://www.servicenow.com/docs/r/it-service-management/problem-management/assess-a-problem.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 21,
+		"prompt": "A customer reports multiple recurring incidents caused by the same underlying failure. What is the appropriate Problem Management action?",
+		"choices": [
+			"Close all related incidents without creating a problem record",
+			"Convert each incident directly to an Emergency change request",
+			"Create a problem to identify the root cause and help prevent recurrence",
+			"Disable the inactivity monitor on the Incident table for that caller"
+		],
+		"correctIndex": 2,
+		"explanation": "Problems are created to identify and permanently fix underlying causes, especially after recurring incidents or major incident resolution.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/problem-management/exploring-problem-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 22,
+		"prompt": "When should a problem be moved to a Known Error state?",
+		"choices": [
+			"The problem has been acknowledged but a root cause has not yet been identified",
+			"The cause of the problem has been determined, but there is no permanent fix available yet",
+			"A permanent fix has already been fully implemented and verified in production",
+			"The problem is actively under investigation and only a workaround has been identified"
+		],
+		"correctIndex": 1,
+		"explanation": "Known Error represents a diagnosed problem where the root cause is understood but a permanent fix is not yet available; workarounds are documented for incident deflection.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/problem-management/exploring-problem-management.html",
+			"https://www.servicenow.com/docs/r/it-service-management/problem-management/create-known-error-from-problem.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 23,
+		"prompt": "Why would a problem manager create a known error article from an assessed problem record?",
+		"choices": [
+			"To enforce emergency change approval for all related incidents",
+			"To store software license entitlements for the affected configuration item",
+			"To replace the service catalog item used for hardware requests",
+			"To document the root cause and workaround so future incidents can be deflected or resolved faster"
+		],
+		"correctIndex": 3,
+		"explanation": "Known error articles capture root cause and workaround information in Knowledge Management to help teams and users address recurring symptoms.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/problem-management/create-known-error-from-problem.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 24,
+		"prompt": "After root cause analysis, a problem requires an infrastructure change to implement the permanent fix. What is the recommended next step?",
+		"choices": [
+			"Delete the problem and ask users to log new incidents for each outage",
+			"Create a change request from the problem to implement the resolution",
+			"Set the problem directly to Closed without linking any related records",
+			"Disable problem tasks for the assignment group to reduce queue volume"
+		],
+		"correctIndex": 1,
+		"explanation": "When investigation shows a permanent fix requires controlled implementation, Problem Management links to Change Management by creating change requests from the problem.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/problem-management/fix-a-change.html",
+			"https://www.servicenow.com/docs/r/it-service-management/problem-management/problem-mgmt-lifecycle.html"
+		]
+	}
+]

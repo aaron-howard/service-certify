@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 75,
+		"prompt": "When ITSM processes require service impact analysis, what does the Configuration Management Database primarily provide?",
+		"choices": [
+			"Logical representations of configuration items and relationships between infrastructure components",
+			"Automatic closure of Resolved incidents after the configured autoclose interval",
+			"Pre-approved Standard change templates for every catalog request",
+			"Service portfolio taxonomy layers managed only by portfolio_viewer users"
+		],
+		"correctIndex": 0,
+		"explanation": "The CMDB stores CIs and their relationships so ITSM teams can understand infrastructure dependencies, integrity, and service context.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/c_ITILConfigurationManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 76,
+		"prompt": "Which role is required to create a new CI class in CI Class Manager?",
+		"choices": [
+			"sn_cmdb_admin or admin",
+			"service_viewer without CMDB workspace permissions",
+			"catalog_admin for all cmdb_ci records only",
+			"sn_incident_write for identification rule maintenance only"
+		],
+		"correctIndex": 0,
+		"explanation": "Creating a CI class in CI Class Manager requires sn_cmdb_admin or admin, along with dictionary access when editing class attributes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/t_CreateCIType.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 77,
+		"prompt": "When a CI is created through the CMDB Workspace Create CI experience, what value is set in the Discovery source field?",
+		"choices": [
+			"Manual via IRE",
+			"Autoclose Incidents scheduled job",
+			"Record producer catalog checkout",
+			"CAB workbench authorization"
+		],
+		"correctIndex": 0,
+		"explanation": "Manual CI creation in CMDB Workspace applies Identification and Reconciliation Engine rules and sets Discovery source to Manual via IRE.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/create-ci-manual-cmdb-workspace.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 78,
+		"prompt": "How can an administrator populate the Managed by Group attribute for CIs in a class that are not associated with a Technology management offering?",
+		"choices": [
+			"Set Managed by Group in CI Class Manager for the class and save the configuration",
+			"Run the Autoclose Incidents scheduled job against cmdb_ci records",
+			"Create a record producer that generates sc_req_item records for each CI",
+			"Disable all identification rules on the parent cmdb_ci class permanently"
+		],
+		"correctIndex": 0,
+		"explanation": "CI Class Manager can synchronize Managed by Group across all CIs in a class unless a Technology management offering overrides group assignment.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/common-service-data-model-csdm/csdm-data-synchronize-enable.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 79,
+		"prompt": "Which CMDB capabilities are used to monitor data quality and manage the CI lifecycle?",
+		"choices": [
+			"CMDB Health, Identification and Reconciliation, and CMDB Data Manager",
+			"Incident auto-close rules and major incident communication plans only",
+			"Service portfolio taxonomy layers and DPM KPI group weighting only",
+			"Catalog client script mandatory-over-hide priority settings only"
+		],
+		"correctIndex": 0,
+		"explanation": "Core CMDB features include Health for compliance monitoring, IRE for data integrity, and Data Manager for bulk lifecycle operations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/c_ITILConfigurationManagement.html"
+		]
+	}
+]

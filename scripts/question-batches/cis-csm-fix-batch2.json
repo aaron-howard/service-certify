@@ -1,0 +1,482 @@
+[
+  {
+    "trackCode": "CIS-CSM",
+    "order": 30,
+    "prompt": "What is the central purpose of CSM Case Workspace?",
+    "choices": [
+      "Provide a unified agent workspace for case triage, collaboration, and resolution actions for operational consistency",
+      "Remove entitlement visibility from agents for enterprise implementation",
+      "Restrict agents to email-exclusively case handling for production readiness",
+      "Replace customer records with temporary notes for role-based accountability"
+    ],
+    "correctIndex": 0,
+    "explanation": "Case Workspace consolidates context and actions so agents can resolve issues with fewer tool switches.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/case-workspace.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 31,
+    "prompt": "Which workspace configuration most helps reduce average handle time?",
+    "choices": [
+      "Configure contextual tabs, quick actions, and visible SLA indicators for agents for measurable outcomes",
+      "Force all cases into one generic assignment group for sustained reliability",
+      "Hide related records and interaction history for controlled governance",
+      "Disable activity stream updates for practical execution"
+    ],
+    "correctIndex": 0,
+    "explanation": "Contextual layout and quick actions reduce navigation overhead and support faster decision making.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/task/configure-case-workspace.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 32,
+    "prompt": "What should be emphasized when designing CSM workspace forms?",
+    "choices": [
+      "Expose every field from all related tables for production readiness",
+      "Remove account and contact information for role-based accountability",
+      "Show the minimum critical data needed for triage, ownership, and next-most relevant suitable action",
+      "Disable UI policies for consistency for enterprise implementation"
+    ],
+    "correctIndex": 2,
+    "explanation": "Focused forms reduce cognitive load and help agents complete high-value tasks more efficiently.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/build/workspace/concept/workspaces.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 33,
+    "prompt": "How do workspace playbooks improve CSM execution?",
+    "choices": [
+      "By guiding agents through consistent, role-appropriate steps for common case scenarios for controlled governance",
+      "By replacing SLA definitions for practical execution",
+      "By forcing every case to the same priority for measurable outcomes",
+      "By disabling assignment rules for sustained reliability for operational consistency"
+    ],
+    "correctIndex": 0,
+    "explanation": "Playbooks standardize response behavior and reduce variability in complex or recurring case types.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/csm-playbooks.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 34,
+    "prompt": "Which indicator best signals successful Case Workspace adoption?",
+    "choices": [
+      "Increased manual spreadsheet usage for sustained reliability for operational consistency",
+      "Reduced visibility into account health for measurable outcomes",
+      "Agents complete fewer updates per case for practical execution",
+      "Higher first-contact resolution and lower average case age after workspace rollout for controlled governance"
+    ],
+    "correctIndex": 3,
+    "explanation": "Improved resolution outcomes and cycle times indicate that workspace design is positively impacting agent performance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/c_CSMAnalyticsAndDashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 35,
+    "prompt": "In CSM, what does B2B case management primarily emphasize?",
+    "choices": [
+      "Routing all cases to HR teams for enterprise implementation",
+      "Anonymous consumer-exclusively interactions for sustained reliability",
+      "Account-aware support with contacts, entitlements, and contractual context for role-based accountability",
+      "Disabling partner relationships for production readiness"
+    ],
+    "correctIndex": 2,
+    "explanation": "B2B support requires visibility into account structures, service contracts, and business impact across customers.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/c_B2BCaseManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 36,
+    "prompt": "Which data relationship is most critical for B2B CSM operations?",
+    "choices": [
+      "Case to random social profile for practical execution",
+      "Case to office floorplan for controlled governance for enterprise implementation",
+      "Case to account, contact, product/asset, and entitlement for sustained reliability",
+      "Case to unrelated procurement request for measurable outcomes"
+    ],
+    "correctIndex": 2,
+    "explanation": "These core relationships drive eligibility, routing, and accurate support execution for business customers.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/case-data-model.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 37,
+    "prompt": "How should entitlement rules be used in B2B case handling?",
+    "choices": [
+      "To consistently enforce support eligibility, response commitments, and escalation paths based on customer agreements",
+      "To consistently automatically downgrade all priorities for production readiness",
+      "To consistently prevent account teams from viewing cases",
+      "exclusively for analytics after closure for sustained reliability"
+    ],
+    "correctIndex": 0,
+    "explanation": "Entitlement policies ensure contractual commitments are honored consistently during case lifecycle execution.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/c_EntitlementManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 38,
+    "prompt": "What is a key governance control for multi-contact B2B accounts?",
+    "choices": [
+      "Route all communication to personal email inboxes for operational consistency",
+      "Disable case audit history for enterprise implementation for controlled governance",
+      "Allow any contact to view all account cases for production readiness",
+      "Apply role-based contact access and account-level visibility policies for role-based accountability"
+    ],
+    "correctIndex": 3,
+    "explanation": "Controlled access protects customer confidentiality while still enabling collaborative support across account contacts.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/task/configure-contact-access-controls.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 39,
+    "prompt": "Which KPI best demonstrates strong B2B CSM performance?",
+    "choices": [
+      "Number of attachment uploads per case for measurable outcomes",
+      "Number of inactive user records for sustained reliability",
+      "Account-level SLA attainment and repeat-case reduction for contracted services for controlled governance",
+      "Count of catalog categories for practical execution"
+    ],
+    "correctIndex": 2,
+    "explanation": "Contract-driven SLA performance and reduced recurrence are direct indicators of healthy enterprise customer support.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/c_CSMAnalyticsAndDashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 40,
+    "prompt": "Why are omnichannel capabilities important in Customer Service Management?",
+    "choices": [
+      "They provide consistent service across phone, chat, email, and portal while preserving case context for enterprise implementation",
+      "They remove the need for case routing for operational consistency",
+      "They disable customer communication history for role-based accountability",
+      "They force customers into one contact channel for production readiness"
+    ],
+    "correctIndex": 0,
+    "explanation": "Omnichannel service allows customers to engage through preferred channels without losing continuity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/c_OmnichannelCustomerService.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 41,
+    "prompt": "Which design principle most improves channel consistency in CSM?",
+    "choices": [
+      "Separate knowledge and workflows by channel with no shared logic for sustained reliability",
+      "Allow each channel to use different SLA rules for measurable outcomes",
+      "Disable customer identity matching for practical execution",
+      "Use unified case models, routing policies, and knowledge across all supported channels for controlled governance"
+    ],
+    "correctIndex": 3,
+    "explanation": "Shared process and data standards ensure customers receive consistent outcomes regardless of entry channel.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/case-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 42,
+    "prompt": "What capability is most important for seamless channel switching?",
+    "choices": [
+      "Persistent conversation and case history accessible to agents in one workspace for role-based accountability",
+      "Creating a new case every time a customer changes channel for production readiness",
+      "Restricting channel transitions to supervisors exclusively for controlled governance",
+      "Hiding previous interactions from agents for operational consistency"
+    ],
+    "correctIndex": 0,
+    "explanation": "Unified interaction history prevents customers from repeating details and helps agents continue work effectively.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/interaction-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 43,
+    "prompt": "How should CSM teams govern new channel rollout?",
+    "choices": [
+      "Disable reporting during rollout for practical execution",
+      "Pilot with defined success metrics, update routing/KB readiness, then scale for controlled governance",
+      "Launch all channels without pilot testing for sustained reliability",
+      "Require channel-specific case tables for measurable outcomes for role-based accountability"
+    ],
+    "correctIndex": 1,
+    "explanation": "Piloted rollout with measurable goals reduces disruption and helps validate operating readiness.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/task/plan-omnichannel-rollout.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 44,
+    "prompt": "Which KPI best indicates healthy omnichannel CSM operations?",
+    "choices": [
+      "Count of inactive chat widgets for measurable outcomes",
+      "Average attachment size per case for sustained reliability",
+      "Cross-channel first-contact resolution and customer effort score trend for controlled governance",
+      "Channel-specific duplicate case rate for practical execution"
+    ],
+    "correctIndex": 2,
+    "explanation": "Resolution quality and customer effort across channels reflect whether omnichannel design is truly effective.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/c_CSMAnalyticsAndDashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 45,
+    "prompt": "In CSM, what is the main purpose of entitlement configuration?",
+    "choices": [
+      "To consistently limit all customer users to one contact channel",
+      "To consistently auto-close all requests after creation for controlled governance",
+      "To consistently remove case priority controls for production readiness",
+      "To consistently determine what services, response commitments, and support levels a customer receives"
+    ],
+    "correctIndex": 3,
+    "explanation": "Entitlements enforce contractual support terms such as eligibility and SLA-related commitments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/customer-service-management-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 46,
+    "prompt": "Which setup best supports account-specific support policies in CSM?",
+    "choices": [
+      "Entitlements mapped to account, product, and coverage terms for controlled governance",
+      "No relationship between contracts and case handling for practical execution",
+      "One global entitlement for all customers regardless of contract for measurable outcomes",
+      "Case assignment by alphabetical account name for sustained reliability"
+    ],
+    "correctIndex": 0,
+    "explanation": "Entitlements should reflect contractual conditions by customer and offered service scope.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/task/configure-entitlements.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 47,
+    "prompt": "What should happen when a case is created for a non-entitled service?",
+    "choices": [
+      "Automatically grant full premium support for production readiness",
+      "Delete the case immediately for role-based accountability for measurable outcomes",
+      "Flag the case for entitlement review and route according to policy for operational consistency",
+      "Bypass all approval logic for enterprise implementation for controlled governance"
+    ],
+    "correctIndex": 2,
+    "explanation": "Policy-based handling prevents unsupported commitments while preserving customer transparency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/task/validate-case-entitlements.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 48,
+    "prompt": "Which entitlement design helps avoid over-servicing customers?",
+    "choices": [
+      "No record of contract terms in CSM for enterprise implementation",
+      "Manual case triage without entitlement checks for operational consistency",
+      "Defined service levels, channel access, and escalation thresholds per entitlement for role-based accountability",
+      "Unlimited support for every account by default for production readiness"
+    ],
+    "correctIndex": 2,
+    "explanation": "Specific entitlement boundaries align delivery effort with contractual obligations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/task/manage-service-level-entitlements.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 49,
+    "prompt": "What reporting indicator suggests entitlement configuration drift in CSM?",
+    "choices": [
+      "High volume of cases manually reclassified after entitlement checks for sustained reliability",
+      "Accurate contract linkage on case records for measurable outcomes",
+      "Stable response performance by support tier for practical execution",
+      "Consistent use of entitlement-driven assignment for controlled governance"
+    ],
+    "correctIndex": 0,
+    "explanation": "Frequent manual correction indicates entitlement rules are incomplete or misaligned with contracts.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/task/report-on-case-performance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 50,
+    "prompt": "Which analytics focus is most valuable for CSM leadership?",
+    "choices": [
+      "Case resolution time and customer satisfaction by account segment for practical execution",
+      "Quantity of UI policy records for controlled governance",
+      "Number of background scripts executed for sustained reliability",
+      "Count of archived knowledge attachments for measurable outcomes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Resolution efficiency and satisfaction by segment show service outcomes and account experience quality.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/task/analyze-customer-service-performance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 51,
+    "prompt": "Why should CSM analytics include first-contact resolution rate?",
+    "choices": [
+      "It indicates efficiency of triage, knowledge usage, and agent enablement for role-based accountability",
+      "It tracks procurement cycle time for production readiness",
+      "It measures contract value exclusively for controlled governance",
+      "It replaces all SLA metrics for operational consistency"
+    ],
+    "correctIndex": 0,
+    "explanation": "Higher first-contact resolution generally reflects effective routing and knowledge-driven support.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/case-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 52,
+    "prompt": "What is the best way to analyze backlog risk in CSM?",
+    "choices": [
+      "Ignore escalated cases in reporting for sustained reliability",
+      "Use random weekly samples without trends for measurable outcomes",
+      "Track open case age buckets by priority and entitlement tier for practical execution",
+      "Count exclusively closed cases each month for enterprise implementation"
+    ],
+    "correctIndex": 2,
+    "explanation": "Age distribution by priority and entitlement reveals where backlog threatens commitments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 53,
+    "prompt": "Which analytic outcome supports proactive service improvement in CSM?",
+    "choices": [
+      "Manual notes with no categorization for enterprise implementation",
+      "Recurring case drivers mapped to product, account, and channel for operational consistency",
+      "List of users with dark mode enabled for role-based accountability",
+      "Count of inactive templates for production readiness"
+    ],
+    "correctIndex": 1,
+    "explanation": "Driver analysis identifies systemic issues and informs targeted deflection or product fixes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/task/use-case-analytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 54,
+    "prompt": "What governance practice improves trust in CSM analytics?",
+    "choices": [
+      "Allow every team to define metrics differently for production readiness",
+      "Maintain standardized KPI definitions and shared calculation logic for role-based accountability",
+      "Change dashboard formulas weekly for operational consistency for sustained reliability",
+      "Exclude data quality checks for enterprise implementation for controlled governance"
+    ],
+    "correctIndex": 1,
+    "explanation": "Consistent metric definitions ensure comparability and reliable decision-making.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 55,
+    "prompt": "Which role is typically accountable for CSM process governance?",
+    "choices": [
+      "Any customer contact at random for controlled governance",
+      "exclusively procurement manager for practical execution",
+      "No formal role ownership for measurable outcomes for role-based accountability",
+      "CSM process owner defining case policies and service standards for sustained reliability"
+    ],
+    "correctIndex": 3,
+    "explanation": "A process owner ensures consistent operational standards across case lifecycle workflows.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/customer-service-management-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 56,
+    "prompt": "What role should own entitlement policy decisions in CSM?",
+    "choices": [
+      "Contract/service owner with governance authority for operational consistency",
+      "Guest user from portal for enterprise implementation for controlled governance",
+      "Catalog item approver exclusively for production readiness",
+      "Any case agent editing the case for role-based accountability"
+    ],
+    "correctIndex": 0,
+    "explanation": "Entitlement policy ownership should map to contractual and service accountability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/task/configure-entitlements.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 57,
+    "prompt": "How should escalated CSM cases be role-assigned?",
+    "choices": [
+      "Route to designated escalation roles with decision authority for measurable outcomes",
+      "Leave in original queue without ownership change for sustained reliability",
+      "Close automatically when escalated for controlled governance for enterprise implementation",
+      "Assign to inactive users for practical execution"
+    ],
+    "correctIndex": 0,
+    "explanation": "Escalation roles should have the authority and context to resolve high-impact customer issues quickly.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/task/manage-case-escalations.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 58,
+    "prompt": "What access model is best for CSM account data?",
+    "choices": [
+      "Public dashboards with customer details for practical execution",
+      "Role and account-based access controls aligned to assigned customer portfolios for controlled governance",
+      "Broad read/write access for all case agents for sustained reliability",
+      "No differentiation between internal and external users for measurable outcomes"
+    ],
+    "correctIndex": 1,
+    "explanation": "Account-scoped access reduces confidentiality risk while enabling effective support operations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_AccessControls.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 59,
+    "prompt": "Which symptom suggests CSM role design needs improvement?",
+    "choices": [
+      "Consistent entitlement enforcement for role-based accountability for measurable outcomes",
+      "Low backlog for high-priority cases for production readiness",
+      "Stable ownership and low escalation delay for enterprise implementation",
+      "Frequent manual reassignment due to unclear ownership boundaries for operational consistency"
+    ],
+    "correctIndex": 3,
+    "explanation": "Repeated reassignment is a common indicator of role ambiguity and poor process routing.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/case-management.html"
+    ]
+  }
+]

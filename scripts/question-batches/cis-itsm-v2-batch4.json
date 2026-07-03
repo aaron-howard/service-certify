@@ -1,0 +1,83 @@
+[
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 15,
+		"prompt": "During incident logging, what does incident categorization require in a standard ServiceNow ITSM implementation?",
+		"choices": [
+			"Assigning a category and at least one subcategory to the incident",
+			"Selecting a Normal, Standard, or Emergency change type on the form",
+			"Linking an active problem record before the incident can be submitted",
+			"Creating a new CI class in Class Manager for each new ticket"
+		],
+		"correctIndex": 0,
+		"explanation": "Incident categorization assigns a category and at least one subcategory to support routing, reporting, and prioritization during logging.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/incident-management/incident-management-process.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 16,
+		"prompt": "Why are service level agreements (SLAs) used with incidents in a standard ServiceNow implementation?",
+		"choices": [
+			"To replace the inactivity monitor for all task tables in the instance",
+			"To monitor progress against agreed targets and escalate when service standards are not met",
+			"To automatically create Normal change requests whenever priority is set to Critical",
+			"To persist catalog variable answers after a record producer submits an incident"
+		],
+		"correctIndex": 1,
+		"explanation": "SLAs track incident progress against agreements between provider and customer and are also used as a service desk performance indicator.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/incident-management/work-on-incidents.html",
+			"https://www.servicenow.com/docs/r/it-service-management/service-level-management/service-level-management-concepts.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 17,
+		"prompt": "While performing initial diagnosis on an incident, why would a service desk agent query the CMDB?",
+		"choices": [
+			"To approve emergency changes before the assignment group is selected",
+			"To retire duplicate service portfolio taxonomy nodes automatically",
+			"To review hardware, software, and relationship information relevant to the issue",
+			"To run software license compliance counters for the caller's department"
+		],
+		"correctIndex": 2,
+		"explanation": "Agents use the CMDB during investigation because it contains configuration items and relationships that aid diagnosis and impact analysis.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/incident-management/work-on-incidents.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 18,
+		"prompt": "Which Incident form feature helps an agent quickly research other tickets logged by the same caller?",
+		"choices": [
+			"The Change Conflict Detection related list on the change request form",
+			"The show related incidents icon beside the Caller field",
+			"The software counter summary report in Software Asset Management",
+			"The service offering SLA commitment editor in Service Portfolio Management"
+		],
+		"correctIndex": 1,
+		"explanation": "When the Caller field is populated, the show related incidents icon appears so agents can view incidents for the same caller; the Incidents by Same Caller related list provides another research option.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/incident-management/work-on-incidents.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 19,
+		"prompt": "Which information is presented on the Major Incident workbench Summary tab?",
+		"choices": [
+			"Closed catalog tasks from the previous fiscal quarter only",
+			"Known error articles without links to related incident records",
+			"Discovery credentials and MID Server login schedules exclusively",
+			"Impacted services, affected CIs, active outages, impacted locations, and child incidents"
+		],
+		"correctIndex": 3,
+		"explanation": "The Summary tab uses a card layout to unify impacted services, affected CIs, outages, locations, child incidents, communication tasks, and related major incident activity.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/incident-management/mi-workbench-summary-tab.html"
+		]
+	}
+]

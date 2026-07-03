@@ -1,0 +1,243 @@
+[
+  {
+    "trackCode": "CIS-DF",
+    "order": 90,
+    "prompt": "What is a recommended approach when a new CI class is needed?",
+    "choices": [
+      "Create random class names",
+      "Skip class manager and insert directly in dictionary tables",
+      "Use global scripts to force class behavior",
+      "Extend an appropriate parent class and define required attributes carefully"
+    ],
+    "correctIndex": 3,
+    "explanation": "Thoughtful class extension preserves inheritance, reporting consistency, and maintainable data modeling practices.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/cmdb-class-manager.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 91,
+    "prompt": "What does the CSDM Foundation domain provide?",
+    "choices": [
+      "Core records and shared entities used across products and domains",
+      "Incident major outage workflows only",
+      "Payroll integrations for HR",
+      "MID Server installation binaries"
+    ],
+    "correctIndex": 0,
+    "explanation": "Foundation supplies common entities, such as organization and location structures, reused across the model.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/common-service-data-model/csdm-foundation-domain.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 92,
+    "prompt": "How can stale CIs be managed without immediately deleting records?",
+    "choices": [
+      "Convert CIs to knowledge records",
+      "Disable health dashboards",
+      "Move records to sys_user table",
+      "Mark CIs with lifecycle status and governance review criteria"
+    ],
+    "correctIndex": 1,
+    "explanation": "Lifecycle statuses and governance reviews help retire or remediate stale records safely and audibly.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/cmdb-lifecycle-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 93,
+    "prompt": "Which import pattern is preferred for repeatable CI ingestion from external systems?",
+    "choices": [
+      "Manually editing CI records each week",
+      "Running only background scripts without mappings",
+      "Using import sets and transform maps with identification/reconciliation controls",
+      "Using update sets from production"
+    ],
+    "correctIndex": 2,
+    "explanation": "Import sets with transforms provide controlled, repeatable ingestion pipelines that integrate with CMDB rules.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/import-sets.html",
+      "https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 94,
+    "prompt": "In CSDM terminology, what does a Service Offering represent?",
+    "choices": [
+      "An ACL rule bundle",
+      "A CI class for Linux servers",
+      "A transform map variant",
+      "A specific consumable version or tier of a service"
+    ],
+    "correctIndex": 3,
+    "explanation": "Service Offerings describe concrete consumable variants of a service, such as tiers, regions, or support levels.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/common-service-data-model/csdm-build-domain.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 95,
+    "prompt": "What is the main governance reason to define authoritative data sources per CI attribute?",
+    "choices": [
+      "To avoid conflicting updates and improve trust in field values",
+      "To disable imports from discovery tools",
+      "To reduce ACL evaluations",
+      "To force all CIs into one class"
+    ],
+    "correctIndex": 0,
+    "explanation": "Authoritative source definitions reduce field conflicts and keep CI attributes aligned with trusted systems of record.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 96,
+    "prompt": "Why is normalization important in CMDB data foundations?",
+    "choices": [
+      "It replaces identifier rules",
+      "It deletes duplicate CIs automatically without review",
+      "It converts relationships into tags",
+      "It standardizes values like manufacturer/model naming for cleaner reporting and matching"
+    ],
+    "correctIndex": 1,
+    "explanation": "Normalization makes source values consistent so matching, analytics, and operational reporting are more reliable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/normalization-data-services-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 97,
+    "prompt": "Which CSDM concept links technical implementation back to business context?",
+    "choices": [
+      "Only assignment groups",
+      "Only sys_properties",
+      "Mapped relationships between business applications, services, and technical services",
+      "Only transform maps"
+    ],
+    "correctIndex": 2,
+    "explanation": "CSDM alignment is achieved through relationships connecting portfolio and business entities to technical service data.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/common-service-data-model/csdm-concepts.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 98,
+    "prompt": "What is a common reason a CI fails identification during import?",
+    "choices": [
+      "The CI has an assigned support group",
+      "The record has too many related incidents",
+      "The CI has work notes disabled",
+      "Incoming values do not satisfy any configured identifier rule"
+    ],
+    "correctIndex": 3,
+    "explanation": "If source attributes do not match identifier criteria, the engine cannot confidently match to an existing CI.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 99,
+    "prompt": "How does CMDB health support continual data improvement?",
+    "choices": [
+      "By surfacing quality scores and issues that teams can prioritize and remediate",
+      "By replacing reconciliation precedence",
+      "By auto-approving all CI changes",
+      "By disabling relationship creation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Health dashboards provide measurable quality indicators that drive targeted remediation and governance cycles.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/cmdb-health-dashboard-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 100,
+    "prompt": "In CSDM, why should organizations avoid over-customizing core model tables too early?",
+    "choices": [
+      "It forces all services to become retired",
+      "It blocks all API access",
+      "It disables role inheritance",
+      "It can break alignment with product data expectations and upgrade paths"
+    ],
+    "correctIndex": 1,
+    "explanation": "Excessive early customization can reduce compatibility with out-of-box capabilities and future model evolution.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/common-service-data-model/csdm-guidance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 101,
+    "prompt": "Which table strategy best supports broad platform reuse for CI-like records?",
+    "choices": [
+      "Store all asset classes in a single string field",
+      "Disable inheritance for performance",
+      "Use class extension and shared parent attributes where appropriate",
+      "Create unrelated custom tables for every integration"
+    ],
+    "correctIndex": 2,
+    "explanation": "Using class extension and shared attributes enables consistent behavior, reporting, and governance across CI families.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/cmdb-class-manager.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 102,
+    "prompt": "What does a CI owner typically validate during data certification?",
+    "choices": [
+      "Only user avatar images",
+      "Only the instance timezone",
+      "Only update set names",
+      "That key CI attributes and relationships are still accurate"
+    ],
+    "correctIndex": 3,
+    "explanation": "Certification asks owners to confirm critical attributes and relationship fidelity for their governed CIs.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/cmdb-data-certification.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 103,
+    "prompt": "What is the primary value of mapping technical services to business services in CSDM?",
+    "choices": [
+      "It improves service visibility and impact tracing from infrastructure to business outcomes",
+      "It replaces all incident categorization",
+      "It removes the need for CMDB relationships",
+      "It disables event management"
+    ],
+    "correctIndex": 0,
+    "explanation": "Service mappings create end-to-end context so teams can understand technical failures in business terms.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/common-service-data-model/csdm-build-domain.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 104,
+    "prompt": "What is a best-practice first step before enabling new CMDB governance policies?",
+    "choices": [
+      "Grant every user cmdb_admin",
+      "Delete all custom classes",
+      "Disable imports for 90 days",
+      "Assess current data quality baseline and ownership model"
+    ],
+    "correctIndex": 1,
+    "explanation": "A baseline of quality scores and ownership responsibilities is needed to design realistic governance improvements.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/cmdb-governance.html"
+    ]
+  }
+]

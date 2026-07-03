@@ -1,0 +1,482 @@
+[
+  {
+    "trackCode": "CPOE",
+    "order": 120,
+    "prompt": "A platform owner wants to compare business value across epics. Which approach is most effective?",
+    "choices": [
+      "Prioritize by requester title under documented platform behavior",
+      "Use weighted scoring with value, risk reduction, and effort dimensions for stable long-term administration",
+      "Estimate by story point total only in large shared environments",
+      "Select items with smallest update set records across governed implementation flows"
+    ],
+    "correctIndex": 1,
+    "explanation": "Weighted scoring introduces transparent trade-off criteria and supports objective portfolio decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/task/use-portfolio-scoring.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 121,
+    "prompt": "Why should enterprise platform strategy include service ownership boundaries?",
+    "choices": [
+      "To avoid dependency mapping for cross-team production support",
+      "To allow uncontrolled changes in enterprise release operations",
+      "To reduce accountability overlap and handoff confusion under documented platform behavior",
+      "To disable incident escalation during controlled change windows"
+    ],
+    "correctIndex": 2,
+    "explanation": "Clear ownership boundaries improve operating clarity for delivery, support, and risk management.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/concept/service-ownership-model.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 122,
+    "prompt": "What should be the first response when strategic KPIs fall below target for two consecutive quarters?",
+    "choices": [
+      "Freeze all enhancements permanently with clear operational impact",
+      "Run a control review to adjust roadmap scope, sequencing, and constraints during controlled change windows",
+      "Ignore variance until next annual plan in large shared environments",
+      "Disable integration monitoring across governed implementation flows"
+    ],
+    "correctIndex": 1,
+    "explanation": "Persistent KPI variance should trigger structured strategy review and corrective portfolio decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/task/review-platform-strategy.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 123,
+    "prompt": "What is the strategic value of maintaining an enterprise platform service catalog?",
+    "choices": [
+      "It eliminates enhancement requests in large shared environments",
+      "It clarifies reusable services, ownership, and request pathways in enterprise release operations",
+      "It prevents plugin upgrades under documented platform behavior",
+      "It replaces CMDB reconciliation for stable long-term administration"
+    ],
+    "correctIndex": 1,
+    "explanation": "A defined service catalog reduces ambiguity and helps teams consume platform capabilities consistently.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/concept/platform-service-catalog.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 124,
+    "prompt": "Which condition most clearly signals platform strategy drift?",
+    "choices": [
+      "Roadmap initiatives mapped to business capabilities with clear operational impact",
+      "Improved release success rate during controlled change windows",
+      "Stable control meetings with documented decisions for cross-team production support",
+      "Growing volume of urgent, unplanned work that bypasses prioritization in enterprise release operations"
+    ],
+    "correctIndex": 3,
+    "explanation": "Unplanned work that bypasses governance indicates strategy execution is being displaced by reactive demand.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/concept/strategy-risk-indicators.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 125,
+    "prompt": "What is the main purpose of an enterprise platform operations runbook?",
+    "choices": [
+      "To track personal admin preferences in large shared environments",
+      "To replace problem management across governed implementation flows",
+      "To store UI theme settings with clear operational impact",
+      "To define repeatable response steps for operational events for stable long-term administration"
+    ],
+    "correctIndex": 3,
+    "explanation": "Runbooks standardize operational handling, reducing response variance and recovery time during incidents.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-operations/concept/operations-runbooks.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 126,
+    "prompt": "Which process most directly supports operational stability after deployments?",
+    "choices": [
+      "Post-deployment validation and hypercare monitoring under documented platform behavior",
+      "Skipping smoke tests for low-risk changes for stable long-term administration",
+      "Disabling alerts during release week for cross-team production support",
+      "Moving all incidents to problem state in enterprise release operations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Validation and hypercare catch regressions quickly, limiting production impact after releases.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-operations/task/post-deployment-validation.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 127,
+    "prompt": "What operational metric best indicates platform reliability health?",
+    "choices": [
+      "Count of catalog categories for cross-team production support",
+      "Theme update frequency across governed implementation flows",
+      "Number of list personalizations with clear operational impact",
+      "Mean time to restore service (MTRS) during controlled change windows"
+    ],
+    "correctIndex": 3,
+    "explanation": "MTRS reflects recovery efficiency and is a core reliability indicator for platform operations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-operations/task/measure-reliability-kpis.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 128,
+    "prompt": "A recurring performance incident affects peak-hour users. What should happen first?",
+    "choices": [
+      "Close incidents after each outage under documented platform behavior",
+      "Increase session timeout immediately for stable long-term administration",
+      "Run root cause analysis and create a problem record with corrective actions for practical implementation decisions",
+      "Archive audit tables without review across governed implementation flows"
+    ],
+    "correctIndex": 2,
+    "explanation": "Problem management and root cause analysis prevent repeated outages by targeting underlying defects.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-it-service-management/page/product/problem-management/concept/problem-management-process.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 129,
+    "prompt": "Why should enterprise platform teams maintain an on-call model with clear escalation paths?",
+    "choices": [
+      "To bypass change approvals for cross-team production support",
+      "To ensure timely ownership and response during major incidents in enterprise release operations",
+      "To avoid documenting incidents under documented platform behavior",
+      "To guarantee every issue is handled only by developers during controlled change windows"
+    ],
+    "correctIndex": 1,
+    "explanation": "Defined on-call and escalation structures reduce response ambiguity and speed coordinated incident handling.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-it-service-management/page/product/incident-management/concept/major-incident-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 130,
+    "prompt": "What is the primary operations benefit of proactive monitoring thresholds?",
+    "choices": [
+      "They detect degradation before user-impacting failure with clear operational impact",
+      "They remove necessity for runbooks during controlled change windows",
+      "They replace platform upgrades in large shared environments",
+      "They reduce need for any logging across governed implementation flows"
+    ],
+    "correctIndex": 0,
+    "explanation": "Threshold-based alerting identifies abnormal behavior early, enabling intervention before incidents escalate.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-operations/concept/proactive-monitoring.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 131,
+    "prompt": "Which action best supports operational readiness for a planned family upgrade?",
+    "choices": [
+      "Skip stakeholder communication in large shared environments",
+      "Disable alerting until the upgrade is complete in enterprise release operations",
+      "Create a cutover checklist with rollback criteria and owner assignments under documented platform behavior",
+      "Run production-first testing for stable long-term administration"
+    ],
+    "correctIndex": 2,
+    "explanation": "Cutover checklists and clear ownership improve execution quality and lower upgrade risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/task/plan-instance-upgrade.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 132,
+    "prompt": "What is the operational purpose of maintenance windows?",
+    "choices": [
+      "To permanently block incidents with clear operational impact",
+      "To avoid release notes during controlled change windows",
+      "To disable ACL processing for cross-team production support",
+      "To perform controlled high-impact work with stakeholder awareness in enterprise release operations"
+    ],
+    "correctIndex": 3,
+    "explanation": "Maintenance windows provide coordinated timing and communication for disruptive operational activities.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/change-management/concept/maintenance-windows.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 133,
+    "prompt": "How does event correlation improve enterprise platform operations?",
+    "choices": [
+      "It disables notifications in large shared environments",
+      "It converts incidents directly to changes across governed implementation flows",
+      "It groups related alerts to reduce noise and improve triage with clear operational impact",
+      "It replaces CI ownership data for stable long-term administration"
+    ],
+    "correctIndex": 2,
+    "explanation": "Correlation reduces alert fatigue and helps responders focus on root service impact instead of isolated symptoms.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-it-operations-management/page/product/event-management/concept/event-correlation.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 134,
+    "prompt": "What should be included in operational handoff from project delivery to platform support?",
+    "choices": [
+      "Personal user preferences under documented platform behavior",
+      "List layout exports for stable long-term administration",
+      "Runbooks, support model, monitoring, and known-risk documentation for cross-team production support",
+      "Only source code comments in enterprise release operations"
+    ],
+    "correctIndex": 2,
+    "explanation": "A complete handoff package ensures support teams can operate and troubleshoot the new capability reliably.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-operations/task/prepare-operational-handover.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 135,
+    "prompt": "Which signal suggests alert tuning is needed?",
+    "choices": [
+      "Improved response time trends for cross-team production support",
+      "Clear priority mapping in incidents across governed implementation flows",
+      "Stable incident volume with accurate ownership with clear operational impact",
+      "High volume of non-actionable repeated alerts during controlled change windows"
+    ],
+    "correctIndex": 3,
+    "explanation": "Excess noisy alerts reduce responder effectiveness and indicate thresholds or rules require adjustment.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-it-operations-management/page/product/event-management/task/tune-alert-noise.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 136,
+    "prompt": "What is the main value of platform health dashboards for operations leads?",
+    "choices": [
+      "They replace release planning under documented platform behavior",
+      "They disable trend analysis for stable long-term administration",
+      "They remove need for incident records in large shared environments",
+      "They provide real-time visibility into service reliability and workload across governed implementation flows"
+    ],
+    "correctIndex": 3,
+    "explanation": "Operational dashboards surface reliability and throughput signals needed for timely decisions and resource management.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-operations/task/build-operations-dashboard.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 137,
+    "prompt": "A major incident bridges multiple support teams. Which role is critical for coordination?",
+    "choices": [
+      "Major incident manager for cross-team production support",
+      "Knowledge publisher in enterprise release operations",
+      "Catalog requester under documented platform behavior",
+      "Theme administrator during controlled change windows"
+    ],
+    "correctIndex": 0,
+    "explanation": "The major incident manager coordinates responders, communications, and restoration actions across teams.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-it-service-management/page/product/incident-management/task/manage-major-incidents.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 138,
+    "prompt": "Which practice best improves incident categorization quality at scale?",
+    "choices": [
+      "Allow free-text category values only with clear operational impact",
+      "Skip categorization for P1 incidents during controlled change windows",
+      "Standardize category taxonomy and enforce required fields in large shared environments",
+      "Close incidents without assignment groups across governed implementation flows"
+    ],
+    "correctIndex": 2,
+    "explanation": "Consistent taxonomy improves analytics, trend identification, and routing effectiveness.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-it-service-management/page/product/incident-management/task/configure-incident-categorization.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 139,
+    "prompt": "Why are post-incident reviews important for enterprise platform operations?",
+    "choices": [
+      "They eliminate need for monitoring in large shared environments",
+      "They assign blame for outages in enterprise release operations",
+      "They replace change approvals under documented platform behavior",
+      "They capture lessons and preventive actions for resilience for stable long-term administration"
+    ],
+    "correctIndex": 3,
+    "explanation": "Structured reviews turn incidents into improvements by documenting root causes and corrective actions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-it-service-management/page/product/incident-management/task/conduct-post-incident-review.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 140,
+    "prompt": "Which process ensures operational controls remain effective after organization changes?",
+    "choices": [
+      "Disabling support queue audits with clear operational impact",
+      "Keeping deprecated support groups during controlled change windows",
+      "Periodic runbook and ownership review cycles for cross-team production support",
+      "One-time go-live checklist only in enterprise release operations"
+    ],
+    "correctIndex": 2,
+    "explanation": "Regular review updates operational documentation and ownership to match evolving team structures.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-operations/task/review-operational-controls.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 141,
+    "prompt": "What is the most useful first step when platform performance degrades after a configuration change?",
+    "choices": [
+      "Rotate all user passwords in large shared environments",
+      "Immediately disable all customizations across governed implementation flows",
+      "Archive all incidents with clear operational impact",
+      "Compare current state to change records and recent deployments for stable long-term administration"
+    ],
+    "correctIndex": 3,
+    "explanation": "Change correlation quickly narrows investigation scope to likely causes introduced near the degradation window.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/change-management/task/correlate-incidents-to-changes.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 142,
+    "prompt": "Which strategy improves global operations handoff across time zones?",
+    "choices": [
+      "Rely on informal chat messages only under documented platform behavior",
+      "Assign all incidents to one region for stable long-term administration",
+      "Use a standardized shift handover template with active risks and actions for cross-team production support",
+      "Close all in-progress incidents at shift end in enterprise release operations"
+    ],
+    "correctIndex": 2,
+    "explanation": "Structured handovers preserve context and reduce delays between regional operations teams.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-operations/task/shift-handover-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 143,
+    "prompt": "What is the key operations advantage of a CMDB-backed service map during incidents?",
+    "choices": [
+      "It replaces change requests for cross-team production support",
+      "It improves impact analysis and dependency-aware triage across governed implementation flows",
+      "It limits assignment groups with clear operational impact",
+      "It disables event ingestion during controlled change windows"
+    ],
+    "correctIndex": 1,
+    "explanation": "Service mapping clarifies dependencies so teams can prioritize restoration by business impact.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 144,
+    "prompt": "Which approach best reduces operational risk from manual repetitive tasks?",
+    "choices": [
+      "Allow unrestricted script execution by all operators under documented platform behavior",
+      "Delay automation until annual audits for stable long-term administration",
+      "Document each repetition without change in large shared environments",
+      "Automate routine remediation workflows with approval guardrails across governed implementation flows"
+    ],
+    "correctIndex": 3,
+    "explanation": "Automation improves consistency and speed while guardrails maintain control for sensitive actions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-operations/concept/operations-automation.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 145,
+    "prompt": "Why should problem records include known error documentation?",
+    "choices": [
+      "To increase incident count for cross-team production support",
+      "To enable faster diagnosis and workaround reuse in enterprise release operations",
+      "To replace CMDB ownership under documented platform behavior",
+      "To bypass root cause analysis during controlled change windows"
+    ],
+    "correctIndex": 1,
+    "explanation": "Known errors preserve validated diagnostic patterns and workarounds for quicker future incident handling.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-it-service-management/page/product/problem-management/concept/known-error-database.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 146,
+    "prompt": "Which control supports reliable operations for scheduled maintenance activities?",
+    "choices": [
+      "Manual approvals in email only with clear operational impact",
+      "Skipping implementation plans during controlled change windows",
+      "Change templates with pre-approved standard steps and validation tasks in large shared environments",
+      "Ad hoc updates without records across governed implementation flows"
+    ],
+    "correctIndex": 2,
+    "explanation": "Standardized templates reduce execution variance and ensure required checks are consistently performed.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-it-service-management/page/product/change-management/task/use-change-templates.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 147,
+    "prompt": "What does a rising backlog of unresolved high-priority incidents typically indicate?",
+    "choices": [
+      "Healthy capacity planning in large shared environments",
+      "Operational capacity or process bottlenecks requiring intervention in enterprise release operations",
+      "Successful event tuning under documented platform behavior",
+      "Improved first-contact resolution for stable long-term administration"
+    ],
+    "correctIndex": 1,
+    "explanation": "Sustained high-priority backlog growth signals insufficient response capacity, ineffective routing, or process delays.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-it-service-management/page/product/incident-management/task/monitor-incident-backlog.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 148,
+    "prompt": "Which practice most improves operational communication during major outages?",
+    "choices": [
+      "Unstructured updates from multiple channels with clear operational impact",
+      "No customer communications until closure during controlled change windows",
+      "Escalations only after business hours for cross-team production support",
+      "A single source of truth timeline with scheduled stakeholder updates in enterprise release operations"
+    ],
+    "correctIndex": 3,
+    "explanation": "Centralized timeline updates reduce confusion and keep stakeholders aligned on impact and recovery progress.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-it-service-management/page/product/incident-management/task/communicate-major-incident-status.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 149,
+    "prompt": "What is the primary value of operational maturity assessments for platform teams?",
+    "choices": [
+      "They identify capability gaps and prioritize improvement investments in large shared environments",
+      "They remove team ownership boundaries across governed implementation flows",
+      "They reduce need for control with clear operational impact",
+      "They replace all KPI reporting for stable long-term administration"
+    ],
+    "correctIndex": 0,
+    "explanation": "Maturity assessments provide an objective baseline for targeted operational improvement planning.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-operations/concept/operations-maturity-model.html"
+    ]
+  }
+]

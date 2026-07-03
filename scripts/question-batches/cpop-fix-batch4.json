@@ -1,0 +1,450 @@
+[
+  {
+    "trackCode": "CPOP",
+    "order": 84,
+    "prompt": "A platform owner wants stronger governance over emergency changes. What should be implemented?",
+    "choices": [
+      "Operationally, this means disable emergency changes entirely.",
+      "From a platform-owner view, create a post-implementation review requirement for each emergency change.",
+      "A team would proceed by allow permanent emergency bypass rights.",
+      "This answer proposes route emergency changes through the service portal only."
+    ],
+    "correctIndex": 1,
+    "explanation": "Mandatory post-implementation review ensures emergency pathways remain controlled and auditable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 85,
+    "prompt": "What governance metric is most useful for evaluating standards adoption?",
+    "choices": [
+      "From a platform-owner view, percentage of delivered changes mapped to approved design standards.",
+      "A team would proceed by count of dashboards shared with executives.",
+      "This answer proposes average daily login count for all users.",
+      "For governance metric useful evaluating, number of cloned instances each quarter."
+    ],
+    "correctIndex": 0,
+    "explanation": "Mapping delivered changes to standards directly measures whether teams are following governance expectations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 86,
+    "prompt": "What should a platform owner do when two governing bodies issue conflicting requirements?",
+    "choices": [
+      "A team would proceed by adopt both without assessing impact.",
+      "For should platform owner do, implement whichever requirement is easier first.",
+      "In this should platform owner do scenario, delay all releases until next fiscal year.",
+      "This answer proposes escalate through a defined conflict-resolution path and record the final decision."
+    ],
+    "correctIndex": 3,
+    "explanation": "Formal conflict-resolution preserves accountability and avoids inconsistent implementation across teams.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 87,
+    "prompt": "Which governance approach is best for reusable platform patterns?",
+    "choices": [
+      "This answer proposes allow each team to design independently without pattern reviews.",
+      "In this governance approach reusable platform scenario, use only global scripts for all new features.",
+      "For governance approach reusable platform, publish approved reference patterns and require justified exceptions.",
+      "This option centers on block pattern reuse to avoid dependency risk."
+    ],
+    "correctIndex": 2,
+    "explanation": "Reference patterns speed delivery and reduce variance while still allowing governed exceptions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-application-development/page/build/system-update-sets/concept/update-set-procedures.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 88,
+    "prompt": "How should governance handle long-running exceptions that never close?",
+    "choices": [
+      "For should governance handle long, hide exception data from dashboards.",
+      "In this should governance handle long scenario, enforce exception expiry with periodic reapproval and remediation plans.",
+      "This option centers on convert all exceptions into permanent policy changes.",
+      "The approach here is remove exception ownership fields to reduce overhead."
+    ],
+    "correctIndex": 1,
+    "explanation": "Expiry and reapproval prevent temporary exceptions from becoming unmanaged permanent risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 89,
+    "prompt": "A platform owner is aligning governance with business outcomes. Which practice is strongest?",
+    "choices": [
+      "In this platform owner aligning governance scenario, tie governance controls to service reliability, risk, and adoption outcomes.",
+      "This option centers on replace governance KPIs with ad hoc manager feedback.",
+      "The approach here is measure only incident closure volume.",
+      "Operationally, this means track only deployment frequency."
+    ],
+    "correctIndex": 0,
+    "explanation": "Outcome-linked controls make governance relevant to business performance rather than process for process' sake.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 90,
+    "prompt": "Which governance anti-pattern most often causes delayed releases?",
+    "choices": [
+      "This option centers on applying risk-tiered controls.",
+      "Operationally, this means using documented approval criteria.",
+      "From a platform-owner view, maintaining release readiness dashboards.",
+      "The approach here is late-stage approvals without predefined entry and exit criteria."
+    ],
+    "correctIndex": 3,
+    "explanation": "Undefined approval gates lead to last-minute debate and schedule slippage.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 91,
+    "prompt": "What should be standardized first when scaling governance to additional business units?",
+    "choices": [
+      "Operationally, this means personal work queues for approvers.",
+      "From a platform-owner view, local dashboard color themes.",
+      "The approach here is control objectives, terminology, and minimum evidence requirements.",
+      "A team would proceed by one-time email templates for announcements."
+    ],
+    "correctIndex": 2,
+    "explanation": "Shared control objectives and evidence standards establish a scalable governance baseline.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 92,
+    "prompt": "Which governance measure best limits unauthorized production configuration changes?",
+    "choices": [
+      "From a platform-owner view, allow direct edits if documented after release.",
+      "Operationally, this means require approved deployment pathways and monitor out-of-process changes.",
+      "A team would proceed by disable update sets in sub-production.",
+      "This answer proposes increase the number of local admins in every team."
+    ],
+    "correctIndex": 1,
+    "explanation": "Governed deployment pathways and monitoring reduce shadow changes and improve auditability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-application-development/page/build/system-update-sets/concept/update-set-procedures.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 93,
+    "prompt": "A governance committee requests fewer but more actionable metrics. Which set is best?",
+    "choices": [
+      "From a platform-owner view, control pass rate, exception aging, and high-risk remediation closure.",
+      "A team would proceed by widget usage, theme usage, and page load duration.",
+      "This answer proposes login count, open tasks, and plugin totals.",
+      "For governance committee requests fewer, catalog item views, SLA names, and table count."
+    ],
+    "correctIndex": 0,
+    "explanation": "These metrics directly indicate governance effectiveness, risk exposure, and remediation follow-through.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 94,
+    "prompt": "What should happen after a governance control fails in production?",
+    "choices": [
+      "This answer proposes ignore the failure if service was restored quickly.",
+      "For should happen after governance, reclassify the control as optional.",
+      "In this should happen after governance scenario, suspend all future releases indefinitely.",
+      "A team would proceed by open a corrective action with owner, due date, and validation criteria."
+    ],
+    "correctIndex": 3,
+    "explanation": "Corrective actions with ownership and validation prevent repeat failures and strengthen governance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 95,
+    "prompt": "Which operating model most supports sustained platform governance?",
+    "choices": [
+      "For operating model supports sustained, ad hoc discussions without recorded outcomes.",
+      "In this operating model supports sustained scenario, only annual governance reviews.",
+      "This answer proposes a recurring forum with decision logs, KPIs, and accountable follow-up owners.",
+      "This option centers on one-time policy publication with no maintenance."
+    ],
+    "correctIndex": 2,
+    "explanation": "Sustained governance needs routine decisions, measurable outcomes, and tracked follow-through.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 96,
+    "prompt": "How should platform owners govern dependency ownership across platform capabilities?",
+    "choices": [
+      "In this should platform owners govern scenario, keep dependencies undocumented to avoid maintenance effort.",
+      "For should platform owners govern, maintain an ownership model for services, integrations, and control dependencies.",
+      "This option centers on delegate all dependency decisions to release managers.",
+      "The approach here is assign ownership only at project kickoff."
+    ],
+    "correctIndex": 1,
+    "explanation": "Persistent dependency ownership supports reliable triage, upgrades, and risk management.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/table-administration/concept/c_TableAdministration.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 97,
+    "prompt": "What is the strongest governance response to repeated policy noncompliance by one product team?",
+    "choices": [
+      "This option centers on require a documented remediation plan with executive sponsor accountability.",
+      "In this strongest governance response repeated scenario, remove the team from all releases.",
+      "The approach here is ignore noncompliance if velocity remains high.",
+      "Operationally, this means lower the policy threshold for that team."
+    ],
+    "correctIndex": 0,
+    "explanation": "Repeated noncompliance needs formal remediation and higher-level accountability to drive change.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 98,
+    "prompt": "Which practice best supports governance transparency for auditors and executives?",
+    "choices": [
+      "This option centers on track only passed controls to keep dashboards clean.",
+      "The approach here is store evidence in local spreadsheets.",
+      "From a platform-owner view, share metrics verbally in steering meetings.",
+      "Operationally, this means maintain traceable evidence for controls, approvals, and exception decisions."
+    ],
+    "correctIndex": 3,
+    "explanation": "Traceable evidence makes governance outcomes verifiable and supports audits efficiently.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 99,
+    "prompt": "Before expanding governance scope, what validation step is most important?",
+    "choices": [
+      "Operationally, this means add more controls without changing evidence workflows.",
+      "From a platform-owner view, remove all exception pathways.",
+      "The approach here is confirm existing controls are measurable, actionable, and owned.",
+      "A team would proceed by pause dashboard reporting until expansion is complete."
+    ],
+    "correctIndex": 2,
+    "explanation": "Governance scales successfully when current controls are already operating with clear ownership and evidence.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 100,
+    "prompt": "Which access strategy best supports least privilege for platform operations teams?",
+    "choices": [
+      "Operationally, this means shared admin accounts for all production support engineers.",
+      "This answer proposes role-based access with periodic entitlement recertification.",
+      "From a platform-owner view, permanent elevated rights for all release contributors.",
+      "A team would proceed by granting admin to any user who submits a request."
+    ],
+    "correctIndex": 1,
+    "explanation": "Role-based access and regular recertification reduce over-privileged access and improve security accountability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 101,
+    "prompt": "A security review finds inactive privileged users. What should a platform owner implement?",
+    "choices": [
+      "For security review finds inactive, automated deprovisioning and periodic privileged access reviews.",
+      "From a platform-owner view, keep inactive privileged accounts for incident surge capacity.",
+      "A team would proceed by convert inactive users to integration accounts.",
+      "This answer proposes leave accounts unchanged if MFA is enabled."
+    ],
+    "correctIndex": 0,
+    "explanation": "Automated deprovisioning and reviews remove unnecessary privilege and lower insider risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/security/concept/security-center.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 102,
+    "prompt": "Which control is most important for securing production integrations?",
+    "choices": [
+      "A team would proceed by run all integration jobs as admin for reliability.",
+      "This answer proposes store credentials in update set descriptions.",
+      "For control important securing production, use one shared password for all external systems.",
+      "In this control important securing production scenario, use managed credentials with rotation and scoped execution context."
+    ],
+    "correctIndex": 3,
+    "explanation": "Managed credentials and scoped execution reduce credential exposure and blast radius.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/integrationhub/concept/IntegrationHub.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 103,
+    "prompt": "What is the best way to govern elevated access during production incidents?",
+    "choices": [
+      "This answer proposes grant permanent access to speed future incidents.",
+      "For way govern elevated access, allow emergency elevation without any approval.",
+      "This option centers on use time-bound elevation with approval and audit logging.",
+      "In this way govern elevated access scenario, use direct database access for troubleshooting."
+    ],
+    "correctIndex": 2,
+    "explanation": "Time-bound elevated access with auditing balances rapid response and security control.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 104,
+    "prompt": "Which evidence is strongest for proving security control effectiveness to auditors?",
+    "choices": [
+      "For evidence strongest proving security, a policy document with no implementation records.",
+      "The approach here is control execution logs tied to owner and remediation outcomes.",
+      "In this evidence strongest proving security scenario, a one-time security presentation slide deck.",
+      "This option centers on a screenshot of user roles from six months ago."
+    ],
+    "correctIndex": 1,
+    "explanation": "Auditors need evidence that controls execute in practice and that failures are remediated.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 105,
+    "prompt": "A team requests cross-scope access for a new app. What should happen first?",
+    "choices": [
+      "Operationally, this means review necessity, data exposure, and least-privilege alternatives.",
+      "In this team requests cross scope scenario, auto-approve to avoid delivery delays.",
+      "This option centers on grant global read/write to all app tables.",
+      "The approach here is disable scope boundaries in sub-production first."
+    ],
+    "correctIndex": 0,
+    "explanation": "Cross-scope access should be justified and minimized because it expands potential data exposure.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-application-development/page/build/applications/concept/scoped-applications.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 106,
+    "prompt": "Which pattern most improves security for outbound web service calls?",
+    "choices": [
+      "This option centers on run all calls from global scripts only.",
+      "The approach here is use hard-coded endpoints and credentials in scripts.",
+      "Operationally, this means allow developers to change production endpoints directly.",
+      "From a platform-owner view, centralize endpoint configuration and credential aliasing with controlled updates."
+    ],
+    "correctIndex": 3,
+    "explanation": "Centralized endpoint and credential management reduces misconfiguration risk and supports secure change control.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/web-services/concept/c_RESTAPI.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 107,
+    "prompt": "What is the primary benefit of separating duties for development and production approvals?",
+    "choices": [
+      "The approach here is fewer clone operations.",
+      "Operationally, this means smaller update set size.",
+      "A team would proceed by reduced conflict of interest and stronger change integrity.",
+      "From a platform-owner view, faster deployment windows."
+    ],
+    "correctIndex": 2,
+    "explanation": "Separation of duties reduces the risk of unauthorized or insufficiently reviewed production changes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 108,
+    "prompt": "How should a platform owner handle repeated failed login attempts on privileged accounts?",
+    "choices": [
+      "Operationally, this means temporarily disable all user authentication.",
+      "This answer proposes trigger alerting and incident workflows tied to identity controls.",
+      "From a platform-owner view, reset all user passwords manually every day.",
+      "A team would proceed by ignore if no outage is reported."
+    ],
+    "correctIndex": 1,
+    "explanation": "Automated alerting and response workflows improve detection and containment of account compromise attempts.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 109,
+    "prompt": "Which security governance practice best controls integration sprawl?",
+    "choices": [
+      "For security governance practice controls, require integration registration with ownership and risk classification.",
+      "From a platform-owner view, allow each team to create independent connectors.",
+      "A team would proceed by use only manual file imports for all data exchanges.",
+      "This answer proposes route all integrations through email parsing."
+    ],
+    "correctIndex": 0,
+    "explanation": "Integration registration provides visibility, ownership, and policy enforcement across the integration landscape.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/integrationhub/concept/IntegrationHub.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 110,
+    "prompt": "A security exception allows temporary broad access. What must be present before approval?",
+    "choices": [
+      "A team would proceed by a verbal agreement from product owners.",
+      "For security exception allows temporary, a promise to revisit after year-end.",
+      "In this security exception allows temporary scenario, a rollback plan for update sets only.",
+      "This answer proposes a compensating control, owner, and expiration date."
+    ],
+    "correctIndex": 3,
+    "explanation": "Compensating controls with clear accountability and expiry keep temporary risk bounded.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 111,
+    "prompt": "Which activity best validates role design after a major reorganization?",
+    "choices": [
+      "This answer proposes disable all custom roles and use only admin.",
+      "In this activity validates role design scenario, keep legacy role mappings to avoid disruption.",
+      "For activity validates role design, run access recertification against updated job responsibilities.",
+      "This option centers on increase role inheritance depth for flexibility."
+    ],
+    "correctIndex": 2,
+    "explanation": "Recertification aligns privileges with current duties and removes stale access from old structures.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/security/concept/security-center.html"
+    ]
+  }
+]

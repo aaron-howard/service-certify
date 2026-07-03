@@ -1,0 +1,482 @@
+[
+  {
+    "trackCode": "CIS-CSM",
+    "order": 0,
+    "prompt": "A new implementation lead wants a structured tour of Customer Service Management capabilities before configuring workspaces. Which concept documentation should they start with?",
+    "choices": [
+      "Defining payroll tax jurisdiction rules for measurable outcomes",
+      "Exploring Customer Service Management for sustained reliability for operational consistency",
+      "Building facility space reservation calendars for controlled governance",
+      "Retiring legacy mainframe terminal emulators for practical execution"
+    ],
+    "correctIndex": 1,
+    "explanation": "The Customer Service Management documentation provides an exploring topic that introduces key application areas and how teams typically navigate the solution.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-customer-service-management/page/product/customer-service-management/concept/exploring-csm.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 1,
+    "prompt": "Agents complain that case intake is inconsistent across channels. Which Washington DC-era concept documentation focuses on day-to-day use patterns for Customer Service Management?",
+    "choices": [
+      "Using Customer Service Management for operational consistency for sustained reliability",
+      "Designing mainframe batch job schedules for enterprise implementation",
+      "Configuring discovery for network printers exclusively for production readiness",
+      "Hardening database table ACLs for HR payroll for role-based accountability"
+    ],
+    "correctIndex": 0,
+    "explanation": "The using Customer Service Management concept documentation describes practical usage patterns that help standardize how agents work cases across channels.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-customer-service-management/page/product/customer-service-management/concept/using-csm.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 2,
+    "prompt": "A B2B retailer needs line-level commercial details captured on cases tied to orders. Which reference documentation should implementers review for the order case line form?",
+    "choices": [
+      "Software license reclamation policy template for controlled governance",
+      "Hardware asset retirement approval matrix for practical execution",
+      "Order case line form for measurable outcomes for role-based accountability",
+      "Employee relations investigation playbook for sustained reliability for operational consistency"
+    ],
+    "correctIndex": 2,
+    "explanation": "Customer Service Management reference documentation for the order case line form explains how order-related line items are represented on cases for structured capture and reporting.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-customer-service-management/page/product/customer-service-management/reference/order-case-line-form.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 3,
+    "prompt": "Support leadership wants a consolidated operational view for customer service performance. Which concept topic aligns with a customer service dashboard experience?",
+    "choices": [
+      "Database index rebuild scheduling guide for production readiness",
+      "Legacy fax server integration patterns for role-based accountability",
+      "Customer service dashboard for operational consistency for sustained reliability",
+      "VPN client certificate pinning procedures for enterprise implementation"
+    ],
+    "correctIndex": 2,
+    "explanation": "The Customer Service Management documentation includes a customer service dashboard concept that supports leadership visibility into service operations from a single pane.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-customer-service-management/page/product/customer-service-management/concept/customer-service-dashboard.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 4,
+    "prompt": "Your organization plans to tune AI-assisted agent experiences in CSM. Which configuration-oriented documentation topic should administrators consult?",
+    "choices": [
+      "Configuring Now Assist for Customer Service Management for enterprise implementation",
+      "Planning data center rack elevation drawings for operational consistency",
+      "Creating barcode labels for stockroom shelves for role-based accountability",
+      "Defining snow removal vendor SLAs for production readiness"
+    ],
+    "correctIndex": 0,
+    "explanation": "Customer Service Management documentation for configuring Now Assist for CSM helps administrators enable and tune AI-assisted experiences for agents and workflows.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-customer-service-management/page/product/customer-service-management/concept/now-assist-csm-configuring.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 5,
+    "prompt": "What is the main purpose of Customer Service Management in ServiceNow?",
+    "choices": [
+      "Manage employee payroll and benefits for sustained reliability",
+      "Handle customer interactions, cases, and issue resolution across channels for measurable outcomes",
+      "Replace CMDB discovery tools for practical execution",
+      "Schedule on-site field technicians exclusively for enterprise implementation"
+    ],
+    "correctIndex": 1,
+    "explanation": "CSM centralizes customer service operations, case workflows, and communication channels for faster resolution.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/concept/csm-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 6,
+    "prompt": "When first exploring CSM, which record type is the core unit of customer issue tracking?",
+    "choices": [
+      "Incident for role-based accountability for measurable outcomes",
+      "Case for production readiness",
+      "Knowledge feedback for enterprise implementation for controlled governance",
+      "Change request for operational consistency for sustained reliability"
+    ],
+    "correctIndex": 1,
+    "explanation": "The case is the central transaction in CSM for managing customer-reported issues and service requests.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/concept/cases.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 7,
+    "prompt": "Why do organizations adopt account and contact models in CSM?",
+    "choices": [
+      "To consistently track software license metering for practical execution",
+      "To consistently replace HR profiles for enterprise implementation",
+      "To consistently remove need for service level definitions",
+      "To consistently define customer relationships and route cases to the correct support context"
+    ],
+    "correctIndex": 3,
+    "explanation": "Account and contact data provide customer context used for entitlement checks, routing, and communications.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/configure-accounts-and-contacts.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 8,
+    "prompt": "Which CSM capability helps deflect repetitive customer questions before a case is opened?",
+    "choices": [
+      "Stockroom transfers for measurable outcomes for role-based accountability",
+      "Vulnerability calculators for sustained reliability for operational consistency",
+      "Contract line depreciation schedules for controlled governance for enterprise implementation",
+      "Knowledge and self-service portal experiences for practical execution"
+    ],
+    "correctIndex": 3,
+    "explanation": "Knowledge and self-service enable customers to resolve common issues without agent intervention.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/concept/csm-self-service.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 9,
+    "prompt": "What is a recommended first metric when evaluating early CSM implementation success?",
+    "choices": [
+      "Mean time to resolution for customer cases for operational consistency",
+      "Number of CMDB classes created for enterprise implementation",
+      "Total hardware assets retired for production readiness",
+      "Count of background scripts run daily for role-based accountability"
+    ],
+    "correctIndex": 0,
+    "explanation": "Case resolution time is a direct indicator of service efficiency and customer-facing operational performance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/monitor-csm-performance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 10,
+    "prompt": "When a support center begins using CSM, what operational benefit is usually realized first?",
+    "choices": [
+      "HR tasks merge into customer cases by default for production readiness",
+      "All customer issues auto-resolve for role-based accountability for measurable outcomes",
+      "Case ownership, routing, and status visibility become standardized for operational consistency",
+      "CMDB discovery stops creating records for enterprise implementation"
+    ],
+    "correctIndex": 2,
+    "explanation": "Using CSM introduces structured case workflows and clearer accountability for service operations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/using-csm-for-case-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 11,
+    "prompt": "Which CSM feature supports consistent handling of repetitive customer issues?",
+    "choices": [
+      "Template-based case creation and playbook-style workflows for controlled governance",
+      "Asset disposal rules for practical execution",
+      "Manual free-form case states for measurable outcomes for role-based accountability",
+      "Catalog item depreciation for sustained reliability for operational consistency"
+    ],
+    "correctIndex": 0,
+    "explanation": "Templates and guided workflows help agents execute recurring work with fewer errors and faster handoffs.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/configure-case-templates.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 12,
+    "prompt": "Why is omnichannel interaction capture valuable when using CSM?",
+    "choices": [
+      "It separates customer context across channels for operational consistency",
+      "It replaces entitlement rules for enterprise implementation for controlled governance",
+      "It prevents knowledge article use for production readiness",
+      "It preserves a unified timeline of customer engagement for better resolution continuity for role-based accountability"
+    ],
+    "correctIndex": 3,
+    "explanation": "A consolidated interaction history reduces duplicate questioning and improves handoffs across teams.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/concept/omnichannel-customer-engagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 13,
+    "prompt": "A manager wants to reduce escalations after adopting CSM. Which action is best?",
+    "choices": [
+      "Route all cases to a single generic group for measurable outcomes",
+      "Define clear escalation criteria and automate routing to specialized queues for sustained reliability",
+      "Require phone-exclusively support for enterprise implementation",
+      "Disable priority fields on cases for practical execution"
+    ],
+    "correctIndex": 1,
+    "explanation": "Structured escalation rules ensure critical issues reach the right specialists quickly.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/configure-case-escalation-rules.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 14,
+    "prompt": "What indicator shows that teams are effectively using CSM knowledge deflection?",
+    "choices": [
+      "More manual routing overrides for practical execution",
+      "Higher percentage of self-service resolutions before case creation for controlled governance",
+      "Rising case reopen rate for sustained reliability for operational consistency",
+      "Longer average first response time for measurable outcomes"
+    ],
+    "correctIndex": 1,
+    "explanation": "Successful adoption includes increased self-service completion and reduced avoidable case volume.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/measure-self-service-effectiveness.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 15,
+    "prompt": "In CSM Order Management, what is the role of order case lines?",
+    "choices": [
+      "They replace customer contracts for role-based accountability for measurable outcomes",
+      "They store vulnerability IDs exclusively for production readiness",
+      "They break an order-related case into specific order line issues for tracking and resolution for enterprise implementation",
+      "They define hardware asset depreciation for operational consistency"
+    ],
+    "correctIndex": 2,
+    "explanation": "Order case lines provide granular visibility when a case affects individual products or service lines.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/manage-order-case-lines.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 16,
+    "prompt": "Why are order case lines useful for fulfillment coordination?",
+    "choices": [
+      "They prevent communication with order systems for sustained reliability",
+      "They force one resolution code for all products for measurable outcomes",
+      "They remove the need for parent cases for practical execution",
+      "They allow separate statuses and actions per impacted order line for controlled governance"
+    ],
+    "correctIndex": 3,
+    "explanation": "Line-level states and actions support mixed outcomes across complex customer orders.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/concept/order-case-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 17,
+    "prompt": "A customer order has one delayed item and two shipped items. How should this be modeled in CSM?",
+    "choices": [
+      "Close the case because most relevant items shipped",
+      "Convert the case to a change request for operational consistency",
+      "Create one unresolved case for the entire order with no detail for role-based accountability",
+      "Track each impacted item through order case lines with distinct statuses for production readiness"
+    ],
+    "correctIndex": 3,
+    "explanation": "Order case lines capture partial impacts and enable accurate customer communication on each line item.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/update-order-line-statuses-in-cases.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 18,
+    "prompt": "What integration benefit comes from linking order case lines to external order systems?",
+    "choices": [
+      "Automatic deletion of old customer contacts for production readiness",
+      "Bypassing entitlement checks for role-based accountability for measurable outcomes",
+      "Synchronized fulfillment updates that strengthen case accuracy and transparency",
+      "Disabling workflow automation for enterprise implementation for controlled governance"
+    ],
+    "correctIndex": 2,
+    "explanation": "System synchronization keeps case line data current and reduces manual status reconciliation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/integrate-order-systems-with-csm.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 19,
+    "prompt": "Which KPI best measures effectiveness of order case line handling?",
+    "choices": [
+      "Number of CMDB classes for controlled governance for enterprise implementation",
+      "Count of inactive groups for practical execution",
+      "Total background scripts executed for measurable outcomes for role-based accountability",
+      "Average age to resolve impacted order lines for sustained reliability"
+    ],
+    "correctIndex": 3,
+    "explanation": "Line-level resolution time directly reflects execution quality for order-related customer issues.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/report-on-order-case-lines.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 20,
+    "prompt": "What is the purpose of a CSM dashboard for service leaders?",
+    "choices": [
+      "Configure field technician routing for role-based accountability for measurable outcomes",
+      "Track customer case volume, SLA performance, and resolution trends in a single operational view for production readiness",
+      "Replace all queue management workflows for enterprise implementation",
+      "Store encrypted passwords for operational consistency for sustained reliability"
+    ],
+    "correctIndex": 1,
+    "explanation": "CSM dashboards consolidate key service metrics to support coaching, staffing, and process improvement decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/concept/csm-dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 21,
+    "prompt": "Which dashboard metric is most useful for detecting customer backlog risk?",
+    "choices": [
+      "Aging open cases by priority and queue for practical execution",
+      "Number of active HR profiles for controlled governance",
+      "Count of CMDB classes for sustained reliability for operational consistency",
+      "Monthly update set exports for measurable outcomes for role-based accountability"
+    ],
+    "correctIndex": 0,
+    "explanation": "Case aging by priority highlights where queues are accumulating unresolved customer impact.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/configure-csm-kpis.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 22,
+    "prompt": "How do dashboard filters improve CSM operational reviews?",
+    "choices": [
+      "They prevent drilldowns for enterprise implementation for controlled governance",
+      "They replace assignment rules for operational consistency for sustained reliability",
+      "They let leaders isolate trends by account, channel, or product line for targeted action for role-based accountability",
+      "They hide all breach data for production readiness"
+    ],
+    "correctIndex": 2,
+    "explanation": "Filtered views help teams detect segment-specific issues and assign focused remediation actions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/customize-csm-dashboard-filters.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 23,
+    "prompt": "A manager wants to improve first contact resolution. Which dashboard combination is most relevant?",
+    "choices": [
+      "Case reopen rate and first response-to-resolution performance for sustained reliability",
+      "Asset retirement trend for measurable outcomes for role-based accountability",
+      "Discovery schedule duration for practical execution",
+      "Number of update sets for controlled governance for enterprise implementation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Reopen and resolution timing metrics indicate whether issues are being solved effectively on initial engagement.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/measure-agent-performance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 24,
+    "prompt": "What practice keeps CSM dashboards trustworthy over time?",
+    "choices": [
+      "Removing SLA fields from forms for controlled governance",
+      "Frequent KPI definition reviews and consistent case data hygiene controls for practical execution",
+      "Allowing free-form status values across teams for measurable outcomes",
+      "Disabling closed case archiving for sustained reliability for operational consistency"
+    ],
+    "correctIndex": 1,
+    "explanation": "Dashboard quality depends on stable metric definitions and disciplined data capture.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/govern-csm-reporting.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 25,
+    "prompt": "What is the primary value of Now Assist in Customer Service Management?",
+    "choices": [
+      "Replacing all human case agents for production readiness",
+      "Generating contextual assistance such as summaries and draft responses to speed case handling for role-based accountability",
+      "Disabling case documentation requirements for operational consistency for sustained reliability",
+      "Automatically closing all low-priority cases for enterprise implementation"
+    ],
+    "correctIndex": 1,
+    "explanation": "Now Assist helps agents work faster and more consistently by providing AI-generated case context and response support.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-assist/page/administer/now-assist-in-csm/concept/now-assist-csm.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 26,
+    "prompt": "Which use case best fits Now Assist for CSM agents?",
+    "choices": [
+      "Bypassing entitlement checks for premium customers for measurable outcomes",
+      "Changing SLA policies without approval for sustained reliability",
+      "Removing customer contact records after closure for controlled governance",
+      "Generating concise case summaries from long activity histories for practical execution"
+    ],
+    "correctIndex": 3,
+    "explanation": "Case summarization is a core productivity scenario that helps agents quickly understand complex issue history.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/task/use-now-assist-in-case-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 27,
+    "prompt": "Before enabling Now Assist suggestions broadly, what should administrators configure?",
+    "choices": [
+      "Delete historical case content to reduce token usage for operational consistency",
+      "Turn off case templates for enterprise implementation for controlled governance",
+      "Move all cases to email-exclusively intake for production readiness",
+      "Role-based access, data governance settings, and validation workflow for AI-generated output for role-based accountability"
+    ],
+    "correctIndex": 3,
+    "explanation": "Governance controls ensure AI assistance aligns with security, compliance, and quality expectations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-assist/page/administer/now-assist/concept/now-assist-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 28,
+    "prompt": "How can a CSM manager measure whether Now Assist is improving operations?",
+    "choices": [
+      "Count exclusively the number of reopened cases for measurable outcomes",
+      "Track adoption and compare average handle time and first response metrics before and after rollout for production readiness",
+      "Review chat sentiment without case outcomes for enterprise implementation",
+      "Measure incident assignment groups in ITSM for operational consistency"
+    ],
+    "correctIndex": 1,
+    "explanation": "Adoption plus outcome metrics gives a practical view of whether AI assistance is improving service performance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/c_CSMAnalyticsAndDashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 29,
+    "prompt": "What is the best agent behavior when using AI-generated customer reply drafts?",
+    "choices": [
+      "Ignore all draft suggestions permanently for practical execution",
+      "Review, edit for customer context and policy alignment, then send for controlled governance",
+      "Send every draft without review for sustained reliability",
+      "Use AI replies exclusively for internally opened cases"
+    ],
+    "correctIndex": 1,
+    "explanation": "Human review preserves accuracy, tone, and policy compliance while still benefiting from AI-assisted drafting speed.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-assist/page/administer/now-assist-in-csm/task/enable-now-assist-features-csm.html"
+    ]
+  }
+]

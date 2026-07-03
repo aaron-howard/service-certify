@@ -1,0 +1,484 @@
+[
+  {
+    "trackCode": "CIS-DF",
+    "order": 30,
+    "prompt": "Why is mapping business services to technical services in CSDM important for CMDB governance?",
+    "choices": [
+      "It ensures all CIs are discovered by one MID Server",
+      "It enables unrestricted writes to cmdb_ci",
+      "It removes the need for CI relationships",
+      "It links outcomes to supporting architecture for impact analysis and ownership"
+    ],
+    "correctIndex": 3,
+    "explanation": "CSDM service modeling ties business context to technical infrastructure so teams can understand ownership and impact.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_CSDMServices.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 31,
+    "prompt": "Which CSDM practice most improves service health reporting accuracy?",
+    "choices": [
+      "Defining clear service boundaries and relating supporting application/infrastructure CIs",
+      "Using one generic service CI for the entire enterprise",
+      "Creating services without ownership fields",
+      "Skipping relationship types to reduce complexity"
+    ],
+    "correctIndex": 0,
+    "explanation": "Accurate health reporting depends on properly scoped services with explicit dependencies and ownership.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_ServiceModelingGuidelines.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 32,
+    "prompt": "In a CSDM-aligned model, what does a service offering primarily represent?",
+    "choices": [
+      "A deployment package for update sets",
+      "A consumable commitment variant of a service for a specific audience",
+      "A technical CI class used only by Discovery",
+      "A replacement for assignment groups"
+    ],
+    "correctIndex": 1,
+    "explanation": "Service offerings provide a consumer-facing variant of a service with defined commitments and context.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_ServiceOfferings.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 33,
+    "prompt": "What is the value of assigning accountable owners to CSDM service records?",
+    "choices": [
+      "It eliminates the need for reconciliation rules",
+      "It automatically creates discovery schedules",
+      "It establishes governance responsibility for lifecycle and data quality",
+      "It prevents incident association with services"
+    ],
+    "correctIndex": 2,
+    "explanation": "Named ownership is a core governance control for maintaining service accuracy and lifecycle accountability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_GovernanceInCSDM.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 34,
+    "prompt": "Which outcome is most likely when CSDM service relationships are incomplete?",
+    "choices": [
+      "Automatic dependency inference in all reports",
+      "Reduced need for event management",
+      "Faster identification engine performance",
+      "Weaker impact analysis during incidents and changes"
+    ],
+    "correctIndex": 3,
+    "explanation": "Missing dependencies lead to blind spots in impact analysis for operations, incident, and change processes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_CSDMAndOperationalProcesses.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 35,
+    "prompt": "Why are CI relationships critical in CMDB beyond storing standalone CI records?",
+    "choices": [
+      "They reveal dependency chains used for impact analysis and service context",
+      "They increase list load speed by denormalizing all classes",
+      "They are required only for hardware lifecycle fields",
+      "They replace reconciliation rules for all attributes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Relationships provide the dependency model needed to understand upstream and downstream impact across services and infrastructure.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CIRelationships.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 36,
+    "prompt": "Which relationship strategy improves change risk analysis quality?",
+    "choices": [
+      "Linking all CIs directly to business services without intermediate layers",
+      "Maintaining accurate typed relationships that reflect real operational dependencies",
+      "Using generic related-to links for all CI pairs",
+      "Removing relationships for retired CIs only"
+    ],
+    "correctIndex": 1,
+    "explanation": "Typed and accurate relationships allow impact engines and change assessments to model real dependency paths.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_RelationshipTypes.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 37,
+    "prompt": "What is a common consequence of stale CMDB relationship data?",
+    "choices": [
+      "Improved event correlation precision",
+      "Automatic reconciliation conflict resolution",
+      "Misleading blast-radius and outage impact analysis",
+      "Faster discovery pattern execution"
+    ],
+    "correctIndex": 2,
+    "explanation": "Outdated dependencies can produce inaccurate impact results during incidents and planned changes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBDataQuality.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 38,
+    "prompt": "When modeling application dependencies, which relationship approach is preferred?",
+    "choices": [
+      "Use one custom relationship type for all links to simplify reports",
+      "Avoid relationships for cloud resources",
+      "Store dependencies only in free-text fields",
+      "Use relationship types that reflect actual hosting and communication patterns"
+    ],
+    "correctIndex": 3,
+    "explanation": "Accurate relationship semantics are essential for trustworthy dependency and service maps.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/task/t_CreateAndManageRelationships.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 39,
+    "prompt": "What governance control best sustains CMDB relationship integrity over time?",
+    "choices": [
+      "Regular quality checks with ownership and remediation workflows",
+      "Disabling relationship discovery to reduce noise",
+      "Limiting relationships to production CIs only",
+      "Manual relationship edits by any itil user"
+    ],
+    "correctIndex": 0,
+    "explanation": "Ongoing governance with ownership and remediation is needed to prevent relationship drift.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBGovernanceAndHealth.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 40,
+    "prompt": "What is a key benefit of using discovery feeds in a CMDB strategy?",
+    "choices": [
+      "They replace identification and reconciliation entirely",
+      "They consolidate data ingestion from multiple tools into governed CMDB updates",
+      "They are required only for non-production environments",
+      "They disable integration schedules by default"
+    ],
+    "correctIndex": 1,
+    "explanation": "Discovery feeds help normalize and ingest source data while still applying CMDB governance patterns like I&R.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/australia/discovery/concept/c_DiscoveryDataSourcesAndFeeds.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 41,
+    "prompt": "Why should discovery feed mappings align to CI class and attribute standards?",
+    "choices": [
+      "To prevent use of MID Servers",
+      "To force all feeds to run hourly",
+      "To reduce model drift and ensure data lands in the correct CMDB structures",
+      "To avoid creating dependency views"
+    ],
+    "correctIndex": 2,
+    "explanation": "Standardized mappings preserve data quality by ensuring feed payloads map to intended classes and fields.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBDataIngestionBestPractices.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 42,
+    "prompt": "How do discovery feeds and reconciliation rules work together?",
+    "choices": [
+      "Reconciliation applies only to manual CI edits",
+      "Feeds can update any attribute when discovery is active",
+      "Feed ingestion bypasses reconciliation for faster writes",
+      "Reconciliation still governs whether feed sources can update controlled attributes"
+    ],
+    "correctIndex": 3,
+    "explanation": "Even feed-driven updates are subject to reconciliation governance for attribute-level source authority.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_ReconciliationRules.html",
+      "https://www.servicenow.com/docs/r/it-operations-management/australia/discovery/concept/c_DiscoveryDataSourcesAndFeeds.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 43,
+    "prompt": "What monitoring practice most improves discovery feed reliability?",
+    "choices": [
+      "Tracking ingestion errors, transform exceptions, and stale feed timestamps",
+      "Running all feeds with identical credentials",
+      "Ignoring partial failures when at least one CI updates",
+      "Disabling error logs to improve throughput"
+    ],
+    "correctIndex": 0,
+    "explanation": "Operational monitoring of error and freshness metrics is key to maintaining trustworthy feed-based CMDB data.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/australia/discovery/task/t_TroubleshootDiscoveryDataIngestion.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 44,
+    "prompt": "A provider wants to onboard a new network discovery source quickly without degrading CMDB quality. What should they do first?",
+    "choices": [
+      "Load data directly into production cmdb_ci",
+      "Map data to CIs, validate identification keys, and test reconciliation outcomes in sub-production",
+      "Disable duplicate CI checks",
+      "Exclude all existing sources during onboarding"
+    ],
+    "correctIndex": 1,
+    "explanation": "Controlled onboarding with mapping and governance validation prevents duplicate and low-quality CI updates.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_IdentificationAndReconciliationEngine.html",
+      "https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBDataQuality.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 45,
+    "prompt": "In an ETL design, what is the primary purpose of a staging layer?",
+    "choices": [
+      "To store only dashboard screenshots",
+      "To bypass data quality checks",
+      "To isolate raw extracts for validation and transformation before publish",
+      "To permanently replace the source system"
+    ],
+    "correctIndex": 2,
+    "explanation": "A staging layer buffers inbound data so transformations and checks can run before curated data is published.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 46,
+    "prompt": "Which ETL pattern is best for reducing load volume when source tables are large and frequently updated?",
+    "choices": [
+      "Full reload every run",
+      "Manual CSV uploads only",
+      "Random sampling",
+      "Incremental extraction using change markers or watermarks"
+    ],
+    "correctIndex": 3,
+    "explanation": "Incremental extraction captures only changed records and is the standard pattern for efficient large-table pipelines.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 47,
+    "prompt": "Why is an idempotent load strategy important in ETL pipelines?",
+    "choices": [
+      "It allows reruns without corrupting target datasets",
+      "It guarantees every run inserts duplicates",
+      "It forces all records into one table",
+      "It eliminates the need for keys"
+    ],
+    "correctIndex": 0,
+    "explanation": "Idempotent logic ensures retries or reruns produce consistent outcomes without duplicate or conflicting records.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 48,
+    "prompt": "How should ETL pipelines typically handle records that fail validation rules?",
+    "choices": [
+      "Publish invalid rows with no flags",
+      "Route failed rows to an error quarantine for remediation",
+      "Drop the entire batch immediately",
+      "Automatically mark all rows as valid"
+    ],
+    "correctIndex": 1,
+    "explanation": "Quarantining invalid rows preserves observability and supports controlled remediation without blocking all valid data.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 49,
+    "prompt": "What ETL approach best supports late-arriving reference attributes in dimensional models?",
+    "choices": [
+      "Convert all dimensions to free text",
+      "Overwrite historical data with nulls",
+      "Use surrogate keys and controlled backfill updates",
+      "Ignore late attributes permanently"
+    ],
+    "correctIndex": 2,
+    "explanation": "Surrogate keys plus backfill processes allow dimensions to be corrected when reference values arrive after fact loads.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 50,
+    "prompt": "What is the primary goal of data certification in an enterprise data program?",
+    "choices": [
+      "To disable data pipelines",
+      "To increase duplicate records",
+      "To prevent all schema evolution",
+      "To establish trusted, governed datasets for business use"
+    ],
+    "correctIndex": 3,
+    "explanation": "Data certification identifies datasets that meet defined quality, governance, and stewardship standards.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 51,
+    "prompt": "Why should a certified dataset include a named data owner and steward?",
+    "choices": [
+      "Named accountability ensures issue resolution and policy adherence",
+      "Ownership is optional for certified data",
+      "It allows skipping metadata",
+      "It removes the need for access controls"
+    ],
+    "correctIndex": 0,
+    "explanation": "Certification requires clear accountability so quality and lifecycle decisions can be managed reliably.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 52,
+    "prompt": "Which control most directly supports ongoing certification confidence?",
+    "choices": [
+      "Disabling all data lineage",
+      "Recurring quality scorecards with threshold alerts",
+      "Manual screenshots in slides",
+      "One-time validation at initial publish only"
+    ],
+    "correctIndex": 1,
+    "explanation": "Recurring scorecards continuously validate that certified data still meets required standards.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 53,
+    "prompt": "How does lineage help a certification review board?",
+    "choices": [
+      "Lineage removes source dependencies",
+      "Lineage replaces access audits",
+      "Lineage shows upstream/downstream impact before approving changes",
+      "Lineage only affects UI themes"
+    ],
+    "correctIndex": 2,
+    "explanation": "Lineage visibility helps reviewers evaluate risk and blast radius when certified data structures change.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 54,
+    "prompt": "What should happen when a certified dataset drops below a required quality threshold?",
+    "choices": [
+      "Publish without notification",
+      "Keep certification status unchanged forever",
+      "Delete all historical records",
+      "Temporarily revoke or warn certification until remediation completes"
+    ],
+    "correctIndex": 3,
+    "explanation": "Certification status should reflect current quality posture and trigger transparent remediation workflows.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 55,
+    "prompt": "Why are reference data loads often handled separately from transactional loads?",
+    "choices": [
+      "Reference data usually changes slowly and drives consistent lookups across datasets",
+      "Separate loads are only for UI reasons",
+      "Transactional data does not require keys",
+      "Reference data should never be versioned"
+    ],
+    "correctIndex": 0,
+    "explanation": "Reference datasets provide controlled lookup values and are typically managed with different cadence and governance than transactions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 56,
+    "prompt": "What is the main benefit of assigning surrogate keys during reference data loads?",
+    "choices": [
+      "To avoid lineage tracking",
+      "To create stable internal identifiers independent of source system codes",
+      "To prevent dimension joins",
+      "To remove all uniqueness constraints"
+    ],
+    "correctIndex": 1,
+    "explanation": "Surrogate keys decouple internal models from volatile source codes and improve integration resilience.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 57,
+    "prompt": "How should ETL processes treat retired or deprecated reference values?",
+    "choices": [
+      "Continue using retired values forever",
+      "Convert to random new values",
+      "Track effective dating or status flags for controlled deprecation",
+      "Hard delete immediately with no audit"
+    ],
+    "correctIndex": 2,
+    "explanation": "Effective dating and status controls preserve history while guiding consumers toward current reference values.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 58,
+    "prompt": "Which validation is most important before publishing reference data to downstream consumers?",
+    "choices": [
+      "Skip stewardship review",
+      "Confirm dark mode is enabled",
+      "Disable source attribution",
+      "Verify conformance to approved domains and uniqueness rules"
+    ],
+    "correctIndex": 3,
+    "explanation": "Reference data must conform to governed domains and uniqueness constraints to prevent downstream semantic drift.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 59,
+    "prompt": "Why should reference data load jobs include change impact notifications?",
+    "choices": [
+      "So consumers can assess model and mapping effects before values are used in production",
+      "Because notifications replace testing",
+      "Because only DBAs need awareness",
+      "To avoid maintaining metadata"
+    ],
+    "correctIndex": 0,
+    "explanation": "Communicating value additions or deprecations helps dependent teams update mappings and avoid report inconsistencies.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+    ]
+  }
+]

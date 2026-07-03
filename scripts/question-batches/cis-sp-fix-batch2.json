@@ -1,0 +1,403 @@
+[
+  {
+    "trackCode": "CIS-SP",
+    "order": 25,
+    "prompt": "In telecom order management, what is the purpose of decomposing a customer order into technical tasks?",
+    "choices": [
+      "To consistently avoid using catalog items for telecom products",
+      "To consistently skip orchestration and fulfill manually for enterprise implementation",
+      "To consistently break high-level services into fulfillment actions for underlying systems and teams",
+      "To consistently merge all order lines into one CI update"
+    ],
+    "correctIndex": 2,
+    "explanation": "Order decomposition translates customer-facing requests into executable fulfillment work across domains and systems.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/telecommunications-service-management/australia/order-management/concept/c_OrderManagementForTelecom.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 26,
+    "prompt": "Which capability is most important for managing complex telecom service orders with multiple dependencies?",
+    "choices": [
+      "Dictionary overrides for enterprise implementation for controlled governance",
+      "Disabling state models for operational consistency for sustained reliability",
+      "Orchestration with dependency-aware workflow sequencing for role-based accountability",
+      "Manual assignment exclusively for production readiness"
+    ],
+    "correctIndex": 2,
+    "explanation": "Complex telecom fulfillment requires orchestration logic that honors dependencies between provisioning steps.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/telecommunications-service-management/australia/order-management/concept/c_ServiceOrderFulfillment.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 27,
+    "prompt": "Why is order fallout handling critical in telecom order management?",
+    "choices": [
+      "It permanently closes failed orders to simplify reporting for sustained reliability",
+      "It exclusively applies to test environments for role-based accountability",
+      "It disables retries for failed orchestration steps for practical execution",
+      "It helps detect, route, and resolve fulfillment exceptions before customer impact grows for controlled governance"
+    ],
+    "correctIndex": 3,
+    "explanation": "Fallout handling provides controlled recovery paths for failed or exception-based fulfillment events.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/telecommunications-service-management/australia/order-management/concept/c_OrderFalloutManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 28,
+    "prompt": "What does end-to-end order visibility primarily provide to telecom operations teams?",
+    "choices": [
+      "Automatic user provisioning in all downstream systems for controlled governance",
+      "Removal of SLA tracking from order tasks for practical execution",
+      "A single audit view of order status across decomposition and fulfillment stages for measurable outcomes",
+      "A replacement for service inventory for sustained reliability"
+    ],
+    "correctIndex": 2,
+    "explanation": "Operational visibility helps teams monitor status, detect blockers, and communicate progress across the full order lifecycle.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/telecommunications-service-management/australia/order-management/concept/c_OrderLifecycleManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 29,
+    "prompt": "Which data quality practice most improves telecom order automation success?",
+    "choices": [
+      "Allowing free-text product identifiers in all integrations for production readiness",
+      "Running order orchestration without validation for role-based accountability",
+      "Maintaining consistent product/service definitions used by ordering and fulfillment systems for operational consistency",
+      "Disabling catalog governance for speed for enterprise implementation"
+    ],
+    "correctIndex": 2,
+    "explanation": "Automation reliability depends on consistent service and product data across order capture and fulfillment.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/telecommunications-service-management/australia/order-management/concept/c_ProductAndServiceCatalogAlignment.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 30,
+    "prompt": "When planning an upgrade for telecom service management capabilities, what should happen first?",
+    "choices": [
+      "Disable all custom apps before cloning for sustained reliability",
+      "Delete deprecated records from CMDB for measurable outcomes",
+      "Upgrade production directly to minimize dual-maintenance effort for practical execution",
+      "Run impact assessment for customizations, integrations, and data model changes for controlled governance"
+    ],
+    "correctIndex": 3,
+    "explanation": "Upgrade planning starts with impact assessment so teams can scope risk across customizations and integrations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/australia/install-and-upgrade/concept/c_PlanningAnUpgrade.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 31,
+    "prompt": "Why is sub-production testing essential during service provider upgrade planning?",
+    "choices": [
+      "It guarantees zero data transformation changes for enterprise implementation",
+      "It allows skipping ATF execution in production for operational consistency",
+      "It validates custom telecom flows and integrations before customer-facing impact for role-based accountability",
+      "It removes the need for change approval for production readiness"
+    ],
+    "correctIndex": 2,
+    "explanation": "Testing in lower environments surfaces regression risk in provider-specific workflows and integrations before go-live.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/australia/install-and-upgrade/concept/c_TestingUpgradeReadiness.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 32,
+    "prompt": "Which upgrade practice best supports telecom operations continuity?",
+    "choices": [
+      "Executing upgrades during peak order windows for practical execution",
+      "Using a communication plan and blackout-aware scheduling for operational teams for controlled governance",
+      "Applying all skipped versions in one untested leap for sustained reliability",
+      "Deferring integration validation until after go-live for measurable outcomes"
+    ],
+    "correctIndex": 1,
+    "explanation": "Coordinated communications and timing around business critical windows reduces operational disruption risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/australia/install-and-upgrade/concept/c_UpgradeBestPractices.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 33,
+    "prompt": "For telecom-specific customizations, what should be reviewed as part of upgrade readiness?",
+    "choices": [
+      "Script includes, flows, and integrations tied to order and inventory processes for role-based accountability",
+      "Inactive users in sys_user exclusively for production readiness",
+      "Knowledge article translations for enterprise implementation for controlled governance",
+      "exclusively login pages and branding assets for sustained reliability"
+    ],
+    "correctIndex": 0,
+    "explanation": "Critical provider customizations are often implemented in scripts, flows, and integration points that must be regression-tested.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/australia/install-and-upgrade/concept/c_UpgradeCustomizationReview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 34,
+    "prompt": "What is the main value of a rollback or contingency plan in upgrade execution?",
+    "choices": [
+      "It guarantees no defects will occur for operational consistency",
+      "It replaces post-upgrade validation for enterprise implementation for controlled governance",
+      "It avoids the need for stakeholder approvals for production readiness",
+      "It enables quick recovery if upgrade issues threaten service delivery for role-based accountability"
+    ],
+    "correctIndex": 3,
+    "explanation": "Contingency planning provides an operational safety net when issues are discovered during or immediately after upgrade activities.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/australia/install-and-upgrade/concept/c_UpgradeFallbackPlanning.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 35,
+    "prompt": "What is the goal of delegated development in a service provider implementation?",
+    "choices": [
+      "To consistently remove all role-based restrictions from Studio",
+      "To consistently let non-admin teams build approved app artifacts while preserving governance guardrails",
+      "To consistently prohibit local updates in scoped apps",
+      "To consistently bypass application scope requirements for practical execution"
+    ],
+    "correctIndex": 1,
+    "explanation": "Delegated development allows broader builder participation while enforcing governance through controlled permissions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/australia/developing-applications/concept/c_DelegatedDevelopment.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 36,
+    "prompt": "Which control is most important when enabling delegated developers for telecom process apps?",
+    "choices": [
+      "Disabling source control integration for production readiness",
+      "Defined delegated privileges scoped to approved application records for role-based accountability",
+      "Unrestricted access to global tables for operational consistency",
+      "Forcing all scripts to run client-side for enterprise implementation"
+    ],
+    "correctIndex": 1,
+    "explanation": "Delegation should be role- and scope-based so teams can extend apps safely without broad platform risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/australia/developing-applications/task/t_SetupDelegatedDevelopment.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 37,
+    "prompt": "How does delegated development support faster telecom service changes?",
+    "choices": [
+      "It disables update set promotion for controlled governance",
+      "It automatically publishes to production for practical execution",
+      "It allows domain teams to implement low-risk enhancements without central bottlenecks for measurable outcomes",
+      "It removes testing requirements for sustained reliability for operational consistency"
+    ],
+    "correctIndex": 2,
+    "explanation": "By empowering trained domain teams within guardrails, delivery throughput improves while central teams focus on higher-risk work.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/australia/developing-applications/concept/c_DelegatedDevelopmentGovernance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 38,
+    "prompt": "Which risk is reduced by using delegated development with clear code review standards?",
+    "choices": [
+      "Duplicate local admin accounts for sustained reliability for operational consistency",
+      "Need for release documentation for measurable outcomes for role-based accountability",
+      "Need for application testing for practical execution",
+      "Uncontrolled customization drift across service domains for controlled governance"
+    ],
+    "correctIndex": 3,
+    "explanation": "Governed delegation limits ad hoc customization and improves consistency through shared standards and reviews.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/australia/developing-applications/concept/c_ApplicationGovernance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 39,
+    "prompt": "A provider wants delegated teams to configure catalog and workflows but not platform-wide security. What is the best approach?",
+    "choices": [
+      "Use delegated development roles with scoped, task-specific permissions for enterprise implementation",
+      "Grant admin to all delegated developers for operational consistency",
+      "Allow exclusively global development for measurable outcomes",
+      "Disable scoped applications for production readiness"
+    ],
+    "correctIndex": 0,
+    "explanation": "Delegated access should align with job responsibilities and remain constrained to approved functional areas.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/australia/developing-applications/task/t_AssignDelegatedDeveloperRoles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 40,
+    "prompt": "For a communications provider with millions of CIs, what is the primary CMDB scale requirement?",
+    "choices": [
+      "Manual CI updates by service owners for measurable outcomes",
+      "Disabling reconciliation to strengthen ingest speed for operational consistency",
+      "Strong data governance, class strategy, and automated quality controls for controlled governance",
+      "One CI class for all assets for practical execution"
+    ],
+    "correctIndex": 2,
+    "explanation": "At provider scale, CMDB success depends on disciplined modeling and automation that sustain data quality and operational trust.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBBestPractices.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 41,
+    "prompt": "Which approach best supports CMDB provider-scale discovery operations?",
+    "choices": [
+      "Centralize all scans through one minimally sized MID Server for operational consistency",
+      "Disable credential management rotation for enterprise implementation for controlled governance",
+      "Run discovery exclusively after incidents occur for production readiness",
+      "Design distributed discovery and ingestion architecture aligned to network and domain boundaries for role-based accountability"
+    ],
+    "correctIndex": 3,
+    "explanation": "Large-scale environments require distributed collection architecture to maintain performance and coverage.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/australia/discovery/concept/c_MIDServerPlanning.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 42,
+    "prompt": "Why is domain-aware ownership important for CMDB at telecom provider scale?",
+    "choices": [
+      "It confirms accountable stewardship for CI data quality across organizational boundaries",
+      "It disables duplicate detection logic for practical execution",
+      "It eliminates the need for class hierarchy for measurable outcomes",
+      "It replaces ACL controls for sustained reliability for operational consistency"
+    ],
+    "correctIndex": 0,
+    "explanation": "Large organizations need explicit stewardship responsibilities so each domain maintains trusted CMDB data.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBGovernanceAndHealth.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 43,
+    "prompt": "What is a practical strategy for sustaining CMDB performance as provider data volume grows?",
+    "choices": [
+      "Increase ad hoc manual data entry for production readiness",
+      "Flatten all CI relationships to reduce record count for role-based accountability",
+      "Apply lifecycle controls, archival strategy, and regular health dashboards for operational consistency",
+      "Disable CI class extensions for enterprise implementation for controlled governance"
+    ],
+    "correctIndex": 2,
+    "explanation": "Scale requires lifecycle and health-management disciplines to keep CMDB performant and actionable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBLifecycleManagement.html",
+      "https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBHealthDashboard.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 44,
+    "prompt": "Which outcome best indicates a CMDB is operating effectively at provider scale?",
+    "choices": [
+      "Trusted dependency maps that support incident, change, and service assurance decisions for enterprise implementation",
+      "All CI classes managed by one assignment group for operational consistency",
+      "No integration sources connected for role-based accountability for measurable outcomes",
+      "High CI count regardless of relationship quality for production readiness"
+    ],
+    "correctIndex": 0,
+    "explanation": "Provider-scale effectiveness is measured by decision-quality outcomes driven by accurate, trusted CMDB dependency data.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBAndOperationalValue.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 45,
+    "prompt": "In Service Mapping, what is a provider primarily used for?",
+    "choices": [
+      "Deleting CMDB classes for sustained reliability for operational consistency",
+      "Managing PA indicators for measurable outcomes for role-based accountability",
+      "Creating catalog request approvals for practical execution",
+      "Collecting topology data from a specific discovery source for controlled governance"
+    ],
+    "correctIndex": 3,
+    "explanation": "Providers retrieve data from underlying technologies so mapping logic can build accurate service topology.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 46,
+    "prompt": "Why is selecting the correct entry point critical for provider-based service mapping?",
+    "choices": [
+      "Entry points replace identifier rules for role-based accountability",
+      "Entry points are exclusively used for dashboard color rules",
+      "Entry points anchor traversal to the right application boundary for enterprise implementation",
+      "Entry points disable credentials for operational consistency for sustained reliability"
+    ],
+    "correctIndex": 2,
+    "explanation": "Correct entry points ensure the provider starts discovery from components that represent the target service.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 47,
+    "prompt": "What is the benefit of provider pattern sections that model connection dependencies?",
+    "choices": [
+      "They avoid creating any relationships for practical execution",
+      "They define how components communicate to build end-to-end maps for controlled governance",
+      "They exclusively rename CI classes for operational consistency",
+      "They remove hosting information for measurable outcomes for role-based accountability"
+    ],
+    "correctIndex": 1,
+    "explanation": "Connection logic in patterns is what allows Service Mapping to establish meaningful dependency chains.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 48,
+    "prompt": "When provider results produce duplicate CIs, which control should be reviewed first?",
+    "choices": [
+      "CMDB identification and reconciliation rules for measurable outcomes",
+      "Incident SLAs for sustained reliability for operational consistency",
+      "Dashboard filters for controlled governance for enterprise implementation",
+      "System notification templates for practical execution"
+    ],
+    "correctIndex": 0,
+    "explanation": "Duplicate infrastructure usually indicates identification rules need adjustment for consistent CI matching.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 49,
+    "prompt": "Which practice best supports troubleshooting provider execution failures?",
+    "choices": [
+      "Run patterns without logging for operational consistency for sustained reliability",
+      "Disable all MID Servers for enterprise implementation for controlled governance",
+      "Delete the service map and restart for production readiness",
+      "Review discovery and pattern logs for failed probes and parse errors for role-based accountability"
+    ],
+    "correctIndex": 3,
+    "explanation": "Execution logs show where provider collection or parsing failed and are the first source for root-cause analysis.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  }
+]

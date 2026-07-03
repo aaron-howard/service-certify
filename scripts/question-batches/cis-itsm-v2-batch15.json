@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 70,
+		"prompt": "In a record producer script, how does an administrator reference a value the end user entered in a variable?",
+		"choices": [
+			"producer.VARIABLE_NAME",
+			"gs.getVariable(VARIABLE_NAME) from the client browser session",
+			"g_scratchpad.VARIABLE_NAME evaluated on the target task table",
+			"current.getDisplayValue() for every unmapped catalog variable"
+		],
+		"correctIndex": 0,
+		"explanation": "Record producer scripts use producer.VARIABLE_NAME to read user-entered variable values and current.FIELD_NAME to set fields on the record being created.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/service-catalog/c_PopulatingRecordData.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 71,
+		"prompt": "A record producer must copy a user-entered variable into the short_description field of the incident it creates. Which script assignment is correct?",
+		"choices": [
+			"current.short_description = producer.issue_summary;",
+			"producer.short_description = current.issue_summary;",
+			"g_form.setValue('short_description', RP.issue_summary);",
+			"gs.setProperty('short_description', producer.issue_summary);"
+		],
+		"correctIndex": 0,
+		"explanation": "current.FIELD_NAME references fields on the record being created, and producer.VARIABLE_NAME references the value entered by the user.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/service-catalog/c_PopulatingRecordData.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 72,
+		"prompt": "How can a record producer redirect a Service Portal user to a specific page after submission?",
+		"choices": [
+			"Set producer.portal_redirect in the record producer Script field",
+			"Set current.redirect on the generated task record",
+			"Add a before business rule on the sc_req_item table",
+			"Configure a UI policy on the Catalog Item form"
+		],
+		"correctIndex": 0,
+		"explanation": "producer.portal_redirect controls redirect behavior in Service Portal, while producer.redirect handles the platform UI.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/service-catalog/c_PopulatingRecordData.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 73,
+		"prompt": "When a variable name on a record producer exactly matches a field name on the target table, what happens by default?",
+		"choices": [
+			"The variable value automatically populates the matching field on the created record",
+			"The variable is ignored unless a business rule copies it explicitly",
+			"The record producer aborts because duplicate names are not allowed",
+			"The value is stored only on the sc_req_item variable editor, never the target field"
+		],
+		"correctIndex": 0,
+		"explanation": "A record producer variable with the same name as a target field populates that field directly when the record is created, provided the variable type matches the field type.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/service-catalog/c_PopulatingRecordData.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 74,
+		"prompt": "A catalog client script must hide a variable that is also set to mandatory without a value. What is the base platform behavior?",
+		"choices": [
+			"The mandatory setting takes priority, so the variable remains visible until it has a value",
+			"The hide instruction always overrides mandatory and removes the variable",
+			"Both settings are ignored and the catalog item fails to load",
+			"The variable is hidden but silently submitted with a null value"
+		],
+		"correctIndex": 0,
+		"explanation": "In catalog client scripts the g_form priority order places Mandatory highest, so a mandatory variable without a value cannot be hidden or made read-only until it is populated.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/service-catalog/t_CreateACatalogClientScript.html"
+		]
+	}
+]

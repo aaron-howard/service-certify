@@ -1,0 +1,483 @@
+[
+  {
+    "trackCode": "CIS-DF",
+    "order": 0,
+    "prompt": "In an import-set workflow, what does a Transform Map define?",
+    "choices": [
+      "The Service Portal theme",
+      "How staging rows map into target records, including field mappings and optional scripts",
+      "LDAP listener ports",
+      "The PA indicator time zone only"
+    ],
+    "correctIndex": 1,
+    "explanation": "Transform maps connect a source staging table to a target table and control how rows become or update target records.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/washingtondc/integrate-applications/system-import-sets/c_CreatingNewTransformMaps.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 1,
+    "prompt": "What is a typical purpose of marking a field as coalesce on a Transform Map?",
+    "choices": [
+      "To disable field-level security",
+      "To schedule a daily data collection job",
+      "To locate an existing target row so the transform updates instead of inserting duplicates",
+      "To force the field to store JSON only"
+    ],
+    "correctIndex": 2,
+    "explanation": "Coalesce fields participate in matching logic so transforms can merge into existing records when keys align.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/washingtondc/integrate-applications/system-import-sets/c_CreatingNewTransformMaps.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 2,
+    "prompt": "How are most Configuration Item (CI) classes structured in the CMDB data model?",
+    "choices": [
+      "As flat spreadsheet uploads only",
+      "As exclusively client-side objects",
+      "As unrelated tables that cannot reference cmdb_ci",
+      "As a hierarchy where specialized classes extend more general base classes"
+    ],
+    "correctIndex": 3,
+    "explanation": "CMDB classes use inheritance so specialized CIs reuse attributes and behavior from parent classes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-servicenow-platform/page/product/configuration-management/concept/cmdb-ci-class-models.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 3,
+    "prompt": "What problem does the Identification and Reconciliation process primarily help address when multiple sources feed the CMDB?",
+    "choices": [
+      "Duplicate or conflicting CI representations by identifying matches and reconciling attributes",
+      "Eliminating the need for Discovery",
+      "Replacing all ACLs with data policies",
+      "Disabling import sets permanently"
+    ],
+    "correctIndex": 0,
+    "explanation": "Identification finds candidate matches while reconciliation applies source precedence so attributes stay consistent.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/c_CMDBIdentifyandReconcile.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 4,
+    "prompt": "Before bulk-loading reference data with import sets, which practice most reduces downstream transform errors?",
+    "choices": [
+      "Load directly into sys_user without a staging table",
+      "Validate source keys, formats, and relationships in staging before running transforms",
+      "Turn off all business rules forever",
+      "Run transforms without reviewing staging rows"
+    ],
+    "correctIndex": 1,
+    "explanation": "Import-set guidance emphasizes staging, mapping, and validation so transforms produce clean target data.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-integrate-applications/page/administer/import-sets/concept/c_ImportDataUsingImportSets.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 5,
+    "prompt": "In IntegrationHub ETL, why is imported data first loaded into a staging table before being promoted to target tables?",
+    "choices": [
+      "To automatically delete duplicate source rows without configuration",
+      "To encrypt every imported field regardless of table settings",
+      "To separate raw inbound data from production records and allow controlled transformation",
+      "To bypass transform maps and write directly to CMDB"
+    ],
+    "correctIndex": 2,
+    "explanation": "Staging tables provide a controlled landing zone for source data so teams can validate, normalize, and troubleshoot before updating destination records.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/data-foundations/vancouver/integrationhub-etl/concept/staging-tables.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 6,
+    "prompt": "During import set processing, what is the primary purpose of coalesce fields on a transform map?",
+    "choices": [
+      "To decide which import rows are skipped based on domain separation",
+      "To generate import set run history records",
+      "To convert all date values into the instance time zone",
+      "To identify matching target records for update instead of always inserting"
+    ],
+    "correctIndex": 3,
+    "explanation": "Coalesce fields determine record matching logic between source and target, enabling upsert behavior and reducing duplicates.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/servicenow-platform/vancouver/platform-administration/concept/c_TransformMaps.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 7,
+    "prompt": "A data engineer needs to inspect rows that failed transformation. Which record type is most useful to review first?",
+    "choices": [
+      "Import set run and transform error records",
+      "Sys_trigger",
+      "Sys_ui_action",
+      "Sys_user_grmember"
+    ],
+    "correctIndex": 0,
+    "explanation": "Import set run and transform logs capture row-level processing details, including failures and script errors, which are essential for troubleshooting.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/servicenow-platform/vancouver/platform-administration/task/t_ViewImportSetRunHistory.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 8,
+    "prompt": "Which statement about staging table design is a best practice for repeatable ETL pipelines?",
+    "choices": [
+      "Use one staging table for all source systems and all entities",
+      "Align staging columns to source payload structure and map downstream in transforms",
+      "Disable indexing on staging tables to speed inserts",
+      "Store only derived and transformed data in staging tables"
+    ],
+    "correctIndex": 1,
+    "explanation": "Staging models should capture source payloads clearly, while transformation logic handles normalization into destination schema.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/data-foundations/vancouver/integrationhub-etl/concept/import-staging-design.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 9,
+    "prompt": "What is the main reason to apply field maps in a transform map instead of writing all logic in scripts?",
+    "choices": [
+      "Field maps are required only when importing XML attachments",
+      "Field maps run only after business rules on target tables",
+      "Field maps provide declarative, maintainable mapping for straightforward source-to-target assignments",
+      "Field maps prevent the use of coalesce on any field"
+    ],
+    "correctIndex": 2,
+    "explanation": "Declarative field mapping keeps simple mappings readable and easier to govern, reserving scripts for exceptional logic.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/servicenow-platform/vancouver/platform-administration/concept/c_TransformMaps.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 10,
+    "prompt": "In a transform map, when does an onBefore transform script execute?",
+    "choices": [
+      "After target business rules complete",
+      "Only after all rows finish transforming",
+      "Only when coalesce fields are empty",
+      "Before each source row is transformed into a target operation"
+    ],
+    "correctIndex": 3,
+    "explanation": "onBefore scripts run per row prior to field mapping commit, allowing conditional control like ignore or value normalization.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/servicenow-platform/vancouver/platform-administration/concept/c_TransformEventScripts.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 11,
+    "prompt": "Which transform script approach is best for skipping invalid source rows without failing the entire import run?",
+    "choices": [
+      "Set ignore = true when validation conditions fail",
+      "Throw an unhandled exception in every invalid row",
+      "Delete the entire import set on first error",
+      "Disable coalesce so all rows insert"
+    ],
+    "correctIndex": 0,
+    "explanation": "Setting ignore to true in row-level script logic lets processing continue while excluding invalid rows from target updates.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/servicenow-platform/vancouver/platform-administration/concept/c_TransformEventScripts.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 12,
+    "prompt": "A transform script needs to convert a source status code into a target reference value using lookup logic. Where should this custom logic live?",
+    "choices": [
+      "In an import set run schedule record",
+      "In a transform script or scripted field map",
+      "In a UI action on the target table",
+      "In a dashboard interactive filter"
+    ],
+    "correctIndex": 1,
+    "explanation": "Transform scripts and scripted field maps are designed for row-level mapping and lookup conversions during transformation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/servicenow-platform/vancouver/platform-administration/concept/c_TransformMaps.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 13,
+    "prompt": "Why should transform scripts avoid unnecessary GlideRecord queries inside every row loop?",
+    "choices": [
+      "GlideRecord cannot be used in transform scripts",
+      "Queries are blocked when coalesce is enabled",
+      "Repeated queries can significantly increase transform runtime and contention",
+      "Row-level queries improve performance in all cases"
+    ],
+    "correctIndex": 2,
+    "explanation": "High-volume row transforms can degrade quickly with per-row database calls; efficient caching or precomputed maps reduce overhead.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/data-foundations/vancouver/integrationhub-etl/concept/etl-transform-performance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 14,
+    "prompt": "What is a safe strategy when introducing new transform script logic in production data pipelines?",
+    "choices": [
+      "Enable scripts directly in production and monitor complaints",
+      "Run only onBefore scripts and remove field maps",
+      "Disable all target business rules permanently",
+      "Test in sub-production with representative data and review transform history before rollout"
+    ],
+    "correctIndex": 3,
+    "explanation": "Validating with realistic datasets and run logs helps catch mapping regressions and performance issues before production impact.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/data-foundations/vancouver/integrationhub-etl/task/test-transforms.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 15,
+    "prompt": "When defining a data source for file-based imports, what does the data source record primarily control?",
+    "choices": [
+      "How ServiceNow locates and interprets the inbound file for loading",
+      "How dashboard widgets display imported metrics",
+      "How SLAs are calculated for imported records",
+      "How update sets capture source rows"
+    ],
+    "correctIndex": 0,
+    "explanation": "The data source configuration specifies file type, retrieval method, and parsing properties used by import processing.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/servicenow-platform/vancouver/platform-administration/concept/c_DataSources.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 16,
+    "prompt": "Which statement best describes a JDBC data source in ServiceNow data ingestion scenarios?",
+    "choices": [
+      "It can run only from client-side scripts",
+      "It enables importing data from external relational databases through configured connections",
+      "It bypasses import sets and writes directly to task tables",
+      "It is used only for importing XML attachments"
+    ],
+    "correctIndex": 1,
+    "explanation": "JDBC data sources connect to supported external databases and feed import set processing in controlled ETL workflows.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/servicenow-platform/vancouver/platform-administration/task/t_CreateAJDBCDataSource.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 17,
+    "prompt": "Why should data source credentials and endpoints be managed carefully across environments?",
+    "choices": [
+      "Because credentials are copied into each imported target record",
+      "To ensure transform maps always run in global scope",
+      "To maintain secure access and avoid accidental imports from the wrong external system",
+      "Because data sources cannot be promoted via update sets"
+    ],
+    "correctIndex": 2,
+    "explanation": "Environment-specific endpoint and credential governance prevents data leakage, authentication failures, and incorrect ingestion.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/servicenow-platform/vancouver/platform-administration/concept/c_DataSources.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 18,
+    "prompt": "A scheduled import job succeeds but loads no rows. Which area should be checked first?",
+    "choices": [
+      "Knowledge category permissions",
+      "PA dashboard drilldowns",
+      "Service Portal theme settings",
+      "Data source accessibility and file/query retrieval configuration"
+    ],
+    "correctIndex": 3,
+    "explanation": "No-row outcomes commonly originate from data retrieval issues such as missing file access, empty source query results, or bad parsing settings.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/servicenow-platform/vancouver/platform-administration/task/t_TroubleshootImportSets.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 19,
+    "prompt": "What is the main reason to separate data source configuration from transform map logic?",
+    "choices": [
+      "It isolates ingestion connection concerns from downstream mapping and normalization rules",
+      "It disables coalesce requirements for target matching",
+      "It ensures all imports run only in manual mode",
+      "It prevents import set history from being retained"
+    ],
+    "correctIndex": 0,
+    "explanation": "Decoupling source retrieval from transformation improves maintainability and allows source changes without rewriting mapping behavior.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/data-foundations/vancouver/integrationhub-etl/concept/data-pipelines.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 20,
+    "prompt": "Why should imported infrastructure records be mapped to the most appropriate CMDB class rather than a generic table?",
+    "choices": [
+      "Class selection affects only dashboard colors",
+      "Class-specific attributes and lifecycle behavior improve data usefulness and governance",
+      "Specific classes prevent relationship creation",
+      "Generic classes are required for all Discovery updates"
+    ],
+    "correctIndex": 1,
+    "explanation": "Using the correct CI class enables accurate attributes, identification behavior, and operational processes tied to that asset type.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/common-service-data-model/vancouver/csdm/concept/c_CMDBClasses.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 21,
+    "prompt": "A pipeline imports server records but keeps creating duplicates. Which CMDB concept should be evaluated first?",
+    "choices": [
+      "Catalog item variable sets",
+      "Widget drilldowns",
+      "Identification and reconciliation rules for the target CI class",
+      "Knowledge base ownership"
+    ],
+    "correctIndex": 2,
+    "explanation": "CMDB identification logic determines whether incoming data matches an existing CI or creates a new one.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/configuration-management/vancouver/cmdb/concept/c_IdentificationAndReconciliation.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 22,
+    "prompt": "What is the primary purpose of CI class hierarchy inheritance in CMDB modeling?",
+    "choices": [
+      "To disable class extensions for custom applications",
+      "To enforce one-to-one mapping with incident categories",
+      "To prevent all imports into base classes",
+      "To share common attributes while allowing specialized subclasses for specific CI types"
+    ],
+    "correctIndex": 3,
+    "explanation": "Inheritance reduces redundancy by keeping shared fields in parent classes while child classes capture type-specific details.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/configuration-management/vancouver/cmdb/concept/cmdb-class-hierarchy.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 23,
+    "prompt": "Why is relationship data as important as CI attribute data when loading CMDB records?",
+    "choices": [
+      "Relationships provide dependency context needed for impact analysis and operational decision-making",
+      "Relationships are optional for service mapping and impact analysis",
+      "Attributes alone are sufficient for outage impact determination",
+      "Relationships are used only by reports, not operations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Service impact, change risk, and root-cause analysis rely on accurate CI dependencies, not just isolated attributes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/configuration-management/vancouver/cmdb/concept/c_CIRelationships.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 24,
+    "prompt": "When expanding a data foundation to new CMDB domains, what is the recommended first step?",
+    "choices": [
+      "Disable reconciliation until all classes are populated",
+      "Define class model, required identifiers, and governance standards before bulk loading data",
+      "Load all records into cmdb_ci and avoid subclassing",
+      "Start with bulk inserts and classify records later"
+    ],
+    "correctIndex": 1,
+    "explanation": "A defined model and governance baseline prevents large-scale rework and improves long-term CMDB quality.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/common-service-data-model/vancouver/csdm/concept/csdm-foundation-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 25,
+    "prompt": "In Identification and Reconciliation (I&R), what is the primary role of an identification rule?",
+    "choices": [
+      "To archive stale CIs after a discovery schedule finishes",
+      "To decide which data source can overwrite a CI attribute",
+      "To uniquely match incoming data to an existing CI or create a new CI",
+      "To determine if incoming values violate dictionary constraints"
+    ],
+    "correctIndex": 2,
+    "explanation": "Identification rules define the criteria I&R uses to determine whether incoming data maps to an existing CI or requires creating a new CI.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_IdentificationAndReconciliationEngine.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 26,
+    "prompt": "What happens when multiple identification entries are configured for a CI class in I&R?",
+    "choices": [
+      "The platform randomly selects one entry at runtime",
+      "All entries must match simultaneously before update",
+      "Only the most recently edited entry is considered",
+      "They are evaluated in sequence until a match is found"
+    ],
+    "correctIndex": 3,
+    "explanation": "I&R evaluates identification entries in order and stops when it can confidently identify a CI.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/task/t_CreateIdentificationRules.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 27,
+    "prompt": "Which statement best describes reconciliation rules in CMDB?",
+    "choices": [
+      "They govern which source is allowed to write specific attributes after identification",
+      "They generate discovery patterns automatically",
+      "They prevent all updates from integration sources",
+      "They are only applied to non-CMDB tables"
+    ],
+    "correctIndex": 0,
+    "explanation": "Reconciliation rules control attribute-level write authority by source once the CI has been identified.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/task/t_CreateReconciliationRules.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 28,
+    "prompt": "Why should source precedence be defined for key CI attributes such as serial number and model?",
+    "choices": [
+      "To force all integrations to update through import sets only",
+      "To ensure trusted sources consistently win attribute conflicts",
+      "To avoid running the identification engine",
+      "To reduce duplicate scheduled jobs"
+    ],
+    "correctIndex": 1,
+    "explanation": "Source precedence in reconciliation prevents low-trust data from overwriting critical CI attributes maintained by authoritative systems.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_ReconciliationRules.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 29,
+    "prompt": "A CI update was identified correctly but skipped for one attribute. What is the most likely reason?",
+    "choices": [
+      "The table has no ACL for admin users",
+      "The CI class is marked read-only in dictionary",
+      "A reconciliation rule blocked that source from updating the attribute",
+      "The discovery schedule was paused"
+    ],
+    "correctIndex": 2,
+    "explanation": "When identification succeeds but a field is not updated, reconciliation controls are the typical cause.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_ReconciliationRules.html",
+      "https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_IdentificationAndReconciliationEngine.html"
+    ]
+  }
+]

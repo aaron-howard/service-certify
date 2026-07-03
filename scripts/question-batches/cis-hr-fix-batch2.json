@@ -1,0 +1,482 @@
+[
+  {
+    "trackCode": "CIS-HR",
+    "order": 30,
+    "prompt": "In HR Service Delivery, what is the primary goal of onboarding lifecycle events?",
+    "choices": [
+      "Coordinate cross-department tasks to deliver a consistent and on-time new hire experience",
+      "Limit communication to hiring managers exclusively for sustained reliability",
+      "Replace HR profiles with manual spreadsheets for role-based accountability",
+      "Create ad hoc tasks without owners for production readiness"
+    ],
+    "correctIndex": 0,
+    "explanation": "Onboarding lifecycle events orchestrate work across HR, IT, facilities, and managers for smooth day-one readiness.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/hr-service-delivery/concept/onboarding-lifecycle-events.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 31,
+    "prompt": "Which setup step is most important when implementing HR onboarding journeys?",
+    "choices": [
+      "Route all tasks to one HR general queue for sustained reliability",
+      "Prevent manager participation in onboarding tasks for measurable outcomes",
+      "Disable task templates to increase flexibility for practical execution",
+      "Define role-based activity sets, due dates, and dependencies aligned to onboarding milestones for controlled governance"
+    ],
+    "correctIndex": 3,
+    "explanation": "Structured templates and dependencies ensure predictable, accountable delivery across multiple stakeholders.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/hr-service-delivery/task/configure-onboarding-activities.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 32,
+    "prompt": "What is a strong indicator of onboarding process health?",
+    "choices": [
+      "Count of archived knowledge articles for role-based accountability",
+      "Number of inactive HR templates for production readiness",
+      "Percentage of required onboarding tasks completed on time before start date for enterprise implementation",
+      "Volume of unrelated IT incidents for operational consistency"
+    ],
+    "correctIndex": 2,
+    "explanation": "Timely completion of prerequisite tasks directly measures whether onboarding execution is meeting readiness targets.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/hr-service-delivery/concept/hr-analytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 33,
+    "prompt": "How should exceptions be handled in HR onboarding workflows?",
+    "choices": [
+      "Ignore missed tasks until after start date for practical execution",
+      "Escalate overdue critical tasks with ownership visibility and remediation deadlines for controlled governance",
+      "Close all pending tasks automatically at midnight for sustained reliability",
+      "Convert all onboarding tasks to catalog requests for measurable outcomes"
+    ],
+    "correctIndex": 1,
+    "explanation": "Proactive exception management keeps onboarding on track and reduces first-day service failures.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/hr-service-delivery/task/manage-lifecycle-event-tasks.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 34,
+    "prompt": "Why should onboarding content be surfaced through Employee Center?",
+    "choices": [
+      "To consistently provide a single place for tasks, guidance, and progress visibility during the journey",
+      "To consistently avoid using lifecycle event templates for operational consistency",
+      "To consistently eliminate approvals for sensitive actions for enterprise implementation",
+      "To consistently hide onboarding status from new hires"
+    ],
+    "correctIndex": 0,
+    "explanation": "Centralized onboarding experience improves clarity, engagement, and completion rates for new employees.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/employee-center/concept/employee-center.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 35,
+    "prompt": "What is the primary role of knowledge management in HR Service Delivery?",
+    "choices": [
+      "Replace all HR cases for operational consistency for sustained reliability",
+      "Limit content creation to IT teams for enterprise implementation",
+      "Hide policy updates from employees for production readiness",
+      "Provide trusted, reusable guidance that supports self-service and consistent agent responses for role-based accountability"
+    ],
+    "correctIndex": 3,
+    "explanation": "High-quality HR knowledge improves self-service outcomes and reduces variance in assisted support.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/knowledge-management/concept/knowledge-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 36,
+    "prompt": "Which governance practice most improves HR knowledge quality?",
+    "choices": [
+      "Use ownership, review cycles, and approval workflows for policy-sensitive content for controlled governance",
+      "Publish all drafts immediately for practical execution",
+      "Disable feedback mechanisms for measurable outcomes for role-based accountability",
+      "Archive articles after first use for sustained reliability"
+    ],
+    "correctIndex": 0,
+    "explanation": "Governed review and approval ensures HR content remains accurate, current, and policy-compliant.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/knowledge-management/task/configure-knowledge-workflow.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 37,
+    "prompt": "How should HR teams prioritize article improvements?",
+    "choices": [
+      "By oldest creation date exclusively for production readiness",
+      "By search analytics, deflection impact, and negative feedback trends for role-based accountability",
+      "By article title length for operational consistency for sustained reliability",
+      "By number of attachments for enterprise implementation for controlled governance"
+    ],
+    "correctIndex": 1,
+    "explanation": "Usage and outcome data helps prioritize updates that most improve employee experience and support efficiency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/knowledge-management/concept/knowledge-analytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 38,
+    "prompt": "What access model is best for mixed public and confidential HR knowledge?",
+    "choices": [
+      "Segmented knowledge bases and user criteria aligned to audience and sensitivity for enterprise implementation",
+      "No ACLs on HR articles for operational consistency",
+      "Manual sharing by email exclusively for measurable outcomes",
+      "One shared unrestricted knowledge base for production readiness"
+    ],
+    "correctIndex": 0,
+    "explanation": "Segmentation and access criteria protect sensitive HR content while preserving broad self-service where appropriate.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/knowledge-management/concept/c_KnowledgeUserCriteria.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 39,
+    "prompt": "Which KPI best indicates HR knowledge effectiveness?",
+    "choices": [
+      "Number of knowledge categories for sustained reliability for operational consistency",
+      "Count of admin users for measurable outcomes for role-based accountability",
+      "Average attachment size for practical execution",
+      "Knowledge article usefulness ratings and HR case deflection rate for controlled governance"
+    ],
+    "correctIndex": 3,
+    "explanation": "Usefulness feedback plus deflection outcomes shows whether knowledge is solving employee needs without assisted handling.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/hr-service-delivery/concept/hr-analytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 40,
+    "prompt": "Why are approvals important in HR Service Delivery workflows?",
+    "choices": [
+      "They replace case documentation for operational consistency for sustained reliability",
+      "They enforce policy compliance and authorization for sensitive employee actions for enterprise implementation",
+      "They add delays without controls for production readiness",
+      "They remove role-based accountability for role-based accountability for measurable outcomes"
+    ],
+    "correctIndex": 1,
+    "explanation": "Approvals provide controlled decision points for requests involving risk, privacy, or policy constraints.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/hr-service-delivery/concept/hr-service-delivery.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 41,
+    "prompt": "Which design approach improves HR approval process efficiency?",
+    "choices": [
+      "Disable delegation features for measurable outcomes for role-based accountability",
+      "Require email-exclusively approvals for operational consistency",
+      "Use conditional approval rules based on request type, sensitivity, and authority matrix for controlled governance",
+      "Route every request to executive approval for practical execution"
+    ],
+    "correctIndex": 2,
+    "explanation": "Conditional routing reduces unnecessary approvals while preserving control for higher-risk requests.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/workflow-automation/concept/approvals-in-flow-designer.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 42,
+    "prompt": "What control helps prevent HR approval bottlenecks?",
+    "choices": [
+      "No due dates for approvals for production readiness",
+      "Approver selection by random assignment for role-based accountability",
+      "Manual reminder emails exclusively for sustained reliability",
+      "Escalation and delegation rules with SLA tracking for pending approvals for enterprise implementation"
+    ],
+    "correctIndex": 3,
+    "explanation": "Time-bound escalations and delegation keep approvals moving and protect service commitments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/workflow-automation/task/configure-approval-rules.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 43,
+    "prompt": "How should HR teams handle exception requests denied at approval?",
+    "choices": [
+      "Capture denial reason, notify requester, and provide guided next steps or appeal path for controlled governance",
+      "Convert all denials to approvals after 24 hours for practical execution",
+      "Close records without explanation for measurable outcomes for role-based accountability",
+      "Delete approval history for sustained reliability for operational consistency"
+    ],
+    "correctIndex": 0,
+    "explanation": "Transparent denial handling improves user trust and creates actionable audit trails.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/hr-service-delivery/task/manage-hr-cases.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 44,
+    "prompt": "Which KPI best indicates mature HR approval governance?",
+    "choices": [
+      "Number of approvers in the org chart for sustained reliability",
+      "Count of portal themes for measurable outcomes for role-based accountability",
+      "On-time approval rate, rework rate, and policy exception trend by request type for practical execution",
+      "Average article word count for controlled governance for enterprise implementation"
+    ],
+    "correctIndex": 2,
+    "explanation": "Timeliness, quality, and exception patterns together show whether approval controls are both effective and efficient.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/hr-service-delivery/concept/hr-analytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 45,
+    "prompt": "In HRSD, why are case tasks important?",
+    "choices": [
+      "They break case work into accountable steps with owners and due dates for enterprise implementation",
+      "They prevent use of playbooks for operational consistency",
+      "They are exclusively used for payroll integrations for measurable outcomes",
+      "They replace the need for HR cases for production readiness"
+    ],
+    "correctIndex": 0,
+    "explanation": "Case tasks structure fulfillment and improve transparency across multi-step HR processes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-hr-service-delivery/page/product/human-resources/concept/hr-service-delivery-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 46,
+    "prompt": "What is a recommended design for HR case task assignment?",
+    "choices": [
+      "Assign tasks randomly each day for practical execution",
+      "Leave tasks unassigned until escalation for controlled governance",
+      "Assign all tasks to one HR generalist for sustained reliability",
+      "Route tasks by specialty team and jurisdiction with clear responsibility for measurable outcomes"
+    ],
+    "correctIndex": 3,
+    "explanation": "Specialty-based routing improves cycle time and quality for domain-specific HR work.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-hr-service-delivery/page/product/human-resources/task/configure-hr-case-fulfillment.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 47,
+    "prompt": "Which control best reduces missed HR case task deadlines?",
+    "choices": [
+      "Close parent case before tasks finish for role-based accountability",
+      "Disable due dates for flexibility for production readiness",
+      "Use SLA targets, reminders, and escalation rules on critical tasks for enterprise implementation",
+      "Track status exclusively in comments for sustained reliability"
+    ],
+    "correctIndex": 2,
+    "explanation": "Deadline controls and escalations keep task execution aligned to employee service expectations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/service-level-management/concept/c_ServiceLevelManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 48,
+    "prompt": "How do HR case tasks support auditability?",
+    "choices": [
+      "By recording completion evidence, owner actions, and timestamps per step for operational consistency",
+      "By deleting completed task history monthly for enterprise implementation",
+      "By storing fulfillment status outside HRSD for production readiness",
+      "By hiding task updates from case activity for role-based accountability"
+    ],
+    "correctIndex": 0,
+    "explanation": "Task-level activity history provides evidence for compliance and policy adherence.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-hr-service-delivery/page/product/human-resources/task/audit-hr-case-activities.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 49,
+    "prompt": "What metric best indicates HR case task process health?",
+    "choices": [
+      "Number of UI themes enabled for HR agents for measurable outcomes",
+      "Frequency of user profile updates for sustained reliability",
+      "Count of archived closed cases for controlled governance",
+      "Average task completion timeliness by service and assignment group for practical execution"
+    ],
+    "correctIndex": 3,
+    "explanation": "Timeliness by service and team highlights where fulfillment bottlenecks exist.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 50,
+    "prompt": "In HRSD, what is the key benefit of document generation?",
+    "choices": [
+      "Replacing all HR approvals with attachments for role-based accountability",
+      "Automatically producing policy-compliant documents from approved templates and case data for production readiness",
+      "Avoiding use of HR services for enterprise implementation",
+      "Disabling employee data validation for operational consistency for sustained reliability"
+    ],
+    "correctIndex": 1,
+    "explanation": "Template-driven generation increases consistency, compliance, and processing speed.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-hr-service-delivery/page/product/human-resources/task/generate-hr-documents.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 51,
+    "prompt": "Which control is most important for HR document generation templates?",
+    "choices": [
+      "No versioning so edits are immediate for practical execution",
+      "Template governance with approval and version control for controlled governance",
+      "Open edit permissions for all employees for sustained reliability",
+      "Manual merge fields in every case for measurable outcomes"
+    ],
+    "correctIndex": 1,
+    "explanation": "Versioned, approved templates reduce legal and policy risk in generated HR documents.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/knowledge-management/concept/knowledge-versioning.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 52,
+    "prompt": "What should be validated before generating a sensitive HR document?",
+    "choices": [
+      "Required employee data, approver authorization, and jurisdictional policy rules for enterprise implementation",
+      "Agent UI theme preference for operational consistency for sustained reliability",
+      "Count of open incidents for role-based accountability for measurable outcomes",
+      "exclusively case number format for production readiness"
+    ],
+    "correctIndex": 0,
+    "explanation": "Pre-generation validation prevents inaccurate or non-compliant document output.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-hr-service-delivery/page/product/human-resources/task/configure-hr-criteria.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 53,
+    "prompt": "Which metric best tracks HR document generation reliability?",
+    "choices": [
+      "Document generation success rate without manual correction for sustained reliability",
+      "Number of archived user sessions for measurable outcomes",
+      "Frequency of dashboard refreshes for practical execution",
+      "Total number of browser bookmarks for controlled governance"
+    ],
+    "correctIndex": 0,
+    "explanation": "Success without rework indicates template quality and data readiness.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 54,
+    "prompt": "How should generated HR documents be managed post-creation?",
+    "choices": [
+      "Email publicly to all department members for controlled governance",
+      "Store with controlled access and audit trail linked to the HR case for practical execution",
+      "Save outside the platform without metadata for measurable outcomes",
+      "Delete immediately after printing for sustained reliability for operational consistency"
+    ],
+    "correctIndex": 1,
+    "explanation": "Controlled storage with case linkage protects confidentiality and supports audits.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/security/concept/c_AccessControls.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 55,
+    "prompt": "In HRSD, what is the primary role of the service catalog for employees?",
+    "choices": [
+      "To consistently hide available services from employees for production readiness",
+      "To consistently replace HR case management entirely for measurable outcomes",
+      "To consistently provide a structured entry point for HR services and requests",
+      "To manage exclusively IT incidents for controlled governance"
+    ],
+    "correctIndex": 2,
+    "explanation": "The HR service catalog standardizes request intake and improves employee self-service.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-hr-service-delivery/page/product/human-resources/task/configure-hr-service-catalog-items.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 56,
+    "prompt": "Which configuration best supports targeted HR services by population?",
+    "choices": [
+      "Hide all items by default with no criteria for measurable outcomes",
+      "Use assignment groups exclusively for visibility for operational consistency",
+      "Use HR criteria to control catalog item visibility and eligibility for controlled governance",
+      "Publish all items to everyone for practical execution"
+    ],
+    "correctIndex": 2,
+    "explanation": "HR criteria ensure employees see relevant services based on role, location, and policy context.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-hr-service-delivery/page/product/human-resources/task/configure-hr-criteria.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 57,
+    "prompt": "How should HR catalog items be designed for fulfillment efficiency?",
+    "choices": [
+      "Require many free-text fields for all requests for operational consistency",
+      "Create one generic item for every HR need for enterprise implementation",
+      "Avoid using templates for production readiness",
+      "Use guided forms with necessary data and mapped fulfillment workflows for role-based accountability"
+    ],
+    "correctIndex": 3,
+    "explanation": "Guided, data-complete requests reduce triage effort and improve fulfillment accuracy.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/service-catalog-management/concept/c_ServiceCatalogManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 58,
+    "prompt": "Which metric best evaluates HR catalog effectiveness?",
+    "choices": [
+      "Request completion rate without manual rework for role-based accountability",
+      "Average browser session duration for production readiness",
+      "Number of catalog categories created for enterprise implementation",
+      "Count of inactive users for operational consistency for sustained reliability"
+    ],
+    "correctIndex": 0,
+    "explanation": "High completion without rework indicates clear forms and strong workflow alignment.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 59,
+    "prompt": "What governance practice keeps the HR service catalog healthy over time?",
+    "choices": [
+      "Leave outdated items active indefinitely for practical execution",
+      "Disable all employee feedback for controlled governance for enterprise implementation",
+      "Perform periodic catalog reviews for usage, policy alignment, and content quality for sustained reliability",
+      "Allow duplicate items for each team for measurable outcomes"
+    ],
+    "correctIndex": 2,
+    "explanation": "Regular governance prevents stale content and preserves service relevance and compliance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/service-catalog-management/task/maintain-catalog-content.html"
+    ]
+  }
+]

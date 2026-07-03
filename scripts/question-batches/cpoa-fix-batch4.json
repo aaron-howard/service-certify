@@ -1,0 +1,403 @@
+[
+  {
+    "trackCode": "CPOA",
+    "order": 75,
+    "prompt": "What is a key responsibility of a platform owner in instance governance?",
+    "choices": [
+      "Write every client script personally",
+      "Own only HR workflows",
+      "Define operating standards, guardrails, and decision rights for platform teams",
+      "Approve only hardware purchases"
+    ],
+    "correctIndex": 2,
+    "explanation": "Platform owners establish governance structures that keep implementation teams aligned with enterprise standards.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-administration/concept/platform-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 76,
+    "prompt": "Why should a platform owner maintain a release and upgrade readiness process?",
+    "choices": [
+      "To replace CAB approvals",
+      "To disable plugin dependencies",
+      "To avoid all testing activities",
+      "To assess impact, validate customizations, and reduce upgrade risk"
+    ],
+    "correctIndex": 3,
+    "explanation": "Upgrade readiness planning identifies risks early and validates that custom behavior remains compatible.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/instance-administration/upgrade-center.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 77,
+    "prompt": "Which metric most directly helps a platform owner evaluate request fulfillment bottlenecks?",
+    "choices": [
+      "Lead time and queue aging by assignment group",
+      "Total sys_user records",
+      "Number of update sets created",
+      "Count of active plugins"
+    ],
+    "correctIndex": 0,
+    "explanation": "Lead time and aging trends expose queue constraints and process friction in delivery workflows.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-analytics-and-reporting/performance-analytics/performance-analytics-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 78,
+    "prompt": "What is the platform owner’s objective when defining a development intake model?",
+    "choices": [
+      "To block all enhancement requests",
+      "To prioritize demand using consistent criteria and strategic alignment",
+      "To route all work to one developer",
+      "To remove stakeholder involvement"
+    ],
+    "correctIndex": 1,
+    "explanation": "A structured intake model helps evaluate demand by value, risk, and capacity rather than ad hoc urgency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/instance-administration/demand-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 79,
+    "prompt": "Why is role-based access governance important for platform ownership?",
+    "choices": [
+      "It replaces all auditing requirements",
+      "It disables delegated administration",
+      "It enforces least privilege and reduces operational/security risk",
+      "It eliminates the need for groups"
+    ],
+    "correctIndex": 2,
+    "explanation": "Least-privilege access design limits unnecessary entitlements and supports compliance controls.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-security/access-control/access-controls.html",
+      "https://www.servicenow.com/docs/r/platform-administration/user-administration/audit-user-roles.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 80,
+    "prompt": "What is a practical use of a platform standards playbook?",
+    "choices": [
+      "It replaces test environments",
+      "It defines naming, design, and lifecycle patterns for consistent implementation",
+      "It controls MID Server certificates",
+      "It stores encrypted attachment binaries"
+    ],
+    "correctIndex": 3,
+    "explanation": "Standards playbooks align teams on repeatable implementation patterns and quality expectations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 81,
+    "prompt": "How does a platform owner typically use Performance Analytics?",
+    "choices": [
+      "To monitor KPI trends and support data-driven platform decisions",
+      "To create ACL scripts automatically",
+      "To enforce update set conflicts",
+      "To replace all native reports"
+    ],
+    "correctIndex": 0,
+    "explanation": "Performance Analytics tracks trends and targets, helping owners make informed governance and investment decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-analytics-and-reporting/performance-analytics/performance-analytics-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 82,
+    "prompt": "What is the value of separating duties across admin, developer, and approver personas?",
+    "choices": [
+      "It guarantees zero incidents",
+      "It reduces risk by limiting concentration of privileged control",
+      "It removes need for logging",
+      "Fewer test environments are needed"
+    ],
+    "correctIndex": 1,
+    "explanation": "Segregation of duties improves control effectiveness and reduces fraud or accidental misuse risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-security/identity-governance/segregation-of-duties.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 83,
+    "prompt": "What should drive platform roadmap prioritization most strongly?",
+    "choices": [
+      "Number of open list filters",
+      "Color scheme updates",
+      "Business value, risk reduction, and strategic outcomes",
+      "Personal preference of one team"
+    ],
+    "correctIndex": 2,
+    "explanation": "Roadmaps should align with measurable business outcomes and risk posture, not ad hoc requests alone.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 84,
+    "prompt": "Why is environment strategy (dev/test/prod) important to platform ownership?",
+    "choices": [
+      "It supports controlled promotion, testing, and release reliability",
+      "It removes need for update sets",
+      "It allows direct prod-only development",
+      "It prevents all defects from occurring"
+    ],
+    "correctIndex": 3,
+    "explanation": "Clear environment purpose and promotion flow reduce release risk and improve change quality.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/instance-administration/instance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 85,
+    "prompt": "What is the primary reason to establish a plugin review process?",
+    "choices": [
+      "To assess feature overlap, dependencies, and operational impact before activation",
+      "To avoid licensing conversations",
+      "To disable all new functionality",
+      "To prevent incident creation"
+    ],
+    "correctIndex": 0,
+    "explanation": "A review process avoids unmanaged complexity by validating plugin value, dependencies, and support requirements.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/instance-administration/plugin-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 86,
+    "prompt": "What does a platform owner gain from a formal architecture review board?",
+    "choices": [
+      "Unlimited script runtime",
+      "Consistent design decisions across teams and solutions",
+      "Automatic role assignment",
+      "A replacement for change management"
+    ],
+    "correctIndex": 1,
+    "explanation": "Architecture reviews create consistent technical direction and reduce divergent solution patterns.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 87,
+    "prompt": "Which practice best supports platform resiliency and continuity?",
+    "choices": [
+      "Remove health dashboards",
+      "Use only manual approvals",
+      "Define backup, recovery, and operational response procedures",
+      "Disable all event processing"
+    ],
+    "correctIndex": 2,
+    "explanation": "Documented resiliency procedures and response ownership improve continuity during incidents or outages.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/instance-administration/high-availability-and-disaster-recovery.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 88,
+    "prompt": "How should a platform owner treat technical debt in customizations?",
+    "choices": [
+      "Delete all custom apps immediately",
+      "Track it visibly and prioritize remediation alongside new demand",
+      "Move it to production comments only",
+      "Ignore it until upgrades fail"
+    ],
+    "correctIndex": 3,
+    "explanation": "Technical debt needs intentional backlog management to avoid compounding maintenance and upgrade risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/instance-administration/technical-debt-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 89,
+    "prompt": "What is the main benefit of defining service ownership metadata for platform capabilities?",
+    "choices": [
+      "It clarifies accountability for support, decision-making, and lifecycle management",
+      "It replaces assignment groups",
+      "It removes ACL requirements",
+      "It forces all work into one queue"
+    ],
+    "correctIndex": 0,
+    "explanation": "Ownership metadata makes escalation and governance decisions clear across operating teams.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 90,
+    "prompt": "What should platform owners emphasize in stakeholder communication?",
+    "choices": [
+      "Only release dates",
+      "Outcome-focused reporting on value, risk, and progress",
+      "Only raw sys_id values",
+      "Only outage details"
+    ],
+    "correctIndex": 1,
+    "explanation": "Outcome-oriented communication helps stakeholders understand impact beyond technical activity metrics.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 91,
+    "prompt": "What is a primary governance reason to maintain naming conventions across artifacts?",
+    "choices": [
+      "They prevent all update conflicts",
+      "They encrypt table records",
+      "They improve discoverability, supportability, and operational consistency",
+      "They replace dictionary entries"
+    ],
+    "correctIndex": 2,
+    "explanation": "Consistent naming reduces confusion and improves troubleshooting and lifecycle management.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-standards.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 92,
+    "prompt": "Why should a platform owner monitor instance health indicators regularly?",
+    "choices": [
+      "To identify performance or stability trends before they become major incidents",
+      "To disable all background jobs",
+      "To remove audit tables",
+      "To reduce the number of users"
+    ],
+    "correctIndex": 3,
+    "explanation": "Routine health monitoring enables proactive remediation and better service reliability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/instance-administration/instance-health.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 93,
+    "prompt": "Which approach best supports sustainable platform scaling?",
+    "choices": [
+      "Reusable patterns, shared components, and governance automation",
+      "Single-developer ownership of all apps",
+      "Disabling standards reviews",
+      "One-off customizations for every team"
+    ],
+    "correctIndex": 0,
+    "explanation": "Reusable components and automated governance reduce duplication and improve long-term scalability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 94,
+    "prompt": "What is the purpose of periodic access recertification?",
+    "choices": [
+      "To remove historical incidents",
+      "To confirm users still need privileged roles and remove excess access",
+      "To rotate UI themes",
+      "To recalculate list layout defaults"
+    ],
+    "correctIndex": 1,
+    "explanation": "Recertification validates that elevated access remains justified and supports least-privilege compliance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-security/identity-governance/access-review.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 95,
+    "prompt": "What does effective demand governance reduce most directly?",
+    "choices": [
+      "Need for role models",
+      "Need for all KPIs",
+      "Unplanned work and low-value backlog growth",
+      "Importance of testing"
+    ],
+    "correctIndex": 2,
+    "explanation": "Demand governance filters and prioritizes requests so teams focus on strategic and high-value work.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/instance-administration/demand-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 96,
+    "prompt": "What is a core reason to document platform decision records?",
+    "choices": [
+      "To preserve rationale for architectural and governance choices over time",
+      "To bypass CAB approvals",
+      "To hide technical debt",
+      "To replace source control commits"
+    ],
+    "correctIndex": 3,
+    "explanation": "Decision records make future maintenance and governance reviews more transparent and defensible.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 97,
+    "prompt": "Which indicator helps evaluate whether platform operations are improving over time?",
+    "choices": [
+      "Trend-based KPIs for reliability, throughput, and quality",
+      "Amount of homepage text",
+      "Count of inactive users only",
+      "Number of favorite records"
+    ],
+    "correctIndex": 0,
+    "explanation": "Trend KPIs provide time-based evidence of operational improvement or degradation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-analytics-and-reporting/performance-analytics/performance-analytics-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 98,
+    "prompt": "What outcome is expected from a mature platform ownership model?",
+    "choices": [
+      "No change approvals required",
+      "Predictable delivery with controlled risk and measurable business value",
+      "All development moved to global scope",
+      "Unlimited customization without standards"
+    ],
+    "correctIndex": 1,
+    "explanation": "Mature ownership balances speed, quality, and risk with governance and value transparency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 99,
+    "prompt": "Why should platform owners encourage reusable integration patterns?",
+    "choices": [
+      "They eliminate security requirements",
+      "They prevent data ownership decisions",
+      "They lower maintenance cost and improve consistency across teams",
+      "They remove all need for API documentation"
+    ],
+    "correctIndex": 2,
+    "explanation": "Reusable patterns improve reliability, reduce duplication, and simplify future enhancement work.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/integration-patterns/integration-patterns-overview.html"
+    ]
+  }
+]

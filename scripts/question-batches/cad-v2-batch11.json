@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CAD",
+		"order": 50,
+		"prompt": "An ACL has a condition and a script. How are they combined to grant access?",
+		"choices": [
+			"Both the condition and the script must evaluate to true (in addition to any required role)",
+			"Only one of them needs to be true",
+			"The script is ignored if a condition exists",
+			"They are averaged into a numeric score"
+		],
+		"correctIndex": 0,
+		"explanation": "An ACL grants access only when the role, condition, and script requirements are all satisfied.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/access-control-rules.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 51,
+		"prompt": "How does Application Scope help protect artifacts during collaborative development with Delegated Development?",
+		"choices": [
+			"Admins can grant specific developers rights to edit only certain file types within a scoped application",
+			"It disables all editing for everyone",
+			"It merges all applications into global scope",
+			"It removes the need for source control"
+		],
+		"correctIndex": 0,
+		"explanation": "Delegated Development, used with scoped apps, lets admins grant developers permission to work on specific application file types while protecting the rest.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/delegated-development-and-deployment/c_DelegatedDevelopment.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 52,
+		"prompt": "Which security artifacts can restrict access to an entire application module? (Choose two.)",
+		"choices": [
+			"Roles required on the module",
+			"Roles required on the application menu",
+			"A transform map on the module",
+			"An import set row for the module"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"questionType": "multi",
+		"explanation": "Both the application menu and its modules can require roles; users without those roles cannot see or open the module.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/application-menus-modules.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 53,
+		"prompt": "When a scoped application needs to call an API in another scope, what must be configured?",
+		"choices": [
+			"Cross-scope access privileges authorizing the specific runtime access",
+			"Nothing; all scopes can call each other freely",
+			"A new instance login page",
+			"A homepage gauge widget"
+		],
+		"correctIndex": 0,
+		"explanation": "Cross-scope access records must authorize a scoped app to access resources in another scope, enforcing the scope protection model.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/c_RuntimeAccessToAppTables.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 54,
+		"prompt": "Which automation tool provides a low-code, visual way to build multi-step process logic triggered by records or schedules?",
+		"choices": [
+			"Flow Designer",
+			"Form Designer for layouts",
+			"Access Control rules for records",
+			"Dictionary Entries for columns"
+		],
+		"correctIndex": 0,
+		"explanation": "Flow Designer offers a low-code interface to build flows with triggers, actions, and subflows for process automation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/hyperautomation-low-code/flow-designer.html"
+		]
+	}
+]

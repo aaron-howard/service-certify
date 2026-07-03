@@ -1,0 +1,497 @@
+[
+  {
+    "trackCode": "CPOE",
+    "order": 60,
+    "prompt": "What is the main purpose of CMDB certification governance in enterprise platform operations?",
+    "choices": [
+      "Maximize CI record count regardless data accuracy with clear operational impact",
+      "Allow unrestricted CI updates by any support role during controlled change windows",
+      "Treat CMDB health as separate from operational risk for cross-team production support",
+      "Ensure CI data quality, ownership, and policy compliance for trusted service decisions for practical implementation decisions"
+    ],
+    "correctIndex": 3,
+    "explanation": "Certification governance validates that CMDB data is reliable enough for incident, change, and risk workflows.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/cmdb-landing.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/cmdb-health-dashboard.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 61,
+    "prompt": "Which model best supports sustainable CMDB certification across many business services?",
+    "choices": [
+      "Disable ownership fields to simplify CI administration in large shared environments",
+      "Depend on manual audits after major incidents only across governed implementation flows",
+      "Centralize all CI validation in a one-time annual event with clear operational impact",
+      "Assign service-level CI ownership and automate recurring certification tasks with escalation for stable long-term administration"
+    ],
+    "correctIndex": 3,
+    "explanation": "Distributed ownership with automation scales certification while maintaining accountability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/c_ServiceMapping.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/cmdb-landing.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 62,
+    "prompt": "How should certification governance address chronic CMDB data quality failures?",
+    "choices": [
+      "Accept inaccuracies if discovery jobs are successful under documented platform behavior",
+      "Defer all remediation until platform reimplementation for stable long-term administration",
+      "Suppress failing CI classes from certification reports for cross-team production support",
+      "Use targeted remediation plans tied to CI class policy violations and ownership KPIs in enterprise release operations"
+    ],
+    "correctIndex": 3,
+    "explanation": "Persistent quality issues require class-specific controls, ownership accountability, and measurable remediation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/cmdb-health-dashboard.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 63,
+    "prompt": "Which metric set is most meaningful for CMDB certification governance?",
+    "choices": [
+      "Number of dashboard widgets on CMDB homepage for cross-team production support",
+      "Count of users with cmdb_admin role across governed implementation flows",
+      "Total number of CI records created weekly with clear operational impact",
+      "Completeness, correctness, and compliance trend scores by CI class and service during controlled change windows"
+    ],
+    "correctIndex": 3,
+    "explanation": "Certification quality depends on trusted data dimensions and their trend behavior over time.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/cmdb-health-dashboard.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 64,
+    "prompt": "What governance step most improves confidence in certified CMDB data for downstream automation?",
+    "choices": [
+      "Ignore certification outcomes in incident and change processes under documented platform behavior",
+      "Allow non-certified CI classes to drive major incident automation for stable long-term administration",
+      "Use certified status only for documentation purposes in large shared environments",
+      "Link certification status to change risk models and service impact workflows across governed implementation flows"
+    ],
+    "correctIndex": 3,
+    "explanation": "Certification has strategic value when it influences operational automation and risk-aware decisioning.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/cmdb-landing.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 65,
+    "prompt": "In advanced domain separation design, what is the main reason to establish a clear domain hierarchy early?",
+    "choices": [
+      "To bypass data policy controls for cross-team production support",
+      "To force all tenants into a single shared domain in enterprise release operations",
+      "To eliminate the need for ACL design under documented platform behavior",
+      "To control inheritance, visibility boundaries, and administrative delegation consistently during controlled change windows"
+    ],
+    "correctIndex": 3,
+    "explanation": "A well-defined hierarchy prevents governance drift and supports predictable access behavior at scale.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/company-and-domain-separation/concept/c_DomainSeparation.html",
+      "https://www.servicenow.com/docs/r/platform-security/c_DomainSeparation.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 66,
+    "prompt": "Which pattern is most appropriate when some reference data must be reused across many isolated domains?",
+    "choices": [
+      "Define controlled shared data strategy and explicit control for cross-domain visibility with clear operational impact",
+      "Disable domain separation for reference tables during controlled change windows",
+      "Duplicate all records manually in every domain forever in large shared environments",
+      "Store shared reference data in spreadsheets outside the platform across governed implementation flows"
+    ],
+    "correctIndex": 0,
+    "explanation": "Advanced domain models typically require deliberate shared-data patterns rather than unmanaged duplication.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/company-and-domain-separation/concept/c_DomainSeparation.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/table-administration/concept/c_TableAdministration.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 67,
+    "prompt": "What is the key risk when domain-separation rules are introduced without enterprise-level test coverage?",
+    "choices": [
+      "Forced rollback of family upgrades in large shared environments",
+      "Unexpected cross-domain access gaps or overexposure that appears only in specific tenant scenarios in enterprise release operations",
+      "Permanent loss of all dashboard metadata under documented platform behavior",
+      "Automatic deactivation of all update set records for stable long-term administration"
+    ],
+    "correctIndex": 1,
+    "explanation": "Domain behavior can vary by role and hierarchy path, so broad scenario-based testing is essential before rollout.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-security/c_DomainSeparation.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 68,
+    "prompt": "How should an enterprise handle cross-domain reporting needs in a domain-separated architecture?",
+    "choices": [
+      "Grant unrestricted global reporting roles to all analysts with clear operational impact",
+      "Disable domain constraints for reporting tables during controlled change windows",
+      "Export all data nightly to unmanaged local files for cross-team production support",
+      "Design approved reporting pathways with explicit security controls and data ownership accountability in enterprise release operations"
+    ],
+    "correctIndex": 3,
+    "explanation": "Cross-domain analytics must be architected intentionally to preserve tenant boundaries and auditability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/company-and-domain-separation/concept/c_DomainSeparation.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 69,
+    "prompt": "Which governance mechanism best sustains advanced domain separation after initial implementation?",
+    "choices": [
+      "Delegating all domain decisions to individual developers in large shared environments",
+      "A recurring architecture review for domain model changes, access exceptions, and shared-data decisions across governed implementation flows",
+      "A one-time design workshop with no follow-up with clear operational impact",
+      "Open domain changes directly in production without approval for stable long-term administration"
+    ],
+    "correctIndex": 1,
+    "explanation": "Ongoing architecture governance prevents uncontrolled divergence and keeps multi-tenant boundaries intact.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-security/c_DomainSeparation.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 70,
+    "prompt": "In enterprise architecture for the Now Platform, what is the main value of a capability map?",
+    "choices": [
+      "It by default resolves all integration failures under documented platform behavior",
+      "It defines end-user training calendars only for stable long-term administration",
+      "It connects business capabilities to platform components, ownership, and roadmap decisions for cross-team production support",
+      "It replaces the need for domain models in enterprise release operations"
+    ],
+    "correctIndex": 2,
+    "explanation": "Capability maps align platform investments with enterprise priorities and architectural accountability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/table-administration/concept/c_TableAdministration.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 71,
+    "prompt": "Which integration architecture choice best supports enterprise-scale maintainability?",
+    "choices": [
+      "Use standardized contracts and reusable IntegrationHub patterns instead of many bespoke point-to-point scripts for cross-team production support",
+      "Embed credentials in every script for speed across governed implementation flows",
+      "Create one-off integration logic per team without control with clear operational impact",
+      "Disable error handling to reduce flow complexity during controlled change windows"
+    ],
+    "correctIndex": 0,
+    "explanation": "Standardized integration architecture improves consistency, supportability, and change velocity at scale.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/integrationhub/concept/IntegrationHub.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/web-services/concept/c_RESTAPI.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 72,
+    "prompt": "From an enterprise architecture perspective, why should resiliency patterns be designed before major platform expansion?",
+    "choices": [
+      "To eliminate monitoring requirements under documented platform behavior",
+      "To permit ungoverned production customizations for stable long-term administration",
+      "To ensure failover, recovery, and operational continuity are built into growth plans in large shared environments",
+      "To avoid using sub-production platform instances across governed implementation flows"
+    ],
+    "correctIndex": 2,
+    "explanation": "Resiliency planning reduces outage risk when transaction load, integrations, and business criticality increase.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 73,
+    "prompt": "How should enterprise architects treat domain separation within a broader platform architecture strategy?",
+    "choices": [
+      "As a deliberate tenancy and control layer that must align with data, access, and operating model design",
+      "As a temporary feature enabled only during upgrades in enterprise release operations",
+      "As a replacement for role-based security controls under documented platform behavior",
+      "As an option unrelated to organizational structure during controlled change windows"
+    ],
+    "correctIndex": 0,
+    "explanation": "Domain separation affects core architecture decisions and must be planned with security and operational governance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/company-and-domain-separation/concept/c_DomainSeparation.html",
+      "https://www.servicenow.com/docs/r/platform-security/c_DomainSeparation.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 74,
+    "prompt": "What governance body most helps sustain enterprise architecture quality across long-lived platform programs?",
+    "choices": [
+      "A policy that prohibits any architecture changes after go-live with clear operational impact",
+      "Only vendor-driven decisions with no internal ownership during controlled change windows",
+      "An architecture review process with standards, exceptions management, and periodic roadmap alignment in large shared environments",
+      "Ad hoc design decisions made per sprint without documentation across governed implementation flows"
+    ],
+    "correctIndex": 2,
+    "explanation": "Continuous architecture governance ensures standards remain practical while controlling exceptions and technical drift.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 75,
+    "prompt": "A platform owner wants to enforce least privilege across thousands of users. Which control should be reviewed first for over-entitlement risk?",
+    "choices": [
+      "UI policy conditions on forms in large shared environments",
+      "Personalized list layouts in enterprise release operations",
+      "Scheduled import sets under documented platform behavior",
+      "Role assignment model and inherited roles for stable long-term administration"
+    ],
+    "correctIndex": 3,
+    "explanation": "Role design and inheritance determine baseline access. Reviewing role grants first exposes broad privilege paths that violate least-privilege principles.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/users-and-roles/concept/roles.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 76,
+    "prompt": "What is the main reason to combine role-based controls with ACL rules in an enterprise security model?",
+    "choices": [
+      "ACLs provide record and field-level enforcement beyond broad role grants with clear operational impact",
+      "ACLs only affect portal branding during controlled change windows",
+      "ACLs are used only for integrations for cross-team production support",
+      "ACLs remove the need for groups and roles in enterprise release operations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Roles grant coarse capabilities, while ACLs enforce access at table, record, and field levels for stronger data protection.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/security/concept/c_AccessControlListRules.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 77,
+    "prompt": "Which governance action best reduces risk from stale privileged access?",
+    "choices": [
+      "Increase inactivity timeout for all admins in large shared environments",
+      "Move all custom apps to global scope across governed implementation flows",
+      "Disable update set records in non-production with clear operational impact",
+      "Run periodic access recertification for elevated roles for stable long-term administration"
+    ],
+    "correctIndex": 3,
+    "explanation": "Access recertification validates that privileged entitlements remain justified and removes obsolete access over time.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/security/task/t_PerformRoleAudits.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 78,
+    "prompt": "For sensitive HR and security tables, what ACL practice is most appropriate?",
+    "choices": [
+      "Use wildcard read ACLs for faster onboarding under documented platform behavior",
+      "Restrict both record and field access with explicit deny-by-default logic for practical implementation decisions",
+      "Allow script includes to bypass ACL evaluation for cross-team production support",
+      "Rely only on list view filters in enterprise release operations"
+    ],
+    "correctIndex": 1,
+    "explanation": "Sensitive data protection requires explicit table and field enforcement so unauthorized users cannot read or infer restricted values.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/security/task/t_CreateAnACLRule.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 79,
+    "prompt": "Why should security admins use elevated roles only when required?",
+    "choices": [
+      "Elevated roles grant temporary high-risk capabilities that should be minimized and monitored for cross-team production support",
+      "Elevated roles improve report performance across governed implementation flows",
+      "Elevated roles are the only way to assign groups with clear operational impact",
+      "Elevated roles are required to view dashboards during controlled change windows"
+    ],
+    "correctIndex": 0,
+    "explanation": "Elevated privileges widen access boundaries; limiting duration and use lowers exposure and supports accountability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/security/concept/c_ElevatedPrivileges.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 80,
+    "prompt": "What is the strongest enterprise rationale for enabling multifactor authentication for administrators?",
+    "choices": [
+      "It lowers account takeover risk for high-privilege users under documented platform behavior",
+      "It allows unrestricted API access for stable long-term administration",
+      "It replaces the need for passwords in large shared environments",
+      "It removes all ACL requirements across governed implementation flows"
+    ],
+    "correctIndex": 0,
+    "explanation": "MFA adds a second verification factor, reducing the probability that stolen credentials can compromise privileged accounts.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/integrate/authentication/concept/multi-factor-authentication.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 81,
+    "prompt": "A platform owner needs to prove who changed security-critical records. Which capability should be emphasized?",
+    "choices": [
+      "Homepage announcements for cross-team production support",
+      "Audit history and system logs with user attribution in enterprise release operations",
+      "Theme customization history under documented platform behavior",
+      "Client-side scripts on forms during controlled change windows"
+    ],
+    "correctIndex": 1,
+    "explanation": "Auditing and logs provide traceability of record changes and actor identity, which is critical for investigations and compliance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/security/concept/auditing.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 82,
+    "prompt": "What is a key security benefit of segregating admin duties across platform teams?",
+    "choices": [
+      "It enforces separation of duties and limits conflict of interest with clear operational impact",
+      "It ensures one administrator can complete all privileged tasks during controlled change windows",
+      "It reduces need for change management approvals in large shared environments",
+      "It disables role inheritance by default across governed implementation flows"
+    ],
+    "correctIndex": 0,
+    "explanation": "Segregation of duties limits concentration of power and helps prevent unauthorized or unreviewed high-impact actions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/security/concept/security-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 83,
+    "prompt": "When designing impersonation governance, what policy is most important?",
+    "choices": [
+      "Require logging and controlled access for impersonation use in large shared environments",
+      "Disable audit logs during impersonation in enterprise release operations",
+      "Use impersonation for all integration testing under documented platform behavior",
+      "Allow unrestricted impersonation for all itil users for stable long-term administration"
+    ],
+    "correctIndex": 0,
+    "explanation": "Impersonation can bypass normal user boundaries, so it must be limited and auditable to prevent misuse.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/users-and-roles/task/t_ImpersonateAUser.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 84,
+    "prompt": "Which approach best secures non-interactive integrations in enterprise environments?",
+    "choices": [
+      "Reuse a named admin account for all APIs with clear operational impact",
+      "Grant service accounts security_admin permanently during controlled change windows",
+      "Use dedicated service accounts with scoped roles and credential rotation for cross-team production support",
+      "Store passwords in scripts for reliability in enterprise release operations"
+    ],
+    "correctIndex": 2,
+    "explanation": "Dedicated service identities with least privilege and managed secrets reduce blast radius and improve operational control.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/integrate/authentication/concept/integration-user-accounts.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 85,
+    "prompt": "A security review finds unrestricted script include access from many scopes. What should the platform owner do first?",
+    "choices": [
+      "Delete all global business rules in large shared environments",
+      "Define and enforce application access settings for cross-scope calls across governed implementation flows",
+      "Convert all flows to subflows with clear operational impact",
+      "Disable scoped applications globally for stable long-term administration"
+    ],
+    "correctIndex": 1,
+    "explanation": "Cross-scope access rules control which apps can invoke resources, preventing broad and unintended code interaction.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-application-development/page/build/applications/concept/c_CrossScopePrivilege.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 86,
+    "prompt": "Why should high-risk ACL and role changes be deployed through governed release processes?",
+    "choices": [
+      "To apply peer review and rollback planning before impact under documented platform behavior",
+      "To avoid update set records entirely for stable long-term administration",
+      "To ensure only production admins can edit ACLs for cross-team production support",
+      "To eliminate the need for testing in enterprise release operations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Security configuration changes can break or expose access. Change governance adds review, testing, and rollback safeguards.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/change-management/concept/change-control-for-platform-admin.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 87,
+    "prompt": "Which login hardening control helps reduce automated credential attacks?",
+    "choices": [
+      "Disabling audit tables for cross-team production support",
+      "Enforcing account lockout and authentication protections across governed implementation flows",
+      "Allowing shared admin credentials with clear operational impact",
+      "Adding more homepage widgets during controlled change windows"
+    ],
+    "correctIndex": 1,
+    "explanation": "Lockout and authentication safeguards help slow brute-force attacks and protect identity entry points.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/integrate/authentication/concept/authentication-policies.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 88,
+    "prompt": "What is the best reason to centralize security event monitoring for the platform?",
+    "choices": [
+      "To remove the need for role design under documented platform behavior",
+      "To replace all platform alerts for stable long-term administration",
+      "To correlate suspicious activity across logs and speed incident response in large shared environments",
+      "To prevent ACL evaluation across governed implementation flows"
+    ],
+    "correctIndex": 2,
+    "explanation": "Central monitoring improves detection by correlating authentication, access, and configuration events in one workflow.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/security-operations/concept/security-event-monitoring.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 89,
+    "prompt": "A platform owner is formalizing privileged access onboarding. Which step is essential?",
+    "choices": [
+      "Require documented approval, business justification, and time-bound assignment for cross-team production support",
+      "Assign security_admin to all developers by default in enterprise release operations",
+      "Use personal accounts for integration troubleshooting under documented platform behavior",
+      "Grant admin rights on manager request only during controlled change windows"
+    ],
+    "correctIndex": 0,
+    "explanation": "Formal approval workflows enforce governance and ensure privileged access is justified, limited, and auditable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/users-and-roles/task/request-elevated-access.html"
+    ]
+  }
+]

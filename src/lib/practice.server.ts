@@ -6,6 +6,7 @@ export type PracticeQuestionRow = {
 	order: number;
 	prompt: string;
 	choices: string[];
+	questionType?: 'single' | 'multi';
 	explanation: string;
 };
 

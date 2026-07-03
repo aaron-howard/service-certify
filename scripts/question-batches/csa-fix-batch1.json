@@ -1,0 +1,483 @@
+[
+  {
+    "trackCode": "CSA",
+    "order": 0,
+    "prompt": "Which statement best describes how roles are typically used to grant capabilities in ServiceNow?",
+    "choices": [
+      "From an implementation standpoint, roles bundle permissions and are assigned to users or groups to grant access",
+      "In most deployments, roles apply only to Performance Analytics widgets in standard operations",
+      "Operationally, each user may hold only one role across the entire instance for consistent administration",
+      "In practice, roles are synonymous with CMDB CI classes in standard operations under normal policy constraints"
+    ],
+    "correctIndex": 0,
+    "explanation": "Roles aggregate permissions; administrators assign them to users or groups so members receive the associated capabilities.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/yokohama-platform-administration/page/administer/roles/concept/using-user-administration.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 1,
+    "prompt": "What do Access Control List (ACL) rules primarily control?",
+    "choices": [
+      "Typically, that color theme of the Next Experience UI in standard operations",
+      "From an implementation standpoint, who may read, write, create, or delete records or fields, subject to conditions",
+      "Operationally, scheduled job concurrency only in standard operations under normal policy constraints",
+      "In practice, whether a table uses auto-numbering for consistent administration for governed delivery"
+    ],
+    "correctIndex": 1,
+    "explanation": "ACL rules secure tables and fields for operations such as read and write, and may evaluate roles or scripts.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/yokohama/platform-security/access-control/exploring-access-control-list.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 2,
+    "prompt": "What is a primary purpose of an update set in a typical instance-to-instance migration workflow?",
+    "choices": [
+      "In this scenario, to encrypt all attachments through configured automation for consistent administration",
+      "Practically speaking, to replace the need for any testing in sub-production under normal policy constraints",
+      "From a governance perspective, to capture configuration changes so they can be reviewed and moved between instances",
+      "In platform terms, to delete orphaned CMDB relationships under normal policy constraints"
+    ],
+    "correctIndex": 2,
+    "explanation": "Update sets record customer configuration changes for promotion between instances with collision and preview workflows.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-application-development/page/build/system-update-sets/concept/system-update-sets.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 3,
+    "prompt": "On a list, what is the effect of applying a filter?",
+    "choices": [
+      "Typically, this approach changes which rows appear based on the filter conditions",
+      "Operationally, this approach exports the dictionary to XML",
+      "In practice, this approach renames the underlying table",
+      "From an implementation standpoint, this approach disables all business rules globally"
+    ],
+    "correctIndex": 0,
+    "explanation": "List filters constrain the query so users see only records that match the specified conditions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-user-interface/page/use/using-lists/task/t_CreatingFilters.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 4,
+    "prompt": "When troubleshooting inbound email processing, an administrator should first verify which area of configuration?",
+    "choices": [
+      "Typically, mID Server wake-on-LAN settings for laptops for consistent administration",
+      "Operationally, that PA data collector schedule exclusively under expected controls",
+      "In practice, email properties and inbound connectivity so the instance can retrieve and process messages",
+      "From an admin perspective, that system dictionary for the incident.number field in standard operations"
+    ],
+    "correctIndex": 2,
+    "explanation": "Inbound email depends on correctly configured email properties and related mail flow so messages reach the instance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/reference-pages/concept/c_EmailProperties.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 5,
+    "prompt": "When a user is added to a group that has roles assigned, what access does the user typically receive?",
+    "choices": [
+      "In this scenario, that user inherits all roles assigned to that group",
+      "In platform terms, roles must be assigned directly to the user; groups cannot carry roles",
+      "In most deployments, group membership grants CMDB write access but does not application roles",
+      "From a governance perspective, that user receives only the admin role regardless of group roles"
+    ],
+    "correctIndex": 0,
+    "explanation": "Users assigned to a group inherit the roles assigned to that group, which is a standard pattern for managing access at scale.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/user-administration/t_AddAUserToAGroup.html",
+      "https://www.servicenow.com/docs/r/platform-administration/user-administration/ua-creating-groups.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 6,
+    "prompt": "An administrator enables delegated role assignment for a team lead. Which constraint applies to what that user may assign?",
+    "choices": [
+      "In this scenario, they may assign any role in the instance without restriction",
+      "From an implementation standpoint, they may assign roles only to users outside their groups",
+      "In most deployments, delegated assignment is limited to the security_admin role exclusively",
+      "From a governance perspective, they may assign only roles that they already hold"
+    ],
+    "correctIndex": 3,
+    "explanation": "Delegated role assignment allows users to assign roles within groups, but only roles they already possess.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/user-administration/c_DelegateRoles.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 7,
+    "prompt": "What is the purpose of a time-limited role assignment?",
+    "choices": [
+      "Practically speaking, to grant a defined role only during a specified time period",
+      "From an admin perspective, to disable ACL evaluation during maintenance windows",
+      "Typically, to replace group membership with a single global role",
+      "In practice, to permanently elevate a user to admin after password reset"
+    ],
+    "correctIndex": 0,
+    "explanation": "Time-limited roles give users a defined role only for a defined period, supporting temporary elevated access.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/user-administration/time-limited-role-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 8,
+    "prompt": "Why would an administrator configure assignment group types on the Type field?",
+    "choices": [
+      "In most deployments, to map groups directly to CMDB relationship types for consistent administration",
+      "From a governance perspective, to encrypt group membership records at rest under normal policy constraints",
+      "In this scenario, to prevent users from belonging to more than one group for governed delivery",
+      "From an implementation standpoint, to define categories of groups that can filter assignment groups via reference qualifiers"
+    ],
+    "correctIndex": 3,
+    "explanation": "Group types categorize groups so assignment groups can be filtered by type using reference qualifiers.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/user-administration/c_ConfigGroupTypesForAssignGroups.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 9,
+    "prompt": "Where are changes to user role assignments tracked for auditing purposes?",
+    "choices": [
+      "Operationally, that Audit Roles [sys_audit_role] table",
+      "In most deployments, that Scheduled Jobs [sys_trigger] table only",
+      "From a governance perspective, that Update Set [sys_update_set] table exclusively",
+      "From an implementation standpoint, that Email [sys_email] table"
+    ],
+    "correctIndex": 0,
+    "explanation": "Changes to user roles are tracked in the Audit Roles table for audit and review.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/user-administration/audit-user-roles.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 10,
+    "prompt": "A user personalizes a list layout and column order for their own work. Where is that personalization typically stored?",
+    "choices": [
+      "Operationally, in the CMDB identification rules for consistent administration for governed delivery",
+      "From a governance perspective, in the update set currently in progress under expected controls",
+      "In most deployments, in the global system property table for all users for stable outcomes",
+      "From an implementation standpoint, as a user-specific list personalization rather than changing the base list for everyone"
+    ],
+    "correctIndex": 3,
+    "explanation": "List personalization lets individual users adjust columns and layout without altering the default list configuration for all users.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-user-interface/list-personalization.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 11,
+    "prompt": "What is the primary effect of applying a filter on a list?",
+    "choices": [
+      "Practically speaking, this approach exports the data dictionary to XML",
+      "Typically, this approach restricts which records appear based on the filter conditions",
+      "In platform terms, this approach disables all business rules on the table",
+      "From an admin perspective, this approach renames the underlying table for reporting"
+    ],
+    "correctIndex": 1,
+    "explanation": "List filters constrain the query so users see only records matching the specified conditions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-user-interface/exploring-lists.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 12,
+    "prompt": "An administrator wants users to sort and group list data interactively. Which list capability supports this?",
+    "choices": [
+      "In this scenario, list controls that let users sort, group, and adjust how data is presented",
+      "Practically speaking, discovery schedules on the MID Server in standard operations",
+      "In platform terms, subscription Management entitlements for consistent administration",
+      "From an admin perspective, transform maps on the import set table under normal policy constraints"
+    ],
+    "correctIndex": 0,
+    "explanation": "List controls provide interactive sorting, grouping, and presentation options on list views.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-user-interface/using-list-controls.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 13,
+    "prompt": "A saved filter is shared with a team. What does sharing a list filter typically allow?",
+    "choices": [
+      "Operationally, modification of table schema for all scoped applications",
+      "In most deployments, deletion of records that do not match the filter",
+      "From an implementation standpoint, other users to apply the same filter conditions on the list",
+      "In practice, automatic elevation to the admin role for consistent administration"
+    ],
+    "correctIndex": 2,
+    "explanation": "Shared filters let teams reuse the same query conditions on a list without each user rebuilding the filter.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-user-interface/exploring-lists.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 14,
+    "prompt": "When troubleshooting why a user cannot see expected records on a list, what should an administrator verify first?",
+    "choices": [
+      "Practically speaking, that PA indicator collection schedule",
+      "From an admin perspective, that hardware asset depreciation method",
+      "In this scenario, whether an active filter or default query is limiting visible rows",
+      "In platform terms, that Service Portal widget compiler version"
+    ],
+    "correctIndex": 2,
+    "explanation": "Active filters and default queries commonly explain missing rows on a list before investigating ACLs or data issues.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-user-interface/exploring-lists.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 15,
+    "prompt": "What is a primary goal of form administration for platform administrators?",
+    "choices": [
+      "Practically speaking, to customize form layouts, sections, and field presentation for users",
+      "From a governance perspective, to replace all list views with gauges",
+      "In this scenario, to run discovery on network devices under expected controls",
+      "In platform terms, to disable the data dictionary globally for stable outcomes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Form administration lets admins configure how forms display fields, sections, and related lists for efficient data entry.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/form-administration/form-administration.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 16,
+    "prompt": "When configuring a form layout, what does adding a related list typically provide?",
+    "choices": [
+      "Typically, a view of child or associated records linked through reference fields",
+      "In practice, a replacement for update set tracking under normal policy constraints",
+      "Operationally, encryption of all fields on the parent form",
+      "From an implementation standpoint, automatic admin role assignment to the viewer"
+    ],
+    "correctIndex": 0,
+    "explanation": "Related lists show connected records from other tables based on reference relationships on the form.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-user-interface/exploring-forms.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 17,
+    "prompt": "An administrator splits a long form into multiple sections. What is the main benefit?",
+    "choices": [
+      "Typically, prevention of any client scripts from running",
+      "In practice, improved usability by grouping related fields into logical sections",
+      "Operationally, automatic translation of every field label",
+      "From an admin perspective, elimination of all ACL requirements on the table"
+    ],
+    "correctIndex": 1,
+    "explanation": "Form sections organize fields logically, making complex forms easier to navigate and complete.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-user-interface/form-layout.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 18,
+    "prompt": "A mandatory field on a form should be configured when:",
+    "choices": [
+      "In most deployments, that business requires the value before the record can be saved",
+      "In this scenario, that field is a reference to the User table only",
+      "In platform terms, that form uses the Next Experience framework exclusively",
+      "From a governance perspective, that table extends cmdb_ci"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mandatory fields enforce required data entry so critical information is captured before save.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/form-administration/form-administration.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 19,
+    "prompt": "When a user reports that a field is hidden on a form, what should an administrator check first?",
+    "choices": [
+      "Typically, that PA job queue exclusively in standard operations",
+      "From an admin perspective, that MID Server JVM heap size",
+      "Operationally, uI Policies, form layout, and field visibility settings",
+      "In practice, that software discovery schedule for governed delivery"
+    ],
+    "correctIndex": 2,
+    "explanation": "Field visibility is commonly controlled by form layout, UI Policies, and role-based form configurations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-user-interface/exploring-forms.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 20,
+    "prompt": "What do Access Control List (ACL) rules evaluate to control access?",
+    "choices": [
+      "In platform terms, only the visual theme of dashboards for stable outcomes for consistent administration",
+      "Practically speaking, whether discovery is licensed on the instance under normal policy constraints",
+      "In this scenario, operations such as read, write, create, and delete against tables or fields, often with conditions and roles",
+      "From a governance perspective, that order of workflow activities exclusively under expected controls"
+    ],
+    "correctIndex": 2,
+    "explanation": "ACLs secure tables and fields for specific operations, evaluating roles, conditions, and scripts as configured.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-security/access-control/exploring-access-control-list.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 21,
+    "prompt": "How do table-level ACLs differ from field-level ACLs?",
+    "choices": [
+      "In most deployments, table ACLs protect entire records; field ACLs protect individual columns on a table",
+      "In this scenario, table ACLs run in the browser; field ACLs run on the MID Server",
+      "In platform terms, there is no difference; both terms mean the same rule type",
+      "From a governance perspective, field ACLs apply only to import sets; table ACLs apply only to reports"
+    ],
+    "correctIndex": 0,
+    "explanation": "ACLs can target a whole table or specific fields, allowing granular control over record and column access.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-security/access-control/acl-rule-types.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 22,
+    "prompt": "An ACL rule denies access even though the user holds a broad role. What should an administrator review?",
+    "choices": [
+      "Typically, that problem task SLA definition only for consistent administration",
+      "From an admin perspective, that catalog item picture attachment size under expected controls",
+      "Operationally, whether a higher-priority deny rule, condition, or security constraint applies",
+      "In practice, that software model normalization schedule in standard operations"
+    ],
+    "correctIndex": 2,
+    "explanation": "ACL evaluation considers rule order, conditions, and security constraints; explicit denies or conditions may override broad grants.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-security/access-control/security-constraints.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 23,
+    "prompt": "What is the effect of ACL debugging for an administrator troubleshooting access?",
+    "choices": [
+      "Typically, this approach converts all roles to the admin role under expected controls",
+      "From an admin perspective, this approach exports user passwords for verification for stable outcomes",
+      "Practically speaking, this approach shows which ACL rules were evaluated and why access was granted or denied",
+      "In practice, this approach permanently disables all ACLs on the instance for consistent administration"
+    ],
+    "correctIndex": 2,
+    "explanation": "ACL debugging helps administrators trace rule evaluation to diagnose unexpected access results.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-security/access-control/exploring-access-control-list.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 24,
+    "prompt": "Why might an administrator create a conditional ACL?",
+    "choices": [
+      "From a governance perspective, to define catalog variable default values for stable outcomes",
+      "In this scenario, to schedule discovery probes under expected controls in standard operations",
+      "In most deployments, to grant or deny access only when specified field or script conditions are met",
+      "From an implementation standpoint, to bypass all role checks for every user under normal policy constraints"
+    ],
+    "correctIndex": 2,
+    "explanation": "Conditional ACLs restrict operations to scenarios defined by conditions, enabling context-sensitive security.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-security/access-control/acl-rule-types.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 25,
+    "prompt": "What is the primary purpose of notifications in ServiceNow?",
+    "choices": [
+      "Practically speaking, to run discovery credentials tests in standard operations",
+      "In practice, to store CMDB relationship definitions for consistent administration",
+      "Typically, to inform users about events such as assignments, approvals, and record updates",
+      "From an admin perspective, to replace all ACL rules on a table for governed delivery"
+    ],
+    "correctIndex": 2,
+    "explanation": "Notifications communicate events to users through channels such as email based on configured conditions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/notifications/notifications.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 26,
+    "prompt": "When inbound email fails to create incidents, what configuration should an administrator verify first?",
+    "choices": [
+      "Practically speaking, that problem task assignment rule for consistent administration",
+      "Typically, email properties and inbound mail connectivity so messages reach the instance",
+      "In platform terms, mID Server wake-on-LAN for laptops for governed delivery",
+      "From an admin perspective, that PA data collector schedule exclusively"
+    ],
+    "correctIndex": 1,
+    "explanation": "Inbound email depends on correct email properties and mail flow configuration before rules can process messages.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/notifications/email-properties.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 27,
+    "prompt": "How can an administrator limit who receives a notification?",
+    "choices": [
+      "Operationally, by defining conditions and recipients such as users, groups, or fields on the notification",
+      "In most deployments, by removing all roles from the instance for governed delivery",
+      "From an implementation standpoint, by converting notifications to import sets under expected controls",
+      "From a governance perspective, by disabling the entire data dictionary for stable outcomes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Notifications use conditions and recipient definitions to target the appropriate audience for each event.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/notifications/notifications.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 28,
+    "prompt": "What does a workflow activity represent in classic workflow administration?",
+    "choices": [
+      "Operationally, a step in a workflow such as approval, notification, or branch logic",
+      "In most deployments, a catalog variable type under expected controls",
+      "From an implementation standpoint, a software discovery model for stable outcomes",
+      "In practice, a CMDB identification rule under expected controls"
+    ],
+    "correctIndex": 0,
+    "explanation": "Workflow activities are the building blocks of workflows, defining actions and transitions in a process.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/workflow-administration/workflow-administration.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 29,
+    "prompt": "An event registry entry is used to:",
+    "choices": [
+      "Practically speaking, define a named event that scripts can fire and notifications or workflows can subscribe to",
+      "From an admin perspective, schedule hardware asset depreciation for stable outcomes",
+      "In this scenario, replace update sets during migration in standard operations",
+      "In platform terms, store encrypted user passwords for stable outcomes for consistent administration"
+    ],
+    "correctIndex": 0,
+    "explanation": "Events provide a publish/subscribe mechanism connecting record activity to notifications and workflow.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/notifications/notifications.html"
+    ]
+  }
+]

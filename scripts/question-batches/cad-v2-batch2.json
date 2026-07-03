@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CAD",
+		"order": 5,
+		"prompt": "When you create a new scoped application, what identifier does the platform assign to protect its artifacts from naming conflicts?",
+		"choices": [
+			"A unique namespace prefix applied to the application's tables and scripts",
+			"A shared global prefix reused by all custom applications",
+			"A random password required to open each form",
+			"A MID Server name bound to the application"
+		],
+		"correctIndex": 0,
+		"explanation": "Scoped applications receive a unique namespace identifier that prefixes their artifacts, preventing naming collisions with other applications.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/c_ApplicationScope.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 6,
+		"prompt": "Which statements about extending a table are correct? (Choose two.)",
+		"choices": [
+			"The child table inherits all fields defined on the parent table",
+			"Records in the child table also appear when querying the parent table",
+			"Extending a table deletes the parent table's existing records",
+			"A child table cannot add any of its own fields"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"questionType": "multi",
+		"explanation": "A child table inherits parent fields and its records are included in queries against the parent (polymorphism); it can still add its own fields, and extending never deletes parent data.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/table-extension.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 7,
+		"prompt": "You are deciding whether new development should be global or scoped. Which guidance does ServiceNow give for creating new tables?",
+		"choices": [
+			"Create new tables in a scoped application to isolate data and enable Delegated Development",
+			"Always place new tables in the global scope to maximize cross-application writes",
+			"Store all new tables inside the sys_properties table",
+			"Avoid tables entirely and use only UI pages"
+		],
+		"correctIndex": 0,
+		"explanation": "ServiceNow recommends scoped applications for new tables because global apps can alter unintended data; scoping isolates artifacts and supports Delegated Development.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/c_ApplicationScope.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 8,
+		"prompt": "What does the Application Access section of a table record control?",
+		"choices": [
+			"Whether other application scopes can read, create, update, or delete that table's data",
+			"The color theme of the form for that table",
+			"How many rows the table can store",
+			"The order of fields on the list view"
+		],
+		"correctIndex": 0,
+		"explanation": "Application Access on the table record defines cross-scope permissions (can read/create/update/delete and accessible from other scopes) that protect the table.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/c_RuntimeAccessToAppTables.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 9,
+		"prompt": "Which artifact defines the columns, types, and attributes that make up a table's structure?",
+		"choices": [
+			"The table's dictionary (Dictionary Entries)",
+			"The homepage gauge configuration",
+			"The email notification record",
+			"The update set preview log"
+		],
+		"correctIndex": 0,
+		"explanation": "Dictionary entries define each column's name, type, and attributes, forming the table's data structure.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/dictionary-entries.html"
+		]
+	}
+]

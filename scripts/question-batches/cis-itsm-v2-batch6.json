@@ -1,0 +1,83 @@
+[
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 25,
+		"prompt": "A problem coordinator needs subject matter experts to investigate root cause and propose a fix. Which problem task type should they create?",
+		"choices": [
+			"Root Cause Analysis",
+			"Catalog Fulfillment",
+			"Emergency Change Approval",
+			"Software License Reconciliation"
+		],
+		"correctIndex": 0,
+		"explanation": "Root Cause Analysis problem tasks assign SMEs to investigate the underlying cause and identify a proposed fix for the parent problem.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/problem-management/create-problem-task.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 26,
+		"prompt": "Why would a problem coordinator relate multiple incidents to one problem record?",
+		"choices": [
+			"To convert the problem into a catalog requested item automatically",
+			"To bypass the Assess and Root Cause Analysis states on every problem",
+			"To avoid creating separate problems for incidents that share the same underlying issue",
+			"To trigger CMDB discovery schedules for each linked incident"
+		],
+		"correctIndex": 2,
+		"explanation": "Relating multiple incidents to one problem consolidates work when several tickets stem from the same root issue.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/problem-management/add-multiple-incidents-to-problem.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 27,
+		"prompt": "When a workaround is communicated on a problem record, what is the expected outcome for related incidents?",
+		"choices": [
+			"All related incidents are automatically closed in the Resolved state",
+			"Notification is sent to related incidents that a workaround is available",
+			"Related incidents are converted to Normal change requests",
+			"The caller loses self-service portal access until the permanent fix is deployed"
+		],
+		"correctIndex": 1,
+		"explanation": "Communicating a workaround documents the temporary restoration steps and notifies related incidents so agents and users can apply the workaround.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/problem-management/communicate-workaround.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 28,
+		"prompt": "During problem assessment, an analyst discovers an existing problem that already tracks the same issue. Which action should they take on the new problem?",
+		"choices": [
+			"Create an Emergency change request without linking any incidents",
+			"Disable the Autoclose Incidents scheduled job for the instance",
+			"Delete both problem records and rerun CMDB identification",
+			"Click Mark Duplicate so related records move to the existing problem"
+		],
+		"correctIndex": 3,
+		"explanation": "Mark Duplicate closes the duplicate problem and moves configured related task records to the existing problem per problem management properties.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/problem-management/assess-a-problem.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 29,
+		"prompt": "In ServiceNow Change Management, why is a change request created?",
+		"choices": [
+			"To implement a controlled process for modifying approved and supported configuration items",
+			"To replace Incident Management for all unplanned service outages",
+			"To log routine password reset requests from the service catalog",
+			"To execute CMDB identification rules without governance or approval"
+		],
+		"correctIndex": 0,
+		"explanation": "Change requests record planned modifications to supported CIs with risk, type, schedule, and approval controls.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/change-management/t_CreateAChange.html",
+			"https://www.servicenow.com/docs/r/it-service-management/change-management/using-change-management.html"
+		]
+	}
+]

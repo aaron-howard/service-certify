@@ -1,0 +1,83 @@
+[
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 30,
+		"prompt": "Conflict detection in Change Management can identify scheduling conflicts for which of the following reasons?",
+		"choices": [
+			"The change schedule occurs during a blackout period for the affected configuration item",
+			"The change requester's department is outside the corporate hierarchy",
+			"The incident priority matrix assigns Critical to all changes automatically",
+			"The catalog item uses more than four variables on the record producer"
+		],
+		"correctIndex": 0,
+		"explanation": "Conflict detection evaluates CIs, planned dates, maintenance windows, blackout schedules, and other active changes to surface scheduling conflicts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/change-management/c_ConflictDetection.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 31,
+		"prompt": "How does a Standard change differ from a Normal change in ServiceNow Change Management?",
+		"choices": [
+			"Standard changes always require two CAB authorization steps for every request",
+			"Standard changes may be created only by users who have no ITIL roles assigned",
+			"Standard changes are pre-authorized, low-risk changes that follow a streamlined process without CAB authorization for each request",
+			"Standard changes bypass all state models and are implemented without documentation"
+		],
+		"correctIndex": 2,
+		"explanation": "Standard changes are frequently implemented, pre-approved procedures that do not require group-level or CAB authorization on each request.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/change-management/change-types.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 32,
+		"prompt": "When should an implementation team select the Emergency change type?",
+		"choices": [
+			"When a fix must be implemented as soon as possible to resolve a major incident or apply a critical patch",
+			"For every routine catalog hardware request submitted through the service portal",
+			"Whenever a user opens a self-service password reset catalog item",
+			"Only when the change can wait for a scheduled maintenance window with no urgency"
+		],
+		"correctIndex": 0,
+		"explanation": "Emergency changes address urgent fix-on-fail or fail-or-fail situations and move quickly to Authorize state for CAB approval group review.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/change-management/change-types.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 33,
+		"prompt": "Which statement best describes a Normal change request?",
+		"choices": [
+			"A change type that never requires peer, change manager, or CAB authorization",
+			"Any service change that is not a Standard or Emergency change and requires full assessment and authorization",
+			"A pre-approved catalog template change that skips risk assessment entirely",
+			"A change record generated automatically by MID Server discovery with no fulfiller involvement"
+		],
+		"correctIndex": 1,
+		"explanation": "Normal changes follow the prescriptive lifecycle with assessments and approvals such as peer review, change management, and CAB authorization.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/change-management/change-types.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 34,
+		"prompt": "What is the purpose of a blackout schedule in Change Management?",
+		"choices": [
+			"To require emergency changes to skip the Authorize state automatically",
+			"To auto-close Resolved incidents after the glide.ui.autoclose.time interval",
+			"To replace conflict detection for all standard change templates",
+			"To define times when normal change activity should not be scheduled"
+		],
+		"correctIndex": 3,
+		"explanation": "Blackout windows block normal change scheduling during restricted periods, while maintenance windows indicate preferred times to schedule changes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/change-management/t_CreateBlkoutMaintSched.html",
+			"https://www.servicenow.com/docs/r/it-service-management/change-management/c_ConflictDetection.html"
+		]
+	}
+]

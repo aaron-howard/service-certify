@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CAD",
+		"order": 75,
+		"prompt": "Which coalesce configuration on a Transform Map prevents duplicate records during repeated imports?",
+		"choices": [
+			"Mark the matching field(s) as coalesce so existing records are updated instead of inserted",
+			"Disable the transform map",
+			"Set every field to read-only",
+			"Delete the import set table after each run"
+		],
+		"correctIndex": 0,
+		"explanation": "Setting a coalesce field makes the transform match existing target records on that value and update them rather than creating duplicates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/integrate-applications/c_ImportSetTransformMaps.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 76,
+		"prompt": "To integrate with an external system over REST from ServiceNow, which server-side API sends outbound requests?",
+		"choices": [
+			"RESTMessageV2 (sn_ws.RESTMessageV2)",
+			"GlideForm client API",
+			"GlideAjax client bridge",
+			"g_scratchpad object"
+		],
+		"correctIndex": 0,
+		"explanation": "RESTMessageV2 constructs and sends outbound REST requests to external endpoints and returns the response for processing.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/integrate-applications/c_RESTMessage.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 77,
+		"prompt": "Which tool lets you build and test outbound REST calls interactively before scripting them?",
+		"choices": [
+			"REST API Explorer / REST Message with a Test button",
+			"Form Designer layout tool",
+			"Access Control rule debugger",
+			"Scheduled Job scheduler screen"
+		],
+		"correctIndex": 0,
+		"explanation": "The REST API Explorer and the REST Message Test action let developers configure and test outbound requests before embedding them in scripts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/integrate-applications/c_RESTMessage.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 78,
+		"prompt": "After sending a RESTMessageV2 request, which response methods retrieve results? (Choose two.)",
+		"choices": [
+			"getBody()",
+			"getStatusCode()",
+			"setMandatory()",
+			"addInfoMessage()"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"questionType": "multi",
+		"explanation": "The REST response object exposes getBody() for payload and getStatusCode() for the HTTP status; the other methods belong to unrelated client APIs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/integrate-applications/c_RESTMessage.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 79,
+		"prompt": "When debugging a failing outbound REST integration, which response detail most directly indicates the failure cause?",
+		"choices": [
+			"The HTTP status code and response body returned by the endpoint",
+			"The color theme of the instance",
+			"The number of modules in the app menu",
+			"The record producer variable order"
+		],
+		"correctIndex": 0,
+		"explanation": "The HTTP status code and response body reveal authentication, payload, or endpoint errors, guiding integration debugging.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/integrate-applications/c_RESTMessage.html"
+		]
+	}
+]

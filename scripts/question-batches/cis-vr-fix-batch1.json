@@ -1,0 +1,482 @@
+[
+  {
+    "trackCode": "CIS-VR",
+    "order": 0,
+    "prompt": "A vulnerability coordinator must open a formal workflow to engage an external software vendor about a reported security defect. Which documentation topic aligns with coordinating third-party security issues in Vulnerability Response?",
+    "choices": [
+      "Focus on escalating a security issue to a third party",
+      "Focus on building a CMDB discovery pattern for printers",
+      "Focus on designing a catalog item for laptop requests",
+      "Focus on configuring password reset policies for end users"
+    ],
+    "correctIndex": 0,
+    "explanation": "Vulnerability Response product documentation includes a task for escalating security issues to third parties, which supports vendor coordination outside your organization.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/yokohama-security-management/page/product/vulnerability-response/task/escalate-sec-issue-3rdparty.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 1,
+    "prompt": "Your team imports scanner findings that reference CVE identifiers not yet represented for a third-party product entry. Which documented task helps associate CVE information with third-party vulnerability data?",
+    "choices": [
+      "Publish a knowledge article for password policies for measurable outcomes",
+      "Create a procurement contract renewal record for practical execution",
+      "Add a CVE entry related to a third-party vulnerability in enterprise contexts",
+      "Configure single sign-on for mobile email clients in real implementations"
+    ],
+    "correctIndex": 2,
+    "explanation": "The Vulnerability Response documentation describes adding a CVE entry related to a third-party vulnerability so findings can be normalized against authoritative CVE metadata.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-security-management/page/product/vulnerability-response/task/add-cve2thirdparty-entry.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 2,
+    "prompt": "Leadership wants to drive remediation as grouped vulnerability work rather than only isolated tickets. Which documented remediation activity focuses on vulnerability groups?",
+    "choices": [
+      "Archive closed incidents older than seven days in real implementations",
+      "Rebuild all service maps from network traffic captures in enterprise contexts",
+      "Remediate vulnerability groups for practical execution",
+      "Rotate database encryption keys manually each night for measurable outcomes"
+    ],
+    "correctIndex": 2,
+    "explanation": "Vulnerability Response includes guidance for remediating vulnerability groups, which helps teams prioritize and execute remediation at an aggregated risk level.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-security-management/page/product/vulnerability-response/task/remediate-vuln-groups.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 3,
+    "prompt": "An operations engineer needs to work remediation tasks from the IT Remediation Workspace using Vulnerability Response records. Which task documentation should they follow first?",
+    "choices": [
+      "Configure discovery schedules for IP telephony subnets under governance oversight",
+      "Create a new procurement vendor record across operational workflows",
+      "Apply remediation task records in the IT Remediation Workspace",
+      "Import hardware asset leases from a spreadsheet in real implementations"
+    ],
+    "correctIndex": 2,
+    "explanation": "The Vulnerability Response documentation explains how remediation task records are used within the IT Remediation Workspace to coordinate remediation execution.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/task/vr-ws-remed-task.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 4,
+    "prompt": "Your container platform team must address image-level findings using Container Vulnerability Response. Which concept page supports remediation-oriented guidance for that product area?",
+    "choices": [
+      "Tune predictive intelligence for HR cases across operational workflows",
+      "Configure outbound REST message authentication under governance oversight",
+      "Remediate container vulnerabilities for practical execution in real implementations",
+      "Design employee onboarding checklists for measurable outcomes"
+    ],
+    "correctIndex": 2,
+    "explanation": "Container Vulnerability Response documentation includes conceptual guidance on remediating container vulnerabilities, aligning remediation practices with containerized workloads.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-security-management/page/product/container-vulnerability-response/concept/remediate-cvr.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 5,
+    "prompt": "In Vulnerability Response, what is the primary objective of vulnerability intake?",
+    "choices": [
+      "Close vulnerabilities automatically after import under governance oversight",
+      "Collect and normalize scanner findings into actionable vulnerability records across operational workflows",
+      "Ignore duplicate findings across sources for measurable outcomes",
+      "Create incidents for every scan result for practical execution"
+    ],
+    "correctIndex": 1,
+    "explanation": "Intake focuses on bringing external findings into VR with consistent normalization and deduplication for triage.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/concept/vulnerability-response-intake.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 6,
+    "prompt": "Why is source integration quality important during vulnerability intake?",
+    "choices": [
+      "It allows analysts to bypass state transitions for practical execution",
+      "It removes the need for remediation tasks for measurable outcomes",
+      "It confirms scan data includes reliable asset and finding context used in downstream prioritization",
+      "It guarantees zero false positives under governance oversight"
+    ],
+    "correctIndex": 2,
+    "explanation": "Good source data quality improves correlation, ownership mapping, and triage confidence.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/task/configure-vulnerability-integrations.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 7,
+    "prompt": "What intake behavior reduces duplicate remediation effort in VR?",
+    "choices": [
+      "With correlation and deduplication logic across repeated scanner observations",
+      "Focus on deleting previous findings before each scan cycle",
+      "Focus on disabling normalization rules under governance oversight",
+      "Focus on creating separate vulnerability items for identical findings on the same asset each import"
+    ],
+    "correctIndex": 0,
+    "explanation": "Correlation and deduplication prevent duplicate work and keep vulnerability state history coherent.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/concept/vulnerability-grouping-and-correlation.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 8,
+    "prompt": "Which data attribute is most critical to preserve at intake for effective assignment?",
+    "choices": [
+      "Scanner UI color theme across operational workflows",
+      "Dashboard widget layout preference under governance oversight",
+      "Analyst personal priority notes for practical execution",
+      "Asset ownership and CI relationship details for measurable outcomes"
+    ],
+    "correctIndex": 3,
+    "explanation": "Assignment and accountability depend on accurate asset-to-owner and CI mappings captured during intake.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/task/map-vulnerabilities-to-cis.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 9,
+    "prompt": "A vulnerability feed starts creating unusable records with missing fields. What is the best first response?",
+    "choices": [
+      "Pause or adjust the integration mapping and validation rules before continuing imports for measurable outcomes",
+      "Disable all scanner connectors permanently for practical execution",
+      "Close all imported vulnerabilities as false positives in enterprise contexts",
+      "Manually edit every record after intake in real implementations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Fixing integration mappings and validation controls at intake prevents recurring downstream triage defects.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/task/troubleshoot-vulnerability-imports.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 10,
+    "prompt": "What is the main goal of vulnerability prioritization in VR?",
+    "choices": [
+      "Focus remediation on vulnerabilities with highest combined technical and business risk for measurable outcomes",
+      "Close medium findings automatically for practical execution",
+      "Assign all vulnerabilities to one team in enterprise contexts",
+      "Sort findings by import date exclusively across operational workflows"
+    ],
+    "correctIndex": 0,
+    "explanation": "Prioritization combines severity, exploitability, and asset criticality to direct limited remediation capacity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/concept/vulnerability-prioritization.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 11,
+    "prompt": "Which factor most improves prioritization accuracy for vulnerability items?",
+    "choices": [
+      "Number of dashboard tabs across operational workflows",
+      "Alphabetical ordering by vulnerability ID under governance oversight",
+      "Asset business criticality and exposure context for practical execution",
+      "Analyst shift schedule for measurable outcomes"
+    ],
+    "correctIndex": 2,
+    "explanation": "Technical severity alone is insufficient; business context clarifies operational risk and urgency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/task/configure-risk-scoring.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 12,
+    "prompt": "How do threat intelligence signals influence VR prioritization?",
+    "choices": [
+      "They remove need for asset ownership data in enterprise contexts",
+      "They are ignored if CVSS is available in real implementations",
+      "They increase urgency when vulnerabilities are known exploited or actively targeted for measurable outcomes",
+      "They replace remediation workflows for practical execution"
+    ],
+    "correctIndex": 2,
+    "explanation": "Known exploitation data can elevate remediation urgency beyond base severity values.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/concept/threat-intelligence-integration.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 13,
+    "prompt": "A security manager needs repeatable triage outcomes. What should be implemented?",
+    "choices": [
+      "Ad hoc analyst decisions for each item in real implementations",
+      "Risk-based assignment rules and defined SLAs by priority level in enterprise contexts",
+      "Single priority for all findings for practical execution",
+      "Manual ticket routing through email for measurable outcomes"
+    ],
+    "correctIndex": 1,
+    "explanation": "Rules and SLA targets create consistent prioritization and measurable execution discipline.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/task/create-vulnerability-sla-definitions.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 14,
+    "prompt": "What is a common anti-pattern in vulnerability prioritization?",
+    "choices": [
+      "Focus on incorporating exploit intelligence for measurable outcomes",
+      "With business service context for practical execution",
+      "Focus on prioritizing solely by scanner severity without business impact weighting",
+      "Focus on considering internet exposure in scoring"
+    ],
+    "correctIndex": 2,
+    "explanation": "Severity-only sorting often misses true operational risk and can misallocate remediation effort.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/concept/risk-based-vulnerability-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 15,
+    "prompt": "In VR, what is the primary purpose of remediation workflows?",
+    "choices": [
+      "Track and enforce vulnerability fix actions through accountable tasks and states in real implementations",
+      "Route all work to security exclusively under governance oversight",
+      "Ignore SLA commitments across operational workflows",
+      "Delete vulnerability records after triage under governance oversight"
+    ],
+    "correctIndex": 0,
+    "explanation": "Remediation workflows coordinate ownership, progress tracking, and closure evidence for vulnerabilities.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/concept/remediation-workflow.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 16,
+    "prompt": "Which action improves remediation cycle time the most?",
+    "choices": [
+      "Focus on assigning all tasks to one queue",
+      "Focus on creating remediation tasks with clear ownership and due dates tied to priority",
+      "Focus on suppressing all notifications for measurable outcomes",
+      "Focus on waiting for monthly review before assignment"
+    ],
+    "correctIndex": 1,
+    "explanation": "Explicit ownership and priority-driven due dates reduce handoff delays and improve accountability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/task/create-remediation-tasks.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 17,
+    "prompt": "When should a vulnerability remediation task be considered complete?",
+    "choices": [
+      "As soon as a patch is scheduled across operational workflows",
+      "After verification confirms the vulnerability is resolved or accepted per policy under governance oversight",
+      "When a comment is added by any user in real implementations",
+      "Immediately after assignment in enterprise contexts under governance oversight"
+    ],
+    "correctIndex": 1,
+    "explanation": "Closure requires evidence that remediation outcomes are validated, not just planned.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/task/verify-vulnerability-remediation.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 18,
+    "prompt": "A remediation owner cannot patch in time due to dependency constraints. What is the best governed response?",
+    "choices": [
+      "Ignore SLA and wait for measurable outcomes",
+      "Request a risk exception with documented compensating controls and expiration for practical execution",
+      "Delete the vulnerability group in enterprise contexts",
+      "Close the item as fixed in real implementations"
+    ],
+    "correctIndex": 1,
+    "explanation": "Formal exceptions with controls and expiry maintain governance when immediate remediation is not feasible.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/task/manage-vulnerability-exceptions.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 19,
+    "prompt": "What should security teams monitor to improve remediation effectiveness over time?",
+    "choices": [
+      "Exclusively the number of imported findings in real implementations",
+      "Case form color themes for measurable outcomes",
+      "Count of inactive users in real implementations",
+      "Mean time to remediate by priority and recurring backlog drivers in enterprise contexts"
+    ],
+    "correctIndex": 3,
+    "explanation": "Trend analysis of MTTR and backlog causes highlights systemic bottlenecks in fix execution.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/task/report-on-remediation-performance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 20,
+    "prompt": "What is the primary value of integrating Vulnerability Response with Security Operations?",
+    "choices": [
+      "It removes need for remediation ownership across operational workflows",
+      "It connects vulnerability findings with active threat and incident workflows for coordinated action under governance oversight",
+      "It isolates vulnerability data from incident response for practical execution",
+      "It disables threat intelligence updates for measurable outcomes"
+    ],
+    "correctIndex": 1,
+    "explanation": "SecOps integration aligns preventive vulnerability management with active detection and response operations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/concept/security-operations-integration.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 21,
+    "prompt": "How does VR-SecOps integration improve risk prioritization?",
+    "choices": [
+      "By converting all vulnerabilities to low priority under governance oversight",
+      "By removing CI relationships across operational workflows",
+      "By elevating vulnerabilities linked to active incidents, campaigns, or exploitation indicators for measurable outcomes",
+      "By ignoring incident context for practical execution"
+    ],
+    "correctIndex": 2,
+    "explanation": "Operational threat signals from SecOps help focus remediation on vulnerabilities with immediate attack relevance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/task/use-security-operations-context-in-vr.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 22,
+    "prompt": "What workflow benefit comes from linking vulnerability groups to SecOps investigations?",
+    "choices": [
+      "Shared context and coordinated ownership between remediation and incident response teams for practical execution",
+      "Deletion of duplicate CIs for measurable outcomes",
+      "Suppression of all notifications across operational workflows",
+      "Automatic closure of security incidents under governance oversight"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cross-linked records reduce context switching and speed coordinated decision-making during active threats.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/task/link-vulnerabilities-to-security-incidents.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 23,
+    "prompt": "A SOC analyst flags exploitation in the wild. Which VR action should be automated?",
+    "choices": [
+      "Pause vulnerability imports for measurable outcomes under governance oversight",
+      "Remove remediation due dates for practical execution",
+      "Downgrade all related items to low under governance oversight",
+      "Create priority overrides or escalation tasks for affected high-value assets across operational workflows"
+    ],
+    "correctIndex": 3,
+    "explanation": "Threat-driven escalation ensures vulnerable critical assets are remediated faster under active risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/task/automate-threat-driven-escalations.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 24,
+    "prompt": "Which KPI best reflects successful VR and SecOps integration?",
+    "choices": [
+      "Number of inactive scanner connectors in real implementations",
+      "Total count of knowledge articles in enterprise contexts",
+      "Mean time from exploit signal to remediation assignment on critical vulnerabilities across operational workflows",
+      "Dashboard refresh frequency under governance oversight"
+    ],
+    "correctIndex": 2,
+    "explanation": "Time from threat signal to assigned remediation captures integration speed and operational responsiveness.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/task/measure-secops-vr-outcomes.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 25,
+    "prompt": "Why integrate Vulnerability Response with change management?",
+    "choices": [
+      "To clearly track remediation implementation through governed change records and reduce production risk",
+      "To clearly force all vulnerabilities into emergency change",
+      "To clearly prevent security teams from seeing infrastructure updates",
+      "To clearly eliminate all change approvals for security fixes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Change integration provides controlled execution, approval traceability, and deployment visibility for remediation activities.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/c_Vuln-Resp-Integrations.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 26,
+    "prompt": "A remediation task requires patch deployment in production. What is the recommended workflow?",
+    "choices": [
+      "Document remediation exclusively in team chat in real implementations",
+      "Convert all patch changes into service requests under governance oversight",
+      "Close the vulnerability item before patching in real implementations",
+      "Create or link a change request and update vulnerability state based on implementation outcome in enterprise contexts"
+    ],
+    "correctIndex": 3,
+    "explanation": "Linking remediation to change records preserves compliance, enables approvals, and ties closure to verified implementation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/task/t_IntegrateVRWithChangeManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 27,
+    "prompt": "Which metric best demonstrates effective VR and change integration?",
+    "choices": [
+      "Average incident reassignment count for measurable outcomes",
+      "Number of discovered CIs with no owner for practical execution",
+      "Percentage of vulnerability remediations completed through associated successful changes under governance oversight",
+      "Total count of normal changes in the month across operational workflows"
+    ],
+    "correctIndex": 2,
+    "explanation": "This metric reflects whether security remediation is consistently executed through approved and successful implementation paths.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/vulnerability-response-dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 28,
+    "prompt": "What is a key benefit of linking vulnerability items to change tasks for operations teams?",
+    "choices": [
+      "Operations can ignore maintenance windows in real implementations",
+      "Teams can coordinate patch timing, approvals, and rollback planning in one governed process in enterprise contexts",
+      "It removes the need to validate post-change remediation status across operational workflows",
+      "It hides risk priority from implementers under governance oversight"
+    ],
+    "correctIndex": 1,
+    "explanation": "Shared process context improves coordination and reduces failed or untracked remediation outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/c_RemediationWorkflows.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 29,
+    "prompt": "If a change implementation fails, how should related vulnerability records be handled?",
+    "choices": [
+      "Reopen or keep remediation in progress and trigger follow-up actions based on failed change outcome in enterprise contexts",
+      "Convert vulnerabilities into knowledge articles in real implementations",
+      "Delete affected vulnerability entries under governance oversight",
+      "Automatically mark vulnerabilities as resolved across operational workflows"
+    ],
+    "correctIndex": 0,
+    "explanation": "Failed implementation means risk likely remains; records should reflect unresolved exposure and drive next remediation steps.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/task/t_ManageRemediationTasks.html"
+    ]
+  }
+]

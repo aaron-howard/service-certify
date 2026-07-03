@@ -1,0 +1,497 @@
+[
+  {
+    "trackCode": "CIS-RC",
+    "order": 30,
+    "prompt": "When launching a new risk assessment cycle, what should be completed first?",
+    "choices": [
+      "Matches the scenario in which define assessment methodology, scoring criteria, and in-scope entities.",
+      "Reflects the condition that mark inherited controls as effective by default.",
+      "Describes the outcome where assign all risks to one enterprise owner.",
+      "Represents the approach that skip stakeholder reviews to accelerate publishing."
+    ],
+    "correctIndex": 0,
+    "explanation": "A defined methodology and scope create consistent, comparable risk assessments across business units.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-risk/concept/risk-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 31,
+    "prompt": "Which factor most improves reliability of inherent and residual risk scoring?",
+    "choices": [
+      "Describes the outcome where excluding control effectiveness from residual scoring.",
+      "Captures the choice stating restricting assessments to annual reviews only.",
+      "Reflects the condition that applying calibrated likelihood and impact scales with documented rationale.",
+      "Matches the scenario in which using only qualitative comments without scoring guidance."
+    ],
+    "correctIndex": 2,
+    "explanation": "Calibrated scales and documented rationale reduce subjectivity and improve repeatability of risk ratings.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-risk/task/configure-risk-scoring.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 32,
+    "prompt": "A business unit disputes a high residual risk score. What is the best governance response?",
+    "choices": [
+      "Reflects the condition that close the risk record and reopen next quarter.",
+      "Corresponds to the option where move the risk to accepted with no approval.",
+      "Matches the scenario in which lower the score immediately to maintain stakeholder confidence.",
+      "Captures the choice stating review control evidence, assumptions, and scoring rationale with accountable owners before adjusting."
+    ],
+    "correctIndex": 3,
+    "explanation": "Transparent review of evidence and assumptions supports fair recalibration while preserving governance rigor.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-risk/task/manage-risk-assessments.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 33,
+    "prompt": "Which reporting output is most useful after completing a risk assessment campaign?",
+    "choices": [
+      "Reflects the condition that count of users who edited risk forms.",
+      "Corresponds to the option where heatmaps and trend views highlighting top residual risks, control gaps, and overdue treatments.",
+      "Captures the choice stating inventory of inactive assignment groups.",
+      "Represents the approach that raw list of all risk records with no grouping."
+    ],
+    "correctIndex": 1,
+    "explanation": "Decision-makers need prioritized trend insights to direct mitigation resources effectively.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-risk/concept/risk-workspace.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 34,
+    "prompt": "Why should periodic risk reassessment be scheduled instead of only performed after incidents?",
+    "choices": [
+      "Corresponds to the option where incidents are not relevant to risk oversight.",
+      "Describes the outcome where scheduled reassessments automatically eliminate all high risks.",
+      "Represents the approach that scheduled reviews replace remediation planning.",
+      "Captures the choice stating risk posture changes with business, technology, and control drift even without a triggering incident."
+    ],
+    "correctIndex": 3,
+    "explanation": "Regular reassessment catches evolving exposure before incidents occur and improves proactive governance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-risk/concept/risk-management-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 35,
+    "prompt": "When defining compliance scopes, what is the most important first step?",
+    "choices": [
+      "Describes the outcome where exclude third-party services from all scope discussions.",
+      "Matches the scenario in which create issues before evidence is collected.",
+      "Corresponds to the option where apply every available control to all departments.",
+      "Represents the approach that determine applicable regulations, in-scope entities, and control objectives before testing."
+    ],
+    "correctIndex": 3,
+    "explanation": "Compliance scoping starts with regulatory applicability and clear boundaries for who and what is assessed.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-policy-and-compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 36,
+    "prompt": "Which approach best avoids over-scoping in a compliance initiative?",
+    "choices": [
+      "Reflects the condition that use only global scope without entity-level mapping.",
+      "Represents the approach that include all historical controls from decommissioned systems.",
+      "Describes the outcome where treat inherited controls as directly applicable everywhere.",
+      "Matches the scenario in which map controls to obligations and business context, then validate ownership and applicability."
+    ],
+    "correctIndex": 2,
+    "explanation": "Control-to-obligation mapping with applicability checks keeps scope defensible and operationally realistic.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-policy-and-compliance/task/manage-authority-documents-and-citations.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 37,
+    "prompt": "A control owner says their control should be removed from scope due to system retirement. What should happen next?",
+    "choices": [
+      "Describes the outcome where validate retirement evidence and dependency impact, then perform governed scope update.",
+      "Matches the scenario in which move the control to a personal namespace.",
+      "Reflects the condition that mark the control pass and keep it active.",
+      "Captures the choice stating remove immediately with no approval."
+    ],
+    "correctIndex": 0,
+    "explanation": "Scope changes require evidence-backed governance to avoid compliance blind spots and audit disputes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-policy-and-compliance/task/manage-controls.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 38,
+    "prompt": "Which dashboard view is most useful for monitoring scope health?",
+    "choices": [
+      "Reflects the condition that list of inactive groups.",
+      "Captures the choice stating coverage gaps, duplicate controls, and overdue scope review attestations by framework.",
+      "Corresponds to the option where user login trend by department.",
+      "Matches the scenario in which count of form customizations per team."
+    ],
+    "correctIndex": 1,
+    "explanation": "Scope health is best evaluated through coverage, duplication, and review timeliness indicators.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-policy-and-compliance/concept/compliance-workspace.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 39,
+    "prompt": "Why should compliance scope reviews be tied to organizational and technology changes?",
+    "choices": [
+      "Reflects the condition that scope reviews should occur only once per year regardless changes.",
+      "Corresponds to the option where technology changes never affect regulatory applicability.",
+      "Represents the approach that change records replace compliance scope entirely.",
+      "Captures the choice stating control applicability can shift when services, ownership, or architecture changes."
+    ],
+    "correctIndex": 3,
+    "explanation": "Dynamic environments require scope updates to maintain ongoing compliance relevance and defensibility.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 40,
+    "prompt": "In an audit-ready GRC program, what is the primary purpose of structured evidence collection?",
+    "choices": [
+      "Represents the approach that replace control ownership assignments.",
+      "Corresponds to the option where store only verbal confirmations from process owners.",
+      "Captures the choice stating close findings before testing completes.",
+      "Describes the outcome where demonstrate control operation with traceable, time-bound artifacts tied to specific tests."
+    ],
+    "correctIndex": 3,
+    "explanation": "Structured evidence ensures test conclusions are defensible and verifiable during internal and external audits.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-policy-and-compliance/concept/control-testing.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 41,
+    "prompt": "Which evidence practice most reduces auditor challenge risk?",
+    "choices": [
+      "Represents the approach that allow duplicate evidence for unrelated controls.",
+      "Describes the outcome where collect evidence only at year-end.",
+      "Matches the scenario in which require evidence metadata, approver attestation, and linkage to control objectives.",
+      "Corresponds to the option where accept screenshots without source attribution."
+    ],
+    "correctIndex": 2,
+    "explanation": "Metadata and attestation provide provenance and relevance, which auditors rely on for validation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-policy-and-compliance/task/collect-control-evidence.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 42,
+    "prompt": "A control test fails because required evidence is missing from one quarter. What is the best response?",
+    "choices": [
+      "Represents the approach that delete the failed test and recreate next cycle.",
+      "Matches the scenario in which mark the test pass due to historical evidence availability.",
+      "Reflects the condition that record the gap, create remediation tasks, and enforce evidence collection checkpoints going forward.",
+      "Describes the outcome where suspend all related controls permanently."
+    ],
+    "correctIndex": 2,
+    "explanation": "Documenting the gap and remediating collection controls strengthens future reliability and governance posture.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-policy-and-compliance/task/manage-control-failures.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 43,
+    "prompt": "Which workflow design most improves evidence quality across distributed teams?",
+    "choices": [
+      "Matches the scenario in which route all evidence tasks to one central coordinator.",
+      "Describes the outcome where allow ad hoc uploads with no deadlines.",
+      "Captures the choice stating use scheduled tasks, ownership rules, and review/approval gates before test closure.",
+      "Reflects the condition that collect evidence only when requested by external auditors."
+    ],
+    "correctIndex": 2,
+    "explanation": "Defined workflow gates and ownership improve completeness, timeliness, and consistency of submitted evidence.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-policy-and-compliance/concept/compliance-workflows.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 44,
+    "prompt": "Why should evidence retention policy be aligned with regulatory and internal requirements?",
+    "choices": [
+      "Captures the choice stating it eliminates the need for access controls.",
+      "Reflects the condition that it replaces risk treatment plans.",
+      "Matches the scenario in which it allows immediate deletion of all closed control tests.",
+      "Corresponds to the option where it confirms artifacts remain available for audits, investigations, and defensible compliance reporting."
+    ],
+    "correctIndex": 3,
+    "explanation": "Retention alignment prevents evidence gaps and supports long-horizon assurance obligations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-policy-and-compliance/concept/document-retention-for-compliance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 45,
+    "prompt": "Which implementation decision best aligns an IRM program to multiple regulatory frameworks at once?",
+    "choices": [
+      "Corresponds to the option where use a common control framework and map each regulation to shared controls and statements.",
+      "Represents the approach that create separate duplicate controls for every regulation with no linkage.",
+      "Captures the choice stating disable control inheritance to keep frameworks isolated.",
+      "Reflects the condition that track regulations only in spreadsheets outside the platform."
+    ],
+    "correctIndex": 0,
+    "explanation": "A common control model reduces duplication and supports traceable cross-framework compliance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/concept/policy-and-compliance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 46,
+    "prompt": "What is the primary purpose of authority documents in a regulatory framework implementation?",
+    "choices": [
+      "Captures the choice stating automatically close failed controls without review.",
+      "Describes the outcome where store vulnerability scan outputs for SOC triage only.",
+      "Represents the approach that replace all internal policy statements with ad hoc tasks.",
+      "Corresponds to the option where define external obligations that drive citations, controls, and compliance requirements."
+    ],
+    "correctIndex": 3,
+    "explanation": "Authority documents represent source obligations used to structure compliant controls and testing.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/concept/policy-and-compliance.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 47,
+    "prompt": "How should teams handle overlapping requirements across NIST, ISO, and local municipal regulations?",
+    "choices": [
+      "Represents the approach that implement each framework independently with duplicate owner assignments.",
+      "Matches the scenario in which track evidence once per year regardless control frequency.",
+      "Corresponds to the option where normalize overlapping citations to shared control objectives while preserving framework-specific evidence traceability.",
+      "Describes the outcome where prioritize only the strictest framework and ignore the others."
+    ],
+    "correctIndex": 2,
+    "explanation": "Normalization supports efficiency while maintaining audit-ready traceability by framework.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/task/t_ManageControlObjectives.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/audit-management/concept/audit-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 48,
+    "prompt": "Which KPI best shows maturity in regulatory framework management?",
+    "choices": [
+      "Represents the approach that increase in number of manually maintained policy spreadsheets.",
+      "Matches the scenario in which more emergency exceptions opened than planned tests completed.",
+      "Describes the outcome where higher count of unresolved citation conflicts quarter over quarter.",
+      "Reflects the condition that decrease in duplicate controls with improved on-time evidence completion across mapped frameworks."
+    ],
+    "correctIndex": 3,
+    "explanation": "Mature framework governance reduces duplication and improves execution consistency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/task/t_UseDashboardsAndReports.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/concept/policy-and-compliance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 49,
+    "prompt": "What is the best approach when a new regulation introduces additional control requirements mid-cycle?",
+    "choices": [
+      "Matches the scenario in which create temporary controls with no owners to accelerate rollout.",
+      "Captures the choice stating wait until the annual audit before updating any control mappings.",
+      "Reflects the condition that close existing control tests and restart the entire program.",
+      "Describes the outcome where run impact analysis against existing controls, then extend mappings and testing plans with approved change oversight."
+    ],
+    "correctIndex": 3,
+    "explanation": "Impact analysis and controlled updates prevent disruption while preserving compliance coverage.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/task/t_AssessControls.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 50,
+    "prompt": "What does risk treatment represent in an IRM implementation lifecycle?",
+    "choices": [
+      "Corresponds to the option where deferring treatment until policy attestation is complete.",
+      "Matches the scenario in which converting every risk into an audit finding.",
+      "Reflects the condition that closing all risk records once they are assessed.",
+      "Captures the choice stating selecting and executing an approved response strategy such as mitigate, transfer, accept, or avoid."
+    ],
+    "correctIndex": 3,
+    "explanation": "Risk treatment operationalizes risk decisions and links them to accountable actions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/task/t_ManageRiskResponses.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 51,
+    "prompt": "Which factor should most influence whether a risk is mitigated versus accepted?",
+    "choices": [
+      "Reflects the condition that number of dashboards available for the risk domain.",
+      "Captures the choice stating preference of whichever analyst opened the record.",
+      "Corresponds to the option where whether the risk has a short description under 100 characters.",
+      "Represents the approach that residual risk compared with organization risk appetite and control implementation feasibility."
+    ],
+    "correctIndex": 3,
+    "explanation": "Treatment choice is driven by residual exposure versus tolerance and practical control options.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-scoring.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 52,
+    "prompt": "How should risk treatment plans be connected to enterprise change governance?",
+    "choices": [
+      "Corresponds to the option where treat risk by creating informational incidents only.",
+      "Represents the approach that delay treatment updates until quarterly board reporting.",
+      "Describes the outcome where run treatment as undocumented emergency work outside change management.",
+      "Captures the choice stating link treatment tasks to approved implementation work and validate control effectiveness after deployment."
+    ],
+    "correctIndex": 3,
+    "explanation": "Treatment requires governed implementation and post-change control validation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/task/t_CreateRiskTreatmentTasks.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 53,
+    "prompt": "Which status pattern indicates risk treatment execution is healthy?",
+    "choices": [
+      "Describes the outcome where many accepted risks without documented rationale.",
+      "Matches the scenario in which frequent reassignment of owners without due dates.",
+      "Corresponds to the option where high volume of overdue treatment tasks with unchanged risk ratings.",
+      "Represents the approach that on-time completion of treatment tasks with measurable reduction in residual risk scores."
+    ],
+    "correctIndex": 3,
+    "explanation": "Healthy treatment programs show execution discipline and reduced residual exposure.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/task/t_UseDashboardsAndReports.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 54,
+    "prompt": "What is the best handling strategy when a planned mitigation is delayed by budget constraints?",
+    "choices": [
+      "Reflects the condition that ignore the delay until external audit discovers it.",
+      "Represents the approach that delete the treatment plan and recreate later.",
+      "Describes the outcome where close the risk as complete because treatment was attempted.",
+      "Matches the scenario in which document a time-bound risk acceptance with compensating controls and escalation to risk oversight."
+    ],
+    "correctIndex": 3,
+    "explanation": "Delayed mitigations require governed acceptance and compensating safeguards until full treatment resumes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/task/t_ManageRiskAcceptances.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/audit-management/concept/audit-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 55,
+    "prompt": "What does continuous monitoring enable in a mature RC program?",
+    "choices": [
+      "Describes the outcome where manual evidence collection from disconnected spreadsheets.",
+      "Matches the scenario in which closure of failed controls without exception records.",
+      "Reflects the condition that annual-only compliance checks with no interim updates.",
+      "Captures the choice stating near-real-time visibility of control health and compliance drift for faster risk response."
+    ],
+    "correctIndex": 3,
+    "explanation": "Continuous monitoring shortens detection-to-action cycles for control failures and emerging risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/task/t_AssessControls.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 56,
+    "prompt": "Which design choice best supports continuous control monitoring?",
+    "choices": [
+      "Reflects the condition that removing ownership fields from control statements.",
+      "Captures the choice stating email-only reporting without structured control records.",
+      "Corresponds to the option where static control tests that run once at implementation time.",
+      "Matches the scenario in which automated indicators tied to control objectives with threshold-based exception creation."
+    ],
+    "correctIndex": 3,
+    "explanation": "Automated indicators and exceptions provide scalable, repeatable control surveillance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/concept/control-indicators.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/task/t_UseDashboardsAndReports.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 57,
+    "prompt": "How should teams react when continuous monitoring repeatedly flags the same control failure?",
+    "choices": [
+      "Reflects the condition that suppress repeated alerts permanently to reduce workload.",
+      "Corresponds to the option where open root-cause remediation with accountable owners and validate sustained effectiveness after fixes.",
+      "Represents the approach that mark findings as accepted risk without oversight review.",
+      "Captures the choice stating restart all control libraries from default content."
+    ],
+    "correctIndex": 1,
+    "explanation": "Recurring failures require remediation and validation, not suppression.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/task/t_CreateIssueFromRisk.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/audit-management/concept/audit-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 58,
+    "prompt": "Which integration most improves RC continuous monitoring value?",
+    "choices": [
+      "Corresponds to the option where import only static policy PDFs each quarter.",
+      "Captures the choice stating ingest run-time signals from security and IT systems to enrich control and risk context automatically.",
+      "Describes the outcome where track exceptions exclusively by meeting notes.",
+      "Represents the approach that disable data integrations to preserve manual review discipline."
+    ],
+    "correctIndex": 1,
+    "explanation": "Integrated operational telemetry makes monitoring timely and context-rich.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-integrations.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 59,
+    "prompt": "Which KPI pattern suggests continuous monitoring is effective?",
+    "choices": [
+      "Describes the outcome where longer intervals between failed tests and notifications.",
+      "Represents the approach that more controls with no owners or monitoring frequency.",
+      "Corresponds to the option where higher percentage of exceptions left unassigned.",
+      "Matches the scenario in which faster exception detection, shorter remediation cycles, and lower repeat control failures."
+    ],
+    "correctIndex": 3,
+    "explanation": "Effective monitoring improves speed and reduces recurrence of control breakdowns.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/concept/policy-and-compliance.html"
+    ]
+  }
+]

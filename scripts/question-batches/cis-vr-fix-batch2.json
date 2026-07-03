@@ -1,0 +1,482 @@
+[
+  {
+    "trackCode": "CIS-VR",
+    "order": 30,
+    "prompt": "What is the main purpose of vulnerability groups in Vulnerability Response?",
+    "choices": [
+      "Disable assignment rules for security teams in enterprise contexts",
+      "Store scanner credentials in real implementations",
+      "Aggregate related vulnerable items so remediation can be coordinated at scale for measurable outcomes",
+      "Replace CI ownership records for practical execution"
+    ],
+    "correctIndex": 2,
+    "explanation": "Grouping vulnerabilities streamlines triage and remediation when many similar findings affect multiple assets.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/c_VulnerabilityGroups.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 31,
+    "prompt": "Which grouping strategy generally improves remediation efficiency?",
+    "choices": [
+      "Group by random import batch in real implementations",
+      "Group by common remediation action, affected software, and responsible assignment group in enterprise contexts",
+      "Group exclusively by discovery date across operational workflows",
+      "Group by scanner user account for measurable outcomes"
+    ],
+    "correctIndex": 1,
+    "explanation": "Operationally meaningful groups help teams execute one remediation pattern across many related findings.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/task/t_CreateVulnerabilityGroups.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 32,
+    "prompt": "When should a vulnerability group be split into smaller groups?",
+    "choices": [
+      "When group size is exactly ten items for measurable outcomes",
+      "When all items share the same patch process for practical execution",
+      "When vulnerabilities are already closed in enterprise contexts",
+      "When there are different owners, SLAs, or remediation approaches within the same group in real implementations"
+    ],
+    "correctIndex": 3,
+    "explanation": "Groups should remain actionable; mixed ownership or remediation paths can reduce execution clarity and accountability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/c_RemediationWorkflows.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 33,
+    "prompt": "What is a key governance benefit of vulnerability groups?",
+    "choices": [
+      "They eliminate risk scoring in real implementations",
+      "They remove CI context from findings in enterprise contexts",
+      "They prevent integration with change management across operational workflows",
+      "They provide a manageable unit for assigning ownership, tracking progress, and reporting outcomes under governance oversight"
+    ],
+    "correctIndex": 3,
+    "explanation": "Group-level ownership and progress tracking improve accountability and status visibility across large remediation programs.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/vulnerability-response-dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 34,
+    "prompt": "Which metric best indicates that vulnerability groups are configured effectively?",
+    "choices": [
+      "High group closure rate with low reopen percentage and clear owner accountability in enterprise contexts",
+      "Count of scanner connectors in real implementations",
+      "Total imported findings regardless of status for measurable outcomes",
+      "Number of inactive CIs for practical execution"
+    ],
+    "correctIndex": 0,
+    "explanation": "Sustained closure with low rework suggests groups are actionable and routed to the right teams.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/vr-performance-analytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 35,
+    "prompt": "What is the primary value of imported scan results in Vulnerability Response?",
+    "choices": [
+      "They close vulnerabilities automatically without review across operational workflows",
+      "They provide the raw vulnerability findings used for normalization, prioritization, and remediation workflows under governance oversight",
+      "They replace CMDB relationships in real implementations",
+      "They disable assignment group routing in enterprise contexts"
+    ],
+    "correctIndex": 1,
+    "explanation": "Scan ingest is the starting point for turning detection data into actionable remediation records.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/c_VRDataIngestion.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 36,
+    "prompt": "Which practice most improves trust in scan-derived vulnerability records?",
+    "choices": [
+      "Treat every scanner as equally configured and calibrated under governance oversight",
+      "Prioritize vulnerabilities by import timestamp exclusively in real implementations",
+      "Apply normalization and deduplication rules with CI correlation validation",
+      "Ignore duplicate findings from multiple scanners for practical execution"
+    ],
+    "correctIndex": 2,
+    "explanation": "Normalization and reliable CI mapping reduce noise and improve the accuracy of remediation targeting.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/task/t_NormalizeAndCorrelateVulnData.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 37,
+    "prompt": "Why should VR teams validate scanner integration health regularly?",
+    "choices": [
+      "To clearly eliminate remediation ownership for practical execution",
+      "To clearly remove low-risk findings from history",
+      "To clearly prevent vulnerability grouping in real implementations",
+      "To confirm scan coverage, import freshness, and pipeline reliability for risk visibility"
+    ],
+    "correctIndex": 3,
+    "explanation": "Integration issues can create blind spots or stale data that undermine prioritization and response decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/task/t_MonitorScannerIntegrations.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 38,
+    "prompt": "What is the best response when scan results show critical findings on unmanaged assets?",
+    "choices": [
+      "Initiate CI ownership remediation and route findings through exception or containment workflow in enterprise contexts",
+      "Convert findings directly into incidents exclusively across operational workflows",
+      "Close findings due to missing ownership for measurable outcomes",
+      "Suppress all unmanaged asset vulnerabilities for practical execution"
+    ],
+    "correctIndex": 0,
+    "explanation": "Unmanaged assets still represent exposure and should trigger ownership correction plus controlled risk treatment.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/c_AssetExposureManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 39,
+    "prompt": "Which metric best reflects scan result pipeline quality?",
+    "choices": [
+      "Number of closed change requests in real implementations",
+      "Count of assignment groups in ITSM in enterprise contexts",
+      "Import success rate and median time from scanner detection to VR record availability for practical execution",
+      "Total CI count in CMDB for measurable outcomes"
+    ],
+    "correctIndex": 2,
+    "explanation": "Data pipeline timeliness and reliability are essential for near-real-time vulnerability operations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/vr-performance-analytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 40,
+    "prompt": "Why are SLAs important in Vulnerability Response?",
+    "choices": [
+      "They replace vulnerability scoring in real implementations",
+      "They are used exclusively for reporting aesthetics",
+      "They eliminate the need for prioritization for practical execution",
+      "They define remediation deadlines aligned to severity and risk exposure for measurable outcomes"
+    ],
+    "correctIndex": 3,
+    "explanation": "VR SLAs create enforceable time expectations so critical vulnerabilities are addressed within acceptable risk windows.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/c_VulnerabilitySLAs.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 41,
+    "prompt": "Which factor should most strongly influence vulnerability remediation SLA targets?",
+    "choices": [
+      "Attachment count on findings under governance oversight",
+      "Analyst shift preferences across operational workflows for practical execution",
+      "Risk severity, exploitability, and business criticality of affected assets in enterprise contexts",
+      "Scanner vendor brand in real implementations across operational workflows"
+    ],
+    "correctIndex": 2,
+    "explanation": "Risk-informed SLA design ensures remediation urgency matches potential business impact.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/vulnerability-prioritization.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 42,
+    "prompt": "What is the best practice when a vulnerability is unlikely to meet SLA due to operational constraints?",
+    "choices": [
+      "Ignore the SLA breach across operational workflows",
+      "Apply a documented exception process with risk acceptance and compensating controls",
+      "Close the vulnerability without remediation for practical execution",
+      "Delete SLA definitions for that assignment group for measurable outcomes"
+    ],
+    "correctIndex": 1,
+    "explanation": "Formal exception governance preserves accountability when deadlines cannot be met.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/task/t_ManageRiskExceptions.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 43,
+    "prompt": "Which operational behavior improves VR SLA attainment?",
+    "choices": [
+      "Automated prioritization, clear ownership routing, and proactive breach notifications under governance oversight",
+      "Suppress SLA timers for critical findings across operational workflows",
+      "Manually reassign all findings daily without rules for measurable outcomes",
+      "Batch triage once per quarter for practical execution"
+    ],
+    "correctIndex": 0,
+    "explanation": "Automation and ownership clarity reduce response lag and prevent avoidable deadline breaches.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/c_RemediationWorkflows.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 44,
+    "prompt": "Which KPI best represents SLA performance maturity in VR?",
+    "choices": [
+      "Number of CMDB classes across operational workflows",
+      "Average number of comments per item under governance oversight",
+      "Total scanner count in real implementations",
+      "Percentage of critical vulnerabilities remediated within SLA and trend of overdue backlog in enterprise contexts"
+    ],
+    "correctIndex": 3,
+    "explanation": "On-time critical remediation and shrinking overdue backlog indicate sustained SLA execution discipline.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/vr-performance-analytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 45,
+    "prompt": "In Vulnerability Response, what is the primary purpose of an exception request?",
+    "choices": [
+      "To clearly replace CMDB relationships with manual entries",
+      "To clearly bypass all remediation controls permanently",
+      "To clearly document and approve temporary acceptance of risk when remediation is not feasible",
+      "To clearly close vulnerabilities without any approval"
+    ],
+    "correctIndex": 2,
+    "explanation": "Exceptions formally capture compensating rationale, approvals, and time bounds for accepted risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/concept/vulnerability-response-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 46,
+    "prompt": "Which field is most important when managing vulnerability exceptions?",
+    "choices": [
+      "Requested desktop wallpaper for practical execution across operational workflows",
+      "Expiration date with documented business justification for measurable outcomes",
+      "Asset purchase date exclusively across operational workflows",
+      "Incident category preference in enterprise contexts under governance oversight"
+    ],
+    "correctIndex": 1,
+    "explanation": "An expiration date and justification enforce periodic review and prevent indefinite risk acceptance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/manage-risk-exceptions.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 47,
+    "prompt": "What is the best governance action when a vulnerability exception nears expiration?",
+    "choices": [
+      "Trigger review workflow for revalidation, remediation, or closure in enterprise contexts",
+      "Delete the exception and leave vulnerability open in real implementations",
+      "Convert the exception into an incident record exclusively",
+      "Auto-extend for one year with no review across operational workflows"
+    ],
+    "correctIndex": 0,
+    "explanation": "Review workflows ensure risk is reassessed and not silently carried forward.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/review-risk-exceptions.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 48,
+    "prompt": "How should compensating controls be represented for a VR exception?",
+    "choices": [
+      "As free-text notes without owner or evidence across operational workflows",
+      "As unresolved vulnerability groups under governance oversight",
+      "As endpoint tags without risk context in real implementations",
+      "As documented controls with owner, implementation evidence, and verification cadence in enterprise contexts"
+    ],
+    "correctIndex": 3,
+    "explanation": "Structured control evidence makes exception decisions auditable and defensible.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/document-compensating-controls.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 49,
+    "prompt": "Which metric best signals weak exception handling in VR?",
+    "choices": [
+      "Documented exception approvals with clear owners under governance oversight",
+      "High percentage of expired exceptions still linked to open critical vulnerabilities across operational workflows",
+      "Routine exception review meetings in enterprise contexts",
+      "Short exception durations for emergency cases in real implementations"
+    ],
+    "correctIndex": 1,
+    "explanation": "Expired exceptions tied to critical findings indicate governance breakdown and unmanaged risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/report-on-vulnerability-risk.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 50,
+    "prompt": "Which KPI is most important for measuring VR program effectiveness?",
+    "choices": [
+      "Count of software catalog items for measurable outcomes",
+      "Number of CMDB classes for practical execution",
+      "Total number of open incidents in enterprise contexts",
+      "Average vulnerability age by severity in real implementations"
+    ],
+    "correctIndex": 3,
+    "explanation": "Vulnerability age by severity indicates whether serious issues are being remediated within expected timelines.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/report-on-vulnerability-risk.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 51,
+    "prompt": "What metric best tracks remediation throughput in VR?",
+    "choices": [
+      "Ratio of vulnerabilities closed versus opened per period for practical execution",
+      "Volume of security announcements read for measurable outcomes",
+      "Count of assignment groups in real implementations",
+      "Number of scanner integrations configured in enterprise contexts"
+    ],
+    "correctIndex": 0,
+    "explanation": "Close-to-open ratios show whether remediation capacity keeps pace with newly discovered risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/use-performance-analytics-for-vr.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 52,
+    "prompt": "Why segment VR metrics by business service or application?",
+    "choices": [
+      "To clearly identify concentration of risk and ownership hotspots",
+      "To clearly remove CI dependency mapping in real implementations",
+      "To clearly hide infrastructure vulnerabilities for measurable outcomes",
+      "To clearly avoid assigning remediation tasks for practical execution"
+    ],
+    "correctIndex": 0,
+    "explanation": "Service-level segmentation reveals where risk accumulates and which owners need attention.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/prioritize-vulnerabilities-by-business-context.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 53,
+    "prompt": "Which metric helps validate SLA policy realism in VR?",
+    "choices": [
+      "Percentage of vulnerabilities meeting SLA by severity class in real implementations",
+      "Count of dashboard tabs in enterprise contexts",
+      "Number of users with admin role for practical execution",
+      "Frequency of weekly standups for measurable outcomes"
+    ],
+    "correctIndex": 0,
+    "explanation": "SLA attainment by severity highlights whether policy targets are achievable and being enforced.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/service-level-management/concept/c_ServiceLevelManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 54,
+    "prompt": "What visualization is best for showing VR risk reduction over time?",
+    "choices": [
+      "Trend of open critical/high vulnerabilities with closure velocity overlays in enterprise contexts",
+      "Single value showing total CI count in real implementations",
+      "Table of inactive users under governance oversight",
+      "Pie chart of scanner names across operational workflows"
+    ],
+    "correctIndex": 0,
+    "explanation": "Time-based trends plus closure velocity provide context on whether risk posture is improving.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 55,
+    "prompt": "Which role is primarily responsible for VR policy and operational governance?",
+    "choices": [
+      "Vulnerability response manager or program owner in real implementations",
+      "No ownership role is needed in enterprise contexts",
+      "Exclusively CMDB data steward in real implementations",
+      "Any business user with portal access under governance oversight"
+    ],
+    "correctIndex": 0,
+    "explanation": "Program ownership is needed to maintain lifecycle standards, SLAs, and remediation accountability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/concept/vulnerability-response-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 56,
+    "prompt": "What role should approve high-impact vulnerability exceptions?",
+    "choices": [
+      "Designated risk approver with security governance authority under governance oversight",
+      "Service desk trainee across operational workflows for practical execution",
+      "Scanner integration user in enterprise contexts under governance oversight",
+      "Any technician assigned to the item in real implementations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Exception approval for high risk requires formal authority and risk accountability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/manage-risk-exceptions.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 57,
+    "prompt": "Which role should typically own remediation tasks in VR?",
+    "choices": [
+      "Application or infrastructure owner responsible for affected assets across operational workflows",
+      "Unassigned queue with no owner under governance oversight",
+      "Exclusively platform administrators in real implementations",
+      "Security auditors exclusively under governance oversight"
+    ],
+    "correctIndex": 0,
+    "explanation": "Asset and application owners are best positioned to execute and validate remediation changes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/remediate-vulnerabilities.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 58,
+    "prompt": "How should read access be handled for vulnerability data with sensitive findings?",
+    "choices": [
+      "Role-based access with constraints for sensitive CI and exploit details in enterprise contexts",
+      "No ACLs needed when dashboards exist in real implementations",
+      "Shared through public reports under governance oversight",
+      "Open to all authenticated users across operational workflows"
+    ],
+    "correctIndex": 0,
+    "explanation": "Sensitive vulnerability details require controlled visibility based on operational need.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_AccessControls.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 59,
+    "prompt": "What indicates healthy VR role alignment?",
+    "choices": [
+      "No role ownership captured on records across operational workflows",
+      "Frequent overdue items with unknown owners under governance oversight",
+      "Remediation, approval, and review duties are clearly separated with low reassignment churn for practical execution",
+      "All responsibilities assigned to one responder for measurable outcomes"
+    ],
+    "correctIndex": 2,
+    "explanation": "Clear ownership and segregation improve throughput, auditability, and risk control.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+    ]
+  }
+]

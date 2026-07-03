@@ -1,0 +1,407 @@
+[
+  {
+    "trackCode": "CPOA",
+    "order": 25,
+    "prompt": "When launching a platform adoption blueprint, what should a platform owner define first to guide all later enablement work?",
+    "choices": [
+      "Business outcomes, success measures, and adoption personas",
+      "Scoped app naming conventions for all development teams",
+      "Database maintenance windows for non-production clones",
+      "Update set naming prefixes by assignment group"
+    ],
+    "correctIndex": 0,
+    "explanation": "Adoption blueprints should begin with clear outcomes and measurable user adoption goals so enablement activities stay aligned with value delivery.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/use/digital-portfolio-management/concept/adoption-and-value-roadmap.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 26,
+    "prompt": "Which KPI set is most appropriate for monitoring adoption performance after a new workflow goes live?",
+    "choices": [
+      "Only node memory usage and JVM thread count",
+      "Unique active users, completion rate, cycle time, and deflection trend",
+      "Total number of ACL records in the instance",
+      "Plugin activation count and number of update sets"
+    ],
+    "correctIndex": 1,
+    "explanation": "Adoption performance should combine usage and business process outcomes, not only technical administration statistics.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/use/performance-analytics/concept/performance-metrics-and-kpis.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 27,
+    "prompt": "A platform owner needs to enforce multi-domain data policies across departments. What is the best governance action?",
+    "choices": [
+      "Disable domain separation so all teams can view all records",
+      "Move sensitive data to client-side local storage",
+      "Use domain separation rules and role-based data access controls",
+      "Require all users to have admin privileges during audits"
+    ],
+    "correctIndex": 2,
+    "explanation": "Domain separation and role-aware controls support policy boundaries while allowing shared platform governance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/company-and-domain-separation/concept/domain-separation.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 28,
+    "prompt": "Why should a platform owner baseline process performance before publishing an adoption blueprint?",
+    "choices": [
+      "To avoid creating user training artifacts",
+      "To bypass stakeholder sign-off requirements",
+      "To auto-generate all stories in Agile Development",
+      "To compare post-release gains against known pre-adoption metrics"
+    ],
+    "correctIndex": 3,
+    "explanation": "A baseline enables objective measurement of whether adoption efforts improved targeted outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/use/performance-analytics/task/create-baselines.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 29,
+    "prompt": "Which operating rhythm best supports continuous adoption monitoring in a platform administration team?",
+    "choices": [
+      "Regular scorecard reviews with action owners for lagging indicators",
+      "Quarterly review only after all projects close",
+      "No cadence; react only to incidents",
+      "Daily emergency CAB sessions for every enhancement"
+    ],
+    "correctIndex": 0,
+    "explanation": "Recurring scorecard reviews with assigned owners keep adoption objectives visible and drive corrective action.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/use/performance-analytics/task/use-scorecards.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 30,
+    "prompt": "What is the primary purpose of Setup Hub during initial platform onboarding?",
+    "choices": [
+      "To monitor only MID Server JVM performance",
+      "To configure foundational instance settings through guided steps",
+      "To replace update sets in production deployment",
+      "To migrate all historical audit records across domains"
+    ],
+    "correctIndex": 1,
+    "explanation": "Setup Hub helps administrators complete baseline configuration activities in a consistent guided process.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/administer/setup-hub/concept/setup-hub.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 31,
+    "prompt": "When governing an internal app repository, which policy best improves reuse and quality?",
+    "choices": [
+      "Publish apps without dependency documentation",
+      "Disable source control integration by default",
+      "Require ownership metadata, review checks, and version standards",
+      "Allow unlimited direct edits in production apps"
+    ],
+    "correctIndex": 2,
+    "explanation": "Repository governance standards make app assets discoverable, supportable, and safer to adopt across teams.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/applications/concept/application-repository.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 32,
+    "prompt": "An enterprise MID strategy should prioritize which architecture outcome?",
+    "choices": [
+      "Running MID only on developer laptops",
+      "Single MID Server for all business-critical integrations globally",
+      "No clustering so failover can be tested manually",
+      "Segmented, redundant MID placement aligned to network zones and workloads"
+    ],
+    "correctIndex": 3,
+    "explanation": "Distributed and redundant MID deployment improves resilience, security boundary alignment, and integration reliability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/product/mid-server/concept/mid-server-architecture.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 33,
+    "prompt": "Which Setup Hub governance practice helps avoid environment drift?",
+    "choices": [
+      "Track setup tasks to completion with accountable owners and evidence",
+      "Run setup tasks once and never review completion status",
+      "Let each admin skip steps without documenting exceptions",
+      "Store setup checklists in personal notes only"
+    ],
+    "correctIndex": 0,
+    "explanation": "Formal tracking and evidence improve consistency and auditability of baseline instance configuration.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/administer/setup-hub/task/complete-setup-tasks.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 34,
+    "prompt": "Why should platform admins classify app repository entries by business capability and support tier?",
+    "choices": [
+      "It forces all apps to use the same custom table prefix",
+      "It helps consumers choose reusable apps with clear ownership and lifecycle expectations",
+      "It prevents any scoped app from being installed",
+      "It removes the need for technical documentation"
+    ],
+    "correctIndex": 1,
+    "explanation": "Capability and tier metadata improves app discoverability, reuse decisions, and support planning.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/applications/task/publish-to-application-repository.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 35,
+    "prompt": "Which instance statistic is most useful for tracking whether transaction demand is outpacing platform capacity?",
+    "choices": [
+      "Number of update sets promoted this month",
+      "Count of active catalog categories",
+      "Transaction throughput trend with response time percentiles",
+      "Total knowledge article views"
+    ],
+    "correctIndex": 2,
+    "explanation": "Throughput and latency trends provide direct visibility into demand and performance pressure on the instance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/administer/instance-administration/concept/instance-performance-dashboard.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 36,
+    "prompt": "A security review identifies over-permissive table access. What is the best immediate administrative response?",
+    "choices": [
+      "Disable all ACLs for the affected table",
+      "Grant admin to all support users temporarily",
+      "Move records to a global table to simplify access",
+      "Tighten ACL conditions and roles using least-privilege principles"
+    ],
+    "correctIndex": 3,
+    "explanation": "Least-privilege ACL adjustments are the correct response to over-broad access findings.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/security/task/create-an-acl-rule.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 37,
+    "prompt": "When enabling cross-scope access between two applications, what should platform admins prioritize first?",
+    "choices": [
+      "Using explicit application access settings and minimal required privileges",
+      "Allowing unrestricted runtime access for speed",
+      "Disabling scope protections during testing",
+      "Converting both apps to global scope"
+    ],
+    "correctIndex": 0,
+    "explanation": "Explicit and minimal cross-scope permissions reduce security risk while enabling necessary integrations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/applications/reference/cross-scope-access-controls.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 38,
+    "prompt": "Which metric combination best highlights potential security constraints impacting adoption?",
+    "choices": [
+      "Plugin activation count and node uptime",
+      "Denied ACL attempts, role request turnaround, and task completion drop-off",
+      "Script include count and clone frequency",
+      "Business rule execution order and UI policy count"
+    ],
+    "correctIndex": 1,
+    "explanation": "Access denials plus user flow degradation can reveal security controls that are misaligned with intended process use.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/security/concept/security-monitoring-and-auditing.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 39,
+    "prompt": "Why should instance statistics reviews be part of a regular admin governance cadence?",
+    "choices": [
+      "They eliminate the need for access reviews",
+      "They remove the need for performance analytics",
+      "They detect trends early so teams can remediate before user impact grows",
+      "They automatically approve all change requests"
+    ],
+    "correctIndex": 2,
+    "explanation": "Routine trend review supports proactive performance and security management rather than reactive firefighting.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/administer/instance-administration/task/monitor-instance-health.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 40,
+    "prompt": "What is the best administrative control for plugin management in a governed enterprise instance?",
+    "choices": [
+      "Activate plugins directly in production whenever requested",
+      "Allow any fulfilled user to manage plugins",
+      "Disable all plugin documentation requirements",
+      "Use formal impact assessment and approval before plugin activation"
+    ],
+    "correctIndex": 3,
+    "explanation": "Plugin activation can affect data model and behavior, so impact assessment and governance approvals are essential.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/administer/plugins/concept/plugin-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 41,
+    "prompt": "During update set promotion, which step most reduces migration risk?",
+    "choices": [
+      "Preview and resolve collisions before committing in target instances",
+      "Promote directly from dev to production with no test instance validation",
+      "Bundle unrelated features in one large emergency update set",
+      "Skip back-out planning for low-priority changes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Collision preview and resolution in lower environments prevents avoidable production conflicts.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/system-update-sets/task/t_PreviewAnUpdateSet.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 42,
+    "prompt": "For cloning at scale, which safeguard is most important for non-production environments?",
+    "choices": [
+      "Allow integrations to call production endpoints immediately",
+      "Apply post-clone data protection and environment-specific sanitization",
+      "Skip clone profiles to reduce clone duration",
+      "Retain all production outbound email settings unchanged"
+    ],
+    "correctIndex": 1,
+    "explanation": "Post-clone controls and sanitization reduce data exposure and prevent unintended external impacts.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/administer/instance-administration/concept/clone-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 43,
+    "prompt": "Why should plugin activation history be tracked as part of platform governance?",
+    "choices": [
+      "It enables automatic rollback of all customizations",
+      "It allows unrestricted admin delegation",
+      "It supports auditability and impact troubleshooting across releases",
+      "It replaces update set documentation"
+    ],
+    "correctIndex": 2,
+    "explanation": "Activation history provides change context for audits and helps diagnose behavior shifts after release events.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/administer/plugins/task/view-plugin-status.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 44,
+    "prompt": "Which clone strategy best supports many development teams while reducing contention?",
+    "choices": [
+      "Allow ad hoc full clones at any time",
+      "Ban all clone activities during release cycles",
+      "Clone only production to every personal developer instance daily",
+      "Use scheduled clone waves with role-specific clone profiles and blackout windows"
+    ],
+    "correctIndex": 3,
+    "explanation": "Planned clone waves and profiles balance data freshness with operational stability at scale.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/administer/instance-administration/task/schedule-a-clone.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 45,
+    "prompt": "What is the strongest governance control for outbound email in a ServiceNow platform owner model?",
+    "choices": [
+      "Define approved sender domains, templates, and notification ownership with periodic audits",
+      "Disable notification logs to reduce storage usage",
+      "Allow any admin to create production email notifications directly",
+      "Route all outbound email through personal mailboxes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Email governance relies on controlled templates, sender policies, and accountable ownership to reduce risk and inconsistency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/notification/concept/c_Notifications.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_EmailSecurity.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 46,
+    "prompt": "Why should a platform owner establish notification design standards across business apps?",
+    "choices": [
+      "To eliminate all event-driven communications",
+      "To prevent duplicate, conflicting, or low-value notifications that degrade user trust",
+      "To bypass approval for emergency communication changes",
+      "To require every team to build custom mail scripts"
+    ],
+    "correctIndex": 1,
+    "explanation": "Consistent standards reduce noise and support a predictable notification experience for users and stakeholders.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/notification/concept/c_Notifications.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/system-properties/concept/c_SystemProperties.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 47,
+    "prompt": "Which metric best signals notification governance health in production?",
+    "choices": [
+      "Maximum use of custom scripts in every notification",
+      "Number of email templates created without review",
+      "Stable delivery success with reduced duplicate sends and lower opt-out complaints",
+      "Highest possible number of notifications sent per day"
+    ],
+    "correctIndex": 2,
+    "explanation": "Governance effectiveness is reflected in reliable delivery and reduced communication fatigue, not raw volume.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/notification/concept/c_Notifications.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 48,
+    "prompt": "How should emergency notification changes be governed to balance speed and control?",
+    "choices": [
+      "Allow each support analyst to publish independent templates",
+      "Permit direct edits in production without records for faster resolution",
+      "Delay all urgent updates until the next monthly release window",
+      "Use expedited change procedures with post-implementation review and rollback readiness"
+    ],
+    "correctIndex": 3,
+    "explanation": "Expedited but documented change control protects reliability while enabling rapid response when communication must change quickly.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/notification/concept/c_Notifications.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 49,
+    "prompt": "What ownership model most improves long-term notification governance?",
+    "choices": [
+      "Assign business service owners to notification portfolios with defined review cadences",
+      "Centralize all notifications under a single ungoverned global script",
+      "Disable role-based access controls for notification administration",
+      "Treat notification content as purely technical configuration"
+    ],
+    "correctIndex": 0,
+    "explanation": "Named ownership with scheduled reviews aligns communication quality with business outcomes and compliance obligations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/roles/concept/c_Roles.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/notification/concept/c_Notifications.html"
+    ]
+  }
+]

@@ -1,0 +1,491 @@
+[
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 30,
+    "prompt": "What is the main purpose of declaring an incident as a major incident?",
+    "choices": [
+      "Describes the outcome where to disable SLA tracking while the incident is open.",
+      "Reflects the condition that to trigger prioritized coordination and communication for high business impact disruptions.",
+      "Matches the scenario in which to convert all related incidents into service requests.",
+      "Represents the approach that to bypass incident state transitions permanently."
+    ],
+    "correctIndex": 1,
+    "explanation": "Major Incident Management formalizes urgent, high-impact response with coordinated communication and accelerated handling.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/australia/incident-management/concept/c_MajorIncidentManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 31,
+    "prompt": "How are incident tasks typically used during major incident response?",
+    "choices": [
+      "Reflects the condition that they break response work into assignable, trackable activities under the parent incident.",
+      "Captures the choice stating they are created only after the incident is resolved.",
+      "Describes the outcome where they replace the need for assignment groups.",
+      "Matches the scenario in which they are limited to knowledge article approvals."
+    ],
+    "correctIndex": 0,
+    "explanation": "Incident tasks allow teams to coordinate parallel technical actions while maintaining traceability to the parent incident.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/australia/incident-management/task/t_UseIncidentTasks.html",
+      "https://www.servicenow.com/docs/r/it-service-management/australia/incident-management/concept/c_MajorIncidentManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 32,
+    "prompt": "Which configuration determines when an incident SLA pauses or resumes?",
+    "choices": [
+      "Reflects the condition that the pause conditions defined on the SLA definition.",
+      "Corresponds to the option where the major incident proposal workflow.",
+      "Matches the scenario in which the incident category dictionary attributes.",
+      "Captures the choice stating the update set state."
+    ],
+    "correctIndex": 0,
+    "explanation": "SLA definitions include explicit start, stop, and pause conditions that control SLA timing behavior on tasks.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/australia/service-level-management/concept/c_ServiceLevelAgreements.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 33,
+    "prompt": "Which statement about SLAs and incident tasks is accurate?",
+    "choices": [
+      "Reflects the condition that incident task SLAs are controlled only by assignment rules.",
+      "Corresponds to the option where sLA timers always stop when a related problem record is created.",
+      "Captures the choice stating sLAs can be defined for incident tasks when conditions match that task type.",
+      "Represents the approach that sLAs can target only the Incident table, not child tasks."
+    ],
+    "correctIndex": 2,
+    "explanation": "Task SLAs are condition-based and can be applied to incident tasks as well as incidents when definitions and criteria align.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/australia/service-level-management/concept/c_TaskSLA.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 34,
+    "prompt": "During a major incident, why is maintaining timely work notes and updates critical?",
+    "choices": [
+      "Corresponds to the option where it prevents creation of child incident tasks.",
+      "Describes the outcome where it allows agents to skip incident closure requirements.",
+      "Represents the approach that it automatically shortens all active SLAs.",
+      "Captures the choice stating it supports coordinated response, stakeholder communication, and auditability of actions."
+    ],
+    "correctIndex": 3,
+    "explanation": "Consistent updates provide a shared operational timeline for responders, stakeholders, and post-incident review.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/australia/incident-management/concept/c_MajorIncidentManagement.html",
+      "https://www.servicenow.com/docs/r/it-service-management/australia/incident-management/c_IncidentManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 35,
+    "prompt": "A customer orders a laptop through the Service Catalog. Which record tracks the overall request while still allowing multiple requested items under it?",
+    "choices": [
+      "Describes the outcome where the Request record on sc_request.",
+      "Matches the scenario in which a Change record in normal state.",
+      "Corresponds to the option where a single Incident record.",
+      "Represents the approach that a CMDB CI class record."
+    ],
+    "correctIndex": 0,
+    "explanation": "The sc_request record represents the parent request and can contain one or many requested items submitted in the same cart checkout.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/service-catalog-management/request-fulfillment.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 36,
+    "prompt": "What is the role of `sc_task` in request fulfillment?",
+    "choices": [
+      "Reflects the condition that it archives closed requests to external storage.",
+      "Represents the approach that it represents fulfillment work assigned to groups or individuals for a requested item.",
+      "Describes the outcome where it replaces approvals on all request items.",
+      "Matches the scenario in which it stores only catalog item images."
+    ],
+    "correctIndex": 1,
+    "explanation": "Catalog tasks (`sc_task`) are the actionable fulfillment tasks generated to complete work for requested items.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/service-catalog-management/request-fulfillment.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 37,
+    "prompt": "A catalog item requires approvals and then provisioning tasks. Where is this sequence typically orchestrated in modern implementations?",
+    "choices": [
+      "Describes the outcome where in list personalization rules.",
+      "Matches the scenario in which in dashboard widgets without backend actions.",
+      "Reflects the condition that in the sys_user table business logic only.",
+      "Captures the choice stating in Flow Designer request fulfillment flows associated with the catalog item."
+    ],
+    "correctIndex": 3,
+    "explanation": "Catalog workflows are commonly implemented with Flow Designer to coordinate approval gates and fulfillment task generation for request items.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/service-catalog-management/request-fulfillment.html",
+      "https://www.servicenow.com/docs/r/process-automation/flow-designer/flow-designer.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 38,
+    "prompt": "If one request contains three requested items, what should fulfillment managers expect regarding task creation?",
+    "choices": [
+      "Reflects the condition that tasks are replaced automatically by incidents.",
+      "Captures the choice stating tasks can be created per requested item based on each item's workflow requirements.",
+      "Corresponds to the option where only one task is ever allowed per request.",
+      "Matches the scenario in which tasks are created only after the request is closed."
+    ],
+    "correctIndex": 1,
+    "explanation": "Each requested item can drive its own fulfillment path, so multiple `sc_task` records may be generated according to item-specific flow logic.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/service-catalog-management/request-fulfillment.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 39,
+    "prompt": "A catalog workflow should route software-access tasks to one group and hardware-delivery tasks to another. Which design supports this best?",
+    "choices": [
+      "Reflects the condition that convert all catalog requests to problem records.",
+      "Corresponds to the option where hard-code all tasks to Service Desk regardless of item type.",
+      "Represents the approach that disable assignment groups on catalog tasks.",
+      "Captures the choice stating use conditional flow logic that creates and assigns `sc_task` records to different groups by request data."
+    ],
+    "correctIndex": 3,
+    "explanation": "Conditional branching in request fulfillment flows allows task assignment to vary by variables, item type, or other request context.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/service-catalog-management/request-fulfillment.html",
+      "https://www.servicenow.com/docs/r/process-automation/flow-designer/flow-designer.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 40,
+    "prompt": "In ITSM release management, what is the primary purpose of a release record?",
+    "choices": [
+      "Represents the approach that to approve user access roles.",
+      "Corresponds to the option where to store software discovery patterns.",
+      "Captures the choice stating to replace all incident records.",
+      "Describes the outcome where to track a coordinated deployment of multiple related changes."
+    ],
+    "correctIndex": 3,
+    "explanation": "A release groups and governs related change activities so teams can plan, test, and deploy capabilities in a controlled way.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-it-service-management/page/product/release-management/concept/c_ReleaseManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 41,
+    "prompt": "How do release tasks support execution quality during a deployment window?",
+    "choices": [
+      "Describes the outcome where by preventing CAB review for normal changes.",
+      "Matches the scenario in which by automatically closing all linked change requests.",
+      "Represents the approach that by replacing test plans with incident work notes.",
+      "Corresponds to the option where by assigning granular implementation steps with ownership and status tracking."
+    ],
+    "correctIndex": 3,
+    "explanation": "Release tasks break work into trackable units with owners and due states, improving coordination and accountability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-it-service-management/page/product/release-management/task/t_CreateReleaseTask.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 42,
+    "prompt": "Which dependency should be verified before moving a release from Build to Test phase?",
+    "choices": [
+      "Represents the approach that at least one incident linked to the release.",
+      "Reflects the condition that cMDB discovery schedule executed same day.",
+      "Matches the scenario in which problem record with workaround published.",
+      "Describes the outcome where all associated release tasks marked Closed Complete."
+    ],
+    "correctIndex": 3,
+    "explanation": "Phase transitions should reflect readiness gates; incomplete release tasks often indicate unresolved implementation items.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-it-service-management/page/product/release-management/concept/c_ReleaseManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 43,
+    "prompt": "What is a key benefit of linking change requests to a release?",
+    "choices": [
+      "Matches the scenario in which it provides end-to-end visibility of delivery scope and approvals.",
+      "Captures the choice stating it disables blackout windows for deployment.",
+      "Describes the outcome where it converts emergency changes into standard changes automatically.",
+      "Reflects the condition that it removes the need for change risk assessment."
+    ],
+    "correctIndex": 0,
+    "explanation": "Linking changes to a release creates a complete trace of scope, approvals, and execution status across related work items.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-it-service-management/page/product/release-management/concept/c_ReleaseManagement.html",
+      "https://www.servicenow.com/docs/bundle/xanadu-it-service-management/page/product/change-management/concept/c_ChangeManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 44,
+    "prompt": "During post-implementation review, which release-task outcome is most useful for continual improvement?",
+    "choices": [
+      "Captures the choice stating unstructured comments without closure codes.",
+      "Reflects the condition that deleting failed tasks to keep reports clean.",
+      "Matches the scenario in which task completion metrics and documented blockers.",
+      "Corresponds to the option where only task assignment group names."
+    ],
+    "correctIndex": 2,
+    "explanation": "Completion data and blocker notes reveal process bottlenecks and execution risks that should inform future release planning.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-it-service-management/page/product/release-management/concept/c_ReleaseManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 45,
+    "prompt": "What does Service Level Management primarily ensure in ITSM?",
+    "choices": [
+      "Corresponds to the option where that CMDB classes are automatically normalized.",
+      "Represents the approach that that all incidents are resolved by one assignment group.",
+      "Captures the choice stating that every change is categorized as standard.",
+      "Reflects the condition that that agreed service commitments are defined, measured, and reported between providers and customers."
+    ],
+    "correctIndex": 3,
+    "explanation": "Service Level Management governs how service commitments are structured and monitored to meet business expectations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/service-level-management/service-level-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 46,
+    "prompt": "In ServiceNow SLM, what is an SLA definition used for?",
+    "choices": [
+      "Captures the choice stating it stores catalog item pricing models.",
+      "Describes the outcome where it determines MID Server JVM heap settings.",
+      "Represents the approach that it controls ACL role inheritance.",
+      "Corresponds to the option where it defines when an SLA attaches, its target timing, and the conditions for pause, resume, or stop."
+    ],
+    "correctIndex": 3,
+    "explanation": "SLA definitions contain the rules and timing behavior that drive task SLA records on qualifying tasks.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/service-level-management/task-sla-definitions.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 47,
+    "prompt": "Which statement correctly describes the relationship between SLA and Task SLA records?",
+    "choices": [
+      "Represents the approach that sLA records are only for incidents, and Task SLAs are only for changes.",
+      "Matches the scenario in which sLA definitions are generated from Knowledge articles.",
+      "Corresponds to the option where task SLAs are manually created and never automated.",
+      "Describes the outcome where sLA definitions provide templates, while Task SLA records are runtime instances attached to specific tasks."
+    ],
+    "correctIndex": 3,
+    "explanation": "An SLA definition determines behavior, and each qualifying task gets its own Task SLA record to track actual timing.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/service-level-management/task-sla.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 48,
+    "prompt": "Why are pause conditions important in an SLA definition?",
+    "choices": [
+      "Represents the approach that they allow users to bypass assignment rules.",
+      "Matches the scenario in which they permanently stop all SLA engines.",
+      "Describes the outcome where they convert response SLAs into availability reports.",
+      "Reflects the condition that they prevent SLA time from counting during approved hold states, improving fair measurement against commitments."
+    ],
+    "correctIndex": 3,
+    "explanation": "Pause conditions align elapsed SLA time with business policy by excluding periods such as awaiting customer input.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/service-level-management/sla-pause-conditions.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 49,
+    "prompt": "What is a best practice when creating multiple SLA definitions for one process?",
+    "choices": [
+      "Matches the scenario in which store all SLA logic in client scripts.",
+      "Captures the choice stating use identical conditions for every priority level.",
+      "Reflects the condition that disable SLA retroactive start to improve accuracy.",
+      "Describes the outcome where confirm start and stop conditions are specific and non-overlapping to avoid unintended simultaneous attachments."
+    ],
+    "correctIndex": 3,
+    "explanation": "Clear, precise conditions help prevent conflicting SLA behavior and make service-level reporting more reliable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/service-level-management/task-sla-definitions.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 50,
+    "prompt": "In ITSM, what is a primary benefit of deploying Virtual Agent for common support requests?",
+    "choices": [
+      "Corresponds to the option where it eliminates the need for a service catalog.",
+      "Matches the scenario in which it automatically decommissions inactive CMDB CIs.",
+      "Reflects the condition that it deflects repetitive contacts by guiding users through conversational self-service flows.",
+      "Captures the choice stating it routes all incidents directly to Problem Management."
+    ],
+    "correctIndex": 2,
+    "explanation": "Virtual Agent reduces service desk load by handling frequent, repeatable user intents through guided conversations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/virtual-agent/virtual-agent/virtual-agent-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 51,
+    "prompt": "A self-service strategy emphasizes \"shift-left\" support. Which outcome best aligns with that goal?",
+    "choices": [
+      "Reflects the condition that users resolve simple issues through knowledge or virtual assistant before contacting agents.",
+      "Captures the choice stating catalog approvals are bypassed for speed.",
+      "Corresponds to the option where all incidents are converted to change requests.",
+      "Represents the approach that more tickets reassigned between resolver groups."
+    ],
+    "correctIndex": 0,
+    "explanation": "Shift-left focuses on moving resolution closer to the user through knowledge and automation, reducing agent-handled demand.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/knowledge-management/knowledge-management.html",
+      "https://www.servicenow.com/docs/r/virtual-agent/virtual-agent/virtual-agent-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 52,
+    "prompt": "Which design choice improves Virtual Agent success for password reset and similar ITSM requests?",
+    "choices": [
+      "Corresponds to the option where disable handoff to live agent entirely.",
+      "Represents the approach that use long free-text prompts with no decision buttons.",
+      "Describes the outcome where create clear intents and guided topic flows with explicit next actions.",
+      "Captures the choice stating trigger CAB approval before every conversation step."
+    ],
+    "correctIndex": 2,
+    "explanation": "Well-defined intents and guided branching reduce ambiguity and make self-service conversations reliable and efficient.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/virtual-agent/virtual-agent/design-conversation-topics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 53,
+    "prompt": "Which KPI best indicates whether ITSM self-service is reducing service desk workload?",
+    "choices": [
+      "Corresponds to the option where number of update sets promoted per week.",
+      "Describes the outcome where decrease in first response SLA target.",
+      "Matches the scenario in which growth in successful self-service/VA resolutions with fewer agent-created incidents.",
+      "Represents the approach that increase in incident reassignment count."
+    ],
+    "correctIndex": 2,
+    "explanation": "The key signal is successful user resolution through self-service channels and reduced need for agent ticket creation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/incident-management/c_IncidentManagement.html",
+      "https://www.servicenow.com/docs/r/virtual-agent/virtual-agent/virtual-agent-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 54,
+    "prompt": "When should a Virtual Agent topic hand off to a live agent in ITSM?",
+    "choices": [
+      "Describes the outcome where when confidence is low, user intent is ambiguous, or policy requires human approval.",
+      "Represents the approach that only after closing the user's incident.",
+      "Reflects the condition that never, because full automation is mandatory.",
+      "Matches the scenario in which immediately for every greeting."
+    ],
+    "correctIndex": 0,
+    "explanation": "Effective VA design includes escalation paths for low-confidence or high-judgment situations to preserve user experience and compliance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/virtual-agent/virtual-agent/design-conversation-topics.html",
+      "https://www.servicenow.com/docs/r/virtual-agent/virtual-agent/virtual-agent-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 55,
+    "prompt": "What is the core purpose of the ITSM Walk-up Experience?",
+    "choices": [
+      "Reflects the condition that to archive closed incidents to external storage.",
+      "Matches the scenario in which to replace all virtual agent conversations.",
+      "Describes the outcome where to run vulnerability scans on endpoints.",
+      "Captures the choice stating to manage in-person support interactions, including check-in, queueing, and fulfillment."
+    ],
+    "correctIndex": 3,
+    "explanation": "Walk-up Experience supports front-desk or on-site support workflows by organizing customer visits and service delivery.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/walk-up-experience/walk-up-experience.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 56,
+    "prompt": "In Walk-up Experience, what does queue management primarily provide?",
+    "choices": [
+      "Reflects the condition that cMDB class inheritance mapping.",
+      "Captures the choice stating encryption key rotation for SSO certificates.",
+      "Corresponds to the option where automatic creation of MID Servers.",
+      "Matches the scenario in which visibility into waiting customers and service order so agents can process requests efficiently."
+    ],
+    "correctIndex": 3,
+    "explanation": "Queue management helps agents prioritize and handle in-person tickets using current wait and service status.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/walk-up-experience/walk-up-queues.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 57,
+    "prompt": "What benefit does Agent Workspace bring to incident management teams?",
+    "choices": [
+      "Reflects the condition that a mandatory replacement for all catalog forms.",
+      "Corresponds to the option where a tool that disables SLA tracking.",
+      "Represents the approach that a direct substitute for CMDB identification rules.",
+      "Captures the choice stating a unified workspace with contextual record views and actions that speeds investigation and resolution."
+    ],
+    "correctIndex": 3,
+    "explanation": "Agent Workspace centralizes task context, related records, and guided actions to improve agent productivity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/agent-workspace/agent-workspace-for-itsm.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 58,
+    "prompt": "Why configure workspace forms and lists for ITSM roles?",
+    "choices": [
+      "Corresponds to the option where to bypass table ACLs permanently.",
+      "Captures the choice stating to surface role-relevant data and actions that reduce handling time and context switching.",
+      "Describes the outcome where to replace all inbound email actions.",
+      "Represents the approach that to eliminate assignment groups."
+    ],
+    "correctIndex": 1,
+    "explanation": "Workspace configuration aligns UI layout to role workflows so agents can resolve tickets with fewer navigation steps.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/agent-workspace/configure-agent-workspace.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 59,
+    "prompt": "How do Walk-up Experience and Agent Workspace complement each other in ITSM operations?",
+    "choices": [
+      "Describes the outcome where both features are required only for HR Service Delivery.",
+      "Represents the approach that both features replace SLA definitions.",
+      "Corresponds to the option where both features are only for software asset normalization.",
+      "Matches the scenario in which walk-up manages in-person intake and queue flow, while Agent Workspace supports efficient backend case handling."
+    ],
+    "correctIndex": 3,
+    "explanation": "Using walk-up for front-of-house support and workspace for agent execution creates an end-to-end support workflow.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/walk-up-experience/walk-up-experience.html",
+      "https://www.servicenow.com/docs/r/it-service-management/agent-workspace/agent-workspace-for-itsm.html"
+    ]
+  }
+]

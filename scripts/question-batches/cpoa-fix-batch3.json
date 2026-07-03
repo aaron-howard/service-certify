@@ -1,0 +1,427 @@
+[
+  {
+    "trackCode": "CPOA",
+    "order": 50,
+    "prompt": "What is the main goal of running HealthScan in a platform owner governance cycle?",
+    "choices": [
+      "Automatically remediate every issue without ownership",
+      "Identify architectural, performance, and maintainability risks before they become operational incidents",
+      "Generate deployment approvals with no human validation",
+      "Replace all code review activities across teams"
+    ],
+    "correctIndex": 1,
+    "explanation": "HealthScan supports proactive governance by highlighting risk patterns that require prioritized remediation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 51,
+    "prompt": "How should HealthScan findings be converted into actionable governance outcomes?",
+    "choices": [
+      "Archive reports without review to preserve historical records",
+      "Delegate remediation ownership to external users",
+      "Map findings to accountable owners, remediation deadlines, and risk severity thresholds",
+      "Treat all findings as informational with no follow-up"
+    ],
+    "correctIndex": 2,
+    "explanation": "Findings only create value when they are tracked with ownership, priority, and closure criteria.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/problem-management/concept/problem-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 52,
+    "prompt": "Which cadence is most appropriate for enterprise HealthScan governance?",
+    "choices": [
+      "Run only when incidents breach SLA",
+      "Run once after initial go-live only",
+      "Run daily in production without analyzing trends",
+      "Run on a recurring schedule aligned to release milestones and major architectural changes"
+    ],
+    "correctIndex": 3,
+    "explanation": "Regular scanning aligned with change velocity enables trend analysis and early intervention.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 53,
+    "prompt": "What is a strong indicator that HealthScan governance is improving platform quality?",
+    "choices": [
+      "A sustained reduction in high-risk findings across consecutive scans",
+      "More emergency changes to address recurring architecture issues",
+      "Higher backlog age for critical remediation tasks",
+      "An increase in exempted findings with no justification"
+    ],
+    "correctIndex": 0,
+    "explanation": "Downward risk trends across scans show that remediation controls are effective and durable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 54,
+    "prompt": "How should platform owners handle repeated HealthScan findings that span multiple teams?",
+    "choices": [
+      "Assign all items to one developer for faster completion",
+      "Create a cross-team remediation program with common standards and executive visibility",
+      "Defer remediation until the next platform upgrade",
+      "Close all repeated findings as accepted risk"
+    ],
+    "correctIndex": 1,
+    "explanation": "Shared recurring issues require coordinated governance and standardization, not isolated fixes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 55,
+    "prompt": "What is the core governance purpose of ServiceNow Store and app management for platform owners?",
+    "choices": [
+      "Install every available app to accelerate feature adoption",
+      "Disable version tracking for simpler administration",
+      "Control app intake, risk review, and lifecycle ownership before installation and updates",
+      "Allow business teams to deploy Store apps directly to production"
+    ],
+    "correctIndex": 2,
+    "explanation": "Store governance ensures only approved, supportable apps enter the platform lifecycle.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/app-store/concept/app-repository-and-store.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 56,
+    "prompt": "How should a platform owner evaluate third-party Store apps before approval?",
+    "choices": [
+      "Skip compatibility checks if installation succeeds in development",
+      "Approve based only on popularity ratings in the Store",
+      "Delegate all evaluation to requester teams without governance",
+      "Assess security posture, dependency impact, upgrade compatibility, and support model fit"
+    ],
+    "correctIndex": 3,
+    "explanation": "App approval requires technical, operational, and security due diligence beyond basic functionality.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/app-store/concept/app-repository-and-store.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Hardening.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 57,
+    "prompt": "Which practice best controls Store app upgrade risk across environments?",
+    "choices": [
+      "Use staged rollout with documented test evidence and rollback plans before production",
+      "Rely on vendor release notes without internal validation",
+      "Disable application version governance during fiscal close",
+      "Upgrade directly in production to minimize cycle time"
+    ],
+    "correctIndex": 0,
+    "explanation": "Staged rollout validates compatibility and prevents broad impact from unexpected regressions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-application-development/page/build/applications/concept/c_ApplicationLifecycleManagement.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 58,
+    "prompt": "What inventory artifact most improves governance for installed apps and plugins?",
+    "choices": [
+      "An informal channel thread with installation notes",
+      "A maintained catalog of app versions, owners, dependencies, and approval status",
+      "A one-time screenshot of installed plugins",
+      "A list of app names without version details"
+    ],
+    "correctIndex": 1,
+    "explanation": "Structured inventory enables impact analysis, upgrade planning, and ownership accountability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/plugins/concept/c_ActivatingPlugins.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/app-store/concept/app-repository-and-store.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 59,
+    "prompt": "Which KPI best reflects effective Store and app governance outcomes?",
+    "choices": [
+      "Maximum number of apps installed per quarter",
+      "Most customizations applied to vendor apps",
+      "High percentage of approved apps with successful upgrades and low post-release incidents",
+      "Longest average approval turnaround regardless risk"
+    ],
+    "correctIndex": 2,
+    "explanation": "Governance success combines controlled adoption with stable operations after deployment.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/app-store/concept/app-repository-and-store.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 60,
+    "prompt": "What is the primary objective of release testing governance for platform owners?",
+    "choices": [
+      "Run only smoke tests on production after release",
+      "Depend solely on developer unit tests for enterprise readiness",
+      "Skip testing when changes are labeled low effort",
+      "Validate business-critical functionality, integrations, and non-functional risks before deployment"
+    ],
+    "correctIndex": 3,
+    "explanation": "Release testing governance ensures changes meet quality and risk expectations before customer impact.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-application-development/page/build/team-development/concept/c_TestManagement.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 61,
+    "prompt": "Which testing scope best supports owner-level release confidence?",
+    "choices": [
+      "Combine regression, integration, and user acceptance testing with documented entry and exit criteria",
+      "Execute tests only after production deployment",
+      "Approve releases based on past performance trends",
+      "Limit testing to updated records only"
+    ],
+    "correctIndex": 0,
+    "explanation": "A layered test scope with clear criteria provides meaningful evidence for release decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-application-development/page/build/team-development/concept/c_TestManagement.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 62,
+    "prompt": "How should failed release tests be governed when delivery deadlines are tight?",
+    "choices": [
+      "Push release and resolve issues in production",
+      "Use risk-based go/no-go decisions with remediation plans and explicit stakeholder sign-off",
+      "Override failures when sprint commitments are at risk",
+      "Hide failed results from release notes until after go-live"
+    ],
+    "correctIndex": 1,
+    "explanation": "Risk-based governance preserves control by making exception decisions transparent and accountable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 63,
+    "prompt": "Which artifact most improves auditability of release testing governance?",
+    "choices": [
+      "A simple pass/fail status message in team chat",
+      "Screenshots of selected test runs without metadata",
+      "A traceability matrix linking requirements, test cases, defects, and release approvals",
+      "An undocumented list of high-priority user stories"
+    ],
+    "correctIndex": 2,
+    "explanation": "Traceability demonstrates that release decisions are evidence-based and repeatable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-application-development/page/build/team-development/concept/c_TestManagement.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 64,
+    "prompt": "What KPI best indicates release testing governance maturity over time?",
+    "choices": [
+      "Greater number of waived test cases per release",
+      "Longer manual testing cycles regardless risk profile",
+      "Increased emergency post-release hotfix count",
+      "Reduced escaped defects in production with stable release predictability"
+    ],
+    "correctIndex": 3,
+    "explanation": "Mature governance improves quality outcomes while maintaining predictable delivery performance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/problem-management/concept/problem-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 65,
+    "prompt": "For a platform owner, what is the primary purpose of an executive analytics view?",
+    "choices": [
+      "Provide a concise, outcome-focused view of platform health, adoption, and risk for decision-making",
+      "Eliminate the need for data collection schedules",
+      "Display only raw table records without aggregation",
+      "Replace all operational dashboards used by administrators"
+    ],
+    "correctIndex": 0,
+    "explanation": "Owner views should summarize strategic platform performance so leadership can prioritize actions and investments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 66,
+    "prompt": "Which metric category is most valuable in a platform owner analytics view for early risk detection?",
+    "choices": [
+      "Only total number of users in the instance",
+      "Leading indicators such as backlog aging trends and change failure rate movement",
+      "Only yearly license counts",
+      "Only number of dashboard widgets created"
+    ],
+    "correctIndex": 1,
+    "explanation": "Leading indicators signal emerging operational issues before lagging outcomes become severe.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 67,
+    "prompt": "When an owner dashboard shows SLA compliance dropping in one business service, what is the best next action?",
+    "choices": [
+      "Hide the indicator until the next quarter",
+      "Disable data collection to avoid noise",
+      "Drill down into supporting indicators and assign targeted remediation with clear owners",
+      "Assume the decline is temporary and take no action"
+    ],
+    "correctIndex": 2,
+    "explanation": "Owner views should be actionable, enabling deeper analysis and accountable follow-through when risks appear.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 68,
+    "prompt": "What design choice best improves trust in an owner-facing analytics view?",
+    "choices": [
+      "Allow each team to define metrics ad hoc without standards",
+      "Refresh scores manually only when leadership asks",
+      "Use duplicated indicators with conflicting formulas",
+      "Document indicator definitions, data sources, and update cadence directly in dashboard context"
+    ],
+    "correctIndex": 3,
+    "explanation": "Transparent metric definitions and collection behavior reduce ambiguity and improve confidence in analytics.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 69,
+    "prompt": "Which governance practice keeps a platform owner analytics view aligned with business priorities over time?",
+    "choices": [
+      "Run a recurring KPI review cycle to retire low-value metrics and add outcome-aligned indicators",
+      "Allow unrestricted metric changes in production",
+      "Track only technical uptime regardless of service outcomes",
+      "Lock all KPIs permanently after first publication"
+    ],
+    "correctIndex": 0,
+    "explanation": "Periodic KPI governance ensures analytics remain relevant as strategy, services, and operating goals evolve.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 70,
+    "prompt": "For final owner KPI design, which principle most directly ties platform analytics to business value?",
+    "choices": [
+      "Prioritize metrics that are easiest to collect over those that are meaningful",
+      "Map each KPI to a defined service outcome and accountable owner",
+      "Track only infrastructure uptime regardless of service context",
+      "Use identical KPI targets for every business function"
+    ],
+    "correctIndex": 1,
+    "explanation": "Outcome-aligned KPIs with clear ownership keep platform reporting focused on measurable business impact.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 71,
+    "prompt": "Which KPI set gives a platform owner the strongest balanced view of operational performance?",
+    "choices": [
+      "Only number of active plugins",
+      "Only yearly user growth",
+      "Reliability, delivery speed, quality/compliance, and adoption outcomes",
+      "Only ticket volume by assignment group"
+    ],
+    "correctIndex": 2,
+    "explanation": "A balanced KPI portfolio reduces blind spots and helps leadership optimize for both stability and value delivery.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 72,
+    "prompt": "What is the best way to keep owner KPIs trustworthy as data sources change over time?",
+    "choices": [
+      "Archive historic scores whenever schema changes occur",
+      "Disable data collector jobs during source transitions",
+      "Allow formula updates directly in production without review",
+      "Implement metric governance for source validation, formula change control, and baseline rechecks"
+    ],
+    "correctIndex": 3,
+    "explanation": "Change control and periodic baselining protect trend integrity and prevent misleading KPI movement.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 73,
+    "prompt": "How should platform owners handle KPI threshold breaches that persist for multiple reporting cycles?",
+    "choices": [
+      "Trigger escalation with documented corrective plans and track closure in governance reviews",
+      "Lower thresholds until results appear green",
+      "Treat repeated breaches as normal variance",
+      "Pause reporting until the issue is resolved"
+    ],
+    "correctIndex": 0,
+    "explanation": "Persistent KPI failures require formal remediation and leadership visibility to restore control and confidence.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 74,
+    "prompt": "As the final batch reaches order 74, what is the most effective way to operationalize owner KPIs long-term?",
+    "choices": [
+      "Restrict KPI access to one administrator account",
+      "Embed KPI review into recurring operating cadence with decisions, owners, and follow-up actions",
+      "Publish KPI dashboards once and rely on ad hoc interpretation",
+      "Track KPIs only during major upgrade windows"
+    ],
+    "correctIndex": 1,
+    "explanation": "KPIs create value when tied to routine governance meetings and explicit decision workflows.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+    ]
+  }
+]

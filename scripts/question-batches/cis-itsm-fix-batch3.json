@@ -1,0 +1,497 @@
+[
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 60,
+    "prompt": "During ITSM onboarding, what is the primary purpose of baseline data?",
+    "choices": [
+      "Represents the approach that to permanently replace all production transaction data.",
+      "Reflects the condition that to disable incident and change workflows.",
+      "Matches the scenario in which to migrate MID Servers between domains.",
+      "Describes the outcome where to provide initial reference records and setup needed for core ITSM processes."
+    ],
+    "correctIndex": 3,
+    "explanation": "Baseline data establishes foundational records so ITSM processes can be configured and executed consistently.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-it-service-management/page/product/itsm-implementation/concept/itsm-implementation-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 61,
+    "prompt": "Which data set is commonly prepared early to support assignment and routing in ITSM onboarding?",
+    "choices": [
+      "Matches the scenario in which only PA widget color palettes.",
+      "Captures the choice stating client browser bookmarks.",
+      "Describes the outcome where service Portal homepage announcements.",
+      "Reflects the condition that users, groups, and group membership mappings."
+    ],
+    "correctIndex": 3,
+    "explanation": "Accurate user and group data is required for ownership, queues, and assignment workflows across ITSM practices.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/administer/users-and-groups/concept/c_UsersAndGroups.html",
+      "https://www.servicenow.com/docs/bundle/xanadu-it-service-management/page/product/itsm-implementation/concept/itsm-implementation-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 62,
+    "prompt": "Why is loading support reference data (such as categories and priorities) important during ITSM onboarding?",
+    "choices": [
+      "Matches the scenario in which it automatically migrates all historical incidents.",
+      "Captures the choice stating it removes the need for SLAs.",
+      "Reflects the condition that it disables mandatory fields on forms.",
+      "Corresponds to the option where it standardizes ticket classification, reporting, and process behavior from day one."
+    ],
+    "correctIndex": 3,
+    "explanation": "Reference values drive consistency in triage, automation, and reporting for incident and request handling.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-it-service-management/page/product/incident-management/concept/incident-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 63,
+    "prompt": "As part of baseline readiness for ITSM, why should a service desk validate assignment groups and queue ownership?",
+    "choices": [
+      "Captures the choice stating to force every change request through emergency workflow.",
+      "Represents the approach that to prevent all incident creation.",
+      "Corresponds to the option where to replace CMDB classes with custom tables.",
+      "Reflects the condition that to confirm incoming work routes to accountable teams with clear ownership."
+    ],
+    "correctIndex": 3,
+    "explanation": "Ownership and routing definitions are essential for stable operations and SLA compliance after go-live.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-it-service-management/page/product/itsm-implementation/concept/itsm-implementation-overview.html",
+      "https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/administer/users-and-groups/concept/c_UsersAndGroups.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 64,
+    "prompt": "What is a practical onboarding approach before loading large baseline datasets into ITSM tables?",
+    "choices": [
+      "Represents the approach that validate data mappings and quality in a test instance, then promote through controlled deployment.",
+      "Describes the outcome where disable all business rules before every import permanently.",
+      "Captures the choice stating load directly to production without validation to save time.",
+      "Corresponds to the option where skip data oversight and rely only on manual edits later."
+    ],
+    "correctIndex": 0,
+    "explanation": "Testing mappings and quality first reduces downstream process issues and improves implementation reliability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-it-service-management/page/product/itsm-implementation/concept/itsm-implementation-overview.html",
+      "https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/applications/concept/c_ImportSets.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 65,
+    "prompt": "What is the main objective of shift planning in IT service operations?",
+    "choices": [
+      "Matches the scenario in which to replace change management approvals.",
+      "Corresponds to the option where to align staffing coverage with expected demand so support is available during required service windows.",
+      "Represents the approach that to eliminate the need for incident priority.",
+      "Describes the outcome where to bypass assignment groups for P1 incidents."
+    ],
+    "correctIndex": 1,
+    "explanation": "Shift planning ensures the right skills are available at the right times to meet operational commitments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/workforce-optimization/concept/workforce-optimization.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 66,
+    "prompt": "Why is documented handoff between shifts important in ITSM?",
+    "choices": [
+      "Represents the approach that it automatically closes all open incidents at shift end.",
+      "Describes the outcome where it replaces SLA definitions.",
+      "Matches the scenario in which it prevents use of major incident workflows.",
+      "Reflects the condition that it preserves incident context and pending actions, reducing delays and rework across staffing transitions."
+    ],
+    "correctIndex": 3,
+    "explanation": "Structured handoffs reduce knowledge loss and improve continuity for active incidents, problems, and requests.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/incident-management/concept/incident-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 67,
+    "prompt": "In an on-call model, what determines who should be alerted first for an after-hours critical incident?",
+    "choices": [
+      "Matches the scenario in which the catalog manager for the affected service.",
+      "Reflects the condition that the active on-call schedule and escalation policy for the relevant support group.",
+      "Captures the choice stating the oldest incident in the queue.",
+      "Describes the outcome where the user who last edited the knowledge base."
+    ],
+    "correctIndex": 1,
+    "explanation": "Effective on-call response depends on accurate schedules and escalation definitions tied to support ownership.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/on-call-scheduling/concept/on-call-scheduling.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 68,
+    "prompt": "What is a best practice for maintaining reliable on-call coverage?",
+    "choices": [
+      "Captures the choice stating assign every incident to one global queue.",
+      "Corresponds to the option where disable notifications during nonbusiness hours.",
+      "Matches the scenario in which restrict major incident communication to monthly reports.",
+      "Reflects the condition that keep schedules current and verify escalation paths before weekends, holidays, and known high-risk windows."
+    ],
+    "correctIndex": 3,
+    "explanation": "Regular validation of schedules and escalation routing prevents missed alerts and delayed response during off-hours.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/on-call-scheduling/concept/on-call-scheduling.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 69,
+    "prompt": "How do shift planning and on-call scheduling work together to improve ITSM outcomes?",
+    "choices": [
+      "Represents the approach that shift plans are used only for knowledge article reviews.",
+      "Reflects the condition that shift planning covers predictable demand while on-call scheduling handles off-hours and surge exceptions.",
+      "Captures the choice stating they are unrelated and managed by separate platforms.",
+      "Corresponds to the option where on-call schedules replace assignment groups entirely."
+    ],
+    "correctIndex": 1,
+    "explanation": "Combining planned staffing with fallback on-call coverage strengthens incident response continuity across all service hours.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/workforce-optimization/concept/workforce-optimization.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/on-call-scheduling/concept/on-call-scheduling.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 70,
+    "prompt": "In ITSM, what does Predictive Intelligence primarily provide for ticket operations?",
+    "choices": [
+      "Corresponds to the option where automatic closure of all incidents without analyst review.",
+      "Represents the approach that mandatory change approval policy enforcement.",
+      "Describes the outcome where a replacement for CMDB data model oversight.",
+      "Captures the choice stating machine learning predictions such as assignment group, category, and priority recommendations based on historical records."
+    ],
+    "correctIndex": 3,
+    "explanation": "Predictive Intelligence applies trained ML solutions to incoming records to help standardize and speed ticket triage.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/administer/predictive-intelligence/concept/predictive-intelligence.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 71,
+    "prompt": "Why is quality historical incident data important before training a Predictive Intelligence solution?",
+    "choices": [
+      "Corresponds to the option where because the model uses only MID Server logs.",
+      "Describes the outcome where because Predictive Intelligence can only train on closed problem records.",
+      "Matches the scenario in which because training requires disabling business rules on incident.",
+      "Represents the approach that because ML model accuracy depends on consistent, representative labeled data from prior records."
+    ],
+    "correctIndex": 3,
+    "explanation": "Well-labeled and representative training data directly improves prediction quality and reliability for production routing use cases.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/administer/predictive-intelligence/task/train-a-solution.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 72,
+    "prompt": "What is a practical benefit of using ML-based assignment group prediction for incidents?",
+    "choices": [
+      "Describes the outcome where it eliminates the need for assignment groups entirely.",
+      "Represents the approach that it can reduce manual triage effort and misroutes by recommending the most likely resolver group at intake.",
+      "Reflects the condition that it forces every ticket to be categorized as low priority.",
+      "Matches the scenario in which it routes all incidents to major incident management."
+    ],
+    "correctIndex": 1,
+    "explanation": "Assignment prediction helps route tickets faster and more consistently, improving response flow and reducing reassignment churn.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/administer/predictive-intelligence/concept/classification-solutions.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 73,
+    "prompt": "When introducing Predictive Intelligence routing recommendations, what governance practice is most appropriate?",
+    "choices": [
+      "Reflects the condition that use ML only for catalog variables, not ITSM records.",
+      "Matches the scenario in which train once and never review confidence or outcomes.",
+      "Describes the outcome where disable all assignment rules permanently.",
+      "Captures the choice stating monitor model performance and retrain periodically as ticket patterns and support ownership evolve."
+    ],
+    "correctIndex": 3,
+    "explanation": "Ongoing monitoring and retraining keeps predictions aligned with real operational patterns and organizational changes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/administer/predictive-intelligence/task/monitor-solution-performance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 74,
+    "prompt": "How should ITSM teams use low-confidence routing predictions from Predictive Intelligence?",
+    "choices": [
+      "Captures the choice stating convert low-confidence incidents directly into change requests.",
+      "Corresponds to the option where ignore confidence and auto-assign every ticket.",
+      "Reflects the condition that delete low-confidence incidents from the queue.",
+      "Matches the scenario in which use confidence thresholds so uncertain predictions are reviewed by analysts instead of auto-routed blindly."
+    ],
+    "correctIndex": 3,
+    "explanation": "Confidence-aware handling supports safer automation by blending ML recommendations with human oversight when certainty is low.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/administer/predictive-intelligence/task/configure-solution-definition.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 75,
+    "prompt": "Why is integrating asset management data with ITSM incident workflows important?",
+    "choices": [
+      "Reflects the condition that it automatically closes all incidents linked to retired devices.",
+      "Represents the approach that it removes the need for assignment groups.",
+      "Corresponds to the option where it replaces change management approvals for hardware updates.",
+      "Captures the choice stating it gives agents visibility into ownership, lifecycle, and support context to improve diagnosis and routing."
+    ],
+    "correctIndex": 3,
+    "explanation": "Asset context in incidents helps support teams understand what is affected, who owns it, and how it should be handled.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/incident-management/concept/incident-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/asset-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 76,
+    "prompt": "When a user reports a laptop issue, what is the best reason to relate the incident to the corresponding hardware asset?",
+    "choices": [
+      "Corresponds to the option where to prevent the incident from being assigned.",
+      "Describes the outcome where to convert the incident into a problem automatically every time.",
+      "Captures the choice stating to bypass CMDB relationships entirely.",
+      "Represents the approach that to maintain traceability for support history, warranty status, and lifecycle decisions."
+    ],
+    "correctIndex": 3,
+    "explanation": "Linking incidents to hardware assets preserves an operational history that supports informed repair, replacement, and escalation decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/c_HardwareAssetManagement.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/incident-management/concept/incident-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 77,
+    "prompt": "How does software asset information most directly support ITSM request fulfillment?",
+    "choices": [
+      "Corresponds to the option where it disables license compliance reporting.",
+      "Describes the outcome where it eliminates approval workflows for all catalog items.",
+      "Represents the approach that it forces all requests to be treated as major incidents.",
+      "Matches the scenario in which it helps verify entitlement and availability before software is approved or delivered."
+    ],
+    "correctIndex": 3,
+    "explanation": "Integrating software asset data with request workflows helps teams fulfill requests while remaining aligned to licensing and compliance needs.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-asset-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/request-management/concept/request-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 78,
+    "prompt": "What is a key operational benefit of aligning hardware asset lifecycle states with ITSM processes?",
+    "choices": [
+      "Describes the outcome where it replaces service level definitions.",
+      "Reflects the condition that it guarantees zero incidents for all managed endpoints.",
+      "Matches the scenario in which it removes the need for CMDB oversight.",
+      "Represents the approach that it prevents active support work from being routed to devices that are retired, lost, or pending disposal."
+    ],
+    "correctIndex": 3,
+    "explanation": "Lifecycle alignment reduces support waste and improves service quality by ensuring ITSM workflows target valid, in-service assets.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/c_HardwareAssetManagement.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/service-desk/concept/service-desk.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 79,
+    "prompt": "In an ITSM practice, why should incident and request records be tied to both CI and asset records when applicable?",
+    "choices": [
+      "Reflects the condition that to combine service impact visibility with financial and lifecycle accountability for better decision-making.",
+      "Captures the choice stating to avoid using assignment rules.",
+      "Describes the outcome where to duplicate records and increase ticket volume.",
+      "Matches the scenario in which to disable reporting on asset consumption."
+    ],
+    "correctIndex": 0,
+    "explanation": "CI relationships provide service context while asset records provide ownership and lifecycle context, together enabling stronger operational and governance outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/c_CMDB.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/asset-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/incident-management/concept/incident-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 80,
+    "prompt": "What is the primary purpose of a self-service portal in ITSM?",
+    "choices": [
+      "Matches the scenario in which to replace all assignment groups with one global queue.",
+      "Reflects the condition that to run background scripts for platform upgrades.",
+      "Captures the choice stating to disable incident categorization and prioritization.",
+      "Corresponds to the option where to give users a single place to submit requests, report issues, and track work status without contacting the service desk directly."
+    ],
+    "correctIndex": 3,
+    "explanation": "A self-service portal improves user experience and service desk efficiency by centralizing access to IT services and request visibility.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/build/service-portal/concept/service-portal.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/service-catalog-management/concept/service-catalog-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 81,
+    "prompt": "How does Employee Service Center support ITSM outcomes?",
+    "choices": [
+      "Captures the choice stating it is used only for CMDB relationship mapping.",
+      "Represents the approach that it automatically marks all incidents as major incidents.",
+      "Corresponds to the option where it unifies employee-facing access to IT services, knowledge, and request workflows in a modern portal experience.",
+      "Reflects the condition that it removes the need for service catalog oversight."
+    ],
+    "correctIndex": 2,
+    "explanation": "Employee Service Center helps streamline intake and self-service by presenting relevant services and knowledge in a single employee experience.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/employee-center/concept/employee-center.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/service-catalog-management/concept/service-catalog-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 82,
+    "prompt": "What is a key best practice when exposing catalog items in Employee Service Center?",
+    "choices": [
+      "Represents the approach that show every internal fulfillment task to all end users.",
+      "Describes the outcome where remove all variable help text to reduce page length.",
+      "Captures the choice stating require users to open separate incidents before every request.",
+      "Corresponds to the option where use clear taxonomy and audience-suitable content so users can quickly find the right service and submit complete requests."
+    ],
+    "correctIndex": 3,
+    "explanation": "A well-organized catalog with understandable content reduces misrouted requests and improves fulfillment speed and data quality.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/service-catalog-management/concept/service-catalog-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/employee-center/concept/employee-center.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 83,
+    "prompt": "How does a knowledge portal reduce incident volume in ITSM?",
+    "choices": [
+      "Matches the scenario in which by replacing SLA policies with article ratings.",
+      "Corresponds to the option where by enabling users to resolve common issues through searchable, reusable articles before submitting tickets.",
+      "Represents the approach that by routing every request directly to change management.",
+      "Describes the outcome where by disabling incident creation for all users."
+    ],
+    "correctIndex": 1,
+    "explanation": "Effective knowledge access increases self-resolution and deflects repetitive tickets, allowing agents to focus on higher-complexity work.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/knowledge-management/concept/knowledge-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/build/service-portal/concept/service-portal.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 84,
+    "prompt": "Which metric most directly indicates that portal and knowledge experiences are improving ITSM performance?",
+    "choices": [
+      "Represents the approach that higher number of mandatory approval steps per request.",
+      "Describes the outcome where longer average time to publish knowledge articles.",
+      "Matches the scenario in which more assignment group transfers per ticket.",
+      "Reflects the condition that increased self-service resolution and reduced repeat incidents for known issues."
+    ],
+    "correctIndex": 3,
+    "explanation": "When users can find and use services and knowledge effectively, organizations typically see more self-resolution and fewer repeat contacts.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/knowledge-management/concept/knowledge-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/employee-center/concept/employee-center.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 85,
+    "prompt": "An incident has widespread impact and requires immediate coordination. Which ITSM action should occur first?",
+    "choices": [
+      "Matches the scenario in which create a catalog task for every affected user.",
+      "Reflects the condition that initiate major incident process and stakeholder communications.",
+      "Captures the choice stating convert directly to a change request.",
+      "Describes the outcome where close similar incidents as duplicates."
+    ],
+    "correctIndex": 1,
+    "explanation": "Major incident procedures provide structured, rapid coordination and communication for high-impact service disruptions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/incident-management/concept/major-incident-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 86,
+    "prompt": "What is the primary purpose of problem management in ITSM?",
+    "choices": [
+      "Matches the scenario in which to assign field technicians by territory.",
+      "Captures the choice stating to determine and eliminate underlying causes of incidents.",
+      "Corresponds to the option where to request new software for users.",
+      "Reflects the condition that to approve all standard changes."
+    ],
+    "correctIndex": 1,
+    "explanation": "Problem management focuses on root cause analysis and permanent resolution of recurring or significant incidents.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/problem-management/concept/problem-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 87,
+    "prompt": "A change is low risk, repeatable, and preapproved. How should it be handled?",
+    "choices": [
+      "Captures the choice stating process it as a normal change with CAB approval every time.",
+      "Reflects the condition that submit it as an emergency change.",
+      "Represents the approach that run it as an incident task.",
+      "Corresponds to the option where implement it through the standard change model."
+    ],
+    "correctIndex": 3,
+    "explanation": "Standard changes are preauthorized and designed for frequent, low-risk implementations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 88,
+    "prompt": "In request fulfillment, what is the role of a catalog item?",
+    "choices": [
+      "Represents the approach that it provides a structured request offering with variables and workflow.",
+      "Corresponds to the option where it defines problem closure codes.",
+      "Captures the choice stating it stores CMDB reconciliation identifiers.",
+      "Describes the outcome where it replaces incident categories."
+    ],
+    "correctIndex": 0,
+    "explanation": "Catalog items standardize user requests and capture required inputs to drive fulfillment workflows.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/service-catalog-management/concept/service-catalog-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 89,
+    "prompt": "Which metric best indicates incident management effectiveness from an operations perspective?",
+    "choices": [
+      "Describes the outcome where count of knowledge base owners.",
+      "Matches the scenario in which number of active catalog categories.",
+      "Represents the approach that total CMDB table count.",
+      "Corresponds to the option where mean time to resolve (MTTR) by priority."
+    ],
+    "correctIndex": 3,
+    "explanation": "MTTR by priority shows how quickly operations restores service for incidents with different business impact.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/incident-management/concept/incident-management.html"
+    ]
+  }
+]

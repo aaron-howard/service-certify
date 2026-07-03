@@ -1,0 +1,485 @@
+[
+  {
+    "trackCode": "CIS-PA",
+    "order": 30,
+    "prompt": "In Performance Analytics, what is the primary purpose of a benchmark?",
+    "choices": [
+      "Practically speaking, to compare indicator performance against external or reference standards",
+      "Typically, to disable historical snapshots under expected controls in standard operations",
+      "From an admin perspective, to run ad hoc SQL against indicator tables for consistent administration",
+      "In practice, to replace all targets for scorecards under normal policy constraints"
+    ],
+    "correctIndex": 0,
+    "explanation": "Benchmarks provide comparative context so teams can evaluate performance relative to peers or defined reference groups.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Benchmarks.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 31,
+    "prompt": "How are targets and benchmarks best used together?",
+    "choices": [
+      "Practically speaking, both are identical and interchangeable in standard operations",
+      "Typically, targets are only valid when benchmark data is absent for consistent administration",
+      "From an admin perspective, targets set internal goals while benchmarks provide external or comparative context",
+      "In platform terms, benchmarks replace all threshold logic for governed delivery"
+    ],
+    "correctIndex": 2,
+    "explanation": "Targets measure progress against your objective; benchmarks add comparison to broader performance baselines.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Targets.html",
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Benchmarks.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 32,
+    "prompt": "What should an admin verify before trusting a benchmark comparison?",
+    "choices": [
+      "In most deployments, that indicator definitions and measurement periods are comparable",
+      "From a governance perspective, that all widgets use the same color palette",
+      "Operationally, that update sets are in committed state for consistent administration",
+      "From an implementation standpoint, that only scripted indicators are included"
+    ],
+    "correctIndex": 0,
+    "explanation": "Benchmark validity depends on comparing like-for-like definitions, sampling windows, and calculation logic.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_BenchmarkDataQuality.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 33,
+    "prompt": "A KPI is above internal target but below industry benchmark. What does this indicate?",
+    "choices": [
+      "Practically speaking, that indicator should be deleted under normal policy constraints",
+      "Typically, data collection failed for consistent administration for governed delivery",
+      "In platform terms, internal goals may be conservative relative to external performance",
+      "From an admin perspective, benchmarks cannot be used for that KPI for stable outcomes"
+    ],
+    "correctIndex": 2,
+    "explanation": "This scenario suggests internal targets are being met but there may be room to improve when viewed against benchmark peers.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Benchmarks.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 34,
+    "prompt": "Which dashboard outcome is enabled by properly configured benchmark data?",
+    "choices": [
+      "In this scenario, real-time CMDB reconciliation for consistent administration",
+      "Practically speaking, comparison views that show organizational performance versus reference cohorts",
+      "In platform terms, automatic upgrade conflict resolution for stable outcomes",
+      "From an admin perspective, automatic ACL generation for all scorecards in standard operations"
+    ],
+    "correctIndex": 1,
+    "explanation": "Benchmarks allow comparative visuals that help stakeholders interpret relative performance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_ConfigureBenchmarking.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 35,
+    "prompt": "In Performance Analytics, what is an analytics group primarily used for?",
+    "choices": [
+      "Operationally, to cluster users or entities for segmented score analysis and targeted visibility",
+      "In most deployments, to define indicator formulas in script includes for stable outcomes",
+      "From an implementation standpoint, to replace all breakdown mappings in standard operations",
+      "In practice, to move indicators between applications for stable outcomes for consistent administration"
+    ],
+    "correctIndex": 0,
+    "explanation": "Analytics groups support segmentation so stakeholders can analyze KPI performance for specific populations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_AnalyticsGroups.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 36,
+    "prompt": "Why would a PA admin map assignment groups into analytics groups?",
+    "choices": [
+      "Operationally, to avoid creating breakdowns entirely",
+      "From an implementation standpoint, to convert scorecards into reports",
+      "Typically, to create segmented KPI views by operational team",
+      "In practice, to disable historical score collection"
+    ],
+    "correctIndex": 2,
+    "explanation": "Grouping by assignment ownership allows operations leaders to compare KPI performance across teams.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_CreateAnalyticsGroups.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 37,
+    "prompt": "Which data management practice helps keep analytics groups reliable?",
+    "choices": [
+      "Practically speaking, allowing duplicate group membership with no ownership",
+      "From a governance perspective, maintaining clear membership criteria and periodic group reviews",
+      "In this scenario, building groups directly from update set history under normal policy constraints",
+      "In platform terms, using only dynamic scripts without validation for governed delivery"
+    ],
+    "correctIndex": 1,
+    "explanation": "Reliable segmentation requires controlled membership logic and regular governance checks.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_AnalyticsGroupsGovernance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 38,
+    "prompt": "What is the reporting benefit of combining analytics groups with indicator breakdowns?",
+    "choices": [
+      "Typically, this approach forces monthly-only collection frequency for consistent administration",
+      "In practice, this approach turns all indicators into automated indicators under normal policy constraints",
+      "Operationally, this approach eliminates the need for score histories for governed delivery",
+      "From an implementation standpoint, this approach enables multidimensional analysis across population and KPI dimensions"
+    ],
+    "correctIndex": 3,
+    "explanation": "Using both constructs supports richer analysis by comparing segmented populations across breakdown perspectives.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html",
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_AnalyticsGroups.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 39,
+    "prompt": "A leader needs KPI visibility for only their operational cohort. Which PA approach fits best?",
+    "choices": [
+      "Typically, create an analytics group for that cohort and filter scorecards accordingly",
+      "In practice, disable all global indicators for consistent administration",
+      "Operationally, clone the entire PA application under expected controls",
+      "From an admin perspective, use system properties to hide score values"
+    ],
+    "correctIndex": 0,
+    "explanation": "Analytics groups are designed for cohort-specific KPI segmentation and controlled visibility.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_UseAnalyticsGroupsInDashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 40,
+    "prompt": "What is the primary purpose of PA Spotlight in stakeholder dashboards?",
+    "choices": [
+      "In this scenario, to configure transform maps for indicator sources",
+      "From a governance perspective, to replace all scorecard and breakdown views",
+      "Practically speaking, to highlight key KPIs, trends, and exceptions for focused executive review",
+      "In platform terms, to manage update set promotions under expected controls"
+    ],
+    "correctIndex": 2,
+    "explanation": "Spotlight is designed to surface the most important performance signals and outliers for rapid decision-making.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_PAStakeholderSpotlight.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 41,
+    "prompt": "Which KPI characteristics make an indicator a good candidate for PA Spotlight?",
+    "choices": [
+      "Operationally, any indicator that has does not breached target under expected controls",
+      "In practice, indicators with no historical trend data for stable outcomes",
+      "Typically, low business relevance with volatile definitions in standard operations",
+      "From an implementation standpoint, high business impact, clear ownership, and actionability"
+    ],
+    "correctIndex": 3,
+    "explanation": "Spotlight KPIs should represent outcomes that matter and drive action by accountable teams.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_KPISelectionBestPractices.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 42,
+    "prompt": "How do targets improve PA Spotlight usefulness?",
+    "choices": [
+      "In practice, they prevent benchmark comparisons for governed delivery for stable outcomes",
+      "Operationally, they through configured automation open incidents in standard operations",
+      "Typically, they remove the need for historical data collection for consistent administration",
+      "From an admin perspective, they add context by showing if spotlight metrics are on, near, or off goal"
+    ],
+    "correctIndex": 3,
+    "explanation": "Target context allows leaders to quickly interpret whether highlighted KPI values require action.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_TargetsAndThresholds.html",
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_PAStakeholderSpotlight.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 43,
+    "prompt": "What implementation choice keeps PA Spotlight dashboards credible over time?",
+    "choices": [
+      "In most deployments, using only manually collected indicators",
+      "In platform terms, removing all drill-down options for stable outcomes",
+      "In this scenario, locking KPI definitions indefinitely even when processes change",
+      "From a governance perspective, periodic review of spotlight KPIs, thresholds, and owners"
+    ],
+    "correctIndex": 3,
+    "explanation": "Governance reviews keep spotlight metrics aligned with current business priorities and process realities.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_PerformanceAnalyticsGovernance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 44,
+    "prompt": "A director asks for one page showing top wins and risks for service desk outcomes. Which PA approach best fits?",
+    "choices": [
+      "Typically, disable breakdown filtering to simplify visuals for consistent administration",
+      "Operationally, create a Spotlight view with selected KPI tiles, trends, and threshold status",
+      "From an admin perspective, use only platform reports without PA for governed delivery",
+      "In practice, export raw indicator tables to CSV weekly under expected controls"
+    ],
+    "correctIndex": 1,
+    "explanation": "Spotlight views are intended for concise executive visibility into prioritized KPI performance and risk signals.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_BuildAStakeholderSpotlight.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 45,
+    "prompt": "In KPI Composer, what is the role of an indicator source?",
+    "choices": [
+      "Typically, this approach stores only color themes for dashboards",
+      "From an admin perspective, this approach replaces automated data collection jobs",
+      "Practically speaking, this approach defines who can log in to Workspace",
+      "In practice, this approach provides the data stream that KPI indicators evaluate"
+    ],
+    "correctIndex": 3,
+    "explanation": "Indicator sources define where KPI data comes from so indicators can compute values correctly.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 46,
+    "prompt": "When configuring a KPI formula, why should aggregation logic match business intent?",
+    "choices": [
+      "From a governance perspective, because aggregation has no reporting impact for governed delivery",
+      "In this scenario, because formulas are ignored by scorecards under expected controls",
+      "In most deployments, because aggregation only affects user avatars for stable outcomes",
+      "From an implementation standpoint, because incorrect aggregation can distort trend interpretation"
+    ],
+    "correctIndex": 3,
+    "explanation": "Choosing sum, average, percent, or weighted logic incorrectly can produce misleading KPI results.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 47,
+    "prompt": "What is the best reason to assign targets to KPIs in KPI Composer?",
+    "choices": [
+      "Operationally, to hide historical KPI data under normal policy constraints",
+      "From a governance perspective, to remove threshold colors",
+      "In most deployments, to compare actual performance against expected outcomes",
+      "From an implementation standpoint, to disable breakdowns"
+    ],
+    "correctIndex": 2,
+    "explanation": "Targets establish measurable expectations that make KPI performance status and variance meaningful.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 48,
+    "prompt": "How do KPI breakdowns improve analysis?",
+    "choices": [
+      "Practically speaking, they replace indicators with static text for stable outcomes",
+      "Typically, they prevent filtering by assignment or service in standard operations",
+      "In platform terms, they segment KPI results by dimensions like group, service, or location",
+      "From an admin perspective, they only export data to PDF under normal policy constraints"
+    ],
+    "correctIndex": 2,
+    "explanation": "Breakdowns allow teams to analyze KPI behavior by relevant dimensions instead of only viewing a global value.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 49,
+    "prompt": "Why should data collection frequency be reviewed when composing KPIs?",
+    "choices": [
+      "Operationally, this approach only changes dashboard font size in standard operations",
+      "In most deployments, this approach controls whether users can open lists for consistent administration",
+      "From an implementation standpoint, this approach disables score history under normal policy constraints",
+      "From a governance perspective, this approach determines how current KPI values are and impacts trend granularity"
+    ],
+    "correctIndex": 3,
+    "explanation": "Collection schedules should align with operational cadence so KPI insights remain timely and actionable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 50,
+    "prompt": "Which Performance Analytics role is typically required to configure indicators, breakdowns, and widgets?",
+    "choices": [
+      "Typically, sn_incident_write",
+      "In practice, knowledge_admin",
+      "Practically speaking, itil",
+      "From an admin perspective, pa_admin"
+    ],
+    "correctIndex": 3,
+    "explanation": "The pa_admin role includes administrative capabilities for configuring core Performance Analytics artifacts.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 51,
+    "prompt": "Why should organizations separate PA administration from broad itil access?",
+    "choices": [
+      "Typically, because PA roles have no effect under normal policy constraints",
+      "In platform terms, to enforce least privilege for analytics configuration changes",
+      "Practically speaking, to prevent data collection under expected controls",
+      "From an admin perspective, to disable dashboards for stable outcomes"
+    ],
+    "correctIndex": 1,
+    "explanation": "Role separation helps control who can change analytics definitions and reduces governance risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 52,
+    "prompt": "What is the practical purpose of granting pa_power_user in many implementations?",
+    "choices": [
+      "Operationally, to create LDAP integrations for consistent administration",
+      "From an implementation standpoint, to bypass ACLs globally",
+      "In most deployments, to allow advanced analytics usage without full admin rights",
+      "From a governance perspective, to manage MID Server certificates"
+    ],
+    "correctIndex": 2,
+    "explanation": "Power-user roles enable deeper analytics work while preserving stricter control over platform-wide administration.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 53,
+    "prompt": "How do PA role assignments affect dashboard sharing outcomes?",
+    "choices": [
+      "Operationally, roles are ignored when dashboards load under expected controls",
+      "From an implementation standpoint, users need both access to content and permission to underlying analytics data",
+      "In most deployments, any user can edit all widgets under expected controls in standard operations",
+      "In practice, sharing is controlled only by browser settings for consistent administration"
+    ],
+    "correctIndex": 1,
+    "explanation": "Dashboard visibility depends on both record access and PA role-based capability to view analytics artifacts.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 54,
+    "prompt": "Which governance practice is most effective for PA role management?",
+    "choices": [
+      "In this scenario, grant pa_admin to all analysts",
+      "Practically speaking, assign roles directly without review",
+      "From an admin perspective, avoid documenting role purpose",
+      "In platform terms, use role groups with periodic access recertification"
+    ],
+    "correctIndex": 3,
+    "explanation": "Group-based assignments and regular recertification keep analytics privileges aligned to job responsibilities.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 55,
+    "prompt": "Which visualization is generally best for showing KPI trend over time?",
+    "choices": [
+      "Operationally, static image under expected controls",
+      "In practice, time series chart for stable outcomes",
+      "In most deployments, single value widget only",
+      "From an implementation standpoint, pivot list without dates"
+    ],
+    "correctIndex": 1,
+    "explanation": "Time series views are designed to represent directional change and seasonality across periods.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 56,
+    "prompt": "When should a score visualization be preferred over a detailed trend chart?",
+    "choices": [
+      "Operationally, when exporting raw logs for stable outcomes",
+      "In practice, when collecting breakdown values for consistent administration",
+      "Typically, when stakeholders need quick current-state status at a glance",
+      "From an implementation standpoint, when trend analysis is required"
+    ],
+    "correctIndex": 2,
+    "explanation": "Score widgets highlight present performance quickly, while trend charts are better for temporal analysis.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 57,
+    "prompt": "How do breakdown-based visualizations improve dashboard usefulness?",
+    "choices": [
+      "In this scenario, they enable slicing indicator values by dimensions like group, service, or region",
+      "In platform terms, they only apply to catalog items for governed delivery",
+      "Practically speaking, they disable drilldowns under normal policy constraints",
+      "From a governance perspective, they remove historical context for stable outcomes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Breakdown visuals let users compare segments and identify where performance variance originates.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 58,
+    "prompt": "What is a key design rule for effective PA dashboard visualization layouts?",
+    "choices": [
+      "In most deployments, hide labels to reduce clutter for governed delivery",
+      "In this scenario, use as many chart types as possible under expected controls",
+      "In platform terms, avoid threshold coloring for governed delivery",
+      "From a governance perspective, align each widget to a clear decision question and audience"
+    ],
+    "correctIndex": 3,
+    "explanation": "Dashboards are most effective when each visualization directly supports a decision the audience must make.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 59,
+    "prompt": "Why should visualization filters be tested against role-specific audiences?",
+    "choices": [
+      "Typically, filters disable data collection under normal policy constraints",
+      "From an admin perspective, only admins can use filters for stable outcomes",
+      "Operationally, filters can expose or hide critical context depending on access and scope",
+      "In practice, filters have no effect on displayed data for consistent administration"
+    ],
+    "correctIndex": 2,
+    "explanation": "Role-aware filter testing ensures users see relevant and authorized analytics views for their responsibilities.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+    ]
+  }
+]
