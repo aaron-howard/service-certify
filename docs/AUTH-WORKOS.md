@@ -310,7 +310,15 @@ Use a **single** variable with comma-separated emails (not one variable per admi
 
 2. Ensure **`PUBLIC_CONVEX_URL`** is set in **SvelteKit** env (`.env.local` locally, Vercel project env for production). Without it, OAuth sign-in works but users are never written to the Convex `users` table.
 
-3. Sign in at `/auth/signin` with an allowlisted email.
+3. Set **`WORKOS_CLIENT_ID`** in **Convex** env (same value as SvelteKit `WORKOS_CLIENT_ID`):
+
+```bash
+npx convex env set WORKOS_CLIENT_ID client_01XXXXXXXXXXXXXXXXXXXXXXXX
+```
+
+Convex uses this to validate WorkOS JWTs for full mock access (`mode=full`).
+
+4. Sign in at `/auth/signin` with an allowlisted email.
 4. Confirm in the [Convex dashboard](https://dashboard.convex.dev) → **Data** → `users` that your row has `role: "admin"`.
 5. Open any exam detail page — you should see **Start Full Mock**.
 
