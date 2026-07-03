@@ -21823,4426 +21823,4175 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 	{
 		"trackCode": "CIS-SPM",
 		"order": 0,
-		"prompt": "In Strategic Planning, what is a strategic plan most commonly used to structure?",
+		"questionType": "multi",
+		"prompt": "Which two plugins are included in the PPM Standard plugin bundle for Strategic Portfolio Management? (Choose two.)",
 		"choices": [
-			"Firewall zones and IDS rules for practical execution",
-			"Vendor SOC 2 reports for measurable outcomes",
-			"Goals, initiatives, and roadmap-style planning artifacts that connect strategy to execution in real implementations",
-			"Software publisher packs in enterprise contexts for measurable outcomes"
+			"Project Portfolio Suite",
+			"Financial Planning",
+			"Hardware Asset Management",
+			"Security Incident Response"
 		],
-		"correctIndex": 2,
-		"explanation": "Strategic Planning documentation describes creating strategic plans to organize goals and planning content within SPM-related planning workflows.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "The PPM Standard bundle includes Project Portfolio Suite and Financial Planning as core SPM foundation plugins.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-business-management/strategic-planning/create-strategic-plan-strategy.html"
+			"https://www.servicenow.com/docs/r/it-business-management/strategic-portfolio-management/spm-implementation-overview.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 1,
-		"prompt": "What does the Strategic Execution dashboard in Strategic Planning primarily provide to portfolio leaders?",
+		"prompt": "Before go-live, an implementation team must confirm that foundational SPM data and configuration are in place. Which activity best aligns with SPM implementation preparation?",
 		"choices": [
-			"Visibility into planning and execution progress aligned to strategic items in the Strategic Planning Workspace for measurable outcomes",
-			"A well-defined CMDB discovery schedule editor in real implementations",
-			"A well-defined hardware disposal certificate generator under governance oversight",
-			"A well-defined malware sandbox execution environment in real implementations"
+			"Validate portfolio hierarchy, fiscal periods, and role-based access for SPM personas",
+			"Disable all financial planning tables to reduce upgrade complexity",
+			"Convert every open incident to a demand record for portfolio intake",
+			"Remove resource management plugins to simplify the initial deployment scope"
 		],
 		"correctIndex": 0,
-		"explanation": "The strategic execution dashboard documentation is tied to monitoring strategic planning workspace execution outcomes.",
+		"explanation": "SPM implementation preparation includes configuring portfolio structure, fiscal calendars, and persona access before teams begin planning and execution workflows.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-business-management/strategic-planning/strategic-execution-dashboard-spw.html"
+			"https://www.servicenow.com/docs/r/it-business-management/strategic-portfolio-management/spm-implementation-overview.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 2,
-		"prompt": "Now Assist for Strategic Portfolio Management is best described as helping teams do which of the following?",
+		"questionType": "multi",
+		"prompt": "On an expense line, which two Expense type values classify spend as capital or operating expenditure? (Choose two.)",
 		"choices": [
-			"Automatically delete all project records nightly in real implementations",
-			"Configure database indexes for the CMDB in enterprise contexts",
-			"Apply generative AI assistance to SPM workflows such as summarization and intake acceleration for practical execution",
-			"Replace the need for any human portfolio decisions for measurable outcomes"
+			"Capex",
+			"Opex",
+			"Revenue",
+			"Depreciation"
 		],
-		"correctIndex": 2,
-		"explanation": "Now Assist for SPM documentation describes AI-assisted capabilities for strategic portfolio management processes.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Expense lines use the Expense type field with Capex and Opex values to distinguish capital from operating spend in financial planning.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-business-management/now-assist-for-strategic-portfolio-management-spm/now-assist-spm.html"
+			"https://www.servicenow.com/docs/r/it-business-management/financial-planning/expense-lines.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 3,
-		"prompt": "Which distinction best separates Strategic Portfolio Management from Adaptive Project Management in common ServiceNow descriptions?",
+		"prompt": "A finance analyst needs to distinguish labor charges from vendor invoices when building a cost plan. Which configuration object defines those charge categories?",
 		"choices": [
-			"SPM focuses on selecting and maintaining the right portfolio of investments; APM focuses on how work is delivered in enterprise contexts",
-			"SPM exclusively tracks hardware warranties across operational workflows expressed as capacity thresholds in auto-scaling policies. (CIS-SPM-3-w1)",
-			"APM replaces all GRC functions for measurable outcomes compared with innovation funnel candidates for funding cycles. (CIS-SPM-3-w2)",
-			"They are identical capabilities with different icons for practical execution"
+			"Cost type records that categorize planned and actual spend",
+			"Demand state definitions that control intake workflow transitions",
+			"Idea assessment templates used during portal submission scoring",
+			"Resource schedule entries that block out employee vacation time"
 		],
 		"correctIndex": 0,
-		"explanation": "Public SPM positioning contrasts portfolio selection and maintenance with execution methodologies handled through adaptive project management.",
+		"explanation": "Cost types classify financial entries such as labor, hardware, and services so cost plans and expense lines roll up consistently.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-business-management/strategic-planning/create-strategic-plan-strategy.html"
+			"https://www.servicenow.com/docs/r/it-business-management/financial-planning/cost-type-and-rate-types.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 4,
-		"prompt": "Which work outcome is most central to Strategic Portfolio Management programs?",
+		"prompt": "When rolling up project labor costs, which rate model element converts planned hours into monetary amounts on a cost plan?",
 		"choices": [
-			"Align funding and work to strategic goals with transparent roadmaps and progress tracking in real implementations",
-			"Run phishing response playbooks in enterprise contexts",
-			"Perform vendor concentration mapping across operational workflows",
-			"Normalize software discovery titles under governance oversight"
+			"Rate type linked to resource roles and currency",
+			"Demand priority matrix tied to strategic objectives",
+			"Idea portal theme configuration for employee submissions",
+			"Time sheet policy that governs weekly hour entry rules"
 		],
 		"correctIndex": 0,
-		"explanation": "SPM documentation themes emphasize connecting strategy, planning, and execution visibility for investment decisions.",
+		"explanation": "Rate types and rate models apply role-based rates to planned or actual hours so financial plans reflect labor cost accurately.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-business-management/now-assist-for-strategic-portfolio-management-spm/now-assist-spm.html"
+			"https://www.servicenow.com/docs/r/it-business-management/financial-planning/rate-models.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 5,
-		"prompt": "In Strategic Portfolio Management, what is the main value of maintaining strategic plans in the platform?",
+		"prompt": "A portfolio financial controller must compare planned spend against approved budget for an investment. Which record type holds the planned financial breakdown?",
 		"choices": [
-			"They provide a structure to define goals, outcomes, and investment alignment across portfolios in enterprise contexts",
-			"They replace all project and demand records in real implementations",
-			"They eliminate the need for governance boards under governance oversight",
-			"They automatically close projects that miss milestones across operational workflows"
+			"Cost plan with expense lines tied to the investment",
+			"Resource plan task that assigns hours to project phases",
+			"Idea record awaiting conversion to a formal demand",
+			"Timecard entry submitted by a project team member"
 		],
 		"correctIndex": 0,
-		"explanation": "Strategic plans connect objectives to execution and funding decisions so portfolio choices are aligned to enterprise goals.",
+		"explanation": "Cost plans capture planned financial detail at the investment level, including expense lines that classify spend by type and fiscal period.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/strategic-portfolio-management/strategic-planning/strategic-plans-overview.html"
+			"https://www.servicenow.com/docs/r/it-business-management/financial-planning/financial-planning-overview.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 6,
-		"prompt": "A portfolio director needs to show how initiatives support organizational goals. Which configuration supports this best?",
+		"prompt": "During annual portfolio planning, leadership allocates funding envelopes before projects are fully scoped. Which artifact represents that top-down budget allocation?",
 		"choices": [
-			"Apply cost plans without objective mappings for practical execution",
-			"Track goals exclusively in a slide deck outside ServiceNow",
-			"Map each investment and initiative to strategic objectives within the strategic plan hierarchy in real implementations",
-			"Create one objective called 'General Improvement' for all work in enterprise contexts"
+			"Budget plan linked to portfolio or investment hierarchy",
+			"Resource assignment on a project task record",
+			"Idea assessment scorecard completed in the portal",
+			"Demand workbench filter saved by the portfolio manager"
 		],
-		"correctIndex": 2,
-		"explanation": "Objective-to-investment mappings provide traceability from funded work back to declared strategic intent.",
+		"correctIndex": 0,
+		"explanation": "Budget plans distribute approved funding across portfolios and investments, providing the financial ceiling that cost plans reference during planning cycles.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/strategic-portfolio-management/strategic-planning/map-objectives-to-investments.html"
+			"https://www.servicenow.com/docs/r/it-business-management/financial-planning/financial-planning-overview.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 7,
-		"prompt": "What planning practice improves confidence in strategic plans during quarterly portfolio reviews?",
+		"prompt": "An expense line on a cost plan shows duplicate labor entries after a rate change. Which field combination most likely caused inconsistent rollups?",
 		"choices": [
-			"Exclusively track completed projects, not in-flight initiatives",
-			"Prioritize initiatives with the largest teams regardless of value across operational workflows",
-			"Apply measurable key results and update progress based on portfolio execution data",
-			"Freeze all objective metrics for the fiscal year in real implementations"
+			"Mismatched rate type and fiscal period on the expense line",
+			"Demand state set to Draft instead of Submitted",
+			"Idea category missing from the portal submission form",
+			"Resource schedule conflict on the assigned employee record"
 		],
-		"correctIndex": 2,
-		"explanation": "Strategic plans are more actionable when objective progress is measured and refreshed from current execution data.",
+		"correctIndex": 0,
+		"explanation": "Expense lines depend on consistent rate type, cost type, and fiscal period values so cost plan totals reconcile when rates are updated.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/strategic-portfolio-management/strategic-planning/measure-strategic-objectives.html"
+			"https://www.servicenow.com/docs/r/it-business-management/financial-planning/expense-lines.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 8,
-		"prompt": "Which scenario best demonstrates strategic plan governance in SPM?",
+		"prompt": "A PMO administrator configures hourly billing for contractors versus employees on the same project. Which approach applies different charge rates by role?",
 		"choices": [
-			"Projects are approved solely by submission date for practical execution",
-			"Resource plans are hidden from portfolio managers for measurable outcomes",
-			"All demand records are auto-approved without scoring in real implementations",
-			"Objective owners review plan progress and adjust priorities before new funding decisions in enterprise contexts"
+			"Define separate rate types within the rate model for each role",
+			"Create a single flat rate on the demand record intake form",
+			"Disable cost plans and track spend exclusively in spreadsheets",
+			"Assign all resources to the same generic resource group"
 		],
-		"correctIndex": 3,
-		"explanation": "Governance involves periodic review of objective progress and using that evidence to steer funding and prioritization.",
+		"correctIndex": 0,
+		"explanation": "Rate models associate rate types with resource roles so planned and actual labor costs reflect role-specific billing rates.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/strategic-portfolio-management/strategic-planning/strategic-plan-governance.html"
+			"https://www.servicenow.com/docs/r/it-business-management/financial-planning/rate-models.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 9,
-		"prompt": "A PMO wants to reduce misalignment between strategy and delivery. What should they enforce first?",
+		"prompt": "Finance leadership asks which SPM capability supports Now Create content generation for portfolio artifacts. Which product area provides that AI-assisted authoring?",
 		"choices": [
-			"Allow teams to create initiatives without objective links for speed for measurable outcomes",
-			"Track strategic themes exclusively in financial planning tools",
-			"Require each major initiative to reference an approved strategic objective and expected outcome in enterprise contexts",
-			"Disable strategic planning modules in non-production instances in real implementations"
+			"Now Create for Strategic Portfolio Management",
+			"Now Assist for IT Service Management incident summarization",
+			"Now Platform analytics dashboards for CMDB health",
+			"Now Assist for HR case document generation"
 		],
-		"correctIndex": 2,
-		"explanation": "Mandatory alignment of initiatives to approved objectives improves prioritization discipline and outcome reporting.",
+		"correctIndex": 0,
+		"explanation": "Now Create for SPM helps teams draft portfolio-related content such as business cases and planning narratives using generative AI within SPM workflows.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/strategic-portfolio-management/strategic-planning/align-investments-to-strategy.html"
+			"https://www.servicenow.com/docs/r/it-business-management/now-create-for-spm/now-create-spm.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 10,
-		"prompt": "What is the purpose of the Strategic Execution Dashboard in SPM?",
+		"prompt": "A cost plan variance report shows actuals exceeding planned Opex for a program. Which review step should the portfolio analyst perform first?",
 		"choices": [
-			"To clearly manage discovery patterns for CMDB",
-			"To clearly run monthly software reconciliation jobs",
-			"To clearly replace all project workbench functionality",
-			"To clearly monitor strategic objective progress and execution health in one place for portfolio decisions"
+			"Compare expense line actuals to planned amounts by cost type and fiscal period",
+			"Reopen the demand in Draft state to remove approved funding",
+			"Delete resource assignments to zero out labor actuals",
+			"Convert the program to an idea record in the employee portal"
 		],
-		"correctIndex": 3,
-		"explanation": "The dashboard consolidates objective, investment, and delivery indicators so leadership can evaluate strategy execution effectively.",
+		"correctIndex": 0,
+		"explanation": "Variance analysis starts by comparing planned versus actual expense lines grouped by cost type and period to identify where overspend occurred.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/strategic-portfolio-management/strategic-planning/strategic-execution-dashboard.html"
+			"https://www.servicenow.com/docs/r/it-business-management/financial-planning/financial-planning-overview.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 11,
-		"prompt": "A CIO asks why a strategic objective is off track. Which dashboard capability should a portfolio analyst use first?",
+		"prompt": "A resource manager opens Resource Management Workspace to review team utilization. Which persona typically owns capacity decisions across multiple projects?",
 		"choices": [
-			"Delete low-performing investments from the plan for practical execution",
-			"Hide cost and resource metrics for simplicity for measurable outcomes",
-			"Export all data to spreadsheets and stop with SPM",
-			"Drill from objective scorecards into contributing initiatives and their status indicators in enterprise contexts"
+			"Resource manager with access to allocation and capacity views",
+			"Catalog administrator who publishes service catalog items",
+			"Change manager who approves standard change models",
+			"Discovery administrator who configures MID Server schedules"
 		],
-		"correctIndex": 3,
-		"explanation": "Drill-down analysis links objective performance to underlying work items, helping identify where execution risks are occurring.",
+		"correctIndex": 0,
+		"explanation": "Resource managers use Resource Management Workspace to view allocations, identify conflicts, and balance capacity across portfolio work.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/strategic-portfolio-management/strategic-planning/use-strategic-execution-dashboard.html"
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-management-workspace.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 12,
-		"prompt": "Which KPI combination is most useful on a strategic execution dashboard?",
+		"prompt": "An administrator configures planning attributes so resource plans can filter staff by skill and location. Where are the attribute values for each employee maintained?",
 		"choices": [
-			"Exclusively total active users in the platform",
-			"Hardware lifecycle end dates across operational workflows",
-			"Exclusively number of open incidents in enterprise contexts",
-			"Objective progress, investment health, and milestone delivery trends in real implementations"
+			"On the Employee profile record in Resource Management",
+			"On the Idea Portal theme configuration record",
+			"On the Budget plan header for the fiscal year",
+			"On the Time sheet policy assigned to the project"
 		],
-		"correctIndex": 3,
-		"explanation": "Combining strategic progress and execution metrics creates a balanced view for portfolio steering conversations.",
+		"correctIndex": 0,
+		"explanation": "Planning attribute values are defined on the Employee profile so resource plans and assignments can match people to work based on skills, location, and other criteria.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/strategic-portfolio-management/strategic-planning/strategic-dashboard-kpis.html"
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/planning-attributes.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 13,
-		"prompt": "How does dashboard filtering improve governance meetings in SPM?",
+		"prompt": "A project manager needs to staff a three-month development phase with two business analysts. Which record type commits specific people and hours to project work?",
 		"choices": [
-			"It removes the need for strategic objectives in real implementations",
-			"It lets leaders focus by portfolio, business unit, or timeframe to prioritize corrective action in enterprise contexts",
-			"It confirms all initiatives are always marked green",
-			"It automatically approves all investment changes for measurable outcomes"
+			"Resource assignment linking employees to planned effort",
+			"Expense line classified as Capex on the cost plan",
+			"Idea assessment response submitted through the portal",
+			"Demand state transition from Qualified to Approved"
 		],
-		"correctIndex": 1,
-		"explanation": "Targeted filtering helps decision-makers isolate issues quickly and act on the highest-priority strategy execution gaps.",
+		"correctIndex": 0,
+		"explanation": "Resource assignments connect employees or groups to planned hours on investments, forming the basis for capacity and utilization reporting.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/strategic-portfolio-management/strategic-planning/configure-strategic-execution-dashboard.html"
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-assignment.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 14,
-		"prompt": "If objective progress looks healthy but delivery dates keep slipping, what is the best interpretation?",
+		"prompt": "Which role-based access configuration grants a user permission to view and manage resource allocations in Resource Management Workspace?",
 		"choices": [
-			"The well-defined strategic plan should be deleted",
-			"Financial planning is no longer required in real implementations",
-			"There may be reporting lag or weak milestone discipline, requiring deeper execution review under governance oversight",
-			"Dashboard data is always wrong when dates slip across operational workflows"
+			"Resource Management Workspace user role for allocation management",
+			"Financial planning administrator role for cost plan editing only",
+			"Idea submitter role for portal idea creation",
+			"Demand read-only role for workbench list viewing"
 		],
-		"correctIndex": 2,
-		"explanation": "Divergence between strategic score and delivery timelines is a signal to inspect milestone tracking quality and execution dependencies.",
+		"correctIndex": 0,
+		"explanation": "Users with the Resource Management Workspace role can access allocation views, resolve conflicts, and manage staffing across portfolio investments.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/strategic-portfolio-management/strategic-planning/analyze-strategic-execution-variance.html"
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-management-workspace.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 15,
-		"prompt": "In SPM, what is a practical use of Now Assist for portfolio teams?",
+		"prompt": "A resource plan shows overallocation for a shared architect across four initiatives. Which workspace capability helps the manager rebalance hours?",
 		"choices": [
-			"Automatically set all at-risk initiatives to complete in real implementations",
-			"Normalize discovered software titles in enterprise contexts synchronized with discovery credentials and schedule windows. (CIS-SPM-15-w1)",
-			"Generate contextual summaries and insights from strategic and execution data to accelerate decision-making across operational workflows",
-			"Replace all approval workflows with chatbot responses under governance oversight"
+			"Resource Management Workspace allocation timeline and conflict indicators",
+			"Demand Workbench ranking view sorted by strategic score",
+			"Idea Portal submission queue filtered by department",
+			"Financial planning cost plan rollup by fiscal quarter"
 		],
-		"correctIndex": 2,
-		"explanation": "Now Assist can help portfolio stakeholders quickly interpret plan and execution context through AI-generated summaries and guidance.",
+		"correctIndex": 0,
+		"explanation": "Resource Management Workspace surfaces allocation conflicts on a timeline so managers can adjust assignments before work starts.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/strategic-portfolio-management/now-assist-in-spm/now-assist-overview.html"
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-management-workspace.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 16,
-		"prompt": "A PMO lead asks for concise status narratives ahead of governance reviews. Which Now Assist capability is most relevant?",
+		"prompt": "Leadership wants to compare available capacity against approved demand for the next two quarters. Which SPM process supports that analysis?",
 		"choices": [
-			"Focus on disabling demand scoring for measurable outcomes",
-			"AI-generated recaps of objective and initiative updates across operational workflows",
-			"Auto-provisioning CMDB CIs for every project in enterprise contexts",
-			"Focus on converting all strategic goals into incident tasks"
+			"Capacity planning using resource plans and allocation data",
+			"Incident major incident management workflow",
+			"Hardware asset disposal certificate generation",
+			"Service catalog item variable validation rules"
 		],
-		"correctIndex": 1,
-		"explanation": "Summarization assistance reduces manual preparation time while preserving key strategic and execution signals for review meetings.",
+		"correctIndex": 0,
+		"explanation": "Capacity planning compares resource availability to planned and requested work so portfolio decisions reflect realistic delivery constraints.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/strategic-portfolio-management/now-assist-in-spm/use-now-assist-summaries.html"
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/capacity-planning.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 17,
-		"prompt": "What governance approach should accompany adoption of Now Assist in SPM?",
+		"prompt": "An employee will be unavailable for two weeks during a critical project phase. Which record type blocks that time from allocation calculations?",
 		"choices": [
-			"Apply AI outputs directly for approvals without human review",
-			"Require human validation of AI-generated recommendations before portfolio decisions for measurable outcomes",
-			"Disable strategic plans to avoid bias across operational workflows",
-			"Limit access to financial data in all dashboards under governance oversight"
+			"Resource schedule entry marking the unavailability period",
+			"Expense line with Opex classification on the cost plan",
+			"Idea record in the Evaluating state awaiting scoring",
+			"Demand assessment template attached to the intake form"
 		],
-		"correctIndex": 1,
-		"explanation": "AI-assisted insights should support, not replace, accountable human judgment in formal portfolio governance.",
+		"correctIndex": 0,
+		"explanation": "Resource schedules define working hours, holidays, and time off so capacity calculations exclude periods when staff cannot be assigned.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/now-assist/now-assist-governance/ai-governance-best-practices.html"
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-schedules.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 18,
-		"prompt": "Which outcome most clearly indicates successful use of Now Assist in SPM?",
+		"prompt": "A portfolio administrator adds a new planning attribute called Certification Level for matching specialized staff. What must be configured before the attribute appears on employee records?",
 		"choices": [
-			"Elimination of strategic objectives under governance oversight",
-			"No need for project status reporting across operational workflows",
-			"Automatic closure of all overdue milestones for measurable outcomes",
-			"Fewer manual narrative updates and faster, better-informed portfolio review cycles for practical execution"
+			"Create the planning attribute definition and assign it to the employee profile",
+			"Enable budget allocation property on the investment planning module",
+			"Publish a new Idea Portal category for employee submissions",
+			"Activate the time sheet policy for the project task table"
 		],
-		"correctIndex": 3,
-		"explanation": "Success is measured by improved decision velocity and quality, not by removing core governance artifacts.",
+		"correctIndex": 0,
+		"explanation": "Planning attributes are defined in Resource Management configuration and then linked to the Employee profile so values can be maintained per person.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/strategic-portfolio-management/now-assist-in-spm/measure-now-assist-value.html"
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/planning-attributes.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 19,
-		"prompt": "When configuring Now Assist prompts for strategic updates, what is the best practice?",
+		"prompt": "During quarterly planning, a resource manager filters staff by region and primary skill before creating assignments. Which data drives those filters?",
 		"choices": [
-			"Apply broad generic prompts with no portfolio context",
-			"Include confidential credentials in prompt templates in enterprise contexts",
-			"Ask Now Assist to bypass role-based security controls across operational workflows",
-			"Anchor prompts to objective, risk, timeline, and financial context to strengthen response quality"
+			"Planning attribute values stored on each employee profile",
+			"Expense type selections on the investment cost plan",
+			"Demand state transitions recorded in the workbench",
+			"Idea portal vote counts collected from submitters"
 		],
-		"correctIndex": 3,
-		"explanation": "Context-rich prompting generally produces more relevant and actionable AI assistance for strategic portfolio workflows.",
+		"correctIndex": 0,
+		"explanation": "Planning attributes on employee profiles enable filtered resource selection when building plans and assignments for portfolio work.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/now-assist/now-assist-guidance/prompting-best-practices.html"
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/planning-attributes.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 20,
-		"prompt": "What best describes the relationship between Application Portfolio Management (APM) and Strategic Portfolio Management (SPM)?",
+		"prompt": "A program manager sees that soft-booked resources on a resource plan differ from confirmed assignments on the project. Which action clarifies committed staffing?",
 		"choices": [
-			"SPM is exclusively used for infrastructure discovery",
-			"APM focuses on application inventory/rationalization insights that feed broader SPM investment and strategy decisions in enterprise contexts",
-			"APM and SPM are unrelated products with no shared data model across operational workflows",
-			"APM replaces all strategic planning workflows in SPM under governance oversight"
+			"Convert soft allocations to hard assignments after approval",
+			"Delete the cost plan and recreate expense lines manually",
+			"Move the demand back to Draft to reset intake scoring",
+			"Archive all idea records submitted through the portal"
 		],
-		"correctIndex": 1,
-		"explanation": "APM provides application-centric portfolio intelligence, while SPM governs strategic planning, prioritization, and execution across portfolios.",
+		"correctIndex": 0,
+		"explanation": "Resource plans may include soft bookings during planning; hard assignments confirm committed staff once funding and scheduling are approved.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/strategic-portfolio-management/application-portfolio-management/apm-overview.html"
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-assignment.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 21,
-		"prompt": "A leadership team wants to reduce redundant applications while funding strategic priorities. Which capability pairing is most appropriate?",
+		"prompt": "Which Resource Management Workspace view helps identify when the same person is assigned more hours than their schedule allows?",
 		"choices": [
-			"Apply APM exclusively and skip strategic objective mapping",
-			"Apply ITSM change requests as the sole investment mechanism",
-			"Apply SPM exclusively and ignore application lifecycle data",
-			"Apply APM rationalization insights and execute investment decisions through SPM planning and governance"
+			"Overallocation report highlighting hours exceeding capacity",
+			"Demand ranking board sorted by business value score",
+			"Idea funnel chart showing submissions by category",
+			"Cost plan variance table grouped by expense type"
 		],
-		"correctIndex": 3,
-		"explanation": "APM identifies rationalization opportunities; SPM converts those insights into governed investment and execution plans.",
+		"correctIndex": 0,
+		"explanation": "Overallocation views compare assigned hours to available capacity from resource schedules, flagging staffing conflicts early.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/strategic-portfolio-management/application-portfolio-management/apm-and-spm-alignment.html"
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-management-workspace.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 22,
-		"prompt": "Which statement is accurate for CIS exam context when comparing APM and SPM?",
+		"prompt": "An implementation specialist configures default working hours for all resources in a business unit. Which object establishes the standard weekly availability pattern?",
 		"choices": [
-			"APM is primarily about strategic objective trees, while SPM tracks exclusively software lifecycle dates",
-			"APM informs what to invest in at the application level; SPM governs how strategic investments are selected and delivered for measurable outcomes",
-			"Both modules provide identical capabilities and should be implemented interchangeably across operational workflows",
-			"SPM is strictly a project execution tool with no strategic planning under governance oversight"
+			"Resource schedule template applied to employee records",
+			"Rate model defining hourly charges by resource role",
+			"Budget plan distributing funding across portfolios",
+			"Demand assessment template scoring intake submissions"
 		],
-		"correctIndex": 1,
-		"explanation": "The distinction is scope: APM provides application portfolio decision support, and SPM handles enterprise strategy-to-execution governance.",
+		"correctIndex": 0,
+		"explanation": "Resource schedule templates set default working time patterns that roll up to individual employee schedules for capacity calculations.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/strategic-portfolio-management/strategic-portfolio-management-overview.html"
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-schedules.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 23,
-		"prompt": "What is a practical governance benefit of integrating APM data into SPM planning?",
+		"prompt": "A portfolio director asks why approved projects keep slipping despite sufficient budget. Which resource metric should be reviewed first?",
 		"choices": [
-			"It removes the need for portfolio review boards in enterprise contexts",
-			"It automatically closes all technical debt items in real implementations",
-			"It limits visibility to exclusively one business unit prefaced with rollback scripts stored alongside deployment packages. (CIS-SPM-23-w2)",
-			"It enables investment decisions to consider business value, risk, cost, and application health together for practical execution"
+			"Utilization and overallocation across shared roles on active investments",
+			"Number of Capex expense lines on the fiscal year cost plan",
+			"Count of ideas in the portal awaiting employee votes",
+			"Demand records in the Cancelled state from prior quarters"
 		],
-		"correctIndex": 3,
-		"explanation": "Integrated data improves governance quality by adding application health and risk context to strategic funding decisions.",
+		"correctIndex": 0,
+		"explanation": "Delivery delays often trace to staffing bottlenecks; reviewing utilization and overallocation reveals whether capacity matches approved work.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/strategic-portfolio-management/application-portfolio-management/use-apm-insights-in-spm.html"
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/capacity-planning.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 24,
-		"prompt": "If an organization tracks app technical fit in APM but does not connect it to SPM priorities, what is the likely outcome?",
+		"prompt": "Which statement accurately describes the relationship between a resource plan and resource assignments on an investment?",
 		"choices": [
-			"Portfolio decisions may miss modernization urgency and strategic alignment opportunities for practical execution",
-			"Infrastructure incidents decrease automatically for measurable outcomes",
-			"Better strategy execution with less data in real implementations",
-			"APM data becomes mandatory for ITSM incident closure in enterprise contexts"
+			"The resource plan defines required roles and hours; assignments commit specific people",
+			"The resource plan replaces cost plans for all labor financial tracking",
+			"Assignments are optional when a resource plan exists on the investment",
+			"Resource plans are created only after a demand reaches the Closed state"
 		],
 		"correctIndex": 0,
-		"explanation": "Without strategic linkage, APM insights are less likely to influence funding and roadmap decisions where they create business value.",
+		"explanation": "Resource plans specify staffing needs by role and period, while assignments name the individuals or groups fulfilling that planned effort.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/strategic-portfolio-management/application-portfolio-management/application-rationalization-and-strategy.html"
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-management-overview.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 25,
-		"prompt": "In SPM, what is the main purpose of investment funding governance?",
+		"prompt": "A resource manager groups employees by department and job profile before bulk-updating planning attributes. Which table stores the employee data used in resource planning?",
 		"choices": [
-			"Approve investments exclusively by submission date in enterprise contexts",
-			"Move all funding decisions to spreadsheet tools outside SPM for practical execution",
-			"Fund every demand item equally regardless of alignment in enterprise contexts",
-			"Allocate budget based on strategic value, risk, and expected outcomes in real implementations"
+			"Employee profile records linked to user accounts",
+			"Expense line records on the investment cost plan",
+			"Idea records submitted through the employee portal",
+			"Timecard rows approved by the project manager"
 		],
-		"correctIndex": 3,
-		"explanation": "Funding governance ensures limited capital is directed toward the highest-value strategic outcomes.",
+		"correctIndex": 0,
+		"explanation": "Resource Management uses Employee profile records to maintain planning attributes, schedules, and role information for staffing decisions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-planning.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html"
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-management-overview.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 26,
-		"prompt": "Which practice most improves confidence in investment funding decisions?",
+		"prompt": "When building a cross-portfolio capacity forecast, which data source reflects both committed and tentative staffing?",
 		"choices": [
-			"Focus on applying a consistent scoring model tied to strategic objectives and benefit metrics",
-			"Focus on funding initiatives without dependency review",
-			"Basing decisions exclusively on prior-year spend in real implementations",
-			"Focus on skipping demand scoring for executive-submitted requests"
+			"Resource plans and assignments aggregated across investments",
+			"Idea portal submissions grouped by business unit",
+			"Demand assessment scores from the intake workbench",
+			"Budget plan totals by fiscal period and portfolio"
 		],
 		"correctIndex": 0,
-		"explanation": "Consistent scoring enables transparent, repeatable funding decisions across portfolios.",
+		"explanation": "Capacity forecasts combine resource plan requirements with assignment data to show both planned demand and confirmed staffing across the portfolio.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/demand-management/concept/demand-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html"
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/capacity-planning.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 27,
-		"prompt": "What should portfolio leaders review before approving incremental funding for an in-flight initiative?",
+		"prompt": "An administrator enables group-based resource planning for a shared testing team. Which approach assigns the group rather than named individuals?",
 		"choices": [
-			"Strategic alignment, forecast variance, and expected incremental benefit in enterprise contexts",
-			"Total number of completed catalog requests in real implementations",
-			"Exclusively the initiative name and owner in enterprise contexts",
-			"Incident backlog trends for unrelated services for practical execution"
+			"Create a resource group assignment on the resource plan",
+			"Add a single Opex expense line for the entire team cost",
+			"Submit one consolidated idea through the employee portal",
+			"Set the demand state to Approved without a resource plan"
 		],
 		"correctIndex": 0,
-		"explanation": "Incremental funding should be evidence-based and linked to measurable strategic impact.",
+		"explanation": "Group assignments allow resource plans to reserve capacity from a team before specific members are named in individual assignments.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-planning.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/concept/spm-workspace.html"
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-assignment.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 28,
-		"prompt": "Which anti-pattern most weakens investment funding discipline in SPM?",
+		"prompt": "A PMO lead wants Resource Management Workspace users to adjust allocations but not edit financial cost plans. Which design supports that separation?",
 		"choices": [
-			"With stage-gate reviews before release of additional funds",
-			"Focus on funding initiatives without objective mapping or measurable outcomes",
-			"Focus on maintaining benefit realization checkpoints across operational workflows",
-			"Focus on capturing reforecast rationale in portfolio reviews"
+			"Assign RM Workspace role without financial planning admin access",
+			"Grant itil_admin to all resource managers for full table access",
+			"Disable resource plans and rely on spreadsheet tracking",
+			"Route all staffing changes through incident assignment rules"
 		],
-		"correctIndex": 1,
-		"explanation": "Without objective linkage and outcomes, funding decisions cannot be justified against strategy.",
+		"correctIndex": 0,
+		"explanation": "Role separation limits resource managers to allocation tasks in RM Workspace while financial administrators maintain cost and budget plans.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html"
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-management-workspace.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 29,
-		"prompt": "Which metric best indicates that investment funding is aligned to strategic intent?",
+		"prompt": "After a merger, two resource schedule templates must coexist for different regions with distinct holiday calendars. How should the administrator configure this?",
 		"choices": [
-			"Total number of active users in the platform under governance oversight",
-			"Average catalog request fulfillment time across operational workflows",
-			"Count of closed incidents in the month for measurable outcomes",
-			"Percentage of funded initiatives mapped to top-priority strategic objectives for practical execution"
+			"Maintain separate resource schedule templates and assign each to the appropriate employees",
+			"Use one global schedule and ignore regional holiday differences",
+			"Delete all schedules and calculate capacity from cost plan hours",
+			"Convert regional holidays into demand records for tracking"
 		],
-		"correctIndex": 3,
-		"explanation": "Objective-mapped funding demonstrates direct alignment between capital allocation and strategic priorities.",
+		"correctIndex": 0,
+		"explanation": "Multiple resource schedule templates support regional working patterns; each employee inherits the schedule matching their location or business unit.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-planning.html"
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-schedules.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 30,
-		"prompt": "What is the main purpose of demand management in SPM?",
+		"prompt": "A resource manager exports allocation data before a portfolio review meeting. Which workspace feature provides a consolidated view of staffing across investments?",
 		"choices": [
-			"Track software entitlement consumption under governance oversight",
-			"Capture, evaluate, and prioritize incoming work against strategic and capacity constraints across operational workflows",
-			"Automatically fund every submitted request in enterprise contexts",
-			"Replace project governance with incident workflows in real implementations"
+			"Resource Management Workspace portfolio allocation dashboard",
+			"Demand Workbench pipeline chart by approval stage",
+			"Idea Portal analytics showing submission trends",
+			"Financial planning budget versus actual comparison report"
 		],
-		"correctIndex": 1,
-		"explanation": "Demand management creates a governed intake pipeline for strategic portfolio decisions.",
+		"correctIndex": 0,
+		"explanation": "Resource Management Workspace dashboards aggregate allocation and utilization data so leaders can assess staffing across the portfolio in one view.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/demand-management/concept/demand-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html"
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-management-workspace.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 31,
-		"prompt": "Which intake design most improves demand decision quality?",
+		"prompt": "Which outcome indicates that planning attributes are configured effectively for resource matching?",
 		"choices": [
-			"A well-defined standardized demand form capturing business value, risk, cost, and objective alignment",
-			"A well-defined free-text form with no required fields",
-			"Email-based requests exclusively with no scoring for practical execution",
-			"Automatic approvals for repeat requesters under governance oversight"
+			"Resource plans filter to qualified employees based on skill and location attributes",
+			"All expense lines default to Capex regardless of spend category",
+			"Every demand record skips assessment and auto-approves on submit",
+			"Idea submissions bypass scoring and convert directly to projects"
 		],
 		"correctIndex": 0,
-		"explanation": "Consistent structured intake improves comparability and prioritization rigor.",
+		"explanation": "Effective planning attributes enable accurate staff filtering when building resource plans, reducing manual searches and mismatched assignments.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/demand-management/concept/demand-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html"
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/planning-attributes.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 32,
-		"prompt": "A demand item has high strategic value but no delivery capacity this quarter. What is the best governance action?",
+		"prompt": "An organization wants employees to submit improvement concepts and track them through evaluation before portfolio intake. Which application provides the central hub for that process?",
 		"choices": [
-			"Reject permanently due to current constraints under governance oversight",
-			"Place in a prioritized backlog with transparent deferral rationale across operational workflows",
-			"Convert it to an incident to speed implementation for measurable outcomes",
-			"Approve immediately and bypass capacity checks for practical execution"
+			"Idea Portal for employee idea collection and evaluation",
+			"Resource Management Workspace for allocation conflict resolution",
+			"Financial planning module for cost plan variance analysis",
+			"Timecard Management for weekly hour submission and approval"
 		],
-		"correctIndex": 1,
-		"explanation": "Deferral with clear prioritization preserves strategic intent while respecting capacity limits.",
+		"correctIndex": 0,
+		"explanation": "Idea Portal is the central application where employees submit ideas, participate in evaluation, and follow progress before ideas convert to demands or investments.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/demand-management/concept/demand-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/concept/spm-workspace.html"
+			"https://www.servicenow.com/docs/r/it-business-management/idea-management/idea-portal.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 33,
-		"prompt": "Which anti-pattern most harms demand management governance?",
+		"prompt": "A portfolio analyst opens Demand Workbench to compare intake items before a funding committee meeting. What is the primary purpose of that workspace?",
 		"choices": [
-			"Focus on reviewing demand scoring during portfolio board meetings",
-			"Focus on approving requests based on requester influence instead of scoring",
-			"Focus on tracking demand aging and disposition status",
-			"Focus on maintaining objective-linked ranking criteria under governance oversight"
+			"Prioritize and manage demand records through assessment and approval stages",
+			"Assign hourly rates to contractor roles on active projects",
+			"Configure employee planning attributes for resource matching",
+			"Approve timecards submitted against project task records"
 		],
-		"correctIndex": 1,
-		"explanation": "Influence-based approvals undermine transparency and strategic prioritization discipline.",
+		"correctIndex": 0,
+		"explanation": "Demand Workbench gives portfolio teams a unified view to rank, assess, and disposition demand items through the intake pipeline.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/demand-management/concept/demand-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-planning.html"
+			"https://www.servicenow.com/docs/r/it-business-management/demand-management/demand-workbench.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 34,
-		"prompt": "Which KPI best indicates healthy demand management operations?",
+		"prompt": "A demand record moves from Submitted to Assessment In Progress after a portfolio manager begins scoring. Which object governs that lifecycle progression?",
 		"choices": [
-			"Number of unchanged portfolio records in enterprise contexts",
-			"Percent of approved demand aligned to strategic objectives and resourced delivery windows in real implementations",
-			"Total number of incidents created each month for measurable outcomes",
-			"Count of catalog items in the service portal for practical execution"
+			"Demand state model defining allowed transitions and stage gates",
+			"Rate model specifying labor charges by resource role",
+			"Resource schedule template for employee working hours",
+			"Cost type table classifying Capex and Opex entries"
 		],
-		"correctIndex": 1,
-		"explanation": "Healthy demand management links approval quality to strategic alignment and delivery feasibility.",
+		"correctIndex": 0,
+		"explanation": "Demand states control the intake workflow, moving records through assessment, qualification, approval, and conversion stages with defined transitions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/demand-management/concept/demand-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html"
+			"https://www.servicenow.com/docs/r/it-business-management/demand-management/demand-states.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 35,
-		"prompt": "What is the primary purpose of resource management in SPM?",
+		"prompt": "A demand intake team uses weighted scoring to compare business value, risk, and strategic alignment. Which configuration artifact defines those evaluation criteria?",
 		"choices": [
-			"Balance people capacity and demand so strategic work is realistically deliverable in real implementations",
-			"Assign resources based exclusively on team availability without prioritization",
-			"Track software license consumption for practical execution",
-			"Replace project planning with incident queues for measurable outcomes"
+			"Demand assessment template with scored criteria",
+			"Resource schedule entry blocking employee vacation",
+			"Rate type record for contractor hourly billing",
+			"Budget plan header for the portfolio fiscal year"
 		],
 		"correctIndex": 0,
-		"explanation": "Resource management aligns staffing capacity with portfolio priorities to improve delivery outcomes.",
+		"explanation": "Demand assessment templates define scored criteria so intake teams evaluate and compare demand items consistently during portfolio reviews.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/concept/spm-workspace.html"
+			"https://www.servicenow.com/docs/r/it-business-management/demand-management/demand-assessments.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 36,
-		"prompt": "Which scenario indicates a resource management imbalance?",
+		"prompt": "An employee submits an idea through the portal and receives status updates as reviewers evaluate it. Which Idea Portal capability supports that visibility?",
 		"choices": [
-			"Demand scoring criteria mapped to objectives in enterprise contexts",
-			"Portfolio board reviews held on schedule in real implementations",
-			"Initiative benefits tracked quarterly under governance oversight",
-			"High-priority initiatives repeatedly delayed due to over-allocated shared roles across operational workflows"
+			"Idea tracking dashboard showing submission status and feedback",
+			"Resource allocation timeline for project staffing conflicts",
+			"Cost plan rollup showing planned versus actual spend",
+			"Time sheet policy configuration for weekly hour entry"
 		],
-		"correctIndex": 3,
-		"explanation": "Repeated delays on strategic work often indicate unresolved capacity bottlenecks.",
+		"correctIndex": 0,
+		"explanation": "Idea Portal provides submitters with visibility into idea status, reviewer feedback, and progression through evaluation stages.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/program-management/concept/program-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-planning.html"
+			"https://www.servicenow.com/docs/r/it-business-management/idea-management/idea-portal.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 37,
-		"prompt": "What is the best governance response when capacity cannot meet all approved demand?",
+		"prompt": "After an idea passes evaluation, the portfolio team converts it to formal intake. Which record type typically receives the converted work item?",
 		"choices": [
-			"Approve all demands and extend timelines indefinitely for practical execution",
-			"Pause objective tracking until more resources are hired for measurable outcomes",
-			"Convert deferred demands into incidents in real implementations",
-			"Reprioritize work by strategic contribution and adjust staffing plans transparently in enterprise contexts"
+			"Demand record entering the demand management pipeline",
+			"Resource assignment on an active project task",
+			"Expense line on the portfolio budget plan",
+			"Timecard row awaiting project manager approval"
 		],
-		"correctIndex": 3,
-		"explanation": "Transparent reprioritization maintains strategic integrity when constraints require trade-offs.",
+		"correctIndex": 0,
+		"explanation": "Approved ideas convert to demand records so they enter the governed intake, assessment, and funding workflow managed in Demand Workbench.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/demand-management/concept/demand-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html"
+			"https://www.servicenow.com/docs/r/it-business-management/demand-management/demand-management-overview.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 38,
-		"prompt": "Which anti-pattern most weakens SPM resource planning accuracy?",
+		"questionType": "multi",
+		"prompt": "Which two demand states indicate that intake evaluation is underway but funding has not yet been approved? (Choose two.)",
 		"choices": [
-			"Focus on maintaining role-based capacity plans for measurable outcomes",
-			"With current allocation and forecast capacity data",
-			"Focus on ignoring non-project operational commitments in capacity forecasts",
-			"Focus on reviewing dependencies during portfolio planning"
+			"Assessment In Progress",
+			"Qualified",
+			"Closed Complete",
+			"Cancelled"
 		],
-		"correctIndex": 2,
-		"explanation": "Excluding operational work from forecasts overstates available capacity and causes planning errors.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Assessment In Progress and Qualified are mid-pipeline states where demand items are being evaluated before final approval and conversion.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-planning.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/program-management/concept/program-management.html"
+			"https://www.servicenow.com/docs/r/it-business-management/demand-management/demand-states.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 39,
-		"prompt": "Which KPI best indicates improving resource management maturity?",
+		"prompt": "A portfolio manager filters Demand Workbench to show only high-priority items aligned to a strategic objective. Which demand field supports that filter?",
 		"choices": [
-			"Higher number of unassigned demands across operational workflows",
-			"Reduction in critical-role overallocation and fewer priority initiative delays under governance oversight",
-			"Increase in emergency demand submissions in real implementations",
-			"Longer backlog aging across all portfolios in enterprise contexts"
+			"Strategic alignment and priority score from the assessment",
+			"Resource schedule template assigned to the submitter",
+			"Rate type applied to planned labor on the cost plan",
+			"Expense type classification on the budget plan line"
 		],
-		"correctIndex": 1,
-		"explanation": "Lower overallocation and reduced delay on strategic work indicate healthier resource governance.",
+		"correctIndex": 0,
+		"explanation": "Demand assessments capture strategic alignment and priority scores that workbench views use to rank and filter intake for portfolio decisions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/concept/spm-workspace.html"
+			"https://www.servicenow.com/docs/r/it-business-management/demand-management/demand-workbench.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 40,
-		"prompt": "In SPM, what is the main purpose of roadmap management?",
+		"prompt": "An idea reviewer completes a structured questionnaire scoring feasibility and business impact before recommending promotion. Which feature captures those responses?",
 		"choices": [
-			"Sequence strategic initiatives over time with dependency and capacity awareness for practical execution",
-			"Manage exclusively completed projects in enterprise contexts",
-			"Track software entitlement metrics across operational workflows",
-			"Replace demand management and portfolio governance controls under governance oversight"
+			"Idea assessment with defined evaluation criteria",
+			"Resource plan task assigning hours to project phases",
+			"Cost plan expense line classified as operating expenditure",
+			"Time sheet policy rule requiring daily hour entry"
 		],
 		"correctIndex": 0,
-		"explanation": "Roadmaps translate strategy into a time-phased execution plan across portfolios.",
+		"explanation": "Idea assessments use structured criteria so reviewers score submissions consistently before ideas advance toward demand conversion.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-planning.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/concept/spm-workspace.html"
+			"https://www.servicenow.com/docs/r/it-business-management/idea-management/idea-portal.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 41,
-		"prompt": "Which roadmap practice most improves executive decision quality?",
+		"prompt": "A demand item remains in the backlog because delivery capacity is unavailable this quarter. Which Demand Workbench action preserves the item for future review?",
 		"choices": [
-			"Plan all initiatives at the same priority level for measurable outcomes",
-			"Freeze roadmap updates for the fiscal year for practical execution",
-			"Maintain dependency-aware milestones linked to strategic objectives and forecast updates under governance oversight",
-			"Hide delivery risks until release dates across operational workflows"
+			"Defer the demand with documented rationale while keeping it ranked",
+			"Delete the demand record and require resubmission through the portal",
+			"Convert the demand to a closed incident for tracking purposes",
+			"Remove all assessment scores so the record returns to Draft"
 		],
-		"correctIndex": 2,
-		"explanation": "Dependency-aware, objective-linked roadmaps support realistic trade-off decisions.",
+		"correctIndex": 0,
+		"explanation": "Deferral allows portfolio teams to retain strategically valuable demand in the pipeline with transparent rationale when capacity constraints prevent immediate approval.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/program-management/concept/program-management.html"
+			"https://www.servicenow.com/docs/r/it-business-management/demand-management/demand-workbench.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 42,
-		"prompt": "A major roadmap milestone is at risk due to a shared team bottleneck. What is the best SPM action?",
+		"prompt": "Leadership wants employees in multiple departments to collaborate on idea evaluation before portfolio intake. Which Idea Portal feature supports cross-functional review?",
 		"choices": [
-			"Ignore the risk until the quarter closes across operational workflows",
-			"Update roadmap scenarios and re-sequence dependent work with governance review",
-			"Shift funding to unrelated initiatives for practical execution",
-			"Convert affected initiatives to low priority automatically for measurable outcomes"
+			"Idea evaluation workflows with assigned reviewer roles",
+			"Resource group assignment on the portfolio resource plan",
+			"Rate model configuration for blended contractor rates",
+			"Budget plan allocation across fiscal periods"
 		],
-		"correctIndex": 1,
-		"explanation": "Scenario-based re-sequencing preserves transparency and helps minimize downstream delivery impact.",
+		"correctIndex": 0,
+		"explanation": "Idea Portal evaluation workflows route submissions to designated reviewers across departments so ideas receive structured feedback before promotion.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-planning.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/concept/spm-workspace.html"
+			"https://www.servicenow.com/docs/r/it-business-management/idea-management/idea-portal.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 43,
-		"prompt": "Which anti-pattern most weakens roadmap credibility?",
+		"prompt": "A demand assessment reveals high strategic value but insufficient benefit quantification. What should the portfolio analyst request before advancing the record?",
 		"choices": [
-			"Focus on linking roadmap items to strategic outcomes",
-			"Focus on keeping roadmap dates static even when delivery evidence changes",
-			"Focus on capturing dependency risks in governance reviews",
-			"Regularly reforecasting milestones with variance commentary for practical execution"
+			"Updated benefit estimates and supporting data in the assessment",
+			"Immediate conversion to a project without a resource plan",
+			"Removal of all idea records linked to the same submitter",
+			"Deletion of cost plan expense lines to reduce planned spend"
 		],
-		"correctIndex": 1,
-		"explanation": "Roadmaps must reflect current execution evidence to remain useful for governance decisions.",
+		"correctIndex": 0,
+		"explanation": "Demand assessments should include quantified benefits; incomplete data warrants requesting updates before the item moves to qualification or approval.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/program-management/concept/program-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html"
+			"https://www.servicenow.com/docs/r/it-business-management/demand-management/demand-assessments.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 44,
-		"prompt": "Which KPI combination best indicates roadmap governance maturity?",
+		"prompt": "Which scenario best demonstrates effective idea-to-demand governance in SPM?",
 		"choices": [
-			"More roadmap items without owners in real implementations sequenced after observability dashboards cover new components. (CIS-SPM-44-w0)",
-			"Longer decision cycle time for priority changes in enterprise contexts",
-			"High milestone predictability, reduced dependency-driven slippage, and objective-linked delivery progress for practical execution",
-			"Increased count of unscored demand submissions for measurable outcomes"
+			"Ideas are scored in the portal, approved ideas convert to assessed demands, and only qualified demands receive funding",
+			"All portal submissions auto-convert to funded projects without assessment",
+			"Demand records are created manually while the Idea Portal remains disabled",
+			"Assessment scores are optional and funding decisions rely on requester seniority"
 		],
-		"correctIndex": 2,
-		"explanation": "Mature roadmap governance combines forecast reliability, dependency control, and strategic traceability.",
+		"correctIndex": 0,
+		"explanation": "Governed intake flows ideas through portal evaluation, converts approved concepts to demands, and applies assessment criteria before funding decisions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-planning.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html"
+			"https://www.servicenow.com/docs/r/it-business-management/demand-management/demand-management-overview.html",
+			"https://www.servicenow.com/docs/r/it-business-management/idea-management/idea-portal.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 45,
-		"prompt": "In SPM, what is the best reason to use strategic goals as a parent structure for initiatives?",
+		"prompt": "After a qualified demand passes portfolio approval, which conversion paths does Demand Management support?",
 		"choices": [
-			"To clearly store vendor software entitlement counts",
-			"To clearly connect delivery investments to measurable business outcomes",
-			"To clearly replace project demand records entirely",
-			"To clearly bypass portfolio governance reviews across operational workflows"
+			"Promote to project, enhancement, change, or defect record",
+			"Convert exclusively to an incident routed to the service desk",
+			"Archive the demand and delete all linked cost plan entries",
+			"Auto-create an agile epic without portfolio or program assignment"
 		],
-		"correctIndex": 1,
-		"explanation": "Goal-to-initiative alignment provides traceability from strategy to execution and enables value-based prioritization.",
+		"correctIndex": 0,
+		"explanation": "Demand Management promotes approved demands into execution records such as projects, enhancements, changes, or defects depending on the intake category.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/concept/spm-overview.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/enterprise-agile-planning/concept/goals-and-initiatives.html"
+			"https://www.servicenow.com/docs/r/it-business-management/demand-management/c_DemandManagement.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 46,
-		"prompt": "Which relationship in SPM most directly supports strategic true-up discussions with executives?",
+		"prompt": "A demand manager delegates feasibility analysis to a subject matter expert. Which object tracks that delegated assessment work?",
 		"choices": [
-			"Focus on mapping initiatives to outcomes, KPIs, and funded work",
-			"Connecting catalog items to hardware models exclusively",
-			"Focus on linking incidents to discovery schedules",
-			"Associating approvals exclusively to assignment groups in enterprise contexts"
+			"Demand task assigned to a specialized resource for evaluation",
+			"Resource plan on the portfolio with soft-booked hours only",
+			"Idea portal submission awaiting employee votes and comments",
+			"Expense line on the cost plan classified as capital expenditure"
 		],
 		"correctIndex": 0,
-		"explanation": "Strategic true-up requires visibility into whether funded initiatives are producing intended outcomes and KPI movement.",
+		"explanation": "Demand tasks let managers delegate feasibility, cost, and effort assessments to subject matter experts while the demand remains in the intake pipeline.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+			"https://www.servicenow.com/docs/r/it-business-management/demand-management/c_DemandManagement.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 47,
-		"prompt": "A portfolio office wants quarterly strategy audits. Which SPM configuration helps most?",
+		"prompt": "A portfolio team compares demand items by strategic value and implementation effort before a funding meeting. Which Demand Management visualization supports that comparison?",
 		"choices": [
-			"Apply periodic initiative reviews with standardized progress, risk, and benefit capture",
-			"Allow each business unit to define unique stage names with no mapping in real implementations",
-			"Track strategy outside the platform in presentation files under governance oversight",
-			"Disable initiative status workflows across operational workflows"
+			"Bubble chart configured with assessment scoring dimensions",
+			"Gantt schedule showing predecessor links between project tasks",
+			"Resource heatmap highlighting overallocation by role and week",
+			"PMO dashboard pipeline tab listing upcoming demand dates"
 		],
 		"correctIndex": 0,
-		"explanation": "Consistent periodic reviews produce comparable evidence for governance and strategic audit readiness.",
+		"explanation": "Demand Management bubble charts plot assessment dimensions such as value and effort so portfolio teams compare intake items visually during prioritization.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/task/review-initiative-progress.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/task/manage-portfolio-work.html"
+			"https://www.servicenow.com/docs/r/it-business-management/demand-management/c_DemandManagement.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 48,
-		"prompt": "Which anti-pattern most weakens SPM goals and initiatives governance?",
+		"prompt": "A project manager needs to plan tasks, review financials, and track RIDAC items in one interface. Which workspace should they use?",
 		"choices": [
-			"Focus on maintaining active dependency and risk tracking",
-			"Focus on creating initiatives without measurable outcomes or success criteria",
-			"Focus on defining baseline and target KPI values",
-			"With initiative owners with clear accountability for measurable outcomes"
+			"Project Workspace as the interactive hub for project delivery",
+			"Idea Portal for employee submissions and evaluation feedback",
+			"Resource Management Workspace heatmap for staffing bandwidth review",
+			"Time Sheet Portal for weekly hour entry and approval routing"
 		],
-		"correctIndex": 1,
-		"explanation": "Without measurable outcomes, initiatives cannot be objectively evaluated for strategic value or continuation decisions.",
+		"correctIndex": 0,
+		"explanation": "Project Workspace centralizes planning, financials, resources, RIDAC, status reports, and analytics so project managers work from a single delivery hub.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/goals-framework.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/initiatives.html"
+			"https://www.servicenow.com/docs/r/it-business-management/project-workspace/project-workspace-landing-page.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 49,
-		"prompt": "What is the strongest indicator that initiative true-up is functioning well in SPM?",
+		"prompt": "A newly created project enters the Initiating state before execution work begins. Which configuration governs those lifecycle transitions?",
 		"choices": [
-			"Executive review meetings held without portfolio data for measurable outcomes",
-			"Regular reforecasting with transparent variance explanations and decision outcomes for practical execution",
-			"No updates to initiative forecasts during the fiscal year under governance oversight",
-			"Exclusively qualitative status notes with no metric references"
+			"Project state model defining allowed workflow stage transitions",
+			"Time sheet policy specifying weekly hour entry requirements",
+			"Rate model converting planned labor hours to monetary amounts",
+			"Lens configuration selecting planning items for portfolio plans"
 		],
-		"correctIndex": 1,
-		"explanation": "Healthy true-up includes data-driven reforecasting, clear variance context, and explicit governance decisions.",
+		"correctIndex": 0,
+		"explanation": "Project and project task states control lifecycle progression through initiating, planning, executing, and closed stages with defined transitions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-planning.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/concept/spm-workspace.html"
+			"https://www.servicenow.com/docs/r/it-business-management/project-management/customize-project-task-states.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 50,
-		"prompt": "What is the main value of Portfolio Workspace in SPM?",
+		"prompt": "Which navigation path opens the modern Project Workspace experience for project managers?",
 		"choices": [
-			"A well-defined replacement for CMDB dependency mapping",
-			"A tool used exclusively for service catalog approvals",
-			"A well-defined portal exclusively for software entitlement imports",
-			"A well-defined unified view to prioritize investments, monitor health, and drive portfolio decisions"
+			"Project > Projects > Project Workspace from the application menu",
+			"Incident > Open > New for service desk assignment routing",
+			"Catalog > Request Items > Create for employee service requests",
+			"Discovery > Status > Schedules for CI classification updates"
 		],
-		"correctIndex": 3,
-		"explanation": "Portfolio Workspace centralizes decision-making context across demand, delivery, risk, and value dimensions.",
+		"correctIndex": 0,
+		"explanation": "Project Workspace is accessed from the Project application menu and provides the Next Experience interface for planning and managing investments.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/concept/spm-workspace.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management-overview.html"
+			"https://www.servicenow.com/docs/r/it-business-management/project-workspace/access-the-project-workspace.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 51,
-		"prompt": "Which Portfolio Workspace practice best supports lifecycle governance from idea to outcome?",
+		"prompt": "To enable budget allocation by expense or cost type in Project Workspace, which system property must an administrator set to true?",
 		"choices": [
-			"Apply stage gates with criteria for advancing demands, initiatives, and investments",
-			"Allow stage transitions without approvals under governance oversight",
-			"Track lifecycle progress exclusively in slide decks",
-			"Keep all records permanently in draft state for measurable outcomes"
+			"sn_invst_pln.enable_budget_allocation_v2 on sys_properties",
+			"glide.ui.project.color on the system property list",
+			"com.snc.financial_planning_pmo.active on the plugin registry",
+			"sn_align_core.apw_lens_count on the portfolio planning module"
 		],
 		"correctIndex": 0,
-		"explanation": "Stage gates enforce consistent governance and reduce portfolio drift by requiring evidence at each transition.",
+		"explanation": "Setting sn_invst_pln.enable_budget_allocation_v2 to true activates the flexible budget allocation experience for projects in Project Workspace.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/task/configure-stage-gates.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/task/manage-portfolio-work.html"
+			"https://www.servicenow.com/docs/r/it-business-management/project-workspace/enable-fin-budget-pws.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 52,
-		"prompt": "A PMO wants faster reallocation of budget between portfolios. Which Portfolio Workspace capability helps most?",
+		"prompt": "A portfolio lead compares subproject progress against the parent initiative. What happens when subprojects update their schedules?",
 		"choices": [
-			"Cross-portfolio financial views and scenario-based funding comparisons for measurable outcomes",
-			"Incident assignment rules by service desk shift for practical execution",
-			"CMDB class hierarchy visualizations under governance oversight",
-			"Endpoint credential rotation schedules across operational workflows"
+			"Progress, costs, and timelines roll up to the parent project metrics",
+			"Subproject data remains isolated with no aggregation to the parent",
+			"Parent project states automatically change to Closed Complete",
+			"Resource plans on the parent are deleted and rebuilt from scratch"
 		],
 		"correctIndex": 0,
-		"explanation": "Financial and scenario views enable comparative decisions on where funds should move for highest strategic return.",
+		"explanation": "Parent-child project hierarchies roll up progress, cost, and schedule data so program and portfolio views reflect consolidated delivery status.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-financials.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/scenario-planning.html"
+			"https://www.servicenow.com/docs/r/it-business-management/program-management/t_CreateAProgram.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 53,
-		"prompt": "Which anti-pattern most reduces confidence in Portfolio Workspace decisions?",
+		"prompt": "A program contains three related projects under one parent initiative. Which field on a project record establishes that hierarchy?",
 		"choices": [
-			"Focus on operating with stale data and infrequent health updates",
-			"Focus on reviewing dependency risk during prioritization",
-			"With consistent scoring criteria across portfolios in real implementations",
-			"Focus on tracking realization against planned outcomes"
+			"Parent field linking the subproject to the parent initiative",
+			"Portfolio field assigning the record to the fiscal year budget",
+			"Phase field naming the current waterfall stage gate only",
+			"Dependency field connecting two tasks on the same schedule"
 		],
 		"correctIndex": 0,
-		"explanation": "Decisions are only as good as portfolio data quality and recency; stale status creates false priorities.",
+		"explanation": "Selecting a parent project on a child record creates a subproject hierarchy that maintains consolidated visibility across related work streams.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/concept/spm-workspace.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/data-management.html"
+			"https://www.servicenow.com/docs/r/it-business-management/program-management/t_CreateAProgram.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 54,
-		"prompt": "What KPI set is most appropriate for Portfolio Workspace leadership dashboards?",
+		"prompt": "A task owner updates planned hours on a project task from Project Workspace. Which table stores that work breakdown element?",
 		"choices": [
-			"Count of archived change requests by month in enterprise contexts",
-			"Investment health, value delivery, financial variance, and strategic alignment coverage in real implementations",
-			"Database index fragmentation and node uptime under governance oversight",
-			"Total number of incident assignments per analyst across operational workflows"
+			"Project task records on the work breakdown structure",
+			"Demand assessment records in the intake evaluation queue",
+			"Time sheet policy rules defining weekly submission windows",
+			"Planning attribute values on the employee profile record"
 		],
-		"correctIndex": 1,
-		"explanation": "These KPIs combine delivery execution, value realization, and strategic fit for informed portfolio steering.",
+		"correctIndex": 0,
+		"explanation": "Project tasks form the work breakdown structure in Project Workspace and hold planned dates, hours, assignments, and dependency relationships.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/task/configure-workspace-dashboards.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+			"https://www.servicenow.com/docs/r/it-business-management/project-workspace/project-workspace-landing-page.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 55,
-		"prompt": "How do usage analytics improve SPM investment governance?",
+		"prompt": "Two project tasks must finish before a third task can start. Which dependency type enforces that sequencing rule?",
 		"choices": [
-			"They quantify adoption and benefit signals used to continue, pivot, or stop investments for practical execution",
-			"They eliminate the need for project status updates for measurable outcomes",
-			"They disable strategic goals during execution in real implementations",
-			"They replace demand intake criteria in enterprise contexts"
+			"Finish-to-Start predecessor relationship between the tasks",
+			"Start-to-Start link allowing both tasks to begin independently",
+			"Catalog variable dependency on a service request fulfillment",
+			"Resource schedule template overlap for the assigned employee"
 		],
 		"correctIndex": 0,
-		"explanation": "Adoption and value evidence helps portfolio leaders make objective lifecycle decisions about investments.",
+		"explanation": "Finish-to-Start dependencies require the predecessor task to complete before the successor task can begin, controlling schedule sequencing.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/performance-analytics/concept/performance-analytics-in-spm.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management-overview.html"
+			"https://www.servicenow.com/docs/r/it-business-management/project-management/r_EditTasks.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 56,
-		"prompt": "Which scenario planning approach best supports portfolio trade-off decisions in SPM?",
+		"prompt": "A PMO wants to accelerate new project setup with predefined phases and tasks. Which feature supports that repeatable structure?",
 		"choices": [
-			"Choose initiatives based exclusively on loudest executive request",
-			"Apply project manager preference as core ranking input",
-			"Compare multiple funding and capacity scenarios against strategic outcomes and constraints under governance oversight",
-			"Lock all forecasts at fiscal year start with no variance updates across operational workflows"
+			"Project template applying standard phases and task structures",
+			"Demand workbench bubble chart with weighted scoring criteria",
+			"Rate model assigning contractor hourly charges by role type",
+			"Timecard category for non-project meetings and training hours"
 		],
-		"correctIndex": 2,
-		"explanation": "Scenario analysis enables transparent trade-offs by testing alternative allocations against strategy and capacity limits.",
+		"correctIndex": 0,
+		"explanation": "Project templates provide predefined phases and tasks so teams launch new investments with consistent structure instead of building schedules from scratch.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/scenario-planning.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-planning.html"
+			"https://www.servicenow.com/docs/r/it-business-management/project-management/t_CreateAProject.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 57,
-		"prompt": "A portfolio board wants to model a 10% budget cut. What is the most useful SPM output?",
+		"prompt": "A project manager records an unresolved obstacle that may affect delivery dates. Which RIDAC record type captures that item?",
 		"choices": [
-			"Incident SLA history for the service desk across operational workflows",
-			"Scenario comparison showing impacted initiatives, strategic value at risk, and capacity shifts under governance oversight",
-			"Normalized software model lifecycle reports in real implementations",
-			"Catalog request approval logs by month in enterprise contexts"
+			"Issue record tracked alongside risks, decisions, actions, and changes",
+			"Benefit plan breakdown showing forecast monetary return values",
+			"Planning attribute on the employee profile for skill matching",
+			"Idea assessment template scoring portal submissions by category"
 		],
-		"correctIndex": 1,
-		"explanation": "Decision-makers need visibility into value loss and capacity effects, not only cost totals, when modeling budget cuts.",
+		"correctIndex": 0,
+		"explanation": "RIDAC encompasses risks, issues, decisions, actions, and change requests; issue records document obstacles that may impact project delivery.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/task/run-strategic-scenarios.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/concept/spm-workspace.html"
+			"https://www.servicenow.com/docs/r/it-business-management/project-management/ppm-collab-overview.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 58,
-		"prompt": "Which anti-pattern most harms SPM scenario planning quality?",
+		"prompt": "Before a steering review, the manager saves a schedule snapshot for variance analysis. Which artifact preserves that point-in-time plan?",
 		"choices": [
-			"Focus on capturing dependencies and risks in model inputs",
-			"Focus on building scenarios from stale financial and delivery data",
-			"Focus on reviewing scenario outcomes with stakeholders",
-			"With shared assumptions for cost and capacity"
+			"Schedule baseline capturing task dates at a specific moment",
+			"Expense line classified as operating expenditure on the plan",
+			"Demand state transition from Draft to Submitted intake stage",
+			"Resource assignment soft-booking before funding committee approval"
 		],
-		"correctIndex": 1,
-		"explanation": "Poor data freshness leads to misleading scenarios and weak portfolio decisions.",
+		"correctIndex": 0,
+		"explanation": "Schedule baselines snapshot planned task dates so managers compare current progress against the saved plan to identify variance.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/scenario-planning.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/data-management.html"
+			"https://www.servicenow.com/docs/r/it-business-management/project-workspace/create-project-baselines-in-project-workspace.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 59,
-		"prompt": "Which KPI set best indicates scenario planning is mature in SPM?",
+		"prompt": "Executives request a periodic summary of schedule, cost, and risk status for a project. Which deliverable fulfills that reporting need?",
 		"choices": [
-			"Decision cycle time, forecast variance reduction, and realized value alignment to selected scenario for practical execution",
-			"Count of reopened low-priority incidents for measurable outcomes",
-			"Age of inactive user accounts in LDAP in real implementations",
-			"Total number of UI actions in workspace forms in enterprise contexts"
+			"Project status report documenting progress and variance commentary",
+			"Time sheet policy defining approval routing for submitted hours",
+			"Portfolio lens defining the planning perspective for roadmap views",
+			"Rate type record converting planned hours to billing amounts"
 		],
 		"correctIndex": 0,
-		"explanation": "These KPIs show both planning efficiency and whether chosen scenarios produce expected strategic results.",
+		"explanation": "Project status reports consolidate schedule, financial, and risk updates for stakeholders and are managed from the Project Workspace Status Reports page.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/performance-analytics/concept/performance-analytics-in-spm.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+			"https://www.servicenow.com/docs/r/it-business-management/project-workspace/view-status-report-in-project-workspace.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 60,
-		"prompt": "Why does SPM governance benefit from clearly defined role separation across portfolio manager, product owner, and finance roles?",
+		"prompt": "A project manager views task bars and dependency connectors to assess timeline risk. Which interface provides that schedule visualization?",
 		"choices": [
-			"It clarifies decision rights, accountability, and control quality across investment lifecycle stages for practical execution",
-			"It removes the need for portfolio review boards for measurable outcomes",
-			"It allows all roles to approve their own funding exceptions in real implementations",
-			"It eliminates dependency management requirements in enterprise contexts"
+			"Gantt chart in Project Workspace showing tasks and predecessors",
+			"Bubble chart in Demand Workbench comparing value versus effort",
+			"Heatmap in Resource Management Workspace showing allocation gaps",
+			"Kanban board in Portfolio Planning Workspace for demand ranking"
 		],
 		"correctIndex": 0,
-		"explanation": "Clear role boundaries reduce conflict and improve governance consistency from planning through delivery.",
+		"explanation": "The Gantt chart displays tasks, durations, and dependency connectors so managers evaluate schedule risk and predecessor relationships visually.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/concept/spm-governance.html",
-			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+			"https://www.servicenow.com/docs/r/it-business-management/project-management/r_EditTasks.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 61,
-		"prompt": "Which integration with PPM capabilities most improves strategic execution in SPM?",
+		"prompt": "A project shows schedule variance but resource utilization appears normal. Which Project Workspace area should the manager review first?",
 		"choices": [
-			"Focus on replacing initiative hierarchy with incident categories",
-			"Tracking exclusively completed projects in SPM for practical execution",
-			"Focus on moving all roadmap decisions to spreadsheets",
-			"Focus on linking strategy objects to projects and epics with traceable financial and delivery status"
+			"Analytics and diagnostics highlighting schedule health indicators",
+			"LDAP synchronization log for user provisioning failures overnight",
+			"CMDB discovery error report for missing configuration items",
+			"Catalog fulfillment workflow approvals pending manager sign-off"
 		],
-		"correctIndex": 3,
-		"explanation": "Strategy-to-delivery traceability is essential for governing whether portfolio work is producing expected outcomes.",
+		"correctIndex": 0,
+		"explanation": "Project Workspace Analytics surfaces schedule and health diagnostics so managers investigate variance without leaving the delivery workspace.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/project-management/concept/project-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html"
+			"https://www.servicenow.com/docs/r/it-business-management/project-workspace/project-workspace-landing-page.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 62,
-		"prompt": "A PMO wants stronger role-based governance for portfolio changes. What should be implemented first?",
+		"prompt": "A waterfall project moves from Planning to Executing after funding approval. Which project attribute reflects that lifecycle transition?",
 		"choices": [
-			"Allow all project managers to edit fiscal plans without controls across operational workflows",
-			"Restrict status updates to annual planning windows under governance oversight",
-			"Disable approval workflows for budget updates in real implementations",
-			"Configure role-scoped approvals and audit trails for investment, funding, and scope changes in enterprise contexts"
+			"Project phase updated to the current lifecycle stage gate",
+			"Expense type on every cost plan line set to capital expenditure",
+			"Timecard rate type replaced with a fixed vendor billing rate",
+			"Portfolio lens switched from Organization to Project Portfolio"
 		],
-		"correctIndex": 3,
-		"explanation": "Role-scoped approval and audit controls are foundational for governed portfolio change management.",
+		"correctIndex": 0,
+		"explanation": "Project phase tracks the current lifecycle stage such as initiating, planning, executing, and closing as work progresses through governance gates.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/task/configure-investment-governance.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+			"https://www.servicenow.com/docs/r/it-business-management/project-management/t_CreateAProject.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 63,
-		"prompt": "Which anti-pattern most harms PPM and SPM integration value?",
+		"prompt": "Lag time between linked tasks pushes a milestone past its committed date. Which schedule element caused that delay?",
 		"choices": [
-			"Focus on keeping strategic plans disconnected from project financials and capacity data",
-			"Focus on maintaining common taxonomy for investment categories",
-			"With consistent periodic reforecast cadence under governance oversight",
-			"Focus on mapping benefits to delivery milestones"
+			"Dependency lag or lead time on the predecessor relationship",
+			"Demand assessment score below the portfolio approval threshold",
+			"Idea portal vote count falling under the promotion minimum",
+			"Budget allocation attribute switching from cost_type to expense_type"
 		],
 		"correctIndex": 0,
-		"explanation": "Disconnected strategy and delivery data prevents realistic prioritization and weakens portfolio governance.",
+		"explanation": "Predecessor relationships support lag and lead time values that offset start or finish dates, directly affecting downstream milestone timing.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-financials.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/project-management/concept/resource-management.html"
+			"https://www.servicenow.com/docs/r/it-business-management/project-workspace/update-the-dependency-details-for-tasks-from-project-workspace.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 64,
-		"prompt": "Which KPI combination best reflects effective role design and PPM integration in SPM?",
+		"prompt": "Leadership asks how far a project has progressed toward completion this quarter. Which metric answers that question?",
 		"choices": [
-			"Faster governance decisions, lower funding variance, and stronger benefit realization traceability in real implementations",
-			"More manual status updates outside the platform in enterprise contexts",
-			"Higher count of bypassed approval records across operational workflows",
-			"Longer cycle time to align strategic goals to active work under governance oversight"
+			"Percent complete calculated from task and milestone progress",
+			"Number of idea submissions received through the employee portal",
+			"Count of rate types configured on the organizational rate model",
+			"Total active users with the itil role on the production instance"
 		],
 		"correctIndex": 0,
-		"explanation": "This KPI mix captures governance velocity, financial predictability, and strategy-to-delivery transparency.",
+		"explanation": "Percent complete rolls up task and milestone progress to show how much of the approved scope has been delivered at a given point.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/performance-analytics/concept/performance-analytics-in-spm.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+			"https://www.servicenow.com/docs/r/it-business-management/project-management/t_CreateAProject.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 65,
-		"prompt": "Which SPM metric best indicates whether investments align to strategic objectives?",
+		"prompt": "A steering committee tracks whether key delivery checkpoints were met on time. Which project object represents those checkpoints?",
 		"choices": [
-			"Number of active users in the platform in enterprise contexts",
-			"Average catalog item fulfillment time in real implementations",
-			"Count of closed incidents by priority under governance oversight",
-			"Percentage of funded demand mapped to approved strategic goals across operational workflows"
+			"Milestone records marking significant delivery checkpoints",
+			"Resource schedule entries blocking employee vacation periods",
+			"Demand collaborators authorized to edit intake submissions",
+			"Planning item tables configured for Portfolio Planning Workspace"
 		],
-		"correctIndex": 3,
-		"explanation": "Strategic alignment is measured by how much funded work traces directly to agreed business objectives.",
+		"correctIndex": 0,
+		"explanation": "Milestones mark significant delivery checkpoints on the project schedule and are tracked for on-time completion during governance reviews.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-portfolio-management/concept/spm-overview.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html"
+			"https://www.servicenow.com/docs/r/it-business-management/project-management/t_CreateAProject.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 66,
-		"prompt": "What is the most effective way to maintain strategic alignment during quarterly planning changes?",
+		"prompt": "A compliance initiative must produce a signed document before closure. Which project component tracks that required output?",
 		"choices": [
-			"Re-score demand with objective-linked criteria and update portfolio ranking",
-			"Approve all requests from the largest department for measurable outcomes",
-			"Ignore objective changes to preserve historical ranking across operational workflows",
-			"Freeze all demand records until year end under governance oversight"
+			"Deliverable record linked to the project with acceptance criteria",
+			"Time sheet policy week start day defining the reporting calendar",
+			"Expense line marked as Opex on the quarterly financial rollup",
+			"Scenario simulation comparing two alternative funding allocations"
 		],
 		"correctIndex": 0,
-		"explanation": "When strategy changes, objective-linked scoring keeps funding and prioritization aligned to current direction.",
+		"explanation": "Deliverables document required outputs with acceptance criteria so teams verify that contractual or compliance artifacts are produced before closure.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/demand-management/concept/demand-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html"
+			"https://www.servicenow.com/docs/r/it-business-management/project-management/t_CreateAProject.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 67,
-		"prompt": "Which practice most improves strategic alignment across portfolios?",
+		"prompt": "A project includes a dedicated phase for quality validation before release. Which project configuration adds that validation phase?",
 		"choices": [
-			"Allow each portfolio to define private objective names in enterprise contexts",
-			"Apply a shared objective taxonomy and mandatory objective mapping on proposals",
-			"Remove objective fields from intake forms for measurable outcomes",
-			"Rank work exclusively by requester seniority for practical execution"
+			"Test phase defined on the project for validation activities",
+			"Lens configuration enabling high-level program planning items",
+			"Soft resource allocation converted to hard assignment after approval",
+			"Investment portal board widget showing pipeline budget totals"
 		],
-		"correctIndex": 1,
-		"explanation": "Consistent taxonomy and required mapping create enterprise-level comparability and alignment governance.",
+		"correctIndex": 0,
+		"explanation": "Projects can include a test phase when the Test Management plugin is active, providing a dedicated stage for quality validation activities.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html"
+			"https://www.servicenow.com/docs/r/it-business-management/project-management/t_CreateAProject.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 68,
-		"prompt": "A portfolio is fully funded but weakly aligned to strategy. Which action is best?",
+		"prompt": "Agile Development 2.0 is active and the team wants iterative delivery tracking. Which project type should they select at creation?",
 		"choices": [
-			"Delay all governance reviews until delivery closes across operational workflows",
-			"Increase budget uniformly across all initiatives under governance oversight",
-			"Rebalance funding toward initiatives with higher objective contribution scores for practical execution",
-			"Convert all initiatives to operational work items for measurable outcomes"
+			"Agile or Hybrid project type when creating the project record",
+			"Classic demand record promoted without a resource plan attached",
+			"Confidential project with allowed users restricted to executives",
+			"Program-level status report generated from the PMO dashboard"
 		],
-		"correctIndex": 2,
-		"explanation": "Rebalancing by contribution score improves strategic value realization within the same funding envelope.",
+		"correctIndex": 0,
+		"explanation": "Agile and Hybrid project types require the Agile Development 2.0 plugin and support iterative delivery tracking within Project Workspace.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html"
+			"https://www.servicenow.com/docs/r/it-business-management/project-management/t_CreateAProject.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 69,
-		"prompt": "What is the strongest evidence that SPM strategic alignment is improving over time?",
+		"prompt": "A scope change requires formal review before modifying the approved schedule. Which RIDAC item initiates that controlled change?",
 		"choices": [
-			"More projects running without benefit measures under governance oversight",
-			"Lower usage of strategic planning records across operational workflows",
-			"An well-defined increasing number of unplanned enhancement requests",
-			"A well-defined growing share of completed value tied to top strategic objectives"
+			"Change request record associated with the project RIDAC set",
+			"Demand deferral with documented rationale in the workbench",
+			"Baseline comparison limited to financial data without schedule",
+			"Timecard merge operation combining duplicate entries for one task"
 		],
-		"correctIndex": 3,
-		"explanation": "Improvement is demonstrated when delivered outcomes increasingly map to priority objectives and value targets.",
+		"correctIndex": 0,
+		"explanation": "Change requests within the RIDAC framework document scope changes that require review before the approved schedule or deliverables are modified.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/program-management/concept/program-management.html"
+			"https://www.servicenow.com/docs/r/it-business-management/project-management/ppm-collab-overview.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 70,
-		"prompt": "Which SPM report best supports executive steering committee decisions?",
+		"prompt": "All deliverables are accepted and open tasks are resolved. Which action moves the project to its final lifecycle state?",
 		"choices": [
-			"A well-defined list of all pending catalog requests",
-			"Incident assignment group heat map exclusively across operational workflows",
-			"Portfolio health dashboard with strategy alignment, benefit status, and financial variance in enterprise contexts",
-			"A well-defined CMDB class count by table name"
+			"Close the project after verifying deliverables and tasks are complete",
+			"Delete the parent program and recreate it from a portal submission",
+			"Reset demand assessments to Draft for the next fiscal intake cycle",
+			"Disable the budget allocation property on the instance immediately"
 		],
-		"correctIndex": 2,
-		"explanation": "Steering decisions require integrated views of value, risk, and financial performance across portfolios.",
+		"correctIndex": 0,
+		"explanation": "Projects are closed once deliverables are accepted and remaining tasks are resolved, moving the investment to its completed lifecycle state.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+			"https://www.servicenow.com/docs/r/it-business-management/project-management/t_CreateAProject.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 71,
-		"prompt": "Which reporting design principle most improves SPM data consumption?",
+		"prompt": "A finance partner reviews planned versus actual spend on an active project. Which Project Workspace page presents that financial data?",
 		"choices": [
-			"Rename KPIs differently on each dashboard in real implementations",
-			"Expose one large raw table to all stakeholders in enterprise contexts",
-			"Apply role-specific dashboards with consistent definitions for value, risk, and status",
-			"Exclude target values from scorecards for measurable outcomes"
+			"Financials page showing cost plans, budgets, and expense lines",
+			"Dependencies page listing predecessor links between sibling tasks",
+			"Diagnostics page displaying LDAP user provisioning error counts",
+			"Templates page listing predefined project creation structures only"
 		],
-		"correctIndex": 2,
-		"explanation": "Role-aligned reporting and consistent metric definitions improve clarity and decision quality.",
+		"correctIndex": 0,
+		"explanation": "The Financials page in Project Workspace displays cost plans, budgets, expense lines, and variance data for project financial governance.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-portfolio-management/concept/spm-overview.html"
+			"https://www.servicenow.com/docs/r/it-business-management/project-workspace/project-workspace-landing-page.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 72,
-		"prompt": "A VP asks for one report to compare investment performance across portfolios. What is best?",
+		"prompt": "A project task needs named resources for the next sprint. Which SPM object commits specific people to planned hours?",
 		"choices": [
-			"An well-defined incident SLA report for service desk teams",
-			"A well-defined static screenshot of last quarter budget totals",
-			"A well-defined list of projects sorted by sys_id",
-			"A well-defined normalized portfolio scorecard with baseline, current forecast, and benefit realization variance"
+			"Resource assignment linking employees to the project task plan",
+			"Idea evaluation workflow routing submissions to reviewer groups",
+			"Cost type record classifying hardware purchases as capital spend",
+			"Portfolio plan shared across product managers in APW"
 		],
-		"correctIndex": 3,
-		"explanation": "Cross-portfolio comparison requires standardized measures against baseline and realized outcomes.",
+		"correctIndex": 0,
+		"explanation": "Resource assignments name the individuals or groups fulfilling planned hours on a resource plan, committing staffing to project tasks.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/financial-planning/concept/financial-planning.html"
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/t_CreateResourcePlanProjectTask.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 73,
-		"prompt": "Which reporting pattern helps detect strategic drift early in SPM?",
+		"prompt": "Before month-end, executives need current project health across the portfolio. Which reporting artifact supports that governance review?",
 		"choices": [
-			"Trend views showing objective alignment and benefit forecast movement over time in real implementations",
-			"Budget totals without objective mapping in enterprise contexts",
-			"Project name listings without KPI context across operational workflows",
-			"One-time quarterly PDF with no historical comparison under governance oversight"
+			"Status reports and program dashboards aggregating delivery indicators",
+			"Time sheet copy operation from the previous week for each user",
+			"Discovery schedule configuration for subnet classification scans",
+			"Demand bubble chart with only a single scoring dimension enabled"
 		],
 		"correctIndex": 0,
-		"explanation": "Time-series tracking reveals deviation earlier than static snapshots, enabling timely governance actions.",
+		"explanation": "Status reports and program-level dashboards consolidate delivery health indicators so executives review portfolio execution without manual data collection.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html"
+			"https://www.servicenow.com/docs/r/it-business-management/program-management/t_CreateAProgram.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 74,
-		"prompt": "Which KPI combination is most useful in an SPM reporting cadence?",
+		"prompt": "What does a time sheet policy define for users recording time worked in the platform?",
 		"choices": [
-			"Number of reopened incidents and problem tickets for measurable outcomes",
-			"Mean time to acknowledge security incidents for practical execution",
-			"Strategic alignment score, forecast-to-actual spend variance, and benefit realization rate under governance oversight",
-			"Count of software installs by operating system across operational workflows"
+			"Requirements and rules governing how users create and submit time cards",
+			"Default project templates applied when a new investment is approved",
+			"Lens hierarchy for Portfolio Planning Workspace roadmap views",
+			"Scoring weights used when comparing demands in the workbench"
 		],
-		"correctIndex": 2,
-		"explanation": "These KPIs together show strategic fit, financial control, and delivered value.",
+		"correctIndex": 0,
+		"explanation": "Time sheet policies define the requirements for users to record time worked, including week start day, rate type visibility, and approval routing.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/financial-planning/concept/financial-planning.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html"
+			"https://www.servicenow.com/docs/r/it-business-management/time-card-management/worker-portal.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 75,
-		"prompt": "Which portfolio analytics measure best supports investment rebalancing decisions?",
+		"prompt": "A consultant logs non-project hours for internal meetings and training sessions. Which configuration categorizes that time?",
 		"choices": [
-			"Value contribution versus risk exposure by strategic objective for practical execution",
-			"Count of users with itil role for measurable outcomes",
-			"Number of project records created this month across operational workflows",
-			"Average incident resolution time under governance oversight"
+			"Project time category for non-task entries such as meetings or training",
+			"Resource schedule template defining regional holiday calendars",
+			"Demand playbook stage gate requiring stakeholder sign-off",
+			"Budget allocation attribute set to expense_type at instance level"
 		],
 		"correctIndex": 0,
-		"explanation": "Rebalancing decisions require a joint view of delivered value and associated portfolio risk.",
+		"explanation": "Project time categories classify non-task time such as meetings and training on time cards so labor reporting captures all worked hours accurately.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html"
+			"https://www.servicenow.com/docs/r/it-business-management/time-card-management/worker-portal.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 76,
-		"prompt": "A portfolio shows strong delivery throughput but weak outcomes. What analytics view should be prioritized?",
+		"prompt": "A user's Time Sheet Portal does not display the Rate type column. Which time sheet policy option controls that visibility?",
 		"choices": [
-			"Total number of tasks completed per sprint exclusively",
-			"Catalog request approval rates across operational workflows",
-			"Monthly count of closed change requests for measurable outcomes",
-			"Benefit realization against planned outcome KPIs by initiative for practical execution"
+			"Allow multiple rate types option on the assigned time sheet policy",
+			"Enable budget allocation property on investment planning records",
+			"Modify existing lens configuration in Portfolio Planning Workspace",
+			"Create new planning item table for custom roadmap entities"
 		],
-		"correctIndex": 3,
-		"explanation": "Outcome-focused analytics reveal whether throughput is translating into intended business value.",
+		"correctIndex": 0,
+		"explanation": "The Rate type column appears in Time Sheet Portal only when Allow multiple rate types is selected on the user's time sheet policy.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/program-management/concept/program-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html"
+			"https://www.servicenow.com/docs/r/it-business-management/time-card-management/worker-portal.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 77,
-		"prompt": "Which analytic segmentation is most useful for identifying underperforming portfolio segments?",
+		"prompt": "An employee's time sheet week begins on Friday instead of Monday. Which policy field determines that calendar layout?",
 		"choices": [
-			"Sort records by creation date without filters for practical execution",
-			"Aggregate all data into one total value for measurable outcomes",
-			"Slice by business unit, objective, and funding type with trend comparisons in real implementations",
-			"Group exclusively by project short description in enterprise contexts"
+			"Week starts on field in the user's assigned time sheet policy",
+			"Planned start date on the predecessor project task relationship",
+			"Investment type on the demand form in the intake pipeline",
+			"Phase field on the program record managing child projects"
 		],
-		"correctIndex": 2,
-		"explanation": "Segmented analytics expose concentration of risk and weak value patterns that totals can hide.",
+		"correctIndex": 0,
+		"explanation": "The Week starts on field in a time sheet policy sets the first day displayed in the Time Sheet section of Time Sheet Portal.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/financial-planning/concept/financial-planning.html"
+			"https://www.servicenow.com/docs/r/it-business-management/time-card-management/worker-portal.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 78,
-		"prompt": "What is the primary purpose of leading indicators in SPM portfolio analytics?",
+		"prompt": "A resource manager approves submitted hours after reviewing weekly variances. Which workflow step completes that governance action?",
 		"choices": [
-			"Measure exclusively closed projects under governance oversight",
-			"Detect likely variance early so governance can intervene before outcomes degrade for practical execution",
-			"Replace all lagging outcome metrics permanently under governance oversight",
-			"Eliminate the need for portfolio review meetings across operational workflows"
+			"Time sheet approval routing defined by the time sheet policy approvers",
+			"Demand promotion converting a qualified record to a new project",
+			"Baseline comparison selecting two schedule snapshots in the workspace",
+			"Scenario planning tab comparing financial outcomes across simulations"
 		],
-		"correctIndex": 1,
-		"explanation": "Leading indicators provide early warning signals that allow corrective action during execution.",
+		"correctIndex": 0,
+		"explanation": "Time sheet policies define approvers and routing rules so submitted time sheets move through approval, rejection, or recall workflows.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html"
+			"https://www.servicenow.com/docs/r/it-business-management/time-card-management/worker-portal.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 79,
-		"prompt": "Which dashboard design choice most improves portfolio analytics decision-making?",
+		"prompt": "A product manager wants to prioritize demands and projects from a single planning workspace using waterfall delivery. Which application supports that approach?",
 		"choices": [
-			"Combine strategic alignment, financial variance, and benefit trends in one governed scorecard for practical execution",
-			"Display every available field with no prioritization for measurable outcomes",
-			"Hide target thresholds to reduce noise across operational workflows",
-			"Apply separate metric definitions for each portfolio"
+			"Portfolio Planning Workspace for traditional portfolio planning and roadmaps",
+			"Vulnerability Response workspace for remediation task assignment",
+			"Security Incident Response playbook for threat containment workflows",
+			"Hardware Asset Management dashboard for disposal certificate tracking"
 		],
 		"correctIndex": 0,
-		"explanation": "Decision-ready dashboards pair integrated KPIs with consistent definitions and clear thresholds.",
+		"explanation": "Portfolio Planning Workspace enhances traditional project and product portfolio management with lenses, roadmaps, and planning items for waterfall delivery.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-portfolio-management/concept/spm-overview.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+			"https://www.servicenow.com/docs/r/it-business-management/portfolio-planning/demand-form-ppw.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 80,
-		"prompt": "What is the primary benefit of using investment scenarios in SPM?",
+		"prompt": "A planning manager switches between portfolio, product, and program perspectives when building roadmaps. Which APW feature enables that flexibility?",
 		"choices": [
-			"Compare alternative funding and sequencing choices before committing portfolio changes across operational workflows",
-			"Replace strategic planning with ad hoc requests under governance oversight",
-			"Eliminate dependency management activities in real implementations",
-			"Automatically approve all high-cost initiatives in enterprise contexts"
+			"Pre-defined lenses such as Project Portfolio, Product, and Organization",
+			"Timecard merge rules combining duplicate entries on submitted weeks",
+			"Project diagnostics alerting on overdue milestone completion dates",
+			"Rate model recalculation after hourly charge updates on a role"
 		],
 		"correctIndex": 0,
-		"explanation": "Scenario analysis enables evidence-based tradeoff decisions before capital is committed.",
+		"explanation": "Portfolio Planning Workspace lenses let managers switch planning perspectives such as Project Portfolio, Product, Organization, and Project Program.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/financial-planning/concept/financial-planning.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html"
+			"https://www.servicenow.com/docs/r/it-business-management/scenario-planning-in-spw/setting-up-alignment-planner-workspace.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 81,
-		"prompt": "When evaluating two investment scenarios, which criterion is most important?",
+		"prompt": "A portfolio plan in APW includes projects, demands, and programs for quarterly roadmapping. Which items are supported as standard planning items?",
 		"choices": [
-			"Which scenario has the most relevant project records",
-			"Expected strategic value relative to risk and resource constraints across operational workflows",
-			"Which scenario has the longest timeline in enterprise contexts",
-			"Which scenario was submitted first in real implementations"
+			"Project, Demand, and Program records added to the portfolio plan",
+			"Vulnerability item and security incident records from SecOps tables",
+			"CMDB CI classes and discovery credentials for subnet scanning",
+			"Catalog item variables and approval policies for service requests"
 		],
-		"correctIndex": 1,
-		"explanation": "Scenario selection should optimize value while respecting risk appetite and delivery capacity.",
+		"correctIndex": 0,
+		"explanation": "Portfolio Planning Workspace supports Project, Demand, and Program as standard planning items that managers add to portfolio plans and roadmaps.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/resource-management/concept/resource-management.html"
+			"https://www.servicenow.com/docs/r/it-business-management/portfolio-planning/demand-form-ppw.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 82,
-		"prompt": "What makes an investment scenario comparison credible for executives?",
+		"prompt": "A business analyst must create and edit planning items in Portfolio Planning Workspace. Which role grants that access?",
 		"choices": [
-			"No baseline scenario for comparison in real implementations",
-			"Different scoring logic for each business unit in enterprise contexts",
-			"Consistent assumptions, documented constraints, and transparent scoring methodology across operational workflows",
-			"Hidden cost assumptions to simplify review under governance oversight"
+			"sn_align_core.apw_user role assigned to the analyst account",
+			"sn_vul.vulnerability_admin role from the security operations module",
+			"sn_change.change_manager role from IT service management only",
+			"admin role with no additional portfolio planning permissions"
 		],
-		"correctIndex": 2,
-		"explanation": "Credibility depends on comparable assumptions and transparent methods across all options.",
+		"correctIndex": 0,
+		"explanation": "The sn_align_core.apw_user role allows users to view, prioritize, and manage planning items within Portfolio Planning Workspace.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/financial-planning/concept/financial-planning.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html"
+			"https://www.servicenow.com/docs/r/it-business-management/scenario-planning-in-spw/setting-up-alignment-planner-workspace.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 83,
-		"prompt": "A proposed scenario increases value but exceeds resource capacity. What is the best next step?",
+		"prompt": "Leadership wants to model a 15% budget reduction before approving the portfolio plan. Which APW capability supports that trade-off analysis?",
 		"choices": [
-			"Cancel all initiatives and restart planning under governance oversight",
-			"Convert every initiative to mandatory work across operational workflows",
-			"Approve the scenario and ignore staffing limits for measurable outcomes",
-			"Adjust sequencing and scope to fit capacity while preserving highest-value outcomes for practical execution"
+			"Scenario planning comparing funding alternatives against constraints",
+			"Time sheet recall operation withdrawing a processed approval record",
+			"Status report duplication copying the prior month narrative verbatim",
+			"Dependency deletion removing all predecessor links on the schedule"
 		],
-		"correctIndex": 3,
-		"explanation": "Capacity-aware sequencing is a core scenario technique for balancing ambition and feasibility.",
+		"correctIndex": 0,
+		"explanation": "Scenario planning in Portfolio Planning Workspace lets teams compare alternative funding and sequencing choices before committing portfolio changes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/resource-management/concept/resource-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/program-management/concept/program-management.html"
+			"https://www.servicenow.com/docs/r/it-business-management/scenario-planning-in-spw/setting-up-alignment-planner-workspace.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 84,
-		"prompt": "Which outcome indicates investment scenario governance is working well?",
+		"prompt": "Two product owners need to collaborate on the same roadmap for a shared portfolio. Which APW object do they maintain together?",
 		"choices": [
-			"Selected scenario assumptions are tracked post-approval and variances trigger review actions in real implementations",
-			"No variance monitoring occurs until project closure in enterprise contexts",
-			"Focus on funding changes are made without scenario updates",
-			"Scenarios are archived immediately after approval for measurable outcomes"
+			"Portfolio plan created and shared within Portfolio Planning Workspace",
+			"Resource schedule template applied to all employees in the division",
+			"Expense line linked to a single Opex entry on the cost plan header",
+			"Demand state model restricting transitions to Draft and Cancelled only"
 		],
 		"correctIndex": 0,
-		"explanation": "Effective governance connects scenario assumptions to execution monitoring and corrective decision loops.",
+		"explanation": "Portfolio plans in APW are created and shared so planning managers collaborate on prioritized work and roadmap content for a portfolio.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html"
+			"https://www.servicenow.com/docs/r/it-business-management/scenario-planning-in-spw/setting-up-alignment-planner-workspace.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 85,
-		"prompt": "Which administrative control most improves SPM data trust?",
+		"prompt": "A roadmap owner arranges demands and projects on a timeline for executive review. Which APW view presents that schedule-oriented plan?",
 		"choices": [
-			"Open edit access for all itil users for measurable outcomes",
-			"Defined ownership and stewardship for portfolio, demand, and financial records for practical execution",
-			"Manual offline updates without synchronization under governance oversight",
-			"No required fields on investment records across operational workflows"
+			"Timeline roadmap view showing planning items across time horizons",
+			"Diagnostics panel listing open issues on the active project record",
+			"Time Sheet Portal dashboard reporting analyst hour utilization",
+			"Gantt dependency editor for predecessor lag on a single task only"
 		],
-		"correctIndex": 1,
-		"explanation": "Data stewardship and clear ownership are foundational for reliable SPM decisions.",
+		"correctIndex": 0,
+		"explanation": "Timeline roadmap views in Portfolio Planning Workspace display planning items across time so executives see when work is scheduled to deliver.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-portfolio-management/concept/spm-overview.html",
-			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+			"https://www.servicenow.com/docs/r/it-business-management/portfolio-planning/demand-form-ppw.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 86,
-		"prompt": "How should SPM administrators handle configuration changes to scoring or prioritization models?",
+		"prompt": "A PMO leader needs a consolidated view of investments, intake pipeline, and key calendar dates. Which dashboard fulfills that need?",
 		"choices": [
-			"Let each PMO lead apply different live logic",
-			"Apply direct production edits with no documentation for measurable outcomes",
-			"Apply change governance with testing, versioning, and stakeholder communication",
-			"Reset all historical rankings after every update in enterprise contexts"
+			"PMO dashboard showing investments, pipeline, and calendar overviews",
+			"Employee profile planning attribute editor for skill certification",
+			"Demand assessment template configuration for weighted scoring",
+			"Resource assignment soft-booking panel on the allocation timeline"
 		],
-		"correctIndex": 2,
-		"explanation": "Controlled, versioned changes preserve comparability and governance confidence over time.",
+		"correctIndex": 0,
+		"explanation": "The PMO dashboard provides consolidated views of investment financials, demand and project pipeline, and calendar dates for portfolio oversight.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/demand-management/concept/demand-management.html"
+			"https://www.servicenow.com/docs/r/it-business-management/ppm-collaboration/project-portfolio-content-pack.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 87,
-		"prompt": "Which role model best supports SPM administration at enterprise scale?",
+		"prompt": "An administrator enables preconfigured PPM analytics for portfolio steering meetings. Which solution provides those dashboards with minimal setup?",
 		"choices": [
-			"Unstructured local administrators with no central standards for measurable outcomes",
-			"No role separation between requesters and approvers for practical execution",
-			"Single administrator owning all planning and reporting tasks in enterprise contexts",
-			"Central governance team with delegated portfolio managers operating under common standards in real implementations"
+			"Platform Analytics PPM Standard content pack and guided setup",
+			"Manual creation of incident assignment group heat maps only",
+			"Discovery credential rotation schedule for subnet classification",
+			"Custom transform map on an import set without indicator definitions"
 		],
-		"correctIndex": 3,
-		"explanation": "A federated model with central standards balances consistency and domain accountability.",
+		"correctIndex": 0,
+		"explanation": "The Platform Analytics PPM Standard content pack delivers preconfigured dashboards through guided setup with minimal Performance Analytics configuration.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+			"https://www.servicenow.com/docs/r/it-business-management/ppm-collaboration/project-portfolio-content-pack.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 88,
-		"prompt": "What is the best administrative practice for SPM reporting definitions?",
+		"prompt": "A transformation office wants project delivery data to inform security remediation prioritization. Which SPM integration pattern supports cross-module visibility?",
 		"choices": [
-			"Maintain a governed KPI dictionary with standard formulas and threshold logic for practical execution",
-			"Avoid storing formula definitions for measurable outcomes",
-			"Rename KPIs each quarter for flexibility across operational workflows",
-			"Allow each dashboard author to define KPIs independently under governance oversight"
+			"Better Together integrations linking SPM with other ServiceNow applications",
+			"Disabling all demand states to prevent intake during the fiscal freeze",
+			"Replacing project tasks with catalog variables for fulfillment tracking",
+			"Archiving every baseline before the first status report is generated"
 		],
 		"correctIndex": 0,
-		"explanation": "Governed metric definitions reduce interpretation drift and improve cross-portfolio comparability.",
+		"explanation": "SPM Better Together integrations connect portfolio planning and delivery with complementary ServiceNow applications for unified operational visibility.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html"
+			"https://www.servicenow.com/docs/r/it-business-management/scenario-planning-in-spw/better-together-with-other-apps-spw.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 89,
-		"prompt": "Which KPI combination best indicates mature SPM administration?",
+		"questionType": "multi",
+		"prompt": "Which two ServiceNow security applications commonly integrate with SPM for vulnerability and incident visibility? (Choose two.)",
 		"choices": [
-			"Higher number of urgent manual data fixes in enterprise contexts",
-			"Longer delays in funding decision cycles in real implementations",
-			"Low data exception rates, high on-time governance reviews, and consistent forecast accuracy for measurable outcomes",
-			"More duplicate investment records each quarter for practical execution"
+			"Vulnerability Response for grouping and remediating vulnerable items",
+			"Security Incident Response for managing security incident workflows",
+			"Hardware Asset Management for disposal certificate generation only",
+			"Discovery for MID Server heartbeat interval configuration tuning"
 		],
-		"correctIndex": 2,
-		"explanation": "Administrative maturity shows in data quality, governance discipline, and planning reliability.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "SPM Better Together integrations include Security Operations applications such as Vulnerability Response and Security Incident Response for cross-domain visibility.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/financial-planning/concept/financial-planning.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+			"https://www.servicenow.com/docs/r/it-business-management/scenario-planning-in-spw/better-together-with-other-apps-spw.html"
 		]
 	},
 	{
 		"trackCode": "CIS-TPRM",
 		"order": 0,
-		"prompt": "What is the primary scope of Third-Party Risk Management on the Now Platform?",
+		"prompt": "A procurement team still coordinates vendor attestations through email threads and shared spreadsheets. Which ServiceNow capability should replace this manual approach for third-party collaboration?",
 		"choices": [
-			"End-to-end vendor and third-party risk workflows from onboarding through monitoring and remediation under governance oversight",
-			"Exclusively IT password rotation for practical execution packaged for deployment via scoped application repository. (CIS-TPRM-0-w1)",
-			"Exclusively facilities badge printing in enterprise contexts",
-			"Exclusively employee travel reimbursement in real implementations"
+			"Third-party Portal for secure questionnaire completion, documentation exchange, and task collaboration with external contacts",
+			"Change Management standard change models for routing infrastructure deployment approvals through CAB review boards",
+			"Hardware Asset Management depreciation schedules for tracking end-user laptop procurement and retirement events",
+			"Employee Service Center catalog items for submitting internal HR benefit requests and payroll inquiries"
 		],
 		"correctIndex": 0,
-		"explanation": "TPRM reference documentation describes the third-party risk program capabilities delivered in the GRC suite.",
+		"explanation": "The Third-party Portal is the designated collaboration channel where external contacts respond to assessments, supply evidence, and communicate with risk assessors instead of using email or spreadsheets.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/vendor-portal.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 1,
+		"prompt": "Which statement best describes how Third-party Risk Management fits within the ServiceNow GRC product suite?",
+		"choices": [
+			"TPRM provides centralized third-party portfolio management, risk assessment, scoring, and remediation within the Governance, Risk, and Compliance suite",
+			"TPRM replaces Incident Management by converting every vendor ticket into a major incident record automatically",
+			"TPRM operates exclusively as a standalone ITSM plugin with no relationship to Risk Management or Policy and Compliance",
+			"TPRM limits scope to financial audit findings and excludes operational or cybersecurity vendor evaluations"
+		],
+		"correctIndex": 0,
+		"explanation": "Third-party Risk Management is a GRC application that manages the full third-party risk lifecycle from portfolio onboarding through assessment, monitoring, and remediation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/third-party-risk-mgt-landing-page.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 2,
+		"prompt": "A risk manager wants to determine the risk level of a new vendor engagement before sending detailed control questionnaires. Which TPRM process should they initiate first?",
+		"choices": [
+			"Request third-party risk due diligence to evaluate inherent risk and determine appropriate assessment depth",
+			"Archive the vendor record and defer all reviews until the contract renewal cycle begins next fiscal year",
+			"Create a hardware asset record and assign depreciation categories before any vendor interaction occurs",
+			"Open a standard change request to deploy monitoring agents on the vendor's internal network infrastructure"
+		],
+		"correctIndex": 0,
+		"explanation": "Due diligence requests establish the risk level of a third-party engagement and drive subsequent assessment, tiering, and approval workflows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-requesting-tpr-due-diligence.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 3,
+		"questionType": "multi",
+		"prompt": "Which two fields on the Third-party Contact form are required to designate the main liaison and deliver automated portal credentials? (Choose two.)",
+		"choices": [
+			"Primary contact checkbox flag identifying the main liaison for the third-party organization",
+			"Email address used to send portal login credentials and notification links to the external user",
+			"Department field listing the organizational unit name at the vendor company headquarters",
+			"Time Zone field defining the preferred regional offset for scheduled assessment reminders"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Every third party must have a primary contact designated, and the email field triggers the automated notification containing portal login credentials.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-tp-contact-config.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 4,
+		"prompt": "When Risk Management is integrated with Third-party Risk Management, where are enterprise risks defined before association with a third party or engagement?",
+		"choices": [
+			"Risk Statement records in the GRC risk library grouped within risk frameworks",
+			"Incident records in the ITSM problem management module awaiting root-cause analysis",
+			"Catalog item variables on the employee-facing service catalog request portal forms",
+			"Change request tasks in the standard change approval workflow awaiting CAB sign-off"
+		],
+		"correctIndex": 0,
+		"explanation": "Risks are registered as Risk Statement records in the risk library; TPRM administrators then associate generated risks with third parties and engagements to influence posture and scoring.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-add-risks-tp.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/rm-assessment-integration.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 5,
+		"prompt": "Which TPRM lifecycle stage follows initial due diligence approval and focuses on sending questionnaires to evaluate vendor controls?",
+		"choices": [
+			"Assess third-party risk by distributing questionnaires and collecting structured control evidence from vendors",
+			"Deactivate the vendor record and remove all associated contacts from the third-party portfolio immediately",
+			"Convert the engagement into a hardware asset and assign a depreciation schedule for capital tracking",
+			"Route the vendor to the employee onboarding catalog for internal badge provisioning and desk assignment"
+		],
+		"correctIndex": 0,
+		"explanation": "After due diligence initiation, the assess stage sends questionnaires and evaluates vendor responses to determine control effectiveness and residual risk.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-assessing-tpr.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 6,
+		"prompt": "An organization wants ongoing visibility into vendor posture between full assessment cycles. Which TPRM capability addresses this requirement?",
+		"choices": [
+			"Monitor third-party risk using continuous monitoring signals, risk intelligence scores, and event-driven rules",
+			"Disable all vendor portal access until the next annual contract renewal date arrives on the calendar",
+			"Export vendor records to offline spreadsheets and review them manually once every five years",
+			"Convert monitoring alerts into employee HR cases routed through the internal service catalog portal"
+		],
+		"correctIndex": 0,
+		"explanation": "TPRM monitoring ingests external risk intelligence and internal signals to detect posture changes and trigger reassessment or remediation between periodic assessments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-monitoring-tpr.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 7,
+		"questionType": "multi",
+		"prompt": "Which two roles are commonly involved in the TPRM due diligence approval workflow after questionnaire responses are reviewed? (Choose two.)",
+		"choices": [
+			"Third-party risk manager who oversees the due diligence process and approves or rejects requests",
+			"Third-party risk approver who validates assessment outcomes at configured approval levels",
+			"Field service dispatcher who assigns mobile technicians to on-site vendor hardware repairs",
+			"Catalog administrator who publishes employee-facing service catalog items for internal requests"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Due diligence approval workflows involve TPR managers and configured approvers who review questionnaire results and process outcomes before granting or denying engagement approval.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-approving.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 8,
+		"prompt": "A contract negotiator must incorporate risk findings into vendor agreements. Which TPRM workspace process supports this activity?",
+		"choices": [
+			"Contract risk process stage where negotiators add contractual provisions addressing identified third-party risks",
+			"Incident matching rules that automatically merge duplicate vendor tickets into a single problem record",
+			"Discovery schedules that scan vendor network segments and populate CMDB configuration item records",
+			"Employee onboarding workflows that provision badges and desk assignments for new internal hires"
+		],
+		"correctIndex": 0,
+		"explanation": "The contract risk process stage enables third-party risk contract negotiators to embed control requirements and remediation terms into vendor agreements.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-ws-contract-risk-process.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 9,
+		"prompt": "Which table stores the primary third-party organization records managed in the TPRM data model?",
+		"choices": [
+			"Company table (core_company) representing third-party organizations in the vendor portfolio",
+			"Incident table (incident) capturing IT service disruption tickets raised by internal employees",
+			"Change Request table (change_request) tracking infrastructure deployment approval workflows",
+			"Task table (task) storing generic work items unrelated to vendor risk assessment activities"
+		],
+		"correctIndex": 0,
+		"explanation": "Third-party organizations are stored on the Company table; engagements, contacts, assessments, and issues reference these company records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 10,
+		"prompt": "Which TPRM table represents a specific business relationship or project between your organization and a third party?",
+		"choices": [
+			"Third-party engagement (sn_vdr_risk_asmt_vendor_engagement) linking a vendor to a scoped business interaction",
+			"Hardware asset (alm_hardware) tracking physical device procurement and retirement lifecycle events",
+			"Problem record (problem) documenting root-cause analysis for recurring IT infrastructure failures",
+			"Knowledge article (kb_knowledge) storing internal employee self-service documentation content"
+		],
+		"correctIndex": 0,
+		"explanation": "Engagements represent scoped business relationships with third parties; assessments, tiering, and risk scores roll up at both the company and engagement levels.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 11,
+		"prompt": "A TPRM administrator needs to grant external users access to respond to assessments without full platform privileges. Which role should be assigned?",
+		"choices": [
+			"vendor_contact role granting Third-party Portal access while prohibiting internal platform navigation",
+			"admin role providing unrestricted access to all tables, modules, and configuration settings on the instance",
+			"itil role enabling full incident, problem, and change management capabilities for IT operations staff",
+			"catalog_admin role allowing creation and publication of employee-facing service catalog item records"
+		],
+		"correctIndex": 0,
+		"explanation": "The vendor_contact role is scoped exclusively for external third-party contacts and grants access only to the Third-party Portal.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-tp-contact-config.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 12,
+		"prompt": "Which sn_vdr_risk_asmt role allows a user to manage third parties, contacts, assessments, and issues across the vendor portfolio?",
+		"choices": [
+			"sn_vdr_risk_asmt.vendor_assessor for day-to-day third-party risk assessment operations",
+			"sn_vdr_risk_asmt.contract_negotiator exclusively for internal employee payroll processing tasks",
+			"sn_vdr_risk_asmt.approver exclusively for hardware asset depreciation schedule approvals",
+			"wm_agent for field service mobile work order execution and on-site technician dispatch routing"
+		],
+		"correctIndex": 0,
+		"explanation": "The vendor_assessor role manages third parties, third-party contacts, risk assessments, and issues as part of core TPRM operational duties.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 13,
+		"questionType": "multi",
+		"prompt": "Which two assessment types are available in the TPRM data model for evaluating third-party risk? (Choose two.)",
+		"choices": [
+			"External assessment (sn_vdr_risk_asmt_assessment) sent to third-party contacts via the portal",
+			"Internal assessment (sn_vdr_risk_asmt_internal_assessment) completed by internal respondents",
+			"Discovery assessment (discovery_assessment) scanning network segments for configuration items",
+			"Vulnerability assessment (sn_vul_vulnerability) importing CVE findings from external scanner feeds"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "TPRM supports external assessments distributed to vendor contacts and internal assessments completed by organizational respondents before or alongside vendor questionnaires.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 14,
+		"prompt": "When questionnaire responses are submitted, how do assessment ratings propagate to the associated third party in TPRM?",
+		"choices": [
+			"Ratings roll up from the assessment to the third party and engagement using the configured MIN, MAX, or AVG method",
+			"Ratings remain isolated on the questionnaire instance and never influence the parent company risk score",
+			"Ratings automatically close all open incidents linked to the vendor without analyst review or approval",
+			"Ratings convert directly into hardware asset depreciation values on the procurement ledger table"
+		],
+		"correctIndex": 0,
+		"explanation": "Assessment ratings aggregate to the third party and engagement according to the configured rollup method, dynamically updating risk posture and scores.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/rm-assessment-integration.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 15,
+		"prompt": "A risk team wants external provider scores that indicate how trustworthy a vendor may be. Which TPRM feature should they configure?",
+		"choices": [
+			"Risk intelligence provider integration to ingest external trust and safety scores for third parties",
+			"Discovery credentials to scan vendor internal networks and populate CMDB configuration items",
+			"Employee onboarding workflows to provision badges and desk assignments for new internal staff",
+			"Change Management standard models to route infrastructure deployment approvals through CAB"
+		],
+		"correctIndex": 0,
+		"explanation": "Risk intelligence integrations import external provider scores that offer insight into third-party trustworthiness and can trigger event-driven reassessment rules.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-riskintelprvdr-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 16,
+		"prompt": "Which table stores risk intelligence scores retrieved from external content providers for third parties?",
+		"choices": [
+			"Risk intelligence score (sn_vdr_risk_asmt_security_score) linked to third-party company records",
+			"Incident (incident) capturing IT service disruption tickets submitted by internal employees",
+			"Change Request (change_request) tracking infrastructure deployment approval workflow states",
+			"Knowledge (kb_knowledge) storing internal employee self-service documentation articles"
+		],
+		"correctIndex": 0,
+		"explanation": "Risk intelligence scores are stored on the sn_vdr_risk_asmt_security_score table and associated with third-party organizations in the portfolio.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 17,
+		"prompt": "An assessor needs to request a formal risk intelligence report for a high-criticality vendor. Which TPRM capability supports this?",
+		"choices": [
+			"Risk intelligence reports that manage and request scores from external content providers",
+			"Hardware asset audits that verify physical device inventory against procurement ledger records",
+			"Discovery schedules that scan vendor subnets and create CMDB configuration item entries",
+			"Employee case routing through the internal service catalog for HR benefit inquiries"
+		],
+		"correctIndex": 0,
+		"explanation": "TPRM risk intelligence reports allow teams to request and manage external provider scores that supplement periodic assessment evidence.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-riskintel-using.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 18,
+		"prompt": "Event-driven management rules in TPRM can trigger which action when external risk intelligence ratings change significantly?",
+		"choices": [
+			"Launch reassessment workflows, create issues or tasks, and send notifications to risk stakeholders",
+			"Permanently deactivate the vendor record and purge all historical assessment data from the instance",
+			"Convert the vendor into a hardware asset and assign a depreciation schedule on the procurement ledger",
+			"Route all vendor communications exclusively through the employee HR self-service catalog portal"
+		],
+		"correctIndex": 0,
+		"explanation": "TPRM event-driven rules respond to risk intelligence rating changes by triggering assessments, creating remediation work, and notifying stakeholders.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/rm-assessment-integration.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 19,
+		"prompt": "Which workspace provides the primary operational interface for third-party risk managers to manage the vendor portfolio?",
+		"choices": [
+			"Vendor Management Workspace (sn_vrm_ws) included with the Third-party Risk Management application",
+			"Dispatcher Workspace for field service mobile technician assignment and route optimization tasks",
+			"Security Operations Workspace for vulnerability response remediation and scanner integration",
+			"Employee Center portal for internal staff to submit HR benefit requests and payroll inquiries"
+		],
+		"correctIndex": 0,
+		"explanation": "The GRC Vendor Management Workspace is the primary interface for managing third parties, engagements, assessments, and related risk activities.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/third-party-risk-mgt-landing-page.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 20,
+		"prompt": "A TPRM administrator is building the third-party portfolio from scratch. Which record type should they create first for each vendor organization?",
+		"choices": [
+			"Company record on core_company representing the third-party organization in the vendor portfolio",
+			"Incident record on incident capturing an IT service disruption ticket for internal tracking purposes",
+			"Change request on change_request documenting an infrastructure deployment awaiting CAB approval",
+			"Hardware asset on alm_hardware tracking laptop procurement and retirement lifecycle events"
+		],
+		"correctIndex": 0,
+		"explanation": "Third-party portfolio management begins with company records; engagements, contacts, and assessments reference these organization records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 21,
+		"prompt": "After creating a third-party company record, what is the next configuration step before sending an external assessment?",
+		"choices": [
+			"Create third-party contacts, designate a primary contact, and grant vendor_contact portal access",
+			"Deploy discovery credentials to scan the vendor network and populate CMDB configuration items",
+			"Convert the company record into a hardware asset and assign depreciation categories immediately",
+			"Route the vendor through employee onboarding workflows for internal badge and desk provisioning"
+		],
+		"correctIndex": 0,
+		"explanation": "Contacts must be configured with primary contact designation and portal roles before external assessments can be distributed to vendor liaisons.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-tp-contact-config.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 22,
+		"prompt": "Which table stores individual third-party contact records linked to vendor organizations in TPRM?",
+		"choices": [
+			"Vendor contact (vm_dr_contact) storing external user details, portal credentials, and primary contact designation",
+			"Sys user (sys_user) exclusively for internal employees with full platform authentication access",
+			"Incident (incident) for IT service disruption tickets submitted by internal organizational staff",
+			"Task (task) for generic work items unrelated to external vendor collaboration activities"
+		],
+		"correctIndex": 0,
+		"explanation": "Third-party contacts are stored on the vendor contact table with standard contact fields, portal credentials, and primary contact designation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 23,
+		"questionType": "multi",
+		"prompt": "Which two contact form fields help personalize the Third-party Portal experience for external users? (Choose two.)",
+		"choices": [
+			"Language preference for displaying portal content in the contact's preferred locale",
+			"Time Zone setting for scheduling assessment reminders and due date notifications",
+			"Depreciation method for calculating hardware asset value over the procurement lifecycle",
+			"Change type for categorizing infrastructure deployment requests in the CAB approval queue"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Language and Time Zone fields on the contact form configure the portal experience and notification timing for external third-party users.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-tp-contact-config.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 24,
+		"prompt": "A TPRM admin wants the organization name displayed consistently on the Third-party Portal. Which property controls this setting?",
+		"choices": [
+			"sn_vdr_risk_asmt.company.name property defining the name third-party contacts see in portal references",
+			"glide.ui.theme.style property controlling the color scheme of internal employee workspace pages",
+			"com.snc.change_management.default_group property assigning CAB members to change approvals",
+			"alm.hardware.default_depreciation property setting asset value calculation for procurement items"
+		],
+		"correctIndex": 0,
+		"explanation": "The company.name TPRM property sets the organization name displayed to third-party contacts across all Third-party Portal references.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-properties-configure.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 25,
+		"prompt": "Which TPRM property controls whether assessors can answer or edit questionnaire responses on behalf of third-party contacts?",
+		"choices": [
+			"sn_svdp.allow_assessor_edit property with values answer, edit, or false for assessor response permissions",
+			"glide.security.strict_login property requiring multi-factor authentication for all internal platform users",
+			"com.snc.change_management.auto_close property automatically closing approved change requests after deployment",
+			"discovery.max_concurrent_jobs property limiting parallel network scan tasks on the discovery engine"
+		],
+		"correctIndex": 0,
+		"explanation": "The allow_assessor_edit property determines whether TPR assessors can enter or modify questionnaire responses on behalf of external contacts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-properties-configure.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 26,
+		"prompt": "An administrator wants to reuse prior questionnaire responses when creating a new assessment for the same vendor. Which property defines the maximum age for response reuse?",
+		"choices": [
+			"sn_tprm_dd.max_age_for_questionnaire_reuse property specifying the maximum age in days for pre-populating responses",
+			"glide.ui.autoclose.time property controlling how long inactive browser sessions remain open on the platform",
+			"com.snc.sla.default_duration property setting baseline service level agreement timers on task records",
+			"discovery.schedule.interval property defining how frequently network scan jobs execute on target subnets"
+		],
+		"correctIndex": 0,
+		"explanation": "The max_age_for_questionnaire_reuse property sets how far back TPRM searches for closed assessment responses to pre-populate new questionnaires.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-properties-configure.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 27,
+		"prompt": "Risk intelligence scores from external providers are stored and linked to third parties. How can these scores influence ongoing vendor oversight?",
+		"choices": [
+			"Event-driven management rules trigger reassessments or create issues when intelligence ratings change materially",
+			"Scores permanently lock the vendor tier and prevent any manual reassessment for the contract duration",
+			"Scores convert directly into hardware asset depreciation values on the procurement finance ledger",
+			"Scores route all vendor communications through the employee HR self-service catalog portal exclusively"
+		],
+		"correctIndex": 0,
+		"explanation": "Risk intelligence scores feed event-driven rules that can launch reassessments, generate issues, and notify stakeholders when ratings shift.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-riskintelprvdr-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 28,
+		"prompt": "Which table tracks the execution history of event-driven management rules triggered by risk intelligence or monitoring signals?",
+		"choices": [
+			"Event-driven management history (sn_tprm_dd_rule_execution_history) logging rule execution outcomes",
+			"Incident (incident) capturing IT service disruption tickets from internal employee submissions",
+			"Change Request (change_request) tracking infrastructure deployment approval workflow progress",
+			"Sys audit (sys_audit) recording field-level changes on unrelated platform configuration tables"
+		],
+		"correctIndex": 0,
+		"explanation": "Event-driven management history records each rule execution triggered by monitoring signals or risk intelligence rating changes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 29,
+		"prompt": "A TPRM team wants engagement-level risk scores calculated from assessment results using configurable logic. Which record type defines this scoring?",
+		"choices": [
+			"Engagement risk scoring rule (sn_vdr_risk_asmt_engagement_risk_scoring_rule) defining score calculation logic",
+			"Discovery schedule (discovery_schedule) controlling network scan frequency on target IP address ranges",
+			"SLA definition (contract_sla) setting response timers on internal employee service desk tickets",
+			"Catalog item (sc_cat_item) publishing employee-facing service request forms on the internal portal"
+		],
+		"correctIndex": 0,
+		"explanation": "Engagement risk scoring rules define how assessment ratings and other inputs combine to produce engagement-level risk scores.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 30,
+		"prompt": "Which table stores the qualitative risk rating assigned to an engagement after assessment scores are calculated?",
+		"choices": [
+			"Engagement level risk rating (sn_vdr_risk_asmt_engagement_level_rating) mapping scores to Critical, High, Moderate, Low, or Minor",
+			"Incident priority (incident.priority) ranking IT service disruption tickets by business impact severity",
+			"Change risk (change_request.risk) categorizing infrastructure deployment requests for CAB review",
+			"Asset cost (alm_asset.cost) recording procurement purchase price on hardware inventory records"
+		],
+		"correctIndex": 0,
+		"explanation": "Engagement level risk ratings translate numeric assessment scores into qualitative tiers such as Critical, High, Moderate, Low, and Minor.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 31,
+		"prompt": "A risk admin manually associates a control deficiency with a third party. Which table captures third-party risk issues requiring remediation?",
+		"choices": [
+			"Third-party risk issue (sn_vdr_risk_asmt_issue) tracking findings, remediation tasks, and closure status",
+			"Problem (problem) documenting root-cause analysis for recurring IT infrastructure failure patterns",
+			"Change Request (change_request) routing infrastructure deployment approvals through the CAB process",
+			"Knowledge (kb_knowledge) storing internal employee self-service documentation and FAQ articles"
+		],
+		"correctIndex": 0,
+		"explanation": "Third-party risk issues track assessment findings and remediation work; issues remain active until findings are resolved and closed.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 32,
+		"prompt": "When both Risk Management and TPRM are active, associating a risk with a third party affects scoring but does not automatically trigger assessments unless what is configured?",
+		"choices": [
+			"TPRM event-driven management rules or provider-based submission rules are configured to trigger assessments",
+			"The vendor contact receives an automatic email converting their portal account into an admin user profile",
+			"The company record is converted into a hardware asset with an assigned depreciation schedule immediately",
+			"All open incidents linked to the vendor are auto-closed without analyst review or management approval"
+		],
+		"correctIndex": 0,
+		"explanation": "Manual risk associations influence posture and scoring; automated assessment triggers require configured TPRM rules such as event-driven management rules.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-add-risks-tp.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 33,
+		"prompt": "Which table stores due diligence requests initiated to evaluate the risk level of a third-party engagement?",
+		"choices": [
+			"Third-party due diligence request (sn_tprm_dd_request) driving the inherent risk and assessment workflow",
+			"Incident (incident) capturing IT service disruption tickets submitted by internal organizational staff",
+			"Change Request (change_request) tracking infrastructure deployment approvals awaiting CAB sign-off",
+			"Catalog Task (sc_task) fulfilling employee-facing service catalog item requests from internal users"
+		],
+		"correctIndex": 0,
+		"explanation": "Due diligence requests initiate the process to determine engagement risk level and configure subsequent assessment and approval workflows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-requesting-tpr-due-diligence.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 34,
+		"prompt": "An assessor creates an internal assessment to evaluate inherent risk before sending vendor questionnaires. Which assessment engine does TPRM use when Smart Assessment Engine is enabled?",
+		"choices": [
+			"Smart Assessment Engine configured via the sn_vdr_risk_asmt.sae_enabled property on the assessment form",
+			"Classic Discovery Engine scanning network segments to populate CMDB configuration item records",
+			"Predictive Intelligence engine scoring employee HR cases for internal service catalog routing",
+			"Vulnerability Response engine importing CVE findings from external security scanner integrations"
+		],
+		"correctIndex": 0,
+		"explanation": "When the SAE enabled property is set, internal and external assessments use the Smart Assessment Engine; otherwise the Classic engine applies.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/create-int-assess-form.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-properties-configure.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 35,
+		"prompt": "Which assessment type determines the inherent risk tier of a third party before full due diligence questionnaires are sent?",
+		"choices": [
+			"Tiering assessment (sn_vdr_risk_asmt_vdr_tiering_assessment) scoring inherent risk to assign vendor tiers",
+			"Discovery assessment scanning vendor network segments to populate CMDB configuration item records",
+			"Vulnerability assessment importing CVE findings from external security scanner vendor integrations",
+			"Employee satisfaction survey collecting internal staff feedback on workplace facility amenities"
+		],
+		"correctIndex": 0,
+		"explanation": "Tiering assessments evaluate inherent risk indicators and assign tiers that determine assessment depth, cadence, and monitoring intensity.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 36,
+		"prompt": "An organization uses the Inherent Risk Questionnaire (IRQ) as part of due diligence. What is the IRQ designed to accomplish?",
+		"choices": [
+			"Gather engagement details to score inherent risk and determine the appropriate assessment tier and depth",
+			"Replace all external vendor questionnaires with a one-time internal employee satisfaction survey",
+			"Scan vendor network infrastructure and automatically populate CMDB configuration item records",
+			"Convert vendor company records into hardware assets with assigned depreciation schedule categories"
+		],
+		"correctIndex": 0,
+		"explanation": "The Inherent Risk Questionnaire collects engagement information used to calculate inherent risk scores and assign vendor tiering before full assessments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-requesting-tpr-due-diligence.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 37,
+		"prompt": "Which record type defines reusable questionnaire structures that can be attached to multiple TPRM assessments?",
+		"choices": [
+			"Questionnaire template (asmt_metric_type) with categories, metrics, and scoring parameters",
+			"Incident template (sysevent_register) predefining IT service disruption ticket field defaults",
+			"Change template (std_change_record_producer) standardizing infrastructure deployment request forms",
+			"Standard change producer (std_change_record_producer) templating infrastructure deployment request submissions"
+		],
+		"correctIndex": 0,
+		"explanation": "Questionnaire templates define reusable question categories and metrics that TPRM assessments reference for consistent evidence collection.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/create-questionnaire-template.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 38,
+		"questionType": "multi",
+		"prompt": "Which two tables are involved when a TPRM assessment questionnaire is sent to a third-party contact? (Choose two.)",
+		"choices": [
+			"Third-party risk assessment (sn_vdr_risk_asmt_assessment) as the parent assessment record",
+			"Questionnaire instance (asmt_assessment_instance) representing the sent questionnaire to the respondent",
+			"Software asset (alm_asset) tracking licensed application installations across the enterprise CMDB",
+			"Known error (problem) storing documented workarounds for recurring platform configuration defects"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "External assessments are parent records on the assessment table; each sent questionnaire creates an instance record linked to the respondent.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 39,
+		"prompt": "Which table stores reusable assessment configurations that define questionnaires and scoring for recurring vendor evaluations?",
+		"choices": [
+			"Assessment template (sn_vdr_risk_asmt_assessment_template) bundling questionnaires and scoring rules",
+			"Discovery schedule (discovery_schedule) controlling network scan frequency on target IP ranges",
+			"Workflow (wf_workflow) orchestrating unrelated approval chains on procurement requisition records",
+			"Knowledge base (kb_knowledge_base) organizing internal employee self-service documentation articles"
+		],
+		"correctIndex": 0,
+		"explanation": "Assessment templates package questionnaire selections and scoring configuration for repeatable vendor risk evaluations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 40,
+		"prompt": "After a third-party contact submits questionnaire responses, how does TPRM calculate the assessment rating?",
+		"choices": [
+			"Metric scores aggregate from individual question responses using the template scoring parameters and rollup method",
+			"An analyst manually assigns a random numeric score without reference to questionnaire response data",
+			"The assessment rating copies directly from the vendor's most recent hardware asset depreciation value",
+			"All submitted responses receive an automatic passing score regardless of control evidence quality"
+		],
+		"correctIndex": 0,
+		"explanation": "Assessment ratings are calculated from metric-level scores on questionnaire responses, aggregated according to configured scoring and rollup rules.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/rm-assessment-integration.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 41,
+		"prompt": "Which qualitative risk ratings can appear on an internal assessment form after scores are calculated?",
+		"choices": [
+			"Critical, High, Moderate, Low, and Minor based on configured risk rating scale ranges",
+			"New, In Progress, On Hold, and Closed based on ITSM incident state model transitions",
+			"Draft, Assess, Review, and Complete based on change management approval workflow stages",
+			"Pending, Approved, Rejected, and Cancelled based on employee travel reimbursement statuses"
+		],
+		"correctIndex": 0,
+		"explanation": "The risk rating field maps numeric assessment scores to qualitative tiers: Critical, High, Moderate, Low, and Minor.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/create-int-assess-form.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 42,
+		"prompt": "An internal assessment completed during due diligence can influence which subsequent TPRM activity?",
+		"choices": [
+			"Determining which external questionnaires are sent to the third party or engagement based on inherent risk results",
+			"Automatically converting the vendor record into a hardware asset with an assigned depreciation schedule",
+			"Permanently closing all open incidents linked to the vendor without analyst review or approval",
+			"Routing the vendor through employee onboarding workflows for internal badge and desk provisioning"
+		],
+		"correctIndex": 0,
+		"explanation": "Internal assessments evaluate inherent risk and can affect which questionnaires are later distributed to the third party or engagement.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-create-int-assessment.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 43,
+		"prompt": "Which table should an implementer reference when building reports on third-party risk assessment records and their states?",
+		"choices": [
+			"Third-party risk assessment (sn_vdr_risk_asmt_assessment) as the primary reporting table for assessment data",
+			"Incident (incident) for IT service disruption ticket volume and mean-time-to-resolution metrics",
+			"Change Request (change_request) for infrastructure deployment approval cycle time reporting",
+			"Sys User (sys_user) for internal employee login frequency and session duration analytics"
+		],
+		"correctIndex": 0,
+		"explanation": "The sn_vdr_risk_asmt_assessment table is the primary source for third-party risk assessment reporting including states, scores, and dates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 44,
+		"prompt": "A TPRM program needs event-driven generation rules that automatically create due diligence requests when engagement criteria are met. Which table stores these rules?",
+		"choices": [
+			"Event-driven management rule (sn_tprm_dd_generation_rule) defining conditions that trigger due diligence requests",
+			"Discovery schedule (discovery_schedule) controlling network scan job frequency on target IP address ranges",
+			"Business rule (sys_script) executing server-side logic on unrelated platform table record updates",
+			"Catalog client script (catalog_script_client) validating employee-facing service catalog form inputs"
+		],
+		"correctIndex": 0,
+		"explanation": "Event-driven management generation rules define conditions that automatically create due diligence requests when engagement or portfolio criteria are met.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 45,
+		"prompt": "A TPR manager must evaluate control posture for a specific vendor engagement rather than the entire company record. Which assessment scope applies?",
+		"choices": [
+			"Engagement-level third-party risk assessment tied to sn_vdr_risk_asmt_vendor_engagement",
+			"Global incident priority matrix applied to all open security incidents",
+			"Hardware asset depreciation schedule linked to procurement contract lines",
+			"Employee onboarding checklist stored on the HR case management table"
+		],
+		"correctIndex": 0,
+		"explanation": "External assessments can target a third-party engagement so scoring and evidence reflect the specific service relationship.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 46,
+		"prompt": "Your team sends the same questionnaire structure to multiple vendors each quarter. Which configuration object should they standardize first?",
+		"choices": [
+			"Assessment template on sn_vdr_risk_asmt_assessment_template with linked questionnaire templates",
+			"Business rule that renames company records when contracts renew",
+			"UI policy that hides the vendor field on unrelated procurement tasks",
+			"Scheduled job that purges closed incidents after ninety days"
+		],
+		"correctIndex": 0,
+		"explanation": "Assessment templates bundle questionnaire templates and reuse consistent control domains across recurring vendor assessments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 47,
+		"prompt": "Questionnaire authors need reusable control libraries that roll up into scored categories. Which global table defines those questionnaire definitions?",
+		"choices": [
+			"asmt_metric_type questionnaire template with categories and metrics",
+			"sys_email_log capturing outbound notification delivery status",
+			"cmdb_ci_server listing discovered infrastructure configuration items",
+			"sn_hr_core_case storing employee relations investigation records"
+		],
+		"correctIndex": 0,
+		"explanation": "Questionnaire templates use asmt_metric_type with related categories and metrics to structure assessable control content.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 48,
+		"prompt": "High-tier vendors require annual reassessment without manual recreation each cycle. How should the TPR manager configure this in TPRM?",
+		"choices": [
+			"Scheduled external assessment using a defined recurrence on the assessment record",
+			"Daily import set that deletes and recreates all vendor company records",
+			"Manual clone of each assessment only when procurement sends email notice",
+			"Change request template that blocks vendor updates until CAB approval"
+		],
+		"correctIndex": 0,
+		"explanation": "TPRM supports on-demand and recurring assessments so teams can automate periodic due diligence cadences.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-create-assessment.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 49,
+		"prompt": "A vendor completes a refreshed assessment but many control answers are unchanged from the prior cycle. Which creation option reduces duplicate data entry?",
+		"choices": [
+			"Include previous responses when initiating the new external assessment",
+			"Disable all questionnaire metrics so only free-text comments remain",
+			"Archive the vendor company record before launching the assessment",
+			"Convert the assessment into a change request with standard approval"
+		],
+		"correctIndex": 0,
+		"explanation": "The Include previous responses option carries forward prior answers so vendors update only changed controls.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-create-assessment.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 50,
+		"prompt": "Your organization adopts Smart Assessment Engine questionnaires for third-party due diligence. Which TPRM capability does SAE primarily enhance?",
+		"choices": [
+			"Structured section-based questionnaires with normalized scoring across assessments",
+			"Automatic deletion of vendor contacts when assessments reach Draft state",
+			"Replacement of all GRC risk registers with procurement requisition records",
+			"Direct migration of CMDB discovery results into assessment metrics"
+		],
+		"correctIndex": 0,
+		"explanation": "SAE adds section navigation, template reuse, score normalization, and portal support for modern assessment delivery.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-sae-using.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 51,
+		"prompt": "Multiple engagement assessments feed a vendor-level risk rating. Which scoring configuration defines how those values aggregate?",
+		"choices": [
+			"Third-party risk scoring rule with component criteria using MIN, MAX, or AVG aggregation",
+			"Incident assignment rule that routes P1 tickets to the security operations center",
+			"Catalog client script that calculates item price based on quantity variables",
+			"Discovery schedule that determines MID Server selection per IP subnet"
+		],
+		"correctIndex": 0,
+		"explanation": "Scoring rules group engagements or third parties and apply criteria tables that aggregate assessment scores with configured methods.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/vendor-ratings-scoring.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 52,
+		"prompt": "Which records are core to storing an external third-party assessment and its answered questionnaire instance? (Choose two.)",
+		"choices": [
+			"sn_vdr_risk_asmt_assessment external assessment header record",
+			"asmt_assessment_instance questionnaire response instance linked to the assessment",
+			"alm_hardware asset record used for warranty tracking",
+			"sn_publications_publication catalog for knowledge article publishing"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"questionType": "multi",
+		"explanation": "External assessments live on sn_vdr_risk_asmt_assessment while asmt_assessment_instance stores the completed questionnaire responses.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 53,
+		"prompt": "Assessors want deficient control responses to automatically create tracked follow-up work. Which configuration supports post-assessment automation?",
+		"choices": [
+			"Issue-generation rule on the questionnaire template triggering issues or tasks",
+			"UI action on the incident table that closes all related problem records",
+			"Data policy that masks vendor names on unrelated company records",
+			"Scheduled report export that emails CSV files without creating records"
+		],
+		"correctIndex": 0,
+		"explanation": "Issue-generation rules on SAE questionnaire templates can create issues or workflow tasks when assessment results meet defined conditions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-sae-using.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 54,
+		"prompt": "An assessor reviews a questionnaire organized by control domain sections such as access management and business continuity. Which structure defines those sections?",
+		"choices": [
+			"asmt_metric_category records grouped under the questionnaire template",
+			"sn_cmp_order_item rows generated from cloud catalog requests",
+			"sc_req_item variables captured on service catalog submissions",
+			"sysapproval_approver entries for change advisory board voting"
+		],
+		"correctIndex": 0,
+		"explanation": "Categories under asmt_metric_type organize metrics into control domains that assessors and vendors navigate during completion.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 55,
+		"prompt": "Legal requires vendors to upload signed policies instead of answering multiple-choice control questions. Which template type should the TPR manager configure?",
+		"choices": [
+			"Document request template linked to the external assessment workflow",
+			"Problem task template used by the IT service desk for root cause analysis",
+			"Change model template that enforces emergency approval paths",
+			"Knowledge article template for internal employee self-service content"
+		],
+		"correctIndex": 0,
+		"explanation": "Document request templates collect file-based evidence such as policies and attestations alongside or instead of scored questionnaires.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-create-assessment.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 56,
+		"prompt": "A questionnaire requires vendor attestation with a captured signature before submission. What must be enabled on the template?",
+		"choices": [
+			"E-signature requirement on the questionnaire or document request before submit",
+			"Automatic closure of all related issues when the assessment opens",
+			"Mandatory attachment of employee performance reviews for each contact",
+			"Conversion of the assessment into a standard change record"
+		],
+		"correctIndex": 0,
+		"explanation": "Questionnaires configured for e-signature require the vendor or reviewer to save and sign before the assessment can be submitted.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-ws-approve-with-e-sig.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 57,
+		"prompt": "Before sending a full control questionnaire, the team runs a lightweight survey to determine vendor tier. Which assessment type fits that step?",
+		"choices": [
+			"Tiering assessment on sn_vdr_risk_asmt_vdr_tiering_assessment",
+			"Internal assessment extension used exclusively for HR background checks",
+			"Discovery status record tracking subnet scan completion",
+			"Financial planning allocation row for capital project budgeting"
+		],
+		"correctIndex": 0,
+		"explanation": "Tiering assessments determine inherent risk tier before deeper external or internal assessments are triggered.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 58,
+		"prompt": "A reporting analyst needs to list all external third-party risk assessments in a ServiceNow report. Which table should the report query?",
+		"choices": [
+			"Third-party Risk Assessment table sn_vdr_risk_asmt_assessment",
+			"Incident table incident with priority less than three filter",
+			"Contract table ast_contract showing hardware lease terms",
+			"User table sys_user filtered by internal employee flag"
+		],
+		"correctIndex": 0,
+		"explanation": "External third-party assessments are stored on sn_vdr_risk_asmt_assessment, the primary table for assessment reporting.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 59,
+		"prompt": "The vendor and assessor finish questionnaire review in the third-party portal. Who typically drives final assessment closure on the internal side?",
+		"choices": [
+			"TPR assessor with sn_vdr_risk_asmt.vendor_assessor working through closure steps",
+			"Catalog administrator with catalog_admin role exclusive to service catalog",
+			"Discovery operator with discovery_admin updating CI classification",
+			"Knowledge manager with kb_knowledge_manager publishing articles only"
+		],
+		"correctIndex": 0,
+		"explanation": "TPR assessors manage third-party assessments and collaborate with vendors in the portal until the assessment is closed.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-create-assessment.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 60,
+		"prompt": "Risk scores from a completed assessment must roll up to the specific vendor service relationship under review. Which record should the assessment reference?",
+		"choices": [
+			"Third-party engagement on sn_vdr_risk_asmt_vendor_engagement",
+			"Problem record on problem used for recurring incident trends",
+			"Change task on change_task tracking implementation steps",
+			"Project task on pm_project_task for portfolio milestones"
+		],
+		"correctIndex": 0,
+		"explanation": "Engagements represent the third-party service relationship and connect assessments, issues, and scoring to that context.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 61,
+		"prompt": "Due diligence onboarding should automatically launch tiering and external assessments when criteria match. Which object orchestrates that generation?",
+		"choices": [
+			"Event-driven management rule on sn_tprm_dd_generation_rule tied to due diligence",
+			"Client callable script include that formats email footers for notifications",
+			"Table rotation definition that archives old syslog entries nightly",
+			"OAuth entity record storing external API consumer credentials"
+		],
+		"correctIndex": 0,
+		"explanation": "Event-driven management rules trigger assessments and related due diligence activities when configured conditions are met.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 62,
+		"prompt": "After external assessment scores are finalized, where do aggregated ratings typically surface for vendor oversight dashboards?",
+		"choices": [
+			"Engagement level risk rating and third-party scoring rule results on the company record",
+			"Incident category field updated from the service catalog variable set",
+			"Knowledge article quality score calculated from view counts",
+			"Discovery credential row showing last successful login attempt"
+		],
+		"correctIndex": 0,
+		"explanation": "Scoring rules aggregate assessment results to engagements and third parties using engagement level risk ratings and vendor scoring rules.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/vendor-ratings-scoring.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 63,
+		"prompt": "A program lead wants to replace email questionnaires and shared spreadsheets for vendor collaboration. Which TPRM feature addresses that goal?",
+		"choices": [
+			"Third-party portal providing structured assessment and document exchange",
+			"Standard employee self-service catalog for hardware requests",
+			"Virtual Agent topic for password reset without vendor access",
+			"Performance Analytics widget showing agent handle time trends"
+		],
+		"correctIndex": 0,
+		"explanation": "The third-party portal gives vendors a secure channel to respond to assessments, upload evidence, and track tasks.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-reference.html"
 		]
 	},
 	{
 		"trackCode": "CIS-TPRM",
-		"order": 1,
-		"prompt": "According to the third-party risk product documentation landing concepts, what is a core benefit of consolidating third-party assessments in ServiceNow?",
+		"order": 64,
+		"prompt": "A new vendor contact must access only the third-party portal without broader instance navigation. Which roles are assigned automatically?",
 		"choices": [
-			"Eliminate all regulatory obligations in real implementations surfaced in the agent workspace with contextual recommendations.",
-			"Increase visibility and consistency between periodic assessments and continuous monitoring signals in enterprise contexts",
-			"Remove procurement from the process entirely for practical execution",
-			"Guarantee that vendors cannot have incidents for measurable outcomes"
-		],
-		"correctIndex": 1,
-		"explanation": "The third-party risk management landing documentation highlights improved visibility across assessments and monitoring as a program outcome.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-governance-risk-compliance/page/product/grc-vendor-risk/concept/third-party-risk-mgt-landing-page.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 2,
-		"prompt": "Why would an organization create questionnaire templates in Third-Party Risk Management?",
-		"choices": [
-			"Define JavaScript lint rules under governance oversight",
-			"Configure SNMP traps across operational workflows for practical execution",
-			"Standardize due diligence and evidence collection across many vendors and assessment types for measurable outcomes",
-			"Replace the incident table for practical execution"
-		],
-		"correctIndex": 2,
-		"explanation": "Vendor risk task documentation includes creating questionnaire templates to drive consistent third-party assessments.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-governance-risk-compliance/page/product/grc-vendor-risk/task/create-questionnaire-template.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 3,
-		"prompt": "Which activity best fits continuous monitoring in a third-party risk program?",
-		"choices": [
-			"Focus on disabling vendor portals in real implementations",
-			"Focus on removing audit trails for assessments",
-			"Focus on ingesting external risk intelligence signals to update vendor posture between full assessments",
-			"Focus on deleting all vendor records annually"
-		],
-		"correctIndex": 2,
-		"explanation": "Third-party risk landing documentation discusses ongoing monitoring and intelligence as part of modern vendor risk programs.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-governance-risk-compliance/page/product/grc-vendor-risk/concept/third-party-risk-mgt-landing-page.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 4,
-		"prompt": "What is the main purpose of a third-party portal in vendor risk programs?",
-		"choices": [
-			"Enable vendors to complete questionnaires and supply evidence in a controlled collaboration channel under governance oversight",
-			"Replace the CMDB across operational workflows documented in the runbook for operational handoff. (CIS-TPRM-4-w1)",
-			"Execute database backups in enterprise contexts measured against SLA targets and operational dashboards. (CIS-TPRM-4-w2)",
-			"Host internal employee payroll slips publicly in real implementations segmented by location, company, or cost center as required."
+			"vendor_contact with snc_external limiting access to external portal functions",
+			"itil with admin impersonation across all application scopes",
+			"sn_grc.analyst with full GRC workspace configuration rights",
+			"security_admin with unrestricted read on all tables"
 		],
 		"correctIndex": 0,
-		"explanation": "TPRM reference material describes portal-based collaboration as part of third-party engagement workflows.",
+		"explanation": "Third-party contacts receive vendor_contact for portal access and snc_external to restrict them from the full internal instance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-roles.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 65,
+		"prompt": "A vendor contact asks for the URL to access their third-party portal on your instance. Which path suffix should they use?",
+		"choices": [
+			"/svdp appended to the instance base URL for the vendor portal",
+			"/navpage.do as the default internal application navigator",
+			"/now/sow/home for Service Operations Workspace landing",
+			"/api/now/table/incident for unauthenticated REST queries"
+		],
+		"correctIndex": 0,
+		"explanation": "Third-party portal users typically navigate to the instance URL followed by /svdp to reach the vendor collaboration interface.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-add-document-portal.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 66,
+		"prompt": "Which actions can a third-party contact perform from the third-party portal? (Choose two.)",
+		"choices": [
+			"Respond to a Third-party Risk Assessment assigned to their organization",
+			"Manage Third-party Contacts for their company engagement",
+			"Approve internal due diligence requests as TPR manager",
+			"Edit scoring rules on sn_vdr_risk_asmt_vendor_risk_scoring_rule"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"questionType": "multi",
+		"explanation": "Portal contacts complete assigned assessments and maintain their contact roster; approval and scoring configuration remain internal functions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-reference.html"
 		]
 	},
 	{
 		"trackCode": "CIS-TPRM",
-		"order": 5,
-		"prompt": "When launching a Third-Party Risk Management program, what is the most important first step in defining vendor risk scope?",
-		"choices": [
-			"Import all vendors and assign the same risk tier for practical execution",
-			"Defer scope decisions until after questionnaires are sent for measurable outcomes",
-			"Assess exclusively vendors with expiring contracts across operational workflows",
-			"Identify which vendor relationships, services, and data flows are in scope for formal assessment under governance oversight"
-		],
-		"correctIndex": 3,
-		"explanation": "TPRM starts with clear scope boundaries so assessments target the right third parties, services, and data exposure paths.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/concept/vendor-risk-management-overview.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 6,
-		"prompt": "Which vendor population is typically prioritized when defining initial TPRM scope?",
-		"choices": [
-			"Vendors with critical services, privileged access, or sensitive data processing under governance oversight",
-			"Exclusively vendors with active incidents for practical execution",
-			"Vendors with no system access or data handling for measurable outcomes",
-			"Exclusively new vendors created this month in real implementations"
-		],
-		"correctIndex": 0,
-		"explanation": "Criticality, access level, and data sensitivity are common criteria for prioritizing scoped third parties.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/define-vendor-risk-scope.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 7,
-		"prompt": "In TPRM, why should business owners be involved in vendor risk scoping?",
-		"choices": [
-			"They can approve all findings without review in real implementations",
-			"They understand service dependency and operational impact if a vendor fails in enterprise contexts",
-			"They determine legal language for every contract across operational workflows",
-			"They replace the risk team in platform administration under governance oversight"
-		],
-		"correctIndex": 1,
-		"explanation": "Business owners provide context on process dependencies and outage impact, which improves scope accuracy.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/assign-vendor-owners.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 8,
-		"prompt": "What scoping outcome best supports repeatable vendor risk assessments?",
-		"choices": [
-			"A well-defined one-time spreadsheet of vendor names",
-			"No segmentation until annual audits in real implementations",
-			"Manual assessment decisions made per analyst preference for measurable outcomes",
-			"A well-defined documented classification model linking vendor types to assessment requirements"
-		],
-		"correctIndex": 3,
-		"explanation": "Documented scope categories enable consistent trigger criteria and repeatable assessment workflows.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/concept/vendor-tiering.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 9,
-		"prompt": "A TPRM team wants to avoid over-assessing low-impact vendors. Which scope control helps most?",
-		"choices": [
-			"Apply inherent risk screening to determine whether full assessment is required",
-			"Assess exclusively vendors selected by procurement under governance oversight",
-			"Require full due diligence for every vendor regardless of profile across operational workflows",
-			"Skip all assessments for internal suppliers under governance oversight"
-		],
-		"correctIndex": 0,
-		"explanation": "Inherent risk screening helps right-size assessment effort based on business and security impact indicators.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/run-inherent-risk-screening.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 10,
-		"prompt": "In Vendor Risk Management, what is the primary purpose of using questionnaires?",
-		"choices": [
-			"Close vendor risks without analysis across operational workflows",
-			"Generate invoices for assessments under governance oversight",
-			"Replace all contract reviews for practical execution",
-			"Collect structured control evidence from vendors against defined risk domains for measurable outcomes"
-		],
-		"correctIndex": 3,
-		"explanation": "Questionnaires standardize evidence collection and help compare vendor controls consistently.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/create-vendor-questionnaires.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 11,
-		"prompt": "Which questionnaire design choice improves response quality in TPRM?",
-		"choices": [
-			"Send the same questionnaire to every vendor category under governance oversight",
-			"Apply exclusively open-text questions for all sections",
-			"Map questions to clear control statements and expected evidence types for measurable outcomes",
-			"Avoid conditional branching for practical execution in real implementations"
-		],
-		"correctIndex": 2,
-		"explanation": "Control-mapped questions with evidence expectations make submissions clearer and easier to score.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/design-vendor-risk-questionnaire.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 12,
-		"prompt": "A team wants shorter assessments for low-risk suppliers. What should they configure?",
-		"choices": [
-			"Disable questionnaires entirely for practical execution across operational workflows",
-			"Apply tier-based questionnaire templates with scoped sections by vendor risk level",
-			"Require full audits for all suppliers across operational workflows",
-			"Manually rewrite each questionnaire before sending under governance oversight"
-		],
-		"correctIndex": 1,
-		"explanation": "Tiered templates scale assessment depth according to inherent vendor risk and business criticality.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/concept/vendor-assessment-templates.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 13,
-		"prompt": "What is the best follow-up when a vendor provides incomplete questionnaire responses?",
-		"choices": [
-			"Close the assessment and wait for renewal for measurable outcomes",
-			"Initiate remediation or clarification tasks tied to unanswered or weak controls for practical execution",
-			"Delete the questionnaire instance under governance oversight",
-			"Mark all unanswered controls as compliant across operational workflows"
-		],
-		"correctIndex": 1,
-		"explanation": "Incomplete or weak responses require tracked follow-up to close evidence gaps before risk acceptance.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/review-vendor-assessment-results.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 14,
-		"prompt": "How should organizations handle recurring annual vendor questionnaires?",
-		"choices": [
-			"Recreate every assessment manually in real implementations",
-			"Skip reassessments if no incidents occurred in enterprise contexts",
-			"Assess exclusively vendors that changed legal name",
-			"Automate reassessment schedules and reuse approved templates with updated control content under governance oversight"
-		],
-		"correctIndex": 3,
-		"explanation": "Scheduled reassessments with maintained templates improve consistency and reduce operational overhead.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/schedule-vendor-reassessments.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 15,
-		"prompt": "In TPRM, what does inherent risk represent?",
-		"choices": [
-			"The well-defined baseline level of risk posed by a vendor relationship before control evaluation",
-			"The well-defined remaining risk after all controls are validated",
-			"A score assigned exclusively to inactive vendors",
-			"Exclusively financial risk after contract signing in real implementations"
-		],
-		"correctIndex": 0,
-		"explanation": "Inherent risk estimates exposure based on vendor activity, data use, and criticality before mitigation is considered.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/concept/inherent-risk.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 16,
-		"prompt": "Which input is most relevant when calculating vendor inherent risk?",
-		"choices": [
-			"Number of dashboard widgets across operational workflows",
-			"The well-defined assessor's tenure in enterprise contexts",
-			"Whether the vendor supports critical services and handles regulated data in real implementations",
-			"Case assignment group color in enterprise contexts"
-		],
-		"correctIndex": 2,
-		"explanation": "Service criticality and sensitive data handling are core inherent risk drivers in vendor relationships.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/configure-inherent-risk-criteria.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 17,
-		"prompt": "Why should inherent risk scoring be standardized across business units?",
-		"choices": [
-			"To clearly avoid reassessments entirely under governance oversight",
-			"To clearly eliminate questionnaire usage across operational workflows",
-			"To clearly support consistent triage thresholds and comparable vendor oversight decisions",
-			"To clearly remove business context from assessments"
-		],
-		"correctIndex": 2,
-		"explanation": "A shared scoring model improves consistency and fairness in how vendors are evaluated and escalated.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/standardize-vendor-risk-methodology.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 18,
-		"prompt": "A vendor provides low-impact office supplies with no data access. What inherent risk outcome is most likely?",
-		"choices": [
-			"High inherent risk requiring full control assessment in real implementations",
-			"Automatic residual risk acceptance in enterprise contexts",
-			"Low inherent risk, often eligible for streamlined due diligence across operational workflows",
-			"Critical risk requiring board approval under governance oversight"
-		],
-		"correctIndex": 2,
-		"explanation": "Low criticality and no sensitive data handling generally result in lower inherent risk classification.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/classify-vendors-by-inherent-risk.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 19,
-		"prompt": "What governance step best improves trust in inherent risk ratings?",
-		"choices": [
-			"Review scoring criteria periodically with risk, legal, and business stakeholders in enterprise contexts",
-			"Allow individual analysts to change criteria ad hoc in real implementations",
-			"Skip documentation for scoring rationale under governance oversight",
-			"Apply exclusively vendor self-attested labels across operational workflows"
-		],
-		"correctIndex": 0,
-		"explanation": "Cross-functional review keeps inherent risk criteria aligned with current regulatory and operational realities.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/review-vendor-risk-scoring-model.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 20,
-		"prompt": "In TPRM, what does residual risk represent?",
-		"choices": [
-			"Risk assigned exclusively to terminated vendors under governance oversight",
-			"The well-defined number of open questionnaires across operational workflows",
-			"Risk remaining after evaluating control effectiveness and mitigation actions in enterprise contexts",
-			"Risk before any controls are reviewed in real implementations"
-		],
-		"correctIndex": 2,
-		"explanation": "Residual risk reflects post-control exposure and informs acceptance, monitoring, or additional remediation decisions.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/concept/residual-risk.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 21,
-		"prompt": "What outcome indicates that control evidence materially reduced vendor risk?",
-		"choices": [
-			"Residual risk score decreases from inherent baseline with documented rationale across operational workflows",
-			"All vendors are set to medium risk under governance oversight",
-			"Questionnaires are archived without review for practical execution",
-			"Inherent risk is deleted for measurable outcomes"
-		],
-		"correctIndex": 0,
-		"explanation": "Residual scoring should show measurable reduction when controls are validated and effective.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/calculate-residual-risk.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 22,
-		"prompt": "When residual risk remains above tolerance, what is the best governance action?",
-		"choices": [
-			"Document and approve risk treatment plans or formal acceptance through authorized stakeholders in enterprise contexts",
-			"Disable risk scoring for that vendor in real implementations",
-			"Close the assessment as complete with no follow-up for measurable outcomes",
-			"Reset the vendor to low risk manually for practical execution"
-		],
-		"correctIndex": 0,
-		"explanation": "High residual risk requires governed decisions: additional mitigation, escalation, or explicit risk acceptance.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/manage-risk-treatment-plans.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 23,
-		"prompt": "Why should residual risk evaluations be time-bound and revisited?",
-		"choices": [
-			"Vendor contexts and threats change, so accepted risk posture can become outdated in real implementations",
-			"Annual reassessment is prohibited in enterprise contexts",
-			"Residual risk never changes after first assessment for practical execution",
-			"Exclusively procurement can review risk for measurable outcomes"
-		],
-		"correctIndex": 0,
-		"explanation": "Risk is dynamic, so residual decisions require periodic validation against changing control and threat conditions.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/schedule-residual-risk-reviews.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 24,
-		"prompt": "What reporting view best supports executive oversight of residual vendor risk?",
-		"choices": [
-			"Dashboard showing residual risk distribution, exceptions, and aging treatment plans in enterprise contexts",
-			"Knowledge article feedback trend in real implementations",
-			"Hardware warranty expiration report under governance oversight",
-			"List of inactive users across operational workflows"
-		],
-		"correctIndex": 0,
-		"explanation": "Leadership needs visibility into residual concentration, unresolved exceptions, and mitigation progress.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/report-on-residual-vendor-risk.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 25,
-		"prompt": "In Third-Party Risk Management, what is the main reason to require documentary evidence on inherent risk questionnaires?",
-		"choices": [
-			"To clearly bypass due diligence workflows for low spend vendors",
-			"To clearly replace the need for control testing entirely",
-			"To clearly reduce the number of vendor contacts required",
-			"To clearly validate questionnaire responses with auditable proof before downstream decisions"
-		],
-		"correctIndex": 3,
-		"explanation": "Evidence attachments support defensible risk decisions by validating that vendor claims are backed by objective documentation.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 26,
-		"prompt": "Which evidence requirement best improves assessor confidence for a vendor claiming strong access controls?",
-		"choices": [
-			"A well-defined commitment to provide evidence after contract signature",
-			"A well-defined marketing brochure describing security innovation",
-			"An well-defined unsigned vendor policy draft from three years ago",
-			"Recent control evidence such as access review records or independent assurance reports for practical execution"
-		],
-		"correctIndex": 3,
-		"explanation": "Current and verifiable control artifacts provide stronger assurance than forward-looking statements or marketing content.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/task/t_CreateVendorAssessmentQuestionnaire.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 27,
-		"prompt": "How should a TPRM team handle missing evidence for responses marked as high assurance?",
-		"choices": [
-			"Auto-approve to maintain assessment SLA across operational workflows",
-			"Downgrade assurance confidence and trigger follow-up tasks before final risk acceptance under governance oversight",
-			"Delete unanswered questions from scoring in real implementations",
-			"Move the vendor directly to offboarding in enterprise contexts"
-		],
-		"correctIndex": 1,
-		"explanation": "Missing evidence should reduce confidence and prompt remediation actions, not be ignored during assessment decisions.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/task/t_AssessThirdPartyRisk.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 28,
-		"prompt": "What is the best governance practice for evidence collected during third-party assessments?",
-		"choices": [
-			"Attach evidence to assessment records with defined retention and reviewer accountability for measurable outcomes",
-			"Keep exclusively summary scores to minimize storage costs",
-			"Require vendors to resubmit all evidence monthly in enterprise contexts",
-			"Store files in personal mailboxes for flexibility in real implementations"
-		],
-		"correctIndex": 0,
-		"explanation": "Centralized, governed evidence linked to assessment artifacts improves traceability and audit readiness.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/concept/c_AssessmentLifecycleTPRM.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 29,
-		"prompt": "During an audit, which capability is most valuable for proving evidence quality in TPRM?",
-		"choices": [
-			"A well-defined documented chain from questionnaire answer to evidence artifact to decision outcome",
-			"A well-defined list of contracts without risk data",
-			"An well-defined export of unresolved incident tickets",
-			"A dashboard that exclusively shows vendor counts by region"
-		],
-		"correctIndex": 0,
-		"explanation": "Auditors look for end-to-end traceability connecting declared control posture, supporting evidence, and resulting risk decisions.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management-workspace.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 30,
-		"prompt": "What is the primary objective of continuous monitoring in Third-Party Risk Management?",
-		"choices": [
-			"Replace all periodic assessments with contract renewals across operational workflows",
-			"Detect vendor risk posture changes rapidly and trigger on-time reassessment actions",
-			"Freeze risk ratings after onboarding in real implementations",
-			"Limit monitoring to financial risk exclusively in enterprise contexts"
-		],
-		"correctIndex": 1,
-		"explanation": "Continuous monitoring helps teams identify emerging risks between assessment cycles and act before exposure grows.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/concept/continuous-monitoring.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 31,
-		"prompt": "Which event should most likely trigger an out-of-cycle third-party reassessment?",
-		"choices": [
-			"A well-defined new marketing campaign launch under governance oversight",
-			"A well-defined routine invoice approval for practical execution",
-			"A well-defined material control failure, breach notification, or major compliance change",
-			"A well-defined vendor logo update across operational workflows"
-		],
-		"correctIndex": 2,
-		"explanation": "Significant control or compliance events indicate changed risk and justify reassessment outside the normal cadence.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/task/manage-third-party-monitoring-events.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 32,
-		"prompt": "How should monitoring signals be prioritized in TPRM operations?",
-		"choices": [
-			"By alphabetical vendor name for practical execution",
-			"By the number of open support tickets for measurable outcomes",
-			"By age of the vendor relationship exclusively",
-			"By risk impact, criticality tier, and confidence of the monitoring evidence in enterprise contexts"
-		],
-		"correctIndex": 3,
-		"explanation": "Risk-based prioritization ensures teams focus first on signals with the greatest potential business impact.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-tiering.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 33,
-		"prompt": "What process outcome indicates healthy TPRM monitoring governance?",
-		"choices": [
-			"Focus on monitoring alerts are triaged, documented, and linked to reassessment or mitigation workflows",
-			"Signals are logged but never dispositioned in real implementations",
-			"Focus on monitoring is paused during contract periods",
-			"All alerts are auto-closed weekly across operational workflows"
-		],
-		"correctIndex": 0,
-		"explanation": "Governance requires clear triage and auditable follow-through from signal detection to risk treatment.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management-workspace.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 34,
-		"prompt": "Which KPI best reflects effective third-party continuous monitoring?",
-		"choices": [
-			"Total number of users with TPRM roles in real implementations",
-			"Mean time to review and disposition high-risk monitoring alerts in enterprise contexts",
-			"Average vendor contract length for practical execution",
-			"Count of archived questionnaires for measurable outcomes"
-		],
-		"correctIndex": 1,
-		"explanation": "Response timeliness for high-risk alerts is a direct indicator of monitoring operational effectiveness.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-performance-metrics.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 35,
-		"prompt": "What is the main purpose of vendor tiering in Third-Party Risk Management?",
-		"choices": [
-			"Rank vendors exclusively by contract value under governance oversight",
-			"Replace due diligence with annual surveys for practical execution",
-			"Differentiate oversight and control rigor based on business criticality and risk exposure under governance oversight",
-			"Assign all vendors the same assessment depth across operational workflows"
-		],
-		"correctIndex": 2,
-		"explanation": "Tiering enables proportional governance so high-impact vendors receive stronger and more frequent risk scrutiny.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-tiering.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 36,
-		"prompt": "Which criterion is typically most important when assigning a vendor to a higher tier?",
-		"choices": [
-			"Number of vendor marketing emails across operational workflows",
-			"Frequency of travel to vendor sites under governance oversight",
-			"Vendor office decor standards for practical execution",
-			"Potential operational, regulatory, or data impact if the vendor fails for measurable outcomes"
-		],
-		"correctIndex": 3,
-		"explanation": "Tiering should reflect risk impact and dependency, not cosmetic or low-relevance attributes.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/task/configure-tiering-criteria.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 37,
-		"prompt": "How does effective tiering influence assessment cadence?",
-		"choices": [
-			"Higher tiers are assessed more frequently and with deeper control validation under governance oversight",
-			"Cadence is based exclusively on vendor response speed",
-			"All tiers apply one fixed reassessment schedule",
-			"Lower tiers are assessed more frequently than critical tiers for practical execution"
-		],
-		"correctIndex": 0,
-		"explanation": "Risk-based cadence aligns assessment effort with potential business impact.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/concept/c_AssessmentLifecycleTPRM.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 38,
-		"prompt": "What governance issue arises when tier assignments are not periodically reviewed?",
-		"choices": [
-			"Automatic increase in evidence quality for practical execution",
-			"Fewer reassessment triggers for high-risk vendors for measurable outcomes",
-			"Outdated tiering can misalign monitoring intensity with current risk and business dependency across operational workflows",
-			"Guaranteed improvement in SLA compliance under governance oversight"
-		],
-		"correctIndex": 2,
-		"explanation": "Vendor context changes over time, so stale tiering can create over- or under-governance.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/task/review-third-party-profiles.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 39,
-		"prompt": "Which outcome indicates a mature vendor tiering model?",
-		"choices": [
-			"Assessment depth, monitoring controls, and escalation paths are consistently mapped to each tier in enterprise contexts",
-			"Tiering is managed exclusively in offline spreadsheets traced from business requirement through deployed configuration. (CIS-TPRM-39-w1)",
-			"All vendors are marked as medium tier for measurable outcomes",
-			"Tier exceptions are undocumented for practical execution"
-		],
-		"correctIndex": 0,
-		"explanation": "Mature tiering translates into operationally consistent risk treatment and clear governance expectations.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management-workspace.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 40,
-		"prompt": "What is the primary purpose of formal third-party risk assessments?",
-		"choices": [
-			"Automatically approve all renewal requests in enterprise contexts",
-			"Collect vendor logos for procurement records in real implementations",
-			"Evaluate control effectiveness and residual risk to support informed risk decisions for measurable outcomes",
-			"Replace contract management processes for practical execution"
-		],
-		"correctIndex": 2,
-		"explanation": "Assessments provide a structured method to evaluate third-party controls and determine whether residual risk is acceptable.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-assessments.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 41,
-		"prompt": "Which approach best improves consistency across TPRM assessments?",
-		"choices": [
-			"Apply ad hoc questionnaires per assessor preference",
-			"Apply standardized assessment templates with control-domain mapping and scoring criteria",
-			"Assess exclusively high-revenue vendors across operational workflows",
-			"Skip residual risk calculations under governance oversight"
-		],
-		"correctIndex": 1,
-		"explanation": "Standardized templates reduce assessor variance and improve comparability across vendor populations.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/task/t_CreateVendorAssessmentQuestionnaire.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 42,
-		"prompt": "When should a third-party risk assessment be reopened or repeated?",
-		"choices": [
-			"After major control, regulatory, or service-scope changes that alter risk exposure in enterprise contexts",
-			"Whenever a ticket is opened in ITSM in real implementations",
-			"When the vendor requests less frequent oversight under governance oversight",
-			"Exclusively at contract termination across operational workflows"
-		],
-		"correctIndex": 0,
-		"explanation": "Material change events can invalidate prior conclusions and require refreshed risk evaluation.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/task/t_AssessThirdPartyRisk.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 43,
-		"prompt": "What is a key output of a mature TPRM assessment process?",
-		"choices": [
-			"An well-defined unsigned spreadsheet with no owner",
-			"A list of vendor support contacts exclusively",
-			"Automatic closure of all control gaps for practical execution",
-			"Documented residual risk, treatment decision, and accountable approver for measurable outcomes"
-		],
-		"correctIndex": 3,
-		"explanation": "Mature assessments end with clear, accountable risk treatment and acceptance documentation.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/concept/c_AssessmentLifecycleTPRM.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 44,
-		"prompt": "Which KPI best reflects assessment program effectiveness in TPRM?",
-		"choices": [
-			"Assessment completion timeliness and percentage of high-risk findings with active treatment plans in enterprise contexts",
-			"Count of vendors by country in real implementations distributed using content delivery rules for geo proximity. (CIS-TPRM-44-w1)",
-			"Average questionnaire page count for measurable outcomes",
-			"Number of contract attachments for practical execution"
-		],
-		"correctIndex": 0,
-		"explanation": "Timeliness and treatment follow-through show whether assessments are both operationally efficient and risk-reducing.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-performance-metrics.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 45,
-		"prompt": "Which contract element most directly supports third-party risk accountability in TPRM?",
-		"choices": [
-			"A well-defined clause defining control requirements, audit rights, and remediation timelines",
-			"A well-defined statement limiting all vendor communications to email",
-			"A well-defined requirement to renew the contract every month",
-			"A well-defined clause preventing any risk review after signing"
-		],
-		"correctIndex": 0,
-		"explanation": "Control expectations and enforceable remediation terms are core to managing third-party risk through contracts.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/vendor-risk-management/concept/vendor-risk-management-overview.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 46,
-		"prompt": "Before contract approval, what is the best TPRM practice for high-risk vendors?",
-		"choices": [
-			"Complete inherent and residual risk assessment with required legal and security sign-off in enterprise contexts",
-			"Approve exclusively based on lowest cost bid",
-			"Apply prior-year assessment results without review for measurable outcomes",
-			"Skip risk review to avoid delaying procurement across operational workflows"
-		],
-		"correctIndex": 0,
-		"explanation": "High-risk vendors should pass current risk evaluation and stakeholder approvals before contractual commitment.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/vendor-risk-management/task/conduct-vendor-assessments.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 47,
-		"prompt": "How should TPRM teams handle contract obligations tied to corrective actions?",
-		"choices": [
-			"Track obligations manually in a spreadsheet outside the platform in real implementations",
-			"Close obligations after contract signature regardless of status in enterprise contexts",
-			"Assign obligations exclusively to procurement, never to control owners",
-			"Store obligations as linked tasks with due dates and owners on the vendor record under governance oversight"
-		],
-		"correctIndex": 3,
-		"explanation": "Linked, assigned tasks provide traceability and operational follow-through on risk obligations.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/vendor-risk-management/task/manage-vendor-issues.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 48,
-		"prompt": "What contract approach best supports ongoing compliance monitoring in TPRM?",
-		"choices": [
-			"Require periodic evidence submissions and right-to-audit language for measurable outcomes",
-			"Apply one-time onboarding attestations exclusively across operational workflows",
-			"Limit reporting to contract expiration date under governance oversight",
-			"Remove control references to simplify legal review across operational workflows"
-		],
-		"correctIndex": 0,
-		"explanation": "Periodic attestations and audit rights create enforceable mechanisms for continuous oversight.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/vendor-risk-management/task/monitor-vendor-performance.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 49,
-		"prompt": "Which contracting outcome indicates strong TPRM maturity?",
-		"choices": [
-			"Contracts are executed before risk scoring across operational workflows",
-			"Contract templates include standardized risk clauses aligned to vendor criticality tiers under governance oversight",
-			"Vendors negotiate out all security controls in real implementations",
-			"Risk teams are excluded from contracting workflow in enterprise contexts"
-		],
-		"correctIndex": 1,
-		"explanation": "Tier-based standardized clauses align legal terms with risk exposure and governance requirements.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/vendor-risk-management/concept/vendor-tiering.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 50,
-		"prompt": "Which report is most useful for executive oversight in TPRM?",
-		"choices": [
-			"A well-defined dashboard showing vendor tier, open findings, and residual risk trends",
-			"A well-defined single monthly screenshot of one assessment",
-			"A report of inactive user accounts exclusively",
-			"A well-defined list of vendor logos by business unit"
-		],
-		"correctIndex": 0,
-		"explanation": "Executives need risk exposure and trend visibility across vendor populations and criticality tiers.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/vendor-risk-management/task/report-on-vendor-risk.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 51,
-		"prompt": "What TPRM metric best reflects remediation execution quality?",
-		"choices": [
-			"Percentage of overdue vendor issues by criticality in enterprise contexts",
-			"Count of archived questionnaires in real implementations",
-			"Number of vendor phone calls per week under governance oversight",
-			"Total contract page count across operational workflows"
-		],
-		"correctIndex": 0,
-		"explanation": "Overdue issues by severity reveal whether high-impact risk findings are being resolved on time.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/vendor-risk-management/task/manage-vendor-issues.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 52,
-		"prompt": "How should TPRM reporting distinguish inherent vs residual risk?",
-		"choices": [
-			"Combine both into one score with no context across operational workflows",
-			"Report residual risk exclusively for low-tier vendors",
-			"Show both values and the control impact that reduced risk in real implementations",
-			"Remove scoring for easier adoption in enterprise contexts"
-		],
-		"correctIndex": 2,
-		"explanation": "Displaying both scores clarifies risk treatment effectiveness and control coverage outcomes.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/risk-management/concept/risk-scoring.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 53,
-		"prompt": "What is the best reporting approach for upcoming reassessment workload?",
-		"choices": [
-			"Apply forward-looking reports of reassessments due by date and vendor tier",
-			"Limit planning to annual meetings across operational workflows",
-			"Suppress due dates to avoid escalations in enterprise contexts",
-			"Track exclusively completed assessments in real implementations"
-		],
-		"correctIndex": 0,
-		"explanation": "Due-date and tier-based forecasting enables proactive staffing and timely reassessment cycles.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/vendor-risk-management/task/schedule-vendor-assessments.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 54,
-		"prompt": "Which data governance action improves TPRM report reliability?",
-		"choices": [
-			"Delete historical risk snapshots quarterly across operational workflows",
-			"Report exclusively on new vendors for measurable outcomes",
-			"Allow free-form criticality values per analyst for practical execution",
-			"Standardize taxonomy for vendor criticality, issue status, and control domains for measurable outcomes"
-		],
-		"correctIndex": 3,
-		"explanation": "Standardized data definitions reduce interpretation drift and improve cross-report consistency.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 55,
-		"prompt": "Which role is typically accountable for overall TPRM program governance?",
-		"choices": [
-			"No defined role is required under governance oversight",
-			"TPRM program owner defining policy, standards, and oversight cadence across operational workflows",
-			"Any requester who submits a vendor onboarding form for measurable outcomes",
-			"Exclusively procurement interns for practical execution"
-		],
-		"correctIndex": 1,
-		"explanation": "A designated program owner ensures consistent policy execution and accountability across vendor lifecycles.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/vendor-risk-management/concept/vendor-risk-management-overview.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 56,
-		"prompt": "What is the best role separation in TPRM assessment workflows?",
-		"choices": [
-			"Assessor also self-approves all findings for practical execution",
-			"Distinct roles for assessor, control owner, and approver for measurable outcomes",
-			"Exclusively one role for all activities for practical execution",
-			"Approvals delegated to unrelated users under governance oversight"
-		],
-		"correctIndex": 1,
-		"explanation": "Segregation of duties reduces bias and strengthens review integrity.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 57,
-		"prompt": "Which TPRM role should own remediation execution for vendor issues?",
-		"choices": [
-			"Any read-exclusively user under governance oversight",
-			"System diagnostics user in real implementations across operational workflows",
-			"Portal guest account for measurable outcomes under governance oversight",
-			"Vendor manager or assigned issue owner with due-date accountability for practical execution"
-		],
-		"correctIndex": 3,
-		"explanation": "Named ownership with due dates ensures issues move from identification to closure.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/vendor-risk-management/task/manage-vendor-issues.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 58,
-		"prompt": "How should access be granted for TPRM reporting consumers?",
-		"choices": [
-			"Share raw tables without ACL controls for practical execution",
-			"Disable role-based access for dashboards for measurable outcomes",
-			"Grant full admin rights to all viewers in real implementations",
-			"Apply least-privilege role groups aligned to data sensitivity and reporting needs"
-		],
-		"correctIndex": 3,
-		"explanation": "Least-privilege access protects vendor risk data while enabling appropriate visibility.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_AccessControls.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 59,
-		"prompt": "Which sign of role-model maturity is most meaningful in TPRM?",
-		"choices": [
-			"No distinction between assessors and approvers for measurable outcomes",
-			"Frequent reassignment of issue ownership for practical execution",
-			"Clear RACI coverage with minimal approval bottlenecks in enterprise contexts",
-			"Untracked exceptions approved by email in real implementations"
-		],
-		"correctIndex": 2,
-		"explanation": "A clear RACI with efficient handoffs indicates sustainable governance and execution.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/risk-management/concept/risk-management-governance.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 60,
-		"prompt": "Which integration provides the most value at TPRM intake?",
-		"choices": [
-			"Focus on syncing office wallpaper settings for measurable outcomes",
-			"Focus on importing inactive user avatars for practical execution",
-			"Focus on disabling vendor records until contract close",
-			"Focus on connecting procurement onboarding events to automatically initiate vendor risk workflows"
-		],
-		"correctIndex": 3,
-		"explanation": "Procurement-triggered onboarding ensures risk evaluation starts early and consistently.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/vendor-risk-management/task/onboard-vendors.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 61,
-		"prompt": "How should external assessment data be integrated into TPRM?",
-		"choices": [
-			"Manually copied into comments exclusively across operational workflows",
-			"Imported without validation rules for measurable outcomes",
-			"Stored in personal spreadsheets in real implementations",
-			"Mapped into structured assessment evidence with source and timestamp lineage in enterprise contexts"
-		],
-		"correctIndex": 3,
-		"explanation": "Structured ingestion with lineage maintains auditability and comparability across assessments.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/vendor-risk-management/task/import-vendor-assessment-data.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 62,
-		"prompt": "What is the best way to integrate TPRM with issue management?",
-		"choices": [
-			"Create linked issue records with shared ownership, due dates, and status synchronization under governance oversight",
-			"Keep vendor findings in isolated tables across operational workflows",
-			"Track remediation through email exclusively in enterprise contexts",
-			"Close findings after data import in real implementations"
-		],
-		"correctIndex": 0,
-		"explanation": "Linked issue lifecycles connect risk identification to accountable remediation execution.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/risk-management/task/manage-risk-issues.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 63,
-		"prompt": "Which integration safeguard helps prevent duplicate vendor records?",
-		"choices": [
-			"Allow free-form vendor names exclusively for practical execution",
-			"Canonical matching and deduplication based on defined vendor identifiers in enterprise contexts",
-			"No matching rules during import for practical execution",
-			"Merge records manually once a year for measurable outcomes"
-		],
-		"correctIndex": 1,
-		"explanation": "Identifier-based matching protects data quality and downstream reporting accuracy.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_ImportSets.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 64,
-		"prompt": "What indicates a mature TPRM integration architecture?",
-		"choices": [
-			"No ownership for inbound data quality in enterprise contexts",
-			"Disconnected tools with manual reconciliation in real implementations",
-			"Documented data contracts, monitored interfaces, and exception handling workflows under governance oversight",
-			"Many one-off scripts with no monitoring across operational workflows"
-		],
-		"correctIndex": 2,
-		"explanation": "Mature integrations depend on clear contracts, observability, and managed failure paths.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/integrationhub/concept/integrationhub.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 65,
-		"prompt": "Which administrative action most improves long-term TPRM data quality?",
-		"choices": [
-			"Periodic governance reviews for vendor tiers, assessments, and issue taxonomy in real implementations",
-			"Focus on disabling mandatory fields for speed",
-			"Focus on deleting historical assessment records in real implementations",
-			"Focus on allowing free-form risk categories for measurable outcomes"
-		],
-		"correctIndex": 0,
-		"explanation": "Routine governance prevents taxonomy drift and preserves reporting reliability.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/vendor-risk-management/concept/vendor-risk-management-overview.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
-		"order": 66,
-		"prompt": "What is the best admin approach to TPRM role provisioning?",
-		"choices": [
-			"Apply role groups aligned to least-privilege responsibilities",
-			"Avoid role auditing across operational workflows in real implementations",
-			"Grant full admin to all stakeholders in enterprise contexts",
-			"Assign permissions exclusively by request email for practical execution"
-		],
-		"correctIndex": 0,
-		"explanation": "Least-privilege role groups reduce security risk while supporting operational needs.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
-		]
-	},
-	{
-		"trackCode": "CIS-TPRM",
 		"order": 67,
-		"prompt": "Which admin metric is most useful for TPRM platform health?",
+		"prompt": "A vendor must attach an updated SOC report to an open assessment from outside the corporate network. Where should they upload it?",
 		"choices": [
-			"Count of dashboard color changes across operational workflows",
-			"Number of profile photos uploaded under governance oversight",
-			"Assessment completion timeliness and issue closure backlog by severity in real implementations",
-			"Volume of archived notifications in enterprise contexts"
+			"Third-party portal Documents section linked to the assessment or engagement",
+			"Internal change request attachment tab visible only to CAB members",
+			"Employee Center profile page used for personal preference settings",
+			"Discovery credential store for MID Server authentication secrets"
 		],
-		"correctIndex": 2,
-		"explanation": "Timeliness and backlog trends show whether core risk operations are keeping pace.",
+		"correctIndex": 0,
+		"explanation": "The portal supports uploading and managing documents such as policies and compliance evidence tied to assessments and engagements.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-add-document-portal.html"
 		]
 	},
 	{
 		"trackCode": "CIS-TPRM",
 		"order": 68,
-		"prompt": "How should TPRM administrators manage configuration changes?",
+		"prompt": "A vendor prefers completing a lengthy questionnaire offline and importing answers later. What portal capability supports that workflow?",
 		"choices": [
-			"Apply controlled change lifecycle with testing and communication",
-			"Remove change records after deployment in real implementations",
-			"Allow each analyst to alter scoring logic live under governance oversight",
-			"Direct production edits without testing across operational workflows"
+			"Download Excel template from the portal, complete offline, then import responses",
+			"Export the CMDB to CSV and merge answers with discovery results",
+			"Clone the assessment record using an internal background script",
+			"Submit answers through the REST Table API using admin credentials"
 		],
 		"correctIndex": 0,
-		"explanation": "Governed changes preserve stability, traceability, and stakeholder confidence.",
+		"explanation": "Third parties can download spreadsheet templates from the portal, fill them offline, and import completed responses back into the assessment.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-reference.html"
 		]
 	},
 	{
 		"trackCode": "CIS-TPRM",
 		"order": 69,
-		"prompt": "What best indicates mature TPRM administration?",
+		"prompt": "The primary vendor contact must grant a colleague read access to a uploaded contract in the portal. Which portal feature controls that sharing?",
 		"choices": [
-			"Frequent emergency fixes and inconsistent scoring across operational workflows",
-			"Manual reporting exclusively for measurable outcomes",
-			"No ownership of integration failures for practical execution",
-			"Stable processes, low exception debt, and predictable assessment cycles for measurable outcomes"
+			"Permissions tab on the document where the primary contact adjusts read and write access",
+			"System property glide.security.administration requiring admin approval",
+			"ACL on sys_user_table that blocks all external role updates",
+			"Business rule on task that auto-assigns documents to the assessor queue"
 		],
-		"correctIndex": 3,
-		"explanation": "Operational stability and predictable governance cadence signal administrative maturity.",
+		"correctIndex": 0,
+		"explanation": "Document permissions in the portal let the primary contact manage which contacts can read or update shared files.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/risk-management/concept/risk-management-governance.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-add-document-portal.html"
 		]
 	},
 	{
 		"trackCode": "CIS-TPRM",
 		"order": 70,
-		"prompt": "Which governance element is most critical when launching an enterprise TPRM program?",
+		"prompt": "A vendor contact logs into the portal to check remediation work assigned after an assessment. Which items appear in their typical portal view?",
 		"choices": [
-			"A well-defined documented policy with defined risk ownership, review cadence, and escalation paths",
-			"Manual vendor review exclusively when incidents occur",
-			"An well-defined open intake queue with no ownership assignments",
-			"Decentralized templates with no common controls for measurable outcomes"
+			"Open assessments, related tasks, issues, and document requests for their engagement",
+			"Internal CAB agenda and pending change approvals for all departments",
+			"Full CMDB dependency map including unrelated infrastructure CIs",
+			"Employee salary bands and HR case details for corporate staff"
 		],
 		"correctIndex": 0,
-		"explanation": "TPRM governance starts with explicit accountability, policy, and escalation structure to drive consistent risk decisions.",
+		"explanation": "Portal users see assessments, tasks, issues, and evidence requests scoped to their third-party relationship.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/concept/policy-and-compliance.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-reference.html"
 		]
 	},
 	{
 		"trackCode": "CIS-TPRM",
 		"order": 71,
-		"prompt": "For enterprise TPRM governance, what is the best way to standardize vendor risk assessments?",
+		"prompt": "Legal uploads a revised data processing agreement and needs prior versions retained for audit. Which portal document feature supports that?",
 		"choices": [
-			"Allow each department to define unrelated scoring scales under governance oversight",
-			"Replace assessments with annual email attestations across operational workflows",
-			"Score exclusively critical vendors and skip the rest",
-			"Apply a common control framework and scoring model across business units"
+			"Version history tab with Add version to upload successive document revisions",
+			"Single-use attachment field that overwrites prior files without retention",
+			"Email forwarding rule that stores files only in personal inboxes",
+			"Manual export to spreadsheet stored on a local workstation share"
 		],
-		"correctIndex": 3,
-		"explanation": "A shared framework and scoring method enables comparable risk posture and enterprise-level reporting.",
+		"correctIndex": 0,
+		"explanation": "Portal document management maintains version history so teams can review and add new revisions over time.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-management.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-add-document-portal.html"
 		]
 	},
 	{
 		"trackCode": "CIS-TPRM",
 		"order": 72,
-		"prompt": "Which KPI best reflects maturity in TPRM program governance?",
+		"prompt": "An uploaded policy must be referenced by an open remediation task and the parent assessment. How should the vendor link it in the portal?",
 		"choices": [
-			"Higher count of unmanaged spreadsheet inventories across operational workflows",
-			"Fewer governance meetings regardless of risk levels under governance oversight",
-			"Reduction in overdue vendor remediation tasks with tracked exception approvals for practical execution",
-			"Increase in unassigned assessment records for measurable outcomes"
+			"References section to associate the document with tasks, issues, engagements, or assessments",
+			"UI macro on the homepage that embeds unrelated knowledge articles",
+			"System log entry created by writing to syslog_event manually",
+			"Import set row staged on sys_import_set without field mapping"
 		],
-		"correctIndex": 2,
-		"explanation": "Mature TPRM programs demonstrate disciplined remediation follow-through and governed exception handling.",
+		"correctIndex": 0,
+		"explanation": "Document references connect uploaded files to assessments, engagements, issues, and tasks for traceable evidence linkage.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-add-document-portal.html"
 		]
 	},
 	{
 		"trackCode": "CIS-TPRM",
 		"order": 73,
-		"prompt": "A global business unit wants to bypass central TPRM controls for speed. What is the best governance response?",
+		"prompt": "After upgrading to Smart Assessment Engine questionnaires, vendors report navigation issues in the legacy portal view. What deployment consideration applies?",
 		"choices": [
-			"Move all assessments to ad hoc email requests under governance oversight",
-			"Enforce baseline controls while allowing approved regional extensions under central oversight across operational workflows",
-			"Allow full local autonomy with no central reporting for measurable outcomes",
-			"Suspend all third-party onboarding until year-end for practical execution"
+			"Third-party portal supports SAE assessments with updated section-based navigation",
+			"SAE questionnaires must be completed only by internal assessors in the workspace",
+			"Portal access is disabled automatically for all SAE-enabled templates",
+			"Vendors must use the CMDB workspace to submit SAE responses"
 		],
-		"correctIndex": 1,
-		"explanation": "Federated execution with mandatory baseline controls balances agility and enterprise risk consistency.",
+		"correctIndex": 0,
+		"explanation": "TPRM portal enhancements support Smart Assessment Engine delivery so external contacts can complete section-based questionnaires.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-sae-using.html"
 		]
 	},
 	{
 		"trackCode": "CIS-TPRM",
 		"order": 74,
-		"prompt": "Which governance practice most improves executive visibility in TPRM?",
+		"prompt": "A due diligence request finishes all assessments and needs formal stakeholder sign-off before contract execution. Which state transition begins that approval path?",
 		"choices": [
-			"A well-defined recurring board-level dashboard for inherent risk, residual risk, and remediation aging",
-			"One-time annual exports without trend history under governance oversight",
-			"Vendor lists sorted exclusively by creation date",
-			"Risk scores hidden from non-analyst stakeholders in enterprise contexts"
+			"Ready for TPRM approval followed by request approval entering Awaiting approval",
+			"Draft assessment state that deletes all questionnaire responses",
+			"Canceled engagement state that archives the vendor without review",
+			"Closed complete incident state on unrelated security tickets"
 		],
 		"correctIndex": 0,
-		"explanation": "Executives need trend-based risk and remediation transparency to steer third-party risk decisions.",
+		"explanation": "After assessments close, the due diligence request moves to Ready for TPRM approval and then Awaiting approval when sign-off is requested.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html",
-			"https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-approving.html"
 		]
 	},
 	{
 		"trackCode": "CIS-TPRM",
 		"order": 75,
-		"prompt": "In a mature TPRM workflow, what should happen when a high-risk vendor misses a remediation due date?",
+		"prompt": "Approvers receive email notification that a due diligence request requires their decision. Which state is the request in when they act?",
 		"choices": [
-			"Downgrade the vendor tier to avoid escalation for measurable outcomes",
-			"Trigger governed escalation with risk owner visibility and revised due-date accountability for practical execution",
-			"Move the issue to informational status exclusively",
-			"Automatically close the issue and wait for next annual assessment across operational workflows"
+			"Awaiting approval while assigned approvers review questionnaire and document evidence",
+			"New vendor onboarding before any assessments have been created",
+			"Retired template state on archived questionnaire definitions",
+			"Closed skipped on assessments that were never sent to the vendor"
 		],
-		"correctIndex": 1,
-		"explanation": "Overdue high-risk remediation requires escalation and accountable follow-up, not silent deferral.",
+		"correctIndex": 0,
+		"explanation": "Requesting approval moves the due diligence record to Awaiting approval and notifies assigned approvers to review submitted evidence.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-management.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-approving.html"
 		]
 	},
 	{
 		"trackCode": "CIS-TPRM",
 		"order": 76,
-		"prompt": "What is the strongest reason to maintain both inherent and residual risk in TPRM records?",
+		"prompt": "Who must hold appropriate TPRM authority to approve or reject a due diligence request in Vendor Management Workspace?",
 		"choices": [
-			"To clearly compare vendor pricing against contract length",
-			"To clearly avoid reassessment scheduling under governance oversight",
-			"To clearly reduce the number of required questionnaires",
-			"To clearly distinguish baseline exposure from post-control exposure for governance decisions"
+			"Member of the Third-party risk manager group with sn_vdr_risk_asmt.vendor_risk_manager",
+			"Any authenticated user with the snc_read_only role across all scopes",
+			"Catalog fulfiller with wf_workflow_admin on service catalog items",
+			"Discovery administrator with discovery_admin on configuration items"
 		],
-		"correctIndex": 3,
-		"explanation": "Separating inherent and residual risk shows whether controls meaningfully reduce exposure.",
+		"correctIndex": 0,
+		"explanation": "Due diligence approvals require TPR manager group membership so authorized stakeholders can accept or reject the request.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-management.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-approving.html"
 		]
 	},
 	{
 		"trackCode": "CIS-TPRM",
 		"order": 77,
-		"prompt": "What intake design most improves TPRM assessment consistency across business units?",
+		"prompt": "A due diligence owner attempts to request approval while one external assessment remains open. What prerequisite blocks that action?",
 		"choices": [
-			"Email-exclusively intake with optional risk fields under governance oversight",
-			"A well-defined standardized onboarding questionnaire with tier-based branching and mandatory ownership",
-			"Assessment kickoff exclusively after contract signature under governance oversight",
-			"Unique forms per business unit without shared controls across operational workflows"
+			"All linked assessments must be closed before entering Ready for TPRM approval",
+			"Every vendor contact must hold the security_admin role",
+			"The company record vendor flag must be set to false",
+			"All CMDB relationships must be deleted from the engagement"
 		],
-		"correctIndex": 1,
-		"explanation": "Standardized, tier-aware intake creates repeatable risk capture while preserving proportional effort.",
+		"correctIndex": 0,
+		"explanation": "The due diligence request enters Ready for TPRM approval only after all assessments in the package have been closed.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/concept/policy-and-compliance.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-approving.html"
 		]
 	},
 	{
 		"trackCode": "CIS-TPRM",
 		"order": 78,
-		"prompt": "Which reporting view gives executives the clearest TPRM oversight?",
+		"prompt": "An auditor asks whether a resolved Third-party Risk Issue still appears in active issue queues. How does TPRM treat issues in the Closed state?",
 		"choices": [
-			"A well-defined one-time export of completed questionnaires",
-			"Trend dashboard of high residual risk vendors, overdue remediation, and upcoming reassessments under governance oversight",
-			"Vendor list sorted alphabetically in real implementations activated only when dependency health checks succeed. (CIS-TPRM-78-w2)",
-			"Count of questionnaire questions per template in enterprise contexts"
+			"Third-party Risk Issues in Closed state are inactive and excluded from active work queues",
+			"Closed issues remain the highest priority in all open issue dashboards",
+			"Closed issues automatically reopen every thirty days without user action",
+			"Closed issues convert to change requests pending CAB review"
 		],
-		"correctIndex": 1,
-		"explanation": "Executives need trend and exposure signals tied to remediation and reassessment readiness.",
+		"correctIndex": 0,
+		"explanation": "Issues on sn_vdr_risk_asmt_issue become inactive when moved to Closed, removing them from active remediation tracking.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html",
-			"https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
 		]
 	},
 	{
 		"trackCode": "CIS-TPRM",
 		"order": 79,
-		"prompt": "A new business sponsor requests onboarding a vendor outside policy. What is the best TPRM response?",
+		"prompt": "A new third-party risk issue is created from a failed control on an assessment. Which initial lifecycle state does it typically enter?",
 		"choices": [
-			"Apply policy-based risk intake with documented exception approval if required under governance oversight",
-			"Delay onboarding until annual review season across operational workflows",
-			"Bypass tiering to speed contracting in enterprise contexts",
-			"Approve immediately and document risk later in real implementations"
+			"New before the assessor analyzes findings and defines remediation actions",
+			"Closed complete immediately upon record insert",
+			"Implementing change state on the standard change record",
+			"Retired archival state on the questionnaire template"
 		],
 		"correctIndex": 0,
-		"explanation": "Policy-aligned intake and governed exceptions preserve control without blocking justified business urgency.",
+		"explanation": "Third-party risk issues begin in New and progress through analysis, optional vendor collaboration, review, and closure.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/concept/policy-and-compliance.html",
-			"https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-workflow-in-workspace.html"
 		]
 	},
 	{
 		"trackCode": "CIS-TPRM",
 		"order": 80,
-		"prompt": "Which vendor characteristic usually warrants the highest TPRM assessment rigor?",
+		"prompt": "An assessor identifies a control gap requiring vendor remediation with a due date. Which record type tracks that execution work?",
 		"choices": [
-			"Temporary contract length under 30 days under governance oversight",
-			"Vendor headquartered in the same city across operational workflows",
-			"Low annual spend with no data access in enterprise contexts",
-			"Access to sensitive customer data and critical business services in real implementations"
+			"Remediation task on sn_vdr_risk_asmt_task assigned to the vendor contact or owner",
+			"Problem task on problem_task used for permanent incident fixes",
+			"Catalog task on sc_task for standard hardware fulfillment",
+			"On-call roster entry on on_call_schedule for pager rotation"
 		],
-		"correctIndex": 3,
-		"explanation": "Data sensitivity and service criticality drive inherent risk and require stronger assessment controls.",
+		"correctIndex": 0,
+		"explanation": "TPRM remediation tasks on sn_vdr_risk_asmt_task carry assigned owners, due dates, and linkage back to the parent issue.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-management.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-workflow-in-workspace.html"
 		]
 	},
 	{
 		"trackCode": "CIS-TPRM",
 		"order": 81,
-		"prompt": "Which reassessment trigger is most appropriate in TPRM?",
+		"prompt": "All remediation tasks linked to a third-party risk issue reach Closed status. What common platform behavior follows?",
 		"choices": [
-			"Vendor logo update for practical execution across operational workflows",
-			"Material change in vendor control posture or a significant incident for measurable outcomes",
-			"Annual finance close across operational workflows for practical execution",
-			"Any internal team reorganization under governance oversight"
+			"The parent issue can auto-close once every related remediation task is complete",
+			"The vendor company record is deleted from core_company automatically",
+			"All assessments reopen and reset questionnaire scores to zero",
+			"The due diligence request skips approval and executes contracts immediately"
 		],
-		"correctIndex": 1,
-		"explanation": "Risk-driven triggers ensure reassessment cadence reflects meaningful changes in exposure.",
+		"correctIndex": 0,
+		"explanation": "Issue management can automatically close the parent issue when all associated remediation tasks are finished.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-management.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-workflow-in-workspace.html"
 		]
 	},
 	{
 		"trackCode": "CIS-TPRM",
 		"order": 82,
-		"prompt": "What is the best control to prevent duplicate third-party records in TPRM?",
+		"prompt": "Your team wants remediation tasks created automatically when an assessment score falls below threshold. Which tool implements that logic?",
 		"choices": [
-			"Enforce onboarding validation keys and governed master-vendor ownership under governance oversight",
-			"Create one vendor record per questionnaire response across operational workflows",
-			"Turn off integration imports for measurable outcomes",
-			"Allow vendor creation from any table without validation for practical execution"
+			"Flow Designer flow triggered on assessment completion conditions",
+			"Manual UI policy that hides the save button on vendor records",
+			"Report designer schedule that emails PDFs without record updates",
+			"Discovery pattern that classifies unknown TCP ports on servers"
 		],
 		"correctIndex": 0,
-		"explanation": "Master data controls and unique keys preserve reporting accuracy and assessment continuity.",
+		"explanation": "Flow Designer can automate task creation when assessment results or issue conditions meet defined criteria.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/data-management.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-workflow-in-workspace.html"
 		]
 	},
 	{
 		"trackCode": "CIS-TPRM",
 		"order": 83,
-		"prompt": "Which operating model best balances central governance with business-unit agility in TPRM?",
+		"prompt": "An issue requires the vendor to review findings before internal closure. Which issue state exposes the record in the third-party portal?",
 		"choices": [
-			"Completely independent TPRM processes in every unit in real implementations",
-			"Assess vendors exclusively when incidents occur under governance oversight",
-			"No policy baseline, exclusively local contracts in real implementations",
-			"Central standards with permitted local extensions under approval under governance oversight"
+			"Submitted to Vendor indicating the vendor can view and respond in the portal",
+			"Analyze while the record remains hidden from all external contacts",
+			"Draft template on the questionnaire with no issue linkage",
+			"Retired on the scoring rule with aggregation disabled"
 		],
-		"correctIndex": 3,
-		"explanation": "Federated execution under common controls preserves comparability while allowing justified variation.",
+		"correctIndex": 0,
+		"explanation": "Submitted to Vendor makes the issue visible to the third-party contact for collaboration during remediation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/concept/policy-and-compliance.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-workflow-in-workspace.html"
 		]
 	},
 	{
 		"trackCode": "CIS-TPRM",
 		"order": 84,
-		"prompt": "Which KPI trend most clearly indicates improving TPRM execution?",
+		"prompt": "Before an issue moves to Closed, which persona validates that remediation evidence meets policy expectations?",
 		"choices": [
-			"Reduction in overdue high-risk remediation and better reassessment timeliness under governance oversight",
-			"Growth in duplicate vendor entries across operational workflows",
-			"Increase in unassigned vendor records in enterprise contexts",
-			"Higher number of ad hoc exceptions without review in real implementations"
+			"TPRM reviewer or assessor confirming resolution during the Review state",
+			"External guest user with no assigned TPRM roles on the instance",
+			"Discovery operator updating CI classification attributes only",
+			"Knowledge subscriber approving article retirement schedules"
 		],
 		"correctIndex": 0,
-		"explanation": "TPRM maturity is visible when high-risk findings are remediated on time and reassessments stay current.",
+		"explanation": "Review state enables TPRM reviewers to validate remediation before the issue is closed complete or incomplete.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
-			"https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-roles.html"
 		]
 	},
 	{
 		"trackCode": "CIS-TPRM",
 		"order": 85,
-		"prompt": "A vendor is business-critical but currently medium residual risk. What is the best TPRM action?",
+		"prompt": "Leadership asks how Third-party Risk Management fits within the broader ServiceNow GRC product suite. Which description is accurate?",
 		"choices": [
-			"Lower monitoring frequency because residual risk is not high in real implementations",
-			"Close all open findings and revisit at contract renewal in enterprise contexts",
-			"Increase reassessment cadence and monitor remediation milestones with business owner visibility for practical execution",
-			"Remove the vendor from executive reporting for measurable outcomes"
+			"TPRM is a Governance, Risk, and Compliance application for third-party assessment and monitoring",
+			"TPRM is a standalone ITSM module replacing incident and problem management",
+			"TPRM is an HR application for employee performance review cycles",
+			"TPRM is a discovery plugin that maps network topology without risk records"
 		],
-		"correctIndex": 2,
-		"explanation": "Business criticality can justify heightened monitoring even when residual risk is moderate.",
+		"correctIndex": 0,
+		"explanation": "Third-party Risk Management is delivered as part of the GRC suite alongside risk, compliance, and policy capabilities.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-management.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-reference.html"
 		]
 	},
 	{
 		"trackCode": "CIS-TPRM",
 		"order": 86,
-		"prompt": "What is the strongest reason to tie TPRM findings to issue management workflows?",
+		"prompt": "A risk manager wants vendor findings registered in the enterprise risk register for consolidated reporting. How are those risks represented in GRC?",
 		"choices": [
-			"To clearly convert all findings into informational records",
-			"To clearly eliminate reassessment requirements for practical execution",
-			"To clearly track remediation accountability, due dates, and closure evidence consistently",
-			"To clearly avoid assigning accountable owners across operational workflows"
+			"Risk Statement records on sn_risk_risk linked from third-party engagements",
+			"Incident records on incident with priority one for every vendor finding",
+			"Catalog items on sc_cat_item representing each vendor contract line",
+			"User preference rows on sys_user_preference storing risk scores"
 		],
-		"correctIndex": 2,
-		"explanation": "Issue workflows create traceability and governance for third-party risk remediation lifecycle.",
+		"correctIndex": 0,
+		"explanation": "The TPRM data model relates engagements to Risk records so third-party exposure rolls into enterprise risk management.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-management.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
 		]
 	},
 	{
 		"trackCode": "CIS-TPRM",
 		"order": 87,
-		"prompt": "Which dashboard dimension is most important for prioritizing third-party remediation workload?",
+		"prompt": "Which GRC integration points help TPRM teams monitor vendor risk and control compliance over time? (Choose two.)",
 		"choices": [
-			"Residual risk tier and remediation aging across operational workflows",
-			"Country of headquarters exclusively for measurable outcomes",
-			"Vendor creation date for practical execution across operational workflows",
-			"Number of questionnaire sections completed for measurable outcomes"
+			"Risk Management risk statements tied to third-party engagements",
+			"Policy and Compliance controls on sn_compliance_control linked to engagements",
+			"Facilities space management floor plans for office seating assignments",
+			"Project portfolio cost plan lines for capital expenditure forecasting"
 		],
 		"correctIndex": 0,
-		"explanation": "Risk tier combined with aging exposes where unresolved third-party issues create the highest urgency.",
+		"correctIndexes": [
+			0,
+			1
+		],
+		"questionType": "multi",
+		"explanation": "Engagements connect to Risk and Control components so teams monitor residual risk and control compliance alongside assessments.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html",
-			"https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
 		]
 	},
 	{
 		"trackCode": "CIS-TPRM",
 		"order": 88,
-		"prompt": "What is the best reason to map TPRM controls to policy requirements?",
+		"prompt": "Compliance wants to verify that a vendor engagement satisfies mapped internal controls after assessment. Which related GRC record should they review?",
 		"choices": [
-			"To clearly eliminate need for residual risk scoring",
-			"To clearly shorten questionnaires by removing evidence fields",
-			"To strengthen traceability from risk findings to governance obligations",
-			"To clearly avoid remediation ownership assignments across operational workflows"
+			"Control record on sn_compliance_control associated with the engagement",
+			"OAuth application registry entry for REST integration consumers",
+			"Email filter definition on sys_email_filter for inbound routing",
+			"Widget instance on sp_widget for employee portal branding"
 		],
-		"correctIndex": 2,
-		"explanation": "Policy-control traceability strengthens auditability and clarifies why remediation actions are required.",
+		"correctIndex": 0,
+		"explanation": "Engagements relate to Control records from Policy and Compliance Management for control testing and attestation alignment.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/concept/policy-and-compliance.html",
-			"https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
 		]
 	},
 	{
 		"trackCode": "CIS-TPRM",
 		"order": 89,
-		"prompt": "Which enterprise KPI set best demonstrates TPRM program health?",
+		"prompt": "Continuous monitoring detects a vendor control regression between assessment cycles. Which integrated response best aligns with GRC practice?",
 		"choices": [
-			"Vendors by country and questionnaire length in real implementations",
-			"High-risk vendor count, overdue remediation aging, and on-time reassessment rate in enterprise contexts",
-			"Number of users with admin role for practical execution",
-			"Daily volume of vendor profile edits for measurable outcomes"
+			"Create or update risk and issue records and trigger reassessment or compliance review workflows",
+			"Delete the vendor from core_company and purge all historical assessments",
+			"Disable all ACLs on external tables so vendors can self-remediate silently",
+			"Convert monitoring alerts into catalog items for unrelated software orders"
 		],
-		"correctIndex": 1,
-		"explanation": "These measures capture risk exposure, remediation discipline, and assessment lifecycle reliability.",
+		"correctIndex": 0,
+		"explanation": "Monitoring signals should feed GRC risk and issue processes with governed reassessment and compliance follow-up.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
-			"https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-reference.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 0,
-		"prompt": "A vulnerability coordinator must open a formal workflow to engage an external software vendor about a reported security defect. Which documentation topic aligns with coordinating third-party security issues in Vulnerability Response?",
+		"questionType": "multi",
+		"prompt": "Which two capabilities describe how ServiceNow Vulnerability Response ingests external vulnerability knowledge? (Choose two.)",
 		"choices": [
-			"Focus on escalating a security issue to a third party",
-			"Focus on building a CMDB discovery pattern for printers",
-			"Focus on designing a catalog item for laptop requests",
-			"Focus on configuring password reset policies for end users"
+			"Integrates with the National Vulnerability Database to import authoritative CVE and CPE metadata into the instance",
+			"Integrates with third-party vulnerability scanners to import detection findings about assets in the environment",
+			"Replaces CMDB discovery by storing all asset records exclusively inside scanner vendor databases",
+			"Automatically closes every imported finding without analyst review or remediation task creation"
 		],
 		"correctIndex": 0,
-		"explanation": "Vulnerability Response product documentation includes a task for escalating security issues to third parties, which supports vendor coordination outside your organization.",
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Vulnerability Response pulls vulnerability knowledge from the NVD and from third-party scanner integrations, then reconciles detections with CMDB assets for prioritized remediation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/yokohama-security-management/page/product/vulnerability-response/task/escalate-sec-issue-3rdparty.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 1,
-		"prompt": "Your team imports scanner findings that reference CVE identifiers not yet represented for a third-party product entry. Which documented task helps associate CVE information with third-party vulnerability data?",
+		"prompt": "A security architect must connect scanner detections to CMDB assets and route remediation work to IT operations teams. Which application should they implement?",
 		"choices": [
-			"Publish a knowledge article for password policies for measurable outcomes",
-			"Create a procurement contract renewal record for practical execution",
-			"Add a CVE entry related to a third-party vulnerability in enterprise contexts",
-			"Configure single sign-on for mobile email clients in real implementations"
+			"Vulnerability Response within the Security Operations suite on the ServiceNow platform",
+			"Hardware Asset Management for tracking procurement lifecycle events on end-user laptops",
+			"Customer Service Management for routing external consumer portal cases to fulfillment groups",
+			"Field Service Management for dispatching mobile technicians to repair physical hardware assets"
 		],
-		"correctIndex": 2,
-		"explanation": "The Vulnerability Response documentation describes adding a CVE entry related to a third-party vulnerability so findings can be normalized against authoritative CVE metadata.",
+		"correctIndex": 0,
+		"explanation": "Vulnerability Response is part of the Security Operations suite and automates the flow from scanner and NVD intake through investigation to IT remediation execution.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-security-management/page/product/vulnerability-response/task/add-cve2thirdparty-entry.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 2,
-		"prompt": "Leadership wants to drive remediation as grouped vulnerability work rather than only isolated tickets. Which documented remediation activity focuses on vulnerability groups?",
+		"questionType": "multi",
+		"prompt": "Which two statements accurately describe NIST National Vulnerability Database (NVD) vulnerability data feeds? (Choose two.)",
 		"choices": [
-			"Archive closed incidents older than seven days in real implementations",
-			"Rebuild all service maps from network traffic captures in enterprise contexts",
-			"Remediate vulnerability groups for practical execution",
-			"Rotate database encryption keys manually each night for measurable outcomes"
+			"Feed files organize CVE records by the first four digits of the CVE identifier (for example, CVE-2024)",
+			"Each feed contains only vulnerabilities that share the same CVSS base score numeric value",
+			"Modified feeds include vulnerabilities that were published or updated within the previous eight days",
+			"NVD feeds exclude CPE data entirely and cannot be used with Vulnerability Response enrichment"
 		],
-		"correctIndex": 2,
-		"explanation": "Vulnerability Response includes guidance for remediating vulnerability groups, which helps teams prioritize and execute remediation at an aggregated risk level.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			2
+		],
+		"explanation": "NVD year feeds group CVE data by the four-digit year prefix in the identifier, and the modified feed tracks recently published or changed entries within an eight-day window.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-security-management/page/product/vulnerability-response/task/remediate-vuln-groups.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/nvd-vuln-integration.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 3,
-		"prompt": "An operations engineer needs to work remediation tasks from the IT Remediation Workspace using Vulnerability Response records. Which task documentation should they follow first?",
+		"prompt": "In Application Vulnerability Response, which persona monitors application security posture and coordinates remediation with development teams from the Security Champion Overview dashboard?",
 		"choices": [
-			"Configure discovery schedules for IP telephony subnets under governance oversight",
-			"Create a new procurement vendor record across operational workflows",
-			"Apply remediation task records in the IT Remediation Workspace",
-			"Import hardware asset leases from a spreadsheet in real implementations"
+			"Security Champion persona aligned with application owners and development stakeholders",
+			"Vulnerability Admin persona responsible for installing store integrations on the instance",
+			"Change Manager persona who approves standard change models for infrastructure patching",
+			"Catalog Manager persona who publishes service catalog items for employee onboarding requests"
 		],
-		"correctIndex": 2,
-		"explanation": "The Vulnerability Response documentation explains how remediation task records are used within the IT Remediation Workspace to coordinate remediation execution.",
+		"correctIndex": 0,
+		"explanation": "The Security Champion persona in Application Vulnerability Response uses the Security Champion Overview dashboard to track scanned applications and drive remediation with development teams.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/task/vr-ws-remed-task.html"
+			"https://www.servicenow.com/docs/r/security-management/application-vulnerability-response/avr-landing.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 4,
-		"prompt": "Your container platform team must address image-level findings using Container Vulnerability Response. Which concept page supports remediation-oriented guidance for that product area?",
+		"prompt": "Which statement distinguishes Application Vulnerability Response from Container Vulnerability Response?",
 		"choices": [
-			"Tune predictive intelligence for HR cases across operational workflows",
-			"Configure outbound REST message authentication under governance oversight",
-			"Remediate container vulnerabilities for practical execution in real implementations",
-			"Design employee onboarding checklists for measurable outcomes"
+			"AVR imports application vulnerable items (AVITs) for software application findings, while CVR imports container vulnerable items (CVITs) for container image findings",
+			"AVR requires Kubernetes discovery for all imports, while CVR only supports mainframe vulnerability scanning integrations",
+			"AVR automatically deletes CMDB CIs when findings arrive, while CVR creates incident records for every CVIT record",
+			"AVR is included in the base ITSM subscription, while CVR cannot integrate with third-party container security products"
 		],
-		"correctIndex": 2,
-		"explanation": "Container Vulnerability Response documentation includes conceptual guidance on remediating container vulnerabilities, aligning remediation practices with containerized workloads.",
+		"correctIndex": 0,
+		"explanation": "Application Vulnerability Response manages AVITs for application-layer findings, whereas Container Vulnerability Response manages CVITs for vulnerabilities detected in container images and runtime deployments.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-security-management/page/product/container-vulnerability-response/concept/remediate-cvr.html"
+			"https://www.servicenow.com/docs/r/security-management/application-vulnerability-response/avr-landing.html",
+			"https://www.servicenow.com/docs/r/security-management/container-vulnerability-response/cvr-landing.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 5,
-		"prompt": "In Vulnerability Response, what is the primary objective of vulnerability intake?",
+		"prompt": "Which workspace does the vulnerability analyst persona primarily use to monitor findings and initiate remediation workflows?",
 		"choices": [
-			"Close vulnerabilities automatically after import under governance oversight",
-			"Collect and normalize scanner findings into actionable vulnerability records across operational workflows",
-			"Ignore duplicate findings across sources for measurable outcomes",
-			"Create incidents for every scan result for practical execution"
+			"Vulnerability Manager Workspace for monitoring vulnerabilities and creating remediation tasks",
+			"IT Remediation Workspace for completing assigned remediation tasks on owned configuration items",
+			"Agent Workspace for handling live chat conversations from external customer portal users",
+			"Dispatcher Workspace for scheduling field service agents to repair physical hardware assets"
 		],
-		"correctIndex": 1,
-		"explanation": "Intake focuses on bringing external findings into VR with consistent normalization and deduplication for triage.",
+		"correctIndex": 0,
+		"explanation": "The vulnerability analyst persona monitors vulnerability exposure and initiates remediation from the Vulnerability Manager Workspace rather than executing remediation tasks directly.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/concept/vulnerability-response-intake.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 6,
-		"prompt": "Why is source integration quality important during vulnerability intake?",
+		"prompt": "A remediation owner in IT Operations must work assigned fix tasks for vulnerable configuration items. Which workspace should they use?",
 		"choices": [
-			"It allows analysts to bypass state transitions for practical execution",
-			"It removes the need for remediation tasks for measurable outcomes",
-			"It confirms scan data includes reliable asset and finding context used in downstream prioritization",
-			"It guarantees zero false positives under governance oversight"
+			"IT Remediation Workspace to view and complete remediation tasks assigned to their team",
+			"Vulnerability Manager Workspace to configure NVD integrations and scanner import schedules",
+			"Security Incident Response Workspace to manage major security incident war room operations",
+			"Performance Analytics Workspace to design KPI indicator sources for HR onboarding metrics"
 		],
-		"correctIndex": 2,
-		"explanation": "Good source data quality improves correlation, ownership mapping, and triage confidence.",
+		"correctIndex": 0,
+		"explanation": "Remediation owners execute fix work from the IT Remediation Workspace, while vulnerability analysts monitor and initiate work from the Vulnerability Manager Workspace.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/task/configure-vulnerability-integrations.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 7,
-		"prompt": "What intake behavior reduces duplicate remediation effort in VR?",
+		"prompt": "During initial Vulnerability Response setup, where should administrators assign persona roles so users can access the correct VR workspaces and integrations?",
 		"choices": [
-			"With correlation and deduplication logic across repeated scanner observations",
-			"Focus on deleting previous findings before each scan cycle",
-			"Focus on disabling normalization rules under governance oversight",
-			"Focus on creating separate vulnerability items for identical findings on the same asset each import"
+			"Setup Assistant persona assignment step for Vulnerability Response roles and granular permissions",
+			"Update Set preview pane before committing unrelated platform UI theme customizations",
+			"Catalog item record producer variables for employee laptop request fulfillment workflows",
+			"Discovery schedule configuration for scanning non-production network subnets only"
 		],
 		"correctIndex": 0,
-		"explanation": "Correlation and deduplication prevent duplicate work and keep vulnerability state history coherent.",
+		"explanation": "Persona and granular role assignment is a first configuration step in Vulnerability Response Setup Assistant and defines what users can see and do across VR and its integrations.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/concept/vulnerability-grouping-and-correlation.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vr-persona-overview.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 8,
-		"prompt": "Which data attribute is most critical to preserve at intake for effective assignment?",
+		"prompt": "Compared with the remediation owner persona, which granular roles typically expand a vulnerability analyst's access to all vulnerable item and remediation task records?",
 		"choices": [
-			"Scanner UI color theme across operational workflows",
-			"Dashboard widget layout preference under governance oversight",
-			"Analyst personal priority notes for practical execution",
-			"Asset ownership and CI relationship details for measurable outcomes"
+			"sn_vul.read_all and sn_vul.write_all granular roles on the vulnerability analyst persona",
+			"sn_vul.read_assigned and sn_vul.write_assigned granular roles inherited by every user",
+			"itil_admin and security_admin roles that replace all Vulnerability Response persona assignments",
+			"catalog_admin and workflow_admin roles that govern service catalog item publishing only"
 		],
-		"correctIndex": 3,
-		"explanation": "Assignment and accountability depend on accurate asset-to-owner and CI mappings captured during intake.",
+		"correctIndex": 0,
+		"explanation": "Remediation owners typically have read_assigned and write_assigned access, while vulnerability analysts add read_all and write_all to view and edit all VR task records.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/task/map-vulnerabilities-to-cis.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vr-persona-overview.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 9,
-		"prompt": "A vulnerability feed starts creating unusable records with missing fields. What is the best first response?",
+		"prompt": "A CISO wants executive visibility into enterprise vulnerability exposure trends without performing day-to-day remediation task updates. Which persona alignment best matches this responsibility?",
 		"choices": [
-			"Pause or adjust the integration mapping and validation rules before continuing imports for measurable outcomes",
-			"Disable all scanner connectors permanently for practical execution",
-			"Close all imported vulnerabilities as false positives in enterprise contexts",
-			"Manually edit every record after intake in real implementations"
+			"Executive stakeholder who consumes Vulnerability Response dashboards and analytics for risk posture reporting",
+			"Remediation owner who completes patch tasks on assigned configuration items in IT Remediation Workspace",
+			"Integration developer who writes custom outbound REST messages for unrelated HR payroll systems",
+			"Discovery administrator who builds classification rules for non-IP based printer hardware assets"
 		],
 		"correctIndex": 0,
-		"explanation": "Fixing integration mappings and validation controls at intake prevents recurring downstream triage defects.",
+		"explanation": "Executive stakeholders such as a CISO consume VR dashboards and analytics for risk posture visibility, while operational personas execute or manage remediation work in workspaces.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/task/troubleshoot-vulnerability-imports.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 10,
-		"prompt": "What is the main goal of vulnerability prioritization in VR?",
+		"prompt": "An application security manager must oversee DAST findings imported into Application Vulnerability Response and assign remediation to product teams. Which persona scope fits this role?",
 		"choices": [
-			"Focus remediation on vulnerabilities with highest combined technical and business risk for measurable outcomes",
-			"Close medium findings automatically for practical execution",
-			"Assign all vulnerabilities to one team in enterprise contexts",
-			"Sort findings by import date exclusively across operational workflows"
+			"Application security manager persona with oversight of AVIT remediation workflows and team assignments",
+			"Container registry administrator persona limited to Docker Hub credential rotation tasks only",
+			"Network operations center persona focused exclusively on SNMP trap correlation for routers",
+			"Procurement analyst persona responsible for vendor contract renewal approvals in sourcing"
 		],
 		"correctIndex": 0,
-		"explanation": "Prioritization combines severity, exploitability, and asset criticality to direct limited remediation capacity.",
+		"explanation": "Application security managers in AVR oversee application vulnerable items, coordinate remediation with development teams, and align with Security Champion workflows.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/concept/vulnerability-prioritization.html"
+			"https://www.servicenow.com/docs/r/security-management/application-vulnerability-response/avr-landing.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 11,
-		"prompt": "Which factor most improves prioritization accuracy for vulnerability items?",
+		"prompt": "A software developer receives an assigned application vulnerable item requiring a code fix before the next release. Where does this work typically originate in Application Vulnerability Response?",
 		"choices": [
-			"Number of dashboard tabs across operational workflows",
-			"Alphabetical ordering by vulnerability ID under governance oversight",
-			"Asset business criticality and exposure context for practical execution",
-			"Analyst shift schedule for measurable outcomes"
+			"Remediation tasks or AVIT assignments routed to the developer through AVR remediation workflows",
+			"Hardware asset retirement records created when laptops reach end-of-life in the asset estate",
+			"Change advisory board meetings scheduled for standard infrastructure patching windows only",
+			"Employee onboarding cases opened when new hires request corporate mobile device enrollment"
 		],
-		"correctIndex": 2,
-		"explanation": "Technical severity alone is insufficient; business context clarifies operational risk and urgency.",
+		"correctIndex": 0,
+		"explanation": "Developers receive application vulnerable item and remediation task assignments through AVR workflows when findings from scanners such as Veracode require code-level fixes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/task/configure-risk-scoring.html"
+			"https://www.servicenow.com/docs/r/security-management/application-vulnerability-response/avr-landing.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 12,
-		"prompt": "How do threat intelligence signals influence VR prioritization?",
+		"prompt": "Why do Vulnerability Response, Application Vulnerability Response, and third-party integrations reference CSDM tables in the ServiceNow platform?",
 		"choices": [
-			"They remove need for asset ownership data in enterprise contexts",
-			"They are ignored if CVSS is available in real implementations",
-			"They increase urgency when vulnerabilities are known exploited or actively targeted for measurable outcomes",
-			"They replace remediation workflows for practical execution"
+			"VR applications consume and contribute configuration and service data that aligns assets with vulnerability findings",
+			"CSDM tables replace all third-party scanner libraries so external CVE identifiers are no longer stored",
+			"CSDM tables are read-only lookup tables that VR applications cannot write vulnerability records into",
+			"CSDM tables store only HR employee records and are unrelated to security operations workflows"
 		],
-		"correctIndex": 2,
-		"explanation": "Known exploitation data can elevate remediation urgency beyond base severity values.",
+		"correctIndex": 0,
+		"explanation": "Vulnerability Response applications manage and use CSDM-aligned CMDB data so scanner findings can be tied to authoritative configuration items and service context.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/concept/threat-intelligence-integration.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 13,
-		"prompt": "A security manager needs repeatable triage outcomes. What should be implemented?",
+		"prompt": "A customer wants to import DAST findings and remediate application vulnerable items through dedicated AVR workspaces. What licensing requirement applies?",
 		"choices": [
-			"Ad hoc analyst decisions for each item in real implementations",
-			"Risk-based assignment rules and defined SLAs by priority level in enterprise contexts",
-			"Single priority for all findings for practical execution",
-			"Manual ticket routing through email for measurable outcomes"
+			"Application Vulnerability Response requires a separate subscription beyond base Vulnerability Response",
+			"Application Vulnerability Response is automatically included with every IT Service Management Pro license",
+			"Application Vulnerability Response is available only when Hardware Asset Management is deactivated",
+			"Application Vulnerability Response requires deactivating Container Vulnerability Response on the instance"
 		],
-		"correctIndex": 1,
-		"explanation": "Rules and SLA targets create consistent prioritization and measurable execution discipline.",
+		"correctIndex": 0,
+		"explanation": "Application Vulnerability Response is a separately subscribed feature of the Vulnerability Response product family for managing application vulnerable items.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/task/create-vulnerability-sla-definitions.html"
+			"https://www.servicenow.com/docs/r/security-management/application-vulnerability-response/avr-landing.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 14,
-		"prompt": "What is a common anti-pattern in vulnerability prioritization?",
+		"prompt": "A platform team running Kubernetes workloads needs runtime context such as cluster, namespace, and service enrichment on container image findings. Which module should they deploy?",
 		"choices": [
-			"Focus on incorporating exploit intelligence for measurable outcomes",
-			"With business service context for practical execution",
-			"Focus on prioritizing solely by scanner severity without business impact weighting",
-			"Focus on considering internet exposure in scoring"
+			"Container Vulnerability Response with integrations such as Prisma Cloud Compute for runtime metadata",
+			"Application Vulnerability Response with Veracode DAST integration for web application code scanning only",
+			"Security Incident Response with major incident war room workflows for phishing email triage",
+			"Discovery with SNMP-based classification for legacy network printer hardware identification"
 		],
-		"correctIndex": 2,
-		"explanation": "Severity-only sorting often misses true operational risk and can misallocate remediation effort.",
+		"correctIndex": 0,
+		"explanation": "Container Vulnerability Response imports CVITs and enriches findings with Kubernetes runtime context through container security product integrations.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/concept/risk-based-vulnerability-management.html"
+			"https://www.servicenow.com/docs/r/security-management/container-vulnerability-response/cvr-landing.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 15,
-		"prompt": "In VR, what is the primary purpose of remediation workflows?",
+		"prompt": "Leadership asks how Vulnerability Response reduces manual handoffs between security analysts and IT remediation teams. Which platform behavior best answers that question?",
 		"choices": [
-			"Track and enforce vulnerability fix actions through accountable tasks and states in real implementations",
-			"Route all work to security exclusively under governance oversight",
-			"Ignore SLA commitments across operational workflows",
-			"Delete vulnerability records after triage under governance oversight"
+			"Automated workflow from integration intake through grouping, prioritization, assignment, and remediation verification",
+			"Manual CSV exports of scanner results that operators email to patch teams outside the platform",
+			"Standalone spreadsheet tracking that replaces all vulnerability records in the ServiceNow instance",
+			"Automatic deletion of CMDB configuration items whenever a scanner reports a new detection"
 		],
 		"correctIndex": 0,
-		"explanation": "Remediation workflows coordinate ownership, progress tracking, and closure evidence for vulnerabilities.",
+		"explanation": "Vulnerability Response automates the end-to-end flow from data ingestion and enrichment through remediation task assignment and post-fix verification.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/concept/remediation-workflow.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 16,
-		"prompt": "Which action improves remediation cycle time the most?",
+		"prompt": "An analyst receives thousands of duplicate scanner observations for the same flaw on multiple assets. Which Vulnerability Response capability addresses this volume problem?",
 		"choices": [
-			"Focus on assigning all tasks to one queue",
-			"Focus on creating remediation tasks with clear ownership and due dates tied to priority",
-			"Focus on suppressing all notifications for measurable outcomes",
-			"Focus on waiting for monthly review before assignment"
+			"Grouping rules that aggregate related vulnerable items so remediation can be coordinated at scale",
+			"Incident Management parent-child linking that converts every detection into a priority 1 incident",
+			"Knowledge Management article publishing that archives scanner output without creating VR records",
+			"Service Catalog record producers that open laptop refresh requests for each reported vulnerability"
 		],
-		"correctIndex": 1,
-		"explanation": "Explicit ownership and priority-driven due dates reduce handoff delays and improve accountability.",
+		"correctIndex": 0,
+		"explanation": "Vulnerability Response applies grouping and correlation rules to consolidate related vulnerable items and reduce redundant remediation effort.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/task/create-remediation-tasks.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 17,
-		"prompt": "When should a vulnerability remediation task be considered complete?",
+		"prompt": "A remediation task cannot be completed within the standard SLA because patching requires an approved change window. Which Vulnerability Response process should the remediation owner initiate?",
 		"choices": [
-			"As soon as a patch is scheduled across operational workflows",
-			"After verification confirms the vulnerability is resolved or accepted per policy under governance oversight",
-			"When a comment is added by any user in real implementations",
-			"Immediately after assignment in enterprise contexts under governance oversight"
+			"Coordinated change or exception management to document controlled deferral or extended remediation",
+			"Immediate closure of the vulnerable item without verification or follow-up scanner confirmation",
+			"Deletion of the third-party vulnerability entry so the finding disappears from all related lists",
+			"Conversion of the vulnerable item into a hardware asset lease record for procurement tracking"
 		],
-		"correctIndex": 1,
-		"explanation": "Closure requires evidence that remediation outcomes are validated, not just planned.",
+		"correctIndex": 0,
+		"explanation": "Vulnerability Response supports change and exception management when remediation requires approved maintenance windows or formal risk acceptance.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/task/verify-vulnerability-remediation.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 18,
-		"prompt": "A remediation owner cannot patch in time due to dependency constraints. What is the best governed response?",
+		"prompt": "After a patch is applied, how does Vulnerability Response confirm that a previously open finding is resolved?",
 		"choices": [
-			"Ignore SLA and wait for measurable outcomes compared with technical debt register items during prioritization.",
-			"Request a risk exception with documented compensating controls and expiration for practical execution",
-			"Delete the vulnerability group in enterprise contexts",
-			"Close the item as fixed in real implementations"
+			"Subsequent scanner detections automatically update vulnerable item state when the flaw is no longer reported",
+			"The vulnerable item remains open indefinitely until an agent manually sets state to Closed without rescan data",
+			"All related configuration items are retired from the CMDB regardless of whether the flaw persists",
+			"Remediation tasks auto-close only when the parent incident record reaches the Resolved state"
 		],
-		"correctIndex": 1,
-		"explanation": "Formal exceptions with controls and expiry maintain governance when immediate remediation is not feasible.",
+		"correctIndex": 0,
+		"explanation": "VR verifies remediation by processing updated detections from integrated scanner products and reflecting fixed findings on vulnerable item records.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/task/manage-vulnerability-exceptions.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 19,
-		"prompt": "What should security teams monitor to improve remediation effectiveness over time?",
+		"prompt": "A new VR administrator is preparing to import Qualys detections. Which data model distinction must they understand before the first scanner import runs?",
 		"choices": [
-			"Exclusively the number of imported findings in real implementations",
-			"Case form color themes for measurable outcomes",
-			"Count of inactive users in real implementations",
-			"Mean time to remediate by priority and recurring backlog drivers in enterprise contexts"
+			"A vulnerability describes the flaw in a library, while a vulnerable item links that flaw to a specific configuration item",
+			"A vulnerable item is the same record type as a third-party vulnerability entry with no relationship between them",
+			"A vulnerability record always includes a CMDB CI, while a vulnerable item stores only CVE text with no asset link",
+			"A third-party vulnerability entry replaces NVD entries and cannot reference CVE identifiers from the NVD library"
 		],
-		"correctIndex": 3,
-		"explanation": "Trend analysis of MTTR and backlog causes highlights systemic bottlenecks in fix execution.",
+		"correctIndex": 0,
+		"explanation": "Scanner libraries store vulnerability definitions (such as QIDs referencing CVEs), while vulnerable items represent a specific flaw detected on a particular configuration item.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/task/report-on-remediation-performance.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/nvd-vuln-integration.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 20,
-		"prompt": "What is the primary value of integrating Vulnerability Response with Security Operations?",
+		"prompt": "Before importing Qualys vulnerability detections, which integration sequence does Vulnerability Response documentation recommend?",
 		"choices": [
-			"It removes need for remediation ownership across operational workflows",
-			"It connects vulnerability findings with active threat and incident workflows for coordinated action under governance oversight",
-			"It isolates vulnerability data from incident response for practical execution",
-			"It disables threat intelligence updates for measurable outcomes funneled into continuous improvement initiatives when trends emerge."
+			"Run NVD and CWE integrations first to enrich vulnerability libraries before third-party scanner imports",
+			"Import Qualys detections first, then disable NVD integrations to prevent duplicate CVE records",
+			"Skip NVD imports entirely because third-party libraries never reference CVE identifiers",
+			"Run scanner imports before any NVD job so CI lookup rules can create NVD entries automatically"
 		],
-		"correctIndex": 1,
-		"explanation": "SecOps integration aligns preventive vulnerability management with active detection and response operations.",
+		"correctIndex": 0,
+		"explanation": "NVD and CWE data should be imported before third-party scanner products so third-party library entries can reference enriched CVE, CWE, and CPE metadata.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/concept/security-operations-integration.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/nvd-vuln-integration.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 21,
-		"prompt": "How does VR-SecOps integration improve risk prioritization?",
+		"prompt": "After a Tenable.io integration runs, where are Tenable plugin definitions stored in the Vulnerability Response data model?",
 		"choices": [
-			"By converting all vulnerabilities to low priority under governance oversight",
-			"By removing CI relationships across operational workflows",
-			"By elevating vulnerabilities linked to active incidents, campaigns, or exploitation indicators for measurable outcomes",
-			"By ignoring incident context for practical execution"
+			"Third-Party Vulnerability Entries table as vendor library records referenced by vulnerable items",
+			"Incident table as child tasks linked to every configuration item in the CMDB automatically",
+			"Knowledge table as published articles that replace all scanner import sets on the instance",
+			"Change Request table as standard changes created for each plugin ID returned by the scan"
 		],
-		"correctIndex": 2,
-		"explanation": "Operational threat signals from SecOps help focus remediation on vulnerabilities with immediate attack relevance.",
+		"correctIndex": 0,
+		"explanation": "Third-party scanners populate the Third-Party Vulnerability Entries table; vulnerable items reference those library entries when detections are imported.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/task/use-security-operations-context-in-vr.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/tenableIntegration.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 22,
-		"prompt": "What workflow benefit comes from linking vulnerability groups to SecOps investigations?",
+		"prompt": "An analyst opens a Qualys-sourced vulnerable item and drills into the related third-party library entry. What relationship should they expect to find when NVD integration has run successfully?",
 		"choices": [
-			"Shared context and coordinated ownership between remediation and incident response teams for practical execution",
-			"Deletion of duplicate CIs for measurable outcomes",
-			"Suppression of all notifications across operational workflows",
-			"Automatic closure of security incidents under governance oversight"
+			"The third-party entry references a CVE in the NVD library that enriches the vulnerable item context",
+			"The third-party entry stores only a hostname string with no link to any vulnerability library tables",
+			"The third-party entry replaces the configuration item and removes all CMDB relationships permanently",
+			"The third-party entry is identical to the NVD entry and cannot coexist in the same instance"
 		],
 		"correctIndex": 0,
-		"explanation": "Cross-linked records reduce context switching and speed coordinated decision-making during active threats.",
+		"explanation": "Third-party identifiers such as Qualys QIDs reference vendor library entries that in turn map to NVD CVE records when NVD integration data is present.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/task/link-vulnerabilities-to-security-incidents.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/nvd-vuln-integration.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 23,
-		"prompt": "A SOC analyst flags exploitation in the wild. Which VR action should be automated?",
+		"prompt": "During initial VR setup, an administrator schedules CWE data import alongside NVD jobs. Why is CWE enrichment valuable before scanner detections arrive?",
 		"choices": [
-			"Pause vulnerability imports for measurable outcomes under governance oversight",
-			"Remove remediation due dates for practical execution",
-			"Downgrade all related items to low under governance oversight",
-			"Create priority overrides or escalation tasks for affected high-value assets across operational workflows"
+			"CWE records describe weakness categories that enrich prioritization and reference context for imported findings",
+			"CWE imports replace all third-party scanner integrations so Qualys and Tenable connectors are disabled",
+			"CWE data is stored only in HR profiles and is unrelated to vulnerability remediation workflows",
+			"CWE scheduling must run after every scanner import or vulnerable items cannot be created"
 		],
-		"correctIndex": 3,
-		"explanation": "Threat-driven escalation ensures vulnerable critical assets are remediated faster under active risk.",
+		"correctIndex": 0,
+		"explanation": "CWE integration imports weakness enumeration data that enriches vulnerability context, especially for Application Vulnerability Response and third-party library cross-references.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/task/automate-threat-driven-escalations.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/nvd-vuln-integration.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 24,
-		"prompt": "Which KPI best reflects successful VR and SecOps integration?",
+		"prompt": "Microsoft TVM machine data is imported and must be tied to existing servers in the CMDB. Which configuration determines how asset identifiers map to configuration items?",
 		"choices": [
-			"Number of inactive scanner connectors in real implementations",
-			"Total count of knowledge articles in enterprise contexts",
-			"Mean time from exploit signal to remediation assignment on critical vulnerabilities across operational workflows",
-			"Dashboard refresh frequency under governance oversight ingested through secure mid-server connectivity channels. (CIS-VR-24-w3)"
+			"CI lookup rules that define how third-party asset attributes match configuration items during import",
+			"Business rules on the incident table that auto-assign TVM findings to the service desk queue",
+			"UI policies on the change form that hide the configuration item field from remediation owners",
+			"Discovery patterns for SNMP printers that translate TVM hostnames into procurement asset tags"
 		],
-		"correctIndex": 2,
-		"explanation": "Time from threat signal to assigned remediation captures integration speed and operational responsiveness.",
+		"correctIndex": 0,
+		"explanation": "Vulnerability Response uses CI lookup rules to match scanner-reported asset data with CMDB configuration items when vulnerable items are created.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/task/measure-secops-vr-outcomes.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/mstvm-integration.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 25,
-		"prompt": "Why integrate Vulnerability Response with change management?",
+		"prompt": "A Rapid7 scan imports a detection for a host that cannot be matched to an existing CMDB configuration item. What does Vulnerability Response create in this scenario?",
 		"choices": [
-			"To clearly track remediation implementation through governed change records and reduce production risk",
-			"To clearly force all vulnerabilities into emergency change",
-			"To clearly prevent security teams from seeing infrastructure updates",
-			"To clearly eliminate all change approvals for security fixes"
+			"An unmatched configuration item associated with the new vulnerable item until reconciliation succeeds",
+			"A closed remediation task that requires no further action from IT operations or security teams",
+			"A hardware asset lease record in procurement that replaces the need for CMDB identification",
+			"A major security incident automatically escalated to the CISO without vulnerability analyst review"
 		],
 		"correctIndex": 0,
-		"explanation": "Change integration provides controlled execution, approval traceability, and deployment visibility for remediation activities.",
+		"explanation": "When CI lookup rules cannot match scanner asset data, VR creates an unmatched CI with the vulnerable item so analysts can reconcile later when CMDB data is updated.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/c_Vuln-Resp-Integrations.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/mstvm-integration.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 26,
-		"prompt": "A remediation task requires patch deployment in production. What is the recommended workflow?",
+		"prompt": "Leadership wants imported findings prioritized using exploit availability and threat context in addition to CVSS scores. Which intake enhancement supports this requirement?",
 		"choices": [
-			"Document remediation exclusively in team chat in real implementations",
-			"Convert all patch changes into service requests under governance oversight",
-			"Close the vulnerability item before patching in real implementations",
-			"Create or link a change request and update vulnerability state based on implementation outcome in enterprise contexts"
+			"Threat and exploit intelligence enrichment applied to ingested vulnerability and third-party entry data",
+			"Manual reclassification of every incident priority field after each nightly scanner export completes",
+			"Deletion of NVD records so only proprietary scanner severity labels remain on vulnerable items",
+			"Conversion of all vulnerable items into knowledge articles without retention of detection metadata"
 		],
-		"correctIndex": 3,
-		"explanation": "Linking remediation to change records preserves compliance, enables approvals, and ties closure to verified implementation.",
+		"correctIndex": 0,
+		"explanation": "Vulnerability Response enriches ingested data with exploit, threat intelligence, risk, and business context to support risk-based prioritization beyond raw scanner severity.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/task/t_IntegrateVRWithChangeManagement.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 27,
-		"prompt": "Which metric best demonstrates effective VR and change integration?",
+		"prompt": "Remediation owners complain that scanner imports omit vendor fix guidance on vulnerable item forms. Which system property enables parsing solution text from third-party integrations?",
 		"choices": [
-			"Average incident reassignment count for measurable outcomes",
-			"Number of discovered CIs with no owner for practical execution",
-			"Percentage of vulnerability remediations completed through associated successful changes under governance oversight",
-			"Total count of normal changes in the month across operational workflows"
+			"sn_vul.populate_scanner_solutions to parse remediation solution content from scanner integrations",
+			"glide.ui.autoclose.time to automatically close resolved incidents after the configured interval",
+			"com.snc.sandbox.enable to route all VR imports through an isolated mid-server sandbox only",
+			"sn_hr_core.batch_size to limit employee onboarding case creation during VR import windows"
 		],
-		"correctIndex": 2,
-		"explanation": "This metric reflects whether security remediation is consistently executed through approved and successful implementation paths.",
+		"correctIndex": 0,
+		"explanation": "The sn_vul.populate_scanner_solutions property controls parsing of solution guidance supplied by supported third-party scanner integrations into VR records.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/vulnerability-response-dashboards.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 28,
-		"prompt": "What is a key benefit of linking vulnerability items to change tasks for operations teams?",
+		"prompt": "Solution Management for Vulnerability Response is installed and the team must configure vendor fix content from Red Hat and Microsoft MSRC. Where is this configured in Setup Assistant?",
 		"choices": [
-			"Operations can ignore maintenance windows in real implementations",
-			"Teams can coordinate patch timing, approvals, and rollback planning in one governed process in enterprise contexts",
-			"It removes the need to validate post-change remediation status across operational workflows",
-			"It hides risk priority from implementers under governance oversight"
+			"Solution Integrations section below Scanner Integrations for supported vulnerability solution providers",
+			"Agent Workspace chat queue routing for external customer messaging channel escalations",
+			"Discovery classification criteria for identifying non-computer CI types such as racks",
+			"Employee Center onboarding checklist templates for new hire equipment provisioning tasks"
 		],
-		"correctIndex": 1,
-		"explanation": "Shared process context improves coordination and reduces failed or untracked remediation outcomes.",
+		"correctIndex": 0,
+		"explanation": "When Solution Management is installed, Setup Assistant exposes Solution Integrations to configure providers such as Red Hat and Microsoft Security Response Center.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/c_RemediationWorkflows.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 29,
-		"prompt": "If a change implementation fails, how should related vulnerability records be handled?",
+		"prompt": "An administrator reviews NVD integration records and notices a default run-as user on each scheduled job. Which value should remain unchanged per product guidance?",
 		"choices": [
-			"Reopen or keep remediation in progress and trigger follow-up actions based on failed change outcome in enterprise contexts",
-			"Convert vulnerabilities into knowledge articles in real implementations",
-			"Delete affected vulnerability entries under governance oversight",
-			"Automatically mark vulnerabilities as resolved across operational workflows"
+			"VR.System as the configured run-as user for NVD and related vulnerability integration jobs",
+			"admin as a mandatory override on every integration so imports bypass all ACL restrictions",
+			"guest as the run-as user so unauthenticated scanner payloads can insert vulnerable items",
+			"itil as the run-as user because NVD jobs create standard ITIL incident records exclusively"
 		],
 		"correctIndex": 0,
-		"explanation": "Failed implementation means risk likely remains; records should reflect unresolved exposure and drive next remediation steps.",
+		"explanation": "NVD integration documentation specifies VR.System as the default run-as user for integration records and advises administrators not to change that value.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/task/t_ManageRemediationTasks.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/nvd-vuln-integration.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 30,
-		"prompt": "What is the main purpose of vulnerability groups in Vulnerability Response?",
+		"prompt": "During a Tenable import, asset observations arrive before vulnerable items are created for matched configuration items. Which record type represents the pre-VI asset match state?",
 		"choices": [
-			"Disable assignment rules for security teams in enterprise contexts",
-			"Store scanner credentials in real implementations",
-			"Aggregate related vulnerable items so remediation can be coordinated at scale for measurable outcomes",
-			"Replace CI ownership records for practical execution"
+			"Discovered items that store ingested asset observations matched or unmatched to CMDB CIs",
+			"Problem records that replace all vulnerable items when multiple scanners report the same CVE",
+			"Change tasks that automatically implement patches before analysts review third-party entries",
+			"Catalog tasks that fulfill hardware refresh requests triggered by every open detection"
 		],
-		"correctIndex": 2,
-		"explanation": "Grouping vulnerabilities streamlines triage and remediation when many similar findings affect multiple assets.",
+		"correctIndex": 0,
+		"explanation": "Discovered items represent scanner-ingested asset observations that are matched to CIs through lookup rules before or alongside vulnerable item creation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/c_VulnerabilityGroups.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/tenableIntegration.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 31,
-		"prompt": "Which grouping strategy generally improves remediation efficiency?",
+		"prompt": "CMDB updates add authoritative server records that should replace stale unmatched CIs on existing discovered items. Which action reapplies matching without waiting for a retired scheduled job?",
 		"choices": [
-			"Group by random import batch in real implementations",
-			"Group by common remediation action, affected software, and responsible assignment group in enterprise contexts",
-			"Group exclusively by discovery date across operational workflows",
-			"Group by scanner user account for measurable outcomes"
+			"Reapply Lookup Rules on filtered discovered items to reconcile unmatched CIs with updated CMDB data",
+			"Delete all third-party vulnerability entries so the next scanner cycle rebuilds the CMDB from scratch",
+			"Convert discovered items into knowledge articles and disable all CI lookup rules permanently",
+			"Run a full Qualys scan before any CMDB reconciliation because lookup rules cannot be re-run"
 		],
-		"correctIndex": 1,
-		"explanation": "Operationally meaningful groups help teams execute one remediation pattern across many related findings.",
+		"correctIndex": 0,
+		"explanation": "Starting in recent VR releases, administrators can reapply CI lookup rules on selected discovered items to reconcile unmatched CIs when CMDB data changes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/task/t_CreateVulnerabilityGroups.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/reapply-reconcile-unmatched-discovered-items.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 32,
-		"prompt": "When should a vulnerability group be split into smaller groups?",
+		"prompt": "Multiple scanner sources report the same CVE on overlapping assets with inconsistent field mappings. Which Security Operations integration practice reduces duplicate remediation effort?",
 		"choices": [
-			"When group size is exactly ten items for measurable outcomes",
-			"When all items share the same patch process for practical execution",
-			"When vulnerabilities are already closed in enterprise contexts",
-			"When there are different owners, SLAs, or remediation approaches within the same group in real implementations"
+			"Use vulnerability data frameworks with import sets and transforms rather than custom one-off scripts",
+			"Disable all ACLs on vulnerable item tables so every integration user can delete peer records",
+			"Store raw scanner XML only in attachments and avoid creating vulnerable item records entirely",
+			"Route every detection to Incident Management and skip Vulnerability Response normalization"
 		],
-		"correctIndex": 3,
-		"explanation": "Groups should remain actionable; mixed ownership or remediation paths can reduce execution clarity and accountability.",
+		"correctIndex": 0,
+		"explanation": "Security Operations integration guidance recommends vulnerability data frameworks, import sets, and transforms to normalize and correlate multi-source scan data consistently.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/c_RemediationWorkflows.html"
+			"https://www.servicenow.com/docs/r/security-management/security-operations/c_BestPractisesIntegrations.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 33,
-		"prompt": "What is a key governance benefit of vulnerability groups?",
+		"prompt": "A VR administrator plans assignment rules based on Qualys host tags imported during asset integrations. What prerequisite does Rapid7 and Qualys guidance specify for tag-driven rules?",
 		"choices": [
-			"They eliminate risk scoring in real implementations",
-			"They remove CI context from findings in enterprise contexts",
-			"They prevent integration with change management across operational workflows",
-			"They provide a manageable unit for assigning ownership, tracking progress, and reporting outcomes under governance oversight"
+			"Run the asset list integration to import host tags before creating assignment or remediation task rules",
+			"Deactivate NVD integrations permanently because host tags replace all CVE-based prioritization logic",
+			"Convert host tags into HR department codes before any vulnerable items can reference CMDB CIs",
+			"Install Field Service Management because host tags are available only on work order task records"
 		],
-		"correctIndex": 3,
-		"explanation": "Group-level ownership and progress tracking improve accountability and status visibility across large remediation programs.",
+		"correctIndex": 0,
+		"explanation": "Scanner integration setup checklists require asset or host tag imports before creating Vulnerability Response assignment or remediation rules that depend on tag values.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/vulnerability-response-dashboards.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/install-and-configure-r7.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 34,
-		"prompt": "Which metric best indicates that vulnerability groups are configured effectively?",
+		"prompt": "An analyst traces a Qualys QID from a vulnerable item to the third-party library and then to NVD. What does this drill-down demonstrate about VR data enrichment?",
 		"choices": [
-			"High group closure rate with low reopen percentage and clear owner accountability in enterprise contexts",
-			"Count of scanner connectors in real implementations",
-			"Total imported findings regardless of status for measurable outcomes",
-			"Number of inactive CIs for practical execution"
+			"Vendor-specific identifiers chain to authoritative CVE metadata when NVD integration data is present",
+			"Qualys library entries cannot reference NVD CVE records under any supported integration scenario",
+			"NVD entries are deleted automatically whenever a third-party scanner import completes successfully",
+			"Third-party entries store CMDB serial numbers instead of vulnerability identifiers from any library"
 		],
 		"correctIndex": 0,
-		"explanation": "Sustained closure with low rework suggests groups are actionable and routed to the right teams.",
+		"explanation": "Third-party library entries such as Qualys QIDs reference CVE records in the NVD library, providing enriched context on vulnerable items after NVD import.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/vr-performance-analytics.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/nvd-vuln-integration.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 35,
-		"prompt": "What is the primary value of imported scan results in Vulnerability Response?",
+		"prompt": "Microsoft TVM is configured with both full and delta machine vulnerability imports. What is the intended purpose of the delta import schedule?",
 		"choices": [
-			"They close vulnerabilities automatically without review across operational workflows documented in the runbook for operational handoff. (CIS-VR-35-w0)",
-			"They provide the raw vulnerability findings used for normalization, prioritization, and remediation workflows under governance oversight",
-			"They replace CMDB relationships in real implementations segmented by location, company, or cost center as required. (CIS-VR-35-w2)",
-			"They disable assignment group routing in enterprise contexts exposed through controlled API endpoints with OAuth scopes. (CIS-VR-35-w3)"
+			"Retrieve new, fixed, and updated vulnerability detections since the last full organization import",
+			"Replace the CMDB with a static export of TVM machine records that disables CI lookup rules",
+			"Import only CPE strings while excluding all CVE identifiers from the TVM recommendation API",
+			"Create change requests for every TVM machine record regardless of open vulnerability status"
 		],
-		"correctIndex": 1,
-		"explanation": "Scan ingest is the starting point for turning detection data into actionable remediation records.",
+		"correctIndex": 0,
+		"explanation": "The MS TVM delta machines vulnerabilities integration retrieves changes since the full import, including new, remediated, and updated detections across the estate.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/c_VRDataIngestion.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/mstvm-integration.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 36,
-		"prompt": "Which practice most improves trust in scan-derived vulnerability records?",
+		"prompt": "A Tenable.io administrator validates that plugin CPE data populates after imports complete. Where does Vulnerability Response store CPE associations for Tenable third-party entries?",
 		"choices": [
-			"Treat every scanner as equally configured and calibrated under governance oversight",
-			"Prioritize vulnerabilities by import timestamp exclusively in real implementations",
-			"Apply normalization and deduplication rules with CI correlation validation",
-			"Ignore duplicate findings from multiple scanners for practical execution"
+			"CPE values populate related Common Platform Enumeration data on third-party vulnerability entries",
+			"CPE strings are stored only on HR employee profiles and cannot appear on vulnerability records",
+			"CPE imports bypass the Third-Party Vulnerability Entries table and write directly to incidents",
+			"CPE data replaces configuration item names in the CMDB during every Tenable integration run"
 		],
-		"correctIndex": 2,
-		"explanation": "Normalization and reliable CI mapping reduce noise and improve the accuracy of remediation targeting.",
+		"correctIndex": 0,
+		"explanation": "Tenable integrations populate CPE associations on third-party vulnerability entries, supporting software identification and enrichment for prioritization.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/task/t_NormalizeAndCorrelateVulnData.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/tenableIntegration.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 37,
-		"prompt": "Why should VR teams validate scanner integration health regularly?",
+		"prompt": "After activating the NIST NVD CVE integration, an administrator needs to confirm the initial library load succeeded before enabling Qualys. Which task should they perform first?",
 		"choices": [
-			"To clearly eliminate remediation ownership for practical execution",
-			"To clearly remove low-risk findings from history",
-			"To clearly prevent vulnerability grouping in real implementations",
-			"To confirm scan coverage, import freshness, and pipeline reliability for risk visibility"
+			"Review NVD integration import run status to verify the scheduled CVE job completed successfully",
+			"Delete all CMDB server CIs so Qualys can recreate authoritative asset records from scan data",
+			"Disable VR.System on integration records to allow guest users to monitor import log attachments",
+			"Convert every NVD entry into a change request before third-party scanner connectors are activated"
 		],
-		"correctIndex": 3,
-		"explanation": "Integration issues can create blind spots or stale data that undermine prioritization and response decisions.",
+		"correctIndex": 0,
+		"explanation": "Administrators verify successful NVD data import by reviewing integration run status before importing third-party scanner detections that reference NVD libraries.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/task/t_MonitorScannerIntegrations.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/nvd-vuln-integration.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 38,
-		"prompt": "What is the best response when scan results show critical findings on unmanaged assets?",
+		"prompt": "Qualys imports a detection for an IP address with no matching CI in the CMDB. Which statement describes the resulting vulnerable item relationship?",
 		"choices": [
-			"Initiate CI ownership remediation and route findings through exception or containment workflow in enterprise contexts",
-			"Convert findings directly into incidents exclusively across operational workflows",
-			"Close findings due to missing ownership for measurable outcomes",
-			"Suppress all unmanaged asset vulnerabilities for practical execution"
+			"A vulnerable item is created with an unmatched CI placeholder until lookup rules or CMDB updates reconcile it",
+			"No vulnerable item is created until an agent manually creates a hardware asset record in procurement",
+			"The detection is stored only as an email attachment and never inserted into Vulnerability Response tables",
+			"The Qualys QID is rejected because third-party entries require a pre-existing authorized CI match"
 		],
 		"correctIndex": 0,
-		"explanation": "Unmanaged assets still represent exposure and should trigger ownership correction plus controlled risk treatment.",
+		"explanation": "VR creates vulnerable items even when CI lookup fails, associating them with unmatched CIs until reconciliation or CMDB updates provide a definitive configuration item.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/c_AssetExposureManagement.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/mstvm-integration.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 39,
-		"prompt": "Which metric best reflects scan result pipeline quality?",
+		"prompt": "An engineer compares an NVD vulnerability entry with a Qualys-sourced vulnerable item on the same server. How should they interpret the two records?",
 		"choices": [
-			"Number of closed change requests in real implementations",
-			"Count of assignment groups in ITSM in enterprise contexts",
-			"Import success rate and median time from scanner detection to VR record availability for practical execution",
-			"Total CI count in CMDB for measurable outcomes reconciled with source-of-truth records on a defined cadence. (CIS-VR-39-w3)"
+			"The NVD entry defines the CVE in the authoritative library; the vulnerable item is the flaw detected on that CI",
+			"The NVD entry and vulnerable item are duplicate records that must never coexist for one CVE on one host",
+			"The vulnerable item defines global CVE metadata while the NVD entry stores only the server hostname",
+			"The NVD entry replaces the vulnerable item once Qualys imports complete and deletes all VI history"
 		],
-		"correctIndex": 2,
-		"explanation": "Data pipeline timeliness and reliability are essential for near-real-time vulnerability operations.",
+		"correctIndex": 0,
+		"explanation": "NVD library entries describe the vulnerability itself, while vulnerable items represent a specific detection of that flaw on a configuration item in the environment.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/vr-performance-analytics.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/nvd-vuln-integration.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 40,
-		"prompt": "Why are SLAs important in Vulnerability Response?",
+		"prompt": "When imported scan detections fail to correlate to CMDB configuration items, what should VR administrators investigate first?",
 		"choices": [
-			"They replace vulnerability scoring in real implementations",
-			"They are used exclusively for reporting aesthetics",
-			"They eliminate the need for prioritization for practical execution",
-			"They define remediation deadlines aligned to severity and risk exposure for measurable outcomes"
+			"CI matching rules and identification reconciliation settings on incoming discovery data",
+			"Dashboard widget refresh intervals configured on executive vulnerability summary reports",
+			"Password reset policy mappings for LDAP users in the corporate identity directory",
+			"Incident auto-close timers applied to resolved tickets in the service desk queue"
 		],
-		"correctIndex": 3,
-		"explanation": "VR SLAs create enforceable time expectations so critical vulnerabilities are addressed within acceptable risk windows.",
+		"correctIndex": 0,
+		"explanation": "Poor CI correlation usually indicates matching rule gaps or reconciliation issues that must be corrected before assignment and remediation can succeed.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/c_VulnerabilitySLAs.html"
+			"https://www.servicenow.com/docs/r/vulnerability-response/map-vulnerabilities-to-cis.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 41,
-		"prompt": "Which factor should most strongly influence vulnerability remediation SLA targets?",
+		"prompt": "Why do VR teams configure classification rules before assignment rules on high-volume vulnerability entries?",
 		"choices": [
-			"Attachment count on findings under governance oversight",
-			"Analyst shift preferences across operational workflows for practical execution",
-			"Risk severity, exploitability, and business criticality of affected assets in enterprise contexts",
-			"Scanner vendor brand in real implementations across operational workflows"
+			"To categorize findings once so downstream rules use direct field matches instead of repeated expensive queries",
+			"To replace all remediation task grouping logic with manual analyst triage queues exclusively",
+			"To bypass CMDB dependency mapping during every third-party scanner import cycle",
+			"To disable vulnerability calculators from evaluating risk scores on vulnerable items"
 		],
-		"correctIndex": 2,
-		"explanation": "Risk-informed SLA design ensures remediation urgency matches potential business impact.",
+		"correctIndex": 0,
+		"explanation": "Classification rules normalize data at ingestion so assignment and other configurations can reference stable classification values rather than re-evaluating heavy conditions per record.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/vulnerability-prioritization.html"
+			"https://www.servicenow.com/docs/r/vulnerability-response/classification-rules.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 42,
-		"prompt": "What is the best practice when a vulnerability is unlikely to meet SLA due to operational constraints?",
+		"prompt": "A VR program must route Linux server findings to the infrastructure team based on classification values. Which rule type should drive that routing?",
 		"choices": [
-			"Ignore the SLA breach across operational workflows",
-			"Apply a documented exception process with risk acceptance and compensating controls",
-			"Close the vulnerability without remediation for practical execution",
-			"Delete SLA definitions for that assignment group for measurable outcomes"
+			"Vulnerability assignment rules using classification and classification type fields on vulnerable items",
+			"Catalog client scripts that execute when end users submit standard service catalog requests",
+			"Discovery classification probes configured for SNMP-enabled network printer subnets",
+			"HR onboarding workflows that assign employee cases by department and location codes"
 		],
-		"correctIndex": 1,
-		"explanation": "Formal exception governance preserves accountability when deadlines cannot be met.",
+		"correctIndex": 0,
+		"explanation": "Assignment rules evaluate vulnerable item attributes—including classification values set earlier—to route work to the correct remediation group.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/task/t_ManageRiskExceptions.html"
+			"https://www.servicenow.com/docs/r/vulnerability-response/assignment-rules.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 43,
-		"prompt": "Which operational behavior improves VR SLA attainment?",
+		"prompt": "What do remediation task rules accomplish in Vulnerability Response?",
 		"choices": [
-			"Automated prioritization, clear ownership routing, and proactive breach notifications under governance oversight",
-			"Suppress SLA timers for critical findings across operational workflows",
-			"Manually reassign all findings daily without rules for measurable outcomes",
-			"Batch triage once per quarter for practical execution"
+			"Automatically group vulnerable items into remediation tasks based on shared remediation context and group-by keys",
+			"Import CVE metadata directly from the NVD feed without requiring MID Server connectivity",
+			"Replace assignment rules so every finding routes exclusively to the vulnerability admin persona",
+			"Generate Performance Analytics indicators for CISO dashboard tiles without rule configuration"
 		],
 		"correctIndex": 0,
-		"explanation": "Automation and ownership clarity reduce response lag and prevent avoidable deadline breaches.",
+		"explanation": "Remediation task rules create actionable task groupings so teams remediate related findings together using consistent ownership and fix patterns.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/c_RemediationWorkflows.html"
+			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-task-rules.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 44,
-		"prompt": "Which KPI best represents SLA performance maturity in VR?",
+		"prompt": "Remediation target rules calculate planned remediation deadlines from a selected date field on vulnerable items. Which date source is commonly configured?",
 		"choices": [
-			"Number of CMDB classes across operational workflows",
-			"Average number of comments per item under governance oversight",
-			"Total scanner count in real implementations constrained to business hours unless emergency criteria apply. (CIS-VR-44-w2)",
-			"Percentage of critical vulnerabilities remediated within SLA and trend of overdue backlog in enterprise contexts"
+			"First detected, last detected, or published date depending on organizational SLA policy",
+			"Scanner UI session login timestamp from the integration service account used for imports",
+			"Last password change date stored on the affected configuration item record in the CMDB",
+			"Change request close code entered by the CAB approver group during post-implementation review"
 		],
-		"correctIndex": 3,
-		"explanation": "On-time critical remediation and shrinking overdue backlog indicate sustained SLA execution discipline.",
+		"correctIndex": 0,
+		"explanation": "Remediation target rules derive due dates from vulnerability lifecycle dates so SLA targets align with when exposure was identified or updated.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/vr-performance-analytics.html"
+			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-target-rules.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 45,
-		"prompt": "In Vulnerability Response, what is the primary purpose of an exception request?",
+		"prompt": "When multiple remediation target rules could match a vulnerable item, how does Vulnerability Response determine which rule applies?",
 		"choices": [
-			"To clearly replace CMDB relationships with manual entries",
-			"To clearly bypass all remediation controls permanently",
-			"To clearly document and approve temporary acceptance of risk when remediation is not feasible",
-			"To clearly close vulnerabilities without any approval"
+			"Match First evaluates rules in sequence and applies the first matching rule by priority order",
+			"Random selection among all active rules assigns deadlines with equal probability weighting",
+			"Every matching rule applies simultaneously and overwrites prior results regardless of sequence",
+			"Only rules authored by users holding sn_vul.vulnerability_admin execute on existing records"
 		],
-		"correctIndex": 2,
-		"explanation": "Exceptions formally capture compensating rationale, approvals, and time bounds for accepted risk.",
+		"correctIndex": 0,
+		"explanation": "Match First execution stops at the first satisfied rule, giving administrators explicit control over which target date logic wins.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/concept/vulnerability-response-overview.html"
+			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-target-rules.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 46,
-		"prompt": "Which field is most important when managing vulnerability exceptions?",
+		"prompt": "Which workspace is designed for vulnerability managers to monitor exposure, prioritize work, and drive remediation efforts?",
 		"choices": [
-			"Requested desktop wallpaper for practical execution across operational workflows",
-			"Expiration date with documented business justification for measurable outcomes",
-			"Asset purchase date exclusively across operational workflows",
-			"Incident category preference in enterprise contexts under governance oversight"
+			"Vulnerability Manager Workspace with watch topics and remediation effort views",
+			"IT Remediation Workspace presenting prioritized remediation tasks to assigned owners",
+			"Employee Center portal where end users browse catalog items and submit requests",
+			"Change Management CAB workbench used to review and authorize scheduled changes"
 		],
-		"correctIndex": 1,
-		"explanation": "An expiration date and justification enforce periodic review and prevent indefinite risk acceptance.",
+		"correctIndex": 0,
+		"explanation": "The Vulnerability Manager Workspace targets vulnerability program owners with strategic monitoring and prioritization capabilities.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/manage-risk-exceptions.html"
+			"https://www.servicenow.com/docs/r/vulnerability-response/vulnerability-manager-workspace.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 47,
-		"prompt": "What is the best governance action when a vulnerability exception nears expiration?",
+		"prompt": "An IT engineer must view and update remediation tasks assigned to their group in the IT Remediation Workspace. Which role should be assigned?",
 		"choices": [
-			"Trigger review workflow for revalidation, remediation, or closure in enterprise contexts",
-			"Delete the exception and leave vulnerability open in real implementations",
-			"Convert the exception into an incident record exclusively",
-			"Auto-extend for one year with no review across operational workflows"
+			"sn_vul.remediation_owner",
+			"sn_vul.vulnerability_admin",
+			"sn_customerservice.consumer",
+			"sn_change.change_manager"
 		],
 		"correctIndex": 0,
-		"explanation": "Review workflows ensure risk is reassessed and not silently carried forward.",
+		"explanation": "The sn_vul.remediation_owner persona role grants users access to remediation tasks and vulnerable items assigned to them or their groups in the IT Remediation Workspace.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/review-risk-exceptions.html"
+			"https://www.servicenow.com/docs/r/vulnerability-response/vr-persona-overview.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 48,
-		"prompt": "How should compensating controls be represented for a VR exception?",
+		"prompt": "Vulnerability calculators combine risk factors into a score on each vulnerable item. Which inputs are commonly evaluated?",
 		"choices": [
-			"As free-text notes without owner or evidence across operational workflows",
-			"As unresolved vulnerability groups under governance oversight",
-			"As endpoint tags without risk context in real implementations",
-			"As documented controls with owner, implementation evidence, and verification cadence in enterprise contexts"
+			"Severity, exploitability, asset business criticality, and classification values from intake",
+			"Monthly count of knowledge articles published in the service catalog by category",
+			"Total hardware asset purchase cost pulled from procurement contract line items",
+			"MID Server heartbeat interval configured on discovery schedules for each subnet"
 		],
-		"correctIndex": 3,
-		"explanation": "Structured control evidence makes exception decisions auditable and defensible.",
+		"correctIndex": 0,
+		"explanation": "Calculators weight technical and business context so prioritization reflects both exploit potential and operational impact.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/document-compensating-controls.html"
+			"https://www.servicenow.com/docs/r/vulnerability-response/vulnerability-calculators.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 49,
-		"prompt": "Which metric best signals weak exception handling in VR?",
+		"prompt": "Which VR configuration types drive automated triage and routing on vulnerable items? (Choose two.)",
 		"choices": [
-			"Documented exception approvals with clear owners under governance oversight",
-			"High percentage of expired exceptions still linked to open critical vulnerabilities across operational workflows",
-			"Routine exception review meetings in enterprise contexts",
-			"Short exception durations for emergency cases in real implementations"
+			"Classification rules applied during vulnerability entry ingestion",
+			"Assignment rules that route vulnerable items to remediation groups",
+			"Password expiration business rules",
+			"LDAP synchronization scheduled jobs"
 		],
-		"correctIndex": 1,
-		"explanation": "Expired exceptions tied to critical findings indicate governance breakdown and unmanaged risk.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"questionType": "multi",
+		"explanation": "Classification rules categorize intake data and assignment rules route vulnerable items to remediation groups; password and LDAP jobs are unrelated platform functions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/report-on-vulnerability-risk.html"
+			"https://www.servicenow.com/docs/r/vulnerability-response/classification-rules.html",
+			"https://www.servicenow.com/docs/r/vulnerability-response/assignment-rules.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 50,
-		"prompt": "Which KPI is most important for measuring VR program effectiveness?",
+		"prompt": "After bulk classification rule changes, why might VR administrators reapply assignment rules on existing vulnerable items?",
 		"choices": [
-			"Count of software catalog items for measurable outcomes",
-			"Number of CMDB classes for practical execution",
-			"Total number of open incidents in enterprise contexts",
-			"Average vulnerability age by severity in real implementations"
+			"Updated classification values require rerouting items to the correct remediation owner groups",
+			"Assignment rules cannot execute until every scanner integration has been permanently disabled",
+			"Reapply clears all closed vulnerability records from historical audit and reporting tables",
+			"Reapply removes CMDB relationships so configuration items can be rediscovered from scratch"
 		],
-		"correctIndex": 3,
-		"explanation": "Vulnerability age by severity indicates whether serious issues are being remediated within expected timelines.",
+		"correctIndex": 0,
+		"explanation": "When classification data changes, reapply assignment rules realigns ownership on open items without waiting for new scanner imports.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/report-on-vulnerability-risk.html"
+			"https://www.servicenow.com/docs/r/vulnerability-response/assignment-rules.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 51,
-		"prompt": "What metric best tracks remediation throughput in VR?",
+		"prompt": "When designing remediation task rules, which grouping principle keeps tasks actionable for remediation teams?",
 		"choices": [
-			"Ratio of vulnerabilities closed versus opened per period for practical execution",
-			"Volume of security announcements read for measurable outcomes",
-			"Count of assignment groups in real implementations",
-			"Number of scanner integrations configured in enterprise contexts"
+			"Group items sharing the same remediation action, owner group, and fix approach together",
+			"Create a separate remediation task for every individual finding regardless of similarity",
+			"Group exclusively by scanner import batch identifier taken from the source file name",
+			"Group by alphabetical order of vulnerability short description text on each record"
 		],
 		"correctIndex": 0,
-		"explanation": "Close-to-open ratios show whether remediation capacity keeps pace with newly discovered risk.",
+		"explanation": "Cohesive task groups let one team execute a single remediation pattern across many related vulnerable items.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/use-performance-analytics-for-vr.html"
+			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-task-rules.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 52,
-		"prompt": "Why segment VR metrics by business service or application?",
+		"prompt": "Remediation task rules support Match All and Match First execution modes. When should Match First be selected?",
 		"choices": [
-			"To clearly identify concentration of risk and ownership hotspots",
-			"To clearly remove CI dependency mapping in real implementations",
-			"To clearly hide infrastructure vulnerabilities for measurable outcomes",
-			"To clearly avoid assigning remediation tasks for practical execution"
+			"When rules are ordered by priority and only the first matching rule should create or update a task",
+			"When every matching rule must create separate remediation tasks for the same vulnerable item",
+			"When no assignment rule has ever executed on newly imported scanner findings",
+			"When vulnerabilities are already marked false positive before grouping logic runs"
 		],
 		"correctIndex": 0,
-		"explanation": "Service-level segmentation reveals where risk accumulates and which owners need attention.",
+		"explanation": "Match First prevents lower-priority rules from overriding a higher-priority grouping decision on the same record.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/prioritize-vulnerabilities-by-business-context.html"
+			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-task-rules.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 53,
-		"prompt": "Which metric helps validate SLA policy realism in VR?",
+		"prompt": "Which actions can remediation owners perform from the IT Remediation Workspace list views?",
 		"choices": [
-			"Percentage of vulnerabilities meeting SLA by severity class in real implementations",
-			"Count of dashboard tabs in enterprise contexts",
-			"Number of users with admin role for practical execution",
-			"Frequency of weekly standups for measurable outcomes"
+			"Request an exception and create a change request linked to a remediation task",
+			"Mark a finding as false positive with a documented close reason captured on the record",
+			"Author new classification rules for third-party vulnerability entry tables",
+			"Configure NVD feed synchronization schedules and MID Server credentials"
 		],
 		"correctIndex": 0,
-		"explanation": "SLA attainment by severity highlights whether policy targets are achievable and being enforced.",
+		"explanation": "The IT Remediation Workspace exposes operational actions such as exceptions, change requests, and false positive disposition for assigned remediation work.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/service-level-management/concept/c_ServiceLevelManagement.html"
+			"https://www.servicenow.com/docs/r/vulnerability-response/it-remediation-workspace.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 54,
-		"prompt": "What visualization is best for showing VR risk reduction over time?",
+		"prompt": "Which system property must be enabled before administrators can rerun remediation task rules on existing records?",
 		"choices": [
-			"Trend of open critical/high vulnerabilities with closure velocity overlays in enterprise contexts",
-			"Single value showing total CI count in real implementations",
-			"Table of inactive users under governance oversight",
-			"Pie chart of scanner names across operational workflows"
+			"sn_sec_rem.rerun_task_rules set to true",
+			"glide.ui.view.layout set to classic rendering for all security workspaces",
+			"com.snc.change_management.auto_close enabled on production change records",
+			"sn_vul.disable_cmdb_correlation set to true during every scanner import"
 		],
 		"correctIndex": 0,
-		"explanation": "Time-based trends plus closure velocity provide context on whether risk posture is improving.",
+		"explanation": "The sn_sec_rem.rerun_task_rules property must be active before assignment and remediation task rules can be reapplied on existing vulnerable items.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html"
+			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-task-rules.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 55,
-		"prompt": "Which role is primarily responsible for VR policy and operational governance?",
+		"prompt": "A vulnerability analyst confirms a scanner finding does not represent real risk on the affected asset. What is the appropriate VR disposition?",
 		"choices": [
-			"Vulnerability response manager or program owner in real implementations",
-			"No ownership role is needed in enterprise contexts",
-			"Exclusively CMDB data steward in real implementations",
-			"Any business user with portal access under governance oversight"
+			"Close the vulnerable item as false positive with a documented close reason on the record",
+			"Delete the vulnerability entry and all related historical audit records permanently",
+			"Leave the item open indefinitely without assignment to any remediation owner group",
+			"Convert the finding into a standard incident ticket without retaining CI context"
 		],
 		"correctIndex": 0,
-		"explanation": "Program ownership is needed to maintain lifecycle standards, SLAs, and remediation accountability.",
+		"explanation": "False positive closure preserves audit history while recording why the finding was determined not to represent actionable exposure.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/concept/vulnerability-response-overview.html"
+			"https://www.servicenow.com/docs/r/vulnerability-response/false-positive-management.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 56,
-		"prompt": "What role should approve high-impact vulnerability exceptions?",
+		"prompt": "When remediation cannot meet SLA because a vendor patch is unavailable, which VR mechanism documents accepted risk?",
 		"choices": [
-			"Designated risk approver with security governance authority under governance oversight",
-			"Service desk trainee across operational workflows for practical execution",
-			"Scanner integration user in enterprise contexts under governance oversight",
-			"Any technician assigned to the item in real implementations"
+			"Vulnerability exception request with expiration date and approver sign-off captured",
+			"Immediate deletion of the vulnerable item from active monitoring and reporting lists",
+			"Silent state change to Closed without approval workflow or documented justification",
+			"Manual override of every ACL to grant all authenticated users write access to VR tables"
 		],
 		"correctIndex": 0,
-		"explanation": "Exception approval for high risk requires formal authority and risk accountability.",
+		"explanation": "Exception requests formalize temporary risk acceptance with approvers, justification, and time bounds until remediation becomes feasible.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/manage-risk-exceptions.html"
+			"https://www.servicenow.com/docs/r/vulnerability-response/vulnerability-exceptions.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 57,
-		"prompt": "Which role should typically own remediation tasks in VR?",
+		"prompt": "How does Vulnerability Exception Management integrate with the broader ServiceNow platform?",
 		"choices": [
-			"Application or infrastructure owner responsible for affected assets across operational workflows",
-			"Unassigned queue with no owner under governance oversight",
-			"Exclusively platform administrators in real implementations",
-			"Security auditors exclusively under governance oversight"
+			"It integrates with ServiceNow Governance, Risk, and Compliance for policy-based exception handling",
+			"It replaces the CMDB with a standalone spreadsheet import table for all asset records",
+			"It disables Performance Analytics collections used by security operations dashboards",
+			"It requires all exceptions to be tracked exclusively in email threads outside the platform"
 		],
 		"correctIndex": 0,
-		"explanation": "Asset and application owners are best positioned to execute and validate remediation changes.",
+		"explanation": "Vulnerability Exception Management connects to ServiceNow GRC so policy exceptions follow enterprise governance workflows and evidence requirements.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/remediate-vulnerabilities.html"
+			"https://www.servicenow.com/docs/r/vulnerability-response/grc-exception-management.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 58,
-		"prompt": "How should read access be handled for vulnerability data with sensitive findings?",
+		"prompt": "What happens when a vulnerability exception request nears its expiration date in VR?",
 		"choices": [
-			"Role-based access with constraints for sensitive CI and exploit details in enterprise contexts",
-			"No ACLs needed when dashboards exist in real implementations",
-			"Shared through public reports under governance oversight",
-			"Open to all authenticated users across operational workflows"
+			"A review workflow triggers revalidation, remediation planning, or closure of accepted risk",
+			"The system automatically deletes all related vulnerable items from the production database",
+			"The exception converts to a permanent approved state without further governance review",
+			"All remediation tasks close as false positives regardless of actual exposure status"
 		],
 		"correctIndex": 0,
-		"explanation": "Sensitive vulnerability details require controlled visibility based on operational need.",
+		"explanation": "Expiring exceptions must be reassessed so accepted risk does not continue without accountable review and updated remediation plans.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_AccessControls.html"
+			"https://www.servicenow.com/docs/r/vulnerability-response/vulnerability-exceptions.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 59,
-		"prompt": "What indicates healthy VR role alignment?",
+		"prompt": "What do automated exception rules accomplish for vulnerable items that match defined conditions?",
 		"choices": [
-			"No role ownership captured on records across operational workflows",
-			"Frequent overdue items with unknown owners under governance oversight",
-			"Remediation, approval, and review duties are clearly separated with low reassignment churn for practical execution",
-			"All responsibilities assigned to one responder for measurable outcomes"
+			"Defer or accept risk for matching items during scheduled evaluation without manual triage",
+			"Permanently remove scanner integrations whenever any critical finding is detected",
+			"Bypass all assignment rules and assign every finding to the system administrator user",
+			"Create normal change requests for every informational severity finding automatically"
 		],
-		"correctIndex": 2,
-		"explanation": "Clear ownership and segregation improve throughput, auditability, and risk control.",
+		"correctIndex": 0,
+		"explanation": "Exception rules automate deferral for known accepted-risk scenarios, reducing repetitive manual exception submissions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+			"https://www.servicenow.com/docs/r/vulnerability-response/exception-rules.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 60,
-		"prompt": "In VR, what is patch orchestration primarily designed to achieve?",
+		"prompt": "When remediation verification confirms a patch succeeded, which close-out state reflects resolved exposure?",
 		"choices": [
-			"Automate coordinated remediation actions from vulnerability findings to patch execution workflows across operational workflows",
-			"Replace vulnerability scoring models under governance oversight",
-			"Disable assignment groups for practical execution across operational workflows",
-			"Prevent scanner imports for measurable outcomes in enterprise contexts"
+			"Move vulnerable items to a closed resolved state with verification evidence captured on the record",
+			"Reopen all related remediation tasks to New regardless of confirmed patch implementation outcome",
+			"Mark items false positive without validating scanner rescan or verification results",
+			"Delete remediation task records entirely to prevent future audit trail review by leadership"
 		],
 		"correctIndex": 0,
-		"explanation": "Patch orchestration links findings to actionable remediation flows and reduces manual handoffs.",
+		"explanation": "Verified remediation should close vulnerable items in a resolved state that documents how exposure was eliminated.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/orchestrate-vulnerability-remediation.html"
+			"https://www.servicenow.com/docs/r/vulnerability-response/close-out-remediation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 61,
-		"prompt": "Which condition should trigger automated patch orchestration?",
+		"prompt": "Vulnerable items deferred through an approved exception should remain in which state until expiration or remediation?",
 		"choices": [
-			"Severity, exploitability, and asset criticality meeting defined policy thresholds in enterprise contexts",
-			"Exclusively vulnerabilities older than one year across operational workflows",
-			"Manual user preference setting under governance oversight",
-			"Any informational finding regardless of context across operational workflows"
+			"Deferred with links to the active exception record and tracked expiration date",
+			"Closed false positive with no reference to the exception approval chain or approver",
+			"Cancelled with all CI relationships removed from the CMDB permanently",
+			"New with assignment cleared and SLA timers permanently disabled on the item"
 		],
 		"correctIndex": 0,
-		"explanation": "Policy thresholds ensure automation focuses on materially risky vulnerabilities.",
+		"explanation": "Deferred state preserves visibility of accepted risk while maintaining traceability to the governing exception record.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/configure-vulnerability-groups.html"
+			"https://www.servicenow.com/docs/r/vulnerability-response/vulnerability-exceptions.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 62,
-		"prompt": "What is the best integration pattern for patch status feedback into VR?",
+		"prompt": "Why must close reasons be preserved when marking vulnerabilities as false positives in VR?",
 		"choices": [
-			"One-way export with no return status across operational workflows",
-			"Email-exclusively confirmations under governance oversight",
-			"Manual weekly reconciliation sheets in real implementations",
-			"Bidirectional updates that reflect patch job outcome and verification state in enterprise contexts"
+			"They support audit review, trend analysis, and analyst accountability for disposition decisions",
+			"They trigger automatic deletion of scanner integration credentials from the instance vault",
+			"They replace the need for any future vulnerability rescans on affected configuration items",
+			"They convert all related items into change requests without additional approval steps"
 		],
-		"correctIndex": 3,
-		"explanation": "Bidirectional status keeps vulnerability records accurate and supports reliable closure decisions.",
+		"correctIndex": 0,
+		"explanation": "Documented close reasons explain why findings were dismissed and support later reassessment if conditions change.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/verify-vulnerability-remediation.html"
+			"https://www.servicenow.com/docs/r/vulnerability-response/false-positive-management.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 63,
-		"prompt": "Which safeguard is most important in automated patch orchestration?",
+		"prompt": "Which VR automation features reduce manual triage on incoming findings? (Choose three.)",
 		"choices": [
-			"Approval gates and rollback procedures for high-impact systems under governance oversight",
-			"No change control or rollback plan across operational workflows",
-			"Ignore maintenance windows in enterprise contexts for measurable outcomes",
-			"Patch all assets simultaneously in real implementations"
+			"Classification rules that categorize scanner intake records",
+			"Assignment rules that set remediation owner groups on items",
+			"Remediation task rules that group items into shared tasks",
+			"Manual CSV export to spreadsheet for offline review"
 		],
 		"correctIndex": 0,
-		"explanation": "Controlled approvals and rollback readiness reduce operational and service risk during remediation.",
+		"correctIndexes": [
+			0,
+			1,
+			2
+		],
+		"questionType": "multi",
+		"explanation": "Classification, assignment, and remediation task rules automate categorization, routing, and grouping; spreadsheet export is a manual workaround.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+			"https://www.servicenow.com/docs/r/vulnerability-response/classification-rules.html",
+			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-task-rules.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 64,
-		"prompt": "What metric best evaluates patch orchestration effectiveness?",
+		"prompt": "When a remediation task moves to Closed / False Positive, what should happen to in-flight false positive approval records?",
 		"choices": [
-			"Count of dashboard colors used across operational workflows",
-			"Reduction in mean time to remediate for orchestrated vulnerability cohorts under governance oversight",
-			"Increase in manual ticket transfers for practical execution",
-			"Number of inactive patch groups for measurable outcomes"
+			"Related state change approval records in Draft or In Review should be cancelled",
+			"Approval records auto-advance to Approved without analyst or approver intervention",
+			"Approval records convert to change requests linked to the CAB schedule board",
+			"Approval records duplicate onto every unrelated open vulnerable item in the queue"
 		],
-		"correctIndex": 1,
-		"explanation": "MTTR improvement for orchestrated cohorts demonstrates practical automation value.",
+		"correctIndex": 0,
+		"explanation": "Cancelling stale approvals keeps vulnerable item state aligned with the remediation task disposition and prevents orphaned review work.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/use-performance-analytics-for-vr.html"
+			"https://www.servicenow.com/docs/r/vulnerability-response/false-positive-management.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 65,
-		"prompt": "Which admin practice most improves VR operational consistency?",
+		"prompt": "Which VR automation approach helps teams close the loop after patch deployment completes?",
 		"choices": [
-			"Disable prioritization logic under governance oversight for measurable outcomes",
-			"Apply ad hoc severity overrides exclusively across operational workflows",
-			"Allow each team to define independent status values for measurable outcomes",
-			"Standardized vulnerability states, assignment rules, and SLA policies for practical execution"
+			"Bidirectional status updates from patch tools that confirm verification on vulnerable items",
+			"One-way export of vulnerability lists with no return status from execution tools",
+			"Weekly manual spreadsheet reconciliation as the only feedback channel for closure",
+			"Disabling all change management integration plugins on production instances permanently"
 		],
-		"correctIndex": 3,
-		"explanation": "Standard operational definitions improve cross-team consistency and measurable outcomes.",
+		"correctIndex": 0,
+		"explanation": "Return status from patch orchestration keeps vulnerability records accurate and supports reliable close-out decisions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/concept/vulnerability-response-overview.html"
+			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-workflows.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 66,
-		"prompt": "How should VR administrators handle scanner source onboarding?",
+		"prompt": "Which control prevents vulnerability exceptions from becoming unmanaged accepted risk over time?",
 		"choices": [
-			"Enable import feeds without validation for practical execution",
-			"Disable CI correlation for measurable outcomes in enterprise contexts",
-			"Accept exclusively CSV email attachments for practical execution",
-			"Apply governed onboarding with field mapping, deduplication, and data quality checks"
+			"Mandatory expiration dates with scheduled review and reapproval workflows",
+			"Unlimited auto-renewal of any approved exception without documented justification",
+			"Removal of approver roles so requesters can self-approve critical findings",
+			"Archiving exception records immediately after initial submission before any review"
 		],
-		"correctIndex": 3,
-		"explanation": "Controlled onboarding protects correlation quality and remediation accuracy.",
+		"correctIndex": 0,
+		"explanation": "Time-bounded exceptions with review cadence ensure leadership reassesses risk instead of silently extending exposure.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/configure-scanner-integrations.html"
+			"https://www.servicenow.com/docs/r/vulnerability-response/vulnerability-exceptions.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 67,
-		"prompt": "Which control is most important for VR exception administration?",
+		"prompt": "Which scheduled job behavior helps VR teams identify duplicate vulnerable items attached to remediation tasks?",
 		"choices": [
-			"Mandatory expiration, approver accountability, and review cadence in enterprise contexts",
-			"No expiration required for approved exceptions in real implementations",
-			"Archive exceptions immediately after approval for measurable outcomes",
-			"Exception approvals by any requester for practical execution"
+			"A scheduled job scans remediation tasks for duplicate VIs and flags them for resolution",
+			"A nightly job deletes all closed vulnerabilities older than one day from history tables",
+			"A weekly job disables every active assignment rule until manually re-enabled by an admin",
+			"A daily job removes CMDB CIs that have not been scanned during the past hour"
 		],
 		"correctIndex": 0,
-		"explanation": "Time-bounded exceptions with accountable review prevent unmanaged accepted risk.",
+		"explanation": "Duplicate VI detection on remediation tasks prevents inconsistent state and redundant work across grouped findings.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/manage-risk-exceptions.html"
+			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-task-rules.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 68,
-		"prompt": "What admin KPI best reflects VR process health?",
+		"prompt": "What is the role of state change approval records in VR exception and false positive workflows?",
 		"choices": [
-			"Number of inactive users for practical execution",
-			"Count of UI actions on forms for measurable outcomes",
-			"Open critical vulnerability age and SLA breach rate in real implementations",
-			"Frequency of dashboard exports in enterprise contexts"
+			"They capture approver decisions before vulnerable items change to deferred or closed states",
+			"They replace vulnerability calculators when scoring critical internet-facing asset findings",
+			"They import NVD CVE feeds when the primary integration fails during ingestion cycles",
+			"They map scanner credentials to MID Server capability definitions during discovery"
 		],
-		"correctIndex": 2,
-		"explanation": "Critical-age and breach metrics reveal whether high-risk remediation is under control.",
+		"correctIndex": 0,
+		"explanation": "State change approvals enforce governance checkpoints before disposition changes take effect on vulnerable items.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/use-performance-analytics-for-vr.html"
+			"https://www.servicenow.com/docs/r/vulnerability-response/vulnerability-exceptions.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 69,
-		"prompt": "Which sign indicates mature VR administration?",
+		"prompt": "Which indicator suggests VR automation is configured effectively across the remediation lifecycle?",
 		"choices": [
-			"No documented ownership model for measurable outcomes",
-			"Exception backlog growing without review for practical execution",
-			"Reliable ingestion, governed workflows, and improving remediation velocity in enterprise contexts",
-			"Low data quality and high manual rework in real implementations"
+			"Findings flow from intake through rules to assigned remediation tasks with minimal manual rework",
+			"Every finding requires manual reassignment regardless of classification or ownership data",
+			"Exception backlogs grow without review while critical items remain deferred indefinitely",
+			"Scanner imports succeed but no assignment or grouping rules execute on new records"
 		],
-		"correctIndex": 2,
-		"explanation": "Mature administration combines reliable operations with measurable risk reduction outcomes.",
+		"correctIndex": 0,
+		"explanation": "Effective automation reduces handoffs and keeps newly imported findings progressing through governed workflows.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/report-on-vulnerability-risk.html"
+			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-workflows.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 70,
-		"prompt": "Which approach best supports enterprise remediation in Vulnerability Response?",
+		"prompt": "Which dashboard view helps vulnerability managers track open risk by severity and aging?",
 		"choices": [
-			"Patch every finding in strict discovery order in enterprise contexts",
-			"Focus on low-risk findings first to increase closure counts in real implementations",
-			"Risk-based prioritization that combines exploitability, asset criticality, and business context for measurable outcomes",
-			"Remediate exclusively vulnerabilities from one scanner for practical execution"
+			"Vulnerability Response overview dashboards with severity breakdowns and age metrics",
+			"Hardware asset lifecycle dashboards for procurement renewal forecasting by cost center",
+			"Employee onboarding journey analytics for HR case completion rates by department",
+			"Change collision detection reports for normal change scheduling across maintenance windows"
 		],
-		"correctIndex": 2,
-		"explanation": "Enterprise remediation is most effective when risk context directs effort to the highest-impact exposures first.",
+		"correctIndex": 0,
+		"explanation": "VR overview dashboards surface severity distribution and aging so managers can spot backlog concentration and SLA risk.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-response.html",
-			"https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-prioritization.html"
+			"https://www.servicenow.com/docs/r/vulnerability-response/vr-dashboards.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 71,
-		"prompt": "What is the most important governance mechanism for enterprise VR remediation teams?",
+		"prompt": "How does Performance Analytics support continuous improvement in a Vulnerability Response program?",
 		"choices": [
-			"Standard SLA policies by risk tier with accountable assignment groups and escalation for practical execution",
-			"No distinction between critical and low findings for measurable outcomes",
-			"Optional due dates set by individual analysts across operational workflows",
-			"Remediation ownership left undefined until audits under governance oversight"
+			"It trends KPIs such as mean time to remediate, SLA attainment, and backlog reduction over time",
+			"It replaces all vulnerability assignment rules with manual analyst triage queues permanently",
+			"It imports scanner findings directly without requiring integration credentials or field mapping",
+			"It eliminates the need for exception management when indicator scores fall below threshold"
 		],
 		"correctIndex": 0,
-		"explanation": "Clear tiered SLAs and ownership reduce remediation drift and create consistent enterprise execution.",
+		"explanation": "Performance Analytics provides time-series visibility into remediation velocity and policy adherence for program tuning.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-response.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+			"https://www.servicenow.com/docs/r/vulnerability-response/vr-performance-analytics.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 72,
-		"prompt": "Which metric set best shows progress in enterprise VR remediation?",
+		"prompt": "Which report best helps security leadership compare remediation progress across business services?",
 		"choices": [
-			"Total number of scanners integrated in enterprise contexts before promoting configuration through the update set pipeline. (CIS-VR-72-w0)",
-			"Number of dashboard widgets in apply across operational workflows",
-			"Weekly count of all discovered IP addresses under governance oversight",
-			"Critical vulnerability aging, SLA attainment by business service, and reopened remediation rate across operational workflows"
+			"Vulnerability status by business service with SLA breach and aging metrics by owner group",
+			"Count of active UI themes configured on the instance segmented by department code",
+			"Total number of MID Server JVM heap allocations per discovery schedule on each subnet",
+			"List of unassigned hardware asset tags exported without any vulnerability context included"
 		],
-		"correctIndex": 3,
-		"explanation": "These measures demonstrate remediation speed, accountability, and quality across enterprise domains.",
+		"correctIndex": 0,
+		"explanation": "Service-level vulnerability reporting shows where risk concentrates and which owner groups need escalation support.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
-			"https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-response.html"
+			"https://www.servicenow.com/docs/r/vulnerability-response/vr-reporting.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 73,
-		"prompt": "When multiple teams dispute ownership of a critical vulnerability, what should happen first?",
+		"prompt": "The CISO wants executive visibility into VR program health without operational detail overload. Which dashboard design choices meet that need? (Choose two.)",
 		"choices": [
-			"Assign ownership to the last team that commented across operational workflows",
-			"Convert the record to informational with no due date under governance oversight",
-			"Apply CMDB and service ownership mapping to assign accountable remediation ownership",
-			"Close the item until teams reach consensus for measurable outcomes"
+			"High-level overview tiles summarizing critical exposure and remediation trend direction",
+			"Single clear health indicators such as overdue critical backlog or SLA attainment rate",
+			"Full editable remediation task lists with every technical field exposed on one screen",
+			"Raw scanner export files attached as the primary visualization on the landing page"
 		],
-		"correctIndex": 2,
-		"explanation": "Accurate ownership mapping is foundational for timely remediation and escalation governance.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"questionType": "multi",
+		"explanation": "Executive consumers need concise overview tiles and a small set of decisive health indicators rather than operational record-level detail.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/c_CMDB.html",
-			"https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-response.html"
+			"https://www.servicenow.com/docs/r/vulnerability-response/ciso-dashboards.html"
 		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 74,
-		"prompt": "What indicates an enterprise VR remediation program is becoming operationally mature?",
+		"prompt": "Which visualization best communicates whether the organization is reducing critical vulnerability exposure over time?",
 		"choices": [
-			"Higher volume of manually updated tickets in enterprise contexts",
-			"Consistent reduction of high-risk backlog and fewer recurring critical findings in real implementations",
-			"More exception requests with no expiration for measurable outcomes",
-			"Longer approval times for patch windows for practical execution"
-		],
-		"correctIndex": 1,
-		"explanation": "Maturity is visible through sustained risk reduction and prevention of repeat high-impact exposures.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-response.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-management.html"
-		]
-	},
-	{
-		"trackCode": "CIS-VR",
-		"order": 75,
-		"prompt": "A critical vulnerability has public exploit activity. What is the best first governance-aligned response in VR?",
-		"choices": [
-			"Create a lower-priority task to avoid patch-window conflicts across operational workflows",
-			"Wait for the next routine patch cycle under governance oversight",
-			"Create an exception request before triage in real implementations",
-			"Re-prioritize with threat context and route urgent remediation through defined SLA/escalation paths"
-		],
-		"correctIndex": 3,
-		"explanation": "Exploit evidence should immediately influence priority and SLA-driven remediation flow.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-prioritization.html",
-			"https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-response.html"
-		]
-	},
-	{
-		"trackCode": "CIS-VR",
-		"order": 76,
-		"prompt": "Which indicator most clearly signals that VR exception governance is weakening?",
-		"choices": [
-			"Higher proportion of exceptions without expiration or compensating controls in enterprise contexts",
-			"Strengthened critical vulnerability SLA attainment in real implementations",
-			"More remediation tasks auto-assigned by ownership rules under governance oversight",
-			"Fewer duplicate findings after scanner tuning across operational workflows"
+			"Trend lines showing open critical and high findings with closure velocity overlays",
+			"Pie chart of scanner vendor names without severity or age context on the dashboard",
+			"Table of inactive user accounts who have never logged into the VR application module",
+			"Single static count of total CMDB configuration items regardless of vulnerability state"
 		],
 		"correctIndex": 0,
-		"explanation": "Unbounded exceptions without control evidence increase unmanaged risk and indicate poor oversight.",
+		"explanation": "Time-based severity trends combined with closure velocity show whether remediation capacity is outpacing newly discovered critical risk.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-response.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-management.html"
-		]
-	},
-	{
-		"trackCode": "CIS-VR",
-		"order": 77,
-		"prompt": "Why should VR remediation ownership be aligned to service/application ownership in CMDB?",
-		"choices": [
-			"It removes the need for vulnerability grouping in real implementations",
-			"It guarantees all vulnerabilities are auto-remediated in enterprise contexts",
-			"It eliminates SLA policy requirements across operational workflows",
-			"It confirms accountability routes to the teams that control the affected assets"
-		],
-		"correctIndex": 3,
-		"explanation": "CMDB ownership alignment makes assignment and escalation paths actionable for remediation execution.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/c_CMDB.html",
-			"https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-response.html"
-		]
-	},
-	{
-		"trackCode": "CIS-VR",
-		"order": 78,
-		"prompt": "What is the primary purpose of vulnerability grouping in VR?",
-		"choices": [
-			"To clearly consolidate related findings into actionable remediation work units",
-			"To clearly assign one SLA to every vulnerability regardless of risk",
-			"To clearly replace CMDB relationships with manual tags",
-			"To clearly hide scanner source differences from analysts"
-		],
-		"correctIndex": 0,
-		"explanation": "Grouping reduces duplicate effort and enables coordinated remediation execution for related exposures.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-response.html",
-			"https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-prioritization.html"
-		]
-	},
-	{
-		"trackCode": "CIS-VR",
-		"order": 79,
-		"prompt": "Which VR metric most directly reflects reduction of high-impact cyber exposure?",
-		"choices": [
-			"Average number of comments per remediation task across operational workflows",
-			"Decrease in aging critical vulnerabilities tied to business-critical services under governance oversight",
-			"Total vulnerabilities imported per scanner in real implementations",
-			"Count of dashboard filters configured in enterprise contexts"
-		],
-		"correctIndex": 1,
-		"explanation": "Aging critical findings on important services is a direct signal of unresolved enterprise risk.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-response.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
-		]
-	},
-	{
-		"trackCode": "CIS-VR",
-		"order": 80,
-		"prompt": "What workflow design most improves remediation throughput in VR?",
-		"choices": [
-			"One-task-per-finding with manual assignment exclusively in real implementations",
-			"No due dates to avoid churn under governance oversight",
-			"Risk-tiered assignment with SLA targets and clear closure criteria in real implementations",
-			"Manual spreadsheet exports for each scanner in enterprise contexts"
-		],
-		"correctIndex": 2,
-		"explanation": "Throughput improves when prioritization, ownership, and completion standards are explicit and repeatable.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-response.html",
-			"https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-prioritization.html"
-		]
-	},
-	{
-		"trackCode": "CIS-VR",
-		"order": 81,
-		"prompt": "A remediation team cannot patch before SLA due to operational freeze. What is the best governed action?",
-		"choices": [
-			"Extend the due date silently under governance oversight",
-			"Close the finding as accepted risk without approval across operational workflows",
-			"Submit a time-bound exception with compensating controls and formal approval in enterprise contexts",
-			"Delete related vulnerability tasks in real implementations"
-		],
-		"correctIndex": 2,
-		"explanation": "Governed exceptions preserve accountability and require explicit risk acceptance during constraints.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-response.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-management.html"
-		]
-	},
-	{
-		"trackCode": "CIS-VR",
-		"order": 82,
-		"prompt": "Which KPI pairing best reflects both speed and quality in VR remediation?",
-		"choices": [
-			"Dashboard refresh frequency and export volume in real implementations",
-			"Percent of records with comments and assignment group size in enterprise contexts",
-			"Total vulnerabilities discovered and scanner count across operational workflows",
-			"SLA attainment by risk tier and reopened remediation rate under governance oversight"
-		],
-		"correctIndex": 3,
-		"explanation": "These metrics together show whether teams remediate on time and avoid unstable fixes.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
-			"https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-response.html"
-		]
-	},
-	{
-		"trackCode": "CIS-VR",
-		"order": 83,
-		"prompt": "Why should scanner integration health be monitored continuously in VR?",
-		"choices": [
-			"To clearly replace remediation validation steps under governance oversight",
-			"To clearly prioritize low-risk vulnerabilities first for practical execution",
-			"To clearly avoid creating assignment groups in enterprise contexts",
-			"To confirm incoming findings remain complete, deduplicated, and actionable for workflows"
-		],
-		"correctIndex": 3,
-		"explanation": "Poor feed quality directly harms prioritization, ownership routing, and remediation confidence.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-response.html",
-			"https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-prioritization.html"
-		]
-	},
-	{
-		"trackCode": "CIS-VR",
-		"order": 84,
-		"prompt": "What is the best reason to align VR and change management for production patching?",
-		"choices": [
-			"To clearly avoid documenting remediation plans for practical execution",
-			"To clearly skip validation testing during emergency fixes",
-			"To clearly close vulnerabilities immediately after task assignment",
-			"To confirm remediation actions are controlled, approved, and traceable"
-		],
-		"correctIndex": 3,
-		"explanation": "Change governance provides controlled execution and evidence for production remediation activities.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-response.html"
-		]
-	},
-	{
-		"trackCode": "CIS-VR",
-		"order": 85,
-		"prompt": "Which practice best reduces recurrence of critical vulnerabilities in VR?",
-		"choices": [
-			"Limit remediation to temporary compensating controls for measurable outcomes",
-			"Ignore vulnerabilities on non-production assets for practical execution",
-			"Prioritize closure count over root-cause analysis under governance oversight",
-			"Track recurring patterns and feed lessons into patch/process hardening across operational workflows"
-		],
-		"correctIndex": 3,
-		"explanation": "Recurring-risk analysis supports durable fixes rather than repeated short-term remediation cycles.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-response.html",
-			"https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-prioritization.html"
-		]
-	},
-	{
-		"trackCode": "CIS-VR",
-		"order": 86,
-		"prompt": "Which triage behavior most improves prioritization quality in VR?",
-		"choices": [
-			"Prioritize strictly by CVSS score without asset context for practical execution",
-			"Combine technical severity with exploit intelligence and business criticality for measurable outcomes",
-			"Triage by record creation time exclusively across operational workflows",
-			"Route all items to one resolver team in enterprise contexts"
-		],
-		"correctIndex": 1,
-		"explanation": "Risk-informed triage requires both technical and business context to focus limited remediation capacity.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-prioritization.html",
-			"https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-response.html"
-		]
-	},
-	{
-		"trackCode": "CIS-VR",
-		"order": 87,
-		"prompt": "What is the primary risk of closing vulnerability records without verification evidence?",
-		"choices": [
-			"False risk reduction reporting and unresolved exposure in production for measurable outcomes",
-			"Longer scanner import duration for practical execution",
-			"Reduced number of assignment groups in enterprise contexts",
-			"Increased dashboard load times in real implementations"
-		],
-		"correctIndex": 0,
-		"explanation": "Without verification, closed records may misstate risk posture while vulnerabilities remain exploitable.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-response.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-management.html"
-		]
-	},
-	{
-		"trackCode": "CIS-VR",
-		"order": 88,
-		"prompt": "Which VR operating model most effectively supports enterprise-scale remediation?",
-		"choices": [
-			"No ownership model until quarterly reviews for practical execution",
-			"Ad hoc prioritization by individual analysts for measurable outcomes",
-			"Central policy with decentralized execution by accountable service teams across operational workflows",
-			"Single remediation queue for every business unit and platform under governance oversight"
-		],
-		"correctIndex": 2,
-		"explanation": "Central standards with local accountable execution balances consistency and delivery speed at scale.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-response.html",
-			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
-		]
-	},
-	{
-		"trackCode": "CIS-VR",
-		"order": 89,
-		"prompt": "Which outcome best shows a VR program is becoming proactive rather than reactive?",
-		"choices": [
-			"Teams postpone ownership assignment until weekly meetings under governance oversight",
-			"Most relevant remediation starts exclusively after SLA breaches",
-			"Critical vulnerability backlog steadily declines while repeat findings are reduced in enterprise contexts",
-			"Exception volume grows faster than closures in real implementations"
-		],
-		"correctIndex": 2,
-		"explanation": "Sustained backlog and recurrence reduction indicates preventive control and faster risk response.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-operations/page/product/vulnerability-response/concept/vulnerability-response.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+			"https://www.servicenow.com/docs/r/vulnerability-response/vr-dashboards.html"
 		]
 	},
 	{

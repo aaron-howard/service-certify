@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-SPM",
+		"order": 50,
+		"prompt": "Which navigation path opens the modern Project Workspace experience for project managers?",
+		"choices": [
+			"Project > Projects > Project Workspace from the application menu",
+			"Incident > Open > New for service desk assignment routing",
+			"Catalog > Request Items > Create for employee service requests",
+			"Discovery > Status > Schedules for CI classification updates"
+		],
+		"correctIndex": 0,
+		"explanation": "Project Workspace is accessed from the Project application menu and provides the Next Experience interface for planning and managing investments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/project-workspace/access-the-project-workspace.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 51,
+		"prompt": "To enable budget allocation by expense or cost type in Project Workspace, which system property must an administrator set to true?",
+		"choices": [
+			"sn_invst_pln.enable_budget_allocation_v2 on sys_properties",
+			"glide.ui.project.color on the system property list",
+			"com.snc.financial_planning_pmo.active on the plugin registry",
+			"sn_align_core.apw_lens_count on the portfolio planning module"
+		],
+		"correctIndex": 0,
+		"explanation": "Setting sn_invst_pln.enable_budget_allocation_v2 to true activates the flexible budget allocation experience for projects in Project Workspace.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/project-workspace/enable-fin-budget-pws.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 52,
+		"prompt": "A portfolio lead compares subproject progress against the parent initiative. What happens when subprojects update their schedules?",
+		"choices": [
+			"Progress, costs, and timelines roll up to the parent project metrics",
+			"Subproject data remains isolated with no aggregation to the parent",
+			"Parent project states automatically change to Closed Complete",
+			"Resource plans on the parent are deleted and rebuilt from scratch"
+		],
+		"correctIndex": 0,
+		"explanation": "Parent-child project hierarchies roll up progress, cost, and schedule data so program and portfolio views reflect consolidated delivery status.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/program-management/t_CreateAProgram.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 53,
+		"prompt": "A program contains three related projects under one parent initiative. Which field on a project record establishes that hierarchy?",
+		"choices": [
+			"Parent field linking the subproject to the parent initiative",
+			"Portfolio field assigning the record to the fiscal year budget",
+			"Phase field naming the current waterfall stage gate only",
+			"Dependency field connecting two tasks on the same schedule"
+		],
+		"correctIndex": 0,
+		"explanation": "Selecting a parent project on a child record creates a subproject hierarchy that maintains consolidated visibility across related work streams.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/program-management/t_CreateAProgram.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 54,
+		"prompt": "A task owner updates planned hours on a project task from Project Workspace. Which table stores that work breakdown element?",
+		"choices": [
+			"Project task records on the work breakdown structure",
+			"Demand assessment records in the intake evaluation queue",
+			"Time sheet policy rules defining weekly submission windows",
+			"Planning attribute values on the employee profile record"
+		],
+		"correctIndex": 0,
+		"explanation": "Project tasks form the work breakdown structure in Project Workspace and hold planned dates, hours, assignments, and dependency relationships.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/project-workspace/project-workspace-landing-page.html"
+		]
+	}
+]

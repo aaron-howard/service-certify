@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 45,
+		"prompt": "A TPR manager must evaluate control posture for a specific vendor engagement rather than the entire company record. Which assessment scope applies?",
+		"choices": [
+			"Engagement-level third-party risk assessment tied to sn_vdr_risk_asmt_vendor_engagement",
+			"Global incident priority matrix applied to all open security incidents",
+			"Hardware asset depreciation schedule linked to procurement contract lines",
+			"Employee onboarding checklist stored on the HR case management table"
+		],
+		"correctIndex": 0,
+		"explanation": "External assessments can target a third-party engagement so scoring and evidence reflect the specific service relationship.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 46,
+		"prompt": "Your team sends the same questionnaire structure to multiple vendors each quarter. Which configuration object should they standardize first?",
+		"choices": [
+			"Assessment template on sn_vdr_risk_asmt_assessment_template with linked questionnaire templates",
+			"Business rule that renames company records when contracts renew",
+			"UI policy that hides the vendor field on unrelated procurement tasks",
+			"Scheduled job that purges closed incidents after ninety days"
+		],
+		"correctIndex": 0,
+		"explanation": "Assessment templates bundle questionnaire templates and reuse consistent control domains across recurring vendor assessments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 47,
+		"prompt": "Questionnaire authors need reusable control libraries that roll up into scored categories. Which global table defines those questionnaire definitions?",
+		"choices": [
+			"asmt_metric_type questionnaire template with categories and metrics",
+			"sys_email_log capturing outbound notification delivery status",
+			"cmdb_ci_server listing discovered infrastructure configuration items",
+			"sn_hr_core_case storing employee relations investigation records"
+		],
+		"correctIndex": 0,
+		"explanation": "Questionnaire templates use asmt_metric_type with related categories and metrics to structure assessable control content.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 48,
+		"prompt": "High-tier vendors require annual reassessment without manual recreation each cycle. How should the TPR manager configure this in TPRM?",
+		"choices": [
+			"Scheduled external assessment using a defined recurrence on the assessment record",
+			"Daily import set that deletes and recreates all vendor company records",
+			"Manual clone of each assessment only when procurement sends email notice",
+			"Change request template that blocks vendor updates until CAB approval"
+		],
+		"correctIndex": 0,
+		"explanation": "TPRM supports on-demand and recurring assessments so teams can automate periodic due diligence cadences.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-create-assessment.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 49,
+		"prompt": "A vendor completes a refreshed assessment but many control answers are unchanged from the prior cycle. Which creation option reduces duplicate data entry?",
+		"choices": [
+			"Include previous responses when initiating the new external assessment",
+			"Disable all questionnaire metrics so only free-text comments remain",
+			"Archive the vendor company record before launching the assessment",
+			"Convert the assessment into a change request with standard approval"
+		],
+		"correctIndex": 0,
+		"explanation": "The Include previous responses option carries forward prior answers so vendors update only changed controls.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-create-assessment.html"
+		]
+	}
+]

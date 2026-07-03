@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-VR",
+		"order": 50,
+		"prompt": "After bulk classification rule changes, why might VR administrators reapply assignment rules on existing vulnerable items?",
+		"choices": [
+			"Updated classification values require rerouting items to the correct remediation owner groups",
+			"Assignment rules cannot execute until every scanner integration has been permanently disabled",
+			"Reapply clears all closed vulnerability records from historical audit and reporting tables",
+			"Reapply removes CMDB relationships so configuration items can be rediscovered from scratch"
+		],
+		"correctIndex": 0,
+		"explanation": "When classification data changes, reapply assignment rules realigns ownership on open items without waiting for new scanner imports.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/vulnerability-response/assignment-rules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 51,
+		"prompt": "When designing remediation task rules, which grouping principle keeps tasks actionable for remediation teams?",
+		"choices": [
+			"Group items sharing the same remediation action, owner group, and fix approach together",
+			"Create a separate remediation task for every individual finding regardless of similarity",
+			"Group exclusively by scanner import batch identifier taken from the source file name",
+			"Group by alphabetical order of vulnerability short description text on each record"
+		],
+		"correctIndex": 0,
+		"explanation": "Cohesive task groups let one team execute a single remediation pattern across many related vulnerable items.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-task-rules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 52,
+		"prompt": "Remediation task rules support Match All and Match First execution modes. When should Match First be selected?",
+		"choices": [
+			"When rules are ordered by priority and only the first matching rule should create or update a task",
+			"When every matching rule must create separate remediation tasks for the same vulnerable item",
+			"When no assignment rule has ever executed on newly imported scanner findings",
+			"When vulnerabilities are already marked false positive before grouping logic runs"
+		],
+		"correctIndex": 0,
+		"explanation": "Match First prevents lower-priority rules from overriding a higher-priority grouping decision on the same record.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-task-rules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 53,
+		"prompt": "Which actions can remediation owners perform from the IT Remediation Workspace list views?",
+		"choices": [
+			"Request an exception and create a change request linked to a remediation task",
+			"Mark a finding as false positive with a documented close reason captured on the record",
+			"Author new classification rules for third-party vulnerability entry tables",
+			"Configure NVD feed synchronization schedules and MID Server credentials"
+		],
+		"correctIndex": 0,
+		"explanation": "The IT Remediation Workspace exposes operational actions such as exceptions, change requests, and false positive disposition for assigned remediation work.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/vulnerability-response/it-remediation-workspace.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 54,
+		"prompt": "Which system property must be enabled before administrators can rerun remediation task rules on existing records?",
+		"choices": [
+			"sn_sec_rem.rerun_task_rules set to true",
+			"glide.ui.view.layout set to classic rendering for all security workspaces",
+			"com.snc.change_management.auto_close enabled on production change records",
+			"sn_vul.disable_cmdb_correlation set to true during every scanner import"
+		],
+		"correctIndex": 0,
+		"explanation": "The sn_sec_rem.rerun_task_rules property must be active before assignment and remediation task rules can be reapplied on existing vulnerable items.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-task-rules.html"
+		]
+	}
+]

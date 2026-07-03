@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 70,
+		"prompt": "A vendor contact logs into the portal to check remediation work assigned after an assessment. Which items appear in their typical portal view?",
+		"choices": [
+			"Open assessments, related tasks, issues, and document requests for their engagement",
+			"Internal CAB agenda and pending change approvals for all departments",
+			"Full CMDB dependency map including unrelated infrastructure CIs",
+			"Employee salary bands and HR case details for corporate staff"
+		],
+		"correctIndex": 0,
+		"explanation": "Portal users see assessments, tasks, issues, and evidence requests scoped to their third-party relationship.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-reference.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 71,
+		"prompt": "Legal uploads a revised data processing agreement and needs prior versions retained for audit. Which portal document feature supports that?",
+		"choices": [
+			"Version history tab with Add version to upload successive document revisions",
+			"Single-use attachment field that overwrites prior files without retention",
+			"Email forwarding rule that stores files only in personal inboxes",
+			"Manual export to spreadsheet stored on a local workstation share"
+		],
+		"correctIndex": 0,
+		"explanation": "Portal document management maintains version history so teams can review and add new revisions over time.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-add-document-portal.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 72,
+		"prompt": "An uploaded policy must be referenced by an open remediation task and the parent assessment. How should the vendor link it in the portal?",
+		"choices": [
+			"References section to associate the document with tasks, issues, engagements, or assessments",
+			"UI macro on the homepage that embeds unrelated knowledge articles",
+			"System log entry created by writing to syslog_event manually",
+			"Import set row staged on sys_import_set without field mapping"
+		],
+		"correctIndex": 0,
+		"explanation": "Document references connect uploaded files to assessments, engagements, issues, and tasks for traceable evidence linkage.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-add-document-portal.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 73,
+		"prompt": "After upgrading to Smart Assessment Engine questionnaires, vendors report navigation issues in the legacy portal view. What deployment consideration applies?",
+		"choices": [
+			"Third-party portal supports SAE assessments with updated section-based navigation",
+			"SAE questionnaires must be completed only by internal assessors in the workspace",
+			"Portal access is disabled automatically for all SAE-enabled templates",
+			"Vendors must use the CMDB workspace to submit SAE responses"
+		],
+		"correctIndex": 0,
+		"explanation": "TPRM portal enhancements support Smart Assessment Engine delivery so external contacts can complete section-based questionnaires.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-sae-using.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 74,
+		"prompt": "A due diligence request finishes all assessments and needs formal stakeholder sign-off before contract execution. Which state transition begins that approval path?",
+		"choices": [
+			"Ready for TPRM approval followed by request approval entering Awaiting approval",
+			"Draft assessment state that deletes all questionnaire responses",
+			"Canceled engagement state that archives the vendor without review",
+			"Closed complete incident state on unrelated security tickets"
+		],
+		"correctIndex": 0,
+		"explanation": "After assessments close, the due diligence request moves to Ready for TPRM approval and then Awaiting approval when sign-off is requested.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-approving.html"
+		]
+	}
+]

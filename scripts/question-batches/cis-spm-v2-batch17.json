@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-SPM",
+		"order": 80,
+		"prompt": "A planning manager switches between portfolio, product, and program perspectives when building roadmaps. Which APW feature enables that flexibility?",
+		"choices": [
+			"Pre-defined lenses such as Project Portfolio, Product, and Organization",
+			"Timecard merge rules combining duplicate entries on submitted weeks",
+			"Project diagnostics alerting on overdue milestone completion dates",
+			"Rate model recalculation after hourly charge updates on a role"
+		],
+		"correctIndex": 0,
+		"explanation": "Portfolio Planning Workspace lenses let managers switch planning perspectives such as Project Portfolio, Product, Organization, and Project Program.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/scenario-planning-in-spw/setting-up-alignment-planner-workspace.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 81,
+		"prompt": "A portfolio plan in APW includes projects, demands, and programs for quarterly roadmapping. Which items are supported as standard planning items?",
+		"choices": [
+			"Project, Demand, and Program records added to the portfolio plan",
+			"Vulnerability item and security incident records from SecOps tables",
+			"CMDB CI classes and discovery credentials for subnet scanning",
+			"Catalog item variables and approval policies for service requests"
+		],
+		"correctIndex": 0,
+		"explanation": "Portfolio Planning Workspace supports Project, Demand, and Program as standard planning items that managers add to portfolio plans and roadmaps.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/portfolio-planning/demand-form-ppw.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 82,
+		"prompt": "A business analyst must create and edit planning items in Portfolio Planning Workspace. Which role grants that access?",
+		"choices": [
+			"sn_align_core.apw_user role assigned to the analyst account",
+			"sn_vul.vulnerability_admin role from the security operations module",
+			"sn_change.change_manager role from IT service management only",
+			"admin role with no additional portfolio planning permissions"
+		],
+		"correctIndex": 0,
+		"explanation": "The sn_align_core.apw_user role allows users to view, prioritize, and manage planning items within Portfolio Planning Workspace.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/scenario-planning-in-spw/setting-up-alignment-planner-workspace.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 83,
+		"prompt": "Leadership wants to model a 15% budget reduction before approving the portfolio plan. Which APW capability supports that trade-off analysis?",
+		"choices": [
+			"Scenario planning comparing funding alternatives against constraints",
+			"Time sheet recall operation withdrawing a processed approval record",
+			"Status report duplication copying the prior month narrative verbatim",
+			"Dependency deletion removing all predecessor links on the schedule"
+		],
+		"correctIndex": 0,
+		"explanation": "Scenario planning in Portfolio Planning Workspace lets teams compare alternative funding and sequencing choices before committing portfolio changes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/scenario-planning-in-spw/setting-up-alignment-planner-workspace.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 84,
+		"prompt": "Two product owners need to collaborate on the same roadmap for a shared portfolio. Which APW object do they maintain together?",
+		"choices": [
+			"Portfolio plan created and shared within Portfolio Planning Workspace",
+			"Resource schedule template applied to all employees in the division",
+			"Expense line linked to a single Opex entry on the cost plan header",
+			"Demand state model restricting transitions to Draft and Cancelled only"
+		],
+		"correctIndex": 0,
+		"explanation": "Portfolio plans in APW are created and shared so planning managers collaborate on prioritized work and roadmap content for a portfolio.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/scenario-planning-in-spw/setting-up-alignment-planner-workspace.html"
+		]
+	}
+]

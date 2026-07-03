@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-VR",
+		"order": 10,
+		"prompt": "An application security manager must oversee DAST findings imported into Application Vulnerability Response and assign remediation to product teams. Which persona scope fits this role?",
+		"choices": [
+			"Application security manager persona with oversight of AVIT remediation workflows and team assignments",
+			"Container registry administrator persona limited to Docker Hub credential rotation tasks only",
+			"Network operations center persona focused exclusively on SNMP trap correlation for routers",
+			"Procurement analyst persona responsible for vendor contract renewal approvals in sourcing"
+		],
+		"correctIndex": 0,
+		"explanation": "Application security managers in AVR oversee application vulnerable items, coordinate remediation with development teams, and align with Security Champion workflows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/application-vulnerability-response/avr-landing.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 11,
+		"prompt": "A software developer receives an assigned application vulnerable item requiring a code fix before the next release. Where does this work typically originate in Application Vulnerability Response?",
+		"choices": [
+			"Remediation tasks or AVIT assignments routed to the developer through AVR remediation workflows",
+			"Hardware asset retirement records created when laptops reach end-of-life in the asset estate",
+			"Change advisory board meetings scheduled for standard infrastructure patching windows only",
+			"Employee onboarding cases opened when new hires request corporate mobile device enrollment"
+		],
+		"correctIndex": 0,
+		"explanation": "Developers receive application vulnerable item and remediation task assignments through AVR workflows when findings from scanners such as Veracode require code-level fixes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/application-vulnerability-response/avr-landing.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 12,
+		"prompt": "Why do Vulnerability Response, Application Vulnerability Response, and third-party integrations reference CSDM tables in the ServiceNow platform?",
+		"choices": [
+			"VR applications consume and contribute configuration and service data that aligns assets with vulnerability findings",
+			"CSDM tables replace all third-party scanner libraries so external CVE identifiers are no longer stored",
+			"CSDM tables are read-only lookup tables that VR applications cannot write vulnerability records into",
+			"CSDM tables store only HR employee records and are unrelated to security operations workflows"
+		],
+		"correctIndex": 0,
+		"explanation": "Vulnerability Response applications manage and use CSDM-aligned CMDB data so scanner findings can be tied to authoritative configuration items and service context.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 13,
+		"prompt": "A customer wants to import DAST findings and remediate application vulnerable items through dedicated AVR workspaces. What licensing requirement applies?",
+		"choices": [
+			"Application Vulnerability Response requires a separate subscription beyond base Vulnerability Response",
+			"Application Vulnerability Response is automatically included with every IT Service Management Pro license",
+			"Application Vulnerability Response is available only when Hardware Asset Management is deactivated",
+			"Application Vulnerability Response requires deactivating Container Vulnerability Response on the instance"
+		],
+		"correctIndex": 0,
+		"explanation": "Application Vulnerability Response is a separately subscribed feature of the Vulnerability Response product family for managing application vulnerable items.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/application-vulnerability-response/avr-landing.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 14,
+		"prompt": "A platform team running Kubernetes workloads needs runtime context such as cluster, namespace, and service enrichment on container image findings. Which module should they deploy?",
+		"choices": [
+			"Container Vulnerability Response with integrations such as Prisma Cloud Compute for runtime metadata",
+			"Application Vulnerability Response with Veracode DAST integration for web application code scanning only",
+			"Security Incident Response with major incident war room workflows for phishing email triage",
+			"Discovery with SNMP-based classification for legacy network printer hardware identification"
+		],
+		"correctIndex": 0,
+		"explanation": "Container Vulnerability Response imports CVITs and enriches findings with Kubernetes runtime context through container security product integrations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/container-vulnerability-response/cvr-landing.html"
+		]
+	}
+]

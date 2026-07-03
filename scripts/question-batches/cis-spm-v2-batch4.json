@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-SPM",
+		"order": 15,
+		"prompt": "A resource plan shows overallocation for a shared architect across four initiatives. Which workspace capability helps the manager rebalance hours?",
+		"choices": [
+			"Resource Management Workspace allocation timeline and conflict indicators",
+			"Demand Workbench ranking view sorted by strategic score",
+			"Idea Portal submission queue filtered by department",
+			"Financial planning cost plan rollup by fiscal quarter"
+		],
+		"correctIndex": 0,
+		"explanation": "Resource Management Workspace surfaces allocation conflicts on a timeline so managers can adjust assignments before work starts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-management-workspace.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 16,
+		"prompt": "Leadership wants to compare available capacity against approved demand for the next two quarters. Which SPM process supports that analysis?",
+		"choices": [
+			"Capacity planning using resource plans and allocation data",
+			"Incident major incident management workflow",
+			"Hardware asset disposal certificate generation",
+			"Service catalog item variable validation rules"
+		],
+		"correctIndex": 0,
+		"explanation": "Capacity planning compares resource availability to planned and requested work so portfolio decisions reflect realistic delivery constraints.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/capacity-planning.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 17,
+		"prompt": "An employee will be unavailable for two weeks during a critical project phase. Which record type blocks that time from allocation calculations?",
+		"choices": [
+			"Resource schedule entry marking the unavailability period",
+			"Expense line with Opex classification on the cost plan",
+			"Idea record in the Evaluating state awaiting scoring",
+			"Demand assessment template attached to the intake form"
+		],
+		"correctIndex": 0,
+		"explanation": "Resource schedules define working hours, holidays, and time off so capacity calculations exclude periods when staff cannot be assigned.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-schedules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 18,
+		"prompt": "A portfolio administrator adds a new planning attribute called Certification Level for matching specialized staff. What must be configured before the attribute appears on employee records?",
+		"choices": [
+			"Create the planning attribute definition and assign it to the employee profile",
+			"Enable budget allocation property on the investment planning module",
+			"Publish a new Idea Portal category for employee submissions",
+			"Activate the time sheet policy for the project task table"
+		],
+		"correctIndex": 0,
+		"explanation": "Planning attributes are defined in Resource Management configuration and then linked to the Employee profile so values can be maintained per person.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/planning-attributes.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 19,
+		"prompt": "During quarterly planning, a resource manager filters staff by region and primary skill before creating assignments. Which data drives those filters?",
+		"choices": [
+			"Planning attribute values stored on each employee profile",
+			"Expense type selections on the investment cost plan",
+			"Demand state transitions recorded in the workbench",
+			"Idea portal vote counts collected from submitters"
+		],
+		"correctIndex": 0,
+		"explanation": "Planning attributes on employee profiles enable filtered resource selection when building plans and assignments for portfolio work.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/planning-attributes.html"
+		]
+	}
+]

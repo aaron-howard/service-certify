@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 80,
+		"prompt": "An assessor identifies a control gap requiring vendor remediation with a due date. Which record type tracks that execution work?",
+		"choices": [
+			"Remediation task on sn_vdr_risk_asmt_task assigned to the vendor contact or owner",
+			"Problem task on problem_task used for permanent incident fixes",
+			"Catalog task on sc_task for standard hardware fulfillment",
+			"On-call roster entry on on_call_schedule for pager rotation"
+		],
+		"correctIndex": 0,
+		"explanation": "TPRM remediation tasks on sn_vdr_risk_asmt_task carry assigned owners, due dates, and linkage back to the parent issue.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-workflow-in-workspace.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 81,
+		"prompt": "All remediation tasks linked to a third-party risk issue reach Closed status. What common platform behavior follows?",
+		"choices": [
+			"The parent issue can auto-close once every related remediation task is complete",
+			"The vendor company record is deleted from core_company automatically",
+			"All assessments reopen and reset questionnaire scores to zero",
+			"The due diligence request skips approval and executes contracts immediately"
+		],
+		"correctIndex": 0,
+		"explanation": "Issue management can automatically close the parent issue when all associated remediation tasks are finished.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-workflow-in-workspace.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 82,
+		"prompt": "Your team wants remediation tasks created automatically when an assessment score falls below threshold. Which tool implements that logic?",
+		"choices": [
+			"Flow Designer flow triggered on assessment completion conditions",
+			"Manual UI policy that hides the save button on vendor records",
+			"Report designer schedule that emails PDFs without record updates",
+			"Discovery pattern that classifies unknown TCP ports on servers"
+		],
+		"correctIndex": 0,
+		"explanation": "Flow Designer can automate task creation when assessment results or issue conditions meet defined criteria.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-workflow-in-workspace.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 83,
+		"prompt": "An issue requires the vendor to review findings before internal closure. Which issue state exposes the record in the third-party portal?",
+		"choices": [
+			"Submitted to Vendor indicating the vendor can view and respond in the portal",
+			"Analyze while the record remains hidden from all external contacts",
+			"Draft template on the questionnaire with no issue linkage",
+			"Retired on the scoring rule with aggregation disabled"
+		],
+		"correctIndex": 0,
+		"explanation": "Submitted to Vendor makes the issue visible to the third-party contact for collaboration during remediation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-workflow-in-workspace.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 84,
+		"prompt": "Before an issue moves to Closed, which persona validates that remediation evidence meets policy expectations?",
+		"choices": [
+			"TPRM reviewer or assessor confirming resolution during the Review state",
+			"External guest user with no assigned TPRM roles on the instance",
+			"Discovery operator updating CI classification attributes only",
+			"Knowledge subscriber approving article retirement schedules"
+		],
+		"correctIndex": 0,
+		"explanation": "Review state enables TPRM reviewers to validate remediation before the issue is closed complete or incomplete.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-roles.html"
+		]
+	}
+]

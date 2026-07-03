@@ -1,0 +1,83 @@
+[
+	{
+		"trackCode": "CIS-SPM",
+		"order": 40,
+		"prompt": "An idea reviewer completes a structured questionnaire scoring feasibility and business impact before recommending promotion. Which feature captures those responses?",
+		"choices": [
+			"Idea assessment with defined evaluation criteria",
+			"Resource plan task assigning hours to project phases",
+			"Cost plan expense line classified as operating expenditure",
+			"Time sheet policy rule requiring daily hour entry"
+		],
+		"correctIndex": 0,
+		"explanation": "Idea assessments use structured criteria so reviewers score submissions consistently before ideas advance toward demand conversion.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/idea-management/idea-portal.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 41,
+		"prompt": "A demand item remains in the backlog because delivery capacity is unavailable this quarter. Which Demand Workbench action preserves the item for future review?",
+		"choices": [
+			"Defer the demand with documented rationale while keeping it ranked",
+			"Delete the demand record and require resubmission through the portal",
+			"Convert the demand to a closed incident for tracking purposes",
+			"Remove all assessment scores so the record returns to Draft"
+		],
+		"correctIndex": 0,
+		"explanation": "Deferral allows portfolio teams to retain strategically valuable demand in the pipeline with transparent rationale when capacity constraints prevent immediate approval.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/demand-management/demand-workbench.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 42,
+		"prompt": "Leadership wants employees in multiple departments to collaborate on idea evaluation before portfolio intake. Which Idea Portal feature supports cross-functional review?",
+		"choices": [
+			"Idea evaluation workflows with assigned reviewer roles",
+			"Resource group assignment on the portfolio resource plan",
+			"Rate model configuration for blended contractor rates",
+			"Budget plan allocation across fiscal periods"
+		],
+		"correctIndex": 0,
+		"explanation": "Idea Portal evaluation workflows route submissions to designated reviewers across departments so ideas receive structured feedback before promotion.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/idea-management/idea-portal.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 43,
+		"prompt": "A demand assessment reveals high strategic value but insufficient benefit quantification. What should the portfolio analyst request before advancing the record?",
+		"choices": [
+			"Updated benefit estimates and supporting data in the assessment",
+			"Immediate conversion to a project without a resource plan",
+			"Removal of all idea records linked to the same submitter",
+			"Deletion of cost plan expense lines to reduce planned spend"
+		],
+		"correctIndex": 0,
+		"explanation": "Demand assessments should include quantified benefits; incomplete data warrants requesting updates before the item moves to qualification or approval.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/demand-management/demand-assessments.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 44,
+		"prompt": "Which scenario best demonstrates effective idea-to-demand governance in SPM?",
+		"choices": [
+			"Ideas are scored in the portal, approved ideas convert to assessed demands, and only qualified demands receive funding",
+			"All portal submissions auto-convert to funded projects without assessment",
+			"Demand records are created manually while the Idea Portal remains disabled",
+			"Assessment scores are optional and funding decisions rely on requester seniority"
+		],
+		"correctIndex": 0,
+		"explanation": "Governed intake flows ideas through portal evaluation, converts approved concepts to demands, and applies assessment criteria before funding decisions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/demand-management/demand-management-overview.html",
+			"https://www.servicenow.com/docs/r/it-business-management/idea-management/idea-portal.html"
+		]
+	}
+]

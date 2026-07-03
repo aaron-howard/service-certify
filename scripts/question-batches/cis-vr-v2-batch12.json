@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-VR",
+		"order": 55,
+		"prompt": "A vulnerability analyst confirms a scanner finding does not represent real risk on the affected asset. What is the appropriate VR disposition?",
+		"choices": [
+			"Close the vulnerable item as false positive with a documented close reason on the record",
+			"Delete the vulnerability entry and all related historical audit records permanently",
+			"Leave the item open indefinitely without assignment to any remediation owner group",
+			"Convert the finding into a standard incident ticket without retaining CI context"
+		],
+		"correctIndex": 0,
+		"explanation": "False positive closure preserves audit history while recording why the finding was determined not to represent actionable exposure.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/vulnerability-response/false-positive-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 56,
+		"prompt": "When remediation cannot meet SLA because a vendor patch is unavailable, which VR mechanism documents accepted risk?",
+		"choices": [
+			"Vulnerability exception request with expiration date and approver sign-off captured",
+			"Immediate deletion of the vulnerable item from active monitoring and reporting lists",
+			"Silent state change to Closed without approval workflow or documented justification",
+			"Manual override of every ACL to grant all authenticated users write access to VR tables"
+		],
+		"correctIndex": 0,
+		"explanation": "Exception requests formalize temporary risk acceptance with approvers, justification, and time bounds until remediation becomes feasible.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/vulnerability-response/vulnerability-exceptions.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 57,
+		"prompt": "How does Vulnerability Exception Management integrate with the broader ServiceNow platform?",
+		"choices": [
+			"It integrates with ServiceNow Governance, Risk, and Compliance for policy-based exception handling",
+			"It replaces the CMDB with a standalone spreadsheet import table for all asset records",
+			"It disables Performance Analytics collections used by security operations dashboards",
+			"It requires all exceptions to be tracked exclusively in email threads outside the platform"
+		],
+		"correctIndex": 0,
+		"explanation": "Vulnerability Exception Management connects to ServiceNow GRC so policy exceptions follow enterprise governance workflows and evidence requirements.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/vulnerability-response/grc-exception-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 58,
+		"prompt": "What happens when a vulnerability exception request nears its expiration date in VR?",
+		"choices": [
+			"A review workflow triggers revalidation, remediation planning, or closure of accepted risk",
+			"The system automatically deletes all related vulnerable items from the production database",
+			"The exception converts to a permanent approved state without further governance review",
+			"All remediation tasks close as false positives regardless of actual exposure status"
+		],
+		"correctIndex": 0,
+		"explanation": "Expiring exceptions must be reassessed so accepted risk does not continue without accountable review and updated remediation plans.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/vulnerability-response/vulnerability-exceptions.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 59,
+		"prompt": "What do automated exception rules accomplish for vulnerable items that match defined conditions?",
+		"choices": [
+			"Defer or accept risk for matching items during scheduled evaluation without manual triage",
+			"Permanently remove scanner integrations whenever any critical finding is detected",
+			"Bypass all assignment rules and assign every finding to the system administrator user",
+			"Create normal change requests for every informational severity finding automatically"
+		],
+		"correctIndex": 0,
+		"explanation": "Exception rules automate deferral for known accepted-risk scenarios, reducing repetitive manual exception submissions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/vulnerability-response/exception-rules.html"
+		]
+	}
+]
