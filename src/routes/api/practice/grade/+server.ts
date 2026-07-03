@@ -1,6 +1,7 @@
 import { rateLimit } from '$lib/rateLimit';
 import { api } from '$convex/_generated/api';
-import { ConvexClient } from 'convex/browser';
+import { ConvexHttpClient } from 'convex/browser';
+import { env as publicEnv } from '$env/dynamic/public';
 import type { RequestHandler } from '@sveltejs/kit';
 
 /**
@@ -8,11 +9,9 @@ import type { RequestHandler } from '@sveltejs/kit';
  * Applies rate limiting before calling Convex mutation.
  *
  * POST /api/practice/grade
- * Body: { trackCode: string, answers: { order: number, selectedIndex: number }[] }
+ * Body: { trackCode: string, mode?: 'sample' | 'full', answers: { order: number, selectedIndex: number }[] }
  */
-export const POST: RequestHandler = async ({ request }) => {
-	// Rate limit: 10 submissions per minute per IP
-	// (prevents abuse from automated test tools)
+export const POST: RequestHandler = async ({ request, cookies }) => {
 	const clientIp = request.headers.get('x-forwarded-for') || 'unknown';
 
 	try {
@@ -21,7 +20,7 @@ export const POST: RequestHandler = async ({ request }) => {
 			maxRequests: 10,
 			keyPrefix: 'grade:'
 		});
-	} catch (error) {
+	} catch {
 		return new Response(
 			JSON.stringify({
 				error: 'Too many practice submissions. Please wait before submitting again.',
@@ -39,7 +38,6 @@ export const POST: RequestHandler = async ({ request }) => {
 		);
 	}
 
-	// Parse request body
 	let body;
 	try {
 		body = await request.json();
@@ -51,22 +49,17 @@ export const POST: RequestHandler = async ({ request }) => {
 	}
 
 	const { trackCode, answers, mode = 'sample' } = body;
+	const practiceMode = mode === 'full' ? 'full' : 'sample';
 
-	// Validate inputs
 	if (!trackCode || !Array.isArray(answers)) {
-		return new Response(
-			JSON.stringify({ error: 'Missing trackCode or answers array' }),
-			{
-				status: 400,
-				headers: { 'Content-Type': 'application/json' }
-			}
-		);
+		return new Response(JSON.stringify({ error: 'Missing trackCode or answers array' }), {
+			status: 400,
+			headers: { 'Content-Type': 'application/json' }
+		});
 	}
 
-	// Call Convex mutation
-	// Note: In Phase C, you'll wire this to your auth context
 	try {
-		const convexUrl = ((globalThis as any).process?.env?.PUBLIC_CONVEX_URL as string);
+		const convexUrl = publicEnv.PUBLIC_CONVEX_URL;
 		if (!convexUrl) {
 			return new Response(JSON.stringify({ error: 'Convex not configured' }), {
 				status: 503,
@@ -74,10 +67,22 @@ export const POST: RequestHandler = async ({ request }) => {
 			});
 		}
 
-		const convex = new ConvexClient(convexUrl);
+		const convex = new ConvexHttpClient(convexUrl);
+
+		if (practiceMode === 'full') {
+			const workosToken = cookies.get('workos_token');
+			if (!workosToken) {
+				return new Response(JSON.stringify({ error: 'Not authenticated' }), {
+					status: 401,
+					headers: { 'Content-Type': 'application/json' }
+				});
+			}
+			convex.setAuth(workosToken);
+		}
+
 		const result = await convex.mutation(api.practiceQuestions.gradeAnswers, {
 			trackCode,
-			mode: mode === 'full' ? 'full' : 'sample',
+			mode: practiceMode,
 			answers
 		});
 

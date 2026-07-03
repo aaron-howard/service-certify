@@ -1,8 +1,9 @@
 import { error, redirect } from '@sveltejs/kit';
 import { getExamBySlug } from '$lib/data/exams';
+import { loadPracticeQuestions } from '$lib/practice.server';
 import type { PageServerLoad } from './$types';
 
-export const load: PageServerLoad = async ({ params, url, parent }) => {
+export const load: PageServerLoad = async ({ params, url, parent, cookies }) => {
 	const exam = getExamBySlug(params.slug);
 	if (!exam) error(404, 'Exam not found');
 
@@ -14,5 +15,22 @@ export const load: PageServerLoad = async ({ params, url, parent }) => {
 		throw redirect(302, `/auth/signin?redirect=${encodeURIComponent(redirectTo)}`);
 	}
 
-	return { exam, mode };
+	let serverQuestions: Awaited<ReturnType<typeof loadPracticeQuestions>> | null = null;
+	let questionsError: string | null = null;
+
+	if (mode === 'full' && user?.isAdmin) {
+		try {
+			serverQuestions = await loadPracticeQuestions({
+				trackCode: exam.code,
+				mode: 'full',
+				workosToken: cookies.get('workos_token')
+			});
+		} catch (err) {
+			questionsError =
+				err instanceof Error ? err.message : 'Could not load full mock questions';
+			console.error('Full mock question load failed:', err);
+		}
+	}
+
+	return { exam, mode, serverQuestions, questionsError };
 };
