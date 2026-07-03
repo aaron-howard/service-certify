@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CSA",
+		"order": 30,
+		"prompt": "How can an administrator add a field to a form that is not stored in the database?",
+		"choices": [
+			"Add a Variable or a non-database field type such as a break or label",
+			"Create a import field map coalesce",
+			"Delete the table ACL",
+			"Disable the activity stream"
+		],
+		"correctIndex": 0,
+		"explanation": "Form layout supports decorative and variable elements; some field types display data without persisting to a column.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/form-layout.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 31,
+		"prompt": "Which Performance Analytics component displays a single metric trend on a dashboard?",
+		"choices": [
+			"A widget bound to an indicator",
+			"A scheduled data import job",
+			"An outbound SOAP message queue",
+			"A plugin record"
+		],
+		"correctIndex": 0,
+		"explanation": "Dashboard widgets can bind to Performance Analytics indicators to visualize KPI trends.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/dashboards-and-widgets.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 32,
+		"prompt": "What does subscribing to a notification allow a user to do?",
+		"choices": [
+			"Receive email or other channels when the notification condition is met",
+			"Gain the admin role automatically",
+			"Edit dictionary entries globally",
+			"Skip all ACL checks"
+		],
+		"correctIndex": 0,
+		"explanation": "Users can subscribe to notifications to receive messages when configured conditions trigger them.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/notifications.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 33,
+		"prompt": "How does Knowledge Management support IT service delivery on the platform?",
+		"choices": [
+			"Capture, publish, and reuse articles to deflect incidents and support self-service",
+			"Replace the CMDB entirely",
+			"Schedule Discovery probes",
+			"Manage payroll records"
+		],
+		"correctIndex": 0,
+		"explanation": "Knowledge Management stores articles that help users solve issues and reduces repeat incident volume.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/knowledge-management/knowledge-management-overview.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 34,
+		"prompt": "Which knowledge article state indicates the article is visible to end users?",
+		"choices": [
+			"Published",
+			"Draft article state only",
+			"Retired without replacement",
+			"Pending plugin activation"
+		],
+		"correctIndex": 0,
+		"explanation": "Published knowledge articles are available to users per category and access rules; drafts are not generally visible.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/knowledge-management/knowledge-article-lifecycle.html"
+		]
+	}
+]

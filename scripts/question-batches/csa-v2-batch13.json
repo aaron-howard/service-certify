@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CSA",
+		"order": 60,
+		"prompt": "What does setting a coalesce field on a transform map accomplish?",
+		"choices": [
+			"Updates existing target records that match the coalesce value instead of inserting duplicates",
+			"Encrypts all imported rows",
+			"Disables ACL checks permanently",
+			"Deletes the import set table"
+		],
+		"correctIndex": 0,
+		"explanation": "Coalesce fields match incoming rows to existing records for update rather than duplicate insert.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/integrate-applications/transform-maps.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 61,
+		"prompt": "What does the CMDB store?",
+		"choices": [
+			"Configuration items and their relationships representing IT infrastructure and services",
+			"Only user passwords",
+			"Only email templates",
+			"Only plugin licenses"
+		],
+		"correctIndex": 0,
+		"explanation": "The CMDB holds CIs and relationships used for impact analysis, change, and service mapping.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-overview.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 62,
+		"prompt": "What is CSDM (Common Service Data Model) intended to standardize?",
+		"choices": [
+			"How services, applications, and infrastructure CIs relate in the CMDB",
+			"Payroll deduction codes",
+			"Email server hostnames only",
+			"Plugin activation sequences"
+		],
+		"correctIndex": 0,
+		"explanation": "CSDM provides a standard data model for mapping business services, applications, and technical CIs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/csdm-overview.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 63,
+		"prompt": "Which tool helps administrators review security posture and recommended hardening on the instance?",
+		"choices": [
+			"Security Center",
+			"Visual Task Boards",
+			"Catalog browse categories",
+			"Homepage themes"
+		],
+		"correctIndex": 0,
+		"explanation": "Security Center aggregates security metrics and guidance for instance hardening and compliance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/security-center.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 64,
+		"prompt": "In the Shared Responsibility Model, who is responsible for securing the underlying cloud infrastructure?",
+		"choices": [
+			"ServiceNow as the platform provider",
+			"The end user on every laptop",
+			"The catalog requester only",
+			"The MID Server exclusively"
+		],
+		"correctIndex": 0,
+		"explanation": "ServiceNow secures the platform infrastructure; customers configure and secure their instance data, users, and integrations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/shared-responsibility-model.html"
+		]
+	}
+]

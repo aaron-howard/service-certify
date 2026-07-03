@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CSA",
+		"order": 15,
+		"prompt": "How can a user save a frequently used filter on a list for quick reuse?",
+		"choices": [
+			"Save the filter and optionally share it with other users or groups",
+			"Export the list to CSV only",
+			"Remove the table from the dictionary entirely",
+			"Convert the list to a homepage gauge"
+		],
+		"correctIndex": 0,
+		"explanation": "List filters can be saved and shared so users can quickly reapply common query conditions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/list-filters.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 16,
+		"prompt": "Why do users apply tags to records in ServiceNow?",
+		"choices": [
+			"To label records for grouping, searching, and informal classification",
+			"To replace access control rules",
+			"To encrypt field values",
+			"To launch network Discovery scans"
+		],
+		"correctIndex": 0,
+		"explanation": "Tags provide lightweight labels users can apply to records for organization and search.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/tags.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 17,
+		"prompt": "Which module displays tasks assigned to the user's group but not yet assigned to an individual?",
+		"choices": [
+			"My Groups Work",
+			"My Teams Work",
+			"My Groups Tasks",
+			"My Teams Tasks"
+		],
+		"correctIndex": 0,
+		"explanation": "The My Groups Work module lists open tasks for the user's groups that have no individual assignee yet.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/my-work-modules.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 18,
+		"prompt": "Which related list on a form shows child tasks linked to the current record?",
+		"choices": [
+			"Related Lists configured on the form layout",
+			"Order Guides for catalog",
+			"Field mapping transforms",
+			"Migration update packages"
+		],
+		"correctIndex": 0,
+		"explanation": "Related lists on a form display associated records such as child tasks, approvals, or attachments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/related-lists.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 19,
+		"prompt": "What does Configure > Form Layout allow an administrator to do?",
+		"choices": [
+			"Add, remove, and arrange fields and related lists on a form",
+			"Run an import set load job",
+			"Enable a licensed plugin",
+			"Commit a pending update set"
+		],
+		"correctIndex": 0,
+		"explanation": "Form Layout lets admins control which fields and related lists appear on a table's form and their order.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/form-layout.html"
+		]
+	}
+]

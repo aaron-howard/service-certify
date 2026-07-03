@@ -36,38 +36,41 @@ export const PHASE1_TRACK_DOC_SOURCES: TrackDocSource[] = [
 			'platform-administration',
 			'now-platform',
 			'platform-user-interface',
-			'platform-security'
+			'platform-security',
+			'integrate-applications',
+			'it-service-management',
+			'knowledge-management'
 		],
 		domains: [
 			{
-				name: 'User administration',
-				weight: '20%',
-				publications: ['platform-administration']
+				name: 'Platform Overview and Navigation',
+				weight: '7%',
+				publications: ['now-platform', 'platform-user-interface']
 			},
 			{
-				name: 'Lists and filters',
-				weight: '15%',
-				publications: ['platform-user-interface']
-			},
-			{
-				name: 'Forms and UI',
-				weight: '15%',
-				publications: ['platform-user-interface', 'platform-administration']
-			},
-			{
-				name: 'Security and ACLs',
-				weight: '20%',
-				publications: ['platform-security']
-			},
-			{
-				name: 'Notifications and workflows',
-				weight: '15%',
+				name: 'Instance Configuration',
+				weight: '10%',
 				publications: ['platform-administration', 'now-platform']
 			},
 			{
-				name: 'Platform fundamentals',
-				weight: '15%',
-				publications: ['now-platform', 'platform-administration']
+				name: 'Configuring Applications for Collaboration',
+				weight: '20%',
+				publications: ['platform-user-interface', 'platform-administration']
+			},
+			{
+				name: 'Self Service and Automation',
+				weight: '20%',
+				publications: ['it-service-management', 'knowledge-management', 'now-platform']
+			},
+			{
+				name: 'Database Management and Platform Security',
+				weight: '30%',
+				publications: ['platform-security', 'platform-administration', 'integrate-applications']
+			},
+			{
+				name: 'Data Migration and Integration',
+				weight: '13%',
+				publications: ['platform-administration', 'integrate-applications']
 			}
 		]
 	},
