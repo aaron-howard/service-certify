@@ -1,0 +1,482 @@
+[
+  {
+    "trackCode": "CIS-RC",
+    "order": 0,
+    "prompt": "In ServiceNow Governance, Risk, and Compliance (GRC) practice, which set of three practice areas is commonly described as the core pillars of GRC?",
+    "choices": [
+      "Represents the approach that security, Service, and Support.",
+      "Matches the scenario in which oversight, Risk, and Compliance.",
+      "Describes the outcome where procurement, Projects, and Performance.",
+      "Reflects the condition that change, setup, and Capacity."
+    ],
+    "correctIndex": 1,
+    "explanation": "ServiceNow GRC documentation frames GRC as the combination of governance, risk, and compliance practices used to align strategy, manage uncertainty, and demonstrate adherence to obligations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 1,
+    "prompt": "Which outcome best matches the intent of Integrated Risk Management (IRM) on the Now Platform?",
+    "choices": [
+      "Matches the scenario in which eliminate the need for policies, controls, or audits.",
+      "Captures the choice stating replace the CMDB with a standalone risk spreadsheet system.",
+      "Reflects the condition that centralize visibility and prioritization across risk types instead of managing each risk domain in isolation.",
+      "Describes the outcome where limit risk reporting to IT incidents only."
+    ],
+    "correctIndex": 2,
+    "explanation": "IRM is positioned as a unifying approach that helps organizations see and prioritize risk holistically across the enterprise rather than only within siloed programs.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-impl-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 2,
+    "prompt": "In Policy and Compliance Management, what is the primary purpose of documenting and managing controls in the GRC suite?",
+    "choices": [
+      "Captures the choice stating provide evidence-ready linkage between obligations, control activities, and testing outcomes.",
+      "Corresponds to the option where automatically delete incidents older than 30 days.",
+      "Matches the scenario in which set up single sign-on for all vendors.",
+      "Reflects the condition that replace change management approvals."
+    ],
+    "correctIndex": 0,
+    "explanation": "GRC control documentation supports structured compliance management by connecting regulatory or policy requirements to control design and operational evidence.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/c_GRCControls.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 3,
+    "prompt": "A customer wants a guided, repeatable approach to identify and intake new risks into their risk register. Which GRC artifact is most aligned to that goal?",
+    "choices": [
+      "Represents the approach that a hardware discovery pattern.",
+      "Reflects the condition that a software reclamation workflow.",
+      "Captures the choice stating a cloud provisioning blueprint.",
+      "Corresponds to the option where a risk identification playbook used within the risk management workspace."
+    ],
+    "correctIndex": 3,
+    "explanation": "ServiceNow provides risk identification playbook guidance as part of the GRC risk management workspace to standardize how new risks are captured and progressed.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-identification-playbook.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 4,
+    "prompt": "In Audit Management, audit tasks are most accurately described as the work items that auditors execute during which phase of an engagement?",
+    "choices": [
+      "Captures the choice stating only software license reclamation.",
+      "Corresponds to the option where fieldwork activities such as control testing, evidence collection, and follow-ups.",
+      "Represents the approach that only employee onboarding checklists.",
+      "Describes the outcome where only hardware procurement approvals."
+    ],
+    "correctIndex": 1,
+    "explanation": "Audit task documentation is oriented around executing and tracking the detailed audit procedures performed after scoping and planning.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/governance-risk-compliance/audit-management/c_AuditTasks.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 5,
+    "prompt": "In IRM Workspace, which capability most directly helps risk managers prioritize what to work first across many open risks?",
+    "choices": [
+      "Represents the approach that disabling inherent and residual scoring fields.",
+      "Describes the outcome where automatically converting all risks into audit tasks.",
+      "Matches the scenario in which routing all risk records to a single assignment group.",
+      "Corresponds to the option where risk score-driven list views and filters that surface highest exposure records first."
+    ],
+    "correctIndex": 3,
+    "explanation": "IRM workspace is designed to centralize and prioritize risk activity, and score-based views help teams focus on highest-impact items.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-impl-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 6,
+    "prompt": "A program owner wants one page in IRM Workspace showing due assessments, overdue tasks, and approval bottlenecks. What should be configured first?",
+    "choices": [
+      "Represents the approach that major incident templates.",
+      "Matches the scenario in which workspace landing page components that aggregate assigned risk work and state indicators.",
+      "Reflects the condition that new CMDB classes for risk dashboards.",
+      "Describes the outcome where discovery patterns for risk records."
+    ],
+    "correctIndex": 1,
+    "explanation": "Workspace components provide role-focused operational visibility, allowing risk teams to monitor workload and bottlenecks in one place.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/workspace-homepage.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 7,
+    "prompt": "Which IRM Workspace practice best supports consistent triage when multiple analysts evaluate newly identified risks?",
+    "choices": [
+      "Matches the scenario in which skip residual risk calculations until audit season.",
+      "Describes the outcome where allow each analyst to define custom severity values ad hoc.",
+      "Captures the choice stating use unrelated incident priority rules for risk scoring.",
+      "Reflects the condition that standardize scoring criteria and decision guidance in workspace process steps."
+    ],
+    "correctIndex": 3,
+    "explanation": "Standardized scoring and guided process steps reduce analyst variance and produce more defensible, repeatable triage outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-identification-playbook.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 8,
+    "prompt": "In IRM Workspace, what is the main benefit of linking risks to business entities such as services or departments?",
+    "choices": [
+      "Captures the choice stating it disables risk treatment plans.",
+      "Reflects the condition that it improves impact context and accountability for remediation decisions.",
+      "Matches the scenario in which it replaces policy statements automatically.",
+      "Corresponds to the option where it removes the need for ownership assignment."
+    ],
+    "correctIndex": 1,
+    "explanation": "Entity linkage gives operational context and clear ownership so treatment decisions reflect business impact and accountability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/business-entities-and-risk.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 9,
+    "prompt": "A risk lead wants stronger governance in IRM Workspace. Which control is most appropriate?",
+    "choices": [
+      "Corresponds to the option where open write access for all itil users.",
+      "Represents the approach that disabling activity logs on risk records.",
+      "Captures the choice stating manual spreadsheet signoff outside the platform.",
+      "Reflects the condition that role-based access and workflow approvals for risk state transitions."
+    ],
+    "correctIndex": 3,
+    "explanation": "Role-based controls and approval checkpoints enforce governance and improve auditability of risk lifecycle changes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 10,
+    "prompt": "In IRM Risk Management, what is the primary purpose of a risk register?",
+    "choices": [
+      "Corresponds to the option where a tracker for software reclaim candidates only.",
+      "Captures the choice stating a centralized inventory of identified risks with ownership, scoring, and treatment status.",
+      "Describes the outcome where a report of closed major incidents.",
+      "Represents the approach that a list of CMDB classes excluded from discovery."
+    ],
+    "correctIndex": 1,
+    "explanation": "The risk register serves as the system of record for risk posture, accountability, and lifecycle progression.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-register.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 11,
+    "prompt": "A risk appears in multiple departments with the same root cause. Which register approach is best?",
+    "choices": [
+      "Describes the outcome where track only one department and ignore others.",
+      "Represents the approach that convert all risk records into audit issues.",
+      "Corresponds to the option where use a parent risk with related records to preserve enterprise visibility and local accountability.",
+      "Matches the scenario in which create unrelated duplicate risks for every department."
+    ],
+    "correctIndex": 2,
+    "explanation": "Parent-child style risk structures can preserve roll-up visibility while still assigning local treatment responsibility.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/manage-risk-records.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 12,
+    "prompt": "Which risk register data quality control has the highest impact on reporting reliability?",
+    "choices": [
+      "Matches the scenario in which optional owner and due date fields.",
+      "Reflects the condition that free-text status values without oversight.",
+      "Describes the outcome where storing all risk notes outside ServiceNow.",
+      "Represents the approach that required owner, rating, treatment plan, and review cadence fields."
+    ],
+    "correctIndex": 3,
+    "explanation": "Required core fields and review cadence enforce consistent lifecycle data and improve decision-grade reporting.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-data-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 13,
+    "prompt": "How should residual risk be handled in the register after controls are implemented?",
+    "choices": [
+      "Describes the outcome where reassess and document residual exposure to support accept/mitigate/transfer decisions.",
+      "Captures the choice stating set every residual score to low by policy.",
+      "Reflects the condition that freeze inherent score and stop reassessment.",
+      "Matches the scenario in which delete the risk once controls are documented."
+    ],
+    "correctIndex": 0,
+    "explanation": "Residual risk must be reassessed to reflect control effectiveness and support informed treatment decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-response-and-treatment.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 14,
+    "prompt": "Which governance activity keeps the risk register trustworthy over time?",
+    "choices": [
+      "Reflects the condition that restricting risk updates to one admin account.",
+      "Corresponds to the option where removing change history from risk records.",
+      "Matches the scenario in which periodic review campaigns to validate stale records, ownership, and treatment progress.",
+      "Captures the choice stating closing all risks older than 90 days automatically."
+    ],
+    "correctIndex": 2,
+    "explanation": "Regular governance reviews prevent stale records and maintain accurate ownership and treatment status.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-review-process.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 15,
+    "prompt": "In Policy and Compliance Management, what is the primary role of a control record?",
+    "choices": [
+      "Reflects the condition that store network discovery credentials.",
+      "Corresponds to the option where replace all risk records in the register.",
+      "Captures the choice stating create emergency change approvals.",
+      "Represents the approach that define the control objective, ownership, and testability linked to authoritative requirements."
+    ],
+    "correctIndex": 3,
+    "explanation": "Control records formalize how obligations are addressed operationally and provide the basis for testing and assurance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/c_GRCControls.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 16,
+    "prompt": "A compliance manager needs to reduce duplicate controls across frameworks. Which strategy is best?",
+    "choices": [
+      "Represents the approach that create separate controls for every citation regardless of overlap.",
+      "Describes the outcome where use common controls mapped to multiple authority documents and citations.",
+      "Corresponds to the option where disable control ownership fields.",
+      "Captures the choice stating map controls only to incidents, not requirements."
+    ],
+    "correctIndex": 1,
+    "explanation": "Common controls reduce duplication and support reuse across multiple frameworks and requirements.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/manage-common-controls.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 17,
+    "prompt": "Which evidence practice most strengthens control testing defensibility?",
+    "choices": [
+      "Corresponds to the option where deleting failed test artifacts after remediation.",
+      "Matches the scenario in which maintaining traceable, time-bound evidence linked to test results and approvers.",
+      "Describes the outcome where attaching screenshots without timestamps.",
+      "Represents the approach that relying on verbal confirmation from process owners."
+    ],
+    "correctIndex": 1,
+    "explanation": "Traceable evidence linked to test execution and approvals is key for defensible assurance and audits.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/control-testing-and-evidence.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 18,
+    "prompt": "What is the most effective response when a key control repeatedly fails testing?",
+    "choices": [
+      "Describes the outcome where archive the requirement citation.",
+      "Reflects the condition that open and track remediation tasks with owners, due dates, and retest criteria.",
+      "Represents the approach that mark the control as passed to preserve KPIs.",
+      "Matches the scenario in which reclassify the control as optional."
+    ],
+    "correctIndex": 1,
+    "explanation": "Documented remediation workflows with retesting provide governance and ensure corrective actions are completed.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/remediate-control-failures.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 19,
+    "prompt": "Which metric best indicates a maturing control environment in IRM?",
+    "choices": [
+      "Describes the outcome where total number of new control records regardless of quality.",
+      "Reflects the condition that count of manually overridden test outcomes.",
+      "Matches the scenario in which percentage of controls with no owner assigned.",
+      "Captures the choice stating increasing pass rate with reduced repeat failures across critical controls."
+    ],
+    "correctIndex": 3,
+    "explanation": "Sustained effectiveness with fewer repeat failures signals stronger control design and operation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/compliance-metrics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 20,
+    "prompt": "In Policy and Compliance Management, what does a policy compliance score primarily indicate?",
+    "choices": [
+      "Captures the choice stating the size of the incident backlog.",
+      "Corresponds to the option where the count of software license entitlements.",
+      "Matches the scenario in which the number of unresolved discovery errors.",
+      "Reflects the condition that the degree to which mapped controls and tests demonstrate adherence to policy requirements."
+    ],
+    "correctIndex": 3,
+    "explanation": "Compliance scoring reflects evidence-backed adherence against policy obligations and control outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/policy-compliance-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 21,
+    "prompt": "A policy statement maps to several controls, and one control fails repeatedly. What is the best compliance response?",
+    "choices": [
+      "Represents the approach that mark all related controls as compensating automatically.",
+      "Reflects the condition that delete the mapped policy statement.",
+      "Captures the choice stating open tracked remediation and reassessment activities tied to the failing control and requirement.",
+      "Corresponds to the option where ignore the failing control if other controls pass."
+    ],
+    "correctIndex": 2,
+    "explanation": "Control failure against a requirement should trigger managed remediation and retesting to restore compliant posture.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/remediate-control-failures.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 22,
+    "prompt": "Which reporting view best supports executives reviewing policy compliance risk?",
+    "choices": [
+      "Captures the choice stating dashboards showing compliance by authority document, business entity, and control test trends.",
+      "Corresponds to the option where cMDB class hierarchy without control mappings.",
+      "Represents the approach that unfiltered activity stream comments.",
+      "Describes the outcome where a list of all closed incidents last quarter."
+    ],
+    "correctIndex": 0,
+    "explanation": "Multi-dimensional compliance dashboards provide actionable visibility into obligations, entities, and control trends.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/compliance-dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 23,
+    "prompt": "What governance mechanism is most effective for keeping policy compliance current after regulatory updates?",
+    "choices": [
+      "Represents the approach that run controlled policy lifecycle updates with impact analysis across controls, tests, and owners.",
+      "Describes the outcome where disable control testing during transitions.",
+      "Matches the scenario in which update only the policy title and ignore citations.",
+      "Corresponds to the option where freeze all policy records until annual audit."
+    ],
+    "correctIndex": 0,
+    "explanation": "Lifecycle governance with impact analysis prevents hidden gaps when regulations and internal policies change.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/policy-lifecycle-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 24,
+    "prompt": "Which practice most improves confidence in policy compliance attestations?",
+    "choices": [
+      "Represents the approach that self-attestation without evidence.",
+      "Matches the scenario in which periodic attestation campaigns with clear owners, due dates, and evidence expectations.",
+      "Reflects the condition that allowing overdue attestations indefinitely.",
+      "Describes the outcome where removing historical attestation records."
+    ],
+    "correctIndex": 1,
+    "explanation": "Structured attestation campaigns strengthen accountability and provide auditable evidence of ongoing compliance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/attest-policy-compliance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 25,
+    "prompt": "During planning for a new audit engagement, which action should occur first to reduce control-testing rework?",
+    "choices": [
+      "Matches the scenario in which assign all testing to one control owner.",
+      "Describes the outcome where define audit scope, objectives, and control universe with stakeholders before evidence requests.",
+      "Captures the choice stating collect screenshots only after the audit report is finalized.",
+      "Reflects the condition that close prior findings without validating corrective action."
+    ],
+    "correctIndex": 1,
+    "explanation": "Clear scope and objective alignment at kickoff prevents irrelevant testing and duplicate evidence collection later.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-audit/concept/audit-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 26,
+    "prompt": "What best indicates an audit engagement is configured correctly in ServiceNow?",
+    "choices": [
+      "Captures the choice stating engagement records include scoped controls, test plans, owners, and scheduled milestones.",
+      "Reflects the condition that evidence tasks are routed to incident assignment groups.",
+      "Matches the scenario in which all controls are marked pass before testing starts.",
+      "Corresponds to the option where only engagement name and due date are populated."
+    ],
+    "correctIndex": 0,
+    "explanation": "A complete engagement includes mapped controls, planned tests, ownership, and timeline checkpoints for governance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-audit/task/create-an-audit-engagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 27,
+    "prompt": "An internal audit requests quarterly evidence but control owners upload outdated artifacts. Which control design improvement is most appropriate?",
+    "choices": [
+      "Corresponds to the option where use time-bound evidence collection tasks with owner accountability and attestation requirements.",
+      "Represents the approach that allow any user to upload evidence without ownership rules.",
+      "Captures the choice stating replace control tests with a yearly email confirmation.",
+      "Reflects the condition that disable evidence due dates to reduce reminder volume."
+    ],
+    "correctIndex": 0,
+    "explanation": "Scheduled evidence tasks with accountable owners and attestations improve freshness and audit reliability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-policy-and-compliance/task/manage-control-tests.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 28,
+    "prompt": "Which engagement-level metric is most useful to audit leadership?",
+    "choices": [
+      "Captures the choice stating total records created in the past month.",
+      "Represents the approach that number of users with admin access in the instance.",
+      "Describes the outcome where count of unrelated incident tickets.",
+      "Corresponds to the option where testing completion rate, open observations, and overdue remediation by engagement."
+    ],
+    "correctIndex": 3,
+    "explanation": "Leadership needs progress and risk indicators tied directly to audit execution and remediation outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-audit/concept/audit-management-workspace.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 29,
+    "prompt": "Why should issue remediation tasks be linked to audit observations instead of tracked separately?",
+    "choices": [
+      "Represents the approach that it eliminates the need for approvers.",
+      "Corresponds to the option where it preserves traceability from finding to corrective action and supports defensible closure evidence.",
+      "Matches the scenario in which it replaces risk scoring in all compliance programs.",
+      "Describes the outcome where it allows observations to be deleted after assignment."
+    ],
+    "correctIndex": 1,
+    "explanation": "Linking remediation directly to observations provides end-to-end audit trail integrity for closure decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-audit/task/manage-audit-observations.html"
+    ]
+  }
+]

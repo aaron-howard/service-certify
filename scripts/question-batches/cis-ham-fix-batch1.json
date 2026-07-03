@@ -1,0 +1,484 @@
+[
+  {
+    "trackCode": "CIS-HAM",
+    "order": 0,
+    "prompt": "When introducing consumable-like hardware that is tracked as inventory rather than as a fully financialized asset, what does product guidance commonly recommend you configure?",
+    "choices": [
+      "In this scenario, a domain separation policy for governed delivery",
+      "From a governance perspective, an event management transform map",
+      "In most deployments, a software license certificate",
+      "In platform terms, a hardware consumable model aligned to how the item is tracked"
+    ],
+    "correctIndex": 3,
+    "explanation": "Hardware consumable models align tracking behavior with items managed as consumables in Hardware Asset Management.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/task/create-hardware-consumable-model.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 1,
+    "prompt": "Stockrooms in Hardware Asset Management primarily support which operational need?",
+    "choices": [
+      "In most deployments, authoring Discovery patterns in standard operations",
+      "From a governance perspective, managing physical locations and inventory levels for fulfillment",
+      "In this scenario, defining SAML authentication flows under normal policy constraints",
+      "From an implementation standpoint, correlating SNMP traps for governed delivery"
+    ],
+    "correctIndex": 1,
+    "explanation": "Stockroom documentation focuses on where inventory lives and how stock is managed for operational fulfillment.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/manage-your-stockrooms.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 2,
+    "prompt": "What is a fair high-level description of Hardware Asset Management scope in ServiceNow documentation?",
+    "choices": [
+      "Practically speaking, replacement for Service Mapping for consistent administration",
+      "Typically, only software license reclamation in standard operations under normal policy constraints",
+      "In practice, lifecycle-oriented tracking and operational processes for hardware assets",
+      "From an admin perspective, exclusive network automation for routers under expected controls"
+    ],
+    "correctIndex": 2,
+    "explanation": "HAM documentation centers on hardware lifecycle and operational tracking capabilities rather than unrelated ITOM areas.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-it-asset-management/page/product/hardware-asset-management/concept/exploring-ham.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 3,
+    "prompt": "Asset bundles in Hardware Asset Management are intended to help you manage which situation?",
+    "choices": [
+      "In most deployments, vPN tunnel encryption policies under normal policy constraints",
+      "From an implementation standpoint, orchestration spoke licensing for governed delivery",
+      "In this scenario, groups of complex assets treated as one logical master where appropriate",
+      "From a governance perspective, single-monitor disposal only for stable outcomes"
+    ],
+    "correctIndex": 2,
+    "explanation": "Asset bundles concepts describe managing grouped hardware as a cohesive unit for operational simplicity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-it-asset-management/page/product/hardware-asset-management/concept/asset-bundles-concept.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 4,
+    "prompt": "Before users can request a tracked hardware item from a catalog, which foundation is most commonly required?",
+    "choices": [
+      "In most deployments, a working hardware model and fulfillment path aligned to your process",
+      "From an implementation standpoint, removing procurement integrations globally",
+      "Operationally, deleting all stockrooms for governed delivery for stable outcomes",
+      "From a governance perspective, disabling the CMDB in standard operations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Catalog fulfillment for hardware depends on modeled items and the operational path from request to delivery, consistent with HAM and catalog documentation themes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/product/service-catalog-management/concept/c_RequestingAServiceCatalogItem.html",
+      "https://www.servicenow.com/docs/bundle/xanadu-it-asset-management/page/product/hardware-asset-management/concept/exploring-ham.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 5,
+    "prompt": "In Hardware Asset Management, why are hardware models foundational to lifecycle governance?",
+    "choices": [
+      "From an admin perspective, they restrict CI discovery from network scans under expected controls",
+      "Typically, they auto-close stale asset tasks for governed delivery for stable outcomes",
+      "Practically speaking, they define standardized product metadata used for procurement, stock, and asset normalization",
+      "In platform terms, they replace all model categories and classes for consistent administration"
+    ],
+    "correctIndex": 2,
+    "explanation": "Hardware models provide the normalized catalog definitions that support consistent purchasing, receiving, and tracking behavior.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-model-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 6,
+    "prompt": "Which configuration most improves reporting accuracy for laptop refresh planning?",
+    "choices": [
+      "In this scenario, setting all assets to one depreciation schedule for stable outcomes",
+      "From an admin perspective, disabling model normalization to preserve imported values in standard operations",
+      "Practically speaking, using free-text model names on each asset record for consistent administration",
+      "In platform terms, associating each asset to a normalized hardware model with consistent manufacturer and model category"
+    ],
+    "correctIndex": 3,
+    "explanation": "Normalized model references make lifecycle and refresh analytics more reliable than ad hoc model text.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/task/normalize-hardware-models.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 7,
+    "prompt": "A receiving team creates duplicate model records for the same vendor SKU. What is the best remediation approach?",
+    "choices": [
+      "Operationally, delete all historical assets tied to duplicate models",
+      "In most deployments, keep duplicates and map stockrooms separately",
+      "In practice, consolidate to a governed model record and map assets to the canonical model",
+      "From an implementation standpoint, convert all duplicates to consumable models"
+    ],
+    "correctIndex": 2,
+    "explanation": "Maintaining a canonical model record avoids fragmented reporting and inconsistent lifecycle controls across equivalent hardware.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/task/manage-hardware-model-records.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 8,
+    "prompt": "What is a common governance risk when model categories are misconfigured?",
+    "choices": [
+      "In this scenario, stock rules cannot be configured for any location for consistent administration",
+      "Practically speaking, cMDB relationships are permanently deleted under normal policy constraints",
+      "In platform terms, assets may follow incorrect workflows, approvals, or financial treatment due to wrong model classification",
+      "From an admin perspective, asset tags are not generated for serialized assets under expected controls"
+    ],
+    "correctIndex": 2,
+    "explanation": "Model category drives process behavior and controls, so misclassification can cause downstream operational and financial errors.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/model-categories.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 9,
+    "prompt": "Which practice best supports long-term hardware model quality in enterprise HAM?",
+    "choices": [
+      "In this scenario, avoid manufacturer references to simplify imports under normal policy constraints",
+      "Practically speaking, track models only in procurement attachments for governed delivery",
+      "In platform terms, implement a model governance process with ownership, deduplication review, and intake standards",
+      "From a governance perspective, allow requesters to create model records directly in production"
+    ],
+    "correctIndex": 2,
+    "explanation": "Governed model maintenance preserves data integrity and keeps asset lifecycle workflows predictable at scale.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-management-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 10,
+    "prompt": "In HAM, what is the key purpose of stockrooms?",
+    "choices": [
+      "Typically, they represent logical/physical inventory locations for receiving, storing, and issuing assets",
+      "In platform terms, they replace assignment groups for asset tasks under expected controls",
+      "Practically speaking, they are used only for consumables, not hardware for stable outcomes",
+      "From an admin perspective, they define depreciation schedules by model category in standard operations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Stockrooms provide controlled inventory locations that support accurate on-hand balances and fulfillment processes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/stockrooms.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 11,
+    "prompt": "A fulfillment team reports negative stock counts. Which configuration check should be prioritized?",
+    "choices": [
+      "In this scenario, whether discovery schedules run every hour under expected controls",
+      "In platform terms, whether event rules suppress warning alerts for stable outcomes",
+      "Practically speaking, whether transfer orders and issue transactions are recorded against correct stockrooms",
+      "From an admin perspective, whether CMDB relationship rules are active for consistent administration"
+    ],
+    "correctIndex": 2,
+    "explanation": "Incorrect stockroom transaction handling is a common cause of inventory count drift and negative balances.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/task/manage-stockroom-inventory.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 12,
+    "prompt": "Which process improves audit readiness for distributed stockrooms?",
+    "choices": [
+      "Operationally, track inventory only at region level, not per stockroom",
+      "From an implementation standpoint, disable transfer workflows to reduce transaction volume",
+      "In most deployments, allow manual stock adjustments without reason codes",
+      "In practice, use periodic cycle counts with reconciliation and documented variance handling"
+    ],
+    "correctIndex": 3,
+    "explanation": "Cycle counts and controlled reconciliation provide evidence of inventory integrity and process compliance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/task/perform-cycle-counts.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 13,
+    "prompt": "What is the best practice when opening a new stockroom location in ServiceNow?",
+    "choices": [
+      "Practically speaking, set all incoming hardware to in use without delay in standard operations",
+      "From an admin perspective, use one global stockroom and ignore local receiving for consistent administration",
+      "In this scenario, copy production data directly into the new stockroom without baseline controls",
+      "In platform terms, define ownership, receiving/issuing procedures, and transfer governance before operational use"
+    ],
+    "correctIndex": 3,
+    "explanation": "Operational controls and clear ownership are needed before go-live to prevent inventory and fulfillment issues.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/stockroom-operations.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 14,
+    "prompt": "Which metric best indicates healthy stockroom operations?",
+    "choices": [
+      "Practically speaking, highest number of manual adjustments each month for consistent administration",
+      "From a governance perspective, no transfer requests between stockrooms under normal policy constraints",
+      "In this scenario, low variance between expected and counted inventory with timely fulfillment cycle times",
+      "In platform terms, all assets stored in one stockroom globally under expected controls"
+    ],
+    "correctIndex": 2,
+    "explanation": "Low variance and reliable fulfillment performance indicate accurate inventory controls and effective stockroom execution.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/asset-management-kpis.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 15,
+    "prompt": "What does an asset lifecycle state represent in HAM?",
+    "choices": [
+      "Typically, this approach controls event severity for connector alerts in standard operations under normal policy constraints",
+      "In practice, this approach identifies which MID Server discovered the asset for governed delivery",
+      "Operationally, this approach reflects where an asset is in its managed process (for example in stock, in use, retired) and drives workflow behavior",
+      "From an implementation standpoint, this approach stores the CI relationship type for service mapping for stable outcomes"
+    ],
+    "correctIndex": 2,
+    "explanation": "Lifecycle states track progression through operational and financial handling stages and often gate allowed actions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/asset-lifecycle.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 16,
+    "prompt": "A retired asset is still allocated to a user and appears in active inventory reports. Which control likely failed?",
+    "choices": [
+      "Typically, lifecycle transition governance and reconciliation between state/substate and assignment data",
+      "In practice, connector endpoint mapping under normal policy constraints under expected controls",
+      "Operationally, discovery credential affinity for governed delivery for stable outcomes",
+      "From an admin perspective, event listener health checks in standard operations"
+    ],
+    "correctIndex": 0,
+    "explanation": "State transition controls should enforce consistency so retired assets are not treated as active assigned inventory.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/task/manage-asset-state-transitions.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 17,
+    "prompt": "Why should lifecycle state changes be tied to governed workflows rather than ad hoc manual edits?",
+    "choices": [
+      "In most deployments, manual edits consistently improve auditability under expected controls",
+      "In this scenario, manual state updates are required for stock transfers for stable outcomes",
+      "In platform terms, workflow-based changes prevent integration with procurement in standard operations",
+      "From a governance perspective, workflows enforce approvals, required data updates, and audit traceability for state transitions"
+    ],
+    "correctIndex": 3,
+    "explanation": "Governed workflows ensure lifecycle transitions occur with policy-compliant controls and complete audit records.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/asset-process-controls.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 18,
+    "prompt": "Which KPI best indicates lifecycle process maturity?",
+    "choices": [
+      "Typically, percentage of assets following expected state transitions with low exception rework",
+      "From an admin perspective, average number of listeners per connector in standard operations",
+      "Operationally, total number of models in the product catalog for consistent administration",
+      "In practice, count of discovery schedules per month in standard operations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Transition conformance and low exception rates show lifecycle governance is operating consistently.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/asset-management-kpis.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 19,
+    "prompt": "What is the biggest risk of allowing direct state changes to \"Retired\" without prerequisite checks?",
+    "choices": [
+      "Typically, this approach causes event connectors to stop ingesting alerts in standard operations",
+      "From an admin perspective, this approach can skip required recovery, data wipe, or disposal controls and create compliance exposure",
+      "Practically speaking, this approach improves financial close timelines too much under normal policy constraints",
+      "In practice, this approach prevents all transfer orders from closing for governed delivery"
+    ],
+    "correctIndex": 1,
+    "explanation": "Retirement often requires mandatory controls; bypassing them can produce audit, security, and compliance issues.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/disposition-and-retirement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 20,
+    "prompt": "How do consumable models differ from hardware models in HAM?",
+    "choices": [
+      "In most deployments, consumable models can only be used with discovery schedules",
+      "In platform terms, consumable models through configured automation create depreciation schedules",
+      "In this scenario, consumable models track non-serialized items managed by quantity, not individual asset records",
+      "From a governance perspective, consumable models require CI relationships before receiving"
+    ],
+    "correctIndex": 2,
+    "explanation": "Consumables are generally managed by stock quantity and consumption patterns rather than per-item lifecycle records.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/consumables.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 21,
+    "prompt": "A team orders printer toner but models are inconsistent across locations. What should be implemented?",
+    "choices": [
+      "Typically, discovery patterns to classify toner cartridges as servers under normal policy constraints",
+      "Operationally, a governed consumable model catalog with standardized naming, units, and manufacturer references",
+      "From an admin perspective, event listener mapping for each toner SKU under expected controls",
+      "In practice, one free-text item per stockroom for governed delivery for stable outcomes"
+    ],
+    "correctIndex": 1,
+    "explanation": "Standardized consumable models reduce duplication and improve replenishment reporting and fulfillment accuracy.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/task/manage-consumable-models.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 22,
+    "prompt": "Which control best prevents over-ordering consumables?",
+    "choices": [
+      "Practically speaking, disable stockroom-level inventory tracking for governed delivery",
+      "Typically, use one global threshold regardless of usage variance under expected controls",
+      "From an admin perspective, convert all consumables to serialized hardware assets for stable outcomes",
+      "In practice, track on-hand quantities and minimum thresholds by stockroom with controlled replenishment workflows"
+    ],
+    "correctIndex": 3,
+    "explanation": "Location-specific quantity thresholds and replenishment controls align purchasing to actual consumption patterns.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/task/manage-consumable-inventory.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 23,
+    "prompt": "Why should consumable model usage be reviewed regularly with request and stockroom data?",
+    "choices": [
+      "In most deployments, to increase CMDB relationship depth under expected controls",
+      "In this scenario, to validate demand patterns and tune reorder policies for cost control",
+      "From a governance perspective, to improve event correlation performance",
+      "From an implementation standpoint, to reduce MID Server CPU usage for consistent administration"
+    ],
+    "correctIndex": 1,
+    "explanation": "Periodic usage review helps align inventory policy with real demand and reduce waste or stockouts.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/consumable-operations-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 24,
+    "prompt": "Which KPI most directly reflects mature consumable model governance?",
+    "choices": [
+      "Typically, highest number of open purchase orders for governed delivery for stable outcomes",
+      "In practice, low stockout frequency with controlled carrying cost and minimal model duplication",
+      "Practically speaking, no cycle counting performed in stockrooms for consistent administration",
+      "From an admin perspective, maximum number of duplicate consumable models under normal policy constraints"
+    ],
+    "correctIndex": 1,
+    "explanation": "Balanced availability, cost control, and clean model data indicate disciplined consumable governance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/asset-management-kpis.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 25,
+    "prompt": "In Hardware Asset Management, what is an asset bundle primarily used for?",
+    "choices": [
+      "Practically speaking, skipping model normalization at receiving",
+      "Typically, grouping related assets into a managed package for deployment or fulfillment",
+      "In platform terms, forcing one-to-one mapping between users and stockrooms",
+      "From an admin perspective, converting consumables into fixed assets through configured automation"
+    ],
+    "correctIndex": 1,
+    "explanation": "Asset bundles help organizations manage and fulfill standard sets of hardware items together for operational consistency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/asset-bundles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 26,
+    "prompt": "Which scenario is the best fit for asset bundle usage?",
+    "choices": [
+      "Operationally, one-off disposal of retired servers for stable outcomes",
+      "In most deployments, manual correction of duplicate model records",
+      "From an implementation standpoint, reconciliation of discovery source priorities",
+      "From a governance perspective, standard new-hire kit fulfillment with predefined hardware items"
+    ],
+    "correctIndex": 3,
+    "explanation": "Bundle definitions are ideal for repeatable request patterns like onboarding kits that require predictable item sets.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/task/create-asset-bundle.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 27,
+    "prompt": "What governance benefit do asset bundles provide to hardware request processes?",
+    "choices": [
+      "Operationally, removing the need for stockroom inventory counts under normal policy constraints",
+      "In most deployments, enforcing standardized item combinations and reducing ad hoc ordering variance",
+      "From an implementation standpoint, eliminating all approval requirements under expected controls",
+      "In practice, auto-closing catalog tasks before fulfillment for stable outcomes"
+    ],
+    "correctIndex": 1,
+    "explanation": "By standardizing grouped items, bundles reduce fulfillment errors and improve control over cost and supportability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-request-fulfillment.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 28,
+    "prompt": "Why should bundle definitions be reviewed whenever standard device models change?",
+    "choices": [
+      "Practically speaking, to bypass transfer order processing for governed delivery",
+      "From an admin perspective, to keep request fulfillment aligned with current approved hardware standards",
+      "In this scenario, to disable all pending catalog requests for stable outcomes",
+      "In platform terms, to prevent purchase order generation in standard operations"
+    ],
+    "correctIndex": 1,
+    "explanation": "Outdated bundle contents can drive incorrect fulfillment and increase support burden if model standards have shifted.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/task/manage-hardware-models.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 29,
+    "prompt": "What is the strongest indicator that bundle strategy is working well in HAM?",
+    "choices": [
+      "In most deployments, higher fulfillment consistency and fewer manual substitutions per request",
+      "In practice, more free-form hardware requests outside the catalog",
+      "Operationally, growing backlog of partially fulfilled onboarding requests",
+      "From an implementation standpoint, increasing stockroom transfers caused by misconfigured kits"
+    ],
+    "correctIndex": 0,
+    "explanation": "Effective bundles reduce exceptions and improve fulfillment predictability across recurring hardware request scenarios.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-request-fulfillment.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/asset-bundles.html"
+    ]
+  }
+]

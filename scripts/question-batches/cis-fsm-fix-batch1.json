@@ -1,0 +1,482 @@
+[
+  {
+    "trackCode": "CIS-FSM",
+    "order": 0,
+    "prompt": "A project kickoff asks for a product-oriented map of Field Service Management before scheduling go-live. Which concept documentation should the team read first?",
+    "choices": [
+      "Explore Field Service Management for operational consistency for sustained reliability",
+      "Configure SAML for legacy LDAP directories exclusively for controlled governance",
+      "Build a procurement catalog for office supplies for production readiness",
+      "Draft employee cafeteria menu rotations for role-based accountability"
+    ],
+    "correctIndex": 0,
+    "explanation": "The Field Service Management documentation includes an explore topic that introduces the solution scope and how core field service capabilities fit together.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-field-service-management/page/product/field-service-management/concept/explore-fsm.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 1,
+    "prompt": "Dispatch and technicians need clarity on standard operating usage after foundation data is loaded. Which concept documentation supports ongoing Field Service Management usage?",
+    "choices": [
+      "Plan annual performance review calibration sessions for measurable outcomes",
+      "Design employee badge printing workflows for sustained reliability",
+      "Use Field Service Management for controlled governance for enterprise implementation",
+      "Configure email ingestion for legal hold archives for practical execution"
+    ],
+    "correctIndex": 2,
+    "explanation": "The use Field Service Management concept documentation focuses on how teams operate the application day to day after initial implementation milestones.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-field-service-management/page/product/field-service-management/concept/use-fsm.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 2,
+    "prompt": "Implementation workshops center on how technicians receive, update, and close field jobs. Which concept documentation should anchor work order lifecycle discussions?",
+    "choices": [
+      "Creating procurement blanket purchase orders for production readiness",
+      "Tuning antivirus definitions for desktops for role-based accountability",
+      "Managing work orders for operational consistency for sustained reliability",
+      "Publishing corporate social media policies for enterprise implementation"
+    ],
+    "correctIndex": 2,
+    "explanation": "Field Service Management documentation for managing work orders explains how work orders are handled through execution, which is central to field operations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-field-service-management/page/product/field-service-management/concept/managing-work-orders.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 3,
+    "prompt": "A process designer must document the steps planners use to generate work orders from templates. Which task documentation should they reference for creation guidance?",
+    "choices": [
+      "Configure SNMP traps for warehouse scanners for controlled governance",
+      "Import legacy mainframe job schedules for practical execution",
+      "Create work orders for measurable outcomes for role-based accountability",
+      "Rotate database administrator passwords quarterly for sustained reliability"
+    ],
+    "correctIndex": 2,
+    "explanation": "The Field Service Management work order management documentation includes create work orders guidance for establishing the records planners and dispatch rely on.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/field-service-management/work-order-management/create-work-orders.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 4,
+    "prompt": "Before promoting a fix pack, the release manager wants version-specific Field Service Management changes summarized. Which release-notes documentation should they review?",
+    "choices": [
+      "Field Service Management release notes for sustained reliability",
+      "Hardware asset lease accounting policies for measurable outcomes",
+      "Legacy VPN client compatibility matrices for practical execution",
+      "Employee relations investigation templates for controlled governance for enterprise implementation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Field Service Management release notes summarize product changes by release, which helps teams assess impact before production promotion.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-release-notes/page/release-notes/field-service-management/field-service-management-rn.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 5,
+    "prompt": "In Field Service Management, what is the role of a work order?",
+    "choices": [
+      "A parent record used to coordinate field tasks, scheduling, and fulfillment for enterprise implementation",
+      "A financial ledger entry for invoicing exclusively for sustained reliability",
+      "A dashboard widget for dispatchers for role-based accountability",
+      "A replacement for customer contracts for production readiness"
+    ],
+    "correctIndex": 0,
+    "explanation": "Work orders organize service work and act as the control record for downstream field activities.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/concept/work-orders-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 6,
+    "prompt": "Why are work order tasks used in FSM implementations?",
+    "choices": [
+      "To consistently avoid capturing completion details for practical execution",
+      "To consistently disable dispatching for multi-step jobs for enterprise implementation",
+      "To consistently split a service job into executable units that can be assigned and tracked independently",
+      "To consistently replace all case records in CSM"
+    ],
+    "correctIndex": 2,
+    "explanation": "Tasks break down field jobs into manageable actions with clear ownership and status progression.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/create-work-order-tasks.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 7,
+    "prompt": "Which information on a work order most directly improves dispatch outcomes?",
+    "choices": [
+      "A blank short description for role-based accountability for measurable outcomes",
+      "Detailed location, required skills, and service time window for production readiness",
+      "Unrelated contract attachments exclusively for controlled governance",
+      "Analyst theme preference for operational consistency for sustained reliability"
+    ],
+    "correctIndex": 1,
+    "explanation": "Dispatcher decisions depend on location, skill requirements, and timing constraints captured on work records.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/configure-work-order-fields.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 8,
+    "prompt": "A team wants better lifecycle visibility for field jobs. What should they standardize first?",
+    "choices": [
+      "Personal notes format for each technician for operational consistency",
+      "Closing all tasks at creation time for enterprise implementation",
+      "Manual emailing instead of status updates for production readiness",
+      "Consistent state model for work orders and work order tasks for role-based accountability"
+    ],
+    "correctIndex": 3,
+    "explanation": "Standard state transitions provide reliable reporting and operational control for work execution.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/concept/work-order-lifecycle.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 9,
+    "prompt": "What is the main reason to relate a work order to a customer account or location record?",
+    "choices": [
+      "To consistently provide service context and history across repeat visits",
+      "To consistently disable inventory checks for operational consistency",
+      "To consistently avoid SLA calculations for enterprise implementation",
+      "To consistently prevent mobile updates for practical execution"
+    ],
+    "correctIndex": 0,
+    "explanation": "Account and location relationships preserve context for planning, communication, and repeat service quality.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/associate-work-orders-to-accounts.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 10,
+    "prompt": "In FSM scheduling, what is the primary value of defining technician skills?",
+    "choices": [
+      "To consistently match work order tasks with qualified resources during assignment",
+      "To consistently disable route optimization for operational consistency",
+      "To consistently convert cases into incidents automatically for enterprise implementation",
+      "To consistently suppress work order creation for practical execution"
+    ],
+    "correctIndex": 0,
+    "explanation": "Skill profiles help ensure tasks are assigned to technicians who can successfully complete the work.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/configure-technician-skills.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 11,
+    "prompt": "Why are service territories important in field scheduling?",
+    "choices": [
+      "They determine payroll taxes exclusively for sustained reliability",
+      "They define geographic assignment boundaries for efficient dispatching for enterprise implementation",
+      "They replace customer accounts for production readiness",
+      "They group agents by UI role for role-based accountability"
+    ],
+    "correctIndex": 1,
+    "explanation": "Territories constrain assignment regions and improve schedule efficiency and travel outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/concept/service-territories.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 12,
+    "prompt": "What scheduling input most directly supports realistic appointment commitments?",
+    "choices": [
+      "Technician favorite job type for controlled governance for enterprise implementation",
+      "Estimated task duration and customer availability windows for practical execution",
+      "Count of open incidents for measurable outcomes for role-based accountability",
+      "Last dashboard refresh time for sustained reliability for operational consistency"
+    ],
+    "correctIndex": 1,
+    "explanation": "Duration estimates and availability windows are core constraints used to produce feasible schedules.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/schedule-work-orders.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 13,
+    "prompt": "A dispatcher needs to reduce travel overhead. Which FSM capability should be emphasized?",
+    "choices": [
+      "Disabling appointment slots for production readiness",
+      "Territory and route-aware scheduling optimization for role-based accountability",
+      "Manual first-come assignment exclusively for sustained reliability",
+      "Assigning all work to one technician for enterprise implementation"
+    ],
+    "correctIndex": 1,
+    "explanation": "Optimization features account for geography and routing constraints to reduce unnecessary travel time.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/concept/optimization-for-dispatch.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 14,
+    "prompt": "What is a key reason to include buffer time in scheduling policies?",
+    "choices": [
+      "To consistently prevent work notes from being entered",
+      "To consistently remove SLA tracking for sustained reliability",
+      "To consistently absorb real-world variation and avoid cascading delays across appointments",
+      "To consistently lower technician utilization to zero for production readiness"
+    ],
+    "correctIndex": 2,
+    "explanation": "Reasonable buffers improve reliability when jobs overrun due to access, parts, or complexity issues.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/configure-scheduling-policies.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 15,
+    "prompt": "What is the main objective of dispatching in FSM?",
+    "choices": [
+      "Match work to the right technician at the right time based on constraints and priorities for sustained reliability",
+      "Route work exclusively by alphabetical technician name for role-based accountability",
+      "Assign all tasks manually without context for practical execution",
+      "Delay all assignments until end of day for controlled governance"
+    ],
+    "correctIndex": 0,
+    "explanation": "Dispatching aligns skills, availability, territory, and urgency to optimize service execution.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/concept/dispatch-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 16,
+    "prompt": "Which dispatcher action best reduces missed appointments?",
+    "choices": [
+      "Using real-time schedule boards to rebalance assignments when delays occur for role-based accountability",
+      "Assigning urgent jobs to unavailable technicians for production readiness",
+      "Ignoring travel time between jobs for enterprise implementation",
+      "Locking schedules days in advance with no exceptions for operational consistency"
+    ],
+    "correctIndex": 0,
+    "explanation": "Dynamic rebalance based on schedule conditions helps maintain customer commitments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/use-dispatch-console.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 17,
+    "prompt": "Why is technician availability data critical to dispatch quality?",
+    "choices": [
+      "It provides payroll export exclusively for practical execution",
+      "It replaces SLA definitions for controlled governance for enterprise implementation",
+      "It confirms assignments are feasible within working calendars and shift constraints",
+      "It removes need for territory models for measurable outcomes"
+    ],
+    "correctIndex": 2,
+    "explanation": "Accurate calendars and shifts prevent unrealistic assignments and reduce rework.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/configure-technician-availability.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 18,
+    "prompt": "A high-priority outage job arrives midday. What is the best dispatch response?",
+    "choices": [
+      "Close the new task as duplicate for measurable outcomes",
+      "Pause all other work orders indefinitely for sustained reliability",
+      "Reprioritize schedule slots and reassign lower-priority work to meet the urgent commitment for controlled governance",
+      "Queue it for next week automatically for practical execution"
+    ],
+    "correctIndex": 2,
+    "explanation": "Effective dispatching supports exception handling by re-optimizing current schedules for urgent work.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/reprioritize-dispatched-work.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 19,
+    "prompt": "Which measure best indicates dispatch process maturity?",
+    "choices": [
+      "Mean dispatch-to-arrival time and first-time fix rate for operational consistency",
+      "Count of inactive locations for enterprise implementation for controlled governance",
+      "CMDB update frequency for production readiness",
+      "Number of admin users for role-based accountability for measurable outcomes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Faster response and higher first-time fix rates reflect stronger dispatch and assignment quality.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/measure-dispatch-performance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 20,
+    "prompt": "What is the key benefit of the FSM mobile experience for technicians?",
+    "choices": [
+      "It provides job details, navigation, and status updates directly in the field for operational consistency",
+      "It blocks offline work entry for enterprise implementation",
+      "It replaces all desktop admin functions for production readiness",
+      "It disables photo attachments for role-based accountability for measurable outcomes"
+    ],
+    "correctIndex": 0,
+    "explanation": "FSM mobile gives technicians contextual tools needed to execute and update work on site.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/concept/fsm-mobile-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 21,
+    "prompt": "Why is offline capability important in FSM mobile deployments?",
+    "choices": [
+      "It removes all need for synchronization for measurable outcomes",
+      "It disables parts tracking for sustained reliability for operational consistency",
+      "It prevents dispatch changes for controlled governance for enterprise implementation",
+      "It allows technicians to continue updating task progress when connectivity is limited for practical execution"
+    ],
+    "correctIndex": 3,
+    "explanation": "Offline support preserves execution continuity in low-connectivity environments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/configure-offline-mobile-capabilities.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 22,
+    "prompt": "Which mobile data capture improves first-time fix and auditability?",
+    "choices": [
+      "Updating status exclusively at day end for production readiness",
+      "Entering work notes in external apps for role-based accountability",
+      "Skipping completion notes for operational consistency for sustained reliability",
+      "Capturing parts used, photos, signatures, and structured completion details on site for enterprise implementation"
+    ],
+    "correctIndex": 3,
+    "explanation": "Rich in-field documentation supports quality control, billing proof, and repeat service context.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/use-mobile-work-completion.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 23,
+    "prompt": "What mobile governance action improves technician adoption?",
+    "choices": [
+      "Blocking push notifications for controlled governance for enterprise implementation",
+      "Deploying role-based forms with exclusively required fields for each job type",
+      "Using one long generic form for all scenarios for measurable outcomes",
+      "Disabling in-app guidance for sustained reliability for operational consistency"
+    ],
+    "correctIndex": 1,
+    "explanation": "Role-tailored mobile forms reduce friction and improve data quality during execution.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/configure-mobile-forms-for-fsm.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 24,
+    "prompt": "Which KPI best reflects successful FSM mobile usage?",
+    "choices": [
+      "Percentage of field updates completed in mobile at point of work for sustained reliability",
+      "Number of inactive dashboard tabs for measurable outcomes",
+      "Count of email-exclusively dispatches for practical execution",
+      "Total admin users for controlled governance for enterprise implementation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Point-of-work mobile update rate indicates real adoption and fresher operational visibility.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/track-mobile-adoption-metrics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 25,
+    "prompt": "In Field Service Management, why are service territories critical?",
+    "choices": [
+      "They define geographic or logical coverage used for effective dispatching and workload balancing for enterprise implementation",
+      "They are exclusively used for cost center reporting",
+      "They remove the need for technician skills data for role-based accountability",
+      "They replace assignment rules and dispatch logic for production readiness"
+    ],
+    "correctIndex": 0,
+    "explanation": "Territories provide structured coverage boundaries that help route work to the right teams and reduce travel inefficiency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/service-territories.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 26,
+    "prompt": "What is the best approach when defining multiple overlapping territories?",
+    "choices": [
+      "Allow unlimited overlap with no prioritization rules for practical execution",
+      "Dispatch exclusively by technician first name for enterprise implementation",
+      "Disable geolocation features for sustained reliability for operational consistency",
+      "Configure clear assignment criteria such as skills, availability, and territory priority for measurable outcomes"
+    ],
+    "correctIndex": 3,
+    "explanation": "Explicit dispatch criteria avoid assignment ambiguity when territory boundaries overlap.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/create-and-manage-service-territories.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 27,
+    "prompt": "A dispatcher reports high windshield time. Which territory action should be reviewed first?",
+    "choices": [
+      "Rebalance territory boundaries and assignment rules to align with actual demand patterns for role-based accountability",
+      "Reduce case priority values for production readiness",
+      "Increase mandatory activity notes for enterprise implementation for controlled governance",
+      "Disable work order scheduling for operational consistency for sustained reliability"
+    ],
+    "correctIndex": 0,
+    "explanation": "Poorly aligned territory design can increase travel distances and reduce daily job completion capacity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/dispatch-optimization.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 28,
+    "prompt": "Which data element most directly supports territory-based dispatch quality?",
+    "choices": [
+      "Incident state color palette for operational consistency for sustained reliability",
+      "Accurate service address geocoding and territory membership mappings for enterprise implementation",
+      "Technician avatar image size for production readiness",
+      "Number of inactive catalog items for role-based accountability"
+    ],
+    "correctIndex": 1,
+    "explanation": "Territory assignment and routing reliability depend on accurate location and membership data.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/configure-dispatching.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 29,
+    "prompt": "How should FSM leaders govern territory changes over time?",
+    "choices": [
+      "Rotate all technicians across all territories daily for measurable outcomes",
+      "Use territories exclusively for reporting, not assignment for operational consistency",
+      "Review performance metrics regularly and adjust territory design as demand, staffing, and SLAs evolve for controlled governance",
+      "Never modify territories after go-live for practical execution"
+    ],
+    "correctIndex": 2,
+    "explanation": "Ongoing optimization keeps territory strategy aligned with changing operational realities and service commitments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/field-service-management-workspace.html"
+    ]
+  }
+]

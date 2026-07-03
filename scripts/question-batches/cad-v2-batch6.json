@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CAD",
+		"order": 25,
+		"prompt": "A Business Rule configured to run 'before' a database insert can do which of the following?",
+		"choices": [
+			"Modify field values on the current record before it is written to the database",
+			"Render HTML directly in the user's browser",
+			"Guarantee execution after all asynchronous jobs finish",
+			"Replace the need for access controls"
+		],
+		"correctIndex": 0,
+		"explanation": "A before business rule executes prior to the database write, so it can adjust current record values or abort the operation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/business-rules.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 26,
+		"prompt": "In a server-side script, which API queries and updates records in a table?",
+		"choices": [
+			"GlideRecord",
+			"g_form (client form object)",
+			"g_scratchpad (server-to-client data)",
+			"spModal (Service Portal dialog)"
+		],
+		"correctIndex": 0,
+		"explanation": "GlideRecord is the server-side API for querying, inserting, updating, and deleting records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/gliderecord.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 27,
+		"prompt": "Where should reusable server-side functions and classes be defined so other server scripts can call them?",
+		"choices": [
+			"In a Script Include",
+			"In an onLoad client script event",
+			"In a UI Policy action row",
+			"In a report definition record"
+		],
+		"correctIndex": 0,
+		"explanation": "Script Includes encapsulate reusable server-side logic (functions/classes) callable from business rules, other script includes, and GlideAjax.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/script-includes.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 28,
+		"prompt": "Which GlideRecord method must you call after setting field values to persist a brand-new record?",
+		"choices": [
+			"insert()",
+			"query()",
+			"next()",
+			"getRowCount()"
+		],
+		"correctIndex": 0,
+		"explanation": "After initializing a new GlideRecord and setting fields, insert() writes the record and returns its sys_id.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/gliderecord.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 29,
+		"prompt": "To debug a server-side script by writing messages to the system log, which method do you use?",
+		"choices": [
+			"gs.info() (or gs.log)",
+			"g_form.addInfoMessage() on the client",
+			"alert() in the browser",
+			"console.table() output"
+		],
+		"correctIndex": 0,
+		"explanation": "GlideSystem logging methods such as gs.info() write to the system log for server-side debugging.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/glidesystem.html"
+		]
+	}
+]

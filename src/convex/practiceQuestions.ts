@@ -9,8 +9,18 @@ const practiceModeValidator = v.union(v.literal('sample'), v.literal('full'));
 
 const answerValidator = v.object({
 	order: v.number(),
-	selectedIndex: v.number()
+	// Single-answer selection (also used as first selection for multi).
+	selectedIndex: v.number(),
+	// Multi-select: full set of selected indexes. Absent for single-answer.
+	selectedIndexes: v.optional(v.array(v.number()))
 });
+
+/** True when two index lists contain exactly the same values (order-independent). */
+function sameIndexSet(a: number[], b: number[]): boolean {
+	if (a.length !== b.length) return false;
+	const setB = new Set(b);
+	return a.every((n) => setB.has(n));
+}
 
 async function loadQuestionsForTrack(ctx: QueryCtx, trackCode: string) {
 	return await ctx.db
@@ -39,6 +49,7 @@ function mapQuestionRows(
 		order: row.order,
 		prompt: row.prompt,
 		choices: row.choices,
+		questionType: row.questionType ?? 'single',
 		explanation: row.explanation
 	}));
 }
@@ -90,6 +101,18 @@ export const gradeAnswers = mutation({
 			if (answer.selectedIndex < 0 || answer.selectedIndex > 5) {
 				throw new Error(`Invalid selectedIndex ${answer.selectedIndex}: must be 0-5`);
 			}
+			if (answer.selectedIndexes !== undefined) {
+				if (answer.selectedIndexes.length < 1 || answer.selectedIndexes.length > 6) {
+					throw new Error(
+						`Invalid selectedIndexes for order ${answer.order}: must have 1-6 items`
+					);
+				}
+				for (const idx of answer.selectedIndexes) {
+					if (idx < 0 || idx > 5) {
+						throw new Error(`Invalid selectedIndexes value ${idx}: must be 0-5`);
+					}
+				}
+			}
 		}
 
 		if (mode === 'full') {
@@ -113,7 +136,10 @@ export const gradeAnswers = mutation({
 		const results: {
 			order: number;
 			selectedIndex: number;
+			selectedIndexes: number[];
 			correctIndex: number;
+			correctIndexes: number[];
+			questionType: 'single' | 'multi';
 			isCorrect: boolean;
 			explanation: string;
 		}[] = [];
@@ -124,12 +150,26 @@ export const gradeAnswers = mutation({
 			if (!question) {
 				throw new Error(`No question with order ${answer.order} for track ${trackCode}`);
 			}
-			const isCorrect = answer.selectedIndex === question.correctIndex;
+			const questionType = question.questionType ?? 'single';
+			const correctIndexes =
+				question.correctIndexes ?? [question.correctIndex];
+			const selectedIndexes =
+				answer.selectedIndexes ?? [answer.selectedIndex];
+
+			// Multi-select requires an exact match of all correct indexes (no partial credit).
+			const isCorrect =
+				questionType === 'multi'
+					? sameIndexSet(selectedIndexes, correctIndexes)
+					: answer.selectedIndex === question.correctIndex;
+
 			if (isCorrect) correct++;
 			results.push({
 				order: answer.order,
 				selectedIndex: answer.selectedIndex,
+				selectedIndexes,
 				correctIndex: question.correctIndex,
+				correctIndexes,
+				questionType,
 				isCorrect,
 				explanation: question.explanation
 			});

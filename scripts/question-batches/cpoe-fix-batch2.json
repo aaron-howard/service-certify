@@ -1,0 +1,497 @@
+[
+  {
+    "trackCode": "CPOE",
+    "order": 30,
+    "prompt": "For operational excellence, how should a COE treat Setup Hub tasks?",
+    "choices": [
+      "As one-time admin chores outside control under documented platform behavior",
+      "As tasks delegated only to external partners for stable long-term administration",
+      "As optional activities only for sandbox platform instances for cross-team production support",
+      "As auditable control activities tied to readiness policy in enterprise release operations"
+    ],
+    "correctIndex": 3,
+    "explanation": "Treating setup tasks as controls improves consistency, compliance evidence, and cross-team accountability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/administer/setup-hub/concept/setup-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 31,
+    "prompt": "Which repository guardrail best supports enterprise-scale quality in shared platform apps?",
+    "choices": [
+      "Mandatory app metadata, dependency transparency, and defined retirement criteria for cross-team production support",
+      "Allowing unpublished apps in production domains across governed implementation flows",
+      "Disabling version history to simplify catalog screens with clear operational impact",
+      "No review process for minor app updates during controlled change windows"
+    ],
+    "correctIndex": 0,
+    "explanation": "Quality guardrails make shared apps easier to govern through their full lifecycle.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/applications/concept/application-lifecycle-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 32,
+    "prompt": "Which enterprise MID policy is most aligned with resilience engineering?",
+    "choices": [
+      "Place all critical integrations on a single MID in one data center under documented platform behavior",
+      "Allow unmanaged local credential storage on MID hosts for stable long-term administration",
+      "Restart MID manually only after outages are reported by users for practical implementation decisions",
+      "Use region-aware redundancy and health monitoring for MID clusters across governed implementation flows"
+    ],
+    "correctIndex": 3,
+    "explanation": "Region-aware redundancy and proactive monitoring reduce single points of failure for integration operations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/product/mid-server/concept/mid-server-clustering.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 33,
+    "prompt": "A COE wants to reduce repository sprawl. Which governance metric is most actionable?",
+    "choices": [
+      "Total table count across all custom scopes for cross-team production support",
+      "Count of all UI actions in global scope in enterprise release operations",
+      "Number of duplicated app capabilities lacking designated product owners under documented platform behavior",
+      "Median script include length by app during controlled change windows"
+    ],
+    "correctIndex": 2,
+    "explanation": "Detecting capability duplication without ownership highlights where consolidation governance is needed.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-strategic-portfolio-management/page/product/application-portfolio-management/task/rationalize-application-portfolio.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 34,
+    "prompt": "What is the strongest reason to formalize enterprise MID standards in an operating model playbook?",
+    "choices": [
+      "To prevent developers from using update set records with clear operational impact",
+      "To ensure secure, repeatable integration operations across environments during controlled change windows",
+      "To eliminate all integration testing in large shared environments",
+      "To reduce repository permissions management across governed implementation flows"
+    ],
+    "correctIndex": 1,
+    "explanation": "Documented MID standards improve repeatability, security controls, and operational continuity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/product/mid-server/concept/mid-server-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 35,
+    "prompt": "Within a COE, what is the strongest use of instance statistics?",
+    "choices": [
+      "Establishing objective service health benchmarks across product lines in large shared environments",
+      "Preventing teams from using scoped apps in enterprise release operations",
+      "Disabling scheduled performance jobs under documented platform behavior",
+      "Replacing all release retrospectives for stable long-term administration"
+    ],
+    "correctIndex": 0,
+    "explanation": "Shared benchmarks based on instance data support consistent governance and continuous improvement.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/administer/instance-administration/concept/instance-observability.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 36,
+    "prompt": "What governance pattern best addresses recurring security constraint exceptions?",
+    "choices": [
+      "Permanent exception approvals with no expiry with clear operational impact",
+      "Disable auditing for exception tables during controlled change windows",
+      "Global admin access for all product owners for cross-team production support",
+      "Time-boxed exceptions with owner, rationale, and periodic review in enterprise release operations"
+    ],
+    "correctIndex": 3,
+    "explanation": "Time-boxed and reviewed exceptions maintain control while supporting legitimate business needs.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/security/task/manage-security-exceptions.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 37,
+    "prompt": "For enterprise-scale cross-scope governance, what should be standardized first?",
+    "choices": [
+      "Daily clone schedule for all apps in large shared environments",
+      "Developer personal preferences for script style across governed implementation flows",
+      "Access request criteria, approval workflow, and audit traceability with clear operational impact",
+      "Manual spreadsheet approval logs for stable long-term administration"
+    ],
+    "correctIndex": 2,
+    "explanation": "Standardized approval and traceability controls reduce inconsistency and compliance risk across many teams.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/applications/task/manage-cross-scope-privileges.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 38,
+    "prompt": "Which reporting view gives executives the clearest understanding of security and performance trade-offs?",
+    "choices": [
+      "List of all client scripts by app under documented platform behavior",
+      "Unified scorecard showing health, access risk, and adoption impact for stable long-term administration",
+      "Raw debug logs from one node for cross-team production support",
+      "Single chart of monthly incident count in enterprise release operations"
+    ],
+    "correctIndex": 1,
+    "explanation": "A unified scorecard connects operational and risk posture with business adoption outcomes for better decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/use/performance-analytics/task/build-executive-scorecard.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 39,
+    "prompt": "Why is cross-scope access recertification important in an operating excellence model?",
+    "choices": [
+      "It confirms granted access is still needed and aligned to current risk posture for practical implementation decisions",
+      "It eliminates the need for ACLs across governed implementation flows",
+      "It removes separation between production and development with clear operational impact",
+      "It guarantees every integration keeps working forever during controlled change windows"
+    ],
+    "correctIndex": 0,
+    "explanation": "Periodic recertification helps prevent privilege drift and unnecessary exposure over time.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/security/concept/access-review-and-certification.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 40,
+    "prompt": "In an operating excellence model, what should govern enterprise plugin management decisions?",
+    "choices": [
+      "Only vendor recommendations without internal assessment under documented platform behavior",
+      "Standard intake, impact scoring, architecture review, and ownership accountability for stable long-term administration",
+      "Ad hoc admin approval with no documented rationale in large shared environments",
+      "Automatic activation for all available plugins across governed implementation flows"
+    ],
+    "correctIndex": 1,
+    "explanation": "A structured governance workflow ensures plugin decisions are consistent, auditable, and aligned to enterprise standards.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-now-platform/page/administer/platform-governance/concept/change-governance-framework.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 41,
+    "prompt": "Which update set promotion policy best supports operational reliability?",
+    "choices": [
+      "Allow direct production commits for all urgent requests for cross-team production support",
+      "Exclude peer review from promotion workflow in enterprise release operations",
+      "Bundle unrelated fixes to minimize record count under documented platform behavior",
+      "Promote update set records only after validated testing and conflict review evidence during controlled change windows"
+    ],
+    "correctIndex": 3,
+    "explanation": "Evidence-backed promotion gates reduce production defects and improve release confidence.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/system-update-sets/task/move-update-sets-between-instances.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 42,
+    "prompt": "At enterprise scale, what is a key risk if clone management lacks standardized profiles?",
+    "choices": [
+      "Reduced need for MID Server monitoring with clear operational impact",
+      "More dashboard personalization options during controlled change windows",
+      "Inconsistent data masking and higher compliance exposure in large shared environments",
+      "Faster script execution in production across governed implementation flows"
+    ],
+    "correctIndex": 2,
+    "explanation": "Without standard clone profiles, teams may apply inconsistent protections that increase compliance and privacy risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/administer/instance-administration/task/configure-clone-profile.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 43,
+    "prompt": "Which measurement best indicates healthy promotion governance over time?",
+    "choices": [
+      "Average size of cloned attachments in large shared environments",
+      "Number of inactive users in non-production in enterprise release operations",
+      "Promotion success rate with low post-release defect leakage under documented platform behavior",
+      "Count of UI policy conditions per table for stable long-term administration"
+    ],
+    "correctIndex": 2,
+    "explanation": "High success and low leakage show that promotion controls are effective and sustainable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/use/performance-analytics/concept/release-quality-metrics.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 44,
+    "prompt": "What governance mechanism most improves cloning at scale across many business units?",
+    "choices": [
+      "Clone every environment at the same time with clear operational impact",
+      "Let each team define clone rules independently during controlled change windows",
+      "Operate a centralized clone calendar with policy-based exceptions for cross-team production support",
+      "Use one global clone profile for all scenarios in enterprise release operations"
+    ],
+    "correctIndex": 2,
+    "explanation": "A centralized schedule and exception process balances local needs with enterprise stability and policy compliance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/administer/instance-administration/concept/enterprise-clone-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 45,
+    "prompt": "Which high availability design principle is most critical for ServiceNow ecosystem integrations?",
+    "choices": [
+      "Assume all upstream systems are always available in large shared environments",
+      "Design for graceful degradation and automated recovery across dependent services across governed implementation flows",
+      "Disable monitoring to reduce operational overhead with clear operational impact",
+      "Centralize all traffic through a single non-redundant endpoint for stable long-term administration"
+    ],
+    "correctIndex": 1,
+    "explanation": "HA architecture depends on failure-tolerant design and rapid automated recovery to preserve service continuity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 46,
+    "prompt": "How should platform owners validate high availability readiness before peak periods?",
+    "choices": [
+      "Disable retry logic to simplify transaction tracing under documented platform behavior",
+      "Run failover simulations and recovery drills with clear RTO and RPO acceptance criteria for stable long-term administration",
+      "Rely only on vendor status pages for assurance for cross-team production support",
+      "Postpone resilience testing until an outage occurs in enterprise release operations"
+    ],
+    "correctIndex": 1,
+    "explanation": "Resilience testing with explicit recovery targets verifies operational readiness under realistic failure conditions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/incident-management/concept/major-incident-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 47,
+    "prompt": "What architecture choice best supports HA for asynchronous processing workloads?",
+    "choices": [
+      "Direct synchronous chaining across all downstream dependencies for cross-team production support",
+      "Queue-based decoupling with retry controls, idempotency, and dead-letter handling across governed implementation flows",
+      "Manual re-entry of failed transactions without audit logs with clear operational impact",
+      "Single-threaded processing with no backpressure controls during controlled change windows"
+    ],
+    "correctIndex": 1,
+    "explanation": "Decoupled queue patterns absorb faults and traffic spikes while preserving processing integrity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/integrationhub/concept/IntegrationHub.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/web-services/concept/c_RESTAPI.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 48,
+    "prompt": "Which KPI set is most meaningful for enterprise HA governance?",
+    "choices": [
+      "Number of custom business rules created monthly under documented platform behavior",
+      "Service availability, incident MTTR, and percentage of successful automated recoveries for stable long-term administration",
+      "Count of inactive update set records in development in large shared environments",
+      "Total notifications sent by workflow across governed implementation flows"
+    ],
+    "correctIndex": 1,
+    "explanation": "These metrics directly quantify resilience performance and recovery effectiveness.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 49,
+    "prompt": "What governance mechanism best prevents recurring HA regressions after major changes?",
+    "choices": [
+      "Optional postmortems only when executives request them for cross-team production support",
+      "Mandatory resilience review gates in release control with post-release reliability scoring in enterprise release operations",
+      "Permanent freeze on all platform enhancements under documented platform behavior",
+      "Independent team-specific HA definitions without shared criteria during controlled change windows"
+    ],
+    "correctIndex": 1,
+    "explanation": "Embedding resilience checks in delivery governance ensures reliability remains a non-negotiable release criterion.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 50,
+    "prompt": "What is the primary data residency governance objective in global ServiceNow architectures?",
+    "choices": [
+      "Ignore regional requirements for internal systems with clear operational impact",
+      "Replicate all data globally to maximize analytics speed during controlled change windows",
+      "Ensure regulated data is stored and processed in approved geographic jurisdictions in large shared environments",
+      "Classify residency as a legal-only concern outside architecture across governed implementation flows"
+    ],
+    "correctIndex": 2,
+    "explanation": "Data residency governance aligns technical architecture with legal and regulatory location requirements.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/security/concept/c_DataProtectionAndPrivacy.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 51,
+    "prompt": "Which architecture practice best supports residency controls for integrations?",
+    "choices": [
+      "Use one global endpoint for all regulated data flows in large shared environments",
+      "Allow unrestricted data replication between environments in enterprise release operations",
+      "Defer residency checks until audit season under documented platform behavior",
+      "Apply data classification and regional routing policies before cross-border transfer for stable long-term administration"
+    ],
+    "correctIndex": 3,
+    "explanation": "Classification plus routing controls prevent unauthorized movement of regulated data.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/integrationhub/concept/IntegrationHub.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/security/concept/c_DataProtectionAndPrivacy.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 52,
+    "prompt": "How should platform experts govern residency-related exceptions for enterprise programs?",
+    "choices": [
+      "Use formal exception workflows with legal sign-off, risk scoring, and expiration dates with clear operational impact",
+      "Treat all cross-border transfers as by default compliant during controlled change windows",
+      "Approve exceptions via verbal agreement during incidents for cross-team production support",
+      "Rely on integration team discretion without controls in enterprise release operations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Residency exceptions are high risk and must be governed through auditable, time-bound controls.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_AuditManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 53,
+    "prompt": "Which evidence package best supports residency compliance audits?",
+    "choices": [
+      "Notification templates used by support teams in large shared environments",
+      "A one-time spreadsheet of integration owners across governed implementation flows",
+      "Data flow maps, classification policies, transfer controls, and exception records with clear operational impact",
+      "Only high-level architecture diagrams without system mappings for stable long-term administration"
+    ],
+    "correctIndex": 2,
+    "explanation": "Audits require traceable proof of how data is classified, routed, and controlled across jurisdictions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/security/concept/c_DataProtectionAndPrivacy.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 54,
+    "prompt": "What is the best way to reduce residency risk during rapid expansion into new regions?",
+    "choices": [
+      "Embed residency impact assessments into architecture review and release control gates under documented platform behavior",
+      "Launch first and classify data after go-live for stable long-term administration",
+      "Delegate residency decisions to each project team independently for cross-team production support",
+      "Pause all integrations indefinitely in enterprise release operations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Early residency review prevents non-compliant designs and costly rework after deployment.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/security/concept/c_DataProtectionAndPrivacy.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 55,
+    "prompt": "What is the most important principle for governing integration throughput at enterprise scale?",
+    "choices": [
+      "Treat retry storms as acceptable during peak windows for cross-team production support",
+      "Use synchronous calls for every high-volume transaction across governed implementation flows",
+      "Set throughput budgets and backpressure controls per integration domain with clear operational impact",
+      "Allow unlimited throughput from all sources at all times during controlled change windows"
+    ],
+    "correctIndex": 2,
+    "explanation": "Throughput governance requires explicit limits and controls to protect platform stability under load.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/integrationhub/concept/IntegrationHub.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/web-services/concept/c_RESTAPI.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 56,
+    "prompt": "Which pattern best preserves reliability when inbound integration volume spikes unexpectedly?",
+    "choices": [
+      "Queue ingestion with throttling, retry policies, and dead-letter routing for failed messages under documented platform behavior",
+      "Bypass all validation to maximize immediate ingestion for stable long-term administration",
+      "Disable monitoring until volume normalizes in large shared environments",
+      "Drop duplicate messages without idempotency checks across governed implementation flows"
+    ],
+    "correctIndex": 0,
+    "explanation": "Queue-based flow control and fault handling maintain consistent throughput without sacrificing integrity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/integrationhub/reference/r_FlowDesignerErrorHandling.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 57,
+    "prompt": "How should architects evaluate throughput risks during new integration onboarding?",
+    "choices": [
+      "Rely only on functional testing with low sample data for cross-team production support",
+      "Enable all connectors at maximum polling frequency by default in enterprise release operations",
+      "Profile expected payload rates, concurrency behavior, and downstream dependency limits before go-live for practical implementation decisions",
+      "Assume partner systems match internal processing capacity during controlled change windows"
+    ],
+    "correctIndex": 2,
+    "explanation": "Throughput-safe onboarding requires capacity-aware validation of real traffic and downstream constraints.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/web-services/concept/c_OutboundRESTWebServices.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 58,
+    "prompt": "Which KPI combination best reflects integration throughput governance quality?",
+    "choices": [
+      "Fewest documented runbooks for on-call teams with clear operational impact",
+      "Maximum number of integrations regardless error trends during controlled change windows",
+      "Stable processing latency, low throttling exceptions, and sustained success rate at target volume in large shared environments",
+      "Highest single-batch payload size processed across governed implementation flows"
+    ],
+    "correctIndex": 2,
+    "explanation": "Throughput governance quality is measured by controlled performance and reliability under expected demand.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 59,
+    "prompt": "What governance action best prevents recurring throughput incidents after remediation?",
+    "choices": [
+      "Turn off alerts once immediate issue is resolved in large shared environments",
+      "Move all integrations to manual batch upload in enterprise release operations",
+      "Codify throughput SLOs and automated alerts into release and integration acceptance criteria under documented platform behavior",
+      "Close incidents without updating operational standards for stable long-term administration"
+    ],
+    "correctIndex": 2,
+    "explanation": "Institutionalizing SLO-driven controls prevents regressions and keeps reliability requirements enforceable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/service-level-management/concept/service-level-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+    ]
+  }
+]

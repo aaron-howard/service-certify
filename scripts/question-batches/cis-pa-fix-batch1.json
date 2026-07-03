@@ -1,0 +1,483 @@
+[
+  {
+    "trackCode": "CIS-PA",
+    "order": 0,
+    "prompt": "In Performance Analytics, an indicator is best described as:",
+    "choices": [
+      "Practically speaking, a tracked metric whose scores are collected over time for analysis",
+      "From an admin perspective, a MID Server configuration record in standard operations",
+      "Typically, a role used only by report admins for stable outcomes for consistent administration",
+      "In platform terms, a type of ACL for dashboards under normal policy constraints"
+    ],
+    "correctIndex": 0,
+    "explanation": "Indicators define what you measure; scores are stored and trended for widgets and analytics.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_UseIndicatorOverview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 1,
+    "prompt": "What is the main purpose of a breakdown for an indicator?",
+    "choices": [
+      "Operationally, to segment scores by dimensions such as assignment group, priority, or location",
+      "In most deployments, to store integration credentials for consistent administration",
+      "From a governance perspective, to disable automated collection under normal policy constraints",
+      "From an implementation standpoint, to define SMTP relay hostnames for governed delivery"
+    ],
+    "correctIndex": 0,
+    "explanation": "Breakdowns slice indicator results by reference data or other dimensions for comparative views.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/use/performance-analytics/concept/c_CreatingBreakdowns.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 2,
+    "prompt": "Data collection for Performance Analytics is primarily responsible for:",
+    "choices": [
+      "Operationally, publishing scoped applications to the Store",
+      "In practice, gathering indicator scores on a schedule or through manual actions",
+      "In most deployments, creating update sets for widgets",
+      "From an implementation standpoint, rotating database encryption keys"
+    ],
+    "correctIndex": 1,
+    "explanation": "Collection jobs populate PA tables from defined sources so dashboards reflect current and historical scores.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/use/performance-analytics/concept/optimized-data-collection.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 3,
+    "prompt": "Which statement about Performance Analytics dashboards is most accurate?",
+    "choices": [
+      "Practically speaking, dashboards assemble widgets that visualize indicators and related scores for consumers",
+      "In platform terms, targets cannot be associated with indicators for governed delivery",
+      "In this scenario, widgets may only show static text without queries under expected controls",
+      "From an admin perspective, dashboards cannot reference PA indicators for stable outcomes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Dashboards compose visual elements fed by indicators and other PA content.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/use/performance-analytics/task/t_CreateADashboard.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 4,
+    "prompt": "A formula indicator is most appropriate when you need to:",
+    "choices": [
+      "In platform terms, configure SAML single logout for governed delivery",
+      "Practically speaking, replace CMDB identification rules under expected controls",
+      "In this scenario, derive a value from arithmetic or functions on other indicators",
+      "From a governance perspective, define email routing rules in standard operations"
+    ],
+    "correctIndex": 2,
+    "explanation": "Formula indicators compute results from other indicators using expressions defined in PA.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/formula-indicators.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 5,
+    "prompt": "In Performance Analytics, what does an indicator primarily represent?",
+    "choices": [
+      "Typically, a one-time report export format under normal policy constraints",
+      "From an implementation standpoint, a user criterion for homepage access",
+      "Operationally, a measurable metric tracked over time as scores",
+      "In practice, a scripted REST API endpoint for dashboard widgets"
+    ],
+    "correctIndex": 2,
+    "explanation": "Indicators are time-series metrics used to monitor trend and performance in PA.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/concept/c_Indicators.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 6,
+    "prompt": "Which configuration determines where an automated indicator retrieves its source records?",
+    "choices": [
+      "In this scenario, widget preferences",
+      "Operationally, indicator source",
+      "From a governance perspective, breakdown mapping",
+      "In platform terms, pA threshold template"
+    ],
+    "correctIndex": 1,
+    "explanation": "The indicator source defines the table and filter conditions that feed data collection for automated indicators.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/concept/c_IndicatorSources.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 7,
+    "prompt": "What is the key difference between an automated indicator and a manual indicator?",
+    "choices": [
+      "In most deployments, automated indicators collect scores from platform data, while manual indicators are entered by users",
+      "In this scenario, automated indicators can only be used in scorecards for consistent administration",
+      "From a governance perspective, manual indicators require a scripted data collector under normal policy constraints",
+      "In platform terms, manual indicators cannot have targets or thresholds for governed delivery"
+    ],
+    "correctIndex": 0,
+    "explanation": "Automated indicators derive values from data collections, while manual indicators rely on user-entered periodic scores.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/concept/c_ManualIndicators.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 8,
+    "prompt": "A PA admin wants to compare an indicator's current score with a predefined objective line. Which feature should be configured?",
+    "choices": [
+      "Typically, breakdown relation",
+      "Operationally, collection source script",
+      "In practice, forecast definition",
+      "From an admin perspective, target"
+    ],
+    "correctIndex": 3,
+    "explanation": "Targets define expected performance values that can be displayed alongside actual scores for comparison.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/task/t_CreateTargets.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 9,
+    "prompt": "Why are indicator scores collected at regular intervals instead of being recalculated only on demand?",
+    "choices": [
+      "Typically, interval collection disables breakdowns through configured automation",
+      "In practice, regular collections are required only for scripted indicators",
+      "Practically speaking, regular collections preserve historical snapshots needed for trend analysis",
+      "From an admin perspective, on-demand calculations are not allowed in PA"
+    ],
+    "correctIndex": 2,
+    "explanation": "PA depends on periodic snapshots to track metric movement over time and support time-based analytics.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/concept/c_DataCollection.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 10,
+    "prompt": "In Performance Analytics, what is a breakdown source?",
+    "choices": [
+      "Practically speaking, a report export for external BI tools for governed delivery",
+      "Typically, a schedule that runs data collection jobs under expected controls",
+      "In practice, a target line configuration for score widgets for stable outcomes",
+      "From an admin perspective, that dataset that defines available values used to segment indicator scores"
+    ],
+    "correctIndex": 3,
+    "explanation": "Breakdown sources provide the dimension values (for example, assignment groups) used to slice indicator results.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/concept/c_Breakdowns.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 11,
+    "prompt": "A breakdown is configured but no values appear during analysis. Which setup should be verified first?",
+    "choices": [
+      "In most deployments, chart legend placement under normal policy constraints",
+      "From an implementation standpoint, forecast confidence interval",
+      "In this scenario, indicator source and breakdown source alignment for the same data context",
+      "From a governance perspective, homepage font and color settings"
+    ],
+    "correctIndex": 2,
+    "explanation": "If breakdown source data does not align with indicator source records, segmentation values will not populate as expected.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/task/t_ConfigureBreakdownSources.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 12,
+    "prompt": "What is the purpose of a breakdown mapping in PA?",
+    "choices": [
+      "In most deployments, to run ad hoc collections on demand for stable outcomes",
+      "From an implementation standpoint, to clone widgets between dashboards in standard operations",
+      "Operationally, to encrypt breakdown values before storage for consistent administration",
+      "From a governance perspective, to connect an indicator source field to the correct breakdown source values"
+    ],
+    "correctIndex": 3,
+    "explanation": "Breakdown mapping defines how indicator data relates to dimension values, enabling accurate segmented scores.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/concept/c_BreakdownMappings.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 13,
+    "prompt": "Why would an admin use scripted breakdown sources?",
+    "choices": [
+      "From an admin perspective, to force all widgets to display as heatmaps",
+      "Typically, to generate dynamic segmentation values when table data alone is insufficient",
+      "Practically speaking, to disable indicator collections for specific groups",
+      "In platform terms, to replace all indicator sources with JavaScript"
+    ],
+    "correctIndex": 1,
+    "explanation": "Scripted breakdown sources support custom value generation and labeling for advanced dimensional analysis needs.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/task/t_CreateScriptedBreakdowns.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 14,
+    "prompt": "What is a common reason to restrict the values in a breakdown source?",
+    "choices": [
+      "In this scenario, to prevent scheduled collections from running for consistent administration",
+      "From an admin perspective, to improve analytical focus and performance by excluding irrelevant segments",
+      "Practically speaking, to ensure indicator scores can does not be trended for governed delivery",
+      "In platform terms, to reduce duplicate user accounts under normal policy constraints"
+    ],
+    "correctIndex": 1,
+    "explanation": "Limiting dimensional values to meaningful segments keeps dashboards relevant and can reduce processing overhead.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/concept/c_Breakdowns.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 15,
+    "prompt": "In PA, what does a data collection job do?",
+    "choices": [
+      "Operationally, synchronizes user preferences between instances under normal policy constraints",
+      "In most deployments, creates update sets for indicator definitions for governed delivery",
+      "In practice, deletes stale dashboard widgets under normal policy constraints under expected controls",
+      "From an implementation standpoint, runs indicator calculations on schedule and stores resulting scores"
+    ],
+    "correctIndex": 3,
+    "explanation": "Collection jobs execute indicator logic at defined intervals and persist score snapshots for trending and analysis.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/concept/c_DataCollectionJobs.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 16,
+    "prompt": "Why is collection schedule design important for high-volume indicators?",
+    "choices": [
+      "In this scenario, this approach controls instance load and ensures timely score freshness for stakeholders",
+      "Practically speaking, this approach disables target comparisons during business hours",
+      "In platform terms, this approach applies only to manual indicators for governed delivery",
+      "From an implementation standpoint, this approach determines whether indicators can use breakdowns"
+    ],
+    "correctIndex": 0,
+    "explanation": "Proper schedule timing balances analytical freshness with platform performance and operational constraints.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/task/t_ScheduleDataCollection.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 17,
+    "prompt": "An indicator score is stale even though the source table has new records. What should be validated first?",
+    "choices": [
+      "In this scenario, that UI actions are visible on indicator forms under expected controls",
+      "Practically speaking, that the report export format is CSV for stable outcomes",
+      "In platform terms, that the related collection job executed successfully for the expected period",
+      "From a governance perspective, that homepage announcements are active for consistent administration"
+    ],
+    "correctIndex": 2,
+    "explanation": "Stale values often indicate missed or failed collection executions rather than issues with source table updates.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/task/t_MonitorCollectionJobs.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 18,
+    "prompt": "What is the role of historical backfill collection in Performance Analytics?",
+    "choices": [
+      "Operationally, this approach disables breakdown collection to improve speed for stable outcomes",
+      "From an implementation standpoint, this approach is required only for scripted REST integrations",
+      "Typically, this approach removes all existing scores before recollecting for consistent administration",
+      "In practice, this approach populates prior periods so trend analysis is available before ongoing schedules accumulate history"
+    ],
+    "correctIndex": 3,
+    "explanation": "Backfill jobs collect past periods to establish usable historical context for dashboards and scorecards.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/task/t_RunHistoricalDataCollection.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 19,
+    "prompt": "A collection job is timing out on a complex indicator source. Which remediation is most appropriate?",
+    "choices": [
+      "Operationally, delete indicator scores and stop collecting",
+      "From an admin perspective, switch all indicators to manual entry",
+      "Typically, optimize source filters/indexing and adjust collection strategy",
+      "In practice, disable all breakdowns globally for consistent administration"
+    ],
+    "correctIndex": 2,
+    "explanation": "Performance issues should be addressed by improving source query efficiency and collection design, not by disabling analytics capability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/concept/performance-analytics-performance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 20,
+    "prompt": "When is a manual indicator the best choice in Performance Analytics?",
+    "choices": [
+      "In this scenario, when metric values come from external or qualitative assessments not directly available in platform tables",
+      "In platform terms, when real-time row-level event processing is required under normal policy constraints",
+      "Practically speaking, when indicator sources are heavily indexed for governed delivery",
+      "From a governance perspective, when automated collection jobs are preferred under expected controls"
+    ],
+    "correctIndex": 0,
+    "explanation": "Manual indicators support metrics that cannot be reliably derived from existing ServiceNow transactional data.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/concept/c_ManualIndicators.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 21,
+    "prompt": "What control helps ensure manual indicator score quality over time?",
+    "choices": [
+      "Operationally, allowing any role to overwrite historical values without audit",
+      "From an implementation standpoint, recalculating manual indicators from incident tables nightly",
+      "Typically, disabling score comments for all users under normal policy constraints",
+      "In practice, defining clear ownership, submission cadence, and review criteria for entered scores"
+    ],
+    "correctIndex": 3,
+    "explanation": "Ownership and governance practices are essential to keep manually entered PA data consistent and trustworthy.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/task/t_ManageManualIndicatorData.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 22,
+    "prompt": "A KPI combines automated incident backlog and a leadership-entered readiness score. How should this be modeled?",
+    "choices": [
+      "Practically speaking, as a single automated indicator with no formula",
+      "From a governance perspective, as two independent widgets with no linkage",
+      "In this scenario, as a formula indicator referencing both automated and manual indicator inputs",
+      "In platform terms, as a report-only metric outside PA under expected controls"
+    ],
+    "correctIndex": 2,
+    "explanation": "Formula indicators can combine multiple source indicators, including manual and automated values, into one KPI expression.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/concept/c_FormulaIndicators.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 23,
+    "prompt": "What is an important risk if manual indicator governance is weak?",
+    "choices": [
+      "In most deployments, breakdown mappings cannot be created under expected controls",
+      "From a governance perspective, widgets cannot render time series for stable outcomes",
+      "In this scenario, inconsistent or delayed entries can reduce confidence in trend interpretation",
+      "In platform terms, targets will be deleted through configured automation"
+    ],
+    "correctIndex": 2,
+    "explanation": "Without disciplined data entry practices, manual score trends may reflect process inconsistency rather than true performance changes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/concept/c_ManualIndicators.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 24,
+    "prompt": "Which approach best supports auditability for manual indicator changes?",
+    "choices": [
+      "Typically, require score rationale and maintain visibility into who entered or adjusted values",
+      "In practice, restrict manual indicators from using targets in standard operations",
+      "Operationally, overwrite prior period scores without retaining history for consistent administration",
+      "From an admin perspective, allow anonymous updates to encourage participation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Documented rationale and traceable ownership improve trust and accountability for manually maintained PA metrics.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/task/t_ManageManualIndicatorData.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 25,
+    "prompt": "In Performance Analytics, what is a target used for?",
+    "choices": [
+      "Practically speaking, to define a desired threshold or goal against an indicator value",
+      "Typically, to replace collection jobs for breakdown indicators",
+      "In practice, to set ACL rules on scorecard widgets in standard operations",
+      "From an admin perspective, to through configured automation assign incidents when KPI is breached"
+    ],
+    "correctIndex": 0,
+    "explanation": "Targets represent expected or desired performance values for indicators and are used to evaluate actual scores.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Targets.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 26,
+    "prompt": "When configuring a target, why would an admin choose a relative target instead of a fixed value?",
+    "choices": [
+      "In most deployments, relative targets are required for all automated indicators",
+      "From an implementation standpoint, relative targets disable indicator breakdowns",
+      "In this scenario, relative targets allow dynamic goals that change with historical or baseline values",
+      "From a governance perspective, relative targets can only be used for scripted sources"
+    ],
+    "correctIndex": 2,
+    "explanation": "Relative targets support goals that move based on trend or baseline context rather than using one static number.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_CreateATarget.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 27,
+    "prompt": "What is the benefit of setting warning and critical target states for an indicator?",
+    "choices": [
+      "Typically, they lock scorecards from manual edits in standard operations",
+      "From an admin perspective, they remove the need for thresholds",
+      "Practically speaking, they increase data collection frequency through configured automation",
+      "In practice, they provide visual performance status bands for interpretation"
+    ],
+    "correctIndex": 3,
+    "explanation": "Warning and critical states help users quickly interpret KPI status through consistent visual thresholds.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_TargetsAndThresholds.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 28,
+    "prompt": "A KPI should improve quarter-over-quarter by 5%. Which target strategy is most appropriate?",
+    "choices": [
+      "From an admin perspective, use only benchmark records",
+      "Typically, disable target evaluation and rely on reports",
+      "Practically speaking, use a static target with no historical dependency",
+      "In platform terms, use a target relative to a prior period value"
+    ],
+    "correctIndex": 3,
+    "explanation": "Relative targets are designed for goals expressed as improvement or change from prior periods.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_CreateATarget.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 29,
+    "prompt": "Which artifact in PA is evaluated against targets to show whether performance is on track?",
+    "choices": [
+      "Operationally, aCL execution plans",
+      "From a governance perspective, import set transforms",
+      "In most deployments, indicator scores",
+      "From an implementation standpoint, update set commits"
+    ],
+    "correctIndex": 2,
+    "explanation": "Targets are applied to indicator scores so users can compare actual performance to expected outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Indicators.html",
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Targets.html"
+    ]
+  }
+]

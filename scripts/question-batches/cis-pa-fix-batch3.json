@@ -1,0 +1,507 @@
+[
+  {
+    "trackCode": "CIS-PA",
+    "order": 60,
+    "prompt": "What is the purpose of advanced breakdowns in Performance Analytics?",
+    "choices": [
+      "In platform terms, to segment indicators across complex, multi-level dimensions for deeper analysis",
+      "Practically speaking, to replace all indicators in standard operations",
+      "In this scenario, to configure MID capabilities for consistent administration",
+      "From a governance perspective, to disable drilldowns under normal policy constraints"
+    ],
+    "correctIndex": 0,
+    "explanation": "Advanced breakdowns enable richer slicing paths that reveal where performance drivers differ across segments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 61,
+    "prompt": "When should a breakdown source be optimized for cardinality?",
+    "choices": [
+      "Typically, when dimensions contain many unique values that could degrade query performance",
+      "From an implementation standpoint, only for catalog tasks for consistent administration",
+      "Operationally, only when building incident forms under normal policy constraints",
+      "In practice, does not, cardinality is irrelevant for governed delivery"
+    ],
+    "correctIndex": 0,
+    "explanation": "High-cardinality dimensions can impact analytics performance, so design should balance detail and usability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 62,
+    "prompt": "How do element filtering and advanced breakdowns work together?",
+    "choices": [
+      "Typically, they only apply to SLA records for stable outcomes for consistent administration",
+      "Operationally, filtering narrows analysis to relevant segments within the breakdown hierarchy",
+      "From an admin perspective, filtering removes all historical values for governed delivery",
+      "In practice, they cannot be combined under normal policy constraints under expected controls"
+    ],
+    "correctIndex": 1,
+    "explanation": "Element filters focus analysis on meaningful slices while preserving the overall breakdown model.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 63,
+    "prompt": "Why should advanced breakdown definitions be governed with naming standards?",
+    "choices": [
+      "In most deployments, standards make reusable analytics artifacts easier to find and maintain",
+      "In this scenario, standards block dashboard sharing for governed delivery",
+      "From a governance perspective, standards disable data collection jobs",
+      "In platform terms, names do not affect maintainability for stable outcomes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Clear naming and governance reduce duplicate artifacts and improve long-term analytics maintainability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 64,
+    "prompt": "What is a common validation step before promoting advanced breakdowns to production?",
+    "choices": [
+      "In most deployments, remove role-based access checks for governed delivery",
+      "In this scenario, disable threshold logic under normal policy constraints under expected controls",
+      "From a governance perspective, confirm trend and score widgets still resolve correctly with expected drilldowns",
+      "From an implementation standpoint, delete indicator history in standard operations"
+    ],
+    "correctIndex": 2,
+    "explanation": "Promotion validation ensures dashboards and drilldowns behave as expected after advanced breakdown changes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 65,
+    "prompt": "For an advanced indicator breakdown strategy, which design best supports actionable operational insight?",
+    "choices": [
+      "Typically, break down by every free-text field to maximize granularity under expected controls",
+      "In practice, use a single global breakdown for all indicators regardless of use case for stable outcomes",
+      "Practically speaking, use breakdown sources aligned to assignment, service, and priority dimensions with controlled cardinality",
+      "From an admin perspective, disable breakdown relations to reduce data model complexity for consistent administration"
+    ],
+    "correctIndex": 2,
+    "explanation": "Useful PA breakdowns balance analytical depth with manageable cardinality by focusing on dimensions tied to operational decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Breakdowns.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 66,
+    "prompt": "Why are scripted breakdown mappings used in complex PA implementations?",
+    "choices": [
+      "In this scenario, they allow dynamic categorization when source values require normalization before trend analysis",
+      "From an implementation standpoint, they permanently bypass data collector jobs in standard operations",
+      "In most deployments, they replace scorecards and widgets in all dashboards for consistent administration",
+      "From a governance perspective, they eliminate the need for indicator sources under normal policy constraints"
+    ],
+    "correctIndex": 0,
+    "explanation": "Scripted mapping is valuable when raw data must be transformed into consistent analytical categories for accurate and comparable trends.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/task/t_CreateABreakdownMapping.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_BreakdownMappings.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 67,
+    "prompt": "What is a key benefit of combining element filters with breakdowns in PA widgets?",
+    "choices": [
+      "Operationally, they remove the need for indicator formulas under expected controls",
+      "From an implementation standpoint, they force all widgets to use real-time transactional queries only",
+      "In most deployments, they let analysts isolate specific cohorts while preserving context from strategic dimensions",
+      "From a governance perspective, they through configured automation disable historical snapshots for filtered results"
+    ],
+    "correctIndex": 2,
+    "explanation": "Element filters and breakdowns together help users drill into targeted populations without losing the broader analytical framework.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/reference/r_WidgetFilters.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Breakdowns.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 68,
+    "prompt": "In advanced PA breakdown governance, what approach helps prevent dimension sprawl?",
+    "choices": [
+      "Practically speaking, establish approval standards for new breakdowns based on decision value, reuse, and maintenance cost",
+      "From an admin perspective, allow any dashboard owner to create unrestricted breakdown sources in production",
+      "Typically, create duplicate breakdowns for each indicator to avoid sharing for governed delivery",
+      "In platform terms, delete unused indicators whenever a new breakdown is requested under expected controls"
+    ],
+    "correctIndex": 0,
+    "explanation": "Governance criteria maintain analytical quality and platform performance by controlling unnecessary or redundant dimensions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Breakdowns.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 69,
+    "prompt": "When evaluating advanced breakdown design quality, which metric is most meaningful?",
+    "choices": [
+      "In this scenario, that percentage of dashboard decisions supported by clear, stable segmented trends",
+      "Practically speaking, that count of unpublished widgets in development instances",
+      "From an admin perspective, that number of users with pa_admin role",
+      "In platform terms, that total number of breakdown elements created each month"
+    ],
+    "correctIndex": 0,
+    "explanation": "Breakdown quality should be judged by decision support and trend stability, not simply by volume of configured elements.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DashboardsAndWidgets.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Breakdowns.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 70,
+    "prompt": "What is a core responsibility of PA administration in enterprise environments?",
+    "choices": [
+      "In most deployments, allowing unrestricted indicator creation in production for governed delivery",
+      "From an implementation standpoint, disabling score snapshots during business hours under expected controls",
+      "Operationally, managing data collection schedules, indicator governance, and role-based access to analytics artifacts",
+      "From a governance perspective, replacing all transactional reporting with external BI tools in standard operations"
+    ],
+    "correctIndex": 2,
+    "explanation": "PA administration ensures reliable data collection and governed analytics lifecycle management across teams.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 71,
+    "prompt": "Why should PA admins baseline indicator sources before introducing new formulas?",
+    "choices": [
+      "Practically speaking, to verify source data stability so formula changes are interpreted correctly",
+      "From an admin perspective, to disable historical comparisons during rollout",
+      "Typically, to force all indicators to use scripted sources only in standard operations",
+      "In platform terms, to avoid creating scorecards and widgets for consistent administration"
+    ],
+    "correctIndex": 0,
+    "explanation": "Baselining clarifies whether trend changes come from real performance shifts or from source/formula modifications.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_IndicatorSources.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 72,
+    "prompt": "Which access pattern is preferred for PA administration security?",
+    "choices": [
+      "Operationally, use only the admin role for all PA tasks for governed delivery for stable outcomes",
+      "In most deployments, grant administrative roles by least privilege and separate content authors from platform administrators",
+      "From a governance perspective, remove role checks to simplify dashboard publishing for consistent administration",
+      "From an implementation standpoint, assign pa_admin to all dashboard consumers under normal policy constraints"
+    ],
+    "correctIndex": 1,
+    "explanation": "Role separation reduces risk while allowing specialized users to create content without full administrative permissions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/roles/concept/c_Roles.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 73,
+    "prompt": "What is the best operational response when PA data collection jobs repeatedly miss schedule windows?",
+    "choices": [
+      "Operationally, move all PA work to client-side scripts under expected controls in standard operations",
+      "In practice, delete historical snapshots to reduce job runtime without delay for consistent administration",
+      "In most deployments, review job configuration, load timing, and query performance, then rebalance schedules and optimization targets",
+      "From an implementation standpoint, disable all breakdowns permanently for governed delivery"
+    ],
+    "correctIndex": 2,
+    "explanation": "Missed collection windows are typically addressed by tuning job design and scheduling relative to instance load and query complexity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 74,
+    "prompt": "Which governance artifact is most useful for long-term PA administration continuity?",
+    "choices": [
+      "Practically speaking, a one-time export of dashboard screenshots only for consistent administration",
+      "In platform terms, a policy that all indicators use identical thresholds under normal policy constraints",
+      "In this scenario, a maintained catalog of indicators, ownership, formulas, schedules, and downstream dashboard dependencies",
+      "From an admin perspective, an informal list of widget names in a team chat under expected controls"
+    ],
+    "correctIndex": 2,
+    "explanation": "A governed analytics catalog preserves operational knowledge, supports impact analysis, and improves maintainability during team transitions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 75,
+    "prompt": "When building a new indicator in Platform Analytics, what should be validated first to keep trend data trustworthy?",
+    "choices": [
+      "In platform terms, score snapshots are disabled during peak hours",
+      "Practically speaking, every user can edit indicator formulas",
+      "In this scenario, that indicator source returns stable records on the expected schedule",
+      "From a governance perspective, all dashboard widgets use the same color palette"
+    ],
+    "correctIndex": 2,
+    "explanation": "A reliable indicator starts with a consistent source and predictable collection behavior so trend lines reflect real performance changes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_IndicatorSources.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 76,
+    "prompt": "A PA admin wants daily scores ready before business hours. Which action best supports that goal?",
+    "choices": [
+      "Typically, run collection only when a dashboard is viewed",
+      "From an implementation standpoint, move indicator logic to client scripts",
+      "Operationally, disable all breakdowns on the indicator",
+      "In practice, schedule data collector jobs to run before users open dashboards"
+    ],
+    "correctIndex": 3,
+    "explanation": "Scheduling data collection before the business day ensures snapshots are available when scorecards and widgets load.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 77,
+    "prompt": "Why does a PA team configure breakdowns for an incident resolution indicator?",
+    "choices": [
+      "In this scenario, to replace scorecards with list reports under expected controls",
+      "Practically speaking, to remove historical snapshots from the indicator for stable outcomes",
+      "From a governance perspective, to analyze performance by dimensions such as assignment group or priority",
+      "In platform terms, to bypass indicator source filtering for consistent administration"
+    ],
+    "correctIndex": 2,
+    "explanation": "Breakdowns let analysts compare indicator results across meaningful dimensions while keeping one governed metric definition.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Breakdowns.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 78,
+    "prompt": "Which option best describes the difference between a scorecard and a dashboard widget in PA?",
+    "choices": [
+      "In most deployments, both are only used to define indicator sources for stable outcomes",
+      "In this scenario, scorecards compare indicator scores over time, while widgets present curated visualizations on dashboards",
+      "From a governance perspective, scorecards are only for administrators and cannot be shared",
+      "In platform terms, widgets can create indicators, while scorecards cannot under normal policy constraints"
+    ],
+    "correctIndex": 1,
+    "explanation": "Scorecards focus on KPI trend and status evaluation, while dashboard widgets package analytics views for consumers.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 79,
+    "prompt": "A KPI is consistently green even when service quality drops. What should be reviewed first?",
+    "choices": [
+      "Typically, transform map coalesce fields in standard operations",
+      "Operationally, cMDB class manager settings for consistent administration",
+      "In practice, threshold and target definitions for the indicator",
+      "From an admin perspective, mID Server memory allocation"
+    ],
+    "correctIndex": 2,
+    "explanation": "If KPI status does not reflect actual performance, threshold and target logic is usually the first governance element to verify.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 80,
+    "prompt": "A new PA indicator is returning unexpected counts. What should an administrator review first?",
+    "choices": [
+      "Practically speaking, that indicator source condition and aggregation logic",
+      "From a governance perspective, that list layout for incident forms",
+      "In this scenario, that change schedule blackout window",
+      "In platform terms, that MID Server service account"
+    ],
+    "correctIndex": 0,
+    "explanation": "Indicator accuracy depends on the source query and aggregation setup that drive score collection.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_IndicatorSources.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 81,
+    "prompt": "Which strategy improves trust in monthly executive PA reviews?",
+    "choices": [
+      "In most deployments, hide indicators with negative trends",
+      "From a governance perspective, allow viewers to edit thresholds during review meetings",
+      "In this scenario, change indicator formulas each month to match narrative",
+      "In platform terms, document indicator ownership, targets, and data definitions"
+    ],
+    "correctIndex": 3,
+    "explanation": "Governed ownership and definitions keep KPI interpretation consistent across reporting periods.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 82,
+    "prompt": "Why are historical snapshots important in Platform Analytics?",
+    "choices": [
+      "Typically, they replace all transactional reports for consistent administration",
+      "In practice, they remove the need for data collector jobs",
+      "Operationally, they preserve trend history even when source records change later",
+      "From an admin perspective, they force every indicator to use scripted sources"
+    ],
+    "correctIndex": 2,
+    "explanation": "Snapshots store point-in-time scores so trend analysis remains stable despite changes in underlying records.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 83,
+    "prompt": "A dashboard audience needs only regional incident performance. What is the best PA design choice?",
+    "choices": [
+      "In this scenario, use unrestricted global dashboards with no filters",
+      "In platform terms, use breakdown-based filtering for region-specific views",
+      "In most deployments, create a separate table for each region",
+      "From a governance perspective, disable breakdowns to simplify scorecards"
+    ],
+    "correctIndex": 1,
+    "explanation": "Breakdown filtering supports targeted views while preserving one governed indicator structure.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Breakdowns.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 84,
+    "prompt": "Which action best supports least-privilege access in PA?",
+    "choices": [
+      "In this scenario, separate content authors from PA administrators using role-based access",
+      "From an implementation standpoint, assign admin to all dashboard consumers",
+      "In most deployments, allow anonymous users to edit indicators",
+      "From a governance perspective, remove all role checks from analytics records"
+    ],
+    "correctIndex": 0,
+    "explanation": "Role separation reduces risk while still enabling governed analytics authoring and administration.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/roles/concept/c_Roles.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 85,
+    "prompt": "Why should PA administrators monitor failed data collection jobs daily?",
+    "choices": [
+      "Practically speaking, to ensure score snapshots stay current and dashboards remain reliable",
+      "From an admin perspective, to remove all breakdowns from existing KPIs",
+      "Typically, to convert PA widgets into list reports in standard operations",
+      "In practice, to disable indicators with small sample sizes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Missed collection jobs can create stale or missing KPI values, so routine monitoring protects analytics reliability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 86,
+    "prompt": "A KPI changed behavior after a formula update. Which governance step should have happened first?",
+    "choices": [
+      "Practically speaking, delete historical scores for consistent administration",
+      "From an admin perspective, disable scorecards that use the KPI",
+      "Typically, convert the indicator to a scripted REST API for governed delivery",
+      "In platform terms, document and approve the formula change with impact review"
+    ],
+    "correctIndex": 3,
+    "explanation": "Formula updates should be controlled and documented so teams can interpret trend changes correctly.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 87,
+    "prompt": "What is the best reason to assign explicit owners to PA indicators?",
+    "choices": [
+      "Operationally, to let only one user view dashboards in standard operations",
+      "In most deployments, to enforce accountability for definition quality and data stewardship",
+      "From a governance perspective, to grant owner users the admin role through configured automation",
+      "From an implementation standpoint, to avoid threshold configuration entirely"
+    ],
+    "correctIndex": 1,
+    "explanation": "Indicator ownership drives accountable maintenance of formulas, thresholds, and source alignment.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 88,
+    "prompt": "Which dashboard pattern best supports executive Platform Analytics consumption?",
+    "choices": [
+      "Practically speaking, admin-only dashboards with unrestricted edits",
+      "In platform terms, raw table exports only under normal policy constraints",
+      "Typically, dozens of unrelated widgets with no KPI context",
+      "From an admin perspective, curated KPI widgets with clear targets and drilldown paths"
+    ],
+    "correctIndex": 3,
+    "explanation": "Executive dashboards should emphasize governed KPI context, targets, and actionable drilldowns.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 89,
+    "prompt": "Which control helps prevent unauthorized PA configuration drift?",
+    "choices": [
+      "Practically speaking, disable audit history for PA records under expected controls",
+      "In platform terms, move indicator definitions to personal update sets for stable outcomes",
+      "In this scenario, limit write access with role-based governance and periodic configuration reviews",
+      "From an admin perspective, allow dashboard consumers to edit indicator formulas"
+    ],
+    "correctIndex": 2,
+    "explanation": "Role governance and periodic review reduce unmanaged changes that can compromise analytics integrity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/roles/concept/c_Roles.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+    ]
+  }
+]

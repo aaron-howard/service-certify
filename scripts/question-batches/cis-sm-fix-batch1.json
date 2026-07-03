@@ -1,0 +1,482 @@
+[
+  {
+    "trackCode": "CIS-SM",
+    "order": 0,
+    "prompt": "In Service Mapping, what is an application service?",
+    "choices": [
+      "Describes the outcome where a project task in Agile Development.",
+      "Matches the scenario in which a logical grouping of connected applications and hosts that work together to deliver a business-facing service.",
+      "Reflects the condition that a single network interface card.",
+      "Represents the approach that a vendor contract record."
+    ],
+    "correctIndex": 1,
+    "explanation": "Service mapping documentation defines an application service as connected applications and infrastructure components that jointly provide a service.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-get-started.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 1,
+    "prompt": "Why is a healthy CMDB foundation commonly emphasized before expanding service mapping coverage?",
+    "choices": [
+      "Describes the outcome where discovery must be disabled first.",
+      "Reflects the condition that service maps depend on reliable setup items and relationships to build accurate dependency views.",
+      "Captures the choice stating cMDB health is unrelated to mapping accuracy.",
+      "Matches the scenario in which service mapping never reads CMDB data."
+    ],
+    "correctIndex": 1,
+    "explanation": "Getting started guidance ties successful mapping to solid configuration data quality because maps are built from CMDB relationships and CI detail.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-get-started.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 2,
+    "prompt": "Which outcome is a primary benefit of maintaining up-to-date service maps for IT operations?",
+    "choices": [
+      "Corresponds to the option where eliminating the need for incident records.",
+      "Matches the scenario in which removing change management oversight.",
+      "Reflects the condition that guaranteeing 100% patch compliance without scanning.",
+      "Captures the choice stating faster impact analysis and prioritization based on business service context."
+    ],
+    "correctIndex": 3,
+    "explanation": "Service mapping is positioned to make operations service-aware so teams can understand what infrastructure supports a business service when issues occur.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-get-started.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 3,
+    "prompt": "Service Mapping is part of which ServiceNow solution area?",
+    "choices": [
+      "Reflects the condition that accounts Payable Operations.",
+      "Captures the choice stating iT Operations Management.",
+      "Corresponds to the option where legal Service Management.",
+      "Represents the approach that human Resources Service Delivery."
+    ],
+    "correctIndex": 1,
+    "explanation": "Service Mapping documentation is published under the IT Operations Management documentation set as an ITOM capability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-get-started.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 4,
+    "prompt": "Compared with only inventorying devices, what additional question does Service Mapping most directly help answer for a CIO dashboard?",
+    "choices": [
+      "Corresponds to the option where the exact salary for every employee.",
+      "Represents the approach that the corporate holiday schedule.",
+      "Describes the outcome where how many cafeterias the company operates.",
+      "Captures the choice stating which business services are supported by the discovered applications and infrastructure."
+    ],
+    "correctIndex": 3,
+    "explanation": "Service mapping focuses on dependency and service context—connecting technical components to the services the business relies on.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-get-started.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 5,
+    "prompt": "For CIS-Service Mapping, what defines an application service in CMDB terms?",
+    "choices": [
+      "Corresponds to the option where a service desk queue with an assignment group.",
+      "Describes the outcome where a logical service record with mapped upstream/downstream dependencies to supporting CIs.",
+      "Matches the scenario in which a single server discovered by credentialless scan.",
+      "Represents the approach that a software entitlement tied to a publisher."
+    ],
+    "correctIndex": 1,
+    "explanation": "Application services represent business-relevant technical services and depend on accurate CI relationships.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/service-mapping/application-services.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 6,
+    "prompt": "A team maps web and app tiers but misses a critical database dependency. What is the most likely impact?",
+    "choices": [
+      "Describes the outcome where service impact analysis will be incomplete during incidents and changes.",
+      "Represents the approach that event rules cannot process warning events.",
+      "Reflects the condition that discovery schedules stop running.",
+      "Matches the scenario in which change approvals are automatically bypassed."
+    ],
+    "correctIndex": 0,
+    "explanation": "Missing dependencies reduce map fidelity, which can mislead impact analysis and outage triage decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-get-started.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 7,
+    "prompt": "Why do service owners care that application services are tied to business services?",
+    "choices": [
+      "Reflects the condition that it removes the need for relationship types in CMDB.",
+      "Matches the scenario in which it connects technical outages to business impact and stakeholder communication priorities.",
+      "Describes the outcome where it guarantees 100% event deduplication.",
+      "Captures the choice stating it auto-generates software contracts."
+    ],
+    "correctIndex": 1,
+    "explanation": "Business service context helps operations translate technical failures into user-facing impact and response urgency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/service-mapping/business-services-and-application-services.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 8,
+    "prompt": "Which mapping strategy is best when onboarding a high-criticality application service for the first time?",
+    "choices": [
+      "Captures the choice stating map every subnet simultaneously without owner validation.",
+      "Corresponds to the option where use only manual CI relationships and avoid discovery inputs.",
+      "Reflects the condition that disable identification rules to speed map creation.",
+      "Matches the scenario in which start with one entry point and validate discovered dependencies with service owners before broadening scope."
+    ],
+    "correctIndex": 0,
+    "explanation": "Controlled onboarding with validated entry points improves accuracy and reduces noisy or incorrect dependencies.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/service-mapping/create-a-service-map.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 9,
+    "prompt": "What governance metric best reflects healthy application service mapping over time?",
+    "choices": [
+      "Reflects the condition that number of manually edited script includes.",
+      "Represents the approach that total count of CI classes in CMDB.",
+      "Corresponds to the option where coverage and freshness of critical service maps with validated dependency accuracy.",
+      "Captures the choice stating percentage of incidents closed in under five minutes."
+    ],
+    "correctIndex": 2,
+    "explanation": "Map coverage plus ongoing accuracy and freshness are stronger indicators of Service Mapping quality than raw volume metrics.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-kpis.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 10,
+    "prompt": "Before scaling Service Mapping, which CMDB prerequisite is most critical?",
+    "choices": [
+      "Represents the approach that disabling relationship types to reduce complexity.",
+      "Describes the outcome where using only manual CI creation from spreadsheets.",
+      "Captures the choice stating removing duplicate detection on discovery imports.",
+      "Corresponds to the option where accurate CI identification and reconciliation rules with stable class models."
+    ],
+    "correctIndex": 3,
+    "explanation": "Reliable identification and reconciliation are foundational to preventing duplicates and ensuring map accuracy.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/identification-and-reconciliation.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 11,
+    "prompt": "Why is CMDB health scoring relevant to CIS-Service Mapping readiness?",
+    "choices": [
+      "Represents the approach that it replaces the need for MID Servers.",
+      "Matches the scenario in which it only tracks incident closure SLA.",
+      "Corresponds to the option where it measures data completeness, correctness, and compliance that affect service map quality.",
+      "Describes the outcome where it automatically creates application services."
+    ],
+    "correctIndex": 0,
+    "explanation": "CMDB Health metrics expose data quality gaps that directly impact dependency mapping outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-health-dashboard.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 12,
+    "prompt": "A team has strong discovery coverage but poor map trust. Which prerequisite is likely missing?",
+    "choices": [
+      "Represents the approach that more assignment groups in Incident Management.",
+      "Matches the scenario in which monthly purge of all dependency relationships.",
+      "Describes the outcome where governed relationship types and cleanup of stale or orphaned CIs.",
+      "Reflects the condition that higher event volume from monitoring tools."
+    ],
+    "correctIndex": 2,
+    "explanation": "Discovery volume alone is insufficient; relationship quality and stale CI governance are required for trustworthy maps.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-data-manager.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 13,
+    "prompt": "What is the best prerequisite approach for credentials and access used by mapping discovery patterns?",
+    "choices": [
+      "Matches the scenario in which rotate credentials only after outages.",
+      "Captures the choice stating store credentials in plain text for troubleshooting.",
+      "Reflects the condition that implement least-privilege credentials and validate access paths before production mapping.",
+      "Describes the outcome where use shared domain admin credentials for all environments."
+    ],
+    "correctIndex": 2,
+    "explanation": "Least-privilege and validated access reduce security risk while supporting reliable data collection for maps.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/discovery-credentials.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 14,
+    "prompt": "Which governance routine is most useful before onboarding the next wave of services to Service Mapping?",
+    "choices": [
+      "Captures the choice stating allowing ad hoc CI class creation by any fulfiller.",
+      "Corresponds to the option where resetting class manager customizations monthly.",
+      "Matches the scenario in which disabling all reconciliation rules temporarily.",
+      "Reflects the condition that cMDB readiness review covering CI quality, ownership, relationship integrity, and discovery health."
+    ],
+    "correctIndex": 3,
+    "explanation": "A structured readiness review prevents onboarding unstable data into map scope and improves long-term map quality.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 15,
+    "prompt": "In tag-based service mapping, what is the key benefit of using cloud tags consistently?",
+    "choices": [
+      "Represents the approach that it prevents dependency discovery.",
+      "Reflects the condition that it replaces service entry points entirely.",
+      "Captures the choice stating it disables CMDB reconciliation logic.",
+      "Corresponds to the option where it enables automated grouping of related resources into application service context."
+    ],
+    "correctIndex": 3,
+    "explanation": "Consistent tagging supports automated association and governance of cloud resources in map scope.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/service-mapping/tag-based-service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 16,
+    "prompt": "Which tagging standard most improves map reliability across multiple cloud accounts?",
+    "choices": [
+      "Captures the choice stating rotating tag formats every sprint.",
+      "Corresponds to the option where applying tags only to load balancers.",
+      "Represents the approach that defining required tag keys and values for service, environment, and ownership.",
+      "Describes the outcome where using owner-defined tags with no naming convention."
+    ],
+    "correctIndex": 2,
+    "explanation": "Standardized keys and values are required for predictable grouping and accurate service association.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/service-mapping/cloud-tag-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 17,
+    "prompt": "A cloud migration introduces many untagged resources. What is the biggest mapping risk?",
+    "choices": [
+      "Represents the approach that automatic deletion of discovery schedules.",
+      "Describes the outcome where resources may be excluded or misgrouped, reducing service map completeness and trust.",
+      "Matches the scenario in which lower incident SLA targets.",
+      "Corresponds to the option where increased CI icon rendering time only."
+    ],
+    "correctIndex": 1,
+    "explanation": "Untagged or inconsistently tagged resources undermine automated grouping and degrade map completeness.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/service-mapping/tag-based-discovery-prerequisites.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 18,
+    "prompt": "What is the best operational pattern for tag-based mapping changes in production?",
+    "choices": [
+      "Represents the approach that disable reconciliation during tag updates.",
+      "Matches the scenario in which apply tag logic directly in prod without testing.",
+      "Reflects the condition that use one global tag for all services.",
+      "Describes the outcome where validate new tag rules in lower environments, then promote with controlled change."
+    ],
+    "correctIndex": 3,
+    "explanation": "Controlled validation and promotion prevent large-scale misclassification in production maps.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/service-mapping/change-management-for-service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 19,
+    "prompt": "Which KPI best measures tag-based mapping effectiveness?",
+    "choices": [
+      "Matches the scenario in which count of discovery credentials stored.",
+      "Describes the outcome where percentage of mapped service CIs with compliant required tags and validated dependencies.",
+      "Captures the choice stating number of incident categories in ITSM.",
+      "Reflects the condition that total number of tag keys in the enterprise."
+    ],
+    "correctIndex": 1,
+    "explanation": "Compliance of required tags plus dependency validation reflects whether tag-based mapping is accurate and governable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-kpis.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 20,
+    "prompt": "Pattern-based discovery in Service Mapping is primarily used to:",
+    "choices": [
+      "Captures the choice stating determine application components and dependencies using reusable logic per technology pattern.",
+      "Corresponds to the option where replace CMDB reconciliation policies.",
+      "Reflects the condition that classify software spend by department.",
+      "Matches the scenario in which create policy statements in IRM."
+    ],
+    "correctIndex": 0,
+    "explanation": "Patterns provide reusable discovery logic to identify components and build accurate dependency relationships.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-patterns-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 21,
+    "prompt": "Which prerequisite most improves success when creating custom pattern-based service discovery logic?",
+    "choices": [
+      "Reflects the condition that clear expected entry points, credentials, and CI identification strategy for target technology.",
+      "Represents the approach that removing relationship classes from CMDB.",
+      "Corresponds to the option where disabling all identification rules before testing.",
+      "Captures the choice stating limiting pattern testing to production only."
+    ],
+    "correctIndex": 0,
+    "explanation": "Custom patterns need known entry points, access, and identification alignment to produce dependable map data.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 22,
+    "prompt": "Why should pattern execution results be validated against known architecture diagrams during onboarding?",
+    "choices": [
+      "Corresponds to the option where to confirm discovered components and dependencies match intended application topology.",
+      "Describes the outcome where to bypass service owner approval.",
+      "Captures the choice stating to reduce MID Server memory use only.",
+      "Represents the approach that to avoid creating service maps."
+    ],
+    "correctIndex": 0,
+    "explanation": "Comparing output to known topology catches false relationships and missing dependencies early.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/service-mapping/validate-service-map-results.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 23,
+    "prompt": "What is the most common risk of unmanaged custom pattern changes?",
+    "choices": [
+      "Describes the outcome where they force Discovery to use credentialless scanning only.",
+      "Represents the approach that they can introduce incorrect CI identification or relationships that degrade map trust.",
+      "Corresponds to the option where they eliminate duplicate CIs permanently.",
+      "Matches the scenario in which they automatically improve map accuracy in all cases."
+    ],
+    "correctIndex": 1,
+    "explanation": "Uncontrolled pattern changes can create misidentification and bad relationships, reducing confidence in map data.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-pattern-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 24,
+    "prompt": "Which governance routine best sustains pattern-based discovery quality over time?",
+    "choices": [
+      "Matches the scenario in which version-controlled pattern updates with test evidence, peer review, and scheduled regression validation.",
+      "Reflects the condition that editing production patterns directly during incidents.",
+      "Describes the outcome where deleting old pattern execution logs immediately.",
+      "Represents the approach that skipping documentation for custom pattern steps."
+    ],
+    "correctIndex": 0,
+    "explanation": "Version control, review, and regression testing maintain reliability as environments and technologies evolve.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/discovery/manage-discovery-pattern-versions.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 25,
+    "prompt": "A SecOps manager wants a service map dashboard for executives. What should be emphasized first?",
+    "choices": [
+      "Describes the outcome where individual analyst preference widgets.",
+      "Captures the choice stating mID Server JVM metrics only.",
+      "Reflects the condition that service health indicators tied to business-critical maps and active risk conditions.",
+      "Matches the scenario in which raw event count by connector without service context."
+    ],
+    "correctIndex": 2,
+    "explanation": "Executive dashboards should focus on business service impact, not tool-centric telemetry details.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 26,
+    "prompt": "What dashboard element most helps identify vulnerable dependencies in mapped services?",
+    "choices": [
+      "Reflects the condition that a weekly export of user records.",
+      "Corresponds to the option where a count of closed change requests only.",
+      "Matches the scenario in which a static list of CI names with no relationship data.",
+      "Captures the choice stating topology visualizations with relationship paths and status overlays from dependent CIs."
+    ],
+    "correctIndex": 3,
+    "explanation": "Dependency-aware topology with health overlays exposes upstream and downstream risk concentration points.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/view-service-map.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 27,
+    "prompt": "Which access control is best practice for a service map dashboard used by multiple teams?",
+    "choices": [
+      "Reflects the condition that allow anonymous editing for rapid collaboration.",
+      "Corresponds to the option where use role-based read/write permissions aligned to run-time responsibilities.",
+      "Captures the choice stating store dashboard setup in personal profiles only.",
+      "Represents the approach that grant admin to all dashboard viewers."
+    ],
+    "correctIndex": 1,
+    "explanation": "Role-based access protects dashboard integrity while allowing appropriate collaboration and review.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 28,
+    "prompt": "Why should service map dashboards include drill-down links into related incidents and alerts?",
+    "choices": [
+      "Corresponds to the option where it prevents updates to business service records.",
+      "Describes the outcome where it replaces the need for CI relationships.",
+      "Represents the approach that it disables event correlation for mapped nodes.",
+      "Captures the choice stating it enables faster transition from service-level visibility to run-time action."
+    ],
+    "correctIndex": 3,
+    "explanation": "Drill-down navigation connects strategic service health views with tactical records needed for response.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/dashboards/concept/dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 29,
+    "prompt": "Which KPI set best validates whether a service map dashboard is useful?",
+    "choices": [
+      "Describes the outcome where total CMDB tables displayed.",
+      "Matches the scenario in which number of dashboard clones by analysts.",
+      "Corresponds to the option where improved service-impact triage time, fewer dependency-blind escalations, and better ownership routing.",
+      "Represents the approach that widget color variety and custom theme usage."
+    ],
+    "correctIndex": 2,
+    "explanation": "Useful dashboards improve operational decision quality and response efficiency for service-impacting issues.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping-best-practices.html"
+    ]
+  }
+]

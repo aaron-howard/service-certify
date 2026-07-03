@@ -1,0 +1,487 @@
+[
+  {
+    "trackCode": "CIS-SAM",
+    "order": 0,
+    "prompt": "In Software Asset Management, what do calculated lifecycles primarily help organizations represent?",
+    "choices": [
+      "Time-based or rules-driven lifecycle positions that support compliance and renewal decisions under governance oversight",
+      "Physical datacenter rack elevations exclusively for practical execution",
+      "Employee performance review cycles in enterprise contexts",
+      "Firewall ACL timelines exclusively across operational workflows"
+    ],
+    "correctIndex": 0,
+    "explanation": "SAM documentation describes calculated lifecycles as part of lifecycle analytics for software assets.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-asset-management/now-assist-for-software-asset-management-sam/calculated-lifecycles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 1,
+    "prompt": "What is the main purpose of the Software Asset Management lifecycle management dashboard?",
+    "choices": [
+      "Provide portfolio visibility into software lifecycle status for operational and compliance conversations in real implementations",
+      "Run major security incident war rooms in enterprise contexts",
+      "Create strategic roadmaps for corporate goals for practical execution",
+      "Manage third-party inherent risk questionnaires for measurable outcomes"
+    ],
+    "correctIndex": 0,
+    "explanation": "The lifecycle management dashboard is documented as a SAM operational view for lifecycle posture across the software estate.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-asset-management/now-assist-for-software-asset-management-sam/lifecycle-management-dashboard.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 2,
+    "prompt": "Why are software models important in IT Asset Management product catalog practice?",
+    "choices": [
+      "They configure single sign-on providers for measurable outcomes",
+      "They replace all CMDB classes for practical execution",
+      "They normalize and standardize how discovered or purchased software is represented for reporting and management in enterprise contexts",
+      "They store ransomware playbooks in real implementations"
+    ],
+    "correctIndex": 2,
+    "explanation": "Product catalog documentation explains creating and managing software models as the standardized representation of software products.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-it-asset-management/page/product/product-catalog/concept/c_CreatingSoftwareModels.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 3,
+    "prompt": "Which scenario best fits Software Asset Management rather than only IT hardware asset tracking?",
+    "choices": [
+      "Focus on scheduling physical security guard patrols",
+      "Focus on managing building maintenance work orders",
+      "Focus on reconciling purchased entitlements to installations and SaaS usage to reduce audit and overspend risk",
+      "Tracking exclusively monitor serial numbers with no license data"
+    ],
+    "correctIndex": 2,
+    "explanation": "SAM documentation emphasizes entitlement, deployment, and usage alignment for software across deployment models.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-asset-management/now-assist-for-software-asset-management-sam/calculated-lifecycles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 4,
+    "prompt": "What is a primary governance outcome of maintaining accurate normalization from discovery models to software models?",
+    "choices": [
+      "More trustworthy compliance and optimization reports because titles roll up to a consistent catalog for measurable outcomes",
+      "Focus on eliminating the CMDB entirely in real implementations",
+      "Focus on disabling all discovery schedules in enterprise contexts",
+      "Focus on removing approvals from the service catalog"
+    ],
+    "correctIndex": 0,
+    "explanation": "Software model guidance supports consistent catalog representation, which underpins trustworthy SAM metrics and decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-it-asset-management/page/product/product-catalog/concept/c_CreatingSoftwareModels.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 5,
+    "prompt": "In Software Asset Management, what is the primary reason to normalize software installations into software models?",
+    "choices": [
+      "To make all publishers apply the same SKU naming pattern",
+      "To clearly automatically create procurement contracts for each installation",
+      "To clearly replace discovery data with manually entered install records",
+      "To clearly map discovered software to a consistent product definition used in compliance and entitlement logic"
+    ],
+    "correctIndex": 3,
+    "explanation": "Software models provide the canonical product identity so entitlements, installations, and reconciliation rules can be evaluated consistently.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-models-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 6,
+    "prompt": "A SAM manager wants different editions of a vendor product tracked separately for compliance. Which model design supports this goal best?",
+    "choices": [
+      "Create distinct software models that represent edition/version differences relevant to licensing under governance oversight",
+      "Apply one software model for all editions and track edition in comments",
+      "Store edition information exclusively on contracts for measurable outcomes",
+      "Disable software model normalization to avoid ambiguity for practical execution"
+    ],
+    "correctIndex": 0,
+    "explanation": "When licensing rights differ by edition or version, separate software models are required for accurate reconciliation and reporting.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/software-asset-management/software-model-management/create-a-software-model.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 7,
+    "prompt": "Which relationship is most important for using software models in effective compliance calculations?",
+    "choices": [
+      "Software model to product catalog image across operational workflows",
+      "Software model to incident category under governance oversight",
+      "Software model to stockroom location for practical execution",
+      "Software model to entitlement and discovered installation records for measurable outcomes"
+    ],
+    "correctIndex": 3,
+    "explanation": "Compliance depends on comparing what is installed against what is licensed, and software models are the shared link across those records.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 8,
+    "prompt": "Why do SAM administrators review software model governance regularly?",
+    "choices": [
+      "To confirm every model has an attached incident response playbook",
+      "To clearly remove publisher information from the model records",
+      "To clearly convert all software models into hardware models each quarter",
+      "To clearly prevent duplicate or poorly classified models from reducing reconciliation accuracy"
+    ],
+    "correctIndex": 3,
+    "explanation": "Model governance ensures data quality and prevents duplicate mappings that can distort compliance and optimization insights.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-model-normalization-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 9,
+    "prompt": "A discovered software title is unmatched in SAM. What is the recommended next step?",
+    "choices": [
+      "Ignore it until year-end true-up across operational workflows",
+      "Reclassify it as hardware to avoid compliance exceptions under governance oversight",
+      "Create or map it to the correct software model so future installs normalize correctly in real implementations",
+      "Delete the discovery record to keep the dashboard clean in enterprise contexts"
+    ],
+    "correctIndex": 2,
+    "explanation": "Unmatched discoveries should be normalized by updating model mappings so usage and compliance rollups remain accurate.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/software-asset-management/software-model-management/map-discovered-software.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 10,
+    "prompt": "In SAM, what does an entitlement record primarily represent?",
+    "choices": [
+      "A well-defined discovered installation awaiting normalization across operational workflows",
+      "A well-defined one-time approval to install software on a single device",
+      "A workflow task for license reclamation exclusively",
+      "A right to apply software, typically derived from purchases, agreements, or subscriptions"
+    ],
+    "correctIndex": 3,
+    "explanation": "Entitlements represent use rights and are the foundation for comparing license position against installed and consumed software.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/software-entitlements-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 11,
+    "prompt": "A true-up is approaching and the publisher questions available license rights. Which entitlement attribute is most critical to verify first?",
+    "choices": [
+      "License metric and quantity aligned to contract terms in enterprise contexts",
+      "Number of attachments on unrelated software models in real implementations",
+      "UI policy names on the entitlement form under governance oversight",
+      "Short description color settings across operational workflows"
+    ],
+    "correctIndex": 0,
+    "explanation": "License metric and quantity define the legal measurement basis and total rights, which directly drive compliance calculations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/manage-software-entitlements.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 12,
+    "prompt": "What is a common reason to split rights into multiple entitlement records for the same software model?",
+    "choices": [
+      "To clearly increase discovery scan frequency for practical execution",
+      "To avoid with contracts in SAM under governance oversight",
+      "To clearly separate rights by metric, term, or restriction so reconciliation applies the correct rules",
+      "To clearly convert named user licenses into hardware assets"
+    ],
+    "correctIndex": 2,
+    "explanation": "Different terms and metrics require separate entitlement records to preserve accurate compliance logic and audit traceability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/software-entitlement-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 13,
+    "prompt": "Which action best improves confidence that entitlements are audit-ready?",
+    "choices": [
+      "Delete expired entitlements immediately without history under governance oversight",
+      "Disable reconciliation jobs during quarter close across operational workflows",
+      "Move entitlement quantities into custom text fields in enterprise contexts",
+      "Store purchase proof and contractual evidence linked to entitlement records in real implementations"
+    ],
+    "correctIndex": 3,
+    "explanation": "Attaching clear entitlement evidence supports defensible license positions and reduces audit response time.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/entitlement-audit-preparation.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 14,
+    "prompt": "When an organization moves to subscription licensing, what SAM update is most important?",
+    "choices": [
+      "Treat all subscriptions as perpetual rights for practical execution",
+      "Exclude subscription installs from reconciliation for measurable outcomes",
+      "Disable publisher data management in real implementations",
+      "Map subscriptions to the correct entitlement structures and terms so renewals and consumption are tracked accurately in enterprise contexts"
+    ],
+    "correctIndex": 3,
+    "explanation": "Subscription licensing introduces term-based rights, so entitlement structure and renewal tracking must reflect subscription conditions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/subscription-entitlements.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 15,
+    "prompt": "Why is selecting the correct license metric critical when configuring SAM entitlements?",
+    "choices": [
+      "It controls which users can log into the instance under governance oversight",
+      "It eliminates the need for contract records across operational workflows",
+      "It determines how consumption is measured against rights during reconciliation for measurable outcomes",
+      "It replaces software normalization rules for practical execution"
+    ],
+    "correctIndex": 2,
+    "explanation": "The license metric defines the counting logic for compliance, so an incorrect metric can materially misstate license position.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/license-metrics-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 16,
+    "prompt": "A publisher audits by named user, but your entitlement is configured by device. What is the likely result?",
+    "choices": [
+      "More accurate reconciliation because device counts are simpler for practical execution",
+      "No impact because SAM converts all metrics automatically for measurable outcomes",
+      "Potential over- or under-counting because measurement basis does not match contract terms across operational workflows",
+      "All installs become compliant by default under governance oversight"
+    ],
+    "correctIndex": 2,
+    "explanation": "Metric mismatch between contract rights and SAM logic can produce inaccurate compliance outcomes and audit risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/configure-license-metrics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 17,
+    "prompt": "Which SAM practice best supports managing products with multiple license metrics across editions?",
+    "choices": [
+      "Create separate entitlement structures aligned to each contractual metric and edition scope for measurable outcomes",
+      "Track metrics exclusively in free-text notes for practical execution",
+      "Disable reconciliation for mixed-metric publishers under governance oversight",
+      "Apply one entitlement and one metric for all editions"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mixed-metric products require explicit modeling so each edition is measured using the proper contractual rules.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/license-metric-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 18,
+    "prompt": "What does effective metric governance in SAM primarily prevent?",
+    "choices": [
+      "Changes to assignment groups on incidents in real implementations",
+      "Apply of discovery data in software models",
+      "Unauthorized updates to knowledge articles across operational workflows",
+      "Inconsistent counting logic that leads to unreliable compliance reporting under governance oversight"
+    ],
+    "correctIndex": 3,
+    "explanation": "Metric governance keeps reconciliation logic consistent and auditable, reducing dispute risk with publishers.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/govern-license-metrics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 19,
+    "prompt": "Before finalizing reconciliation, which validation gives the strongest confidence metric mappings are correct?",
+    "choices": [
+      "Replace entitlement quantities with rounded estimates under governance oversight",
+      "Review the form layout and color theme across operational workflows",
+      "Confirm metric-to-contract alignment and test expected consumption outcomes on representative data for measurable outcomes",
+      "Temporarily disable reconciliation errors for practical execution"
+    ],
+    "correctIndex": 2,
+    "explanation": "Testing against representative data confirms that metric configuration behaves as intended under real licensing scenarios.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/validate-reconciliation-results.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 20,
+    "prompt": "In SAM, what is the purpose of discovery model mapping for software assets?",
+    "choices": [
+      "To clearly convert all software into hardware CIs",
+      "To clearly assign every installation to the same license metric",
+      "To clearly remove publisher names from discovered titles",
+      "To clearly link discovered software evidence to the correct normalized software model for reconciliation"
+    ],
+    "correctIndex": 3,
+    "explanation": "Discovery model mapping bridges raw discovery data to normalized model records, enabling accurate entitlement and compliance logic.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/software-asset-management/software-model-management/discovery-model-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 21,
+    "prompt": "A newly discovered title is repeatedly unmatched. Which approach should a SAM administrator take?",
+    "choices": [
+      "Create a mapping rule or model mapping entry so future discoveries normalize automatically across operational workflows",
+      "Delete the discovered software records weekly under governance oversight",
+      "Disable normalization jobs for that publisher for practical execution",
+      "Ignore unmatched titles unless they appear in incident records for measurable outcomes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Persistent unmatched titles indicate missing mapping logic and should be addressed to improve normalization completeness.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/software-asset-management/software-model-management/manage-unmatched-discovered-software.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 22,
+    "prompt": "Why is validation with publisher and version details important when creating discovery model mappings?",
+    "choices": [
+      "It increases incident SLA accuracy for measurable outcomes",
+      "It confirms the mapped model represents the correct licensable product variant",
+      "It bypasses reconciliation exceptions automatically under governance oversight",
+      "It prevents contract renewals from being created across operational workflows"
+    ],
+    "correctIndex": 1,
+    "explanation": "Accurate publisher/version alignment prevents mapping errors that can distort entitlement consumption and compliance results.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/software-asset-management/software-model-management/validate-software-model-mappings.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 23,
+    "prompt": "What is the main risk of overly broad discovery mapping rules?",
+    "choices": [
+      "Slower catalog item approvals for practical execution",
+      "Incorrectly grouping distinct products under one software model, causing compliance inaccuracies for measurable outcomes",
+      "Too many CMDB relationship types across operational workflows",
+      "Focus on missing knowledge base categories in enterprise contexts"
+    ],
+    "correctIndex": 1,
+    "explanation": "Broad rules can misclassify products and produce misleading reconciliation outcomes, especially for publishers with complex portfolios.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-normalization-rules.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 24,
+    "prompt": "Which KPI best reflects improvement in discovery model quality over time?",
+    "choices": [
+      "Number of dashboard widgets created in enterprise contexts",
+      "Total users in the SAM admin group in real implementations",
+      "Decrease in unmatched discovered software and fewer remaps after reconciliation review under governance oversight",
+      "Count of ITSM incidents linked to software across operational workflows"
+    ],
+    "correctIndex": 2,
+    "explanation": "Lower unmatched volume and fewer correction cycles indicate healthier mapping logic and better normalization quality.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-model-data-quality-kpis.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 25,
+    "prompt": "What is the primary purpose of a software reclamation campaign in SAM?",
+    "choices": [
+      "Identify unused or low-usage software so entitlements can be recovered and reused in real implementations",
+      "Replace reconciliation with manual spreadsheet tracking in enterprise contexts",
+      "Delete historical software installation records to strengthen performance",
+      "Automatically renew all publisher agreements before renewal date under governance oversight"
+    ],
+    "correctIndex": 0,
+    "explanation": "Reclamation improves license efficiency by recovering unused rights and reducing unnecessary spend.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-reclamation.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_ReclaimUnusedSoftware.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 26,
+    "prompt": "Which data point is most important when prioritizing users for software reclamation?",
+    "choices": [
+      "Last usage activity compared to reclaim threshold policy in enterprise contexts",
+      "Number of catalog requests submitted this quarter in real implementations",
+      "Employee office location for measurable outcomes under governance oversight",
+      "Count of incidents assigned to the user's group for practical execution"
+    ],
+    "correctIndex": 0,
+    "explanation": "Reclamation targeting should be based on measurable inactivity and policy-defined thresholds.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-reclamation.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 27,
+    "prompt": "Why should SAM teams define exception workflows for reclamation requests?",
+    "choices": [
+      "To clearly document approved business justifications and maintain governance traceability",
+      "To clearly prevent all software from being reclaimed",
+      "To clearly let software remain installed indefinitely without review",
+      "To route reclamation exclusively through incident management"
+    ],
+    "correctIndex": 0,
+    "explanation": "Exception governance keeps reclamation fair and auditable while allowing valid business retention cases.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-reclamation.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 28,
+    "prompt": "What financial outcome is most directly improved by successful reclamation execution?",
+    "choices": [
+      "Increased duplicate software model creation in enterprise contexts",
+      "Longer reconciliation cycle times in real implementations",
+      "Higher number of emergency software requests under governance oversight",
+      "Reduced need for new license purchases due to reharvested entitlements across operational workflows"
+    ],
+    "correctIndex": 3,
+    "explanation": "Recovered entitlements lower purchase demand and improve realized SAM savings.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_ReclaimUnusedSoftware.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 29,
+    "prompt": "Which KPI best indicates that reclamation governance is working over time?",
+    "choices": [
+      "Number of knowledge articles published in real implementations",
+      "Volume of unchanged software models in enterprise contexts",
+      "Count of closed incidents by priority across operational workflows",
+      "Ratio of reclaimed licenses to successfully reallocated licenses under governance oversight"
+    ],
+    "correctIndex": 3,
+    "explanation": "A strong reclaim-to-reuse ratio shows reclaimed rights are being effectively converted into business value.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-reclamation.html"
+    ]
+  }
+]

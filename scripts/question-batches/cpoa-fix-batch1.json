@@ -1,0 +1,402 @@
+[
+  {
+    "trackCode": "CPOA",
+    "order": 0,
+    "prompt": "Why do platform owners maintain separate production and sub-production instances?",
+    "choices": [
+      "To ensure every user edits production forms directly",
+      "To eliminate backups",
+      "To store integrations only on workstations",
+      "To test changes safely, validate integrations, and promote work without risking live service"
+    ],
+    "correctIndex": 3,
+    "explanation": "Clone and environment practices separate live operations from development and test cycles.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/managing-data/task/t_CreateACloneTarget.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 1,
+    "prompt": "Which activity is central to governing platform upgrades over time?",
+    "choices": [
+      "Following a defined upgrade process that includes preparation, testing, and review of outcomes",
+      "Ignoring release notes",
+      "Disabling the Upgrade Center permanently",
+      "Deploying patches to production without a test cycle"
+    ],
+    "correctIndex": 0,
+    "explanation": "Platform upgrade documentation describes lifecycle steps for preparing and executing family upgrades.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/administer/platform-upgrades/concept/platform-upgrades.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 2,
+    "prompt": "Why should platform owners review skipped updates after an upgrade?",
+    "choices": [
+      "Skipped updates delete all Script Includes",
+      "Skipped updates highlight conflicts between customer changes and base versions that must be resolved",
+      "Skipped updates are always safe to ignore indefinitely",
+      "Skipped updates only affect email logs"
+    ],
+    "correctIndex": 1,
+    "explanation": "Resolving skipped updates reconciles customization with new baseline changes using guided tasks.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/customer-support/task/t_ResolveASkippedUpdate.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 3,
+    "prompt": "Before scheduling a production upgrade, what should owners prioritize from a risk perspective?",
+    "choices": [
+      "Removing sub-production clones",
+      "Deferring all security patches",
+      "Assessing customization, integrations, and regression test coverage documented in the upgrade plan",
+      "Increasing unaudited direct production edits"
+    ],
+    "correctIndex": 2,
+    "explanation": "Upgrade planning materials emphasize analyzing scope and validating critical capabilities before production cutover.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 4,
+    "prompt": "What is a sound practice for governing many third-party integrations on the Now Platform?",
+    "choices": [
+      "Use a single unnamed integration user for every system",
+      "Avoid documenting spokes or flows",
+      "Share production credentials in chat for speed",
+      "Use centralized integration capabilities, managed connections, and reusable actions rather than one-off bespoke endpoints per team"
+    ],
+    "correctIndex": 3,
+    "explanation": "IntegrationHub documentation describes managed integrations through spokes, actions, and connection management.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-integrate-applications/page/administer/integrationhub/concept/integrationhub.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 5,
+    "prompt": "Before cloning a production instance for troubleshooting, what should a platform owner verify first?",
+    "choices": [
+      "That clone profiles include data-preservation and post-clone cleanup requirements",
+      "That update sets are committed in source and target before clone starts",
+      "That all integrations are permanently disabled in production",
+      "That all users have local admin rights in the target instance"
+    ],
+    "correctIndex": 0,
+    "explanation": "Clone profiles and related policies define what data is preserved or excluded and what automation runs after the clone, reducing operational risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/instance-clone.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 6,
+    "prompt": "Why are clone cleanup scripts commonly used in lower environments after a production clone?",
+    "choices": [
+      "To force all cloned records into a separate domain automatically",
+      "To remove or mask sensitive data and reset environment-specific settings",
+      "To copy update set history back to production",
+      "To rollback all plugins installed in production"
+    ],
+    "correctIndex": 1,
+    "explanation": "Post-clone scripts help sanitize data and reconfigure non-prod integrations, email, and endpoints so cloned environments are safe for testing.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/task/t_CreateCloneCleanupScript.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 7,
+    "prompt": "A team needs to protect a small reference dataset in sub-prod during recurring clones. Which capability is most appropriate?",
+    "choices": [
+      "Domain map exclusions",
+      "Scheduled jobs",
+      "Data preservation policy for clone",
+      "Clone source locking"
+    ],
+    "correctIndex": 2,
+    "explanation": "Data preservation policies allow defined table records to be retained in the target while the broader clone refresh is applied.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/clone-data-preservation.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 8,
+    "prompt": "What is the primary reason to suspend outbound email and external integrations in a cloned test instance?",
+    "choices": [
+      "To avoid clone lock contention",
+      "To enable skipped update resolution",
+      "To improve indexing speed for cloned tables",
+      "To prevent unintended notifications or calls to production-connected systems"
+    ],
+    "correctIndex": 3,
+    "explanation": "Cloned data can trigger business logic; disabling outbound paths prevents accidental communication with customers or third-party systems.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/task/t_PrepareTargetInstanceForClone.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 9,
+    "prompt": "Which statement best describes clone governance for enterprise platform ownership?",
+    "choices": [
+      "Clone scheduling should align with release windows, data sensitivity controls, and stakeholder communication",
+      "Clone history is not required if backups exist",
+      "Clone plans are needed only for production-to-production operations",
+      "Clones should be run ad hoc by any admin when environments drift"
+    ],
+    "correctIndex": 0,
+    "explanation": "A governed clone process includes timing, approvals, risk controls, and notifications to minimize disruption and compliance issues.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/c_CloneManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 10,
+    "prompt": "In the ServiceNow upgrade lifecycle, which activity should occur first for a platform owner?",
+    "choices": [
+      "Schedule production cutover immediately",
+      "Assess release notes, feature impacts, and prerequisite changes",
+      "Disable all custom applications before planning",
+      "Merge skipped updates directly in production"
+    ],
+    "correctIndex": 1,
+    "explanation": "Lifecycle execution starts with assessment to understand impact, effort, and risk before timelines and environments are committed.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade/concept/upgrade-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 11,
+    "prompt": "Why is validating customizations in sub-production a core lifecycle requirement?",
+    "choices": [
+      "Because only sub-production can process family upgrades",
+      "Because skipped updates are generated only in development instances",
+      "Because it identifies regressions in configurations and custom code before production impact",
+      "Because production upgrades do not support rollback windows"
+    ],
+    "correctIndex": 2,
+    "explanation": "Testing customizations across lower tiers reduces production defects and confirms business-critical behavior after upgrade.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade/task/test-instance-upgrade.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 12,
+    "prompt": "Which governance artifact best supports an auditable upgrade lifecycle?",
+    "choices": [
+      "Personal notes from the lead admin",
+      "Only final release notes",
+      "Unstructured chat transcripts",
+      "Documented plan with risks, test evidence, and approval checkpoints"
+    ],
+    "correctIndex": 3,
+    "explanation": "An auditable lifecycle includes formal plans and evidence for readiness, controls, and stakeholder approvals.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade/concept/upgrade-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 13,
+    "prompt": "During release execution, what is the main purpose of a predefined outage communication plan?",
+    "choices": [
+      "To ensure stakeholders receive consistent status, impact, and recovery updates",
+      "To bypass change approvals during emergency upgrades",
+      "To automate skipped update acceptance decisions",
+      "To replace upgrade testing in lower environments"
+    ],
+    "correctIndex": 0,
+    "explanation": "Communication plans improve coordination and user trust by setting expectations before and during maintenance windows.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade/task/prepare-upgrade-communications.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 14,
+    "prompt": "What is the best post-upgrade lifecycle practice after production validation is complete?",
+    "choices": [
+      "Delete upgrade logs to reduce storage",
+      "Capture lessons learned and update runbooks and standards",
+      "Clone production to development immediately without review",
+      "Freeze all platform changes for the next family release"
+    ],
+    "correctIndex": 1,
+    "explanation": "Lifecycle maturity improves when teams codify what worked, what failed, and how procedures should evolve for future upgrades.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade/concept/continuous-upgrade-improvement.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 15,
+    "prompt": "What is the primary purpose of ServiceNow Admin Center for platform owners?",
+    "choices": [
+      "To bypass role requirements for temporary admins",
+      "To replace all development tooling for scoped apps",
+      "To centralize visibility and management of instance administration tasks",
+      "To run clone operations across different customer tenants"
+    ],
+    "correctIndex": 2,
+    "explanation": "Admin Center gives administrators a consolidated experience for key operational and configuration responsibilities.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/admin-center/concept/admin-center.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 16,
+    "prompt": "How does Admin Center improve execution consistency across admin teams?",
+    "choices": [
+      "By removing all role checks from admin tasks",
+      "By forcing all tasks into one global update set",
+      "By disabling plugin lifecycle controls",
+      "By presenting guided workflows and centralized administration actions"
+    ],
+    "correctIndex": 3,
+    "explanation": "Guided operational tasks and shared visibility reduce variation in how administrators perform common platform activities.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/admin-center/task/use-admin-center.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 17,
+    "prompt": "A platform owner wants to reduce missed admin prerequisites. Which Admin Center outcome is most relevant?",
+    "choices": [
+      "Consolidated recommendations and operational task tracking",
+      "Managed domain hierarchy creation",
+      "Cross-instance source control branching",
+      "Automatic deletion of skipped updates"
+    ],
+    "correctIndex": 0,
+    "explanation": "Central recommendations and tracked tasks help teams execute required admin steps in a predictable order.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/admin-center/concept/admin-recommendations.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 18,
+    "prompt": "Which practice best aligns Admin Center usage with platform governance?",
+    "choices": [
+      "Apply emergency-only admin workflows for all maintenance",
+      "Pair Admin Center processes with role-based ownership and change control",
+      "Allow every fulfiller to execute admin actions directly",
+      "Use personal runbooks outside the platform"
+    ],
+    "correctIndex": 1,
+    "explanation": "Governance improves when Admin Center actions are tied to clear accountability and approved change procedures.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/admin-center/concept/admin-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 19,
+    "prompt": "What is the most valuable KPI to monitor after broad Admin Center adoption?",
+    "choices": [
+      "Count of skipped update records created",
+      "Total number of temporary admin grants",
+      "Reduction in execution errors and faster completion of standardized admin tasks",
+      "Frequency of ad hoc production hotfixes"
+    ],
+    "correctIndex": 2,
+    "explanation": "Operational quality metrics show whether centralized administration is improving reliability and efficiency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/admin-center/task/measure-admin-center-adoption.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 20,
+    "prompt": "What is the primary value of IntegrationHub for a platform owner?",
+    "choices": [
+      "To replace all inbound REST APIs with email-based imports",
+      "To bypass credential management requirements",
+      "To eliminate the need for flow testing",
+      "To provide governed, reusable integrations without custom middleware for every use case"
+    ],
+    "correctIndex": 3,
+    "explanation": "IntegrationHub supports standardized integration patterns that reduce custom code and improve maintainability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/administer/integrationhub/concept/integrationhub.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 21,
+    "prompt": "When implementing IntegrationHub spokes, which approach best supports secure operations?",
+    "choices": [
+      "Use Connection & Credential aliases with least-privilege accounts",
+      "Store credentials in script includes for easier reuse",
+      "Embed secrets directly in flow actions",
+      "Reuse production credentials in all sub-prod instances"
+    ],
+    "correctIndex": 0,
+    "explanation": "Connection and credential management centralizes secret handling and enforces safer account-scoping practices.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/administer/integrationhub/task/configure-connections-and-credentials.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 22,
+    "prompt": "Why should platform owners standardize reusable subflows for common integration patterns?",
+    "choices": [
+      "They eliminate the need for error handling",
+      "They improve consistency and reduce duplicated logic across teams",
+      "They automatically remove all API rate limits",
+      "They convert all asynchronous calls to synchronous execution"
+    ],
+    "correctIndex": 1,
+    "explanation": "Reusable subflows create consistent design patterns and reduce maintenance burden for enterprise integration automation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/administer/flow-designer/concept/subflows.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 23,
+    "prompt": "Which control should be implemented to reduce impact from external API outages in IntegrationHub flows?",
+    "choices": [
+      "Skip logging to preserve performance",
+      "Force every integration to run as a single transaction",
+      "Use robust error handling, retry logic, and alerting for failed actions",
+      "Disable all retries for failed calls"
+    ],
+    "correctIndex": 2,
+    "explanation": "Resilience patterns such as retries, exception paths, and alerts help contain failures and improve recovery times.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/administer/flow-designer/task/handle-flow-errors.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 24,
+    "prompt": "What metric best indicates healthy IntegrationHub operations at associate platform-owner level?",
+    "choices": [
+      "Count of outbound REST steps per flow",
+      "Number of personal developer integrations",
+      "Total number of flow versions created monthly",
+      "Successful execution rate with low incident-causing flow failures"
+    ],
+    "correctIndex": 3,
+    "explanation": "Execution success and failure impact provide direct operational signals about integration reliability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/administer/flow-designer/task/monitor-flow-executions.html"
+    ]
+  }
+]

@@ -1,0 +1,482 @@
+[
+  {
+    "trackCode": "CIS-SIR",
+    "order": 0,
+    "prompt": "When a ransomware event requires coordinated war-room style response across security and business stakeholders, which Security Incident Response capability is most specifically designed for that scenario?",
+    "choices": [
+      "Describes the outcome where service catalog checkout.",
+      "Reflects the condition that software normalization.",
+      "Matches the scenario in which hardware asset disposal.",
+      "Represents the approach that major Security Incident Management."
+    ],
+    "correctIndex": 3,
+    "explanation": "Major Security Incident Management is documented as the collaborative response model for high-impact security incidents such as ransomware and large-scale breaches.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/security-management/security-incident-response/major-security-incident-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 1,
+    "prompt": "What is the primary operational benefit of using security incident response playbooks in ServiceNow?",
+    "choices": [
+      "Reflects the condition that standardize and automate repeatable response steps to reduce manual handoffs and response time.",
+      "Captures the choice stating replace vulnerability scanning tools.",
+      "Describes the outcome where remove the need for a CMDB.",
+      "Matches the scenario in which guarantee zero false positives from SIEM alerts."
+    ],
+    "correctIndex": 0,
+    "explanation": "Playbook documentation focuses on consistent, repeatable response procedures that can be orchestrated as part of security operations workflows.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-playbook.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 2,
+    "prompt": "Why do security teams associate MITRE ATT&CK tactics and techniques with a security incident record?",
+    "choices": [
+      "Corresponds to the option where automatically patch all endpoints.",
+      "Matches the scenario in which normalize software publishers for audits.",
+      "Reflects the condition that create new business applications in SPM.",
+      "Captures the choice stating add structured adversary behavior context that supports prioritization, investigation, and defensive planning."
+    ],
+    "correctIndex": 3,
+    "explanation": "MITRE ATT&CK alignment in Security Incident Response is documented to enrich incidents with standardized threat behavior context.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/security-management/security-incident-response/mitre-attack-defend-graph-sir.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 3,
+    "prompt": "Which statement best describes how Security Incident Response typically fits into ServiceNow Security Operations?",
+    "choices": [
+      "Reflects the condition that it orchestrates triage, assignment, and remediation coordination across security and IT teams.",
+      "Captures the choice stating it only tracks facilities access badges.",
+      "Corresponds to the option where it is limited to HR case management.",
+      "Represents the approach that it replaces the setup Management Database."
+    ],
+    "correctIndex": 0,
+    "explanation": "Security Incident Response is positioned as a Security Operations capability that streamlines cross-team coordination for security incidents.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/security-management/security-incident-response/major-security-incident-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 4,
+    "prompt": "When parent and child security incidents exist, what does rolling up MITRE ATT&CK information commonly help analysts maintain?",
+    "choices": [
+      "Corresponds to the option where discovery of printer hardware.",
+      "Represents the approach that software model creation.",
+      "Describes the outcome where automatic firewall rule deletion.",
+      "Captures the choice stating a consolidated view of tactics and techniques at the parent incident as child investigations progress."
+    ],
+    "correctIndex": 3,
+    "explanation": "Documentation describes rolling up MITRE ATT&CK details from child security incidents to support parent-level reporting and analysis.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/yokohama-security-management/page/product/threat-intelligence/task/rollup-mitre-att-ck-information-from-child-security-incidents.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 5,
+    "prompt": "In Security Incident Response, which lifecycle phase is focused on validating scope, assigning ownership, and determining initial severity?",
+    "choices": [
+      "Describes the outcome where eradication.",
+      "Matches the scenario in which post-incident review.",
+      "Corresponds to the option where triage.",
+      "Represents the approach that closure."
+    ],
+    "correctIndex": 2,
+    "explanation": "Triage establishes ownership, impact, and urgency so teams can move incidents through investigation and response effectively.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-lifecycle.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 6,
+    "prompt": "What is the primary objective of the containment step in the SIR lifecycle?",
+    "choices": [
+      "Reflects the condition that auto-close duplicate incidents without analyst review.",
+      "Represents the approach that limit attacker impact and prevent further spread while investigation continues.",
+      "Describes the outcome where finalize all compliance attestations.",
+      "Matches the scenario in which create software model normalization rules."
+    ],
+    "correctIndex": 1,
+    "explanation": "Containment actions are intended to reduce active harm and stop lateral movement while evidence and response efforts proceed.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/security-management/security-incident-response/respond-to-a-security-incident.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 7,
+    "prompt": "Which outcome best indicates the eradication and recovery phases were successful?",
+    "choices": [
+      "Describes the outcome where no lessons learned are documented.",
+      "Matches the scenario in which malicious artifacts are removed and affected services are restored with monitored stability.",
+      "Reflects the condition that all incident tasks are reassigned to one team.",
+      "Captures the choice stating every alert source is disabled."
+    ],
+    "correctIndex": 1,
+    "explanation": "Successful eradication and recovery remove adversary presence and return services to stable operation with verification.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-process.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 8,
+    "prompt": "Why is documenting timeline evidence throughout the SIR lifecycle considered essential?",
+    "choices": [
+      "Reflects the condition that it prevents integration with SIEM tools.",
+      "Captures the choice stating it allows incidents to skip closure criteria.",
+      "Corresponds to the option where it replaces the need for assignment groups.",
+      "Matches the scenario in which it supports root-cause analysis, legal defensibility, and repeatable post-incident improvement."
+    ],
+    "correctIndex": 3,
+    "explanation": "A complete timeline provides operational and audit value, improving accountability and quality of post-incident decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/security-management/security-incident-response/investigate-a-security-incident.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 9,
+    "prompt": "Which lifecycle governance practice most improves consistency across multiple SOC shifts?",
+    "choices": [
+      "Reflects the condition that allowing each shift to rename lifecycle states.",
+      "Corresponds to the option where using standardized state transitions, mandatory fields, and task templates per incident type.",
+      "Represents the approach that removing closure validation rules.",
+      "Captures the choice stating tracking only critical incidents in SIR."
+    ],
+    "correctIndex": 0,
+    "explanation": "Standardized workflows and required data reduce handoff errors and improve consistency across analysts and shifts.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-task-types.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 10,
+    "prompt": "What is the main value of security incident playbooks in ServiceNow SIR?",
+    "choices": [
+      "Captures the choice stating disable integrations with external security tools.",
+      "Represents the approach that orchestrate repeatable response steps and reduce manual handoffs across teams.",
+      "Describes the outcome where replace analyst judgment entirely.",
+      "Corresponds to the option where convert all incidents to vulnerabilities."
+    ],
+    "correctIndex": 1,
+    "explanation": "Playbooks provide structured, repeatable execution for common incident types and improve response consistency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-playbook.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 11,
+    "prompt": "A phishing incident playbook should trigger which action earliest?",
+    "choices": [
+      "Represents the approach that initial triage tasks such as evidence capture, user validation, and scope determination.",
+      "Corresponds to the option where immediate closure after user notification.",
+      "Matches the scenario in which software model normalization.",
+      "Describes the outcome where full endpoint rebuild before analysis."
+    ],
+    "correctIndex": 0,
+    "explanation": "Early triage and evidence capture determine scope and support defensible next-step decisions in phishing response.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/security-management/security-incident-response/configure-security-incident-playbooks.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 12,
+    "prompt": "Which playbook design choice best supports SOC scalability?",
+    "choices": [
+      "Matches the scenario in which modular playbooks with reusable tasks and conditional branches by incident characteristics.",
+      "Describes the outcome where one monolithic playbook for all incident types.",
+      "Represents the approach that no conditional logic to keep flows simple.",
+      "Reflects the condition that manual routing only with no task templates."
+    ],
+    "correctIndex": 0,
+    "explanation": "Modular and conditional playbooks are easier to maintain and scale across varied incident classes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/security-management/security-incident-response/security-operations-playbooks.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 13,
+    "prompt": "Why should playbook changes follow formal change control in production?",
+    "choices": [
+      "Reflects the condition that unvetted automation changes can break response workflows and increase run-time risk.",
+      "Captures the choice stating only CMDB admins can edit SIR tasks.",
+      "Matches the scenario in which change control prevents all future SOC updates.",
+      "Describes the outcome where playbooks are not used during major incidents."
+    ],
+    "correctIndex": 0,
+    "explanation": "Playbook changes affect critical incident handling, so controlled release and validation are essential.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/security-management/security-incident-response/playbook-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 14,
+    "prompt": "Which KPI best reflects playbook effectiveness in SIR?",
+    "choices": [
+      "Matches the scenario in which volume of reopened low-severity incidents.",
+      "Corresponds to the option where number of custom fields added per incident.",
+      "Captures the choice stating reduction in mean time to contain and consistent completion of required response tasks.",
+      "Reflects the condition that total count of manually created subtasks."
+    ],
+    "correctIndex": 2,
+    "explanation": "Containment speed and consistent execution of required tasks indicate playbooks are improving operational outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/security-management/security-incident-response/security-operations-metrics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 15,
+    "prompt": "Why does mapping SIR findings to MITRE ATT&CK improve operations beyond simple severity labels?",
+    "choices": [
+      "Captures the choice stating it eliminates the need for indicators of compromise.",
+      "Represents the approach that it automatically removes false positives from all tools.",
+      "Reflects the condition that it provides standardized adversary behavior context to prioritize investigations and defensive actions.",
+      "Corresponds to the option where it replaces incident assignment rules."
+    ],
+    "correctIndex": 2,
+    "explanation": "ATT&CK context gives a common behavior framework that supports analyst decisions and communication.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/security-management/security-incident-response/mitre-attack-defend-graph-sir.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 16,
+    "prompt": "A SOC lead wants to compare repeated intrusion techniques across incidents. Which ATT&CK-aligned data point is most useful?",
+    "choices": [
+      "Represents the approach that catalog task short description.",
+      "Corresponds to the option where user session timeout values.",
+      "Captures the choice stating mapped techniques and tactics captured on security incidents and related observables.",
+      "Describes the outcome where cMDB class icon color."
+    ],
+    "correctIndex": 2,
+    "explanation": "Technique and tactic mappings enable trend analysis across incident sets and recurring adversary behavior.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/security-management/security-incident-response/map-security-incidents-to-mitre-attack.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 17,
+    "prompt": "What is a practical use of ATT&CK rollup from child to parent incidents?",
+    "choices": [
+      "Describes the outcome where close parent records when one child is resolved.",
+      "Matches the scenario in which convert parent incidents to vulnerabilities automatically.",
+      "Represents the approach that maintain consolidated adversary-behavior visibility for coordinated response leadership.",
+      "Corresponds to the option where suppress all child records from analysts."
+    ],
+    "correctIndex": 2,
+    "explanation": "ATT&CK rollups support parent-level situational awareness during multi-workstream incidents.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/yokohama-security-management/page/product/threat-intelligence/task/rollup-mitre-att-ck-information-from-child-security-incidents.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 18,
+    "prompt": "Which governance control improves ATT&CK data quality in SIR?",
+    "choices": [
+      "Represents the approach that mapping ATT&CK only during post-incident reviews.",
+      "Reflects the condition that allowing free-text tactics without reference values.",
+      "Matches the scenario in which removing mandatory incident categorization.",
+      "Describes the outcome where enforcing standardized ATT&CK taxonomy fields with analyst validation checkpoints."
+    ],
+    "correctIndex": 3,
+    "explanation": "Standardized taxonomy and validation improve consistency and analytical value of ATT&CK mappings.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/security-management/security-incident-response/mitre-attack-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 19,
+    "prompt": "Which outcome best demonstrates ATT&CK integration is helping the SOC?",
+    "choices": [
+      "Matches the scenario in which no linkage between incidents and observables.",
+      "Captures the choice stating higher number of uncategorized incidents.",
+      "Describes the outcome where fewer incident assignments to owning teams.",
+      "Reflects the condition that faster detection engineering updates tied to frequently observed techniques."
+    ],
+    "correctIndex": 3,
+    "explanation": "When ATT&CK data informs detection tuning and prioritization, SOC response effectiveness improves measurably.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/security-management/security-incident-response/security-operations-metrics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 20,
+    "prompt": "What defines a major security incident in ServiceNow SIR practice?",
+    "choices": [
+      "Reflects the condition that a high-impact incident requiring coordinated cross-functional response and executive visibility.",
+      "Corresponds to the option where any incident with more than ten tasks.",
+      "Captures the choice stating only incidents with malware indicators.",
+      "Matches the scenario in which any incident created from email."
+    ],
+    "correctIndex": 0,
+    "explanation": "Major security incidents are distinguished by business impact and the need for coordinated enterprise response.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/security-management/security-incident-response/major-security-incident-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 21,
+    "prompt": "During a major incident, what is the most important reason to maintain a single parent record with child workstreams?",
+    "choices": [
+      "Corresponds to the option where to prevent integration with threat intelligence.",
+      "Represents the approach that to reduce the total number of analysts required.",
+      "Reflects the condition that to avoid documenting decisions.",
+      "Captures the choice stating to centralize command-and-control visibility while teams execute parallel containment and recovery tasks."
+    ],
+    "correctIndex": 3,
+    "explanation": "Parent-child structure enables centralized coordination and reporting while separate teams handle parallel work.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/security-management/security-incident-response/manage-major-security-incidents.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 22,
+    "prompt": "Which communication pattern is best during major incident operations?",
+    "choices": [
+      "Describes the outcome where ad hoc chat updates without timestamps.",
+      "Captures the choice stating status updates only at final closure.",
+      "Corresponds to the option where separate timelines per analyst with no shared source.",
+      "Represents the approach that scheduled, role-based updates with a validated incident timeline and decision log."
+    ],
+    "correctIndex": 3,
+    "explanation": "Cadenced communication and a validated timeline reduce confusion and improve decision quality during high-pressure response.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-war-room-operations.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 23,
+    "prompt": "What is the best indicator that major incident governance is working effectively?",
+    "choices": [
+      "Corresponds to the option where frequent reopening because closure criteria are unclear.",
+      "Represents the approach that clear role assignments, rapid containment, and complete post-incident actions tracked to closure.",
+      "Describes the outcome where higher count of unresolved child incidents.",
+      "Matches the scenario in which no formal handoff records between shifts."
+    ],
+    "correctIndex": 1,
+    "explanation": "Strong governance is reflected in coordinated execution, measurable containment, and closed improvement actions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/security-management/security-incident-response/security-operations-metrics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 24,
+    "prompt": "Which post-major-incident output delivers the most long-term operational value?",
+    "choices": [
+      "Describes the outcome where a lessons-learned review with prioritized improvements, control owners, and due dates.",
+      "Matches the scenario in which automatic closure of related vulnerabilities.",
+      "Reflects the condition that a list of all chat participants.",
+      "Represents the approach that a high-level summary with no action owners."
+    ],
+    "correctIndex": 0,
+    "explanation": "Structured post-incident reviews with owned improvements drive measurable resilience gains.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/security-management/security-incident-response/post-incident-review.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 25,
+    "prompt": "In Security Incident Response, what is the primary value of integrating threat intelligence feeds?",
+    "choices": [
+      "Describes the outcome where enrich indicators and prioritize incidents using reputation and context data.",
+      "Reflects the condition that disable correlation to reduce processing load.",
+      "Captures the choice stating automatically close every low-severity alert.",
+      "Matches the scenario in which replace CMDB service ownership records."
+    ],
+    "correctIndex": 0,
+    "explanation": "Threat intelligence enriches observables so analysts can prioritize and respond based on risk context.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/threat-intelligence.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 26,
+    "prompt": "A new IOC feed creates many false positives. What is the best first tuning step?",
+    "choices": [
+      "Reflects the condition that adjust indicator confidence thresholds and matching logic before auto-escalation.",
+      "Matches the scenario in which delete all past incidents.",
+      "Corresponds to the option where route all alerts to major incident.",
+      "Captures the choice stating disable all enrichment jobs permanently."
+    ],
+    "correctIndex": 0,
+    "explanation": "Threshold and matching refinement reduces noise while keeping useful threat signals flowing to analysts.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/configure-threat-intelligence-sources.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 27,
+    "prompt": "Which process most improves analyst trust in threat-intel enrichment?",
+    "choices": [
+      "Corresponds to the option where track source, confidence, first-seen, and expiration details on each indicator.",
+      "Captures the choice stating hide source provider metadata from all incident records.",
+      "Reflects the condition that ingest indicators without timestamps.",
+      "Represents the approach that store indicators only in spreadsheet attachments."
+    ],
+    "correctIndex": 0,
+    "explanation": "Transparent indicator lineage and validity windows help analysts decide whether enrichment is actionable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response-data-model.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 28,
+    "prompt": "What is the best reason to map threat intel to MITRE ATT&CK techniques in SIR reporting?",
+    "choices": [
+      "Corresponds to the option where it allows skipping triage for mapped incidents.",
+      "Represents the approach that it improves trend analysis for adversary behavior and helps prioritize defensive controls.",
+      "Describes the outcome where it replaces assignment rules with static groups.",
+      "Captures the choice stating it removes the need for indicator expiration."
+    ],
+    "correctIndex": 1,
+    "explanation": "Technique mapping supports strategic prioritization by connecting incidents to known adversary tactics and gaps.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response-reporting.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 29,
+    "prompt": "Which KPI best measures threat-intelligence quality in SIR?",
+    "choices": [
+      "Corresponds to the option where total attachments per incident.",
+      "Describes the outcome where reduction in mean time to triage and higher true-positive rate after enrichment.",
+      "Matches the scenario in which number of feeds enabled regardless utility.",
+      "Represents the approach that count of unassigned security incidents."
+    ],
+    "correctIndex": 1,
+    "explanation": "High-quality intelligence should improve triage speed and incident precision, not just increase data volume.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-operations-kpis.html"
+    ]
+  }
+]

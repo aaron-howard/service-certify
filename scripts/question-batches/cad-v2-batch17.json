@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CAD",
+		"order": 80,
+		"prompt": "Which import formats can ServiceNow load directly into an Import Set? (Choose two.)",
+		"choices": [
+			"CSV",
+			"Excel (XLS/XLSX)",
+			"Compiled Java bytecode",
+			"Raw disk images"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"questionType": "multi",
+		"explanation": "Import Sets accept structured data files such as CSV and Excel, staging rows for transformation onto target tables.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/integrate-applications/c_ImportSetsKeyConcepts.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 81,
+		"prompt": "How do you obtain a certified or shared application published to the ServiceNow Store or an update source?",
+		"choices": [
+			"Download and install it from the application repository / Store",
+			"Copy its records into sys_properties",
+			"Recreate every artifact manually by hand",
+			"Email the application to each user"
+		],
+		"correctIndex": 0,
+		"explanation": "Applications are downloaded and installed from the ServiceNow Store or an application repository into the instance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/download-and-install-applications.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 82,
+		"prompt": "What does Delegated Development allow an administrator to do?",
+		"choices": [
+			"Grant non-admin developers rights to develop specified application file types and perform code review",
+			"Delete all applications automatically",
+			"Convert scoped apps to global on upgrade",
+			"Disable source control for the instance"
+		],
+		"correctIndex": 0,
+		"explanation": "Delegated Development lets admins assign developers permission to work on specific application files and participate in code review without full admin rights.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/delegated-development-and-deployment/c_DelegatedDevelopment.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 83,
+		"prompt": "Which capability lets you manage a scoped application's source code in an external Git repository?",
+		"choices": [
+			"The ServiceNow source control (Git) integration in Studio",
+			"The inbound email client",
+			"The transform map history log",
+			"The homepage gauge editor panel"
+		],
+		"correctIndex": 0,
+		"explanation": "Studio's source control integration links a scoped app to a Git repository for committing, branching, and applying changes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/link-app-to-source-control.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 84,
+		"prompt": "When managing global application files, which action is allowed?",
+		"choices": [
+			"Adding files from global scope to a global application",
+			"Moving application files into or out of a scoped application",
+			"Changing the scope of a global application",
+			"Removing an application's scope"
+		],
+		"correctIndex": 0,
+		"explanation": "For global applications, you can add global-scope files to the global app; you cannot move files across scopes, change a global app's scope, or remove an application's scope.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/application-files.html"
+		]
+	}
+]

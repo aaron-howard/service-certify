@@ -1,0 +1,482 @@
+[
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 0,
+    "prompt": "What is the primary scope of Third-Party Risk Management on the Now Platform?",
+    "choices": [
+      "End-to-end vendor and third-party risk workflows from onboarding through monitoring and remediation under governance oversight",
+      "Exclusively IT password rotation for practical execution",
+      "Exclusively facilities badge printing in enterprise contexts",
+      "Exclusively employee travel reimbursement in real implementations"
+    ],
+    "correctIndex": 0,
+    "explanation": "TPRM reference documentation describes the third-party risk program capabilities delivered in the GRC suite.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-reference.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 1,
+    "prompt": "According to the third-party risk product documentation landing concepts, what is a core benefit of consolidating third-party assessments in ServiceNow?",
+    "choices": [
+      "Eliminate all regulatory obligations in real implementations",
+      "Increase visibility and consistency between periodic assessments and continuous monitoring signals in enterprise contexts",
+      "Remove procurement from the process entirely for practical execution",
+      "Guarantee that vendors cannot have incidents for measurable outcomes"
+    ],
+    "correctIndex": 1,
+    "explanation": "The third-party risk management landing documentation highlights improved visibility across assessments and monitoring as a program outcome.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-governance-risk-compliance/page/product/grc-vendor-risk/concept/third-party-risk-mgt-landing-page.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 2,
+    "prompt": "Why would an organization create questionnaire templates in Third-Party Risk Management?",
+    "choices": [
+      "Define JavaScript lint rules under governance oversight",
+      "Configure SNMP traps across operational workflows for practical execution",
+      "Standardize due diligence and evidence collection across many vendors and assessment types for measurable outcomes",
+      "Replace the incident table for practical execution"
+    ],
+    "correctIndex": 2,
+    "explanation": "Vendor risk task documentation includes creating questionnaire templates to drive consistent third-party assessments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-governance-risk-compliance/page/product/grc-vendor-risk/task/create-questionnaire-template.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 3,
+    "prompt": "Which activity best fits continuous monitoring in a third-party risk program?",
+    "choices": [
+      "Focus on disabling vendor portals in real implementations",
+      "Focus on removing audit trails for assessments",
+      "Focus on ingesting external risk intelligence signals to update vendor posture between full assessments",
+      "Focus on deleting all vendor records annually"
+    ],
+    "correctIndex": 2,
+    "explanation": "Third-party risk landing documentation discusses ongoing monitoring and intelligence as part of modern vendor risk programs.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-governance-risk-compliance/page/product/grc-vendor-risk/concept/third-party-risk-mgt-landing-page.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 4,
+    "prompt": "What is the main purpose of a third-party portal in vendor risk programs?",
+    "choices": [
+      "Enable vendors to complete questionnaires and supply evidence in a controlled collaboration channel under governance oversight",
+      "Replace the CMDB across operational workflows",
+      "Execute database backups in enterprise contexts",
+      "Host internal employee payroll slips publicly in real implementations"
+    ],
+    "correctIndex": 0,
+    "explanation": "TPRM reference material describes portal-based collaboration as part of third-party engagement workflows.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-reference.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 5,
+    "prompt": "When launching a Third-Party Risk Management program, what is the most important first step in defining vendor risk scope?",
+    "choices": [
+      "Import all vendors and assign the same risk tier for practical execution",
+      "Defer scope decisions until after questionnaires are sent for measurable outcomes",
+      "Assess exclusively vendors with expiring contracts across operational workflows",
+      "Identify which vendor relationships, services, and data flows are in scope for formal assessment under governance oversight"
+    ],
+    "correctIndex": 3,
+    "explanation": "TPRM starts with clear scope boundaries so assessments target the right third parties, services, and data exposure paths.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/concept/vendor-risk-management-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 6,
+    "prompt": "Which vendor population is typically prioritized when defining initial TPRM scope?",
+    "choices": [
+      "Vendors with critical services, privileged access, or sensitive data processing under governance oversight",
+      "Exclusively vendors with active incidents for practical execution",
+      "Vendors with no system access or data handling for measurable outcomes",
+      "Exclusively new vendors created this month in real implementations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Criticality, access level, and data sensitivity are common criteria for prioritizing scoped third parties.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/define-vendor-risk-scope.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 7,
+    "prompt": "In TPRM, why should business owners be involved in vendor risk scoping?",
+    "choices": [
+      "They can approve all findings without review in real implementations",
+      "They understand service dependency and operational impact if a vendor fails in enterprise contexts",
+      "They determine legal language for every contract across operational workflows",
+      "They replace the risk team in platform administration under governance oversight"
+    ],
+    "correctIndex": 1,
+    "explanation": "Business owners provide context on process dependencies and outage impact, which improves scope accuracy.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/assign-vendor-owners.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 8,
+    "prompt": "What scoping outcome best supports repeatable vendor risk assessments?",
+    "choices": [
+      "A well-defined one-time spreadsheet of vendor names",
+      "No segmentation until annual audits in real implementations",
+      "Manual assessment decisions made per analyst preference for measurable outcomes",
+      "A well-defined documented classification model linking vendor types to assessment requirements"
+    ],
+    "correctIndex": 3,
+    "explanation": "Documented scope categories enable consistent trigger criteria and repeatable assessment workflows.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/concept/vendor-tiering.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 9,
+    "prompt": "A TPRM team wants to avoid over-assessing low-impact vendors. Which scope control helps most?",
+    "choices": [
+      "Apply inherent risk screening to determine whether full assessment is required",
+      "Assess exclusively vendors selected by procurement under governance oversight",
+      "Require full due diligence for every vendor regardless of profile across operational workflows",
+      "Skip all assessments for internal suppliers under governance oversight"
+    ],
+    "correctIndex": 0,
+    "explanation": "Inherent risk screening helps right-size assessment effort based on business and security impact indicators.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/run-inherent-risk-screening.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 10,
+    "prompt": "In Vendor Risk Management, what is the primary purpose of using questionnaires?",
+    "choices": [
+      "Close vendor risks without analysis across operational workflows",
+      "Generate invoices for assessments under governance oversight",
+      "Replace all contract reviews for practical execution",
+      "Collect structured control evidence from vendors against defined risk domains for measurable outcomes"
+    ],
+    "correctIndex": 3,
+    "explanation": "Questionnaires standardize evidence collection and help compare vendor controls consistently.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/create-vendor-questionnaires.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 11,
+    "prompt": "Which questionnaire design choice improves response quality in TPRM?",
+    "choices": [
+      "Send the same questionnaire to every vendor category under governance oversight",
+      "Apply exclusively open-text questions for all sections",
+      "Map questions to clear control statements and expected evidence types for measurable outcomes",
+      "Avoid conditional branching for practical execution in real implementations"
+    ],
+    "correctIndex": 2,
+    "explanation": "Control-mapped questions with evidence expectations make submissions clearer and easier to score.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/design-vendor-risk-questionnaire.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 12,
+    "prompt": "A team wants shorter assessments for low-risk suppliers. What should they configure?",
+    "choices": [
+      "Disable questionnaires entirely for practical execution across operational workflows",
+      "Apply tier-based questionnaire templates with scoped sections by vendor risk level",
+      "Require full audits for all suppliers across operational workflows",
+      "Manually rewrite each questionnaire before sending under governance oversight"
+    ],
+    "correctIndex": 1,
+    "explanation": "Tiered templates scale assessment depth according to inherent vendor risk and business criticality.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/concept/vendor-assessment-templates.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 13,
+    "prompt": "What is the best follow-up when a vendor provides incomplete questionnaire responses?",
+    "choices": [
+      "Close the assessment and wait for renewal for measurable outcomes",
+      "Initiate remediation or clarification tasks tied to unanswered or weak controls for practical execution",
+      "Delete the questionnaire instance under governance oversight",
+      "Mark all unanswered controls as compliant across operational workflows"
+    ],
+    "correctIndex": 1,
+    "explanation": "Incomplete or weak responses require tracked follow-up to close evidence gaps before risk acceptance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/review-vendor-assessment-results.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 14,
+    "prompt": "How should organizations handle recurring annual vendor questionnaires?",
+    "choices": [
+      "Recreate every assessment manually in real implementations",
+      "Skip reassessments if no incidents occurred in enterprise contexts",
+      "Assess exclusively vendors that changed legal name",
+      "Automate reassessment schedules and reuse approved templates with updated control content under governance oversight"
+    ],
+    "correctIndex": 3,
+    "explanation": "Scheduled reassessments with maintained templates improve consistency and reduce operational overhead.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/schedule-vendor-reassessments.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 15,
+    "prompt": "In TPRM, what does inherent risk represent?",
+    "choices": [
+      "The well-defined baseline level of risk posed by a vendor relationship before control evaluation",
+      "The well-defined remaining risk after all controls are validated",
+      "A score assigned exclusively to inactive vendors",
+      "Exclusively financial risk after contract signing in real implementations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Inherent risk estimates exposure based on vendor activity, data use, and criticality before mitigation is considered.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/concept/inherent-risk.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 16,
+    "prompt": "Which input is most relevant when calculating vendor inherent risk?",
+    "choices": [
+      "Number of dashboard widgets across operational workflows",
+      "The well-defined assessor's tenure in enterprise contexts",
+      "Whether the vendor supports critical services and handles regulated data in real implementations",
+      "Case assignment group color in enterprise contexts"
+    ],
+    "correctIndex": 2,
+    "explanation": "Service criticality and sensitive data handling are core inherent risk drivers in vendor relationships.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/configure-inherent-risk-criteria.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 17,
+    "prompt": "Why should inherent risk scoring be standardized across business units?",
+    "choices": [
+      "To clearly avoid reassessments entirely under governance oversight",
+      "To clearly eliminate questionnaire usage across operational workflows",
+      "To clearly support consistent triage thresholds and comparable vendor oversight decisions",
+      "To clearly remove business context from assessments"
+    ],
+    "correctIndex": 2,
+    "explanation": "A shared scoring model improves consistency and fairness in how vendors are evaluated and escalated.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/standardize-vendor-risk-methodology.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 18,
+    "prompt": "A vendor provides low-impact office supplies with no data access. What inherent risk outcome is most likely?",
+    "choices": [
+      "High inherent risk requiring full control assessment in real implementations",
+      "Automatic residual risk acceptance in enterprise contexts",
+      "Low inherent risk, often eligible for streamlined due diligence across operational workflows",
+      "Critical risk requiring board approval under governance oversight"
+    ],
+    "correctIndex": 2,
+    "explanation": "Low criticality and no sensitive data handling generally result in lower inherent risk classification.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/classify-vendors-by-inherent-risk.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 19,
+    "prompt": "What governance step best improves trust in inherent risk ratings?",
+    "choices": [
+      "Review scoring criteria periodically with risk, legal, and business stakeholders in enterprise contexts",
+      "Allow individual analysts to change criteria ad hoc in real implementations",
+      "Skip documentation for scoring rationale under governance oversight",
+      "Apply exclusively vendor self-attested labels across operational workflows"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cross-functional review keeps inherent risk criteria aligned with current regulatory and operational realities.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/review-vendor-risk-scoring-model.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 20,
+    "prompt": "In TPRM, what does residual risk represent?",
+    "choices": [
+      "Risk assigned exclusively to terminated vendors under governance oversight",
+      "The well-defined number of open questionnaires across operational workflows",
+      "Risk remaining after evaluating control effectiveness and mitigation actions in enterprise contexts",
+      "Risk before any controls are reviewed in real implementations"
+    ],
+    "correctIndex": 2,
+    "explanation": "Residual risk reflects post-control exposure and informs acceptance, monitoring, or additional remediation decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/concept/residual-risk.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 21,
+    "prompt": "What outcome indicates that control evidence materially reduced vendor risk?",
+    "choices": [
+      "Residual risk score decreases from inherent baseline with documented rationale across operational workflows",
+      "All vendors are set to medium risk under governance oversight",
+      "Questionnaires are archived without review for practical execution",
+      "Inherent risk is deleted for measurable outcomes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Residual scoring should show measurable reduction when controls are validated and effective.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/calculate-residual-risk.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 22,
+    "prompt": "When residual risk remains above tolerance, what is the best governance action?",
+    "choices": [
+      "Document and approve risk treatment plans or formal acceptance through authorized stakeholders in enterprise contexts",
+      "Disable risk scoring for that vendor in real implementations",
+      "Close the assessment as complete with no follow-up for measurable outcomes",
+      "Reset the vendor to low risk manually for practical execution"
+    ],
+    "correctIndex": 0,
+    "explanation": "High residual risk requires governed decisions: additional mitigation, escalation, or explicit risk acceptance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/manage-risk-treatment-plans.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 23,
+    "prompt": "Why should residual risk evaluations be time-bound and revisited?",
+    "choices": [
+      "Vendor contexts and threats change, so accepted risk posture can become outdated in real implementations",
+      "Annual reassessment is prohibited in enterprise contexts",
+      "Residual risk never changes after first assessment for practical execution",
+      "Exclusively procurement can review risk for measurable outcomes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Risk is dynamic, so residual decisions require periodic validation against changing control and threat conditions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/schedule-residual-risk-reviews.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 24,
+    "prompt": "What reporting view best supports executive oversight of residual vendor risk?",
+    "choices": [
+      "Dashboard showing residual risk distribution, exceptions, and aging treatment plans in enterprise contexts",
+      "Knowledge article feedback trend in real implementations",
+      "Hardware warranty expiration report under governance oversight",
+      "List of inactive users across operational workflows"
+    ],
+    "correctIndex": 0,
+    "explanation": "Leadership needs visibility into residual concentration, unresolved exceptions, and mitigation progress.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/report-on-residual-vendor-risk.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 25,
+    "prompt": "In Third-Party Risk Management, what is the main reason to require documentary evidence on inherent risk questionnaires?",
+    "choices": [
+      "To clearly bypass due diligence workflows for low spend vendors",
+      "To clearly replace the need for control testing entirely",
+      "To clearly reduce the number of vendor contacts required",
+      "To clearly validate questionnaire responses with auditable proof before downstream decisions"
+    ],
+    "correctIndex": 3,
+    "explanation": "Evidence attachments support defensible risk decisions by validating that vendor claims are backed by objective documentation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 26,
+    "prompt": "Which evidence requirement best improves assessor confidence for a vendor claiming strong access controls?",
+    "choices": [
+      "A well-defined commitment to provide evidence after contract signature",
+      "A well-defined marketing brochure describing security innovation",
+      "An well-defined unsigned vendor policy draft from three years ago",
+      "Recent control evidence such as access review records or independent assurance reports for practical execution"
+    ],
+    "correctIndex": 3,
+    "explanation": "Current and verifiable control artifacts provide stronger assurance than forward-looking statements or marketing content.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/task/t_CreateVendorAssessmentQuestionnaire.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 27,
+    "prompt": "How should a TPRM team handle missing evidence for responses marked as high assurance?",
+    "choices": [
+      "Auto-approve to maintain assessment SLA across operational workflows",
+      "Downgrade assurance confidence and trigger follow-up tasks before final risk acceptance under governance oversight",
+      "Delete unanswered questions from scoring in real implementations",
+      "Move the vendor directly to offboarding in enterprise contexts"
+    ],
+    "correctIndex": 1,
+    "explanation": "Missing evidence should reduce confidence and prompt remediation actions, not be ignored during assessment decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/task/t_AssessThirdPartyRisk.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 28,
+    "prompt": "What is the best governance practice for evidence collected during third-party assessments?",
+    "choices": [
+      "Attach evidence to assessment records with defined retention and reviewer accountability for measurable outcomes",
+      "Keep exclusively summary scores to minimize storage costs",
+      "Require vendors to resubmit all evidence monthly in enterprise contexts",
+      "Store files in personal mailboxes for flexibility in real implementations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Centralized, governed evidence linked to assessment artifacts improves traceability and audit readiness.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/concept/c_AssessmentLifecycleTPRM.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 29,
+    "prompt": "During an audit, which capability is most valuable for proving evidence quality in TPRM?",
+    "choices": [
+      "A well-defined documented chain from questionnaire answer to evidence artifact to decision outcome",
+      "A well-defined list of contracts without risk data",
+      "An well-defined export of unresolved incident tickets",
+      "A dashboard that exclusively shows vendor counts by region"
+    ],
+    "correctIndex": 0,
+    "explanation": "Auditors look for end-to-end traceability connecting declared control posture, supporting evidence, and resulting risk decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management-workspace.html"
+    ]
+  }
+]

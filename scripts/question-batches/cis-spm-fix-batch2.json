@@ -1,0 +1,512 @@
+[
+  {
+    "trackCode": "CIS-SPM",
+    "order": 30,
+    "prompt": "What is the main purpose of demand management in SPM?",
+    "choices": [
+      "Track software entitlement consumption under governance oversight",
+      "Capture, evaluate, and prioritize incoming work against strategic and capacity constraints across operational workflows",
+      "Automatically fund every submitted request in enterprise contexts",
+      "Replace project governance with incident workflows in real implementations"
+    ],
+    "correctIndex": 1,
+    "explanation": "Demand management creates a governed intake pipeline for strategic portfolio decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/demand-management/concept/demand-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 31,
+    "prompt": "Which intake design most improves demand decision quality?",
+    "choices": [
+      "A well-defined standardized demand form capturing business value, risk, cost, and objective alignment",
+      "A well-defined free-text form with no required fields",
+      "Email-based requests exclusively with no scoring for practical execution",
+      "Automatic approvals for repeat requesters under governance oversight"
+    ],
+    "correctIndex": 0,
+    "explanation": "Consistent structured intake improves comparability and prioritization rigor.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/demand-management/concept/demand-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 32,
+    "prompt": "A demand item has high strategic value but no delivery capacity this quarter. What is the best governance action?",
+    "choices": [
+      "Reject permanently due to current constraints under governance oversight",
+      "Place in a prioritized backlog with transparent deferral rationale across operational workflows",
+      "Convert it to an incident to speed implementation for measurable outcomes",
+      "Approve immediately and bypass capacity checks for practical execution"
+    ],
+    "correctIndex": 1,
+    "explanation": "Deferral with clear prioritization preserves strategic intent while respecting capacity limits.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/demand-management/concept/demand-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/concept/spm-workspace.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 33,
+    "prompt": "Which anti-pattern most harms demand management governance?",
+    "choices": [
+      "Focus on reviewing demand scoring during portfolio board meetings",
+      "Focus on approving requests based on requester influence instead of scoring",
+      "Focus on tracking demand aging and disposition status",
+      "Focus on maintaining objective-linked ranking criteria under governance oversight"
+    ],
+    "correctIndex": 1,
+    "explanation": "Influence-based approvals undermine transparency and strategic prioritization discipline.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/demand-management/concept/demand-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 34,
+    "prompt": "Which KPI best indicates healthy demand management operations?",
+    "choices": [
+      "Number of unchanged portfolio records in enterprise contexts",
+      "Percent of approved demand aligned to strategic objectives and resourced delivery windows in real implementations",
+      "Total number of incidents created each month for measurable outcomes",
+      "Count of catalog items in the service portal for practical execution"
+    ],
+    "correctIndex": 1,
+    "explanation": "Healthy demand management links approval quality to strategic alignment and delivery feasibility.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/demand-management/concept/demand-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 35,
+    "prompt": "What is the primary purpose of resource management in SPM?",
+    "choices": [
+      "Balance people capacity and demand so strategic work is realistically deliverable in real implementations",
+      "Assign resources based exclusively on team availability without prioritization",
+      "Track software license consumption for practical execution",
+      "Replace project planning with incident queues for measurable outcomes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Resource management aligns staffing capacity with portfolio priorities to improve delivery outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/concept/spm-workspace.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 36,
+    "prompt": "Which scenario indicates a resource management imbalance?",
+    "choices": [
+      "Demand scoring criteria mapped to objectives in enterprise contexts",
+      "Portfolio board reviews held on schedule in real implementations",
+      "Initiative benefits tracked quarterly under governance oversight",
+      "High-priority initiatives repeatedly delayed due to over-allocated shared roles across operational workflows"
+    ],
+    "correctIndex": 3,
+    "explanation": "Repeated delays on strategic work often indicate unresolved capacity bottlenecks.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/program-management/concept/program-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 37,
+    "prompt": "What is the best governance response when capacity cannot meet all approved demand?",
+    "choices": [
+      "Approve all demands and extend timelines indefinitely for practical execution",
+      "Pause objective tracking until more resources are hired for measurable outcomes",
+      "Convert deferred demands into incidents in real implementations",
+      "Reprioritize work by strategic contribution and adjust staffing plans transparently in enterprise contexts"
+    ],
+    "correctIndex": 3,
+    "explanation": "Transparent reprioritization maintains strategic integrity when constraints require trade-offs.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/demand-management/concept/demand-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 38,
+    "prompt": "Which anti-pattern most weakens SPM resource planning accuracy?",
+    "choices": [
+      "Focus on maintaining role-based capacity plans for measurable outcomes",
+      "With current allocation and forecast capacity data",
+      "Focus on ignoring non-project operational commitments in capacity forecasts",
+      "Focus on reviewing dependencies during portfolio planning"
+    ],
+    "correctIndex": 2,
+    "explanation": "Excluding operational work from forecasts overstates available capacity and causes planning errors.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/program-management/concept/program-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 39,
+    "prompt": "Which KPI best indicates improving resource management maturity?",
+    "choices": [
+      "Higher number of unassigned demands across operational workflows",
+      "Reduction in critical-role overallocation and fewer priority initiative delays under governance oversight",
+      "Increase in emergency demand submissions in real implementations",
+      "Longer backlog aging across all portfolios in enterprise contexts"
+    ],
+    "correctIndex": 1,
+    "explanation": "Lower overallocation and reduced delay on strategic work indicate healthier resource governance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/concept/spm-workspace.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 40,
+    "prompt": "In SPM, what is the main purpose of roadmap management?",
+    "choices": [
+      "Sequence strategic initiatives over time with dependency and capacity awareness for practical execution",
+      "Manage exclusively completed projects in enterprise contexts",
+      "Track software entitlement metrics across operational workflows",
+      "Replace demand management and portfolio governance controls under governance oversight"
+    ],
+    "correctIndex": 0,
+    "explanation": "Roadmaps translate strategy into a time-phased execution plan across portfolios.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/concept/spm-workspace.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 41,
+    "prompt": "Which roadmap practice most improves executive decision quality?",
+    "choices": [
+      "Plan all initiatives at the same priority level for measurable outcomes",
+      "Freeze roadmap updates for the fiscal year for practical execution",
+      "Maintain dependency-aware milestones linked to strategic objectives and forecast updates under governance oversight",
+      "Hide delivery risks until release dates across operational workflows"
+    ],
+    "correctIndex": 2,
+    "explanation": "Dependency-aware, objective-linked roadmaps support realistic trade-off decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/program-management/concept/program-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 42,
+    "prompt": "A major roadmap milestone is at risk due to a shared team bottleneck. What is the best SPM action?",
+    "choices": [
+      "Ignore the risk until the quarter closes across operational workflows",
+      "Update roadmap scenarios and re-sequence dependent work with governance review",
+      "Shift funding to unrelated initiatives for practical execution",
+      "Convert affected initiatives to low priority automatically for measurable outcomes"
+    ],
+    "correctIndex": 1,
+    "explanation": "Scenario-based re-sequencing preserves transparency and helps minimize downstream delivery impact.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/concept/spm-workspace.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 43,
+    "prompt": "Which anti-pattern most weakens roadmap credibility?",
+    "choices": [
+      "Focus on linking roadmap items to strategic outcomes",
+      "Focus on keeping roadmap dates static even when delivery evidence changes",
+      "Focus on capturing dependency risks in governance reviews",
+      "Regularly reforecasting milestones with variance commentary for practical execution"
+    ],
+    "correctIndex": 1,
+    "explanation": "Roadmaps must reflect current execution evidence to remain useful for governance decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/program-management/concept/program-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 44,
+    "prompt": "Which KPI combination best indicates roadmap governance maturity?",
+    "choices": [
+      "More roadmap items without owners in real implementations",
+      "Longer decision cycle time for priority changes in enterprise contexts",
+      "High milestone predictability, reduced dependency-driven slippage, and objective-linked delivery progress for practical execution",
+      "Increased count of unscored demand submissions for measurable outcomes"
+    ],
+    "correctIndex": 2,
+    "explanation": "Mature roadmap governance combines forecast reliability, dependency control, and strategic traceability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 45,
+    "prompt": "In SPM, what is the best reason to use strategic goals as a parent structure for initiatives?",
+    "choices": [
+      "To clearly store vendor software entitlement counts",
+      "To clearly connect delivery investments to measurable business outcomes",
+      "To clearly replace project demand records entirely",
+      "To clearly bypass portfolio governance reviews across operational workflows"
+    ],
+    "correctIndex": 1,
+    "explanation": "Goal-to-initiative alignment provides traceability from strategy to execution and enables value-based prioritization.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/concept/spm-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/enterprise-agile-planning/concept/goals-and-initiatives.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 46,
+    "prompt": "Which relationship in SPM most directly supports strategic true-up discussions with executives?",
+    "choices": [
+      "Focus on mapping initiatives to outcomes, KPIs, and funded work",
+      "Connecting catalog items to hardware models exclusively",
+      "Focus on linking incidents to discovery schedules",
+      "Associating approvals exclusively to assignment groups in enterprise contexts"
+    ],
+    "correctIndex": 0,
+    "explanation": "Strategic true-up requires visibility into whether funded initiatives are producing intended outcomes and KPI movement.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 47,
+    "prompt": "A portfolio office wants quarterly strategy audits. Which SPM configuration helps most?",
+    "choices": [
+      "Apply periodic initiative reviews with standardized progress, risk, and benefit capture",
+      "Allow each business unit to define unique stage names with no mapping in real implementations",
+      "Track strategy outside the platform in presentation files under governance oversight",
+      "Disable initiative status workflows across operational workflows"
+    ],
+    "correctIndex": 0,
+    "explanation": "Consistent periodic reviews produce comparable evidence for governance and strategic audit readiness.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/task/review-initiative-progress.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/task/manage-portfolio-work.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 48,
+    "prompt": "Which anti-pattern most weakens SPM goals and initiatives governance?",
+    "choices": [
+      "Focus on maintaining active dependency and risk tracking",
+      "Focus on creating initiatives without measurable outcomes or success criteria",
+      "Focus on defining baseline and target KPI values",
+      "With initiative owners with clear accountability for measurable outcomes"
+    ],
+    "correctIndex": 1,
+    "explanation": "Without measurable outcomes, initiatives cannot be objectively evaluated for strategic value or continuation decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/goals-framework.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/initiatives.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 49,
+    "prompt": "What is the strongest indicator that initiative true-up is functioning well in SPM?",
+    "choices": [
+      "Executive review meetings held without portfolio data for measurable outcomes",
+      "Regular reforecasting with transparent variance explanations and decision outcomes for practical execution",
+      "No updates to initiative forecasts during the fiscal year under governance oversight",
+      "Exclusively qualitative status notes with no metric references"
+    ],
+    "correctIndex": 1,
+    "explanation": "Healthy true-up includes data-driven reforecasting, clear variance context, and explicit governance decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/concept/spm-workspace.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 50,
+    "prompt": "What is the main value of Portfolio Workspace in SPM?",
+    "choices": [
+      "A well-defined replacement for CMDB dependency mapping",
+      "A tool used exclusively for service catalog approvals",
+      "A well-defined portal exclusively for software entitlement imports",
+      "A well-defined unified view to prioritize investments, monitor health, and drive portfolio decisions"
+    ],
+    "correctIndex": 3,
+    "explanation": "Portfolio Workspace centralizes decision-making context across demand, delivery, risk, and value dimensions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/concept/spm-workspace.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 51,
+    "prompt": "Which Portfolio Workspace practice best supports lifecycle governance from idea to outcome?",
+    "choices": [
+      "Apply stage gates with criteria for advancing demands, initiatives, and investments",
+      "Allow stage transitions without approvals under governance oversight",
+      "Track lifecycle progress exclusively in slide decks",
+      "Keep all records permanently in draft state for measurable outcomes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Stage gates enforce consistent governance and reduce portfolio drift by requiring evidence at each transition.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/task/configure-stage-gates.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/task/manage-portfolio-work.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 52,
+    "prompt": "A PMO wants faster reallocation of budget between portfolios. Which Portfolio Workspace capability helps most?",
+    "choices": [
+      "Cross-portfolio financial views and scenario-based funding comparisons for measurable outcomes",
+      "Incident assignment rules by service desk shift for practical execution",
+      "CMDB class hierarchy visualizations under governance oversight",
+      "Endpoint credential rotation schedules across operational workflows"
+    ],
+    "correctIndex": 0,
+    "explanation": "Financial and scenario views enable comparative decisions on where funds should move for highest strategic return.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-financials.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/scenario-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 53,
+    "prompt": "Which anti-pattern most reduces confidence in Portfolio Workspace decisions?",
+    "choices": [
+      "Focus on operating with stale data and infrequent health updates",
+      "Focus on reviewing dependency risk during prioritization",
+      "With consistent scoring criteria across portfolios in real implementations",
+      "Focus on tracking realization against planned outcomes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Decisions are only as good as portfolio data quality and recency; stale status creates false priorities.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/concept/spm-workspace.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/data-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 54,
+    "prompt": "What KPI set is most appropriate for Portfolio Workspace leadership dashboards?",
+    "choices": [
+      "Count of archived change requests by month in enterprise contexts",
+      "Investment health, value delivery, financial variance, and strategic alignment coverage in real implementations",
+      "Database index fragmentation and node uptime under governance oversight",
+      "Total number of incident assignments per analyst across operational workflows"
+    ],
+    "correctIndex": 1,
+    "explanation": "These KPIs combine delivery execution, value realization, and strategic fit for informed portfolio steering.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/task/configure-workspace-dashboards.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 55,
+    "prompt": "How do usage analytics improve SPM investment governance?",
+    "choices": [
+      "They quantify adoption and benefit signals used to continue, pivot, or stop investments for practical execution",
+      "They eliminate the need for project status updates for measurable outcomes",
+      "They disable strategic goals during execution in real implementations",
+      "They replace demand intake criteria in enterprise contexts"
+    ],
+    "correctIndex": 0,
+    "explanation": "Adoption and value evidence helps portfolio leaders make objective lifecycle decisions about investments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/performance-analytics/concept/performance-analytics-in-spm.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 56,
+    "prompt": "Which scenario planning approach best supports portfolio trade-off decisions in SPM?",
+    "choices": [
+      "Choose initiatives based exclusively on loudest executive request",
+      "Apply project manager preference as core ranking input",
+      "Compare multiple funding and capacity scenarios against strategic outcomes and constraints under governance oversight",
+      "Lock all forecasts at fiscal year start with no variance updates across operational workflows"
+    ],
+    "correctIndex": 2,
+    "explanation": "Scenario analysis enables transparent trade-offs by testing alternative allocations against strategy and capacity limits.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/scenario-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 57,
+    "prompt": "A portfolio board wants to model a 10% budget cut. What is the most useful SPM output?",
+    "choices": [
+      "Incident SLA history for the service desk across operational workflows",
+      "Scenario comparison showing impacted initiatives, strategic value at risk, and capacity shifts under governance oversight",
+      "Normalized software model lifecycle reports in real implementations",
+      "Catalog request approval logs by month in enterprise contexts"
+    ],
+    "correctIndex": 1,
+    "explanation": "Decision-makers need visibility into value loss and capacity effects, not only cost totals, when modeling budget cuts.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/task/run-strategic-scenarios.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/concept/spm-workspace.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 58,
+    "prompt": "Which anti-pattern most harms SPM scenario planning quality?",
+    "choices": [
+      "Focus on capturing dependencies and risks in model inputs",
+      "Focus on building scenarios from stale financial and delivery data",
+      "Focus on reviewing scenario outcomes with stakeholders",
+      "With shared assumptions for cost and capacity"
+    ],
+    "correctIndex": 1,
+    "explanation": "Poor data freshness leads to misleading scenarios and weak portfolio decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/scenario-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/data-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 59,
+    "prompt": "Which KPI set best indicates scenario planning is mature in SPM?",
+    "choices": [
+      "Decision cycle time, forecast variance reduction, and realized value alignment to selected scenario for practical execution",
+      "Count of reopened low-priority incidents for measurable outcomes",
+      "Age of inactive user accounts in LDAP in real implementations",
+      "Total number of UI actions in workspace forms in enterprise contexts"
+    ],
+    "correctIndex": 0,
+    "explanation": "These KPIs show both planning efficiency and whether chosen scenarios produce expected strategic results.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/performance-analytics/concept/performance-analytics-in-spm.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  }
+]

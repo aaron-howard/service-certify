@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 40,
+		"prompt": "Why is the Change Advisory Board (CAB) configured in Simplified Change Management?",
+		"choices": [
+			"To define who reviews and approves significant changes before they are implemented",
+			"To auto-close Resolved incidents after the configured autoclose interval",
+			"To replace CMDB identification and reconciliation rules entirely",
+			"To generate catalog variables on record producers automatically"
+		],
+		"correctIndex": 0,
+		"explanation": "CAB setup identifies members who review and approve significant changes as part of governed Change Management.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/configure-cab-change-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 41,
+		"prompt": "What is the CAB workbench used for in Change Management?",
+		"choices": [
+			"Discovering configuration items using MID Server schedules only",
+			"Reviewing and authorizing change requests and reviewing recently implemented changes",
+			"Managing software license compliance counters for enterprise agreements",
+			"Publishing known error articles without linking them to problem records"
+		],
+		"correctIndex": 1,
+		"explanation": "The CAB workbench supports CAB meeting workflows to review, authorize, and retrospectively assess change requests.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/change-management/using-cab-workbench-cf.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 42,
+		"prompt": "When risk assessment is configured for Simplified Change Management, how is a submitted change request routed?",
+		"choices": [
+			"Manually by the caller's department manager for every request regardless of score",
+			"Based on the total risk assessment score mapped to Low, Moderate, or High approval workflows",
+			"By alphabetical order of the change short description field only",
+			"Using the incident priority matrix without evaluating change-specific questions"
+		],
+		"correctIndex": 1,
+		"explanation": "Risk survey answers produce a score that maps to risk levels and automatically routes the change to the matching approval workflow.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/configure-risk-change-mgmt.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 43,
+		"prompt": "In the normal change state model, what happens during the Authorize state?",
+		"choices": [
+			"The change is closed after post-implementation review is complete",
+			"Peer review and technical approval of change details are performed",
+			"Change Management and the CAB schedule the change and provide final authorization to proceed",
+			"The planned start date has arrived and implementation work is actively underway"
+		],
+		"correctIndex": 2,
+		"explanation": "Assess covers peer and technical approval; Authorize is where Change Management and the CAB schedule and authorize the change before Scheduled and Implement states.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/change-management/c_ChangeStateModel.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 44,
+		"prompt": "When an approver grants a pending change request approval, which state does the change request typically enter?",
+		"choices": [
+			"Scheduled",
+			"Canceled",
+			"Closed",
+			"New"
+		],
+		"correctIndex": 0,
+		"explanation": "Approved change requests move to Scheduled; rejected approvals return the change request to New.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/change-management/t_ProcessAChangeRequest.html"
+		]
+	}
+]

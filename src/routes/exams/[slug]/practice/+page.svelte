@@ -36,12 +36,16 @@
 		prompt: string;
 		choices: string[];
 		permutation: number[];
+		questionType: 'single' | 'multi';
 	};
 
 	type GradeResult = {
 		order: number;
 		selectedIndex: number;
+		selectedIndexes: number[];
 		correctIndex: number;
+		correctIndexes: number[];
+		questionType: 'single' | 'multi';
 		isCorrect: boolean;
 		explanation: string;
 	};
@@ -50,7 +54,12 @@
 		typeof env.PUBLIC_CONVEX_URL === 'string' && env.PUBLIC_CONVEX_URL.length > 0;
 
 	function toDisplayQuestions(
-		rows: { order: number; prompt: string; choices: string[] }[]
+		rows: {
+			order: number;
+			prompt: string;
+			choices: string[];
+			questionType?: 'single' | 'multi';
+		}[]
 	): Q[] {
 		return rows.map((r) => {
 			const { choices, permutation } = shuffleChoicesForDisplay(
@@ -58,7 +67,13 @@
 				sessionSeed,
 				r.order
 			);
-			return { id: r.order, prompt: r.prompt, choices, permutation };
+			return {
+				id: r.order,
+				prompt: r.prompt,
+				choices,
+				permutation,
+				questionType: r.questionType ?? 'single'
+			};
 		});
 	}
 
@@ -79,6 +94,7 @@
 
 	let remaining = $state(90 * 60);
 	let selected = $state<Record<number, number>>({});
+	let selectedMulti = $state<Record<number, number[]>>({});
 	let submitted = $state(false);
 	let grading = $state(false);
 	let gradeError = $state<string | null>(null);
@@ -121,18 +137,45 @@
 		return `${m}:${r.toString().padStart(2, '0')}`;
 	}
 
+	function isAnswered(q: Q): boolean {
+		return q.questionType === 'multi'
+			? (selectedMulti[q.id]?.length ?? 0) > 0
+			: selected[q.id] !== undefined;
+	}
+
+	const answeredCount = $derived(questions.filter((q) => isAnswered(q)).length);
+
 	const progressPct = $derived(
-		questions.length === 0
-			? 0
-			: Math.round((Object.keys(selected).length / questions.length) * 100)
+		questions.length === 0 ? 0 : Math.round((answeredCount / questions.length) * 100)
 	);
+
+	function toggleMulti(q: Q, displayIdx: number) {
+		const current = selectedMulti[q.id] ?? [];
+		const next = current.includes(displayIdx)
+			? current.filter((i) => i !== displayIdx)
+			: [...current, displayIdx];
+		selectedMulti = { ...selectedMulti, [q.id]: next };
+	}
 
 	function resultFor(order: number): GradeResult | undefined {
 		return gradedByOrder[order];
 	}
 
-	function displayCorrectIndex(q: Q, graded: GradeResult): number {
-		return originalIndexToDisplay(graded.correctIndex, q.permutation);
+	/** Correct choice indexes in display space for highlighting after grade. */
+	function displayCorrectIndexes(q: Q, graded: GradeResult): number[] {
+		return graded.correctIndexes.map((original) =>
+			originalIndexToDisplay(original, q.permutation)
+		);
+	}
+
+	function isChoiceCorrect(q: Q, graded: GradeResult, displayIdx: number): boolean {
+		return displayCorrectIndexes(q, graded).includes(displayIdx);
+	}
+
+	function isChoiceSelected(q: Q, displayIdx: number): boolean {
+		return q.questionType === 'multi'
+			? (selectedMulti[q.id]?.includes(displayIdx) ?? false)
+			: selected[q.id] === displayIdx;
 	}
 
 	async function submit() {
@@ -144,10 +187,23 @@
 				trackCode: exam.code,
 				mode,
 				...(isFullMock ? { sessionSeed } : {}),
-				answers: questions.map((q) => ({
-					order: q.id,
-					selectedIndex: displayIndexToOriginal(selected[q.id]!, q.permutation)
-				}))
+				answers: questions.map((q) => {
+					if (q.questionType === 'multi') {
+						const displaySel = selectedMulti[q.id] ?? [];
+						const originalSel = displaySel
+							.map((d) => displayIndexToOriginal(d, q.permutation))
+							.sort((a, b) => a - b);
+						return {
+							order: q.id,
+							selectedIndex: originalSel[0] ?? 0,
+							selectedIndexes: originalSel
+						};
+					}
+					return {
+						order: q.id,
+						selectedIndex: displayIndexToOriginal(selected[q.id]!, q.permutation)
+					};
+				})
 			};
 
 			type GradeResponse = {
@@ -262,31 +318,46 @@
 							{q.prompt}
 						</h2>
 					</div>
+					{#if q.questionType === 'multi'}
+						<p class="mb-3 text-xs font-bold uppercase tracking-wider text-secondary">
+							Select all that apply
+						</p>
+					{/if}
 					<ul class="space-y-3">
 						{#each q.choices as choice, idx}
+							{@const showCorrect = submitted && graded && isChoiceCorrect(q, graded, idx)}
+							{@const showWrong =
+								submitted &&
+								graded &&
+								isChoiceSelected(q, idx) &&
+								!isChoiceCorrect(q, graded, idx)}
 							<li>
 								<label
-									class="flex cursor-pointer items-start gap-3 rounded-lg bg-surface-container-high/80 p-4 transition-colors hover:bg-surface-container-high {submitted &&
-									graded &&
-									idx === displayCorrectIndex(q, graded)
+									class="flex cursor-pointer items-start gap-3 rounded-lg bg-surface-container-high/80 p-4 transition-colors hover:bg-surface-container-high {showCorrect
 										? 'ring-2 ring-secondary'
-										: ''} {submitted &&
-									graded &&
-									selected[q.id] === idx &&
-									idx !== displayCorrectIndex(q, graded)
-										? 'ring-2 ring-error'
-										: ''}"
+										: ''} {showWrong ? 'ring-2 ring-error' : ''}"
 								>
-									<input
-										type="radio"
-										name="q{q.id}"
-										class="mt-1 border-outline text-secondary focus:ring-secondary"
-										disabled={submitted || grading}
-										checked={selected[q.id] === idx}
-										onchange={() => {
-											selected = { ...selected, [q.id]: idx };
-										}}
-									/>
+									{#if q.questionType === 'multi'}
+										<input
+											type="checkbox"
+											name="q{q.id}"
+											class="mt-1 rounded border-outline text-secondary focus:ring-secondary"
+											disabled={submitted || grading}
+											checked={isChoiceSelected(q, idx)}
+											onchange={() => toggleMulti(q, idx)}
+										/>
+									{:else}
+										<input
+											type="radio"
+											name="q{q.id}"
+											class="mt-1 border-outline text-secondary focus:ring-secondary"
+											disabled={submitted || grading}
+											checked={selected[q.id] === idx}
+											onchange={() => {
+												selected = { ...selected, [q.id]: idx };
+											}}
+										/>
+									{/if}
 									<span class="text-sm leading-relaxed text-on-surface">{choice}</span>
 								</label>
 							</li>
@@ -316,7 +387,7 @@
 				<button
 					type="button"
 					class="rounded-md bg-secondary px-10 py-3 font-bold text-on-secondary transition-opacity hover:opacity-90 disabled:opacity-40"
-					disabled={Object.keys(selected).length < questions.length || grading}
+					disabled={answeredCount < questions.length || grading}
 					onclick={submit}
 				>
 					{grading ? 'Grading…' : 'Submit answers'}

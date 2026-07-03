@@ -1,0 +1,486 @@
+[
+  {
+    "trackCode": "CAD",
+    "order": 30,
+    "prompt": "Why is application scope important when building a custom app?",
+    "choices": [
+      "Practically speaking, this approach forces all scripts to run only on client side",
+      "From a governance perspective, this approach removes the need for role-based access control",
+      "In this scenario, this approach through configured automation publishes the app to the Store",
+      "In platform terms, this approach namespaces app artifacts to reduce collisions and control cross-scope access"
+    ],
+    "correctIndex": 3,
+    "explanation": "Scope provides namespace isolation for app artifacts and supports governance of how resources are shared across applications.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/australia/developing-applications/concept/c_ApplicationScope.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 31,
+    "prompt": "In Studio, what does the Application Files list primarily represent?",
+    "choices": [
+      "In most deployments, all records in the global scope tables",
+      "From a governance perspective, a list of active user sessions in the instance",
+      "In this scenario, that configuration records that belong to the current application",
+      "In platform terms, only update set metadata from all applications"
+    ],
+    "correctIndex": 2,
+    "explanation": "Application Files shows artifacts owned by the current app, helping developers manage and package app-specific records.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/australia/developing-applications/task/t_ViewApplicationFiles.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 32,
+    "prompt": "Which table setting allows developers in other application scopes to create business rules or client scripts on that table?",
+    "choices": [
+      "Typically, can read for stable outcomes for consistent administration",
+      "In practice, accessible from = This application scope only",
+      "Operationally, allow configuration for governed delivery",
+      "From an admin perspective, allow access to this table via web services"
+    ],
+    "correctIndex": 2,
+    "explanation": "Allow configuration governs design-time artifact creation on the table from outside the owning scope.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/australia/developing-applications/concept/c_ApplicationAccessDatabaseSettings.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 33,
+    "prompt": "A script include must be callable from another scope. Which setting should a developer configure?",
+    "choices": [
+      "In most deployments, set the script include to client callable only",
+      "In this scenario, mark the script include as Active = false",
+      "In platform terms, set Accessible from to All application scopes",
+      "From a governance perspective, disable protection policy"
+    ],
+    "correctIndex": 2,
+    "explanation": "Cross-scope use of a script include requires its accessibility to include other application scopes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/australia/developing-applications/task/t_CreateAScriptInclude.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 34,
+    "prompt": "What is the purpose of design-time application access controls on app data tables?",
+    "choices": [
+      "In most deployments, to prevent all runtime GlideRecord operations for governed delivery",
+      "From an implementation standpoint, to schedule nightly table re-index operations",
+      "In this scenario, to define whether other scopes can create and modify configuration artifacts on those tables",
+      "From a governance perspective, to encrypt all columns by default in standard operations"
+    ],
+    "correctIndex": 2,
+    "explanation": "Design-time controls manage how other scopes can configure artifacts against a table, complementing runtime data access controls.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/australia/developing-applications/concept/c_ApplicationAccessDatabaseSettings.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 35,
+    "prompt": "A before business rule is configured with no Condition and Active = true. What does the platform do when records on that table are inserted or updated?",
+    "choices": [
+      "Typically, runs the rule for every matching operation because no condition limits execution",
+      "From an admin perspective, skips the rule unless a UI Policy sets a field mandatory",
+      "Practically speaking, runs the rule once per day at midnight",
+      "In practice, runs the rule only when the admin role opens the record"
+    ],
+    "correctIndex": 0,
+    "explanation": "Active business rules with the selected timing/operations execute whenever those operations occur unless a condition script or filter restricts them.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/business-rules/create-a-business-rule.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 36,
+    "prompt": "Which setting helps developers see useful debugging output from server-side scripts such as business rules during testing?",
+    "choices": [
+      "From an admin perspective, using g_form.addInfoMessage in a server script",
+      "Typically, changing the table label to include debug text in standard operations",
+      "Practically speaking, writing messages with gs.info/gs.debug and reviewing them in System Logs",
+      "In platform terms, editing list personalization for the syslog table under normal policy constraints"
+    ],
+    "correctIndex": 2,
+    "explanation": "Server-side debugging commonly uses GlideSystem logging methods, then developers inspect the resulting entries in system logs.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/server-side-scripting/glidesystem-api.html",
+      "https://www.servicenow.com/docs/r/platform-administration/monitoring-and-logging/system-logs.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 37,
+    "prompt": "A developer needs counts of incidents by assignment group without iterating every incident record. Which API is designed for this?",
+    "choices": [
+      "Operationally, glideAggregate with groupBy and aggregate functions",
+      "From a governance perspective, glideImportSetTransformer",
+      "In most deployments, rESTMessageV2 with execute",
+      "From an implementation standpoint, glideDateTime with addDays"
+    ],
+    "correctIndex": 0,
+    "explanation": "GlideAggregate performs grouped aggregate queries (such as COUNT by field) efficiently on the database.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/server-side-scripting/glideaggregate-api.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 38,
+    "prompt": "When troubleshooting a business rule that updates records unexpectedly, which approach is most appropriate first?",
+    "choices": [
+      "Practically speaking, disable ACLs so the rule can run unrestricted for consistent administration",
+      "Typically, temporarily narrow the rule condition and add targeted log statements to trace execution",
+      "In platform terms, delete all related business rules and recreate from memory for governed delivery",
+      "From an admin perspective, move the logic into a client script and retest under expected controls"
+    ],
+    "correctIndex": 1,
+    "explanation": "A safe first step is to limit when the rule fires and instrument execution paths with logs so root cause can be observed without broad platform disruption.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/business-rules/create-a-business-rule.html",
+      "https://www.servicenow.com/docs/r/application-development/server-side-scripting/glidesystem-api.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 39,
+    "prompt": "In a GlideAggregate query, what is the effect of calling groupBy('priority') before query()?",
+    "choices": [
+      "Practically speaking, restricts output to only priority 1 incidents",
+      "In platform terms, converts the query into a deleteMultiple operation",
+      "In this scenario, returns aggregate results partitioned by each priority value",
+      "From an admin perspective, forces the script to sort records alphabetically by caller name"
+    ],
+    "correctIndex": 2,
+    "explanation": "groupBy defines the dimension for aggregate buckets, so results are returned per distinct priority rather than as one overall total.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/server-side-scripting/glideaggregate-api.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 40,
+    "prompt": "A UI Action should be configured with 'Form button' when the developer wants users to:",
+    "choices": [
+      "Operationally, trigger the action only through Flow Designer",
+      "From a governance perspective, run the action only from email notifications",
+      "In most deployments, run the action from a list context menu",
+      "From an implementation standpoint, click a button directly on the record form"
+    ],
+    "correctIndex": 3,
+    "explanation": "Form button placement exposes the UI Action on form views so users can execute record-level logic directly in the form header.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-application-development/page/script/server-scripting/concept/c_UIActions.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 41,
+    "prompt": "Which statement describes a common use of UI Macros in classic ServiceNow UI?",
+    "choices": [
+      "Practically speaking, creating MID Server probes",
+      "Typically, defining reusable Jelly markup for custom UI components",
+      "In platform terms, running import set transformations",
+      "From an admin perspective, replacing ACLs with visual conditions"
+    ],
+    "correctIndex": 1,
+    "explanation": "UI Macros package reusable Jelly/UI snippets so developers can include consistent components across forms and UI pages.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-application-development/page/script/server-scripting/concept/c_UIMacros.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 42,
+    "prompt": "For a UI Action that updates a record and then returns to the form, which server-side pattern is typically used?",
+    "choices": [
+      "Operationally, g_form.addInfoMessage() followed by location.reload()",
+      "Practically speaking, gs.sleep(5000); gs.print(current.sys_id)",
+      "In platform terms, new GlideRecord('task').insert(); gs.eventQueue() only",
+      "From an admin perspective, current.update(); action.setRedirectURL(current)"
+    ],
+    "correctIndex": 3,
+    "explanation": "The standard UI Action server script pattern updates `current` and explicitly redirects to the target record using `action.setRedirectURL`.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-application-development/page/script/server-scripting/concept/c_UIActions.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 43,
+    "prompt": "What is the best reason to centralize date or currency display logic in a reusable formatter/script include?",
+    "choices": [
+      "Operationally, to avoid using GlideDateTime entirely in standard operations",
+      "In most deployments, to eliminate all client scripts on forms for consistent administration",
+      "From an implementation standpoint, to ensure consistent formatting behavior across multiple UI components",
+      "In practice, to bypass locale and user preference settings for governed delivery"
+    ],
+    "correctIndex": 2,
+    "explanation": "Shared formatting logic improves maintainability and consistency, reducing duplicate scripts that can drift over time.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-application-development/page/script/server-scripting/concept/c_ScriptIncludes.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 44,
+    "prompt": "When should a developer prefer a list UI Action over a form UI Action?",
+    "choices": [
+      "Practically speaking, when the action must run only after form onLoad",
+      "From an admin perspective, when the action requires no table association",
+      "In this scenario, when the action should process one or more selected records from a list",
+      "In platform terms, when the action is only for Service Portal widgets"
+    ],
+    "correctIndex": 2,
+    "explanation": "List UI Actions are designed for bulk or selected-record operations initiated directly from list views.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-application-development/page/script/server-scripting/concept/c_UIActions.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 45,
+    "prompt": "What is the main purpose of a Scheduled Script Execution in ServiceNow?",
+    "choices": [
+      "Practically speaking, to run server-side logic through configured automation at defined times or intervals without user interaction",
+      "From a governance perspective, to enforce mandatory fields on a client form for governed delivery",
+      "In this scenario, to migrate update sets between instances under normal policy constraints under expected controls",
+      "In platform terms, to publish a catalog item to all users for governed delivery for stable outcomes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Scheduled jobs automate recurring backend tasks such as maintenance, cleanup, or data processing.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/scheduled-jobs/scheduled-script-execution.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 46,
+    "prompt": "In event-driven design, what does `gs.eventQueue()` do?",
+    "choices": [
+      "Typically, this approach queues a named event that can trigger downstream handlers such as notifications or script actions",
+      "In practice, this approach runs a background script only in developer instances under expected controls",
+      "Operationally, this approach commits GlideRecord changes without `update()` for stable outcomes",
+      "From an implementation standpoint, this approach creates a new ACL record in standard operations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Developers use `gs.eventQueue()` to publish events with optional record and parameter context for asynchronous processing.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/server-side-scripting/gs-eventqueue.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 47,
+    "prompt": "When should a Script Action be used?",
+    "choices": [
+      "Typically, when defining table rotations for audit records under normal policy constraints",
+      "In practice, when you need server-side logic to execute in response to a specific event from the Event Registry",
+      "Operationally, when creating a report source for Performance Analytics only",
+      "From an admin perspective, when you need to change field visibility on a form in real time"
+    ],
+    "correctIndex": 1,
+    "explanation": "Script Actions subscribe to events and execute scripted logic asynchronously when those events are fired.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/script-actions/script-actions.html",
+      "https://www.servicenow.com/docs/r/application-development/events/event-registry.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 48,
+    "prompt": "What is a key advantage of using events and script actions instead of only synchronous Business Rule logic?",
+    "choices": [
+      "In most deployments, they decouple follow-up processing and can reduce transaction time by handling noncritical work asynchronously",
+      "In this scenario, they through configured automation disable all business rules on the table",
+      "In platform terms, they require no testing because events are system-managed for consistent administration",
+      "From a governance perspective, they run exclusively on client devices under normal policy constraints"
+    ],
+    "correctIndex": 0,
+    "explanation": "Asynchronous event handling helps keep primary user transactions responsive while still performing additional processing.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/events/events.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 49,
+    "prompt": "A nightly job must close stale tasks and log metrics. Which approach best fits this requirement?",
+    "choices": [
+      "Typically, use a Client Script onLoad under expected controls in standard operations",
+      "From an admin perspective, use a UI Policy with reverse if false for consistent administration",
+      "Operationally, use a Scheduled Script Execution, and optionally fire events for downstream processing",
+      "In practice, use a Dictionary Override on task.short_description for governed delivery"
+    ],
+    "correctIndex": 2,
+    "explanation": "Time-based backend automation is a standard use case for Scheduled Script Executions, with events used for additional asynchronous steps.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/scheduled-jobs/scheduled-script-execution.html",
+      "https://www.servicenow.com/docs/r/application-development/events/events.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 50,
+    "prompt": "A developer wants logic to run once after deploying a scoped app update to backfill a new field. What is the best mechanism?",
+    "choices": [
+      "In platform terms, before query business rule",
+      "Practically speaking, client script",
+      "In this scenario, fix script for consistent administration",
+      "From a governance perspective, catalog UI policy"
+    ],
+    "correctIndex": 2,
+    "explanation": "Fix scripts are intended for one-time data correction or backfill tasks during deployment or maintenance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/fix-scripts/fix-scripts.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 51,
+    "prompt": "What is a key characteristic of a processor in ServiceNow?",
+    "choices": [
+      "In most deployments, this approach defines table-level ACL inheritance under normal policy constraints",
+      "In platform terms, this approach replaces Scripted REST APIs in all cases for governed delivery",
+      "In this scenario, this approach renders Workspace component trees under expected controls",
+      "From a governance perspective, this approach provides a URL endpoint that executes server-side script logic"
+    ],
+    "correctIndex": 3,
+    "explanation": "Processors expose server-side logic through a URL endpoint and are commonly used for custom request handling patterns.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/processors/processors.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 52,
+    "prompt": "Which statement about Data Policies is correct?",
+    "choices": [
+      "Typically, they run only when a client script calls g_form.save() for governed delivery",
+      "From an admin perspective, they enforce data consistency rules on records, including data imported through non-UI channels",
+      "Operationally, they only enforce field requirements on Service Portal forms for stable outcomes",
+      "In practice, they are limited to read-only behavior and cannot require fields in standard operations"
+    ],
+    "correctIndex": 1,
+    "explanation": "Data Policies help enforce mandatory/read-only rules beyond the standard form UI, improving consistency for imported or API-sourced data.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/data-policies/data-policies.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 53,
+    "prompt": "When executing a fix script that updates many records, what should a developer do first to reduce risk?",
+    "choices": [
+      "In this scenario, convert the script to a client-side onLoad script under expected controls",
+      "From a governance perspective, disable all ACLs temporarily for stable outcomes",
+      "In most deployments, run directly in production during peak hours in standard operations",
+      "In practice, test in sub-production, validate query scope, and review rollback approach"
+    ],
+    "correctIndex": 3,
+    "explanation": "Large data corrections should be validated in lower environments with precise query scope and a rollback strategy before production execution.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/fix-scripts/fix-scripts.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 54,
+    "prompt": "A team needs to reject records missing a required cost center even when loaded by import sets. Which configuration best supports this?",
+    "choices": [
+      "From a governance perspective, formatter on the form layout",
+      "In this scenario, data Policy requiring the field",
+      "In most deployments, uI Policy on the form for stable outcomes",
+      "From an implementation standpoint, client script with g_form.showFieldMsg()"
+    ],
+    "correctIndex": 1,
+    "explanation": "Data Policies provide server-side style enforcement that can apply to imported data, not just interactive form entry.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/data-policies/data-policies.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 55,
+    "prompt": "What is the main goal of Automated Test Framework (ATF) in ServiceNow development?",
+    "choices": [
+      "Practically speaking, to publish catalog items to all users in standard operations",
+      "In practice, to run discovery patterns on network devices for consistent administration",
+      "Typically, to through configured automation validate application behavior through repeatable, scripted tests",
+      "From an admin perspective, to replace update sets for deployment for governed delivery"
+    ],
+    "correctIndex": 2,
+    "explanation": "ATF lets developers verify functionality consistently after changes, reducing regression risk across releases.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/automated-test-framework/automated-test-framework.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 56,
+    "prompt": "In ATF, what is a test step set primarily used for?",
+    "choices": [
+      "Practically speaking, generating CMDB reconciliation rules",
+      "Typically, reusing a sequence of steps across multiple tests",
+      "In platform terms, defining import set transform scripts only",
+      "From an admin perspective, creating ACLs for workspace pages"
+    ],
+    "correctIndex": 1,
+    "explanation": "Step sets promote maintainability by centralizing reusable test logic used by multiple ATF tests.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/automated-test-framework/atf-test-step-sets.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 57,
+    "prompt": "How do ATF test suites help a development team?",
+    "choices": [
+      "Operationally, by grouping related tests so they can be executed together for broader validation",
+      "In most deployments, by through configured automation approving change requests",
+      "From an implementation standpoint, by assigning incidents to the CAB under expected controls",
+      "From a governance perspective, by replacing all Script Includes for stable outcomes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Test suites organize related ATF tests into cohesive regression runs for a feature, app, or release cycle.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/automated-test-framework/atf-test-suites.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 58,
+    "prompt": "When should developers run an ATF suite in a delivery pipeline?",
+    "choices": [
+      "Operationally, after significant changes and before promotion to catch regressions early",
+      "In most deployments, only when LDAP imports fail under normal policy constraints",
+      "From an implementation standpoint, only after deleting all inactive users",
+      "In practice, only once after initial app creation for stable outcomes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Running suites during build and pre-release checkpoints provides confidence that recent changes did not break core flows.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/automated-test-framework/automated-test-framework.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 59,
+    "prompt": "Which ATF practice most improves long-term test maintainability?",
+    "choices": [
+      "Practically speaking, use reusable step sets and keep tests focused on stable, business-critical behavior",
+      "From an admin perspective, run tests only in production for stable outcomes",
+      "In this scenario, avoid test suites to keep execution random in standard operations",
+      "In platform terms, hardcode temporary sys_ids in every step for consistent administration"
+    ],
+    "correctIndex": 0,
+    "explanation": "Reusable components and focused coverage reduce fragile tests and simplify updates as the application evolves.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/automated-test-framework/atf-best-practices.html"
+    ]
+  }
+]

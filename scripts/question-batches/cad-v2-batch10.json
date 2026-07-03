@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CAD",
+		"order": 45,
+		"prompt": "You want to test an ACL you just created. Which approach lets you verify access as a non-admin user?",
+		"choices": [
+			"Impersonate a user with the relevant role and attempt the operation",
+			"Delete all other ACLs on the table first",
+			"Disable the login page",
+			"Convert the table to global scope"
+		],
+		"correctIndex": 0,
+		"explanation": "Impersonating a representative user lets you confirm that the ACL grants or denies access as intended without using admin privileges.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/access-control-rules.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 46,
+		"prompt": "Which statement about the admin role and ACLs is correct?",
+		"choices": [
+			"The admin role satisfies role requirements in most ACLs, effectively bypassing role checks",
+			"The admin role is always denied by ACLs",
+			"ACLs ignore the admin role entirely",
+			"Only guests can pass ACL role checks"
+		],
+		"correctIndex": 0,
+		"explanation": "Users with the admin role generally satisfy ACL role requirements, so admins can perform most operations regardless of specific roles.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/access-control-rules.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 47,
+		"prompt": "To debug why a user cannot see a field, which tool shows how ACLs were evaluated for that user?",
+		"choices": [
+			"Enable Debug Security (Access Control debugging) and impersonate the user",
+			"Run a scheduled job report",
+			"Open the transform map history",
+			"Check the MID Server log"
+		],
+		"correctIndex": 0,
+		"explanation": "Access Control (Security) debugging displays which ACLs were checked and their pass/fail results while impersonating the user.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/access-control-rules.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 48,
+		"prompt": "Why should new custom tables be created in a scoped application rather than global?",
+		"choices": [
+			"Scope isolates the table's data and logic, reducing the risk of unintended cross-application changes",
+			"Global scope encrypts all fields automatically",
+			"Scoped tables cannot be reported on",
+			"Global tables are deleted on every upgrade"
+		],
+		"correctIndex": 0,
+		"explanation": "Scoping protects the application's data and artifacts and limits cross-application interference, which global scope does not enforce.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/c_ApplicationScope.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 49,
+		"prompt": "In an ACL script, which expression grants access only when the current user holds the 'itil' role?",
+		"choices": [
+			"answer = gs.hasRole('itil')",
+			"answer = gs.eventQueue('itil')",
+			"answer = gs.addInfoMessage('itil')",
+			"answer = gs.getProperty('itil')"
+		],
+		"correctIndex": 0,
+		"explanation": "gs.hasRole('itil') returns true when the current user has that role, so assigning it to answer grants access in the ACL script.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/glidesystem.html"
+		]
+	}
+]

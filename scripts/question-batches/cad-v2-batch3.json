@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CAD",
+		"order": 10,
+		"prompt": "A field must store one value chosen from a fixed set of options presented as a dropdown. Which field type is appropriate?",
+		"choices": [
+			"Choice field with defined choice list values",
+			"Journal Input field",
+			"Duration field",
+			"Attachment field"
+		],
+		"correctIndex": 0,
+		"explanation": "A Choice field presents a dropdown of predefined values, ideal for selecting one option from a fixed set.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/field-types.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 11,
+		"prompt": "What is the effect of the Auto-number configuration on a table?",
+		"choices": [
+			"Each new record receives a sequential, prefixed identifier automatically",
+			"Records are deleted automatically after numbering",
+			"The table becomes read-only for all users",
+			"Fields are renamed to numeric labels"
+		],
+		"correctIndex": 0,
+		"explanation": "Auto-number assigns each new record a sequential number with a configured prefix and starting value.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/number-maintenance.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 12,
+		"prompt": "When designing the data model, why might you choose a Many-to-Many relationship table rather than a single reference field?",
+		"choices": [
+			"Because each record on both tables can relate to multiple records on the other table",
+			"Because reference fields cannot store any value",
+			"Because it prevents users from opening the form",
+			"Because it converts the table to global scope"
+		],
+		"correctIndex": 0,
+		"explanation": "A Many-to-Many relationship uses an intermediary table so records on each side can associate with many records on the other side.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/many-to-many-relationships.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 13,
+		"prompt": "What does setting a field as Mandatory in the dictionary enforce?",
+		"choices": [
+			"The record cannot be saved until the field contains a value",
+			"The field is hidden on every form",
+			"The field value is encrypted at rest",
+			"The field is copied to all related tables"
+		],
+		"correctIndex": 0,
+		"explanation": "A mandatory dictionary attribute requires a value before the record can be inserted or updated.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/dictionary-entries.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 14,
+		"prompt": "Which tool provides a guided environment for building scoped applications, including tables, forms, and business logic in one place?",
+		"choices": [
+			"App Engine Studio / Studio IDE",
+			"The email client",
+			"The Discovery schedule editor",
+			"The MID Server dashboard"
+		],
+		"correctIndex": 0,
+		"explanation": "Studio (and App Engine Studio) is the integrated development environment for building and organizing all files of a scoped application.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/app-eng-studio-overview.html"
+		]
+	}
+]

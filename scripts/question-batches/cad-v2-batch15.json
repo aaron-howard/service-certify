@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CAD",
+		"order": 70,
+		"prompt": "Which object references the record that triggered a Notification when building its message body with mail scripts?",
+		"choices": [
+			"current",
+			"g_form on the notification form",
+			"g_scratchpad in the mail script",
+			"spModal from the portal"
+		],
+		"correctIndex": 0,
+		"explanation": "In notification mail scripts, current refers to the triggering record, allowing field values to be inserted into the email.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/email-notifications.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 71,
+		"prompt": "A flow needs to wait for a manager approval before continuing. Which capability supports this?",
+		"choices": [
+			"An approval action that pauses the flow until the approval is complete",
+			"An onSubmit client script",
+			"A dictionary default value",
+			"An import set transform"
+		],
+		"correctIndex": 0,
+		"explanation": "Flow Designer approval actions pause execution until the requested approvals are granted or rejected, then resume the flow.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/hyperautomation-low-code/flow-designer.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 72,
+		"prompt": "Which utility determines whether field names in an Import Set match the field names on the target table during import?",
+		"choices": [
+			"Auto Map Matching Fields",
+			"Transform Maps only",
+			"CI Relationship Builder",
+			"Business Service Management Map"
+		],
+		"correctIndex": 0,
+		"explanation": "Auto Map Matching Fields automatically maps import set columns to target fields that share the same name.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/integrate-applications/c_ImportSetsKeyConcepts.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 73,
+		"prompt": "When importing data from a CSV or Excel file, where does the data land before it is transformed onto the target table?",
+		"choices": [
+			"A staging Import Set table",
+			"Directly into the sys_user table",
+			"Into the browser cache",
+			"Into an ACL record"
+		],
+		"correctIndex": 0,
+		"explanation": "Imported rows first populate a staging Import Set table, then a Transform Map moves them to the target table.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/integrate-applications/c_ImportSetsKeyConcepts.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 74,
+		"prompt": "What does a Transform Map define during a data import?",
+		"choices": [
+			"How import set fields map to target table fields, including coalesce and scripts",
+			"The color of the import button",
+			"The role required to view a form",
+			"The schedule for a nightly job"
+		],
+		"correctIndex": 0,
+		"explanation": "A Transform Map specifies field-to-field mapping, coalesce (matching) fields, and optional transform scripts to load data onto the target table.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/integrate-applications/c_ImportSetTransformMaps.html"
+		]
+	}
+]

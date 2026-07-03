@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CAD",
+		"order": 60,
+		"prompt": "Which method queues an event named 'x_app.record.created' for the current record in a business rule?",
+		"choices": [
+			"gs.eventQueue('x_app.record.created', current, parm1, parm2)",
+			"g_form.eventQueue('x_app.record.created')",
+			"current.eventQueue('x_app.record.created')",
+			"gs.getProperty('x_app.record.created')"
+		],
+		"correctIndex": 0,
+		"explanation": "gs.eventQueue(name, GlideRecord, parm1, parm2) fires a registered event tied to a record so subscribers can react.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/events.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 61,
+		"prompt": "To send an email when a record reaches a certain state, which artifact defines the recipients, subject, and body?",
+		"choices": [
+			"A Notification record (triggered by a condition or event)",
+			"A dictionary entry",
+			"An access control rule",
+			"A transform map"
+		],
+		"correctIndex": 0,
+		"explanation": "Notification records define when to send email (condition or event), the recipients, and the message content.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/email-notifications.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 62,
+		"prompt": "What is a Scheduled Script Execution (Scheduled Job) used for?",
+		"choices": [
+			"Running server-side script logic automatically on a defined schedule",
+			"Rendering a client-side form control",
+			"Storing user preferences in the browser",
+			"Defining an ACL condition"
+		],
+		"correctIndex": 0,
+		"explanation": "A Scheduled Job runs server-side script or job logic automatically at configured intervals or times.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/scheduled-jobs.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 63,
+		"prompt": "Where should you place a Utils-style set of reusable helper functions for a scoped application?",
+		"choices": [
+			"In a Script Include class instantiated by other server scripts",
+			"In an onChange client script",
+			"In a UI Policy action",
+			"In a notification body"
+		],
+		"correctIndex": 0,
+		"explanation": "A Utils Script Include holds reusable server-side helper functions that business rules, flows, and other scripts can call.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/script-includes.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 64,
+		"prompt": "Which inbound email component processes messages that arrive in the instance to create or update records?",
+		"choices": [
+			"Inbound Email Action",
+			"Outbound Notification",
+			"UI Policy",
+			"Access Control rule"
+		],
+		"correctIndex": 0,
+		"explanation": "Inbound Email Actions parse received email and run scripts to create or update records based on the message.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/inbound-email-actions.html"
+		]
+	}
+]

@@ -1,0 +1,450 @@
+[
+  {
+    "trackCode": "CPOP",
+    "order": 140,
+    "prompt": "Which anti-pattern most increases production upgrade risk?",
+    "choices": [
+      "Operationally, this means tracking owner-level progress in dashboards.",
+      "From a platform-owner view, compressing validation by skipping critical scenario tests.",
+      "A team would proceed by using a rollback decision tree.",
+      "This answer proposes completing readiness tasks in lower environments first."
+    ],
+    "correctIndex": 1,
+    "explanation": "Skipping critical validation removes confidence in business continuity during cutover.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/task/plan-instance-upgrade.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 141,
+    "prompt": "What should guide rollback trigger thresholds in an upgrade runbook?",
+    "choices": [
+      "From a platform-owner view, business-impact thresholds tied to predefined technical signals.",
+      "A team would proceed by cAB attendance percentage.",
+      "This answer proposes remaining weekend hours in the maintenance window.",
+      "For should guide rollback trigger, developer preference during hypercare."
+    ],
+    "correctIndex": 0,
+    "explanation": "Rollback decisions should be objective, pre-agreed, and tied to business impact criteria.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 142,
+    "prompt": "Which governance behavior most improves upgrade predictability over time?",
+    "choices": [
+      "This answer proposes approve all exceptions to avoid delays.",
+      "For governance behavior improves upgrade, reset all KPIs each quarter.",
+      "In this governance behavior improves upgrade scenario, change release gates every sprint.",
+      "A team would proceed by use consistent readiness criteria and trend performance across upgrade cycles."
+    ],
+    "correctIndex": 3,
+    "explanation": "Stable criteria and trend analysis make upgrade performance measurable and improvable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 143,
+    "prompt": "What is the best approach to validating integrations before production upgrade cutover?",
+    "choices": [
+      "This answer proposes rely on historical integration uptime only.",
+      "In this approach validating integrations before scenario, test only one low-risk integration path.",
+      "For approach validating integrations before, execute prioritized end-to-end integration tests with clear pass/fail evidence.",
+      "This option centers on disable integrations until after go-live."
+    ],
+    "correctIndex": 2,
+    "explanation": "Prioritized end-to-end testing verifies real business dependencies before production exposure.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/web-services/concept/c_RESTAPI.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 144,
+    "prompt": "A release train includes multiple applications with different readiness levels. What should the platform owner do?",
+    "choices": [
+      "For release train includes multiple, delay all upgrades until every app reaches full readiness.",
+      "In this release train includes multiple scenario, use risk-based sequencing and explicit entry criteria for each application wave.",
+      "This option centers on allow each app owner to choose independent production windows with no governance.",
+      "The approach here is force all applications into one fixed cutover regardless of risk."
+    ],
+    "correctIndex": 1,
+    "explanation": "Wave-based sequencing reduces aggregate risk while preserving governance control.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/task/use-upgrade-center.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 145,
+    "prompt": "Which prep activity most improves confidence in upgrade rollback readiness?",
+    "choices": [
+      "The approach here is rehearse rollback procedures with timing, owners, and validation checkpoints.",
+      "In this prep activity improves confidence scenario, assume rollback is unnecessary if tests pass.",
+      "This option centers on rely on vendor support to define rollback during outage.",
+      "Operationally, this means document rollback only at a high level."
+    ],
+    "correctIndex": 0,
+    "explanation": "Rollback rehearsal verifies feasibility and decision timing before production risk is introduced.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 146,
+    "prompt": "How should platform owners treat upgrade tasks that repeatedly miss deadlines?",
+    "choices": [
+      "This option centers on close overdue tasks automatically if no incident exists.",
+      "The approach here is remove deadlines to reduce pressure.",
+      "From a platform-owner view, hide overdue tasks from readiness dashboards.",
+      "Operationally, this means escalate blocked tasks and adjust ownership or scope based on root cause."
+    ],
+    "correctIndex": 3,
+    "explanation": "Escalation and root-cause action maintain accountability and restore schedule realism.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/concept/upgrade-readiness-dashboard.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 147,
+    "prompt": "What should be considered a minimum evidence package for upgrade sign-off?",
+    "choices": [
+      "The approach here is a chat thread indicating team confidence.",
+      "Operationally, this means a verbal confirmation from one lead engineer.",
+      "From a platform-owner view, readiness checklist completion, test evidence, open-risk decisions, and rollback plan.",
+      "A team would proceed by a count of completed user stories."
+    ],
+    "correctIndex": 2,
+    "explanation": "Formal sign-off needs objective evidence across readiness, testing, risk acceptance, and recoverability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/task/plan-instance-upgrade.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 148,
+    "prompt": "Which behavior most undermines continuous improvement after each upgrade?",
+    "choices": [
+      "Operationally, this means updating runbook steps using retrospective findings.",
+      "A team would proceed by skipping retrospective review when no Sev-1 occurred.",
+      "From a platform-owner view, publishing KPI trends to governance forums.",
+      "This answer proposes tracking defect categories across releases."
+    ],
+    "correctIndex": 1,
+    "explanation": "Even successful upgrades produce lessons that improve reliability and future efficiency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 149,
+    "prompt": "What is the most effective long-term upgrade strategy for platform ownership?",
+    "choices": [
+      "From a platform-owner view, treat upgrades as recurring governed programs with measurable readiness and outcomes.",
+      "A team would proceed by prioritize feature delivery over release maintenance.",
+      "This answer proposes upgrade only after major audit findings.",
+      "For effective long term upgrade, delay upgrades until support deadlines force action."
+    ],
+    "correctIndex": 0,
+    "explanation": "A programmatic upgrade model improves predictability, reduces technical debt, and lowers release risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/concept/upgrade-center.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 150,
+    "prompt": "What is the primary objective of an instance strategy for platform ownership?",
+    "choices": [
+      "A team would proceed by eliminate the need for clone and refresh planning.",
+      "This answer proposes keep all development and production work in one instance.",
+      "In this primary objective instance strategy scenario, allow each team to manage independent production instances.",
+      "For primary objective instance strategy, define environment purpose, data policy, and promotion pathways across the lifecycle."
+    ],
+    "correctIndex": 3,
+    "explanation": "A clear instance strategy aligns environment usage, controls, and release flow to reduce operational risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/instance-clone.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 151,
+    "prompt": "Which practice best reduces risk when refreshing lower environments from production?",
+    "choices": [
+      "For practice reduces risk refreshing, disable all lower environments before each refresh.",
+      "In this practice reduces risk refreshing scenario, keep clone jobs ad hoc to maximize flexibility.",
+      "This answer proposes use clone schedules, data preservation, and post-clone sanitization controls.",
+      "This option centers on run clones without stakeholder communication."
+    ],
+    "correctIndex": 2,
+    "explanation": "Planned clone governance protects sensitive data and keeps non-production environments usable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/c_CloneManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 152,
+    "prompt": "A platform owner must retain key test records during routine clones. Which feature should be used?",
+    "choices": [
+      "For platform owner must retain, scheduled script executions only.",
+      "In this platform owner must retain scenario, clone data preservation policies.",
+      "This option centers on global table ACL overrides.",
+      "The approach here is manual record export/import before each clone."
+    ],
+    "correctIndex": 1,
+    "explanation": "Data preservation policies keep defined records in target instances across clone operations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/clone-data-preservation.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 153,
+    "prompt": "Why should outbound integrations usually be disabled immediately after a production-to-test clone?",
+    "choices": [
+      "The approach here is to prevent accidental calls to live external systems.",
+      "In this why should outbound integrations scenario, to reduce update set conflicts.",
+      "This option centers on to improve database indexing speed.",
+      "Operationally, this means to avoid re-running skipped update resolution."
+    ],
+    "correctIndex": 0,
+    "explanation": "Cloned data can trigger automation, so outbound controls prevent unintended external impact.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/task/t_PrepareTargetInstanceForClone.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 154,
+    "prompt": "What should guide environment sizing and role assignment in an instance strategy?",
+    "choices": [
+      "This option centers on number of developers requesting access.",
+      "The approach here is only current storage utilization.",
+      "From a platform-owner view, theme and branding requirements.",
+      "Operationally, this means business criticality, workload profile, and ownership responsibilities."
+    ],
+    "correctIndex": 3,
+    "explanation": "Sizing and ownership should align to operational criticality and expected workload patterns.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 155,
+    "prompt": "Which approach best supports safe production support while preserving development velocity?",
+    "choices": [
+      "The approach here is deploy all fixes from local branches to production.",
+      "Operationally, this means use a single shared update set for all teams.",
+      "From a platform-owner view, separate support and delivery pathways with controlled promotion gates.",
+      "A team would proceed by run emergency fixes directly in production without traceability."
+    ],
+    "correctIndex": 2,
+    "explanation": "Distinct pathways with controls balance urgent support and governed feature delivery.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-application-development/page/build/system-update-sets/concept/update-set-procedures.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 156,
+    "prompt": "What is the best way to govern instance drift across environments?",
+    "choices": [
+      "Operationally, this means allow environment-specific changes without documentation.",
+      "A team would proceed by use baseline comparison and managed remediation workflows.",
+      "From a platform-owner view, run full clones weekly regardless of impact.",
+      "This answer proposes rely on memory of senior administrators."
+    ],
+    "correctIndex": 1,
+    "explanation": "Baseline and remediation workflows keep environment differences visible and controllable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/table-administration/concept/c_TableAdministration.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 157,
+    "prompt": "Which scenario signals an unhealthy instance strategy?",
+    "choices": [
+      "A team would proceed by frequent direct production changes to compensate for non-prod gaps.",
+      "From a platform-owner view, documented role boundaries per environment.",
+      "This answer proposes defined refresh cadence and post-clone validation.",
+      "For scenario signals unhealthy instance, published environment-specific integration rules."
+    ],
+    "correctIndex": 0,
+    "explanation": "Frequent direct production edits often indicate weak non-production fidelity and poor promotion discipline.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/instance-clone.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 158,
+    "prompt": "How should instance strategy address sensitive data in lower environments?",
+    "choices": [
+      "This answer proposes disable all compliance checks outside production.",
+      "For should instance strategy address, allow broad access to improve test realism.",
+      "In this should instance strategy address scenario, copy production exports into local developer machines.",
+      "A team would proceed by use masking, cleanup scripts, and restricted access models."
+    ],
+    "correctIndex": 3,
+    "explanation": "Data protection in lower environments requires both technical masking and strict access controls.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/task/t_CreateCloneCleanupScript.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 159,
+    "prompt": "Which governance control best supports reliable environment refresh planning?",
+    "choices": [
+      "For governance control supports reliable, permanent refresh freeze during release windows.",
+      "In this governance control supports reliable scenario, refreshes only after audit findings.",
+      "This answer proposes a published refresh calendar with approvals and communication checkpoints.",
+      "This option centers on ad hoc refreshes based on individual requests."
+    ],
+    "correctIndex": 2,
+    "explanation": "A governed refresh calendar reduces disruption and aligns teams around predictable environment availability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/c_CloneManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 160,
+    "prompt": "What is the strongest reason to maintain instance-specific integration endpoint controls?",
+    "choices": [
+      "For strongest reason maintain instance, to avoid documenting integration dependencies.",
+      "The approach here is to prevent non-production traffic from reaching production-connected services.",
+      "In this strongest reason maintain instance scenario, to increase endpoint counts for audit reports.",
+      "This option centers on to simplify role naming conventions."
+    ],
+    "correctIndex": 1,
+    "explanation": "Endpoint controls prevent accidental cross-environment traffic and unintended business impact.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/web-services/concept/c_RESTAPI.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 161,
+    "prompt": "Which practice most improves cutover confidence in a multi-instance release model?",
+    "choices": [
+      "Operationally, this means defined entry/exit criteria for each environment in the release path.",
+      "In this practice improves cutover confidence scenario, production-only validation.",
+      "This option centers on skipping pre-prod sign-off when timelines are tight.",
+      "The approach here is using one shared account for all deployment roles."
+    ],
+    "correctIndex": 0,
+    "explanation": "Environment-specific criteria provide objective control before promotion to the next stage.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 162,
+    "prompt": "What should happen after each major clone to keep lower environments usable?",
+    "choices": [
+      "This option centers on resume all outbound integrations automatically.",
+      "The approach here is reset all user passwords to default values.",
+      "Operationally, this means disable all custom applications temporarily.",
+      "From a platform-owner view, run post-clone validation checklist and environment reconfiguration tasks."
+    ],
+    "correctIndex": 3,
+    "explanation": "Structured post-clone validation ensures environment health, safety, and readiness for teams.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/task/t_PrepareTargetInstanceForClone.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 163,
+    "prompt": "Which anti-pattern most harms long-term instance governance?",
+    "choices": [
+      "The approach here is documented clone and refresh standards.",
+      "Operationally, this means periodic access recertification.",
+      "A team would proceed by untracked one-off instance customizations.",
+      "From a platform-owner view, environment purpose definitions."
+    ],
+    "correctIndex": 2,
+    "explanation": "Untracked customizations create drift and unpredictable behavior across environments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 164,
+    "prompt": "A platform owner wants better non-production stability for testing. What is the best action?",
+    "choices": [
+      "Operationally, this means allow direct schema edits during UAT.",
+      "This answer proposes define environment stability windows and freeze periods for critical testing.",
+      "From a platform-owner view, increase clone frequency without communication.",
+      "A team would proceed by share production credentials with testers."
+    ],
+    "correctIndex": 1,
+    "explanation": "Stability windows help preserve test integrity and reduce concurrent change noise.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 165,
+    "prompt": "How should a platform owner treat environment-specific emergency fixes?",
+    "choices": [
+      "For should platform owner treat, track, reconcile, and promote through governed pathways.",
+      "From a platform-owner view, keep them local to avoid extra documentation.",
+      "A team would proceed by move fixes directly to production from any instance.",
+      "This answer proposes apply fixes in personal developer instances only."
+    ],
+    "correctIndex": 0,
+    "explanation": "Governed reconciliation prevents divergence and protects release integrity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-application-development/page/build/system-update-sets/concept/update-set-procedures.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 166,
+    "prompt": "Which operating KPI best reflects instance strategy effectiveness?",
+    "choices": [
+      "A team would proceed by total number of cloned records.",
+      "This answer proposes count of inactive users.",
+      "For operating kpi reflects instance, portal page view totals.",
+      "In this operating kpi reflects instance scenario, environment availability, drift rate, and promotion success rate."
+    ],
+    "correctIndex": 3,
+    "explanation": "These KPIs reflect whether environment governance supports reliable delivery and operations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 167,
+    "prompt": "What is the best way to manage competing requests for shared test environments?",
+    "choices": [
+      "This answer proposes first-come, first-served with no governance.",
+      "For way manage competing requests, assign environments permanently to one team.",
+      "This option centers on use a published allocation model tied to release and risk priorities.",
+      "In this way manage competing requests scenario, block all environment access during each sprint."
+    ],
+    "correctIndex": 2,
+    "explanation": "Allocation governance improves fairness and aligns environment usage with enterprise priorities.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html"
+    ]
+  }
+]

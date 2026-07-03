@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CAD",
+		"order": 20,
+		"prompt": "Which client script type runs when a form is first loaded, before the user interacts with it?",
+		"choices": [
+			"onLoad client script",
+			"onCellEdit client script",
+			"onSubmit client script",
+			"Scheduled script execution"
+		],
+		"correctIndex": 0,
+		"explanation": "An onLoad client script runs when the form loads, allowing initial field manipulation before user interaction.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/client-scripts.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 21,
+		"prompt": "Within a client script, which object is used to get and set field values and control form behavior?",
+		"choices": [
+			"g_form",
+			"g_user (current user client object)",
+			"gs (GlideSystem)",
+			"GlideRecord server query API"
+		],
+		"correctIndex": 0,
+		"explanation": "The g_form object provides client-side methods such as getValue, setValue, setMandatory, and setVisible to manipulate the form.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/g-form.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 22,
+		"prompt": "Which onChange client script parameter contains the field value before the user's change?",
+		"choices": [
+			"oldValue",
+			"newValue",
+			"isLoading",
+			"control"
+		],
+		"correctIndex": 0,
+		"explanation": "The onChange handler receives control, oldValue, newValue, and isLoading; oldValue holds the prior field value.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/client-scripts.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 23,
+		"prompt": "When should you use a UI Policy instead of a client script to make a field mandatory or read-only?",
+		"choices": [
+			"When the condition can be expressed declaratively without scripting",
+			"When you must run a server-side database query",
+			"When you need to send an email notification",
+			"When you want to schedule a nightly job"
+		],
+		"correctIndex": 0,
+		"explanation": "UI Policies declaratively set fields mandatory, read-only, or visible based on conditions, and are preferred over scripting for simple form logic.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/ui-policies.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 24,
+		"prompt": "Which client-side technique lets a client script call server-side logic and return data without reloading the form?",
+		"choices": [
+			"GlideAjax calling a script include with client-callable enabled",
+			"A before Business Rule invoked with current.update()",
+			"A scheduled job triggered on form load",
+			"An access-control evaluation on submit"
+		],
+		"correctIndex": 0,
+		"explanation": "GlideAjax invokes a client-callable Script Include on the server and returns results asynchronously to the client script.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/glideajax.html"
+		]
+	}
+]

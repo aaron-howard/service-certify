@@ -1,0 +1,452 @@
+[
+  {
+    "trackCode": "CPOP",
+    "order": 0,
+    "prompt": "A platform owner is steering an instance toward safer upgrades. Which approach best preserves upgradeability while still delivering change?",
+    "choices": [
+      "For platform owner steering instance, routinely capture production ticket rows in update sets for reuse.",
+      "In this platform owner steering instance scenario, deliver changes through scoped applications with clear ownership boundaries and interfaces.",
+      "This option centers on encourage direct edits to baseline system records whenever it is faster.",
+      "The approach here is keep large bespoke changes in the global scope without packaging or ownership."
+    ],
+    "correctIndex": 1,
+    "explanation": "Scoped applications package configuration with explicit boundaries, which reduces accidental collisions with baseline updates compared with unmanaged global edits or misusing update sets for data.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/app-store/dev_portal/application_model/concept/c_ApplicationScopes.html",
+      "https://www.servicenow.com/docs/r/application-development/system-update-sets.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 1,
+    "prompt": "Which outcome is most aligned with relationship governance for CMDB data?",
+    "choices": [
+      "Operationally, this means defining and enforcing how relationships are created and maintained so the service model stays trustworthy.",
+      "In this outcome aligned relationship governance scenario, encrypting all relationship records at rest by default.",
+      "This option centers on replacing the need for Discovery schedules with manual Excel imports.",
+      "The approach here is automatically deleting CIs that have not been scanned in 30 days."
+    ],
+    "correctIndex": 0,
+    "explanation": "Relationship governance is about controlled creation and maintenance of relationships so CMDB topology reflects reality and can be relied on for decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/product/configuration-management/concept/relationship-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 2,
+    "prompt": "In Knowledge Management, what is a primary purpose of enabling ownership groups?",
+    "choices": [
+      "This option centers on to route every incident to the article author automatically.",
+      "The approach here is to store article encryption keys separately from the instance.",
+      "Operationally, this means to replace categories and knowledge bases entirely.",
+      "From a platform-owner view, to assign editorial responsibility and manage access for article lifecycle work."
+    ],
+    "correctIndex": 3,
+    "explanation": "Ownership groups associate people with responsibility for knowledge content and its governance rather than replacing taxonomy or acting as encryption storage.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/servicenow-platform/knowledge-management/enable-ownership-group.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 3,
+    "prompt": "When comparing update sets to typical ITSM transactional records, what is the key distinction a platform owner should reinforce?",
+    "choices": [
+      "The approach here is update sets should include end-user attachments for completeness.",
+      "Operationally, this means update sets are the preferred way to move thousands of incident rows to production.",
+      "A team would proceed by update sets primarily move configuration metadata between instances, not day-to-day business data.",
+      "From a platform-owner view, update sets replace the need for scoped applications."
+    ],
+    "correctIndex": 2,
+    "explanation": "Update sets are intended for moving configuration between instances; operational records belong to data migration or integration patterns, not update sets.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/system-update-sets.html",
+      "https://www.servicenow.com/docs/bundle/vancouver-application-development/page/build/system-update-sets/concept/update-set-procedures.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 4,
+    "prompt": "Which scenario best illustrates a platform-owner guardrail that protects long-term maintainability?",
+    "choices": [
+      "Operationally, this means granting broad admin rights on production to speed up testing.",
+      "From a platform-owner view, establishing promotion practices and packaging expectations before changes reach production.",
+      "A team would proceed by discouraging documentation because the platform is self-explanatory.",
+      "This answer proposes allowing unmanaged customization in the global scope without standards."
+    ],
+    "correctIndex": 1,
+    "explanation": "Controlled promotion and packaging expectations reduce surprise failures and rework, which is central to platform ownership and sustainable operations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-application-development/page/build/system-update-sets/concept/update-set-procedures.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 5,
+    "prompt": "In Upgrade Center, what is the main value of release readiness information before scheduling an upgrade?",
+    "choices": [
+      "From a platform-owner view, it provides visibility into family support timelines and upgrade planning data.",
+      "A team would proceed by it exports a full CMDB dependency graph.",
+      "This answer proposes it locks update set promotion during blackout periods.",
+      "For upgrade center main value, it automatically remediates all customizations."
+    ],
+    "correctIndex": 0,
+    "explanation": "Upgrade Center centralizes lifecycle and readiness details so operators can plan upgrade windows and resources with less uncertainty.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/concept/upgrade-center.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 6,
+    "prompt": "Which Upgrade Center activity helps reduce surprises during production cutover?",
+    "choices": [
+      "A team would proceed by cloning production after every patch note is published.",
+      "This answer proposes running skipped update merges only in production.",
+      "In this upgrade center activity helps scenario, disabling all plugins before review.",
+      "For upgrade center activity helps, reviewing recommended preparation tasks and upgrade insights."
+    ],
+    "correctIndex": 3,
+    "explanation": "Preparation tasks and insights highlight prerequisite checks and potential risk areas that should be addressed before cutover.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/task/use-upgrade-center.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 7,
+    "prompt": "How does Upgrade Center support operational reporting across multiple platform teams?",
+    "choices": [
+      "This answer proposes by preventing plugin activation in non-prod.",
+      "For does upgrade center support, by replacing CAB records with automated approvals.",
+      "In this does upgrade center support scenario, by showing upgrade status and actionable tasks in a centralized workspace.",
+      "This option centers on by forcing all teams to share one update set branch."
+    ],
+    "correctIndex": 2,
+    "explanation": "Operational teams can use Upgrade Center to track progress, responsibilities, and blockers in a common view.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/concept/upgrade-readiness-dashboard.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 8,
+    "prompt": "A platform owner wants consistent execution of upgrade tasks across environments. What is the best approach?",
+    "choices": [
+      "For platform owner wants consistent, run production first and mirror issues backward to sub-prod.",
+      "In this platform owner wants consistent scenario, use Upgrade Center task tracking and complete prerequisite activities in lower instances first.",
+      "This option centers on skip non-prod validation to reduce lead time.",
+      "The approach here is perform family upgrades only when critical defects occur."
+    ],
+    "correctIndex": 1,
+    "explanation": "Following tracked tasks in lower environments first improves repeatability and lowers risk before production execution.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/task/plan-instance-upgrade.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 9,
+    "prompt": "Which outcome indicates Upgrade Center is being used effectively from an operations perspective?",
+    "choices": [
+      "This option centers on clear progress visibility, assigned owners, and reduced upgrade execution variance.",
+      "In this outcome indicates upgrade center scenario, upgrade notes captured only in personal spreadsheets.",
+      "The approach here is dependency tracking moved outside the platform.",
+      "Operationally, this means unplanned production upgrades with minimal documentation."
+    ],
+    "correctIndex": 0,
+    "explanation": "Effective use is demonstrated by transparent ownership, predictable execution, and fewer last-minute unknowns.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/concept/upgrade-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 10,
+    "prompt": "What does a skipped update indicate during a ServiceNow upgrade?",
+    "choices": [
+      "The approach here is a subscription entitlement is missing for an application.",
+      "Operationally, this means a plugin failed to activate in the target release.",
+      "From a platform-owner view, a failed clone process interrupted dictionary updates.",
+      "This option centers on a base system record with local modifications was not automatically overwritten."
+    ],
+    "correctIndex": 3,
+    "explanation": "Skipped updates occur when local customizations conflict with upgraded baseline records, requiring review and merge decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade/concept/skipped-updates.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 11,
+    "prompt": "Why should skipped update remediation happen in lower environments before production?",
+    "choices": [
+      "Operationally, this means to avoid creating change requests.",
+      "From a platform-owner view, to reduce table index rebuild duration.",
+      "The approach here is to verify merge outcomes and prevent production regressions.",
+      "A team would proceed by to remove upgrade logs from production history."
+    ],
+    "correctIndex": 2,
+    "explanation": "Pre-production remediation validates behavior and minimizes service risk when final merge actions are applied in production.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade/task/review-skipped-updates.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 12,
+    "prompt": "Which operational role is most critical when resolving high-impact skipped updates?",
+    "choices": [
+      "Operationally, this means security admin only.",
+      "A team would proceed by platform owner coordinating developers, testers, and process owners.",
+      "From a platform-owner view, requester approver.",
+      "This answer proposes catalog manager only."
+    ],
+    "correctIndex": 1,
+    "explanation": "High-impact conflicts require cross-functional coordination to balance technical merge decisions with business process integrity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade/concept/skipped-updates-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 13,
+    "prompt": "Which approach best supports repeatable skipped update handling over multiple upgrade cycles?",
+    "choices": [
+      "A team would proceed by maintain standardized triage criteria and decision logs for each conflict.",
+      "From a platform-owner view, accept all baseline versions by default.",
+      "This answer proposes resolve conflicts directly in production to save time.",
+      "For approach supports repeatable skipped, avoid documenting merge rationale."
+    ],
+    "correctIndex": 0,
+    "explanation": "Documented triage and rationale improve consistency, traceability, and future maintenance decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade/task/manage-skipped-update-records.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 14,
+    "prompt": "A skipped update touches a heavily customized business rule. What is the most appropriate first action?",
+    "choices": [
+      "A team would proceed by delete the customized rule and rely on baseline behavior immediately.",
+      "This answer proposes move the rule to a different domain to avoid conflict.",
+      "In this skipped update touches heavily scenario, ignore the skipped update until the next family release.",
+      "For skipped update touches heavily, assess business impact and compare baseline versus customized logic before choosing merge direction."
+    ],
+    "correctIndex": 3,
+    "explanation": "Impact-based analysis determines whether to keep custom logic, adopt baseline changes, or refactor safely.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade/task/evaluate-skipped-update-conflicts.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 15,
+    "prompt": "In ServiceNow subscription operations, what is a platform owner primarily responsible for?",
+    "choices": [
+      "This answer proposes only requesting plugin activations.",
+      "For servicenow subscription operations platform, managing CMDB CI reconciliation jobs.",
+      "In this servicenow subscription operations platform scenario, tracking entitlements, usage alignment, and feature adoption planning.",
+      "This option centers on resolving all skipped updates."
+    ],
+    "correctIndex": 2,
+    "explanation": "Subscription operations include understanding what is licensed, what is enabled, and how adoption is governed operationally.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/subscriptions/concept/subscription-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 16,
+    "prompt": "Why should operational teams review subscription usage trends regularly?",
+    "choices": [
+      "For why should operational teams, to eliminate the need for release planning.",
+      "The approach here is to detect over- or under-utilization and support informed roadmap decisions.",
+      "In this why should operational teams scenario, to bypass financial governance controls.",
+      "This option centers on to force all apps into global scope."
+    ],
+    "correctIndex": 1,
+    "explanation": "Usage trends help align platform investments with actual adoption and enterprise priorities.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/subscriptions/task/monitor-subscription-usage.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 17,
+    "prompt": "A business unit requests enablement of a new subscribed capability. What should happen first?",
+    "choices": [
+      "In this business unit requests enablement scenario, validate entitlement, security impact, and support readiness.",
+      "This option centers on create update sets before confirming licensing.",
+      "The approach here is enable in production immediately to accelerate value.",
+      "Operationally, this means approve automatically if the requestor is a manager."
+    ],
+    "correctIndex": 0,
+    "explanation": "Operational governance starts by confirming entitlement and readiness before introducing new platform capabilities.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/subscriptions/task/evaluate-feature-entitlement.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 18,
+    "prompt": "Which operating model best supports enterprise subscription governance?",
+    "choices": [
+      "The approach here is decentralized activation by any admin without review.",
+      "Operationally, this means email approvals only with no audit trail.",
+      "From a platform-owner view, quarterly clean-up with no ownership model.",
+      "This option centers on centralized review board with documented approval and accountability."
+    ],
+    "correctIndex": 3,
+    "explanation": "A central governance model improves traceability, compliance, and alignment to platform strategy.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/subscriptions/concept/subscription-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 19,
+    "prompt": "What is a common risk when subscription adoption is not coordinated with support teams?",
+    "choices": [
+      "Operationally, this means update sets cannot be exported.",
+      "From a platform-owner view, domain hierarchy becomes immutable.",
+      "The approach here is new capabilities go live without operational readiness, increasing incident volume.",
+      "A team would proceed by skipped updates are deleted automatically."
+    ],
+    "correctIndex": 2,
+    "explanation": "Without enablement planning and support readiness, teams often see avoidable incidents and slower issue resolution.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/subscriptions/task/plan-subscription-adoption.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 20,
+    "prompt": "What is the goal of integration governance for operational platform ownership?",
+    "choices": [
+      "Operationally, this means allow unrestricted point-to-point integrations to speed delivery.",
+      "This answer proposes establish standards for security, lifecycle, ownership, and monitoring.",
+      "From a platform-owner view, replace change management for all external connections.",
+      "A team would proceed by prevent use of IntegrationHub spokes."
+    ],
+    "correctIndex": 1,
+    "explanation": "Governance creates repeatable controls so integrations remain secure, supportable, and aligned to enterprise standards.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/administer/integrationhub/concept/integration-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 21,
+    "prompt": "Which operational control best reduces unmanaged external dependency risk?",
+    "choices": [
+      "A team would proceed by maintain a centralized integration inventory with owners and support contacts.",
+      "From a platform-owner view, let each team maintain private integration records.",
+      "This answer proposes use production credentials for all testing.",
+      "For operational control reduces unmanaged, disable audit history for integration configuration tables."
+    ],
+    "correctIndex": 0,
+    "explanation": "An owned integration inventory improves accountability, incident response, and change impact analysis.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/administer/integrationhub/task/manage-integration-inventory.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 22,
+    "prompt": "Why are environment-specific endpoints and credentials important in integration governance?",
+    "choices": [
+      "A team would proceed by they eliminate all REST API authentication requirements.",
+      "For why environment specific endpoints, they reduce update set collisions only.",
+      "In this why environment specific endpoints scenario, they make clone operations unnecessary.",
+      "This answer proposes they prevent accidental non-prod to production data exchange."
+    ],
+    "correctIndex": 3,
+    "explanation": "Segregating environment connections prevents unintended data movement and reduces operational and compliance risks.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/administer/integrationhub/task/manage-environment-connections.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 23,
+    "prompt": "What should happen when a critical external API version deprecation is announced?",
+    "choices": [
+      "For should happen critical external, migrate directly in production without testing.",
+      "In this should happen critical external scenario, disable all related flows immediately.",
+      "This answer proposes treat as an operational change event with impact analysis and remediation timeline.",
+      "This option centers on wait until failures occur in production."
+    ],
+    "correctIndex": 2,
+    "explanation": "Version deprecations require controlled change planning, testing, and communication to avoid service disruption.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/administer/integrationhub/concept/integration-lifecycle-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 24,
+    "prompt": "Which result best demonstrates mature integration governance operations?",
+    "choices": [
+      "For result demonstrates mature integration, high number of emergency integration changes.",
+      "In this result demonstrates mature integration scenario, documented standards, clear ownership, and measurable reliability improvements.",
+      "This option centers on ad hoc credential updates by individual developers.",
+      "The approach here is no ownership records for third-party connectors."
+    ],
+    "correctIndex": 1,
+    "explanation": "Maturity is visible through clear controls, accountability, and improved reliability outcomes over time.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/administer/integrationhub/concept/integration-operating-model.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 25,
+    "prompt": "In a product-led adoption blueprint, what is the main purpose of outcome-based milestones?",
+    "choices": [
+      "This option centers on they tie roadmap delivery to measurable value realization.",
+      "In this product led adoption blueprint scenario, they replace backlog prioritization completely.",
+      "The approach here is they force all teams to deploy on the same day.",
+      "Operationally, this means they eliminate the need for release notes."
+    ],
+    "correctIndex": 0,
+    "explanation": "Outcome-based milestones help product owners track whether delivered capabilities produce intended business results.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-strategic-portfolio-management/page/product/agile-development/concept/outcome-based-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 26,
+    "prompt": "A product owner is reviewing weak adoption in one business domain. Which action is best first?",
+    "choices": [
+      "This option centers on deactivate the application in that domain.",
+      "Operationally, this means archive all low-usage stories immediately.",
+      "From a platform-owner view, clone production to all lower environments.",
+      "The approach here is segment analytics by persona and domain to identify friction points."
+    ],
+    "correctIndex": 3,
+    "explanation": "Domain and persona segmentation helps identify where adoption barriers occur before deciding on remediation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/use/performance-analytics/concept/breakdowns.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 27,
+    "prompt": "How does product instrumentation support performance monitoring for adoption goals?",
+    "choices": [
+      "The approach here is it automatically resolves all incidents.",
+      "Operationally, this means it removes the need for governance approvals.",
+      "From a platform-owner view, it tracks feature usage events that feed KPI dashboards.",
+      "A team would proceed by it replaces all user research interviews."
+    ],
+    "correctIndex": 2,
+    "explanation": "Instrumentation provides data points that can be turned into indicators for ongoing adoption analysis.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/use/performance-analytics/concept/indicator-sources.html"
+    ]
+  }
+]

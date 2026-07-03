@@ -1,0 +1,512 @@
+[
+  {
+    "trackCode": "CIS-SAM",
+    "order": 30,
+    "prompt": "What is the primary objective of SaaS management within SAM?",
+    "choices": [
+      "Manage SaaS subscriptions, usage, and spend to reduce waste and compliance risk for practical execution",
+      "Convert SaaS licenses into hardware assets for measurable outcomes",
+      "Replace all software discovery with manual entry across operational workflows",
+      "Disable reclamation for cloud applications under governance oversight"
+    ],
+    "correctIndex": 0,
+    "explanation": "SaaS management focuses on visibility, control, and optimization of subscription-based software.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 31,
+    "prompt": "Which signal most strongly suggests a SaaS optimization opportunity?",
+    "choices": [
+      "Many provisioned accounts with low or no recent activity in enterprise contexts",
+      "Focus on increasing number of CMDB classes",
+      "Growth in closed incident volume for measurable outcomes",
+      "High number of assignment groups for practical execution"
+    ],
+    "correctIndex": 0,
+    "explanation": "Low-activity SaaS accounts are prime candidates for right-sizing or reclamation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-reclamation.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 32,
+    "prompt": "Why should SaaS ownership be explicitly assigned for each major subscription?",
+    "choices": [
+      "To clearly establish accountability for entitlement, usage, and renewal governance",
+      "To clearly avoid maintaining software models under governance oversight",
+      "To clearly allow any user to add licenses without approval",
+      "To shift renewal responsibility to the service desk exclusively"
+    ],
+    "correctIndex": 0,
+    "explanation": "Clear ownership is essential for controlling spend, renewals, and compliance decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-compliance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 33,
+    "prompt": "Which governance policy best supports controlled SaaS provisioning?",
+    "choices": [
+      "Remove all deprovisioning controls under governance oversight",
+      "Require approved entitlement checks and role-based provisioning workflows across operational workflows",
+      "Provision all requested SaaS seats automatically for measurable outcomes",
+      "Approve provisioning exclusively during annual true-up periods"
+    ],
+    "correctIndex": 1,
+    "explanation": "Entitlement checks and governed workflows reduce over-provisioning and unauthorized access.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-compliance.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 34,
+    "prompt": "Which KPI combination best reflects mature SaaS management?",
+    "choices": [
+      "Lower inactive account rate, strengthened license utilization, and reduced renewal waste",
+      "Higher volume of unapproved software installs under governance oversight",
+      "More emergency access grants in real implementations",
+      "Longer entitlement reconciliation cycles in enterprise contexts"
+    ],
+    "correctIndex": 0,
+    "explanation": "These metrics indicate control over spend and stronger governance of subscription usage.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 35,
+    "prompt": "In SAM, what is the main benefit of publisher packs?",
+    "choices": [
+      "Replace all software model normalization activities for measurable outcomes",
+      "Automatically approve all software requests for practical execution",
+      "Convert SaaS subscriptions into perpetual licenses under governance oversight",
+      "Provide publisher-specific license rules and content that strengthen effective position accuracy"
+    ],
+    "correctIndex": 3,
+    "explanation": "Publisher packs improve compliance precision by applying vendor-specific licensing intelligence.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/license-metrics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 36,
+    "prompt": "Why should SAM administrators validate publisher pack scope before activating new content?",
+    "choices": [
+      "To confirm metrics, products, and contract terms align with the organization's licensed footprint",
+      "To clearly disable reconciliation processing for measurable outcomes",
+      "To clearly migrate all installations into one software model",
+      "To clearly eliminate the need for entitlement records"
+    ],
+    "correctIndex": 0,
+    "explanation": "Scope validation prevents misapplied rules and inaccurate compliance outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/license-metrics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_ReconcileSoftwareEntitlements.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 37,
+    "prompt": "What is the best way to reduce risk when introducing updated publisher pack rules?",
+    "choices": [
+      "Pilot in lower environments, review compliance deltas, then promote through change governance for measurable outcomes",
+      "Apply changes directly in production during true-up week for practical execution",
+      "Remove historical reconciliation results in enterprise contexts",
+      "Suspend all reconciliations for one quarter in real implementations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Controlled rollout limits disruption and supports defensible compliance transitions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_CreateReconciliationResults.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 38,
+    "prompt": "Which KPI best shows whether publisher pack content is improving compliance quality?",
+    "choices": [
+      "Growth in unrelated service desk ticket volume across operational workflows",
+      "Higher percentage of reconciled records with reduced manual exception handling under governance oversight",
+      "Increase in unresolved unmatched software installs in real implementations",
+      "Decrease in CMDB relationship count in enterprise contexts"
+    ],
+    "correctIndex": 1,
+    "explanation": "Better publisher content should increase automated reconciliation quality and reduce manual intervention.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_CreateReconciliationResults.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 39,
+    "prompt": "Which governance action is most important for long-term publisher pack reliability?",
+    "choices": [
+      "Allow analysts to create ad hoc license rules without approval under governance oversight",
+      "Skip contract updates after renewal events across operational workflows",
+      "Disable audit trails on reconciliation jobs in enterprise contexts",
+      "Assign ownership for periodic review of publisher content, exceptions, and contract changes in real implementations"
+    ],
+    "correctIndex": 3,
+    "explanation": "Named ownership and periodic review keep publisher rule logic aligned to changing licensing terms.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-compliance.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 40,
+    "prompt": "In SAM, what is the primary goal of software optimization activities?",
+    "choices": [
+      "Increase software deployment volume regardless of demand for measurable outcomes",
+      "Disable all reclamation notifications for practical execution",
+      "Reduce cost and compliance risk by aligning entitlements to real usage under governance oversight",
+      "Replace reconciliation with yearly manual audits across operational workflows"
+    ],
+    "correctIndex": 2,
+    "explanation": "Optimization ensures software spend and risk posture reflect actual business consumption.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 41,
+    "prompt": "Which optimization tactic usually delivers the fastest measurable SAM savings?",
+    "choices": [
+      "Ignore renewal dates until the procurement deadline across operational workflows",
+      "Reclaim low-usage licenses and reallocate them before purchasing new rights under governance oversight",
+      "Disable software model governance in real implementations",
+      "Move all software contracts to one shared vendor account in enterprise contexts"
+    ],
+    "correctIndex": 1,
+    "explanation": "Reclaim-and-reuse workflows produce direct avoidable-cost savings quickly.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-reclamation.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_ReclaimUnusedSoftware.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 42,
+    "prompt": "Why should optimization opportunities be segmented by publisher and business unit?",
+    "choices": [
+      "To clearly target highest-impact savings and remediation where exposure is concentrated",
+      "To clearly eliminate the need for entitlement data",
+      "To clearly route all actions through service desk incidents",
+      "To clearly avoid stakeholder accountability across operational workflows"
+    ],
+    "correctIndex": 0,
+    "explanation": "Segmentation focuses optimization on areas with the largest financial or compliance leverage.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-compliance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 43,
+    "prompt": "Which anti-pattern most undermines continuous SAM optimization?",
+    "choices": [
+      "Focus on operating with recurring KPI reviews and action tracking",
+      "Focus on treating optimization as a one-time project instead of an ongoing process",
+      "Focus on monitoring renewal risk against effective position trends",
+      "With quarterly reclaim campaigns with defined owners"
+    ],
+    "correctIndex": 1,
+    "explanation": "Optimization requires sustained governance cadence, not a single cleanup event.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 44,
+    "prompt": "Which KPI set best demonstrates successful software optimization governance?",
+    "choices": [
+      "Higher number of unresolved software requests for measurable outcomes",
+      "Longer remediation cycle times for practical execution",
+      "Lower true-up exposure, reduced unused entitlements, and measurable realized savings under governance oversight",
+      "Increase in unmatched discovery records across operational workflows"
+    ],
+    "correctIndex": 2,
+    "explanation": "These metrics link optimization efforts to both financial and compliance outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-compliance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 45,
+    "prompt": "During a software publisher true-up, which data set is most important to validate before negotiating any shortfall?",
+    "choices": [
+      "Reconciled software installations mapped to normalized models and license metrics in real implementations",
+      "Procurement approval records without entitlements in enterprise contexts",
+      "Exclusively open incident counts by assignment group",
+      "CAB meeting notes from the previous quarter for measurable outcomes"
+    ],
+    "correctIndex": 0,
+    "explanation": "True-up negotiations depend on defensible consumption evidence, which requires normalized installs and metric-aligned reconciliation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_ReconcileSoftwareEntitlements.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 46,
+    "prompt": "What is the primary SAM benefit of running regular internal audits before a vendor-initiated audit notice arrives?",
+    "choices": [
+      "Focus on detecting compliance gaps early so remediation can happen on your timeline",
+      "Focus on preventing all contract renewals across operational workflows",
+      "Focus on replacing discovery and normalization processes",
+      "Focus on eliminating the need for license entitlements"
+    ],
+    "correctIndex": 0,
+    "explanation": "Proactive internal audits identify exposure in advance, enabling cost-effective remediation before external pressure and penalties increase.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-compliance.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_SoftwareComplianceReporting.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 47,
+    "prompt": "Which SAM operating practice best improves audit defensibility for complex publisher metrics such as cores or users?",
+    "choices": [
+      "Focus on maintaining metric-specific reconciliation rules and traceable evidence history",
+      "Focus on estimating usage from change request volumes",
+      "Tracking exclusively device names and skipping contract evidence",
+      "Focus on relying on spreadsheets outside the platform"
+    ],
+    "correctIndex": 0,
+    "explanation": "Metric-specific rules and preserved evidence trails are critical to explain how effective position results were calculated.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/license-metrics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_CreateReconciliationResults.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 48,
+    "prompt": "A SAM manager defines a goal to reduce annual over-licensing spend. Which initiative aligns best with that goal?",
+    "choices": [
+      "Launch reclaim and reharvest campaigns targeting low-usage installations in enterprise contexts",
+      "Disable reclamation workflows in real implementations across operational workflows",
+      "Increase emergency software requests without approvals for measurable outcomes",
+      "Move all entitlements to unrestricted stockrooms for practical execution"
+    ],
+    "correctIndex": 0,
+    "explanation": "Reclamation initiatives directly support over-licensing reduction by removing unused software and reusing owned rights.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-reclamation.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_ReclaimUnusedSoftware.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 49,
+    "prompt": "When defining SAM goals and initiatives, which KPI combination is most meaningful for leadership reporting?",
+    "choices": [
+      "Compliance risk trend, realized savings, and remediation cycle time for practical execution",
+      "Number of CMDB classes created this month for measurable outcomes",
+      "Count of knowledge articles in the portal across operational workflows",
+      "Mean time to close unrelated HR cases under governance oversight"
+    ],
+    "correctIndex": 0,
+    "explanation": "These KPIs connect governance exposure and financial outcomes while showing delivery speed of corrective actions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 50,
+    "prompt": "In SAM, what is the main purpose of defining software model lifecycles?",
+    "choices": [
+      "Control how titles progress from requestable to retired states for compliant governance in real implementations",
+      "Force every entitlement into one license metric in enterprise contexts",
+      "Disable product normalization jobs across operational workflows",
+      "Replace all procurement approvals under governance oversight"
+    ],
+    "correctIndex": 0,
+    "explanation": "Lifecycle governance standardizes how software moves through planning, use, and retirement while preserving compliance controls.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-model-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 51,
+    "prompt": "Which action best supports CAL optimization in SAM after identifying underused subscriptions?",
+    "choices": [
+      "Reclaim inactive assignments and redeploy existing rights before new spend for measurable outcomes",
+      "Increase blanket purchases immediately for practical execution",
+      "Convert subscription software to hardware assets in enterprise contexts",
+      "Disable usage collection to avoid noise in real implementations"
+    ],
+    "correctIndex": 0,
+    "explanation": "CAL optimization is achieved by reclaiming and reusing entitlements before purchasing additional licenses.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-reclamation.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_ManageUserSubscriptions.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 52,
+    "prompt": "A SAM team tracks request, deploy, optimize, and retire stages. What is the biggest lifecycle risk if retire is unmanaged?",
+    "choices": [
+      "Unused rights remain consumed, inflating compliance and cost exposure across operational workflows",
+      "License metrics stop calculating permanently under governance oversight",
+      "Fewer catalog requests are submitted in real implementations",
+      "Normalization rules are deleted automatically in enterprise contexts"
+    ],
+    "correctIndex": 0,
+    "explanation": "Unmanaged retirement leaves stale allocations and installations, which distorts effective license position and cost posture.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-lifecycle.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_RetireSoftwareAssets.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 53,
+    "prompt": "Which dashboard view is most useful for SAM lifecycle governance reviews?",
+    "choices": [
+      "List of closed incidents older than 18 months in enterprise contexts",
+      "Catalog item thumbnails grouped by color in real implementations",
+      "Stage-based metrics showing demand, active usage, reclaim candidates, and retirement backlog for measurable outcomes",
+      "Exclusively discovery error logs from one subnet"
+    ],
+    "correctIndex": 2,
+    "explanation": "Stage-based metrics reveal bottlenecks and waste points across the full software lifecycle.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 54,
+    "prompt": "What is the best governance control when introducing a new CAL-intensive software publisher?",
+    "choices": [
+      "Define lifecycle policy, ownership, and entitlement evidence requirements before broad rollout across operational workflows",
+      "Skip model normalization until true-up under governance oversight",
+      "Apply one generic contract for all publishers",
+      "Allow any requester to install without approval for measurable outcomes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Up-front lifecycle and evidence controls prevent uncontrolled growth and improve audit readiness for complex publishers.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-model-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-compliance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 55,
+    "prompt": "In SAM, what is the main purpose of usage analytics for subscription-heavy software?",
+    "choices": [
+      "Replace all contract metadata under governance oversight",
+      "Identify inactive or low-value assignments for reclaim and cost optimization across operational workflows",
+      "Automatically close publisher audit requests for measurable outcomes",
+      "Disable software normalization jobs for practical execution"
+    ],
+    "correctIndex": 1,
+    "explanation": "Usage analytics exposes underutilized subscriptions so organizations can reclaim rights and reduce unnecessary spend.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-usage.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-reclamation.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 56,
+    "prompt": "Which SAM scenario planning question is most valuable before a major contract renewal?",
+    "choices": [
+      "Can discovery probes be disabled for weekends? across operational workflows",
+      "What are projected costs under current usage, optimized reclaim, and growth cases? under governance oversight",
+      "How many incidents can be reassigned next month? in real implementations",
+      "Should all software models share one lifecycle state? in enterprise contexts"
+    ],
+    "correctIndex": 1,
+    "explanation": "Scenario comparisons help negotiate renewals using evidence-based cost and demand projections.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-compliance.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 57,
+    "prompt": "A SAM analyst sees high install counts but low active usage. What should happen first?",
+    "choices": [
+      "Run reclaim candidate validation and business-owner review before entitlement changes in enterprise contexts",
+      "Delete all inactive user records from HR systems in real implementations",
+      "Ignore usage data until year-end true-up for measurable outcomes",
+      "Purchase additional licenses immediately for practical execution"
+    ],
+    "correctIndex": 0,
+    "explanation": "Validation with business owners ensures reclaim actions are safe and aligned with actual operational needs.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_ReclaimUnusedSoftware.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_SoftwareComplianceReporting.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 58,
+    "prompt": "Which governance risk appears when SAM usage analytics are collected but never tied to action workflows?",
+    "choices": [
+      "Discovery schedules will stop permanently across operational workflows",
+      "Optimization opportunities are identified but not realized, reducing program credibility under governance oversight",
+      "Contracts are auto-renewed at no cost for practical execution",
+      "Entitlement records become read-exclusively under governance oversight"
+    ],
+    "correctIndex": 1,
+    "explanation": "Analytics without operational follow-through creates reporting noise and weakens trust in SAM outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-usage.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 59,
+    "prompt": "Which KPI pairing best demonstrates effective SAM usage analytics and planning maturity?",
+    "choices": [
+      "Count of catalog categories and KB articles under governance oversight",
+      "Age of historical task comments across operational workflows",
+      "Reclaim realization rate and renewal forecast accuracy for measurable outcomes",
+      "Number of UI policies on software forms for practical execution"
+    ],
+    "correctIndex": 2,
+    "explanation": "These KPIs show whether analytics are converting into action and whether planning assumptions match actual outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  }
+]

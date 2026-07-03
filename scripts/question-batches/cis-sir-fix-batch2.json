@@ -1,0 +1,497 @@
+[
+  {
+    "trackCode": "CIS-SIR",
+    "order": 30,
+    "prompt": "In SIR workflow design, what is the main purpose of predefined incident tasks?",
+    "choices": [
+      "Matches the scenario in which increase manual note-taking effort.",
+      "Describes the outcome where bypass severity determination.",
+      "Represents the approach that standardize response actions and accountability for repeatable incident handling.",
+      "Reflects the condition that replace playbooks with ad hoc analyst decisions."
+    ],
+    "correctIndex": 2,
+    "explanation": "Predefined tasks ensure consistent response execution and clearer ownership during investigations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response-workflow.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 31,
+    "prompt": "Which task type should be prioritized immediately for a suspected active compromise?",
+    "choices": [
+      "Reflects the condition that dashboard layout update.",
+      "Captures the choice stating archive closed incident attachments.",
+      "Matches the scenario in which initial triage and containment validation tasks aligned to incident severity.",
+      "Describes the outcome where quarterly control attestation request."
+    ],
+    "correctIndex": 2,
+    "explanation": "Early triage and containment tasks reduce blast radius and establish response momentum for critical incidents.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/respond-to-security-incident.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 32,
+    "prompt": "A team misses SLA targets because tasks are manually reassigned. What should be implemented?",
+    "choices": [
+      "Matches the scenario in which create one universal assignment group for every task.",
+      "Corresponds to the option where remove due dates from all SIR tasks.",
+      "Captures the choice stating use random assignment to balance workload.",
+      "Reflects the condition that use rule-based task assignment and escalation tied to severity and ownership."
+    ],
+    "correctIndex": 3,
+    "explanation": "Automated assignment and escalation reduce delays and improve adherence to response objectives.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/configure-security-incident-response.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 33,
+    "prompt": "Why should closure tasks include post-incident documentation requirements?",
+    "choices": [
+      "Captures the choice stating they automatically reduce incident severity.",
+      "Represents the approach that they prevent the use of threat intelligence feeds.",
+      "Reflects the condition that they remove the need for parent incident records.",
+      "Corresponds to the option where they support lessons learned, audit readiness, and future playbook improvement."
+    ],
+    "correctIndex": 3,
+    "explanation": "Structured closure evidence improves organizational learning and strengthens defensible response records.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response-reporting.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 34,
+    "prompt": "Which KPI best reflects healthy SIR task orchestration?",
+    "choices": [
+      "Captures the choice stating count of task comments only.",
+      "Represents the approach that lower mean time per critical task phase with clear completion evidence and fewer handoff delays.",
+      "Corresponds to the option where higher volume of reopened tasks each month.",
+      "Describes the outcome where more tasks created per incident regardless outcome."
+    ],
+    "correctIndex": 1,
+    "explanation": "Good orchestration improves speed and quality of execution, not just task quantity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-operations-kpis.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 35,
+    "prompt": "What is the main goal of SecOps integration with Security Incident Response?",
+    "choices": [
+      "Represents the approach that replace threat intelligence with manual spreadsheets.",
+      "Matches the scenario in which route all incidents to one resolver queue.",
+      "Describes the outcome where connect detection, case management, and response actions into one coordinated workflow.",
+      "Corresponds to the option where eliminate incident prioritization."
+    ],
+    "correctIndex": 2,
+    "explanation": "SecOps integration unifies tooling and process handoffs so response teams can act faster with shared context.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/secops/concept/secops-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 36,
+    "prompt": "Which integration pattern most improves triage quality between detections and SIR records?",
+    "choices": [
+      "Matches the scenario in which map normalized detection fields to incident context, indicators, and affected assets.",
+      "Reflects the condition that store detections only as email attachments.",
+      "Represents the approach that open incidents without source artifact references.",
+      "Describes the outcome where suppress all low-severity detections before enrichment."
+    ],
+    "correctIndex": 0,
+    "explanation": "Field normalization and context mapping preserve signal fidelity and improve analyst decision-making.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/integrate-security-tools.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 37,
+    "prompt": "A SecOps team reports duplicate records from two security tools for the same compromise. What should be adjusted?",
+    "choices": [
+      "Captures the choice stating assign both records to different teams.",
+      "Describes the outcome where delete older incidents at midnight.",
+      "Matches the scenario in which use correlation and deduplication rules based on shared observables and asset context.",
+      "Reflects the condition that disable one tool permanently."
+    ],
+    "correctIndex": 2,
+    "explanation": "Correlation and deduplication reduce duplicate handling while retaining a complete evidence timeline.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-correlation.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 38,
+    "prompt": "Why is bi-directional integration with ticketing and orchestration systems valuable in SecOps?",
+    "choices": [
+      "Matches the scenario in which it guarantees all incidents are false positives.",
+      "Reflects the condition that it enables synchronized status, task execution, and response evidence across platforms.",
+      "Captures the choice stating it removes the need for RBAC.",
+      "Corresponds to the option where it prevents post-incident reviews."
+    ],
+    "correctIndex": 1,
+    "explanation": "Bi-directional sync keeps teams aligned and reduces response delays caused by fragmented tooling.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/secops/concept/security-orchestration.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 39,
+    "prompt": "Which KPI best demonstrates successful SecOps integration?",
+    "choices": [
+      "Captures the choice stating lower mean time to detect and respond with fewer duplicate cases and cleaner handoffs.",
+      "Corresponds to the option where higher number of standalone tool dashboards.",
+      "Represents the approach that increase in unassigned tasks.",
+      "Reflects the condition that more manually copied notes between systems."
+    ],
+    "correctIndex": 0,
+    "explanation": "Integration success is measured by faster, cleaner response execution and reduced operational friction.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/secops/concept/secops-kpis.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 40,
+    "prompt": "What is the primary objective of containment workflows in Security Incident Response?",
+    "choices": [
+      "Corresponds to the option where close all incidents within one hour regardless severity.",
+      "Captures the choice stating capture analyst satisfaction surveys.",
+      "Describes the outcome where limit attacker movement and business impact while preserving investigative integrity.",
+      "Represents the approach that disable threat intelligence integrations."
+    ],
+    "correctIndex": 2,
+    "explanation": "Containment workflows are designed to reduce ongoing risk while maintaining evidence needed for investigation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/containment-eradication-recovery.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 41,
+    "prompt": "Which containment action should generally happen earliest for a confirmed compromised endpoint?",
+    "choices": [
+      "Corresponds to the option where archive all event logs.",
+      "Represents the approach that finalize post-incident report.",
+      "Describes the outcome where reassign ownership to a non-security group.",
+      "Matches the scenario in which isolate affected assets and trigger approved response tasks per severity playbook."
+    ],
+    "correctIndex": 3,
+    "explanation": "Early isolation and guided response steps help stop spread while teams investigate root cause.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/contain-security-incident.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 42,
+    "prompt": "A containment playbook creates excessive service disruption for medium incidents. What should be tuned first?",
+    "choices": [
+      "Describes the outcome where apply identical actions for all severities.",
+      "Matches the scenario in which disable all containment workflows.",
+      "Reflects the condition that adjust conditional branching and approval logic by severity and asset criticality.",
+      "Represents the approach that skip approval requirements entirely."
+    ],
+    "correctIndex": 2,
+    "explanation": "Risk-based branching and approvals balance response speed with business continuity needs.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/configure-security-playbooks.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 43,
+    "prompt": "Why should containment workflows capture execution timestamps and approver decisions?",
+    "choices": [
+      "Describes the outcome where they eliminate the need for root cause analysis.",
+      "Reflects the condition that they are only needed for low-priority incidents.",
+      "Captures the choice stating they provide forensic timeline clarity and auditable accountability for response actions.",
+      "Matches the scenario in which they replace task-level ownership."
+    ],
+    "correctIndex": 2,
+    "explanation": "Recorded decision and action timelines support investigations, audits, and post-incident lessons learned.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response-reporting.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 44,
+    "prompt": "Which KPI best indicates effective containment workflow performance?",
+    "choices": [
+      "Reflects the condition that increase in unresolved critical incidents.",
+      "Matches the scenario in which shorter time to containment with fewer repeat compromises on previously affected assets.",
+      "Corresponds to the option where higher number of manual approvals per incident.",
+      "Captures the choice stating more containment tasks created regardless closure quality."
+    ],
+    "correctIndex": 1,
+    "explanation": "Containment effectiveness is shown by speed and durable risk reduction, not task volume.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-operations-kpis.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 45,
+    "prompt": "What is the key objective of a post-incident review in Security Incident Response?",
+    "choices": [
+      "Corresponds to the option where capture lessons learned and assign corrective actions to reduce recurrence and improve response readiness.",
+      "Captures the choice stating reopen all previously resolved incidents for comparison.",
+      "Reflects the condition that close incidents faster by skipping evidence and timeline validation.",
+      "Represents the approach that focus only on team performance ratings without process analysis."
+    ],
+    "correctIndex": 0,
+    "explanation": "Post-incident reviews drive measurable improvement through action-oriented lessons learned.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_ReviewSecurityIncident.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 46,
+    "prompt": "Which artifact is most critical during a formal SIR post-incident review?",
+    "choices": [
+      "Represents the approach that a list of responder names with no action timestamps.",
+      "Describes the outcome where a spreadsheet of unrelated open vulnerabilities.",
+      "Corresponds to the option where a screenshot of the incident form after closure.",
+      "Captures the choice stating a validated incident timeline including detections, containment actions, decisions, and communication points."
+    ],
+    "correctIndex": 3,
+    "explanation": "A validated timeline supports root-cause analysis and accountability for process improvement.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response-workspace.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_ManageSecurityIncidents.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 47,
+    "prompt": "How should a SIR team prioritize improvement actions after a high-severity incident?",
+    "choices": [
+      "Corresponds to the option where assign all actions to one analyst for speed.",
+      "Matches the scenario in which rank actions by risk reduction impact, implementation effort, and dependency on critical controls.",
+      "Describes the outcome where implement every suggestion in arbitrary order regardless risk.",
+      "Represents the approach that delay action planning until the next annual program review."
+    ],
+    "correctIndex": 1,
+    "explanation": "Risk-based prioritization ensures limited capacity is focused on the most effective improvements.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_ManageSecurityIncidents.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 48,
+    "prompt": "Which pattern indicates a healthy post-incident review process?",
+    "choices": [
+      "Describes the outcome where no distinction between confirmed root cause and assumptions.",
+      "Reflects the condition that review notes stored in private chat channels only.",
+      "Represents the approach that documented lessons learned linked to tracked corrective tasks with owner and due-date accountability.",
+      "Matches the scenario in which corrective tasks closed immediately without validation."
+    ],
+    "correctIndex": 2,
+    "explanation": "Effective PIR processes produce traceable, accountable corrective outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_CreateTasksForSecurityIncident.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/workflow-automation/concept/workflow-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 49,
+    "prompt": "What should be updated first when post-incident findings reveal delayed containment decisions?",
+    "choices": [
+      "Describes the outcome where dashboard color themes used in security workspace.",
+      "Reflects the condition that containment playbook decision points, escalation criteria, and role responsibilities.",
+      "Matches the scenario in which incident numbering format in system properties.",
+      "Captures the choice stating user profile photos for SOC analysts."
+    ],
+    "correctIndex": 1,
+    "explanation": "Containment delays are addressed by clarifying operational decision logic and responsibilities.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_UsePlaybooksInSecurityIncidentResponse.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 50,
+    "prompt": "Which metric best reflects SIR detection effectiveness?",
+    "choices": [
+      "Captures the choice stating count of closed incidents without severity classification.",
+      "Corresponds to the option where mean time to detect from threat occurrence to case creation with quality triage context.",
+      "Matches the scenario in which total number of analyst comments per incident.",
+      "Reflects the condition that number of notification templates configured."
+    ],
+    "correctIndex": 1,
+    "explanation": "Detection effectiveness is measured by how quickly and reliably threats become actionable incidents.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 51,
+    "prompt": "How is mean time to contain (MTTC) used in SIR program management?",
+    "choices": [
+      "Represents the approach that measure elapsed time from annual policy review to control attestation.",
+      "Reflects the condition that calculate number of open vulnerabilities grouped by assignment.",
+      "Captures the choice stating estimate how long it takes to archive completed incidents.",
+      "Corresponds to the option where track speed from incident identification to successful containment to evaluate response process efficiency."
+    ],
+    "correctIndex": 3,
+    "explanation": "MTTC indicates operational containment performance and process bottlenecks.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_ManageSecurityIncidents.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 52,
+    "prompt": "Which metric pairing is most useful for evaluating SIR triage quality?",
+    "choices": [
+      "Captures the choice stating volume of historical incidents older than two years.",
+      "Corresponds to the option where false-positive rate and percentage of incidents correctly prioritized at first assignment.",
+      "Represents the approach that number of dashboard widgets and report exports.",
+      "Describes the outcome where count of emails sent during major incidents."
+    ],
+    "correctIndex": 1,
+    "explanation": "Good triage should minimize false positives and improve first-pass prioritization accuracy.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response-workspace.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_DefinePrioritiesForSecurityIncidents.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 53,
+    "prompt": "What does repeated growth in incident reopen rates usually indicate?",
+    "choices": [
+      "Represents the approach that sOC staffing is oversized for current alert volume.",
+      "Matches the scenario in which case templates contain too many optional fields.",
+      "Describes the outcome where threat intelligence feeds are too comprehensive.",
+      "Corresponds to the option where containment or eradication actions are incomplete and closure criteria need stronger validation."
+    ],
+    "correctIndex": 3,
+    "explanation": "High reopen rates often signal weak closure controls or unresolved root issues.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_CloseSecurityIncident.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_CreateTasksForSecurityIncident.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 54,
+    "prompt": "Which reporting approach best supports executive review of SIR metrics?",
+    "choices": [
+      "Matches the scenario in which use one-time screenshots instead of trend dashboards.",
+      "Reflects the condition that trend MTTD, MTTC, MTTR, severity distribution, and repeat-incident rates with narrative risk context.",
+      "Represents the approach that show only raw incident counts by month with no segmentation.",
+      "Describes the outcome where report solely on analyst workload by shift."
+    ],
+    "correctIndex": 1,
+    "explanation": "Executive metrics should show response performance trends and risk impact context.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 55,
+    "prompt": "Why integrate Vulnerability Response data into SIR workflows?",
+    "choices": [
+      "Captures the choice stating replace all incident evidence with vulnerability scanner output.",
+      "Describes the outcome where provide exploitable-asset context and prioritization signals that improve incident triage and containment decisions.",
+      "Matches the scenario in which route vulnerabilities directly to change approvals only.",
+      "Reflects the condition that disable threat indicators to reduce case complexity."
+    ],
+    "correctIndex": 1,
+    "explanation": "VR context strengthens SIR prioritization by connecting incidents to known exposure.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/vulnerability-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 56,
+    "prompt": "Which scenario best demonstrates SIR and VR integration value?",
+    "choices": [
+      "Matches the scenario in which incidents and vulnerabilities are managed in separate tools with no cross-reference.",
+      "Reflects the condition that a security incident automatically links to active critical vulnerabilities on affected CIs for response prioritization.",
+      "Captures the choice stating sOC analysts manually retype CVE details into incident notes.",
+      "Corresponds to the option where vulnerability records are closed whenever an incident opens."
+    ],
+    "correctIndex": 1,
+    "explanation": "Cross-linked incident and vulnerability data speeds risk-informed response.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/task/t_LinkSecurityIncidentsAndVulnerabilities.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_ManageSecurityIncidents.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 57,
+    "prompt": "How should SIR teams use VR severity and exploit intelligence during active investigations?",
+    "choices": [
+      "Captures the choice stating ignore VR context until after incident closure.",
+      "Corresponds to the option where adjust containment urgency and escalation based on exploitability, asset criticality, and exposure scope.",
+      "Represents the approach that escalate only incidents that include malware attachments.",
+      "Reflects the condition that treat all vulnerabilities as equal priority regardless exploit status."
+    ],
+    "correctIndex": 1,
+    "explanation": "Exploit intelligence and asset impact data improve precision in escalation and containment.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/risk-based-prioritization.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response-workspace.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 58,
+    "prompt": "What governance control is essential when integrating SIR and VR data?",
+    "choices": [
+      "Captures the choice stating store vulnerability data without assignment groups.",
+      "Represents the approach that allow duplicate CI records for each security tool source.",
+      "Describes the outcome where consistent CI identification and ownership to prevent mismatched exposure and incident linkage.",
+      "Corresponds to the option where disable CMDB reconciliation for security integrations."
+    ],
+    "correctIndex": 2,
+    "explanation": "Reliable CI identity and ownership are prerequisites for trustworthy SIR-VR correlation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/cmdb-landing.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/vulnerability-response.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 59,
+    "prompt": "Which KPI confirms SIR and VR integration is improving outcomes?",
+    "choices": [
+      "Represents the approach that more manual copy-paste activity between teams.",
+      "Corresponds to the option where reduced time to prioritize and contain incidents with known exploitable vulnerabilities.",
+      "Matches the scenario in which higher count of unlinked vulnerabilities after incident closure.",
+      "Describes the outcome where longer delay between incident creation and enrichment."
+    ],
+    "correctIndex": 1,
+    "explanation": "Integration success appears as faster, context-driven action on exploitable threats.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/vulnerability-response.html"
+    ]
+  }
+]

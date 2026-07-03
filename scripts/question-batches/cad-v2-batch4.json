@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CAD",
+		"order": 15,
+		"prompt": "Which statement best describes when an application is a good fit to build natively on ServiceNow?",
+		"choices": [
+			"When it manages structured records, tasks, approvals, and reporting on the platform data model",
+			"When it requires a proprietary desktop-only kernel driver",
+			"When it must avoid all use of tables and forms",
+			"When it exclusively renders 3D game graphics"
+		],
+		"correctIndex": 0,
+		"explanation": "Applications centered on structured data, tasks, approvals, and reporting align with the platform's tables, workflow, and UI capabilities.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/app-eng-studio-overview.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 16,
+		"prompt": "What is the purpose of an Application File in a scoped application?",
+		"choices": [
+			"It is any configuration record (table, script, form, etc.) that belongs to and is tracked by the application",
+			"It is a binary attachment stored on the sys_user table",
+			"It is a temporary cache cleared on logout",
+			"It is a MID Server credential"
+		],
+		"correctIndex": 0,
+		"explanation": "Application files are the configuration records (tables, business rules, forms, and more) associated with and packaged by an application.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/application-files.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 17,
+		"prompt": "You want a module in your application to open a filtered list of records by default. What do you configure on the module?",
+		"choices": [
+			"Set the module link type to List and define the table and default filter conditions",
+			"Delete the application menu",
+			"Change the table to global scope",
+			"Convert the module into an access control"
+		],
+		"correctIndex": 0,
+		"explanation": "A module of link type List targets a table and can apply default filter conditions to show a pre-filtered list.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/application-menus-modules.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 18,
+		"prompt": "Which UI element lets you group related fields into collapsible sections on a form?",
+		"choices": [
+			"Form sections (and form layout) configured with the Form Designer",
+			"Access control rules on the table",
+			"Scheduled jobs that run nightly",
+			"Transform maps for imports"
+		],
+		"correctIndex": 0,
+		"explanation": "Form sections, arranged with the Form Designer or Form Layout, group fields into organized, collapsible areas on a form.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/form-design.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 19,
+		"prompt": "To add or remove fields shown on a form for a table, which tool do you use?",
+		"choices": [
+			"Form Designer (Configure > Form Design/Form Layout)",
+			"The REST API Explorer",
+			"The Import Set loader",
+			"The Flow Designer trigger panel"
+		],
+		"correctIndex": 0,
+		"explanation": "Form Designer / Form Layout lets developers add, remove, and arrange fields displayed on a form.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/form-design.html"
+		]
+	}
+]

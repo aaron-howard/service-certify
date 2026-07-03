@@ -1,0 +1,405 @@
+[
+  {
+    "trackCode": "CIS-EM",
+    "order": 25,
+    "prompt": "In Event Management, what is the main operational value of alert management workflows?",
+    "choices": [
+      "Replacing all event rules with manual queue review",
+      "Preventing connector ingestion during maintenance windows",
+      "Disabling impact calculations for infrastructure services",
+      "Standardizing triage, ownership, and lifecycle handling of alerts"
+    ],
+    "correctIndex": 3,
+    "explanation": "Alert management workflows define consistent states, assignments, and actions so responders can process alerts reliably.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/alert-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 26,
+    "prompt": "Which configuration most directly controls who initially works a newly created alert?",
+    "choices": [
+      "Alert assignment rules",
+      "Connector transform map",
+      "MID Server capability set",
+      "Event retention policy"
+    ],
+    "correctIndex": 0,
+    "explanation": "Assignment rules route alerts to the correct support group based on source, severity, CI context, or custom conditions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/task/configure-alert-assignment.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 27,
+    "prompt": "What is the best reason to define explicit alert state transitions such as Open, Acknowledged, and Closed?",
+    "choices": [
+      "To disable incident creation from critical alerts",
+      "To support clear handoffs and measurable responder actions",
+      "To increase duplicate alerts for the same CI",
+      "To avoid correlation logic in event processing"
+    ],
+    "correctIndex": 1,
+    "explanation": "Controlled lifecycle states improve operational clarity and provide auditable progression from detection to resolution.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/alert-lifecycle.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 28,
+    "prompt": "A team wants less alert backlog without losing critical signal. Which approach is most effective?",
+    "choices": [
+      "Ignore all warning alerts permanently",
+      "Route every alert to one assignment group",
+      "Tune alert thresholds, correlation, and assignment logic together",
+      "Disable event de-duplication"
+    ],
+    "correctIndex": 2,
+    "explanation": "Backlog reduction requires balanced tuning so noise is filtered while high-value alerts remain visible and actionable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-correlation.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/alert-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 29,
+    "prompt": "Which metric best indicates that alert management maturity is improving?",
+    "choices": [
+      "Increasing number of unassigned alerts",
+      "Longer average alert age in open state",
+      "Higher percentage of alerts with no CI binding",
+      "Decreasing mean time to acknowledge and close actionable alerts"
+    ],
+    "correctIndex": 3,
+    "explanation": "Lower response and closure times for valid alerts show stronger triage discipline and better operational readiness.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/alert-analytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 30,
+    "prompt": "What is the primary role of alert groups in Event Management?",
+    "choices": [
+      "Organize related alerts into a single operational context for responders",
+      "Convert all grouped alerts directly into changes",
+      "Replace event ingestion connectors",
+      "Disable impact calculation for grouped alerts"
+    ],
+    "correctIndex": 0,
+    "explanation": "Alert groups reduce noise and help teams manage correlated issues as one operational unit.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/alert-groups.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 31,
+    "prompt": "Which criterion is commonly used to build effective alert groups?",
+    "choices": [
+      "Stockroom location and transfer order number",
+      "Shared CI, service, and time-window context",
+      "Requester department hierarchy",
+      "Asset depreciation schedule"
+    ],
+    "correctIndex": 1,
+    "explanation": "Grouping by technical and temporal context helps combine alerts that likely represent one underlying issue.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/task/configure-alert-groups.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 32,
+    "prompt": "Why should alert group rules be tested against historical event patterns?",
+    "choices": [
+      "To bypass assignment rules",
+      "To prevent incident creation from critical alerts",
+      "To confirm groups reduce noise without hiding distinct incidents",
+      "To increase maximum event retention"
+    ],
+    "correctIndex": 2,
+    "explanation": "Historical validation helps tune grouping logic so it suppresses duplication while preserving real operational signal.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-correlation.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 33,
+    "prompt": "What is a common anti-pattern when implementing alert groups?",
+    "choices": [
+      "Including CI metadata in grouping conditions",
+      "Aligning group ownership with resolver teams",
+      "Reviewing group quality in operations reports",
+      "Creating one broad rule that combines unrelated alerts"
+    ],
+    "correctIndex": 3,
+    "explanation": "Overly broad grouping can hide multiple root causes and delay accurate triage.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/alert-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 34,
+    "prompt": "Which outcome best shows alert grouping is tuned effectively?",
+    "choices": [
+      "Lower duplicate alert volume with clear, actionable group ownership",
+      "Longer alert queues with fewer acknowledgements",
+      "More manual regrouping during incidents",
+      "Higher percentage of unbound alerts"
+    ],
+    "correctIndex": 0,
+    "explanation": "Effective grouping reduces duplicate workload and supports faster coordinated action by the right team.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/alert-analytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 35,
+    "prompt": "In Event Management, what does CI binding enable most directly?",
+    "choices": [
+      "Converting all events into changes",
+      "Linking alerts to impacted configuration items for context and impact analysis",
+      "Replacing event transform maps with script includes",
+      "Disabling service maps for bound alerts"
+    ],
+    "correctIndex": 1,
+    "explanation": "CI binding connects alerts to infrastructure context, which supports impact visibility, routing, and faster triage.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/alert-cmdb-binding.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 36,
+    "prompt": "Why is CI binding quality dependent on both event payloads and CMDB data hygiene?",
+    "choices": [
+      "Because CI binding only runs during maintenance windows",
+      "Because binding requires stockroom data",
+      "Because either side can weaken identifier matching and produce unbound alerts",
+      "Because binding ignores all source node values"
+    ],
+    "correctIndex": 2,
+    "explanation": "Reliable binding requires strong identifiers in incoming events and accurate CI records in CMDB.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/task/configure-cmdb-alert-binding.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/cmdb-health-dashboard.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 37,
+    "prompt": "A monitoring source sends host aliases that do not match CMDB names. What is the best first remediation?",
+    "choices": [
+      "Disable CI binding for that connector",
+      "Force all alerts to bind to one fallback CI",
+      "Send all alerts to a manual triage queue permanently",
+      "Normalize source identifiers through event rules or transform logic before binding"
+    ],
+    "correctIndex": 3,
+    "explanation": "Identifier normalization in the ingestion path improves match quality while preserving automated alert processing.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-rules.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 38,
+    "prompt": "Which KPI most directly measures CI binding health?",
+    "choices": [
+      "Percentage of alerts successfully bound to valid CIs",
+      "Number of active stockrooms",
+      "Total MID Server count",
+      "Average catalog fulfillment time"
+    ],
+    "correctIndex": 0,
+    "explanation": "Binding success rate quantifies how much incoming alert volume is receiving accurate CMDB context.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/alert-analytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 39,
+    "prompt": "What is a practical benefit of accurate CI binding for incident workflows?",
+    "choices": [
+      "All critical alerts auto-close without investigation",
+      "Incidents can inherit CI context and service impact, improving assignment and prioritization",
+      "Incidents no longer require short descriptions",
+      "Event connectors become optional"
+    ],
+    "correctIndex": 1,
+    "explanation": "CI-aware incidents provide responders with better context at creation time, reducing manual enrichment and triage delays.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/alert-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/incident-management/concept/incident-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 40,
+    "prompt": "What is the main objective of event filters in Event Management?",
+    "choices": [
+      "Bind events directly to procurement records",
+      "Disable event rule evaluation",
+      "Remove non-actionable or low-value events before alert creation",
+      "Replace all event connector integrations"
+    ],
+    "correctIndex": 2,
+    "explanation": "Event filters help reduce ingestion noise by stopping irrelevant events from consuming operational attention.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-filters.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 41,
+    "prompt": "Why should event filter conditions be reviewed with operations teams regularly?",
+    "choices": [
+      "To avoid CI binding completely",
+      "To disable alert grouping for critical services",
+      "To reroute events to MID Server logs",
+      "To ensure filtering still matches current monitoring signal and business priorities"
+    ],
+    "correctIndex": 3,
+    "explanation": "Monitoring environments evolve, so regular review ensures filters keep suppressing noise without hiding actionable events.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/task/configure-event-filters.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 42,
+    "prompt": "What is the best way to validate a new event filter rule before broad rollout?",
+    "choices": [
+      "Test against sample and historical events to measure suppression impact",
+      "Apply globally in production without baseline comparison",
+      "Turn off all event rules and test manually",
+      "Bind all filtered events to one generic CI"
+    ],
+    "correctIndex": 0,
+    "explanation": "Testing with representative event data verifies that noise is reduced while true signals remain visible.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-rules.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 43,
+    "prompt": "What is a high-risk anti-pattern when configuring event filters?",
+    "choices": [
+      "Documenting filter rationale and owner",
+      "Creating broad wildcard filters that suppress unknown critical events",
+      "Tracking filter impact with analytics",
+      "Using explicit source and severity conditions"
+    ],
+    "correctIndex": 1,
+    "explanation": "Overly broad wildcard suppression can hide meaningful incidents and delay operational response.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-management-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 44,
+    "prompt": "Which metric best demonstrates event filter effectiveness?",
+    "choices": [
+      "Increase in manually reopened alerts",
+      "Longer average mean time to detect",
+      "Reduced noisy event volume with stable or improved actionable alert detection",
+      "Maximum suppression percentage regardless of missed incidents"
+    ],
+    "correctIndex": 2,
+    "explanation": "Effective filters lower noise while preserving detection performance for important operational issues.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/alert-analytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 45,
+    "prompt": "In Event Management, why are connector templates useful for onboarding new monitoring tools?",
+    "choices": [
+      "They disable event rules until incidents are opened",
+      "They eliminate the need for event field mapping",
+      "They convert alerts directly into hardware assets",
+      "They provide reusable ingestion configuration patterns that speed implementation consistency"
+    ],
+    "correctIndex": 3,
+    "explanation": "Templates standardize connector setup and reduce manual rework when integrating multiple sources with similar ingestion requirements.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 46,
+    "prompt": "Which step is most important after applying a connector template?",
+    "choices": [
+      "Validate source-specific mapping and credentials for that endpoint",
+      "Disable all event processing rules",
+      "Drop existing alert correlation logic",
+      "Rebuild MID Server certificates for every connector"
+    ],
+    "correctIndex": 0,
+    "explanation": "Templates accelerate setup, but each source still requires validation of connection details, mappings, and authentication.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 47,
+    "prompt": "What risk is reduced by using standardized connector templates across teams?",
+    "choices": [
+      "Duplicate loaner asset reservations",
+      "Inconsistent event taxonomy and parsing behavior between integrations",
+      "Discovery IP range overlap",
+      "CMDB relationship recursion"
+    ],
+    "correctIndex": 1,
+    "explanation": "Standard templates improve consistency in how events are mapped and classified, lowering operational variance and troubleshooting complexity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-it-operations-management/page/product/event-management/concept/event-management-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 48,
+    "prompt": "When a template-based connector is cloned for a new source, what should be reviewed to prevent noisy alerts?",
+    "choices": [
+      "Only dashboard color themes",
+      "Only stockroom assignment rules",
+      "Event filtering, severity mapping, and deduplication settings",
+      "Only MID Server disk space"
+    ],
+    "correctIndex": 2,
+    "explanation": "Source-specific filtering and severity controls are essential to keep alert quality high after template reuse.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/event-management/create-event-rule.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 49,
+    "prompt": "Which KPI best reflects successful connector template governance?",
+    "choices": [
+      "Maximum count of connector records regardless of data quality",
+      "Manual event reclassification in every shift",
+      "No use of shared templates in production",
+      "Faster connector onboarding with stable event quality and fewer mapping defects"
+    ],
+    "correctIndex": 3,
+    "explanation": "Good governance balances speed and reliability, resulting in quicker onboarding without sacrificing event fidelity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-it-operations-management/page/product/event-management/concept/event-management-overview.html"
+    ]
+  }
+]

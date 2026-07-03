@@ -1,0 +1,487 @@
+[
+  {
+    "trackCode": "CIS-HAM",
+    "order": 30,
+    "prompt": "In Hardware Asset Management, what is the main purpose of an RMA workflow?",
+    "choices": [
+      "Practically speaking, track return, replacement, and vendor resolution for defective hardware",
+      "From an admin perspective, through configured automation retire every asset after first incident",
+      "Typically, move all returned assets to consumable inventory",
+      "In platform terms, bypass procurement approval for replacements"
+    ],
+    "correctIndex": 0,
+    "explanation": "RMA workflows provide controlled lifecycle steps for defective items from return initiation through replacement or closure.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/rma-process.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 31,
+    "prompt": "Which record linkage is most important for RMA traceability?",
+    "choices": [
+      "In this scenario, rMA to source code repository commit",
+      "Practically speaking, rMA to event rule condition",
+      "From an admin perspective, rMA to discovery classification probe",
+      "In platform terms, rMA to original asset and related procurement details"
+    ],
+    "correctIndex": 3,
+    "explanation": "Connecting RMAs to the asset and purchase context supports warranty validation, vendor communication, and auditability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/task/manage-rma-records.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 32,
+    "prompt": "Why should organizations define clear state transitions in RMA workflows?",
+    "choices": [
+      "Operationally, to ensure consistent handling from defect report to replacement completion",
+      "In practice, to avoid recording vendor communication in standard operations",
+      "In most deployments, to prevent stockroom transfers permanently",
+      "From an implementation standpoint, to force all RMAs to close in one business day"
+    ],
+    "correctIndex": 0,
+    "explanation": "Explicit workflow states make handoffs predictable and reduce delays or loss of accountability during return processing.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-lifecycle.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 33,
+    "prompt": "What is a key control to avoid financial loss in RMA operations?",
+    "choices": [
+      "Practically speaking, validating warranty entitlement and return deadlines before shipment",
+      "In platform terms, removing procurement references for faster processing",
+      "In this scenario, skipping serial number checks on returned equipment",
+      "From an implementation standpoint, closing RMA cases before shipment confirmation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Warranty and timeline validation ensures returned assets are eligible and prevents missed vendor credit opportunities.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/task/verify-warranty-information.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 34,
+    "prompt": "Which metric best reflects healthy RMA workflow performance?",
+    "choices": [
+      "In platform terms, growing backlog of unresolved defective assets",
+      "Practically speaking, longer duration in vendor pending state",
+      "In this scenario, reduced cycle time from RMA creation to replacement asset readiness",
+      "From a governance perspective, higher count of manually corrected return records"
+    ],
+    "correctIndex": 2,
+    "explanation": "Shorter end-to-end RMA cycle time with fewer exceptions indicates a mature and efficient return process.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 35,
+    "prompt": "Why is procurement integration important in Hardware Asset Management?",
+    "choices": [
+      "Typically, this approach disables warranty tracking under normal policy constraints under expected controls",
+      "From an implementation standpoint, this approach prevents catalog-based hardware requests for stable outcomes",
+      "Operationally, this approach links purchasing activity to asset lifecycle records for financial and operational traceability",
+      "In practice, this approach removes the need for receiving workflows for consistent administration"
+    ],
+    "correctIndex": 2,
+    "explanation": "Integration with procurement connects requested, ordered, received, and deployed states in one governed lifecycle.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/procurement/concept/procurement-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 36,
+    "prompt": "Which record relationship is most critical for end-to-end procurement visibility?",
+    "choices": [
+      "Typically, alert group to vendor contract for governed delivery for stable outcomes",
+      "Operationally, discovery schedule to stockroom transfer order in standard operations",
+      "From an admin perspective, purchase order line to receiving record to resulting asset",
+      "In practice, pattern step output to depreciation schedule under normal policy constraints"
+    ],
+    "correctIndex": 2,
+    "explanation": "Linking PO lines through receiving into asset records preserves traceability for audits and lifecycle reporting.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/procurement/task/manage-purchase-orders.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/task/receive-hardware-assets.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 37,
+    "prompt": "What is the main reason to automate asset creation from receiving transactions?",
+    "choices": [
+      "In this scenario, to force all assets into in-use state in standard operations",
+      "From a governance perspective, to reduce manual entry errors and speed lifecycle updates",
+      "In most deployments, to bypass model approvals under normal policy constraints",
+      "In platform terms, to avoid stockroom assignment for governed delivery"
+    ],
+    "correctIndex": 1,
+    "explanation": "Receiving automation improves data accuracy and ensures timely transition from procurement to managed asset records.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/task/configure-asset-creation-from-receipt.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 38,
+    "prompt": "What risk is introduced when procurement and HAM are managed in disconnected systems with no integration?",
+    "choices": [
+      "From a governance perspective, higher chance of orphan purchases and incomplete asset records",
+      "In this scenario, automatic duplicate prevention under normal policy constraints",
+      "In most deployments, faster RMA turnaround for consistent administration",
+      "From an implementation standpoint, lower reconciliation effort under expected controls"
+    ],
+    "correctIndex": 0,
+    "explanation": "Without integration, purchased items may not become governed assets, weakening controls and reporting quality.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-lifecycle.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 39,
+    "prompt": "Which outcome indicates procurement integration is mature?",
+    "choices": [
+      "Practically speaking, receiving happens without model references under normal policy constraints",
+      "In practice, pO lines are closed before any asset record linkage for governed delivery",
+      "Typically, assets are traceable from request through PO, receipt, assignment, and financial lifecycle",
+      "From an admin perspective, most assets are created manually after deployment for stable outcomes"
+    ],
+    "correctIndex": 2,
+    "explanation": "Mature integration delivers full-chain traceability and minimizes manual corrections across asset processes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/procurement/concept/procurement-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 40,
+    "prompt": "In HAM catalog fulfillment, what is the primary objective of linking requests to asset workflows?",
+    "choices": [
+      "In most deployments, ensure requested hardware is reserved, fulfilled, and tracked through lifecycle states",
+      "In this scenario, disable stockroom tasks during fulfillment under normal policy constraints",
+      "From a governance perspective, bypass approvals for standard catalog items",
+      "In platform terms, through configured automation retire all previously assigned devices"
+    ],
+    "correctIndex": 0,
+    "explanation": "Catalog-linked fulfillment coordinates request, inventory, assignment, and lifecycle tracking in one controlled process.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-request-fulfillment.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 41,
+    "prompt": "Which configuration most improves fulfillment speed for common hardware requests?",
+    "choices": [
+      "Typically, delaying task creation until requester confirmation emails",
+      "Operationally, routing all requests to one global queue",
+      "In practice, defining standardized catalog items with clear model and stockroom routing",
+      "From an admin perspective, requiring manual model selection on every task"
+    ],
+    "correctIndex": 2,
+    "explanation": "Standardized catalog definitions and routing reduce ambiguity and allow predictable, faster fulfillment execution.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/service-catalog-management/concept/service-catalog-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/task/configure-hardware-catalog-items.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 42,
+    "prompt": "Why should fulfillment tasks capture the specific asset serial or tag assigned to the requester?",
+    "choices": [
+      "Typically, to prevent transfer order creation for governed delivery for stable outcomes",
+      "In practice, to auto-approve all future hardware requests in standard operations",
+      "Practically speaking, to bypass receiving validation for consistent administration",
+      "From an admin perspective, to maintain auditable custody and support downstream lifecycle events"
+    ],
+    "correctIndex": 3,
+    "explanation": "Recording the actual assigned asset ensures traceability for support, audits, returns, and financial controls.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-lifecycle.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 43,
+    "prompt": "What is a common fulfillment risk when catalog items are not aligned with current stockroom inventory?",
+    "choices": [
+      "In this scenario, improved first-pass fulfillment rates",
+      "From an implementation standpoint, lower need for substitutions",
+      "In most deployments, increased backorders, substitutions, and request delays",
+      "From a governance perspective, automatic procurement reconciliation"
+    ],
+    "correctIndex": 2,
+    "explanation": "Misalignment between catalog definitions and real inventory causes avoidable fulfillment exceptions and slower delivery.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/stockroom-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 44,
+    "prompt": "Which KPI best reflects mature catalog fulfillment in HAM?",
+    "choices": [
+      "Practically speaking, rising number of requests fulfilled without asset records",
+      "From an admin perspective, longer average request-to-delivery duration",
+      "Typically, high first-pass fulfillment rate with accurate asset-requester linkage",
+      "In practice, more manual task reassignments during delivery"
+    ],
+    "correctIndex": 2,
+    "explanation": "Mature fulfillment delivers quickly and correctly while preserving complete asset traceability and accountability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-request-fulfillment.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 45,
+    "prompt": "In Hardware Asset Management, what is a transfer order primarily used for?",
+    "choices": [
+      "Practically speaking, moving inventory between stockrooms with traceable fulfillment workflow",
+      "From an admin perspective, retiring hardware assets through configured automation",
+      "Typically, creating software entitlement records under normal policy constraints",
+      "In platform terms, generating discovery schedules for warehouse devices"
+    ],
+    "correctIndex": 0,
+    "explanation": "Transfer orders formalize stock movement between locations while preserving operational accountability and status tracking.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/create-transfer-order.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 46,
+    "prompt": "Which prerequisite matters most before submitting a transfer order?",
+    "choices": [
+      "Operationally, disabling the destination stockroom for consistent administration",
+      "In most deployments, closing all open asset tasks under normal policy constraints",
+      "From a governance perspective, removing asset model records from catalog",
+      "From an implementation standpoint, confirming source availability and destination stockroom context"
+    ],
+    "correctIndex": 3,
+    "explanation": "Transfer workflows depend on available quantity at the source and valid stockroom assignment at the destination.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/manage-your-stockrooms.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 47,
+    "prompt": "How do transfer orders support auditability in HAM operations?",
+    "choices": [
+      "Operationally, they record movement history and ownership handoffs across stockrooms",
+      "In practice, they bypass approvals to speed relocations for governed delivery",
+      "In most deployments, they delete historical stock transactions after completion",
+      "From an implementation standpoint, they replace all procurement receiving records"
+    ],
+    "correctIndex": 0,
+    "explanation": "Transfer records provide traceable movement events that help reconcile stock and support operational audits.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/transfer-stockrooms.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 48,
+    "prompt": "What issue most often indicates poor transfer order process control?",
+    "choices": [
+      "Practically speaking, consistent receiving confirmations for stable outcomes",
+      "In platform terms, frequent stock discrepancies between source and destination records",
+      "In this scenario, balanced stockroom counts after transfers for consistent administration",
+      "From an admin perspective, clear in-transit status updates under normal policy constraints"
+    ],
+    "correctIndex": 1,
+    "explanation": "Recurring inventory mismatch after transfers usually points to weak execution controls or incomplete receiving updates.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/reconcile-hardware-inventory.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 49,
+    "prompt": "Which transfer-order design choice best supports scalable fulfillment operations?",
+    "choices": [
+      "In this scenario, use standardized statuses, approvals, and receiving checkpoints across locations",
+      "In platform terms, allow each stockroom to invent unique status values",
+      "Practically speaking, skip in-transit tracking for low-cost models",
+      "From a governance perspective, route transfer requests through procurement catalog items only"
+    ],
+    "correctIndex": 0,
+    "explanation": "Consistent transfer lifecycle controls improve visibility and reduce exceptions as inventory movement volume grows.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/create-transfer-order.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 50,
+    "prompt": "In Hardware Asset Management, disposal processing is primarily about which objective?",
+    "choices": [
+      "Practically speaking, converting all retired assets to consumables",
+      "In platform terms, through configured automation creating software licenses for retired devices",
+      "Typically, executing controlled retirement with financial and compliance traceability",
+      "From an admin perspective, disabling inventory audits in closed stockrooms"
+    ],
+    "correctIndex": 2,
+    "explanation": "Disposal workflows formalize retirement activities and capture evidence needed for governance, risk, and accounting controls.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/dispose-hardware-assets.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 51,
+    "prompt": "What should be confirmed before moving assets into disposal status?",
+    "choices": [
+      "Practically speaking, that procurement records are deleted under normal policy constraints",
+      "In platform terms, that all transfer orders are canceled globally for governed delivery",
+      "In this scenario, that the assets are active in discovery schedules under expected controls",
+      "From an admin perspective, that data wipe, chain-of-custody, and approval requirements are satisfied"
+    ],
+    "correctIndex": 3,
+    "explanation": "Disposal readiness includes security and governance checks, especially data sanitization and documented custody controls.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-lifecycle.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 52,
+    "prompt": "Why are disposal vendors often integrated into HAM workflows?",
+    "choices": [
+      "From an implementation standpoint, to create discovery patterns for end-of-life devices",
+      "In most deployments, to capture external processing milestones and certification evidence",
+      "Operationally, to replace all internal asset approvals",
+      "In practice, to disable retirement financial calculations"
+    ],
+    "correctIndex": 1,
+    "explanation": "Vendor integration supports traceable processing events and documentation such as certificates of destruction or recycling records.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/dispose-hardware-assets.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 53,
+    "prompt": "Which metric most directly indicates disposal process health?",
+    "choices": [
+      "Typically, event connector throughput under normal policy constraints under expected controls",
+      "From an implementation standpoint, average days from retirement approval to verified disposal completion",
+      "Operationally, count of open catalog requests in standard operations",
+      "In practice, number of MID Servers in use for stable outcomes for consistent administration"
+    ],
+    "correctIndex": 1,
+    "explanation": "Cycle time from approved retirement to verified completion reflects disposal execution efficiency and process control.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/use/reporting/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 54,
+    "prompt": "What governance benefit comes from linking disposal records to asset lifecycle history?",
+    "choices": [
+      "In this scenario, this approach allows disposal without approvals for stable outcomes",
+      "Practically speaking, this approach preserves end-to-end audit evidence from acquisition through retirement",
+      "From a governance perspective, this approach prevents CMDB updates from Discovery",
+      "In platform terms, this approach eliminates the need for stockrooms under normal policy constraints"
+    ],
+    "correctIndex": 1,
+    "explanation": "Lifecycle linkage creates a complete record trail for compliance, financial review, and operational accountability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-lifecycle.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 55,
+    "prompt": "In HAM, loaner asset workflows primarily support which scenario?",
+    "choices": [
+      "Typically, temporary assignment of hardware while preserving accountability and return tracking",
+      "Operationally, automated procurement for data center racks for consistent administration",
+      "In practice, event suppression during change windows under normal policy constraints",
+      "From an implementation standpoint, permanent retirement of devices for governed delivery"
+    ],
+    "correctIndex": 0,
+    "explanation": "Loaner processes provide controlled short-term distribution and return tracking for hardware issued to users.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/manage-loaner-assets.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 56,
+    "prompt": "What data point is most critical when issuing a loaner asset?",
+    "choices": [
+      "Typically, cloud account region for stable outcomes for consistent administration",
+      "Operationally, discovery schedule run time under normal policy constraints",
+      "In practice, connector template version for governed delivery",
+      "From an admin perspective, expected return date with responsible user assignment"
+    ],
+    "correctIndex": 3,
+    "explanation": "A defined return commitment and accountable assignee reduce loss risk and improve recovery cycle performance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-lifecycle.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 57,
+    "prompt": "Which control helps prevent long-term conversion of loaners into untracked assets?",
+    "choices": [
+      "In this scenario, skip stockroom check-in on return under normal policy constraints",
+      "In platform terms, delete loaner asset history after 7 days for governed delivery",
+      "In most deployments, disable assignment updates under expected controls",
+      "From a governance perspective, use return reminders and overdue escalation workflows"
+    ],
+    "correctIndex": 3,
+    "explanation": "Automated reminders and escalation policies increase return compliance and keep temporary assignments visible.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/administer/business-rules/concept/c_BusinessRules.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 58,
+    "prompt": "Why should returned loaner assets follow a standard inspection process?",
+    "choices": [
+      "In this scenario, to auto-retire every returned device for governed delivery",
+      "From an implementation standpoint, to bypass warranty checks under expected controls",
+      "In most deployments, to verify condition, update status, and determine readiness for reissue",
+      "From a governance perspective, to suppress transfer orders in standard operations"
+    ],
+    "correctIndex": 2,
+    "explanation": "Consistent post-return checks maintain data quality and ensure only suitable devices return to available inventory.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/manage-hardware-assets.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 59,
+    "prompt": "Which KPI most directly reflects loaner program health?",
+    "choices": [
+      "Practically speaking, count of maintenance windows per month",
+      "From an admin perspective, connector setup lead time",
+      "Typically, on-time return rate and average overdue duration",
+      "In practice, number of discovery probes executed daily"
+    ],
+    "correctIndex": 2,
+    "explanation": "Return timeliness metrics show whether loaner controls are effective and inventory remains available for temporary needs.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/use/reporting/concept/c_ReportingAndAnalytics.html"
+    ]
+  }
+]

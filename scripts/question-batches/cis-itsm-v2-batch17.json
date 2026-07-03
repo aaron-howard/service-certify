@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 80,
+		"prompt": "During incident investigation, the team determines the underlying cause is a widespread error affecting multiple users. What is the recommended next step?",
+		"choices": [
+			"Create a problem record from the incident and associate it with the incident",
+			"Convert the incident directly to a catalog requested item without request tracking",
+			"Close the incident and disable the inactivity monitor for the caller",
+			"Run CMDB identification rules manually for every related configuration item"
+		],
+		"correctIndex": 0,
+		"explanation": "When an incident stems from an error or widespread issue, Problem Management is initiated by creating a problem from the incident and linking the records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/incident-management/t_PromoteAnIncident.html",
+			"https://www.servicenow.com/docs/r/it-service-management/incident-management/work-on-incidents.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 81,
+		"prompt": "During incident resolution, the team determines an infrastructure change is required. What action can be taken from the incident form?",
+		"choices": [
+			"Create Normal, Standard, or Emergency Change from the incident context menu",
+			"Submit an order guide that generates Requested Item records without a Request record",
+			"Mark the incident as duplicate and delete the associated problem record",
+			"Disable all SLA definitions on the Incident table for the assignment group"
+		],
+		"correctIndex": 0,
+		"explanation": "When resolution requires a controlled infrastructure or service modification, a change record can be created from the incident and linked in Related Records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/incident-management/t_PromoteAnIncident.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 82,
+		"prompt": "When planning a change request, why should affected CIs be added and Impacted Services refreshed on the change record?",
+		"choices": [
+			"To identify dependent CIs and populate impacted services based on the primary configuration item",
+			"To auto-close all open incidents for the change requester without agent review",
+			"To replace CAB authorization with pre-approved Standard change templates",
+			"To bypass conflict detection for every Normal change in the instance"
+		],
+		"correctIndex": 0,
+		"explanation": "Affected CIs and Refresh Impacted Services help assess CI and service impact so dependency and offering relationships are visible before implementation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/change-management/c_AffectedCIsAndImpactedServices.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 83,
+		"prompt": "After a problem coordinator confirms a valid problem during assessment, which state does the problem enter next?",
+		"choices": [
+			"The problem enters the Root Cause Analysis state",
+			"Closed with Risk accepted as the resolution code",
+			"New awaiting the Update Problem State to Assess business rule",
+			"Scheduled waiting for the planned start date"
+		],
+		"correctIndex": 0,
+		"explanation": "Confirming a valid problem during Assess moves it into Root Cause Analysis for investigation and proposed fix identification.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/problem-management/assess-a-problem.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 84,
+		"prompt": "In the normal change lifecycle, what happens during the Review state after implementation work is complete?",
+		"choices": [
+			"The change requester determines whether the change was successful during post-implementation review",
+			"The change is auto-approved and moves directly to Closed without documentation",
+			"All catalog variables are disabled on related Requested Item records",
+			"Emergency changes skip Authorize and move back to New automatically"
+		],
+		"correctIndex": 0,
+		"explanation": "Review follows Implement so the requester can verify success, conduct post-implementation review, and close the change when complete.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/change-management/c_ChangeStateModel.html",
+			"https://www.servicenow.com/docs/r/it-service-management/change-management/t_ProcessAChangeRequest.html"
+		]
+	}
+]
