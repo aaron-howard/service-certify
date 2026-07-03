@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-CSM",
+		"order": 35,
+		"prompt": "Supervisors want recommended agents displayed before manually assigning complex cases. Which configuration powers the assignment workbench recommendations?",
+		"choices": [
+			"A matching rule based on the Selection criteria matching type",
+			"A product model attribute that ranks agents by catalog category ownership",
+			"An entitlement field that auto-assigns cases to the contract author",
+			"A household relationship that maps consumers to assignment groups"
+		],
+		"correctIndex": 0,
+		"explanation": "Assignment workbench configurations are stored in matching rules using the Selection criteria type, such as the default Recommendation for Case Assignment rule.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/case-assignment-matching-rules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 36,
+		"prompt": "Cases that meet specific product and priority conditions should auto-assign when still unassigned. Which record performs that automatic assignment?",
+		"choices": [
+			"Assignment rule linked to a matching rule for the case conditions",
+			"Sold product record that stores the assignee on the product model form",
+			"Contact relationship that copies the contact's manager to every new case",
+			"Inbound email flow action that sets the assigned_to field on incidents only"
+		],
+		"correctIndex": 0,
+		"explanation": "Assignment rules route tasks to users or groups when matching rule conditions are met, but only if the case is not already assigned.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/c_CaseRouting.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 37,
+		"prompt": "The default Recommendation for Case Assignment matching rule uses three of four default criteria. Which criterion is NOT included in that default rule?",
+		"choices": [
+			"Case Priority Score",
+			"Availability Today",
+			"Matching Skills",
+			"Assigned Cases"
+		],
+		"correctIndex": 0,
+		"explanation": "The default recommendation matching rule uses Availability Today, Matching Skills, and Assigned Cases; Case Priority Score is not one of the default matching criteria.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/case-assignment-matching-rules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 38,
+		"prompt": "When mandatory skills are enabled for case assignment, which matching criterion should administrators use?",
+		"choices": [
+			"Matching Skills - Mandatory Skills Support",
+			"Availability Today without any skill evaluation configured",
+			"Assigned Cases as the only criterion ignoring product expertise",
+			"Contract Renewal Date matched against agent calendar entries"
+		],
+		"correctIndex": 0,
+		"explanation": "When mandatory skills are required on cases, the Matching Skills - Mandatory Skills Support criterion ensures recommended agents possess those mandatory skills.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/case-assignment-matching-rules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 39,
+		"prompt": "An administrator changes the Applies to table on a matching rule after creating its assignment rule. What happens to the assignment rule?",
+		"choices": [
+			"The assignment rule is not updated because the records are independent",
+			"The assignment rule table changes automatically to match the matching rule",
+			"Both records are deleted and must be recreated by Guided Setup",
+			"The matching rule is deleted and only the assignment rule remains active"
+		],
+		"correctIndex": 0,
+		"explanation": "Matching rules and assignment rules are independent records with no synchronization; changes to one are not reflected in the other.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/c_CaseRouting.html"
+		]
+	}
+]

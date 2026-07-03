@@ -387,23 +387,60 @@ export const PHASE8_TRACK_DOC_SOURCES: TrackDocSource[] = [
 	{
 		trackCode: 'CIS-CSM',
 		officialName: 'Certified Implementation Specialist - Customer Service Management',
-		publications: ['customer-service-management'],
+		publications: ['customer-service-management', 'knowledge-management', 'now-intelligence'],
 		domains: [
-			{ name: 'Case management', weight: '28%', publications: ['customer-service-management'] },
-			{ name: 'Customer service workspace', weight: '24%', publications: ['customer-service-management'] },
-			{ name: 'Orders and B2B', weight: '24%', publications: ['customer-service-management'] },
-			{ name: 'Now Assist CSM', weight: '24%', publications: ['customer-service-management'] }
+			{
+				name: 'CSM Foundational Data Model',
+				weight: '27%',
+				publications: ['customer-service-management']
+			},
+			{
+				name: 'CSM Configuration',
+				weight: '38%',
+				publications: ['customer-service-management']
+			},
+			{
+				name: 'Case Management',
+				weight: '17%',
+				publications: ['customer-service-management']
+			},
+			{
+				name: 'CSM Workspace Portals Analytics and Reporting',
+				weight: '8%',
+				publications: ['customer-service-management', 'now-intelligence']
+			},
+			{
+				name: 'CSM Best Practices and Knowledge Management',
+				weight: '10%',
+				publications: ['customer-service-management', 'knowledge-management']
+			}
 		]
 	},
 	{
 		trackCode: 'CIS-FSM',
 		officialName: 'Certified Implementation Specialist - Field Service Management',
-		publications: ['field-service-management'],
+		publications: ['field-service-management', 'now-platform', 'mobile-platform'],
 		domains: [
-			{ name: 'Work orders and tasks', weight: '28%', publications: ['field-service-management'] },
-			{ name: 'Scheduling and dispatch', weight: '26%', publications: ['field-service-management'] },
-			{ name: 'Mobile field service', weight: '24%', publications: ['field-service-management'] },
-			{ name: 'Assets and territories', weight: '22%', publications: ['field-service-management'] }
+			{
+				name: 'Field Service Management Fundamentals',
+				weight: '42%',
+				publications: ['field-service-management']
+			},
+			{
+				name: 'Implementation Planning',
+				weight: '3%',
+				publications: ['field-service-management', 'now-platform']
+			},
+			{
+				name: 'Implementing Field Service Processes',
+				weight: '52%',
+				publications: ['field-service-management']
+			},
+			{
+				name: 'Implementing Related Processes',
+				weight: '3%',
+				publications: ['field-service-management', 'mobile-platform']
+			}
 		]
 	},
 	{

@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-FSM",
+		"order": 30,
+		"prompt": "Which Field Service persona reviews draft work orders and creates or edits tasks before dispatch?",
+		"choices": [
+			"Qualifier with the wm_qualifier role",
+			"Field agent with the wm_agent role executing tasks without task design duties",
+			"Initiator with the wm_initiator role when qualification is disabled globally on the instance",
+			"Contract auditor role used exclusively for hardware asset disposal approval workflows"
+		],
+		"correctIndex": 0,
+		"explanation": "Qualifiers review work orders, create and edit tasks, and move records through the qualification states before dispatch.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/configure-qualify-fsm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 31,
+		"prompt": "Which Field Service persona typically creates a new work order or generates one from an incident, problem, or change record?",
+		"choices": [
+			"Initiator with the wm_initiator role",
+			"Dispatcher with the wm_dispatcher role before any qualification step occurs automatically",
+			"External customer survey recipient with no Field Service roles on the user record",
+			"CMDB manager responsible for identification and reconciliation rule maintenance only"
+		],
+		"correctIndex": 0,
+		"explanation": "Initiators create work orders directly or from related records such as incidents, problems, changes, or project tasks.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/setting-up-field-service-user-groups.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 32,
+		"prompt": "A regional operations lead assigns skills to technician groups and monitors team performance. Which role aligns to this manager persona?",
+		"choices": [
+			"wm_manager with access to Manage Skills and field team performance views",
+			"wm_agent executing tasks without permissions to manage skills on Manage Skills",
+			"wm_qualifier focused on task creation without workforce performance dashboards",
+			"wm_dispatcher limited to drag-and-drop assignment without manager workspace access"
+		],
+		"correctIndex": 0,
+		"explanation": "Field Service managers use the wm_manager role to manage agent skills, assignment groups, and team performance through manager workspaces.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/field-service-manager-agent-skills.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 33,
+		"prompt": "Work order lifecycle, task templates, and qualification states are core capabilities of which Field Service module area?",
+		"choices": [
+			"Work Order Management within Field Service Management",
+			"Security Operations vulnerability response scanning for external IP address ranges only",
+			"HR Service Delivery employee onboarding case management for corporate staff only",
+			"Enterprise Asset Management depreciation schedules without work order integration"
+		],
+		"correctIndex": 0,
+		"explanation": "Work Order Management covers creating work orders and tasks, qualification, templates, and execution through closure.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/setting-up-work-orders-and-tasks.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 34,
+		"prompt": "Technician shift calendars and availability windows feed which scheduling outcome during implementation?",
+		"choices": [
+			"Realistic assignment slots that respect working hours when dispatching work order tasks",
+			"Automatic deletion of overdue tasks without notifying agents or updating task states",
+			"Removal of territory boundaries so every agent appears available twenty-four hours daily",
+			"Conversion of all work orders to catalog tasks processed by the service desk queue only"
+		],
+		"correctIndex": 0,
+		"explanation": "Agent schedules and availability data constrain dispatch and dynamic scheduling so assignments fit within working calendars and shift rules.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/dynamic-scheduling.html"
+		]
+	}
+]

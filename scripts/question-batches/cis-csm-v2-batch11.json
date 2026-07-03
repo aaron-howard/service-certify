@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-CSM",
+		"order": 50,
+		"prompt": "A B2B organization supports businesses, while a B2C organization supports individuals. Which CSM case type distinction should the implementer configure to reflect these engagement models?",
+		"choices": [
+			"Business-to-business cases tied to accounts and business-to-consumer cases tied to consumers",
+			"A single generic case type that ignores whether the customer is a company or an individual",
+			"Change request records reused directly as the only customer-facing case type in the portal",
+			"Problem tasks repurposed to represent every customer interaction across all support channels"
+		],
+		"correctIndex": 0,
+		"explanation": "CSM supports B2B models where cases relate to accounts and contacts, and B2C models where cases relate to consumers, so case type configuration must reflect the supported engagement model.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/customer-service-management-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 51,
+		"prompt": "An implementer needs the phone channel to create cases and capture caller context automatically when an agent answers. Which CSM capability supports this telephony intake?",
+		"choices": [
+			"Customer Service Management integration with a computer telephony integration for the phone channel",
+			"A scheduled import set that only loads historical call detail records once every night",
+			"A catalog client script that validates variable input on unrelated hardware request items",
+			"A data lookup rule that sets priority solely from the case short description keywords"
+		],
+		"correctIndex": 0,
+		"explanation": "CTI/OpenFrame integrations connect the phone channel to CSM so inbound calls surface caller identity and can generate or link cases with context during the interaction.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/openframe-for-csm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 52,
+		"prompt": "A customer service team wants proactive outbound messages sent to a targeted set of contacts about a maintenance window. Which CSM feature is designed for this outreach?",
+		"choices": [
+			"Targeted communications that select recipients and send campaign-style customer notifications",
+			"The incident major problem workbench used only by internal problem management coordinators",
+			"A single system property that toggles instance-wide read-only maintenance for all users",
+			"The knowledge feedback flag that customers submit against an individual published article"
+		],
+		"correctIndex": 0,
+		"explanation": "Targeted communications let CSM teams define recipient audiences and send proactive, campaign-style outbound messages such as maintenance or outage notices to affected customers.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/targeted-communications-for-csm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 53,
+		"questionType": "multi",
+		"prompt": "Which two elements does a targeted communication in CSM require the implementer to define before it can be sent? (Choose two.)",
+		"choices": [
+			"The audience or recipient list that determines who receives the communication",
+			"The message content or template delivered to the selected recipients",
+			"A mandatory change advisory board approval recorded on every outbound customer message",
+			"A discovery schedule that scans customer devices before any communication is released"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Targeted communications need a defined audience (recipients) and message content or template; they do not require CAB approval or discovery schedules.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/targeted-communications-for-csm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 54,
+		"prompt": "A support contract promises resolution of high-priority cases within four business hours. Which CSM configuration tracks and enforces that commitment on each qualifying case?",
+		"choices": [
+			"Service level agreements with definitions and schedules attached to qualifying cases",
+			"A read-only annotation field that agents optionally fill in with a target date manually",
+			"The account contact directory listing every individual who can open a customer case",
+			"A survey trigger that sends a satisfaction questionnaire after the case is resolved"
+		],
+		"correctIndex": 0,
+		"explanation": "SLA definitions with conditions and schedules measure elapsed time against commitments, driving timers, breaches, and escalations for qualifying customer cases.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/service-level-agreements-for-csm.html"
+		]
+	}
+]

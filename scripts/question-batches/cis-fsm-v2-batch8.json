@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-FSM",
+		"order": 35,
+		"prompt": "A field operations program prioritizes reducing friction for technicians completing jobs onsite. Which improvement target aligns to this goal?",
+		"choices": [
+			"Mobile guidance, contextual task data, and streamlined workflows that speed onsite completion",
+			"Requiring paper forms for every checklist item before agents may update task states digitally",
+			"Removing offline support so technicians verify connectivity before opening any work order",
+			"Mandatory dispatcher approval for each individual line on multi-step work order checklists"
+		],
+		"correctIndex": 0,
+		"explanation": "Improving the field agent experience focuses on reducing friction through mobile guidance, relevant context, and efficient task workflows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/mobile-experience-fsm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 36,
+		"prompt": "During a storm response, technicians lose cellular signal across a wide region. Which mobile capability remains most critical?",
+		"choices": [
+			"Offline task execution and data capture that synchronizes automatically when reconnected",
+			"Forced hourly VPN reconnections before any work order task can display customer details",
+			"Live video streaming requirements for every appointment regardless of bandwidth constraints",
+			"Animated dashboard widgets on mobile home screens replacing task completion forms entirely"
+		],
+		"correctIndex": 0,
+		"explanation": "Offline-first mobile workflows let technicians keep executing and recording work during connectivity outages and sync when service returns.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/mobile-experience-fsm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 37,
+		"prompt": "Before configuring territories and groups, an implementation lead wants packaging, licensing, and training guidance. Which resource should they start with?",
+		"choices": [
+			"Plan implementation documentation covering packaging, licensing, and recommended training paths",
+			"Production problem close notes from unrelated ITSM teams without any field service context",
+			"Legacy release notes for deprecated plugins not included in the current FSM subscription",
+			"Unrelated identity provider SAML metadata used exclusively for enterprise portal login"
+		],
+		"correctIndex": 0,
+		"explanation": "Plan implementation documentation helps teams understand FSM packaging, licensing, and training before foundation configuration begins.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/planning-implementation-fsm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 38,
+		"prompt": "A new Field Service deployment team needs a sequenced checklist to import foundation data such as users, locations, and territories. What should they use?",
+		"choices": [
+			"Field Service Management Guided Setup to import and configure foundation data in order",
+			"A manual script bundle that bypasses all Field Service tables and ACL validation rules",
+			"The HR onboarding case workflow intended for employee lifecycle requests in HRSD only",
+			"Custom discovery patterns for datacenter server classification without user group setup"
+		],
+		"correctIndex": 0,
+		"explanation": "Field Service Management Guided Setup provides a sequenced task list to import and configure foundation data such as users, locations, and territories.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/configuring-fsm-with-guided-setup.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 39,
+		"prompt": "During planning workshops, stakeholders map initiators, qualifiers, dispatchers, and agents to locations. Which configuration concept should anchor these discussions?",
+		"choices": [
+			"Field Service user groups with inherited roles and location coverage for each persona",
+			"A single global assignment group with no location or dispatch group relationships defined",
+			"Catalog client scripts that run only when employees order laptops from the service portal",
+			"Problem management root cause categories unrelated to field execution responsibilities"
+		],
+		"correctIndex": 0,
+		"explanation": "Implementation planning should align personas to user groups with inherited roles and location coverage so qualification and dispatch paths are clear.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/setting-up-field-service-user-groups.html"
+		]
+	}
+]

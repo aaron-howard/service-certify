@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-FSM",
+		"order": 55,
+		"prompt": "During workforce setup, a region reports misrouted jobs to distant technicians. Which foundational data issue is most likely?",
+		"choices": [
+			"Service locations lack accurate geocoding needed for territory-based assignment",
+			"Knowledge articles are missing approval workflows for internal authors",
+			"Timesheet categories were not activated for the Time Recording plugin",
+			"Virtual Agent topics were not published to the employee service portal"
+		],
+		"correctIndex": 0,
+		"explanation": "Territory management and routing depend on accurate geographic location data; poor geocoding leads to incorrect territory assignment.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/c_TerritoryManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 56,
+		"prompt": "A parts manager needs to track van stock and warehouse inventory separately. What FSM record type should be configured?",
+		"choices": [
+			"A stockroom representing a physical or virtual space for parts and assets",
+			"A change model used to approve hardware refresh project milestones",
+			"A problem task template for recurring network outage investigations",
+			"A service offering record tied to the strategic portfolio planning workspace"
+		],
+		"correctIndex": 0,
+		"explanation": "Stockrooms organize inventory items such as parts and assets in physical or virtual storage locations used during field operations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/asset-management-for-field-service/configuring-stockrooms.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 57,
+		"prompt": "Technicians in a regional crew should search parts only from designated warehouses. What configuration supports this?",
+		"choices": [
+			"Preferred stockrooms assigned to the work group for mobile part lookup",
+			"Global incident assignment rules mapped to the default IT support group",
+			"Change advisory board delegates listed on every standard change template",
+			"Discovery schedules that run weekly against all network device classes"
+		],
+		"correctIndex": 0,
+		"explanation": "Preferred stockrooms for work groups let agents search parts from designated stockrooms using the Now Mobile Agent application.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/asset-management-for-field-service/setup-preferred-stockrooms.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 58,
+		"prompt": "Work orders are linked to customer accounts during implementation. What operational benefit does this relationship provide?",
+		"choices": [
+			"Service history and customer context are preserved across repeat visits to the account",
+			"All open incidents automatically close when the related work order is created",
+			"Contractor invoices bypass approval when the account record is populated",
+			"SLA timers are removed for work tied to accounts marked as inactive"
+		],
+		"correctIndex": 0,
+		"explanation": "Account relationships on work orders preserve customer context and service history for planning, communication, and repeat visits.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/Work-order-fsm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 59,
+		"prompt": "Before repairing HVAC equipment, a technician needs prior service history for that unit. Where should they find it?",
+		"choices": [
+			"The related asset record and linked work history on the work order",
+			"The default change management risk assessment questionnaire only",
+			"The service catalog execution plan attached to the request item",
+			"The problem management known error database for unrelated incidents"
+		],
+		"correctIndex": 0,
+		"explanation": "Work orders store associated configuration items and assets; asset records provide install base context and prior service history.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/Work-order-fsm.html"
+		]
+	}
+]

@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-CSM",
+		"order": 20,
+		"prompt": "A read-only analyst must view customer contracts and install base data without editing cases. Which role provides that access?",
+		"choices": [
+			"Customer data viewer role with read-only access to customer entities",
+			"Consumer role for individual end customers who purchased retail products",
+			"Document template admin role that manages PDF templates for case types",
+			"Agent workspace user role that accepts messaging channel conversations"
+		],
+		"correctIndex": 0,
+		"explanation": "The customer data viewer role grants read-only access to customer data entities including accounts, contacts, install base items, contracts, entitlements, and sold products.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 21,
+		"prompt": "A B2B account also sells to individual end users who need portal access under that account. Which record links a consumer to the business account?",
+		"choices": [
+			"Account consumer association on the account consumer table",
+			"Contact relationship that converts the consumer into a contact employee",
+			"Matching rule that routes the consumer's cases to the account manager",
+			"Product model extension that stores consumer login credentials"
+		],
+		"correctIndex": 0,
+		"explanation": "Account consumer records associate individual consumers with a business account so they can access account-scoped data such as install base and sold product information.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 22,
+		"prompt": "Legal and billing stakeholders must appear on cases without being account team members or case assignees. Which configuration defines these parties?",
+		"choices": [
+			"Related party configuration for designated stakeholder roles on cases",
+			"Inbound email flow that forwards case updates to all instance users",
+			"Entitlement modification that adds stakeholders as entitlement admins",
+			"Case type table extension that removes the account field from the form"
+		],
+		"correctIndex": 0,
+		"explanation": "Related party configuration lets organizations define additional stakeholders who receive visibility or notifications on cases beyond standard account team membership.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 23,
+		"prompt": "Agents must see a warning when opening cases for a VIP account with non-standard handling instructions. Which application surfaces notes from related account records on the case?",
+		"choices": [
+			"Special handling notes configured to display from related account records",
+			"Request parent mapping that synchronizes SC requests to case work notes",
+			"WhatsApp integration that posts account alerts into the chat transcript",
+			"MFA clock skew property that delays portal login for VIP contacts"
+		],
+		"correctIndex": 0,
+		"explanation": "Special handling notes can be configured on entity tables and set to display alerts from related records such as the account or product associated with a case.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/c_OnScreenAlerts.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 24,
+		"prompt": "A new CSM implementation team is preparing the instance before agents handle live cases. What should they configure first to establish core customer data?",
+		"choices": [
+			"Accounts, contacts or consumers, and product catalog structures including product models",
+			"Advanced Work Assignment queues before any customer or product records exist",
+			"Incident integration roles before defining case types or customer entities",
+			"Playbook process pages before loading accounts or entitlements into the instance"
+		],
+		"correctIndex": 0,
+		"explanation": "Foundational CSM setup begins with customer entities and product catalog data so cases, entitlements, and channels can reference accounts, contacts or consumers, and products.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/set-up-post-sales-support.html"
+		]
+	}
+]

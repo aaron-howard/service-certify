@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-CSM",
+		"order": 75,
+		"prompt": "An implementer must let customers register and associate with the correct account so they only see records relevant to their organization on the portal. Which portal capability handles this?",
+		"choices": [
+			"Customer account and contact registration that scopes portal data to the user's account",
+			"A global anonymous view that shows every customer's cases to all portal visitors alike",
+			"An internal-only ACL that blocks all external users from ever reaching the portal login",
+			"A knowledge feedback widget that only collects article ratings from signed-in agents"
+		],
+		"correctIndex": 0,
+		"explanation": "Portal registration ties a contact to an account and applies account-based access, ensuring customers see only the cases, assets, and entitlements for their organization.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/customer-service-portal.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 76,
+		"prompt": "A CSM leader wants trended, historical insight into metrics like average resolution time and case backlog over months, not just current values. Which capability should be enabled?",
+		"choices": [
+			"Performance Analytics with indicators and scheduled data collection for trend scoring",
+			"A single real-time list filter that only shows cases open at the current moment",
+			"A one-off export to a spreadsheet that captures a static snapshot for one day only",
+			"The OpenFrame telephony toolbar that displays live inbound call queue counts only"
+		],
+		"correctIndex": 0,
+		"explanation": "Performance Analytics collects indicator scores on a schedule to reveal trends and historical patterns over time, unlike real-time reports that show only the current state.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/performance-analytics-for-csm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 77,
+		"prompt": "What is the key difference between a report and a Performance Analytics indicator in a CSM deployment?",
+		"choices": [
+			"A report shows current data while an indicator captures scores over time to reveal trends",
+			"A report can never be shared with any user while an indicator is always fully public",
+			"A report requires a telephony integration while an indicator requires a chat integration",
+			"A report deletes source records after rendering while an indicator duplicates every case"
+		],
+		"correctIndex": 0,
+		"explanation": "Reports present current data at query time, whereas Performance Analytics indicators snapshot scores over time to surface trends, targets, and forecasts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/performance-analytics-for-csm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 78,
+		"prompt": "A manager wants a single screen combining several reports, indicators, and lists for daily monitoring of the customer service operation. Which artifact should the implementer build?",
+		"choices": [
+			"A dashboard that aggregates multiple reports, indicators, and lists onto one screen",
+			"A single knowledge article that manually restates yesterday's case counts in text",
+			"A data policy that makes the case priority field mandatory during record creation",
+			"An assignment rule that pushes every new case to one designated senior agent only"
+		],
+		"correctIndex": 0,
+		"explanation": "Dashboards combine multiple reports, Performance Analytics widgets, and lists into a single monitoring view tailored to a role such as a customer service manager.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/reporting-for-csm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 79,
+		"prompt": "During onboarding an agent should immediately see any critical account handling instructions while working a case in the workspace. Where do special handling notes appear to support this usage?",
+		"choices": [
+			"Contextually within the agent workspace when the matching case conditions are met",
+			"Only in a nightly email digest delivered after the agent's shift has already ended",
+			"Exclusively on the external customer portal where customers read the notes themselves",
+			"In the system logs table that only administrators review during scheduled audits"
+		],
+		"correctIndex": 0,
+		"explanation": "Special handling notes surface contextually in the agent workspace when their conditions match the case, so agents see critical account guidance at the moment they need it.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/special-handling-notes-for-csm.html"
+		]
+	}
+]
