@@ -3,6 +3,7 @@
 
 	let { data } = $props();
 	const exam = $derived(data.exam);
+	const isAdmin = $derived(data.user?.isAdmin ?? false);
 </script>
 
 <svelte:head>
@@ -90,6 +91,14 @@
 						>
 							Try Sample Practice
 						</a>
+						{#if isAdmin}
+							<a
+								href="/exams/{exam.slug}/practice?mode=full"
+								class="block w-full rounded-md bg-primary py-4 text-center text-lg font-bold text-on-primary transition-all hover:brightness-110 active:scale-[0.98]"
+							>
+								Start Full Mock
+							</a>
+						{/if}
 					</div>
 					<div class="space-y-3">
 						<p class="text-sm font-bold uppercase tracking-widest text-primary">Test Bank Features</p>

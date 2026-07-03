@@ -7,7 +7,7 @@ import {
 	OAUTH_PROVIDERS
 } from '$lib/workos.server';
 
-export const GET: RequestHandler = async ({ url }) => {
+export const GET: RequestHandler = async ({ url, cookies }) => {
 	if (!isWorkOSConfigured()) {
 		throw redirect(302, '/auth/signin?error=workos_not_configured');
 	}
@@ -16,6 +16,17 @@ export const GET: RequestHandler = async ({ url }) => {
 
 	if (!provider || !(provider in OAUTH_PROVIDERS)) {
 		throw redirect(302, '/auth/signin?error=invalid_provider');
+	}
+
+	const postAuthRedirect = url.searchParams.get('redirect');
+	if (postAuthRedirect?.startsWith('/')) {
+		cookies.set('auth_redirect', postAuthRedirect, {
+			httpOnly: true,
+			secure: url.protocol === 'https:',
+			sameSite: 'lax',
+			path: '/',
+			maxAge: 10 * 60
+		});
 	}
 
 	const authorizationUrl = getOAuthAuthorizationUrl(url.origin, provider);
