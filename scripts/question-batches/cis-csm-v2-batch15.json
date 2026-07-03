@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-CSM",
+		"order": 70,
+		"prompt": "An agent working in the CSM Configurable Workspace needs recommended next steps that adapt to the current case context. Which workspace capability presents these context-aware recommendations?",
+		"choices": [
+			"Guided decisions or agent assist that surface recommended actions based on case context",
+			"A static printed runbook stored outside the platform that agents consult manually",
+			"The instance clone scheduler that copies production data into a sub-production instance",
+			"A UI theme picker that only changes the workspace accent color for the signed-in user"
+		],
+		"correctIndex": 0,
+		"explanation": "Guided decisions and agent assistance tools in the workspace surface context-aware recommended actions, helping agents follow consistent, efficient resolution paths.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/guided-decisions-for-csm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 71,
+		"prompt": "A supervisor needs real-time visibility into agent workload, queue backlogs, and case volumes across the team. Which workspace feature best provides this operational view?",
+		"choices": [
+			"Workspace dashboards and lists that display live case, queue, and agent metrics",
+			"A one-time export of last year's cases to a spreadsheet for offline manual review",
+			"The account contact form section listing individual contacts for a single account",
+			"A knowledge article template that standardizes the layout of published documents"
+		],
+		"correctIndex": 0,
+		"explanation": "Configurable workspace dashboards and lists give supervisors real-time operational visibility into queues, workloads, and case metrics for proactive management.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/csm-configurable-workspace.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 72,
+		"questionType": "multi",
+		"prompt": "Which two components make the CSM Configurable Workspace adaptable to an organization's process without heavy custom code? (Choose two.)",
+		"choices": [
+			"Configurable list and form layouts tailored to agent roles and case types",
+			"Contextual side panels and declarative actions defined for the workspace experience",
+			"Mandatory rewrites of the underlying case table schema for every configuration change",
+			"A separate physical server that must be provisioned for each individual agent account"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "The workspace is adapted through configurable layouts, contextual panels, and declarative actions rather than schema rewrites or per-agent servers, keeping customization low-code.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/csm-configurable-workspace.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 73,
+		"prompt": "An organization wants customers to open cases, track status, and search knowledge from a branded self-service site. Which CSM front-end should the implementer configure?",
+		"choices": [
+			"The Customer Service Portal that provides self-service case and knowledge access",
+			"The internal core UI application navigator restricted to fulfiller and admin users",
+			"The Advanced Work Assignment queue configuration screen used only by administrators",
+			"The performance analytics data collector job scheduler for nightly score snapshots"
+		],
+		"correctIndex": 0,
+		"explanation": "The Customer Service Portal is the branded self-service experience where customers submit and track cases, browse the catalog, and search knowledge.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/customer-service-portal.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 74,
+		"prompt": "A customer wants to request a standardized service, such as a return or an upgrade, directly from the Customer Service Portal. Which construct presents these requestable offerings?",
+		"choices": [
+			"A service catalog for CSM that publishes customer-requestable items on the portal",
+			"A read-only knowledge category that only displays reference documentation articles",
+			"An internal change request form available exclusively to the change management team",
+			"A targeted communication audience list used solely for outbound campaign messaging"
+		],
+		"correctIndex": 0,
+		"explanation": "A service catalog surfaced on the Customer Service Portal lets customers request standardized offerings, generating the appropriate case or request records for fulfillment.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/service-catalog-for-csm.html"
+		]
+	}
+]

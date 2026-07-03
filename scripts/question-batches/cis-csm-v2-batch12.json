@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-CSM",
+		"order": 55,
+		"prompt": "Some enterprise customers require agents to follow account-specific handling rules, such as never contacting the customer by phone after hours. Which CSM feature surfaces these instructions to agents on the case?",
+		"choices": [
+			"Special handling notes that display account or contact-specific guidance to agents",
+			"A random tip-of-the-day banner rotated globally across every agent's home dashboard",
+			"The default incident resolution notes copied automatically from a prior unrelated case",
+			"A read-only audit history entry that records every field change on the case record"
+		],
+		"correctIndex": 0,
+		"explanation": "Special handling notes present account-, contact-, product-, or asset-specific instructions to agents at the right moment so they follow required customer handling rules.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/special-handling-notes-for-csm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 56,
+		"prompt": "When configuring a special handling note, which setting determines the conditions under which the note appears to an agent working a case?",
+		"choices": [
+			"The applies-to record and matching conditions that scope when the note is shown",
+			"The instance-wide session timeout value that logs idle agents out of the platform",
+			"The outbound email server profile used to deliver customer acknowledgement messages",
+			"The report source table selected when building a performance analytics dashboard widget"
+		],
+		"correctIndex": 0,
+		"explanation": "A special handling note is scoped by what it applies to (account, contact, product, or asset) and the conditions that control when it surfaces to agents.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/special-handling-notes-for-csm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 57,
+		"prompt": "An implementer must ensure only certain agents can view sensitive special handling notes for a regulated account. What should govern this visibility?",
+		"choices": [
+			"Access controls and note visibility settings that restrict which users can read the note",
+			"A public knowledge base flag that publishes the note to the external customer portal",
+			"An assignment rule that reassigns the entire account to a different regional group",
+			"A survey definition scheduled to gather feedback from the account's primary contact"
+		],
+		"correctIndex": 0,
+		"explanation": "Visibility of special handling notes is controlled through access settings so only authorized agents see sensitive account guidance, keeping regulated information restricted.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/special-handling-notes-for-csm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 58,
+		"prompt": "An agent opens a newly created customer case that has not yet been picked up. Which case state typically represents this starting point in the CSM case lifecycle?",
+		"choices": [
+			"New, indicating the case has been logged but work has not yet begun",
+			"Closed, indicating resolution was confirmed and the case is fully archived",
+			"Cancelled, indicating the customer withdrew the request before any triage occurred",
+			"Resolved, indicating a fix was applied and awaiting customer confirmation only"
+		],
+		"correctIndex": 0,
+		"explanation": "The CSM case lifecycle generally begins in the New state when a case is logged, then progresses through open, in-progress, resolved, and closed states as work advances.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/case-management-process.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 59,
+		"prompt": "A customer replies with the requested information after an agent moved a case to Awaiting Info. What is the appropriate lifecycle transition for the agent to make?",
+		"choices": [
+			"Return the case to an active in-progress state so work resumes on the response",
+			"Immediately close the case as complete without reviewing the customer's reply",
+			"Delete the case record entirely to remove it from the agent's assigned queue",
+			"Convert the case into a knowledge article before reading the submitted information"
+		],
+		"correctIndex": 0,
+		"explanation": "When a customer supplies the needed information, the agent moves the case out of the awaiting-info hold back into an active working state to continue resolution.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/case-management-process.html"
+		]
+	}
+]

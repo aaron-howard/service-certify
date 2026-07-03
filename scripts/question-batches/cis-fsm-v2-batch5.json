@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-FSM",
+		"order": 20,
+		"prompt": "Which capability gives field technicians job details, navigation support, and status updates while onsite?",
+		"choices": [
+			"The Field Service Management mobile experience through Now Mobile or Agent apps",
+			"Exclusive use of the Service Desk interaction portal for phone-based ticket updates only",
+			"Exporting work orders to email attachments that technicians edit and reply with daily",
+			"Running the Dispatcher Workspace interface on technician laptops without any role changes"
+		],
+		"correctIndex": 0,
+		"explanation": "FSM mobile applications provide technicians with contextual job information, navigation, and task updates directly at the customer site.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/mobile-experience-fsm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 21,
+		"prompt": "Technicians frequently work in basements and rural areas with intermittent connectivity. Which mobile design best supports continued execution?",
+		"choices": [
+			"Offline access to assigned work orders and task steps that sync when connectivity returns",
+			"Requiring live VPN sessions before any work order field can be viewed or updated on mobile",
+			"Blocking task completion until technicians return to the office and use the desktop form",
+			"Disabling photo and signature capture to reduce payload size during online sessions only"
+		],
+		"correctIndex": 0,
+		"explanation": "Offline mobile support lets technicians continue working and capture data in low-connectivity areas, syncing updates when the device reconnects.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/mobile-experience-fsm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 22,
+		"prompt": "To improve billing evidence and repeat-visit context, what should technicians capture on mobile at job completion?",
+		"choices": [
+			"Parts consumed, photos, customer signatures, and structured completion details on the task",
+			"Only the work order number typed into a personal spreadsheet stored on local devices",
+			"A verbal confirmation recorded outside ServiceNow with no updates to the work order task",
+			"The dispatcher schedule board screenshot attached as proof of attendance at the customer site"
+		],
+		"correctIndex": 0,
+		"explanation": "Rich mobile completion data—including parts, photos, signatures, and notes—supports billing, audit trails, and future service context.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/mobile-experience-fsm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 23,
+		"prompt": "Adoption testing shows technicians abandon long generic mobile forms. What configuration change best improves compliance?",
+		"choices": [
+			"Role-based mobile forms with only the fields required for each job type and persona",
+			"Adding every work order and asset field to a single universal form for all technicians",
+			"Removing mandatory fields so agents can close tasks without recording parts or time worked",
+			"Disabling push notifications so technicians are not reminded about pending task updates"
+		],
+		"correctIndex": 0,
+		"explanation": "Tailored mobile forms reduce friction by showing only the fields each role and job type requires during field execution.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/configuring-work-configs.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 24,
+		"prompt": "Which metric best indicates technicians are completing field updates at the point of work rather than end-of-day batch entry?",
+		"choices": [
+			"Percentage of task status and completion updates submitted from mobile at the job site",
+			"Count of inactive UI policies on the work order table updated more than one year ago",
+			"Total number of email notifications sent to dispatchers when tasks change state each week",
+			"Average number of catalog items published per quarter on the employee service portal"
+		],
+		"correctIndex": 0,
+		"explanation": "A high rate of mobile updates at the point of work indicates real adoption and fresher operational visibility for dispatch and managers.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/mobile-experience-fsm.html"
+		]
+	}
+]

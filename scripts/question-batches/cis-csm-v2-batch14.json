@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-CSM",
+		"order": 65,
+		"prompt": "A service manager wants a consolidated periodic summary of case activity, such as new, resolved, and aging cases, delivered to account stakeholders. Which CSM feature produces this rollup?",
+		"choices": [
+			"Case digests that summarize case activity for stakeholders on a scheduled basis",
+			"A single case form section that only shows the currently open case's short description",
+			"The OpenFrame telephony toolbar that displays live inbound call queue statistics",
+			"A UI action button that manually closes one selected case at a time from a list"
+		],
+		"correctIndex": 0,
+		"explanation": "Case digests generate periodic summaries of case activity so stakeholders receive a consolidated view of volumes, status, and trends without opening individual cases.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/case-digest-for-csm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 66,
+		"prompt": "A CSM implementation ties cases to the specific offering a customer is entitled to, such as a support tier tied to a product line. Which construct defines that supported offering?",
+		"choices": [
+			"Service definitions and entitlements that specify which services a customer can receive",
+			"A generic catalog item variable set reused only for internal hardware procurement requests",
+			"A discovery pattern that maps only network topology for infrastructure configuration items",
+			"An email notification layout template applied to outbound case acknowledgement messages"
+		],
+		"correctIndex": 0,
+		"explanation": "Service definitions and entitlements describe the services and support levels a customer is eligible for, driving what cases and offerings apply to that account or contract.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/entitlements-for-csm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 67,
+		"prompt": "How do entitlements influence what happens when a contact submits a new case in CSM?",
+		"choices": [
+			"They determine the support the contact is eligible for and which SLAs apply to the case",
+			"They set the background color theme of the agent workspace list view columns only",
+			"They control the order in which knowledge article categories appear in search results",
+			"They decide the physical data center region where the ServiceNow instance is hosted"
+		],
+		"correctIndex": 0,
+		"explanation": "Entitlements define the level and type of support a customer is eligible for, which drives applicable SLAs and validates that the case falls within the customer's coverage.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/entitlements-for-csm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 68,
+		"prompt": "During case resolution an agent references a known fix documented in the knowledge base and attaches it to the case. What benefit does this attach-knowledge action provide?",
+		"choices": [
+			"It links the article to the case and lets the agent share a proven solution with the customer",
+			"It permanently unpublishes the referenced article so no other agent can reuse it",
+			"It reassigns case ownership to the knowledge base owner instead of the current agent",
+			"It converts the customer contact record into an internal fulfiller user automatically"
+		],
+		"correctIndex": 0,
+		"explanation": "Attaching a knowledge article to a case links the proven solution to the case and enables the agent to share it with the customer, promoting consistent, faster resolution.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/knowledge-management-for-csm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 69,
+		"prompt": "A team wants agents to work cases, tasks, and interactions from a single modern interface with contextual side panels and guided actions. Which environment should the implementer deploy?",
+		"choices": [
+			"The Customer Service Management Configurable Workspace built for agent productivity",
+			"The classic core UI list module with no contextual side panels or guided actions",
+			"A read-only reporting portal that only displays historical performance analytics scores",
+			"The system definition table editor used solely by administrators to alter data schemas"
+		],
+		"correctIndex": 0,
+		"explanation": "The CSM Configurable Workspace gives agents a unified, modern interface with contextual panels, guided actions, and tools to work cases and interactions efficiently.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/csm-configurable-workspace.html"
+		]
+	}
+]

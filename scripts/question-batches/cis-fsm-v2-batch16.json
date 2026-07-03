@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-FSM",
+		"order": 75,
+		"prompt": "A dispatcher must rebalance today's schedule and monitor customer commitments in one interface. Which workspace should they use?",
+		"choices": [
+			"Dispatcher Workspace for managing field teams, schedules, and customer experience",
+			"Agent Workspace for IT service management incident triage and resolution",
+			"Strategic Portfolio Planning Workspace for demand and capacity forecasting",
+			"Security Operations Workspace for vulnerability response case management"
+		],
+		"correctIndex": 0,
+		"explanation": "Dispatcher Workspace lets dispatchers manage field teams, scheduling operations, and customer experience outcomes in real time.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/dispatcher-activities.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 76,
+		"prompt": "Operations leadership wants live visibility into agent locations and open work order statuses. Which tool provides this?",
+		"choices": [
+			"The Dispatcher dashboard showing work orders, schedules, and agent locations",
+			"The service catalog manager reporting on item popularity by department",
+			"The change management schedule console for blackout window enforcement",
+			"The HR case management dashboard for employee relations intake volume"
+		],
+		"correctIndex": 0,
+		"explanation": "The Dispatcher dashboard provides real-time visibility into work orders, schedules, agent locations, and task statuses.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/dispatcher-activities.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 77,
+		"prompt": "Customers should choose installation windows that align with technician availability. Which FSM feature enables this?",
+		"choices": [
+			"Appointment booking to configure, manage, and create customer service appointments",
+			"Event management alert grouping to reduce duplicate monitoring notifications",
+			"Software reclamation to identify unused licenses across SaaS subscriptions",
+			"Domain separation policy enforcement for multi-tenant instance isolation"
+		],
+		"correctIndex": 0,
+		"explanation": "Appointment booking lets organizations configure available slots so customers or agents can schedule service visits.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/appointment-booking.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 78,
+		"prompt": "Several technicians have gaps in their afternoon schedules. How can dispatch improve utilization without manual reassignment?",
+		"choices": [
+			"Intelligent Task Recommendation suggesting tasks agents can self-assign from mobile",
+			"Problem management root cause analysis workshops scheduled each Friday",
+			"Change management standard templates auto-approved for low-risk requests",
+			"Discovery status jobs that refresh configuration item serial numbers nightly"
+		],
+		"correctIndex": 0,
+		"explanation": "Intelligent Task Recommendation suggests tasks to fill schedule gaps; agents can view and self-assign recommended tasks in the Now Agent mobile app.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/fsm-task-recommendation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 79,
+		"prompt": "Regional managers need to compare demand against available technician capacity by territory. Which console supports this?",
+		"choices": [
+			"Capacity Console with real-time resource utilization across territories",
+			"Knowledge Management homepage filtered by article owner and category",
+			"Hardware asset lifecycle dashboard for retired equipment disposal",
+			"Performance Analytics data collector configuration for indicator sources"
+		],
+		"correctIndex": 0,
+		"explanation": "The Capacity Console provides real-time insights into resource utilization to optimize capacity usage by territory.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/capacity-console.html"
+		]
+	}
+]

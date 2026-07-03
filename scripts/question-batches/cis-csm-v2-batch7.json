@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-CSM",
+		"order": 30,
+		"prompt": "Support emails arrive at a dedicated mailbox and should create or update cases without custom inbound scripts. Which CSM capability handles this?",
+		"choices": [
+			"Inbound email flows such as Create Case from Email and Update Case via Reply",
+			"Account relationship rules that convert each email into a consumer record",
+			"Special handling notes that parse MIME attachments into case tasks",
+			"Matching rules that assign the sender's email domain to a product model"
+		],
+		"correctIndex": 0,
+		"explanation": "Inbound email flows use Flow Designer to create cases from new emails and update cases when customers reply, with flows taking precedence over legacy inbound actions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/define-process-incoming-emails.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 31,
+		"prompt": "Security requires portal users to verify identity with a second factor after password login. Which external roles should be added to multi-factor authentication criteria?",
+		"choices": [
+			"sn_customerservice.customer and sn_customerservice.consumer",
+			"sn_customerservice.agent and sn_customerservice.manager",
+			"sn_csm_doctemplate.admin and workspace_admin",
+			"sn_incident_read and sn_incident_write"
+		],
+		"correctIndex": 0,
+		"explanation": "MFA for Customer and Consumer Service Portals applies to external customer and consumer roles configured in multi-factor authentication role criteria.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/customer-self-service-and-omnichannel-engagement/configure-csm-multifactor-auth.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 32,
+		"prompt": "Consumers want to start a messaging conversation that agents accept from the Agent Workspace Inbox. Which integration enables WhatsApp chat in CSM?",
+		"choices": [
+			"Conversational Integration with WhatsApp powered by Twilio",
+			"Inbound email flow named Update Case via Reply for MIME attachments",
+			"Request parent mapping entry on the sn_customerservice_case table",
+			"Customer data viewer role assigned to every WhatsApp phone number"
+		],
+		"correctIndex": 0,
+		"explanation": "The Conversational Integration with WhatsApp application lets contacts and consumers chat with virtual or live agents and allows agents to accept conversations through the WhatsApp service channel.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/messg-integrate-whatsapp-csm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 33,
+		"prompt": "Agents handle outbound and inbound phone calls and need customer history visible during the call. Which workspace template supports this experience?",
+		"choices": [
+			"CSM voice interaction record page template for phone interaction management",
+			"CSM centered chat interaction template used exclusively for email cases",
+			"Onboarding playbook process page variant for entitlement renewals only",
+			"Document template admin form for generating call transcripts as PDF files"
+		],
+		"correctIndex": 0,
+		"explanation": "CSM interaction page templates include a voice interaction record template that helps agents manage phone calls and view contextual customer information during the interaction.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/csm-config-workspace-page-templates.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 34,
+		"prompt": "When an inbound email flow executes for a message sent to the support mailbox, how does it interact with legacy inbound actions?",
+		"choices": [
+			"The email flow runs first and prevents inbound actions from executing",
+			"Inbound actions always override the email flow regardless of activation order",
+			"Both the flow and inbound actions run independently on every message",
+			"Neither runs until an agent manually selects a channel on the case form"
+		],
+		"correctIndex": 0,
+		"explanation": "Inbound email flows take higher precedence than inbound actions; when a flow executes, it prevents the corresponding inbound actions from running.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/define-process-incoming-emails.html"
+		]
+	}
+]

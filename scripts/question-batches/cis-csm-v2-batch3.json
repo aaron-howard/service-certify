@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-CSM",
+		"order": 10,
+		"prompt": "Support leadership wants contracted response times enforced when agents work cases. Which record type stores the customer's agreed service coverage?",
+		"choices": [
+			"Contract linked to the account with defined support terms",
+			"Matching rule that ranks agents by availability in the workbench",
+			"Form action that exposes a UI action on the case record page",
+			"Page template for centered chat interactions in the workspace"
+		],
+		"correctIndex": 0,
+		"explanation": "Contracts capture commercial support agreements for accounts; entitlements derived from contracts define eligibility and service levels applied during case handling.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/set-up-post-sales-support.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 11,
+		"prompt": "What is the role of an entitlement in CSM post-sales support?",
+		"choices": [
+			"It defines the support level a customer receives for covered products or services",
+			"It replaces case assignment rules so every case routes to the CSM admin role",
+			"It stores chat transcripts from WhatsApp conversations with consumers",
+			"It generates product models automatically from inbound support emails"
+		],
+		"correctIndex": 0,
+		"explanation": "Entitlements specify support coverage such as response commitments and eligible services, often linked to contracts and install base or sold product records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/configure-csm-entitlements.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 12,
+		"prompt": "A case is opened for a product that is no longer covered under the customer's active agreement. Which CSM capability helps agents verify support eligibility before committing to SLAs?",
+		"choices": [
+			"Entitlement associated with the account, product, or install base on the case",
+			"Special handling note configured only on the agent's personal dashboard",
+			"Consumer-to-consumer relationship between two unrelated household members",
+			"Inbound email flow that bypasses entitlement checks for all reply messages"
+		],
+		"correctIndex": 0,
+		"explanation": "Entitlements tied to customer agreements and product coverage allow agents to confirm whether the reported issue qualifies for contracted support.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/configure-csm-entitlements.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 13,
+		"prompt": "An entitlement manager needs to change support hours on an active entitlement without creating a duplicate record. What is the recommended approach?",
+		"choices": [
+			"Modify the existing entitlement record to update the coverage terms",
+			"Delete all install base items and recreate them under a new account",
+			"Disable the Customer Service Base Entities plugin and reload demo data",
+			"Convert the entitlement into a case type configuration admin record"
+		],
+		"correctIndex": 0,
+		"explanation": "Entitlements can be modified in place to adjust coverage details such as support hours, keeping the relationship to contracts and covered products intact.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/cce-modify-entitlement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 14,
+		"prompt": "During case creation, an agent selects an account with multiple active entitlements for the same product line. What should determine which entitlement applies?",
+		"choices": [
+			"The entitlement rules and coverage linked to the case product, install base, or contract context",
+			"The alphabetical sort order of entitlement numbers in the related list view",
+			"The agent's personal skill profile configured in Advanced Work Assignment",
+			"The default MFA bypass count configured for portal authentication"
+		],
+		"correctIndex": 0,
+		"explanation": "Entitlement applicability depends on configured coverage relationships to accounts, contracts, and product instances rather than arbitrary list ordering or agent preferences.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/configure-csm-entitlements.html"
+		]
+	}
+]

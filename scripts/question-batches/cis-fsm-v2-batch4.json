@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-FSM",
+		"order": 15,
+		"prompt": "Service territories in Field Service Management define what operational boundary for dispatch?",
+		"choices": [
+			"Geographic or logical coverage areas used to route work to appropriate teams and agents",
+			"Financial cost centers used exclusively for annual budget forecasting reports and accruals",
+			"Software license pools used to restrict ServiceNow login counts for contractor user accounts",
+			"CMDB discovery scopes used to limit which configuration items appear in nightly import sets"
+		],
+		"correctIndex": 0,
+		"explanation": "Service territories define coverage boundaries that help dispatch route work to the right teams and reduce inefficient travel.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/c_TerritoryManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 16,
+		"prompt": "Two territories overlap the same customer address. What should administrators configure to avoid ambiguous dispatch assignments?",
+		"choices": [
+			"Clear assignment criteria such as skills, availability, and territory priority rules",
+			"A single global territory that includes every location in the instance without any boundaries",
+			"Disable Dynamic Scheduling so dispatchers never evaluate overlapping territory memberships",
+			"Remove all location records from work orders so territories are ignored during assignment"
+		],
+		"correctIndex": 0,
+		"explanation": "When territories overlap, explicit assignment criteria and priority rules prevent ambiguous routing and inconsistent dispatch decisions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/c_TerritoryManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 17,
+		"prompt": "On a field agent user group, the Locations Covered related list determines what dispatch constraint?",
+		"choices": [
+			"Which geographic areas the group can receive and execute work order tasks within",
+			"Which customer survey templates are emailed after every work order reaches Closed state",
+			"Which procurement vendor catalogs appear on the mobile app home screen for agents only",
+			"Which discovery schedules run against assets linked to the group members each night"
+		],
+		"correctIndex": 0,
+		"explanation": "Locations Covered limits which geographic areas a user group handles so dispatch assigns work only within the group's service coverage.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/setting-up-field-service-user-groups.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 18,
+		"prompt": "From Dispatcher Workspace, a dispatcher opens Assignment assistance on a work order task. Which sort option ranks agents by proximity to the task location?",
+		"choices": [
+			"Distance",
+			"Earliest start time",
+			"Parts availability count",
+			"Skills count without location consideration"
+		],
+		"correctIndex": 0,
+		"explanation": "Assignment assistance includes a Distance sort option that ranks agents based on how far each agent is from the work order task location.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/field-service-scheduling/assignment-assistance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 19,
+		"prompt": "To auto-calculate estimated travel duration using agent latitude and longitude, which capability must be active alongside geolocation tracking?",
+		"choices": [
+			"Field Service Geolocation with a supported maps integration for travel time estimates",
+			"A weekly scheduled report that compares technician seniority levels across all territories",
+			"Manual entry of travel minutes on every work order task before dispatch assignment occurs",
+			"Disabling territory membership checks so agents appear on maps by office location only"
+		],
+		"correctIndex": 0,
+		"explanation": "Estimated travel duration calculations rely on Field Service Geolocation and a supported maps provider to compute driving time from agent coordinates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/customer-experience-components.html"
+		]
+	}
+]

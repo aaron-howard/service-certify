@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-FSM",
+		"order": 45,
+		"prompt": "A cable provider sees last-minute appointment cancellations and new repair tasks after a storm. When should the dispatcher use intra-day optimization?",
+		"choices": [
+			"When real-time schedule changes require reorganizing assignments for the current day",
+			"When annual territory boundaries are being redrawn for the next fiscal year",
+			"When stockroom min/max levels need recalculation for slow-moving parts",
+			"When contractor onboarding forms must be approved before first dispatch"
+		],
+		"correctIndex": 0,
+		"explanation": "Intra-day optimization reorganizes schedules in real time when tasks are canceled, delayed, or new high-priority work arrives during the day.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/schedule-optimization.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 46,
+		"prompt": "A technician calls out sick mid-shift and several appointments are at risk. How does the dynamic assignment engine respond?",
+		"choices": [
+			"It locks the schedule until the next business day to prevent further changes",
+			"It automatically reassigns affected tasks using ordering rules and un-assignment constraints",
+			"It converts all open work order tasks into catalog requests for manual review",
+			"It removes SLA tracking from tasks assigned to the unavailable technician only"
+		],
+		"correctIndex": 1,
+		"explanation": "Dynamic scheduling automatically reassigns tasks when agents become unavailable, using ordering rules and constraints to maintain SLA compliance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/dynamic-scheduling.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 47,
+		"prompt": "Operations leadership wants fewer windshield miles without missing priority commitments. What outcome should the automated scheduling engine target?",
+		"choices": [
+			"Assign every task to the nearest technician regardless of skills or capacity limits",
+			"Maximize completed jobs within working hours while honoring priority and SLA constraints",
+			"Eliminate all manual dispatcher actions from daily scheduling operations entirely",
+			"Schedule all work at end of day to simplify route planning for each technician"
+		],
+		"correctIndex": 1,
+		"explanation": "The scheduling engine balances task assignment, travel reduction, and priority or SLA commitments to improve daily completion capacity.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/schedule-optimization.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 48,
+		"prompt": "Which capabilities does the automated scheduling engine provide in Field Service Management? (Choose two.)",
+		"choices": [
+			"Auto-assign tasks using agent skills, availability, and travel constraints",
+			"Reorganize schedules in real time when tasks are canceled or delayed",
+			"Replace dispatcher workspace functions for all assignment decisions permanently",
+			"Remove territory membership checks from every scheduling run by default"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"questionType": "multi",
+		"explanation": "The scheduling engine auto-assigns tasks and supports intra-day reorganization; it augments rather than replaces dispatcher tools and still respects territory constraints.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/schedule-optimization.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 49,
+		"prompt": "Dispatchers need agent calendar events visible when making assignment decisions. What does dynamic assignment integrate from Workforce Optimization?",
+		"choices": [
+			"Agent schedules and calendar events shown in Dispatcher Workspace",
+			"Enterprise LDAP group mappings for all internal IT service desk agents",
+			"Hardware asset depreciation schedules for stockroom replenishment planning",
+			"Change management blackout windows for standard catalog item approvals"
+		],
+		"correctIndex": 0,
+		"explanation": "Dynamic scheduling integrates with Workforce Optimization to display agent schedules and events on the Dispatcher Workspace calendar for informed assignments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/dynamic-scheduling.html"
+		]
+	}
+]

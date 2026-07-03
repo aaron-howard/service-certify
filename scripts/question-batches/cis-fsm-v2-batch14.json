@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-FSM",
+		"order": 65,
+		"prompt": "A facilities team must run inspections and maintenance on recurring intervals. Which FSM application supports this?",
+		"choices": [
+			"Planned Work Management for recurring maintenance, inspections, and audits",
+			"Problem Management for documenting known error database articles only",
+			"Service Portfolio Management for demand and capacity financial planning",
+			"Governance, Risk, and Compliance for policy attestation campaigns"
+		],
+		"correctIndex": 0,
+		"explanation": "Planned Work Management creates and manages planned work activities with recurring schedules such as maintenance and inspections.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/planned-work-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 66,
+		"prompt": "An aircraft maintenance manager needs diagnostic work generated after every 25 flight hours. What should they configure?",
+		"choices": [
+			"A maintenance plan tied to asset usage that triggers work orders at the threshold",
+			"A one-time catalog task manually ordered by dispatch each quarter",
+			"An incident template that auto-closes when the asset record is updated",
+			"A change request standard template for all hangar equipment upgrades"
+		],
+		"correctIndex": 0,
+		"explanation": "Preventive maintenance plans can generate recurring work orders based on usage thresholds such as flight hours on an asset.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/preventive-maintenance-use-case.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 67,
+		"prompt": "Operations wants visibility into parts consumed, transferred, and adjusted across field teams. Which FSM process covers this?",
+		"choices": [
+			"Inventory management including transfers, consumption, adjustments, and replenishment",
+			"Incident matching rules that deduplicate alerts from monitoring integrations",
+			"Employee document generation for offer letters in HR service delivery",
+			"Software reclamation workflows for unused SaaS license harvesting"
+		],
+		"correctIndex": 0,
+		"explanation": "FSM inventory management tracks parts and supplies through transfers, consumption, adjustments, and related stockroom operations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/inventory-management-fsm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 68,
+		"prompt": "A dispatcher reserves a replacement motor from a central warehouse for tomorrow's repair task. What is this process called?",
+		"choices": [
+			"Sourcing a part by reserving and obtaining the asset through stockroom transfer",
+			"Normalizing a configuration item class in the CMDB reconciliation workspace",
+			"Publishing a knowledge article version to the self-service portal catalog",
+			"Escalating a problem record to the major incident management bridge"
+		],
+		"correctIndex": 0,
+		"explanation": "Sourcing reserves and obtains a part described in a part requirement by transferring it from one stockroom to another or to the agent.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_SourceParts.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 69,
+		"prompt": "Which activities are included in Field Service Management inventory operations? (Choose two.)",
+		"choices": [
+			"Recording part consumption when agents complete field repairs",
+			"Transferring parts between company stockrooms using transfer orders",
+			"Running enterprise-wide password expiration notifications for staff",
+			"Publishing change advisory board minutes to external vendor portals"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"questionType": "multi",
+		"explanation": "FSM inventory management covers consumption tracking and part transfers between stockrooms; password notifications and CAB minutes are unrelated.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/inventory-management-fsm.html"
+		]
+	}
+]
