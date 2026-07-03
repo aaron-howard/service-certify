@@ -1,0 +1,402 @@
+[
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 25,
+    "prompt": "In Third-Party Risk Management, what is the main reason to require documentary evidence on inherent risk questionnaires?",
+    "choices": [
+      "To reduce the number of vendor contacts required",
+      "To validate questionnaire responses with auditable proof before downstream decisions",
+      "To bypass due diligence workflows for low spend vendors",
+      "To replace the need for control testing entirely"
+    ],
+    "correctIndex": 1,
+    "explanation": "Evidence attachments support defensible risk decisions by validating that vendor claims are backed by objective documentation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 26,
+    "prompt": "Which evidence requirement best improves assessor confidence for a vendor claiming strong access controls?",
+    "choices": [
+      "A marketing brochure describing security innovation",
+      "An unsigned vendor policy draft from three years ago",
+      "Recent control evidence such as access review records or independent assurance reports",
+      "A commitment to provide evidence after contract signature"
+    ],
+    "correctIndex": 2,
+    "explanation": "Current and verifiable control artifacts provide stronger assurance than forward-looking statements or marketing content.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/task/t_CreateVendorAssessmentQuestionnaire.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 27,
+    "prompt": "How should a TPRM team handle missing evidence for responses marked as high assurance?",
+    "choices": [
+      "Auto-approve to maintain assessment SLA",
+      "Downgrade assurance confidence and trigger follow-up tasks before final risk acceptance",
+      "Delete unanswered questions from scoring",
+      "Move the vendor directly to offboarding"
+    ],
+    "correctIndex": 1,
+    "explanation": "Missing evidence should reduce confidence and prompt remediation actions, not be ignored during assessment decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/task/t_AssessThirdPartyRisk.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 28,
+    "prompt": "What is the best governance practice for evidence collected during third-party assessments?",
+    "choices": [
+      "Store files in personal mailboxes for flexibility",
+      "Attach evidence to assessment records with defined retention and reviewer accountability",
+      "Keep only summary scores to minimize storage costs",
+      "Require vendors to resubmit all evidence monthly"
+    ],
+    "correctIndex": 1,
+    "explanation": "Centralized, governed evidence linked to assessment artifacts improves traceability and audit readiness.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/concept/c_AssessmentLifecycleTPRM.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 29,
+    "prompt": "During an audit, which capability is most valuable for proving evidence quality in TPRM?",
+    "choices": [
+      "A documented chain from questionnaire answer to evidence artifact to decision outcome",
+      "A dashboard that only shows vendor counts by region",
+      "A list of contracts without risk data",
+      "An export of unresolved incident tickets"
+    ],
+    "correctIndex": 0,
+    "explanation": "Auditors look for end-to-end traceability connecting declared control posture, supporting evidence, and resulting risk decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management-workspace.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 25,
+    "prompt": "Why integrate Vulnerability Response with change management?",
+    "choices": [
+      "To eliminate all change approvals for security fixes",
+      "To track remediation implementation through governed change records and reduce production risk",
+      "To prevent security teams from seeing infrastructure updates",
+      "To force all vulnerabilities into emergency change"
+    ],
+    "correctIndex": 1,
+    "explanation": "Change integration provides controlled execution, approval traceability, and deployment visibility for remediation activities.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/c_Vuln-Resp-Integrations.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 26,
+    "prompt": "A remediation task requires patch deployment in production. What is the recommended workflow?",
+    "choices": [
+      "Close the vulnerability item before patching",
+      "Create or link a change request and update vulnerability state based on implementation outcome",
+      "Document remediation only in team chat",
+      "Convert all patch changes into service requests"
+    ],
+    "correctIndex": 1,
+    "explanation": "Linking remediation to change records preserves compliance, enables approvals, and ties closure to verified implementation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/task/t_IntegrateVRWithChangeManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 27,
+    "prompt": "Which metric best demonstrates effective VR and change integration?",
+    "choices": [
+      "Number of discovered CIs with no owner",
+      "Percentage of vulnerability remediations completed through associated successful changes",
+      "Total count of normal changes in the month",
+      "Average incident reassignment count"
+    ],
+    "correctIndex": 1,
+    "explanation": "This metric reflects whether security remediation is consistently executed through approved and successful implementation paths.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/vulnerability-response-dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 28,
+    "prompt": "What is a key benefit of linking vulnerability items to change tasks for operations teams?",
+    "choices": [
+      "Operations can ignore maintenance windows",
+      "Teams can coordinate patch timing, approvals, and rollback planning in one governed process",
+      "It removes the need to validate post-change remediation status",
+      "It hides risk priority from implementers"
+    ],
+    "correctIndex": 1,
+    "explanation": "Shared process context improves coordination and reduces failed or untracked remediation outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/c_RemediationWorkflows.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 29,
+    "prompt": "If a change implementation fails, how should related vulnerability records be handled?",
+    "choices": [
+      "Automatically mark vulnerabilities as resolved",
+      "Reopen or keep remediation in progress and trigger follow-up actions based on failed change outcome",
+      "Delete affected vulnerability entries",
+      "Convert vulnerabilities into knowledge articles"
+    ],
+    "correctIndex": 1,
+    "explanation": "Failed implementation means risk likely remains; records should reflect unresolved exposure and drive next remediation steps.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/task/t_ManageRemediationTasks.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 25,
+    "prompt": "What is the primary value of Now Assist in Customer Service Management?",
+    "choices": [
+      "Replacing all human case agents",
+      "Generating contextual assistance such as summaries and draft responses to speed case handling",
+      "Disabling case documentation requirements",
+      "Automatically closing all low-priority cases"
+    ],
+    "correctIndex": 1,
+    "explanation": "Now Assist helps agents work faster and more consistently by providing AI-generated case context and response support.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-assist/page/administer/now-assist-in-csm/concept/now-assist-csm.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 26,
+    "prompt": "Which use case best fits Now Assist for CSM agents?",
+    "choices": [
+      "Generating concise case summaries from long activity histories",
+      "Bypassing entitlement checks for premium customers",
+      "Changing SLA policies without approval",
+      "Removing customer contact records after closure"
+    ],
+    "correctIndex": 0,
+    "explanation": "Case summarization is a core productivity scenario that helps agents quickly understand complex issue history.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/task/use-now-assist-in-case-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 27,
+    "prompt": "Before enabling Now Assist suggestions broadly, what should administrators configure?",
+    "choices": [
+      "Delete historical case content to reduce token usage",
+      "Role-based access, data governance settings, and validation workflow for AI-generated output",
+      "Turn off case templates",
+      "Move all cases to email-only intake"
+    ],
+    "correctIndex": 1,
+    "explanation": "Governance controls ensure AI assistance aligns with security, compliance, and quality expectations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-assist/page/administer/now-assist/concept/now-assist-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 28,
+    "prompt": "How can a CSM manager measure whether Now Assist is improving operations?",
+    "choices": [
+      "Track adoption and compare average handle time and first response metrics before and after rollout",
+      "Count only the number of reopened cases",
+      "Measure incident assignment groups in ITSM",
+      "Review chat sentiment without case outcomes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Adoption plus outcome metrics gives a practical view of whether AI assistance is improving service performance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/c_CSMAnalyticsAndDashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 29,
+    "prompt": "What is the best agent behavior when using AI-generated customer reply drafts?",
+    "choices": [
+      "Send every draft without review",
+      "Review, edit for customer context and policy alignment, then send",
+      "Ignore all draft suggestions permanently",
+      "Use AI replies only for internally opened cases"
+    ],
+    "correctIndex": 1,
+    "explanation": "Human review preserves accuracy, tone, and policy compliance while still benefiting from AI-assisted drafting speed.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-assist/page/administer/now-assist-in-csm/task/enable-now-assist-features-csm.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 25,
+    "prompt": "In Field Service Management, why are service territories critical?",
+    "choices": [
+      "They replace assignment rules and dispatch logic",
+      "They define geographic or logical coverage used for effective dispatching and workload balancing",
+      "They are only used for cost center reporting",
+      "They remove the need for technician skills data"
+    ],
+    "correctIndex": 1,
+    "explanation": "Territories provide structured coverage boundaries that help route work to the right teams and reduce travel inefficiency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/service-territories.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 26,
+    "prompt": "What is the best approach when defining multiple overlapping territories?",
+    "choices": [
+      "Allow unlimited overlap with no prioritization rules",
+      "Configure clear assignment criteria such as skills, availability, and territory priority",
+      "Dispatch only by technician first name",
+      "Disable geolocation features"
+    ],
+    "correctIndex": 1,
+    "explanation": "Explicit dispatch criteria avoid assignment ambiguity when territory boundaries overlap.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/create-and-manage-service-territories.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 27,
+    "prompt": "A dispatcher reports high windshield time. Which territory action should be reviewed first?",
+    "choices": [
+      "Reduce case priority values",
+      "Rebalance territory boundaries and assignment rules to align with actual demand patterns",
+      "Disable work order scheduling",
+      "Increase mandatory activity notes"
+    ],
+    "correctIndex": 1,
+    "explanation": "Poorly aligned territory design can increase travel distances and reduce daily job completion capacity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/dispatch-optimization.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 28,
+    "prompt": "Which data element most directly supports territory-based dispatch quality?",
+    "choices": [
+      "Technician avatar image size",
+      "Accurate service address geocoding and territory membership mappings",
+      "Incident state color palette",
+      "Number of inactive catalog items"
+    ],
+    "correctIndex": 1,
+    "explanation": "Territory assignment and routing reliability depend on accurate location and membership data.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/configure-dispatching.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 29,
+    "prompt": "How should FSM leaders govern territory changes over time?",
+    "choices": [
+      "Never modify territories after go-live",
+      "Review performance metrics regularly and adjust territory design as demand, staffing, and SLAs evolve",
+      "Rotate all technicians across all territories daily",
+      "Use territories only for reporting, not assignment"
+    ],
+    "correctIndex": 1,
+    "explanation": "Ongoing optimization keeps territory strategy aligned with changing operational realities and service commitments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/field-service-management-workspace.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 25,
+    "prompt": "What is the primary purpose of Employee Center in HR Service Delivery?",
+    "choices": [
+      "Provide a unified portal for employees to find knowledge, submit requests, and track cases",
+      "Replace HR case tables with spreadsheets",
+      "Remove role-based access controls",
+      "Limit access to only HR administrators"
+    ],
+    "correctIndex": 0,
+    "explanation": "Employee Center centralizes employee interactions across knowledge and service workflows to improve self-service experience.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/employee-center/concept/employee-center.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 26,
+    "prompt": "Which configuration most improves Employee Center content relevance for HR users?",
+    "choices": [
+      "Disable taxonomy and rely on random article order",
+      "Use audience criteria and topic-based navigation aligned to employee needs",
+      "Show all internal admin pages to all users",
+      "Route every search query to external websites"
+    ],
+    "correctIndex": 1,
+    "explanation": "Audience targeting and structured topics help employees find the right HR information quickly.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/employee-center/task/configure-employee-center.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 27,
+    "prompt": "Why should HR administrators connect catalog items and knowledge in Employee Center?",
+    "choices": [
+      "To force users to submit duplicate requests",
+      "To provide guided self-service with both answers and action paths",
+      "To eliminate case visibility for employees",
+      "To bypass HR assignment rules"
+    ],
+    "correctIndex": 1,
+    "explanation": "Combining knowledge with request options improves deflection and reduces friction when employees need support.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/hr-service-delivery/concept/hr-service-delivery.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 28,
+    "prompt": "An HR team wants to improve portal adoption. Which KPI is most useful?",
+    "choices": [
+      "Employee Center self-service completion and case deflection rate",
+      "Number of backend script includes",
+      "Count of deactivated user records",
+      "Average CMDB relationship depth"
+    ],
+    "correctIndex": 0,
+    "explanation": "Self-service and deflection metrics indicate whether Employee Center is effectively meeting employee needs without assisted handling.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/employee-center/concept/employee-center-analytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 29,
+    "prompt": "What access model should be used for HR-sensitive content in Employee Center?",
+    "choices": [
+      "Make all HR knowledge public internally",
+      "Apply user criteria and role-based restrictions to enforce least-privilege access",
+      "Grant editor rights to all employees",
+      "Disable read ACLs for faster indexing"
+    ],
+    "correctIndex": 1,
+    "explanation": "HR content often contains sensitive information and should be protected through targeted audience and ACL controls.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/knowledge-management/concept/c_KnowledgeUserCriteria.html"
+    ]
+  }
+]

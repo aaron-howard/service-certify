@@ -1,0 +1,257 @@
+[
+	{
+		"trackCode": "CPOA",
+		"order": 65,
+		"prompt": "For a platform owner, what is the primary purpose of an executive analytics view?",
+		"choices": [
+			"Provide a concise, outcome-focused view of platform health, adoption, and risk for decision-making",
+			"Replace all operational dashboards used by administrators",
+			"Eliminate the need for data collection schedules",
+			"Display only raw table records without aggregation"
+		],
+		"correctIndex": 0,
+		"explanation": "Owner views should summarize strategic platform performance so leadership can prioritize actions and investments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 66,
+		"prompt": "Which metric category is most valuable in a platform owner analytics view for early risk detection?",
+		"choices": [
+			"Leading indicators such as backlog aging trends and change failure rate movement",
+			"Only yearly license counts",
+			"Only number of dashboard widgets created",
+			"Only total number of users in the instance"
+		],
+		"correctIndex": 0,
+		"explanation": "Leading indicators signal emerging operational issues before lagging outcomes become severe.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 67,
+		"prompt": "When an owner dashboard shows SLA compliance dropping in one business service, what is the best next action?",
+		"choices": [
+			"Drill down into supporting indicators and assign targeted remediation with clear owners",
+			"Hide the indicator until the next quarter",
+			"Disable data collection to avoid noise",
+			"Assume the decline is temporary and take no action"
+		],
+		"correctIndex": 0,
+		"explanation": "Owner views should be actionable, enabling deeper analysis and accountable follow-through when risks appear.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 68,
+		"prompt": "What design choice best improves trust in an owner-facing analytics view?",
+		"choices": [
+			"Document indicator definitions, data sources, and update cadence directly in dashboard context",
+			"Allow each team to define metrics ad hoc without standards",
+			"Refresh scores manually only when leadership asks",
+			"Use duplicated indicators with conflicting formulas"
+		],
+		"correctIndex": 0,
+		"explanation": "Transparent metric definitions and collection behavior reduce ambiguity and improve confidence in analytics.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 69,
+		"prompt": "Which governance practice keeps a platform owner analytics view aligned with business priorities over time?",
+		"choices": [
+			"Run a recurring KPI review cycle to retire low-value metrics and add outcome-aligned indicators",
+			"Lock all KPIs permanently after first publication",
+			"Allow unrestricted metric changes in production",
+			"Track only technical uptime regardless of service outcomes"
+		],
+		"correctIndex": 0,
+		"explanation": "Periodic KPI governance ensures analytics remain relevant as strategy, services, and operating goals evolve.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 65,
+		"prompt": "In platform ownership governance, what is the strongest audit readiness control for production changes?",
+		"choices": [
+			"Maintain traceable evidence from approved request through testing, promotion, and post-implementation validation",
+			"Allow emergency changes without documentation when deadlines are tight",
+			"Rely on verbal approvals captured in team meetings",
+			"Keep evidence only for failed changes"
+		],
+		"correctIndex": 0,
+		"explanation": "Auditors need end-to-end traceability proving changes were authorized, tested, and implemented under control.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html",
+			"https://www.servicenow.com/docs/bundle/vancouver-application-development/page/build/system-update-sets/concept/update-set-procedures.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 66,
+		"prompt": "Which role strategy best supports compliance for a platform team handling sensitive administrative functions?",
+		"choices": [
+			"Use least privilege with separation of duties between requesters, implementers, and approvers",
+			"Grant admin to all delivery personnel for speed",
+			"Use one shared super-user account for all deployments",
+			"Remove role reviews after initial onboarding"
+		],
+		"correctIndex": 0,
+		"explanation": "Role separation and least privilege are foundational controls for reducing fraud and operational risk.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/roles/concept/c_Roles.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 67,
+		"prompt": "What evidence artifact most directly supports an auditor's review of skipped updates after a family upgrade?",
+		"choices": [
+			"A documented resolution record showing analysis, disposition, and validation results",
+			"A screenshot of the upgrade start time only",
+			"An informal chat transcript with no record references",
+			"A list of unrelated incidents closed that week"
+		],
+		"correctIndex": 0,
+		"explanation": "Auditors look for specific records that demonstrate conflicts were assessed and resolved through controlled process.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/customer-support/task/t_ResolveASkippedUpdate.html",
+			"https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 68,
+		"prompt": "Which monitoring pattern best strengthens continuous compliance for platform operations?",
+		"choices": [
+			"Define control indicators and exception thresholds, then track and remediate breaches on schedule",
+			"Perform compliance checks only after major incidents",
+			"Disable alerts to reduce operational workload",
+			"Rely exclusively on annual external audits"
+		],
+		"correctIndex": 0,
+		"explanation": "Continuous control monitoring helps detect and address compliance drift before audit or business impact escalates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 69,
+		"prompt": "When an internal audit identifies repeated policy exceptions in change implementation, what should the platform owner do first?",
+		"choices": [
+			"Launch corrective actions with accountable owners and target dates, then verify closure evidence",
+			"Archive the findings until the next quarter",
+			"Pause all platform changes indefinitely",
+			"Treat all exceptions as acceptable business variance"
+		],
+		"correctIndex": 0,
+		"explanation": "Effective compliance response requires structured remediation ownership and measurable closure validation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 65,
+		"prompt": "In advanced domain separation design, what is the main reason to establish a clear domain hierarchy early?",
+		"choices": [
+			"To control inheritance, visibility boundaries, and administrative delegation consistently",
+			"To eliminate the need for ACL design",
+			"To force all tenants into a single shared domain",
+			"To bypass data policy controls"
+		],
+		"correctIndex": 0,
+		"explanation": "A well-defined hierarchy prevents governance drift and supports predictable access behavior at scale.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/company-and-domain-separation/concept/c_DomainSeparation.html",
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainSeparation.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 66,
+		"prompt": "Which pattern is most appropriate when some reference data must be reused across many isolated domains?",
+		"choices": [
+			"Define controlled shared data strategy and explicit governance for cross-domain visibility",
+			"Duplicate all records manually in every domain forever",
+			"Disable domain separation for reference tables",
+			"Store shared reference data in spreadsheets outside the platform"
+		],
+		"correctIndex": 0,
+		"explanation": "Advanced domain models typically require deliberate shared-data patterns rather than unmanaged duplication.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/company-and-domain-separation/concept/c_DomainSeparation.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/table-administration/concept/c_TableAdministration.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 67,
+		"prompt": "What is the key risk when domain-separation rules are introduced without enterprise-level test coverage?",
+		"choices": [
+			"Unexpected cross-domain access gaps or overexposure that appears only in specific tenant scenarios",
+			"Automatic deactivation of all update sets",
+			"Permanent loss of all dashboard metadata",
+			"Forced rollback of family upgrades"
+		],
+		"correctIndex": 0,
+		"explanation": "Domain behavior can vary by role and hierarchy path, so broad scenario-based testing is essential before rollout.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainSeparation.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 68,
+		"prompt": "How should an enterprise handle cross-domain reporting needs in a domain-separated architecture?",
+		"choices": [
+			"Design approved reporting pathways with explicit security controls and data ownership accountability",
+			"Grant unrestricted global reporting roles to all analysts",
+			"Export all data nightly to unmanaged local files",
+			"Disable domain constraints for reporting tables"
+		],
+		"correctIndex": 0,
+		"explanation": "Cross-domain analytics must be architected intentionally to preserve tenant boundaries and auditability.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/company-and-domain-separation/concept/c_DomainSeparation.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 69,
+		"prompt": "Which governance mechanism best sustains advanced domain separation after initial implementation?",
+		"choices": [
+			"A recurring architecture review for domain model changes, access exceptions, and shared-data decisions",
+			"A one-time design workshop with no follow-up",
+			"Open domain changes directly in production without approval",
+			"Delegating all domain decisions to individual developers"
+		],
+		"correctIndex": 0,
+		"explanation": "Ongoing architecture governance prevents uncontrolled divergence and keeps multi-tenant boundaries intact.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainSeparation.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+		]
+	}
+]

@@ -1,0 +1,322 @@
+[
+  {
+    "trackCode": "CIS-FSM",
+    "order": 75,
+    "prompt": "A dispatcher needs to assign work to the right technician automatically. Which configuration most directly controls this in Field Service Management?",
+    "choices": [
+      "Assignment rules and scheduling constraints on work orders",
+      "Knowledge article approval workflows",
+      "Incident state model settings",
+      "Service catalog item variable sets"
+    ],
+    "correctIndex": 0,
+    "explanation": "In FSM, assignment and scheduling behavior is driven by work assignment logic such as assignment rules, skills, and scheduling constraints.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/field-service-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 76,
+    "prompt": "What is the primary purpose of a service territory in Field Service Management?",
+    "choices": [
+      "To define escalation policies for incidents",
+      "To group service locations and technicians by geographic responsibility",
+      "To manage software license consumption",
+      "To control catalog approval chains"
+    ],
+    "correctIndex": 1,
+    "explanation": "Service territories define geographic boundaries and operational ownership for field assignments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/service-territory-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 77,
+    "prompt": "A job requires a technician certified on high-voltage equipment. Which FSM capability ensures only qualified technicians are considered for scheduling?",
+    "choices": [
+      "CMDB reconciliation rules",
+      "Catalog entitlement rules",
+      "Skill requirements matched against technician skills",
+      "SLA pause conditions"
+    ],
+    "correctIndex": 2,
+    "explanation": "Skill matching in FSM filters candidate technicians to those who meet required competencies and certifications.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/skills-in-field-service-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 78,
+    "prompt": "Which action best helps optimize daily route efficiency for field technicians?",
+    "choices": [
+      "Creating more incident categories",
+      "Disabling schedule constraints",
+      "Assigning all tasks manually from list view",
+      "Using scheduling optimization that considers travel time and availability"
+    ],
+    "correctIndex": 3,
+    "explanation": "FSM scheduling optimization improves route plans by factoring availability, location, and travel time.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/scheduling-and-dispatching.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 79,
+    "prompt": "A technician reaches a customer site and needs all required job details in one place. Which FSM capability supports this outcome?",
+    "choices": [
+      "Mobile work order execution with task and asset context",
+      "Problem root cause analysis templates",
+      "Service portfolio management dashboards",
+      "CMDB identification rules"
+    ],
+    "correctIndex": 0,
+    "explanation": "FSM mobile workflows provide technicians with work order details, tasks, and related context while on site.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/mobile-field-service-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 80,
+    "prompt": "In FSM, what is the relationship between a work order and work order tasks?",
+    "choices": [
+      "Work order tasks replace the need for a parent work order",
+      "The work order is the parent record and tasks represent executable steps",
+      "Tasks can only exist for incidents, not work orders",
+      "Tasks are used only for catalog approvals"
+    ],
+    "correctIndex": 1,
+    "explanation": "A work order contains overall job context, while work order tasks break execution into actionable units.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/work-order-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 81,
+    "prompt": "A dispatcher wants to avoid assigning emergency calls to technicians who are already overbooked. Which FSM setup is most relevant?",
+    "choices": [
+      "Incident business service mapping",
+      "SLA retroactive start",
+      "Capacity-aware scheduling policies and schedule constraints",
+      "Knowledge base user criteria"
+    ],
+    "correctIndex": 2,
+    "explanation": "Scheduling constraints and capacity settings prevent over-allocation and improve dispatch quality.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/scheduling-and-dispatching.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 82,
+    "prompt": "Why would an implementation team enable appointment booking options in FSM?",
+    "choices": [
+      "To enforce CMDB normalization",
+      "To replace change approvals",
+      "To create HR case templates",
+      "To let customers or agents select available service windows"
+    ],
+    "correctIndex": 3,
+    "explanation": "Appointment booking provides available time slots so service visits can be scheduled to match customer and technician availability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/appointment-booking.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 83,
+    "prompt": "A field technician consumes a replacement part during a repair. What should be captured to keep inventory accurate?",
+    "choices": [
+      "Part consumption on the related work execution record",
+      "A change request risk score",
+      "A problem known error record",
+      "A service catalog variable choice"
+    ],
+    "correctIndex": 0,
+    "explanation": "Recording part usage during field execution updates inventory and supports downstream replenishment processes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/parts-and-inventory-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 84,
+    "prompt": "Which workspace is primarily used by dispatchers to monitor queues and assign field work in real time?",
+    "choices": [
+      "Agent Workspace for ITSM incidents",
+      "Dispatcher Workspace",
+      "Service Portfolio Workspace",
+      "Strategic Portfolio Planning Workspace"
+    ],
+    "correctIndex": 1,
+    "explanation": "Dispatcher Workspace is designed for field scheduling visibility and assignment operations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/dispatcher-workspace.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 85,
+    "prompt": "A company wants preventive maintenance visits to be generated automatically every quarter. Which FSM approach fits best?",
+    "choices": [
+      "Create ad hoc incidents each quarter",
+      "Use one-time catalog tasks with no schedule",
+      "Use maintenance plans that generate recurring work orders",
+      "Configure only SLA definitions"
+    ],
+    "correctIndex": 2,
+    "explanation": "Maintenance plans automate periodic field work creation, supporting recurring preventive service.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/maintenance-plans.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 86,
+    "prompt": "Which KPI best reflects how effectively field jobs are completed on the first visit?",
+    "choices": [
+      "Average incident reassignments",
+      "Catalog request backlog",
+      "Count of CMDB classes",
+      "First-time fix rate"
+    ],
+    "correctIndex": 3,
+    "explanation": "First-time fix rate measures whether technicians resolve issues during the initial visit without return trips.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/field-service-management-analytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 87,
+    "prompt": "If a work order depends on specific equipment history, where should the technician access that context?",
+    "choices": [
+      "The related asset record and linked work history",
+      "A change model template",
+      "The software model normalization table",
+      "The service catalog category record"
+    ],
+    "correctIndex": 0,
+    "explanation": "Asset context and prior work history help technicians diagnose and complete field tasks accurately.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/asset-and-configuration-context-for-fsm.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 88,
+    "prompt": "What is the main benefit of configuring travel and work-time constraints for technicians?",
+    "choices": [
+      "To increase manual dispatcher workload",
+      "To produce feasible schedules that respect labor and travel limits",
+      "To bypass service territories",
+      "To replace assignment groups with user criteria"
+    ],
+    "correctIndex": 1,
+    "explanation": "Travel and labor constraints make schedules realistic and reduce missed appointments or overtime risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/scheduling-and-dispatching.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 89,
+    "prompt": "A dispatcher must prioritize safety-critical work over routine tasks. Which FSM mechanism should be used?",
+    "choices": [
+      "Knowledge category ownership",
+      "Catalog item popularity metrics",
+      "Work order prioritization rules and scheduling policies",
+      "CMDB reconciliation identifiers"
+    ],
+    "correctIndex": 2,
+    "explanation": "Prioritization rules and scheduling policies ensure high-risk work receives earlier assignment and dispatch attention.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/work-order-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 85,
+    "prompt": "An incident has widespread impact and requires immediate coordination. Which ITSM action should occur first?",
+    "choices": [
+      "Initiate major incident process and stakeholder communications",
+      "Convert directly to a change request",
+      "Close similar incidents as duplicates",
+      "Create a catalog task for every affected user"
+    ],
+    "correctIndex": 0,
+    "explanation": "Major incident procedures provide structured, rapid coordination and communication for high-impact service disruptions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/incident-management/concept/major-incident-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 86,
+    "prompt": "What is the primary purpose of problem management in ITSM?",
+    "choices": [
+      "To approve all standard changes",
+      "To identify and eliminate underlying causes of incidents",
+      "To request new software for users",
+      "To assign field technicians by territory"
+    ],
+    "correctIndex": 1,
+    "explanation": "Problem management focuses on root cause analysis and permanent resolution of recurring or significant incidents.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/problem-management/concept/problem-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 87,
+    "prompt": "A change is low risk, repeatable, and preapproved. How should it be handled?",
+    "choices": [
+      "Submit it as an emergency change",
+      "Process it as a normal change with CAB approval every time",
+      "Implement it through the standard change model",
+      "Run it as an incident task"
+    ],
+    "correctIndex": 2,
+    "explanation": "Standard changes are preauthorized and designed for frequent, low-risk implementations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 88,
+    "prompt": "In request fulfillment, what is the role of a catalog item?",
+    "choices": [
+      "It replaces incident categories",
+      "It stores CMDB reconciliation identifiers",
+      "It defines problem closure codes",
+      "It provides a structured request offering with variables and workflow"
+    ],
+    "correctIndex": 3,
+    "explanation": "Catalog items standardize user requests and capture required inputs to drive fulfillment workflows.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/service-catalog-management/concept/service-catalog-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 89,
+    "prompt": "Which metric best indicates incident management effectiveness from an operations perspective?",
+    "choices": [
+      "Mean time to resolve (MTTR) by priority",
+      "Number of active catalog categories",
+      "Total CMDB table count",
+      "Count of knowledge base owners"
+    ],
+    "correctIndex": 0,
+    "explanation": "MTTR by priority shows how quickly operations restores service for incidents with different business impact.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/incident-management/concept/incident-management.html"
+    ]
+  }
+]

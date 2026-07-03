@@ -1,0 +1,242 @@
+[
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 20,
+		"prompt": "What is the primary function of a Discovery schedule?",
+		"choices": [
+			"It defines when and where Discovery runs, including IP ranges, behaviors, and MID Server usage",
+			"It stores normalized hardware model attributes",
+			"It creates event connectors for third-party monitoring",
+			"It controls stockroom reorder points"
+		],
+		"correctIndex": 0,
+		"explanation": "Schedules operationalize Discovery execution parameters so scans run predictably against intended network targets.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/discovery-schedules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 21,
+		"prompt": "A team wants frequent cloud discovery but weekly on-prem scans. Which design is best?",
+		"choices": [
+			"Use separate schedules aligned to environment volatility and operational windows",
+			"Use one global schedule at the highest possible frequency",
+			"Disable schedule behaviors and run all scans manually",
+			"Run discovery only when event rules generate incidents"
+		],
+		"correctIndex": 0,
+		"explanation": "Different infrastructure domains often require different scan cadence and windows to balance freshness and performance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/create-a-discovery-schedule.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 22,
+		"prompt": "Which schedule practice reduces production impact during business hours?",
+		"choices": [
+			"Run all broad network scans at noon local time",
+			"Target large ranges without exclusion lists",
+			"Use blackout windows, throttling, and scoped ranges to control scan load",
+			"Disable MID Server validation before each run"
+		],
+		"correctIndex": 2,
+		"explanation": "Controlled timing and scope prevents unnecessary network or endpoint load while maintaining CMDB data quality.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/discovery-best-practices.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 23,
+		"prompt": "What should be reviewed first when a Discovery schedule repeatedly finishes with partial results?",
+		"choices": [
+			"Stockroom assignment rules",
+			"Asset disposal workflow",
+			"Event connector deduplication settings",
+			"Schedule logs, credential success, and MID Server reachability for failed ranges"
+		],
+		"correctIndex": 3,
+		"explanation": "Partial completion is commonly caused by targeting or connectivity issues visible in schedule execution and credential logs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/view-discovery-status-and-logs.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 24,
+		"prompt": "Which governance control is most useful when many teams request Discovery schedule changes?",
+		"choices": [
+			"Apply change-managed schedule ownership with documented scope, timing, and success criteria",
+			"Allow direct production edits by any discovery_admin user",
+			"Use one shared schedule and adjust ranges ad hoc",
+			"Disable schedule history retention to reduce storage"
+		],
+		"correctIndex": 0,
+		"explanation": "Controlled ownership and change standards prevent overlapping scans, unexpected impact, and unmanaged CMDB variance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/discovery-governance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 20,
+		"prompt": "What is the main objective of an Event Management event rule?",
+		"choices": [
+			"To transform, filter, and classify events so only meaningful signals create or update alerts",
+			"To assign stockroom managers to hardware models",
+			"To define MID Server failover sequence",
+			"To replace CI identification and reconciliation rules"
+		],
+		"correctIndex": 0,
+		"explanation": "Event rules control how raw events are interpreted and whether they should drive alerting actions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-rules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 21,
+		"prompt": "A source sends heartbeat events that should not open alerts. Which rule behavior is most appropriate?",
+		"choices": [
+			"Route all heartbeat events to critical severity",
+			"Create a rule to drop or de-prioritize heartbeat events before alert generation",
+			"Disable listener ingestion for the source entirely",
+			"Convert heartbeat events to discovery schedules"
+		],
+		"correctIndex": 1,
+		"explanation": "Filtering or lowering significance for heartbeat traffic reduces noise without losing important failure signals.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/task/configure-event-filtering-rules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 22,
+		"prompt": "Why should event rules be tested in lower environments with representative payloads?",
+		"choices": [
+			"Because rule simulation is not available in production",
+			"Because event rules affect only dashboard widgets",
+			"To validate noise reduction and prevent unintended suppression of actionable events",
+			"To ensure stockroom transfer orders can be auto-approved"
+		],
+		"correctIndex": 2,
+		"explanation": "Testing with realistic payloads helps verify that filtering and classification logic preserves signal while reducing noise.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/task/test-event-rules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 23,
+		"prompt": "What is a common risk of overly broad event suppression rules?",
+		"choices": [
+			"Faster stockroom fulfillment",
+			"More accurate hardware normalization",
+			"Higher discovery credential success",
+			"Critical conditions may be hidden, delaying incident response"
+		],
+		"correctIndex": 3,
+		"explanation": "Excessive suppression can remove important signals and create blind spots in operational monitoring.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-noise-reduction.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 24,
+		"prompt": "Which event rule governance practice supports sustainable CIS-EM operations?",
+		"choices": [
+			"Maintain rule ownership, documented intent, and periodic effectiveness reviews tied to operational KPIs",
+			"Keep all rules unmanaged so NOC teams can tune live",
+			"Store rule logic only in external spreadsheets",
+			"Disable change tracking for event rule records"
+		],
+		"correctIndex": 0,
+		"explanation": "Ownership and periodic review ensure rule sets remain effective as source systems and monitoring priorities evolve.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-management-governance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 20,
+		"prompt": "How do consumable models differ from hardware models in HAM?",
+		"choices": [
+			"Consumable models track non-serialized items managed by quantity, not individual asset records",
+			"Consumable models require CI relationships before receiving",
+			"Consumable models can only be used with discovery schedules",
+			"Consumable models automatically create depreciation schedules"
+		],
+		"correctIndex": 0,
+		"explanation": "Consumables are generally managed by stock quantity and consumption patterns rather than per-item lifecycle records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/consumables.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 21,
+		"prompt": "A team orders printer toner but models are inconsistent across locations. What should be implemented?",
+		"choices": [
+			"A governed consumable model catalog with standardized naming, units, and manufacturer references",
+			"One free-text item per stockroom",
+			"Event listener mapping for each toner SKU",
+			"Discovery patterns to classify toner cartridges as servers"
+		],
+		"correctIndex": 0,
+		"explanation": "Standardized consumable models reduce duplication and improve replenishment reporting and fulfillment accuracy.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/task/manage-consumable-models.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 22,
+		"prompt": "Which control best prevents over-ordering consumables?",
+		"choices": [
+			"Disable stockroom-level inventory tracking",
+			"Track on-hand quantities and minimum thresholds by stockroom with controlled replenishment workflows",
+			"Use one global threshold regardless of usage variance",
+			"Convert all consumables to serialized hardware assets"
+		],
+		"correctIndex": 1,
+		"explanation": "Location-specific quantity thresholds and replenishment controls align purchasing to actual consumption patterns.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/task/manage-consumable-inventory.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 23,
+		"prompt": "Why should consumable model usage be reviewed regularly with request and stockroom data?",
+		"choices": [
+			"To improve event correlation performance",
+			"To reduce MID Server CPU usage",
+			"To validate demand patterns and tune reorder policies for cost control",
+			"To increase CMDB relationship depth"
+		],
+		"correctIndex": 2,
+		"explanation": "Periodic usage review helps align inventory policy with real demand and reduce waste or stockouts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/consumable-operations-best-practices.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 24,
+		"prompt": "Which KPI most directly reflects mature consumable model governance?",
+		"choices": [
+			"Highest number of open purchase orders",
+			"Maximum number of duplicate consumable models",
+			"No cycle counting performed in stockrooms",
+			"Low stockout frequency with controlled carrying cost and minimal model duplication"
+		],
+		"correctIndex": 3,
+		"explanation": "Balanced availability, cost control, and clean model data indicate disciplined consumable governance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/asset-management-kpis.html"
+		]
+	}
+]

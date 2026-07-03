@@ -1,0 +1,427 @@
+[
+  {
+    "trackCode": "CIS-PA",
+    "order": 80,
+    "prompt": "A new PA indicator is returning unexpected counts. What should an administrator review first?",
+    "choices": [
+      "The indicator source condition and aggregation logic",
+      "The list layout for incident forms",
+      "The MID Server service account",
+      "The change schedule blackout window"
+    ],
+    "correctIndex": 0,
+    "explanation": "Indicator accuracy depends on the source query and aggregation setup that drive score collection.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_IndicatorSources.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 81,
+    "prompt": "Which strategy improves trust in monthly executive PA reviews?",
+    "choices": [
+      "Change indicator formulas each month to match narrative",
+      "Document indicator ownership, targets, and data definitions",
+      "Hide indicators with negative trends",
+      "Allow viewers to edit thresholds during review meetings"
+    ],
+    "correctIndex": 1,
+    "explanation": "Governed ownership and definitions keep KPI interpretation consistent across reporting periods.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 82,
+    "prompt": "Why are historical snapshots important in Platform Analytics?",
+    "choices": [
+      "They replace all transactional reports",
+      "They remove the need for data collector jobs",
+      "They preserve trend history even when source records change later",
+      "They force every indicator to use scripted sources"
+    ],
+    "correctIndex": 2,
+    "explanation": "Snapshots store point-in-time scores so trend analysis remains stable despite changes in underlying records.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 83,
+    "prompt": "A dashboard audience needs only regional incident performance. What is the best PA design choice?",
+    "choices": [
+      "Create a separate table for each region",
+      "Disable breakdowns to simplify scorecards",
+      "Use unrestricted global dashboards with no filters",
+      "Use breakdown-based filtering for region-specific views"
+    ],
+    "correctIndex": 3,
+    "explanation": "Breakdown filtering supports targeted views while preserving one governed indicator structure.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Breakdowns.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 84,
+    "prompt": "Which action best supports least-privilege access in PA?",
+    "choices": [
+      "Separate content authors from PA administrators using role-based access",
+      "Assign admin to all dashboard consumers",
+      "Allow anonymous users to edit indicators",
+      "Remove all role checks from analytics records"
+    ],
+    "correctIndex": 0,
+    "explanation": "Role separation reduces risk while still enabling governed analytics authoring and administration.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/roles/concept/c_Roles.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 80,
+    "prompt": "Why should Discovery schedules align with change windows?",
+    "choices": [
+      "To reduce CMDB classes automatically",
+      "To avoid unmanaged scanning during sensitive infrastructure changes",
+      "To force all probes to run every minute",
+      "To disable identification rules during maintenance"
+    ],
+    "correctIndex": 1,
+    "explanation": "Coordinating with change windows minimizes operational disruption and prevents misleading discovery results.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/c_Discovery.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 81,
+    "prompt": "What is the best control for Discovery credential rotation?",
+    "choices": [
+      "Rotate credentials only after annual audits",
+      "Store shared passwords in team chat",
+      "Use managed credential records with scheduled rotation and testing",
+      "Disable Discovery after every credential update"
+    ],
+    "correctIndex": 2,
+    "explanation": "Managed credential rotation with validation maintains security without breaking discovery coverage.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/security/concept/c_CredentialsAndSecrets.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/t_ConfigureDiscoveryCredentials.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 82,
+    "prompt": "What should a Discovery admin do when duplicate server CIs appear after scans?",
+    "choices": [
+      "Turn off CMDB health jobs",
+      "Delete all duplicate records manually each week",
+      "Increase scan frequency to overwrite duplicates",
+      "Review identification and reconciliation rules affecting those classes"
+    ],
+    "correctIndex": 3,
+    "explanation": "Duplicate CI issues usually point to identification or reconciliation configuration gaps for discovered classes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/c_ConfigurationManagement.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/c_Discovery.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 83,
+    "prompt": "Which MID Server practice best supports resilient Discovery execution?",
+    "choices": [
+      "Maintain health monitoring and capacity planning for MID clusters",
+      "Run one MID Server for all environments with no failover",
+      "Disable MID service restarts after patching",
+      "Limit MID visibility to one probe type forever"
+    ],
+    "correctIndex": 0,
+    "explanation": "Monitoring and planning MID capacity reduces bottlenecks and improves Discovery reliability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/mid-server/concept/c_MIDServer.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/mid-server/task/t_UpgradeMIDServer.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 84,
+    "prompt": "Which reporting view is most useful for Discovery operations management?",
+    "choices": [
+      "Catalog request volume by quarter",
+      "Scan success trends and top recurring probe error categories",
+      "Number of dashboard tabs created",
+      "Total ACL rules per application scope"
+    ],
+    "correctIndex": 1,
+    "explanation": "Operational Discovery reporting should highlight success rates and repeat failure patterns for remediation planning.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/c_Discovery.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 80,
+    "prompt": "What is the biggest risk of skipping receiving and stocking steps in HAM?",
+    "choices": [
+      "Assets are assigned faster",
+      "Depreciation starts earlier",
+      "Inventory chain-of-custody and financial accuracy degrade",
+      "Discovery scans complete more slowly"
+    ],
+    "correctIndex": 2,
+    "explanation": "Receiving and stocking establish the official asset baseline needed for accountability and lifecycle tracking.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/task/t_ManageHardwareAssets.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/asset-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 81,
+    "prompt": "Which approach best supports controlled asset refresh planning?",
+    "choices": [
+      "Refresh all assets every fiscal year regardless condition",
+      "Track age, warranty end dates, and criticality in lifecycle reporting",
+      "Retire only assets with open incidents",
+      "Use procurement request count as the only KPI"
+    ],
+    "correctIndex": 1,
+    "explanation": "Refresh strategy should be driven by lifecycle, support coverage, and business impact rather than a single metric.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 82,
+    "prompt": "Why is assignment verification important in HAM governance?",
+    "choices": [
+      "It removes the need for stockrooms",
+      "It is only required for mobile devices",
+      "It confirms accountability and reduces orphaned assets",
+      "It disables contract entitlement checks"
+    ],
+    "correctIndex": 2,
+    "explanation": "Verified assignments keep ownership accurate and reduce compliance risk from unknown device custody.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 83,
+    "prompt": "A team wants to track disposal compliance. Which data element is most important?",
+    "choices": [
+      "Widget color preference",
+      "Asset class display value",
+      "Incident caller locale",
+      "Documented retirement and disposal evidence"
+    ],
+    "correctIndex": 3,
+    "explanation": "Disposal governance requires verifiable retirement records and evidence that policy steps were followed.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/asset-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 84,
+    "prompt": "Which HAM dashboard metric best highlights data quality risk?",
+    "choices": [
+      "Count of assets missing model, owner, or location attributes",
+      "Number of users with pa_viewer",
+      "Total update sets in development",
+      "Change request approval duration"
+    ],
+    "correctIndex": 0,
+    "explanation": "Missing core attributes directly affect lifecycle controls, reporting quality, and audit readiness.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/c_DataManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 80,
+    "prompt": "What should risk owners do when inherent risk remains high after control testing?",
+    "choices": [
+      "Ignore the result if no incident has occurred",
+      "Document treatment plans and residual risk decisions",
+      "Delete failed control tests to avoid confusion",
+      "Reduce impact scores without approval"
+    ],
+    "correctIndex": 1,
+    "explanation": "High residual exposure requires formal treatment planning or approved acceptance with governance traceability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk/concept/risk-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 81,
+    "prompt": "Why does RC use issue records linked to failed controls?",
+    "choices": [
+      "To replace policy management completely",
+      "To track remediation accountability and closure evidence",
+      "To bypass assignment and due dates",
+      "To hide failures from audit reports"
+    ],
+    "correctIndex": 1,
+    "explanation": "Linked issues provide operational workflow for remediation and audit-ready closure documentation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 82,
+    "prompt": "Which design principle best supports repeatable compliance assessments?",
+    "choices": [
+      "Use ad hoc questions per assessor",
+      "Run assessments without control mappings",
+      "Standardize assessment templates and scoring guidance",
+      "Allow direct closure with no reviewer"
+    ],
+    "correctIndex": 2,
+    "explanation": "Template-driven assessments reduce variance and improve comparability across entities and periods.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk/concept/risk-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 83,
+    "prompt": "What is the best reason to enforce separation of duties in RC administration?",
+    "choices": [
+      "To increase number of emergency changes",
+      "To let risk owners approve their own exceptions",
+      "To avoid documenting role assignments",
+      "To reduce conflict-of-interest risk in governance actions"
+    ],
+    "correctIndex": 3,
+    "explanation": "SoD controls prevent a single actor from initiating and approving sensitive governance decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 84,
+    "prompt": "Which KPI helps measure RC process effectiveness over time?",
+    "choices": [
+      "Reduction in overdue high-severity control issues",
+      "Number of active homepages",
+      "MID Server installation count",
+      "Average SLA on catalog tasks"
+    ],
+    "correctIndex": 0,
+    "explanation": "A decline in overdue critical issues indicates stronger governance execution and remediation discipline.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk/concept/risk-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 80,
+    "prompt": "What is the best way to improve consistency in initial SIR triage?",
+    "choices": [
+      "Route all alerts to one analyst",
+      "Use standardized severity criteria and assignment rules",
+      "Let responders set severity after closure",
+      "Disable CI/context enrichment"
+    ],
+    "correctIndex": 1,
+    "explanation": "Standard triage criteria and assignment logic reduce variance and speed up appropriate response routing.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/configure-security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 81,
+    "prompt": "Why should SIR teams track containment and eradication milestones separately?",
+    "choices": [
+      "To replace closure notes",
+      "To distinguish immediate control actions from root-cause cleanup work",
+      "To increase number of task states",
+      "To avoid using playbooks"
+    ],
+    "correctIndex": 1,
+    "explanation": "Separating milestones improves operational visibility and helps teams manage short-term and long-term response tasks.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/automation/concept/flow-designer.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 82,
+    "prompt": "Which control most improves SIR escalation reliability?",
+    "choices": [
+      "Optional assignment groups for major incidents",
+      "Manual paging through personal email",
+      "Documented on-call groups with severity-based routing",
+      "Closing incidents before escalation"
+    ],
+    "correctIndex": 2,
+    "explanation": "Defined on-call ownership and severity mapping ensures escalations happen predictably during high-impact events.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/configure-security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 83,
+    "prompt": "What should be required before closing a high-severity security incident?",
+    "choices": [
+      "No related tasks were created",
+      "No analyst notes were captured",
+      "The incident was reassigned at least once",
+      "Validated closure details and supporting investigation evidence"
+    ],
+    "correctIndex": 3,
+    "explanation": "High-severity closures need complete evidence and documentation for auditability and lessons learned.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/c_DataManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 84,
+    "prompt": "Which metric best signals improvement in SIR response execution?",
+    "choices": [
+      "Decreasing mean time to contain for comparable incident types",
+      "Rising volume of emergency workflow edits",
+      "Increasing number of unclassified incidents",
+      "More unresolved incidents in pending state"
+    ],
+    "correctIndex": 0,
+    "explanation": "Containment time is a core effectiveness measure when normalized across similar incident categories.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  }
+]

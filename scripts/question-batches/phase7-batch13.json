@@ -1,0 +1,172 @@
+[
+  {
+    "trackCode": "CIS-SAM",
+    "order": 65,
+    "prompt": "Which report best helps a SAM manager prioritize remediation before a vendor true-up?",
+    "choices": [
+      "An entitlement vs. install position report filtered to high-cost publishers",
+      "A list of all open incidents assigned to software teams",
+      "A CMDB duplicate CI report with no publisher grouping",
+      "A daily change request calendar without license context"
+    ],
+    "correctIndex": 0,
+    "explanation": "Effective true-up preparation starts with a publisher-focused compliance position that highlights financial exposure.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/software-asset-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-compliance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 65,
+    "prompt": "Which SPM metric best indicates whether investments align to strategic objectives?",
+    "choices": [
+      "Percentage of funded demand mapped to approved strategic goals",
+      "Number of active users in the platform",
+      "Average catalog item fulfillment time",
+      "Count of closed incidents by priority"
+    ],
+    "correctIndex": 0,
+    "explanation": "Strategic alignment is measured by how much funded work traces directly to agreed business objectives.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-portfolio-management/concept/spm-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 66,
+    "prompt": "A compliance report shows sudden over-deployment for one publisher. What should be validated first?",
+    "choices": [
+      "Discovery and reconciliation data quality for installations and entitlements",
+      "Service catalog branding and logo placement",
+      "Incident major outage communications",
+      "CMDB ownership of network devices"
+    ],
+    "correctIndex": 0,
+    "explanation": "Before remediation decisions, SAM teams should confirm that the compliance signal is based on reliable normalized data.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-data-foundation.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/software-normalization.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 66,
+    "prompt": "What is the most effective way to maintain strategic alignment during quarterly planning changes?",
+    "choices": [
+      "Re-score demand using objective-linked criteria and update portfolio ranking",
+      "Freeze all demand records until year end",
+      "Approve all requests from the largest department",
+      "Ignore objective changes to preserve historical ranking"
+    ],
+    "correctIndex": 0,
+    "explanation": "When strategy changes, objective-linked scoring keeps funding and prioritization aligned to current direction.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/demand-management/concept/demand-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 67,
+    "prompt": "Which reporting approach gives executives the clearest SAM compliance story?",
+    "choices": [
+      "Trend and exposure dashboard combining compliance status, risk, and estimated cost impact",
+      "Raw installation list sorted alphabetically by device name",
+      "Weekly list of all software models without totals",
+      "A one-time screenshot of a reconciliation table"
+    ],
+    "correctIndex": 0,
+    "explanation": "Executives need summarized exposure and trend insights rather than operational raw data.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-compliance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 67,
+    "prompt": "Which practice most improves strategic alignment across portfolios?",
+    "choices": [
+      "Use a shared objective taxonomy and mandatory objective mapping on proposals",
+      "Allow each portfolio to define private objective names",
+      "Rank work only by requester seniority",
+      "Remove objective fields from intake forms"
+    ],
+    "correctIndex": 0,
+    "explanation": "Consistent taxonomy and required mapping create enterprise-level comparability and alignment governance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 68,
+    "prompt": "What should a SAM compliance exception report include for audit readiness?",
+    "choices": [
+      "Exception owner, rationale, approval date, and expiration or review cycle",
+      "Only the software publisher name",
+      "A list of affected users without context",
+      "Screenshots of workstation desktops"
+    ],
+    "correctIndex": 0,
+    "explanation": "Audit-ready exceptions require accountable ownership, documented approval, and time-bound governance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/audit-management/concept/audit-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 68,
+    "prompt": "A portfolio is fully funded but weakly aligned to strategy. Which action is best?",
+    "choices": [
+      "Rebalance funding toward initiatives with higher objective contribution scores",
+      "Increase budget uniformly across all initiatives",
+      "Delay all governance reviews until delivery closes",
+      "Convert all initiatives to operational work items"
+    ],
+    "correctIndex": 0,
+    "explanation": "Rebalancing by contribution score improves strategic value realization within the same funding envelope.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 69,
+    "prompt": "Which report segmentation is most useful for SAM compliance governance boards?",
+    "choices": [
+      "Exposure by publisher, business unit, and remediation status with aging",
+      "Hardware warranty expiration by model",
+      "Incident reopen counts by assignment group",
+      "Knowledge article views by category"
+    ],
+    "correctIndex": 0,
+    "explanation": "Governance boards need segmented exposure and remediation progress to drive accountable decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-compliance.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 69,
+    "prompt": "What is the strongest evidence that SPM strategic alignment is improving over time?",
+    "choices": [
+      "A growing share of completed value tied to top strategic objectives",
+      "An increasing number of unplanned enhancement requests",
+      "More projects running without benefit measures",
+      "Lower usage of strategic planning records"
+    ],
+    "correctIndex": 0,
+    "explanation": "Improvement is demonstrated when delivered outcomes increasingly map to priority objectives and value targets.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/program-management/concept/program-management.html"
+    ]
+  }
+]

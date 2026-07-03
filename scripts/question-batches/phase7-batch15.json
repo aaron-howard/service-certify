@@ -1,0 +1,87 @@
+[
+  {
+    "trackCode": "CIS-SPM",
+    "order": 75,
+    "prompt": "Which portfolio analytics measure best supports investment rebalancing decisions?",
+    "choices": [
+      "Value contribution versus risk exposure by strategic objective",
+      "Number of project records created this month",
+      "Count of users with itil role",
+      "Average incident resolution time"
+    ],
+    "correctIndex": 0,
+    "explanation": "Rebalancing decisions require a joint view of delivered value and associated portfolio risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 76,
+    "prompt": "A portfolio shows strong delivery throughput but weak outcomes. What analytics view should be prioritized?",
+    "choices": [
+      "Benefit realization against planned outcome KPIs by initiative",
+      "Total number of tasks completed per sprint only",
+      "Monthly count of closed change requests",
+      "Catalog request approval rates"
+    ],
+    "correctIndex": 0,
+    "explanation": "Outcome-focused analytics reveal whether throughput is translating into intended business value.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/program-management/concept/program-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 77,
+    "prompt": "Which analytic segmentation is most useful for identifying underperforming portfolio segments?",
+    "choices": [
+      "Slice by business unit, objective, and funding type with trend comparisons",
+      "Group only by project short description",
+      "Sort records by creation date without filters",
+      "Aggregate all data into one total value"
+    ],
+    "correctIndex": 0,
+    "explanation": "Segmented analytics expose concentration of risk and weak value patterns that totals can hide.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/financial-planning/concept/financial-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 78,
+    "prompt": "What is the primary purpose of leading indicators in SPM portfolio analytics?",
+    "choices": [
+      "Detect likely variance early so governance can intervene before outcomes degrade",
+      "Replace all lagging outcome metrics permanently",
+      "Eliminate the need for portfolio review meetings",
+      "Measure only closed projects"
+    ],
+    "correctIndex": 0,
+    "explanation": "Leading indicators provide early warning signals that allow corrective action during execution.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 79,
+    "prompt": "Which dashboard design choice most improves portfolio analytics decision-making?",
+    "choices": [
+      "Combine strategic alignment, financial variance, and benefit trends in one governed scorecard",
+      "Display every available field with no prioritization",
+      "Hide target thresholds to reduce noise",
+      "Use separate metric definitions for each portfolio"
+    ],
+    "correctIndex": 0,
+    "explanation": "Decision-ready dashboards pair integrated KPIs with consistent definitions and clear thresholds.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-portfolio-management/concept/spm-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  }
+]

@@ -1,0 +1,242 @@
+[
+	{
+		"trackCode": "CIS-DF",
+		"order": 10,
+		"prompt": "In a transform map, when does an onBefore transform script execute?",
+		"choices": [
+			"Before each source row is transformed into a target operation",
+			"Only after all rows finish transforming",
+			"Only when coalesce fields are empty",
+			"After target business rules complete"
+		],
+		"correctIndex": 0,
+		"explanation": "onBefore scripts run per row prior to field mapping commit, allowing conditional control like ignore or value normalization.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/vancouver/platform-administration/concept/c_TransformEventScripts.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 11,
+		"prompt": "Which transform script approach is best for skipping invalid source rows without failing the entire import run?",
+		"choices": [
+			"Throw an unhandled exception in every invalid row",
+			"Set ignore = true when validation conditions fail",
+			"Delete the entire import set on first error",
+			"Disable coalesce so all rows insert"
+		],
+		"correctIndex": 1,
+		"explanation": "Setting ignore to true in row-level script logic lets processing continue while excluding invalid rows from target updates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/vancouver/platform-administration/concept/c_TransformEventScripts.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 12,
+		"prompt": "A transform script needs to convert a source status code into a target reference value using lookup logic. Where should this custom logic live?",
+		"choices": [
+			"In a dashboard interactive filter",
+			"In an import set run schedule record",
+			"In a transform script or scripted field map",
+			"In a UI action on the target table"
+		],
+		"correctIndex": 2,
+		"explanation": "Transform scripts and scripted field maps are designed for row-level mapping and lookup conversions during transformation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/vancouver/platform-administration/concept/c_TransformMaps.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 13,
+		"prompt": "Why should transform scripts avoid unnecessary GlideRecord queries inside every row loop?",
+		"choices": [
+			"GlideRecord cannot be used in transform scripts",
+			"Row-level queries improve performance in all cases",
+			"Queries are blocked when coalesce is enabled",
+			"Repeated queries can significantly increase transform runtime and contention"
+		],
+		"correctIndex": 3,
+		"explanation": "High-volume row transforms can degrade quickly with per-row database calls; efficient caching or precomputed maps reduce overhead.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/data-foundations/vancouver/integrationhub-etl/concept/etl-transform-performance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 14,
+		"prompt": "What is a safe strategy when introducing new transform script logic in production data pipelines?",
+		"choices": [
+			"Test in sub-production with representative data and review transform history before rollout",
+			"Enable scripts directly in production and monitor complaints",
+			"Disable all target business rules permanently",
+			"Run only onBefore scripts and remove field maps"
+		],
+		"correctIndex": 0,
+		"explanation": "Validating with realistic datasets and run logs helps catch mapping regressions and performance issues before production impact.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/data-foundations/vancouver/integrationhub-etl/task/test-transforms.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 10,
+		"prompt": "In Performance Analytics, what is a breakdown source?",
+		"choices": [
+			"A schedule that runs data collection jobs",
+			"The dataset that defines available values used to segment indicator scores",
+			"A report export for external BI tools",
+			"A target line configuration for score widgets"
+		],
+		"correctIndex": 1,
+		"explanation": "Breakdown sources provide the dimension values (for example, assignment groups) used to slice indicator results.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/concept/c_Breakdowns.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 11,
+		"prompt": "A breakdown is configured but no values appear during analysis. Which setup should be verified first?",
+		"choices": [
+			"Indicator source and breakdown source alignment for the same data context",
+			"Homepage font and color settings",
+			"Forecast confidence interval",
+			"Chart legend placement"
+		],
+		"correctIndex": 0,
+		"explanation": "If breakdown source data does not align with indicator source records, segmentation values will not populate as expected.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/task/t_ConfigureBreakdownSources.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 12,
+		"prompt": "What is the purpose of a breakdown mapping in PA?",
+		"choices": [
+			"To encrypt breakdown values before storage",
+			"To connect an indicator source field to the correct breakdown source values",
+			"To run ad hoc collections on demand",
+			"To clone widgets between dashboards"
+		],
+		"correctIndex": 1,
+		"explanation": "Breakdown mapping defines how indicator data relates to dimension values, enabling accurate segmented scores.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/concept/c_BreakdownMappings.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 13,
+		"prompt": "Why would an admin use scripted breakdown sources?",
+		"choices": [
+			"To disable indicator collections for specific groups",
+			"To replace all indicator sources with JavaScript",
+			"To generate dynamic segmentation values when table data alone is insufficient",
+			"To force all widgets to display as heatmaps"
+		],
+		"correctIndex": 2,
+		"explanation": "Scripted breakdown sources support custom value generation and labeling for advanced dimensional analysis needs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/task/t_CreateScriptedBreakdowns.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 14,
+		"prompt": "What is a common reason to restrict the values in a breakdown source?",
+		"choices": [
+			"To ensure indicator scores can never be trended",
+			"To reduce duplicate user accounts",
+			"To prevent scheduled collections from running",
+			"To improve analytical focus and performance by excluding irrelevant segments"
+		],
+		"correctIndex": 3,
+		"explanation": "Limiting dimensional values to meaningful segments keeps dashboards relevant and can reduce processing overhead.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/concept/c_Breakdowns.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 10,
+		"prompt": "In Service Provider workflows, what is the primary benefit of using IntegrationHub spokes with external OSS/BSS tools?",
+		"choices": [
+			"They provide reusable actions that standardize integrations and reduce custom script maintenance",
+			"They remove all authentication requirements for external systems",
+			"They replace the need for flow logic",
+			"They can only run from client scripts"
+		],
+		"correctIndex": 0,
+		"explanation": "Spokes package prebuilt actions for common operations, accelerating integration development and consistency.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/integrationhub/vancouver/integrationhub/concept/c_IntegrationHubSpokes.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 11,
+		"prompt": "A telecom operations flow needs to open incidents in an external NMS when internal alarms are raised. Which IntegrationHub capability is most relevant?",
+		"choices": [
+			"Flow Designer data pills",
+			"Spoke actions with authenticated connections and data mapping",
+			"UI policy scripts on incident forms",
+			"Knowledge article feedback tasks"
+		],
+		"correctIndex": 1,
+		"explanation": "Spoke actions execute external API operations through configured connections and map operational context between systems.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/integrationhub/vancouver/integrationhub/task/t_UseSpokeActionsInFlowDesigner.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 12,
+		"prompt": "Why should connection and credential aliases be used in IntegrationHub for service provider automations?",
+		"choices": [
+			"They are required only for manual flows",
+			"They force all actions to run as guest users",
+			"They decouple flow logic from environment-specific endpoint and credential details",
+			"They disable spoke version upgrades"
+		],
+		"correctIndex": 2,
+		"explanation": "Aliases allow flows to stay portable across environments while administrators manage endpoints and credentials separately.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/integrationhub/vancouver/integrationhub/concept/c_ConnectionAndCredentialAliases.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 13,
+		"prompt": "A spoke action intermittently fails due to rate limits from a partner API. Which design practice is most appropriate?",
+		"choices": [
+			"Disable error handling in the flow",
+			"Increase incident priority for all failures",
+			"Retry indefinitely without delay",
+			"Implement controlled retry and exception paths in Flow Designer"
+		],
+		"correctIndex": 3,
+		"explanation": "Resilient integration design includes bounded retries and explicit failure handling to manage transient API limitations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/integrationhub/vancouver/integrationhub/concept/flow-error-handling.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 14,
+		"prompt": "What is a key governance reason to prefer certified spokes over ad hoc scripted REST calls for recurring telecom integrations?",
+		"choices": [
+			"Certified spokes provide maintainable, supportable integration patterns with clearer lifecycle management",
+			"Certified spokes always execute faster than any custom code",
+			"Certified spokes eliminate the need for credentials",
+			"Certified spokes can be used only in global scope"
+		],
+		"correctIndex": 0,
+		"explanation": "Using managed spoke capabilities improves consistency, supportability, and operational governance of integration automations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/integrationhub/vancouver/integrationhub/concept/c_IntegrationHubSpokes.html"
+		]
+	}
+]

@@ -1,0 +1,244 @@
+[
+	{
+		"trackCode": "CSA",
+		"order": 10,
+		"prompt": "A user personalizes a list layout and column order for their own work. Where is that personalization typically stored?",
+		"choices": [
+			"In the global system property table for all users",
+			"As a user-specific list personalization rather than changing the base list for everyone",
+			"In the CMDB identification rules",
+			"In the update set currently in progress"
+		],
+		"correctIndex": 1,
+		"explanation": "List personalization lets individual users adjust columns and layout without altering the default list configuration for all users.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/list-personalization.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 11,
+		"prompt": "What is the primary effect of applying a filter on a list?",
+		"choices": [
+			"It restricts which records appear based on the filter conditions",
+			"It renames the underlying table for reporting",
+			"It disables all business rules on the table",
+			"It exports the data dictionary to XML"
+		],
+		"correctIndex": 0,
+		"explanation": "List filters constrain the query so users see only records matching the specified conditions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/exploring-lists.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 12,
+		"prompt": "An administrator wants users to sort and group list data interactively. Which list capability supports this?",
+		"choices": [
+			"List controls that let users sort, group, and adjust how data is presented",
+			"Transform maps on the import set table",
+			"Discovery schedules on the MID Server",
+			"Subscription Management entitlements"
+		],
+		"correctIndex": 0,
+		"explanation": "List controls provide interactive sorting, grouping, and presentation options on list views.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/using-list-controls.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 13,
+		"prompt": "A saved filter is shared with a team. What does sharing a list filter typically allow?",
+		"choices": [
+			"Other users to apply the same filter conditions on the list",
+			"Automatic elevation to the admin role",
+			"Deletion of records that do not match the filter",
+			"Modification of table schema for all scoped applications"
+		],
+		"correctIndex": 0,
+		"explanation": "Shared filters let teams reuse the same query conditions on a list without each user rebuilding the filter.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/exploring-lists.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 14,
+		"prompt": "When troubleshooting why a user cannot see expected records on a list, what should an administrator verify first?",
+		"choices": [
+			"Whether an active filter or default query is limiting visible rows",
+			"The PA indicator collection schedule",
+			"The Service Portal widget compiler version",
+			"The hardware asset depreciation method"
+		],
+		"correctIndex": 0,
+		"explanation": "Active filters and default queries commonly explain missing rows on a list before investigating ACLs or data issues.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/exploring-lists.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 10,
+		"prompt": "When do client scripts execute in the classic form experience?",
+		"choices": [
+			"Only on the email client after inbound processing",
+			"When client-based events occur such as form load, field change, or form submit",
+			"Exclusively during scheduled job execution on the server",
+			"Only when a transform map runs on an import set"
+		],
+		"correctIndex": 1,
+		"explanation": "Client scripts run in the browser in response to client events such as onLoad, onChange, and onSubmit.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/servicenow-sdk/client-script-api-now-ts.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 11,
+		"prompt": "Which API object is commonly used in client scripts to read and modify field values on a form?",
+		"choices": [
+			"GlideRecord",
+			"g_form",
+			"GlideSystem",
+			"RESTMessageV2"
+		],
+		"correctIndex": 1,
+		"explanation": "The g_form client API provides methods to get, set, and control field behavior on forms.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/servicenow-sdk/client-script-api-now-ts.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 12,
+		"prompt": "How do UI Policies differ from Client Scripts for form behavior?",
+		"choices": [
+			"UI Policies provide declarative control of visibility and mandatory state; Client Scripts add imperative JavaScript logic",
+			"UI Policies run only on the server during database commit",
+			"Client Scripts cannot reference form fields",
+			"UI Policies replace the need for any ACL rules"
+		],
+		"correctIndex": 0,
+		"explanation": "UI Policies configure form behavior declaratively; Client Scripts implement custom client-side logic when needed.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/form-administration/t_CreateAUIPolicy.html",
+			"https://www.servicenow.com/docs/r/application-development/ui-builder/define-client-scripts.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 13,
+		"prompt": "In UI Builder, how are client scripts typically associated with page behavior?",
+		"choices": [
+			"By binding scripts to components through event handlers",
+			"By storing scripts only in the system log table",
+			"By compiling scripts into CMDB relationship rules",
+			"By attaching scripts exclusively to scheduled jobs"
+		],
+		"correctIndex": 0,
+		"explanation": "UI Builder lets developers define client scripts and bind them to components via event handlers to update client state.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/ui-builder/define-client-scripts.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 14,
+		"prompt": "A developer needs to call server-side logic from a client script without exposing database queries in the browser. Which approach is appropriate?",
+		"choices": [
+			"Embed GlideRecord queries directly in the client script",
+			"Use GlideAjax to invoke a Script Include on the server",
+			"Store credentials in a client script global variable",
+			"Disable all ACLs on the target table"
+		],
+		"correctIndex": 1,
+		"explanation": "GlideAjax calls server-side Script Includes so sensitive database operations stay on the server.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/servicenow-sdk/client-script-api-now-ts.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 10,
+		"prompt": "What is the primary purpose of the Service Catalog in ITSM?",
+		"choices": [
+			"To let users request standard services through defined catalog items and fulfillment workflows",
+			"To replace incident management for all outages",
+			"To store discovery results from the MID Server",
+			"To manage software license compliance audits only"
+		],
+		"correctIndex": 0,
+		"explanation": "The Service Catalog provides a structured way for users to order services with defined items, variables, and fulfillment.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/service-catalog-management/service-catalog-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 11,
+		"prompt": "After a user submits a catalog request, what does request fulfillment typically involve?",
+		"choices": [
+			"Automatically closing all open incidents",
+			"Executing approval, provisioning, and task workflows to deliver the requested service",
+			"Deleting the user's roles until delivery completes",
+			"Converting the request to a change record in every case"
+		],
+		"correctIndex": 1,
+		"explanation": "Request fulfillment coordinates approvals, tasks, and automation to complete the ordered service.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/service-catalog-management/request-fulfillment.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 12,
+		"prompt": "Why are variable sets used in catalog item design?",
+		"choices": [
+			"To reuse common questions across multiple catalog items",
+			"To replace the need for any approval workflows",
+			"To encrypt catalog attachments at rest",
+			"To map CI relationships in the CMDB"
+		],
+		"correctIndex": 0,
+		"explanation": "Variable sets let designers reuse groups of variables across catalog items for consistent data collection.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/service-catalog-management/catalog-item-design.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 13,
+		"prompt": "A catalog item requires manager approval before fulfillment. Where is that control typically configured?",
+		"choices": [
+			"In the catalog item or flow approval configuration as part of the request workflow",
+			"In the incident priority matrix only",
+			"In the discovery status field on cmdb_ci",
+			"In the global email property exclusively"
+		],
+		"correctIndex": 0,
+		"explanation": "Catalog approvals are configured on the item or its fulfillment flow to gate provisioning until approvers act.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/service-catalog-management/request-fulfillment.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 14,
+		"prompt": "How does a standard catalog request differ from a break-fix incident?",
+		"choices": [
+			"A catalog request represents planned service consumption; an incident represents unplanned service degradation",
+			"A catalog request always has higher priority than any incident",
+			"Incidents always create catalog tasks automatically",
+			"Catalog requests cannot reference configuration items"
+		],
+		"correctIndex": 0,
+		"explanation": "Catalog requests are for ordered services; incidents address unplanned interruptions to restore normal service.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/service-catalog-management/service-catalog-management.html",
+			"https://www.servicenow.com/docs/r/it-service-management/incident-management/c_IncidentManagement.html"
+		]
+	}
+]

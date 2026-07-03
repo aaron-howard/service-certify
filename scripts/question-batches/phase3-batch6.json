@@ -1,0 +1,243 @@
+[
+	{
+		"trackCode": "CIS-DF",
+		"order": 30,
+		"prompt": "Why is mapping business services to technical services in CSDM important for CMDB governance?",
+		"choices": [
+			"It removes the need for CI relationships",
+			"It links outcomes to supporting architecture for impact analysis and ownership",
+			"It ensures all CIs are discovered by one MID Server",
+			"It enables unrestricted writes to cmdb_ci"
+		],
+		"correctIndex": 1,
+		"explanation": "CSDM service modeling ties business context to technical infrastructure so teams can understand ownership and impact.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_CSDMServices.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 31,
+		"prompt": "Which CSDM practice most improves service health reporting accuracy?",
+		"choices": [
+			"Using one generic service CI for the entire enterprise",
+			"Defining clear service boundaries and relating supporting application/infrastructure CIs",
+			"Creating services without ownership fields",
+			"Skipping relationship types to reduce complexity"
+		],
+		"correctIndex": 1,
+		"explanation": "Accurate health reporting depends on properly scoped services with explicit dependencies and ownership.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_ServiceModelingGuidelines.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 32,
+		"prompt": "In a CSDM-aligned model, what does a service offering primarily represent?",
+		"choices": [
+			"A technical CI class used only by Discovery",
+			"A deployment package for update sets",
+			"A consumable commitment variant of a service for a specific audience",
+			"A replacement for assignment groups"
+		],
+		"correctIndex": 2,
+		"explanation": "Service offerings provide a consumer-facing variant of a service with defined commitments and context.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_ServiceOfferings.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 33,
+		"prompt": "What is the value of assigning accountable owners to CSDM service records?",
+		"choices": [
+			"It automatically creates discovery schedules",
+			"It eliminates the need for reconciliation rules",
+			"It establishes governance responsibility for lifecycle and data quality",
+			"It prevents incident association with services"
+		],
+		"correctIndex": 2,
+		"explanation": "Named ownership is a core governance control for maintaining service accuracy and lifecycle accountability.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_GovernanceInCSDM.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 34,
+		"prompt": "Which outcome is most likely when CSDM service relationships are incomplete?",
+		"choices": [
+			"Faster identification engine performance",
+			"Reduced need for event management",
+			"Weaker impact analysis during incidents and changes",
+			"Automatic dependency inference in all reports"
+		],
+		"correctIndex": 2,
+		"explanation": "Missing dependencies lead to blind spots in impact analysis for operations, incident, and change processes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_CSDMAndOperationalProcesses.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 30,
+		"prompt": "In Performance Analytics, what is the primary purpose of a benchmark?",
+		"choices": [
+			"To compare indicator performance against external or reference standards",
+			"To replace all targets for scorecards",
+			"To disable historical snapshots",
+			"To run ad hoc SQL against indicator tables"
+		],
+		"correctIndex": 0,
+		"explanation": "Benchmarks provide comparative context so teams can evaluate performance relative to peers or defined reference groups.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Benchmarks.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 31,
+		"prompt": "How are targets and benchmarks best used together?",
+		"choices": [
+			"Targets set internal goals while benchmarks provide external or comparative context",
+			"Benchmarks replace all threshold logic",
+			"Targets are only valid when benchmark data is absent",
+			"Both are identical and interchangeable"
+		],
+		"correctIndex": 0,
+		"explanation": "Targets measure progress against your objective; benchmarks add comparison to broader performance baselines.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Targets.html",
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Benchmarks.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 32,
+		"prompt": "What should an admin verify before trusting a benchmark comparison?",
+		"choices": [
+			"That update sets are in committed state",
+			"That indicator definitions and measurement periods are comparable",
+			"That only scripted indicators are included",
+			"That all widgets use the same color palette"
+		],
+		"correctIndex": 1,
+		"explanation": "Benchmark validity depends on comparing like-for-like definitions, sampling windows, and calculation logic.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_BenchmarkDataQuality.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 33,
+		"prompt": "A KPI is above internal target but below industry benchmark. What does this indicate?",
+		"choices": [
+			"Data collection failed",
+			"Internal goals may be conservative relative to external performance",
+			"Benchmarks cannot be used for that KPI",
+			"The indicator should be deleted"
+		],
+		"correctIndex": 1,
+		"explanation": "This scenario suggests internal targets are being met but there may be room to improve when viewed against benchmark peers.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Benchmarks.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 34,
+		"prompt": "Which dashboard outcome is enabled by properly configured benchmark data?",
+		"choices": [
+			"Comparison views that show organizational performance versus reference cohorts",
+			"Automatic ACL generation for all scorecards",
+			"Real-time CMDB reconciliation",
+			"Automatic upgrade conflict resolution"
+		],
+		"correctIndex": 0,
+		"explanation": "Benchmarks allow comparative visuals that help stakeholders interpret relative performance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_ConfigureBenchmarking.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 30,
+		"prompt": "When planning an upgrade for telecom service management capabilities, what should happen first?",
+		"choices": [
+			"Upgrade production directly to minimize dual-maintenance effort",
+			"Run impact assessment for customizations, integrations, and data model changes",
+			"Disable all custom apps before cloning",
+			"Delete deprecated records from CMDB"
+		],
+		"correctIndex": 1,
+		"explanation": "Upgrade planning starts with impact assessment so teams can scope risk across customizations and integrations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/australia/install-and-upgrade/concept/c_PlanningAnUpgrade.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 31,
+		"prompt": "Why is sub-production testing essential during service provider upgrade planning?",
+		"choices": [
+			"It allows skipping ATF execution in production",
+			"It validates custom telecom flows and integrations before customer-facing impact",
+			"It removes the need for change approval",
+			"It guarantees zero data transformation changes"
+		],
+		"correctIndex": 1,
+		"explanation": "Testing in lower environments surfaces regression risk in provider-specific workflows and integrations before go-live.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/australia/install-and-upgrade/concept/c_TestingUpgradeReadiness.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 32,
+		"prompt": "Which upgrade practice best supports telecom operations continuity?",
+		"choices": [
+			"Executing upgrades during peak order windows",
+			"Using a communication plan and blackout-aware scheduling for operational teams",
+			"Applying all skipped versions in one untested leap",
+			"Deferring integration validation until after go-live"
+		],
+		"correctIndex": 1,
+		"explanation": "Coordinated communications and timing around business critical windows reduces operational disruption risk.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/australia/install-and-upgrade/concept/c_UpgradeBestPractices.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 33,
+		"prompt": "For telecom-specific customizations, what should be reviewed as part of upgrade readiness?",
+		"choices": [
+			"Only login pages and branding assets",
+			"Script includes, flows, and integrations tied to order and inventory processes",
+			"Inactive users in sys_user only",
+			"Knowledge article translations"
+		],
+		"correctIndex": 1,
+		"explanation": "Critical provider customizations are often implemented in scripts, flows, and integration points that must be regression-tested.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/australia/install-and-upgrade/concept/c_UpgradeCustomizationReview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 34,
+		"prompt": "What is the main value of a rollback or contingency plan in upgrade execution?",
+		"choices": [
+			"It guarantees no defects will occur",
+			"It enables quick recovery if upgrade issues threaten service delivery",
+			"It replaces post-upgrade validation",
+			"It avoids the need for stakeholder approvals"
+		],
+		"correctIndex": 1,
+		"explanation": "Contingency planning provides an operational safety net when issues are discovered during or immediately after upgrade activities.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/australia/install-and-upgrade/concept/c_UpgradeFallbackPlanning.html"
+		]
+	}
+]

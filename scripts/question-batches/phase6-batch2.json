@@ -1,0 +1,242 @@
+[
+	{
+		"trackCode": "CIS-RC",
+		"order": 10,
+		"prompt": "In IRM Risk Management, what is the primary purpose of a risk register?",
+		"choices": [
+			"A centralized inventory of identified risks with ownership, scoring, and treatment status",
+			"A list of CMDB classes excluded from discovery",
+			"A tracker for software reclaim candidates only",
+			"A report of closed major incidents"
+		],
+		"correctIndex": 0,
+		"explanation": "The risk register serves as the system of record for risk posture, accountability, and lifecycle progression.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-register.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 11,
+		"prompt": "A risk appears in multiple departments with the same root cause. Which register approach is best?",
+		"choices": [
+			"Create unrelated duplicate risks for every department",
+			"Use a parent risk with related records to preserve enterprise visibility and local accountability",
+			"Track only one department and ignore others",
+			"Convert all risk records into audit issues"
+		],
+		"correctIndex": 1,
+		"explanation": "Parent-child style risk structures can preserve roll-up visibility while still assigning local treatment responsibility.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/manage-risk-records.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 12,
+		"prompt": "Which risk register data quality control has the highest impact on reporting reliability?",
+		"choices": [
+			"Optional owner and due date fields",
+			"Free-text status values without governance",
+			"Required owner, rating, treatment plan, and review cadence fields",
+			"Storing all risk notes outside ServiceNow"
+		],
+		"correctIndex": 2,
+		"explanation": "Required core fields and review cadence enforce consistent lifecycle data and improve decision-grade reporting.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-data-governance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 13,
+		"prompt": "How should residual risk be handled in the register after controls are implemented?",
+		"choices": [
+			"Delete the risk once controls are documented",
+			"Freeze inherent score and stop reassessment",
+			"Set every residual score to low by policy",
+			"Reassess and document residual exposure to support accept/mitigate/transfer decisions"
+		],
+		"correctIndex": 3,
+		"explanation": "Residual risk must be reassessed to reflect control effectiveness and support informed treatment decisions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-response-and-treatment.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 14,
+		"prompt": "Which governance activity keeps the risk register trustworthy over time?",
+		"choices": [
+			"Periodic review campaigns to validate stale records, ownership, and treatment progress",
+			"Closing all risks older than 90 days automatically",
+			"Restricting risk updates to one admin account",
+			"Removing change history from risk records"
+		],
+		"correctIndex": 0,
+		"explanation": "Regular governance reviews prevent stale records and maintain accurate ownership and treatment status.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-review-process.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 10,
+		"prompt": "What is the main value of security incident playbooks in ServiceNow SIR?",
+		"choices": [
+			"Replace analyst judgment entirely",
+			"Orchestrate repeatable response steps and reduce manual handoffs across teams",
+			"Disable integrations with external security tools",
+			"Convert all incidents to vulnerabilities"
+		],
+		"correctIndex": 1,
+		"explanation": "Playbooks provide structured, repeatable execution for common incident types and improve response consistency.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-playbook.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 11,
+		"prompt": "A phishing incident playbook should trigger which action earliest?",
+		"choices": [
+			"Immediate closure after user notification",
+			"Software model normalization",
+			"Initial triage tasks such as evidence capture, user validation, and scope determination",
+			"Full endpoint rebuild before analysis"
+		],
+		"correctIndex": 2,
+		"explanation": "Early triage and evidence capture determine scope and support defensible next-step decisions in phishing response.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/configure-security-incident-playbooks.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 12,
+		"prompt": "Which playbook design choice best supports SOC scalability?",
+		"choices": [
+			"One monolithic playbook for all incident types",
+			"No conditional logic to keep flows simple",
+			"Manual routing only with no task templates",
+			"Modular playbooks with reusable tasks and conditional branches by incident characteristics"
+		],
+		"correctIndex": 3,
+		"explanation": "Modular and conditional playbooks are easier to maintain and scale across varied incident classes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-operations-playbooks.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 13,
+		"prompt": "Why should playbook changes follow formal change control in production?",
+		"choices": [
+			"Unvetted automation changes can break response workflows and increase operational risk",
+			"Change control prevents all future SOC updates",
+			"Playbooks are not used during major incidents",
+			"Only CMDB admins can edit SIR tasks"
+		],
+		"correctIndex": 0,
+		"explanation": "Playbook changes affect critical incident handling, so controlled release and validation are essential.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/playbook-governance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 14,
+		"prompt": "Which KPI best reflects playbook effectiveness in SIR?",
+		"choices": [
+			"Number of custom fields added per incident",
+			"Reduction in mean time to contain and consistent completion of required response tasks",
+			"Volume of reopened low-severity incidents",
+			"Total count of manually created subtasks"
+		],
+		"correctIndex": 1,
+		"explanation": "Containment speed and consistent execution of required tasks indicate playbooks are improving operational outcomes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-operations-metrics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 10,
+		"prompt": "Before scaling Service Mapping, which CMDB prerequisite is most critical?",
+		"choices": [
+			"Accurate CI identification and reconciliation rules with stable class models",
+			"Disabling relationship types to reduce complexity",
+			"Using only manual CI creation from spreadsheets",
+			"Removing duplicate detection on discovery imports"
+		],
+		"correctIndex": 0,
+		"explanation": "Reliable identification and reconciliation are foundational to preventing duplicates and ensuring map accuracy.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/identification-and-reconciliation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 11,
+		"prompt": "Why is CMDB health scoring relevant to CIS-Service Mapping readiness?",
+		"choices": [
+			"It measures data completeness, correctness, and compliance that affect service map quality",
+			"It replaces the need for MID Servers",
+			"It automatically creates application services",
+			"It only tracks incident closure SLA"
+		],
+		"correctIndex": 1,
+		"explanation": "CMDB Health metrics expose data quality gaps that directly impact dependency mapping outcomes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-health-dashboard.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 12,
+		"prompt": "A team has strong discovery coverage but poor map trust. Which prerequisite is likely missing?",
+		"choices": [
+			"Higher event volume from monitoring tools",
+			"More assignment groups in Incident Management",
+			"Governed relationship types and cleanup of stale or orphaned CIs",
+			"Monthly purge of all dependency relationships"
+		],
+		"correctIndex": 2,
+		"explanation": "Discovery volume alone is insufficient; relationship quality and stale CI governance are required for trustworthy maps.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-data-manager.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 13,
+		"prompt": "What is the best prerequisite approach for credentials and access used by mapping discovery patterns?",
+		"choices": [
+			"Use shared domain admin credentials for all environments",
+			"Store credentials in plain text for troubleshooting",
+			"Rotate credentials only after outages",
+			"Implement least-privilege credentials and validate access paths before production mapping"
+		],
+		"correctIndex": 3,
+		"explanation": "Least-privilege and validated access reduce security risk while supporting reliable data collection for maps.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/discovery-credentials.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 14,
+		"prompt": "Which governance routine is most useful before onboarding the next wave of services to Service Mapping?",
+		"choices": [
+			"CMDB readiness review covering CI quality, ownership, relationship integrity, and discovery health",
+			"Disabling all reconciliation rules temporarily",
+			"Resetting class manager customizations monthly",
+			"Allowing ad hoc CI class creation by any fulfiller"
+		],
+		"correctIndex": 0,
+		"explanation": "A structured readiness review prevents onboarding unstable data into map scope and improves long-term map quality.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
+		]
+	}
+]

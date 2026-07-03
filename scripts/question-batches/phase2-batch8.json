@@ -1,0 +1,165 @@
+[
+	{
+		"trackCode": "CSA",
+		"order": 65,
+		"prompt": "What is the purpose of Subscription Management in ServiceNow?",
+		"choices": [
+			"To monitor purchased subscriptions and entitlement usage so administrators can manage license compliance",
+			"To route all incidents directly to on-call users",
+			"To replace update sets for application promotion",
+			"To configure MID Server network ports"
+		],
+		"correctIndex": 0,
+		"explanation": "Subscription Management helps organizations track entitlements and consumption against purchased ServiceNow subscriptions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-platform-administration/page/administer/subscription-management/concept/subscription-management.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 66,
+		"prompt": "Why should administrators review subscription usage trends regularly?",
+		"choices": [
+			"To identify overuse or underuse early and make informed licensing and adoption decisions",
+			"To automatically close stale catalog tasks",
+			"To disable ACL evaluation during audits",
+			"To reset all user passwords each quarter"
+		],
+		"correctIndex": 0,
+		"explanation": "Trend monitoring supports proactive governance by exposing adoption gaps and potential entitlement risk before renewal cycles.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-platform-administration/page/administer/subscription-management/concept/subscription-management.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 67,
+		"prompt": "What does the Stats module in ServiceNow primarily provide?",
+		"choices": [
+			"A real-time view of key instance performance and operational statistics",
+			"A replacement for CMDB relationship mapping",
+			"A wizard for creating catalog item variables",
+			"A UI policy debugger for portal widgets only"
+		],
+		"correctIndex": 0,
+		"explanation": "The Stats view surfaces operational metrics that help admins quickly assess instance health and runtime behavior.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-platform-administration/page/administer/instance-administration/reference/r_StatsModule.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 68,
+		"prompt": "Which administrator action is most appropriate when instance stats show sustained transaction latency growth?",
+		"choices": [
+			"Investigate recent changes, high-cost operations, and load patterns before applying targeted remediation",
+			"Delete all scheduled jobs immediately",
+			"Disable auditing on every task table",
+			"Clear all user sessions every five minutes"
+		],
+		"correctIndex": 0,
+		"explanation": "Stats are most useful when correlated with change activity and workload signals to isolate likely performance causes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-platform-administration/page/administer/instance-administration/reference/r_StatsModule.html",
+			"https://www.servicenow.com/docs/bundle/zurich-platform-administration/page/administer/performance/concept/c_PerformanceDashboard.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 69,
+		"prompt": "How do subscription management data and instance statistics complement each other for platform governance?",
+		"choices": [
+			"Subscription data shows entitlement consumption while instance stats show technical health, enabling balanced operational decisions",
+			"They serve the same purpose and should not be compared",
+			"Both are used only to define catalog approvals",
+			"They are only relevant during initial instance installation"
+		],
+		"correctIndex": 0,
+		"explanation": "Combining business-facing entitlement visibility with technical performance visibility helps administrators manage both compliance and service quality.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-platform-administration/page/administer/subscription-management/concept/subscription-management.html",
+			"https://www.servicenow.com/docs/bundle/zurich-platform-administration/page/administer/instance-administration/reference/r_StatsModule.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 65,
+		"prompt": "What is the main objective of shift planning in IT service operations?",
+		"choices": [
+			"To align staffing coverage with expected demand so support is available during required service windows",
+			"To bypass assignment groups for P1 incidents",
+			"To eliminate the need for incident priority",
+			"To replace change management approvals"
+		],
+		"correctIndex": 0,
+		"explanation": "Shift planning ensures the right skills are available at the right times to meet operational commitments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/workforce-optimization/concept/workforce-optimization.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 66,
+		"prompt": "Why is documented handoff between shifts important in ITSM?",
+		"choices": [
+			"It preserves incident context and pending actions, reducing delays and rework across staffing transitions",
+			"It automatically closes all open incidents at shift end",
+			"It prevents use of major incident workflows",
+			"It replaces SLA definitions"
+		],
+		"correctIndex": 0,
+		"explanation": "Structured handoffs reduce knowledge loss and improve continuity for active incidents, problems, and requests.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/incident-management/concept/incident-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 67,
+		"prompt": "In an on-call model, what determines who should be alerted first for an after-hours critical incident?",
+		"choices": [
+			"The active on-call schedule and escalation policy for the relevant support group",
+			"The oldest incident in the queue",
+			"The user who last edited the knowledge base",
+			"The catalog manager for the affected service"
+		],
+		"correctIndex": 0,
+		"explanation": "Effective on-call response depends on accurate schedules and escalation definitions tied to support ownership.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/on-call-scheduling/concept/on-call-scheduling.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 68,
+		"prompt": "What is a best practice for maintaining reliable on-call coverage?",
+		"choices": [
+			"Keep schedules current and verify escalation paths before weekends, holidays, and known high-risk windows",
+			"Assign every incident to one global queue",
+			"Disable notifications during nonbusiness hours",
+			"Restrict major incident communication to monthly reports"
+		],
+		"correctIndex": 0,
+		"explanation": "Regular validation of schedules and escalation routing prevents missed alerts and delayed response during off-hours.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/on-call-scheduling/concept/on-call-scheduling.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 69,
+		"prompt": "How do shift planning and on-call scheduling work together to improve ITSM outcomes?",
+		"choices": [
+			"Shift planning covers predictable demand while on-call scheduling handles off-hours and surge exceptions",
+			"They are unrelated and managed by separate platforms",
+			"On-call schedules replace assignment groups entirely",
+			"Shift plans are used only for knowledge article reviews"
+		],
+		"correctIndex": 0,
+		"explanation": "Combining planned staffing with fallback on-call coverage strengthens incident response continuity across all service hours.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/workforce-optimization/concept/workforce-optimization.html",
+			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/on-call-scheduling/concept/on-call-scheduling.html"
+		]
+	}
+]

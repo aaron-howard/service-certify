@@ -1,0 +1,242 @@
+[
+	{
+		"trackCode": "CPOA",
+		"order": 35,
+		"prompt": "Which instance statistic is most useful for tracking whether transaction demand is outpacing platform capacity?",
+		"choices": [
+			"Transaction throughput trend with response time percentiles",
+			"Number of update sets promoted this month",
+			"Count of active catalog categories",
+			"Total knowledge article views"
+		],
+		"correctIndex": 0,
+		"explanation": "Throughput and latency trends provide direct visibility into demand and performance pressure on the instance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/administer/instance-administration/concept/instance-performance-dashboard.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 36,
+		"prompt": "A security review identifies over-permissive table access. What is the best immediate administrative response?",
+		"choices": [
+			"Disable all ACLs for the affected table",
+			"Tighten ACL conditions and roles using least-privilege principles",
+			"Grant admin to all support users temporarily",
+			"Move records to a global table to simplify access"
+		],
+		"correctIndex": 1,
+		"explanation": "Least-privilege ACL adjustments are the correct response to over-broad access findings.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/security/task/create-an-acl-rule.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 37,
+		"prompt": "When enabling cross-scope access between two applications, what should platform admins prioritize first?",
+		"choices": [
+			"Allowing unrestricted runtime access for speed",
+			"Using explicit application access settings and minimal required privileges",
+			"Converting both apps to global scope",
+			"Disabling scope protections during testing"
+		],
+		"correctIndex": 1,
+		"explanation": "Explicit and minimal cross-scope permissions reduce security risk while enabling necessary integrations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/applications/reference/cross-scope-access-controls.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 38,
+		"prompt": "Which metric combination best highlights potential security constraints impacting adoption?",
+		"choices": [
+			"Script include count and clone frequency",
+			"Denied ACL attempts, role request turnaround, and task completion drop-off",
+			"Plugin activation count and node uptime",
+			"Business rule execution order and UI policy count"
+		],
+		"correctIndex": 1,
+		"explanation": "Access denials plus user flow degradation can reveal security controls that are misaligned with intended process use.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/security/concept/security-monitoring-and-auditing.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 39,
+		"prompt": "Why should instance statistics reviews be part of a regular admin governance cadence?",
+		"choices": [
+			"They automatically approve all change requests",
+			"They remove the need for performance analytics",
+			"They detect trends early so teams can remediate before user impact grows",
+			"They eliminate the need for access reviews"
+		],
+		"correctIndex": 2,
+		"explanation": "Routine trend review supports proactive performance and security management rather than reactive firefighting.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/administer/instance-administration/task/monitor-instance-health.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 35,
+		"prompt": "For product governance, how should instance stats influence roadmap prioritization?",
+		"choices": [
+			"Use stats to identify technical bottlenecks impacting product outcomes",
+			"Ignore stats unless an outage occurs",
+			"Prioritize only UI redesign stories",
+			"Move all reliability work to a separate platform backlog"
+		],
+		"correctIndex": 0,
+		"explanation": "Operational stats should inform backlog priorities when platform constraints affect product value delivery.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-strategic-portfolio-management/page/product/agile-development/concept/data-informed-prioritization.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 36,
+		"prompt": "A product owner receives repeated complaints about permission barriers. What is the best first analysis?",
+		"choices": [
+			"Compare role model intent with observed denied-access trends by persona",
+			"Disable all security constraints to gather feedback faster",
+			"Reassign all users to admin",
+			"Delay issue review until next quarter"
+		],
+		"correctIndex": 0,
+		"explanation": "Mapping denied-access data to expected role design helps find policy mismatches without weakening security.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/security/concept/roles-and-groups.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 37,
+		"prompt": "What is the main product risk of poorly governed cross-scope access?",
+		"choices": [
+			"Reduced list personalization options",
+			"Unintended data exposure or app dependency failures",
+			"Longer catalog item descriptions",
+			"Lower number of scheduled jobs"
+		],
+		"correctIndex": 1,
+		"explanation": "Cross-scope misconfiguration can create both security leakage and fragile inter-app dependencies.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/applications/concept/application-scope.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 38,
+		"prompt": "Which KPI most directly reflects whether security constraints are balanced with product usability?",
+		"choices": [
+			"Number of active plugins",
+			"Median incident priority",
+			"Successful task completion rate by authorized users",
+			"Count of custom tables per scope"
+		],
+		"correctIndex": 2,
+		"explanation": "Completion rate among authorized personas indicates whether controls protect data without blocking valid work.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/use/performance-analytics/concept/measure-user-journeys.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 39,
+		"prompt": "How should a product owner handle competing requests for broader cross-scope permissions?",
+		"choices": [
+			"Approve all requests to accelerate delivery",
+			"Reject all requests without review",
+			"Grant temporary admin and revisit later",
+			"Use risk-based review with explicit use cases and least-privilege design"
+		],
+		"correctIndex": 3,
+		"explanation": "A risk-based model enables needed integration while maintaining platform security principles.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/security/concept/security-governance-process.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 35,
+		"prompt": "Within a COE, what is the strongest use of instance statistics?",
+		"choices": [
+			"Establishing objective service health benchmarks across product lines",
+			"Replacing all release retrospectives",
+			"Preventing teams from using scoped apps",
+			"Disabling scheduled performance jobs"
+		],
+		"correctIndex": 0,
+		"explanation": "Shared benchmarks based on instance data support consistent governance and continuous improvement.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/administer/instance-administration/concept/instance-observability.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 36,
+		"prompt": "What governance pattern best addresses recurring security constraint exceptions?",
+		"choices": [
+			"Permanent exception approvals with no expiry",
+			"Time-boxed exceptions with owner, rationale, and periodic review",
+			"Global admin access for all product owners",
+			"Disable auditing for exception tables"
+		],
+		"correctIndex": 1,
+		"explanation": "Time-boxed and reviewed exceptions maintain control while supporting legitimate business needs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/security/task/manage-security-exceptions.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 37,
+		"prompt": "For enterprise-scale cross-scope governance, what should be standardized first?",
+		"choices": [
+			"Developer personal preferences for script style",
+			"Manual spreadsheet approval logs",
+			"Access request criteria, approval workflow, and audit traceability",
+			"Daily clone schedule for all apps"
+		],
+		"correctIndex": 2,
+		"explanation": "Standardized approval and traceability controls reduce inconsistency and compliance risk across many teams.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/applications/task/manage-cross-scope-privileges.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 38,
+		"prompt": "Which reporting view gives executives the clearest understanding of security and performance trade-offs?",
+		"choices": [
+			"Raw debug logs from one node",
+			"List of all client scripts by app",
+			"Single chart of monthly incident count",
+			"Unified scorecard showing health, access risk, and adoption impact"
+		],
+		"correctIndex": 3,
+		"explanation": "A unified scorecard connects operational and risk posture with business adoption outcomes for better decisions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/use/performance-analytics/task/build-executive-scorecard.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 39,
+		"prompt": "Why is cross-scope access recertification important in an operating excellence model?",
+		"choices": [
+			"It confirms granted access is still needed and aligned to current risk posture",
+			"It eliminates the need for ACLs",
+			"It guarantees every integration keeps working forever",
+			"It removes separation between production and development"
+		],
+		"correctIndex": 0,
+		"explanation": "Periodic recertification helps prevent privilege drift and unnecessary exposure over time.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/security/concept/access-review-and-certification.html"
+		]
+	}
+]

@@ -1,0 +1,242 @@
+[
+	{
+		"trackCode": "CPOA",
+		"order": 5,
+		"prompt": "Before cloning a production instance for troubleshooting, what should a platform owner verify first?",
+		"choices": [
+			"That clone profiles include data-preservation and post-clone cleanup requirements",
+			"That all users have local admin rights in the target instance",
+			"That update sets are committed in source and target before clone starts",
+			"That all integrations are permanently disabled in production"
+		],
+		"correctIndex": 0,
+		"explanation": "Clone profiles and related policies define what data is preserved or excluded and what automation runs after the clone, reducing operational risk.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/instance-clone.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 6,
+		"prompt": "Why are clone cleanup scripts commonly used in lower environments after a production clone?",
+		"choices": [
+			"To force all cloned records into a separate domain automatically",
+			"To remove or mask sensitive data and reset environment-specific settings",
+			"To rollback all plugins installed in production",
+			"To copy update set history back to production"
+		],
+		"correctIndex": 1,
+		"explanation": "Post-clone scripts help sanitize data and reconfigure non-prod integrations, email, and endpoints so cloned environments are safe for testing.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/task/t_CreateCloneCleanupScript.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 7,
+		"prompt": "A team needs to protect a small reference dataset in sub-prod during recurring clones. Which capability is most appropriate?",
+		"choices": [
+			"Scheduled jobs",
+			"Domain map exclusions",
+			"Data preservation policy for clone",
+			"Clone source locking"
+		],
+		"correctIndex": 2,
+		"explanation": "Data preservation policies allow defined table records to be retained in the target while the broader clone refresh is applied.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/clone-data-preservation.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 8,
+		"prompt": "What is the primary reason to suspend outbound email and external integrations in a cloned test instance?",
+		"choices": [
+			"To improve indexing speed for cloned tables",
+			"To enable skipped update resolution",
+			"To avoid clone lock contention",
+			"To prevent unintended notifications or calls to production-connected systems"
+		],
+		"correctIndex": 3,
+		"explanation": "Cloned data can trigger business logic; disabling outbound paths prevents accidental communication with customers or third-party systems.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/task/t_PrepareTargetInstanceForClone.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 9,
+		"prompt": "Which statement best describes clone governance for enterprise platform ownership?",
+		"choices": [
+			"Clone scheduling should align with release windows, data sensitivity controls, and stakeholder communication",
+			"Clones should be run ad hoc by any admin when environments drift",
+			"Clone plans are needed only for production-to-production operations",
+			"Clone history is not required if backups exist"
+		],
+		"correctIndex": 0,
+		"explanation": "A governed clone process includes timing, approvals, risk controls, and notifications to minimize disruption and compliance issues.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/c_CloneManagement.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 5,
+		"prompt": "In Upgrade Center, what is the main value of release readiness information before scheduling an upgrade?",
+		"choices": [
+			"It automatically remediates all customizations",
+			"It provides visibility into family support timelines and upgrade planning data",
+			"It locks update set promotion during blackout periods",
+			"It exports a full CMDB dependency graph"
+		],
+		"correctIndex": 1,
+		"explanation": "Upgrade Center centralizes lifecycle and readiness details so operators can plan upgrade windows and resources with less uncertainty.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/concept/upgrade-center.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 6,
+		"prompt": "Which Upgrade Center activity helps reduce surprises during production cutover?",
+		"choices": [
+			"Reviewing recommended preparation tasks and upgrade insights",
+			"Disabling all plugins before review",
+			"Cloning production after every patch note is published",
+			"Running skipped update merges only in production"
+		],
+		"correctIndex": 0,
+		"explanation": "Preparation tasks and insights highlight prerequisite checks and potential risk areas that should be addressed before cutover.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/task/use-upgrade-center.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 7,
+		"prompt": "How does Upgrade Center support operational reporting across multiple platform teams?",
+		"choices": [
+			"By replacing CAB records with automated approvals",
+			"By showing upgrade status and actionable tasks in a centralized workspace",
+			"By forcing all teams to share one update set branch",
+			"By preventing plugin activation in non-prod"
+		],
+		"correctIndex": 1,
+		"explanation": "Operational teams can use Upgrade Center to track progress, responsibilities, and blockers in a common view.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/concept/upgrade-readiness-dashboard.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 8,
+		"prompt": "A platform owner wants consistent execution of upgrade tasks across environments. What is the best approach?",
+		"choices": [
+			"Run production first and mirror issues backward to sub-prod",
+			"Use Upgrade Center task tracking and complete prerequisite activities in lower instances first",
+			"Skip non-prod validation to reduce lead time",
+			"Perform family upgrades only when critical defects occur"
+		],
+		"correctIndex": 1,
+		"explanation": "Following tracked tasks in lower environments first improves repeatability and lowers risk before production execution.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/task/plan-instance-upgrade.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 9,
+		"prompt": "Which outcome indicates Upgrade Center is being used effectively from an operations perspective?",
+		"choices": [
+			"Unplanned production upgrades with minimal documentation",
+			"Upgrade notes captured only in personal spreadsheets",
+			"Dependency tracking moved outside the platform",
+			"Clear progress visibility, assigned owners, and reduced upgrade execution variance"
+		],
+		"correctIndex": 3,
+		"explanation": "Effective use is demonstrated by transparent ownership, predictable execution, and fewer last-minute unknowns.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/concept/upgrade-governance.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 5,
+		"prompt": "In a domain-separated enterprise instance, what does domain separation primarily provide?",
+		"choices": [
+			"Data and process isolation for distinct business entities within one platform",
+			"A mandatory requirement for all scoped applications",
+			"Automatic conversion of global ACLs to scoped ACLs",
+			"A replacement for role-based access controls"
+		],
+		"correctIndex": 0,
+		"explanation": "Domain separation enables segmented data and process control so business units or customers can coexist on one instance safely.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/domain-separation/concept/domain-separation.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 6,
+		"prompt": "When designing enterprise domain hierarchies, which principle is most important?",
+		"choices": [
+			"Mirror every org chart level exactly, regardless of data access needs",
+			"Model domains around security, data-sharing, and operational ownership boundaries",
+			"Keep all records in global and rely only on UI policies",
+			"Use one domain per update set"
+		],
+		"correctIndex": 1,
+		"explanation": "Domain models should support practical isolation and sharing requirements, not purely organizational chart complexity.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/domain-separation/task/design-domain-hierarchy.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 7,
+		"prompt": "A record must be visible to users in multiple child domains. Which configuration is typically used?",
+		"choices": [
+			"Set the record to private and disable ACL inheritance",
+			"Move users to global for all shared workflows",
+			"Use domain visibility/sharing rules appropriate to the hierarchy",
+			"Convert the table to a rotated log table"
+		],
+		"correctIndex": 2,
+		"explanation": "Domain visibility and sharing settings allow controlled cross-domain access without collapsing overall isolation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/domain-separation/concept/domain-visibility.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 8,
+		"prompt": "What is a key governance risk when domain separation is enabled but role strategy is weak?",
+		"choices": [
+			"Skipped updates cannot be resolved",
+			"Clone operations are blocked permanently",
+			"Subscription counts are misreported",
+			"Users may receive broad privileges that bypass intended isolation boundaries"
+		],
+		"correctIndex": 3,
+		"explanation": "Domain structure alone is not sufficient; role design and ACL enforcement are needed to preserve least-privilege access.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/domain-separation/concept/domain-security-best-practices.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 9,
+		"prompt": "Why should enterprise teams pilot domain separation in a limited scope before broad rollout?",
+		"choices": [
+			"To validate data partitioning, shared service behaviors, and admin operating model impacts",
+			"Because domain separation can be enabled only in personal developer instances",
+			"To avoid creating ACLs for domain-separated tables",
+			"Because shared applications cannot run in domain-separated instances"
+		],
+		"correctIndex": 0,
+		"explanation": "A pilot helps uncover design and operational gaps early, reducing enterprise rollout risk and rework.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/domain-separation/task/plan-domain-separation-implementation.html"
+		]
+	}
+]

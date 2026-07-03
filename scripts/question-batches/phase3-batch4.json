@@ -1,0 +1,242 @@
+[
+	{
+		"trackCode": "CIS-DF",
+		"order": 20,
+		"prompt": "Why should imported infrastructure records be mapped to the most appropriate CMDB class rather than a generic table?",
+		"choices": [
+			"Class-specific attributes and lifecycle behavior improve data usefulness and governance",
+			"Generic classes are required for all Discovery updates",
+			"Specific classes prevent relationship creation",
+			"Class selection affects only dashboard colors"
+		],
+		"correctIndex": 0,
+		"explanation": "Using the correct CI class enables accurate attributes, identification behavior, and operational processes tied to that asset type.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/common-service-data-model/vancouver/csdm/concept/c_CMDBClasses.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 21,
+		"prompt": "A pipeline imports server records but keeps creating duplicates. Which CMDB concept should be evaluated first?",
+		"choices": [
+			"Widget drilldowns",
+			"Identification and reconciliation rules for the target CI class",
+			"Knowledge base ownership",
+			"Catalog item variable sets"
+		],
+		"correctIndex": 1,
+		"explanation": "CMDB identification logic determines whether incoming data matches an existing CI or creates a new one.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/vancouver/cmdb/concept/c_IdentificationAndReconciliation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 22,
+		"prompt": "What is the primary purpose of CI class hierarchy inheritance in CMDB modeling?",
+		"choices": [
+			"To disable class extensions for custom applications",
+			"To enforce one-to-one mapping with incident categories",
+			"To share common attributes while allowing specialized subclasses for specific CI types",
+			"To prevent all imports into base classes"
+		],
+		"correctIndex": 2,
+		"explanation": "Inheritance reduces redundancy by keeping shared fields in parent classes while child classes capture type-specific details.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/vancouver/cmdb/concept/cmdb-class-hierarchy.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 23,
+		"prompt": "Why is relationship data as important as CI attribute data when loading CMDB records?",
+		"choices": [
+			"Relationships are used only by reports, not operations",
+			"Relationships are optional for service mapping and impact analysis",
+			"Attributes alone are sufficient for outage impact determination",
+			"Relationships provide dependency context needed for impact analysis and operational decision-making"
+		],
+		"correctIndex": 3,
+		"explanation": "Service impact, change risk, and root-cause analysis rely on accurate CI dependencies, not just isolated attributes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/vancouver/cmdb/concept/c_CIRelationships.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 24,
+		"prompt": "When expanding a data foundation to new CMDB domains, what is the recommended first step?",
+		"choices": [
+			"Define class model, required identifiers, and governance standards before bulk loading data",
+			"Start with bulk inserts and classify records later",
+			"Disable reconciliation until all classes are populated",
+			"Load all records into cmdb_ci and avoid subclassing"
+		],
+		"correctIndex": 0,
+		"explanation": "A defined model and governance baseline prevents large-scale rework and improves long-term CMDB quality.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/common-service-data-model/vancouver/csdm/concept/csdm-foundation-planning.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 20,
+		"prompt": "When is a manual indicator the best choice in Performance Analytics?",
+		"choices": [
+			"When metric values come from external or qualitative assessments not directly available in platform tables",
+			"When real-time row-level event processing is required",
+			"When indicator sources are heavily indexed",
+			"When automated collection jobs are preferred"
+		],
+		"correctIndex": 0,
+		"explanation": "Manual indicators support metrics that cannot be reliably derived from existing ServiceNow transactional data.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/concept/c_ManualIndicators.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 21,
+		"prompt": "What control helps ensure manual indicator score quality over time?",
+		"choices": [
+			"Disabling score comments for all users",
+			"Defining clear ownership, submission cadence, and review criteria for entered scores",
+			"Allowing any role to overwrite historical values without audit",
+			"Recalculating manual indicators from incident tables nightly"
+		],
+		"correctIndex": 1,
+		"explanation": "Ownership and governance practices are essential to keep manually entered PA data consistent and trustworthy.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/task/t_ManageManualIndicatorData.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 22,
+		"prompt": "A KPI combines automated incident backlog and a leadership-entered readiness score. How should this be modeled?",
+		"choices": [
+			"As a single automated indicator with no formula",
+			"As two independent widgets with no linkage",
+			"As a formula indicator referencing both automated and manual indicator inputs",
+			"As a report-only metric outside PA"
+		],
+		"correctIndex": 2,
+		"explanation": "Formula indicators can combine multiple source indicators, including manual and automated values, into one KPI expression.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/concept/c_FormulaIndicators.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 23,
+		"prompt": "What is an important risk if manual indicator governance is weak?",
+		"choices": [
+			"Breakdown mappings cannot be created",
+			"Targets will be deleted automatically",
+			"Widgets cannot render time series",
+			"Inconsistent or delayed entries can reduce confidence in trend interpretation"
+		],
+		"correctIndex": 3,
+		"explanation": "Without disciplined data entry practices, manual score trends may reflect process inconsistency rather than true performance changes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/concept/c_ManualIndicators.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 24,
+		"prompt": "Which approach best supports auditability for manual indicator changes?",
+		"choices": [
+			"Require score rationale and maintain visibility into who entered or adjusted values",
+			"Allow anonymous updates to encourage participation",
+			"Overwrite prior period scores without retaining history",
+			"Restrict manual indicators from using targets"
+		],
+		"correctIndex": 0,
+		"explanation": "Documented rationale and traceable ownership improve trust and accountability for manually maintained PA metrics.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/task/t_ManageManualIndicatorData.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 20,
+		"prompt": "For communications service providers, what is the main benefit of linking customer-facing cases with underlying service operations records?",
+		"choices": [
+			"It enables agents to provide accurate status based on operational progress and service impact",
+			"It prevents customers from opening additional cases",
+			"It forces all cases into major incident workflows",
+			"It removes the need for entitlement management"
+		],
+		"correctIndex": 0,
+		"explanation": "Case-to-operations linkage improves customer communication quality by grounding updates in real operational work context.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/csp-customer-service/concept/customer-service-operations-linkage.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 21,
+		"prompt": "In CSP customer service, why are account and service hierarchies important?",
+		"choices": [
+			"They are used only for branding in portals",
+			"They support entitlement checks, prioritization, and routing based on customer context",
+			"They disable SLA calculations for child services",
+			"They replace agent assignment rules completely"
+		],
+		"correctIndex": 1,
+		"explanation": "Account and service structures provide critical context for support eligibility, impact scope, and response handling.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/csp-customer-service/concept/account-service-hierarchy.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 22,
+		"prompt": "Which practice most improves first-contact resolution in CSP customer support?",
+		"choices": [
+			"Limiting agent visibility to case notes only",
+			"Avoiding integration with network operations",
+			"Providing agents with service inventory, outage context, and recent activity at case intake",
+			"Routing all cases directly to engineering teams"
+		],
+		"correctIndex": 2,
+		"explanation": "Rich operational context at intake helps agents diagnose faster and provide effective resolution or escalation decisions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/csp-customer-service/task/optimize-case-intake.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 23,
+		"prompt": "What is a common reason to automate case updates from operational workflow events in CSP environments?",
+		"choices": [
+			"To stop customers from receiving outage notifications",
+			"To avoid using SLAs on customer cases",
+			"To ensure agents never need to review task history",
+			"To keep customers informed with timely, consistent status without manual rework"
+		],
+		"correctIndex": 3,
+		"explanation": "Automated status propagation reduces manual effort and improves consistency and timeliness of customer communications.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/csp-customer-service/concept/automated-customer-updates.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 24,
+		"prompt": "When designing CSP customer service KPIs, which outcome best reflects service excellence?",
+		"choices": [
+			"Balanced focus on restoration speed, communication quality, and customer experience measures",
+			"Tracking only ticket closure count per day",
+			"Prioritizing low-severity cases over high-impact outages",
+			"Disabling customer feedback collection"
+		],
+		"correctIndex": 0,
+		"explanation": "Effective CSP KPI design combines operational effectiveness with customer-perceived service quality.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/csp-customer-service/concept/customer-service-kpis.html"
+		]
+	}
+]

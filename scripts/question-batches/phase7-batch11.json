@@ -1,0 +1,172 @@
+[
+  {
+    "trackCode": "CIS-SAM",
+    "order": 55,
+    "prompt": "In SAM, what is the main purpose of usage analytics for subscription-heavy software?",
+    "choices": [
+      "Identify inactive or low-value assignments for reclaim and cost optimization",
+      "Replace all contract metadata",
+      "Disable software normalization jobs",
+      "Automatically close publisher audit requests"
+    ],
+    "correctIndex": 0,
+    "explanation": "Usage analytics exposes underutilized subscriptions so organizations can reclaim rights and reduce unnecessary spend.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-usage.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-reclamation.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 56,
+    "prompt": "Which SAM scenario planning question is most valuable before a major contract renewal?",
+    "choices": [
+      "How many incidents can be reassigned next month?",
+      "What are projected costs under current usage, optimized reclaim, and growth cases?",
+      "Can discovery probes be disabled for weekends?",
+      "Should all software models share one lifecycle state?"
+    ],
+    "correctIndex": 1,
+    "explanation": "Scenario comparisons help negotiate renewals using evidence-based cost and demand projections.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-compliance.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 57,
+    "prompt": "A SAM analyst sees high install counts but low active usage. What should happen first?",
+    "choices": [
+      "Purchase additional licenses immediately",
+      "Ignore usage data until year-end true-up",
+      "Run reclaim candidate validation and business-owner review before entitlement changes",
+      "Delete all inactive user records from HR systems"
+    ],
+    "correctIndex": 2,
+    "explanation": "Validation with business owners ensures reclaim actions are safe and aligned with actual operational needs.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_ReclaimUnusedSoftware.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_SoftwareComplianceReporting.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 58,
+    "prompt": "Which governance risk appears when SAM usage analytics are collected but never tied to action workflows?",
+    "choices": [
+      "Discovery schedules will stop permanently",
+      "Entitlement records become read-only",
+      "Contracts are auto-renewed at no cost",
+      "Optimization opportunities are identified but not realized, reducing program credibility"
+    ],
+    "correctIndex": 3,
+    "explanation": "Analytics without operational follow-through creates reporting noise and weakens trust in SAM outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-usage.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 59,
+    "prompt": "Which KPI pairing best demonstrates effective SAM usage analytics and planning maturity?",
+    "choices": [
+      "Reclaim realization rate and renewal forecast accuracy",
+      "Count of catalog categories and KB articles",
+      "Number of UI policies on software forms",
+      "Age of historical task comments"
+    ],
+    "correctIndex": 0,
+    "explanation": "These KPIs show whether analytics are converting into action and whether planning assumptions match actual outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 55,
+    "prompt": "How do usage analytics improve SPM investment governance?",
+    "choices": [
+      "They quantify adoption and benefit signals used to continue, pivot, or stop investments",
+      "They replace demand intake criteria",
+      "They disable strategic goals during execution",
+      "They eliminate the need for project status updates"
+    ],
+    "correctIndex": 0,
+    "explanation": "Adoption and value evidence helps portfolio leaders make objective lifecycle decisions about investments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/performance-analytics/concept/performance-analytics-in-spm.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 56,
+    "prompt": "Which scenario planning approach best supports portfolio trade-off decisions in SPM?",
+    "choices": [
+      "Compare multiple funding and capacity scenarios against strategic outcomes and constraints",
+      "Choose initiatives based only on loudest executive request",
+      "Lock all forecasts at fiscal year start with no variance updates",
+      "Use project manager preference as primary ranking input"
+    ],
+    "correctIndex": 0,
+    "explanation": "Scenario analysis enables transparent trade-offs by testing alternative allocations against strategy and capacity limits.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/scenario-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 57,
+    "prompt": "A portfolio board wants to model a 10% budget cut. What is the most useful SPM output?",
+    "choices": [
+      "Incident SLA history for the service desk",
+      "Normalized software model lifecycle reports",
+      "Scenario comparison showing impacted initiatives, strategic value at risk, and capacity shifts",
+      "Catalog request approval logs by month"
+    ],
+    "correctIndex": 2,
+    "explanation": "Decision-makers need visibility into value loss and capacity effects, not only cost totals, when modeling budget cuts.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/task/run-strategic-scenarios.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/concept/spm-workspace.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 58,
+    "prompt": "Which anti-pattern most harms SPM scenario planning quality?",
+    "choices": [
+      "Using shared assumptions for cost and capacity",
+      "Reviewing scenario outcomes with stakeholders",
+      "Capturing dependencies and risks in model inputs",
+      "Building scenarios from stale financial and delivery data"
+    ],
+    "correctIndex": 3,
+    "explanation": "Poor data freshness leads to misleading scenarios and weak portfolio decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/scenario-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/data-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 59,
+    "prompt": "Which KPI set best indicates scenario planning is mature in SPM?",
+    "choices": [
+      "Decision cycle time, forecast variance reduction, and realized value alignment to selected scenario",
+      "Total number of UI actions in workspace forms",
+      "Age of inactive user accounts in LDAP",
+      "Count of reopened low-priority incidents"
+    ],
+    "correctIndex": 0,
+    "explanation": "These KPIs show both planning efficiency and whether chosen scenarios produce expected strategic results.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/performance-analytics/concept/performance-analytics-in-spm.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  }
+]

@@ -1,0 +1,172 @@
+[
+  {
+    "trackCode": "CIS-SAM",
+    "order": 60,
+    "prompt": "Which role in a mature SAM operating model is primarily accountable for software compliance governance?",
+    "choices": [
+      "SAM manager or SAM owner with defined policy authority and reporting accountability",
+      "Any requester with catalog access",
+      "Only service desk agents on night shift",
+      "Database administrators for all software publishers"
+    ],
+    "correctIndex": 0,
+    "explanation": "A clearly accountable SAM leadership role is required to govern policy, controls, and compliance outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-roles.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 61,
+    "prompt": "What is the best way to separate duties between SAM and procurement teams?",
+    "choices": [
+      "Give both teams full admin rights in SAM",
+      "Define role-based responsibilities where procurement manages buys and SAM validates compliance position",
+      "Allow procurement to edit reconciliation rules ad hoc",
+      "Move all SAM decisions to email approvals only"
+    ],
+    "correctIndex": 1,
+    "explanation": "Separation of duties improves control quality by distinguishing purchasing execution from compliance validation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-roles.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/procurement/concept/procurement-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 62,
+    "prompt": "Which SAM role activity most improves data quality for license reconciliation?",
+    "choices": [
+      "Skipping software model normalization until quarter end",
+      "Disabling entitlement imports from contracts",
+      "Assigning model manager responsibilities for normalization, metric mapping, and publisher hygiene",
+      "Allowing end users to edit license metric definitions"
+    ],
+    "correctIndex": 2,
+    "explanation": "A dedicated model-management role keeps core normalization and licensing metadata accurate for reliable compliance results.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-model-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_NormalizeSoftwareData.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 63,
+    "prompt": "What is the strongest reason to integrate SAM with PPM/SPM demand planning?",
+    "choices": [
+      "To replace all project financial tracking",
+      "To avoid capturing software costs in investment records",
+      "To remove governance approvals for new software",
+      "To forecast licensing impact of planned initiatives before commitments are finalized"
+    ],
+    "correctIndex": 3,
+    "explanation": "Linking SAM and portfolio planning enables earlier visibility into licensing cost and compliance impacts of planned work.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 64,
+    "prompt": "Which integration outcome best indicates SAM and PPM are working effectively together?",
+    "choices": [
+      "Project estimates include validated software cost and entitlement assumptions with fewer renewal surprises",
+      "License compliance is reviewed only after project closure",
+      "Portfolio records exclude software dependencies",
+      "All software requests bypass demand governance"
+    ],
+    "correctIndex": 0,
+    "explanation": "Effective integration surfaces software cost and compliance assumptions early, reducing late-cycle budget and audit risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-compliance.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/concept/spm-workspace.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 60,
+    "prompt": "Why does SPM governance benefit from clearly defined role separation across portfolio manager, product owner, and finance roles?",
+    "choices": [
+      "It clarifies decision rights, accountability, and control quality across investment lifecycle stages",
+      "It allows all roles to approve their own funding exceptions",
+      "It removes the need for portfolio review boards",
+      "It eliminates dependency management requirements"
+    ],
+    "correctIndex": 0,
+    "explanation": "Clear role boundaries reduce conflict and improve governance consistency from planning through delivery.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/concept/spm-governance.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 61,
+    "prompt": "Which integration with PPM capabilities most improves strategic execution in SPM?",
+    "choices": [
+      "Linking strategy objects to projects and epics with traceable financial and delivery status",
+      "Replacing initiative hierarchy with incident categories",
+      "Moving all roadmap decisions to spreadsheets",
+      "Tracking only completed projects in SPM"
+    ],
+    "correctIndex": 0,
+    "explanation": "Strategy-to-delivery traceability is essential for governing whether portfolio work is producing expected outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/project-management/concept/project-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 62,
+    "prompt": "A PMO wants stronger role-based governance for portfolio changes. What should be implemented first?",
+    "choices": [
+      "Disable approval workflows for budget updates",
+      "Configure role-scoped approvals and audit trails for investment, funding, and scope changes",
+      "Allow all project managers to edit fiscal plans without controls",
+      "Restrict status updates to annual planning windows"
+    ],
+    "correctIndex": 1,
+    "explanation": "Role-scoped approval and audit controls are foundational for governed portfolio change management.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/task/configure-investment-governance.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 63,
+    "prompt": "Which anti-pattern most harms PPM and SPM integration value?",
+    "choices": [
+      "Maintaining common taxonomy for investment categories",
+      "Using consistent periodic reforecast cadence",
+      "Mapping benefits to delivery milestones",
+      "Keeping strategic plans disconnected from project financials and capacity data"
+    ],
+    "correctIndex": 3,
+    "explanation": "Disconnected strategy and delivery data prevents realistic prioritization and weakens portfolio governance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-financials.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/project-management/concept/resource-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 64,
+    "prompt": "Which KPI combination best reflects effective role design and PPM integration in SPM?",
+    "choices": [
+      "Faster governance decisions, lower funding variance, and stronger benefit realization traceability",
+      "More manual status updates outside the platform",
+      "Higher count of bypassed approval records",
+      "Longer cycle time to align strategic goals to active work"
+    ],
+    "correctIndex": 0,
+    "explanation": "This KPI mix captures governance velocity, financial predictability, and strategy-to-delivery transparency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/performance-analytics/concept/performance-analytics-in-spm.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  }
+]

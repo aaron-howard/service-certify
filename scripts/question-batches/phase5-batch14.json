@@ -1,0 +1,257 @@
+[
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 70,
+    "prompt": "Which administrative practice most improves long-term Discovery stability?",
+    "choices": [
+      "Maintain governance for schedules, credentials, probes, and MID Server upgrades with documented ownership",
+      "Let each team modify Discovery behavior directly in production",
+      "Disable change approvals for Discovery-related updates",
+      "Run all Discovery jobs continuously with no maintenance windows"
+    ],
+    "correctIndex": 0,
+    "explanation": "Discovery administration is most effective when operational controls and ownership are clearly defined.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/c_Discovery.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 71,
+    "prompt": "What should be part of a Discovery admin baseline before onboarding a new network segment?",
+    "choices": [
+      "Validated ranges, credential policies, behavior settings, and role-based access for schedule management",
+      "Immediate broad scan of all ports without approvals",
+      "Temporary admin rights for all service desk analysts",
+      "Manual CI entry until quarterly reviews finish"
+    ],
+    "correctIndex": 0,
+    "explanation": "A controlled baseline reduces onboarding risk by ensuring scope, security, and ownership are ready.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/t_SetUpDiscovery.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 72,
+    "prompt": "How should Discovery administrators handle MID Server lifecycle governance?",
+    "choices": [
+      "Patch and rotate MID Servers on a controlled cadence with health monitoring and capability validation",
+      "Keep a single MID Server permanently on an old version",
+      "Disable MID auto-start services to reduce resource usage",
+      "Move all Discovery probes to client browsers"
+    ],
+    "correctIndex": 0,
+    "explanation": "MID lifecycle controls prevent compatibility and reliability drift across Discovery operations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/mid-server/concept/c_MIDServer.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/mid-server/task/t_UpgradeMIDServer.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 73,
+    "prompt": "Which administrative control best protects Discovery from unauthorized scope expansion?",
+    "choices": [
+      "Require approved change requests and segregated roles for modifying Discovery schedules and IP ranges",
+      "Allow any itil user to add subnets to active schedules",
+      "Turn off audit history on Discovery schedule records",
+      "Reuse privileged credentials across all domains"
+    ],
+    "correctIndex": 0,
+    "explanation": "Role segregation and change governance prevent unmanaged scanning scope and security exposure.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 74,
+    "prompt": "Which KPI set best reflects effective Discovery administration?",
+    "choices": [
+      "Consistent scan success, healthy MID uptime, controlled scope changes, and timely remediation of failed jobs",
+      "Number of administrators with full access",
+      "Maximum daily scan count regardless results",
+      "Total custom probes developed each month"
+    ],
+    "correctIndex": 0,
+    "explanation": "Administrative quality is measured by stability, governance discipline, and issue response effectiveness.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/c_Discovery.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 70,
+    "prompt": "What is the main objective of Event Management operations in a mature NOC model?",
+    "choices": [
+      "Detect, prioritize, and resolve service-impacting conditions with consistent operational runbooks",
+      "Escalate every event to major incident automatically",
+      "Focus only on dashboard aesthetics and widget counts",
+      "Treat event operations separately from incident workflows"
+    ],
+    "correctIndex": 0,
+    "explanation": "EM operations align monitoring signals to repeatable response actions for service reliability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/incident-management/concept/incident-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 71,
+    "prompt": "Which operational control most reduces alert fatigue in Event Management?",
+    "choices": [
+      "Apply noise-reduction rules, deduplication, and service-aware routing aligned to on-call responsibilities",
+      "Lower every threshold to generate earlier alerts",
+      "Send all events to every resolver group",
+      "Disable event correlation during peak hours"
+    ],
+    "correctIndex": 0,
+    "explanation": "Event ops maturity depends on filtering and routing signals to the right responders with minimal noise.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/task/t_ConfigureEventRules.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 72,
+    "prompt": "How should EM operations handle recurring major-event patterns?",
+    "choices": [
+      "Integrate problem management to eliminate root causes and update automation playbooks",
+      "Accept recurrence as normal and document each incident separately",
+      "Increase manual triage staffing without process changes",
+      "Suppress recurring events permanently"
+    ],
+    "correctIndex": 0,
+    "explanation": "Linking event operations to problem management reduces recurrence and improves systemic reliability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/problem-management/concept/problem-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 73,
+    "prompt": "What is the best operational approach for handling maintenance windows in Event Management?",
+    "choices": [
+      "Use planned suppression and contextual routing policies while preserving visibility for true critical exceptions",
+      "Turn off all monitoring connectors during maintenance",
+      "Create incidents for every event regardless change context",
+      "Ignore maintenance data in event correlation logic"
+    ],
+    "correctIndex": 0,
+    "explanation": "Controlled suppression avoids noise while still surfacing meaningful exceptions during planned work.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/task/t_CreateMaintenanceWindow.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 74,
+    "prompt": "Which KPI mix best demonstrates effective Event Management operations?",
+    "choices": [
+      "Lower mean time to acknowledge, fewer duplicate incidents, and improved service availability trends",
+      "Higher count of generated raw events",
+      "More custom dashboards per team",
+      "Increased manual reassignment volume"
+    ],
+    "correctIndex": 0,
+    "explanation": "Strong EM operations improve response speed, reduce noise-induced duplication, and protect availability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 70,
+    "prompt": "What is the primary purpose of HAM reporting for asset governance leaders?",
+    "choices": [
+      "Provide decision-ready visibility into lifecycle, financial exposure, compliance posture, and operational risk",
+      "List every asset record without aggregation or context",
+      "Track only newly purchased devices",
+      "Replace audit controls with dashboard color indicators"
+    ],
+    "correctIndex": 0,
+    "explanation": "HAM reporting supports governance decisions by translating asset data into risk and lifecycle insight.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 71,
+    "prompt": "Which report design best supports executive review of hardware asset health?",
+    "choices": [
+      "Trend dashboards combining stock, assignment accuracy, contract coverage, and exception aging",
+      "A single table export of all asset fields",
+      "Weekly screenshots of random asset forms",
+      "Only disposal counts by quarter"
+    ],
+    "correctIndex": 0,
+    "explanation": "Executive reporting should present trend-based KPIs across lifecycle, compliance, and control dimensions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/asset-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 72,
+    "prompt": "How should HAM reporting address stale or low-confidence asset data?",
+    "choices": [
+      "Include data-quality indicators, ownership gaps, and remediation backlog metrics alongside lifecycle KPIs",
+      "Hide low-confidence records from all reports",
+      "Reset stale records to in-stock automatically",
+      "Report only assets with active incidents"
+    ],
+    "correctIndex": 0,
+    "explanation": "Transparent data-quality dimensions make reporting actionable and prevent false governance confidence.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 73,
+    "prompt": "Which reporting cadence and model best supports operational HAM decision-making?",
+    "choices": [
+      "Daily exception dashboards for operations and monthly governance packs for leadership with shared definitions",
+      "Annual static reports for all audiences",
+      "Ad hoc reports generated only after audit findings",
+      "Separate unaligned reports per stockroom manager"
+    ],
+    "correctIndex": 0,
+    "explanation": "Layered cadence and standardized definitions keep reporting relevant for both tactical and strategic decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/task/t_ManageHardwareAssets.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 74,
+    "prompt": "Which outcome indicates mature HAM reporting capability?",
+    "choices": [
+      "Leaders use consistent KPI trends to reduce exception volume, improve reuse, and lower lifecycle cost",
+      "More manual spreadsheet reconciliation before each meeting",
+      "Higher number of report variants with conflicting metrics",
+      "Reduced visibility into aging non-compliant assets"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mature reporting drives measurable improvements in control outcomes, reuse efficiency, and cost governance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  }
+]

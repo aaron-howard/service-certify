@@ -1,0 +1,242 @@
+[
+	{
+		"trackCode": "CIS-RC",
+		"order": 5,
+		"prompt": "In IRM Workspace, which capability most directly helps risk managers prioritize what to work first across many open risks?",
+		"choices": [
+			"Risk score-driven list views and filters that surface highest exposure records first",
+			"Automatically converting all risks into audit tasks",
+			"Disabling inherent and residual scoring fields",
+			"Routing all risk records to a single assignment group"
+		],
+		"correctIndex": 0,
+		"explanation": "IRM workspace is designed to centralize and prioritize risk activity, and score-based views help teams focus on highest-impact items.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-impl-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 6,
+		"prompt": "A program owner wants one page in IRM Workspace showing due assessments, overdue tasks, and approval bottlenecks. What should be configured first?",
+		"choices": [
+			"New CMDB classes for risk dashboards",
+			"Workspace landing page components that aggregate assigned risk work and state indicators",
+			"Major incident templates",
+			"Discovery patterns for risk records"
+		],
+		"correctIndex": 1,
+		"explanation": "Workspace components provide role-focused operational visibility, allowing risk teams to monitor workload and bottlenecks in one place.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/workspace-homepage.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 7,
+		"prompt": "Which IRM Workspace practice best supports consistent triage when multiple analysts evaluate newly identified risks?",
+		"choices": [
+			"Allow each analyst to define custom severity values ad hoc",
+			"Use unrelated incident priority rules for risk scoring",
+			"Standardize scoring criteria and decision guidance in workspace process steps",
+			"Skip residual risk calculations until audit season"
+		],
+		"correctIndex": 2,
+		"explanation": "Standardized scoring and guided process steps reduce analyst variance and produce more defensible, repeatable triage outcomes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-identification-playbook.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 8,
+		"prompt": "In IRM Workspace, what is the main benefit of linking risks to business entities such as services or departments?",
+		"choices": [
+			"It disables risk treatment plans",
+			"It replaces policy statements automatically",
+			"It removes the need for ownership assignment",
+			"It improves impact context and accountability for remediation decisions"
+		],
+		"correctIndex": 3,
+		"explanation": "Entity linkage gives operational context and clear ownership so treatment decisions reflect business impact and accountability.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/business-entities-and-risk.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 9,
+		"prompt": "A risk lead wants stronger governance in IRM Workspace. Which control is most appropriate?",
+		"choices": [
+			"Role-based access and workflow approvals for risk state transitions",
+			"Open write access for all itil users",
+			"Manual spreadsheet signoff outside the platform",
+			"Disabling activity logs on risk records"
+		],
+		"correctIndex": 0,
+		"explanation": "Role-based controls and approval checkpoints enforce governance and improve auditability of risk lifecycle changes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-governance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 5,
+		"prompt": "In Security Incident Response, which lifecycle phase is focused on validating scope, assigning ownership, and determining initial severity?",
+		"choices": [
+			"Closure",
+			"Triage",
+			"Post-incident review",
+			"Eradication"
+		],
+		"correctIndex": 1,
+		"explanation": "Triage establishes ownership, impact, and urgency so teams can move incidents through investigation and response effectively.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-lifecycle.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 6,
+		"prompt": "What is the primary objective of the containment step in the SIR lifecycle?",
+		"choices": [
+			"Create software model normalization rules",
+			"Finalize all compliance attestations",
+			"Limit attacker impact and prevent further spread while investigation continues",
+			"Auto-close duplicate incidents without analyst review"
+		],
+		"correctIndex": 2,
+		"explanation": "Containment actions are intended to reduce active harm and stop lateral movement while evidence and response efforts proceed.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/respond-to-a-security-incident.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 7,
+		"prompt": "Which outcome best indicates the eradication and recovery phases were successful?",
+		"choices": [
+			"Every alert source is disabled",
+			"All incident tasks are reassigned to one team",
+			"No lessons learned are documented",
+			"Malicious artifacts are removed and affected services are restored with monitored stability"
+		],
+		"correctIndex": 3,
+		"explanation": "Successful eradication and recovery remove adversary presence and return services to stable operation with verification.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-process.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 8,
+		"prompt": "Why is documenting timeline evidence throughout the SIR lifecycle considered essential?",
+		"choices": [
+			"It supports root-cause analysis, legal defensibility, and repeatable post-incident improvement",
+			"It replaces the need for assignment groups",
+			"It allows incidents to skip closure criteria",
+			"It prevents integration with SIEM tools"
+		],
+		"correctIndex": 0,
+		"explanation": "A complete timeline provides operational and audit value, improving accountability and quality of post-incident decisions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/investigate-a-security-incident.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 9,
+		"prompt": "Which lifecycle governance practice most improves consistency across multiple SOC shifts?",
+		"choices": [
+			"Using standardized state transitions, mandatory fields, and task templates per incident type",
+			"Allowing each shift to rename lifecycle states",
+			"Removing closure validation rules",
+			"Tracking only critical incidents in SIR"
+		],
+		"correctIndex": 1,
+		"explanation": "Standardized workflows and required data reduce handoff errors and improve consistency across analysts and shifts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-task-types.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 5,
+		"prompt": "For CIS-Service Mapping, what defines an application service in CMDB terms?",
+		"choices": [
+			"A single server discovered by credentialless scan",
+			"A service desk queue with an assignment group",
+			"A logical service record with mapped upstream/downstream dependencies to supporting CIs",
+			"A software entitlement tied to a publisher"
+		],
+		"correctIndex": 2,
+		"explanation": "Application services represent business-relevant technical services and depend on accurate CI relationships.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/application-services.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 6,
+		"prompt": "A team maps web and app tiers but misses a critical database dependency. What is the most likely impact?",
+		"choices": [
+			"Change approvals are automatically bypassed",
+			"Discovery schedules stop running",
+			"Event rules cannot process warning events",
+			"Service impact analysis will be incomplete during incidents and changes"
+		],
+		"correctIndex": 3,
+		"explanation": "Missing dependencies reduce map fidelity, which can mislead impact analysis and outage triage decisions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-get-started.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 7,
+		"prompt": "Why do service owners care that application services are tied to business services?",
+		"choices": [
+			"It connects technical outages to business impact and stakeholder communication priorities",
+			"It removes the need for relationship types in CMDB",
+			"It auto-generates software contracts",
+			"It guarantees 100% event deduplication"
+		],
+		"correctIndex": 0,
+		"explanation": "Business service context helps operations translate technical failures into user-facing impact and response urgency.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/business-services-and-application-services.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 8,
+		"prompt": "Which mapping strategy is best when onboarding a high-criticality application service for the first time?",
+		"choices": [
+			"Start with one entry point and validate discovered dependencies with service owners before broadening scope",
+			"Map every subnet simultaneously without owner validation",
+			"Disable identification rules to speed map creation",
+			"Use only manual CI relationships and avoid discovery inputs"
+		],
+		"correctIndex": 1,
+		"explanation": "Controlled onboarding with validated entry points improves accuracy and reduces noisy or incorrect dependencies.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/create-a-service-map.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 9,
+		"prompt": "What governance metric best reflects healthy application service mapping over time?",
+		"choices": [
+			"Total count of CI classes in CMDB",
+			"Number of manually edited script includes",
+			"Coverage and freshness of critical service maps with validated dependency accuracy",
+			"Percentage of incidents closed in under five minutes"
+		],
+		"correctIndex": 2,
+		"explanation": "Map coverage plus ongoing accuracy and freshness are stronger indicators of Service Mapping quality than raw volume metrics.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-kpis.html"
+		]
+	}
+]

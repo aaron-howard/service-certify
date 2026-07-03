@@ -1,0 +1,244 @@
+[
+	{
+		"trackCode": "CSA",
+		"order": 25,
+		"prompt": "What is the primary purpose of notifications in ServiceNow?",
+		"choices": [
+			"To inform users about events such as assignments, approvals, and record updates",
+			"To replace all ACL rules on a table",
+			"To run discovery credentials tests",
+			"To store CMDB relationship definitions"
+		],
+		"correctIndex": 0,
+		"explanation": "Notifications communicate events to users through channels such as email based on configured conditions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/notifications/notifications.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 26,
+		"prompt": "When inbound email fails to create incidents, what configuration should an administrator verify first?",
+		"choices": [
+			"Email properties and inbound mail connectivity so messages reach the instance",
+			"The PA data collector schedule exclusively",
+			"MID Server wake-on-LAN for laptops",
+			"The problem task assignment rule"
+		],
+		"correctIndex": 0,
+		"explanation": "Inbound email depends on correct email properties and mail flow configuration before rules can process messages.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/notifications/email-properties.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 27,
+		"prompt": "How can an administrator limit who receives a notification?",
+		"choices": [
+			"By defining conditions and recipients such as users, groups, or fields on the notification",
+			"By disabling the entire data dictionary",
+			"By removing all roles from the instance",
+			"By converting notifications to import sets"
+		],
+		"correctIndex": 0,
+		"explanation": "Notifications use conditions and recipient definitions to target the appropriate audience for each event.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/notifications/notifications.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 28,
+		"prompt": "What does a workflow activity represent in classic workflow administration?",
+		"choices": [
+			"A step in a workflow such as approval, notification, or branch logic",
+			"A CMDB identification rule",
+			"A catalog variable type",
+			"A software discovery model"
+		],
+		"correctIndex": 0,
+		"explanation": "Workflow activities are the building blocks of workflows, defining actions and transitions in a process.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/workflow-administration/workflow-administration.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 29,
+		"prompt": "An event registry entry is used to:",
+		"choices": [
+			"Define a named event that scripts can fire and notifications or workflows can subscribe to",
+			"Store encrypted user passwords",
+			"Replace update sets during migration",
+			"Schedule hardware asset depreciation"
+		],
+		"correctIndex": 0,
+		"explanation": "Events provide a publish/subscribe mechanism connecting record activity to notifications and workflow.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/notifications/notifications.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 25,
+		"prompt": "Which component defines a custom HTTP method, path, and script for inbound REST integration in a scoped app?",
+		"choices": [
+			"A Scripted REST API resource",
+			"A Transform Map",
+			"A homepage gauge",
+			"A discovery schedule"
+		],
+		"correctIndex": 0,
+		"explanation": "Scripted REST API resources expose endpoints backed by scripts that process requests and responses.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/api-reference/rest-api-explorer/t_CreateAScriptedRESTAPIResource.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 26,
+		"prompt": "What is the purpose of an outbound REST message?",
+		"choices": [
+			"To call external REST APIs from server-side scripts on the instance",
+			"To render client-side form layouts",
+			"To discover devices on the network",
+			"To replace GlideRecord for all queries"
+		],
+		"correctIndex": 0,
+		"explanation": "Outbound REST messages configure HTTP calls to external systems from server-side integration code.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/outbound-rest-message.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 27,
+		"prompt": "In an import-set integration, what does a Transform Map define?",
+		"choices": [
+			"How staging rows map to target records, including field mappings and optional scripts",
+			"The PA indicator timezone only",
+			"LDAP listener ports",
+			"The Service Portal theme"
+		],
+		"correctIndex": 0,
+		"explanation": "Transform maps control field mapping and transformation logic from import set rows to target tables.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/import-set-transform.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 28,
+		"prompt": "A developer must parse JSON from an external API response in a server script. Which class is appropriate?",
+		"choices": [
+			"RESTMessageV2 with parsing of the response body",
+			"g_form on the client",
+			"spModal in Service Portal only",
+			"GlideFilter without HTTP"
+		],
+		"correctIndex": 0,
+		"explanation": "RESTMessageV2 executes outbound REST calls; the response body can be parsed in server-side script logic.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/outbound-rest-message.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 29,
+		"prompt": "Why use an Import Set table before loading data into a target production table?",
+		"choices": [
+			"To stage and validate source data before transform maps commit records to target tables",
+			"To bypass all ACLs permanently on the target",
+			"To store client scripts for UI Builder",
+			"To replace scripted REST APIs"
+		],
+		"correctIndex": 0,
+		"explanation": "Import sets stage external data so transforms can map, validate, and load into target tables safely.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/import-set-transform.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 25,
+		"prompt": "What is the primary outcome of Problem Management?",
+		"choices": [
+			"Identifying root cause and preventing recurrence of incidents",
+			"Restoring service within minutes for every outage",
+			"Approving all infrastructure purchases",
+			"Fulfilling catalog hardware requests"
+		],
+		"correctIndex": 0,
+		"explanation": "Problem Management focuses on underlying causes and preventive action, complementing incident restoration.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/problem-management/problem-mgmt-lifecycle.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 26,
+		"prompt": "What is a Known Error record used for?",
+		"choices": [
+			"Documenting a problem with a workaround until a permanent fix is available",
+			"Storing catalog item images",
+			"Replacing change requests for emergency fixes",
+			"Scheduling discovery on the MID Server"
+		],
+		"correctIndex": 0,
+		"explanation": "Known errors capture diagnosed problems and workarounds to help teams resolve recurring incidents faster.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/problem-management/known-error-database.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 27,
+		"prompt": "How can Problem Management reduce incident volume over time?",
+		"choices": [
+			"By eliminating root causes and publishing workarounds through known errors and knowledge",
+			"By auto-closing every incident at creation",
+			"By removing the CMDB from the instance",
+			"By converting all changes to standard changes"
+		],
+		"correctIndex": 0,
+		"explanation": "Addressing root causes and sharing known errors and knowledge helps prevent repeat incidents.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/problem-management/problem-mgmt-lifecycle.html",
+			"https://www.servicenow.com/docs/r/it-service-management/problem-management/known-error-database.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 28,
+		"prompt": "What is the knowledge article lifecycle intended to support?",
+		"choices": [
+			"Creating, reviewing, publishing, and retiring articles for self-service and agent use",
+			"Discovering software installations only",
+			"Approving emergency changes exclusively",
+			"Importing user records from LDAP"
+		],
+		"correctIndex": 0,
+		"explanation": "Knowledge Management governs article authoring, review, publication, and retirement to support resolution and self-service.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/knowledge-management/knowledge-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 29,
+		"prompt": "Linking a knowledge article to an incident benefits the service desk by:",
+		"choices": [
+			"Providing documented resolution steps and reducing repeat research for similar issues",
+			"Automatically assigning the incident to the CAB",
+			"Deleting related problem records",
+			"Skipping all approval workflows on catalog items"
+		],
+		"correctIndex": 0,
+		"explanation": "Attached knowledge gives agents and users proven resolution content, improving consistency and speed.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/knowledge-management/knowledge-management.html",
+			"https://www.servicenow.com/docs/r/it-service-management/incident-management/c_IncidentManagement.html"
+		]
+	}
+]

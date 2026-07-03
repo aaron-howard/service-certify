@@ -1,0 +1,162 @@
+[
+	{
+		"trackCode": "CIS-SAM",
+		"order": 5,
+		"prompt": "In Software Asset Management, what is the primary reason to normalize software installations into software models?",
+		"choices": [
+			"To make all publishers use the same SKU naming pattern",
+			"To map discovered software to a consistent product definition used in compliance and entitlement logic",
+			"To automatically create procurement contracts for each installation",
+			"To replace discovery data with manually entered install records"
+		],
+		"correctIndex": 1,
+		"explanation": "Software models provide the canonical product identity so entitlements, installations, and reconciliation rules can be evaluated consistently.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-models-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 6,
+		"prompt": "A SAM manager wants different editions of a vendor product tracked separately for compliance. Which model design supports this goal best?",
+		"choices": [
+			"Use one software model for all editions and track edition in comments",
+			"Create distinct software models that represent edition/version differences relevant to licensing",
+			"Disable software model normalization to avoid ambiguity",
+			"Store edition information only on contracts"
+		],
+		"correctIndex": 1,
+		"explanation": "When licensing rights differ by edition or version, separate software models are required for accurate reconciliation and reporting.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/create-a-software-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 7,
+		"prompt": "Which relationship is most important for using software models in effective compliance calculations?",
+		"choices": [
+			"Software model to stockroom location",
+			"Software model to incident category",
+			"Software model to product catalog image",
+			"Software model to entitlement and discovered installation records"
+		],
+		"correctIndex": 3,
+		"explanation": "Compliance depends on comparing what is installed against what is licensed, and software models are the shared link across those records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 8,
+		"prompt": "Why do SAM administrators review software model governance regularly?",
+		"choices": [
+			"To prevent duplicate or poorly classified models from reducing reconciliation accuracy",
+			"To convert all software models into hardware models each quarter",
+			"To ensure every model has an attached incident response playbook",
+			"To remove publisher information from the model records"
+		],
+		"correctIndex": 0,
+		"explanation": "Model governance ensures data quality and prevents duplicate mappings that can distort compliance and optimization insights.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-model-normalization-governance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 9,
+		"prompt": "A discovered software title is unmatched in SAM. What is the recommended next step?",
+		"choices": [
+			"Ignore it until year-end true-up",
+			"Delete the discovery record to keep the dashboard clean",
+			"Create or map it to the correct software model so future installs normalize correctly",
+			"Reclassify it as hardware to avoid compliance exceptions"
+		],
+		"correctIndex": 2,
+		"explanation": "Unmatched discoveries should be normalized by updating model mappings so usage and compliance rollups remain accurate.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/map-discovered-software.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 5,
+		"prompt": "In Strategic Portfolio Management, what is the main value of maintaining strategic plans in the platform?",
+		"choices": [
+			"They replace all project and demand records",
+			"They provide a structure to define goals, outcomes, and investment alignment across portfolios",
+			"They automatically close projects that miss milestones",
+			"They eliminate the need for governance boards"
+		],
+		"correctIndex": 1,
+		"explanation": "Strategic plans connect objectives to execution and funding decisions so portfolio choices are aligned to enterprise goals.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/strategic-portfolio-management/strategic-planning/strategic-plans-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 6,
+		"prompt": "A portfolio director needs to show how initiatives support organizational goals. Which configuration supports this best?",
+		"choices": [
+			"Map each investment and initiative to strategic objectives within the strategic plan hierarchy",
+			"Track goals only in a slide deck outside ServiceNow",
+			"Use cost plans without objective mappings",
+			"Create one objective called 'General Improvement' for all work"
+		],
+		"correctIndex": 0,
+		"explanation": "Objective-to-investment mappings provide traceability from funded work back to declared strategic intent.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/strategic-portfolio-management/strategic-planning/map-objectives-to-investments.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 7,
+		"prompt": "What planning practice improves confidence in strategic plans during quarterly portfolio reviews?",
+		"choices": [
+			"Freeze all objective metrics for the fiscal year",
+			"Use measurable key results and update progress based on portfolio execution data",
+			"Only track completed projects, not in-flight initiatives",
+			"Prioritize initiatives with the largest teams regardless of value"
+		],
+		"correctIndex": 1,
+		"explanation": "Strategic plans are more actionable when objective progress is measured and refreshed from current execution data.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/strategic-portfolio-management/strategic-planning/measure-strategic-objectives.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 8,
+		"prompt": "Which scenario best demonstrates strategic plan governance in SPM?",
+		"choices": [
+			"Projects are approved solely by submission date",
+			"Objective owners review plan progress and adjust priorities before new funding decisions",
+			"All demand records are auto-approved without scoring",
+			"Resource plans are hidden from portfolio managers"
+		],
+		"correctIndex": 1,
+		"explanation": "Governance involves periodic review of objective progress and using that evidence to steer funding and prioritization.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/strategic-portfolio-management/strategic-planning/strategic-plan-governance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 9,
+		"prompt": "A PMO wants to reduce misalignment between strategy and delivery. What should they enforce first?",
+		"choices": [
+			"Require each major initiative to reference an approved strategic objective and expected outcome",
+			"Allow teams to create initiatives without objective links for speed",
+			"Disable strategic planning modules in non-production instances",
+			"Track strategic themes only in financial planning tools"
+		],
+		"correctIndex": 0,
+		"explanation": "Mandatory alignment of initiatives to approved objectives improves prioritization discipline and outcome reporting.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/strategic-portfolio-management/strategic-planning/align-investments-to-strategy.html"
+		]
+	}
+]

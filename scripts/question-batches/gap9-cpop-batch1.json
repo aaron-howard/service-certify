@@ -1,0 +1,402 @@
+[
+  {
+    "trackCode": "CPOP",
+    "order": 75,
+    "prompt": "A platform owner is defining operating governance for a new platform council. Which artifact should be created first?",
+    "choices": [
+      "A decision-rights charter with clear ownership and escalation paths",
+      "A backlog of UI enhancements requested by power users",
+      "A list of all historical incidents from legacy systems",
+      "A report that ranks developers by update set volume"
+    ],
+    "correctIndex": 0,
+    "explanation": "A governance charter defines who decides, who executes, and how exceptions are escalated, which is foundational for consistent platform ownership.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 76,
+    "prompt": "Which review cadence best supports governance for enterprise platform standards?",
+    "choices": [
+      "Only after a Sev-1 outage",
+      "A recurring monthly standards and exceptions review",
+      "Once per year during budget season",
+      "Whenever a developer requests admin rights"
+    ],
+    "correctIndex": 1,
+    "explanation": "A regular governance cadence keeps standards current and prevents unmanaged exception growth.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 77,
+    "prompt": "A team wants to bypass a required standard for a critical release. What is the best governance response?",
+    "choices": [
+      "Approve immediately to preserve release velocity",
+      "Reject all exceptions to avoid precedent",
+      "Use a documented exception process with risk acceptance and expiry",
+      "Move the change to global scope to avoid review"
+    ],
+    "correctIndex": 2,
+    "explanation": "Governed exceptions should include risk, accountable approvers, and a defined end date.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 78,
+    "prompt": "What KPI most directly indicates governance process health?",
+    "choices": [
+      "Number of active update sets",
+      "Total plugins installed in production",
+      "Count of active users in self-service portal",
+      "Percent of changes meeting defined control gates before deployment"
+    ],
+    "correctIndex": 3,
+    "explanation": "Control-gate adherence reflects whether governance controls are actually operating before release.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 79,
+    "prompt": "For cross-functional governance, what RACI issue creates the highest operational risk?",
+    "choices": [
+      "Unclear accountability for final production go/no-go decisions",
+      "A larger than expected CAB attendee list",
+      "Weekly status reports sent in PDF format",
+      "Different teams using different dashboard colors"
+    ],
+    "correctIndex": 0,
+    "explanation": "Unclear decision accountability causes delays and conflicting direction during high-risk releases.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 80,
+    "prompt": "Which governance control best reduces policy drift across product teams?",
+    "choices": [
+      "Let each team publish local standards only",
+      "Maintain a centrally versioned standard and enforce periodic attestations",
+      "Disable all customizations in sub-production",
+      "Track compliance only after production incidents"
+    ],
+    "correctIndex": 1,
+    "explanation": "Versioned standards plus attestations create traceable alignment across distributed teams.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 81,
+    "prompt": "A governance board needs visibility into control failures. Which reporting view is most useful?",
+    "choices": [
+      "A list of all open incidents regardless of source",
+      "A count of catalog requests by assignment group",
+      "A dashboard of breached controls, owners, and remediation due dates",
+      "A snapshot of role grants in the last 24 hours only"
+    ],
+    "correctIndex": 2,
+    "explanation": "Governance decisions require owner-level accountability and remediation tracking, not just raw volume data.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 82,
+    "prompt": "What is the best way to govern platform design decisions across multiple agile teams?",
+    "choices": [
+      "Require every decision to be approved by all developers",
+      "Allow architecture choices only after production deployment",
+      "Document decisions in personal notes and share on request",
+      "Use an architecture decision record process with review checkpoints"
+    ],
+    "correctIndex": 3,
+    "explanation": "A formal decision record process supports traceability, reuse, and controlled exceptions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 83,
+    "prompt": "Which practice best improves governance maturity for release communications?",
+    "choices": [
+      "Define stakeholder notification standards by change risk tier",
+      "Notify all stakeholders only after cutover is complete",
+      "Limit release communication to platform admins",
+      "Send release notices only when a failure occurs"
+    ],
+    "correctIndex": 0,
+    "explanation": "Risk-based communication standards align messaging depth and timing to release impact.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 84,
+    "prompt": "A platform owner wants stronger governance over emergency changes. What should be implemented?",
+    "choices": [
+      "Allow permanent emergency bypass rights",
+      "Create a post-implementation review requirement for each emergency change",
+      "Disable emergency changes entirely",
+      "Route emergency changes through the service portal only"
+    ],
+    "correctIndex": 1,
+    "explanation": "Mandatory post-implementation review ensures emergency pathways remain controlled and auditable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 85,
+    "prompt": "What governance metric is most useful for evaluating standards adoption?",
+    "choices": [
+      "Number of cloned instances each quarter",
+      "Average daily login count for all users",
+      "Percentage of delivered changes mapped to approved design standards",
+      "Count of dashboards shared with executives"
+    ],
+    "correctIndex": 2,
+    "explanation": "Mapping delivered changes to standards directly measures whether teams are following governance expectations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 86,
+    "prompt": "What should a platform owner do when two governing bodies issue conflicting requirements?",
+    "choices": [
+      "Adopt both without assessing impact",
+      "Delay all releases until next fiscal year",
+      "Implement whichever requirement is easier first",
+      "Escalate through a defined conflict-resolution path and record the final decision"
+    ],
+    "correctIndex": 3,
+    "explanation": "Formal conflict-resolution preserves accountability and avoids inconsistent implementation across teams.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 87,
+    "prompt": "Which governance approach is best for reusable platform patterns?",
+    "choices": [
+      "Publish approved reference patterns and require justified exceptions",
+      "Allow each team to design independently without pattern reviews",
+      "Block pattern reuse to avoid dependency risk",
+      "Use only global scripts for all new features"
+    ],
+    "correctIndex": 0,
+    "explanation": "Reference patterns speed delivery and reduce variance while still allowing governed exceptions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-application-development/page/build/system-update-sets/concept/update-set-procedures.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 88,
+    "prompt": "How should governance handle long-running exceptions that never close?",
+    "choices": [
+      "Convert all exceptions into permanent policy changes",
+      "Enforce exception expiry with periodic reapproval and remediation plans",
+      "Hide exception data from dashboards",
+      "Remove exception ownership fields to reduce overhead"
+    ],
+    "correctIndex": 1,
+    "explanation": "Expiry and reapproval prevent temporary exceptions from becoming unmanaged permanent risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 89,
+    "prompt": "A platform owner is aligning governance with business outcomes. Which practice is strongest?",
+    "choices": [
+      "Track only deployment frequency",
+      "Measure only incident closure volume",
+      "Tie governance controls to service reliability, risk, and adoption outcomes",
+      "Replace governance KPIs with ad hoc manager feedback"
+    ],
+    "correctIndex": 2,
+    "explanation": "Outcome-linked controls make governance relevant to business performance rather than process for process' sake.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 90,
+    "prompt": "Which governance anti-pattern most often causes delayed releases?",
+    "choices": [
+      "Using documented approval criteria",
+      "Applying risk-tiered controls",
+      "Maintaining release readiness dashboards",
+      "Late-stage approvals without predefined entry and exit criteria"
+    ],
+    "correctIndex": 3,
+    "explanation": "Undefined approval gates lead to last-minute debate and schedule slippage.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 91,
+    "prompt": "What should be standardized first when scaling governance to additional business units?",
+    "choices": [
+      "Control objectives, terminology, and minimum evidence requirements",
+      "Local dashboard color themes",
+      "Personal work queues for approvers",
+      "One-time email templates for announcements"
+    ],
+    "correctIndex": 0,
+    "explanation": "Shared control objectives and evidence standards establish a scalable governance baseline.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 92,
+    "prompt": "Which governance measure best limits unauthorized production configuration changes?",
+    "choices": [
+      "Increase the number of local admins in every team",
+      "Require approved deployment pathways and monitor out-of-process changes",
+      "Disable update sets in sub-production",
+      "Allow direct edits if documented after release"
+    ],
+    "correctIndex": 1,
+    "explanation": "Governed deployment pathways and monitoring reduce shadow changes and improve auditability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-application-development/page/build/system-update-sets/concept/update-set-procedures.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 93,
+    "prompt": "A governance committee requests fewer but more actionable metrics. Which set is best?",
+    "choices": [
+      "Login count, open tasks, and plugin totals",
+      "Catalog item views, SLA names, and table count",
+      "Control pass rate, exception aging, and high-risk remediation closure",
+      "Widget usage, theme usage, and page load duration"
+    ],
+    "correctIndex": 2,
+    "explanation": "These metrics directly indicate governance effectiveness, risk exposure, and remediation follow-through.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 94,
+    "prompt": "What should happen after a governance control fails in production?",
+    "choices": [
+      "Ignore the failure if service was restored quickly",
+      "Reclassify the control as optional",
+      "Suspend all future releases indefinitely",
+      "Open a corrective action with owner, due date, and validation criteria"
+    ],
+    "correctIndex": 3,
+    "explanation": "Corrective actions with ownership and validation prevent repeat failures and strengthen governance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 95,
+    "prompt": "Which operating model most supports sustained platform governance?",
+    "choices": [
+      "A recurring forum with decision logs, KPIs, and accountable follow-up owners",
+      "Ad hoc discussions without recorded outcomes",
+      "Only annual governance reviews",
+      "One-time policy publication with no maintenance"
+    ],
+    "correctIndex": 0,
+    "explanation": "Sustained governance needs routine decisions, measurable outcomes, and tracked follow-through.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 96,
+    "prompt": "How should platform owners govern dependency ownership across platform capabilities?",
+    "choices": [
+      "Assign ownership only at project kickoff",
+      "Maintain an ownership model for services, integrations, and control dependencies",
+      "Keep dependencies undocumented to avoid maintenance effort",
+      "Delegate all dependency decisions to release managers"
+    ],
+    "correctIndex": 1,
+    "explanation": "Persistent dependency ownership supports reliable triage, upgrades, and risk management.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/table-administration/concept/c_TableAdministration.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 97,
+    "prompt": "What is the strongest governance response to repeated policy noncompliance by one product team?",
+    "choices": [
+      "Remove the team from all releases",
+      "Lower the policy threshold for that team",
+      "Require a documented remediation plan with executive sponsor accountability",
+      "Ignore noncompliance if velocity remains high"
+    ],
+    "correctIndex": 2,
+    "explanation": "Repeated noncompliance needs formal remediation and higher-level accountability to drive change.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 98,
+    "prompt": "Which practice best supports governance transparency for auditors and executives?",
+    "choices": [
+      "Store evidence in local spreadsheets",
+      "Track only passed controls to keep dashboards clean",
+      "Share metrics verbally in steering meetings",
+      "Maintain traceable evidence for controls, approvals, and exception decisions"
+    ],
+    "correctIndex": 3,
+    "explanation": "Traceable evidence makes governance outcomes verifiable and supports audits efficiently.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 99,
+    "prompt": "Before expanding governance scope, what validation step is most important?",
+    "choices": [
+      "Confirm existing controls are measurable, actionable, and owned",
+      "Add more controls without changing evidence workflows",
+      "Remove all exception pathways",
+      "Pause dashboard reporting until expansion is complete"
+    ],
+    "correctIndex": 0,
+    "explanation": "Governance scales successfully when current controls are already operating with clear ownership and evidence.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+    ]
+  }
+]

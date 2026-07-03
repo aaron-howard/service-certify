@@ -3,6 +3,7 @@ import type { QueryCtx } from './_generated/server';
 import { v } from 'convex/values';
 import { requireAdmin } from './lib/authorization';
 import { applyModeLimit, validateAnswersForMode } from './lib/practiceAccess';
+import { getOfficialQuestionCount } from './catalog/examQuestionPolicy';
 
 const practiceModeValidator = v.union(v.literal('sample'), v.literal('full'));
 
@@ -16,6 +17,19 @@ async function loadQuestionsForTrack(ctx: QueryCtx, trackCode: string) {
 		.query('practiceQuestions')
 		.withIndex('by_trackCode', (q) => q.eq('trackCode', trackCode))
 		.collect();
+}
+
+function limitQuestionsForSession(
+	rows: Awaited<ReturnType<typeof loadQuestionsForTrack>>,
+	mode: 'sample' | 'full',
+	trackCode: string,
+	sessionSeed?: string
+) {
+	const attemptQuestionCount = mode === 'full' ? getOfficialQuestionCount(trackCode) : undefined;
+	return applyModeLimit(rows, mode, {
+		attemptQuestionCount,
+		sessionSeed
+	});
 }
 
 function mapQuestionRows(
@@ -33,19 +47,23 @@ function mapQuestionRows(
 export const listByTrackCode = query({
 	args: {
 		trackCode: v.string(),
-		mode: v.optional(practiceModeValidator)
+		mode: v.optional(practiceModeValidator),
+		sessionSeed: v.optional(v.string())
 	},
-	handler: async (ctx, { trackCode, mode = 'sample' }) => {
+	handler: async (ctx, { trackCode, mode = 'sample', sessionSeed }) => {
 		if (!trackCode || trackCode.length < 3 || trackCode.length > 10) {
 			throw new Error('Invalid trackCode: must be 3-10 characters');
 		}
 
 		if (mode === 'full') {
 			await requireAdmin(ctx);
+			if (!sessionSeed || sessionSeed.length < 8) {
+				throw new Error('Full mock requires a sessionSeed (min 8 characters)');
+			}
 		}
 
 		const rows = await loadQuestionsForTrack(ctx, trackCode);
-		const limited = applyModeLimit(rows, mode);
+		const limited = limitQuestionsForSession(rows, mode, trackCode, sessionSeed);
 		return mapQuestionRows(limited);
 	}
 });
@@ -55,9 +73,10 @@ export const gradeAnswers = mutation({
 	args: {
 		trackCode: v.string(),
 		mode: v.optional(practiceModeValidator),
+		sessionSeed: v.optional(v.string()),
 		answers: v.array(answerValidator)
 	},
-	handler: async (ctx, { trackCode, mode = 'sample', answers }) => {
+	handler: async (ctx, { trackCode, mode = 'sample', sessionSeed, answers }) => {
 		if (!trackCode || trackCode.length < 3 || trackCode.length > 10) {
 			throw new Error('Invalid trackCode: must be 3-10 characters');
 		}
@@ -75,9 +94,17 @@ export const gradeAnswers = mutation({
 
 		if (mode === 'full') {
 			await requireAdmin(ctx);
+			if (!sessionSeed || sessionSeed.length < 8) {
+				throw new Error('Full mock requires a sessionSeed (min 8 characters)');
+			}
 		}
 
-		const rows = applyModeLimit(await loadQuestionsForTrack(ctx, trackCode), mode);
+		const rows = limitQuestionsForSession(
+			await loadQuestionsForTrack(ctx, trackCode),
+			mode,
+			trackCode,
+			sessionSeed
+		);
 		const allowedOrders = new Set(rows.map((row) => row.order));
 		validateAnswersForMode(answers, allowedOrders);
 

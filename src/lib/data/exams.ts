@@ -1,4 +1,8 @@
 import { certificationTracks } from './certification-tracks';
+import {
+	getOfficialQuestionCount,
+	getQuestionBankTarget
+} from '$lib/catalog/examQuestionPolicy';
 
 export type ExamDomain = {
 	name: string;
@@ -20,7 +24,10 @@ export type Exam = {
 	shortTitle: string;
 	tag: string;
 	trackLabel: string;
+	/** Official proctored exam question count (per attempt). */
 	questionCount: number;
+	/** Seeded bank size (official + 30) for randomized full mocks. */
+	questionBankSize: number;
 	questionBankLabel: string;
 	mockExamCount: string;
 	releaseFocus: string;
@@ -169,6 +176,8 @@ function baseExamFromTrack(
 ): Exam {
 	const slug = slugFromCode(t.code);
 	const official = t.officialCertificationName;
+	const officialCount = getOfficialQuestionCount(t.code);
+	const bankSize = getQuestionBankTarget(t.code);
 	return {
 		slug,
 		code: t.code,
@@ -177,8 +186,9 @@ function baseExamFromTrack(
 		shortTitle: official,
 		tag: t.code,
 		trackLabel: trackLabelForCode(t.code),
-		questionCount: 75,
-		questionBankLabel: '450+',
+		questionCount: officialCount,
+		questionBankSize: bankSize,
+		questionBankLabel: String(bankSize),
 		mockExamCount: '8 Full-length',
 		releaseFocus: 'Washington DC',
 		updatedLabel: 'Mar 2025',
@@ -199,8 +209,6 @@ const examDetailOverrides: Partial<Record<string, Partial<Exam>>> = {
 		shortTitle: 'Certified Implementation Specialist - IT Service Management',
 		officialCertificationName: 'Certified Implementation Specialist - IT Service Management',
 		trackLabel: 'CIS Practice Exam',
-		questionCount: 85,
-		questionBankLabel: '650+',
 		mockExamCount: '12 Full-length',
 		releaseFocus: 'Xanadu',
 		updatedLabel: 'Oct 2024',
@@ -223,8 +231,6 @@ const examDetailOverrides: Partial<Record<string, Partial<Exam>>> = {
 		shortTitle: 'Certified Application Developer',
 		officialCertificationName: 'Certified Application Developer',
 		trackLabel: 'Developer Track',
-		questionCount: 65,
-		questionBankLabel: '450+',
 		mockExamCount: '8 Full-length',
 		releaseFocus: 'Xanadu',
 		updatedLabel: 'Dec 2024',
@@ -247,8 +253,6 @@ const examDetailOverrides: Partial<Record<string, Partial<Exam>>> = {
 		shortTitle: 'Certified Implementation Specialist - Strategic Portfolio Management',
 		officialCertificationName: 'Certified Implementation Specialist - Strategic Portfolio Management',
 		trackLabel: 'Portfolio Track',
-		questionCount: 90,
-		questionBankLabel: '410+',
 		mockExamCount: '9 Full-length',
 		releaseFocus: 'Washington DC',
 		updatedLabel: 'Nov 2024',
@@ -268,8 +272,6 @@ const examDetailOverrides: Partial<Record<string, Partial<Exam>>> = {
 		shortTitle: 'Certified System Administrator',
 		officialCertificationName: 'Certified System Administrator',
 		trackLabel: 'Core Administrator',
-		questionCount: 72,
-		questionBankLabel: '600+',
 		mockExamCount: '6 Full-length',
 		releaseFocus: 'Xanadu',
 		updatedLabel: 'Mar 2025',
@@ -292,8 +294,6 @@ const examDetailOverrides: Partial<Record<string, Partial<Exam>>> = {
 		shortTitle: 'Certified Implementation Specialist - Human Resources',
 		officialCertificationName: 'Certified Implementation Specialist - Human Resources',
 		trackLabel: 'HRSD Track',
-		questionCount: 70,
-		questionBankLabel: '380+',
 		mockExamCount: '7 Full-length',
 		releaseFocus: 'Washington DC',
 		updatedLabel: 'Feb 2025',

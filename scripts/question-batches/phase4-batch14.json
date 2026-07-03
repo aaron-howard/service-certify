@@ -1,0 +1,257 @@
+[
+	{
+		"trackCode": "CPOA",
+		"order": 70,
+		"prompt": "For final owner KPI design, which principle most directly ties platform analytics to business value?",
+		"choices": [
+			"Map each KPI to a defined service outcome and accountable owner",
+			"Track only infrastructure uptime regardless of service context",
+			"Prioritize metrics that are easiest to collect over those that are meaningful",
+			"Use identical KPI targets for every business function"
+		],
+		"correctIndex": 0,
+		"explanation": "Outcome-aligned KPIs with clear ownership keep platform reporting focused on measurable business impact.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 71,
+		"prompt": "Which KPI set gives a platform owner the strongest balanced view of operational performance?",
+		"choices": [
+			"Reliability, delivery speed, quality/compliance, and adoption outcomes",
+			"Only ticket volume by assignment group",
+			"Only number of active plugins",
+			"Only yearly user growth"
+		],
+		"correctIndex": 0,
+		"explanation": "A balanced KPI portfolio reduces blind spots and helps leadership optimize for both stability and value delivery.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 72,
+		"prompt": "What is the best way to keep owner KPIs trustworthy as data sources change over time?",
+		"choices": [
+			"Implement metric governance for source validation, formula change control, and baseline rechecks",
+			"Allow formula updates directly in production without review",
+			"Disable data collector jobs during source transitions",
+			"Archive historic scores whenever schema changes occur"
+		],
+		"correctIndex": 0,
+		"explanation": "Change control and periodic baselining protect trend integrity and prevent misleading KPI movement.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 73,
+		"prompt": "How should platform owners handle KPI threshold breaches that persist for multiple reporting cycles?",
+		"choices": [
+			"Trigger escalation with documented corrective plans and track closure in governance reviews",
+			"Lower thresholds until results appear green",
+			"Pause reporting until the issue is resolved",
+			"Treat repeated breaches as normal variance"
+		],
+		"correctIndex": 0,
+		"explanation": "Persistent KPI failures require formal remediation and leadership visibility to restore control and confidence.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 74,
+		"prompt": "As the final batch reaches order 74, what is the most effective way to operationalize owner KPIs long-term?",
+		"choices": [
+			"Embed KPI review into recurring operating cadence with decisions, owners, and follow-up actions",
+			"Publish KPI dashboards once and rely on ad hoc interpretation",
+			"Restrict KPI access to one administrator account",
+			"Track KPIs only during major upgrade windows"
+		],
+		"correctIndex": 0,
+		"explanation": "KPIs create value when tied to routine governance meetings and explicit decision workflows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 70,
+		"prompt": "What is the most important go/no-go criterion before a production cutover?",
+		"choices": [
+			"Critical business scenarios have passed validation and rollback readiness is confirmed",
+			"All non-critical cosmetic defects are resolved",
+			"The deployment window is the shortest available",
+			"Every stakeholder prefers the same dashboard layout"
+		],
+		"correctIndex": 0,
+		"explanation": "Cutover readiness is primarily about validated business continuity and recoverability, not cosmetic completeness.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html",
+			"https://www.servicenow.com/docs/bundle/vancouver-application-development/page/build/system-update-sets/concept/update-set-procedures.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 71,
+		"prompt": "Which cutover runbook element most directly reduces production risk?",
+		"choices": [
+			"Clear step sequencing, decision checkpoints, and explicit rollback triggers",
+			"A long narrative history of previous projects",
+			"Only the name of the release manager",
+			"A list of optional improvements for next quarter"
+		],
+		"correctIndex": 0,
+		"explanation": "Runbooks are risk controls when they define exact execution steps and conditions for safe rollback.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/vancouver-application-development/page/build/system-update-sets/concept/update-set-procedures.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 72,
+		"prompt": "During production cutover, why should platform owners enforce a controlled change freeze scope?",
+		"choices": [
+			"To prevent conflicting modifications that undermine validation and rollback assumptions",
+			"To stop all service desk activity organization-wide",
+			"To remove the need for post-cutover monitoring",
+			"To bypass approval workflows for urgent requests"
+		],
+		"correctIndex": 0,
+		"explanation": "Cutover assumptions remain reliable only when concurrent change volume is constrained and governed.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html",
+			"https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 73,
+		"prompt": "What is the best post-cutover hypercare operating model for platform ownership teams?",
+		"choices": [
+			"Use enhanced monitoring, rapid triage routing, and daily risk review until stability criteria are met",
+			"Close all deployment-related incidents automatically after 24 hours",
+			"Delay monitoring until weekly reporting cycles",
+			"Route all post-cutover issues to development only"
+		],
+		"correctIndex": 0,
+		"explanation": "Hypercare should provide fast detection and coordinated response until production behavior is stable.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 74,
+		"prompt": "Which closure activity most improves future production cutovers after stabilization?",
+		"choices": [
+			"Capture lessons learned, update runbooks, and formalize control improvements for the next release",
+			"Archive all cutover artifacts immediately without review",
+			"Keep rollback plans undocumented to reduce overhead",
+			"Skip retrospective analysis if no Sev-1 incidents occurred"
+		],
+		"correctIndex": 0,
+		"explanation": "Structured retrospectives convert cutover experience into repeatable improvements in delivery governance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 70,
+		"prompt": "In enterprise architecture for the Now Platform, what is the main value of a capability map?",
+		"choices": [
+			"It connects business capabilities to platform components, ownership, and roadmap decisions",
+			"It replaces the need for domain models",
+			"It automatically resolves all integration failures",
+			"It defines end-user training calendars only"
+		],
+		"correctIndex": 0,
+		"explanation": "Capability maps align platform investments with enterprise priorities and architectural accountability.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/table-administration/concept/c_TableAdministration.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 71,
+		"prompt": "Which integration architecture choice best supports enterprise-scale maintainability?",
+		"choices": [
+			"Use standardized contracts and reusable IntegrationHub patterns instead of many bespoke point-to-point scripts",
+			"Embed credentials in every script for speed",
+			"Create one-off integration logic per team without governance",
+			"Disable error handling to reduce flow complexity"
+		],
+		"correctIndex": 0,
+		"explanation": "Standardized integration architecture improves consistency, supportability, and change velocity at scale.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/integrationhub/concept/IntegrationHub.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/web-services/concept/c_RESTAPI.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 72,
+		"prompt": "From an enterprise architecture perspective, why should resiliency patterns be designed before major platform expansion?",
+		"choices": [
+			"To ensure failover, recovery, and operational continuity are built into growth plans",
+			"To avoid using sub-production instances",
+			"To eliminate monitoring requirements",
+			"To permit ungoverned production customizations"
+		],
+		"correctIndex": 0,
+		"explanation": "Resiliency planning reduces outage risk when transaction load, integrations, and business criticality increase.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 73,
+		"prompt": "How should enterprise architects treat domain separation within a broader platform architecture strategy?",
+		"choices": [
+			"As a deliberate tenancy and governance layer that must align with data, access, and operating model design",
+			"As a temporary feature enabled only during upgrades",
+			"As a replacement for role-based security controls",
+			"As an option unrelated to organizational structure"
+		],
+		"correctIndex": 0,
+		"explanation": "Domain separation affects core architecture decisions and must be planned with security and operational governance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/company-and-domain-separation/concept/c_DomainSeparation.html",
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainSeparation.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 74,
+		"prompt": "What governance body most helps sustain enterprise architecture quality across long-lived platform programs?",
+		"choices": [
+			"An architecture review process with standards, exceptions management, and periodic roadmap alignment",
+			"Ad hoc design decisions made per sprint without documentation",
+			"A policy that prohibits any architecture changes after go-live",
+			"Only vendor-driven decisions with no internal ownership"
+		],
+		"correctIndex": 0,
+		"explanation": "Continuous architecture governance ensures standards remain practical while controlling exceptions and technical drift.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html"
+		]
+	}
+]

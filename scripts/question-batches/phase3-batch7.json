@@ -1,0 +1,243 @@
+[
+	{
+		"trackCode": "CIS-DF",
+		"order": 35,
+		"prompt": "Why are CI relationships critical in CMDB beyond storing standalone CI records?",
+		"choices": [
+			"They increase list load speed by denormalizing all classes",
+			"They reveal dependency chains used for impact analysis and service context",
+			"They replace reconciliation rules for all attributes",
+			"They are required only for hardware lifecycle fields"
+		],
+		"correctIndex": 1,
+		"explanation": "Relationships provide the dependency model needed to understand upstream and downstream impact across services and infrastructure.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CIRelationships.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 36,
+		"prompt": "Which relationship strategy improves change risk analysis quality?",
+		"choices": [
+			"Using generic related-to links for all CI pairs",
+			"Maintaining accurate typed relationships that reflect real operational dependencies",
+			"Removing relationships for retired CIs only",
+			"Linking all CIs directly to business services without intermediate layers"
+		],
+		"correctIndex": 1,
+		"explanation": "Typed and accurate relationships allow impact engines and change assessments to model real dependency paths.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_RelationshipTypes.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 37,
+		"prompt": "What is a common consequence of stale CMDB relationship data?",
+		"choices": [
+			"Improved event correlation precision",
+			"Misleading blast-radius and outage impact analysis",
+			"Automatic reconciliation conflict resolution",
+			"Faster discovery pattern execution"
+		],
+		"correctIndex": 1,
+		"explanation": "Outdated dependencies can produce inaccurate impact results during incidents and planned changes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBDataQuality.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 38,
+		"prompt": "When modeling application dependencies, which relationship approach is preferred?",
+		"choices": [
+			"Use relationship types that reflect actual hosting and communication patterns",
+			"Use one custom relationship type for all links to simplify reports",
+			"Store dependencies only in free-text fields",
+			"Avoid relationships for cloud resources"
+		],
+		"correctIndex": 0,
+		"explanation": "Accurate relationship semantics are essential for trustworthy dependency and service maps.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/task/t_CreateAndManageRelationships.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 39,
+		"prompt": "What governance control best sustains CMDB relationship integrity over time?",
+		"choices": [
+			"Manual relationship edits by any itil user",
+			"Regular quality checks with ownership and remediation workflows",
+			"Disabling relationship discovery to reduce noise",
+			"Limiting relationships to production CIs only"
+		],
+		"correctIndex": 1,
+		"explanation": "Ongoing governance with ownership and remediation is needed to prevent relationship drift.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBGovernanceAndHealth.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 35,
+		"prompt": "In Performance Analytics, what is an analytics group primarily used for?",
+		"choices": [
+			"To cluster users or entities for segmented score analysis and targeted visibility",
+			"To replace all breakdown mappings",
+			"To define indicator formulas in script includes",
+			"To move indicators between applications"
+		],
+		"correctIndex": 0,
+		"explanation": "Analytics groups support segmentation so stakeholders can analyze KPI performance for specific populations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_AnalyticsGroups.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 36,
+		"prompt": "Why would a PA admin map assignment groups into analytics groups?",
+		"choices": [
+			"To create segmented KPI views by operational team",
+			"To disable historical score collection",
+			"To avoid creating breakdowns entirely",
+			"To convert scorecards into reports"
+		],
+		"correctIndex": 0,
+		"explanation": "Grouping by assignment ownership allows operations leaders to compare KPI performance across teams.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_CreateAnalyticsGroups.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 37,
+		"prompt": "Which data management practice helps keep analytics groups reliable?",
+		"choices": [
+			"Allowing duplicate group membership with no ownership",
+			"Maintaining clear membership criteria and periodic group reviews",
+			"Building groups directly from update set history",
+			"Using only dynamic scripts without validation"
+		],
+		"correctIndex": 1,
+		"explanation": "Reliable segmentation requires controlled membership logic and regular governance checks.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_AnalyticsGroupsGovernance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 38,
+		"prompt": "What is the reporting benefit of combining analytics groups with indicator breakdowns?",
+		"choices": [
+			"It eliminates the need for score histories",
+			"It enables multidimensional analysis across population and KPI dimensions",
+			"It forces monthly-only collection frequency",
+			"It turns all indicators into automated indicators"
+		],
+		"correctIndex": 1,
+		"explanation": "Using both constructs supports richer analysis by comparing segmented populations across breakdown perspectives.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html",
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_AnalyticsGroups.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 39,
+		"prompt": "A leader needs KPI visibility for only their operational cohort. Which PA approach fits best?",
+		"choices": [
+			"Create an analytics group for that cohort and filter scorecards accordingly",
+			"Disable all global indicators",
+			"Clone the entire PA application",
+			"Use system properties to hide score values"
+		],
+		"correctIndex": 0,
+		"explanation": "Analytics groups are designed for cohort-specific KPI segmentation and controlled visibility.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_UseAnalyticsGroupsInDashboards.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 35,
+		"prompt": "What is the goal of delegated development in a service provider implementation?",
+		"choices": [
+			"To let non-admin teams build approved app artifacts while preserving governance guardrails",
+			"To remove all role-based restrictions from Studio",
+			"To bypass application scope requirements",
+			"To prohibit local updates in scoped apps"
+		],
+		"correctIndex": 0,
+		"explanation": "Delegated development allows broader builder participation while enforcing governance through controlled permissions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/australia/developing-applications/concept/c_DelegatedDevelopment.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 36,
+		"prompt": "Which control is most important when enabling delegated developers for telecom process apps?",
+		"choices": [
+			"Unrestricted access to global tables",
+			"Defined delegated privileges scoped to approved application records",
+			"Disabling source control integration",
+			"Forcing all scripts to run client-side"
+		],
+		"correctIndex": 1,
+		"explanation": "Delegation should be role- and scope-based so teams can extend apps safely without broad platform risk.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/australia/developing-applications/task/t_SetupDelegatedDevelopment.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 37,
+		"prompt": "How does delegated development support faster telecom service changes?",
+		"choices": [
+			"It removes testing requirements",
+			"It allows domain teams to implement low-risk enhancements without central bottlenecks",
+			"It disables update set promotion",
+			"It automatically publishes to production"
+		],
+		"correctIndex": 1,
+		"explanation": "By empowering trained domain teams within guardrails, delivery throughput improves while central teams focus on higher-risk work.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/australia/developing-applications/concept/c_DelegatedDevelopmentGovernance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 38,
+		"prompt": "Which risk is reduced by using delegated development with clear code review standards?",
+		"choices": [
+			"Duplicate local admin accounts",
+			"Uncontrolled customization drift across service domains",
+			"Need for application testing",
+			"Need for release documentation"
+		],
+		"correctIndex": 1,
+		"explanation": "Governed delegation limits ad hoc customization and improves consistency through shared standards and reviews.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/australia/developing-applications/concept/c_ApplicationGovernance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 39,
+		"prompt": "A provider wants delegated teams to configure catalog and workflows but not platform-wide security. What is the best approach?",
+		"choices": [
+			"Grant admin to all delegated developers",
+			"Use delegated development roles with scoped, task-specific permissions",
+			"Disable scoped applications",
+			"Allow only global development"
+		],
+		"correctIndex": 1,
+		"explanation": "Delegated access should align with job responsibilities and remain constrained to approved functional areas.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/australia/developing-applications/task/t_AssignDelegatedDeveloperRoles.html"
+		]
+	}
+]

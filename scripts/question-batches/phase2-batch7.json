@@ -1,0 +1,248 @@
+[
+	{
+		"trackCode": "CSA",
+		"order": 60,
+		"prompt": "In Performance Analytics, what does an indicator primarily represent?",
+		"choices": [
+			"A metric definition used to track a measurable value over time",
+			"A list layout personalization for an individual user",
+			"A MID Server discovery schedule",
+			"A client-side catalog UI policy"
+		],
+		"correctIndex": 0,
+		"explanation": "Indicators define the measurements that Performance Analytics collects and trends over time for analysis.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/performance-analytics/concept/indicators.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 61,
+		"prompt": "What is the purpose of an indicator source in Performance Analytics?",
+		"choices": [
+			"To define where and how indicator data is collected, such as a table and aggregation",
+			"To store update set XML for migration",
+			"To publish knowledge articles to employee center",
+			"To replace ACL rules on PA score tables"
+		],
+		"correctIndex": 0,
+		"explanation": "Indicator sources configure the collection logic and data origin used to generate indicator scores.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/performance-analytics/task/t_CreateIndicatorSources.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 62,
+		"prompt": "In PA administration, what does data collection do?",
+		"choices": [
+			"Runs jobs that calculate and store indicator scores for configured periods",
+			"Deletes all report definitions nightly",
+			"Automatically provisions new MID Servers",
+			"Publishes application updates to the Store"
+		],
+		"correctIndex": 0,
+		"explanation": "Data collection jobs compute scores for indicators and save the results so trends and breakdowns can be analyzed.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/performance-analytics/task/t_RunDataCollection.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 63,
+		"prompt": "Which PA feature lets administrators analyze indicator values by dimensions like assignment group or priority?",
+		"choices": [
+			"Breakdowns",
+			"Discovery sensors",
+			"Flow Designer spokes",
+			"Import set coalesce fields"
+		],
+		"correctIndex": 0,
+		"explanation": "Breakdowns segment indicator scores by categories, enabling deeper analysis across dimensions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/performance-analytics/concept/c_BreakdownsAndElements.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 64,
+		"prompt": "Before stakeholders can view PA trend data on a dashboard, what must be true?",
+		"choices": [
+			"Indicators and collections are configured so scores exist for visualization",
+			"Every incident has a related change request",
+			"All users have admin role",
+			"CMDB identification rules are disabled"
+		],
+		"correctIndex": 0,
+		"explanation": "Dashboards and widgets rely on collected scores; without configured indicators and collection jobs, meaningful trends are unavailable.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/performance-analytics/concept/indicators.html",
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/performance-analytics/task/t_RunDataCollection.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 60,
+		"prompt": "What is the ServiceNow Store primarily used for by application developers and administrators?",
+		"choices": [
+			"Discovering and installing certified applications, plugins, and integrations",
+			"Writing client scripts directly in production",
+			"Hosting MID Server binaries only",
+			"Managing LDAP authentication sources"
+		],
+		"correctIndex": 0,
+		"explanation": "The Store provides packaged applications and integrations that can be installed into instances.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/administer/applications/concept/c_ServiceNowStore.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 61,
+		"prompt": "Why would a development team publish a scoped application to the Application Repository?",
+		"choices": [
+			"To version and distribute app updates across instances in a controlled way",
+			"To enforce ACLs on all global tables automatically",
+			"To replace source control integration with local update sets only",
+			"To bypass application access settings"
+		],
+		"correctIndex": 0,
+		"explanation": "The repository supports versioned app publishing and installation, enabling controlled lifecycle management.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/applications/concept/c_ApplicationRepository.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 62,
+		"prompt": "When installing an app from an Application Repository, what does selecting a version determine?",
+		"choices": [
+			"Which packaged app contents and updates are installed on the target instance",
+			"Which user passwords are synchronized",
+			"Which discovery probes run daily",
+			"Which outbound email account is active"
+		],
+		"correctIndex": 0,
+		"explanation": "Each repository version contains a specific packaged state of the app that is applied during installation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/applications/task/t_InstallAnApplication.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 63,
+		"prompt": "What is a key benefit of using source control together with the Application Repository for a scoped app?",
+		"choices": [
+			"Source control manages code history while repository publishes installable application versions",
+			"Both tools only manage knowledge article approval",
+			"They automatically convert all scripts to Flow Designer actions",
+			"They remove the need for app testing"
+		],
+		"correctIndex": 0,
+		"explanation": "Git tracks development history, and the repository handles deployment-ready version packaging and distribution.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/applications/concept/c_SourceControlInStudio.html",
+			"https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/applications/concept/c_ApplicationRepository.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 64,
+		"prompt": "Before publishing a new app version to the Application Repository, what should developers typically do first?",
+		"choices": [
+			"Increment the application version and validate the app in the development instance",
+			"Delete all existing repository versions",
+			"Disable cross-scope access controls globally",
+			"Clone production directly into update set preview"
+		],
+		"correctIndex": 0,
+		"explanation": "Publishing should follow version updates and validation to ensure the released package is intentional and stable.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/applications/task/t_PublishAnApplicationToVersionControl.html",
+			"https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/applications/concept/c_ApplicationRepository.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 60,
+		"prompt": "During ITSM onboarding, what is the primary purpose of baseline data?",
+		"choices": [
+			"To provide initial reference records and configuration needed for core ITSM processes",
+			"To permanently replace all production transaction data",
+			"To disable incident and change workflows",
+			"To migrate MID Servers between domains"
+		],
+		"correctIndex": 0,
+		"explanation": "Baseline data establishes foundational records so ITSM processes can be configured and executed consistently.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-it-service-management/page/product/itsm-implementation/concept/itsm-implementation-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 61,
+		"prompt": "Which data set is commonly prepared early to support assignment and routing in ITSM onboarding?",
+		"choices": [
+			"Users, groups, and group membership mappings",
+			"Only PA widget color palettes",
+			"Service Portal homepage announcements",
+			"Client browser bookmarks"
+		],
+		"correctIndex": 0,
+		"explanation": "Accurate user and group data is required for ownership, queues, and assignment workflows across ITSM practices.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/administer/users-and-groups/concept/c_UsersAndGroups.html",
+			"https://www.servicenow.com/docs/bundle/xanadu-it-service-management/page/product/itsm-implementation/concept/itsm-implementation-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 62,
+		"prompt": "Why is loading support reference data (such as categories and priorities) important during ITSM onboarding?",
+		"choices": [
+			"It standardizes ticket classification, reporting, and process behavior from day one",
+			"It removes the need for SLAs",
+			"It automatically migrates all historical incidents",
+			"It disables mandatory fields on forms"
+		],
+		"correctIndex": 0,
+		"explanation": "Reference values drive consistency in triage, automation, and reporting for incident and request handling.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-it-service-management/page/product/incident-management/concept/incident-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 63,
+		"prompt": "As part of baseline readiness for ITSM, why should a service desk validate assignment groups and queue ownership?",
+		"choices": [
+			"To ensure incoming work routes to accountable teams with clear ownership",
+			"To prevent all incident creation",
+			"To replace CMDB classes with custom tables",
+			"To force every change request through emergency workflow"
+		],
+		"correctIndex": 0,
+		"explanation": "Ownership and routing definitions are essential for stable operations and SLA compliance after go-live.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-it-service-management/page/product/itsm-implementation/concept/itsm-implementation-overview.html",
+			"https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/administer/users-and-groups/concept/c_UsersAndGroups.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 64,
+		"prompt": "What is a practical onboarding approach before loading large baseline datasets into ITSM tables?",
+		"choices": [
+			"Validate data mappings and quality in a test instance, then promote through controlled deployment",
+			"Load directly to production without validation to save time",
+			"Disable all business rules before every import permanently",
+			"Skip data governance and rely only on manual edits later"
+		],
+		"correctIndex": 0,
+		"explanation": "Testing mappings and quality first reduces downstream process issues and improves implementation reliability.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-it-service-management/page/product/itsm-implementation/concept/itsm-implementation-overview.html",
+			"https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/applications/concept/c_ImportSets.html"
+		]
+	}
+]

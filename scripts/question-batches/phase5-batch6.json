@@ -1,0 +1,243 @@
+[
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 30,
+    "prompt": "In Discovery, what is the main purpose of classification before identification and exploration?",
+    "choices": [
+      "Determine device type and select the correct probes or patterns",
+      "Insert CI records immediately without validation",
+      "Skip credential checks for known IP ranges",
+      "Route all ECC output to a default MID Server"
+    ],
+    "correctIndex": 0,
+    "explanation": "Classification determines what endpoint is being scanned so the platform can run the right logic for accurate CI population.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/discovery-classification.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 31,
+    "prompt": "Why are classification probes often tuned differently across network segments?",
+    "choices": [
+      "To avoid using credentials in secure zones",
+      "To match protocol availability and reduce unnecessary probe attempts",
+      "To disable horizontal discovery patterns",
+      "To force one CI class for all devices"
+    ],
+    "correctIndex": 1,
+    "explanation": "Different environments expose different protocols, so tuning classifications improves success rate and reduces scan overhead.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/configure-classification-probes.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 32,
+    "prompt": "A device is consistently misclassified as generic network gear. What should be reviewed first?",
+    "choices": [
+      "Stockroom assignment rules",
+      "Event management connector templates",
+      "Classification rules and probe responses for that device signature",
+      "Procurement approval policies"
+    ],
+    "correctIndex": 2,
+    "explanation": "Misclassification usually indicates rule matching or response parsing issues in the classification stage.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/troubleshoot-classification.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 33,
+    "prompt": "What is the key risk of overly broad custom classification rules?",
+    "choices": [
+      "Duplicate software model normalization",
+      "Automatic retirement of stale CIs",
+      "Disabled service mapping dependencies",
+      "Incorrect device typing that cascades into poor CMDB data quality"
+    ],
+    "correctIndex": 3,
+    "explanation": "Overly broad matching can classify endpoints incorrectly, which impacts downstream identification, attributes, and relationships.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/c_DiscoveryBestPractices.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 34,
+    "prompt": "How does strong classification governance support CMDB trust?",
+    "choices": [
+      "It improves consistency of CI class assignment and downstream attribute accuracy",
+      "It eliminates the need for identification reconciliation rules",
+      "It guarantees every scan creates a new CI",
+      "It disables sensor execution after classification"
+    ],
+    "correctIndex": 0,
+    "explanation": "Reliable classification drives the right discovery logic, which is foundational for trustworthy CMDB records.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/cmdb-health-dashboard.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/discovery-classification.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 30,
+    "prompt": "What is the primary role of alert groups in Event Management?",
+    "choices": [
+      "Organize related alerts into a single operational context for responders",
+      "Replace event ingestion connectors",
+      "Disable impact calculation for grouped alerts",
+      "Convert all grouped alerts directly into changes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Alert groups reduce noise and help teams manage correlated issues as one operational unit.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/alert-groups.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 31,
+    "prompt": "Which criterion is commonly used to build effective alert groups?",
+    "choices": [
+      "Stockroom location and transfer order number",
+      "Shared CI, service, and time-window context",
+      "Requester department hierarchy",
+      "Asset depreciation schedule"
+    ],
+    "correctIndex": 1,
+    "explanation": "Grouping by technical and temporal context helps combine alerts that likely represent one underlying issue.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/task/configure-alert-groups.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 32,
+    "prompt": "Why should alert group rules be tested against historical event patterns?",
+    "choices": [
+      "To increase maximum event retention",
+      "To bypass assignment rules",
+      "To confirm groups reduce noise without hiding distinct incidents",
+      "To prevent incident creation from critical alerts"
+    ],
+    "correctIndex": 2,
+    "explanation": "Historical validation helps tune grouping logic so it suppresses duplication while preserving real operational signal.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-correlation.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 33,
+    "prompt": "What is a common anti-pattern when implementing alert groups?",
+    "choices": [
+      "Including CI metadata in grouping conditions",
+      "Reviewing group quality in operations reports",
+      "Aligning group ownership with resolver teams",
+      "Creating one broad rule that combines unrelated alerts"
+    ],
+    "correctIndex": 3,
+    "explanation": "Overly broad grouping can hide multiple root causes and delay accurate triage.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/alert-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 34,
+    "prompt": "Which outcome best shows alert grouping is tuned effectively?",
+    "choices": [
+      "Lower duplicate alert volume with clear, actionable group ownership",
+      "Longer alert queues with fewer acknowledgements",
+      "Higher percentage of unbound alerts",
+      "More manual regrouping during incidents"
+    ],
+    "correctIndex": 0,
+    "explanation": "Effective grouping reduces duplicate workload and supports faster coordinated action by the right team.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/alert-analytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 30,
+    "prompt": "In Hardware Asset Management, what is the main purpose of an RMA workflow?",
+    "choices": [
+      "Track return, replacement, and vendor resolution for defective hardware",
+      "Automatically retire every asset after first incident",
+      "Move all returned assets to consumable inventory",
+      "Bypass procurement approval for replacements"
+    ],
+    "correctIndex": 0,
+    "explanation": "RMA workflows provide controlled lifecycle steps for defective items from return initiation through replacement or closure.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/rma-process.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 31,
+    "prompt": "Which record linkage is most important for RMA traceability?",
+    "choices": [
+      "RMA to source code repository commit",
+      "RMA to original asset and related procurement details",
+      "RMA to event rule condition",
+      "RMA to discovery classification probe"
+    ],
+    "correctIndex": 1,
+    "explanation": "Connecting RMAs to the asset and purchase context supports warranty validation, vendor communication, and auditability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/task/manage-rma-records.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 32,
+    "prompt": "Why should organizations define clear state transitions in RMA workflows?",
+    "choices": [
+      "To prevent stockroom transfers permanently",
+      "To avoid recording vendor communication",
+      "To ensure consistent handling from defect report to replacement completion",
+      "To force all RMAs to close in one business day"
+    ],
+    "correctIndex": 2,
+    "explanation": "Explicit workflow states make handoffs predictable and reduce delays or loss of accountability during return processing.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-lifecycle.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 33,
+    "prompt": "What is a key control to avoid financial loss in RMA operations?",
+    "choices": [
+      "Skipping serial number checks on returned equipment",
+      "Closing RMA cases before shipment confirmation",
+      "Removing procurement references for faster processing",
+      "Validating warranty entitlement and return deadlines before shipment"
+    ],
+    "correctIndex": 3,
+    "explanation": "Warranty and timeline validation ensures returned assets are eligible and prevents missed vendor credit opportunities.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/task/verify-warranty-information.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 34,
+    "prompt": "Which metric best reflects healthy RMA workflow performance?",
+    "choices": [
+      "Reduced cycle time from RMA creation to replacement asset readiness",
+      "Higher count of manually corrected return records",
+      "Longer duration in vendor pending state",
+      "Growing backlog of unresolved defective assets"
+    ],
+    "correctIndex": 0,
+    "explanation": "Shorter end-to-end RMA cycle time with fewer exceptions indicates a mature and efficient return process.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-management.html"
+    ]
+  }
+]

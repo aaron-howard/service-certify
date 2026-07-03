@@ -1,0 +1,242 @@
+[
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 10,
+		"prompt": "In Discovery architecture, what is the ECC Queue's core role?",
+		"choices": [
+			"It transports probe requests to MID Servers and returns results to the instance for sensor processing",
+			"It stores CMDB relationship history for impact analysis",
+			"It provides a backup credential vault for probe accounts",
+			"It schedules discovery jobs independently of MID Servers"
+		],
+		"correctIndex": 0,
+		"explanation": "ECC Queue is the communication channel between the instance and MID Servers, carrying commands and returned payloads.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/mid-server/concept/ecc-queue-mid-server.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 11,
+		"prompt": "A Discovery run is delayed even though schedules are active. Which ECC symptom most directly indicates MID processing backlog?",
+		"choices": [
+			"No records in ecc_queue for the schedule",
+			"Large number of output-ready or processing records waiting against the MID Server topic",
+			"All CI records updated in the last five minutes",
+			"Discovery credentials show Passed tests"
+		],
+		"correctIndex": 1,
+		"explanation": "Backlog in relevant ECC states and topics indicates the MID Server is not keeping up with queued probe activity.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/troubleshoot-discovery-with-ecc-queue.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 12,
+		"prompt": "Why should Discovery administrators monitor ECC Queue health trends over time?",
+		"choices": [
+			"To map ECC messages directly to asset depreciation rules",
+			"To automate stockroom transfers from discovery events",
+			"To detect throughput, latency, or failure patterns before they impact CMDB freshness",
+			"To disable probes when event rules are updated"
+		],
+		"correctIndex": 2,
+		"explanation": "Trend monitoring helps identify scaling or reliability issues early, reducing stale CI data and failed discovery outcomes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/mid-server/concept/mid-server-monitoring.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 13,
+		"prompt": "What is the best first action if ECC Queue records show repeated payload processing errors for one probe type?",
+		"choices": [
+			"Delete all CI records discovered by that probe",
+			"Disable the entire Discovery application",
+			"Reinstall the instance node",
+			"Review probe/sensor logs and payload details to isolate pattern, credential, or script issues"
+		],
+		"correctIndex": 3,
+		"explanation": "Targeted inspection of probe and sensor details avoids broad disruption and pinpoints the true processing fault.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/t_TroubleshootDiscoveryProblems.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 14,
+		"prompt": "Which ECC Queue governance practice supports stable Discovery operations in production?",
+		"choices": [
+			"Establish monitoring, threshold alerts, and operational runbooks for queue backlog and failures",
+			"Purge ECC records daily without reviewing error trends",
+			"Route all Discovery probes through one MID Server regardless of load",
+			"Disable sensor logging for faster queue turnover"
+		],
+		"correctIndex": 0,
+		"explanation": "Operational thresholds and response procedures keep queue issues visible and manageable before they cause major CMDB impact.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/mid-server/task/set-up-mid-server-alerting.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 10,
+		"prompt": "What is the main function of an Event Management connector?",
+		"choices": [
+			"It configures assignment groups for incident creation",
+			"It ingests and maps external monitoring events into the ServiceNow event format",
+			"It replaces CMDB CI identification rules",
+			"It archives alerts to external SIEM tools"
+		],
+		"correctIndex": 1,
+		"explanation": "Connectors provide source-specific ingestion and mapping logic so external telemetry can enter the EM pipeline correctly.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-connectors.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 11,
+		"prompt": "A team onboarded a new connector and sees unknown node names. Which step most improves downstream correlation quality?",
+		"choices": [
+			"Disable the connector and rely on manual alerts",
+			"Set all unknown nodes to critical severity",
+			"Configure field mapping and CI binding rules so connector payloads resolve to known CIs",
+			"Bypass event rules until incident templates are finalized"
+		],
+		"correctIndex": 2,
+		"explanation": "Accurate mapping and binding from connector payloads to CIs is required for meaningful correlation and service impact context.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/task/configure-event-field-mapping.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 12,
+		"prompt": "Which connector onboarding approach is best for production readiness?",
+		"choices": [
+			"Enable all source event types on day one to maximize coverage",
+			"Skip lower environment validation to accelerate go-live",
+			"Use one shared credential across all connectors and teams",
+			"Pilot in scoped environments, validate mapping/correlation, then expand source coverage iteratively"
+		],
+		"correctIndex": 3,
+		"explanation": "Phased onboarding reduces noise and avoids large-scale misconfiguration by validating behavior before broad rollout.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-management-implementation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 13,
+		"prompt": "Why is connector health monitoring important after go-live?",
+		"choices": [
+			"It detects ingestion failures or latency early so alert pipelines remain trustworthy",
+			"It automatically reclassifies all alerts by business service",
+			"It eliminates the need for event rules",
+			"It guarantees zero duplicate events from every source"
+		],
+		"correctIndex": 0,
+		"explanation": "Monitoring connector status helps operations catch broken feeds quickly and maintain reliable event coverage.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/task/monitor-event-connectors.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 14,
+		"prompt": "What connector governance policy is most aligned with CIS-EM best practice?",
+		"choices": [
+			"Allow any team to modify production connector mappings ad hoc",
+			"Use change-controlled connector configuration with defined ownership and test criteria",
+			"Disable version tracking for connector updates",
+			"Store connector secrets in plain text for troubleshooting speed"
+		],
+		"correctIndex": 1,
+		"explanation": "Connector changes affect ingestion quality and alert behavior, so controlled ownership and testing are essential.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-management-governance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 10,
+		"prompt": "In HAM, what is the key purpose of stockrooms?",
+		"choices": [
+			"They represent logical/physical inventory locations for receiving, storing, and issuing assets",
+			"They replace assignment groups for asset tasks",
+			"They define depreciation schedules by model category",
+			"They are used only for consumables, not hardware"
+		],
+		"correctIndex": 0,
+		"explanation": "Stockrooms provide controlled inventory locations that support accurate on-hand balances and fulfillment processes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/stockrooms.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 11,
+		"prompt": "A fulfillment team reports negative stock counts. Which configuration check should be prioritized?",
+		"choices": [
+			"Whether transfer orders and issue transactions are recorded against correct stockrooms",
+			"Whether CMDB relationship rules are active",
+			"Whether discovery schedules run every hour",
+			"Whether event rules suppress warning alerts"
+		],
+		"correctIndex": 0,
+		"explanation": "Incorrect stockroom transaction handling is a common cause of inventory count drift and negative balances.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/task/manage-stockroom-inventory.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 12,
+		"prompt": "Which process improves audit readiness for distributed stockrooms?",
+		"choices": [
+			"Disable transfer workflows to reduce transaction volume",
+			"Use periodic cycle counts with reconciliation and documented variance handling",
+			"Allow manual stock adjustments without reason codes",
+			"Track inventory only at region level, not per stockroom"
+		],
+		"correctIndex": 1,
+		"explanation": "Cycle counts and controlled reconciliation provide evidence of inventory integrity and process compliance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/task/perform-cycle-counts.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 13,
+		"prompt": "What is the best practice when opening a new stockroom location in ServiceNow?",
+		"choices": [
+			"Copy production data directly into the new stockroom without baseline controls",
+			"Set all incoming hardware to in use immediately",
+			"Define ownership, receiving/issuing procedures, and transfer governance before operational use",
+			"Use one global stockroom and ignore local receiving"
+		],
+		"correctIndex": 2,
+		"explanation": "Operational controls and clear ownership are needed before go-live to prevent inventory and fulfillment issues.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/stockroom-operations.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 14,
+		"prompt": "Which metric best indicates healthy stockroom operations?",
+		"choices": [
+			"Highest number of manual adjustments each month",
+			"No transfer requests between stockrooms",
+			"All assets stored in one stockroom globally",
+			"Low variance between expected and counted inventory with timely fulfillment cycle times"
+		],
+		"correctIndex": 3,
+		"explanation": "Low variance and reliable fulfillment performance indicate accurate inventory controls and effective stockroom execution.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/asset-management-kpis.html"
+		]
+	}
+]

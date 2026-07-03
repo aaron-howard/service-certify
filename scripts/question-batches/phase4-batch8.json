@@ -1,0 +1,242 @@
+[
+	{
+		"trackCode": "CPOA",
+		"order": 40,
+		"prompt": "What is the best administrative control for plugin management in a governed enterprise instance?",
+		"choices": [
+			"Use formal impact assessment and approval before plugin activation",
+			"Activate plugins directly in production whenever requested",
+			"Disable all plugin documentation requirements",
+			"Allow any fulfilled user to manage plugins"
+		],
+		"correctIndex": 0,
+		"explanation": "Plugin activation can affect data model and behavior, so impact assessment and governance approvals are essential.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/administer/plugins/concept/plugin-management.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 41,
+		"prompt": "During update set promotion, which step most reduces migration risk?",
+		"choices": [
+			"Promote directly from dev to production with no test instance validation",
+			"Preview and resolve collisions before committing in target instances",
+			"Bundle unrelated features in one large emergency update set",
+			"Skip back-out planning for low-priority changes"
+		],
+		"correctIndex": 1,
+		"explanation": "Collision preview and resolution in lower environments prevents avoidable production conflicts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/system-update-sets/task/t_PreviewAnUpdateSet.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 42,
+		"prompt": "For cloning at scale, which safeguard is most important for non-production environments?",
+		"choices": [
+			"Retain all production outbound email settings unchanged",
+			"Skip clone profiles to reduce clone duration",
+			"Apply post-clone data protection and environment-specific sanitization",
+			"Allow integrations to call production endpoints immediately"
+		],
+		"correctIndex": 2,
+		"explanation": "Post-clone controls and sanitization reduce data exposure and prevent unintended external impacts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/administer/instance-administration/concept/clone-management.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 43,
+		"prompt": "Why should plugin activation history be tracked as part of platform governance?",
+		"choices": [
+			"It enables automatic rollback of all customizations",
+			"It replaces update set documentation",
+			"It allows unrestricted admin delegation",
+			"It supports auditability and impact troubleshooting across releases"
+		],
+		"correctIndex": 3,
+		"explanation": "Activation history provides change context for audits and helps diagnose behavior shifts after release events.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/administer/plugins/task/view-plugin-status.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 44,
+		"prompt": "Which clone strategy best supports many development teams while reducing contention?",
+		"choices": [
+			"Use scheduled clone waves with role-specific clone profiles and blackout windows",
+			"Allow ad hoc full clones at any time",
+			"Clone only production to every personal developer instance daily",
+			"Ban all clone activities during release cycles"
+		],
+		"correctIndex": 0,
+		"explanation": "Planned clone waves and profiles balance data freshness with operational stability at scale.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/administer/instance-administration/task/schedule-a-clone.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 40,
+		"prompt": "How should a product owner evaluate a request to activate a new plugin mid-release?",
+		"choices": [
+			"Approve immediately if a stakeholder asks",
+			"Assess feature value, dependency impact, and release risk before decision",
+			"Reject all plugin requests categorically",
+			"Move activation to production first for faster feedback"
+		],
+		"correctIndex": 1,
+		"explanation": "Product owners should weigh value against implementation and stability risk before introducing plugin dependencies.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-strategic-portfolio-management/page/product/agile-development/concept/release-risk-management.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 41,
+		"prompt": "What is the biggest portfolio benefit of disciplined update set promotion?",
+		"choices": [
+			"It keeps release evidence traceable across environments",
+			"It eliminates need for testing",
+			"It allows scope bypass for urgent features",
+			"It prevents all merge conflicts automatically"
+		],
+		"correctIndex": 0,
+		"explanation": "Structured promotion provides traceability and confidence that delivered changes align with approved scope.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/system-update-sets/concept/system-update-sets.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 42,
+		"prompt": "For cloning at scale, which planning decision most protects roadmap velocity?",
+		"choices": [
+			"No communication before clone windows",
+			"Coordinate clone schedules with sprint milestones and test cycles",
+			"Clone all environments during peak business hours",
+			"Pause all backlog work for one quarter"
+		],
+		"correctIndex": 1,
+		"explanation": "Coordinated clone timing reduces disruption to testing and delivery commitments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/administer/instance-administration/concept/clone-planning.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 43,
+		"prompt": "Which KPI best shows whether plugin investments are producing product outcomes?",
+		"choices": [
+			"Total number of plugins ever activated",
+			"Count of list layouts changed by users",
+			"Adoption and cycle-time improvement linked to plugin-enabled capabilities",
+			"Number of cloned records in test data"
+		],
+		"correctIndex": 2,
+		"explanation": "Outcome-linked KPIs help determine whether plugin-enabled features delivered expected value.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/use/performance-analytics/concept/value-kpi-mapping.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 44,
+		"prompt": "What is the most effective product governance response to repeated update set rollback events?",
+		"choices": [
+			"Increase promotion frequency without changing controls",
+			"Hide rollback metrics from stakeholders",
+			"Skip collision previews for low-risk stories",
+			"Introduce stricter release readiness criteria and root-cause reviews"
+		],
+		"correctIndex": 3,
+		"explanation": "Frequent rollbacks signal process gaps that require stronger readiness checks and systemic corrective action.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-strategic-portfolio-management/page/product/agile-development/task/conduct-release-retrospective.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 40,
+		"prompt": "In an operating excellence model, what should govern enterprise plugin management decisions?",
+		"choices": [
+			"Standard intake, impact scoring, architecture review, and ownership accountability",
+			"Ad hoc admin approval with no documented rationale",
+			"Automatic activation for all available plugins",
+			"Only vendor recommendations without internal assessment"
+		],
+		"correctIndex": 0,
+		"explanation": "A structured governance workflow ensures plugin decisions are consistent, auditable, and aligned to enterprise standards.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-now-platform/page/administer/platform-governance/concept/change-governance-framework.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 41,
+		"prompt": "Which update set promotion policy best supports operational reliability?",
+		"choices": [
+			"Promote update sets only after validated testing and conflict review evidence",
+			"Allow direct production commits for all urgent requests",
+			"Exclude peer review from promotion workflow",
+			"Bundle unrelated fixes to minimize record count"
+		],
+		"correctIndex": 0,
+		"explanation": "Evidence-backed promotion gates reduce production defects and improve release confidence.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/system-update-sets/task/move-update-sets-between-instances.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 42,
+		"prompt": "At enterprise scale, what is a key risk if clone management lacks standardized profiles?",
+		"choices": [
+			"More dashboard personalization options",
+			"Inconsistent data masking and higher compliance exposure",
+			"Faster script execution in production",
+			"Reduced need for MID Server monitoring"
+		],
+		"correctIndex": 1,
+		"explanation": "Without standard clone profiles, teams may apply inconsistent protections that increase compliance and privacy risk.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/administer/instance-administration/task/configure-clone-profile.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 43,
+		"prompt": "Which measurement best indicates healthy promotion governance over time?",
+		"choices": [
+			"Number of inactive users in non-production",
+			"Average size of cloned attachments",
+			"Promotion success rate with low post-release defect leakage",
+			"Count of UI policy conditions per table"
+		],
+		"correctIndex": 2,
+		"explanation": "High success and low leakage show that promotion controls are effective and sustainable.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/use/performance-analytics/concept/release-quality-metrics.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 44,
+		"prompt": "What governance mechanism most improves cloning at scale across many business units?",
+		"choices": [
+			"Let each team define clone rules independently",
+			"Clone every environment at the same time",
+			"Use one global clone profile for all scenarios",
+			"Operate a centralized clone calendar with policy-based exceptions"
+		],
+		"correctIndex": 3,
+		"explanation": "A centralized schedule and exception process balances local needs with enterprise stability and policy compliance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/administer/instance-administration/concept/enterprise-clone-governance.html"
+		]
+	}
+]

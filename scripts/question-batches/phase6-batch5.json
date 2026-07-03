@@ -1,0 +1,242 @@
+[
+  {
+    "trackCode": "CIS-RC",
+    "order": 25,
+    "prompt": "During planning for a new audit engagement, which action should occur first to reduce control-testing rework?",
+    "choices": [
+      "Define audit scope, objectives, and control universe with stakeholders before evidence requests",
+      "Close prior findings without validating corrective action",
+      "Assign all testing to one control owner",
+      "Collect screenshots only after the audit report is finalized"
+    ],
+    "correctIndex": 0,
+    "explanation": "Clear scope and objective alignment at kickoff prevents irrelevant testing and duplicate evidence collection later.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-audit/concept/audit-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 26,
+    "prompt": "What best indicates an audit engagement is configured correctly in ServiceNow?",
+    "choices": [
+      "Only engagement name and due date are populated",
+      "Engagement records include scoped controls, test plans, owners, and scheduled milestones",
+      "All controls are marked pass before testing starts",
+      "Evidence tasks are routed to incident assignment groups"
+    ],
+    "correctIndex": 1,
+    "explanation": "A complete engagement includes mapped controls, planned tests, ownership, and timeline checkpoints for governance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-audit/task/create-an-audit-engagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 27,
+    "prompt": "An internal audit requests quarterly evidence but control owners upload outdated artifacts. Which control design improvement is most appropriate?",
+    "choices": [
+      "Disable evidence due dates to reduce reminder volume",
+      "Allow any user to upload evidence without ownership rules",
+      "Use time-bound evidence collection tasks with owner accountability and attestation requirements",
+      "Replace control tests with a yearly email confirmation"
+    ],
+    "correctIndex": 2,
+    "explanation": "Scheduled evidence tasks with accountable owners and attestations improve freshness and audit reliability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-policy-and-compliance/task/manage-control-tests.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 28,
+    "prompt": "Which engagement-level metric is most useful to audit leadership?",
+    "choices": [
+      "Number of users with admin access in the instance",
+      "Total records created in the past month",
+      "Count of unrelated incident tickets",
+      "Testing completion rate, open observations, and overdue remediation by engagement"
+    ],
+    "correctIndex": 3,
+    "explanation": "Leadership needs progress and risk indicators tied directly to audit execution and remediation outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-audit/concept/audit-management-workspace.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 29,
+    "prompt": "Why should issue remediation tasks be linked to audit observations instead of tracked separately?",
+    "choices": [
+      "It preserves traceability from finding to corrective action and supports defensible closure evidence",
+      "It allows observations to be deleted after assignment",
+      "It eliminates the need for approvers",
+      "It replaces risk scoring in all compliance programs"
+    ],
+    "correctIndex": 0,
+    "explanation": "Linking remediation directly to observations provides end-to-end audit trail integrity for closure decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-audit/task/manage-audit-observations.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 25,
+    "prompt": "In Security Incident Response, what is the primary value of integrating threat intelligence feeds?",
+    "choices": [
+      "Automatically close every low-severity alert",
+      "Enrich indicators and prioritize incidents using reputation and context data",
+      "Replace CMDB service ownership records",
+      "Disable correlation to reduce processing load"
+    ],
+    "correctIndex": 1,
+    "explanation": "Threat intelligence enriches observables so analysts can prioritize and respond based on risk context.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/threat-intelligence.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 26,
+    "prompt": "A new IOC feed creates many false positives. What is the best first tuning step?",
+    "choices": [
+      "Delete all past incidents",
+      "Route all alerts to major incident",
+      "Adjust indicator confidence thresholds and matching logic before auto-escalation",
+      "Disable all enrichment jobs permanently"
+    ],
+    "correctIndex": 2,
+    "explanation": "Threshold and matching refinement reduces noise while keeping useful threat signals flowing to analysts.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/configure-threat-intelligence-sources.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 27,
+    "prompt": "Which process most improves analyst trust in threat-intel enrichment?",
+    "choices": [
+      "Hide source provider metadata from all incident records",
+      "Ingest indicators without timestamps",
+      "Store indicators only in spreadsheet attachments",
+      "Track source, confidence, first-seen, and expiration details on each indicator"
+    ],
+    "correctIndex": 3,
+    "explanation": "Transparent indicator lineage and validity windows help analysts decide whether enrichment is actionable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response-data-model.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 28,
+    "prompt": "What is the best reason to map threat intel to MITRE ATT&CK techniques in SIR reporting?",
+    "choices": [
+      "It improves trend analysis for adversary behavior and helps prioritize defensive controls",
+      "It allows skipping triage for mapped incidents",
+      "It removes the need for indicator expiration",
+      "It replaces assignment rules with static groups"
+    ],
+    "correctIndex": 0,
+    "explanation": "Technique mapping supports strategic prioritization by connecting incidents to known adversary tactics and gaps.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response-reporting.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 29,
+    "prompt": "Which KPI best measures threat-intelligence quality in SIR?",
+    "choices": [
+      "Number of feeds enabled regardless utility",
+      "Reduction in mean time to triage and higher true-positive rate after enrichment",
+      "Total attachments per incident",
+      "Count of unassigned security incidents"
+    ],
+    "correctIndex": 1,
+    "explanation": "High-quality intelligence should improve triage speed and incident precision, not just increase data volume.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-operations-kpis.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 25,
+    "prompt": "A SecOps manager wants a service map dashboard for executives. What should be emphasized first?",
+    "choices": [
+      "Raw event count by connector without service context",
+      "Service health indicators tied to business-critical maps and active risk conditions",
+      "MID Server JVM metrics only",
+      "Individual analyst preference widgets"
+    ],
+    "correctIndex": 1,
+    "explanation": "Executive dashboards should focus on business service impact, not tool-centric telemetry details.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 26,
+    "prompt": "What dashboard element most helps identify vulnerable dependencies in mapped services?",
+    "choices": [
+      "A static list of CI names with no relationship data",
+      "A weekly export of user records",
+      "Topology visualizations with relationship paths and status overlays from dependent CIs",
+      "A count of closed change requests only"
+    ],
+    "correctIndex": 2,
+    "explanation": "Dependency-aware topology with health overlays exposes upstream and downstream risk concentration points.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/view-service-map.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 27,
+    "prompt": "Which access control is best practice for a service map dashboard used by multiple teams?",
+    "choices": [
+      "Grant admin to all dashboard viewers",
+      "Allow anonymous editing for rapid collaboration",
+      "Store dashboard configuration in personal profiles only",
+      "Use role-based read/write permissions aligned to operational responsibilities"
+    ],
+    "correctIndex": 3,
+    "explanation": "Role-based access protects dashboard integrity while allowing appropriate collaboration and review.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 28,
+    "prompt": "Why should service map dashboards include drill-down links into related incidents and alerts?",
+    "choices": [
+      "It enables faster transition from service-level visibility to operational action",
+      "It replaces the need for CI relationships",
+      "It prevents updates to business service records",
+      "It disables event correlation for mapped nodes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Drill-down navigation connects strategic service health views with tactical records needed for response.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/dashboards/concept/dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 29,
+    "prompt": "Which KPI set best validates whether a service map dashboard is useful?",
+    "choices": [
+      "Widget color variety and custom theme usage",
+      "Improved service-impact triage time, fewer dependency-blind escalations, and better ownership routing",
+      "Number of dashboard clones by analysts",
+      "Total CMDB tables displayed"
+    ],
+    "correctIndex": 1,
+    "explanation": "Useful dashboards improve operational decision quality and response efficiency for service-impacting issues.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping-best-practices.html"
+    ]
+  }
+]

@@ -1,0 +1,257 @@
+[
+  {
+    "trackCode": "CIS-RC",
+    "order": 45,
+    "prompt": "Which implementation decision best aligns an IRM program to multiple regulatory frameworks at once?",
+    "choices": [
+      "Use a common control framework and map each regulation to shared controls and statements",
+      "Create separate duplicate controls for every regulation with no linkage",
+      "Track regulations only in spreadsheets outside the platform",
+      "Disable control inheritance to keep frameworks isolated"
+    ],
+    "correctIndex": 0,
+    "explanation": "A common control model reduces duplication and supports traceable cross-framework compliance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/concept/policy-and-compliance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 46,
+    "prompt": "What is the primary purpose of authority documents in a regulatory framework implementation?",
+    "choices": [
+      "Define external obligations that drive citations, controls, and compliance requirements",
+      "Replace all internal policy statements with ad hoc tasks",
+      "Store vulnerability scan outputs for SOC triage only",
+      "Automatically close failed controls without review"
+    ],
+    "correctIndex": 0,
+    "explanation": "Authority documents represent source obligations used to structure compliant controls and testing.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/concept/policy-and-compliance.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 47,
+    "prompt": "How should teams handle overlapping requirements across NIST, ISO, and local municipal regulations?",
+    "choices": [
+      "Normalize overlapping citations to shared control objectives while preserving framework-specific evidence traceability",
+      "Implement each framework independently with duplicate owner assignments",
+      "Prioritize only the strictest framework and ignore the others",
+      "Track evidence once per year regardless control frequency"
+    ],
+    "correctIndex": 0,
+    "explanation": "Normalization supports efficiency while maintaining audit-ready traceability by framework.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/task/t_ManageControlObjectives.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/audit-management/concept/audit-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 48,
+    "prompt": "Which KPI best shows maturity in regulatory framework management?",
+    "choices": [
+      "Decrease in duplicate controls with improved on-time evidence completion across mapped frameworks",
+      "Increase in number of manually maintained policy spreadsheets",
+      "Higher count of unresolved citation conflicts quarter over quarter",
+      "More emergency exceptions opened than planned tests completed"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mature framework governance reduces duplication and improves execution consistency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/task/t_UseDashboardsAndReports.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/concept/policy-and-compliance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 49,
+    "prompt": "What is the best approach when a new regulation introduces additional control requirements mid-cycle?",
+    "choices": [
+      "Run impact analysis against existing controls, then extend mappings and testing plans with approved change governance",
+      "Wait until the annual audit before updating any control mappings",
+      "Create temporary controls with no owners to accelerate rollout",
+      "Close existing control tests and restart the entire program"
+    ],
+    "correctIndex": 0,
+    "explanation": "Impact analysis and controlled updates prevent disruption while preserving compliance coverage.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/task/t_AssessControls.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 45,
+    "prompt": "What is the key objective of a post-incident review in Security Incident Response?",
+    "choices": [
+      "Capture lessons learned and assign corrective actions to reduce recurrence and improve response readiness",
+      "Close incidents faster by skipping evidence and timeline validation",
+      "Focus only on team performance ratings without process analysis",
+      "Reopen all previously resolved incidents for comparison"
+    ],
+    "correctIndex": 0,
+    "explanation": "Post-incident reviews drive measurable improvement through action-oriented lessons learned.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_ReviewSecurityIncident.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 46,
+    "prompt": "Which artifact is most critical during a formal SIR post-incident review?",
+    "choices": [
+      "A validated incident timeline including detections, containment actions, decisions, and communication points",
+      "A list of responder names with no action timestamps",
+      "A screenshot of the incident form after closure",
+      "A spreadsheet of unrelated open vulnerabilities"
+    ],
+    "correctIndex": 0,
+    "explanation": "A validated timeline supports root-cause analysis and accountability for process improvement.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response-workspace.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_ManageSecurityIncidents.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 47,
+    "prompt": "How should a SIR team prioritize improvement actions after a high-severity incident?",
+    "choices": [
+      "Rank actions by risk reduction impact, implementation effort, and dependency on critical controls",
+      "Implement every suggestion in arbitrary order regardless risk",
+      "Assign all actions to one analyst for speed",
+      "Delay action planning until the next annual program review"
+    ],
+    "correctIndex": 0,
+    "explanation": "Risk-based prioritization ensures limited capacity is focused on the most effective improvements.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_ManageSecurityIncidents.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 48,
+    "prompt": "Which pattern indicates a healthy post-incident review process?",
+    "choices": [
+      "Documented lessons learned linked to tracked corrective tasks with owner and due-date accountability",
+      "Review notes stored in private chat channels only",
+      "Corrective tasks closed immediately without validation",
+      "No distinction between confirmed root cause and assumptions"
+    ],
+    "correctIndex": 0,
+    "explanation": "Effective PIR processes produce traceable, accountable corrective outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_CreateTasksForSecurityIncident.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/workflow-automation/concept/workflow-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 49,
+    "prompt": "What should be updated first when post-incident findings reveal delayed containment decisions?",
+    "choices": [
+      "Containment playbook decision points, escalation criteria, and role responsibilities",
+      "Dashboard color themes used in security workspace",
+      "User profile photos for SOC analysts",
+      "Incident numbering format in system properties"
+    ],
+    "correctIndex": 0,
+    "explanation": "Containment delays are addressed by clarifying operational decision logic and responsibilities.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_UsePlaybooksInSecurityIncidentResponse.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 45,
+    "prompt": "Why are dynamic CI groups useful in Service Mapping implementations?",
+    "choices": [
+      "They maintain service context automatically as membership changes based on CI attributes and rules",
+      "They replace service maps with static spreadsheet relationships",
+      "They prevent any discovered CI from joining mapped services",
+      "They eliminate the need for CMDB classes and identification"
+    ],
+    "correctIndex": 0,
+    "explanation": "Dynamic CI groups keep maps current by rule-driven inclusion as infrastructure changes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/cmdb-landing.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 46,
+    "prompt": "Which design approach is best for dynamic CI group criteria?",
+    "choices": [
+      "Use stable attributes such as environment, service ownership, and application tier tags",
+      "Use temporary hostname fragments that change each deployment",
+      "Add all CIs manually each week to preserve precision",
+      "Limit groups to retired assets to reduce map churn"
+    ],
+    "correctIndex": 0,
+    "explanation": "Stable, meaningful attributes reduce noise and keep group membership reliable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_CreateServiceMappingEntryPoint.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/c_ServiceMappingTags.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 47,
+    "prompt": "What is the main risk of poorly governed dynamic CI groups?",
+    "choices": [
+      "Incorrect CI membership can distort dependency maps and impact analysis accuracy",
+      "All maps automatically become read-only",
+      "Discovery schedules stop running across all MID Servers",
+      "CMDB reconciliation rules are permanently disabled"
+    ],
+    "correctIndex": 0,
+    "explanation": "Bad group logic propagates incorrect topology and weakens operational decision quality.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_TroubleshootServiceMapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 48,
+    "prompt": "How should teams validate dynamic CI groups before broad production use?",
+    "choices": [
+      "Test criteria in lower environments, compare expected versus actual members, and review with service owners",
+      "Deploy group rules directly to production without testing",
+      "Approve criteria based only on naming conventions",
+      "Exclude application owners from validation sessions"
+    ],
+    "correctIndex": 0,
+    "explanation": "Controlled validation prevents mapping drift and ensures business alignment.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_TestServiceMap.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 49,
+    "prompt": "Which KPI best indicates dynamic CI groups are improving Service Mapping quality?",
+    "choices": [
+      "Higher map coverage accuracy with fewer manual CI membership corrections per release cycle",
+      "Higher number of ad hoc map overrides by administrators",
+      "More retired CIs linked to active services",
+      "Longer map refresh times with unchanged dependency confidence"
+    ],
+    "correctIndex": 0,
+    "explanation": "Quality improves when group logic reduces manual corrections and increases dependable coverage.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  }
+]

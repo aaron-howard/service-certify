@@ -1,0 +1,242 @@
+[
+	{
+		"trackCode": "CPOA",
+		"order": 30,
+		"prompt": "What is the primary purpose of Setup Hub during initial platform onboarding?",
+		"choices": [
+			"To configure foundational instance settings through guided steps",
+			"To replace update sets in production deployment",
+			"To monitor only MID Server JVM performance",
+			"To migrate all historical audit records across domains"
+		],
+		"correctIndex": 0,
+		"explanation": "Setup Hub helps administrators complete baseline configuration activities in a consistent guided process.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/administer/setup-hub/concept/setup-hub.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 31,
+		"prompt": "When governing an internal app repository, which policy best improves reuse and quality?",
+		"choices": [
+			"Allow unlimited direct edits in production apps",
+			"Require ownership metadata, review checks, and version standards",
+			"Disable source control integration by default",
+			"Publish apps without dependency documentation"
+		],
+		"correctIndex": 1,
+		"explanation": "Repository governance standards make app assets discoverable, supportable, and safer to adopt across teams.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/applications/concept/application-repository.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 32,
+		"prompt": "An enterprise MID strategy should prioritize which architecture outcome?",
+		"choices": [
+			"Single MID Server for all business-critical integrations globally",
+			"No clustering so failover can be tested manually",
+			"Segmented, redundant MID placement aligned to network zones and workloads",
+			"Running MID only on developer laptops"
+		],
+		"correctIndex": 2,
+		"explanation": "Distributed and redundant MID deployment improves resilience, security boundary alignment, and integration reliability.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/product/mid-server/concept/mid-server-architecture.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 33,
+		"prompt": "Which Setup Hub governance practice helps avoid environment drift?",
+		"choices": [
+			"Run setup tasks once and never review completion status",
+			"Let each admin skip steps without documenting exceptions",
+			"Store setup checklists in personal notes only",
+			"Track setup tasks to completion with accountable owners and evidence"
+		],
+		"correctIndex": 3,
+		"explanation": "Formal tracking and evidence improve consistency and auditability of baseline instance configuration.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/administer/setup-hub/task/complete-setup-tasks.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 34,
+		"prompt": "Why should platform admins classify app repository entries by business capability and support tier?",
+		"choices": [
+			"It helps consumers choose reusable apps with clear ownership and lifecycle expectations",
+			"It forces all apps to use the same custom table prefix",
+			"It prevents any scoped app from being installed",
+			"It removes the need for technical documentation"
+		],
+		"correctIndex": 0,
+		"explanation": "Capability and tier metadata improves app discoverability, reuse decisions, and support planning.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/applications/task/publish-to-application-repository.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 30,
+		"prompt": "How does Setup Hub help product owners accelerate time-to-value for a new platform domain?",
+		"choices": [
+			"By replacing backlog planning with admin-only scripts",
+			"By reducing foundational setup ambiguity and sequencing required readiness tasks",
+			"By deactivating role-based access controls",
+			"By cloning production data into personal developer instances"
+		],
+		"correctIndex": 1,
+		"explanation": "Guided setup improves predictability for readiness milestones that product owners depend on for launch planning.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/administer/setup-hub/concept/setup-hub-overview.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 31,
+		"prompt": "What repository decision most improves enterprise product portfolio coherence?",
+		"choices": [
+			"Maintain duplicate apps per department with no shared lifecycle policy",
+			"Establish reuse-first intake criteria before authorizing net-new app builds",
+			"Publish apps without semantic versioning",
+			"Hide ownership fields from catalog consumers"
+		],
+		"correctIndex": 1,
+		"explanation": "Reuse-first repository governance reduces duplication and improves consistency across product investments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/applications/concept/reuse-application-components.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 32,
+		"prompt": "A product depends on on-prem orchestration. Which enterprise MID planning factor should be addressed early in roadmap planning?",
+		"choices": [
+			"UI theme colors for integration records",
+			"Network connectivity, credential strategy, and failover coverage",
+			"Catalog item icon style",
+			"Personalized list layouts for admins"
+		],
+		"correctIndex": 1,
+		"explanation": "Integration roadmap risk is reduced by early planning for MID connectivity, security, and resilience.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/product/mid-server/reference/mid-server-installation-planning.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 33,
+		"prompt": "Which KPI is most useful when measuring app repository health from a product perspective?",
+		"choices": [
+			"Average number of dictionary entries per table",
+			"Reuse ratio of approved shared apps versus net-new app requests",
+			"Count of admin users with personalize_list rights",
+			"Number of inactive scheduled jobs"
+		],
+		"correctIndex": 1,
+		"explanation": "Reuse ratio indicates whether repository governance is reducing duplicate investment and improving portfolio efficiency.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-strategic-portfolio-management/page/product/application-portfolio-management/concept/application-portfolio-management.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 34,
+		"prompt": "What is the best release-planning approach for enterprise MID-dependent features?",
+		"choices": [
+			"Deploy directly to production without lower-environment validation",
+			"Treat MID validation as optional if unit tests pass",
+			"Use staged readiness gates that include MID connectivity and transaction tests",
+			"Delay all MID testing until post-go-live support"
+		],
+		"correctIndex": 2,
+		"explanation": "Readiness gates with MID validation reduce integration failures at release time.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/product/mid-server/task/test-mid-server.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 30,
+		"prompt": "For operational excellence, how should a COE treat Setup Hub tasks?",
+		"choices": [
+			"As one-time admin chores outside governance",
+			"As auditable control activities tied to readiness policy",
+			"As optional activities only for sandbox instances",
+			"As tasks delegated only to external partners"
+		],
+		"correctIndex": 1,
+		"explanation": "Treating setup tasks as controls improves consistency, compliance evidence, and cross-team accountability.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/administer/setup-hub/concept/setup-governance.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 31,
+		"prompt": "Which repository guardrail best supports enterprise-scale quality in shared platform apps?",
+		"choices": [
+			"Mandatory app metadata, dependency transparency, and defined retirement criteria",
+			"No review process for minor app updates",
+			"Allowing unpublished apps in production domains",
+			"Disabling version history to simplify catalog screens"
+		],
+		"correctIndex": 0,
+		"explanation": "Quality guardrails make shared apps easier to govern through their full lifecycle.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/applications/concept/application-lifecycle-management.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 32,
+		"prompt": "Which enterprise MID policy is most aligned with resilience engineering?",
+		"choices": [
+			"Place all critical integrations on a single MID in one data center",
+			"Use region-aware redundancy and health monitoring for MID clusters",
+			"Restart MID manually only after outages are reported by users",
+			"Allow unmanaged local credential storage on MID hosts"
+		],
+		"correctIndex": 1,
+		"explanation": "Region-aware redundancy and proactive monitoring reduce single points of failure for integration operations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/product/mid-server/concept/mid-server-clustering.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 33,
+		"prompt": "A COE wants to reduce repository sprawl. Which governance metric is most actionable?",
+		"choices": [
+			"Count of all UI actions in global scope",
+			"Median script include length by app",
+			"Number of duplicated app capabilities lacking designated product owners",
+			"Total table count across all custom scopes"
+		],
+		"correctIndex": 2,
+		"explanation": "Detecting capability duplication without ownership highlights where consolidation governance is needed.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-strategic-portfolio-management/page/product/application-portfolio-management/task/rationalize-application-portfolio.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 34,
+		"prompt": "What is the strongest reason to formalize enterprise MID standards in an operating model playbook?",
+		"choices": [
+			"To prevent developers from using update sets",
+			"To reduce repository permissions management",
+			"To eliminate all integration testing",
+			"To ensure secure, repeatable integration operations across environments"
+		],
+		"correctIndex": 3,
+		"explanation": "Documented MID standards improve repeatability, security controls, and operational continuity.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/product/mid-server/concept/mid-server-best-practices.html"
+		]
+	}
+]

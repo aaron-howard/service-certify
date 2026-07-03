@@ -1,0 +1,402 @@
+[
+  {
+    "trackCode": "CPOE",
+    "order": 75,
+    "prompt": "A platform owner wants to enforce least privilege across thousands of users. Which control should be reviewed first for over-entitlement risk?",
+    "choices": [
+      "UI policy conditions on forms",
+      "Personalized list layouts",
+      "Scheduled import sets",
+      "Role assignment model and inherited roles"
+    ],
+    "correctIndex": 3,
+    "explanation": "Role design and inheritance determine baseline access. Reviewing role grants first exposes broad privilege paths that violate least-privilege principles.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/users-and-roles/concept/roles.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 76,
+    "prompt": "What is the main reason to combine role-based controls with ACL rules in an enterprise security model?",
+    "choices": [
+      "ACLs provide record and field-level enforcement beyond broad role grants",
+      "ACLs remove the need for groups and roles",
+      "ACLs only affect portal branding",
+      "ACLs are used only for integrations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Roles grant coarse capabilities, while ACLs enforce access at table, record, and field levels for stronger data protection.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/security/concept/c_AccessControlListRules.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 77,
+    "prompt": "Which governance action best reduces risk from stale privileged access?",
+    "choices": [
+      "Increase inactivity timeout for all admins",
+      "Run periodic access recertification for elevated roles",
+      "Disable update sets in non-production",
+      "Move all custom apps to global scope"
+    ],
+    "correctIndex": 1,
+    "explanation": "Access recertification validates that privileged entitlements remain justified and removes obsolete access over time.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/security/task/t_PerformRoleAudits.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 78,
+    "prompt": "For sensitive HR and security tables, what ACL practice is most appropriate?",
+    "choices": [
+      "Use wildcard read ACLs for faster onboarding",
+      "Rely only on list view filters",
+      "Allow script includes to bypass ACL evaluation",
+      "Restrict both record and field access with explicit deny-by-default logic"
+    ],
+    "correctIndex": 3,
+    "explanation": "Sensitive data protection requires explicit table and field enforcement so unauthorized users cannot read or infer restricted values.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/security/task/t_CreateAnACLRule.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 79,
+    "prompt": "Why should security admins use elevated roles only when required?",
+    "choices": [
+      "Elevated roles grant temporary high-risk capabilities that should be minimized and monitored",
+      "Elevated roles are required to view dashboards",
+      "Elevated roles improve report performance",
+      "Elevated roles are the only way to assign groups"
+    ],
+    "correctIndex": 0,
+    "explanation": "Elevated privileges widen access boundaries; limiting duration and use lowers exposure and supports accountability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/security/concept/c_ElevatedPrivileges.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 80,
+    "prompt": "What is the strongest enterprise rationale for enabling multifactor authentication for administrators?",
+    "choices": [
+      "It replaces the need for passwords",
+      "It lowers account takeover risk for high-privilege users",
+      "It removes all ACL requirements",
+      "It allows unrestricted API access"
+    ],
+    "correctIndex": 1,
+    "explanation": "MFA adds a second verification factor, reducing the probability that stolen credentials can compromise privileged accounts.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/integrate/authentication/concept/multi-factor-authentication.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 81,
+    "prompt": "A platform owner needs to prove who changed security-critical records. Which capability should be emphasized?",
+    "choices": [
+      "Client-side scripts on forms",
+      "Audit history and system logs with user attribution",
+      "Homepage announcements",
+      "Theme customization history"
+    ],
+    "correctIndex": 1,
+    "explanation": "Auditing and logs provide traceability of record changes and actor identity, which is critical for investigations and compliance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/security/concept/auditing.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 82,
+    "prompt": "What is a key security benefit of segregating admin duties across platform teams?",
+    "choices": [
+      "It ensures one administrator can complete all privileged tasks",
+      "It reduces need for change management approvals",
+      "It enforces separation of duties and limits conflict of interest",
+      "It disables role inheritance automatically"
+    ],
+    "correctIndex": 2,
+    "explanation": "Segregation of duties limits concentration of power and helps prevent unauthorized or unreviewed high-impact actions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/security/concept/security-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 83,
+    "prompt": "When designing impersonation governance, what policy is most important?",
+    "choices": [
+      "Allow unrestricted impersonation for all itil users",
+      "Require logging and controlled access for impersonation use",
+      "Disable audit logs during impersonation",
+      "Use impersonation for all integration testing"
+    ],
+    "correctIndex": 1,
+    "explanation": "Impersonation can bypass normal user boundaries, so it must be limited and auditable to prevent misuse.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/users-and-roles/task/t_ImpersonateAUser.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 84,
+    "prompt": "Which approach best secures non-interactive integrations in enterprise environments?",
+    "choices": [
+      "Use dedicated service accounts with scoped roles and credential rotation",
+      "Reuse a named admin account for all APIs",
+      "Store passwords in scripts for reliability",
+      "Grant service accounts security_admin permanently"
+    ],
+    "correctIndex": 0,
+    "explanation": "Dedicated service identities with least privilege and managed secrets reduce blast radius and improve operational control.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/integrate/authentication/concept/integration-user-accounts.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 85,
+    "prompt": "A security review finds unrestricted script include access from many scopes. What should the platform owner do first?",
+    "choices": [
+      "Disable scoped applications globally",
+      "Define and enforce application access settings for cross-scope calls",
+      "Delete all global business rules",
+      "Convert all flows to subflows"
+    ],
+    "correctIndex": 1,
+    "explanation": "Cross-scope access rules control which apps can invoke resources, preventing broad and unintended code interaction.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-application-development/page/build/applications/concept/c_CrossScopePrivilege.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 86,
+    "prompt": "Why should high-risk ACL and role changes be deployed through governed release processes?",
+    "choices": [
+      "To avoid update sets entirely",
+      "To ensure only production admins can edit ACLs",
+      "To apply peer review and rollback planning before impact",
+      "To eliminate the need for testing"
+    ],
+    "correctIndex": 2,
+    "explanation": "Security configuration changes can break or expose access. Change governance adds review, testing, and rollback safeguards.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/change-management/concept/change-control-for-platform-admin.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 87,
+    "prompt": "Which login hardening control helps reduce automated credential attacks?",
+    "choices": [
+      "Adding more homepage widgets",
+      "Disabling audit tables",
+      "Enforcing account lockout and authentication protections",
+      "Allowing shared admin credentials"
+    ],
+    "correctIndex": 2,
+    "explanation": "Lockout and authentication safeguards help slow brute-force attacks and protect identity entry points.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/integrate/authentication/concept/authentication-policies.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 88,
+    "prompt": "What is the best reason to centralize security event monitoring for the platform?",
+    "choices": [
+      "To replace all platform alerts",
+      "To correlate suspicious activity across logs and speed incident response",
+      "To prevent ACL evaluation",
+      "To remove the need for role design"
+    ],
+    "correctIndex": 1,
+    "explanation": "Central monitoring improves detection by correlating authentication, access, and configuration events in one workflow.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/security-operations/concept/security-event-monitoring.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 89,
+    "prompt": "A platform owner is formalizing privileged access onboarding. Which step is essential?",
+    "choices": [
+      "Grant admin rights on manager request only",
+      "Require documented approval, business justification, and time-bound assignment",
+      "Assign security_admin to all developers by default",
+      "Use personal accounts for integration troubleshooting"
+    ],
+    "correctIndex": 1,
+    "explanation": "Formal approval workflows enforce governance and ensure privileged access is justified, limited, and auditable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/users-and-roles/task/request-elevated-access.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 90,
+    "prompt": "Which outcome indicates ACL inheritance is configured incorrectly?",
+    "choices": [
+      "Users can access child-table sensitive fields unexpectedly",
+      "Users need to log in again after timeout",
+      "Dashboards load slowly during peak usage",
+      "Lists are sorted by update date"
+    ],
+    "correctIndex": 0,
+    "explanation": "Unexpected access to child-table data often signals inherited or missing ACL logic that does not match policy intent.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/security/concept/acl-evaluation-order.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 91,
+    "prompt": "Why should production break-glass accounts be tightly controlled?",
+    "choices": [
+      "They are required for daily administration",
+      "They provide emergency access and must be limited, monitored, and periodically tested",
+      "They eliminate the need for MFA",
+      "They should be shared across teams for speed"
+    ],
+    "correctIndex": 1,
+    "explanation": "Break-glass accounts are high-risk emergency controls, so strict governance prevents misuse and preserves recoverability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/security/concept/emergency-access-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 92,
+    "prompt": "What is the strongest reason to maintain separate admin and day-to-day user accounts?",
+    "choices": [
+      "To simplify password resets",
+      "To avoid creating groups",
+      "To reduce exposure of privileged sessions and improve accountability",
+      "To speed up cloning"
+    ],
+    "correctIndex": 2,
+    "explanation": "Using separate identities limits privileged session time and improves traceability of high-impact administrative actions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/security/concept/administrative-account-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 93,
+    "prompt": "An audit requires evidence that dormant accounts are handled consistently. Which process should be in place?",
+    "choices": [
+      "Quarterly deactivation and review of inactive users",
+      "Automatic assignment of itil role to inactive users",
+      "Removal of last login tracking",
+      "Disabling group approvals"
+    ],
+    "correctIndex": 0,
+    "explanation": "Inactive account governance reduces attack surface and demonstrates continuous access hygiene.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/users-and-roles/task/manage-inactive-user-accounts.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 94,
+    "prompt": "What should a platform owner validate before enabling a new authentication integration in production?",
+    "choices": [
+      "Branding theme compatibility",
+      "Failover behavior, user mapping, and lockout impact",
+      "Catalog item icons",
+      "List export delimiter settings"
+    ],
+    "correctIndex": 1,
+    "explanation": "Authentication changes affect platform entry. Validating failover and identity mapping prevents widespread access outages or mis-assignment.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/integrate/single-sign-on/concept/sso-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 95,
+    "prompt": "Which evidence best supports enterprise compliance during a security audit?",
+    "choices": [
+      "Screenshots of homepages",
+      "Documented policies linked to role design, ACL controls, and review records",
+      "Personal admin notes",
+      "Unstructured chat messages"
+    ],
+    "correctIndex": 1,
+    "explanation": "Auditors need policy-to-control traceability and recurring review evidence to verify that governance is operating effectively.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/security/concept/security-compliance-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 96,
+    "prompt": "Why is scripted ACL logic review important in large enterprises?",
+    "choices": [
+      "Scripted ACLs can introduce complex bypass conditions if not tested",
+      "Scripted ACLs improve branding consistency",
+      "Scripted ACLs disable domain separation",
+      "Scripted ACLs are ignored during API calls"
+    ],
+    "correctIndex": 0,
+    "explanation": "Scripted access checks can unintentionally grant or deny access due to logic errors, making review and tests essential.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/security/task/scripted-acl-rules.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 97,
+    "prompt": "A merger introduces new business units with stricter data boundaries. Which platform capability is most relevant?",
+    "choices": [
+      "Knowledge article versioning",
+      "Domain separation architecture and domain-aware access controls",
+      "Flow designer spokes",
+      "Service portal themes"
+    ],
+    "correctIndex": 1,
+    "explanation": "Domain separation allows isolation of data and processes across organizational boundaries while operating on a shared platform.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/domain-separation/concept/domain-separation.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 98,
+    "prompt": "Which indicator suggests enterprise security operations need stronger change control?",
+    "choices": [
+      "Consistent CAB approval records",
+      "Frequent emergency ACL fixes after production deployment",
+      "Stable authentication uptime",
+      "Documented rollback runbooks"
+    ],
+    "correctIndex": 1,
+    "explanation": "Repeated post-deployment security hotfixes often indicate weak pre-release validation and governance gaps.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/change-management/task/assess-change-risk.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 99,
+    "prompt": "What is the primary value of maintaining a platform security baseline standard?",
+    "choices": [
+      "It allows every team to define different login requirements",
+      "It aligns controls across environments and reduces configuration drift",
+      "It removes the need for monitoring",
+      "It eliminates integration account management"
+    ],
+    "correctIndex": 1,
+    "explanation": "A defined baseline ensures consistent controls and makes drift detection and remediation more manageable at enterprise scale.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/security/concept/security-baselines.html"
+    ]
+  }
+]

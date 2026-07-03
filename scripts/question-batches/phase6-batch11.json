@@ -1,0 +1,257 @@
+[
+  {
+    "trackCode": "CIS-RC",
+    "order": 55,
+    "prompt": "What does continuous monitoring enable in a mature RC program?",
+    "choices": [
+      "Near-real-time visibility of control health and compliance drift for faster risk response",
+      "Annual-only compliance checks with no interim updates",
+      "Manual evidence collection from disconnected spreadsheets",
+      "Closure of failed controls without exception records"
+    ],
+    "correctIndex": 0,
+    "explanation": "Continuous monitoring shortens detection-to-action cycles for control failures and emerging risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/task/t_AssessControls.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 56,
+    "prompt": "Which design choice best supports continuous control monitoring?",
+    "choices": [
+      "Automated indicators tied to control objectives with threshold-based exception creation",
+      "Static control tests that run once at implementation time",
+      "Email-only reporting without structured control records",
+      "Removing ownership fields from control statements"
+    ],
+    "correctIndex": 0,
+    "explanation": "Automated indicators and exceptions provide scalable, repeatable control surveillance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/concept/control-indicators.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/task/t_UseDashboardsAndReports.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 57,
+    "prompt": "How should teams react when continuous monitoring repeatedly flags the same control failure?",
+    "choices": [
+      "Open root-cause remediation with accountable owners and validate sustained effectiveness after fixes",
+      "Suppress repeated alerts permanently to reduce workload",
+      "Mark findings as accepted risk without governance review",
+      "Restart all control libraries from default content"
+    ],
+    "correctIndex": 0,
+    "explanation": "Recurring failures require remediation and validation, not suppression.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/task/t_CreateIssueFromRisk.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/audit-management/concept/audit-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 58,
+    "prompt": "Which integration most improves RC continuous monitoring value?",
+    "choices": [
+      "Ingest operational signals from security and IT systems to enrich control and risk context automatically",
+      "Disable data integrations to preserve manual review discipline",
+      "Import only static policy PDFs each quarter",
+      "Track exceptions exclusively by meeting notes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Integrated operational telemetry makes monitoring timely and context-rich.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-integrations.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 59,
+    "prompt": "Which KPI pattern suggests continuous monitoring is effective?",
+    "choices": [
+      "Faster exception detection, shorter remediation cycles, and lower repeat control failures",
+      "Higher percentage of exceptions left unassigned",
+      "Longer intervals between failed tests and notifications",
+      "More controls with no owners or monitoring frequency"
+    ],
+    "correctIndex": 0,
+    "explanation": "Effective monitoring improves speed and reduces recurrence of control breakdowns.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/concept/policy-and-compliance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 55,
+    "prompt": "Why integrate Vulnerability Response data into SIR workflows?",
+    "choices": [
+      "Provide exploitable-asset context and prioritization signals that improve incident triage and containment decisions",
+      "Replace all incident evidence with vulnerability scanner output",
+      "Route vulnerabilities directly to change approvals only",
+      "Disable threat indicators to reduce case complexity"
+    ],
+    "correctIndex": 0,
+    "explanation": "VR context strengthens SIR prioritization by connecting incidents to known exposure.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/vulnerability-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 56,
+    "prompt": "Which scenario best demonstrates SIR and VR integration value?",
+    "choices": [
+      "A security incident automatically links to active critical vulnerabilities on affected CIs for response prioritization",
+      "Incidents and vulnerabilities are managed in separate tools with no cross-reference",
+      "Vulnerability records are closed whenever an incident opens",
+      "SOC analysts manually retype CVE details into incident notes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cross-linked incident and vulnerability data speeds risk-informed response.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/task/t_LinkSecurityIncidentsAndVulnerabilities.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_ManageSecurityIncidents.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 57,
+    "prompt": "How should SIR teams use VR severity and exploit intelligence during active investigations?",
+    "choices": [
+      "Adjust containment urgency and escalation based on exploitability, asset criticality, and exposure scope",
+      "Ignore VR context until after incident closure",
+      "Treat all vulnerabilities as equal priority regardless exploit status",
+      "Escalate only incidents that include malware attachments"
+    ],
+    "correctIndex": 0,
+    "explanation": "Exploit intelligence and asset impact data improve precision in escalation and containment.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/risk-based-prioritization.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response-workspace.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 58,
+    "prompt": "What governance control is essential when integrating SIR and VR data?",
+    "choices": [
+      "Consistent CI identification and ownership to prevent mismatched exposure and incident linkage",
+      "Allow duplicate CI records for each security tool source",
+      "Store vulnerability data without assignment groups",
+      "Disable CMDB reconciliation for security integrations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Reliable CI identity and ownership are prerequisites for trustworthy SIR-VR correlation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/cmdb-landing.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/vulnerability-response.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 59,
+    "prompt": "Which KPI confirms SIR and VR integration is improving outcomes?",
+    "choices": [
+      "Reduced time to prioritize and contain incidents with known exploitable vulnerabilities",
+      "Higher count of unlinked vulnerabilities after incident closure",
+      "More manual copy-paste activity between teams",
+      "Longer delay between incident creation and enrichment"
+    ],
+    "correctIndex": 0,
+    "explanation": "Integration success appears as faster, context-driven action on exploitable threats.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/vulnerability-response.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 55,
+    "prompt": "What defines a top-down Service Mapping approach?",
+    "choices": [
+      "Start from business service entry points and trace downstream dependencies to infrastructure components",
+      "Begin with unmanaged infrastructure and infer business context later",
+      "Create maps from retired assets first to test scale",
+      "Map only database servers and ignore application tiers"
+    ],
+    "correctIndex": 0,
+    "explanation": "Top-down mapping anchors discovery in business-service context and follows runtime dependencies.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping-methods.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_DefineServiceEntryPoints.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 56,
+    "prompt": "Why are accurate entry points critical for top-down mapping?",
+    "choices": [
+      "They provide the starting transaction path needed to discover dependencies that support the service",
+      "They replace MID Servers for all service discovery tasks",
+      "They eliminate the need for CMDB application services",
+      "They automatically classify all unknown CIs as business services"
+    ],
+    "correctIndex": 0,
+    "explanation": "Top-down tracing quality depends heavily on valid and reachable entry points.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_CreateServiceMappingEntryPoint.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 57,
+    "prompt": "Which challenge is most common in top-down mapping for complex microservice estates?",
+    "choices": [
+      "Frequent routing and ephemeral component changes can break dependency tracing if identifiers are unstable",
+      "Too few CIs in CMDB to represent infrastructure",
+      "Lack of alert events from monitoring tools",
+      "Inability to assign service ownership records"
+    ],
+    "correctIndex": 0,
+    "explanation": "Dynamic architectures require robust identifiers and governance to keep top-down maps accurate.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_TroubleshootServiceMapping.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/cmdb-landing.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 58,
+    "prompt": "How should teams improve top-down map reliability after repeated tracing gaps?",
+    "choices": [
+      "Refine entry points, credentials, and traffic visibility, then rerun discovery with targeted validation",
+      "Disable service maps and switch to static architecture diagrams",
+      "Increase map refresh intervals to once per quarter",
+      "Accept incomplete maps for critical services"
+    ],
+    "correctIndex": 0,
+    "explanation": "Reliability improves when tracing prerequisites are tuned and validated iteratively.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_ValidateServiceMap.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_TroubleshootServiceMapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 59,
+    "prompt": "Which metric best measures top-down mapping effectiveness?",
+    "choices": [
+      "Percentage of business services with validated end-to-end dependency maps and low unresolved gap counts",
+      "Number of manual CI relationships created per week",
+      "Total map objects regardless confidence score",
+      "Count of service owners added without map validation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Effectiveness is shown by validated service coverage and fewer unresolved mapping gaps.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping-methods.html"
+    ]
+  }
+]

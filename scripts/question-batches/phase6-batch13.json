@@ -1,0 +1,257 @@
+[
+  {
+    "trackCode": "CIS-RC",
+    "order": 65,
+    "prompt": "What is the primary objective of audit remediation in Risk and Compliance?",
+    "choices": [
+      "Close control gaps with documented corrective actions, owners, and due dates tied to findings",
+      "Archive findings without action once the audit report is published",
+      "Convert all findings into low-priority risks automatically",
+      "Delay remediation until the next annual audit cycle"
+    ],
+    "correctIndex": 0,
+    "explanation": "Audit remediation focuses on correcting identified deficiencies through accountable and traceable action plans.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/concept/policy-and-compliance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 66,
+    "prompt": "Which remediation workflow design most improves audit finding closure rates?",
+    "choices": [
+      "Use tasks with clear ownership, evidence requirements, milestone tracking, and escalation rules",
+      "Assign all findings to one generic compliance group",
+      "Allow remediation tasks to close without supporting evidence",
+      "Track remediation in offline spreadsheets only"
+    ],
+    "correctIndex": 0,
+    "explanation": "Structured, accountable tasks with evidence and escalation drive consistent and timely remediation outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk/concept/risk-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/task-table/concept/task-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 67,
+    "prompt": "How should control owners prioritize audit remediation efforts?",
+    "choices": [
+      "Prioritize by business impact, regulatory exposure, and likelihood of recurrence",
+      "Prioritize by which findings are easiest to close first",
+      "Prioritize only by age of the finding",
+      "Prioritize findings based on report page order"
+    ],
+    "correctIndex": 0,
+    "explanation": "Risk-based prioritization ensures the most consequential control failures are remediated first.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk/concept/risk-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/concept/policy-and-compliance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 68,
+    "prompt": "Which evidence package best supports validation of completed audit remediation?",
+    "choices": [
+      "Updated control records, test results, implementation proof, and approver sign-off",
+      "A verbal confirmation from the control owner",
+      "A screenshot of the finding list",
+      "An email saying remediation is complete without attachments"
+    ],
+    "correctIndex": 0,
+    "explanation": "Auditable closure requires traceable evidence that corrective changes were implemented and validated.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/concept/policy-and-compliance.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 69,
+    "prompt": "Which KPI best indicates a mature audit remediation program?",
+    "choices": [
+      "Lower repeat findings with faster closure of high-risk issues and verified control effectiveness",
+      "Higher number of open findings each quarter",
+      "More overdue remediation tasks",
+      "Fewer documented control tests"
+    ],
+    "correctIndex": 0,
+    "explanation": "Maturity is reflected by reducing recurring issues and resolving material gaps quickly with validated controls.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 65,
+    "prompt": "What is the primary purpose of war room operations during a high-severity security incident?",
+    "choices": [
+      "Coordinate cross-functional responders in real time using a shared timeline, decisions, and action ownership",
+      "Limit communication to one analyst to reduce message volume",
+      "Pause all containment actions until a final root cause is known",
+      "Track decisions outside the incident record to preserve flexibility"
+    ],
+    "correctIndex": 0,
+    "explanation": "War room operations align stakeholders and actions quickly to contain and recover from major security incidents.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/major-incident-management/concept/major-incident-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 66,
+    "prompt": "Which role is most important to assign explicitly in SIR war room operations?",
+    "choices": [
+      "An incident commander responsible for prioritization, decision cadence, and escalation",
+      "A rotating note-taker with no authority",
+      "Only technical analysts with identical responsibilities",
+      "A procurement approver for all containment actions"
+    ],
+    "correctIndex": 0,
+    "explanation": "An incident commander provides clear authority and coordination across response teams.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/major-incident-management/concept/major-incident-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 67,
+    "prompt": "What communication model best supports effective SIR war room execution?",
+    "choices": [
+      "Time-boxed update intervals with structured status, blockers, and next actions",
+      "Continuous unstructured chat without decision summaries",
+      "Email-only communication with end-of-day status notes",
+      "Silence until containment is fully complete"
+    ],
+    "correctIndex": 0,
+    "explanation": "Structured cadence prevents confusion and keeps responders aligned on immediate priorities.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/collaboration/concept/collaboration-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 68,
+    "prompt": "How should SIR teams handle conflicting containment recommendations in a war room?",
+    "choices": [
+      "Use impact-based decision criteria, document trade-offs, and record the approved action with owner",
+      "Apply all recommendations simultaneously without validation",
+      "Wait for unanimous agreement before any action",
+      "Let the loudest stakeholder decide"
+    ],
+    "correctIndex": 0,
+    "explanation": "Decision traceability and impact-based criteria reduce risk while preserving accountability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/respond-security-incident.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/task-table/concept/task-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 69,
+    "prompt": "Which metric best reflects war room effectiveness for security incidents?",
+    "choices": [
+      "Reduced time to containment and clear ownership completion rates for critical response tasks",
+      "Higher number of participants invited to calls",
+      "Longer discussion duration per meeting",
+      "Increased volume of unassigned tasks"
+    ],
+    "correctIndex": 0,
+    "explanation": "Effective war rooms shorten containment timelines and drive accountable execution of critical work.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 65,
+    "prompt": "What is the main value of service health monitoring in Service Mapping operations?",
+    "choices": [
+      "Surface service-impacting CI degradation quickly using business service context and dependency relationships",
+      "Track only server CPU metrics outside service context",
+      "Replace event and incident processes entirely",
+      "Focus exclusively on historical monthly reports"
+    ],
+    "correctIndex": 0,
+    "explanation": "Service health is most useful when technical signals are tied to business services and dependencies.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 66,
+    "prompt": "Which prerequisite most improves confidence in service health views?",
+    "choices": [
+      "Accurate CI relationships and maintained service maps in the CMDB",
+      "A large number of custom dashboard colors",
+      "Manual weekly map redraws in presentation tools",
+      "Suppressing all warning-level events"
+    ],
+    "correctIndex": 0,
+    "explanation": "Reliable service health depends on trustworthy map topology and CI relationship accuracy.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/cmdb-landing.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 67,
+    "prompt": "How should teams handle noisy health indicators that trigger frequent false service degradation?",
+    "choices": [
+      "Tune thresholds and event rules using historical incident validation and service impact criteria",
+      "Disable service health indicators for all services",
+      "Escalate every warning to critical severity",
+      "Ignore recurring alerts during business hours"
+    ],
+    "correctIndex": 0,
+    "explanation": "Threshold and rule tuning aligned to real impact improves health signal quality.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/task/t_ConfigureEventRules.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 68,
+    "prompt": "What operating practice best supports proactive service health management?",
+    "choices": [
+      "Use daily health review with ownership assignments for recurring degradations and map quality issues",
+      "Review service health only after outages occur",
+      "Assign all health tasks to one platform admin",
+      "Measure health solely by event volume"
+    ],
+    "correctIndex": 0,
+    "explanation": "Regular review and clear ownership help teams prevent repeat degradations before outages occur.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_MonitorServiceHealth.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/task-table/concept/task-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 69,
+    "prompt": "Which KPI set best demonstrates improvement in service health operations?",
+    "choices": [
+      "Lower duration of degraded service states and fewer repeat dependency-driven incidents",
+      "Higher count of health widgets per dashboard",
+      "More manually edited CI relationship records",
+      "Greater number of services marked critical by default"
+    ],
+    "correctIndex": 0,
+    "explanation": "Operational health gains are reflected by faster recovery and reduced recurrence of dependency-related impact.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  }
+]

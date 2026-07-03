@@ -1,0 +1,402 @@
+[
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 10,
+    "prompt": "In Vendor Risk Management, what is the primary purpose of using questionnaires?",
+    "choices": [
+      "Replace all contract reviews",
+      "Collect structured control evidence from vendors against defined risk domains",
+      "Close vendor risks without analysis",
+      "Generate invoices for assessments"
+    ],
+    "correctIndex": 1,
+    "explanation": "Questionnaires standardize evidence collection and help compare vendor controls consistently.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/create-vendor-questionnaires.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 11,
+    "prompt": "Which questionnaire design choice improves response quality in TPRM?",
+    "choices": [
+      "Use only open-text questions for all sections",
+      "Map questions to clear control statements and expected evidence types",
+      "Avoid conditional branching",
+      "Send the same questionnaire to every vendor category"
+    ],
+    "correctIndex": 1,
+    "explanation": "Control-mapped questions with evidence expectations make submissions clearer and easier to score.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/design-vendor-risk-questionnaire.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 12,
+    "prompt": "A team wants shorter assessments for low-risk suppliers. What should they configure?",
+    "choices": [
+      "Disable questionnaires entirely",
+      "Use tier-based questionnaire templates with scoped sections by vendor risk level",
+      "Require full audits for all suppliers",
+      "Manually rewrite each questionnaire before sending"
+    ],
+    "correctIndex": 1,
+    "explanation": "Tiered templates scale assessment depth according to inherent vendor risk and business criticality.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/concept/vendor-assessment-templates.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 13,
+    "prompt": "What is the best follow-up when a vendor provides incomplete questionnaire responses?",
+    "choices": [
+      "Mark all unanswered controls as compliant",
+      "Close the assessment and wait for renewal",
+      "Initiate remediation or clarification tasks tied to unanswered or weak controls",
+      "Delete the questionnaire instance"
+    ],
+    "correctIndex": 2,
+    "explanation": "Incomplete or weak responses require tracked follow-up to close evidence gaps before risk acceptance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/review-vendor-assessment-results.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 14,
+    "prompt": "How should organizations handle recurring annual vendor questionnaires?",
+    "choices": [
+      "Recreate every assessment manually",
+      "Automate reassessment schedules and reuse approved templates with updated control content",
+      "Skip reassessments if no incidents occurred",
+      "Assess only vendors that changed legal name"
+    ],
+    "correctIndex": 1,
+    "explanation": "Scheduled reassessments with maintained templates improve consistency and reduce operational overhead.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/schedule-vendor-reassessments.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 10,
+    "prompt": "What is the main goal of vulnerability prioritization in VR?",
+    "choices": [
+      "Sort findings by import date only",
+      "Focus remediation on vulnerabilities with highest combined technical and business risk",
+      "Assign all vulnerabilities to one team",
+      "Close medium findings automatically"
+    ],
+    "correctIndex": 1,
+    "explanation": "Prioritization combines severity, exploitability, and asset criticality to direct limited remediation capacity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/concept/vulnerability-prioritization.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 11,
+    "prompt": "Which factor most improves prioritization accuracy for vulnerability items?",
+    "choices": [
+      "Asset business criticality and exposure context",
+      "Analyst shift schedule",
+      "Number of dashboard tabs",
+      "Alphabetical ordering by vulnerability ID"
+    ],
+    "correctIndex": 0,
+    "explanation": "Technical severity alone is insufficient; business context clarifies operational risk and urgency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/task/configure-risk-scoring.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 12,
+    "prompt": "How do threat intelligence signals influence VR prioritization?",
+    "choices": [
+      "They are ignored if CVSS is available",
+      "They increase urgency when vulnerabilities are known exploited or actively targeted",
+      "They replace remediation workflows",
+      "They remove need for asset ownership data"
+    ],
+    "correctIndex": 1,
+    "explanation": "Known exploitation data can elevate remediation urgency beyond base severity values.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/concept/threat-intelligence-integration.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 13,
+    "prompt": "A security manager needs repeatable triage outcomes. What should be implemented?",
+    "choices": [
+      "Ad hoc analyst decisions for each item",
+      "Risk-based assignment rules and defined SLAs by priority level",
+      "Single priority for all findings",
+      "Manual ticket routing through email"
+    ],
+    "correctIndex": 1,
+    "explanation": "Rules and SLA targets create consistent prioritization and measurable execution discipline.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/task/create-vulnerability-sla-definitions.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 14,
+    "prompt": "What is a common anti-pattern in vulnerability prioritization?",
+    "choices": [
+      "Considering internet exposure in scoring",
+      "Incorporating exploit intelligence",
+      "Using business service context",
+      "Prioritizing solely by scanner severity without business impact weighting"
+    ],
+    "correctIndex": 3,
+    "explanation": "Severity-only sorting often misses true operational risk and can misallocate remediation effort.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/concept/risk-based-vulnerability-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 10,
+    "prompt": "When a support center begins using CSM, what operational benefit is usually realized first?",
+    "choices": [
+      "Case ownership, routing, and status visibility become standardized",
+      "All customer issues auto-resolve",
+      "HR tasks merge into customer cases by default",
+      "CMDB discovery stops creating records"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using CSM introduces structured case workflows and clearer accountability for service operations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/using-csm-for-case-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 11,
+    "prompt": "Which CSM feature supports consistent handling of repetitive customer issues?",
+    "choices": [
+      "Catalog item depreciation",
+      "Template-based case creation and playbook-style workflows",
+      "Asset disposal rules",
+      "Manual free-form case states"
+    ],
+    "correctIndex": 1,
+    "explanation": "Templates and guided workflows help agents execute recurring work with fewer errors and faster handoffs.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/configure-case-templates.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 12,
+    "prompt": "Why is omnichannel interaction capture valuable when using CSM?",
+    "choices": [
+      "It separates customer context across channels",
+      "It preserves a unified timeline of customer engagement for better resolution continuity",
+      "It replaces entitlement rules",
+      "It prevents knowledge article use"
+    ],
+    "correctIndex": 1,
+    "explanation": "A consolidated interaction history reduces duplicate questioning and improves handoffs across teams.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/concept/omnichannel-customer-engagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 13,
+    "prompt": "A manager wants to reduce escalations after adopting CSM. Which action is best?",
+    "choices": [
+      "Define clear escalation criteria and automate routing to specialized queues",
+      "Route all cases to a single generic group",
+      "Disable priority fields on cases",
+      "Require phone-only support"
+    ],
+    "correctIndex": 0,
+    "explanation": "Structured escalation rules ensure critical issues reach the right specialists quickly.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/configure-case-escalation-rules.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 14,
+    "prompt": "What indicator shows that teams are effectively using CSM knowledge deflection?",
+    "choices": [
+      "Rising case reopen rate",
+      "Higher percentage of self-service resolutions before case creation",
+      "More manual routing overrides",
+      "Longer average first response time"
+    ],
+    "correctIndex": 1,
+    "explanation": "Successful adoption includes increased self-service completion and reduced avoidable case volume.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/measure-self-service-effectiveness.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 10,
+    "prompt": "In FSM scheduling, what is the primary value of defining technician skills?",
+    "choices": [
+      "To suppress work order creation",
+      "To match work order tasks with qualified resources during assignment",
+      "To disable route optimization",
+      "To convert cases into incidents automatically"
+    ],
+    "correctIndex": 1,
+    "explanation": "Skill profiles help ensure tasks are assigned to technicians who can successfully complete the work.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/configure-technician-skills.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 11,
+    "prompt": "Why are service territories important in field scheduling?",
+    "choices": [
+      "They determine payroll taxes only",
+      "They group agents by UI role",
+      "They define geographic assignment boundaries for efficient dispatching",
+      "They replace customer accounts"
+    ],
+    "correctIndex": 2,
+    "explanation": "Territories constrain assignment regions and improve schedule efficiency and travel outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/concept/service-territories.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 12,
+    "prompt": "What scheduling input most directly supports realistic appointment commitments?",
+    "choices": [
+      "Estimated task duration and customer availability windows",
+      "Technician favorite job type",
+      "Last dashboard refresh time",
+      "Count of open incidents"
+    ],
+    "correctIndex": 0,
+    "explanation": "Duration estimates and availability windows are core constraints used to produce feasible schedules.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/schedule-work-orders.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 13,
+    "prompt": "A dispatcher needs to reduce travel overhead. Which FSM capability should be emphasized?",
+    "choices": [
+      "Manual first-come assignment only",
+      "Territory and route-aware scheduling optimization",
+      "Disabling appointment slots",
+      "Assigning all work to one technician"
+    ],
+    "correctIndex": 1,
+    "explanation": "Optimization features account for geography and routing constraints to reduce unnecessary travel time.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/concept/optimization-for-dispatch.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 14,
+    "prompt": "What is a key reason to include buffer time in scheduling policies?",
+    "choices": [
+      "To lower technician utilization to zero",
+      "To absorb real-world variation and avoid cascading delays across appointments",
+      "To prevent work notes from being entered",
+      "To remove SLA tracking"
+    ],
+    "correctIndex": 1,
+    "explanation": "Reasonable buffers improve reliability when jobs overrun due to access, parts, or complexity issues.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/configure-scheduling-policies.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 10,
+    "prompt": "In HRSD, why are HR case categories and topics configured?",
+    "choices": [
+      "To sort vulnerabilities by CVSS score",
+      "To classify requests for routing, reporting, and fulfillment consistency",
+      "To replace employee profiles",
+      "To disable SLA tracking"
+    ],
+    "correctIndex": 1,
+    "explanation": "Case categorization enables accurate assignment logic and better service analytics.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/configure-hr-case-categories.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 11,
+    "prompt": "What does proper case assignment in HRSD help prevent?",
+    "choices": [
+      "Cross-functional collaboration",
+      "Access control enforcement",
+      "Delayed handling caused by misrouted sensitive HR requests",
+      "Employee self-service adoption"
+    ],
+    "correctIndex": 2,
+    "explanation": "Accurate routing reduces transfer delays and protects confidentiality by directing work to the right HR groups.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/configure-hr-assignment-rules.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 12,
+    "prompt": "Which HR case feature supports consistent employee communications?",
+    "choices": [
+      "Structured templates and activity timelines on case records",
+      "Free-form case records with no status model",
+      "Manual notes stored outside the platform",
+      "Disabled notifications"
+    ],
+    "correctIndex": 0,
+    "explanation": "Templates and timeline visibility improve communication quality and auditability of HR interactions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/concept/hr-case-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 13,
+    "prompt": "A compliance lead needs better oversight of employee requests. Which HRSD metric is most useful?",
+    "choices": [
+      "Average time to resolve HR cases by service type",
+      "Number of vulnerable CIs",
+      "Technician travel distance",
+      "Count of discovery schedules"
+    ],
+    "correctIndex": 0,
+    "explanation": "Resolution trend metrics by case type help identify process bottlenecks and policy compliance issues.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/report-on-hr-cases.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 14,
+    "prompt": "What is a common best practice for handling confidential HR case notes?",
+    "choices": [
+      "Share all notes broadly for transparency",
+      "Use role-based access and case security controls to restrict sensitive detail visibility",
+      "Export all notes to public knowledge",
+      "Disable audit history for private fields"
+    ],
+    "correctIndex": 1,
+    "explanation": "HR cases often include sensitive information and require strict visibility controls and traceability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/protect-sensitive-hr-data.html"
+    ]
+  }
+]

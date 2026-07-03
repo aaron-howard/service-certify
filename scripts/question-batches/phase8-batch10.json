@@ -1,0 +1,402 @@
+[
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 50,
+    "prompt": "Which report is most useful for executive oversight in TPRM?",
+    "choices": [
+      "A dashboard showing vendor tier, open findings, and residual risk trends",
+      "A list of vendor logos by business unit",
+      "A report of inactive user accounts only",
+      "A single monthly screenshot of one assessment"
+    ],
+    "correctIndex": 0,
+    "explanation": "Executives need risk exposure and trend visibility across vendor populations and criticality tiers.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/vendor-risk-management/task/report-on-vendor-risk.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 51,
+    "prompt": "What TPRM metric best reflects remediation execution quality?",
+    "choices": [
+      "Number of vendor phone calls per week",
+      "Percentage of overdue vendor issues by criticality",
+      "Total contract page count",
+      "Count of archived questionnaires"
+    ],
+    "correctIndex": 1,
+    "explanation": "Overdue issues by severity reveal whether high-impact risk findings are being resolved on time.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/vendor-risk-management/task/manage-vendor-issues.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 52,
+    "prompt": "How should TPRM reporting distinguish inherent vs residual risk?",
+    "choices": [
+      "Combine both into one score with no context",
+      "Show both values and the control impact that reduced risk",
+      "Report residual risk only for low-tier vendors",
+      "Remove scoring for easier adoption"
+    ],
+    "correctIndex": 1,
+    "explanation": "Displaying both scores clarifies risk treatment effectiveness and control coverage outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/risk-management/concept/risk-scoring.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 53,
+    "prompt": "What is the best reporting approach for upcoming reassessment workload?",
+    "choices": [
+      "Track only completed assessments",
+      "Use forward-looking reports of reassessments due by date and vendor tier",
+      "Suppress due dates to avoid escalations",
+      "Limit planning to annual meetings"
+    ],
+    "correctIndex": 1,
+    "explanation": "Due-date and tier-based forecasting enables proactive staffing and timely reassessment cycles.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/vendor-risk-management/task/schedule-vendor-assessments.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 54,
+    "prompt": "Which data governance action improves TPRM report reliability?",
+    "choices": [
+      "Allow free-form criticality values per analyst",
+      "Standardize taxonomy for vendor criticality, issue status, and control domains",
+      "Delete historical risk snapshots quarterly",
+      "Report only on new vendors"
+    ],
+    "correctIndex": 1,
+    "explanation": "Standardized data definitions reduce interpretation drift and improve cross-report consistency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 50,
+    "prompt": "Which KPI is most important for measuring VR program effectiveness?",
+    "choices": [
+      "Average vulnerability age by severity",
+      "Total number of open incidents",
+      "Count of software catalog items",
+      "Number of CMDB classes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Vulnerability age by severity indicates whether serious issues are being remediated within expected timelines.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/report-on-vulnerability-risk.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 51,
+    "prompt": "What metric best tracks remediation throughput in VR?",
+    "choices": [
+      "Ratio of vulnerabilities closed versus opened per period",
+      "Number of scanner integrations configured",
+      "Count of assignment groups",
+      "Volume of security announcements read"
+    ],
+    "correctIndex": 0,
+    "explanation": "Close-to-open ratios show whether remediation capacity keeps pace with newly discovered risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/use-performance-analytics-for-vr.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 52,
+    "prompt": "Why segment VR metrics by business service or application?",
+    "choices": [
+      "To hide infrastructure vulnerabilities",
+      "To identify concentration of risk and ownership hotspots",
+      "To avoid assigning remediation tasks",
+      "To remove CI dependency mapping"
+    ],
+    "correctIndex": 1,
+    "explanation": "Service-level segmentation reveals where risk accumulates and which owners need attention.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/prioritize-vulnerabilities-by-business-context.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 53,
+    "prompt": "Which metric helps validate SLA policy realism in VR?",
+    "choices": [
+      "Percentage of vulnerabilities meeting SLA by severity class",
+      "Number of users with admin role",
+      "Count of dashboard tabs",
+      "Frequency of weekly standups"
+    ],
+    "correctIndex": 0,
+    "explanation": "SLA attainment by severity highlights whether policy targets are achievable and being enforced.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/service-level-management/concept/c_ServiceLevelManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 54,
+    "prompt": "What visualization is best for showing VR risk reduction over time?",
+    "choices": [
+      "Pie chart of scanner names",
+      "Trend of open critical/high vulnerabilities with closure velocity overlays",
+      "Table of inactive users",
+      "Single value showing total CI count"
+    ],
+    "correctIndex": 1,
+    "explanation": "Time-based trends plus closure velocity provide context on whether risk posture is improving.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 50,
+    "prompt": "Which analytics focus is most valuable for CSM leadership?",
+    "choices": [
+      "Case resolution time and customer satisfaction by account segment",
+      "Number of background scripts executed",
+      "Quantity of UI policy records",
+      "Count of archived knowledge attachments"
+    ],
+    "correctIndex": 0,
+    "explanation": "Resolution efficiency and satisfaction by segment show service outcomes and account experience quality.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/task/analyze-customer-service-performance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 51,
+    "prompt": "Why should CSM analytics include first-contact resolution rate?",
+    "choices": [
+      "It replaces all SLA metrics",
+      "It indicates efficiency of triage, knowledge usage, and agent enablement",
+      "It measures contract value only",
+      "It tracks procurement cycle time"
+    ],
+    "correctIndex": 1,
+    "explanation": "Higher first-contact resolution generally reflects effective routing and knowledge-driven support.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/case-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 52,
+    "prompt": "What is the best way to analyze backlog risk in CSM?",
+    "choices": [
+      "Track open case age buckets by priority and entitlement tier",
+      "Count only closed cases each month",
+      "Ignore escalated cases in reporting",
+      "Use random weekly samples without trends"
+    ],
+    "correctIndex": 0,
+    "explanation": "Age distribution by priority and entitlement reveals where backlog threatens commitments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 53,
+    "prompt": "Which analytic outcome supports proactive service improvement in CSM?",
+    "choices": [
+      "Recurring case drivers mapped to product, account, and channel",
+      "List of users with dark mode enabled",
+      "Count of inactive templates",
+      "Manual notes with no categorization"
+    ],
+    "correctIndex": 0,
+    "explanation": "Driver analysis identifies systemic issues and informs targeted deflection or product fixes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/task/use-case-analytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 54,
+    "prompt": "What governance practice improves trust in CSM analytics?",
+    "choices": [
+      "Allow every team to define metrics differently",
+      "Maintain standardized KPI definitions and shared calculation logic",
+      "Change dashboard formulas weekly",
+      "Exclude data quality checks"
+    ],
+    "correctIndex": 1,
+    "explanation": "Consistent metric definitions ensure comparability and reliable decision-making.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 50,
+    "prompt": "In FSM, what is the purpose of work order tasks?",
+    "choices": [
+      "To fragment one job into untracked notes",
+      "To define ordered, assignable steps required to complete a work order",
+      "To replace all inventory records",
+      "To bypass technician dispatching"
+    ],
+    "correctIndex": 1,
+    "explanation": "Work order tasks provide structured execution and accountability at the step level.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/manage-work-orders.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 51,
+    "prompt": "Which design improves consistency for recurring field jobs?",
+    "choices": [
+      "Use standardized task templates tied to work order type",
+      "Create tasks ad hoc for every technician",
+      "Store tasks in external spreadsheets",
+      "Avoid mandatory task sequencing"
+    ],
+    "correctIndex": 0,
+    "explanation": "Task templates enforce repeatable quality and reduce dispatch variation for similar jobs.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/configure-work-order-templates.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 52,
+    "prompt": "What should happen when a prerequisite work order task is incomplete?",
+    "choices": [
+      "Downstream tasks proceed regardless",
+      "Dependent tasks remain blocked until prerequisite completion is confirmed",
+      "Work order auto-closes immediately",
+      "Dispatch reassigns all tasks randomly"
+    ],
+    "correctIndex": 1,
+    "explanation": "Dependency controls prevent unsafe or invalid execution sequences in field operations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/manage-task-dependencies.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 53,
+    "prompt": "Which metric best evaluates work order task execution quality?",
+    "choices": [
+      "Task completion time variance versus planned duration",
+      "Number of profile image uploads",
+      "Count of active browser sessions",
+      "Total email signatures used"
+    ],
+    "correctIndex": 0,
+    "explanation": "Planned-versus-actual variance highlights estimate quality and process performance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/report-on-work-order-performance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 54,
+    "prompt": "What is the best way to capture completion evidence for work order tasks?",
+    "choices": [
+      "Use task closure criteria including required fields, notes, and proof artifacts",
+      "Allow closure with empty mandatory fields",
+      "Record completion status verbally only",
+      "Delete failed task attempts"
+    ],
+    "correctIndex": 0,
+    "explanation": "Structured closure criteria create auditable outcomes and improve downstream billing and compliance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/close-work-order-tasks.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 50,
+    "prompt": "In HRSD, what is the key benefit of document generation?",
+    "choices": [
+      "Automatically producing policy-compliant documents from approved templates and case data",
+      "Replacing all HR approvals with attachments",
+      "Disabling employee data validation",
+      "Avoiding use of HR services"
+    ],
+    "correctIndex": 0,
+    "explanation": "Template-driven generation increases consistency, compliance, and processing speed.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-hr-service-delivery/page/product/human-resources/task/generate-hr-documents.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 51,
+    "prompt": "Which control is most important for HR document generation templates?",
+    "choices": [
+      "No versioning so edits are immediate",
+      "Template governance with approval and version control",
+      "Open edit permissions for all employees",
+      "Manual merge fields in every case"
+    ],
+    "correctIndex": 1,
+    "explanation": "Versioned, approved templates reduce legal and policy risk in generated HR documents.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/knowledge-management/concept/knowledge-versioning.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 52,
+    "prompt": "What should be validated before generating a sensitive HR document?",
+    "choices": [
+      "Only case number format",
+      "Required employee data, approver authorization, and jurisdictional policy rules",
+      "Agent UI theme preference",
+      "Count of open incidents"
+    ],
+    "correctIndex": 1,
+    "explanation": "Pre-generation validation prevents inaccurate or non-compliant document output.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-hr-service-delivery/page/product/human-resources/task/configure-hr-criteria.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 53,
+    "prompt": "Which metric best tracks HR document generation reliability?",
+    "choices": [
+      "Document generation success rate without manual correction",
+      "Total number of browser bookmarks",
+      "Number of archived user sessions",
+      "Frequency of dashboard refreshes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Success without rework indicates template quality and data readiness.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 54,
+    "prompt": "How should generated HR documents be managed post-creation?",
+    "choices": [
+      "Store with controlled access and audit trail linked to the HR case",
+      "Email publicly to all department members",
+      "Delete immediately after printing",
+      "Save outside the platform without metadata"
+    ],
+    "correctIndex": 0,
+    "explanation": "Controlled storage with case linkage protects confidentiality and supports audits.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/security/concept/c_AccessControls.html"
+    ]
+  }
+]
