@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 55,
+		"prompt": "Legal requires vendors to upload signed policies instead of answering multiple-choice control questions. Which template type should the TPR manager configure?",
+		"choices": [
+			"Document request template linked to the external assessment workflow",
+			"Problem task template used by the IT service desk for root cause analysis",
+			"Change model template that enforces emergency approval paths",
+			"Knowledge article template for internal employee self-service content"
+		],
+		"correctIndex": 0,
+		"explanation": "Document request templates collect file-based evidence such as policies and attestations alongside or instead of scored questionnaires.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-create-assessment.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 56,
+		"prompt": "A questionnaire requires vendor attestation with a captured signature before submission. What must be enabled on the template?",
+		"choices": [
+			"E-signature requirement on the questionnaire or document request before submit",
+			"Automatic closure of all related issues when the assessment opens",
+			"Mandatory attachment of employee performance reviews for each contact",
+			"Conversion of the assessment into a standard change record"
+		],
+		"correctIndex": 0,
+		"explanation": "Questionnaires configured for e-signature require the vendor or reviewer to save and sign before the assessment can be submitted.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-ws-approve-with-e-sig.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 57,
+		"prompt": "Before sending a full control questionnaire, the team runs a lightweight survey to determine vendor tier. Which assessment type fits that step?",
+		"choices": [
+			"Tiering assessment on sn_vdr_risk_asmt_vdr_tiering_assessment",
+			"Internal assessment extension used exclusively for HR background checks",
+			"Discovery status record tracking subnet scan completion",
+			"Financial planning allocation row for capital project budgeting"
+		],
+		"correctIndex": 0,
+		"explanation": "Tiering assessments determine inherent risk tier before deeper external or internal assessments are triggered.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 58,
+		"prompt": "A reporting analyst needs to list all external third-party risk assessments in a ServiceNow report. Which table should the report query?",
+		"choices": [
+			"Third-party Risk Assessment table sn_vdr_risk_asmt_assessment",
+			"Incident table incident with priority less than three filter",
+			"Contract table ast_contract showing hardware lease terms",
+			"User table sys_user filtered by internal employee flag"
+		],
+		"correctIndex": 0,
+		"explanation": "External third-party assessments are stored on sn_vdr_risk_asmt_assessment, the primary table for assessment reporting.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 59,
+		"prompt": "The vendor and assessor finish questionnaire review in the third-party portal. Who typically drives final assessment closure on the internal side?",
+		"choices": [
+			"TPR assessor with sn_vdr_risk_asmt.vendor_assessor working through closure steps",
+			"Catalog administrator with catalog_admin role exclusive to service catalog",
+			"Discovery operator with discovery_admin updating CI classification",
+			"Knowledge manager with kb_knowledge_manager publishing articles only"
+		],
+		"correctIndex": 0,
+		"explanation": "TPR assessors manage third-party assessments and collaborate with vendors in the portal until the assessment is closed.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-create-assessment.html"
+		]
+	}
+]

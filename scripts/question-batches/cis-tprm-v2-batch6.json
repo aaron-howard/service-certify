@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 25,
+		"prompt": "Which TPRM property controls whether assessors can answer or edit questionnaire responses on behalf of third-party contacts?",
+		"choices": [
+			"sn_svdp.allow_assessor_edit property with values answer, edit, or false for assessor response permissions",
+			"glide.security.strict_login property requiring multi-factor authentication for all internal platform users",
+			"com.snc.change_management.auto_close property automatically closing approved change requests after deployment",
+			"discovery.max_concurrent_jobs property limiting parallel network scan tasks on the discovery engine"
+		],
+		"correctIndex": 0,
+		"explanation": "The allow_assessor_edit property determines whether TPR assessors can enter or modify questionnaire responses on behalf of external contacts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-properties-configure.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 26,
+		"prompt": "An administrator wants to reuse prior questionnaire responses when creating a new assessment for the same vendor. Which property defines the maximum age for response reuse?",
+		"choices": [
+			"sn_tprm_dd.max_age_for_questionnaire_reuse property specifying the maximum age in days for pre-populating responses",
+			"glide.ui.autoclose.time property controlling how long inactive browser sessions remain open on the platform",
+			"com.snc.sla.default_duration property setting baseline service level agreement timers on task records",
+			"discovery.schedule.interval property defining how frequently network scan jobs execute on target subnets"
+		],
+		"correctIndex": 0,
+		"explanation": "The max_age_for_questionnaire_reuse property sets how far back TPRM searches for closed assessment responses to pre-populate new questionnaires.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-properties-configure.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 27,
+		"prompt": "Risk intelligence scores from external providers are stored and linked to third parties. How can these scores influence ongoing vendor oversight?",
+		"choices": [
+			"Event-driven management rules trigger reassessments or create issues when intelligence ratings change materially",
+			"Scores permanently lock the vendor tier and prevent any manual reassessment for the contract duration",
+			"Scores convert directly into hardware asset depreciation values on the procurement finance ledger",
+			"Scores route all vendor communications through the employee HR self-service catalog portal exclusively"
+		],
+		"correctIndex": 0,
+		"explanation": "Risk intelligence scores feed event-driven rules that can launch reassessments, generate issues, and notify stakeholders when ratings shift.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-riskintelprvdr-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 28,
+		"prompt": "Which table tracks the execution history of event-driven management rules triggered by risk intelligence or monitoring signals?",
+		"choices": [
+			"Event-driven management history (sn_tprm_dd_rule_execution_history) logging rule execution outcomes",
+			"Incident (incident) capturing IT service disruption tickets from internal employee submissions",
+			"Change Request (change_request) tracking infrastructure deployment approval workflow progress",
+			"Sys audit (sys_audit) recording field-level changes on unrelated platform configuration tables"
+		],
+		"correctIndex": 0,
+		"explanation": "Event-driven management history records each rule execution triggered by monitoring signals or risk intelligence rating changes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 29,
+		"prompt": "A TPRM team wants engagement-level risk scores calculated from assessment results using configurable logic. Which record type defines this scoring?",
+		"choices": [
+			"Engagement risk scoring rule (sn_vdr_risk_asmt_engagement_risk_scoring_rule) defining score calculation logic",
+			"Discovery schedule (discovery_schedule) controlling network scan frequency on target IP address ranges",
+			"SLA definition (contract_sla) setting response timers on internal employee service desk tickets",
+			"Catalog item (sc_cat_item) publishing employee-facing service request forms on the internal portal"
+		],
+		"correctIndex": 0,
+		"explanation": "Engagement risk scoring rules define how assessment ratings and other inputs combine to produce engagement-level risk scores.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	}
+]

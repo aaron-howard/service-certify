@@ -1,0 +1,85 @@
+[
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 35,
+		"prompt": "Which assessment type determines the inherent risk tier of a third party before full due diligence questionnaires are sent?",
+		"choices": [
+			"Tiering assessment (sn_vdr_risk_asmt_vdr_tiering_assessment) scoring inherent risk to assign vendor tiers",
+			"Discovery assessment scanning vendor network segments to populate CMDB configuration item records",
+			"Vulnerability assessment importing CVE findings from external security scanner vendor integrations",
+			"Employee satisfaction survey collecting internal staff feedback on workplace facility amenities"
+		],
+		"correctIndex": 0,
+		"explanation": "Tiering assessments evaluate inherent risk indicators and assign tiers that determine assessment depth, cadence, and monitoring intensity.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 36,
+		"prompt": "An organization uses the Inherent Risk Questionnaire (IRQ) as part of due diligence. What is the IRQ designed to accomplish?",
+		"choices": [
+			"Gather engagement details to score inherent risk and determine the appropriate assessment tier and depth",
+			"Replace all external vendor questionnaires with a one-time internal employee satisfaction survey",
+			"Scan vendor network infrastructure and automatically populate CMDB configuration item records",
+			"Convert vendor company records into hardware assets with assigned depreciation schedule categories"
+		],
+		"correctIndex": 0,
+		"explanation": "The Inherent Risk Questionnaire collects engagement information used to calculate inherent risk scores and assign vendor tiering before full assessments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-requesting-tpr-due-diligence.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 37,
+		"prompt": "Which record type defines reusable questionnaire structures that can be attached to multiple TPRM assessments?",
+		"choices": [
+			"Questionnaire template (asmt_metric_type) with categories, metrics, and scoring parameters",
+			"Incident template (sysevent_register) predefining IT service disruption ticket field defaults",
+			"Change template (std_change_record_producer) standardizing infrastructure deployment request forms",
+			"Standard change producer (std_change_record_producer) templating infrastructure deployment request submissions"
+		],
+		"correctIndex": 0,
+		"explanation": "Questionnaire templates define reusable question categories and metrics that TPRM assessments reference for consistent evidence collection.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/create-questionnaire-template.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 38,
+		"questionType": "multi",
+		"prompt": "Which two tables are involved when a TPRM assessment questionnaire is sent to a third-party contact? (Choose two.)",
+		"choices": [
+			"Third-party risk assessment (sn_vdr_risk_asmt_assessment) as the parent assessment record",
+			"Questionnaire instance (asmt_assessment_instance) representing the sent questionnaire to the respondent",
+			"Software asset (alm_asset) tracking licensed application installations across the enterprise CMDB",
+			"Known error (problem) storing documented workarounds for recurring platform configuration defects"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "External assessments are parent records on the assessment table; each sent questionnaire creates an instance record linked to the respondent.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 39,
+		"prompt": "Which table stores reusable assessment configurations that define questionnaires and scoring for recurring vendor evaluations?",
+		"choices": [
+			"Assessment template (sn_vdr_risk_asmt_assessment_template) bundling questionnaires and scoring rules",
+			"Discovery schedule (discovery_schedule) controlling network scan frequency on target IP ranges",
+			"Workflow (wf_workflow) orchestrating unrelated approval chains on procurement requisition records",
+			"Knowledge base (kb_knowledge_base) organizing internal employee self-service documentation articles"
+		],
+		"correctIndex": 0,
+		"explanation": "Assessment templates package questionnaire selections and scoring configuration for repeatable vendor risk evaluations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	}
+]

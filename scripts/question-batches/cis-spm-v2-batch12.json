@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-SPM",
+		"order": 55,
+		"prompt": "Two project tasks must finish before a third task can start. Which dependency type enforces that sequencing rule?",
+		"choices": [
+			"Finish-to-Start predecessor relationship between the tasks",
+			"Start-to-Start link allowing both tasks to begin independently",
+			"Catalog variable dependency on a service request fulfillment",
+			"Resource schedule template overlap for the assigned employee"
+		],
+		"correctIndex": 0,
+		"explanation": "Finish-to-Start dependencies require the predecessor task to complete before the successor task can begin, controlling schedule sequencing.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/project-management/r_EditTasks.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 56,
+		"prompt": "A PMO wants to accelerate new project setup with predefined phases and tasks. Which feature supports that repeatable structure?",
+		"choices": [
+			"Project template applying standard phases and task structures",
+			"Demand workbench bubble chart with weighted scoring criteria",
+			"Rate model assigning contractor hourly charges by role type",
+			"Timecard category for non-project meetings and training hours"
+		],
+		"correctIndex": 0,
+		"explanation": "Project templates provide predefined phases and tasks so teams launch new investments with consistent structure instead of building schedules from scratch.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/project-management/t_CreateAProject.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 57,
+		"prompt": "A project manager records an unresolved obstacle that may affect delivery dates. Which RIDAC record type captures that item?",
+		"choices": [
+			"Issue record tracked alongside risks, decisions, actions, and changes",
+			"Benefit plan breakdown showing forecast monetary return values",
+			"Planning attribute on the employee profile for skill matching",
+			"Idea assessment template scoring portal submissions by category"
+		],
+		"correctIndex": 0,
+		"explanation": "RIDAC encompasses risks, issues, decisions, actions, and change requests; issue records document obstacles that may impact project delivery.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/project-management/ppm-collab-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 58,
+		"prompt": "Before a steering review, the manager saves a schedule snapshot for variance analysis. Which artifact preserves that point-in-time plan?",
+		"choices": [
+			"Schedule baseline capturing task dates at a specific moment",
+			"Expense line classified as operating expenditure on the plan",
+			"Demand state transition from Draft to Submitted intake stage",
+			"Resource assignment soft-booking before funding committee approval"
+		],
+		"correctIndex": 0,
+		"explanation": "Schedule baselines snapshot planned task dates so managers compare current progress against the saved plan to identify variance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/project-workspace/create-project-baselines-in-project-workspace.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 59,
+		"prompt": "Executives request a periodic summary of schedule, cost, and risk status for a project. Which deliverable fulfills that reporting need?",
+		"choices": [
+			"Project status report documenting progress and variance commentary",
+			"Time sheet policy defining approval routing for submitted hours",
+			"Portfolio lens defining the planning perspective for roadmap views",
+			"Rate type record converting planned hours to billing amounts"
+		],
+		"correctIndex": 0,
+		"explanation": "Project status reports consolidate schedule, financial, and risk updates for stakeholders and are managed from the Project Workspace Status Reports page.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/project-workspace/view-status-report-in-project-workspace.html"
+		]
+	}
+]

@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-VR",
+		"order": 40,
+		"prompt": "When imported scan detections fail to correlate to CMDB configuration items, what should VR administrators investigate first?",
+		"choices": [
+			"CI matching rules and identification reconciliation settings on incoming discovery data",
+			"Dashboard widget refresh intervals configured on executive vulnerability summary reports",
+			"Password reset policy mappings for LDAP users in the corporate identity directory",
+			"Incident auto-close timers applied to resolved tickets in the service desk queue"
+		],
+		"correctIndex": 0,
+		"explanation": "Poor CI correlation usually indicates matching rule gaps or reconciliation issues that must be corrected before assignment and remediation can succeed.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/vulnerability-response/map-vulnerabilities-to-cis.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 41,
+		"prompt": "Why do VR teams configure classification rules before assignment rules on high-volume vulnerability entries?",
+		"choices": [
+			"To categorize findings once so downstream rules use direct field matches instead of repeated expensive queries",
+			"To replace all remediation task grouping logic with manual analyst triage queues exclusively",
+			"To bypass CMDB dependency mapping during every third-party scanner import cycle",
+			"To disable vulnerability calculators from evaluating risk scores on vulnerable items"
+		],
+		"correctIndex": 0,
+		"explanation": "Classification rules normalize data at ingestion so assignment and other configurations can reference stable classification values rather than re-evaluating heavy conditions per record.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/vulnerability-response/classification-rules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 42,
+		"prompt": "A VR program must route Linux server findings to the infrastructure team based on classification values. Which rule type should drive that routing?",
+		"choices": [
+			"Vulnerability assignment rules using classification and classification type fields on vulnerable items",
+			"Catalog client scripts that execute when end users submit standard service catalog requests",
+			"Discovery classification probes configured for SNMP-enabled network printer subnets",
+			"HR onboarding workflows that assign employee cases by department and location codes"
+		],
+		"correctIndex": 0,
+		"explanation": "Assignment rules evaluate vulnerable item attributes—including classification values set earlier—to route work to the correct remediation group.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/vulnerability-response/assignment-rules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 43,
+		"prompt": "What do remediation task rules accomplish in Vulnerability Response?",
+		"choices": [
+			"Automatically group vulnerable items into remediation tasks based on shared remediation context and group-by keys",
+			"Import CVE metadata directly from the NVD feed without requiring MID Server connectivity",
+			"Replace assignment rules so every finding routes exclusively to the vulnerability admin persona",
+			"Generate Performance Analytics indicators for CISO dashboard tiles without rule configuration"
+		],
+		"correctIndex": 0,
+		"explanation": "Remediation task rules create actionable task groupings so teams remediate related findings together using consistent ownership and fix patterns.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-task-rules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 44,
+		"prompt": "Remediation target rules calculate planned remediation deadlines from a selected date field on vulnerable items. Which date source is commonly configured?",
+		"choices": [
+			"First detected, last detected, or published date depending on organizational SLA policy",
+			"Scanner UI session login timestamp from the integration service account used for imports",
+			"Last password change date stored on the affected configuration item record in the CMDB",
+			"Change request close code entered by the CAB approver group during post-implementation review"
+		],
+		"correctIndex": 0,
+		"explanation": "Remediation target rules derive due dates from vulnerability lifecycle dates so SLA targets align with when exposure was identified or updated.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-target-rules.html"
+		]
+	}
+]

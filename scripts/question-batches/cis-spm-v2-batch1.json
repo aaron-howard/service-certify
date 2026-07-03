@@ -1,0 +1,86 @@
+[
+	{
+		"trackCode": "CIS-SPM",
+		"order": 0,
+		"questionType": "multi",
+		"prompt": "Which two plugins are included in the PPM Standard plugin bundle for Strategic Portfolio Management? (Choose two.)",
+		"choices": [
+			"Project Portfolio Suite",
+			"Financial Planning",
+			"Hardware Asset Management",
+			"Security Incident Response"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "The PPM Standard bundle includes Project Portfolio Suite and Financial Planning as core SPM foundation plugins.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/strategic-portfolio-management/spm-implementation-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 1,
+		"prompt": "Before go-live, an implementation team must confirm that foundational SPM data and configuration are in place. Which activity best aligns with SPM implementation preparation?",
+		"choices": [
+			"Validate portfolio hierarchy, fiscal periods, and role-based access for SPM personas",
+			"Disable all financial planning tables to reduce upgrade complexity",
+			"Convert every open incident to a demand record for portfolio intake",
+			"Remove resource management plugins to simplify the initial deployment scope"
+		],
+		"correctIndex": 0,
+		"explanation": "SPM implementation preparation includes configuring portfolio structure, fiscal calendars, and persona access before teams begin planning and execution workflows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/strategic-portfolio-management/spm-implementation-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 2,
+		"questionType": "multi",
+		"prompt": "On an expense line, which two Expense type values classify spend as capital or operating expenditure? (Choose two.)",
+		"choices": [
+			"Capex",
+			"Opex",
+			"Revenue",
+			"Depreciation"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Expense lines use the Expense type field with Capex and Opex values to distinguish capital from operating spend in financial planning.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/financial-planning/expense-lines.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 3,
+		"prompt": "A finance analyst needs to distinguish labor charges from vendor invoices when building a cost plan. Which configuration object defines those charge categories?",
+		"choices": [
+			"Cost type records that categorize planned and actual spend",
+			"Demand state definitions that control intake workflow transitions",
+			"Idea assessment templates used during portal submission scoring",
+			"Resource schedule entries that block out employee vacation time"
+		],
+		"correctIndex": 0,
+		"explanation": "Cost types classify financial entries such as labor, hardware, and services so cost plans and expense lines roll up consistently.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/financial-planning/cost-type-and-rate-types.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 4,
+		"prompt": "When rolling up project labor costs, which rate model element converts planned hours into monetary amounts on a cost plan?",
+		"choices": [
+			"Rate type linked to resource roles and currency",
+			"Demand priority matrix tied to strategic objectives",
+			"Idea portal theme configuration for employee submissions",
+			"Time sheet policy that governs weekly hour entry rules"
+		],
+		"correctIndex": 0,
+		"explanation": "Rate types and rate models apply role-based rates to planned or actual hours so financial plans reflect labor cost accurately.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/financial-planning/rate-models.html"
+		]
+	}
+]

@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 65,
+		"prompt": "A vendor contact asks for the URL to access their third-party portal on your instance. Which path suffix should they use?",
+		"choices": [
+			"/svdp appended to the instance base URL for the vendor portal",
+			"/navpage.do as the default internal application navigator",
+			"/now/sow/home for Service Operations Workspace landing",
+			"/api/now/table/incident for unauthenticated REST queries"
+		],
+		"correctIndex": 0,
+		"explanation": "Third-party portal users typically navigate to the instance URL followed by /svdp to reach the vendor collaboration interface.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-add-document-portal.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 66,
+		"prompt": "Which actions can a third-party contact perform from the third-party portal? (Choose two.)",
+		"choices": [
+			"Respond to a Third-party Risk Assessment assigned to their organization",
+			"Manage Third-party Contacts for their company engagement",
+			"Approve internal due diligence requests as TPR manager",
+			"Edit scoring rules on sn_vdr_risk_asmt_vendor_risk_scoring_rule"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"questionType": "multi",
+		"explanation": "Portal contacts complete assigned assessments and maintain their contact roster; approval and scoring configuration remain internal functions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-reference.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 67,
+		"prompt": "A vendor must attach an updated SOC report to an open assessment from outside the corporate network. Where should they upload it?",
+		"choices": [
+			"Third-party portal Documents section linked to the assessment or engagement",
+			"Internal change request attachment tab visible only to CAB members",
+			"Employee Center profile page used for personal preference settings",
+			"Discovery credential store for MID Server authentication secrets"
+		],
+		"correctIndex": 0,
+		"explanation": "The portal supports uploading and managing documents such as policies and compliance evidence tied to assessments and engagements.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-add-document-portal.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 68,
+		"prompt": "A vendor prefers completing a lengthy questionnaire offline and importing answers later. What portal capability supports that workflow?",
+		"choices": [
+			"Download Excel template from the portal, complete offline, then import responses",
+			"Export the CMDB to CSV and merge answers with discovery results",
+			"Clone the assessment record using an internal background script",
+			"Submit answers through the REST Table API using admin credentials"
+		],
+		"correctIndex": 0,
+		"explanation": "Third parties can download spreadsheet templates from the portal, fill them offline, and import completed responses back into the assessment.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-reference.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 69,
+		"prompt": "The primary vendor contact must grant a colleague read access to a uploaded contract in the portal. Which portal feature controls that sharing?",
+		"choices": [
+			"Permissions tab on the document where the primary contact adjusts read and write access",
+			"System property glide.security.administration requiring admin approval",
+			"ACL on sys_user_table that blocks all external role updates",
+			"Business rule on task that auto-assigns documents to the assessor queue"
+		],
+		"correctIndex": 0,
+		"explanation": "Document permissions in the portal let the primary contact manage which contacts can read or update shared files.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-add-document-portal.html"
+		]
+	}
+]

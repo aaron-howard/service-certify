@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 15,
+		"prompt": "A risk team wants external provider scores that indicate how trustworthy a vendor may be. Which TPRM feature should they configure?",
+		"choices": [
+			"Risk intelligence provider integration to ingest external trust and safety scores for third parties",
+			"Discovery credentials to scan vendor internal networks and populate CMDB configuration items",
+			"Employee onboarding workflows to provision badges and desk assignments for new internal staff",
+			"Change Management standard models to route infrastructure deployment approvals through CAB"
+		],
+		"correctIndex": 0,
+		"explanation": "Risk intelligence integrations import external provider scores that offer insight into third-party trustworthiness and can trigger event-driven reassessment rules.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-riskintelprvdr-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 16,
+		"prompt": "Which table stores risk intelligence scores retrieved from external content providers for third parties?",
+		"choices": [
+			"Risk intelligence score (sn_vdr_risk_asmt_security_score) linked to third-party company records",
+			"Incident (incident) capturing IT service disruption tickets submitted by internal employees",
+			"Change Request (change_request) tracking infrastructure deployment approval workflow states",
+			"Knowledge (kb_knowledge) storing internal employee self-service documentation articles"
+		],
+		"correctIndex": 0,
+		"explanation": "Risk intelligence scores are stored on the sn_vdr_risk_asmt_security_score table and associated with third-party organizations in the portfolio.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 17,
+		"prompt": "An assessor needs to request a formal risk intelligence report for a high-criticality vendor. Which TPRM capability supports this?",
+		"choices": [
+			"Risk intelligence reports that manage and request scores from external content providers",
+			"Hardware asset audits that verify physical device inventory against procurement ledger records",
+			"Discovery schedules that scan vendor subnets and create CMDB configuration item entries",
+			"Employee case routing through the internal service catalog for HR benefit inquiries"
+		],
+		"correctIndex": 0,
+		"explanation": "TPRM risk intelligence reports allow teams to request and manage external provider scores that supplement periodic assessment evidence.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-riskintel-using.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 18,
+		"prompt": "Event-driven management rules in TPRM can trigger which action when external risk intelligence ratings change significantly?",
+		"choices": [
+			"Launch reassessment workflows, create issues or tasks, and send notifications to risk stakeholders",
+			"Permanently deactivate the vendor record and purge all historical assessment data from the instance",
+			"Convert the vendor into a hardware asset and assign a depreciation schedule on the procurement ledger",
+			"Route all vendor communications exclusively through the employee HR self-service catalog portal"
+		],
+		"correctIndex": 0,
+		"explanation": "TPRM event-driven rules respond to risk intelligence rating changes by triggering assessments, creating remediation work, and notifying stakeholders.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/rm-assessment-integration.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 19,
+		"prompt": "Which workspace provides the primary operational interface for third-party risk managers to manage the vendor portfolio?",
+		"choices": [
+			"Vendor Management Workspace (sn_vrm_ws) included with the Third-party Risk Management application",
+			"Dispatcher Workspace for field service mobile technician assignment and route optimization tasks",
+			"Security Operations Workspace for vulnerability response remediation and scanner integration",
+			"Employee Center portal for internal staff to submit HR benefit requests and payroll inquiries"
+		],
+		"correctIndex": 0,
+		"explanation": "The GRC Vendor Management Workspace is the primary interface for managing third parties, engagements, assessments, and related risk activities.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/third-party-risk-mgt-landing-page.html"
+		]
+	}
+]

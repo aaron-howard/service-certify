@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 10,
+		"prompt": "Which TPRM table represents a specific business relationship or project between your organization and a third party?",
+		"choices": [
+			"Third-party engagement (sn_vdr_risk_asmt_vendor_engagement) linking a vendor to a scoped business interaction",
+			"Hardware asset (alm_hardware) tracking physical device procurement and retirement lifecycle events",
+			"Problem record (problem) documenting root-cause analysis for recurring IT infrastructure failures",
+			"Knowledge article (kb_knowledge) storing internal employee self-service documentation content"
+		],
+		"correctIndex": 0,
+		"explanation": "Engagements represent scoped business relationships with third parties; assessments, tiering, and risk scores roll up at both the company and engagement levels.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 11,
+		"prompt": "A TPRM administrator needs to grant external users access to respond to assessments without full platform privileges. Which role should be assigned?",
+		"choices": [
+			"vendor_contact role granting Third-party Portal access while prohibiting internal platform navigation",
+			"admin role providing unrestricted access to all tables, modules, and configuration settings on the instance",
+			"itil role enabling full incident, problem, and change management capabilities for IT operations staff",
+			"catalog_admin role allowing creation and publication of employee-facing service catalog item records"
+		],
+		"correctIndex": 0,
+		"explanation": "The vendor_contact role is scoped exclusively for external third-party contacts and grants access only to the Third-party Portal.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-tp-contact-config.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 12,
+		"prompt": "Which sn_vdr_risk_asmt role allows a user to manage third parties, contacts, assessments, and issues across the vendor portfolio?",
+		"choices": [
+			"sn_vdr_risk_asmt.vendor_assessor for day-to-day third-party risk assessment operations",
+			"sn_vdr_risk_asmt.contract_negotiator exclusively for internal employee payroll processing tasks",
+			"sn_vdr_risk_asmt.approver exclusively for hardware asset depreciation schedule approvals",
+			"wm_agent for field service mobile work order execution and on-site technician dispatch routing"
+		],
+		"correctIndex": 0,
+		"explanation": "The vendor_assessor role manages third parties, third-party contacts, risk assessments, and issues as part of core TPRM operational duties.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 13,
+		"questionType": "multi",
+		"prompt": "Which two assessment types are available in the TPRM data model for evaluating third-party risk? (Choose two.)",
+		"choices": [
+			"External assessment (sn_vdr_risk_asmt_assessment) sent to third-party contacts via the portal",
+			"Internal assessment (sn_vdr_risk_asmt_internal_assessment) completed by internal respondents",
+			"Discovery assessment (discovery_assessment) scanning network segments for configuration items",
+			"Vulnerability assessment (sn_vul_vulnerability) importing CVE findings from external scanner feeds"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "TPRM supports external assessments distributed to vendor contacts and internal assessments completed by organizational respondents before or alongside vendor questionnaires.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 14,
+		"prompt": "When questionnaire responses are submitted, how do assessment ratings propagate to the associated third party in TPRM?",
+		"choices": [
+			"Ratings roll up from the assessment to the third party and engagement using the configured MIN, MAX, or AVG method",
+			"Ratings remain isolated on the questionnaire instance and never influence the parent company risk score",
+			"Ratings automatically close all open incidents linked to the vendor without analyst review or approval",
+			"Ratings convert directly into hardware asset depreciation values on the procurement ledger table"
+		],
+		"correctIndex": 0,
+		"explanation": "Assessment ratings aggregate to the third party and engagement according to the configured rollup method, dynamically updating risk posture and scores.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/rm-assessment-integration.html"
+		]
+	}
+]

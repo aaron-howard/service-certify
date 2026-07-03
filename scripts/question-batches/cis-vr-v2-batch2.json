@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-VR",
+		"order": 5,
+		"prompt": "Which workspace does the vulnerability analyst persona primarily use to monitor findings and initiate remediation workflows?",
+		"choices": [
+			"Vulnerability Manager Workspace for monitoring vulnerabilities and creating remediation tasks",
+			"IT Remediation Workspace for completing assigned remediation tasks on owned configuration items",
+			"Agent Workspace for handling live chat conversations from external customer portal users",
+			"Dispatcher Workspace for scheduling field service agents to repair physical hardware assets"
+		],
+		"correctIndex": 0,
+		"explanation": "The vulnerability analyst persona monitors vulnerability exposure and initiates remediation from the Vulnerability Manager Workspace rather than executing remediation tasks directly.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 6,
+		"prompt": "A remediation owner in IT Operations must work assigned fix tasks for vulnerable configuration items. Which workspace should they use?",
+		"choices": [
+			"IT Remediation Workspace to view and complete remediation tasks assigned to their team",
+			"Vulnerability Manager Workspace to configure NVD integrations and scanner import schedules",
+			"Security Incident Response Workspace to manage major security incident war room operations",
+			"Performance Analytics Workspace to design KPI indicator sources for HR onboarding metrics"
+		],
+		"correctIndex": 0,
+		"explanation": "Remediation owners execute fix work from the IT Remediation Workspace, while vulnerability analysts monitor and initiate work from the Vulnerability Manager Workspace.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 7,
+		"prompt": "During initial Vulnerability Response setup, where should administrators assign persona roles so users can access the correct VR workspaces and integrations?",
+		"choices": [
+			"Setup Assistant persona assignment step for Vulnerability Response roles and granular permissions",
+			"Update Set preview pane before committing unrelated platform UI theme customizations",
+			"Catalog item record producer variables for employee laptop request fulfillment workflows",
+			"Discovery schedule configuration for scanning non-production network subnets only"
+		],
+		"correctIndex": 0,
+		"explanation": "Persona and granular role assignment is a first configuration step in Vulnerability Response Setup Assistant and defines what users can see and do across VR and its integrations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vr-persona-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 8,
+		"prompt": "Compared with the remediation owner persona, which granular roles typically expand a vulnerability analyst's access to all vulnerable item and remediation task records?",
+		"choices": [
+			"sn_vul.read_all and sn_vul.write_all granular roles on the vulnerability analyst persona",
+			"sn_vul.read_assigned and sn_vul.write_assigned granular roles inherited by every user",
+			"itil_admin and security_admin roles that replace all Vulnerability Response persona assignments",
+			"catalog_admin and workflow_admin roles that govern service catalog item publishing only"
+		],
+		"correctIndex": 0,
+		"explanation": "Remediation owners typically have read_assigned and write_assigned access, while vulnerability analysts add read_all and write_all to view and edit all VR task records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vr-persona-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 9,
+		"prompt": "A CISO wants executive visibility into enterprise vulnerability exposure trends without performing day-to-day remediation task updates. Which persona alignment best matches this responsibility?",
+		"choices": [
+			"Executive stakeholder who consumes Vulnerability Response dashboards and analytics for risk posture reporting",
+			"Remediation owner who completes patch tasks on assigned configuration items in IT Remediation Workspace",
+			"Integration developer who writes custom outbound REST messages for unrelated HR payroll systems",
+			"Discovery administrator who builds classification rules for non-IP based printer hardware assets"
+		],
+		"correctIndex": 0,
+		"explanation": "Executive stakeholders such as a CISO consume VR dashboards and analytics for risk posture visibility, while operational personas execute or manage remediation work in workspaces.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
+		]
+	}
+]

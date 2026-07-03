@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 30,
+		"prompt": "Which table stores the qualitative risk rating assigned to an engagement after assessment scores are calculated?",
+		"choices": [
+			"Engagement level risk rating (sn_vdr_risk_asmt_engagement_level_rating) mapping scores to Critical, High, Moderate, Low, or Minor",
+			"Incident priority (incident.priority) ranking IT service disruption tickets by business impact severity",
+			"Change risk (change_request.risk) categorizing infrastructure deployment requests for CAB review",
+			"Asset cost (alm_asset.cost) recording procurement purchase price on hardware inventory records"
+		],
+		"correctIndex": 0,
+		"explanation": "Engagement level risk ratings translate numeric assessment scores into qualitative tiers such as Critical, High, Moderate, Low, and Minor.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 31,
+		"prompt": "A risk admin manually associates a control deficiency with a third party. Which table captures third-party risk issues requiring remediation?",
+		"choices": [
+			"Third-party risk issue (sn_vdr_risk_asmt_issue) tracking findings, remediation tasks, and closure status",
+			"Problem (problem) documenting root-cause analysis for recurring IT infrastructure failure patterns",
+			"Change Request (change_request) routing infrastructure deployment approvals through the CAB process",
+			"Knowledge (kb_knowledge) storing internal employee self-service documentation and FAQ articles"
+		],
+		"correctIndex": 0,
+		"explanation": "Third-party risk issues track assessment findings and remediation work; issues remain active until findings are resolved and closed.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 32,
+		"prompt": "When both Risk Management and TPRM are active, associating a risk with a third party affects scoring but does not automatically trigger assessments unless what is configured?",
+		"choices": [
+			"TPRM event-driven management rules or provider-based submission rules are configured to trigger assessments",
+			"The vendor contact receives an automatic email converting their portal account into an admin user profile",
+			"The company record is converted into a hardware asset with an assigned depreciation schedule immediately",
+			"All open incidents linked to the vendor are auto-closed without analyst review or management approval"
+		],
+		"correctIndex": 0,
+		"explanation": "Manual risk associations influence posture and scoring; automated assessment triggers require configured TPRM rules such as event-driven management rules.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-add-risks-tp.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 33,
+		"prompt": "Which table stores due diligence requests initiated to evaluate the risk level of a third-party engagement?",
+		"choices": [
+			"Third-party due diligence request (sn_tprm_dd_request) driving the inherent risk and assessment workflow",
+			"Incident (incident) capturing IT service disruption tickets submitted by internal organizational staff",
+			"Change Request (change_request) tracking infrastructure deployment approvals awaiting CAB sign-off",
+			"Catalog Task (sc_task) fulfilling employee-facing service catalog item requests from internal users"
+		],
+		"correctIndex": 0,
+		"explanation": "Due diligence requests initiate the process to determine engagement risk level and configure subsequent assessment and approval workflows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-requesting-tpr-due-diligence.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 34,
+		"prompt": "An assessor creates an internal assessment to evaluate inherent risk before sending vendor questionnaires. Which assessment engine does TPRM use when Smart Assessment Engine is enabled?",
+		"choices": [
+			"Smart Assessment Engine configured via the sn_vdr_risk_asmt.sae_enabled property on the assessment form",
+			"Classic Discovery Engine scanning network segments to populate CMDB configuration item records",
+			"Predictive Intelligence engine scoring employee HR cases for internal service catalog routing",
+			"Vulnerability Response engine importing CVE findings from external security scanner integrations"
+		],
+		"correctIndex": 0,
+		"explanation": "When the SAE enabled property is set, internal and external assessments use the Smart Assessment Engine; otherwise the Classic engine applies.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/create-int-assess-form.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-properties-configure.html"
+		]
+	}
+]

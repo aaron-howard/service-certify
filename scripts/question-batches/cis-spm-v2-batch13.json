@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-SPM",
+		"order": 60,
+		"prompt": "A project manager views task bars and dependency connectors to assess timeline risk. Which interface provides that schedule visualization?",
+		"choices": [
+			"Gantt chart in Project Workspace showing tasks and predecessors",
+			"Bubble chart in Demand Workbench comparing value versus effort",
+			"Heatmap in Resource Management Workspace showing allocation gaps",
+			"Kanban board in Portfolio Planning Workspace for demand ranking"
+		],
+		"correctIndex": 0,
+		"explanation": "The Gantt chart displays tasks, durations, and dependency connectors so managers evaluate schedule risk and predecessor relationships visually.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/project-management/r_EditTasks.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 61,
+		"prompt": "A project shows schedule variance but resource utilization appears normal. Which Project Workspace area should the manager review first?",
+		"choices": [
+			"Analytics and diagnostics highlighting schedule health indicators",
+			"LDAP synchronization log for user provisioning failures overnight",
+			"CMDB discovery error report for missing configuration items",
+			"Catalog fulfillment workflow approvals pending manager sign-off"
+		],
+		"correctIndex": 0,
+		"explanation": "Project Workspace Analytics surfaces schedule and health diagnostics so managers investigate variance without leaving the delivery workspace.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/project-workspace/project-workspace-landing-page.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 62,
+		"prompt": "A waterfall project moves from Planning to Executing after funding approval. Which project attribute reflects that lifecycle transition?",
+		"choices": [
+			"Project phase updated to the current lifecycle stage gate",
+			"Expense type on every cost plan line set to capital expenditure",
+			"Timecard rate type replaced with a fixed vendor billing rate",
+			"Portfolio lens switched from Organization to Project Portfolio"
+		],
+		"correctIndex": 0,
+		"explanation": "Project phase tracks the current lifecycle stage such as initiating, planning, executing, and closing as work progresses through governance gates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/project-management/t_CreateAProject.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 63,
+		"prompt": "Lag time between linked tasks pushes a milestone past its committed date. Which schedule element caused that delay?",
+		"choices": [
+			"Dependency lag or lead time on the predecessor relationship",
+			"Demand assessment score below the portfolio approval threshold",
+			"Idea portal vote count falling under the promotion minimum",
+			"Budget allocation attribute switching from cost_type to expense_type"
+		],
+		"correctIndex": 0,
+		"explanation": "Predecessor relationships support lag and lead time values that offset start or finish dates, directly affecting downstream milestone timing.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/project-workspace/update-the-dependency-details-for-tasks-from-project-workspace.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 64,
+		"prompt": "Leadership asks how far a project has progressed toward completion this quarter. Which metric answers that question?",
+		"choices": [
+			"Percent complete calculated from task and milestone progress",
+			"Number of idea submissions received through the employee portal",
+			"Count of rate types configured on the organizational rate model",
+			"Total active users with the itil role on the production instance"
+		],
+		"correctIndex": 0,
+		"explanation": "Percent complete rolls up task and milestone progress to show how much of the approved scope has been delivered at a given point.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/project-management/t_CreateAProject.html"
+		]
+	}
+]

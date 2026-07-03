@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-SPM",
+		"order": 10,
+		"prompt": "A cost plan variance report shows actuals exceeding planned Opex for a program. Which review step should the portfolio analyst perform first?",
+		"choices": [
+			"Compare expense line actuals to planned amounts by cost type and fiscal period",
+			"Reopen the demand in Draft state to remove approved funding",
+			"Delete resource assignments to zero out labor actuals",
+			"Convert the program to an idea record in the employee portal"
+		],
+		"correctIndex": 0,
+		"explanation": "Variance analysis starts by comparing planned versus actual expense lines grouped by cost type and period to identify where overspend occurred.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/financial-planning/financial-planning-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 11,
+		"prompt": "A resource manager opens Resource Management Workspace to review team utilization. Which persona typically owns capacity decisions across multiple projects?",
+		"choices": [
+			"Resource manager with access to allocation and capacity views",
+			"Catalog administrator who publishes service catalog items",
+			"Change manager who approves standard change models",
+			"Discovery administrator who configures MID Server schedules"
+		],
+		"correctIndex": 0,
+		"explanation": "Resource managers use Resource Management Workspace to view allocations, identify conflicts, and balance capacity across portfolio work.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-management-workspace.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 12,
+		"prompt": "An administrator configures planning attributes so resource plans can filter staff by skill and location. Where are the attribute values for each employee maintained?",
+		"choices": [
+			"On the Employee profile record in Resource Management",
+			"On the Idea Portal theme configuration record",
+			"On the Budget plan header for the fiscal year",
+			"On the Time sheet policy assigned to the project"
+		],
+		"correctIndex": 0,
+		"explanation": "Planning attribute values are defined on the Employee profile so resource plans and assignments can match people to work based on skills, location, and other criteria.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/planning-attributes.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 13,
+		"prompt": "A project manager needs to staff a three-month development phase with two business analysts. Which record type commits specific people and hours to project work?",
+		"choices": [
+			"Resource assignment linking employees to planned effort",
+			"Expense line classified as Capex on the cost plan",
+			"Idea assessment response submitted through the portal",
+			"Demand state transition from Qualified to Approved"
+		],
+		"correctIndex": 0,
+		"explanation": "Resource assignments connect employees or groups to planned hours on investments, forming the basis for capacity and utilization reporting.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-assignment.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 14,
+		"prompt": "Which role-based access configuration grants a user permission to view and manage resource allocations in Resource Management Workspace?",
+		"choices": [
+			"Resource Management Workspace user role for allocation management",
+			"Financial planning administrator role for cost plan editing only",
+			"Idea submitter role for portal idea creation",
+			"Demand read-only role for workbench list viewing"
+		],
+		"correctIndex": 0,
+		"explanation": "Users with the Resource Management Workspace role can access allocation views, resolve conflicts, and manage staffing across portfolio investments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-management-workspace.html"
+		]
+	}
+]

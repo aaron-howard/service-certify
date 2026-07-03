@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-SPM",
+		"order": 5,
+		"prompt": "A portfolio financial controller must compare planned spend against approved budget for an investment. Which record type holds the planned financial breakdown?",
+		"choices": [
+			"Cost plan with expense lines tied to the investment",
+			"Resource plan task that assigns hours to project phases",
+			"Idea record awaiting conversion to a formal demand",
+			"Timecard entry submitted by a project team member"
+		],
+		"correctIndex": 0,
+		"explanation": "Cost plans capture planned financial detail at the investment level, including expense lines that classify spend by type and fiscal period.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/financial-planning/financial-planning-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 6,
+		"prompt": "During annual portfolio planning, leadership allocates funding envelopes before projects are fully scoped. Which artifact represents that top-down budget allocation?",
+		"choices": [
+			"Budget plan linked to portfolio or investment hierarchy",
+			"Resource assignment on a project task record",
+			"Idea assessment scorecard completed in the portal",
+			"Demand workbench filter saved by the portfolio manager"
+		],
+		"correctIndex": 0,
+		"explanation": "Budget plans distribute approved funding across portfolios and investments, providing the financial ceiling that cost plans reference during planning cycles.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/financial-planning/financial-planning-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 7,
+		"prompt": "An expense line on a cost plan shows duplicate labor entries after a rate change. Which field combination most likely caused inconsistent rollups?",
+		"choices": [
+			"Mismatched rate type and fiscal period on the expense line",
+			"Demand state set to Draft instead of Submitted",
+			"Idea category missing from the portal submission form",
+			"Resource schedule conflict on the assigned employee record"
+		],
+		"correctIndex": 0,
+		"explanation": "Expense lines depend on consistent rate type, cost type, and fiscal period values so cost plan totals reconcile when rates are updated.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/financial-planning/expense-lines.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 8,
+		"prompt": "A PMO administrator configures hourly billing for contractors versus employees on the same project. Which approach applies different charge rates by role?",
+		"choices": [
+			"Define separate rate types within the rate model for each role",
+			"Create a single flat rate on the demand record intake form",
+			"Disable cost plans and track spend exclusively in spreadsheets",
+			"Assign all resources to the same generic resource group"
+		],
+		"correctIndex": 0,
+		"explanation": "Rate models associate rate types with resource roles so planned and actual labor costs reflect role-specific billing rates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/financial-planning/rate-models.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 9,
+		"prompt": "Finance leadership asks which SPM capability supports Now Create content generation for portfolio artifacts. Which product area provides that AI-assisted authoring?",
+		"choices": [
+			"Now Create for Strategic Portfolio Management",
+			"Now Assist for IT Service Management incident summarization",
+			"Now Platform analytics dashboards for CMDB health",
+			"Now Assist for HR case document generation"
+		],
+		"correctIndex": 0,
+		"explanation": "Now Create for SPM helps teams draft portfolio-related content such as business cases and planning narratives using generative AI within SPM workflows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/now-create-for-spm/now-create-spm.html"
+		]
+	}
+]

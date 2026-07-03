@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-SPM",
+		"order": 70,
+		"prompt": "All deliverables are accepted and open tasks are resolved. Which action moves the project to its final lifecycle state?",
+		"choices": [
+			"Close the project after verifying deliverables and tasks are complete",
+			"Delete the parent program and recreate it from a portal submission",
+			"Reset demand assessments to Draft for the next fiscal intake cycle",
+			"Disable the budget allocation property on the instance immediately"
+		],
+		"correctIndex": 0,
+		"explanation": "Projects are closed once deliverables are accepted and remaining tasks are resolved, moving the investment to its completed lifecycle state.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/project-management/t_CreateAProject.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 71,
+		"prompt": "A finance partner reviews planned versus actual spend on an active project. Which Project Workspace page presents that financial data?",
+		"choices": [
+			"Financials page showing cost plans, budgets, and expense lines",
+			"Dependencies page listing predecessor links between sibling tasks",
+			"Diagnostics page displaying LDAP user provisioning error counts",
+			"Templates page listing predefined project creation structures only"
+		],
+		"correctIndex": 0,
+		"explanation": "The Financials page in Project Workspace displays cost plans, budgets, expense lines, and variance data for project financial governance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/project-workspace/project-workspace-landing-page.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 72,
+		"prompt": "A project task needs named resources for the next sprint. Which SPM object commits specific people to planned hours?",
+		"choices": [
+			"Resource assignment linking employees to the project task plan",
+			"Idea evaluation workflow routing submissions to reviewer groups",
+			"Cost type record classifying hardware purchases as capital spend",
+			"Portfolio plan shared across product managers in APW"
+		],
+		"correctIndex": 0,
+		"explanation": "Resource assignments name the individuals or groups fulfilling planned hours on a resource plan, committing staffing to project tasks.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/t_CreateResourcePlanProjectTask.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 73,
+		"prompt": "Before month-end, executives need current project health across the portfolio. Which reporting artifact supports that governance review?",
+		"choices": [
+			"Status reports and program dashboards aggregating delivery indicators",
+			"Time sheet copy operation from the previous week for each user",
+			"Discovery schedule configuration for subnet classification scans",
+			"Demand bubble chart with only a single scoring dimension enabled"
+		],
+		"correctIndex": 0,
+		"explanation": "Status reports and program-level dashboards consolidate delivery health indicators so executives review portfolio execution without manual data collection.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/program-management/t_CreateAProgram.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 74,
+		"prompt": "What does a time sheet policy define for users recording time worked in the platform?",
+		"choices": [
+			"Requirements and rules governing how users create and submit time cards",
+			"Default project templates applied when a new investment is approved",
+			"Lens hierarchy for Portfolio Planning Workspace roadmap views",
+			"Scoring weights used when comparing demands in the workbench"
+		],
+		"correctIndex": 0,
+		"explanation": "Time sheet policies define the requirements for users to record time worked, including week start day, rate type visibility, and approval routing.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/time-card-management/worker-portal.html"
+		]
+	}
+]

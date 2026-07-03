@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 60,
+		"prompt": "Risk scores from a completed assessment must roll up to the specific vendor service relationship under review. Which record should the assessment reference?",
+		"choices": [
+			"Third-party engagement on sn_vdr_risk_asmt_vendor_engagement",
+			"Problem record on problem used for recurring incident trends",
+			"Change task on change_task tracking implementation steps",
+			"Project task on pm_project_task for portfolio milestones"
+		],
+		"correctIndex": 0,
+		"explanation": "Engagements represent the third-party service relationship and connect assessments, issues, and scoring to that context.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 61,
+		"prompt": "Due diligence onboarding should automatically launch tiering and external assessments when criteria match. Which object orchestrates that generation?",
+		"choices": [
+			"Event-driven management rule on sn_tprm_dd_generation_rule tied to due diligence",
+			"Client callable script include that formats email footers for notifications",
+			"Table rotation definition that archives old syslog entries nightly",
+			"OAuth entity record storing external API consumer credentials"
+		],
+		"correctIndex": 0,
+		"explanation": "Event-driven management rules trigger assessments and related due diligence activities when configured conditions are met.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 62,
+		"prompt": "After external assessment scores are finalized, where do aggregated ratings typically surface for vendor oversight dashboards?",
+		"choices": [
+			"Engagement level risk rating and third-party scoring rule results on the company record",
+			"Incident category field updated from the service catalog variable set",
+			"Knowledge article quality score calculated from view counts",
+			"Discovery credential row showing last successful login attempt"
+		],
+		"correctIndex": 0,
+		"explanation": "Scoring rules aggregate assessment results to engagements and third parties using engagement level risk ratings and vendor scoring rules.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/vendor-ratings-scoring.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 63,
+		"prompt": "A program lead wants to replace email questionnaires and shared spreadsheets for vendor collaboration. Which TPRM feature addresses that goal?",
+		"choices": [
+			"Third-party portal providing structured assessment and document exchange",
+			"Standard employee self-service catalog for hardware requests",
+			"Virtual Agent topic for password reset without vendor access",
+			"Performance Analytics widget showing agent handle time trends"
+		],
+		"correctIndex": 0,
+		"explanation": "The third-party portal gives vendors a secure channel to respond to assessments, upload evidence, and track tasks.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-reference.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 64,
+		"prompt": "A new vendor contact must access only the third-party portal without broader instance navigation. Which roles are assigned automatically?",
+		"choices": [
+			"vendor_contact with snc_external limiting access to external portal functions",
+			"itil with admin impersonation across all application scopes",
+			"sn_grc.analyst with full GRC workspace configuration rights",
+			"security_admin with unrestricted read on all tables"
+		],
+		"correctIndex": 0,
+		"explanation": "Third-party contacts receive vendor_contact for portal access and snc_external to restrict them from the full internal instance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-roles.html"
+		]
+	}
+]

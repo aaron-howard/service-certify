@@ -1,0 +1,85 @@
+[
+	{
+		"trackCode": "CIS-VR",
+		"order": 60,
+		"prompt": "When remediation verification confirms a patch succeeded, which close-out state reflects resolved exposure?",
+		"choices": [
+			"Move vulnerable items to a closed resolved state with verification evidence captured on the record",
+			"Reopen all related remediation tasks to New regardless of confirmed patch implementation outcome",
+			"Mark items false positive without validating scanner rescan or verification results",
+			"Delete remediation task records entirely to prevent future audit trail review by leadership"
+		],
+		"correctIndex": 0,
+		"explanation": "Verified remediation should close vulnerable items in a resolved state that documents how exposure was eliminated.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/vulnerability-response/close-out-remediation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 61,
+		"prompt": "Vulnerable items deferred through an approved exception should remain in which state until expiration or remediation?",
+		"choices": [
+			"Deferred with links to the active exception record and tracked expiration date",
+			"Closed false positive with no reference to the exception approval chain or approver",
+			"Cancelled with all CI relationships removed from the CMDB permanently",
+			"New with assignment cleared and SLA timers permanently disabled on the item"
+		],
+		"correctIndex": 0,
+		"explanation": "Deferred state preserves visibility of accepted risk while maintaining traceability to the governing exception record.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/vulnerability-response/vulnerability-exceptions.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 62,
+		"prompt": "Why must close reasons be preserved when marking vulnerabilities as false positives in VR?",
+		"choices": [
+			"They support audit review, trend analysis, and analyst accountability for disposition decisions",
+			"They trigger automatic deletion of scanner integration credentials from the instance vault",
+			"They replace the need for any future vulnerability rescans on affected configuration items",
+			"They convert all related items into change requests without additional approval steps"
+		],
+		"correctIndex": 0,
+		"explanation": "Documented close reasons explain why findings were dismissed and support later reassessment if conditions change.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/vulnerability-response/false-positive-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 63,
+		"prompt": "Which VR automation features reduce manual triage on incoming findings? (Choose three.)",
+		"choices": [
+			"Classification rules that categorize scanner intake records",
+			"Assignment rules that set remediation owner groups on items",
+			"Remediation task rules that group items into shared tasks",
+			"Manual CSV export to spreadsheet for offline review"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1, 2],
+		"questionType": "multi",
+		"explanation": "Classification, assignment, and remediation task rules automate categorization, routing, and grouping; spreadsheet export is a manual workaround.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/vulnerability-response/classification-rules.html",
+			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-task-rules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 64,
+		"prompt": "When a remediation task moves to Closed / False Positive, what should happen to in-flight false positive approval records?",
+		"choices": [
+			"Related state change approval records in Draft or In Review should be cancelled",
+			"Approval records auto-advance to Approved without analyst or approver intervention",
+			"Approval records convert to change requests linked to the CAB schedule board",
+			"Approval records duplicate onto every unrelated open vulnerable item in the queue"
+		],
+		"correctIndex": 0,
+		"explanation": "Cancelling stale approvals keeps vulnerable item state aligned with the remediation task disposition and prevents orphaned review work.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/vulnerability-response/false-positive-management.html"
+		]
+	}
+]

@@ -1,0 +1,85 @@
+[
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 0,
+		"prompt": "A procurement team still coordinates vendor attestations through email threads and shared spreadsheets. Which ServiceNow capability should replace this manual approach for third-party collaboration?",
+		"choices": [
+			"Third-party Portal for secure questionnaire completion, documentation exchange, and task collaboration with external contacts",
+			"Change Management standard change models for routing infrastructure deployment approvals through CAB review boards",
+			"Hardware Asset Management depreciation schedules for tracking end-user laptop procurement and retirement events",
+			"Employee Service Center catalog items for submitting internal HR benefit requests and payroll inquiries"
+		],
+		"correctIndex": 0,
+		"explanation": "The Third-party Portal is the designated collaboration channel where external contacts respond to assessments, supply evidence, and communicate with risk assessors instead of using email or spreadsheets.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/vendor-portal.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 1,
+		"prompt": "Which statement best describes how Third-party Risk Management fits within the ServiceNow GRC product suite?",
+		"choices": [
+			"TPRM provides centralized third-party portfolio management, risk assessment, scoring, and remediation within the Governance, Risk, and Compliance suite",
+			"TPRM replaces Incident Management by converting every vendor ticket into a major incident record automatically",
+			"TPRM operates exclusively as a standalone ITSM plugin with no relationship to Risk Management or Policy and Compliance",
+			"TPRM limits scope to financial audit findings and excludes operational or cybersecurity vendor evaluations"
+		],
+		"correctIndex": 0,
+		"explanation": "Third-party Risk Management is a GRC application that manages the full third-party risk lifecycle from portfolio onboarding through assessment, monitoring, and remediation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/third-party-risk-mgt-landing-page.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 2,
+		"prompt": "A risk manager wants to determine the risk level of a new vendor engagement before sending detailed control questionnaires. Which TPRM process should they initiate first?",
+		"choices": [
+			"Request third-party risk due diligence to evaluate inherent risk and determine appropriate assessment depth",
+			"Archive the vendor record and defer all reviews until the contract renewal cycle begins next fiscal year",
+			"Create a hardware asset record and assign depreciation categories before any vendor interaction occurs",
+			"Open a standard change request to deploy monitoring agents on the vendor's internal network infrastructure"
+		],
+		"correctIndex": 0,
+		"explanation": "Due diligence requests establish the risk level of a third-party engagement and drive subsequent assessment, tiering, and approval workflows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-requesting-tpr-due-diligence.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 3,
+		"questionType": "multi",
+		"prompt": "Which two fields on the Third-party Contact form are required to designate the main liaison and deliver automated portal credentials? (Choose two.)",
+		"choices": [
+			"Primary contact checkbox flag identifying the main liaison for the third-party organization",
+			"Email address used to send portal login credentials and notification links to the external user",
+			"Department field listing the organizational unit name at the vendor company headquarters",
+			"Time Zone field defining the preferred regional offset for scheduled assessment reminders"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Every third party must have a primary contact designated, and the email field triggers the automated notification containing portal login credentials.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-tp-contact-config.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 4,
+		"prompt": "When Risk Management is integrated with Third-party Risk Management, where are enterprise risks defined before association with a third party or engagement?",
+		"choices": [
+			"Risk Statement records in the GRC risk library grouped within risk frameworks",
+			"Incident records in the ITSM problem management module awaiting root-cause analysis",
+			"Catalog item variables on the employee-facing service catalog request portal forms",
+			"Change request tasks in the standard change approval workflow awaiting CAB sign-off"
+		],
+		"correctIndex": 0,
+		"explanation": "Risks are registered as Risk Statement records in the risk library; TPRM administrators then associate generated risks with third parties and engagements to influence posture and scoring.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-add-risks-tp.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/rm-assessment-integration.html"
+		]
+	}
+]

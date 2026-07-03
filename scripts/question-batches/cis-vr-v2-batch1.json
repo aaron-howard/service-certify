@@ -1,0 +1,87 @@
+[
+	{
+		"trackCode": "CIS-VR",
+		"order": 0,
+		"questionType": "multi",
+		"prompt": "Which two capabilities describe how ServiceNow Vulnerability Response ingests external vulnerability knowledge? (Choose two.)",
+		"choices": [
+			"Integrates with the National Vulnerability Database to import authoritative CVE and CPE metadata into the instance",
+			"Integrates with third-party vulnerability scanners to import detection findings about assets in the environment",
+			"Replaces CMDB discovery by storing all asset records exclusively inside scanner vendor databases",
+			"Automatically closes every imported finding without analyst review or remediation task creation"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Vulnerability Response pulls vulnerability knowledge from the NVD and from third-party scanner integrations, then reconciles detections with CMDB assets for prioritized remediation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 1,
+		"prompt": "A security architect must connect scanner detections to CMDB assets and route remediation work to IT operations teams. Which application should they implement?",
+		"choices": [
+			"Vulnerability Response within the Security Operations suite on the ServiceNow platform",
+			"Hardware Asset Management for tracking procurement lifecycle events on end-user laptops",
+			"Customer Service Management for routing external consumer portal cases to fulfillment groups",
+			"Field Service Management for dispatching mobile technicians to repair physical hardware assets"
+		],
+		"correctIndex": 0,
+		"explanation": "Vulnerability Response is part of the Security Operations suite and automates the flow from scanner and NVD intake through investigation to IT remediation execution.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 2,
+		"questionType": "multi",
+		"prompt": "Which two statements accurately describe NIST National Vulnerability Database (NVD) vulnerability data feeds? (Choose two.)",
+		"choices": [
+			"Feed files organize CVE records by the first four digits of the CVE identifier (for example, CVE-2024)",
+			"Each feed contains only vulnerabilities that share the same CVSS base score numeric value",
+			"Modified feeds include vulnerabilities that were published or updated within the previous eight days",
+			"NVD feeds exclude CPE data entirely and cannot be used with Vulnerability Response enrichment"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 2],
+		"explanation": "NVD year feeds group CVE data by the four-digit year prefix in the identifier, and the modified feed tracks recently published or changed entries within an eight-day window.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/nvd-vuln-integration.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 3,
+		"prompt": "In Application Vulnerability Response, which persona monitors application security posture and coordinates remediation with development teams from the Security Champion Overview dashboard?",
+		"choices": [
+			"Security Champion persona aligned with application owners and development stakeholders",
+			"Vulnerability Admin persona responsible for installing store integrations on the instance",
+			"Change Manager persona who approves standard change models for infrastructure patching",
+			"Catalog Manager persona who publishes service catalog items for employee onboarding requests"
+		],
+		"correctIndex": 0,
+		"explanation": "The Security Champion persona in Application Vulnerability Response uses the Security Champion Overview dashboard to track scanned applications and drive remediation with development teams.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/application-vulnerability-response/avr-landing.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 4,
+		"prompt": "Which statement distinguishes Application Vulnerability Response from Container Vulnerability Response?",
+		"choices": [
+			"AVR imports application vulnerable items (AVITs) for software application findings, while CVR imports container vulnerable items (CVITs) for container image findings",
+			"AVR requires Kubernetes discovery for all imports, while CVR only supports mainframe vulnerability scanning integrations",
+			"AVR automatically deletes CMDB CIs when findings arrive, while CVR creates incident records for every CVIT record",
+			"AVR is included in the base ITSM subscription, while CVR cannot integrate with third-party container security products"
+		],
+		"correctIndex": 0,
+		"explanation": "Application Vulnerability Response manages AVITs for application-layer findings, whereas Container Vulnerability Response manages CVITs for vulnerabilities detected in container images and runtime deployments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/application-vulnerability-response/avr-landing.html",
+			"https://www.servicenow.com/docs/r/security-management/container-vulnerability-response/cvr-landing.html"
+		]
+	}
+]
