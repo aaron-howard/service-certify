@@ -78,6 +78,10 @@ function parseFirstJsonArray(text) {
 	return null;
 }
 
+function escapeRegExp(text) {
+	return text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
 function extractLargestJsonArrayFromJsonl(filePath) {
 	const raw = fs.readFileSync(filePath, 'utf8');
 	let best = null;
@@ -121,7 +125,11 @@ function resolveBatchFiles() {
 			if (pattern.includes('*')) {
 				const dir = path.dirname(pattern);
 				const base = path.basename(pattern);
-				const re = new RegExp('^' + base.replace(/\*/g, '.*') + '$');
+				const safePattern = base
+					.split('*')
+					.map((part) => escapeRegExp(part))
+					.join('.*');
+				const re = new RegExp('^' + safePattern + '$');
 				return fs
 					.readdirSync(dir === '.' ? batchesDir : dir)
 					.filter((f) => re.test(f))
