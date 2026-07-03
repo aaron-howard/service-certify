@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-HR",
+		"order": 65,
+		"prompt": "What is stored in a lifecycle event template?",
+		"choices": [
+			"Reusable activity sets, triggers, and mappings for common employee transitions",
+			"Encrypted employee SSN values",
+			"CMDB discovery credentials",
+			"Software installation media"
+		],
+		"correctIndex": 0,
+		"explanation": "Templates accelerate journey implementation by providing starting configurations for standard lifecycle scenarios.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 66,
+		"prompt": "Which employee transition commonly uses an offboarding lifecycle event?",
+		"choices": [
+			"Termination or resignation with access removal and asset recovery tasks",
+			"Quarterly CMDB audit",
+			"Annual firewall review",
+			"Software model normalization"
+		],
+		"correctIndex": 0,
+		"explanation": "Offboarding journeys coordinate HR, IT, and security steps when employment ends.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 67,
+		"prompt": "How does Journey Designer relate to Workflow Studio flows in HR implementations?",
+		"choices": [
+			"Journey activities may invoke or integrate with flows for automated HR processing",
+			"Journey Designer replaces all platform security",
+			"Workflow Studio cannot interact with HR tables",
+			"Journey Designer only edits CMDB classes"
+		],
+		"correctIndex": 0,
+		"explanation": "Lifecycle orchestration can call automated flows for notifications, approvals, and system updates within journeys.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 68,
+		"prompt": "Which lifecycle components must be configured before employees can be enrolled in a journey? (Choose two.)",
+		"choices": [
+			"Trigger conditions",
+			"Activity sets",
+			"CMDB identification rules",
+			"MID Server clusters"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"questionType": "multi",
+		"explanation": "Lifecycle events require trigger conditions to start and activity sets defining the work; CMDB identification and MID Server clusters are unrelated.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 69,
+		"prompt": "Why map HR profile fields into lifecycle activity records?",
+		"choices": [
+			"So fulfillers receive accurate employee context without re-entering data",
+			"To expose all HR data publicly",
+			"To disable HR criteria on services",
+			"To remove COE assignment"
+		],
+		"correctIndex": 0,
+		"explanation": "Field mappings propagate hire date, location, and role details into tasks agents and partners must complete.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+		]
+	}
+]

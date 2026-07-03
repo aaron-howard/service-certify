@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-HR",
+		"order": 60,
+		"prompt": "Which tool is used to design and maintain HR lifecycle journeys visually?",
+		"choices": [
+			"Journey Designer",
+			"Dependency Views",
+			"Identification Engine",
+			"Firewall Manager"
+		],
+		"correctIndex": 0,
+		"explanation": "Journey Designer provides a design surface for lifecycle events, activity sets, and orchestration logic.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 61,
+		"prompt": "When onboarding a new hire, which lifecycle pattern is commonly implemented?",
+		"choices": [
+			"An onboarding lifecycle event with sequenced provisioning and orientation activities",
+			"A CMDB full sync lifecycle",
+			"A payroll year-end close lifecycle",
+			"A vulnerability scan lifecycle"
+		],
+		"correctIndex": 0,
+		"explanation": "Onboarding lifecycle events coordinate HR, IT, and facilities tasks from offer acceptance through day one readiness.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 62,
+		"prompt": "How can activity dependencies control journey execution order?",
+		"choices": [
+			"Later activities wait until prerequisite activities complete or meet conditions",
+			"All activities run simultaneously without rules",
+			"Dependencies disable HR security",
+			"Dependencies convert cases to incidents"
+		],
+		"correctIndex": 0,
+		"explanation": "Dependencies ensure activities such as account creation finish before equipment shipping tasks begin.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 63,
+		"prompt": "Which records are typically generated when lifecycle activities execute?",
+		"choices": [
+			"HR tasks and related fulfillment records assigned to responsible parties",
+			"CMDB-only records without assignees",
+			"Payroll journal batches",
+			"Firewall change tickets only"
+		],
+		"correctIndex": 0,
+		"explanation": "Activities create trackable HR task work items so teams can complete and audit lifecycle steps.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 64,
+		"prompt": "How can conditional logic be applied within a lifecycle journey?",
+		"choices": [
+			"Activities or sets run only when trigger or branch conditions evaluate true",
+			"Conditions remove all HR roles globally",
+			"Conditions disable Employee Center permanently",
+			"Conditions bypass activity field mappings"
+		],
+		"correctIndex": 0,
+		"explanation": "Conditional branches tailor journeys—for example, skipping relocation tasks when the hire is remote.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+		]
+	}
+]

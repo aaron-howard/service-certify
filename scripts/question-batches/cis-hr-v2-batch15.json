@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-HR",
+		"order": 70,
+		"prompt": "How can HR teams monitor lifecycle event progress for a cohort of new hires?",
+		"choices": [
+			"Lifecycle dashboards and HR task lists showing activity completion status",
+			"CMDB dependency views only",
+			"Discovery error logs only",
+			"Software reclamation reports only"
+		],
+		"correctIndex": 0,
+		"explanation": "Operational views track open lifecycle tasks and highlight stalled activities across onboarding cohorts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-reporting-and-analytics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 71,
+		"prompt": "Which practice keeps lifecycle journeys maintainable after go-live?",
+		"choices": [
+			"Version and test journey changes in sub-production before promoting scoped update sets",
+			"Edit production journeys directly without testing",
+			"Store all activities in Global scope",
+			"Remove activity dependencies to simplify"
+		],
+		"correctIndex": 0,
+		"explanation": "Governed promotion of scoped lifecycle changes reduces regression risk for employee-critical processes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 72,
+		"prompt": "Which security layer restricts read and write operations on hr_case records?",
+		"choices": [
+			"Platform ACLs combined with HR roles",
+			"SNMP community strings",
+			"Discovery schedules",
+			"Import set coalesce rules"
+		],
+		"correctIndex": 0,
+		"explanation": "Table and field ACLs enforce record access in conjunction with HR-specific roles assigned to users and groups.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 73,
+		"prompt": "What is contextual security in HR Service Delivery?",
+		"choices": [
+			"HR criteria and case access rules based on employee relationship to the record",
+			"Global admin access to all cases",
+			"Unrestricted public case comments",
+			"CMDB-based case encryption"
+		],
+		"correctIndex": 0,
+		"explanation": "Contextual security limits case visibility using HR criteria such as opened_for, subject person, and COE membership.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 74,
+		"prompt": "How do HR roles differ from platform ACLs?",
+		"choices": [
+			"Roles bundle permissions while ACLs enforce record and field operations at runtime",
+			"Roles replace all ACL evaluation",
+			"ACLs assign user passwords",
+			"Roles only apply to CMDB tables"
+		],
+		"correctIndex": 0,
+		"explanation": "Users receive HR roles for authorized capabilities; ACLs evaluate each database operation against those roles and conditions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
+		]
+	}
+]

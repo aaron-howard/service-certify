@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-HR",
+		"order": 75,
+		"prompt": "What is the Delegated Developer role used for in HR scoped applications?",
+		"choices": [
+			"Allowing controlled customization within an HR scope without full admin rights",
+			"Granting unrestricted Global scope development",
+			"Disabling all HR ACL checks",
+			"Running Discovery on HR laptops"
+		],
+		"correctIndex": 0,
+		"explanation": "Delegated developers can build within assigned scoped applications while governance limits cross-scope or platform-wide changes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 76,
+		"prompt": "Which field type on HR cases often requires stricter field-level ACLs?",
+		"choices": [
+			"Sensitive personal or compensation-related fields",
+			"Public marketing descriptions",
+			"CMDB serial numbers on unrelated tables",
+			"Discovery status codes"
+		],
+		"correctIndex": 0,
+		"explanation": "PII and confidential HR data use field ACLs so only authorized roles can read or update sensitive columns.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 77,
+		"prompt": "How should HR work notes be secured compared to public comments?",
+		"choices": [
+			"Work notes remain internal to authorized HR roles while comments may be employee-visible",
+			"Work notes are visible to all employees by default",
+			"Comments are always encrypted with no access control",
+			"Work notes bypass all journaling"
+		],
+		"correctIndex": 0,
+		"explanation": "Separating work notes from customer-visible comments protects confidential HR handling details.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 78,
+		"prompt": "Which techniques help verify an HR agent can access a specific case?",
+		"choices": [
+			"Security debugging and impersonation while reviewing ACL results",
+			"Deleting all ACLs on hr_case",
+			"Assigning every user the admin role",
+			"Disabling HR criteria globally"
+		],
+		"correctIndex": 0,
+		"explanation": "Access debugging shows which ACLs and contextual rules pass or fail for the impersonated user on the case.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 79,
+		"prompt": "Why apply need-to-know assignment patterns on sensitive HR cases?",
+		"choices": [
+			"To limit exposure of confidential employee matters to authorized handlers only",
+			"To publish case details on public dashboards",
+			"To allow any manager worldwide to edit cases",
+			"To skip approval requirements"
+		],
+		"correctIndex": 0,
+		"explanation": "Restricting assignment and visibility reduces privacy risk for investigations, medical, or disciplinary cases.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
+		]
+	}
+]
