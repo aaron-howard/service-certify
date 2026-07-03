@@ -1,0 +1,242 @@
+[
+	{
+		"trackCode": "CIS-RC",
+		"order": 20,
+		"prompt": "In Policy and Compliance Management, what does a policy compliance score primarily indicate?",
+		"choices": [
+			"The degree to which mapped controls and tests demonstrate adherence to policy requirements",
+			"The number of unresolved discovery errors",
+			"The count of software license entitlements",
+			"The size of the incident backlog"
+		],
+		"correctIndex": 0,
+		"explanation": "Compliance scoring reflects evidence-backed adherence against policy obligations and control outcomes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/policy-compliance-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 21,
+		"prompt": "A policy statement maps to several controls, and one control fails repeatedly. What is the best compliance response?",
+		"choices": [
+			"Ignore the failing control if other controls pass",
+			"Open tracked remediation and reassessment activities tied to the failing control and requirement",
+			"Delete the mapped policy statement",
+			"Mark all related controls as compensating automatically"
+		],
+		"correctIndex": 1,
+		"explanation": "Control failure against a requirement should trigger managed remediation and retesting to restore compliant posture.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/remediate-control-failures.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 22,
+		"prompt": "Which reporting view best supports executives reviewing policy compliance risk?",
+		"choices": [
+			"A list of all closed incidents last quarter",
+			"Unfiltered activity stream comments",
+			"Dashboards showing compliance by authority document, business entity, and control test trends",
+			"CMDB class hierarchy without control mappings"
+		],
+		"correctIndex": 2,
+		"explanation": "Multi-dimensional compliance dashboards provide actionable visibility into obligations, entities, and control trends.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/compliance-dashboards.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 23,
+		"prompt": "What governance mechanism is most effective for keeping policy compliance current after regulatory updates?",
+		"choices": [
+			"Freeze all policy records until annual audit",
+			"Update only the policy title and ignore citations",
+			"Disable control testing during transitions",
+			"Run controlled policy lifecycle updates with impact analysis across controls, tests, and owners"
+		],
+		"correctIndex": 3,
+		"explanation": "Lifecycle governance with impact analysis prevents hidden gaps when regulations and internal policies change.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/policy-lifecycle-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 24,
+		"prompt": "Which practice most improves confidence in policy compliance attestations?",
+		"choices": [
+			"Periodic attestation campaigns with clear owners, due dates, and evidence expectations",
+			"Self-attestation without evidence",
+			"Allowing overdue attestations indefinitely",
+			"Removing historical attestation records"
+		],
+		"correctIndex": 0,
+		"explanation": "Structured attestation campaigns strengthen accountability and provide auditable evidence of ongoing compliance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/attest-policy-compliance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 20,
+		"prompt": "What defines a major security incident in ServiceNow SIR practice?",
+		"choices": [
+			"Any incident created from email",
+			"A high-impact incident requiring coordinated cross-functional response and executive visibility",
+			"Only incidents with malware indicators",
+			"Any incident with more than ten tasks"
+		],
+		"correctIndex": 1,
+		"explanation": "Major security incidents are distinguished by business impact and the need for coordinated enterprise response.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/major-security-incident-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 21,
+		"prompt": "During a major incident, what is the most important reason to maintain a single parent record with child workstreams?",
+		"choices": [
+			"To reduce the total number of analysts required",
+			"To avoid documenting decisions",
+			"To centralize command-and-control visibility while teams execute parallel containment and recovery tasks",
+			"To prevent integration with threat intelligence"
+		],
+		"correctIndex": 2,
+		"explanation": "Parent-child structure enables centralized coordination and reporting while separate teams handle parallel work.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/manage-major-security-incidents.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 22,
+		"prompt": "Which communication pattern is best during major incident operations?",
+		"choices": [
+			"Status updates only at final closure",
+			"Ad hoc chat updates without timestamps",
+			"Separate timelines per analyst with no shared source",
+			"Scheduled, role-based updates with a validated incident timeline and decision log"
+		],
+		"correctIndex": 3,
+		"explanation": "Cadenced communication and a validated timeline reduce confusion and improve decision quality during high-pressure response.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-war-room-operations.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 23,
+		"prompt": "What is the best indicator that major incident governance is working effectively?",
+		"choices": [
+			"Clear role assignments, rapid containment, and complete post-incident actions tracked to closure",
+			"Higher count of unresolved child incidents",
+			"No formal handoff records between shifts",
+			"Frequent reopening because closure criteria are unclear"
+		],
+		"correctIndex": 0,
+		"explanation": "Strong governance is reflected in coordinated execution, measurable containment, and closed improvement actions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-operations-metrics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 24,
+		"prompt": "Which post-major-incident output delivers the most long-term operational value?",
+		"choices": [
+			"A high-level summary with no action owners",
+			"A lessons-learned review with prioritized improvements, control owners, and due dates",
+			"Automatic closure of related vulnerabilities",
+			"A list of all chat participants"
+		],
+		"correctIndex": 1,
+		"explanation": "Structured post-incident reviews with owned improvements drive measurable resilience gains.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/post-incident-review.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 20,
+		"prompt": "Pattern-based discovery in Service Mapping is primarily used to:",
+		"choices": [
+			"Identify application components and dependencies using reusable logic per technology pattern",
+			"Replace CMDB reconciliation policies",
+			"Create policy statements in IRM",
+			"Classify software spend by department"
+		],
+		"correctIndex": 0,
+		"explanation": "Patterns provide reusable discovery logic to identify components and build accurate dependency relationships.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-patterns-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 21,
+		"prompt": "Which prerequisite most improves success when creating custom pattern-based service discovery logic?",
+		"choices": [
+			"Disabling all identification rules before testing",
+			"Clear expected entry points, credentials, and CI identification strategy for target technology",
+			"Removing relationship classes from CMDB",
+			"Limiting pattern testing to production only"
+		],
+		"correctIndex": 1,
+		"explanation": "Custom patterns need known entry points, access, and identification alignment to produce dependable map data.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 22,
+		"prompt": "Why should pattern execution results be validated against known architecture diagrams during onboarding?",
+		"choices": [
+			"To reduce MID Server memory use only",
+			"To avoid creating service maps",
+			"To confirm discovered components and dependencies match intended application topology",
+			"To bypass service owner approval"
+		],
+		"correctIndex": 2,
+		"explanation": "Comparing output to known topology catches false relationships and missing dependencies early.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/validate-service-map-results.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 23,
+		"prompt": "What is the most common risk of unmanaged custom pattern changes?",
+		"choices": [
+			"They automatically improve map accuracy in all cases",
+			"They eliminate duplicate CIs permanently",
+			"They force Discovery to use credentialless scanning only",
+			"They can introduce incorrect CI identification or relationships that degrade map trust"
+		],
+		"correctIndex": 3,
+		"explanation": "Uncontrolled pattern changes can create misidentification and bad relationships, reducing confidence in map data.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-pattern-best-practices.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 24,
+		"prompt": "Which governance routine best sustains pattern-based discovery quality over time?",
+		"choices": [
+			"Version-controlled pattern updates with test evidence, peer review, and scheduled regression validation",
+			"Editing production patterns directly during incidents",
+			"Skipping documentation for custom pattern steps",
+			"Deleting old pattern execution logs immediately"
+		],
+		"correctIndex": 0,
+		"explanation": "Version control, review, and regression testing maintain reliability as environments and technologies evolve.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/manage-discovery-pattern-versions.html"
+		]
+	}
+]

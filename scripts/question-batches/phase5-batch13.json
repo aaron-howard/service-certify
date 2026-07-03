@@ -1,0 +1,257 @@
+[
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 65,
+    "prompt": "A Discovery schedule stopped populating new CIs after a MID Server update. What is the best first troubleshooting action?",
+    "choices": [
+      "Validate MID Server status, capability assignment, and ECC queue heartbeat for the affected IP range",
+      "Delete all Discovery schedules and recreate them from scratch",
+      "Disable Identification and Reconciliation to bypass matching rules",
+      "Run Discovery from production credentials on every subnet"
+    ],
+    "correctIndex": 0,
+    "explanation": "Discovery troubleshooting starts by confirming MID health and ECC communication before changing data-model controls.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/c_Discovery.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/mid-server/concept/c_MIDServer.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 66,
+    "prompt": "Which signal most directly indicates credentials are causing Discovery failures?",
+    "choices": [
+      "High probe timeout or authentication errors in Discovery Status and ECC response logs",
+      "A drop in incident ticket volume during business hours",
+      "An increase in CMDB relationship records",
+      "More users opening the Service Portal"
+    ],
+    "correctIndex": 0,
+    "explanation": "Authentication and timeout errors in Discovery execution records are primary indicators of credential issues.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/t_ConfigureDiscoveryCredentials.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/mid-server/concept/c_MIDServer.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 67,
+    "prompt": "How should you troubleshoot inconsistent CI updates from horizontal Discovery patterns?",
+    "choices": [
+      "Review pattern debug output, classification results, and IRE logs to isolate extraction or identification failures",
+      "Disable patterns and rely only on manual CI creation",
+      "Run all patterns at maximum frequency without analysis",
+      "Remove CI class constraints from the CMDB schema"
+    ],
+    "correctIndex": 0,
+    "explanation": "Pattern and IRE diagnostics reveal where data extraction, classification, or reconciliation is failing.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/horizontal-discovery.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/ire.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 68,
+    "prompt": "What troubleshooting approach best reduces repeat Discovery outages after network changes?",
+    "choices": [
+      "Establish pre-change validation checks for firewall paths, DNS resolution, and target reachability from MID Servers",
+      "Increase Discovery concurrency globally without validation",
+      "Exclude failed subnets from future Discovery schedules",
+      "Disable alerting on Discovery failures to reduce noise"
+    ],
+    "correctIndex": 0,
+    "explanation": "Network path validation and controlled pre-checks prevent common post-change Discovery failures.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/c_Discovery.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/mid-server/task/t_TestMIDServerConnectivity.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 69,
+    "prompt": "Which KPI is most useful for measuring Discovery troubleshooting effectiveness over time?",
+    "choices": [
+      "Trend of successful device classification and CI update rate with lower repeat failure categories",
+      "Total number of MID Servers installed regardless workload",
+      "Number of Discovery schedules created each month",
+      "Volume of manual CI edits by administrators"
+    ],
+    "correctIndex": 0,
+    "explanation": "Improved success and reduced recurring failure causes indicate troubleshooting actions are working.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/c_Discovery.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 65,
+    "prompt": "What is the primary benefit of integrating Event Management with AIOps capabilities?",
+    "choices": [
+      "Correlate high-volume events into actionable situations with probable cause context and faster triage",
+      "Replace all event sources with manual ticket entry",
+      "Suppress every event after first occurrence",
+      "Route all events directly to change management approvals"
+    ],
+    "correctIndex": 0,
+    "explanation": "AIOps integration improves signal quality by correlation, context enrichment, and actionable clustering.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/aiops/concept/aiops-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 66,
+    "prompt": "Which data quality dependency is most critical for successful AIOps event correlation?",
+    "choices": [
+      "Accurate CI topology and service mapping relationships in the CMDB",
+      "Maximum number of email notifications to operators",
+      "Weekly reset of all alert severity values",
+      "Manual event tagging by every resolver group"
+    ],
+    "correctIndex": 0,
+    "explanation": "AIOps correlation depends on trustworthy CI and service context to group related events correctly.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/cmdb-landing.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 67,
+    "prompt": "How should teams tune AIOps/event ops models when false-positive situations increase?",
+    "choices": [
+      "Refine event rules, retrain correlation models with validated incidents, and adjust noise suppression thresholds",
+      "Disable correlation and open incidents for every raw event",
+      "Set all event severities to critical for visibility",
+      "Pause ingestion from all monitoring connectors"
+    ],
+    "correctIndex": 0,
+    "explanation": "Model and rule tuning with validated outcomes reduces noisy groupings while preserving meaningful alerts.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/task/t_ConfigureEventRules.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/aiops/concept/aiops-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 68,
+    "prompt": "Which operating model best supports AIOps-assisted event response at scale?",
+    "choices": [
+      "Use tiered triage with automation for known patterns and human escalation for ambiguous situations",
+      "Require senior engineers to manually review every event before action",
+      "Auto-close all medium and low events by default",
+      "Route events only through weekly CAB reviews"
+    ],
+    "correctIndex": 0,
+    "explanation": "Blended automation and human oversight provides scalable response while maintaining operational control.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/automation/concept/flow-designer.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 69,
+    "prompt": "Which KPI set best demonstrates value from AIOps integration in Event Management?",
+    "choices": [
+      "Reduced mean time to acknowledge and resolve service-impacting situations with lower event-to-incident volume",
+      "Higher raw event ingestion volume regardless outcomes",
+      "More notification channels per operator",
+      "Increased count of manually merged alerts"
+    ],
+    "correctIndex": 0,
+    "explanation": "AIOps value is reflected in faster restoration and reduced noise-to-action conversion costs.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/aiops/concept/aiops-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 65,
+    "prompt": "What is the primary purpose of an audit program in Hardware Asset Management?",
+    "choices": [
+      "Validate physical, financial, and lifecycle accuracy of hardware records against policy and controls",
+      "Increase asset count by creating placeholder records",
+      "Close reconciliation tasks without evidence",
+      "Limit audit scope to retired assets only"
+    ],
+    "correctIndex": 0,
+    "explanation": "HAM audits confirm asset data integrity, control effectiveness, and compliance readiness.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 66,
+    "prompt": "Which control most improves auditability of hardware stock and assignments?",
+    "choices": [
+      "Enforce barcode or serial-based custody transactions with user, date, and location traceability",
+      "Allow verbal handoffs without system updates",
+      "Track assets only at procurement and disposal",
+      "Use shared generic assignee records for speed"
+    ],
+    "correctIndex": 0,
+    "explanation": "End-to-end custody traceability creates defensible audit evidence for movement and assignment events.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/task/t_ManageHardwareAssets.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/asset-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 67,
+    "prompt": "How should HAM teams handle recurring audit discrepancies between discovered and tracked assets?",
+    "choices": [
+      "Perform root-cause analysis by lifecycle stage, then implement corrective workflows and ownership accountability",
+      "Ignore discrepancies under a fixed threshold",
+      "Delete unmatched records to improve dashboard percentages",
+      "Pause all discovery feeds until next fiscal year"
+    ],
+    "correctIndex": 0,
+    "explanation": "Recurring discrepancies require stage-specific remediation and accountable process owners.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/cmdb-landing.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 68,
+    "prompt": "Which evidence package is most appropriate for a HAM internal audit review?",
+    "choices": [
+      "Policy controls, sample transaction logs, exception remediation records, and approved attestation sign-offs",
+      "A screenshot of the asset list without filters",
+      "An email summary from one asset manager",
+      "A count of open incidents for hardware issues"
+    ],
+    "correctIndex": 0,
+    "explanation": "Audits require traceable control evidence, exceptions, and documented attestations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/asset-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 69,
+    "prompt": "Which metric best indicates HAM audit program maturity?",
+    "choices": [
+      "Declining repeat audit findings with faster closure of control exceptions and verified corrective actions",
+      "Higher volume of waived audit controls",
+      "Longer audit cycles regardless risk",
+      "More manual spreadsheet reconciliations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mature audit programs reduce repeat findings and improve exception remediation effectiveness.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-management.html"
+    ]
+  }
+]

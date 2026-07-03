@@ -1,0 +1,402 @@
+[
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 15,
+    "prompt": "In TPRM, what does inherent risk represent?",
+    "choices": [
+      "The remaining risk after all controls are validated",
+      "The baseline level of risk posed by a vendor relationship before control evaluation",
+      "Only financial risk after contract signing",
+      "A score assigned only to inactive vendors"
+    ],
+    "correctIndex": 1,
+    "explanation": "Inherent risk estimates exposure based on vendor activity, data use, and criticality before mitigation is considered.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/concept/inherent-risk.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 16,
+    "prompt": "Which input is most relevant when calculating vendor inherent risk?",
+    "choices": [
+      "Whether the vendor supports critical services and handles regulated data",
+      "The assessor's tenure",
+      "Number of dashboard widgets",
+      "Case assignment group color"
+    ],
+    "correctIndex": 0,
+    "explanation": "Service criticality and sensitive data handling are core inherent risk drivers in vendor relationships.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/configure-inherent-risk-criteria.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 17,
+    "prompt": "Why should inherent risk scoring be standardized across business units?",
+    "choices": [
+      "To remove business context from assessments",
+      "To support consistent triage thresholds and comparable vendor oversight decisions",
+      "To avoid reassessments entirely",
+      "To eliminate questionnaire usage"
+    ],
+    "correctIndex": 1,
+    "explanation": "A shared scoring model improves consistency and fairness in how vendors are evaluated and escalated.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/standardize-vendor-risk-methodology.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 18,
+    "prompt": "A vendor provides low-impact office supplies with no data access. What inherent risk outcome is most likely?",
+    "choices": [
+      "High inherent risk requiring full control assessment",
+      "Critical risk requiring board approval",
+      "Low inherent risk, often eligible for streamlined due diligence",
+      "Automatic residual risk acceptance"
+    ],
+    "correctIndex": 2,
+    "explanation": "Low criticality and no sensitive data handling generally result in lower inherent risk classification.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/classify-vendors-by-inherent-risk.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 19,
+    "prompt": "What governance step best improves trust in inherent risk ratings?",
+    "choices": [
+      "Allow individual analysts to change criteria ad hoc",
+      "Review scoring criteria periodically with risk, legal, and business stakeholders",
+      "Use only vendor self-attested labels",
+      "Skip documentation for scoring rationale"
+    ],
+    "correctIndex": 1,
+    "explanation": "Cross-functional review keeps inherent risk criteria aligned with current regulatory and operational realities.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/review-vendor-risk-scoring-model.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 15,
+    "prompt": "In VR, what is the primary purpose of remediation workflows?",
+    "choices": [
+      "Track and enforce vulnerability fix actions through accountable tasks and states",
+      "Delete vulnerability records after triage",
+      "Route all work to security only",
+      "Ignore SLA commitments"
+    ],
+    "correctIndex": 0,
+    "explanation": "Remediation workflows coordinate ownership, progress tracking, and closure evidence for vulnerabilities.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/concept/remediation-workflow.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 16,
+    "prompt": "Which action improves remediation cycle time the most?",
+    "choices": [
+      "Creating remediation tasks with clear ownership and due dates tied to priority",
+      "Assigning all tasks to one queue",
+      "Waiting for monthly review before assignment",
+      "Suppressing all notifications"
+    ],
+    "correctIndex": 0,
+    "explanation": "Explicit ownership and priority-driven due dates reduce handoff delays and improve accountability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/task/create-remediation-tasks.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 17,
+    "prompt": "When should a vulnerability remediation task be considered complete?",
+    "choices": [
+      "As soon as a patch is scheduled",
+      "After verification confirms the vulnerability is resolved or accepted per policy",
+      "When a comment is added by any user",
+      "Immediately after assignment"
+    ],
+    "correctIndex": 1,
+    "explanation": "Closure requires evidence that remediation outcomes are validated, not just planned.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/task/verify-vulnerability-remediation.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 18,
+    "prompt": "A remediation owner cannot patch in time due to dependency constraints. What is the best governed response?",
+    "choices": [
+      "Close the item as fixed",
+      "Ignore SLA and wait",
+      "Request a risk exception with documented compensating controls and expiration",
+      "Delete the vulnerability group"
+    ],
+    "correctIndex": 2,
+    "explanation": "Formal exceptions with controls and expiry maintain governance when immediate remediation is not feasible.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/task/manage-vulnerability-exceptions.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 19,
+    "prompt": "What should security teams monitor to improve remediation effectiveness over time?",
+    "choices": [
+      "Only the number of imported findings",
+      "Mean time to remediate by priority and recurring backlog drivers",
+      "Case form color themes",
+      "Count of inactive users"
+    ],
+    "correctIndex": 1,
+    "explanation": "Trend analysis of MTTR and backlog causes highlights systemic bottlenecks in fix execution.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/task/report-on-remediation-performance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 15,
+    "prompt": "In CSM Order Management, what is the role of order case lines?",
+    "choices": [
+      "They define hardware asset depreciation",
+      "They break an order-related case into specific order line issues for tracking and resolution",
+      "They replace customer contracts",
+      "They store vulnerability IDs only"
+    ],
+    "correctIndex": 1,
+    "explanation": "Order case lines provide granular visibility when a case affects individual products or service lines.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/manage-order-case-lines.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 16,
+    "prompt": "Why are order case lines useful for fulfillment coordination?",
+    "choices": [
+      "They prevent communication with order systems",
+      "They allow separate statuses and actions per impacted order line",
+      "They remove the need for parent cases",
+      "They force one resolution code for all products"
+    ],
+    "correctIndex": 1,
+    "explanation": "Line-level states and actions support mixed outcomes across complex customer orders.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/concept/order-case-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 17,
+    "prompt": "A customer order has one delayed item and two shipped items. How should this be modeled in CSM?",
+    "choices": [
+      "Create one unresolved case for the entire order with no detail",
+      "Close the case because most items shipped",
+      "Track each impacted item through order case lines with distinct statuses",
+      "Convert the case to a change request"
+    ],
+    "correctIndex": 2,
+    "explanation": "Order case lines capture partial impacts and enable accurate customer communication on each line item.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/update-order-line-statuses-in-cases.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 18,
+    "prompt": "What integration benefit comes from linking order case lines to external order systems?",
+    "choices": [
+      "Automatic deletion of old customer contacts",
+      "Synchronized fulfillment updates that improve case accuracy and transparency",
+      "Bypassing entitlement checks",
+      "Disabling workflow automation"
+    ],
+    "correctIndex": 1,
+    "explanation": "System synchronization keeps case line data current and reduces manual status reconciliation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/integrate-order-systems-with-csm.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 19,
+    "prompt": "Which KPI best measures effectiveness of order case line handling?",
+    "choices": [
+      "Average age to resolve impacted order lines",
+      "Number of CMDB classes",
+      "Total background scripts executed",
+      "Count of inactive groups"
+    ],
+    "correctIndex": 0,
+    "explanation": "Line-level resolution time directly reflects execution quality for order-related customer issues.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/report-on-order-case-lines.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 15,
+    "prompt": "What is the main objective of dispatching in FSM?",
+    "choices": [
+      "Match work to the right technician at the right time based on constraints and priorities",
+      "Delay all assignments until end of day",
+      "Assign all tasks manually without context",
+      "Route work only by alphabetical technician name"
+    ],
+    "correctIndex": 0,
+    "explanation": "Dispatching aligns skills, availability, territory, and urgency to optimize service execution.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/concept/dispatch-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 16,
+    "prompt": "Which dispatcher action best reduces missed appointments?",
+    "choices": [
+      "Ignoring travel time between jobs",
+      "Using real-time schedule boards to rebalance assignments when delays occur",
+      "Locking schedules days in advance with no exceptions",
+      "Assigning urgent jobs to unavailable technicians"
+    ],
+    "correctIndex": 1,
+    "explanation": "Dynamic rebalance based on schedule conditions helps maintain customer commitments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/use-dispatch-console.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 17,
+    "prompt": "Why is technician availability data critical to dispatch quality?",
+    "choices": [
+      "It provides payroll export only",
+      "It ensures assignments are feasible within working calendars and shift constraints",
+      "It replaces SLA definitions",
+      "It removes need for territory models"
+    ],
+    "correctIndex": 1,
+    "explanation": "Accurate calendars and shifts prevent unrealistic assignments and reduce rework.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/configure-technician-availability.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 18,
+    "prompt": "A high-priority outage job arrives midday. What is the best dispatch response?",
+    "choices": [
+      "Queue it for next week automatically",
+      "Reprioritize schedule slots and reassign lower-priority work to meet the urgent commitment",
+      "Close the new task as duplicate",
+      "Pause all other work orders indefinitely"
+    ],
+    "correctIndex": 1,
+    "explanation": "Effective dispatching supports exception handling by re-optimizing current schedules for urgent work.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/reprioritize-dispatched-work.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 19,
+    "prompt": "Which measure best indicates dispatch process maturity?",
+    "choices": [
+      "Mean dispatch-to-arrival time and first-time fix rate",
+      "Number of admin users",
+      "CMDB update frequency",
+      "Count of inactive locations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Faster response and higher first-time fix rates reflect stronger dispatch and assignment quality.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/measure-dispatch-performance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 15,
+    "prompt": "In HRSD, what are lifecycle events designed to support?",
+    "choices": [
+      "Vendor onboarding questionnaires",
+      "Coordinated employee journeys such as onboarding, transitions, and offboarding",
+      "Field technician route planning",
+      "Security patch deployments"
+    ],
+    "correctIndex": 1,
+    "explanation": "Lifecycle events orchestrate cross-department tasks tied to key employee moments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/concept/lifecycle-events-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 16,
+    "prompt": "Why do HR teams use lifecycle event templates?",
+    "choices": [
+      "To ensure repeatable task orchestration and role-based ownership for common employee scenarios",
+      "To bypass security roles",
+      "To eliminate HR case usage",
+      "To disable notifications"
+    ],
+    "correctIndex": 0,
+    "explanation": "Templates provide standardized task sets and timelines for predictable employee experiences.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/create-lifecycle-event-templates.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 17,
+    "prompt": "What is a key advantage of assigning lifecycle event activities across departments?",
+    "choices": [
+      "It reduces collaboration by centralizing all tasks in HR only",
+      "It prevents visibility into task status",
+      "It eliminates approvals",
+      "It improves coordination among HR, IT, facilities, and other stakeholders during transitions"
+    ],
+    "correctIndex": 3,
+    "explanation": "Cross-functional assignment ensures each team completes its responsibilities in time-sensitive events.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/configure-cross-functional-lifecycle-activities.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 18,
+    "prompt": "An organization wants better onboarding transparency. Which lifecycle event feature helps most?",
+    "choices": [
+      "Task timelines and progress tracking for each event participant",
+      "Disabling employee notifications",
+      "Using only email threads for updates",
+      "Creating one generic task with no due date"
+    ],
+    "correctIndex": 0,
+    "explanation": "Lifecycle event progress views make ownership and completion status visible across stakeholders.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/track-lifecycle-event-progress.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 19,
+    "prompt": "Which metric is most useful for evaluating lifecycle event effectiveness?",
+    "choices": [
+      "Number of active discovery probes",
+      "Percentage of lifecycle activities completed on time",
+      "Count of security incidents",
+      "Total catalog categories"
+    ],
+    "correctIndex": 1,
+    "explanation": "On-time completion rate is a direct indicator of lifecycle orchestration performance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/report-on-lifecycle-events.html"
+    ]
+  }
+]

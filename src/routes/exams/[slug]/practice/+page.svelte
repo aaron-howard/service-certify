@@ -10,12 +10,19 @@
 	const mode = $derived(data.mode as 'sample' | 'full');
 	const isFullMock = $derived(mode === 'full');
 	const convex = useConvexClient();
+	const sessionSeed = $state(
+		typeof crypto !== 'undefined' && 'randomUUID' in crypto
+			? crypto.randomUUID()
+			: `mock-${Date.now()}`
+	);
 
 	const bank = useQuery(
 		api.practiceQuestions.listByTrackCode,
 		() =>
 			browser && env.PUBLIC_CONVEX_URL
-				? { trackCode: exam.code, mode }
+				? isFullMock
+					? { trackCode: exam.code, mode, sessionSeed }
+					: { trackCode: exam.code, mode }
 				: 'skip'
 	);
 
@@ -104,6 +111,7 @@
 			const graded = await convex.mutation(api.practiceQuestions.gradeAnswers, {
 				trackCode: exam.code,
 				mode,
+				...(isFullMock ? { sessionSeed } : {}),
 				answers: questions.map((q) => ({
 					order: q.id,
 					selectedIndex: selected[q.id]!

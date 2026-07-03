@@ -1,0 +1,290 @@
+[
+  {
+    "trackCode": "CSA",
+    "order": 72,
+    "prompt": "What is the main benefit of assigning roles through groups instead of directly to users?",
+    "choices": [
+      "Access can be managed consistently for sets of users",
+      "It bypasses ACL evaluation",
+      "It eliminates the need for user records",
+      "It auto-grants security_admin"
+    ],
+    "correctIndex": 0,
+    "explanation": "Group-based role assignment simplifies administration and keeps access changes consistent across team members.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/user-administration/ua-creating-groups.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 73,
+    "prompt": "Which module is commonly used to review who currently has a specific role?",
+    "choices": [
+      "CMDB Health Dashboard",
+      "Users with Role report/list view",
+      "Scheduled Jobs",
+      "Data Sources"
+    ],
+    "correctIndex": 1,
+    "explanation": "Role assignment visibility is typically reviewed from role-user relationship lists and reports.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/user-administration/audit-user-roles.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 74,
+    "prompt": "What does impersonation allow an administrator to do?",
+    "choices": [
+      "Reset system properties without audit",
+      "Change update set scope globally",
+      "Experience the platform as another user for troubleshooting",
+      "Disable ACLs for one session"
+    ],
+    "correctIndex": 2,
+    "explanation": "Impersonation helps admins validate user experience and permissions while retaining auditability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/user-administration/t_ImpersonateAUser.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 75,
+    "prompt": "What is the purpose of a dictionary override on an extended table?",
+    "choices": [
+      "To create a new table hierarchy",
+      "To disable inherited fields permanently",
+      "To clone records into another scope",
+      "To modify inherited field behavior for a child table"
+    ],
+    "correctIndex": 3,
+    "explanation": "Dictionary overrides let child tables alter inherited field properties without changing the parent definition.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/data-dictionary/dictionary-overrides.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 76,
+    "prompt": "Which statement about update sets is correct for configuration migration?",
+    "choices": [
+      "They capture many configuration changes for promotion between instances",
+      "They store production task data records automatically",
+      "They replace all source control workflows",
+      "They cannot include dictionary changes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Update sets track many metadata configuration changes and are moved between environments for deployment.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/application-development/update-sets-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 77,
+    "prompt": "What is a key use of list personalization for administrators and users?",
+    "choices": [
+      "Changing ACL scripts",
+      "Adding, removing, and reordering visible list columns",
+      "Rebuilding table indexes",
+      "Defining transform maps"
+    ],
+    "correctIndex": 1,
+    "explanation": "List personalization allows users to tailor visible columns and layout for role-specific productivity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-user-interface/lists/personalize-lists.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 78,
+    "prompt": "Why would an admin configure list filters and filter breadcrumbs?",
+    "choices": [
+      "To bypass table ACLs",
+      "To archive records automatically",
+      "To quickly narrow records using reusable conditions",
+      "To change dictionary attributes"
+    ],
+    "correctIndex": 2,
+    "explanation": "List filters provide a fast way to target relevant records and can be reused in reporting and daily operations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-user-interface/lists/list-filters.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 79,
+    "prompt": "What is the primary function of ACL rules in ServiceNow?",
+    "choices": [
+      "To assign update sets to users",
+      "To schedule import jobs",
+      "To define dashboard widgets",
+      "To control record and field access based on conditions and roles"
+    ],
+    "correctIndex": 3,
+    "explanation": "ACLs enforce authorization for table records and fields through role, condition, and script logic.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-security/access-control/access-controls.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 80,
+    "prompt": "What does the System Dictionary define for a table field?",
+    "choices": [
+      "Core metadata such as type, length, default, and attributes",
+      "Only dashboard color themes",
+      "Only email templates",
+      "Only transform schedules"
+    ],
+    "correctIndex": 0,
+    "explanation": "Dictionary entries define technical field behavior and metadata used throughout the platform.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/data-dictionary/system-dictionary-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 81,
+    "prompt": "Which capability is provided by assignment rules?",
+    "choices": [
+      "Encrypting attachment payloads",
+      "Automatically routing records to users or groups based on conditions",
+      "Changing table inheritance",
+      "Converting incidents into CIs"
+    ],
+    "correctIndex": 1,
+    "explanation": "Assignment rules automate routing logic so records are directed to the proper support teams.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/task-management/create-assignment-rules.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 82,
+    "prompt": "What is a common use of notifications in administration?",
+    "choices": [
+      "To create class hierarchies",
+      "To enforce field encryption",
+      "To send event-driven communications by email or other channels",
+      "To replicate records across domains"
+    ],
+    "correctIndex": 2,
+    "explanation": "Notifications are triggered by events or record conditions to deliver timely communication.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/notifications/notifications-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 83,
+    "prompt": "What does a Data Policy do compared with a UI Policy?",
+    "choices": [
+      "Only Data Policies run on mobile",
+      "Only UI Policies run server-side",
+      "Data Policies create ACLs automatically",
+      "Data Policies enforce data consistency independent of form UI"
+    ],
+    "correctIndex": 3,
+    "explanation": "Data Policies enforce field requirements and consistency across imports and integrations, not just interactive forms.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/data-management/data-policies.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 84,
+    "prompt": "Which action is a standard way to troubleshoot why a user cannot see a field value?",
+    "choices": [
+      "Review applicable ACLs and field-level security behavior",
+      "Delete and recreate the table",
+      "Reset all system properties",
+      "Disable update sets"
+    ],
+    "correctIndex": 0,
+    "explanation": "Field visibility issues are commonly tied to ACL logic and role or condition checks.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-security/access-control/access-controls.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 85,
+    "prompt": "What is the practical reason for using form views?",
+    "choices": [
+      "To store binary attachments",
+      "To present different field layouts for different roles or processes",
+      "To bypass mandatory checks",
+      "To map CI relationships"
+    ],
+    "correctIndex": 1,
+    "explanation": "Form views allow tailored experiences so each audience sees relevant fields and layout.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-user-interface/forms/create-and-customize-form-views.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 86,
+    "prompt": "When creating a report for operational monitoring, what is typically most important first?",
+    "choices": [
+      "Adding as many colors as possible",
+      "Choosing random aggregations",
+      "Selecting the correct table and filter criteria for the target question",
+      "Exporting results to XML"
+    ],
+    "correctIndex": 2,
+    "explanation": "A meaningful report starts with accurate data scope from the right table and conditions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-analytics-and-reporting/create-reports/reporting-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 87,
+    "prompt": "Why do administrators use system properties?",
+    "choices": [
+      "To define one-time update set metadata",
+      "To replace all script includes",
+      "To store and manage configurable runtime behavior without code edits",
+      "To enforce email domain policies only"
+    ],
+    "correctIndex": 3,
+    "explanation": "System properties externalize configuration so behavior can be tuned without changing scripts.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/system-properties/system-properties.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 88,
+    "prompt": "What is the key purpose of an import set table?",
+    "choices": [
+      "To stage incoming source data before transform processing",
+      "To replace target production tables",
+      "To store archived incidents only",
+      "To manage domain separation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Import sets stage external data and allow controlled transforms into destination tables.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/import-sets.html"
+    ]
+  },
+  {
+    "trackCode": "CSA",
+    "order": 89,
+    "prompt": "What does a scheduled job (Scheduled Script Execution) allow an admin to do?",
+    "choices": [
+      "Grant security_admin automatically",
+      "Run recurring scripted logic on a schedule",
+      "Clone production records to sub-prod daily",
+      "Override dictionary inheritance"
+    ],
+    "correctIndex": 1,
+    "explanation": "Scheduled jobs automate repeated administrative tasks at defined intervals.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/scheduled-jobs/scheduled-script-execution.html"
+    ]
+  }
+]

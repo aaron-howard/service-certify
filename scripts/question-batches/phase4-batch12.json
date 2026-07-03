@@ -1,0 +1,257 @@
+[
+  {
+    "trackCode": "CPOA",
+    "order": 60,
+    "prompt": "What is the primary objective of release testing governance for platform owners?",
+    "choices": [
+      "Validate business-critical functionality, integrations, and non-functional risks before deployment",
+      "Run only smoke tests on production after release",
+      "Skip testing when changes are labeled low effort",
+      "Depend solely on developer unit tests for enterprise readiness"
+    ],
+    "correctIndex": 0,
+    "explanation": "Release testing governance ensures changes meet quality and risk expectations before customer impact.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-application-development/page/build/team-development/concept/c_TestManagement.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 61,
+    "prompt": "Which testing scope best supports owner-level release confidence?",
+    "choices": [
+      "Combine regression, integration, and user acceptance testing with documented entry and exit criteria",
+      "Limit testing to updated records only",
+      "Execute tests only after production deployment",
+      "Approve releases based on past performance trends"
+    ],
+    "correctIndex": 0,
+    "explanation": "A layered test scope with clear criteria provides meaningful evidence for release decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-application-development/page/build/team-development/concept/c_TestManagement.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 62,
+    "prompt": "How should failed release tests be governed when delivery deadlines are tight?",
+    "choices": [
+      "Use risk-based go/no-go decisions with remediation plans and explicit stakeholder sign-off",
+      "Override failures when sprint commitments are at risk",
+      "Hide failed results from release notes until after go-live",
+      "Push release and resolve issues in production"
+    ],
+    "correctIndex": 0,
+    "explanation": "Risk-based governance preserves control by making exception decisions transparent and accountable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 63,
+    "prompt": "Which artifact most improves auditability of release testing governance?",
+    "choices": [
+      "A traceability matrix linking requirements, test cases, defects, and release approvals",
+      "A simple pass/fail status message in team chat",
+      "Screenshots of selected test runs without metadata",
+      "An undocumented list of high-priority user stories"
+    ],
+    "correctIndex": 0,
+    "explanation": "Traceability demonstrates that release decisions are evidence-based and repeatable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-application-development/page/build/team-development/concept/c_TestManagement.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 64,
+    "prompt": "What KPI best indicates release testing governance maturity over time?",
+    "choices": [
+      "Reduced escaped defects in production with stable release predictability",
+      "Greater number of waived test cases per release",
+      "Longer manual testing cycles regardless risk profile",
+      "Increased emergency post-release hotfix count"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mature governance improves quality outcomes while maintaining predictable delivery performance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/problem-management/concept/problem-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 60,
+    "prompt": "What is the primary purpose of environment sequencing governance in ServiceNow delivery?",
+    "choices": [
+      "Ensure changes flow through defined stages with validation gates before production",
+      "Allow direct production deployments for low-risk updates",
+      "Use any environment order based on team preference",
+      "Skip testing in pre-production for routine changes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Sequenced promotion controls reduce release risk by enforcing staged validation and approval.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-application-development/page/build/team-development/concept/c_TeamDevelopment.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 61,
+    "prompt": "Which control best prevents environment drift from undermining sequencing governance?",
+    "choices": [
+      "Standardize configuration baselines and run periodic drift comparisons across environments",
+      "Permit each environment to evolve independently",
+      "Disable update set history after deployment",
+      "Rely solely on production incident trends"
+    ],
+    "correctIndex": 0,
+    "explanation": "Drift management keeps test and production behavior aligned so sequence decisions remain meaningful.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/plugins/concept/c_ActivatingPlugins.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 62,
+    "prompt": "How should urgent production fixes be handled within environment sequencing governance?",
+    "choices": [
+      "Use emergency process controls and back-promote validated changes to lower environments",
+      "Patch production only and skip downstream reconciliation",
+      "Pause all emergency fixes until normal release windows",
+      "Allow developers to choose personal sequencing methods"
+    ],
+    "correctIndex": 0,
+    "explanation": "Emergency governance requires controlled exceptions and post-fix reconciliation to preserve sequence integrity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-application-development/page/build/team-development/concept/c_TeamDevelopment.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 63,
+    "prompt": "What evidence most strongly supports compliance with environment sequencing policy?",
+    "choices": [
+      "Promotion records showing approvals, test outcomes, and deployment lineage across stages",
+      "A deployment calendar without execution details",
+      "Informal handoff notes between developers",
+      "Only the final production change ticket"
+    ],
+    "correctIndex": 0,
+    "explanation": "Complete promotion lineage is necessary to prove process adherence and support auditability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-application-development/page/build/team-development/concept/c_TeamDevelopment.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 64,
+    "prompt": "Which outcome indicates strong environment sequencing governance?",
+    "choices": [
+      "Lower deployment failure rates with fewer rollback events and predictable release cadence",
+      "Higher volume of direct production changes",
+      "Longer approval queues with no risk differentiation",
+      "More post-release incidents attributed to configuration mismatch"
+    ],
+    "correctIndex": 0,
+    "explanation": "Effective sequencing governance improves release reliability and reduces avoidable deployment disruption.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 60,
+    "prompt": "What is the main purpose of CMDB certification governance in enterprise platform operations?",
+    "choices": [
+      "Ensure CI data quality, ownership, and policy compliance for trusted service decisions",
+      "Maximize CI record count regardless data accuracy",
+      "Allow unrestricted CI updates by any support role",
+      "Treat CMDB health as separate from operational risk"
+    ],
+    "correctIndex": 0,
+    "explanation": "Certification governance validates that CMDB data is reliable enough for incident, change, and risk workflows.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/cmdb-landing.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/cmdb-health-dashboard.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 61,
+    "prompt": "Which model best supports sustainable CMDB certification across many business services?",
+    "choices": [
+      "Assign service-level CI ownership and automate recurring certification tasks with escalation",
+      "Centralize all CI validation in a one-time annual event",
+      "Disable ownership fields to simplify CI administration",
+      "Depend on manual audits after major incidents only"
+    ],
+    "correctIndex": 0,
+    "explanation": "Distributed ownership with automation scales certification while maintaining accountability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/c_ServiceMapping.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/cmdb-landing.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 62,
+    "prompt": "How should certification governance address chronic CMDB data quality failures?",
+    "choices": [
+      "Use targeted remediation plans tied to CI class policy violations and ownership KPIs",
+      "Suppress failing CI classes from certification reports",
+      "Defer all remediation until platform reimplementation",
+      "Accept inaccuracies if discovery jobs are successful"
+    ],
+    "correctIndex": 0,
+    "explanation": "Persistent quality issues require class-specific controls, ownership accountability, and measurable remediation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/cmdb-health-dashboard.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 63,
+    "prompt": "Which metric set is most meaningful for CMDB certification governance?",
+    "choices": [
+      "Completeness, correctness, and compliance trend scores by CI class and service",
+      "Total number of CI records created weekly",
+      "Count of users with cmdb_admin role",
+      "Number of dashboard widgets on CMDB homepage"
+    ],
+    "correctIndex": 0,
+    "explanation": "Certification quality depends on trusted data dimensions and their trend behavior over time.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/cmdb-health-dashboard.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 64,
+    "prompt": "What governance step most improves confidence in certified CMDB data for downstream automation?",
+    "choices": [
+      "Link certification status to change risk models and service impact workflows",
+      "Use certified status only for documentation purposes",
+      "Ignore certification outcomes in incident and change processes",
+      "Allow non-certified CI classes to drive major incident automation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Certification has strategic value when it influences operational automation and risk-aware decisioning.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/cmdb-landing.html"
+    ]
+  }
+]

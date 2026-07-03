@@ -1,0 +1,172 @@
+[
+  {
+    "trackCode": "CIS-SAM",
+    "order": 35,
+    "prompt": "In SAM, what is the main benefit of publisher packs?",
+    "choices": [
+      "Provide publisher-specific license rules and content that improve effective position accuracy",
+      "Replace all software model normalization activities",
+      "Automatically approve all software requests",
+      "Convert SaaS subscriptions into perpetual licenses"
+    ],
+    "correctIndex": 0,
+    "explanation": "Publisher packs improve compliance precision by applying vendor-specific licensing intelligence.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/license-metrics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 36,
+    "prompt": "Why should SAM administrators validate publisher pack scope before activating new content?",
+    "choices": [
+      "To ensure metrics, products, and contract terms align with the organization's licensed footprint",
+      "To eliminate the need for entitlement records",
+      "To disable reconciliation processing",
+      "To migrate all installations into one software model"
+    ],
+    "correctIndex": 0,
+    "explanation": "Scope validation prevents misapplied rules and inaccurate compliance outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/license-metrics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_ReconcileSoftwareEntitlements.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 37,
+    "prompt": "What is the best way to reduce risk when introducing updated publisher pack rules?",
+    "choices": [
+      "Apply changes directly in production during true-up week",
+      "Pilot in lower environments, review compliance deltas, then promote through change governance",
+      "Suspend all reconciliations for one quarter",
+      "Remove historical reconciliation results"
+    ],
+    "correctIndex": 1,
+    "explanation": "Controlled rollout limits disruption and supports defensible compliance transitions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_CreateReconciliationResults.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 38,
+    "prompt": "Which KPI best shows whether publisher pack content is improving compliance quality?",
+    "choices": [
+      "Increase in unresolved unmatched software installs",
+      "Higher percentage of reconciled records with reduced manual exception handling",
+      "Growth in unrelated service desk ticket volume",
+      "Decrease in CMDB relationship count"
+    ],
+    "correctIndex": 1,
+    "explanation": "Better publisher content should increase automated reconciliation quality and reduce manual intervention.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_CreateReconciliationResults.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 39,
+    "prompt": "Which governance action is most important for long-term publisher pack reliability?",
+    "choices": [
+      "Assign ownership for periodic review of publisher content, exceptions, and contract changes",
+      "Allow analysts to create ad hoc license rules without approval",
+      "Skip contract updates after renewal events",
+      "Disable audit trails on reconciliation jobs"
+    ],
+    "correctIndex": 0,
+    "explanation": "Named ownership and periodic review keep publisher rule logic aligned to changing licensing terms.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-compliance.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 35,
+    "prompt": "What is the primary purpose of resource management in SPM?",
+    "choices": [
+      "Balance people capacity and demand so strategic work is realistically deliverable",
+      "Assign resources based only on team availability without prioritization",
+      "Track software license consumption",
+      "Replace project planning with incident queues"
+    ],
+    "correctIndex": 0,
+    "explanation": "Resource management aligns staffing capacity with portfolio priorities to improve delivery outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/concept/spm-workspace.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 36,
+    "prompt": "Which scenario indicates a resource management imbalance?",
+    "choices": [
+      "High-priority initiatives repeatedly delayed due to over-allocated shared roles",
+      "Demand scoring criteria mapped to objectives",
+      "Portfolio board reviews held on schedule",
+      "Initiative benefits tracked quarterly"
+    ],
+    "correctIndex": 0,
+    "explanation": "Repeated delays on strategic work often indicate unresolved capacity bottlenecks.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/program-management/concept/program-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 37,
+    "prompt": "What is the best governance response when capacity cannot meet all approved demand?",
+    "choices": [
+      "Approve all demands and extend timelines indefinitely",
+      "Reprioritize work by strategic contribution and adjust staffing plans transparently",
+      "Pause objective tracking until more resources are hired",
+      "Convert deferred demands into incidents"
+    ],
+    "correctIndex": 1,
+    "explanation": "Transparent reprioritization maintains strategic integrity when constraints require trade-offs.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/demand-management/concept/demand-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 38,
+    "prompt": "Which anti-pattern most weakens SPM resource planning accuracy?",
+    "choices": [
+      "Using current allocation and forecast capacity data",
+      "Maintaining role-based capacity plans",
+      "Reviewing dependencies during portfolio planning",
+      "Ignoring non-project operational commitments in capacity forecasts"
+    ],
+    "correctIndex": 3,
+    "explanation": "Excluding operational work from forecasts overstates available capacity and causes planning errors.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/program-management/concept/program-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 39,
+    "prompt": "Which KPI best indicates improving resource management maturity?",
+    "choices": [
+      "Increase in emergency demand submissions",
+      "Reduction in critical-role overallocation and fewer priority initiative delays",
+      "Higher number of unassigned demands",
+      "Longer backlog aging across all portfolios"
+    ],
+    "correctIndex": 1,
+    "explanation": "Lower overallocation and reduced delay on strategic work indicate healthier resource governance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/concept/spm-workspace.html"
+    ]
+  }
+]

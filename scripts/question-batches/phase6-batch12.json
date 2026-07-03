@@ -1,0 +1,257 @@
+[
+  {
+    "trackCode": "CIS-RC",
+    "order": 60,
+    "prompt": "What is the main objective of GRC reporting for executive stakeholders?",
+    "choices": [
+      "Present risk, compliance, and audit posture trends that support governance decisions and resource prioritization",
+      "List every open task without severity or ownership context",
+      "Display only policy document counts by department",
+      "Replace risk reviews with dashboard color indicators"
+    ],
+    "correctIndex": 0,
+    "explanation": "Executive GRC reporting should translate operational data into decision-ready governance insight.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/task/t_UseDashboardsAndReports.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 61,
+    "prompt": "Which report design best supports board-level RC discussions?",
+    "choices": [
+      "Trend-based dashboards showing inherent versus residual risk, control effectiveness, and high-risk exception aging",
+      "A single export of all risk records with raw notes",
+      "Daily analyst activity counts without risk segmentation",
+      "Unfiltered policy attestation comments"
+    ],
+    "correctIndex": 0,
+    "explanation": "Board reporting should emphasize trend, impact, and accountability rather than raw record volume.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-scoring.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 62,
+    "prompt": "How should GRC reporting handle inconsistent data quality across business units?",
+    "choices": [
+      "Include data-quality indicators, ownership gaps, and remediation plans alongside risk and compliance metrics",
+      "Exclude low-quality units from all dashboards permanently",
+      "Average all scores without transparency to improve appearance",
+      "Delay reporting until every field is perfectly complete"
+    ],
+    "correctIndex": 0,
+    "explanation": "Transparent data-quality dimensions preserve trust and drive remediation accountability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/data-quality-in-grc.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/audit-management/concept/audit-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 63,
+    "prompt": "Which cadence model is most effective for GRC reporting?",
+    "choices": [
+      "Operational weekly dashboards with monthly governance packs and quarterly executive summaries",
+      "Annual static reports for all audiences",
+      "On-demand reporting only after major incidents",
+      "Separate inconsistent report definitions per team"
+    ],
+    "correctIndex": 0,
+    "explanation": "Layered cadence supports tactical action and strategic governance with consistent definitions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/task/t_ConfigureScorecards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 64,
+    "prompt": "Which outcome indicates GRC reporting maturity?",
+    "choices": [
+      "Leaders consistently use reports to reduce exposure, close exceptions faster, and improve control performance",
+      "More report variants with conflicting risk numbers",
+      "Longer time spent reconciling spreadsheets before reviews",
+      "Higher percentage of unowned high-risk findings"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mature reporting drives measurable governance outcomes, not just dashboard production.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/task/t_UseDashboardsAndReports.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 60,
+    "prompt": "Which role is primarily accountable for coordinating end-to-end response actions during an active security incident?",
+    "choices": [
+      "Security incident coordinator or incident commander",
+      "CMDB data steward",
+      "Change advisory board chair",
+      "Procurement specialist"
+    ],
+    "correctIndex": 0,
+    "explanation": "The incident coordinator drives response orchestration, communication, and decision pacing.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_AssignSecurityIncidentRoles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 61,
+    "prompt": "What is the core responsibility of a Tier 1 SOC analyst in the SIR role model?",
+    "choices": [
+      "Perform initial triage, enrichment, and prioritization before escalation",
+      "Approve all risk acceptances for the organization",
+      "Own final incident closure sign-off for legal review",
+      "Manage CMDB class hierarchy changes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Tier 1 analysts focus on fast, accurate triage and routing to the right responders.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response-workspace.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_DefinePrioritiesForSecurityIncidents.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 62,
+    "prompt": "How should SIR implementations enforce role separation between responders and approvers?",
+    "choices": [
+      "Use role-based access controls and workflow approvals to separate execution from governance decisions",
+      "Allow all responders full administrative permissions by default",
+      "Assign one shared account to all SOC roles",
+      "Restrict approvals to manual email only"
+    ],
+    "correctIndex": 0,
+    "explanation": "Role separation improves accountability and reduces governance risk in high-impact incidents.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_AssignSecurityIncidentRoles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 63,
+    "prompt": "Which role typically validates technical eradication before case closure?",
+    "choices": [
+      "Assigned resolver or containment owner with required reviewer sign-off",
+      "Service catalog manager",
+      "Payroll systems administrator",
+      "Knowledge base contributor"
+    ],
+    "correctIndex": 0,
+    "explanation": "Technical owners verify eradication outcomes, while governance sign-off confirms closure readiness.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_CreateTasksForSecurityIncident.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_CloseSecurityIncident.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 64,
+    "prompt": "Which KPI most directly indicates healthy SIR role clarity?",
+    "choices": [
+      "Lower reassignment churn and faster handoff times between triage, containment, and recovery roles",
+      "Higher number of incidents with no assignment group",
+      "More incidents reopened due to unclear ownership",
+      "Longer approval wait times for routine decisions"
+    ],
+    "correctIndex": 0,
+    "explanation": "Clear roles reduce handoff friction and improve response continuity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 60,
+    "prompt": "What defines a bottom-up Service Mapping approach?",
+    "choices": [
+      "Start from infrastructure and application component dependencies, then assemble validated service context upward",
+      "Start only from executive service catalogs and skip technical dependency discovery",
+      "Map by importing static architecture diagrams without CMDB records",
+      "Limit mapping to network devices and ignore applications"
+    ],
+    "correctIndex": 0,
+    "explanation": "Bottom-up mapping builds service understanding from discovered technical relationships.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping-methods.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/c_Discovery.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 61,
+    "prompt": "When is bottom-up mapping especially useful?",
+    "choices": [
+      "When business service definitions are incomplete but technical dependency data is available",
+      "When all services already have perfectly maintained maps",
+      "When discovery is intentionally disabled across environments",
+      "When no CMDB classes exist for application components"
+    ],
+    "correctIndex": 0,
+    "explanation": "Bottom-up techniques help bootstrap service context from reliable technical evidence.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/cmdb-landing.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 62,
+    "prompt": "Which prerequisite most improves bottom-up mapping accuracy?",
+    "choices": [
+      "Consistent CI identification, reconciliation rules, and discovered relationship quality in CMDB",
+      "Weekly manual deletion of stale CI relationships",
+      "Mapping only production databases regardless service boundaries",
+      "Removing ownership and support group fields from CIs"
+    ],
+    "correctIndex": 0,
+    "explanation": "Bottom-up mapping quality depends on strong CMDB identity and relationship integrity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/ire.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_TroubleshootServiceMapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 63,
+    "prompt": "How should teams convert bottom-up technical maps into business-service-aligned views?",
+    "choices": [
+      "Layer application service definitions and ownership metadata over validated dependency clusters",
+      "Publish technical maps directly to executives without context",
+      "Remove non-critical dependencies to simplify every map",
+      "Create separate maps per admin without shared standards"
+    ],
+    "correctIndex": 0,
+    "explanation": "Business relevance comes from overlaying ownership and service definitions onto technical topology.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_CreateAndMaintainServiceMaps.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_UseServiceMapsForImpactAnalysis.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 64,
+    "prompt": "Which KPI indicates bottom-up mapping is delivering operational value?",
+    "choices": [
+      "Improved incident impact accuracy and faster root-cause isolation due to dependable dependency topology",
+      "More manual reassignment of application CI ownership",
+      "Higher count of unclassified CIs in mapped services",
+      "Longer mean time to restore with no map updates"
+    ],
+    "correctIndex": 0,
+    "explanation": "Operational value appears when topology quality improves impact and troubleshooting outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_UseServiceMapsForImpactAnalysis.html"
+    ]
+  }
+]

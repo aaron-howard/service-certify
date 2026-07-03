@@ -1,0 +1,242 @@
+[
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 45,
+		"prompt": "During horizontal discovery, what is the primary role of a probe in relation to a sensor?",
+		"choices": [
+			"A probe collects raw target data and a sensor interprets the result to update records",
+			"A probe creates CMDB classes and a sensor schedules discovery runs",
+			"A probe retires stale CIs and a sensor creates credential aliases",
+			"A probe only validates licenses while sensors execute patterns"
+		],
+		"correctIndex": 0,
+		"explanation": "Probes gather information from the target system, and sensors process that payload to identify or update CI-related data.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 46,
+		"prompt": "Which outcome best indicates a sensor is correctly mapped for a probe payload?",
+		"choices": [
+			"The MID Server no longer requires ECC queue records",
+			"The payload is parsed into expected CI attributes and relationships",
+			"All discovery schedules automatically switch to on-demand mode",
+			"Credential-less discovery is enabled for all targets"
+		],
+		"correctIndex": 1,
+		"explanation": "A correctly configured sensor parses probe output and maps values to the intended CMDB classes and fields.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 47,
+		"prompt": "When troubleshooting missing CI details, which probe/sensor check is most useful first?",
+		"choices": [
+			"Disable all classification behavior",
+			"Delete the discovery schedule and recreate it",
+			"Review probe output and sensor processing logs for the affected target",
+			"Force all results into the cmdb_ci table"
+		],
+		"correctIndex": 2,
+		"explanation": "Validating payload generation and sensor parsing for the same run quickly isolates whether data was never collected or not interpreted correctly.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-it-operations-management/page/product/discovery/task/troubleshoot-discovery-errors.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 48,
+		"prompt": "Why should discovery teams avoid unnecessary customization of out-of-box probes and sensors?",
+		"choices": [
+			"Customization disables MID selection",
+			"Customized sensors cannot write to CMDB",
+			"Out-of-box probes only support Windows endpoints",
+			"Heavy customization increases upgrade maintenance and regression risk"
+		],
+		"correctIndex": 3,
+		"explanation": "Extensive customization can complicate upgrades and troubleshooting because platform updates may no longer align with modified discovery logic.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-it-operations-management/page/product/discovery/concept/discovery-best-practices.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 49,
+		"prompt": "What governance practice improves probe and sensor reliability at scale?",
+		"choices": [
+			"Track customizations, test in sub-production, and validate CI outcomes after changes",
+			"Run all probe changes directly in production to reduce delay",
+			"Skip validation if ECC records show any response",
+			"Use one sensor mapping for all CI classes"
+		],
+		"correctIndex": 0,
+		"explanation": "Controlled change management and regression validation reduce data quality drift when discovery logic evolves.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-it-operations-management/page/product/discovery/concept/discovery-best-practices.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 45,
+		"prompt": "In Event Management, why are connector templates useful for onboarding new monitoring tools?",
+		"choices": [
+			"They provide reusable ingestion configuration patterns that speed implementation consistency",
+			"They eliminate the need for event field mapping",
+			"They convert alerts directly into hardware assets",
+			"They disable event rules until incidents are opened"
+		],
+		"correctIndex": 0,
+		"explanation": "Templates standardize connector setup and reduce manual rework when integrating multiple sources with similar ingestion requirements.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 46,
+		"prompt": "Which step is most important after applying a connector template?",
+		"choices": [
+			"Disable all event processing rules",
+			"Validate source-specific mapping and credentials for that endpoint",
+			"Drop existing alert correlation logic",
+			"Rebuild MID Server certificates for every connector"
+		],
+		"correctIndex": 1,
+		"explanation": "Templates accelerate setup, but each source still requires validation of connection details, mappings, and authentication.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 47,
+		"prompt": "What risk is reduced by using standardized connector templates across teams?",
+		"choices": [
+			"CMDB relationship recursion",
+			"Inconsistent event taxonomy and parsing behavior between integrations",
+			"Duplicate loaner asset reservations",
+			"Discovery IP range overlap"
+		],
+		"correctIndex": 1,
+		"explanation": "Standard templates improve consistency in how events are mapped and classified, lowering operational variance and troubleshooting complexity.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-it-operations-management/page/product/event-management/concept/event-management-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 48,
+		"prompt": "When a template-based connector is cloned for a new source, what should be reviewed to prevent noisy alerts?",
+		"choices": [
+			"Only dashboard color themes",
+			"Only MID Server disk space",
+			"Only stockroom assignment rules",
+			"Event filtering, severity mapping, and deduplication settings"
+		],
+		"correctIndex": 3,
+		"explanation": "Source-specific filtering and severity controls are essential to keep alert quality high after template reuse.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/create-event-rule.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 49,
+		"prompt": "Which KPI best reflects successful connector template governance?",
+		"choices": [
+			"Faster connector onboarding with stable event quality and fewer mapping defects",
+			"Maximum count of connector records regardless of data quality",
+			"No use of shared templates in production",
+			"Manual event reclassification in every shift"
+		],
+		"correctIndex": 0,
+		"explanation": "Good governance balances speed and reliability, resulting in quicker onboarding without sacrificing event fidelity.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-it-operations-management/page/product/event-management/concept/event-management-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 45,
+		"prompt": "In Hardware Asset Management, what is a transfer order primarily used for?",
+		"choices": [
+			"Moving inventory between stockrooms with traceable fulfillment workflow",
+			"Retiring hardware assets automatically",
+			"Creating software entitlement records",
+			"Generating discovery schedules for warehouse devices"
+		],
+		"correctIndex": 0,
+		"explanation": "Transfer orders formalize stock movement between locations while preserving operational accountability and status tracking.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/create-transfer-order.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 46,
+		"prompt": "Which prerequisite matters most before submitting a transfer order?",
+		"choices": [
+			"Disabling the destination stockroom",
+			"Confirming source availability and destination stockroom context",
+			"Closing all open asset tasks",
+			"Removing asset model records from catalog"
+		],
+		"correctIndex": 1,
+		"explanation": "Transfer workflows depend on available quantity at the source and valid stockroom assignment at the destination.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/manage-your-stockrooms.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 47,
+		"prompt": "How do transfer orders support auditability in HAM operations?",
+		"choices": [
+			"They delete historical stock transactions after completion",
+			"They bypass approvals to speed relocations",
+			"They record movement history and ownership handoffs across stockrooms",
+			"They replace all procurement receiving records"
+		],
+		"correctIndex": 2,
+		"explanation": "Transfer records provide traceable movement events that help reconcile stock and support operational audits.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/transfer-stockrooms.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 48,
+		"prompt": "What issue most often indicates poor transfer order process control?",
+		"choices": [
+			"Consistent receiving confirmations",
+			"Clear in-transit status updates",
+			"Balanced stockroom counts after transfers",
+			"Frequent stock discrepancies between source and destination records"
+		],
+		"correctIndex": 3,
+		"explanation": "Recurring inventory mismatch after transfers usually points to weak execution controls or incomplete receiving updates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/reconcile-hardware-inventory.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 49,
+		"prompt": "Which transfer-order design choice best supports scalable fulfillment operations?",
+		"choices": [
+			"Use standardized statuses, approvals, and receiving checkpoints across locations",
+			"Allow each stockroom to invent unique status values",
+			"Skip in-transit tracking for low-cost models",
+			"Route transfer requests through procurement catalog items only"
+		],
+		"correctIndex": 0,
+		"explanation": "Consistent transfer lifecycle controls improve visibility and reduce exceptions as inventory movement volume grows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/create-transfer-order.html"
+		]
+	}
+]

@@ -1,0 +1,172 @@
+[
+  {
+    "trackCode": "CIS-SAM",
+    "order": 45,
+    "prompt": "During a software publisher true-up, which data set is most important to validate before negotiating any shortfall?",
+    "choices": [
+      "Reconciled software installations mapped to normalized models and license metrics",
+      "Only open incident counts by assignment group",
+      "Procurement approval records without entitlements",
+      "CAB meeting notes from the previous quarter"
+    ],
+    "correctIndex": 0,
+    "explanation": "True-up negotiations depend on defensible consumption evidence, which requires normalized installs and metric-aligned reconciliation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_ReconcileSoftwareEntitlements.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 46,
+    "prompt": "What is the primary SAM benefit of running regular internal audits before a vendor-initiated audit notice arrives?",
+    "choices": [
+      "Eliminating the need for license entitlements",
+      "Detecting compliance gaps early so remediation can happen on your timeline",
+      "Replacing discovery and normalization processes",
+      "Preventing all contract renewals"
+    ],
+    "correctIndex": 1,
+    "explanation": "Proactive internal audits identify exposure in advance, enabling cost-effective remediation before external pressure and penalties increase.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-compliance.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_SoftwareComplianceReporting.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 47,
+    "prompt": "Which SAM operating practice best improves audit defensibility for complex publisher metrics such as cores or users?",
+    "choices": [
+      "Tracking only device names and skipping contract evidence",
+      "Relying on spreadsheets outside the platform",
+      "Maintaining metric-specific reconciliation rules and traceable evidence history",
+      "Estimating usage from change request volumes"
+    ],
+    "correctIndex": 2,
+    "explanation": "Metric-specific rules and preserved evidence trails are critical to explain how effective position results were calculated.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/license-metrics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_CreateReconciliationResults.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 48,
+    "prompt": "A SAM manager defines a goal to reduce annual over-licensing spend. Which initiative aligns best with that goal?",
+    "choices": [
+      "Disable reclamation workflows",
+      "Increase emergency software requests without approvals",
+      "Move all entitlements to unrestricted stockrooms",
+      "Launch reclaim and reharvest campaigns targeting low-usage installations"
+    ],
+    "correctIndex": 3,
+    "explanation": "Reclamation initiatives directly support over-licensing reduction by removing unused software and reusing owned rights.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-reclamation.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_ReclaimUnusedSoftware.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 49,
+    "prompt": "When defining SAM goals and initiatives, which KPI combination is most meaningful for leadership reporting?",
+    "choices": [
+      "Compliance risk trend, realized savings, and remediation cycle time",
+      "Number of CMDB classes created this month",
+      "Count of knowledge articles in the portal",
+      "Mean time to close unrelated HR cases"
+    ],
+    "correctIndex": 0,
+    "explanation": "These KPIs connect governance exposure and financial outcomes while showing delivery speed of corrective actions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 45,
+    "prompt": "In SPM, what is the best reason to use strategic goals as a parent structure for initiatives?",
+    "choices": [
+      "To connect delivery investments to measurable business outcomes",
+      "To replace project demand records entirely",
+      "To bypass portfolio governance reviews",
+      "To store vendor software entitlement counts"
+    ],
+    "correctIndex": 0,
+    "explanation": "Goal-to-initiative alignment provides traceability from strategy to execution and enables value-based prioritization.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/concept/spm-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/enterprise-agile-planning/concept/goals-and-initiatives.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 46,
+    "prompt": "Which relationship in SPM most directly supports strategic true-up discussions with executives?",
+    "choices": [
+      "Mapping initiatives to outcomes, KPIs, and funded work",
+      "Linking incidents to discovery schedules",
+      "Connecting catalog items to hardware models only",
+      "Associating approvals only to assignment groups"
+    ],
+    "correctIndex": 0,
+    "explanation": "Strategic true-up requires visibility into whether funded initiatives are producing intended outcomes and KPI movement.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 47,
+    "prompt": "A portfolio office wants quarterly strategy audits. Which SPM configuration helps most?",
+    "choices": [
+      "Disable initiative status workflows",
+      "Use periodic initiative reviews with standardized progress, risk, and benefit capture",
+      "Track strategy outside the platform in presentation files",
+      "Allow each business unit to define unique stage names with no mapping"
+    ],
+    "correctIndex": 1,
+    "explanation": "Consistent periodic reviews produce comparable evidence for governance and strategic audit readiness.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/task/review-initiative-progress.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/task/manage-portfolio-work.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 48,
+    "prompt": "Which anti-pattern most weakens SPM goals and initiatives governance?",
+    "choices": [
+      "Defining baseline and target KPI values",
+      "Using initiative owners with clear accountability",
+      "Maintaining active dependency and risk tracking",
+      "Creating initiatives without measurable outcomes or success criteria"
+    ],
+    "correctIndex": 3,
+    "explanation": "Without measurable outcomes, initiatives cannot be objectively evaluated for strategic value or continuation decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/goals-framework.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/initiatives.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 49,
+    "prompt": "What is the strongest indicator that initiative true-up is functioning well in SPM?",
+    "choices": [
+      "Regular reforecasting with transparent variance explanations and decision outcomes",
+      "No updates to initiative forecasts during the fiscal year",
+      "Only qualitative status notes with no metric references",
+      "Executive review meetings held without portfolio data"
+    ],
+    "correctIndex": 0,
+    "explanation": "Healthy true-up includes data-driven reforecasting, clear variance context, and explicit governance decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/concept/spm-workspace.html"
+    ]
+  }
+]

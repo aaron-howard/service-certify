@@ -1,0 +1,244 @@
+[
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 40,
+    "prompt": "In Discovery pattern designer, what is the main purpose of sections and ordered steps?",
+    "choices": [
+      "To create structured data collection logic that is easier to maintain and troubleshoot",
+      "To bypass credential configuration entirely",
+      "To force all outputs into one CI class",
+      "To disable identification reconciliation processing"
+    ],
+    "correctIndex": 0,
+    "explanation": "Pattern designer uses sequenced steps and reusable sections to organize discovery logic clearly and predictably.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/pattern-designer-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 41,
+    "prompt": "Which pattern designer practice best supports reusable discovery logic across technologies?",
+    "choices": [
+      "Embedding all logic in one vendor-specific command",
+      "Creating shared sub-patterns and conditional branches",
+      "Removing validation steps for faster runs",
+      "Hardcoding MID Server names in each step"
+    ],
+    "correctIndex": 1,
+    "explanation": "Reusable sub-patterns and conditional flow reduce duplication and improve maintainability across similar discovery scenarios.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/design-discovery-patterns.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 42,
+    "prompt": "Why is step output validation important in pattern designer testing?",
+    "choices": [
+      "It converts all discovered CIs into assets",
+      "It avoids CMDB relationship creation",
+      "It confirms each step produces expected data before writing CI updates",
+      "It prevents credential alias usage"
+    ],
+    "correctIndex": 2,
+    "explanation": "Validating outputs at each step helps catch parsing or command issues before they propagate into incorrect CMDB data.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/test-discovery-pattern.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 43,
+    "prompt": "What is a common cause of pattern designer fragility after platform upgrades?",
+    "choices": [
+      "Using out-of-box patterns without edits",
+      "Keeping pattern logic modular",
+      "Running test executions in sub-prod first",
+      "Heavy dependence on brittle custom parsing with minimal validation"
+    ],
+    "correctIndex": 3,
+    "explanation": "Highly fragile parsing logic can break as command output formats or dependencies change across environments and releases.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/c_DiscoveryBestPractices.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 44,
+    "prompt": "Which governance action most improves long-term pattern designer quality?",
+    "choices": [
+      "Versioning pattern changes with test evidence and defined ownership",
+      "Allowing direct production edits without peer review",
+      "Suppressing pattern execution logs to reduce storage",
+      "Deferring all pattern maintenance until major outages"
+    ],
+    "correctIndex": 0,
+    "explanation": "Versioned change control with test evidence supports safe evolution of discovery patterns and faster troubleshooting.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/manage-discovery-pattern-lifecycle.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 40,
+    "prompt": "What is the main objective of event filters in Event Management?",
+    "choices": [
+      "Remove non-actionable or low-value events before alert creation",
+      "Replace all event connector integrations",
+      "Bind events directly to procurement records",
+      "Disable event rule evaluation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Event filters help reduce ingestion noise by stopping irrelevant events from consuming operational attention.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-filters.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 41,
+    "prompt": "Why should event filter conditions be reviewed with operations teams regularly?",
+    "choices": [
+      "To ensure filtering still matches current monitoring signal and business priorities",
+      "To disable alert grouping for critical services",
+      "To reroute events to MID Server logs",
+      "To avoid CI binding completely"
+    ],
+    "correctIndex": 0,
+    "explanation": "Monitoring environments evolve, so regular review ensures filters keep suppressing noise without hiding actionable events.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/task/configure-event-filters.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 42,
+    "prompt": "What is the best way to validate a new event filter rule before broad rollout?",
+    "choices": [
+      "Apply globally in production without baseline comparison",
+      "Turn off all event rules and test manually",
+      "Test against sample and historical events to measure suppression impact",
+      "Bind all filtered events to one generic CI"
+    ],
+    "correctIndex": 2,
+    "explanation": "Testing with representative event data verifies that noise is reduced while true signals remain visible.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-rules.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 43,
+    "prompt": "What is a high-risk anti-pattern when configuring event filters?",
+    "choices": [
+      "Using explicit source and severity conditions",
+      "Documenting filter rationale and owner",
+      "Tracking filter impact with analytics",
+      "Creating broad wildcard filters that suppress unknown critical events"
+    ],
+    "correctIndex": 3,
+    "explanation": "Overly broad wildcard suppression can hide meaningful incidents and delay operational response.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-management-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 44,
+    "prompt": "Which metric best demonstrates event filter effectiveness?",
+    "choices": [
+      "Reduced noisy event volume with stable or improved actionable alert detection",
+      "Maximum suppression percentage regardless of missed incidents",
+      "Increase in manually reopened alerts",
+      "Longer average mean time to detect"
+    ],
+    "correctIndex": 0,
+    "explanation": "Effective filters lower noise while preserving detection performance for important operational issues.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/alert-analytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 40,
+    "prompt": "In HAM catalog fulfillment, what is the primary objective of linking requests to asset workflows?",
+    "choices": [
+      "Ensure requested hardware is reserved, fulfilled, and tracked through lifecycle states",
+      "Automatically retire all previously assigned devices",
+      "Disable stockroom tasks during fulfillment",
+      "Bypass approvals for standard catalog items"
+    ],
+    "correctIndex": 0,
+    "explanation": "Catalog-linked fulfillment coordinates request, inventory, assignment, and lifecycle tracking in one controlled process.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-request-fulfillment.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 41,
+    "prompt": "Which configuration most improves fulfillment speed for common hardware requests?",
+    "choices": [
+      "Defining standardized catalog items with clear model and stockroom routing",
+      "Requiring manual model selection on every task",
+      "Routing all requests to one global queue",
+      "Delaying task creation until requester confirmation emails"
+    ],
+    "correctIndex": 0,
+    "explanation": "Standardized catalog definitions and routing reduce ambiguity and allow predictable, faster fulfillment execution.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/service-catalog-management/concept/service-catalog-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/task/configure-hardware-catalog-items.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 42,
+    "prompt": "Why should fulfillment tasks capture the specific asset serial or tag assigned to the requester?",
+    "choices": [
+      "To bypass receiving validation",
+      "To prevent transfer order creation",
+      "To maintain auditable custody and support downstream lifecycle events",
+      "To auto-approve all future hardware requests"
+    ],
+    "correctIndex": 2,
+    "explanation": "Recording the actual assigned asset ensures traceability for support, audits, returns, and financial controls.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-lifecycle.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 43,
+    "prompt": "What is a common fulfillment risk when catalog items are not aligned with current stockroom inventory?",
+    "choices": [
+      "Improved first-pass fulfillment rates",
+      "Lower need for substitutions",
+      "Automatic procurement reconciliation",
+      "Increased backorders, substitutions, and request delays"
+    ],
+    "correctIndex": 3,
+    "explanation": "Misalignment between catalog definitions and real inventory causes avoidable fulfillment exceptions and slower delivery.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/stockroom-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 44,
+    "prompt": "Which KPI best reflects mature catalog fulfillment in HAM?",
+    "choices": [
+      "High first-pass fulfillment rate with accurate asset-requester linkage",
+      "More manual task reassignments during delivery",
+      "Rising number of requests fulfilled without asset records",
+      "Longer average request-to-delivery duration"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mature fulfillment delivers quickly and correctly while preserving complete asset traceability and accountability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-request-fulfillment.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-management.html"
+    ]
+  }
+]

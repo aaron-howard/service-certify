@@ -1,0 +1,162 @@
+[
+	{
+		"trackCode": "CIS-SAM",
+		"order": 20,
+		"prompt": "In SAM, what is the purpose of discovery model mapping for software assets?",
+		"choices": [
+			"To link discovered software evidence to the correct normalized software model for reconciliation",
+			"To convert all software into hardware CIs",
+			"To assign every installation to the same license metric",
+			"To remove publisher names from discovered titles"
+		],
+		"correctIndex": 0,
+		"explanation": "Discovery model mapping bridges raw discovery data to normalized model records, enabling accurate entitlement and compliance logic.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/discovery-model-mapping.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 21,
+		"prompt": "A newly discovered title is repeatedly unmatched. Which approach should a SAM administrator take?",
+		"choices": [
+			"Create a mapping rule or model mapping entry so future discoveries normalize automatically",
+			"Ignore unmatched titles unless they appear in incident records",
+			"Delete the discovered software records weekly",
+			"Disable normalization jobs for that publisher"
+		],
+		"correctIndex": 0,
+		"explanation": "Persistent unmatched titles indicate missing mapping logic and should be addressed to improve normalization completeness.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/manage-unmatched-discovered-software.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 22,
+		"prompt": "Why is validation with publisher and version details important when creating discovery model mappings?",
+		"choices": [
+			"It ensures the mapped model represents the correct licensable product variant",
+			"It increases incident SLA accuracy",
+			"It prevents contract renewals from being created",
+			"It bypasses reconciliation exceptions automatically"
+		],
+		"correctIndex": 0,
+		"explanation": "Accurate publisher/version alignment prevents mapping errors that can distort entitlement consumption and compliance results.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/validate-software-model-mappings.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 23,
+		"prompt": "What is the main risk of overly broad discovery mapping rules?",
+		"choices": [
+			"Too many CMDB relationship types",
+			"Incorrectly grouping distinct products under one software model, causing compliance inaccuracies",
+			"Slower catalog item approvals",
+			"Missing knowledge base categories"
+		],
+		"correctIndex": 1,
+		"explanation": "Broad rules can misclassify products and produce misleading reconciliation outcomes, especially for publishers with complex portfolios.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-normalization-rules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 24,
+		"prompt": "Which KPI best reflects improvement in discovery model quality over time?",
+		"choices": [
+			"Count of ITSM incidents linked to software",
+			"Decrease in unmatched discovered software and fewer remaps after reconciliation review",
+			"Number of dashboard widgets created",
+			"Total users in the SAM admin group"
+		],
+		"correctIndex": 1,
+		"explanation": "Lower unmatched volume and fewer correction cycles indicate healthier mapping logic and better normalization quality.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-model-data-quality-kpis.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 20,
+		"prompt": "What best describes the relationship between Application Portfolio Management (APM) and Strategic Portfolio Management (SPM)?",
+		"choices": [
+			"APM and SPM are unrelated products with no shared data model",
+			"APM focuses on application inventory/rationalization insights that feed broader SPM investment and strategy decisions",
+			"SPM is only used for infrastructure discovery",
+			"APM replaces all strategic planning workflows in SPM"
+		],
+		"correctIndex": 1,
+		"explanation": "APM provides application-centric portfolio intelligence, while SPM governs strategic planning, prioritization, and execution across portfolios.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/strategic-portfolio-management/application-portfolio-management/apm-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 21,
+		"prompt": "A leadership team wants to reduce redundant applications while funding strategic priorities. Which capability pairing is most appropriate?",
+		"choices": [
+			"Use APM rationalization insights and execute investment decisions through SPM planning and governance",
+			"Use SPM only and ignore application lifecycle data",
+			"Use APM only and skip strategic objective mapping",
+			"Use ITSM change requests as the sole investment mechanism"
+		],
+		"correctIndex": 0,
+		"explanation": "APM identifies rationalization opportunities; SPM converts those insights into governed investment and execution plans.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/strategic-portfolio-management/application-portfolio-management/apm-and-spm-alignment.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 22,
+		"prompt": "Which statement is accurate for CIS exam context when comparing APM and SPM?",
+		"choices": [
+			"APM is primarily about strategic objective trees, while SPM tracks only software lifecycle dates",
+			"SPM is strictly a project execution tool with no strategic planning",
+			"APM informs what to invest in at the application level; SPM governs how strategic investments are selected and delivered",
+			"Both modules provide identical capabilities and should be implemented interchangeably"
+		],
+		"correctIndex": 2,
+		"explanation": "The distinction is scope: APM provides application portfolio decision support, and SPM handles enterprise strategy-to-execution governance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/strategic-portfolio-management/strategic-portfolio-management-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 23,
+		"prompt": "What is a practical governance benefit of integrating APM data into SPM planning?",
+		"choices": [
+			"It automatically closes all technical debt items",
+			"It removes the need for portfolio review boards",
+			"It enables investment decisions to consider business value, risk, cost, and application health together",
+			"It limits visibility to only one business unit"
+		],
+		"correctIndex": 2,
+		"explanation": "Integrated data improves governance quality by adding application health and risk context to strategic funding decisions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/strategic-portfolio-management/application-portfolio-management/use-apm-insights-in-spm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 24,
+		"prompt": "If an organization tracks app technical fit in APM but does not connect it to SPM priorities, what is the likely outcome?",
+		"choices": [
+			"Better strategy execution with less data",
+			"Infrastructure incidents decrease automatically",
+			"Portfolio decisions may miss modernization urgency and strategic alignment opportunities",
+			"APM data becomes mandatory for ITSM incident closure"
+		],
+		"correctIndex": 2,
+		"explanation": "Without strategic linkage, APM insights are less likely to influence funding and roadmap decisions where they create business value.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/strategic-portfolio-management/application-portfolio-management/application-rationalization-and-strategy.html"
+		]
+	}
+]

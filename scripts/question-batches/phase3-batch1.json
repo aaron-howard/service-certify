@@ -1,0 +1,242 @@
+[
+	{
+		"trackCode": "CIS-DF",
+		"order": 5,
+		"prompt": "In IntegrationHub ETL, why is imported data first loaded into a staging table before being promoted to target tables?",
+		"choices": [
+			"To separate raw inbound data from production records and allow controlled transformation",
+			"To bypass transform maps and write directly to CMDB",
+			"To automatically delete duplicate source rows without configuration",
+			"To encrypt every imported field regardless of table settings"
+		],
+		"correctIndex": 0,
+		"explanation": "Staging tables provide a controlled landing zone for source data so teams can validate, normalize, and troubleshoot before updating destination records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/data-foundations/vancouver/integrationhub-etl/concept/staging-tables.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 6,
+		"prompt": "During import set processing, what is the primary purpose of coalesce fields on a transform map?",
+		"choices": [
+			"To decide which import rows are skipped based on domain separation",
+			"To identify matching target records for update instead of always inserting",
+			"To convert all date values into the instance time zone",
+			"To generate import set run history records"
+		],
+		"correctIndex": 1,
+		"explanation": "Coalesce fields determine record matching logic between source and target, enabling upsert behavior and reducing duplicates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/vancouver/platform-administration/concept/c_TransformMaps.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 7,
+		"prompt": "A data engineer needs to inspect rows that failed transformation. Which record type is most useful to review first?",
+		"choices": [
+			"sys_user_grmember",
+			"sys_trigger",
+			"Import set run and transform error records",
+			"sys_ui_action"
+		],
+		"correctIndex": 2,
+		"explanation": "Import set run and transform logs capture row-level processing details, including failures and script errors, which are essential for troubleshooting.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/vancouver/platform-administration/task/t_ViewImportSetRunHistory.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 8,
+		"prompt": "Which statement about staging table design is a best practice for repeatable ETL pipelines?",
+		"choices": [
+			"Use one staging table for all source systems and all entities",
+			"Store only derived and transformed data in staging tables",
+			"Disable indexing on staging tables to speed inserts",
+			"Align staging columns to source payload structure and map downstream in transforms"
+		],
+		"correctIndex": 3,
+		"explanation": "Staging models should capture source payloads clearly, while transformation logic handles normalization into destination schema.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/data-foundations/vancouver/integrationhub-etl/concept/import-staging-design.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 9,
+		"prompt": "What is the main reason to apply field maps in a transform map instead of writing all logic in scripts?",
+		"choices": [
+			"Field maps provide declarative, maintainable mapping for straightforward source-to-target assignments",
+			"Field maps are required only when importing XML attachments",
+			"Field maps prevent the use of coalesce on any field",
+			"Field maps run only after business rules on target tables"
+		],
+		"correctIndex": 0,
+		"explanation": "Declarative field mapping keeps simple mappings readable and easier to govern, reserving scripts for exceptional logic.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/vancouver/platform-administration/concept/c_TransformMaps.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 5,
+		"prompt": "In Performance Analytics, what does an indicator primarily represent?",
+		"choices": [
+			"A one-time report export format",
+			"A measurable metric tracked over time as scores",
+			"A scripted REST API endpoint for dashboard widgets",
+			"A user criterion for homepage access"
+		],
+		"correctIndex": 1,
+		"explanation": "Indicators are time-series metrics used to monitor trend and performance in PA.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/concept/c_Indicators.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 6,
+		"prompt": "Which configuration determines where an automated indicator retrieves its source records?",
+		"choices": [
+			"Indicator source",
+			"Breakdown mapping",
+			"PA threshold template",
+			"Widget preferences"
+		],
+		"correctIndex": 0,
+		"explanation": "The indicator source defines the table and filter conditions that feed data collection for automated indicators.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/concept/c_IndicatorSources.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 7,
+		"prompt": "What is the key difference between an automated indicator and a manual indicator?",
+		"choices": [
+			"Automated indicators can only be used in scorecards",
+			"Manual indicators cannot have targets or thresholds",
+			"Automated indicators collect scores from platform data, while manual indicators are entered by users",
+			"Manual indicators require a scripted data collector"
+		],
+		"correctIndex": 2,
+		"explanation": "Automated indicators derive values from data collections, while manual indicators rely on user-entered periodic scores.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/concept/c_ManualIndicators.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 8,
+		"prompt": "A PA admin wants to compare an indicator's current score with a predefined objective line. Which feature should be configured?",
+		"choices": [
+			"Breakdown relation",
+			"Forecast definition",
+			"Collection source script",
+			"Target"
+		],
+		"correctIndex": 3,
+		"explanation": "Targets define expected performance values that can be displayed alongside actual scores for comparison.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/task/t_CreateTargets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 9,
+		"prompt": "Why are indicator scores collected at regular intervals instead of being recalculated only on demand?",
+		"choices": [
+			"Regular collections preserve historical snapshots needed for trend analysis",
+			"On-demand calculations are not allowed in PA",
+			"Interval collection disables breakdowns automatically",
+			"Regular collections are required only for scripted indicators"
+		],
+		"correctIndex": 0,
+		"explanation": "PA depends on periodic snapshots to track metric movement over time and support time-based analytics.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/concept/c_DataCollection.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 5,
+		"prompt": "In telecom service operations, what is the primary value of managing service-affecting work through structured operational tasks?",
+		"choices": [
+			"It automatically closes all customer cases when network alarms clear",
+			"It enforces consistent assignment, execution tracking, and accountability for service work",
+			"It removes the need for maintenance windows",
+			"It replaces integration with external OSS systems"
+		],
+		"correctIndex": 1,
+		"explanation": "Operational task workflows standardize ownership and progress tracking, improving execution quality for telecom service operations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/telecommunications-service-management/vancouver/service-provider-workflows/concept/telecom-service-operations.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 6,
+		"prompt": "A provider wants to reduce duplicate effort between NOC and customer operations teams. Which process outcome is most important?",
+		"choices": [
+			"Shared visibility of incidents, tasks, and service impact across teams",
+			"Independent queues with no cross-team updates",
+			"Manual nightly export of all incident records",
+			"Separate service models for each resolver group"
+		],
+		"correctIndex": 0,
+		"explanation": "Shared operational context allows coordinated response and avoids duplicate troubleshooting activities.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/service-operations/concept/cross-team-operations.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 7,
+		"prompt": "During a telecom outage, which capability helps operations prioritize restoration work by business impact?",
+		"choices": [
+			"User preference records",
+			"Service impact and dependency visibility",
+			"Knowledge article ratings",
+			"Catalog item variables"
+		],
+		"correctIndex": 1,
+		"explanation": "Impact visibility across dependent services and customers supports effective triage and restoration prioritization.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/service-operations/concept/service-impact-visibility.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 8,
+		"prompt": "Which statement best describes the role of SLAs in telecom service operations?",
+		"choices": [
+			"SLAs only apply to billing disputes, not technical work",
+			"SLAs replace assignment groups for all operational tickets",
+			"SLAs define commitments and measure response/resolution performance for service tickets",
+			"SLAs can run only on closed records"
+		],
+		"correctIndex": 2,
+		"explanation": "Service-level commitments provide measurable targets for operations teams and customer-facing service delivery.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/service-operations/concept/service-level-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 9,
+		"prompt": "What is a common benefit of connecting operational alarms to service management workflows in telecom?",
+		"choices": [
+			"Eliminating the need for incident prioritization",
+			"Preventing all duplicate records without tuning",
+			"Converting every alarm directly into a resolved case",
+			"Accelerating detection-to-action by creating or enriching operational records automatically"
+		],
+		"correctIndex": 3,
+		"explanation": "Alarm-to-workflow integration shortens time to response by automating record creation and contextual updates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/service-operations/concept/event-driven-operations.html"
+		]
+	}
+]

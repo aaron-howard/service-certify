@@ -1,0 +1,257 @@
+[
+  {
+    "trackCode": "CPOA",
+    "order": 55,
+    "prompt": "What is the core governance purpose of ServiceNow Store and app management for platform owners?",
+    "choices": [
+      "Control app intake, risk review, and lifecycle ownership before installation and updates",
+      "Install every available app to accelerate feature adoption",
+      "Allow business teams to deploy Store apps directly to production",
+      "Disable version tracking for simpler administration"
+    ],
+    "correctIndex": 0,
+    "explanation": "Store governance ensures only approved, supportable apps enter the platform lifecycle.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/app-store/concept/app-repository-and-store.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 56,
+    "prompt": "How should a platform owner evaluate third-party Store apps before approval?",
+    "choices": [
+      "Assess security posture, dependency impact, upgrade compatibility, and support model fit",
+      "Approve based only on popularity ratings in the Store",
+      "Skip compatibility checks if installation succeeds in development",
+      "Delegate all evaluation to requester teams without governance"
+    ],
+    "correctIndex": 0,
+    "explanation": "App approval requires technical, operational, and security due diligence beyond basic functionality.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/app-store/concept/app-repository-and-store.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Hardening.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 57,
+    "prompt": "Which practice best controls Store app upgrade risk across environments?",
+    "choices": [
+      "Use staged rollout with documented test evidence and rollback plans before production",
+      "Upgrade directly in production to minimize cycle time",
+      "Rely on vendor release notes without internal validation",
+      "Disable application version governance during fiscal close"
+    ],
+    "correctIndex": 0,
+    "explanation": "Staged rollout validates compatibility and prevents broad impact from unexpected regressions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-application-development/page/build/applications/concept/c_ApplicationLifecycleManagement.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 58,
+    "prompt": "What inventory artifact most improves governance for installed apps and plugins?",
+    "choices": [
+      "A maintained catalog of app versions, owners, dependencies, and approval status",
+      "A list of app names without version details",
+      "A one-time screenshot of installed plugins",
+      "An informal channel thread with installation notes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Structured inventory enables impact analysis, upgrade planning, and ownership accountability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/plugins/concept/c_ActivatingPlugins.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/app-store/concept/app-repository-and-store.html"
+    ]
+  },
+  {
+    "trackCode": "CPOA",
+    "order": 59,
+    "prompt": "Which KPI best reflects effective Store and app governance outcomes?",
+    "choices": [
+      "High percentage of approved apps with successful upgrades and low post-release incidents",
+      "Maximum number of apps installed per quarter",
+      "Longest average approval turnaround regardless risk",
+      "Most customizations applied to vendor apps"
+    ],
+    "correctIndex": 0,
+    "explanation": "Governance success combines controlled adoption with stable operations after deployment.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/app-store/concept/app-repository-and-store.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 55,
+    "prompt": "What is the first principle of capacity planning for ServiceNow platform governance?",
+    "choices": [
+      "Forecast demand using usage trends, business growth, and workload criticality",
+      "Scale only after sustained production incidents occur",
+      "Assume historical peak loads will never repeat",
+      "Plan capacity by counting active update sets only"
+    ],
+    "correctIndex": 0,
+    "explanation": "Capacity planning starts with evidence-based forecasting tied to business demand and service criticality.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 56,
+    "prompt": "Which signal most clearly indicates emerging capacity risk in enterprise instances?",
+    "choices": [
+      "Increasing transaction latency and queue backlog during expected demand windows",
+      "Higher number of catalog items published",
+      "More dashboard widgets created monthly",
+      "Growth in knowledge article attachments"
+    ],
+    "correctIndex": 0,
+    "explanation": "Latency and backlog under normal peaks are direct early warnings of constrained capacity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 57,
+    "prompt": "How should professional governance address competing capacity demands from multiple product teams?",
+    "choices": [
+      "Use a prioritization framework based on business criticality, SLA impact, and risk",
+      "Allocate resources equally regardless service importance",
+      "Reserve all capacity for emergency change work",
+      "Allow teams to self-assign infrastructure allocations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Risk-based prioritization aligns finite capacity with enterprise outcomes and operational commitments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/service-level-management/concept/service-level-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 58,
+    "prompt": "What governance artifact best supports repeatable capacity planning reviews?",
+    "choices": [
+      "A capacity model with baseline metrics, demand forecasts, and trigger thresholds",
+      "A one-time architecture presentation deck",
+      "An ad hoc list of performance incidents only",
+      "Team-specific planning notes without shared definitions"
+    ],
+    "correctIndex": 0,
+    "explanation": "A formal capacity model enables consistent review, escalation, and decision-making across teams.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 59,
+    "prompt": "Which outcome demonstrates mature capacity planning governance?",
+    "choices": [
+      "Predictable peak performance with fewer emergency scaling actions and sustained SLA attainment",
+      "Higher volume of manual ticket rerouting during surges",
+      "Frequent unplanned release delays due to performance uncertainty",
+      "Increasing backlog of unresolved platform bottlenecks"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mature governance reduces reactive firefighting by making capacity decisions proactive and measurable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/service-level-management/concept/service-level-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 55,
+    "prompt": "What is the most important principle for governing integration throughput at enterprise scale?",
+    "choices": [
+      "Set throughput budgets and backpressure controls per integration domain",
+      "Allow unlimited throughput from all sources at all times",
+      "Treat retry storms as acceptable during peak windows",
+      "Use synchronous calls for every high-volume transaction"
+    ],
+    "correctIndex": 0,
+    "explanation": "Throughput governance requires explicit limits and controls to protect platform stability under load.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/integrationhub/concept/IntegrationHub.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/web-services/concept/c_RESTAPI.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 56,
+    "prompt": "Which pattern best preserves reliability when inbound integration volume spikes unexpectedly?",
+    "choices": [
+      "Queue ingestion with throttling, retry policies, and dead-letter routing for failed messages",
+      "Bypass all validation to maximize immediate ingestion",
+      "Disable monitoring until volume normalizes",
+      "Drop duplicate messages without idempotency checks"
+    ],
+    "correctIndex": 0,
+    "explanation": "Queue-based flow control and fault handling maintain consistent throughput without sacrificing integrity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/integrationhub/reference/r_FlowDesignerErrorHandling.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 57,
+    "prompt": "How should architects evaluate throughput risks during new integration onboarding?",
+    "choices": [
+      "Profile expected payload rates, concurrency behavior, and downstream dependency limits before go-live",
+      "Assume partner systems match internal processing capacity",
+      "Rely only on functional testing with low sample data",
+      "Enable all connectors at maximum polling frequency by default"
+    ],
+    "correctIndex": 0,
+    "explanation": "Throughput-safe onboarding requires capacity-aware validation of real traffic and downstream constraints.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/web-services/concept/c_OutboundRESTWebServices.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 58,
+    "prompt": "Which KPI combination best reflects integration throughput governance quality?",
+    "choices": [
+      "Stable processing latency, low throttling exceptions, and sustained success rate at target volume",
+      "Maximum number of integrations regardless error trends",
+      "Highest single-batch payload size processed",
+      "Fewest documented runbooks for on-call teams"
+    ],
+    "correctIndex": 0,
+    "explanation": "Throughput governance quality is measured by controlled performance and reliability under expected demand.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 59,
+    "prompt": "What governance action best prevents recurring throughput incidents after remediation?",
+    "choices": [
+      "Codify throughput SLOs and automated alerts into release and integration acceptance criteria",
+      "Close incidents without updating operational standards",
+      "Turn off alerts once immediate issue is resolved",
+      "Move all integrations to manual batch upload"
+    ],
+    "correctIndex": 0,
+    "explanation": "Institutionalizing SLO-driven controls prevents regressions and keeps reliability requirements enforceable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/service-level-management/concept/service-level-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+    ]
+  }
+]

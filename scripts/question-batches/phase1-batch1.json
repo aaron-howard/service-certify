@@ -1,0 +1,243 @@
+[
+	{
+		"trackCode": "CSA",
+		"order": 5,
+		"prompt": "When a user is added to a group that has roles assigned, what access does the user typically receive?",
+		"choices": [
+			"The user inherits all roles assigned to that group",
+			"The user receives only the admin role regardless of group roles",
+			"Group membership grants CMDB write access but never application roles",
+			"Roles must be assigned directly to the user; groups cannot carry roles"
+		],
+		"correctIndex": 0,
+		"explanation": "Users assigned to a group inherit the roles assigned to that group, which is a standard pattern for managing access at scale.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/user-administration/t_AddAUserToAGroup.html",
+			"https://www.servicenow.com/docs/r/platform-administration/user-administration/ua-creating-groups.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 6,
+		"prompt": "An administrator enables delegated role assignment for a team lead. Which constraint applies to what that user may assign?",
+		"choices": [
+			"They may assign any role in the instance without restriction",
+			"They may assign only roles that they already hold",
+			"They may assign roles only to users outside their groups",
+			"Delegated assignment is limited to the security_admin role exclusively"
+		],
+		"correctIndex": 1,
+		"explanation": "Delegated role assignment allows users to assign roles within groups, but only roles they already possess.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/user-administration/c_DelegateRoles.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 7,
+		"prompt": "What is the purpose of a time-limited role assignment?",
+		"choices": [
+			"To grant a defined role only during a specified time period",
+			"To permanently elevate a user to admin after password reset",
+			"To replace group membership with a single global role",
+			"To disable ACL evaluation during maintenance windows"
+		],
+		"correctIndex": 0,
+		"explanation": "Time-limited roles give users a defined role only for a defined period, supporting temporary elevated access.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/user-administration/time-limited-role-overview.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 8,
+		"prompt": "Why would an administrator configure assignment group types on the Type field?",
+		"choices": [
+			"To encrypt group membership records at rest",
+			"To define categories of groups that can filter assignment groups via reference qualifiers",
+			"To prevent users from belonging to more than one group",
+			"To map groups directly to CMDB relationship types"
+		],
+		"correctIndex": 1,
+		"explanation": "Group types categorize groups so assignment groups can be filtered by type using reference qualifiers.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/user-administration/c_ConfigGroupTypesForAssignGroups.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 9,
+		"prompt": "Where are changes to user role assignments tracked for auditing purposes?",
+		"choices": [
+			"The Audit Roles [sys_audit_role] table",
+			"The Scheduled Jobs [sys_trigger] table only",
+			"The Email [sys_email] table",
+			"The Update Set [sys_update_set] table exclusively"
+		],
+		"correctIndex": 0,
+		"explanation": "Changes to user roles are tracked in the Audit Roles table for audit and review.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/user-administration/audit-user-roles.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 5,
+		"prompt": "In application development, what do tables primarily define in a ServiceNow application?",
+		"choices": [
+			"The visual theme of the Service Portal only",
+			"What data is stored and how it is structured through fields and data types",
+			"MID Server polling intervals for discovery",
+			"The order of workflow activities in Flow Designer exclusively"
+		],
+		"correctIndex": 1,
+		"explanation": "Tables are the foundation of applications; they define stored data and structure via fields such as strings, dates, numbers, and references.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/tables-and-data-models.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 6,
+		"prompt": "How is a one-to-many relationship between two tables typically modeled?",
+		"choices": [
+			"By duplicating all columns from both tables into a third table",
+			"By placing a reference field on the many side pointing to the one side",
+			"By using only many-to-many junction tables in every case",
+			"By extending both tables from the same parent without references"
+		],
+		"correctIndex": 1,
+		"explanation": "One-to-many relationships use a reference field on the many side (for example, many incidents referencing one user).",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/tables-and-data-models.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 7,
+		"prompt": "Which approach is required to model a many-to-many relationship between users and roles?",
+		"choices": [
+			"A single reference field on the user table only",
+			"A junction table with two reference fields connecting the related tables",
+			"Deleting the role table and storing roles in a string field",
+			"A UI Policy that copies values between forms"
+		],
+		"correctIndex": 1,
+		"explanation": "Many-to-many relationships require an intermediate junction table with reference fields to each related table.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/tables-and-data-models.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 8,
+		"prompt": "When a custom table extends a parent table, what do records on the child table receive?",
+		"choices": [
+			"Only the fields explicitly created on the child, with no parent fields",
+			"All parent fields automatically plus any custom fields defined on the child",
+			"A separate database with no shared dictionary entries",
+			"Parent fields only after a nightly reconciliation job runs"
+		],
+		"correctIndex": 1,
+		"explanation": "Table extension lets child tables inherit all parent fields and functionality while adding their own fields.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/tables-and-data-models.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 9,
+		"prompt": "Incident, Problem, and Change records share common task fields such as assignment and state because they extend which table?",
+		"choices": [
+			"The User [sys_user] table",
+			"The Task table",
+			"The Contract [ast_contract] table",
+			"The Metric Definition [asmt_metric_definition] table"
+		],
+		"correctIndex": 1,
+		"explanation": "ITSM process tables such as Incident, Problem, and Change extend Task, inheriting common workflow fields while adding process-specific fields.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/tables-and-data-models.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 5,
+		"prompt": "In the Incident Management process, what is the first step after a potential issue is reported?",
+		"choices": [
+			"Immediate closure with no logging",
+			"Incident identification to determine whether the issue is truly an incident or a request",
+			"Automatic conversion to a change request",
+			"Assignment to the CAB for approval"
+		],
+		"correctIndex": 1,
+		"explanation": "Incident identification is the first lifecycle step; the service desk determines if the issue is an incident versus a service request.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/incident-management/incident-management-process.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 6,
+		"prompt": "During incident logging, what does incident categorization typically require?",
+		"choices": [
+			"Assigning a category and at least one subcategory",
+			"Selecting only the caller's location",
+			"Entering the hardware serial number for every ticket",
+			"Choosing a change type of Normal, Standard, or Emergency"
+		],
+		"correctIndex": 0,
+		"explanation": "Categorization assigns a category and at least one subcategory to support routing, reporting, and prioritization.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/incident-management/incident-management-process.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 7,
+		"prompt": "How is incident priority typically determined in a standard ITSM configuration?",
+		"choices": [
+			"By the number of attachments on the record",
+			"By impact on users or business and urgency, interpreted through priority rules",
+			"By alphabetical order of the short description",
+			"By the age of the related configuration item only"
+		],
+		"correctIndex": 1,
+		"explanation": "Priority is driven by impact and urgency to support SLA response and work ordering.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/incident-management/incident-management-process.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 8,
+		"prompt": "When should incident escalation occur during resolution?",
+		"choices": [
+			"Only after the incident is closed and surveyed",
+			"When the incident requires advanced support such as on-site technicians or certified staff",
+			"Whenever any user opens the self-service portal",
+			"Before incident identification is complete"
+		],
+		"correctIndex": 1,
+		"explanation": "Escalation happens when incidents need advanced support beyond initial service desk capabilities.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/incident-management/incident-management-process.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 9,
+		"prompt": "Besides manual closure, how can resolved incidents be closed in ServiceNow Incident Management?",
+		"choices": [
+			"Only by deleting the caller's user record",
+			"Automatically based on last updated date or resolution date per configuration",
+			"By converting every incident to a problem record",
+			"Through MID Server rediscovery schedules"
+		],
+		"correctIndex": 1,
+		"explanation": "Incidents can be closed manually or automatically based on configured rules tied to resolution or last updated dates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/incident-management/incident-management-process.html"
+		]
+	}
+]

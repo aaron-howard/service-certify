@@ -1,0 +1,243 @@
+[
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 50,
+		"prompt": "What is a primary value of cloud discovery in ServiceNow Discovery?",
+		"choices": [
+			"It identifies cloud resources and relationships for CMDB visibility",
+			"It replaces credential management for all targets",
+			"It disables horizontal discovery patterns",
+			"It creates hardware disposal tasks automatically"
+		],
+		"correctIndex": 0,
+		"explanation": "Cloud discovery extends visibility to cloud-native resources and their dependencies so operational data remains current in CMDB.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/cloud-discovery-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 51,
+		"prompt": "When onboarding cloud discovery, which setup area should be validated first?",
+		"choices": [
+			"Service catalog categories",
+			"Cloud account credentials, roles, and API permissions",
+			"Event connector template inheritance",
+			"Stockroom transfer priorities"
+		],
+		"correctIndex": 1,
+		"explanation": "Cloud discovery success depends on authorized account access and sufficient API permissions to enumerate resources.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/configure-cloud-discovery.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 52,
+		"prompt": "Which governance practice reduces duplication during multi-account cloud discovery?",
+		"choices": [
+			"Running all accounts in one unrestricted schedule",
+			"Ignoring account ownership metadata",
+			"Defining scoped schedules and identification rules for each account boundary",
+			"Disabling CI relationship writes"
+		],
+		"correctIndex": 2,
+		"explanation": "Scoped schedules and strong identification logic help prevent duplicates when resources appear in overlapping account or region contexts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-it-operations-management/page/product/discovery/concept/discovery-schedules.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/product/configuration-management/concept/identification-and-reconciliation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 53,
+		"prompt": "Why should cloud discovery results be reviewed with service owners after initial rollout?",
+		"choices": [
+			"To remove all relationships for noisy services",
+			"To validate licensing-only metrics",
+			"To replace CMDB governance committees",
+			"To confirm discovered services and dependencies reflect operational reality"
+		],
+		"correctIndex": 3,
+		"explanation": "Service-owner validation catches modeling gaps and improves confidence that discovered cloud topology supports operations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/product/configuration-management/concept/csdm-concepts.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 54,
+		"prompt": "Which metric best indicates cloud discovery maturity?",
+		"choices": [
+			"Consistent coverage of expected cloud accounts with low unresolved discovery errors",
+			"Highest number of MID Servers regardless of scope",
+			"Manual CI creation growth month over month",
+			"Event ingestion volume only"
+		],
+		"correctIndex": 0,
+		"explanation": "Mature cloud discovery combines broad, expected coverage with stable execution quality and manageable exception rates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-it-operations-management/page/product/discovery/concept/discovery-dashboard.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 50,
+		"prompt": "In Event Management, remediation tasks are primarily intended to do what?",
+		"choices": [
+			"Drive structured follow-up actions from alert conditions",
+			"Archive all raw events immediately",
+			"Replace incident records permanently",
+			"Provision MID Servers automatically"
+		],
+		"correctIndex": 0,
+		"explanation": "Remediation tasks link operational response work to alerts so responders can execute and track corrective actions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/create-alert-management-rule.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 51,
+		"prompt": "Which design choice improves remediation task quality and ownership?",
+		"choices": [
+			"Creating tasks without assignment logic",
+			"Using clear trigger criteria, assignment rules, and runbook context",
+			"Routing all tasks to a generic queue with no SLA",
+			"Disabling alert severity mapping"
+		],
+		"correctIndex": 1,
+		"explanation": "Task effectiveness improves when creation rules include explicit ownership, urgency alignment, and actionable guidance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-it-service-management/page/product/incident-management/concept/incident-assignment-and-routing.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 52,
+		"prompt": "What should be monitored to ensure remediation tasks are not becoming operational debt?",
+		"choices": [
+			"Total count of connector templates only",
+			"MID Server CPU baseline only",
+			"Task backlog age, reopen rate, and closure quality",
+			"Stockroom transfer lead time"
+		],
+		"correctIndex": 2,
+		"explanation": "Aging and rework patterns reveal whether remediation tasks are resolving root issues or simply accumulating queue load.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/use/reporting/concept/c_ReportingAndAnalytics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 53,
+		"prompt": "Why should remediation task generation be tuned by alert severity?",
+		"choices": [
+			"To disable all low-priority monitoring",
+			"To force one task per incoming event",
+			"To avoid updating CMDB relationships",
+			"To prioritize response effort and reduce non-actionable task noise"
+		],
+		"correctIndex": 3,
+		"explanation": "Severity-based routing helps teams focus on impactful issues while limiting unnecessary task creation from low-risk events.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/alert-management-rule.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 54,
+		"prompt": "Which outcome indicates remediation task automation is working well?",
+		"choices": [
+			"Faster mean time to mitigate with clear task-to-alert traceability",
+			"More manual triage tickets per major incident",
+			"No assignment groups defined",
+			"Every alert produces multiple duplicate tasks"
+		],
+		"correctIndex": 0,
+		"explanation": "Effective automation improves response speed and preserves an auditable chain from signal to remediation activity.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-it-operations-management/page/product/event-management/concept/event-management-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 50,
+		"prompt": "In Hardware Asset Management, disposal processing is primarily about which objective?",
+		"choices": [
+			"Executing controlled retirement with financial and compliance traceability",
+			"Automatically creating software licenses for retired devices",
+			"Converting all retired assets to consumables",
+			"Disabling inventory audits in closed stockrooms"
+		],
+		"correctIndex": 0,
+		"explanation": "Disposal workflows formalize retirement activities and capture evidence needed for governance, risk, and accounting controls.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/dispose-hardware-assets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 51,
+		"prompt": "What should be confirmed before moving assets into disposal status?",
+		"choices": [
+			"That the assets are active in discovery schedules",
+			"That data wipe, chain-of-custody, and approval requirements are satisfied",
+			"That all transfer orders are canceled globally",
+			"That procurement records are deleted"
+		],
+		"correctIndex": 1,
+		"explanation": "Disposal readiness includes security and governance checks, especially data sanitization and documented custody controls.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-lifecycle.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 52,
+		"prompt": "Why are disposal vendors often integrated into HAM workflows?",
+		"choices": [
+			"To replace all internal asset approvals",
+			"To disable retirement financial calculations",
+			"To capture external processing milestones and certification evidence",
+			"To create discovery patterns for end-of-life devices"
+		],
+		"correctIndex": 2,
+		"explanation": "Vendor integration supports traceable processing events and documentation such as certificates of destruction or recycling records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/dispose-hardware-assets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 53,
+		"prompt": "Which metric most directly indicates disposal process health?",
+		"choices": [
+			"Count of open catalog requests",
+			"Number of MID Servers in use",
+			"Event connector throughput",
+			"Average days from retirement approval to verified disposal completion"
+		],
+		"correctIndex": 3,
+		"explanation": "Cycle time from approved retirement to verified completion reflects disposal execution efficiency and process control.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/use/reporting/concept/c_ReportingAndAnalytics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 54,
+		"prompt": "What governance benefit comes from linking disposal records to asset lifecycle history?",
+		"choices": [
+			"It preserves end-to-end audit evidence from acquisition through retirement",
+			"It eliminates the need for stockrooms",
+			"It prevents CMDB updates from Discovery",
+			"It allows disposal without approvals"
+		],
+		"correctIndex": 0,
+		"explanation": "Lifecycle linkage creates a complete record trail for compliance, financial review, and operational accountability.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-lifecycle.html"
+		]
+	}
+]

@@ -1,0 +1,87 @@
+[
+  {
+    "trackCode": "CIS-SPM",
+    "order": 80,
+    "prompt": "What is the primary benefit of using investment scenarios in SPM?",
+    "choices": [
+      "Compare alternative funding and sequencing choices before committing portfolio changes",
+      "Automatically approve all high-cost initiatives",
+      "Replace strategic planning with ad hoc requests",
+      "Eliminate dependency management activities"
+    ],
+    "correctIndex": 0,
+    "explanation": "Scenario analysis enables evidence-based tradeoff decisions before capital is committed.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/financial-planning/concept/financial-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 81,
+    "prompt": "When evaluating two investment scenarios, which criterion is most important?",
+    "choices": [
+      "Expected strategic value relative to risk and resource constraints",
+      "Which scenario has the most project records",
+      "Which scenario was submitted first",
+      "Which scenario has the longest timeline"
+    ],
+    "correctIndex": 0,
+    "explanation": "Scenario selection should optimize value while respecting risk appetite and delivery capacity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/resource-management/concept/resource-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 82,
+    "prompt": "What makes an investment scenario comparison credible for executives?",
+    "choices": [
+      "Consistent assumptions, documented constraints, and transparent scoring methodology",
+      "Different scoring logic for each business unit",
+      "No baseline scenario for comparison",
+      "Hidden cost assumptions to simplify review"
+    ],
+    "correctIndex": 0,
+    "explanation": "Credibility depends on comparable assumptions and transparent methods across all options.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/financial-planning/concept/financial-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 83,
+    "prompt": "A proposed scenario increases value but exceeds resource capacity. What is the best next step?",
+    "choices": [
+      "Adjust sequencing and scope to fit capacity while preserving highest-value outcomes",
+      "Approve the scenario and ignore staffing limits",
+      "Cancel all initiatives and restart planning",
+      "Convert every initiative to mandatory work"
+    ],
+    "correctIndex": 0,
+    "explanation": "Capacity-aware sequencing is a core scenario technique for balancing ambition and feasibility.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/resource-management/concept/resource-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/program-management/concept/program-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 84,
+    "prompt": "Which outcome indicates investment scenario governance is working well?",
+    "choices": [
+      "Selected scenario assumptions are tracked post-approval and variances trigger review actions",
+      "Scenarios are archived immediately after approval",
+      "No variance monitoring occurs until project closure",
+      "Funding changes are made without scenario updates"
+    ],
+    "correctIndex": 0,
+    "explanation": "Effective governance connects scenario assumptions to execution monitoring and corrective decision loops.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html"
+    ]
+  }
+]

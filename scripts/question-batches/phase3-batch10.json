@@ -1,0 +1,242 @@
+[
+	{
+		"trackCode": "CIS-DF",
+		"order": 50,
+		"prompt": "What is the primary goal of data certification in an enterprise data program?",
+		"choices": [
+			"To increase duplicate records",
+			"To establish trusted, governed datasets for business use",
+			"To prevent all schema evolution",
+			"To disable data pipelines"
+		],
+		"correctIndex": 1,
+		"explanation": "Data certification identifies datasets that meet defined quality, governance, and stewardship standards.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 51,
+		"prompt": "Why should a certified dataset include a named data owner and steward?",
+		"choices": [
+			"Ownership is optional for certified data",
+			"Named accountability ensures issue resolution and policy adherence",
+			"It allows skipping metadata",
+			"It removes the need for access controls"
+		],
+		"correctIndex": 1,
+		"explanation": "Certification requires clear accountability so quality and lifecycle decisions can be managed reliably.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 52,
+		"prompt": "Which control most directly supports ongoing certification confidence?",
+		"choices": [
+			"One-time validation at initial publish only",
+			"Recurring quality scorecards with threshold alerts",
+			"Manual screenshots in slides",
+			"Disabling all data lineage"
+		],
+		"correctIndex": 1,
+		"explanation": "Recurring scorecards continuously validate that certified data still meets required standards.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 53,
+		"prompt": "How does lineage help a certification review board?",
+		"choices": [
+			"Lineage removes source dependencies",
+			"Lineage shows upstream/downstream impact before approving changes",
+			"Lineage only affects UI themes",
+			"Lineage replaces access audits"
+		],
+		"correctIndex": 1,
+		"explanation": "Lineage visibility helps reviewers evaluate risk and blast radius when certified data structures change.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 54,
+		"prompt": "What should happen when a certified dataset drops below a required quality threshold?",
+		"choices": [
+			"Keep certification status unchanged forever",
+			"Temporarily revoke or warn certification until remediation completes",
+			"Delete all historical records",
+			"Publish without notification"
+		],
+		"correctIndex": 1,
+		"explanation": "Certification status should reflect current quality posture and trigger transparent remediation workflows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 50,
+		"prompt": "Which Performance Analytics role is typically required to configure indicators, breakdowns, and widgets?",
+		"choices": [
+			"itil",
+			"pa_admin",
+			"sn_incident_write",
+			"knowledge_admin"
+		],
+		"correctIndex": 1,
+		"explanation": "The pa_admin role includes administrative capabilities for configuring core Performance Analytics artifacts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 51,
+		"prompt": "Why should organizations separate PA administration from broad itil access?",
+		"choices": [
+			"Because PA roles have no effect",
+			"To enforce least privilege for analytics configuration changes",
+			"To disable dashboards",
+			"To prevent data collection"
+		],
+		"correctIndex": 1,
+		"explanation": "Role separation helps control who can change analytics definitions and reduces governance risk.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 52,
+		"prompt": "What is the practical purpose of granting pa_power_user in many implementations?",
+		"choices": [
+			"To allow advanced analytics usage without full admin rights",
+			"To manage MID Server certificates",
+			"To create LDAP integrations",
+			"To bypass ACLs globally"
+		],
+		"correctIndex": 0,
+		"explanation": "Power-user roles enable deeper analytics work while preserving stricter control over platform-wide administration.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 53,
+		"prompt": "How do PA role assignments affect dashboard sharing outcomes?",
+		"choices": [
+			"Roles are ignored when dashboards load",
+			"Users need both access to content and permission to underlying analytics data",
+			"Any user can edit all widgets",
+			"Sharing is controlled only by browser settings"
+		],
+		"correctIndex": 1,
+		"explanation": "Dashboard visibility depends on both record access and PA role-based capability to view analytics artifacts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 54,
+		"prompt": "Which governance practice is most effective for PA role management?",
+		"choices": [
+			"Grant pa_admin to all analysts",
+			"Use role groups with periodic access recertification",
+			"Assign roles directly without review",
+			"Avoid documenting role purpose"
+		],
+		"correctIndex": 1,
+		"explanation": "Group-based assignments and regular recertification keep analytics privileges aligned to job responsibilities.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 50,
+		"prompt": "In Service Mapping, what is the MID Server provider responsible for?",
+		"choices": [
+			"Rendering PA scorecards",
+			"Executing probes and patterns against target environments securely",
+			"Approving changes",
+			"Hosting service portal widgets"
+		],
+		"correctIndex": 1,
+		"explanation": "MID Servers run discovery activities from inside controlled network zones to collect mapping data.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 51,
+		"prompt": "Why is MID Server placement important for service mapping accuracy?",
+		"choices": [
+			"Placement has no impact",
+			"It determines network reachability to application and infrastructure endpoints",
+			"It only changes CMDB class icons",
+			"It disables credentials"
+		],
+		"correctIndex": 1,
+		"explanation": "A correctly placed MID Server can reach the required endpoints and produce complete topology evidence.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 52,
+		"prompt": "Which requirement should be validated before assigning a MID Server to a mapping schedule?",
+		"choices": [
+			"Theme color compatibility",
+			"Capability, credentials access, and connectivity to targets",
+			"Incident priority matrix",
+			"Knowledge workflow state"
+		],
+		"correctIndex": 1,
+		"explanation": "Capability tags, valid credentials, and reachable paths are foundational prerequisites for reliable execution.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 53,
+		"prompt": "What is a common symptom of an unhealthy MID provider path?",
+		"choices": [
+			"Consistent identification of all dependencies",
+			"Frequent probe timeout or credential failure events",
+			"Lower dashboard contrast",
+			"Automatic certification success"
+		],
+		"correctIndex": 1,
+		"explanation": "Timeouts and auth failures indicate MID provider issues that block successful data collection.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 54,
+		"prompt": "How does the ECC queue support MID provider operations?",
+		"choices": [
+			"It stores only change requests",
+			"It brokers command and result messages between instance and MID Server",
+			"It replaces CMDB identification rules",
+			"It archives PA breakdowns"
+		],
+		"correctIndex": 1,
+		"explanation": "The ECC queue is the communication backbone used to dispatch work and receive execution results from MID Servers.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+		]
+	}
+]

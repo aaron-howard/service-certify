@@ -1,0 +1,242 @@
+[
+	{
+		"trackCode": "CIS-DF",
+		"order": 45,
+		"prompt": "In an ETL design, what is the primary purpose of a staging layer?",
+		"choices": [
+			"To permanently replace the source system",
+			"To isolate raw extracts for validation and transformation before publish",
+			"To store only dashboard screenshots",
+			"To bypass data quality checks"
+		],
+		"correctIndex": 1,
+		"explanation": "A staging layer buffers inbound data so transformations and checks can run before curated data is published.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 46,
+		"prompt": "Which ETL pattern is best for reducing load volume when source tables are large and frequently updated?",
+		"choices": [
+			"Full reload every run",
+			"Incremental extraction using change markers or watermarks",
+			"Manual CSV uploads only",
+			"Random sampling"
+		],
+		"correctIndex": 1,
+		"explanation": "Incremental extraction captures only changed records and is the standard pattern for efficient large-table pipelines.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 47,
+		"prompt": "Why is an idempotent load strategy important in ETL pipelines?",
+		"choices": [
+			"It guarantees every run inserts duplicates",
+			"It allows reruns without corrupting target datasets",
+			"It eliminates the need for keys",
+			"It forces all records into one table"
+		],
+		"correctIndex": 1,
+		"explanation": "Idempotent logic ensures retries or reruns produce consistent outcomes without duplicate or conflicting records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 48,
+		"prompt": "How should ETL pipelines typically handle records that fail validation rules?",
+		"choices": [
+			"Drop the entire batch immediately",
+			"Publish invalid rows with no flags",
+			"Route failed rows to an error quarantine for remediation",
+			"Automatically mark all rows as valid"
+		],
+		"correctIndex": 2,
+		"explanation": "Quarantining invalid rows preserves observability and supports controlled remediation without blocking all valid data.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 49,
+		"prompt": "What ETL approach best supports late-arriving reference attributes in dimensional models?",
+		"choices": [
+			"Ignore late attributes permanently",
+			"Overwrite historical data with nulls",
+			"Use surrogate keys and controlled backfill updates",
+			"Convert all dimensions to free text"
+		],
+		"correctIndex": 2,
+		"explanation": "Surrogate keys plus backfill processes allow dimensions to be corrected when reference values arrive after fact loads.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 45,
+		"prompt": "In KPI Composer, what is the role of an indicator source?",
+		"choices": [
+			"It defines who can log in to Workspace",
+			"It provides the data stream that KPI indicators evaluate",
+			"It stores only color themes for dashboards",
+			"It replaces automated data collection jobs"
+		],
+		"correctIndex": 1,
+		"explanation": "Indicator sources define where KPI data comes from so indicators can compute values correctly.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 46,
+		"prompt": "When configuring a KPI formula, why should aggregation logic match business intent?",
+		"choices": [
+			"Because aggregation has no reporting impact",
+			"Because incorrect aggregation can distort trend interpretation",
+			"Because formulas are ignored by scorecards",
+			"Because aggregation only affects user avatars"
+		],
+		"correctIndex": 1,
+		"explanation": "Choosing sum, average, percent, or weighted logic incorrectly can produce misleading KPI results.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 47,
+		"prompt": "What is the best reason to assign targets to KPIs in KPI Composer?",
+		"choices": [
+			"To hide historical KPI data",
+			"To compare actual performance against expected outcomes",
+			"To disable breakdowns",
+			"To remove threshold colors"
+		],
+		"correctIndex": 1,
+		"explanation": "Targets establish measurable expectations that make KPI performance status and variance meaningful.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 48,
+		"prompt": "How do KPI breakdowns improve analysis?",
+		"choices": [
+			"They prevent filtering by assignment or service",
+			"They segment KPI results by dimensions like group, service, or location",
+			"They only export data to PDF",
+			"They replace indicators with static text"
+		],
+		"correctIndex": 1,
+		"explanation": "Breakdowns allow teams to analyze KPI behavior by relevant dimensions instead of only viewing a global value.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 49,
+		"prompt": "Why should data collection frequency be reviewed when composing KPIs?",
+		"choices": [
+			"It controls whether users can open lists",
+			"It determines how current KPI values are and impacts trend granularity",
+			"It only changes dashboard font size",
+			"It disables score history"
+		],
+		"correctIndex": 1,
+		"explanation": "Collection schedules should align with operational cadence so KPI insights remain timely and actionable.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 45,
+		"prompt": "In Service Mapping, what is a provider primarily used for?",
+		"choices": [
+			"Creating catalog request approvals",
+			"Collecting topology data from a specific discovery source",
+			"Deleting CMDB classes",
+			"Managing PA indicators"
+		],
+		"correctIndex": 1,
+		"explanation": "Providers retrieve data from underlying technologies so mapping logic can build accurate service topology.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 46,
+		"prompt": "Why is selecting the correct entry point critical for provider-based service mapping?",
+		"choices": [
+			"Entry points are only used for dashboard color rules",
+			"Entry points anchor traversal to the right application boundary",
+			"Entry points disable credentials",
+			"Entry points replace identifier rules"
+		],
+		"correctIndex": 1,
+		"explanation": "Correct entry points ensure the provider starts discovery from components that represent the target service.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 47,
+		"prompt": "What is the benefit of provider pattern sections that model connection dependencies?",
+		"choices": [
+			"They avoid creating any relationships",
+			"They define how components communicate to build end-to-end maps",
+			"They only rename CI classes",
+			"They remove hosting information"
+		],
+		"correctIndex": 1,
+		"explanation": "Connection logic in patterns is what allows Service Mapping to establish meaningful dependency chains.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 48,
+		"prompt": "When provider results produce duplicate CIs, which control should be reviewed first?",
+		"choices": [
+			"System notification templates",
+			"CMDB identification and reconciliation rules",
+			"Incident SLAs",
+			"Dashboard filters"
+		],
+		"correctIndex": 1,
+		"explanation": "Duplicate infrastructure usually indicates identification rules need adjustment for consistent CI matching.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 49,
+		"prompt": "Which practice best supports troubleshooting provider execution failures?",
+		"choices": [
+			"Run patterns without logging",
+			"Review discovery and pattern logs for failed probes and parse errors",
+			"Disable all MID Servers",
+			"Delete the service map and restart"
+		],
+		"correctIndex": 1,
+		"explanation": "Execution logs show where provider collection or parsing failed and are the first source for root-cause analysis.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+		]
+	}
+]

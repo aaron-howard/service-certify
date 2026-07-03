@@ -1,0 +1,257 @@
+[
+  {
+    "trackCode": "CIS-RC",
+    "order": 70,
+    "prompt": "What is the primary goal of RC administration in a production instance?",
+    "choices": [
+      "Maintain stable configuration, access governance, and data quality for risk and compliance processes",
+      "Allow unrestricted customization by any itil user",
+      "Disable audit history to improve performance",
+      "Run policy and risk workflows without role controls"
+    ],
+    "correctIndex": 0,
+    "explanation": "RC administration ensures governance controls are reliable, secure, and operationally sustainable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 71,
+    "prompt": "Which administrative control best protects RC data integrity?",
+    "choices": [
+      "Use role-based access with separation of duties for policy, risk, and control administration",
+      "Grant admin privileges to all auditors and control owners",
+      "Store risk treatment decisions only in email threads",
+      "Disable mandatory fields on high-impact risk records"
+    ],
+    "correctIndex": 0,
+    "explanation": "Separation of duties and RBAC reduce unauthorized changes and preserve governance integrity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk/concept/risk-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 72,
+    "prompt": "How should RC administrators manage changes to assessment methodologies or scoring models?",
+    "choices": [
+      "Govern updates through change control, versioning, stakeholder approval, and impact communication",
+      "Update scoring models directly in production without notice",
+      "Apply different scoring logic per analyst for flexibility",
+      "Reset all historical assessments after each methodology change"
+    ],
+    "correctIndex": 0,
+    "explanation": "Controlled, versioned changes preserve comparability and trust in RC reporting outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk/concept/risk-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 73,
+    "prompt": "Which administrative practice most improves RC platform maintainability?",
+    "choices": [
+      "Standardize configuration, document design decisions, and review customizations regularly",
+      "Rely on undocumented scripts for core logic",
+      "Allow duplicate policy frameworks with overlapping controls",
+      "Avoid governance reviews to reduce administrative overhead"
+    ],
+    "correctIndex": 0,
+    "explanation": "Administrative consistency and documentation reduce technical debt and operational risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/configuration-management/concept/configuration-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 74,
+    "prompt": "Which KPI mix best reflects effective RC administration?",
+    "choices": [
+      "High workflow completion quality, low unauthorized changes, and timely closure of admin exceptions",
+      "Higher number of emergency configuration updates",
+      "More users with elevated governance roles",
+      "Increased count of duplicate control records"
+    ],
+    "correctIndex": 0,
+    "explanation": "Healthy administration is visible in stable operations, strong control over change, and reduced exceptions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 70,
+    "prompt": "What is the primary objective of SIR administration?",
+    "choices": [
+      "Ensure incident response configuration, roles, and workflows are governed for consistent security operations",
+      "Allow each analyst to define ad hoc response states",
+      "Disable severity models to speed ticket intake",
+      "Route all incidents to one resolver group by default"
+    ],
+    "correctIndex": 0,
+    "explanation": "SIR administration establishes a controlled operating model for repeatable and accountable incident response.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 71,
+    "prompt": "Which administrative setup is most important for reliable SIR assignment and escalation?",
+    "choices": [
+      "Role-based group ownership, defined severity-to-priority mapping, and maintained escalation paths",
+      "Manual assignment by whichever analyst is available",
+      "Single priority level for all security incidents",
+      "Escalations handled only through external chat tools"
+    ],
+    "correctIndex": 0,
+    "explanation": "Consistent assignment and escalation require explicit ownership structures and severity governance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/configure-security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/incident-management/concept/incident-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 72,
+    "prompt": "How should SIR administrators handle updates to playbooks and response tasks?",
+    "choices": [
+      "Test changes in lower environments, validate with responders, and promote through change governance",
+      "Edit playbooks live during active incidents",
+      "Permit local teams to fork uncontrolled playbook variants",
+      "Disable approval requirements for response workflow changes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Controlled promotion and user validation prevent operational disruption during critical incidents.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/automation/concept/flow-designer.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 73,
+    "prompt": "Which governance practice most improves SIR data quality and reporting trust?",
+    "choices": [
+      "Enforce mandatory taxonomy fields, closure codes, and post-incident validation reviews",
+      "Allow free-text categorization with no required fields",
+      "Close incidents automatically when any task is completed",
+      "Exclude low-severity incidents from all reporting"
+    ],
+    "correctIndex": 0,
+    "explanation": "Consistent required data and review controls make SIR analytics more reliable and actionable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/data-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 74,
+    "prompt": "Which KPI set best indicates mature SIR administration?",
+    "choices": [
+      "Consistent SLA adherence, lower reassignment churn, and high-quality closure data across incident tiers",
+      "Higher count of unclassified incidents",
+      "More emergency workflow edits in production",
+      "Longer incident queue times before triage"
+    ],
+    "correctIndex": 0,
+    "explanation": "Administrative maturity appears in operational consistency, governance discipline, and dependable reporting.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 70,
+    "prompt": "What is the primary purpose of Service Mapping administration?",
+    "choices": [
+      "Govern map creation, ownership, credentials, and update policies to keep service topology accurate",
+      "Allow unrestricted map editing by any user with itil role",
+      "Disable dependency discovery to reduce processing",
+      "Maintain maps only during outage investigations"
+    ],
+    "correctIndex": 0,
+    "explanation": "SM administration ensures service maps remain reliable, governed, and operationally useful.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 71,
+    "prompt": "Which administrative control best protects map quality over time?",
+    "choices": [
+      "Define ownership, review cadence, and approval gates for map changes and entry point updates",
+      "Permit direct production edits without review",
+      "Clone maps whenever a CI is renamed",
+      "Disable map validation checks for speed"
+    ],
+    "correctIndex": 0,
+    "explanation": "Governed change controls help prevent map drift and preserve service topology accuracy.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_MaintainServiceMap.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 72,
+    "prompt": "How should administrators manage credentials and discovery patterns for Service Mapping?",
+    "choices": [
+      "Maintain least-privilege credential governance and test pattern updates before production rollout",
+      "Reuse one privileged credential for every service and domain",
+      "Disable credential validation to reduce onboarding time",
+      "Modify discovery patterns during active outages"
+    ],
+    "correctIndex": 0,
+    "explanation": "Credential governance and controlled pattern promotion reduce risk and preserve mapping reliability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/t_ConfigureDiscoveryCredentials.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 73,
+    "prompt": "Which administrative operating model best supports scalable Service Mapping?",
+    "choices": [
+      "Central platform governance with delegated service owners and standardized onboarding checklists",
+      "Completely decentralized map ownership with no standards",
+      "One administrator managing all maps without service input",
+      "No ownership assignment until map failures occur"
+    ],
+    "correctIndex": 0,
+    "explanation": "Balanced governance and delegated accountability support scale without sacrificing consistency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/configuration-management/concept/configuration-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 74,
+    "prompt": "Which KPI set best demonstrates effective Service Mapping administration?",
+    "choices": [
+      "High map freshness, low orphan CI rates, and faster correction of topology discrepancies",
+      "Higher number of unmanaged entry points",
+      "More emergency map edits in production",
+      "Increased count of unmapped business services"
+    ],
+    "correctIndex": 0,
+    "explanation": "Administrative effectiveness is reflected by map currency, topology integrity, and responsive governance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  }
+]

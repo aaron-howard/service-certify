@@ -1,0 +1,242 @@
+[
+	{
+		"trackCode": "CIS-DF",
+		"order": 15,
+		"prompt": "When defining a data source for file-based imports, what does the data source record primarily control?",
+		"choices": [
+			"How ServiceNow locates and interprets the inbound file for loading",
+			"How SLAs are calculated for imported records",
+			"How dashboard widgets display imported metrics",
+			"How update sets capture source rows"
+		],
+		"correctIndex": 0,
+		"explanation": "The data source configuration specifies file type, retrieval method, and parsing properties used by import processing.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/vancouver/platform-administration/concept/c_DataSources.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 16,
+		"prompt": "Which statement best describes a JDBC data source in ServiceNow data ingestion scenarios?",
+		"choices": [
+			"It is used only for importing XML attachments",
+			"It enables importing data from external relational databases through configured connections",
+			"It can run only from client-side scripts",
+			"It bypasses import sets and writes directly to task tables"
+		],
+		"correctIndex": 1,
+		"explanation": "JDBC data sources connect to supported external databases and feed import set processing in controlled ETL workflows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/vancouver/platform-administration/task/t_CreateAJDBCDataSource.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 17,
+		"prompt": "Why should data source credentials and endpoints be managed carefully across environments?",
+		"choices": [
+			"Because credentials are copied into each imported target record",
+			"Because data sources cannot be promoted via update sets",
+			"To maintain secure access and avoid accidental imports from the wrong external system",
+			"To ensure transform maps always run in global scope"
+		],
+		"correctIndex": 2,
+		"explanation": "Environment-specific endpoint and credential governance prevents data leakage, authentication failures, and incorrect ingestion.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/vancouver/platform-administration/concept/c_DataSources.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 18,
+		"prompt": "A scheduled import job succeeds but loads no rows. Which area should be checked first?",
+		"choices": [
+			"PA dashboard drilldowns",
+			"Knowledge category permissions",
+			"Service Portal theme settings",
+			"Data source accessibility and file/query retrieval configuration"
+		],
+		"correctIndex": 3,
+		"explanation": "No-row outcomes commonly originate from data retrieval issues such as missing file access, empty source query results, or bad parsing settings.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/vancouver/platform-administration/task/t_TroubleshootImportSets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 19,
+		"prompt": "What is the main reason to separate data source configuration from transform map logic?",
+		"choices": [
+			"It isolates ingestion connection concerns from downstream mapping and normalization rules",
+			"It ensures all imports run only in manual mode",
+			"It disables coalesce requirements for target matching",
+			"It prevents import set history from being retained"
+		],
+		"correctIndex": 0,
+		"explanation": "Decoupling source retrieval from transformation improves maintainability and allows source changes without rewriting mapping behavior.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/data-foundations/vancouver/integrationhub-etl/concept/data-pipelines.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 15,
+		"prompt": "In PA, what does a data collection job do?",
+		"choices": [
+			"Creates update sets for indicator definitions",
+			"Runs indicator calculations on schedule and stores resulting scores",
+			"Deletes stale dashboard widgets",
+			"Synchronizes user preferences between instances"
+		],
+		"correctIndex": 1,
+		"explanation": "Collection jobs execute indicator logic at defined intervals and persist score snapshots for trending and analysis.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/concept/c_DataCollectionJobs.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 16,
+		"prompt": "Why is collection schedule design important for high-volume indicators?",
+		"choices": [
+			"It controls instance load and ensures timely score freshness for stakeholders",
+			"It determines whether indicators can use breakdowns",
+			"It disables target comparisons during business hours",
+			"It applies only to manual indicators"
+		],
+		"correctIndex": 0,
+		"explanation": "Proper schedule timing balances analytical freshness with platform performance and operational constraints.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/task/t_ScheduleDataCollection.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 17,
+		"prompt": "An indicator score is stale even though the source table has new records. What should be validated first?",
+		"choices": [
+			"That the related collection job executed successfully for the expected period",
+			"That homepage announcements are active",
+			"That the report export format is CSV",
+			"That UI actions are visible on indicator forms"
+		],
+		"correctIndex": 0,
+		"explanation": "Stale values often indicate missed or failed collection executions rather than issues with source table updates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/task/t_MonitorCollectionJobs.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 18,
+		"prompt": "What is the role of historical backfill collection in Performance Analytics?",
+		"choices": [
+			"It removes all existing scores before recollecting",
+			"It disables breakdown collection to improve speed",
+			"It populates prior periods so trend analysis is available before ongoing schedules accumulate history",
+			"It is required only for scripted REST integrations"
+		],
+		"correctIndex": 2,
+		"explanation": "Backfill jobs collect past periods to establish usable historical context for dashboards and scorecards.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/task/t_RunHistoricalDataCollection.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 19,
+		"prompt": "A collection job is timing out on a complex indicator source. Which remediation is most appropriate?",
+		"choices": [
+			"Delete indicator scores and stop collecting",
+			"Switch all indicators to manual entry",
+			"Disable all breakdowns globally",
+			"Optimize source filters/indexing and adjust collection strategy"
+		],
+		"correctIndex": 3,
+		"explanation": "Performance issues should be addressed by improving source query efficiency and collection design, not by disabling analytics capability.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/concept/performance-analytics-performance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 15,
+		"prompt": "In network inventory management, why are accurate relationships between network resources and services critical?",
+		"choices": [
+			"They enable impact analysis and faster fault isolation across dependent services",
+			"They are required only for billing invoices",
+			"They prevent all discovery errors automatically",
+			"They replace incident categorization"
+		],
+		"correctIndex": 0,
+		"explanation": "Relationship fidelity allows operations teams to assess downstream impact and prioritize remediation effectively.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/network-inventory/concept/network-service-relationships.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 16,
+		"prompt": "What is a primary operational benefit of maintaining current network inventory attributes (location, vendor, model, status)?",
+		"choices": [
+			"It removes the need for assignment groups",
+			"It improves troubleshooting context, planning, and lifecycle governance",
+			"It guarantees zero incident volume",
+			"It automatically resolves configuration drift"
+		],
+		"correctIndex": 1,
+		"explanation": "Accurate asset and resource attributes support better operational decisions across incident, change, and capacity processes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/network-inventory/concept/network-inventory-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 17,
+		"prompt": "How does network inventory quality affect change risk assessment?",
+		"choices": [
+			"Inventory quality has no impact on change outcomes",
+			"Only software versions matter, not relationships",
+			"Complete and accurate inventory improves dependency visibility for safer change planning",
+			"Risk is based only on CAB voting results"
+		],
+		"correctIndex": 2,
+		"explanation": "Reliable inventory and relationships reduce uncertainty and help teams evaluate blast radius before implementing changes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/network-inventory/concept/network-change-planning.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 18,
+		"prompt": "Which practice most directly improves trust in network inventory data over time?",
+		"choices": [
+			"Restrict all inventory updates to annual audits only",
+			"Allow unmanaged free-text updates without controls",
+			"Ignore discrepancies from discovery and operations teams",
+			"Implement reconciliation and governance processes for continuous data quality"
+		],
+		"correctIndex": 3,
+		"explanation": "Regular reconciliation and governed updates maintain inventory accuracy as network environments evolve.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/network-inventory/task/improve-inventory-data-quality.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 19,
+		"prompt": "When onboarding a new network domain into inventory, what should be established first?",
+		"choices": [
+			"A defined model for classes, key attributes, ownership, and relationship standards",
+			"A report export template for executives",
+			"A portal theme update for NOC users",
+			"A universal priority of P1 for all discovered resources"
+		],
+		"correctIndex": 0,
+		"explanation": "A clear data model and governance baseline ensures newly onboarded inventory remains consistent and operationally useful.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/network-inventory/concept/network-inventory-governance.html"
+		]
+	}
+]

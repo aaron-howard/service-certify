@@ -1,0 +1,243 @@
+[
+	{
+		"trackCode": "CSA",
+		"order": 40,
+		"prompt": "Which artifact defines retention, classification, and handling requirements for data records in ServiceNow?",
+		"choices": [
+			"A documented data policy",
+			"A UI policy",
+			"A business rule script include",
+			"A transform map run history"
+		],
+		"correctIndex": 0,
+		"explanation": "Data policies establish governance requirements such as classification, retention, and handling controls that support compliance obligations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/security/concept/c_DataPolicies.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 41,
+		"prompt": "In Edge Encryption, what is the primary security benefit of encrypting sensitive fields before data reaches the instance?",
+		"choices": [
+			"It allows unauthenticated API access to those fields",
+			"It protects data confidentiality in transit and at rest in the tenant",
+			"It disables ACL evaluation for encrypted columns",
+			"It replaces all role-based access controls automatically"
+		],
+		"correctIndex": 1,
+		"explanation": "Client-side encryption ensures protected values are encrypted before transmission, reducing exposure while preserving platform processing for authorized use cases.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/product/edge-encryption/concept/edge-encryption.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 42,
+		"prompt": "Which approach best supports regulatory audits for personally identifiable information (PII) in ServiceNow?",
+		"choices": [
+			"Disable activity auditing to reduce storage usage",
+			"Track access and change history on PII fields with audit controls",
+			"Store all PII in free-text journal fields",
+			"Grant admin role to all approvers"
+		],
+		"correctIndex": 1,
+		"explanation": "Compliance audits require traceability. Field and record audit history helps demonstrate who viewed or changed sensitive data and when.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/security/concept/c_AuditingInServiceNow.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 43,
+		"prompt": "When implementing field-level encryption, which role should own encryption key lifecycle controls?",
+		"choices": [
+			"Any fulfiller role with table write access",
+			"Only catalog admins",
+			"A designated security administrator or key custodian role",
+			"All end users with self-service access"
+		],
+		"correctIndex": 2,
+		"explanation": "Segregation of duties is a core control: key management should be restricted to trusted security custodians, not broad operational roles.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/security/concept/encryption-support.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 44,
+		"prompt": "What is the most appropriate action when a data policy conflicts with a legal hold requirement?",
+		"choices": [
+			"Delete all matching records immediately",
+			"Ignore the legal hold and keep normal retention",
+			"Pause retention disposition for affected records per legal hold governance",
+			"Convert records to attachments to avoid retention checks"
+		],
+		"correctIndex": 2,
+		"explanation": "Legal hold requirements take precedence over standard retention schedules to prevent improper destruction of records subject to litigation or investigation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/security/concept/c_DataPolicies.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 40,
+		"prompt": "A UI Action should be configured with 'Form button' when the developer wants users to:",
+		"choices": [
+			"Run the action from a list context menu",
+			"Click a button directly on the record form",
+			"Trigger the action only through Flow Designer",
+			"Run the action only from email notifications"
+		],
+		"correctIndex": 1,
+		"explanation": "Form button placement exposes the UI Action on form views so users can execute record-level logic directly in the form header.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-application-development/page/script/server-scripting/concept/c_UIActions.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 41,
+		"prompt": "Which statement describes a common use of UI Macros in classic ServiceNow UI?",
+		"choices": [
+			"Defining reusable Jelly markup for custom UI components",
+			"Replacing ACLs with visual conditions",
+			"Running import set transformations",
+			"Creating MID Server probes"
+		],
+		"correctIndex": 0,
+		"explanation": "UI Macros package reusable Jelly/UI snippets so developers can include consistent components across forms and UI pages.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-application-development/page/script/server-scripting/concept/c_UIMacros.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 42,
+		"prompt": "For a UI Action that updates a record and then returns to the form, which server-side pattern is typically used?",
+		"choices": [
+			"g_form.addInfoMessage() followed by location.reload()",
+			"current.update(); action.setRedirectURL(current);",
+			"gs.sleep(5000); gs.print(current.sys_id);",
+			"new GlideRecord('task').insert(); gs.eventQueue() only"
+		],
+		"correctIndex": 1,
+		"explanation": "The standard UI Action server script pattern updates `current` and explicitly redirects to the target record using `action.setRedirectURL`.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-application-development/page/script/server-scripting/concept/c_UIActions.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 43,
+		"prompt": "What is the best reason to centralize date or currency display logic in a reusable formatter/script include?",
+		"choices": [
+			"To ensure consistent formatting behavior across multiple UI components",
+			"To bypass locale and user preference settings",
+			"To eliminate all client scripts on forms",
+			"To avoid using GlideDateTime entirely"
+		],
+		"correctIndex": 0,
+		"explanation": "Shared formatting logic improves maintainability and consistency, reducing duplicate scripts that can drift over time.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-application-development/page/script/server-scripting/concept/c_ScriptIncludes.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 44,
+		"prompt": "When should a developer prefer a list UI Action over a form UI Action?",
+		"choices": [
+			"When the action should process one or more selected records from a list",
+			"When the action must run only after form onLoad",
+			"When the action is only for Service Portal widgets",
+			"When the action requires no table association"
+		],
+		"correctIndex": 0,
+		"explanation": "List UI Actions are designed for bulk or selected-record operations initiated directly from list views.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-application-development/page/script/server-scripting/concept/c_UIActions.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 40,
+		"prompt": "In ITSM release management, what is the primary purpose of a release record?",
+		"choices": [
+			"To track a coordinated deployment of multiple related changes",
+			"To replace all incident records",
+			"To store software discovery patterns",
+			"To approve user access roles"
+		],
+		"correctIndex": 0,
+		"explanation": "A release groups and governs related change activities so teams can plan, test, and deploy capabilities in a controlled way.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-it-service-management/page/product/release-management/concept/c_ReleaseManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 41,
+		"prompt": "How do release tasks support execution quality during a deployment window?",
+		"choices": [
+			"By assigning granular implementation steps with ownership and status tracking",
+			"By automatically closing all linked change requests",
+			"By replacing test plans with incident work notes",
+			"By preventing CAB review for normal changes"
+		],
+		"correctIndex": 0,
+		"explanation": "Release tasks break work into trackable units with owners and due states, improving coordination and accountability.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-it-service-management/page/product/release-management/task/t_CreateReleaseTask.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 42,
+		"prompt": "Which dependency should be verified before moving a release from Build to Test phase?",
+		"choices": [
+			"All associated release tasks marked Closed Complete",
+			"At least one incident linked to the release",
+			"CMDB discovery schedule executed same day",
+			"Problem record with workaround published"
+		],
+		"correctIndex": 0,
+		"explanation": "Phase transitions should reflect readiness gates; incomplete release tasks often indicate unresolved implementation items.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-it-service-management/page/product/release-management/concept/c_ReleaseManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 43,
+		"prompt": "What is a key benefit of linking change requests to a release?",
+		"choices": [
+			"It removes the need for change risk assessment",
+			"It provides end-to-end visibility of delivery scope and approvals",
+			"It converts emergency changes into standard changes automatically",
+			"It disables blackout windows for deployment"
+		],
+		"correctIndex": 1,
+		"explanation": "Linking changes to a release creates a complete trace of scope, approvals, and execution status across related work items.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-it-service-management/page/product/release-management/concept/c_ReleaseManagement.html",
+			"https://www.servicenow.com/docs/bundle/xanadu-it-service-management/page/product/change-management/concept/c_ChangeManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 44,
+		"prompt": "During post-implementation review, which release-task outcome is most useful for continual improvement?",
+		"choices": [
+			"Only task assignment group names",
+			"Unstructured comments without closure codes",
+			"Task completion metrics and documented blockers",
+			"Deleting failed tasks to keep reports clean"
+		],
+		"correctIndex": 2,
+		"explanation": "Completion data and blocker notes reveal process bottlenecks and execution risks that should inform future release planning.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/xanadu-it-service-management/page/product/release-management/concept/c_ReleaseManagement.html"
+		]
+	}
+]

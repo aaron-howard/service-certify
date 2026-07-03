@@ -1,0 +1,162 @@
+[
+	{
+		"trackCode": "CIS-SAM",
+		"order": 15,
+		"prompt": "Why is selecting the correct license metric critical when configuring SAM entitlements?",
+		"choices": [
+			"It determines how consumption is measured against rights during reconciliation",
+			"It controls which users can log into the instance",
+			"It replaces software normalization rules",
+			"It eliminates the need for contract records"
+		],
+		"correctIndex": 0,
+		"explanation": "The license metric defines the counting logic for compliance, so an incorrect metric can materially misstate license position.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/license-metrics-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 16,
+		"prompt": "A publisher audits by named user, but your entitlement is configured by device. What is the likely result?",
+		"choices": [
+			"More accurate reconciliation because device counts are simpler",
+			"Potential over- or under-counting because measurement basis does not match contract terms",
+			"No impact because SAM converts all metrics automatically",
+			"All installs become compliant by default"
+		],
+		"correctIndex": 1,
+		"explanation": "Metric mismatch between contract rights and SAM logic can produce inaccurate compliance outcomes and audit risk.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/configure-license-metrics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 17,
+		"prompt": "Which SAM practice best supports managing products with multiple license metrics across editions?",
+		"choices": [
+			"Use one entitlement and one metric for all editions",
+			"Create separate entitlement structures aligned to each contractual metric and edition scope",
+			"Disable reconciliation for mixed-metric publishers",
+			"Track metrics only in free-text notes"
+		],
+		"correctIndex": 1,
+		"explanation": "Mixed-metric products require explicit modeling so each edition is measured using the proper contractual rules.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/license-metric-best-practices.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 18,
+		"prompt": "What does effective metric governance in SAM primarily prevent?",
+		"choices": [
+			"Unauthorized updates to knowledge articles",
+			"Inconsistent counting logic that leads to unreliable compliance reporting",
+			"Changes to assignment groups on incidents",
+			"Use of discovery data in software models"
+		],
+		"correctIndex": 1,
+		"explanation": "Metric governance keeps reconciliation logic consistent and auditable, reducing dispute risk with publishers.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/govern-license-metrics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 19,
+		"prompt": "Before finalizing reconciliation, which validation gives the strongest confidence metric mappings are correct?",
+		"choices": [
+			"Review the form layout and color theme",
+			"Confirm metric-to-contract alignment and test expected consumption outcomes on representative data",
+			"Temporarily disable reconciliation errors",
+			"Replace entitlement quantities with rounded estimates"
+		],
+		"correctIndex": 1,
+		"explanation": "Testing against representative data confirms that metric configuration behaves as intended under real licensing scenarios.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/validate-reconciliation-results.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 15,
+		"prompt": "In SPM, what is a practical use of Now Assist for portfolio teams?",
+		"choices": [
+			"Generate contextual summaries and insights from strategic and execution data to accelerate decision-making",
+			"Replace all approval workflows with chatbot responses",
+			"Automatically set all at-risk initiatives to complete",
+			"Normalize discovered software titles"
+		],
+		"correctIndex": 0,
+		"explanation": "Now Assist can help portfolio stakeholders quickly interpret plan and execution context through AI-generated summaries and guidance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/strategic-portfolio-management/now-assist-in-spm/now-assist-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 16,
+		"prompt": "A PMO lead asks for concise status narratives ahead of governance reviews. Which Now Assist capability is most relevant?",
+		"choices": [
+			"AI-generated recaps of objective and initiative updates",
+			"Auto-provisioning CMDB CIs for every project",
+			"Converting all strategic goals into incident tasks",
+			"Disabling demand scoring"
+		],
+		"correctIndex": 0,
+		"explanation": "Summarization assistance reduces manual preparation time while preserving key strategic and execution signals for review meetings.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/strategic-portfolio-management/now-assist-in-spm/use-now-assist-summaries.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 17,
+		"prompt": "What governance approach should accompany adoption of Now Assist in SPM?",
+		"choices": [
+			"Use AI outputs directly for approvals without human review",
+			"Require human validation of AI-generated recommendations before portfolio decisions",
+			"Disable strategic plans to avoid bias",
+			"Limit access to financial data in all dashboards"
+		],
+		"correctIndex": 1,
+		"explanation": "AI-assisted insights should support, not replace, accountable human judgment in formal portfolio governance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-assist/now-assist-governance/ai-governance-best-practices.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 18,
+		"prompt": "Which outcome most clearly indicates successful use of Now Assist in SPM?",
+		"choices": [
+			"Fewer manual narrative updates and faster, better-informed portfolio review cycles",
+			"Elimination of strategic objectives",
+			"No need for project status reporting",
+			"Automatic closure of all overdue milestones"
+		],
+		"correctIndex": 0,
+		"explanation": "Success is measured by improved decision velocity and quality, not by removing core governance artifacts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/strategic-portfolio-management/now-assist-in-spm/measure-now-assist-value.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 19,
+		"prompt": "When configuring Now Assist prompts for strategic updates, what is the best practice?",
+		"choices": [
+			"Use broad generic prompts with no portfolio context",
+			"Anchor prompts to objective, risk, timeline, and financial context to improve response quality",
+			"Include confidential credentials in prompt templates",
+			"Ask Now Assist to bypass role-based security controls"
+		],
+		"correctIndex": 1,
+		"explanation": "Context-rich prompting generally produces more relevant and actionable AI assistance for strategic portfolio workflows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-assist/now-assist-guidance/prompting-best-practices.html"
+		]
+	}
+]

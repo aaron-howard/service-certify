@@ -1,0 +1,242 @@
+[
+	{
+		"trackCode": "CIS-RC",
+		"order": 15,
+		"prompt": "In Policy and Compliance Management, what is the primary role of a control record?",
+		"choices": [
+			"Define the control objective, ownership, and testability linked to authoritative requirements",
+			"Store network discovery credentials",
+			"Replace all risk records in the register",
+			"Create emergency change approvals"
+		],
+		"correctIndex": 0,
+		"explanation": "Control records formalize how obligations are addressed operationally and provide the basis for testing and assurance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/c_GRCControls.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 16,
+		"prompt": "A compliance manager needs to reduce duplicate controls across frameworks. Which strategy is best?",
+		"choices": [
+			"Create separate controls for every citation regardless of overlap",
+			"Use common controls mapped to multiple authority documents and citations",
+			"Map controls only to incidents, not requirements",
+			"Disable control ownership fields"
+		],
+		"correctIndex": 1,
+		"explanation": "Common controls reduce duplication and support reuse across multiple frameworks and requirements.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/manage-common-controls.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 17,
+		"prompt": "Which evidence practice most strengthens control testing defensibility?",
+		"choices": [
+			"Relying on verbal confirmation from process owners",
+			"Attaching screenshots without timestamps",
+			"Maintaining traceable, time-bound evidence linked to test results and approvers",
+			"Deleting failed test artifacts after remediation"
+		],
+		"correctIndex": 2,
+		"explanation": "Traceable evidence linked to test execution and approvals is key for defensible assurance and audits.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/control-testing-and-evidence.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 18,
+		"prompt": "What is the most effective response when a key control repeatedly fails testing?",
+		"choices": [
+			"Mark the control as passed to preserve KPIs",
+			"Archive the requirement citation",
+			"Reclassify the control as optional",
+			"Open and track remediation tasks with owners, due dates, and retest criteria"
+		],
+		"correctIndex": 3,
+		"explanation": "Documented remediation workflows with retesting provide governance and ensure corrective actions are completed.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/remediate-control-failures.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 19,
+		"prompt": "Which metric best indicates a maturing control environment in IRM?",
+		"choices": [
+			"Increasing pass rate with reduced repeat failures across critical controls",
+			"Total number of new control records regardless of quality",
+			"Percentage of controls with no owner assigned",
+			"Count of manually overridden test outcomes"
+		],
+		"correctIndex": 0,
+		"explanation": "Sustained effectiveness with fewer repeat failures signals stronger control design and operation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/compliance-metrics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 15,
+		"prompt": "Why does mapping SIR findings to MITRE ATT&CK improve operations beyond simple severity labels?",
+		"choices": [
+			"It provides standardized adversary behavior context to prioritize investigations and defensive actions",
+			"It automatically removes false positives from all tools",
+			"It replaces incident assignment rules",
+			"It eliminates the need for indicators of compromise"
+		],
+		"correctIndex": 0,
+		"explanation": "ATT&CK context gives a common behavior framework that supports analyst decisions and communication.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/mitre-attack-defend-graph-sir.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 16,
+		"prompt": "A SOC lead wants to compare repeated intrusion techniques across incidents. Which ATT&CK-aligned data point is most useful?",
+		"choices": [
+			"Catalog task short description",
+			"Mapped techniques and tactics captured on security incidents and related observables",
+			"CMDB class icon color",
+			"User session timeout values"
+		],
+		"correctIndex": 1,
+		"explanation": "Technique and tactic mappings enable trend analysis across incident sets and recurring adversary behavior.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/map-security-incidents-to-mitre-attack.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 17,
+		"prompt": "What is a practical use of ATT&CK rollup from child to parent incidents?",
+		"choices": [
+			"Suppress all child records from analysts",
+			"Close parent records when one child is resolved",
+			"Maintain consolidated adversary-behavior visibility for coordinated response leadership",
+			"Convert parent incidents to vulnerabilities automatically"
+		],
+		"correctIndex": 2,
+		"explanation": "ATT&CK rollups support parent-level situational awareness during multi-workstream incidents.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/yokohama-security-management/page/product/threat-intelligence/task/rollup-mitre-att-ck-information-from-child-security-incidents.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 18,
+		"prompt": "Which governance control improves ATT&CK data quality in SIR?",
+		"choices": [
+			"Allowing free-text tactics without reference values",
+			"Mapping ATT&CK only during post-incident reviews",
+			"Removing mandatory incident categorization",
+			"Enforcing standardized ATT&CK taxonomy fields with analyst validation checkpoints"
+		],
+		"correctIndex": 3,
+		"explanation": "Standardized taxonomy and validation improve consistency and analytical value of ATT&CK mappings.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/mitre-attack-governance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 19,
+		"prompt": "Which outcome best demonstrates ATT&CK integration is helping the SOC?",
+		"choices": [
+			"Faster detection engineering updates tied to frequently observed techniques",
+			"Higher number of uncategorized incidents",
+			"Fewer incident assignments to owning teams",
+			"No linkage between incidents and observables"
+		],
+		"correctIndex": 0,
+		"explanation": "When ATT&CK data informs detection tuning and prioritization, SOC response effectiveness improves measurably.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-operations-metrics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 15,
+		"prompt": "In tag-based service mapping, what is the key benefit of using cloud tags consistently?",
+		"choices": [
+			"It enables automated grouping of related resources into application service context",
+			"It disables CMDB reconciliation logic",
+			"It replaces service entry points entirely",
+			"It prevents dependency discovery"
+		],
+		"correctIndex": 0,
+		"explanation": "Consistent tagging supports automated association and governance of cloud resources in map scope.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/tag-based-service-mapping.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 16,
+		"prompt": "Which tagging standard most improves map reliability across multiple cloud accounts?",
+		"choices": [
+			"Using owner-defined tags with no naming convention",
+			"Defining required tag keys and values for service, environment, and ownership",
+			"Rotating tag formats every sprint",
+			"Applying tags only to load balancers"
+		],
+		"correctIndex": 1,
+		"explanation": "Standardized keys and values are required for predictable grouping and accurate service association.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/cloud-tag-governance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 17,
+		"prompt": "A cloud migration introduces many untagged resources. What is the biggest mapping risk?",
+		"choices": [
+			"Increased CI icon rendering time only",
+			"Lower incident SLA targets",
+			"Resources may be excluded or misgrouped, reducing service map completeness and trust",
+			"Automatic deletion of discovery schedules"
+		],
+		"correctIndex": 2,
+		"explanation": "Untagged or inconsistently tagged resources undermine automated grouping and degrade map completeness.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/tag-based-discovery-prerequisites.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 18,
+		"prompt": "What is the best operational pattern for tag-based mapping changes in production?",
+		"choices": [
+			"Apply tag logic directly in prod without testing",
+			"Disable reconciliation during tag updates",
+			"Use one global tag for all services",
+			"Validate new tag rules in lower environments, then promote with controlled change"
+		],
+		"correctIndex": 3,
+		"explanation": "Controlled validation and promotion prevent large-scale misclassification in production maps.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/change-management-for-service-mapping.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 19,
+		"prompt": "Which KPI best measures tag-based mapping effectiveness?",
+		"choices": [
+			"Percentage of mapped service CIs with compliant required tags and validated dependencies",
+			"Total number of tag keys in the enterprise",
+			"Count of discovery credentials stored",
+			"Number of incident categories in ITSM"
+		],
+		"correctIndex": 0,
+		"explanation": "Compliance of required tags plus dependency validation reflects whether tag-based mapping is accurate and governable.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-kpis.html"
+		]
+	}
+]
