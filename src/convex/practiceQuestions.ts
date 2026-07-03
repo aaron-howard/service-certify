@@ -1,41 +1,63 @@
 import { mutation, query } from './_generated/server';
+import type { QueryCtx } from './_generated/server';
 import { v } from 'convex/values';
+import { requireAdmin } from './lib/authorization';
+import { applyModeLimit, validateAnswersForMode } from './lib/practiceAccess';
 
-/** Practice prompts without answer keys (safe to load before submit). */
-export const listByTrackCode = query({
-	args: { trackCode: v.string() },
-	handler: async (ctx, { trackCode }) => {
-		if (!trackCode || trackCode.length < 3 || trackCode.length > 10) {
-			throw new Error('Invalid trackCode: must be 3-10 characters');
-		}
-		const rows = await ctx.db
-			.query('practiceQuestions')
-			.withIndex('by_trackCode', (q) => q.eq('trackCode', trackCode))
-			.collect();
-		return rows
-			.sort((a, b) => a.order - b.order)
-			.map((row) => ({
-				order: row.order,
-				prompt: row.prompt,
-				choices: row.choices,
-				explanation: row.explanation
-			}));
-	}
-});
+const practiceModeValidator = v.union(v.literal('sample'), v.literal('full'));
 
 const answerValidator = v.object({
 	order: v.number(),
 	selectedIndex: v.number()
 });
 
+async function loadQuestionsForTrack(ctx: QueryCtx, trackCode: string) {
+	return await ctx.db
+		.query('practiceQuestions')
+		.withIndex('by_trackCode', (q) => q.eq('trackCode', trackCode))
+		.collect();
+}
+
+function mapQuestionRows(
+	rows: Awaited<ReturnType<typeof loadQuestionsForTrack>>
+) {
+	return rows.map((row) => ({
+		order: row.order,
+		prompt: row.prompt,
+		choices: row.choices,
+		explanation: row.explanation
+	}));
+}
+
+/** Practice prompts without answer keys (safe to load before submit). */
+export const listByTrackCode = query({
+	args: {
+		trackCode: v.string(),
+		mode: v.optional(practiceModeValidator)
+	},
+	handler: async (ctx, { trackCode, mode = 'sample' }) => {
+		if (!trackCode || trackCode.length < 3 || trackCode.length > 10) {
+			throw new Error('Invalid trackCode: must be 3-10 characters');
+		}
+
+		if (mode === 'full') {
+			await requireAdmin(ctx);
+		}
+
+		const rows = await loadQuestionsForTrack(ctx, trackCode);
+		const limited = applyModeLimit(rows, mode);
+		return mapQuestionRows(limited);
+	}
+});
+
 /** Grade a practice session server-side; returns per-question results and score. */
 export const gradeAnswers = mutation({
 	args: {
 		trackCode: v.string(),
+		mode: v.optional(practiceModeValidator),
 		answers: v.array(answerValidator)
 	},
-	handler: async (ctx, { trackCode, answers }) => {
-		// Validate inputs
+	handler: async (ctx, { trackCode, mode = 'sample', answers }) => {
 		if (!trackCode || trackCode.length < 3 || trackCode.length > 10) {
 			throw new Error('Invalid trackCode: must be 3-10 characters');
 		}
@@ -50,10 +72,15 @@ export const gradeAnswers = mutation({
 				throw new Error(`Invalid selectedIndex ${answer.selectedIndex}: must be 0-5`);
 			}
 		}
-		const rows = await ctx.db
-			.query('practiceQuestions')
-			.withIndex('by_trackCode', (q) => q.eq('trackCode', trackCode))
-			.collect();
+
+		if (mode === 'full') {
+			await requireAdmin(ctx);
+		}
+
+		const rows = applyModeLimit(await loadQuestionsForTrack(ctx, trackCode), mode);
+		const allowedOrders = new Set(rows.map((row) => row.order));
+		validateAnswersForMode(answers, allowedOrders);
+
 		const byOrder = new Map(rows.map((row) => [row.order, row]));
 
 		const results: {

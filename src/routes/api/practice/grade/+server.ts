@@ -50,7 +50,7 @@ export const POST: RequestHandler = async ({ request }) => {
 		});
 	}
 
-	const { trackCode, answers } = body;
+	const { trackCode, answers, mode = 'sample' } = body;
 
 	// Validate inputs
 	if (!trackCode || !Array.isArray(answers)) {
@@ -77,6 +77,7 @@ export const POST: RequestHandler = async ({ request }) => {
 		const convex = new ConvexClient(convexUrl);
 		const result = await convex.mutation(api.practiceQuestions.gradeAnswers, {
 			trackCode,
+			mode: mode === 'full' ? 'full' : 'sample',
 			answers
 		});
 

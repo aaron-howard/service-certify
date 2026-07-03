@@ -24,6 +24,19 @@
 	});
 	setConvexClientContext(convexClient);
 
+	if (browser && convexConfigured) {
+		convexClient.setAuth(async () => {
+			try {
+				const response = await fetch('/api/auth/convex-token');
+				if (!response.ok) return null;
+				const body = (await response.json()) as { token?: string };
+				return body.token ?? null;
+			} catch {
+				return null;
+			}
+		});
+	}
+
 	injectSpeedInsights();
 
 	$effect(() => () => convexClient.close());
