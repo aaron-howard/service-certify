@@ -5,6 +5,13 @@ import { env as publicEnv } from '$env/dynamic/public';
 let client: ConvexHttpClient | null = null;
 let clientUrl: string | null = null;
 
+export type ConvexUserSession = {
+	role: 'user' | 'admin';
+	name?: string;
+	profileImage?: string;
+	provider?: string;
+};
+
 /** Server-side Convex HTTP client for auth sync and session role lookup. */
 export function getConvexHttpClient(): ConvexHttpClient | null {
 	const convexUrl = publicEnv.PUBLIC_CONVEX_URL;
@@ -17,19 +24,6 @@ export function getConvexHttpClient(): ConvexHttpClient | null {
 		clientUrl = convexUrl;
 	}
 	return client;
-}
-
-export async function getUserRoleByEmail(email: string): Promise<'user' | 'admin'> {
-	const convex = getConvexHttpClient();
-	if (!convex) return 'user';
-
-	try {
-		const user = await convex.query(api.auth.getUserByEmail, { email });
-		return user?.role ?? 'user';
-	} catch (error) {
-		console.error('getUserRoleByEmail failed:', error);
-		return 'user';
-	}
 }
 
 export async function syncUserToConvex(args: {
@@ -55,26 +49,28 @@ export async function syncUserToConvex(args: {
 	}
 }
 
-/** Create the Convex user row if missing (e.g. after fixing env or first login). */
+/** Sync profile to Convex and return the stored user (creates or updates every time). */
 export async function ensureConvexUser(args: {
 	workosId: string;
 	email: string;
 	name?: string;
 	profileImage?: string;
 	provider?: string;
-}): Promise<'user' | 'admin'> {
+}): Promise<ConvexUserSession> {
 	const convex = getConvexHttpClient();
-	if (!convex) return 'user';
+	if (!convex) return { role: 'user' };
 
 	try {
-		let user = await convex.query(api.auth.getUserByEmail, { email: args.email });
-		if (!user) {
-			await convex.mutation(api.auth.createOrUpdateUser, args);
-			user = await convex.query(api.auth.getUserByEmail, { email: args.email });
-		}
-		return user?.role ?? 'user';
+		await convex.mutation(api.auth.createOrUpdateUser, args);
+		const user = await convex.query(api.auth.getUserByEmail, { email: args.email });
+		return {
+			role: user?.role ?? 'user',
+			name: user?.name ?? args.name,
+			profileImage: user?.profileImage ?? args.profileImage,
+			provider: user?.provider ?? args.provider
+		};
 	} catch (error) {
 		console.error('ensureConvexUser failed:', error);
-		return 'user';
+		return { role: 'user', name: args.name, profileImage: args.profileImage, provider: args.provider };
 	}
 }

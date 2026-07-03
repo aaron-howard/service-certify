@@ -29,6 +29,14 @@ export const GET: RequestHandler = async ({ url, cookies }) => {
 		});
 	}
 
+	cookies.set('auth_provider', provider, {
+		httpOnly: true,
+		secure: url.protocol === 'https:',
+		sameSite: 'lax',
+		path: '/',
+		maxAge: 10 * 60
+	});
+
 	const authorizationUrl = getOAuthAuthorizationUrl(url.origin, provider);
 
 	if (!authorizationUrl) {
