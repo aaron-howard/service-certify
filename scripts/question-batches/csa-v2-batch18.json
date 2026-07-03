@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CSA",
+		"order": 85,
+		"prompt": "In a client script, which object manipulates form fields?",
+		"choices": [
+			"g_form",
+			"current on the server",
+			"GlideRecord in the browser",
+			"gs on the client"
+		],
+		"correctIndex": 0,
+		"explanation": "g_form provides client-side methods such as getValue, setValue, and setMandatory on the form.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/client-scripts.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 86,
+		"prompt": "What does gs.info() do in a server script?",
+		"choices": [
+			"Writes an informational message to the system log",
+			"Displays a browser alert",
+			"Submits the form",
+			"Activates a plugin"
+		],
+		"correctIndex": 0,
+		"explanation": "GlideSystem logging methods such as gs.info() record messages in the system log for debugging.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/glidesystem.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 87,
+		"prompt": "Which artifacts are commonly moved between instances using Update Sets? (Choose two.)",
+		"choices": [
+			"Business Rules",
+			"UI Policies",
+			"User password hashes",
+			"All incident transactional data by default"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"questionType": "multi",
+		"explanation": "Update sets capture configuration like business rules and UI policies; passwords and bulk transactional data are not typical update set content.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/update-sets.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 88,
+		"prompt": "What is the recommended approach before committing an retrieved update set on production?",
+		"choices": [
+			"Preview and test the update set in a sub-production instance first",
+			"Skip preview to save time",
+			"Delete all ACLs",
+			"Disable all business rules globally"
+		],
+		"correctIndex": 0,
+		"explanation": "Update sets should be previewed and validated in sub-production before committing to production to avoid conflicts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/update-sets.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 89,
+		"prompt": "Which client script type runs when a user changes a field value on a form?",
+		"choices": [
+			"onChange",
+			"onLoad only",
+			"Scheduled Job",
+			"Import field mapping step"
+		],
+		"correctIndex": 0,
+		"explanation": "onChange client scripts fire when a field value changes, enabling dynamic form behavior.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/client-scripts.html"
+		]
+	}
+]

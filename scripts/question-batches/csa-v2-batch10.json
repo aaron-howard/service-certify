@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CSA",
+		"order": 45,
+		"prompt": "Which role is typically required to author and publish knowledge articles?",
+		"choices": [
+			"knowledge_admin or knowledge author roles",
+			"mid_server role only",
+			"guest role",
+			"Discovery admin only"
+		],
+		"correctIndex": 0,
+		"explanation": "Knowledge authoring and publishing require knowledge-specific roles such as knowledge_admin or kb author roles.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/knowledge-management/knowledge-roles.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 46,
+		"prompt": "How can knowledge articles be suggested when a user creates an incident?",
+		"choices": [
+			"Knowledge articles can appear based on short description or category matching",
+			"Only by disabling Self Service",
+			"By converting incidents to change requests",
+			"By deleting open incidents"
+		],
+		"correctIndex": 0,
+		"explanation": "The platform can suggest relevant knowledge during incident creation to encourage deflection and faster resolution.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/knowledge-management/knowledge-search.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 47,
+		"prompt": "What is the purpose of a catalog item category?",
+		"choices": [
+			"Organize catalog items for browsing in the Service Catalog portal",
+			"Replace ACL evaluation",
+			"Store MID Server logs",
+			"Define CMDB class hierarchy"
+		],
+		"correctIndex": 0,
+		"explanation": "Categories group catalog items so users can browse related services in the catalog portal.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/catalog-categories.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 48,
+		"prompt": "Which automation tool can trigger actions when a catalog request is submitted?",
+		"choices": [
+			"A flow or workflow attached to the catalog item",
+			"A dictionary export",
+			"A homepage theme",
+			"A plugin license key"
+		],
+		"correctIndex": 0,
+		"explanation": "Catalog items can reference flows or workflows that run on submission to handle approvals and fulfillment.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/catalog-fulfillment.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 49,
+		"prompt": "What does a Requested Item (RITM) represent?",
+		"choices": [
+			"A single catalog item ordered as part of a parent Request",
+			"A CMDB configuration item",
+			"An import set staging row",
+			"A plugin activation record"
+		],
+		"correctIndex": 0,
+		"explanation": "Each RITM corresponds to one catalog item on a request and carries its own variables and fulfillment tasks.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/request-and-requested-item.html"
+		]
+	}
+]

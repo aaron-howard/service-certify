@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CSA",
+		"order": 70,
+		"prompt": "How are groups used in ServiceNow security?",
+		"choices": [
+			"Groups bundle users and can carry roles assigned to all members",
+			"Groups replace all tables",
+			"Groups encrypt the CMDB",
+			"Groups disable notifications"
+		],
+		"correctIndex": 0,
+		"explanation": "Groups organize users; roles assigned to a group apply to its members for access and assignment.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/groups.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 71,
+		"prompt": "What does the Customer role typically allow?",
+		"choices": [
+			"Basic self-service access such as submitting incidents and viewing own requests",
+			"Full admin configuration of ACLs",
+			"MID Server administration",
+			"Unrestricted CMDB delete"
+		],
+		"correctIndex": 0,
+		"explanation": "The snc_internal or customer/end-user roles enable self-service without administrative privileges.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/roles.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 72,
+		"prompt": "Which import formats can be loaded into an Import Set? (Choose two.)",
+		"choices": [
+			"CSV",
+			"Excel (XLS/XLSX)",
+			"Compiled Java bytecode",
+			"Raw disk images"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"questionType": "multi",
+		"explanation": "Import sets accept structured files such as CSV and Excel for staging before transform.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/integrate-applications/import-sets.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 73,
+		"prompt": "What is the purpose of a CMDB relationship?",
+		"choices": [
+			"Document dependency or connectivity between configuration items",
+			"Store user passwords",
+			"Replace transform maps",
+			"Schedule payroll jobs"
+		],
+		"correctIndex": 0,
+		"explanation": "CI relationships model dependencies such as runs on or depends on for impact and change analysis.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-relationships.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 74,
+		"prompt": "Which responsibility belongs to the customer in the Shared Responsibility Model?",
+		"choices": [
+			"Configuring users, roles, ACLs, and data on their instance",
+			"Physical data center power and cooling",
+			"Hypervisor patch management for all tenants",
+			"Global DNS root zone maintenance"
+		],
+		"correctIndex": 0,
+		"explanation": "Customers secure and configure their instance content, access, and integrations; ServiceNow secures the platform stack.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/shared-responsibility-model.html"
+		]
+	}
+]

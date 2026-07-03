@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CSA",
+		"order": 65,
+		"prompt": "Which ACL type would you create to restrict access to a specific column on a table?",
+		"choices": [
+			"Field-level ACL",
+			"Homepage ACL",
+			"MID Server ACL",
+			"Plugin license ACL"
+		],
+		"correctIndex": 0,
+		"explanation": "Field ACLs control read and write access to individual columns in addition to table ACLs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/access-control-rules.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 66,
+		"prompt": "How can an administrator test why a user cannot access a record?",
+		"choices": [
+			"Enable security debugging and impersonate the user",
+			"Delete all ACLs on the table",
+			"Disable the Service Catalog",
+			"Remove all roles from admin"
+		],
+		"correctIndex": 0,
+		"explanation": "Access control debugging while impersonating shows which ACLs passed or failed for the user.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/access-control-rules.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 67,
+		"prompt": "Which operations can table ACLs secure? (Choose two.)",
+		"choices": [
+			"read",
+			"write",
+			"clone instance",
+			"upgrade kernel"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"questionType": "multi",
+		"explanation": "Table ACLs govern record operations such as read, write, create, and delete; instance clone and kernel upgrade are not ACL operations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/access-control-rules.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 68,
+		"prompt": "What is a reference field used for in the data schema?",
+		"choices": [
+			"To link a record to another record in a related table",
+			"To store binary attachments only",
+			"To replace roles",
+			"To run Discovery credential tests"
+		],
+		"correctIndex": 0,
+		"explanation": "Reference fields store a pointer (sys_id) to a record in another table, forming relationships.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/reference-fields.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 69,
+		"prompt": "Which table stores user accounts and their login IDs?",
+		"choices": [
+			"User [sys_user]",
+			"Import Set [sys_import_set]",
+			"Update Set [sys_update_set]",
+			"Transform Map [sys_transform_map]"
+		],
+		"correctIndex": 0,
+		"explanation": "The sys_user table holds user records including user ID, name, and contact information.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/user-administration.html"
+		]
+	}
+]

@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CSA",
+		"order": 55,
+		"prompt": "What bundles permissions that can be assigned to users and groups?",
+		"choices": [
+			"A role",
+			"A dashboard homepage gauge widget",
+			"A field mapping import job",
+			"A Visual Task Board lane"
+		],
+		"correctIndex": 0,
+		"explanation": "Roles group access permissions; users and groups receive roles to gain authorized capabilities.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/roles.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 56,
+		"prompt": "How are roles typically assigned to a user?",
+		"choices": [
+			"Directly on the user record or inherited from groups",
+			"Only by editing sys_properties",
+			"Only through Discovery",
+			"Only via import sets"
+		],
+		"correctIndex": 0,
+		"explanation": "Users receive roles directly or inherit them from group membership.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/roles.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 57,
+		"prompt": "What is the definition of a transform map in ServiceNow?",
+		"choices": [
+			"A map that defines relationships between import set fields and fields on a target table",
+			"A map that stores incident history only",
+			"A map used to encrypt all attachments",
+			"A map that replaces ACL evaluation"
+		],
+		"correctIndex": 0,
+		"explanation": "Transform maps field mappings from staging import set tables onto existing target tables during data load.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/integrate-applications/transform-maps.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 58,
+		"prompt": "Where does imported data land before a transform map loads it onto the target table?",
+		"choices": [
+			"An Import Set table (staging)",
+			"The sys_user table directly",
+			"The CMDB only",
+			"A homepage gauge"
+		],
+		"correctIndex": 0,
+		"explanation": "Import sets stage incoming rows; transform maps then move validated data to the target table.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/integrate-applications/import-sets.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 59,
+		"prompt": "Which utility automatically maps import set columns to target fields with the same name?",
+		"choices": [
+			"Auto Map Matching Fields",
+			"CI Relationship Builder",
+			"Business Service Management Map",
+			"Plugin Activation Wizard"
+		],
+		"correctIndex": 0,
+		"explanation": "Auto Map Matching Fields links import set and target fields that share identical names.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/integrate-applications/transform-maps.html"
+		]
+	}
+]
