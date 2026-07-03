@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CSA",
+		"order": 20,
+		"prompt": "Which form feature lets users pick from predefined templates when creating certain records?",
+		"choices": [
+			"Form templates",
+			"Data import field maps",
+			"Migration update set bundles",
+			"Staging import tables"
+		],
+		"correctIndex": 0,
+		"explanation": "Form templates provide predefined field values and layouts when creating new records of supported types.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/form-templates.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 21,
+		"prompt": "When editing a form, what does the Insert and Stay button do?",
+		"choices": [
+			"Saves the record and opens a new empty form for the same table",
+			"Deletes the current record",
+			"Submits an update set",
+			"Runs Discovery on the record"
+		],
+		"correctIndex": 0,
+		"explanation": "Insert and Stay saves the new record and immediately presents another blank form for rapid data entry.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/form-actions.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 22,
+		"prompt": "What is a Visual Task Board (VTB) used for?",
+		"choices": [
+			"Kanban-style visualization and management of tasks on lanes",
+			"Database schema design",
+			"Import set staging",
+			"Plugin activation"
+		],
+		"correctIndex": 0,
+		"explanation": "Visual Task Boards display tasks on swimlanes for drag-and-drop workflow management.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/visual-task-boards.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 23,
+		"prompt": "Which artifact combines multiple widgets to show KPIs and reports on one screen?",
+		"choices": [
+			"A dashboard",
+			"A field mapping transform",
+			"A migration update package",
+			"A dictionary entry"
+		],
+		"correctIndex": 0,
+		"explanation": "Dashboards group widgets and reports to visualize metrics and operational data.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/dashboards.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 24,
+		"prompt": "How are email notifications typically triggered when a record meets a condition?",
+		"choices": [
+			"A notification record with a When to send condition or event",
+			"A homepage gauge refresh",
+			"A MID Server poll",
+			"A Discovery schedule probe"
+		],
+		"correctIndex": 0,
+		"explanation": "Notification records define recipients and content, firing when their condition or registered event is met.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/notifications.html"
+		]
+	}
+]

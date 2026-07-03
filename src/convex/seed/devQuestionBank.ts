@@ -34808,1448 +34808,1466 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 	{
 		"trackCode": "CSA",
 		"order": 0,
-		"prompt": "Which statement best describes how roles are typically used to grant capabilities in ServiceNow?",
+		"prompt": "Which application is available to all users by default for browsing services and submitting requests?",
 		"choices": [
-			"From an implementation standpoint, roles bundle permissions and are assigned to users or groups to grant access",
-			"In most deployments, roles apply only to Performance Analytics widgets in standard operations",
-			"Operationally, each user may hold only one role across the entire instance for consistent administration",
-			"In practice, roles are synonymous with CMDB CI classes in standard operations under normal policy constraints"
+			"Self Service",
+			"Change Management",
+			"Incident Management",
+			"Facilities Management"
 		],
 		"correctIndex": 0,
-		"explanation": "Roles aggregate permissions; administrators assign them to users or groups so members receive the associated capabilities.",
+		"explanation": "Self Service is the default end-user application for catalog browsing and request submission; ITSM apps like Change and Incident are role-restricted.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/yokohama-platform-administration/page/administer/roles/concept/using-user-administration.html"
+			"https://www.servicenow.com/docs/r/platform-user-interface/self-service-application.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 1,
-		"prompt": "What do Access Control List (ACL) rules primarily control?",
+		"prompt": "What does the Application Navigator provide on a ServiceNow instance?",
 		"choices": [
-			"Typically, that color theme of the Next Experience UI in standard operations",
-			"From an implementation standpoint, who may read, write, create, or delete records or fields, subject to conditions",
-			"Operationally, scheduled job concurrency only in standard operations under normal policy constraints",
-			"In practice, whether a table uses auto-numbering for consistent administration for governed delivery"
+			"A hierarchical menu of applications and modules for navigating the platform",
+			"A database backup scheduler",
+			"A MID Server configuration panel",
+			"A CMDB reconciliation dashboard only"
 		],
-		"correctIndex": 1,
-		"explanation": "ACL rules secure tables and fields for operations such as read and write, and may evaluate roles or scripts.",
+		"correctIndex": 0,
+		"explanation": "The Application Navigator lists applications and their modules, giving users entry points to lists, forms, and other content.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/yokohama/platform-security/access-control/exploring-access-control-list.html"
+			"https://www.servicenow.com/docs/r/platform-user-interface/application-navigator.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 2,
-		"prompt": "What is a primary purpose of an update set in a typical instance-to-instance migration workflow?",
+		"prompt": "In Next Experience Unified Navigation, how do users switch between applications?",
 		"choices": [
-			"In this scenario, to encrypt all attachments through configured automation for consistent administration",
-			"Practically speaking, to replace the need for any testing in sub-production under normal policy constraints",
-			"From a governance perspective, to capture configuration changes so they can be reviewed and moved between instances",
-			"In platform terms, to delete orphaned CMDB relationships under normal policy constraints"
+			"Through the unified header and application picker without leaving the workspace shell",
+			"By logging out and back in for each application",
+			"Only through direct URL bookmarks",
+			"By editing sys_properties manually"
 		],
-		"correctIndex": 2,
-		"explanation": "Update sets record customer configuration changes for promotion between instances with collision and preview workflows.",
+		"correctIndex": 0,
+		"explanation": "Next Experience provides unified navigation with an application picker in the header so users move between apps within one shell.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-application-development/page/build/system-update-sets/concept/system-update-sets.html"
+			"https://www.servicenow.com/docs/r/platform-user-interface/next-experience-unified-navigation.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 3,
-		"prompt": "On a list, what is the effect of applying a filter?",
+		"prompt": "Which statement best describes a ServiceNow instance?",
 		"choices": [
-			"Typically, this approach changes which rows appear based on the filter conditions",
-			"Operationally, this approach exports the dictionary to XML",
-			"In practice, this approach renames the underlying table",
-			"From an implementation standpoint, this approach disables all business rules globally"
+			"A dedicated environment with its own database, applications, and configuration",
+			"A single shared table across all customers with no isolation",
+			"A desktop client installed on each user's laptop",
+			"A read-only documentation portal"
 		],
 		"correctIndex": 0,
-		"explanation": "List filters constrain the query so users see only records that match the specified conditions.",
+		"explanation": "An instance is an isolated ServiceNow environment containing its own data, apps, and settings.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-platform-user-interface/page/use/using-lists/task/t_CreatingFilters.html"
+			"https://www.servicenow.com/docs/r/now-platform/service-now-instances.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 4,
-		"prompt": "When troubleshooting inbound email processing, an administrator should first verify which area of configuration?",
+		"prompt": "Which platform capabilities are core services provided on every instance? (Choose two.)",
 		"choices": [
-			"Typically, mID Server wake-on-LAN settings for laptops for consistent administration",
-			"Operationally, that PA data collector schedule exclusively under expected controls",
-			"In practice, email properties and inbound connectivity so the instance can retrieve and process messages",
-			"From an admin perspective, that system dictionary for the incident.number field in standard operations"
+			"Workflow and automation",
+			"Reporting and dashboards",
+			"GPU ray tracing",
+			"Offline-only file storage"
 		],
-		"correctIndex": 2,
-		"explanation": "Inbound email depends on correctly configured email properties and related mail flow so messages reach the instance.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"questionType": "multi",
+		"explanation": "ServiceNow instances include workflow, automation, reporting, and dashboards as platform services; GPU rendering and offline-only storage are not platform capabilities.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/reference-pages/concept/c_EmailProperties.html"
+			"https://www.servicenow.com/docs/r/now-platform/platform-overview.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 5,
-		"prompt": "When a user is added to a group that has roles assigned, what access does the user typically receive?",
+		"prompt": "Where can an administrator search across tables, knowledge, and catalog items from a single entry point?",
 		"choices": [
-			"In this scenario, that user inherits all roles assigned to that group",
-			"In platform terms, roles must be assigned directly to the user; groups cannot carry roles",
-			"In most deployments, group membership grants CMDB write access but does not application roles",
-			"From a governance perspective, that user receives only the admin role regardless of group roles"
+			"Global search in the platform header",
+			"The MID Server log viewer",
+			"The update set preview only",
+			"The dictionary export tool"
 		],
 		"correctIndex": 0,
-		"explanation": "Users assigned to a group inherit the roles assigned to that group, which is a standard pattern for managing access at scale.",
+		"explanation": "Global search in the header queries multiple sources (records, knowledge, catalog) from one search box.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/user-administration/t_AddAUserToAGroup.html",
-			"https://www.servicenow.com/docs/r/platform-administration/user-administration/ua-creating-groups.html"
+			"https://www.servicenow.com/docs/r/platform-user-interface/global-search.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 6,
-		"prompt": "An administrator enables delegated role assignment for a team lead. Which constraint applies to what that user may assign?",
+		"prompt": "How does an administrator install a new application or plugin on the instance?",
 		"choices": [
-			"In this scenario, they may assign any role in the instance without restriction",
-			"From an implementation standpoint, they may assign roles only to users outside their groups",
-			"In most deployments, delegated assignment is limited to the security_admin role exclusively",
-			"From a governance perspective, they may assign only roles that they already hold"
+			"Activate the plugin or install the application from the application repository",
+			"Copy rows into sys_user manually",
+			"Disable all ACLs first",
+			"Edit the MID Server configuration"
 		],
-		"correctIndex": 3,
-		"explanation": "Delegated role assignment allows users to assign roles within groups, but only roles they already possess.",
+		"correctIndex": 0,
+		"explanation": "Plugins and store applications are activated or installed through the application repository and plugin management.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/user-administration/c_DelegateRoles.html"
+			"https://www.servicenow.com/docs/r/platform-administration/plugin-management.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 7,
-		"prompt": "What is the purpose of a time-limited role assignment?",
+		"prompt": "Which setting lets a user personalize list columns and form layout without changing global configuration?",
 		"choices": [
-			"Practically speaking, to grant a defined role only during a specified time period",
-			"From an admin perspective, to disable ACL evaluation during maintenance windows",
-			"Typically, to replace group membership with a single global role",
-			"In practice, to permanently elevate a user to admin after password reset"
+			"Personalize List / Personalize Form (user-level layout)",
+			"Delete all dictionary entries for the table",
+			"Convert the table to global scope",
+			"Disable the application navigator"
 		],
 		"correctIndex": 0,
-		"explanation": "Time-limited roles give users a defined role only for a defined period, supporting temporary elevated access.",
+		"explanation": "Users can personalize lists and forms for their own view; changes do not alter the global layout for others.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/user-administration/time-limited-role-overview.html"
+			"https://www.servicenow.com/docs/r/platform-user-interface/personalize-list-form.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 8,
-		"prompt": "Why would an administrator configure assignment group types on the Type field?",
+		"prompt": "Which interface is used to view and edit a single record's fields?",
 		"choices": [
-			"In most deployments, to map groups directly to CMDB relationship types for consistent administration",
-			"From a governance perspective, to encrypt group membership records at rest under normal policy constraints",
-			"In this scenario, to prevent users from belonging to more than one group for governed delivery",
-			"From an implementation standpoint, to define categories of groups that can filter assignment groups via reference qualifiers"
+			"Form layout designer",
+			"Import set staging list",
+			"Transform history log",
+			"Update set comparison preview"
 		],
-		"correctIndex": 3,
-		"explanation": "Group types categorize groups so assignment groups can be filtered by type using reference qualifiers.",
+		"correctIndex": 0,
+		"explanation": "A form displays one record's fields for viewing and editing; lists show many records in tabular format.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/user-administration/c_ConfigGroupTypesForAssignGroups.html"
+			"https://www.servicenow.com/docs/r/platform-user-interface/forms.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 9,
-		"prompt": "Where are changes to user role assignments tracked for auditing purposes?",
+		"prompt": "Which interface displays multiple records from a table in rows and columns?",
 		"choices": [
-			"Operationally, that Audit Roles [sys_audit_role] table",
-			"In most deployments, that Scheduled Jobs [sys_trigger] table only",
-			"From a governance perspective, that Update Set [sys_update_set] table exclusively",
-			"From an implementation standpoint, that Email [sys_email] table"
+			"List view",
+			"Record form view",
+			"Homepage gauge widget",
+			"Field mapping transform"
 		],
 		"correctIndex": 0,
-		"explanation": "Changes to user roles are tracked in the Audit Roles table for audit and review.",
+		"explanation": "List views present multiple records in a table layout with sortable columns and filters.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/user-administration/audit-user-roles.html"
+			"https://www.servicenow.com/docs/r/platform-user-interface/lists.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 10,
-		"prompt": "A user personalizes a list layout and column order for their own work. Where is that personalization typically stored?",
+		"prompt": "What does the System Settings > System Properties module store?",
 		"choices": [
-			"Operationally, in the CMDB identification rules for consistent administration for governed delivery",
-			"From a governance perspective, in the update set currently in progress under expected controls",
-			"In most deployments, in the global system property table for all users for stable outcomes",
-			"From an implementation standpoint, as a user-specific list personalization rather than changing the base list for everyone"
+			"To view and edit instance-wide configuration name-value pairs",
+			"To design catalog client scripts only",
+			"To run Discovery schedules",
+			"To manage CMDB reconciliation rules only"
 		],
-		"correctIndex": 3,
-		"explanation": "List personalization lets individual users adjust columns and layout without altering the default list configuration for all users.",
+		"correctIndex": 0,
+		"explanation": "System properties store instance configuration values referenced by the platform and applications.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-user-interface/list-personalization.html"
+			"https://www.servicenow.com/docs/r/platform-administration/system-properties.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 11,
-		"prompt": "What is the primary effect of applying a filter on a list?",
+		"prompt": "An administrator wants to change the instance name displayed in the browser title. Where is this configured?",
 		"choices": [
-			"Practically speaking, this approach exports the data dictionary to XML",
-			"Typically, this approach restricts which records appear based on the filter conditions",
-			"In platform terms, this approach disables all business rules on the table",
-			"From an admin perspective, this approach renames the underlying table for reporting"
+			"System Properties such as glide.product.name",
+			"The CMDB class manager",
+			"A transform map coalesce field",
+			"The Visual Task Board lane"
 		],
-		"correctIndex": 1,
-		"explanation": "List filters constrain the query so users see only records matching the specified conditions.",
+		"correctIndex": 0,
+		"explanation": "Instance branding and display name are controlled through system properties like glide.product.name.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-user-interface/exploring-lists.html"
+			"https://www.servicenow.com/docs/r/platform-administration/system-properties.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 12,
-		"prompt": "An administrator wants users to sort and group list data interactively. Which list capability supports this?",
+		"prompt": "Which tool provides a timeline of configuration changes made on the instance for troubleshooting?",
 		"choices": [
-			"In this scenario, list controls that let users sort, group, and adjust how data is presented",
-			"Practically speaking, discovery schedules on the MID Server in standard operations",
-			"In platform terms, subscription Management entitlements for consistent administration",
-			"From an admin perspective, transform maps on the import set table under normal policy constraints"
+			"System Logs and audit records",
+			"The catalog variable editor only",
+			"A homepage theme gauge",
+			"The MID Server status dashboard"
 		],
 		"correctIndex": 0,
-		"explanation": "List controls provide interactive sorting, grouping, and presentation options on list views.",
+		"explanation": "System logs and audit tables record configuration and data changes for administrators to review.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-user-interface/using-list-controls.html"
+			"https://www.servicenow.com/docs/r/platform-administration/system-logs.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 13,
-		"prompt": "A saved filter is shared with a team. What does sharing a list filter typically allow?",
+		"prompt": "What does activating a plugin typically do on an instance?",
 		"choices": [
-			"Operationally, modification of table schema for all scoped applications",
-			"In most deployments, deletion of records that do not match the filter",
-			"From an implementation standpoint, other users to apply the same filter conditions on the list",
-			"In practice, automatic elevation to the admin role for consistent administration"
+			"Installs application files and enables related modules and functionality",
+			"Deletes all existing incident records",
+			"Converts every table to global scope",
+			"Disables the Application Navigator"
 		],
-		"correctIndex": 2,
-		"explanation": "Shared filters let teams reuse the same query conditions on a list without each user rebuilding the filter.",
+		"correctIndex": 0,
+		"explanation": "Plugin activation loads application components and exposes the associated modules and features.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-user-interface/exploring-lists.html"
+			"https://www.servicenow.com/docs/r/platform-administration/plugin-management.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 14,
-		"prompt": "When troubleshooting why a user cannot see expected records on a list, what should an administrator verify first?",
+		"prompt": "Which user interface lets administrators configure the look of the login and banner branding?",
 		"choices": [
-			"Practically speaking, that PA indicator collection schedule",
-			"From an admin perspective, that hardware asset depreciation method",
-			"In this scenario, whether an active filter or default query is limiting visible rows",
-			"In platform terms, that Service Portal widget compiler version"
+			"System UI > UI Pages and branding properties",
+			"Import Set Transform Maps",
+			"Visual Task Board settings",
+			"CMDB Health dashboard"
 		],
-		"correctIndex": 2,
-		"explanation": "Active filters and default queries commonly explain missing rows on a list before investigating ACLs or data issues.",
+		"correctIndex": 0,
+		"explanation": "Branding and login appearance are customized through UI configuration and related system properties.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-user-interface/exploring-lists.html"
+			"https://www.servicenow.com/docs/r/platform-user-interface/branding.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 15,
-		"prompt": "What is a primary goal of form administration for platform administrators?",
+		"prompt": "How can a user save a frequently used filter on a list for quick reuse?",
 		"choices": [
-			"Practically speaking, to customize form layouts, sections, and field presentation for users",
-			"From a governance perspective, to replace all list views with gauges",
-			"In this scenario, to run discovery on network devices under expected controls",
-			"In platform terms, to disable the data dictionary globally for stable outcomes"
+			"Save the filter and optionally share it with other users or groups",
+			"Export the list to CSV only",
+			"Remove the table from the dictionary entirely",
+			"Convert the list to a homepage gauge"
 		],
 		"correctIndex": 0,
-		"explanation": "Form administration lets admins configure how forms display fields, sections, and related lists for efficient data entry.",
+		"explanation": "List filters can be saved and shared so users can quickly reapply common query conditions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/form-administration/form-administration.html"
+			"https://www.servicenow.com/docs/r/platform-user-interface/list-filters.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 16,
-		"prompt": "When configuring a form layout, what does adding a related list typically provide?",
+		"prompt": "Why do users apply tags to records in ServiceNow?",
 		"choices": [
-			"Typically, a view of child or associated records linked through reference fields",
-			"In practice, a replacement for update set tracking under normal policy constraints",
-			"Operationally, encryption of all fields on the parent form",
-			"From an implementation standpoint, automatic admin role assignment to the viewer"
+			"To label records for grouping, searching, and informal classification",
+			"To replace access control rules",
+			"To encrypt field values",
+			"To launch network Discovery scans"
 		],
 		"correctIndex": 0,
-		"explanation": "Related lists show connected records from other tables based on reference relationships on the form.",
+		"explanation": "Tags provide lightweight labels users can apply to records for organization and search.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-user-interface/exploring-forms.html"
+			"https://www.servicenow.com/docs/r/platform-user-interface/tags.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 17,
-		"prompt": "An administrator splits a long form into multiple sections. What is the main benefit?",
+		"prompt": "Which module displays tasks assigned to the user's group but not yet assigned to an individual?",
 		"choices": [
-			"Typically, prevention of any client scripts from running",
-			"In practice, improved usability by grouping related fields into logical sections",
-			"Operationally, automatic translation of every field label",
-			"From an admin perspective, elimination of all ACL requirements on the table"
+			"My Groups Work",
+			"My Teams Work",
+			"My Groups Tasks",
+			"My Teams Tasks"
 		],
-		"correctIndex": 1,
-		"explanation": "Form sections organize fields logically, making complex forms easier to navigate and complete.",
+		"correctIndex": 0,
+		"explanation": "The My Groups Work module lists open tasks for the user's groups that have no individual assignee yet.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/my-work-modules.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 18,
+		"prompt": "Which related list on a form shows child tasks linked to the current record?",
+		"choices": [
+			"Related Lists configured on the form layout",
+			"Order Guides for catalog",
+			"Field mapping transforms",
+			"Migration update packages"
+		],
+		"correctIndex": 0,
+		"explanation": "Related lists on a form display associated records such as child tasks, approvals, or attachments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/related-lists.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 19,
+		"prompt": "What does Configure > Form Layout allow an administrator to do?",
+		"choices": [
+			"Add, remove, and arrange fields and related lists on a form",
+			"Run an import set load job",
+			"Enable a licensed plugin",
+			"Commit a pending update set"
+		],
+		"correctIndex": 0,
+		"explanation": "Form Layout lets admins control which fields and related lists appear on a table's form and their order.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-user-interface/form-layout.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
-		"order": 18,
-		"prompt": "A mandatory field on a form should be configured when:",
+		"order": 20,
+		"prompt": "Which form feature lets users pick from predefined templates when creating certain records?",
 		"choices": [
-			"In most deployments, that business requires the value before the record can be saved",
-			"In this scenario, that field is a reference to the User table only",
-			"In platform terms, that form uses the Next Experience framework exclusively",
-			"From a governance perspective, that table extends cmdb_ci"
+			"Form templates",
+			"Data import field maps",
+			"Migration update set bundles",
+			"Staging import tables"
 		],
 		"correctIndex": 0,
-		"explanation": "Mandatory fields enforce required data entry so critical information is captured before save.",
+		"explanation": "Form templates provide predefined field values and layouts when creating new records of supported types.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/form-administration/form-administration.html"
-		]
-	},
-	{
-		"trackCode": "CSA",
-		"order": 19,
-		"prompt": "When a user reports that a field is hidden on a form, what should an administrator check first?",
-		"choices": [
-			"Typically, that PA job queue exclusively in standard operations",
-			"From an admin perspective, that MID Server JVM heap size",
-			"Operationally, uI Policies, form layout, and field visibility settings",
-			"In practice, that software discovery schedule for governed delivery"
-		],
-		"correctIndex": 2,
-		"explanation": "Field visibility is commonly controlled by form layout, UI Policies, and role-based form configurations.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-user-interface/exploring-forms.html"
-		]
-	},
-	{
-		"trackCode": "CSA",
-		"order": 20,
-		"prompt": "What do Access Control List (ACL) rules evaluate to control access?",
-		"choices": [
-			"In platform terms, only the visual theme of dashboards for stable outcomes for consistent administration",
-			"Practically speaking, whether discovery is licensed on the instance under normal policy constraints",
-			"In this scenario, operations such as read, write, create, and delete against tables or fields, often with conditions and roles",
-			"From a governance perspective, that order of workflow activities exclusively under expected controls"
-		],
-		"correctIndex": 2,
-		"explanation": "ACLs secure tables and fields for specific operations, evaluating roles, conditions, and scripts as configured.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/access-control/exploring-access-control-list.html"
+			"https://www.servicenow.com/docs/r/platform-user-interface/form-templates.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 21,
-		"prompt": "How do table-level ACLs differ from field-level ACLs?",
+		"prompt": "When editing a form, what does the Insert and Stay button do?",
 		"choices": [
-			"In most deployments, table ACLs protect entire records; field ACLs protect individual columns on a table",
-			"In this scenario, table ACLs run in the browser; field ACLs run on the MID Server",
-			"In platform terms, there is no difference; both terms mean the same rule type",
-			"From a governance perspective, field ACLs apply only to import sets; table ACLs apply only to reports"
+			"Saves the record and opens a new empty form for the same table",
+			"Deletes the current record",
+			"Submits an update set",
+			"Runs Discovery on the record"
 		],
 		"correctIndex": 0,
-		"explanation": "ACLs can target a whole table or specific fields, allowing granular control over record and column access.",
+		"explanation": "Insert and Stay saves the new record and immediately presents another blank form for rapid data entry.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/access-control/acl-rule-types.html"
+			"https://www.servicenow.com/docs/r/platform-user-interface/form-actions.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 22,
-		"prompt": "An ACL rule denies access even though the user holds a broad role. What should an administrator review?",
+		"prompt": "What is a Visual Task Board (VTB) used for?",
 		"choices": [
-			"Typically, that problem task SLA definition only for consistent administration",
-			"From an admin perspective, that catalog item picture attachment size under expected controls",
-			"Operationally, whether a higher-priority deny rule, condition, or security constraint applies",
-			"In practice, that software model normalization schedule in standard operations"
+			"Kanban-style visualization and management of tasks on lanes",
+			"Database schema design",
+			"Import set staging",
+			"Plugin activation"
 		],
-		"correctIndex": 2,
-		"explanation": "ACL evaluation considers rule order, conditions, and security constraints; explicit denies or conditions may override broad grants.",
+		"correctIndex": 0,
+		"explanation": "Visual Task Boards display tasks on swimlanes for drag-and-drop workflow management.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/access-control/security-constraints.html"
+			"https://www.servicenow.com/docs/r/platform-user-interface/visual-task-boards.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 23,
-		"prompt": "What is the effect of ACL debugging for an administrator troubleshooting access?",
+		"prompt": "Which artifact combines multiple widgets to show KPIs and reports on one screen?",
 		"choices": [
-			"Typically, this approach converts all roles to the admin role under expected controls",
-			"From an admin perspective, this approach exports user passwords for verification for stable outcomes",
-			"Practically speaking, this approach shows which ACL rules were evaluated and why access was granted or denied",
-			"In practice, this approach permanently disables all ACLs on the instance for consistent administration"
+			"A dashboard",
+			"A field mapping transform",
+			"A migration update package",
+			"A dictionary entry"
 		],
-		"correctIndex": 2,
-		"explanation": "ACL debugging helps administrators trace rule evaluation to diagnose unexpected access results.",
+		"correctIndex": 0,
+		"explanation": "Dashboards group widgets and reports to visualize metrics and operational data.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/access-control/exploring-access-control-list.html"
+			"https://www.servicenow.com/docs/r/platform-user-interface/dashboards.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 24,
-		"prompt": "Why might an administrator create a conditional ACL?",
+		"prompt": "How are email notifications typically triggered when a record meets a condition?",
 		"choices": [
-			"From a governance perspective, to define catalog variable default values for stable outcomes",
-			"In this scenario, to schedule discovery probes under expected controls in standard operations",
-			"In most deployments, to grant or deny access only when specified field or script conditions are met",
-			"From an implementation standpoint, to bypass all role checks for every user under normal policy constraints"
+			"A notification record with a When to send condition or event",
+			"A homepage gauge refresh",
+			"A MID Server poll",
+			"A Discovery schedule probe"
 		],
-		"correctIndex": 2,
-		"explanation": "Conditional ACLs restrict operations to scenarios defined by conditions, enabling context-sensitive security.",
+		"correctIndex": 0,
+		"explanation": "Notification records define recipients and content, firing when their condition or registered event is met.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/access-control/acl-rule-types.html"
+			"https://www.servicenow.com/docs/r/platform-administration/notifications.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 25,
-		"prompt": "What is the primary purpose of notifications in ServiceNow?",
+		"prompt": "Which list feature lets a user export the currently displayed rows to a spreadsheet format?",
 		"choices": [
-			"Practically speaking, to run discovery credentials tests in standard operations",
-			"In practice, to store CMDB relationship definitions for consistent administration",
-			"Typically, to inform users about events such as assignments, approvals, and record updates",
-			"From an admin perspective, to replace all ACL rules on a table for governed delivery"
+			"Export to Excel or CSV from the list context menu",
+			"Commit a migration update set",
+			"Enable a licensed plugin module",
+			"Run an import field map"
 		],
-		"correctIndex": 2,
-		"explanation": "Notifications communicate events to users through channels such as email based on configured conditions.",
+		"correctIndex": 0,
+		"explanation": "Lists support exporting filtered results to Excel or CSV for offline analysis.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/notifications/notifications.html"
+			"https://www.servicenow.com/docs/r/platform-user-interface/lists.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 26,
-		"prompt": "When inbound email fails to create incidents, what configuration should an administrator verify first?",
+		"prompt": "What does the Activity stream on a form display?",
 		"choices": [
-			"Practically speaking, that problem task assignment rule for consistent administration",
-			"Typically, email properties and inbound mail connectivity so messages reach the instance",
-			"In platform terms, mID Server wake-on-LAN for laptops for governed delivery",
-			"From an admin perspective, that PA data collector schedule exclusively"
+			"Journal entries, work notes, and field changes for the record",
+			"Only CMDB relationships",
+			"Import set row errors",
+			"Plugin dependency trees"
 		],
-		"correctIndex": 1,
-		"explanation": "Inbound email depends on correct email properties and mail flow configuration before rules can process messages.",
+		"correctIndex": 0,
+		"explanation": "The activity stream shows comments, work notes, and audit-style updates related to the record.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/notifications/email-properties.html"
+			"https://www.servicenow.com/docs/r/platform-user-interface/activity-stream.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 27,
-		"prompt": "How can an administrator limit who receives a notification?",
+		"prompt": "Which configuration controls mandatory fields on a form without scripting?",
 		"choices": [
-			"Operationally, by defining conditions and recipients such as users, groups, or fields on the notification",
-			"In most deployments, by removing all roles from the instance for governed delivery",
-			"From an implementation standpoint, by converting notifications to import sets under expected controls",
-			"From a governance perspective, by disabling the entire data dictionary for stable outcomes"
+			"Dictionary attribute Mandatory or UI Policy",
+			"Import field map script",
+			"Coalesce field matcher",
+			"MID Server credential"
 		],
 		"correctIndex": 0,
-		"explanation": "Notifications use conditions and recipient definitions to target the appropriate audience for each event.",
+		"explanation": "Fields can be required via the dictionary Mandatory attribute or a UI Policy that sets mandatory true.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/notifications/notifications.html"
+			"https://www.servicenow.com/docs/r/platform-user-interface/ui-policies.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 28,
-		"prompt": "What does a workflow activity represent in classic workflow administration?",
+		"prompt": "What information does the Timeline related list on task records show?",
 		"choices": [
-			"Operationally, a step in a workflow such as approval, notification, or branch logic",
-			"In most deployments, a catalog variable type under expected controls",
-			"From an implementation standpoint, a software discovery model for stable outcomes",
-			"In practice, a CMDB identification rule under expected controls"
+			"Shows SLA stages, approvals, and state changes over time",
+			"Stores import set staging rows",
+			"Lists plugin dependencies",
+			"Replaces the CMDB"
 		],
 		"correctIndex": 0,
-		"explanation": "Workflow activities are the building blocks of workflows, defining actions and transitions in a process.",
+		"explanation": "The timeline visualizes task history including SLAs, approvals, and workflow states chronologically.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/workflow-administration/workflow-administration.html"
+			"https://www.servicenow.com/docs/r/platform-user-interface/timeline.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 29,
-		"prompt": "An event registry entry is used to:",
+		"prompt": "Which modules help users track work assigned directly to them?",
 		"choices": [
-			"Practically speaking, define a named event that scripts can fire and notifications or workflows can subscribe to",
-			"From an admin perspective, schedule hardware asset depreciation for stable outcomes",
-			"In this scenario, replace update sets during migration in standard operations",
-			"In platform terms, store encrypted user passwords for stable outcomes for consistent administration"
+			"My Work and My Tasks modules",
+			"Import field mapping module",
+			"Configuration update packages",
+			"Plugin Management"
 		],
 		"correctIndex": 0,
-		"explanation": "Events provide a publish/subscribe mechanism connecting record activity to notifications and workflow.",
+		"explanation": "My Work and related modules show tasks and items assigned to the logged-in user.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/notifications/notifications.html"
+			"https://www.servicenow.com/docs/r/platform-user-interface/my-work-modules.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 30,
-		"prompt": "Before activating a plugin in production, what should an administrator validate first?",
+		"prompt": "How can an administrator add a field to a form that is not stored in the database?",
 		"choices": [
-			"Operationally, whether the plugin can be selectively activated for one assignment group only",
-			"From an implementation standpoint, whether the plugin through configured automation disables update sets",
-			"In most deployments, that all inactive users are deleted from the instance",
-			"From a governance perspective, plugin dependencies, potential data model impacts, and required roles"
+			"Add a Variable or a non-database field type such as a break or label",
+			"Create a import field map coalesce",
+			"Delete the table ACL",
+			"Disable the activity stream"
 		],
-		"correctIndex": 3,
-		"explanation": "Plugin activation can introduce dependent functionality and schema changes, so admins should review dependencies, impacts, and role requirements before enabling it.",
+		"correctIndex": 0,
+		"explanation": "Form layout supports decorative and variable elements; some field types display data without persisting to a column.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/australia/plugins/concept/c_Plugins.html"
+			"https://www.servicenow.com/docs/r/platform-user-interface/form-layout.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 31,
-		"prompt": "Which statement best describes plugin deactivation behavior in ServiceNow?",
+		"prompt": "Which Performance Analytics component displays a single metric trend on a dashboard?",
 		"choices": [
-			"Practically speaking, deactivating a plugin only hides menus and does not affects configuration",
-			"From an admin perspective, any plugin can be safely deactivated after one business day",
-			"Typically, many plugins are intended as one-way activations and are not routinely deactivated",
-			"In platform terms, deactivation is automatic when no records use plugin tables"
+			"A widget bound to an indicator",
+			"A scheduled data import job",
+			"An outbound SOAP message queue",
+			"A plugin record"
 		],
-		"correctIndex": 2,
-		"explanation": "ServiceNow treats many plugins as one-way activations because enabling them can add artifacts and dependencies that are not designed for routine rollback.",
+		"correctIndex": 0,
+		"explanation": "Dashboard widgets can bind to Performance Analytics indicators to visualize KPI trends.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/australia/plugins/concept/c_Plugins.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/dashboards-and-widgets.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 32,
-		"prompt": "What is the recommended naming convention for a custom system property created by an administrator?",
+		"prompt": "What does subscribing to a notification allow a user to do?",
 		"choices": [
-			"In this scenario, use a unique, app-specific prefix such as x_company_app.setting_name",
-			"Practically speaking, reuse a global glide.* property name to keep naming simple",
-			"From an admin perspective, use uppercase only and include spaces for readability",
-			"In platform terms, name it after the admin user who created it"
+			"Receive email or other channels when the notification condition is met",
+			"Gain the admin role automatically",
+			"Edit dictionary entries globally",
+			"Skip all ACL checks"
 		],
 		"correctIndex": 0,
-		"explanation": "Custom properties should use a unique namespace-style prefix so they are distinguishable from baseline properties and easier to govern across environments.",
+		"explanation": "Users can subscribe to notifications to receive messages when configured conditions trigger them.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/australia/system-administration/system-properties/concept/c_SystemProperties.html"
+			"https://www.servicenow.com/docs/r/platform-administration/notifications.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 33,
-		"prompt": "When storing an integration credential in a system property, which property type is most appropriate?",
+		"prompt": "How does Knowledge Management support IT service delivery on the platform?",
 		"choices": [
-			"In most deployments, string for consistent administration",
-			"In practice, integer for consistent administration",
-			"Operationally, password (2 Way Encrypted)",
-			"From an implementation standpoint, true/False"
+			"Capture, publish, and reuse articles to deflect incidents and support self-service",
+			"Replace the CMDB entirely",
+			"Schedule Discovery probes",
+			"Manage payroll records"
 		],
-		"correctIndex": 2,
-		"explanation": "Sensitive secrets should be stored in an encrypted password property type rather than plain text values.",
+		"correctIndex": 0,
+		"explanation": "Knowledge Management stores articles that help users solve issues and reduces repeat incident volume.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/australia/system-administration/system-properties/concept/c_SystemProperties.html"
+			"https://www.servicenow.com/docs/r/knowledge-management/knowledge-management-overview.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 34,
-		"prompt": "How does instance time zone configuration affect date/time values in ServiceNow?",
+		"prompt": "Which knowledge article state indicates the article is visible to end users?",
 		"choices": [
-			"Typically, this approach changes only SLA schedules and nothing else for consistent administration for governed delivery",
-			"In practice, this approach applies only to reports, not forms or lists under expected controls",
-			"Operationally, this approach converts stored values from UTC to local time permanently in the database",
-			"From an implementation standpoint, this approach affects how date/time values are displayed, while values are stored in UTC"
+			"Published",
+			"Draft article state only",
+			"Retired without replacement",
+			"Pending plugin activation"
 		],
-		"correctIndex": 3,
-		"explanation": "ServiceNow stores date/time in UTC and applies time zone settings for user-facing display and interpretation.",
+		"correctIndex": 0,
+		"explanation": "Published knowledge articles are available to users per category and access rules; drafts are not generally visible.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/australia/system-administration/reference/r_DateAndTime.html",
-			"https://www.servicenow.com/docs/r/platform-administration/australia/system-administration/concept/c_TimeZones.html"
+			"https://www.servicenow.com/docs/r/knowledge-management/knowledge-article-lifecycle.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 35,
-		"prompt": "A user says they can find a module by searching in the filter navigator, but they do not know which application owns it. Which interface behavior helps identify the owning application before opening the module?",
+		"prompt": "What does the Service Catalog provide to end users?",
 		"choices": [
-			"In this scenario, checking the module entry shown under its application section in the navigator results",
-			"In platform terms, opening System Logs and searching for the module label for stable outcomes",
-			"Practically speaking, reviewing the MID Server capability table in standard operations",
-			"From a governance perspective, exporting the Application Picker choices to XML for consistent administration"
+			"A structured way to browse and order services and products",
+			"A CMDB reconciliation engine",
+			"A MID Server configuration tool",
+			"A plugin activation wizard only"
 		],
 		"correctIndex": 0,
-		"explanation": "Navigator search surfaces matching modules within their application grouping, so users can see which application contains the module before they click it.",
+		"explanation": "The Service Catalog presents orderable items with variables and fulfillment workflows for standardized service delivery.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-user-interface/navigation-and-search/filter-navigator.html"
+			"https://www.servicenow.com/docs/r/it-service-management/service-catalog-overview.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 36,
-		"prompt": "An analyst needs to work only in the Service Desk application and avoid modules from other apps cluttering the menu. What should they do?",
+		"prompt": "Multiple Choice, Single Line Text, and Select Box are examples of what in ServiceNow?",
 		"choices": [
-			"Typically, set the Application Picker to Service Desk so navigator content scopes to that app",
-			"Operationally, delete modules from other applications in standard operations",
-			"From an implementation standpoint, switch the list layout to compact mode",
-			"In practice, enable elevated privileges with security_admin under normal policy constraints"
+			"Catalog variable types",
+			"Order guide stages",
+			"Related list types",
+			"CMDB relationship types"
 		],
 		"correctIndex": 0,
-		"explanation": "The Application Picker controls which application's navigation items are shown, helping users focus on relevant modules.",
+		"explanation": "These are catalog variable types used on catalog items and record producers to collect user input.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-user-interface/navigation-and-search/application-picker.html"
+			"https://www.servicenow.com/docs/r/it-service-management/service-catalog-variables.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 37,
-		"prompt": "A module is available to a role, but a user still cannot see it in the navigation menu. Which condition is most likely causing this?",
+		"prompt": "Which catalog artifact lets a user order several related items in one request?",
 		"choices": [
-			"Typically, that instance has no active SLA definitions in standard operations",
-			"From an admin perspective, that user has too many records in sys_user",
-			"Operationally, that module's application menu is inactive or not visible to the user context",
-			"In practice, that module has more than one list layout for governed delivery"
+			"Order Guide",
+			"Field mapping Transform Map",
+			"Migration Update Set",
+			"Visual Task Board"
 		],
-		"correctIndex": 2,
-		"explanation": "Even with role access, users need the module's parent application/menu context to be available and visible in navigation.",
+		"correctIndex": 0,
+		"explanation": "An order guide groups multiple catalog items so one request creates several requested items.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/application-menus-and-modules/configure-application-menus-and-modules.html"
+			"https://www.servicenow.com/docs/r/it-service-management/order-guides.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 38,
-		"prompt": "What is the main purpose of an application menu in the platform navigator?",
+		"prompt": "What record is created when a user submits a catalog item?",
 		"choices": [
-			"In this scenario, to replace ACL evaluation for table access",
-			"From a governance perspective, to execute background scripts on schedule",
-			"In most deployments, to group related modules for a functional area or app",
-			"In platform terms, to store encrypted credentials for integrations"
+			"A Request with one or more Requested Items (RITMs)",
+			"A CMDB CI only",
+			"An import set header record",
+			"A plugin dependency"
 		],
-		"correctIndex": 2,
-		"explanation": "Application menus organize related modules so users can find and launch app functionality from a single logical grouping.",
+		"correctIndex": 0,
+		"explanation": "Catalog checkout creates a Request header and Requested Item records that drive fulfillment tasks.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/application-menus-and-modules/configure-application-menus-and-modules.html"
+			"https://www.servicenow.com/docs/r/it-service-management/request-and-requested-item.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 39,
-		"prompt": "A fulfillment lead opens Records > Incidents repeatedly throughout the day and wants one-click access from the left navigator. Which action best meets this need?",
+		"prompt": "Which variable types are commonly used on catalog items? (Choose two.)",
 		"choices": [
-			"From a governance perspective, change the incident number format",
-			"In this scenario, disable all other navigation modules",
-			"In most deployments, mark the module as a favorite so it appears in Favorites",
-			"From an implementation standpoint, create a new table extension for incident"
+			"Single Line Text",
+			"Multiple Choice",
+			"CMDB Relationship",
+			"Plugin Dependency"
 		],
-		"correctIndex": 2,
-		"explanation": "Favoriting frequently used modules adds quick access shortcuts without changing the underlying application or module configuration.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"questionType": "multi",
+		"explanation": "Catalog items use variable types such as Single Line Text and Multiple Choice; CMDB relationships and plugin dependencies are not catalog variable types.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-user-interface/navigation-and-search/use-favorites-in-the-application-navigator.html"
+			"https://www.servicenow.com/docs/r/it-service-management/service-catalog-variables.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 40,
-		"prompt": "Which artifact defines retention, classification, and handling requirements for data records in ServiceNow?",
+		"prompt": "What is Workflow Studio used for?",
 		"choices": [
-			"In this scenario, a transform map run history",
-			"Operationally, a documented data policy",
-			"From a governance perspective, a business rule script include",
-			"In platform terms, a UI policy under expected controls"
+			"Designing and managing flows that automate processes across the platform",
+			"Editing CMDB class icons only",
+			"Running Discovery schedules",
+			"Managing payroll deductions"
 		],
-		"correctIndex": 1,
-		"explanation": "Data policies establish governance requirements such as classification, retention, and handling controls that support compliance obligations.",
+		"correctIndex": 0,
+		"explanation": "Workflow Studio provides a design environment for building and maintaining automated workflows and flows.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/security/concept/c_DataPolicies.html"
+			"https://www.servicenow.com/docs/r/now-platform/workflow-studio.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 41,
-		"prompt": "In Edge Encryption, what is the primary security benefit of encrypting sensitive fields before data reaches the instance?",
+		"prompt": "How does Virtual Agent support self-service?",
 		"choices": [
-			"In most deployments, this approach allows unauthenticated API access to those fields",
-			"In this scenario, this approach replaces all role-based access controls through configured automation",
-			"From a governance perspective, this approach disables ACL evaluation for encrypted columns",
-			"In platform terms, this approach protects data confidentiality in transit and at rest in the tenant"
+			"Conversational chat that can answer questions and initiate catalog or case flows",
+			"By replacing all ACLs",
+			"By deleting incident records automatically",
+			"By disabling the Service Catalog"
 		],
-		"correctIndex": 3,
-		"explanation": "Client-side encryption ensures protected values are encrypted before transmission, reducing exposure while preserving platform processing for authorized use cases.",
+		"correctIndex": 0,
+		"explanation": "Virtual Agent provides chat-based self-service that can deflect to knowledge, catalog, or live agents.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/product/edge-encryption/concept/edge-encryption.html"
+			"https://www.servicenow.com/docs/r/now-platform/virtual-agent.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 42,
-		"prompt": "Which approach best supports regulatory audits for personally identifiable information (PII) in ServiceNow?",
+		"prompt": "What is a record producer in the Service Catalog?",
 		"choices": [
-			"Typically, disable activity auditing to reduce storage usage for stable outcomes",
-			"Operationally, store all PII in free-text journal fields in standard operations",
-			"In practice, grant admin role to all approvers for stable outcomes for consistent administration",
-			"From an admin perspective, track access and change history on PII fields with audit controls"
+			"A catalog item that creates a task record instead of a requested item",
+			"A scheduled Discovery probe",
+			"An update set container",
+			"A MID Server probe"
 		],
-		"correctIndex": 3,
-		"explanation": "Compliance audits require traceability. Field and record audit history helps demonstrate who viewed or changed sensitive data and when.",
+		"correctIndex": 0,
+		"explanation": "Record producers use catalog-style forms to create records directly on target tables such as incidents.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/security/concept/c_AuditingInServiceNow.html"
+			"https://www.servicenow.com/docs/r/it-service-management/record-producers.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 43,
-		"prompt": "When implementing field-level encryption, which role should own encryption key lifecycle controls?",
+		"prompt": "Which knowledge feature lets users rate whether an article was helpful?",
 		"choices": [
-			"Typically, any fulfiller role with table write access in standard operations",
-			"In practice, all end users with self-service access for consistent administration",
-			"Practically speaking, a designated security administrator or key custodian role",
-			"From an admin perspective, only catalog admins for governed delivery"
+			"Article feedback and voting",
+			"Transform map coalesce",
+			"Import set coalesce preview",
+			"Plugin activation log"
 		],
-		"correctIndex": 2,
-		"explanation": "Segregation of duties is a core control: key management should be restricted to trusted security custodians, not broad operational roles.",
+		"correctIndex": 0,
+		"explanation": "Knowledge articles support feedback mechanisms so authors and owners can measure usefulness.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/security/concept/encryption-support.html"
+			"https://www.servicenow.com/docs/r/knowledge-management/knowledge-feedback.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 44,
-		"prompt": "What is the most appropriate action when a data policy conflicts with a legal hold requirement?",
+		"prompt": "What does a catalog fulfillment flow typically automate?",
 		"choices": [
-			"In this scenario, delete all matching records without delay for stable outcomes for consistent administration",
-			"From an implementation standpoint, pause retention disposition for affected records per legal hold governance",
-			"In most deployments, convert records to attachments to avoid retention checks for governed delivery",
-			"From a governance perspective, ignore the legal hold and keep normal retention under expected controls"
+			"Approval, provisioning tasks, and notifications after a catalog order",
+			"CMDB identification only",
+			"MID Server installation",
+			"Payroll processing"
 		],
-		"correctIndex": 1,
-		"explanation": "Legal hold requirements take precedence over standard retention schedules to prevent improper destruction of records subject to litigation or investigation.",
+		"correctIndex": 0,
+		"explanation": "Catalog fulfillment flows route approvals and create tasks to deliver the ordered service.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/security/concept/c_DataPolicies.html"
+			"https://www.servicenow.com/docs/r/it-service-management/catalog-fulfillment.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 45,
-		"prompt": "What is the primary role of a MID Server in ServiceNow?",
+		"prompt": "Which role is typically required to author and publish knowledge articles?",
 		"choices": [
-			"Operationally, to act as a secure agent that communicates between the ServiceNow instance and resources inside a private network",
-			"In most deployments, to render Service Portal widgets on the client for governed delivery",
-			"From an implementation standpoint, to store update set history for all applications under expected controls",
-			"From a governance perspective, to replace ACL evaluation for all tables for stable outcomes"
+			"knowledge_admin or knowledge author roles",
+			"mid_server role only",
+			"guest role",
+			"Discovery admin only"
 		],
 		"correctIndex": 0,
-		"explanation": "A MID Server runs in the customer network and securely executes discovery, orchestration, and integration tasks on behalf of the instance.",
+		"explanation": "Knowledge authoring and publishing require knowledge-specific roles such as knowledge_admin or kb author roles.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/mid-server/mid-server.html"
+			"https://www.servicenow.com/docs/r/knowledge-management/knowledge-roles.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 46,
-		"prompt": "Why is validating MID Server status important before running Discovery?",
+		"prompt": "How can knowledge articles be suggested when a user creates an incident?",
 		"choices": [
-			"Practically speaking, because Discovery through configured automation ignores all network credentials for governed delivery",
-			"Typically, because MID Servers are required only for email notifications under normal policy constraints under expected controls",
-			"From an admin perspective, because Discovery depends on a validated, up MID Server to execute probes and patterns against target infrastructure",
-			"In platform terms, because Discovery can only run from a client browser tab in standard operations"
+			"Knowledge articles can appear based on short description or category matching",
+			"Only by disabling Self Service",
+			"By converting incidents to change requests",
+			"By deleting open incidents"
 		],
-		"correctIndex": 2,
-		"explanation": "Discovery schedules require operational MID Servers to communicate with devices and return results to the instance.",
+		"correctIndex": 0,
+		"explanation": "The platform can suggest relevant knowledge during incident creation to encourage deflection and faster resolution.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html",
-			"https://www.servicenow.com/docs/r/platform-administration/mid-server/mid-server.html"
+			"https://www.servicenow.com/docs/r/knowledge-management/knowledge-search.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 47,
-		"prompt": "In a multi-node ServiceNow instance, what does clustering awareness help administrators understand?",
+		"prompt": "What is the purpose of a catalog item category?",
 		"choices": [
-			"In most deployments, this approach means every user session is permanently bound to one MID Server under expected controls",
-			"From a governance perspective, this approach requires separate update sets per cluster node for stable outcomes",
-			"Operationally, this approach helps them understand that processing is distributed across nodes for scale and availability rather than tied to one app server",
-			"From an implementation standpoint, this approach disables load balancing during peak usage for consistent administration"
+			"Organize catalog items for browsing in the Service Catalog portal",
+			"Replace ACL evaluation",
+			"Store MID Server logs",
+			"Define CMDB class hierarchy"
 		],
-		"correctIndex": 2,
-		"explanation": "ServiceNow instances run on clustered application nodes, and workload distribution improves reliability and performance.",
+		"correctIndex": 0,
+		"explanation": "Categories group catalog items so users can browse related services in the catalog portal.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-platform-administration/page/administer/instances/concept/c_InstanceArchitecture.html"
+			"https://www.servicenow.com/docs/r/it-service-management/catalog-categories.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 48,
-		"prompt": "What is a practical reason to deploy multiple MID Servers for production integrations?",
+		"prompt": "Which automation tool can trigger actions when a catalog request is submitted?",
 		"choices": [
-			"In most deployments, to provide redundancy and workload distribution so integrations continue if one MID Server is unavailable",
-			"In practice, to ensure each MID Server can connect to only one table in standard operations",
-			"Operationally, to eliminate the need for credentials in Discovery for consistent administration",
-			"From an implementation standpoint, to bypass ECC Queue processing under normal policy constraints"
+			"A flow or workflow attached to the catalog item",
+			"A dictionary export",
+			"A homepage theme",
+			"A plugin license key"
 		],
 		"correctIndex": 0,
-		"explanation": "Using more than one MID Server supports high availability and better throughput for integration and discovery workloads.",
+		"explanation": "Catalog items can reference flows or workflows that run on submission to handle approvals and fulfillment.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/mid-server/mid-server-clusters.html"
+			"https://www.servicenow.com/docs/r/it-service-management/catalog-fulfillment.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 49,
-		"prompt": "How does the ECC Queue relate to MID Server operations?",
+		"prompt": "What does a Requested Item (RITM) represent?",
 		"choices": [
-			"In this scenario, this approach stores only CMDB relationship records in standard operations",
-			"In platform terms, this approach replaces import set tables during data loads for consistent administration",
-			"Practically speaking, this approach is the message framework used for commands and responses between the instance and MID Servers",
-			"From an admin perspective, this approach is a UI policy engine for catalog forms for governed delivery"
+			"A single catalog item ordered as part of a parent Request",
+			"A CMDB configuration item",
+			"An import set staging row",
+			"A plugin activation record"
 		],
-		"correctIndex": 2,
-		"explanation": "The ECC Queue is the communication channel where the instance sends work to MID Servers and receives execution results.",
+		"correctIndex": 0,
+		"explanation": "Each RITM corresponds to one catalog item on a request and carries its own variables and fulfillment tasks.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/mid-server/ecc-queue.html"
+			"https://www.servicenow.com/docs/r/it-service-management/request-and-requested-item.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 50,
-		"prompt": "A platform owner wants a visual that immediately shows whether open P1 incidents are above or below target. Which report visualization is best?",
+		"prompt": "Which portal do most end users access for self-service catalog and knowledge?",
 		"choices": [
-			"Operationally, list report grouped by assignment group",
-			"In most deployments, gauge with warning and critical thresholds",
-			"From a governance perspective, calendar report",
-			"From an implementation standpoint, single score report"
+			"Service Portal or Employee Center",
+			"The CMDB Manager workspace only",
+			"The MID Server health dashboard",
+			"The update set comparison screen"
 		],
-		"correctIndex": 1,
-		"explanation": "A gauge is designed to compare a metric to target thresholds and quickly communicate status with color bands.",
+		"correctIndex": 0,
+		"explanation": "Service Portal and Employee Center provide self-service access to catalog, knowledge, and cases for end users.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/reports-and-dashboards/gauges.html"
+			"https://www.servicenow.com/docs/r/platform-user-interface/service-portal.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 51,
-		"prompt": "Which statement correctly describes a homepage in classic ServiceNow UI?",
+		"prompt": "In the ServiceNow data schema, what does a table represent?",
 		"choices": [
-			"Practically speaking, this approach replaces update sets for migrating records under normal policy constraints",
-			"In platform terms, this approach is the only place where ACL rules can be configured for governed delivery",
-			"Typically, this approach is a collection of report widgets and content blocks users can view for operational monitoring",
-			"From an admin perspective, this approach is required to run scripted REST APIs for stable outcomes"
+			"A collection of records stored as rows with a defined set of fields",
+			"A homepage widget only",
+			"A MID Server credential",
+			"A plugin license file"
 		],
-		"correctIndex": 2,
-		"explanation": "Homepages provide role-based at-a-glance views by arranging reports, gauges, and other widgets in one place.",
+		"correctIndex": 0,
+		"explanation": "Tables are the fundamental data containers; each row is a record with columns defined in the dictionary.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/reports-and-dashboards/homepages.html"
+			"https://www.servicenow.com/docs/r/platform-administration/data-schema.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 52,
-		"prompt": "An admin needs a chart showing incidents opened by priority during the last 30 days and refreshed daily. What should they configure first?",
+		"prompt": "What is defined in the Dictionary for a field?",
 		"choices": [
-			"Practically speaking, a UI policy on the incident form for governed delivery",
-			"In platform terms, a business rule on sys_user under expected controls",
-			"In this scenario, a scheduled import set transform for stable outcomes",
-			"From an admin perspective, a report with a date filter and grouping by priority"
+			"Field name, type, max length, and attributes such as mandatory or read-only",
+			"Only the homepage layout",
+			"Only MID Server routing",
+			"Only plugin activation order"
 		],
-		"correctIndex": 3,
-		"explanation": "The core requirement is reporting logic: define the report data source, filter window, and grouping to visualize incident volume by priority.",
+		"correctIndex": 0,
+		"explanation": "Dictionary entries define each column's type, constraints, and behavior on a table.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/reports-and-dashboards/create-a-report.html"
+			"https://www.servicenow.com/docs/r/platform-administration/dictionary.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 53,
-		"prompt": "Why would an administrator add multiple gauges to the same homepage?",
+		"prompt": "Which mechanism controls who can read or write records and fields?",
 		"choices": [
-			"From an implementation standpoint, to track several KPIs with separate thresholds in one operational view",
-			"In most deployments, to replace assignment rules for incidents for stable outcomes",
-			"Operationally, to enforce ACLs on tables used by reports in standard operations",
-			"In practice, to prevent users from creating personal reports for consistent administration"
+			"Access Control (ACL) rules",
+			"Homepage gauges",
+			"Visual Task Board lanes",
+			"Service catalog categories"
 		],
 		"correctIndex": 0,
-		"explanation": "Each gauge can represent a different KPI with distinct warning/critical limits, giving teams a compact health overview.",
+		"explanation": "ACLs evaluate roles, conditions, and scripts to grant or deny operations on tables and fields.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/reports-and-dashboards/gauges.html",
-			"https://www.servicenow.com/docs/r/platform-administration/reports-and-dashboards/homepages.html"
+			"https://www.servicenow.com/docs/r/platform-security/access-control-rules.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 54,
-		"prompt": "A manager says, \"I only need one number: currently open high-priority incidents.\" Which report type is most appropriate?",
+		"prompt": "When no ACL grants an operation, what is the default platform behavior?",
 		"choices": [
-			"Typically, pivot report for governed delivery",
-			"From an implementation standpoint, calendar report",
-			"Operationally, single score report for consistent administration",
-			"In practice, trend report under normal policy constraints"
+			"Access is denied",
+			"Access is granted to all users",
+			"The table is deleted",
+			"The user becomes admin"
 		],
-		"correctIndex": 2,
-		"explanation": "Single score reports are intended to display one aggregate metric, such as count of open high-priority incidents.",
+		"correctIndex": 0,
+		"explanation": "ServiceNow uses deny-by-default security; an explicit ACL must grant the operation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/reports-and-dashboards/single-score-reports.html"
+			"https://www.servicenow.com/docs/r/platform-security/access-control-rules.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 55,
-		"prompt": "In a basic LDAP integration, what does an LDAP server definition primarily provide to ServiceNow?",
+		"prompt": "What bundles permissions that can be assigned to users and groups?",
 		"choices": [
-			"In this scenario, a client-side script library for form validation in standard operations",
-			"Practically speaking, connection and query settings used to import users and groups from the directory",
-			"From a governance perspective, a replacement for all ACL role checks under normal policy constraints",
-			"In platform terms, a workflow approval matrix for change requests for governed delivery"
+			"A role",
+			"A dashboard homepage gauge widget",
+			"A field mapping import job",
+			"A Visual Task Board lane"
 		],
-		"correctIndex": 1,
-		"explanation": "LDAP server definitions store the host, bind, and search configuration required for ServiceNow to read directory data.",
+		"correctIndex": 0,
+		"explanation": "Roles group access permissions; users and groups receive roles to gain authorized capabilities.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/ldap-integration/ldap-server.html"
+			"https://www.servicenow.com/docs/r/platform-security/roles.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 56,
-		"prompt": "Why are LDAP OU definitions important in user and group imports?",
+		"prompt": "How are roles typically assigned to a user?",
 		"choices": [
-			"Typically, they scope searches to targeted directory paths so imports pull the right records",
-			"In this scenario, they set incident priority based on caller role",
-			"From a governance perspective, they encrypt all outbound REST messages through configured automation",
-			"In platform terms, they define catalog variable sets for request items"
+			"Directly on the user record or inherited from groups",
+			"Only by editing sys_properties",
+			"Only through Discovery",
+			"Only via import sets"
 		],
 		"correctIndex": 0,
-		"explanation": "OU definitions control where ServiceNow searches in the directory, helping administrators target and optimize imports.",
+		"explanation": "Users receive roles directly or inherit them from group membership.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/ldap-integration/ldap-organizational-units.html"
+			"https://www.servicenow.com/docs/r/platform-security/roles.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 57,
-		"prompt": "What is the primary purpose of LDAP transform maps in ServiceNow?",
+		"prompt": "What is the definition of a transform map in ServiceNow?",
 		"choices": [
-			"In practice, to replace all business rules on sys_user under normal policy constraints",
-			"Operationally, to schedule CMDB discovery probes for governed delivery",
-			"Typically, to map LDAP attributes to ServiceNow user or group fields during import",
-			"From an admin perspective, to render workspace list layouts for stable outcomes"
+			"A map that defines relationships between import set fields and fields on a target table",
+			"A map that stores incident history only",
+			"A map used to encrypt all attachments",
+			"A map that replaces ACL evaluation"
 		],
-		"correctIndex": 2,
-		"explanation": "LDAP transform maps define how inbound directory attributes populate target fields such as name, email, and manager.",
+		"correctIndex": 0,
+		"explanation": "Transform maps field mappings from staging import set tables onto existing target tables during data load.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/ldap-integration/ldap-transform-maps.html"
+			"https://www.servicenow.com/docs/r/integrate-applications/transform-maps.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 58,
-		"prompt": "In ServiceNow SSO administration, what does an Identity Provider (IdP) record represent?",
+		"prompt": "Where does imported data land before a transform map loads it onto the target table?",
 		"choices": [
-			"In most deployments, a MID Server cluster policy for consistent administration",
-			"In platform terms, a dependency mapping relationship in CMDB under expected controls",
-			"In this scenario, that external authentication service that issues assertions used for user sign-in",
-			"From a governance perspective, a local table rotation strategy for syslog in standard operations"
+			"An Import Set table (staging)",
+			"The sys_user table directly",
+			"The CMDB only",
+			"A homepage gauge"
 		],
-		"correctIndex": 2,
-		"explanation": "IdP records configure trust and authentication metadata so ServiceNow can accept federated login assertions.",
+		"correctIndex": 0,
+		"explanation": "Import sets stage incoming rows; transform maps then move validated data to the target table.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/single-sign-on/sso-identity-providers.html"
+			"https://www.servicenow.com/docs/r/integrate-applications/import-sets.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 59,
-		"prompt": "What is a common administrative validation after enabling SSO?",
+		"prompt": "Which utility automatically maps import set columns to target fields with the same name?",
 		"choices": [
-			"In most deployments, delete LDAP import schedules to avoid duplicates under expected controls",
-			"In this scenario, test IdP-initiated and SP-initiated login flows to confirm users map correctly to accounts",
-			"From an implementation standpoint, convert all notifications to SMS-only in standard operations",
-			"From a governance perspective, disable all local admin accounts permanently for consistent administration"
+			"Auto Map Matching Fields",
+			"CI Relationship Builder",
+			"Business Service Management Map",
+			"Plugin Activation Wizard"
 		],
-		"correctIndex": 1,
-		"explanation": "SSO rollout should include both login flow tests and user-mapping verification to avoid authentication and access issues.",
+		"correctIndex": 0,
+		"explanation": "Auto Map Matching Fields links import set and target fields that share identical names.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/single-sign-on/single-sign-on.html"
+			"https://www.servicenow.com/docs/r/integrate-applications/transform-maps.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 60,
-		"prompt": "In Performance Analytics, what does an indicator primarily represent?",
+		"prompt": "What does setting a coalesce field on a transform map accomplish?",
 		"choices": [
-			"Typically, a client-side catalog UI policy for governed delivery",
-			"Operationally, a MID Server discovery schedule for stable outcomes",
-			"In practice, a metric definition used to track a measurable value over time",
-			"From an admin perspective, a list layout personalization for an individual user"
+			"Updates existing target records that match the coalesce value instead of inserting duplicates",
+			"Encrypts all imported rows",
+			"Disables ACL checks permanently",
+			"Deletes the import set table"
 		],
-		"correctIndex": 2,
-		"explanation": "Indicators define the measurements that Performance Analytics collects and trends over time for analysis.",
+		"correctIndex": 0,
+		"explanation": "Coalesce fields match incoming rows to existing records for update rather than duplicate insert.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/performance-analytics/concept/indicators.html"
+			"https://www.servicenow.com/docs/r/integrate-applications/transform-maps.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 61,
-		"prompt": "What is the purpose of an indicator source in Performance Analytics?",
+		"prompt": "What does the CMDB store?",
 		"choices": [
-			"In this scenario, to store update set XML for migration under expected controls in standard operations",
-			"In platform terms, to replace ACL rules on PA score tables for consistent administration",
-			"In most deployments, to define where and how indicator data is collected, such as a table and aggregation",
-			"From a governance perspective, to publish knowledge articles to employee center for governed delivery"
+			"Configuration items and their relationships representing IT infrastructure and services",
+			"Only user passwords",
+			"Only email templates",
+			"Only plugin licenses"
 		],
-		"correctIndex": 2,
-		"explanation": "Indicator sources configure the collection logic and data origin used to generate indicator scores.",
+		"correctIndex": 0,
+		"explanation": "The CMDB holds CIs and relationships used for impact analysis, change, and service mapping.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/performance-analytics/task/t_CreateIndicatorSources.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-overview.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 62,
-		"prompt": "In PA administration, what does data collection do?",
+		"prompt": "What is CSDM (Common Service Data Model) intended to standardize?",
 		"choices": [
-			"Operationally, runs jobs that calculate and store indicator scores for configured periods",
-			"From an admin perspective, deletes all report definitions nightly under normal policy constraints",
-			"Typically, publishes application updates to the Store for governed delivery",
-			"In practice, through configured automation provisions new MID Servers"
+			"How services, applications, and infrastructure CIs relate in the CMDB",
+			"Payroll deduction codes",
+			"Email server hostnames only",
+			"Plugin activation sequences"
 		],
 		"correctIndex": 0,
-		"explanation": "Data collection jobs compute scores for indicators and save the results so trends and breakdowns can be analyzed.",
+		"explanation": "CSDM provides a standard data model for mapping business services, applications, and technical CIs.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/performance-analytics/task/t_RunDataCollection.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/csdm-overview.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 63,
-		"prompt": "Which PA feature lets administrators analyze indicator values by dimensions like assignment group or priority?",
+		"prompt": "Which tool helps administrators review security posture and recommended hardening on the instance?",
 		"choices": [
-			"Practically speaking, flow Designer spokes",
-			"From an admin perspective, import set coalesce fields",
-			"Typically, breakdowns under normal policy constraints",
-			"In practice, discovery sensors under expected controls"
+			"Security Center",
+			"Visual Task Boards",
+			"Catalog browse categories",
+			"Homepage themes"
 		],
-		"correctIndex": 2,
-		"explanation": "Breakdowns segment indicator scores by categories, enabling deeper analysis across dimensions.",
+		"correctIndex": 0,
+		"explanation": "Security Center aggregates security metrics and guidance for instance hardening and compliance.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/performance-analytics/concept/c_BreakdownsAndElements.html"
+			"https://www.servicenow.com/docs/r/platform-security/security-center.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 64,
-		"prompt": "Before stakeholders can view PA trend data on a dashboard, what must be true?",
+		"prompt": "In the Shared Responsibility Model, who is responsible for securing the underlying cloud infrastructure?",
 		"choices": [
-			"In most deployments, indicators and collections are configured so scores exist for visualization",
-			"From a governance perspective, every incident has a related change request",
-			"In this scenario, all users have admin role for governed delivery",
-			"From an implementation standpoint, cMDB identification rules are disabled"
+			"ServiceNow as the platform provider",
+			"The end user on every laptop",
+			"The catalog requester only",
+			"The MID Server exclusively"
 		],
 		"correctIndex": 0,
-		"explanation": "Dashboards and widgets rely on collected scores; without configured indicators and collection jobs, meaningful trends are unavailable.",
+		"explanation": "ServiceNow secures the platform infrastructure; customers configure and secure their instance data, users, and integrations.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/performance-analytics/concept/indicators.html",
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/performance-analytics/task/t_RunDataCollection.html"
+			"https://www.servicenow.com/docs/r/platform-security/shared-responsibility-model.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 65,
-		"prompt": "What is the purpose of Subscription Management in ServiceNow?",
+		"prompt": "Which ACL type would you create to restrict access to a specific column on a table?",
 		"choices": [
-			"Operationally, to monitor purchased subscriptions and entitlement usage so administrators can manage license compliance",
-			"In most deployments, to route all incidents directly to on-call users for stable outcomes",
-			"From a governance perspective, to configure MID Server network ports in standard operations",
-			"From an implementation standpoint, to replace update sets for application promotion for consistent administration"
+			"Field-level ACL",
+			"Homepage ACL",
+			"MID Server ACL",
+			"Plugin license ACL"
 		],
 		"correctIndex": 0,
-		"explanation": "Subscription Management helps organizations track entitlements and consumption against purchased ServiceNow subscriptions.",
+		"explanation": "Field ACLs control read and write access to individual columns in addition to table ACLs.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-platform-administration/page/administer/subscription-management/concept/subscription-management.html"
+			"https://www.servicenow.com/docs/r/platform-security/access-control-rules.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 66,
-		"prompt": "Why should administrators review subscription usage trends regularly?",
+		"prompt": "How can an administrator test why a user cannot access a record?",
 		"choices": [
-			"Practically speaking, to reset all user passwords each quarter for stable outcomes",
-			"In platform terms, to through configured automation close stale catalog tasks",
-			"Typically, to identify overuse or underuse early and make informed licensing and adoption decisions",
-			"From an admin perspective, to disable ACL evaluation during audits under normal policy constraints"
+			"Enable security debugging and impersonate the user",
+			"Delete all ACLs on the table",
+			"Disable the Service Catalog",
+			"Remove all roles from admin"
 		],
-		"correctIndex": 2,
-		"explanation": "Trend monitoring supports proactive governance by exposing adoption gaps and potential entitlement risk before renewal cycles.",
+		"correctIndex": 0,
+		"explanation": "Access control debugging while impersonating shows which ACLs passed or failed for the user.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-platform-administration/page/administer/subscription-management/concept/subscription-management.html"
+			"https://www.servicenow.com/docs/r/platform-security/access-control-rules.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 67,
-		"prompt": "What does the Stats module in ServiceNow primarily provide?",
+		"prompt": "Which operations can table ACLs secure? (Choose two.)",
 		"choices": [
-			"In most deployments, a real-time view of key instance performance and operational statistics",
-			"From an implementation standpoint, a UI policy debugger for portal widgets only",
-			"Operationally, a wizard for creating catalog item variables",
-			"From a governance perspective, a replacement for CMDB relationship mapping"
+			"read",
+			"write",
+			"clone instance",
+			"upgrade kernel"
 		],
 		"correctIndex": 0,
-		"explanation": "The Stats view surfaces operational metrics that help admins quickly assess instance health and runtime behavior.",
+		"correctIndexes": [
+			0,
+			1
+		],
+		"questionType": "multi",
+		"explanation": "Table ACLs govern record operations such as read, write, create, and delete; instance clone and kernel upgrade are not ACL operations.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-platform-administration/page/administer/instance-administration/reference/r_StatsModule.html"
+			"https://www.servicenow.com/docs/r/platform-security/access-control-rules.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 68,
-		"prompt": "Which administrator action is most appropriate when instance stats show sustained transaction latency growth?",
+		"prompt": "What is a reference field used for in the data schema?",
 		"choices": [
-			"From an implementation standpoint, delete all scheduled jobs without delay for consistent administration",
-			"In most deployments, disable auditing on every task table in standard operations under normal policy constraints",
-			"Operationally, investigate recent changes, high-cost operations, and load patterns before applying targeted remediation",
-			"In practice, clear all user sessions every five minutes under normal policy constraints under expected controls"
+			"To link a record to another record in a related table",
+			"To store binary attachments only",
+			"To replace roles",
+			"To run Discovery credential tests"
 		],
-		"correctIndex": 2,
-		"explanation": "Stats are most useful when correlated with change activity and workload signals to isolate likely performance causes.",
+		"correctIndex": 0,
+		"explanation": "Reference fields store a pointer (sys_id) to a record in another table, forming relationships.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-platform-administration/page/administer/instance-administration/reference/r_StatsModule.html",
-			"https://www.servicenow.com/docs/bundle/zurich-platform-administration/page/administer/performance/concept/c_PerformanceDashboard.html"
+			"https://www.servicenow.com/docs/r/platform-administration/reference-fields.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 69,
-		"prompt": "How do subscription management data and instance statistics complement each other for platform governance?",
+		"prompt": "Which table stores user accounts and their login IDs?",
 		"choices": [
-			"In this scenario, subscription data shows entitlement consumption while instance stats show technical health, enabling balanced operational decisions",
-			"Practically speaking, both are used only to define catalog approvals for consistent administration for governed delivery",
-			"From an admin perspective, they are only relevant during initial instance installation under expected controls for stable outcomes",
-			"In platform terms, they serve the same purpose and should not be compared for stable outcomes in standard operations"
+			"User [sys_user]",
+			"Import Set [sys_import_set]",
+			"Update Set [sys_update_set]",
+			"Transform Map [sys_transform_map]"
 		],
 		"correctIndex": 0,
-		"explanation": "Combining business-facing entitlement visibility with technical performance visibility helps administrators manage both compliance and service quality.",
+		"explanation": "The sys_user table holds user records including user ID, name, and contact information.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-platform-administration/page/administer/subscription-management/concept/subscription-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-platform-administration/page/administer/instance-administration/reference/r_StatsModule.html"
+			"https://www.servicenow.com/docs/r/platform-administration/user-administration.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 70,
-		"prompt": "What is the primary value of Admin Center for ServiceNow administrators?",
+		"prompt": "How are groups used in ServiceNow security?",
 		"choices": [
-			"In most deployments, this approach disables role-based access controls during setup for governed delivery",
-			"From an implementation standpoint, this approach stores only discovery patterns and probes under expected controls",
-			"Operationally, this approach centralizes administrative insights and guided tasks so admins can promptly monitor instance posture and take action",
-			"From a governance perspective, this approach replaces Flow Designer for all workflow automation in standard operations"
+			"Groups bundle users and can carry roles assigned to all members",
+			"Groups replace all tables",
+			"Groups encrypt the CMDB",
+			"Groups disable notifications"
 		],
-		"correctIndex": 2,
-		"explanation": "Admin Center provides a consolidated administrative experience that helps platform owners track key setup, health, and governance activities.",
+		"correctIndex": 0,
+		"explanation": "Groups organize users; roles assigned to a group apply to its members for access and assignment.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-platform-administration/page/administer/admin-center/concept/admin-center.html"
+			"https://www.servicenow.com/docs/r/platform-administration/groups.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 71,
-		"prompt": "How does Setup Hub help new instance administrators accelerate platform readiness?",
+		"prompt": "What does the Customer role typically allow?",
 		"choices": [
-			"From an implementation standpoint, this approach runs client-side scripts to enforce browser compatibility",
-			"In most deployments, this approach removes the need for users, groups, and roles for governed delivery",
-			"Operationally, this approach offers guided setup experiences and recommended configuration steps for foundational platform capabilities",
-			"In practice, this approach through configured automation migrates all update sets to production without review"
+			"Basic self-service access such as submitting incidents and viewing own requests",
+			"Full admin configuration of ACLs",
+			"MID Server administration",
+			"Unrestricted CMDB delete"
 		],
-		"correctIndex": 2,
-		"explanation": "Setup Hub organizes essential onboarding and configuration work so administrators can establish core platform capabilities in a structured way.",
+		"correctIndex": 0,
+		"explanation": "The snc_internal or customer/end-user roles enable self-service without administrative privileges.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-platform-administration/page/administer/setup-hub/concept/setup-hub.html"
+			"https://www.servicenow.com/docs/r/platform-security/roles.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 72,
-		"prompt": "What is the main benefit of assigning roles through groups instead of directly to users?",
+		"prompt": "Which import formats can be loaded into an Import Set? (Choose two.)",
 		"choices": [
-			"In this scenario, this approach eliminates the need for user records",
-			"From an admin perspective, this approach auto-grants security_admin",
-			"Practically speaking, access can be managed consistently for sets of users",
-			"In platform terms, this approach bypasses ACL evaluation"
+			"CSV",
+			"Excel (XLS/XLSX)",
+			"Compiled Java bytecode",
+			"Raw disk images"
 		],
-		"correctIndex": 2,
-		"explanation": "Group-based role assignment simplifies administration and keeps access changes consistent across team members.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"questionType": "multi",
+		"explanation": "Import sets accept structured files such as CSV and Excel for staging before transform.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/user-administration/ua-creating-groups.html"
+			"https://www.servicenow.com/docs/r/integrate-applications/import-sets.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 73,
-		"prompt": "Which module is commonly used to review who currently has a specific role?",
+		"prompt": "What is the purpose of a CMDB relationship?",
 		"choices": [
-			"Operationally, data Sources under expected controls in standard operations",
-			"In most deployments, cMDB Health Dashboard for consistent administration",
-			"In practice, scheduled Jobs in standard operations under normal policy constraints",
-			"From an implementation standpoint, users with Role report/list view"
+			"Document dependency or connectivity between configuration items",
+			"Store user passwords",
+			"Replace transform maps",
+			"Schedule payroll jobs"
 		],
-		"correctIndex": 3,
-		"explanation": "Role assignment visibility is typically reviewed from role-user relationship lists and reports.",
+		"correctIndex": 0,
+		"explanation": "CI relationships model dependencies such as runs on or depends on for impact and change analysis.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/user-administration/audit-user-roles.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-relationships.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 74,
-		"prompt": "What does impersonation allow an administrator to do?",
+		"prompt": "Which responsibility belongs to the customer in the Shared Responsibility Model?",
 		"choices": [
-			"Typically, reset system properties without audit in standard operations",
-			"Operationally, experience the platform as another user for troubleshooting",
-			"In practice, disable ACLs for one session for consistent administration",
-			"From an implementation standpoint, change update set scope globally"
+			"Configuring users, roles, ACLs, and data on their instance",
+			"Physical data center power and cooling",
+			"Hypervisor patch management for all tenants",
+			"Global DNS root zone maintenance"
 		],
-		"correctIndex": 1,
-		"explanation": "Impersonation helps admins validate user experience and permissions while retaining auditability.",
+		"correctIndex": 0,
+		"explanation": "Customers secure and configure their instance content, access, and integrations; ServiceNow secures the platform stack.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/user-administration/t_ImpersonateAUser.html"
+			"https://www.servicenow.com/docs/r/platform-security/shared-responsibility-model.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 75,
-		"prompt": "What is the purpose of a dictionary override on an extended table?",
+		"prompt": "What does the admin role provide on an instance?",
 		"choices": [
-			"In this scenario, to modify inherited field behavior for a child table",
-			"Practically speaking, to clone records into another scope",
-			"In platform terms, to create a new table hierarchy",
-			"From a governance perspective, to disable inherited fields permanently"
+			"Broad configuration access including most tables, ACL bypass for roles, and system settings",
+			"Read-only access to Self Service only",
+			"No access to user records",
+			"Automatic deletion of all incidents"
 		],
 		"correctIndex": 0,
-		"explanation": "Dictionary overrides let child tables alter inherited field properties without changing the parent definition.",
+		"explanation": "The admin role grants extensive configuration privileges and satisfies most ACL role requirements.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/data-dictionary/dictionary-overrides.html"
+			"https://www.servicenow.com/docs/r/platform-security/roles.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 76,
-		"prompt": "Which statement about update sets is correct for configuration migration?",
+		"prompt": "Which field type stores a choice from a predefined list on a form?",
 		"choices": [
-			"In this scenario, they store production task data records through configured automation",
-			"In platform terms, they cannot include dictionary changes under normal policy constraints",
-			"In most deployments, they capture many configuration changes for promotion between instances",
-			"From a governance perspective, they replace all source control workflows"
+			"Choice (dropdown)",
+			"Journal Input",
+			"HTML",
+			"Password (hashed) only"
 		],
-		"correctIndex": 2,
-		"explanation": "Update sets track many metadata configuration changes and are moved between environments for deployment.",
+		"correctIndex": 0,
+		"explanation": "Choice fields present a dropdown of predefined values defined in the dictionary or choice list.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/application-development/update-sets-overview.html"
+			"https://www.servicenow.com/docs/r/platform-administration/field-types.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 77,
-		"prompt": "What is a key use of list personalization for administrators and users?",
+		"prompt": "How does ServiceNow encrypt sensitive field values such as passwords?",
 		"choices": [
-			"Operationally, changing ACL scripts under expected controls",
-			"From an admin perspective, rebuilding table indexes for stable outcomes",
-			"Typically, defining transform maps under expected controls",
-			"In practice, adding, removing, and reordering visible list columns"
+			"Using platform encryption on designated field types",
+			"By storing them in plain text in the activity stream",
+			"By emailing them to administrators",
+			"By disabling ACLs"
 		],
-		"correctIndex": 3,
-		"explanation": "List personalization allows users to tailor visible columns and layout for role-specific productivity.",
+		"correctIndex": 0,
+		"explanation": "Password and other sensitive field types use platform encryption and masking rather than clear-text storage.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-user-interface/lists/personalize-lists.html"
+			"https://www.servicenow.com/docs/r/platform-security/encryption.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 78,
-		"prompt": "Why would an admin configure list filters and filter breadcrumbs?",
+		"prompt": "What is the purpose of a UI Policy?",
 		"choices": [
-			"In most deployments, to bypass table ACLs for governed delivery",
-			"From a governance perspective, to change dictionary attributes",
-			"In this scenario, to promptly narrow records using reusable conditions",
-			"In platform terms, to archive records through configured automation"
+			"Declaratively control field visibility, mandatory, and read-only state on forms",
+			"Import CSV data into staging tables",
+			"Replace all business rules",
+			"Activate plugins automatically"
 		],
-		"correctIndex": 2,
-		"explanation": "List filters provide a fast way to target relevant records and can be reused in reporting and daily operations.",
+		"correctIndex": 0,
+		"explanation": "UI Policies apply form behavior changes based on conditions without requiring client scripts.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-user-interface/lists/list-filters.html"
+			"https://www.servicenow.com/docs/r/platform-administration/ui-policies.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 79,
-		"prompt": "What is the primary function of ACL rules in ServiceNow?",
+		"prompt": "When does a Business Rule with 'before' timing execute?",
 		"choices": [
-			"In most deployments, to control record and field access based on conditions and roles",
-			"From a governance perspective, to assign update sets to users",
-			"In this scenario, to define dashboard widgets in standard operations",
-			"From an implementation standpoint, to schedule import jobs"
+			"Before the record is written to the database",
+			"Only after the user closes the browser",
+			"Only on homepage load",
+			"Only during plugin activation"
 		],
 		"correctIndex": 0,
-		"explanation": "ACLs enforce authorization for table records and fields through role, condition, and script logic.",
+		"explanation": "Before business rules run prior to insert, update, or delete so they can modify or abort the transaction.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/access-control/access-controls.html"
+			"https://www.servicenow.com/docs/r/platform-administration/business-rules.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 80,
-		"prompt": "What does the System Dictionary define for a table field?",
+		"prompt": "What is captured in an Update Set?",
 		"choices": [
-			"Typically, only transform schedules for stable outcomes",
-			"From an admin perspective, only dashboard color themes",
-			"Operationally, core metadata such as type, length, default, and attributes",
-			"In practice, only email templates under normal policy constraints"
+			"Configuration changes such as business rules, fields, and UI changes for migration between instances",
+			"End-user password values in plain text",
+			"All transactional incident rows permanently",
+			"MID Server binaries"
 		],
-		"correctIndex": 2,
-		"explanation": "Dictionary entries define technical field behavior and metadata used throughout the platform.",
+		"correctIndex": 0,
+		"explanation": "Update sets bundle customizations and configuration for export and import across instances.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/data-dictionary/system-dictionary-overview.html"
+			"https://www.servicenow.com/docs/r/platform-administration/update-sets.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 81,
-		"prompt": "Which capability is provided by assignment rules?",
+		"prompt": "Which update set state indicates it is ready to export to another instance?",
 		"choices": [
-			"In this scenario, encrypting attachment payloads in standard operations under normal policy constraints",
-			"From a governance perspective, converting incidents into CIs for governed delivery",
-			"In most deployments, changing table inheritance under normal policy constraints",
-			"In platform terms, through configured automation routing records to users or groups based on conditions"
+			"Complete",
+			"In Progress state only",
+			"In Progress forever",
+			"Retired automatically"
 		],
-		"correctIndex": 3,
-		"explanation": "Assignment rules automate routing logic so records are directed to the proper support teams.",
+		"correctIndex": 0,
+		"explanation": "An update set must be marked Complete before it can be exported or retrieved on a target instance.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/task-management/create-assignment-rules.html"
+			"https://www.servicenow.com/docs/r/platform-administration/update-sets.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 82,
-		"prompt": "What is a common use of notifications in administration?",
+		"prompt": "What language is used for scripting in ServiceNow?",
 		"choices": [
-			"In most deployments, to create class hierarchies",
-			"From a governance perspective, to enforce field encryption",
-			"In this scenario, to send event-driven communications by email or other channels",
-			"From an implementation standpoint, to replicate records across domains"
+			"JavaScript",
+			"Java",
+			"Python",
+			"COBOL"
 		],
-		"correctIndex": 2,
-		"explanation": "Notifications are triggered by events or record conditions to deliver timely communication.",
+		"correctIndex": 0,
+		"explanation": "Client scripts, business rules, and most platform scripts use JavaScript (Rhino engine on the server).",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/notifications/notifications-overview.html"
+			"https://www.servicenow.com/docs/r/platform-administration/scripting-in-servicenow.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 83,
-		"prompt": "What does a Data Policy do compared with a UI Policy?",
+		"prompt": "In a server-side Business Rule script, which object represents the current record?",
 		"choices": [
-			"Practically speaking, only Data Policies run on mobile",
-			"Typically, data Policies create ACLs through configured automation",
-			"In practice, data Policies enforce data consistency independent of form UI",
-			"From an admin perspective, only UI Policies run server-side"
+			"current",
+			"g_form client object",
+			"window",
+			"document"
 		],
-		"correctIndex": 2,
-		"explanation": "Data Policies enforce field requirements and consistency across imports and integrations, not just interactive forms.",
+		"correctIndex": 0,
+		"explanation": "The current GlideRecord in a business rule exposes field values and methods for the record being processed.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/data-management/data-policies.html"
+			"https://www.servicenow.com/docs/r/platform-administration/business-rules.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 84,
-		"prompt": "Which action is a standard way to troubleshoot why a user cannot see a field value?",
+		"prompt": "Which server-side API is used to query records in most Business Rules?",
 		"choices": [
-			"In most deployments, reset all system properties for stable outcomes",
-			"From an implementation standpoint, delete and recreate the table",
-			"In this scenario, review applicable ACLs and field-level security behavior",
-			"From a governance perspective, disable update sets under normal policy constraints"
+			"GlideRecord",
+			"the GlideSystem API",
+			"GlideAjax",
+			"spModal"
 		],
-		"correctIndex": 2,
-		"explanation": "Field visibility issues are commonly tied to ACL logic and role or condition checks.",
+		"correctIndex": 0,
+		"explanation": "GlideRecord is the standard server API for database queries and updates in business rules and scripts.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/access-control/access-controls.html"
+			"https://www.servicenow.com/docs/r/platform-administration/gliderecord.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 85,
-		"prompt": "What is the practical reason for using form views?",
+		"prompt": "In a client script, which object manipulates form fields?",
 		"choices": [
-			"In most deployments, to map CI relationships under expected controls in standard operations",
-			"From an implementation standpoint, to bypass mandatory checks for consistent administration",
-			"Operationally, to store binary attachments in standard operations under normal policy constraints",
-			"From a governance perspective, to present different field layouts for different roles or processes"
+			"g_form",
+			"current on the server",
+			"GlideRecord in the browser",
+			"gs on the client"
 		],
-		"correctIndex": 3,
-		"explanation": "Form views allow tailored experiences so each audience sees relevant fields and layout.",
+		"correctIndex": 0,
+		"explanation": "g_form provides client-side methods such as getValue, setValue, and setMandatory on the form.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-user-interface/forms/create-and-customize-form-views.html"
+			"https://www.servicenow.com/docs/r/platform-administration/client-scripts.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 86,
-		"prompt": "When creating a report for operational monitoring, what is typically most important first?",
+		"prompt": "What does gs.info() do in a server script?",
 		"choices": [
-			"From an admin perspective, exporting results to XML for consistent administration",
-			"Typically, selecting the correct table and filter criteria for the target question",
-			"Practically speaking, adding as many colors as possible for governed delivery",
-			"In platform terms, choosing random aggregations under expected controls"
+			"Writes an informational message to the system log",
+			"Displays a browser alert",
+			"Submits the form",
+			"Activates a plugin"
 		],
-		"correctIndex": 1,
-		"explanation": "A meaningful report starts with accurate data scope from the right table and conditions.",
+		"correctIndex": 0,
+		"explanation": "GlideSystem logging methods such as gs.info() record messages in the system log for debugging.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-analytics-and-reporting/create-reports/reporting-overview.html"
+			"https://www.servicenow.com/docs/r/platform-administration/glidesystem.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 87,
-		"prompt": "Why do administrators use system properties?",
+		"prompt": "Which artifacts are commonly moved between instances using Update Sets? (Choose two.)",
 		"choices": [
-			"In this scenario, to store and manage configurable runtime behavior without code edits",
-			"From an admin perspective, to enforce email domain policies only for governed delivery",
-			"Practically speaking, to define one-time update set metadata under expected controls",
-			"In platform terms, to replace all script includes for stable outcomes"
+			"Business Rules",
+			"UI Policies",
+			"User password hashes",
+			"All incident transactional data by default"
 		],
-		"correctIndex": 1,
-		"explanation": "System properties externalize configuration so behavior can be tuned without changing scripts.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"questionType": "multi",
+		"explanation": "Update sets capture configuration like business rules and UI policies; passwords and bulk transactional data are not typical update set content.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/system-properties/system-properties.html"
+			"https://www.servicenow.com/docs/r/platform-administration/update-sets.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 88,
-		"prompt": "What is the key purpose of an import set table?",
+		"prompt": "What is the recommended approach before committing an retrieved update set on production?",
 		"choices": [
-			"Operationally, to manage domain separation for consistent administration",
-			"In most deployments, to stage incoming source data before transform processing",
-			"In practice, to store archived incidents only under expected controls",
-			"From an implementation standpoint, to replace target production tables"
+			"Preview and test the update set in a sub-production instance first",
+			"Skip preview to save time",
+			"Delete all ACLs",
+			"Disable all business rules globally"
 		],
-		"correctIndex": 1,
-		"explanation": "Import sets stage external data and allow controlled transforms into destination tables.",
+		"correctIndex": 0,
+		"explanation": "Update sets should be previewed and validated in sub-production before committing to production to avoid conflicts.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/import-sets.html"
+			"https://www.servicenow.com/docs/r/platform-administration/update-sets.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 89,
-		"prompt": "What does a scheduled job (Scheduled Script Execution) allow an admin to do?",
+		"prompt": "Which client script type runs when a user changes a field value on a form?",
 		"choices": [
-			"In this scenario, grant security_admin through configured automation",
-			"Practically speaking, override dictionary inheritance",
-			"In platform terms, clone production records to sub-prod daily",
-			"From an admin perspective, run recurring scripted logic on a schedule"
+			"onChange",
+			"onLoad only",
+			"Scheduled Job",
+			"Import field mapping step"
 		],
-		"correctIndex": 3,
-		"explanation": "Scheduled jobs automate repeated administrative tasks at defined intervals.",
+		"correctIndex": 0,
+		"explanation": "onChange client scripts fire when a field value changes, enabling dynamic form behavior.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/scheduled-jobs/scheduled-script-execution.html"
+			"https://www.servicenow.com/docs/r/platform-administration/client-scripts.html"
 		]
 	}
 ];

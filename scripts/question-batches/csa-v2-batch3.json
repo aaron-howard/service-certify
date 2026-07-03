@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CSA",
+		"order": 10,
+		"prompt": "What does the System Settings > System Properties module store?",
+		"choices": [
+			"To view and edit instance-wide configuration name-value pairs",
+			"To design catalog client scripts only",
+			"To run Discovery schedules",
+			"To manage CMDB reconciliation rules only"
+		],
+		"correctIndex": 0,
+		"explanation": "System properties store instance configuration values referenced by the platform and applications.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/system-properties.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 11,
+		"prompt": "An administrator wants to change the instance name displayed in the browser title. Where is this configured?",
+		"choices": [
+			"System Properties such as glide.product.name",
+			"The CMDB class manager",
+			"A transform map coalesce field",
+			"The Visual Task Board lane"
+		],
+		"correctIndex": 0,
+		"explanation": "Instance branding and display name are controlled through system properties like glide.product.name.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/system-properties.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 12,
+		"prompt": "Which tool provides a timeline of configuration changes made on the instance for troubleshooting?",
+		"choices": [
+			"System Logs and audit records",
+			"The catalog variable editor only",
+			"A homepage theme gauge",
+			"The MID Server status dashboard"
+		],
+		"correctIndex": 0,
+		"explanation": "System logs and audit tables record configuration and data changes for administrators to review.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/system-logs.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 13,
+		"prompt": "What does activating a plugin typically do on an instance?",
+		"choices": [
+			"Installs application files and enables related modules and functionality",
+			"Deletes all existing incident records",
+			"Converts every table to global scope",
+			"Disables the Application Navigator"
+		],
+		"correctIndex": 0,
+		"explanation": "Plugin activation loads application components and exposes the associated modules and features.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/plugin-management.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 14,
+		"prompt": "Which user interface lets administrators configure the look of the login and banner branding?",
+		"choices": [
+			"System UI > UI Pages and branding properties",
+			"Import Set Transform Maps",
+			"Visual Task Board settings",
+			"CMDB Health dashboard"
+		],
+		"correctIndex": 0,
+		"explanation": "Branding and login appearance are customized through UI configuration and related system properties.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/branding.html"
+		]
+	}
+]

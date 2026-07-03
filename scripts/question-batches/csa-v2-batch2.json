@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CSA",
+		"order": 5,
+		"prompt": "Where can an administrator search across tables, knowledge, and catalog items from a single entry point?",
+		"choices": [
+			"Global search in the platform header",
+			"The MID Server log viewer",
+			"The update set preview only",
+			"The dictionary export tool"
+		],
+		"correctIndex": 0,
+		"explanation": "Global search in the header queries multiple sources (records, knowledge, catalog) from one search box.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/global-search.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 6,
+		"prompt": "How does an administrator install a new application or plugin on the instance?",
+		"choices": [
+			"Activate the plugin or install the application from the application repository",
+			"Copy rows into sys_user manually",
+			"Disable all ACLs first",
+			"Edit the MID Server configuration"
+		],
+		"correctIndex": 0,
+		"explanation": "Plugins and store applications are activated or installed through the application repository and plugin management.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/plugin-management.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 7,
+		"prompt": "Which setting lets a user personalize list columns and form layout without changing global configuration?",
+		"choices": [
+			"Personalize List / Personalize Form (user-level layout)",
+			"Delete all dictionary entries for the table",
+			"Convert the table to global scope",
+			"Disable the application navigator"
+		],
+		"correctIndex": 0,
+		"explanation": "Users can personalize lists and forms for their own view; changes do not alter the global layout for others.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/personalize-list-form.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 8,
+		"prompt": "Which interface is used to view and edit a single record's fields?",
+		"choices": [
+			"Form layout designer",
+			"Import set staging list",
+			"Transform history log",
+			"Update set comparison preview"
+		],
+		"correctIndex": 0,
+		"explanation": "A form displays one record's fields for viewing and editing; lists show many records in tabular format.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/forms.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 9,
+		"prompt": "Which interface displays multiple records from a table in rows and columns?",
+		"choices": [
+			"List view",
+			"Record form view",
+			"Homepage gauge widget",
+			"Field mapping transform"
+		],
+		"correctIndex": 0,
+		"explanation": "List views present multiple records in a table layout with sortable columns and filters.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/lists.html"
+		]
+	}
+]

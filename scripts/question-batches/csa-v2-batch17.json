@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CSA",
+		"order": 80,
+		"prompt": "What is captured in an Update Set?",
+		"choices": [
+			"Configuration changes such as business rules, fields, and UI changes for migration between instances",
+			"End-user password values in plain text",
+			"All transactional incident rows permanently",
+			"MID Server binaries"
+		],
+		"correctIndex": 0,
+		"explanation": "Update sets bundle customizations and configuration for export and import across instances.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/update-sets.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 81,
+		"prompt": "Which update set state indicates it is ready to export to another instance?",
+		"choices": [
+			"Complete",
+			"In Progress state only",
+			"In Progress forever",
+			"Retired automatically"
+		],
+		"correctIndex": 0,
+		"explanation": "An update set must be marked Complete before it can be exported or retrieved on a target instance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/update-sets.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 82,
+		"prompt": "What language is used for scripting in ServiceNow?",
+		"choices": [
+			"JavaScript",
+			"Java",
+			"Python",
+			"COBOL"
+		],
+		"correctIndex": 0,
+		"explanation": "Client scripts, business rules, and most platform scripts use JavaScript (Rhino engine on the server).",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/scripting-in-servicenow.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 83,
+		"prompt": "In a server-side Business Rule script, which object represents the current record?",
+		"choices": [
+			"current",
+			"g_form client object",
+			"window",
+			"document"
+		],
+		"correctIndex": 0,
+		"explanation": "The current GlideRecord in a business rule exposes field values and methods for the record being processed.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/business-rules.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 84,
+		"prompt": "Which server-side API is used to query records in most Business Rules?",
+		"choices": [
+			"GlideRecord",
+			"the GlideSystem API",
+			"GlideAjax",
+			"spModal"
+		],
+		"correctIndex": 0,
+		"explanation": "GlideRecord is the standard server API for database queries and updates in business rules and scripts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/gliderecord.html"
+		]
+	}
+]

@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CSA",
+		"order": 75,
+		"prompt": "What does the admin role provide on an instance?",
+		"choices": [
+			"Broad configuration access including most tables, ACL bypass for roles, and system settings",
+			"Read-only access to Self Service only",
+			"No access to user records",
+			"Automatic deletion of all incidents"
+		],
+		"correctIndex": 0,
+		"explanation": "The admin role grants extensive configuration privileges and satisfies most ACL role requirements.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/roles.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 76,
+		"prompt": "Which field type stores a choice from a predefined list on a form?",
+		"choices": [
+			"Choice (dropdown)",
+			"Journal Input",
+			"HTML",
+			"Password (hashed) only"
+		],
+		"correctIndex": 0,
+		"explanation": "Choice fields present a dropdown of predefined values defined in the dictionary or choice list.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/field-types.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 77,
+		"prompt": "How does ServiceNow encrypt sensitive field values such as passwords?",
+		"choices": [
+			"Using platform encryption on designated field types",
+			"By storing them in plain text in the activity stream",
+			"By emailing them to administrators",
+			"By disabling ACLs"
+		],
+		"correctIndex": 0,
+		"explanation": "Password and other sensitive field types use platform encryption and masking rather than clear-text storage.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/encryption.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 78,
+		"prompt": "What is the purpose of a UI Policy?",
+		"choices": [
+			"Declaratively control field visibility, mandatory, and read-only state on forms",
+			"Import CSV data into staging tables",
+			"Replace all business rules",
+			"Activate plugins automatically"
+		],
+		"correctIndex": 0,
+		"explanation": "UI Policies apply form behavior changes based on conditions without requiring client scripts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/ui-policies.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 79,
+		"prompt": "When does a Business Rule with 'before' timing execute?",
+		"choices": [
+			"Before the record is written to the database",
+			"Only after the user closes the browser",
+			"Only on homepage load",
+			"Only during plugin activation"
+		],
+		"correctIndex": 0,
+		"explanation": "Before business rules run prior to insert, update, or delete so they can modify or abort the transaction.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/business-rules.html"
+		]
+	}
+]
