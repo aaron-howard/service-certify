@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-HR",
+		"order": 20,
+		"prompt": "Which component connects an HR service to its catalog item or record producer for intake?",
+		"choices": [
+			"HR service configuration linking to catalog or producer records",
+			"A CMDB dependency map",
+			"A Discovery credential alias",
+			"A payroll GL code mapping"
+		],
+		"correctIndex": 0,
+		"explanation": "HR services reference catalog items or record producers so Employee Center submissions create the correct HR case or request.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-services-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 21,
+		"prompt": "How do HR topic categories help structure the HR service catalog?",
+		"choices": [
+			"They group related services for browsing, routing, and reporting",
+			"They replace all ACL evaluation on hr_case",
+			"They disable lifecycle event triggers",
+			"They convert cases to incidents automatically"
+		],
+		"correctIndex": 0,
+		"explanation": "Topic categories organize HR services so employees find the right offering and operations can analyze demand by subject area.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-services-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 22,
+		"prompt": "Which table would you inspect to review HR service-to-COE associations?",
+		"choices": [
+			"hr_service and related COE reference fields",
+			"cmdb_rel_ci",
+			"sys_email",
+			"alm_asset"
+		],
+		"correctIndex": 0,
+		"explanation": "HR service records reference a COE so cases route to the correct functional team and appear in COE dashboards.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-centers-of-excellence.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 23,
+		"prompt": "What does activating HR integrations enable in the architecture?",
+		"choices": [
+			"Synchronization of employee and org data with external HR systems of record",
+			"Automatic closure of all open HR cases",
+			"Removal of Employee Center authentication",
+			"Deletion of lifecycle event templates"
+		],
+		"correctIndex": 0,
+		"explanation": "HR integrations keep profiles, positions, and org structures aligned with authoritative HCM sources.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 24,
+		"prompt": "Which design principle supports scalable HR implementations across multiple COEs?",
+		"choices": [
+			"Standardize shared data model and scoped configuration before COE-specific extensions",
+			"Customize exclusively in Global scope for speed",
+			"Disable HR criteria on all services",
+			"Store all HR work notes in public comments"
+		],
+		"correctIndex": 0,
+		"explanation": "A consistent core model with scoped extensions allows COEs to specialize while preserving upgradeability and reporting consistency.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+		]
+	}
+]

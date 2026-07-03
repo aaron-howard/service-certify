@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-HR",
+		"order": 25,
+		"prompt": "Which reporting area helps HR leaders monitor case volume and aging by COE?",
+		"choices": [
+			"HR dashboards and analytics",
+			"Discovery status dashboard",
+			"Software reclamation dashboard",
+			"Firewall rule analytics"
+		],
+		"correctIndex": 0,
+		"explanation": "HR reporting and dashboards visualize throughput, backlog, and service performance segmented by COE and service.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-reporting-and-analytics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 26,
+		"prompt": "What is the benefit of keeping Journey Designer artifacts in the Lifecycle Events scope?",
+		"choices": [
+			"Lifecycle customizations stay isolated from core case tables and integration code",
+			"Journey flows cannot use HR tasks",
+			"Lifecycle events bypass all security controls",
+			"Employees cannot trigger onboarding from Employee Center"
+		],
+		"correctIndex": 0,
+		"explanation": "Separating lifecycle configuration protects core HR case operations while allowing journey teams to iterate safely.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 27,
+		"prompt": "How many COEs may be associated with an HR Service?",
+		"choices": [
+			"1",
+			"5",
+			"10",
+			"Unlimited"
+		],
+		"correctIndex": 0,
+		"explanation": "Each HR service links to exactly one Center of Excellence for routing, ownership, and operational reporting.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-centers-of-excellence.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 28,
+		"prompt": "Which configuration object determines which employees can see or request a specific HR service?",
+		"choices": [
+			"HR criteria",
+			"CMDB dependency rules",
+			"Firewall policy definitions",
+			"Payroll GL mapping tables"
+		],
+		"correctIndex": 0,
+		"explanation": "HR criteria evaluates employee attributes to control eligibility and visibility for HR services on Employee Center.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-criteria.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 29,
+		"prompt": "How do assignment rules support HR case routing?",
+		"choices": [
+			"They assign cases to groups or users based on conditions such as COE, topic, or skills",
+			"They encrypt HR case attachments at rest",
+			"They convert HR cases to incidents",
+			"They delete draft lifecycle events"
+		],
+		"correctIndex": 0,
+		"explanation": "Assignment rules automate dispatch to the correct HR team using case and employee attributes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-routing.html"
+		]
+	}
+]

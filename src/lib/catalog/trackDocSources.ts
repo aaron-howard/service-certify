@@ -409,12 +409,33 @@ export const PHASE8_TRACK_DOC_SOURCES: TrackDocSource[] = [
 	{
 		trackCode: 'CIS-HR',
 		officialName: 'Certified Implementation Specialist - Human Resources',
-		publications: ['employee-service-management'],
+		publications: [
+			'employee-service-management',
+			'human-resources',
+			'employee-center',
+			'platform-security'
+		],
 		domains: [
-			{ name: 'HR cases and lifecycle', weight: '28%', publications: ['employee-service-management'] },
-			{ name: 'Document templates', weight: '24%', publications: ['employee-service-management'] },
-			{ name: 'Employee Center', weight: '24%', publications: ['employee-service-management'] },
-			{ name: 'HR service delivery', weight: '24%', publications: ['employee-service-management'] }
+			{
+				name: 'HR System Architecture',
+				weight: '30%',
+				publications: ['employee-service-management', 'human-resources']
+			},
+			{
+				name: 'Core HR Applications and Employee Center',
+				weight: '30%',
+				publications: ['employee-service-management', 'employee-center', 'human-resources']
+			},
+			{
+				name: 'HR Journeys',
+				weight: '20%',
+				publications: ['employee-service-management', 'human-resources']
+			},
+			{
+				name: 'Platform, Role, and Contextual Security',
+				weight: '20%',
+				publications: ['platform-security', 'employee-service-management', 'human-resources']
+			}
 		]
 	}
 ];

@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-HR",
+		"order": 45,
+		"prompt": "How can HR knowledge articles reduce operational case volume?",
+		"choices": [
+			"Employees resolve common questions via self-service before opening cases",
+			"Knowledge articles auto-close all HR cases nightly",
+			"Knowledge articles remove HR criteria checks",
+			"Knowledge articles disable Employee Center login"
+		],
+		"correctIndex": 0,
+		"explanation": "Published HR knowledge deflects repetitive inquiries by answering policy and how-to questions upfront.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-knowledge-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 46,
+		"prompt": "Which configuration ensures only eligible new hires see an onboarding HR service tile?",
+		"choices": [
+			"HR criteria on the HR service limiting visibility by employee attributes",
+			"Global table ACL delete rule",
+			"Discovery status filter",
+			"Software normalization map"
+		],
+		"correctIndex": 0,
+		"explanation": "Service-level HR criteria restricts catalog visibility to employees who meet defined conditions such as hire status.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-criteria.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 47,
+		"prompt": "What happens when an employee without matching HR criteria attempts to open a restricted HR service?",
+		"choices": [
+			"The service is hidden or blocked based on Can/Cannot Read HR criteria evaluation",
+			"The case is converted to an incident automatically",
+			"The employee receives the admin role",
+			"All HR cases are reassigned globally"
+		],
+		"correctIndex": 0,
+		"explanation": "HR criteria and related read rules prevent unauthorized employees from viewing or requesting restricted services.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-criteria.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 48,
+		"prompt": "Which Employee Center personalization uses user criteria distinct from HR criteria?",
+		"choices": [
+			"Can Read / Cannot Read user criteria on content such as knowledge",
+			"CMDB identification user criteria",
+			"Discovery credential user criteria",
+			"Firewall policy user criteria"
+		],
+		"correctIndex": 0,
+		"explanation": "User criteria controls general content visibility while HR criteria targets HR-specific service eligibility.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-knowledge-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 49,
+		"prompt": "How should HR catalog fulfillment flows notify stakeholders?",
+		"choices": [
+			"Configured notifications on case state changes, tasks, and approvals",
+			"Only manual phone calls outside the platform",
+			"SNMP traps to hr_case",
+			"Discovery emails to all users"
+		],
+		"correctIndex": 0,
+		"explanation": "HR fulfillment flows trigger notifications so employees and agents receive updates as work progresses.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-management.html"
+		]
+	}
+]

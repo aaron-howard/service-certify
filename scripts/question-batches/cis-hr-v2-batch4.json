@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-HR",
+		"order": 15,
+		"prompt": "How does HR Service Delivery sit on the Now Platform architecture?",
+		"choices": [
+			"As scoped applications using platform tables, workflows, security, and portals",
+			"As a standalone database outside the instance",
+			"As a client-only Java applet",
+			"As a MID Server extension without tables"
+		],
+		"correctIndex": 0,
+		"explanation": "HRSD leverages core platform services—tasks, ACLs, catalog, flows—within dedicated HR scoped applications.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 16,
+		"prompt": "Which artifact defines reusable HR letter and form generation tied to case data?",
+		"choices": [
+			"Document Template",
+			"Transform Map",
+			"Identification Rule",
+			"Discovery Schedule"
+		],
+		"correctIndex": 0,
+		"explanation": "Document templates merge HR case and profile fields to produce standardized employee communications.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/document-management-for-hr.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 17,
+		"prompt": "Where are employee personnel documents stored with controlled access in HRSD?",
+		"choices": [
+			"Employee Document Management",
+			"Import Set staging tables",
+			"CMDB baseline tables",
+			"Event Management alerts"
+		],
+		"correctIndex": 0,
+		"explanation": "Employee Document Management centralizes HR files while enforcing confidentiality through HR security controls.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/employee-document-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 18,
+		"prompt": "Which role is commonly assigned to HR agents who work HR cases daily?",
+		"choices": [
+			"sn_hr_core.basic",
+			"itil_admin",
+			"asset",
+			"sn_incident_write"
+		],
+		"correctIndex": 0,
+		"explanation": "HR core roles such as sn_hr_core.basic grant access to HR case workspaces and related HR tables per the HR security model.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 19,
+		"prompt": "What is the function of the hr_case_template table in the HR architecture?",
+		"choices": [
+			"Predefine recurring case fields and handling patterns for consistent fulfillment",
+			"Store encrypted payroll bank details",
+			"Map import set columns to target fields",
+			"Track software license keys"
+		],
+		"correctIndex": 0,
+		"explanation": "Case templates standardize intake and processing for common HR scenarios, reducing variability across COEs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-templates.html"
+		]
+	}
+]

@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-HR",
+		"order": 85,
+		"prompt": "Which audit capability supports reviewing HR case activity for compliance?",
+		"choices": [
+			"Case activity streams, journals, and audit fields on record updates",
+			"CMDB dependency audit only",
+			"Discovery log purge settings",
+			"Software model discard queues"
+		],
+		"correctIndex": 0,
+		"explanation": "HR case history captures communications and field changes needed for investigations and compliance reviews.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 86,
+		"prompt": "When should HR administrators create custom ACLs instead of relying on baseline HR ACLs?",
+		"choices": [
+			"When business policy requires tighter field or table access than the baseline model provides",
+			"For every table in the instance regardless of need",
+			"To remove employee authentication",
+			"To allow unauthenticated case creation"
+		],
+		"correctIndex": 0,
+		"explanation": "Custom ACLs address organization-specific confidentiality requirements while preserving the baseline HR security foundation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 87,
+		"prompt": "How does platform security extend to HR integrations importing employee data?",
+		"choices": [
+			"Integration roles, ACLs, and secured credentials limit who can run and view import jobs",
+			"Integrations bypass all ACL checks by default",
+			"Import sets are always world-readable",
+			"MID Servers require no authentication"
+		],
+		"correctIndex": 0,
+		"explanation": "Secured integration accounts and role restrictions protect employee data during inbound and outbound HR flows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 88,
+		"prompt": "Which approach aligns HR security with privacy regulations such as GDPR?",
+		"choices": [
+			"Apply least privilege, data minimization, and controlled retention on HR records",
+			"Grant all employees access to all HR cases",
+			"Store unrestricted exports on public shares",
+			"Disable journaling to reduce storage"
+		],
+		"correctIndex": 0,
+		"explanation": "Privacy programs combine role design, field protection, and retention policies to safeguard personal employee data.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 89,
+		"prompt": "What is a long-term benefit of combining platform, role, and contextual HR security?",
+		"choices": [
+			"Consistent protection of sensitive HR data while enabling scalable self-service and operations",
+			"Elimination of all HR approvals",
+			"Removal of COE routing requirements",
+			"Automatic public posting of case details"
+		],
+		"correctIndex": 0,
+		"explanation": "Layered security lets organizations scale HRSD while maintaining confidentiality, auditability, and policy compliance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+		]
+	}
+]
