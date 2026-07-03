@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-SPM",
+		"order": 20,
+		"prompt": "A program manager sees that soft-booked resources on a resource plan differ from confirmed assignments on the project. Which action clarifies committed staffing?",
+		"choices": [
+			"Convert soft allocations to hard assignments after approval",
+			"Delete the cost plan and recreate expense lines manually",
+			"Move the demand back to Draft to reset intake scoring",
+			"Archive all idea records submitted through the portal"
+		],
+		"correctIndex": 0,
+		"explanation": "Resource plans may include soft bookings during planning; hard assignments confirm committed staff once funding and scheduling are approved.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-assignment.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 21,
+		"prompt": "Which Resource Management Workspace view helps identify when the same person is assigned more hours than their schedule allows?",
+		"choices": [
+			"Overallocation report highlighting hours exceeding capacity",
+			"Demand ranking board sorted by business value score",
+			"Idea funnel chart showing submissions by category",
+			"Cost plan variance table grouped by expense type"
+		],
+		"correctIndex": 0,
+		"explanation": "Overallocation views compare assigned hours to available capacity from resource schedules, flagging staffing conflicts early.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-management-workspace.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 22,
+		"prompt": "An implementation specialist configures default working hours for all resources in a business unit. Which object establishes the standard weekly availability pattern?",
+		"choices": [
+			"Resource schedule template applied to employee records",
+			"Rate model defining hourly charges by resource role",
+			"Budget plan distributing funding across portfolios",
+			"Demand assessment template scoring intake submissions"
+		],
+		"correctIndex": 0,
+		"explanation": "Resource schedule templates set default working time patterns that roll up to individual employee schedules for capacity calculations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-schedules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 23,
+		"prompt": "A portfolio director asks why approved projects keep slipping despite sufficient budget. Which resource metric should be reviewed first?",
+		"choices": [
+			"Utilization and overallocation across shared roles on active investments",
+			"Number of Capex expense lines on the fiscal year cost plan",
+			"Count of ideas in the portal awaiting employee votes",
+			"Demand records in the Cancelled state from prior quarters"
+		],
+		"correctIndex": 0,
+		"explanation": "Delivery delays often trace to staffing bottlenecks; reviewing utilization and overallocation reveals whether capacity matches approved work.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/capacity-planning.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 24,
+		"prompt": "Which statement accurately describes the relationship between a resource plan and resource assignments on an investment?",
+		"choices": [
+			"The resource plan defines required roles and hours; assignments commit specific people",
+			"The resource plan replaces cost plans for all labor financial tracking",
+			"Assignments are optional when a resource plan exists on the investment",
+			"Resource plans are created only after a demand reaches the Closed state"
+		],
+		"correctIndex": 0,
+		"explanation": "Resource plans specify staffing needs by role and period, while assignments name the individuals or groups fulfilling that planned effort.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-management-overview.html"
+		]
+	}
+]

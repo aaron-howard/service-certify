@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-SPM",
+		"order": 45,
+		"prompt": "After a qualified demand passes portfolio approval, which conversion paths does Demand Management support?",
+		"choices": [
+			"Promote to project, enhancement, change, or defect record",
+			"Convert exclusively to an incident routed to the service desk",
+			"Archive the demand and delete all linked cost plan entries",
+			"Auto-create an agile epic without portfolio or program assignment"
+		],
+		"correctIndex": 0,
+		"explanation": "Demand Management promotes approved demands into execution records such as projects, enhancements, changes, or defects depending on the intake category.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/demand-management/c_DemandManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 46,
+		"prompt": "A demand manager delegates feasibility analysis to a subject matter expert. Which object tracks that delegated assessment work?",
+		"choices": [
+			"Demand task assigned to a specialized resource for evaluation",
+			"Resource plan on the portfolio with soft-booked hours only",
+			"Idea portal submission awaiting employee votes and comments",
+			"Expense line on the cost plan classified as capital expenditure"
+		],
+		"correctIndex": 0,
+		"explanation": "Demand tasks let managers delegate feasibility, cost, and effort assessments to subject matter experts while the demand remains in the intake pipeline.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/demand-management/c_DemandManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 47,
+		"prompt": "A portfolio team compares demand items by strategic value and implementation effort before a funding meeting. Which Demand Management visualization supports that comparison?",
+		"choices": [
+			"Bubble chart configured with assessment scoring dimensions",
+			"Gantt schedule showing predecessor links between project tasks",
+			"Resource heatmap highlighting overallocation by role and week",
+			"PMO dashboard pipeline tab listing upcoming demand dates"
+		],
+		"correctIndex": 0,
+		"explanation": "Demand Management bubble charts plot assessment dimensions such as value and effort so portfolio teams compare intake items visually during prioritization.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/demand-management/c_DemandManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 48,
+		"prompt": "A project manager needs to plan tasks, review financials, and track RIDAC items in one interface. Which workspace should they use?",
+		"choices": [
+			"Project Workspace as the interactive hub for project delivery",
+			"Idea Portal for employee submissions and evaluation feedback",
+			"Resource Management Workspace heatmap for staffing bandwidth review",
+			"Time Sheet Portal for weekly hour entry and approval routing"
+		],
+		"correctIndex": 0,
+		"explanation": "Project Workspace centralizes planning, financials, resources, RIDAC, status reports, and analytics so project managers work from a single delivery hub.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/project-workspace/project-workspace-landing-page.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 49,
+		"prompt": "A newly created project enters the Initiating state before execution work begins. Which configuration governs those lifecycle transitions?",
+		"choices": [
+			"Project state model defining allowed workflow stage transitions",
+			"Time sheet policy specifying weekly hour entry requirements",
+			"Rate model converting planned labor hours to monetary amounts",
+			"Lens configuration selecting planning items for portfolio plans"
+		],
+		"correctIndex": 0,
+		"explanation": "Project and project task states control lifecycle progression through initiating, planning, executing, and closed stages with defined transitions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/project-management/customize-project-task-states.html"
+		]
+	}
+]

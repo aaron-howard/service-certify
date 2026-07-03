@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-SPM",
+		"order": 75,
+		"prompt": "A consultant logs non-project hours for internal meetings and training sessions. Which configuration categorizes that time?",
+		"choices": [
+			"Project time category for non-task entries such as meetings or training",
+			"Resource schedule template defining regional holiday calendars",
+			"Demand playbook stage gate requiring stakeholder sign-off",
+			"Budget allocation attribute set to expense_type at instance level"
+		],
+		"correctIndex": 0,
+		"explanation": "Project time categories classify non-task time such as meetings and training on time cards so labor reporting captures all worked hours accurately.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/time-card-management/worker-portal.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 76,
+		"prompt": "A user's Time Sheet Portal does not display the Rate type column. Which time sheet policy option controls that visibility?",
+		"choices": [
+			"Allow multiple rate types option on the assigned time sheet policy",
+			"Enable budget allocation property on investment planning records",
+			"Modify existing lens configuration in Portfolio Planning Workspace",
+			"Create new planning item table for custom roadmap entities"
+		],
+		"correctIndex": 0,
+		"explanation": "The Rate type column appears in Time Sheet Portal only when Allow multiple rate types is selected on the user's time sheet policy.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/time-card-management/worker-portal.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 77,
+		"prompt": "An employee's time sheet week begins on Friday instead of Monday. Which policy field determines that calendar layout?",
+		"choices": [
+			"Week starts on field in the user's assigned time sheet policy",
+			"Planned start date on the predecessor project task relationship",
+			"Investment type on the demand form in the intake pipeline",
+			"Phase field on the program record managing child projects"
+		],
+		"correctIndex": 0,
+		"explanation": "The Week starts on field in a time sheet policy sets the first day displayed in the Time Sheet section of Time Sheet Portal.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/time-card-management/worker-portal.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 78,
+		"prompt": "A resource manager approves submitted hours after reviewing weekly variances. Which workflow step completes that governance action?",
+		"choices": [
+			"Time sheet approval routing defined by the time sheet policy approvers",
+			"Demand promotion converting a qualified record to a new project",
+			"Baseline comparison selecting two schedule snapshots in the workspace",
+			"Scenario planning tab comparing financial outcomes across simulations"
+		],
+		"correctIndex": 0,
+		"explanation": "Time sheet policies define approvers and routing rules so submitted time sheets move through approval, rejection, or recall workflows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/time-card-management/worker-portal.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 79,
+		"prompt": "A product manager wants to prioritize demands and projects from a single planning workspace using waterfall delivery. Which application supports that approach?",
+		"choices": [
+			"Portfolio Planning Workspace for traditional portfolio planning and roadmaps",
+			"Vulnerability Response workspace for remediation task assignment",
+			"Security Incident Response playbook for threat containment workflows",
+			"Hardware Asset Management dashboard for disposal certificate tracking"
+		],
+		"correctIndex": 0,
+		"explanation": "Portfolio Planning Workspace enhances traditional project and product portfolio management with lenses, roadmaps, and planning items for waterfall delivery.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/portfolio-planning/demand-form-ppw.html"
+		]
+	}
+]

@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-VR",
+		"order": 65,
+		"prompt": "Which VR automation approach helps teams close the loop after patch deployment completes?",
+		"choices": [
+			"Bidirectional status updates from patch tools that confirm verification on vulnerable items",
+			"One-way export of vulnerability lists with no return status from execution tools",
+			"Weekly manual spreadsheet reconciliation as the only feedback channel for closure",
+			"Disabling all change management integration plugins on production instances permanently"
+		],
+		"correctIndex": 0,
+		"explanation": "Return status from patch orchestration keeps vulnerability records accurate and supports reliable close-out decisions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-workflows.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 66,
+		"prompt": "Which control prevents vulnerability exceptions from becoming unmanaged accepted risk over time?",
+		"choices": [
+			"Mandatory expiration dates with scheduled review and reapproval workflows",
+			"Unlimited auto-renewal of any approved exception without documented justification",
+			"Removal of approver roles so requesters can self-approve critical findings",
+			"Archiving exception records immediately after initial submission before any review"
+		],
+		"correctIndex": 0,
+		"explanation": "Time-bounded exceptions with review cadence ensure leadership reassesses risk instead of silently extending exposure.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/vulnerability-response/vulnerability-exceptions.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 67,
+		"prompt": "Which scheduled job behavior helps VR teams identify duplicate vulnerable items attached to remediation tasks?",
+		"choices": [
+			"A scheduled job scans remediation tasks for duplicate VIs and flags them for resolution",
+			"A nightly job deletes all closed vulnerabilities older than one day from history tables",
+			"A weekly job disables every active assignment rule until manually re-enabled by an admin",
+			"A daily job removes CMDB CIs that have not been scanned during the past hour"
+		],
+		"correctIndex": 0,
+		"explanation": "Duplicate VI detection on remediation tasks prevents inconsistent state and redundant work across grouped findings.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-task-rules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 68,
+		"prompt": "What is the role of state change approval records in VR exception and false positive workflows?",
+		"choices": [
+			"They capture approver decisions before vulnerable items change to deferred or closed states",
+			"They replace vulnerability calculators when scoring critical internet-facing asset findings",
+			"They import NVD CVE feeds when the primary integration fails during ingestion cycles",
+			"They map scanner credentials to MID Server capability definitions during discovery"
+		],
+		"correctIndex": 0,
+		"explanation": "State change approvals enforce governance checkpoints before disposition changes take effect on vulnerable items.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/vulnerability-response/vulnerability-exceptions.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 69,
+		"prompt": "Which indicator suggests VR automation is configured effectively across the remediation lifecycle?",
+		"choices": [
+			"Findings flow from intake through rules to assigned remediation tasks with minimal manual rework",
+			"Every finding requires manual reassignment regardless of classification or ownership data",
+			"Exception backlogs grow without review while critical items remain deferred indefinitely",
+			"Scanner imports succeed but no assignment or grouping rules execute on new records"
+		],
+		"correctIndex": 0,
+		"explanation": "Effective automation reduces handoffs and keeps newly imported findings progressing through governed workflows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-workflows.html"
+		]
+	}
+]

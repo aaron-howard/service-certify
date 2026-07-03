@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 50,
+		"prompt": "Your organization adopts Smart Assessment Engine questionnaires for third-party due diligence. Which TPRM capability does SAE primarily enhance?",
+		"choices": [
+			"Structured section-based questionnaires with normalized scoring across assessments",
+			"Automatic deletion of vendor contacts when assessments reach Draft state",
+			"Replacement of all GRC risk registers with procurement requisition records",
+			"Direct migration of CMDB discovery results into assessment metrics"
+		],
+		"correctIndex": 0,
+		"explanation": "SAE adds section navigation, template reuse, score normalization, and portal support for modern assessment delivery.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-sae-using.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 51,
+		"prompt": "Multiple engagement assessments feed a vendor-level risk rating. Which scoring configuration defines how those values aggregate?",
+		"choices": [
+			"Third-party risk scoring rule with component criteria using MIN, MAX, or AVG aggregation",
+			"Incident assignment rule that routes P1 tickets to the security operations center",
+			"Catalog client script that calculates item price based on quantity variables",
+			"Discovery schedule that determines MID Server selection per IP subnet"
+		],
+		"correctIndex": 0,
+		"explanation": "Scoring rules group engagements or third parties and apply criteria tables that aggregate assessment scores with configured methods.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/vendor-ratings-scoring.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 52,
+		"prompt": "Which records are core to storing an external third-party assessment and its answered questionnaire instance? (Choose two.)",
+		"choices": [
+			"sn_vdr_risk_asmt_assessment external assessment header record",
+			"asmt_assessment_instance questionnaire response instance linked to the assessment",
+			"alm_hardware asset record used for warranty tracking",
+			"sn_publications_publication catalog for knowledge article publishing"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"questionType": "multi",
+		"explanation": "External assessments live on sn_vdr_risk_asmt_assessment while asmt_assessment_instance stores the completed questionnaire responses.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 53,
+		"prompt": "Assessors want deficient control responses to automatically create tracked follow-up work. Which configuration supports post-assessment automation?",
+		"choices": [
+			"Issue-generation rule on the questionnaire template triggering issues or tasks",
+			"UI action on the incident table that closes all related problem records",
+			"Data policy that masks vendor names on unrelated company records",
+			"Scheduled report export that emails CSV files without creating records"
+		],
+		"correctIndex": 0,
+		"explanation": "Issue-generation rules on SAE questionnaire templates can create issues or workflow tasks when assessment results meet defined conditions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-sae-using.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 54,
+		"prompt": "An assessor reviews a questionnaire organized by control domain sections such as access management and business continuity. Which structure defines those sections?",
+		"choices": [
+			"asmt_metric_category records grouped under the questionnaire template",
+			"sn_cmp_order_item rows generated from cloud catalog requests",
+			"sc_req_item variables captured on service catalog submissions",
+			"sysapproval_approver entries for change advisory board voting"
+		],
+		"correctIndex": 0,
+		"explanation": "Categories under asmt_metric_type organize metrics into control domains that assessors and vendors navigate during completion.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	}
+]

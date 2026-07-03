@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 5,
+		"prompt": "Which TPRM lifecycle stage follows initial due diligence approval and focuses on sending questionnaires to evaluate vendor controls?",
+		"choices": [
+			"Assess third-party risk by distributing questionnaires and collecting structured control evidence from vendors",
+			"Deactivate the vendor record and remove all associated contacts from the third-party portfolio immediately",
+			"Convert the engagement into a hardware asset and assign a depreciation schedule for capital tracking",
+			"Route the vendor to the employee onboarding catalog for internal badge provisioning and desk assignment"
+		],
+		"correctIndex": 0,
+		"explanation": "After due diligence initiation, the assess stage sends questionnaires and evaluates vendor responses to determine control effectiveness and residual risk.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-assessing-tpr.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 6,
+		"prompt": "An organization wants ongoing visibility into vendor posture between full assessment cycles. Which TPRM capability addresses this requirement?",
+		"choices": [
+			"Monitor third-party risk using continuous monitoring signals, risk intelligence scores, and event-driven rules",
+			"Disable all vendor portal access until the next annual contract renewal date arrives on the calendar",
+			"Export vendor records to offline spreadsheets and review them manually once every five years",
+			"Convert monitoring alerts into employee HR cases routed through the internal service catalog portal"
+		],
+		"correctIndex": 0,
+		"explanation": "TPRM monitoring ingests external risk intelligence and internal signals to detect posture changes and trigger reassessment or remediation between periodic assessments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-monitoring-tpr.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 7,
+		"questionType": "multi",
+		"prompt": "Which two roles are commonly involved in the TPRM due diligence approval workflow after questionnaire responses are reviewed? (Choose two.)",
+		"choices": [
+			"Third-party risk manager who oversees the due diligence process and approves or rejects requests",
+			"Third-party risk approver who validates assessment outcomes at configured approval levels",
+			"Field service dispatcher who assigns mobile technicians to on-site vendor hardware repairs",
+			"Catalog administrator who publishes employee-facing service catalog items for internal requests"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Due diligence approval workflows involve TPR managers and configured approvers who review questionnaire results and process outcomes before granting or denying engagement approval.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-approving.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 8,
+		"prompt": "A contract negotiator must incorporate risk findings into vendor agreements. Which TPRM workspace process supports this activity?",
+		"choices": [
+			"Contract risk process stage where negotiators add contractual provisions addressing identified third-party risks",
+			"Incident matching rules that automatically merge duplicate vendor tickets into a single problem record",
+			"Discovery schedules that scan vendor network segments and populate CMDB configuration item records",
+			"Employee onboarding workflows that provision badges and desk assignments for new internal hires"
+		],
+		"correctIndex": 0,
+		"explanation": "The contract risk process stage enables third-party risk contract negotiators to embed control requirements and remediation terms into vendor agreements.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-ws-contract-risk-process.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 9,
+		"prompt": "Which table stores the primary third-party organization records managed in the TPRM data model?",
+		"choices": [
+			"Company table (core_company) representing third-party organizations in the vendor portfolio",
+			"Incident table (incident) capturing IT service disruption tickets raised by internal employees",
+			"Change Request table (change_request) tracking infrastructure deployment approval workflows",
+			"Task table (task) storing generic work items unrelated to vendor risk assessment activities"
+		],
+		"correctIndex": 0,
+		"explanation": "Third-party organizations are stored on the Company table; engagements, contacts, assessments, and issues reference these company records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	}
+]

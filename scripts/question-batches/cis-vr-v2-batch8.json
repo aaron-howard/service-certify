@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-VR",
+		"order": 35,
+		"prompt": "Microsoft TVM is configured with both full and delta machine vulnerability imports. What is the intended purpose of the delta import schedule?",
+		"choices": [
+			"Retrieve new, fixed, and updated vulnerability detections since the last full organization import",
+			"Replace the CMDB with a static export of TVM machine records that disables CI lookup rules",
+			"Import only CPE strings while excluding all CVE identifiers from the TVM recommendation API",
+			"Create change requests for every TVM machine record regardless of open vulnerability status"
+		],
+		"correctIndex": 0,
+		"explanation": "The MS TVM delta machines vulnerabilities integration retrieves changes since the full import, including new, remediated, and updated detections across the estate.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/mstvm-integration.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 36,
+		"prompt": "A Tenable.io administrator validates that plugin CPE data populates after imports complete. Where does Vulnerability Response store CPE associations for Tenable third-party entries?",
+		"choices": [
+			"CPE values populate related Common Platform Enumeration data on third-party vulnerability entries",
+			"CPE strings are stored only on HR employee profiles and cannot appear on vulnerability records",
+			"CPE imports bypass the Third-Party Vulnerability Entries table and write directly to incidents",
+			"CPE data replaces configuration item names in the CMDB during every Tenable integration run"
+		],
+		"correctIndex": 0,
+		"explanation": "Tenable integrations populate CPE associations on third-party vulnerability entries, supporting software identification and enrichment for prioritization.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/tenableIntegration.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 37,
+		"prompt": "After activating the NIST NVD CVE integration, an administrator needs to confirm the initial library load succeeded before enabling Qualys. Which task should they perform first?",
+		"choices": [
+			"Review NVD integration import run status to verify the scheduled CVE job completed successfully",
+			"Delete all CMDB server CIs so Qualys can recreate authoritative asset records from scan data",
+			"Disable VR.System on integration records to allow guest users to monitor import log attachments",
+			"Convert every NVD entry into a change request before third-party scanner connectors are activated"
+		],
+		"correctIndex": 0,
+		"explanation": "Administrators verify successful NVD data import by reviewing integration run status before importing third-party scanner detections that reference NVD libraries.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/nvd-vuln-integration.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 38,
+		"prompt": "Qualys imports a detection for an IP address with no matching CI in the CMDB. Which statement describes the resulting vulnerable item relationship?",
+		"choices": [
+			"A vulnerable item is created with an unmatched CI placeholder until lookup rules or CMDB updates reconcile it",
+			"No vulnerable item is created until an agent manually creates a hardware asset record in procurement",
+			"The detection is stored only as an email attachment and never inserted into Vulnerability Response tables",
+			"The Qualys QID is rejected because third-party entries require a pre-existing authorized CI match"
+		],
+		"correctIndex": 0,
+		"explanation": "VR creates vulnerable items even when CI lookup fails, associating them with unmatched CIs until reconciliation or CMDB updates provide a definitive configuration item.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/mstvm-integration.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 39,
+		"prompt": "An engineer compares an NVD vulnerability entry with a Qualys-sourced vulnerable item on the same server. How should they interpret the two records?",
+		"choices": [
+			"The NVD entry defines the CVE in the authoritative library; the vulnerable item is the flaw detected on that CI",
+			"The NVD entry and vulnerable item are duplicate records that must never coexist for one CVE on one host",
+			"The vulnerable item defines global CVE metadata while the NVD entry stores only the server hostname",
+			"The NVD entry replaces the vulnerable item once Qualys imports complete and deletes all VI history"
+		],
+		"correctIndex": 0,
+		"explanation": "NVD library entries describe the vulnerability itself, while vulnerable items represent a specific detection of that flaw on a configuration item in the environment.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/nvd-vuln-integration.html"
+		]
+	}
+]

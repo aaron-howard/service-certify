@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 75,
+		"prompt": "Approvers receive email notification that a due diligence request requires their decision. Which state is the request in when they act?",
+		"choices": [
+			"Awaiting approval while assigned approvers review questionnaire and document evidence",
+			"New vendor onboarding before any assessments have been created",
+			"Retired template state on archived questionnaire definitions",
+			"Closed skipped on assessments that were never sent to the vendor"
+		],
+		"correctIndex": 0,
+		"explanation": "Requesting approval moves the due diligence record to Awaiting approval and notifies assigned approvers to review submitted evidence.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-approving.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 76,
+		"prompt": "Who must hold appropriate TPRM authority to approve or reject a due diligence request in Vendor Management Workspace?",
+		"choices": [
+			"Member of the Third-party risk manager group with sn_vdr_risk_asmt.vendor_risk_manager",
+			"Any authenticated user with the snc_read_only role across all scopes",
+			"Catalog fulfiller with wf_workflow_admin on service catalog items",
+			"Discovery administrator with discovery_admin on configuration items"
+		],
+		"correctIndex": 0,
+		"explanation": "Due diligence approvals require TPR manager group membership so authorized stakeholders can accept or reject the request.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-approving.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 77,
+		"prompt": "A due diligence owner attempts to request approval while one external assessment remains open. What prerequisite blocks that action?",
+		"choices": [
+			"All linked assessments must be closed before entering Ready for TPRM approval",
+			"Every vendor contact must hold the security_admin role",
+			"The company record vendor flag must be set to false",
+			"All CMDB relationships must be deleted from the engagement"
+		],
+		"correctIndex": 0,
+		"explanation": "The due diligence request enters Ready for TPRM approval only after all assessments in the package have been closed.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-approving.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 78,
+		"prompt": "An auditor asks whether a resolved Third-party Risk Issue still appears in active issue queues. How does TPRM treat issues in the Closed state?",
+		"choices": [
+			"Third-party Risk Issues in Closed state are inactive and excluded from active work queues",
+			"Closed issues remain the highest priority in all open issue dashboards",
+			"Closed issues automatically reopen every thirty days without user action",
+			"Closed issues convert to change requests pending CAB review"
+		],
+		"correctIndex": 0,
+		"explanation": "Issues on sn_vdr_risk_asmt_issue become inactive when moved to Closed, removing them from active remediation tracking.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 79,
+		"prompt": "A new third-party risk issue is created from a failed control on an assessment. Which initial lifecycle state does it typically enter?",
+		"choices": [
+			"New before the assessor analyzes findings and defines remediation actions",
+			"Closed complete immediately upon record insert",
+			"Implementing change state on the standard change record",
+			"Retired archival state on the questionnaire template"
+		],
+		"correctIndex": 0,
+		"explanation": "Third-party risk issues begin in New and progress through analysis, optional vendor collaboration, review, and closure.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-workflow-in-workspace.html"
+		]
+	}
+]

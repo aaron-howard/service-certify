@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-VR",
+		"order": 30,
+		"prompt": "During a Tenable import, asset observations arrive before vulnerable items are created for matched configuration items. Which record type represents the pre-VI asset match state?",
+		"choices": [
+			"Discovered items that store ingested asset observations matched or unmatched to CMDB CIs",
+			"Problem records that replace all vulnerable items when multiple scanners report the same CVE",
+			"Change tasks that automatically implement patches before analysts review third-party entries",
+			"Catalog tasks that fulfill hardware refresh requests triggered by every open detection"
+		],
+		"correctIndex": 0,
+		"explanation": "Discovered items represent scanner-ingested asset observations that are matched to CIs through lookup rules before or alongside vulnerable item creation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/tenableIntegration.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 31,
+		"prompt": "CMDB updates add authoritative server records that should replace stale unmatched CIs on existing discovered items. Which action reapplies matching without waiting for a retired scheduled job?",
+		"choices": [
+			"Reapply Lookup Rules on filtered discovered items to reconcile unmatched CIs with updated CMDB data",
+			"Delete all third-party vulnerability entries so the next scanner cycle rebuilds the CMDB from scratch",
+			"Convert discovered items into knowledge articles and disable all CI lookup rules permanently",
+			"Run a full Qualys scan before any CMDB reconciliation because lookup rules cannot be re-run"
+		],
+		"correctIndex": 0,
+		"explanation": "Starting in recent VR releases, administrators can reapply CI lookup rules on selected discovered items to reconcile unmatched CIs when CMDB data changes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/reapply-reconcile-unmatched-discovered-items.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 32,
+		"prompt": "Multiple scanner sources report the same CVE on overlapping assets with inconsistent field mappings. Which Security Operations integration practice reduces duplicate remediation effort?",
+		"choices": [
+			"Use vulnerability data frameworks with import sets and transforms rather than custom one-off scripts",
+			"Disable all ACLs on vulnerable item tables so every integration user can delete peer records",
+			"Store raw scanner XML only in attachments and avoid creating vulnerable item records entirely",
+			"Route every detection to Incident Management and skip Vulnerability Response normalization"
+		],
+		"correctIndex": 0,
+		"explanation": "Security Operations integration guidance recommends vulnerability data frameworks, import sets, and transforms to normalize and correlate multi-source scan data consistently.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-operations/c_BestPractisesIntegrations.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 33,
+		"prompt": "A VR administrator plans assignment rules based on Qualys host tags imported during asset integrations. What prerequisite does Rapid7 and Qualys guidance specify for tag-driven rules?",
+		"choices": [
+			"Run the asset list integration to import host tags before creating assignment or remediation task rules",
+			"Deactivate NVD integrations permanently because host tags replace all CVE-based prioritization logic",
+			"Convert host tags into HR department codes before any vulnerable items can reference CMDB CIs",
+			"Install Field Service Management because host tags are available only on work order task records"
+		],
+		"correctIndex": 0,
+		"explanation": "Scanner integration setup checklists require asset or host tag imports before creating Vulnerability Response assignment or remediation rules that depend on tag values.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/install-and-configure-r7.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 34,
+		"prompt": "An analyst traces a Qualys QID from a vulnerable item to the third-party library and then to NVD. What does this drill-down demonstrate about VR data enrichment?",
+		"choices": [
+			"Vendor-specific identifiers chain to authoritative CVE metadata when NVD integration data is present",
+			"Qualys library entries cannot reference NVD CVE records under any supported integration scenario",
+			"NVD entries are deleted automatically whenever a third-party scanner import completes successfully",
+			"Third-party entries store CMDB serial numbers instead of vulnerability identifiers from any library"
+		],
+		"correctIndex": 0,
+		"explanation": "Third-party library entries such as Qualys QIDs reference CVE records in the NVD library, providing enriched context on vulnerable items after NVD import.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/nvd-vuln-integration.html"
+		]
+	}
+]

@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-VR",
+		"order": 25,
+		"prompt": "A Rapid7 scan imports a detection for a host that cannot be matched to an existing CMDB configuration item. What does Vulnerability Response create in this scenario?",
+		"choices": [
+			"An unmatched configuration item associated with the new vulnerable item until reconciliation succeeds",
+			"A closed remediation task that requires no further action from IT operations or security teams",
+			"A hardware asset lease record in procurement that replaces the need for CMDB identification",
+			"A major security incident automatically escalated to the CISO without vulnerability analyst review"
+		],
+		"correctIndex": 0,
+		"explanation": "When CI lookup rules cannot match scanner asset data, VR creates an unmatched CI with the vulnerable item so analysts can reconcile later when CMDB data is updated.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/mstvm-integration.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 26,
+		"prompt": "Leadership wants imported findings prioritized using exploit availability and threat context in addition to CVSS scores. Which intake enhancement supports this requirement?",
+		"choices": [
+			"Threat and exploit intelligence enrichment applied to ingested vulnerability and third-party entry data",
+			"Manual reclassification of every incident priority field after each nightly scanner export completes",
+			"Deletion of NVD records so only proprietary scanner severity labels remain on vulnerable items",
+			"Conversion of all vulnerable items into knowledge articles without retention of detection metadata"
+		],
+		"correctIndex": 0,
+		"explanation": "Vulnerability Response enriches ingested data with exploit, threat intelligence, risk, and business context to support risk-based prioritization beyond raw scanner severity.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 27,
+		"prompt": "Remediation owners complain that scanner imports omit vendor fix guidance on vulnerable item forms. Which system property enables parsing solution text from third-party integrations?",
+		"choices": [
+			"sn_vul.populate_scanner_solutions to parse remediation solution content from scanner integrations",
+			"glide.ui.autoclose.time to automatically close resolved incidents after the configured interval",
+			"com.snc.sandbox.enable to route all VR imports through an isolated mid-server sandbox only",
+			"sn_hr_core.batch_size to limit employee onboarding case creation during VR import windows"
+		],
+		"correctIndex": 0,
+		"explanation": "The sn_vul.populate_scanner_solutions property controls parsing of solution guidance supplied by supported third-party scanner integrations into VR records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 28,
+		"prompt": "Solution Management for Vulnerability Response is installed and the team must configure vendor fix content from Red Hat and Microsoft MSRC. Where is this configured in Setup Assistant?",
+		"choices": [
+			"Solution Integrations section below Scanner Integrations for supported vulnerability solution providers",
+			"Agent Workspace chat queue routing for external customer messaging channel escalations",
+			"Discovery classification criteria for identifying non-computer CI types such as racks",
+			"Employee Center onboarding checklist templates for new hire equipment provisioning tasks"
+		],
+		"correctIndex": 0,
+		"explanation": "When Solution Management is installed, Setup Assistant exposes Solution Integrations to configure providers such as Red Hat and Microsoft Security Response Center.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 29,
+		"prompt": "An administrator reviews NVD integration records and notices a default run-as user on each scheduled job. Which value should remain unchanged per product guidance?",
+		"choices": [
+			"VR.System as the configured run-as user for NVD and related vulnerability integration jobs",
+			"admin as a mandatory override on every integration so imports bypass all ACL restrictions",
+			"guest as the run-as user so unauthenticated scanner payloads can insert vulnerable items",
+			"itil as the run-as user because NVD jobs create standard ITIL incident records exclusively"
+		],
+		"correctIndex": 0,
+		"explanation": "NVD integration documentation specifies VR.System as the default run-as user for integration records and advises administrators not to change that value.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/nvd-vuln-integration.html"
+		]
+	}
+]

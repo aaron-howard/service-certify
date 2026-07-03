@@ -1,0 +1,85 @@
+[
+	{
+		"trackCode": "CIS-VR",
+		"order": 45,
+		"prompt": "When multiple remediation target rules could match a vulnerable item, how does Vulnerability Response determine which rule applies?",
+		"choices": [
+			"Match First evaluates rules in sequence and applies the first matching rule by priority order",
+			"Random selection among all active rules assigns deadlines with equal probability weighting",
+			"Every matching rule applies simultaneously and overwrites prior results regardless of sequence",
+			"Only rules authored by users holding sn_vul.vulnerability_admin execute on existing records"
+		],
+		"correctIndex": 0,
+		"explanation": "Match First execution stops at the first satisfied rule, giving administrators explicit control over which target date logic wins.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-target-rules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 46,
+		"prompt": "Which workspace is designed for vulnerability managers to monitor exposure, prioritize work, and drive remediation efforts?",
+		"choices": [
+			"Vulnerability Manager Workspace with watch topics and remediation effort views",
+			"IT Remediation Workspace presenting prioritized remediation tasks to assigned owners",
+			"Employee Center portal where end users browse catalog items and submit requests",
+			"Change Management CAB workbench used to review and authorize scheduled changes"
+		],
+		"correctIndex": 0,
+		"explanation": "The Vulnerability Manager Workspace targets vulnerability program owners with strategic monitoring and prioritization capabilities.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/vulnerability-response/vulnerability-manager-workspace.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 47,
+		"prompt": "An IT engineer must view and update remediation tasks assigned to their group in the IT Remediation Workspace. Which role should be assigned?",
+		"choices": [
+			"sn_vul.remediation_owner",
+			"sn_vul.vulnerability_admin",
+			"sn_customerservice.consumer",
+			"sn_change.change_manager"
+		],
+		"correctIndex": 0,
+		"explanation": "The sn_vul.remediation_owner persona role grants users access to remediation tasks and vulnerable items assigned to them or their groups in the IT Remediation Workspace.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/vulnerability-response/vr-persona-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 48,
+		"prompt": "Vulnerability calculators combine risk factors into a score on each vulnerable item. Which inputs are commonly evaluated?",
+		"choices": [
+			"Severity, exploitability, asset business criticality, and classification values from intake",
+			"Monthly count of knowledge articles published in the service catalog by category",
+			"Total hardware asset purchase cost pulled from procurement contract line items",
+			"MID Server heartbeat interval configured on discovery schedules for each subnet"
+		],
+		"correctIndex": 0,
+		"explanation": "Calculators weight technical and business context so prioritization reflects both exploit potential and operational impact.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/vulnerability-response/vulnerability-calculators.html"
+		]
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 49,
+		"prompt": "Which VR configuration types drive automated triage and routing on vulnerable items? (Choose two.)",
+		"choices": [
+			"Classification rules applied during vulnerability entry ingestion",
+			"Assignment rules that route vulnerable items to remediation groups",
+			"Password expiration business rules",
+			"LDAP synchronization scheduled jobs"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"questionType": "multi",
+		"explanation": "Classification rules categorize intake data and assignment rules route vulnerable items to remediation groups; password and LDAP jobs are unrelated platform functions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/vulnerability-response/classification-rules.html",
+			"https://www.servicenow.com/docs/r/vulnerability-response/assignment-rules.html"
+		]
+	}
+]
