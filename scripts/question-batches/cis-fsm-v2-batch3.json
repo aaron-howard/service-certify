@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-FSM",
+		"order": 10,
+		"prompt": "Where do you enable the qualification requirement so new work orders move through Awaiting Qualification before dispatch?",
+		"choices": [
+			"Field Service > Administration > Configuration, turning on Qualification is required for new requests",
+			"System Definition > Dictionary, editing the wm_order state choice list without saving configuration",
+			"Service Catalog > Record Producers, adding a catalog variable for qualification review notes only",
+			"MID Server > Configuration, enabling qualification polling on discovery schedules for assets"
+		],
+		"correctIndex": 0,
+		"explanation": "Work order qualification is enabled on the Field Service Configuration page by turning on Qualification is required for new requests.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/configure-qualify-fsm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 11,
+		"prompt": "A dispatcher cannot see agent assignment groups in Dispatcher Workspace. What must be configured on the dispatcher user record?",
+		"choices": [
+			"Dispatch Groups added on the Groups tab so the dispatcher can manage those user groups",
+			"A personal API key on the Credentials tab for Google Maps geocoding requests exclusively",
+			"The wm_agent role assigned directly without any group membership or dispatch group links",
+			"An elevated security admin role to bypass all field service ACL restrictions globally"
+		],
+		"correctIndex": 0,
+		"explanation": "Dispatch groups must be added to a dispatcher's user record so they can see the assignment groups covered by those dispatch groups in Dispatcher Workspace.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/configure-dispatcher-user.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 12,
+		"prompt": "Agent user groups configured under Field Service > Group Management > Work Groups receive dispatched tasks for which purpose?",
+		"choices": [
+			"Executing field work at covered locations with required parts and skills for assigned tasks",
+			"Approving change requests that require Change Advisory Board review before production deployment",
+			"Creating problem records and root cause analysis tasks for the Problem Management team queue",
+			"Managing software license reclamation for decommissioned hardware assets stored in warehouse"
+		],
+		"correctIndex": 0,
+		"explanation": "Work Groups represent field agents who execute dispatched tasks at covered locations with the parts and skills needed for assigned work.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/setting-up-field-service-user-groups.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 13,
+		"prompt": "Which Field Service role is assigned to technicians who perform dispatched work order tasks in the field?",
+		"choices": [
+			"wm_agent — field technician who executes dispatched work order tasks onsite",
+			"wm_dispatcher — scheduler who assigns tasks from Dispatcher Workspace consoles",
+			"wm_qualifier — reviewer who qualifies draft work orders before dispatch routing",
+			"wm_manager — supervisor who manages skills and monitors field team performance"
+		],
+		"correctIndex": 0,
+		"explanation": "The wm_agent role is assigned to field technicians who receive and complete dispatched work order tasks.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/r_UserRoleInstallWFieldSrvMgmnt.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 14,
+		"prompt": "Which Field Service role enables a user to assign and schedule work order tasks to field agents from Dispatcher Workspace?",
+		"choices": [
+			"wm_dispatcher with membership in a Dispatch Group covering agent assignment groups",
+			"wm_initiator who creates draft work orders but does not schedule field appointments",
+			"wm_agent who executes tasks onsite without Dispatcher Workspace assignment permissions",
+			"hr_case_writer who processes HR service delivery cases unrelated to field dispatch"
+		],
+		"correctIndex": 0,
+		"explanation": "Dispatchers use the wm_dispatcher role to manage schedules and assign qualified work order tasks to field agents.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/r_UserRoleInstallWFieldSrvMgmnt.html"
+		]
+	}
+]

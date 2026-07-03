@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-CSM",
+		"order": 25,
+		"prompt": "Operations wants separate workflows for product support, billing disputes, and new customer onboarding. Which CSM artifact defines each distinct workflow?",
+		"choices": [
+			"A case type with its own table extending the base Case table",
+			"A product model variant that replaces the case state field entirely",
+			"An account relationship type that auto-closes cases after seven days",
+			"A sold product record that stores the workflow diagram as an attachment"
+		],
+		"correctIndex": 0,
+		"explanation": "Case types extend the Case table to provide specialized fields, states, and experiences such as product support, onboarding, or billing workflows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/configure-csm-case-types.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 26,
+		"prompt": "An administrator creates a custom onboarding workflow with unique fields and states. Which requirement must the new case type table meet?",
+		"choices": [
+			"It must extend the Case [sn_customerservice_case] table",
+			"It must extend the Incident [incident] table instead of the case table",
+			"It must replace the sn_customerservice_case table and delete base cases",
+			"It must be stored only in a scoped app with no table extension allowed"
+		],
+		"correctIndex": 0,
+		"explanation": "CSM case types are implemented as tables that extend sn_customerservice_case so they inherit core case behavior while adding type-specific configuration.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/configure-csm-case-types.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 27,
+		"prompt": "Agents must generate standardized PDF letters from certain case types. Which role can create and maintain the document templates used by those case types?",
+		"choices": [
+			"Document template admin role for CSM document template tables",
+			"Case type configuration viewer role with read-only access to case schemas",
+			"Major issue manager role for coordinating enterprise outage communications",
+			"Incident read role for viewing ITSM records linked from customer cases"
+		],
+		"correctIndex": 0,
+		"explanation": "The document template admin role allows creating, updating, and deleting records in document template tables used by CSM case type configurations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 28,
+		"prompt": "When an agent creates an onboarding case in CSM Configurable Workspace, where does the onboarding playbook appear?",
+		"choices": [
+			"On the Playbook tab of the case record in the workspace",
+			"Only in the Customer Service Portal after the consumer submits a form",
+			"In the inbound email flow log before the case number is generated",
+			"On the entitlement form as a related list of approval activities"
+		],
+		"correctIndex": 0,
+		"explanation": "The Case Playbook for Onboarding appears on the Playbook tab when agents work onboarding cases in CSM Configurable Workspace or CSM Agent Workspace.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/csm-case-type-onboarding.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 29,
+		"prompt": "During the initiate stage of the onboarding playbook, what information does the first activity collect from the agent?",
+		"choices": [
+			"Channel, account, contact or consumer, product, and service details",
+			"Incident priority, impact, and urgency for ITSM escalation only",
+			"Assignment group queue capacity and AWA agent availability scores",
+			"MFA bypass count and one-time code validity for portal users"
+		],
+		"correctIndex": 0,
+		"explanation": "The onboarding playbook's first activity gathers customer context including channel, account, contact or consumer, product, and service to start the onboarding process.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/csm-case-type-onboarding.html"
+		]
+	}
+]

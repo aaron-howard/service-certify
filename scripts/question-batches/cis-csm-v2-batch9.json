@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-CSM",
+		"order": 40,
+		"prompt": "Agents working product support cases need guided activities for triage, research, and resolution. Where do they access the product support playbook?",
+		"choices": [
+			"On the Playbook tab of the case record in CSM workspace",
+			"In the entitlement related list after modifying contract coverage terms",
+			"From the matching rule form used by the assignment workbench only",
+			"On the MFA properties page under Multi-factor Authentication settings"
+		],
+		"correctIndex": 0,
+		"explanation": "Case playbooks such as product support appear on the Playbook tab in CSM workspaces, guiding agents through structured activities on the case record.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/csm-playbook-product-support.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 41,
+		"prompt": "Partner administrators cannot assign the customer case manager role to contacts in the portal. Which property must be updated to expose that role?",
+		"choices": [
+			"sn_customerservice.contact_role_assignment on Customer Service > Administration > Properties",
+			"glide.authenticate.multifactor on Multi-factor Authentication > Properties",
+			"request_parent_mapping on the Request Management configuration module",
+			"sn_shn.admin on the Special Handling Notes application menu"
+		],
+		"correctIndex": 0,
+		"explanation": "The customer case manager role is not included by default in sn_customerservice.contact_role_assignment; administrators add it under Customer Service > Administration > Properties.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 42,
+		"prompt": "A UI action must appear as a button on case records in CSM Configurable Workspace. What must exist for each UI action?",
+		"choices": [
+			"A corresponding form action linked to the UI action",
+			"A separate incident record synchronized through the CSM-ITSM plugin",
+			"A household member relationship for every external portal user",
+			"A WhatsApp service channel queue with assignment eligibility rules"
+		],
+		"correctIndex": 0,
+		"explanation": "CSM Configurable Workspace requires a form action for each UI action so the action can render and execute in the UI Builder-based workspace experience.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/config-csm-config-ws-form-action.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 43,
+		"questionType": "multi",
+		"prompt": "When CSM is integrated with Incident Management, which two events synchronize information to the case work notes? (Choose two.)",
+		"choices": [
+			"Incident state changes",
+			"Resolution notes when the incident is resolved or closed",
+			"Creation of a new product model from the incident form",
+			"Deletion of the related account record from the CMDB"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Work notes sync from the incident to the case when incident state changes and when the incident is resolved or closed with resolution notes; additional comments also sync but product models and account deletion are unrelated.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/csm-integration-sm-incident.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 44,
+		"prompt": "Agents must create a service catalog request from a case and keep the requester informed through case work notes. Which plugin enables this CSM-ITSM bridge?",
+		"choices": [
+			"Customer Service with Request Management (com.sn_cs_sm_request)",
+			"Customer Service with Service Management (com.sn_cs_sm) for incidents only",
+			"Special Handling Notes application with no Request Management dependency",
+			"Customer Service Base Entities plugin without service catalog integration"
+		],
+		"correctIndex": 0,
+		"explanation": "CSM integration with Request Management requires the com.sn_cs_sm_request plugin so agents can create or associate requests from cases and synchronize fulfiller comments to case work notes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/csm-integration-sm-request.html"
+		]
+	}
+]

@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-CSM",
+		"order": 45,
+		"prompt": "A CSM team wants cases automatically routed to the correct agent group based on the case product and priority without manual triage. Which configuration should the implementer use?",
+		"choices": [
+			"Advanced work assignment with service channels and assignment eligibility conditions",
+			"A single static default assignment group applied to every incoming customer case record",
+			"A manual round-robin spreadsheet maintained outside the ServiceNow customer service platform",
+			"A read-only business rule that only recalculates the case number sequence on insert"
+		],
+		"correctIndex": 0,
+		"explanation": "Advanced Work Assignment (AWA) uses service channels, assignment rules, and eligibility conditions to push work to agents automatically based on capacity, skills, and matching conditions such as product and priority.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/advanced-work-assignment-for-csm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 46,
+		"prompt": "How does Advanced Work Assignment prevent an agent from being overloaded when distributing customer cases?",
+		"choices": [
+			"It respects the agent capacity limits defined for each configured service channel",
+			"It permanently deletes any case that cannot be immediately assigned to an available agent",
+			"It disables all inbound communication channels until an administrator manually re-enables them",
+			"It reassigns closed cases back into the queue until every agent reaches an identical count"
+		],
+		"correctIndex": 0,
+		"explanation": "AWA balances load by honoring per-channel capacity limits so agents are not assigned more concurrent work than their configured capacity allows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/advanced-work-assignment-for-csm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 47,
+		"prompt": "A customer service manager needs cases created from inbound email, phone, chat, and the portal to all funnel into one prioritized queue. Which construct groups these inbound sources for assignment?",
+		"choices": [
+			"Service channels that categorize each source of incoming customer work for routing",
+			"Notification email templates that only format outbound acknowledgement messages to customers",
+			"Data policies that make individual case form fields mandatory during record insertion",
+			"UI policies that hide or show related lists on the case form based on state"
+		],
+		"correctIndex": 0,
+		"explanation": "Service channels represent the different sources of work (chat, email, phone, case, messaging) and let Advanced Work Assignment route each source into queues consistently.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/service-channels-for-csm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 48,
+		"prompt": "During implementation the team must decide how work is pulled or pushed to agents in a queue. What does an assignment method on a queue control in Advanced Work Assignment?",
+		"choices": [
+			"Whether items are automatically pushed to agents or agents pull the next available item",
+			"The retention period before closed customer cases are archived from the instance permanently",
+			"The currency and language shown on the customer self-service portal landing page banner",
+			"The database index strategy used by the platform when running scheduled report aggregations"
+		],
+		"correctIndex": 0,
+		"explanation": "A queue's assignment method determines whether AWA pushes items directly to eligible agents or lets agents pull the next item, shaping how work reaches the team.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/awa-queues-for-csm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 49,
+		"prompt": "An implementer wants agents to only receive chat and case work they are qualified to handle. Which mechanism links required competencies to the agent for eligibility matching?",
+		"choices": [
+			"Skills and skill determination rules evaluated against the work item during assignment",
+			"A static welcome message displayed once when the agent first signs into the workspace",
+			"The account hierarchy relationship maintained between parent and child customer accounts",
+			"The knowledge base ownership group assigned to published customer-facing articles only"
+		],
+		"correctIndex": 0,
+		"explanation": "Skill-based routing uses skills and skill determination rules so AWA assigns items only to agents who hold the competencies the work requires.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/skill-based-routing-for-csm.html"
+		]
+	}
+]

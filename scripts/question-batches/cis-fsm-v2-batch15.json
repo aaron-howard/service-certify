@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-FSM",
+		"order": 70,
+		"prompt": "Parts must move from a regional warehouse to a technician's van before a site visit. What record should be created?",
+		"choices": [
+			"A transfer order to move parts between stockrooms or to the receiving agent",
+			"A change request to document the hardware refresh approval chain",
+			"An incident task assigned to the network operations center queue",
+			"A problem record linked to a known error for the asset model class"
+		],
+		"correctIndex": 0,
+		"explanation": "Transfer orders move required parts between company stockrooms or to a location where an agent can receive them.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_TransferOrders.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 71,
+		"prompt": "A task requires a specialized part already stocked on a qualified technician's route. Which workflow should dispatch use?",
+		"choices": [
+			"Source parts and assign the task to an agent who has or will receive the part",
+			"Close the work order and create a new incident for parts procurement review",
+			"Disable part requirements on the task and proceed with manual assignment",
+			"Convert the work order task into a catalog request for warehouse staff"
+		],
+		"correctIndex": 0,
+		"explanation": "The source-parts workflow reserves parts and can assign the task to agents who already have required inventory or will receive it.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_SourceParts.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 72,
+		"prompt": "Dispatch leadership wants technicians to complete more jobs per day with less driving. Which capability should be enabled?",
+		"choices": [
+			"Route optimization that reorders tasks to reduce travel time between stops",
+			"Incident matching that merges duplicate alerts from monitoring tools",
+			"Knowledge harvesting that drafts articles from resolved problem records",
+			"Software normalization that maps publisher titles to product models"
+		],
+		"correctIndex": 0,
+		"explanation": "Route optimization strategically reorders assigned tasks to reduce travel time and improve daily completion capacity.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/field-service-scheduling/configuring-route-optimization.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 73,
+		"prompt": "An agent needs to collect several reserved parts before the first customer appointment. Where do they view pending pickups?",
+		"choices": [
+			"A consolidated pickup list grouped by stockroom showing assets ready to collect",
+			"The change schedule calendar filtered by blackout and maintenance windows",
+			"The service catalog homepage sorted by most requested item categories",
+			"The CMDB workspace dashboard listing unidentified configuration items"
+		],
+		"correctIndex": 0,
+		"explanation": "Agents view a consolidated list grouped by stockroom of assets waiting to be picked up before heading to job sites.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/t_PickUpAnAsset.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 74,
+		"prompt": "After a job, a technician returns unused parts from a personal van stock to the depot. Which feature supports this?",
+		"choices": [
+			"Drop-off lists used to return items from a personal stockroom to a company stockroom",
+			"Discovery status dashboards showing probe success rates by subnet range",
+			"Employee relations case templates for workplace investigation intake",
+			"Vendor risk assessment surveys for third-party software procurement"
+		],
+		"correctIndex": 0,
+		"explanation": "Drop-off lists let agents return items held in a personal stockroom to a designated company stockroom after field work.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_UseDropOffLists.html"
+		]
+	}
+]

@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-FSM",
+		"order": 60,
+		"prompt": "Regulatory audits require proof that safety steps were completed before closing refrigeration repairs. Which questionnaire type fits?",
+		"choices": [
+			"Smart Assessment questionnaires configured as mandatory before task closure",
+			"Standard incident survey templates sent after password reset requests",
+			"Change management risk calculators attached to normal change records",
+			"Employee onboarding checklists managed in the HR service delivery workspace"
+		],
+		"correctIndex": 0,
+		"explanation": "Smart Assessment questionnaires capture structured safety, inspection, and compliance data and can be mandatory before a task closes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/smart-assessment-questionnaire.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 61,
+		"prompt": "An administrator associates a survey question set with a work order task type. When does the agent see the questionnaire?",
+		"choices": [
+			"When configured trigger conditions are met on the assigned task form",
+			"Only after the work order has been closed for at least seven days",
+			"Immediately upon login to the service portal before requesting service",
+			"After every change request linked to the account reaches the Implement state"
+		],
+		"correctIndex": 0,
+		"explanation": "Survey-based questionnaires become available on the task form when the configured trigger conditions for that work order task are satisfied.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/survey-based-questionnaires.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 62,
+		"prompt": "A dispatch director wants one place to manage skills, schedules, and routing for all field teams. Which application supports this?",
+		"choices": [
+			"Workforce Optimization for Field Service",
+			"Strategic Portfolio Management for project milestone tracking",
+			"Software Asset Management for license reconciliation reporting",
+			"Security Operations for vulnerability response orchestration"
+		],
+		"correctIndex": 0,
+		"explanation": "Workforce Optimization for Field Service centralizes routing, skills, schedules, and workforce performance management.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-fsm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 63,
+		"prompt": "Before enabling automated assignment, which baseline records should the implementation team configure?",
+		"choices": [
+			"Users, locations, territories, and related foundational workforce data",
+			"Change models, blackout schedules, and CAB delegate assignment groups",
+			"Discovery credentials, MID Server clusters, and identification rules",
+			"Catalog categories, record producers, and order guide variable sets"
+		],
+		"correctIndex": 0,
+		"explanation": "Workforce setup involves configuring users, locations, territories, and other foundational data required for scheduling and dispatch.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/setting-up-workforce.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 64,
+		"prompt": "Technicians in one territory are consistently overbooked while nearby teams have open capacity. Which feature addresses this?",
+		"choices": [
+			"Capacity and Reservations Management with reservation rules by task attributes",
+			"Knowledge subscription notifications for article authors in the region",
+			"Hardware asset lifecycle stages for retired equipment disposal tracking",
+			"Event management alert correlation rules for monitoring tool integrations"
+		],
+		"correctIndex": 0,
+		"explanation": "Capacity and Reservations Management assigns work within defined capacity limits using reservation rules for priority, work type, and other task attributes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/capacity-management.html"
+		]
+	}
+]

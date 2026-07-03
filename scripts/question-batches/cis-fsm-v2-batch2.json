@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-FSM",
+		"order": 5,
+		"prompt": "An implementation team must standardize inconsistent location names imported from legacy systems before dispatch routing goes live. Which no-code platform feature transforms field values using defined rules?",
+		"choices": [
+			"Field normalization rules that cleanse and standardize data during record updates",
+			"Client-side UI scripts that run only when administrators manually edit forms",
+			"Scheduled import sets that bypass all table-level business rules during every load",
+			"Workflow editor activities that send approval emails when location values change"
+		],
+		"correctIndex": 0,
+		"explanation": "Field normalization rules provide no-code data cleansing by transforming field values based on conditions and patterns defined by administrators.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/c_FieldNormalization.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 6,
+		"prompt": "A field service manager opens Field Service > Manager > Manage Skills to assign HVAC certification to technicians. What does Skills Management define for dispatch matching?",
+		"choices": [
+			"Agent competencies and skill levels used to match qualified resources to work requirements",
+			"Territory boundaries that replace geographic assignment logic in Dispatcher Workspace",
+			"Contract entitlement tiers that determine whether customers can open new incidents",
+			"Catalog item categories used exclusively for employee self-service portal requests"
+		],
+		"correctIndex": 0,
+		"explanation": "Skills Management lets managers create skills and assign them to agents so scheduling and dispatch can match work to qualified technicians.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/field-service-manager-agent-skills.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 7,
+		"questionType": "multi",
+		"prompt": "A dispatcher wants agent positions updated on the dispatch map in near real time. Which two items must be enabled to track field agents? (Choose two.)",
+		"choices": [
+			"The Geolocation plugin activated on the instance",
+			"The sn_fsm_customer_ex.work.management.cx.share_agent_details property set to true",
+			"The Field technician feedback survey enabled for every closed work order",
+			"The Location history map report scheduled to run once per week only"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Agent tracking on dispatch maps requires Geolocation and the share agent details property, which updates the map with the agent's latest location.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/customer-experience-components.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 8,
+		"prompt": "Dispatchers need a single workspace to view tasks, agents, locations, and schedule changes. Which Field Service Management capability provides this?",
+		"choices": [
+			"Dispatcher Workspace with configurable views, filters, and drag-and-drop assignment",
+			"Hardware Asset Management lifecycle dashboard for warehouse stock transfers only",
+			"Performance Analytics homepage widgets for HR onboarding completion metrics only",
+			"Security Incident Response playbooks for malware containment workflow execution only"
+		],
+		"correctIndex": 0,
+		"explanation": "Dispatcher Workspace is the primary scheduling console where dispatchers manage teams, tasks, and assignments with configurable layouts and filters.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/dispatcher-activities.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 9,
+		"prompt": "After qualification, an organization enables automatic assignment based on agent skills, availability, and travel time. Which capability supports this scheduling model?",
+		"choices": [
+			"Dynamic Scheduling with configurable matching criteria for field agents",
+			"Manual spreadsheet import of assignments uploaded nightly by dispatchers only",
+			"Change Management standard change templates for emergency CAB approval workflows",
+			"Knowledge Management article versioning for self-service search deflection metrics only"
+		],
+		"correctIndex": 0,
+		"explanation": "Dynamic Scheduling intelligently assigns tasks by evaluating agent skills, availability, travel time, and other matching criteria configured by administrators.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/dynamic-scheduling.html"
+		]
+	}
+]

@@ -1490,1461 +1490,1472 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 	{
 		"trackCode": "CIS-CSM",
 		"order": 0,
-		"prompt": "A new implementation lead wants a structured tour of Customer Service Management capabilities before configuring workspaces. Which concept documentation should they start with?",
+		"prompt": "A manufacturer sells through business customers and also supports end users who buy directly online. Which CSM business model pairing best matches these two audiences?",
 		"choices": [
-			"Defining payroll tax jurisdiction rules for measurable outcomes",
-			"Exploring Customer Service Management for sustained reliability for operational consistency",
-			"Building facility space reservation calendars for controlled governance",
-			"Retiring legacy mainframe terminal emulators for practical execution"
+			"B2B for account-based relationships and B2C for individual consumers",
+			"B2C for account-based relationships and B2B for individual consumers",
+			"B2B for internal employees only and B2C for vendor partners exclusively",
+			"B2C for partner resellers only and B2B for anonymous portal visitors"
 		],
-		"correctIndex": 1,
-		"explanation": "The Customer Service Management documentation provides an exploring topic that introduces key application areas and how teams typically navigate the solution.",
+		"correctIndex": 0,
+		"explanation": "CSM supports B2B with accounts and contacts for business customers, and B2C with consumers for individuals purchasing products or services directly.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-customer-service-management/page/product/customer-service-management/concept/exploring-csm.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 1,
-		"prompt": "Agents complain that case intake is inconsistent across channels. Which Washington DC-era concept documentation focuses on day-to-day use patterns for Customer Service Management?",
+		"prompt": "A contact employed by Account A must open and update cases for Account B from the customer portal. Which CSM feature enables this cross-account access?",
 		"choices": [
-			"Using Customer Service Management for operational consistency for sustained reliability",
-			"Designing mainframe batch job schedules for enterprise implementation",
-			"Configuring discovery for network printers exclusively for production readiness",
-			"Hardening database table ACLs for HR payroll for role-based accountability"
+			"Contact relationship linking the contact to the additional account",
+			"Account hierarchy that merges both accounts into one parent record",
+			"Install base item shared between both accounts on the same asset tag",
+			"Consumer household membership that replaces the contact record"
 		],
 		"correctIndex": 0,
-		"explanation": "The using Customer Service Management concept documentation describes practical usage patterns that help standardize how agents work cases across channels.",
+		"explanation": "Contact relationships associate a contact from one account with another account so authorized contacts can view data and perform actions such as creating or updating cases on behalf of that account.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-customer-service-management/page/product/customer-service-management/concept/using-csm.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/c_ContactRelationships.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 2,
-		"prompt": "A B2B retailer needs line-level commercial details captured on cases tied to orders. Which reference documentation should implementers review for the order case line form?",
+		"questionType": "multi",
+		"prompt": "Which two external roles are assigned to users who access Customer and Consumer Service Portals for self-service? (Choose two.)",
 		"choices": [
-			"Software license reclamation policy template for controlled governance",
-			"Hardware asset retirement approval matrix for practical execution",
-			"Order case line form for measurable outcomes for role-based accountability",
-			"Employee relations investigation playbook for sustained reliability for operational consistency"
+			"sn_customerservice.customer",
+			"sn_customerservice.consumer",
+			"sn_customerservice.agent",
+			"sn_customerservice.manager"
 		],
-		"correctIndex": 2,
-		"explanation": "Customer Service Management reference documentation for the order case line form explains how order-related line items are represented on cases for structured capture and reporting.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "External portal users receive customer or consumer roles depending on whether they represent a business contact or an individual consumer; agent and manager are internal fulfillment roles.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-customer-service-management/page/product/customer-service-management/reference/order-case-line-form.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 3,
-		"prompt": "Support leadership wants a consolidated operational view for customer service performance. Which concept topic aligns with a customer service dashboard experience?",
+		"prompt": "In a B2B CSM deployment, what does an account record represent in the customer data model?",
 		"choices": [
-			"Database index rebuild scheduling guide for production readiness",
-			"Legacy fax server integration patterns for role-based accountability",
-			"Customer service dashboard for operational consistency for sustained reliability",
-			"VPN client certificate pinning procedures for enterprise implementation"
+			"A customer organization that contacts belong to and cases can be tied to",
+			"An individual end user who purchased a single retail product online",
+			"A fulfillment group that receives auto-assigned case tasks from AWA",
+			"A catalog category used to classify knowledge articles for agents"
 		],
-		"correctIndex": 2,
-		"explanation": "The Customer Service Management documentation includes a customer service dashboard concept that supports leadership visibility into service operations from a single pane.",
+		"correctIndex": 0,
+		"explanation": "In B2B service models, accounts represent customer organizations; contacts are employees of those accounts and cases are managed in an account-aware context.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-customer-service-management/page/product/customer-service-management/concept/customer-service-dashboard.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 4,
-		"prompt": "Your organization plans to tune AI-assisted agent experiences in CSM. Which configuration-oriented documentation topic should administrators consult?",
+		"prompt": "How does a consumer differ from a B2B contact in the CSM data model?",
 		"choices": [
-			"Configuring Now Assist for Customer Service Management for enterprise implementation",
-			"Planning data center rack elevation drawings for operational consistency",
-			"Creating barcode labels for stockroom shelves for role-based accountability",
-			"Defining snow removal vendor SLAs for production readiness"
+			"A consumer is an individual end customer, while a contact is an employee of a business account",
+			"A consumer always has the agent role, while a contact always has the admin role",
+			"A consumer record stores contract entitlements, while a contact stores install base serial numbers",
+			"A consumer is created only from inbound email, while a contact is created only from chat"
 		],
 		"correctIndex": 0,
-		"explanation": "Customer Service Management documentation for configuring Now Assist for CSM helps administrators enable and tune AI-assisted experiences for agents and workflows.",
+		"explanation": "B2C deployments use consumers as individual customers who manage cases for products they purchased, whereas B2B contacts represent people employed by customer accounts.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-customer-service-management/page/product/customer-service-management/concept/now-assist-csm-configuring.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 5,
-		"prompt": "What is the main purpose of Customer Service Management in ServiceNow?",
+		"prompt": "Before agents log install base items for customer sites, what must exist in the product catalog?",
 		"choices": [
-			"Manage employee payroll and benefits for sustained reliability",
-			"Handle customer interactions, cases, and issue resolution across channels for measurable outcomes",
-			"Replace CMDB discovery tools for practical execution",
-			"Schedule on-site field technicians exclusively for enterprise implementation"
+			"A product model that defines the product the install base item references",
+			"A completed case playbook run for every serial number in the warehouse",
+			"An active entitlement contract signed before any catalog item is created",
+			"A consumer household record linked to each manufacturing plant location"
 		],
-		"correctIndex": 1,
-		"explanation": "CSM centralizes customer service operations, case workflows, and communication channels for faster resolution.",
+		"correctIndex": 0,
+		"explanation": "Product models define catalog products; install base items represent deployed instances of those products at customer locations and reference the product model.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/concept/csm-overview.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/c_OnScreenAlerts.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 6,
-		"prompt": "When first exploring CSM, which record type is the core unit of customer issue tracking?",
+		"prompt": "What does an install base item represent in Customer Service Management?",
 		"choices": [
-			"Incident for role-based accountability for measurable outcomes",
-			"Case for production readiness",
-			"Knowledge feedback for enterprise implementation for controlled governance",
-			"Change request for operational consistency for sustained reliability"
+			"A specific deployed instance of a product owned by a customer at a location",
+			"A generic catalog definition shared by all customers in the product model table",
+			"A template email flow used when cases arrive from the support mailbox",
+			"A queue definition that routes chat interactions to available agents"
 		],
-		"correctIndex": 1,
-		"explanation": "The case is the central transaction in CSM for managing customer-reported issues and service requests.",
+		"correctIndex": 0,
+		"explanation": "Install base items track individual product deployments for customers, distinct from product models that describe the product definition in the catalog.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/concept/cases.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/install-base-item.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 7,
-		"prompt": "Why do organizations adopt account and contact models in CSM?",
+		"questionType": "multi",
+		"prompt": "Which two CSM records represent customer-owned product instances that agents associate with cases? (Choose two.)",
 		"choices": [
-			"To consistently track software license metering for practical execution",
-			"To consistently replace HR profiles for enterprise implementation",
-			"To consistently remove need for service level definitions",
-			"To consistently define customer relationships and route cases to the correct support context"
+			"Install base item",
+			"Sold product",
+			"Product model",
+			"Case type configuration"
 		],
-		"correctIndex": 3,
-		"explanation": "Account and contact data provide customer context used for entitlement checks, routing, and communications.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Install base items and sold products both represent customer-owned product instances, while product models are catalog definitions and case type configuration defines case workflows.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/configure-accounts-and-contacts.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/install-base-item.html",
+			"https://www.servicenow.com/docs/r/customer-service-management/sold-product.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 8,
-		"prompt": "Which CSM capability helps deflect repetitive customer questions before a case is opened?",
+		"prompt": "An agent needs warranty context when troubleshooting a failed device at a customer site. Which related record on the case provides the deployed product definition?",
 		"choices": [
-			"Stockroom transfers for measurable outcomes for role-based accountability",
-			"Vulnerability calculators for sustained reliability for operational consistency",
-			"Contract line depreciation schedules for controlled governance for enterprise implementation",
-			"Knowledge and self-service portal experiences for practical execution"
+			"The install base item linked to the case",
+			"The inbound email flow that created the case from the support alias",
+			"The matching rule used by the assignment workbench for recommendations",
+			"The MFA property that governs portal login for external users"
 		],
-		"correctIndex": 3,
-		"explanation": "Knowledge and self-service enable customers to resolve common issues without agent intervention.",
+		"correctIndex": 0,
+		"explanation": "Linking an install base item to a case gives agents visibility into the specific deployed product instance, its location, and related entitlement coverage.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/concept/csm-self-service.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/create-install-base-item.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 9,
-		"prompt": "What is a recommended first metric when evaluating early CSM implementation success?",
+		"prompt": "A sold product record is created after a customer completes an online purchase. How does it relate to the product model?",
 		"choices": [
-			"Mean time to resolution for customer cases for operational consistency",
-			"Number of CMDB classes created for enterprise implementation",
-			"Total hardware assets retired for production readiness",
-			"Count of background scripts run daily for role-based accountability"
+			"The sold product is a customer-specific instance that references the product model definition",
+			"The sold product replaces the product model and deletes the catalog entry permanently",
+			"The sold product stores only contract PDF attachments with no catalog relationship",
+			"The sold product is identical to a product model and uses the same table without extension"
 		],
 		"correctIndex": 0,
-		"explanation": "Case resolution time is a direct indicator of service efficiency and customer-facing operational performance.",
+		"explanation": "Sold products represent items purchased by a customer and reference the underlying product model that defines the product in the CSM catalog structure.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/monitor-csm-performance.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/sold-product.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 10,
-		"prompt": "When a support center begins using CSM, what operational benefit is usually realized first?",
+		"prompt": "Support leadership wants contracted response times enforced when agents work cases. Which record type stores the customer's agreed service coverage?",
 		"choices": [
-			"HR tasks merge into customer cases by default for production readiness",
-			"All customer issues auto-resolve for role-based accountability for measurable outcomes",
-			"Case ownership, routing, and status visibility become standardized for operational consistency",
-			"CMDB discovery stops creating records for enterprise implementation"
+			"Contract linked to the account with defined support terms",
+			"Matching rule that ranks agents by availability in the workbench",
+			"Form action that exposes a UI action on the case record page",
+			"Page template for centered chat interactions in the workspace"
 		],
-		"correctIndex": 2,
-		"explanation": "Using CSM introduces structured case workflows and clearer accountability for service operations.",
+		"correctIndex": 0,
+		"explanation": "Contracts capture commercial support agreements for accounts; entitlements derived from contracts define eligibility and service levels applied during case handling.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/using-csm-for-case-management.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/set-up-post-sales-support.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 11,
-		"prompt": "Which CSM feature supports consistent handling of repetitive customer issues?",
+		"prompt": "What is the role of an entitlement in CSM post-sales support?",
 		"choices": [
-			"Template-based case creation and playbook-style workflows for controlled governance",
-			"Asset disposal rules for practical execution",
-			"Manual free-form case states for measurable outcomes for role-based accountability",
-			"Catalog item depreciation for sustained reliability for operational consistency"
+			"It defines the support level a customer receives for covered products or services",
+			"It replaces case assignment rules so every case routes to the CSM admin role",
+			"It stores chat transcripts from WhatsApp conversations with consumers",
+			"It generates product models automatically from inbound support emails"
 		],
 		"correctIndex": 0,
-		"explanation": "Templates and guided workflows help agents execute recurring work with fewer errors and faster handoffs.",
+		"explanation": "Entitlements specify support coverage such as response commitments and eligible services, often linked to contracts and install base or sold product records.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/configure-case-templates.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/configure-csm-entitlements.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 12,
-		"prompt": "Why is omnichannel interaction capture valuable when using CSM?",
+		"prompt": "A case is opened for a product that is no longer covered under the customer's active agreement. Which CSM capability helps agents verify support eligibility before committing to SLAs?",
 		"choices": [
-			"It separates customer context across channels for operational consistency",
-			"It replaces entitlement rules for enterprise implementation for controlled governance",
-			"It prevents knowledge article use for production readiness",
-			"It preserves a unified timeline of customer engagement for better resolution continuity for role-based accountability"
+			"Entitlement associated with the account, product, or install base on the case",
+			"Special handling note configured only on the agent's personal dashboard",
+			"Consumer-to-consumer relationship between two unrelated household members",
+			"Inbound email flow that bypasses entitlement checks for all reply messages"
 		],
-		"correctIndex": 3,
-		"explanation": "A consolidated interaction history reduces duplicate questioning and improves handoffs across teams.",
+		"correctIndex": 0,
+		"explanation": "Entitlements tied to customer agreements and product coverage allow agents to confirm whether the reported issue qualifies for contracted support.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/concept/omnichannel-customer-engagement.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/configure-csm-entitlements.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 13,
-		"prompt": "A manager wants to reduce escalations after adopting CSM. Which action is best?",
+		"prompt": "An entitlement manager needs to change support hours on an active entitlement without creating a duplicate record. What is the recommended approach?",
 		"choices": [
-			"Route all cases to a single generic group for measurable outcomes",
-			"Define clear escalation criteria and automate routing to specialized queues for sustained reliability",
-			"Require phone-exclusively support for enterprise implementation",
-			"Disable priority fields on cases for practical execution"
+			"Modify the existing entitlement record to update the coverage terms",
+			"Delete all install base items and recreate them under a new account",
+			"Disable the Customer Service Base Entities plugin and reload demo data",
+			"Convert the entitlement into a case type configuration admin record"
 		],
-		"correctIndex": 1,
-		"explanation": "Structured escalation rules ensure critical issues reach the right specialists quickly.",
+		"correctIndex": 0,
+		"explanation": "Entitlements can be modified in place to adjust coverage details such as support hours, keeping the relationship to contracts and covered products intact.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/configure-case-escalation-rules.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/cce-modify-entitlement.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 14,
-		"prompt": "What indicator shows that teams are effectively using CSM knowledge deflection?",
+		"prompt": "During case creation, an agent selects an account with multiple active entitlements for the same product line. What should determine which entitlement applies?",
 		"choices": [
-			"More manual routing overrides for practical execution",
-			"Higher percentage of self-service resolutions before case creation for controlled governance",
-			"Rising case reopen rate for sustained reliability for operational consistency",
-			"Longer average first response time for measurable outcomes"
+			"The entitlement rules and coverage linked to the case product, install base, or contract context",
+			"The alphabetical sort order of entitlement numbers in the related list view",
+			"The agent's personal skill profile configured in Advanced Work Assignment",
+			"The default MFA bypass count configured for portal authentication"
 		],
-		"correctIndex": 1,
-		"explanation": "Successful adoption includes increased self-service completion and reduced avoidable case volume.",
+		"correctIndex": 0,
+		"explanation": "Entitlement applicability depends on configured coverage relationships to accounts, contracts, and product instances rather than arbitrary list ordering or agent preferences.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/measure-self-service-effectiveness.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/configure-csm-entitlements.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 15,
-		"prompt": "In CSM Order Management, what is the role of order case lines?",
+		"prompt": "A retailer wants to support both corporate clients with dedicated account teams and individual shoppers who buy online. Which CSM configuration approach aligns with this strategy?",
 		"choices": [
-			"They replace customer contracts for role-based accountability for measurable outcomes",
-			"They store vulnerability IDs exclusively for production readiness",
-			"They break an order-related case into specific order line issues for tracking and resolution for enterprise implementation",
-			"They define hardware asset depreciation for operational consistency"
+			"Enable B2B for accounts and contacts alongside B2C for consumers",
+			"Restrict the instance to B2C only and disable all account records",
+			"Use B2B exclusively and treat every shopper as an internal agent",
+			"Deploy B2C only and map corporate clients to assignment group records"
 		],
-		"correctIndex": 2,
-		"explanation": "Order case lines provide granular visibility when a case affects individual products or service lines.",
+		"correctIndex": 0,
+		"explanation": "CSM supports simultaneous B2B and B2C business models, using accounts and contacts for business customers and consumers for individual end customers.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/manage-order-case-lines.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 16,
-		"prompt": "Why are order case lines useful for fulfillment coordination?",
+		"prompt": "A global customer has regional subsidiaries that roll up to a parent organization. Which CSM structure models this corporate hierarchy?",
 		"choices": [
-			"They prevent communication with order systems for sustained reliability",
-			"They force one resolution code for all products for measurable outcomes",
-			"They remove the need for parent cases for practical execution",
-			"They allow separate statuses and actions per impacted order line for controlled governance"
+			"Parent and child accounts linked in an account hierarchy",
+			"Contact relationships that merge all subsidiaries into one contact record",
+			"Sold products that automatically inherit the parent case assignment group",
+			"Install base items that replace account records for each subsidiary site"
 		],
-		"correctIndex": 3,
-		"explanation": "Line-level states and actions support mixed outcomes across complex customer orders.",
+		"correctIndex": 0,
+		"explanation": "Account hierarchies represent parent and child customer organizations, enabling consolidated visibility and case management across related business entities.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/concept/order-case-management.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 17,
-		"prompt": "A customer order has one delayed item and two shipped items. How should this be modeled in CSM?",
+		"prompt": "Two customer accounts have a reseller relationship rather than a parent-child hierarchy. Which table defines this type of association?",
 		"choices": [
-			"Close the case because most relevant items shipped",
-			"Convert the case to a change request for operational consistency",
-			"Create one unresolved case for the entire order with no detail for role-based accountability",
-			"Track each impacted item through order case lines with distinct statuses for production readiness"
+			"Account relationship with a configured relationship type",
+			"Contact relationship that converts both accounts into one consumer",
+			"Household member relationship used only in B2C deployments",
+			"Request parent mapping entry for ITSM integration on cases"
 		],
-		"correctIndex": 3,
-		"explanation": "Order case lines capture partial impacts and enable accurate customer communication on each line item.",
+		"correctIndex": 0,
+		"explanation": "Account relationships and account relationship types model non-hierarchical links between accounts such as reseller, partner, or other defined business relationships.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/update-order-line-statuses-in-cases.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 18,
-		"prompt": "What integration benefit comes from linking order case lines to external order systems?",
+		"prompt": "A strategic account needs a dedicated service manager and technical advisor visible on every case. Which CSM feature assigns these internal stakeholders to the customer?",
 		"choices": [
-			"Automatic deletion of old customer contacts for production readiness",
-			"Bypassing entitlement checks for role-based accountability for measurable outcomes",
-			"Synchronized fulfillment updates that strengthen case accuracy and transparency",
-			"Disabling workflow automation for enterprise implementation for controlled governance"
+			"Account team members associated with the account record",
+			"Inbound email flow conditions that CC the stakeholders on every reply",
+			"Mandatory skills on the matching rule used by the assignment workbench",
+			"Multi-factor authentication roles assigned to external portal users"
 		],
-		"correctIndex": 2,
-		"explanation": "System synchronization keeps case line data current and reduces manual status reconciliation.",
+		"correctIndex": 0,
+		"explanation": "Account teams associate internal or partner users with an account so agents and customers have defined stakeholders for support and escalation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/integrate-order-systems-with-csm.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 19,
-		"prompt": "Which KPI best measures effectiveness of order case line handling?",
+		"prompt": "In a B2C deployment, related consumers share a household subscription plan. Which relationship type groups those consumers?",
 		"choices": [
-			"Number of CMDB classes for controlled governance for enterprise implementation",
-			"Count of inactive groups for practical execution",
-			"Total background scripts executed for measurable outcomes for role-based accountability",
-			"Average age to resolve impacted order lines for sustained reliability"
+			"Household member relationship linking consumers in the same household",
+			"Account relationship that treats each consumer as a child account",
+			"Contact relationship between two business account employee records",
+			"Sold product record that replaces the need for consumer identity"
 		],
-		"correctIndex": 3,
-		"explanation": "Line-level resolution time directly reflects execution quality for order-related customer issues.",
+		"correctIndex": 0,
+		"explanation": "Household member relationships group individual consumers in B2C scenarios so shared services and cases can reflect the household context.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/report-on-order-case-lines.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 20,
-		"prompt": "What is the purpose of a CSM dashboard for service leaders?",
+		"prompt": "A read-only analyst must view customer contracts and install base data without editing cases. Which role provides that access?",
 		"choices": [
-			"Configure field technician routing for role-based accountability for measurable outcomes",
-			"Track customer case volume, SLA performance, and resolution trends in a single operational view for production readiness",
-			"Replace all queue management workflows for enterprise implementation",
-			"Store encrypted passwords for operational consistency for sustained reliability"
+			"Customer data viewer role with read-only access to customer entities",
+			"Consumer role for individual end customers who purchased retail products",
+			"Document template admin role that manages PDF templates for case types",
+			"Agent workspace user role that accepts messaging channel conversations"
 		],
-		"correctIndex": 1,
-		"explanation": "CSM dashboards consolidate key service metrics to support coaching, staffing, and process improvement decisions.",
+		"correctIndex": 0,
+		"explanation": "The customer data viewer role grants read-only access to customer data entities including accounts, contacts, install base items, contracts, entitlements, and sold products.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/concept/csm-dashboards.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 21,
-		"prompt": "Which dashboard metric is most useful for detecting customer backlog risk?",
+		"prompt": "A B2B account also sells to individual end users who need portal access under that account. Which record links a consumer to the business account?",
 		"choices": [
-			"Aging open cases by priority and queue for practical execution",
-			"Number of active HR profiles for controlled governance",
-			"Count of CMDB classes for sustained reliability for operational consistency",
-			"Monthly update set exports for measurable outcomes for role-based accountability"
+			"Account consumer association on the account consumer table",
+			"Contact relationship that converts the consumer into a contact employee",
+			"Matching rule that routes the consumer's cases to the account manager",
+			"Product model extension that stores consumer login credentials"
 		],
 		"correctIndex": 0,
-		"explanation": "Case aging by priority highlights where queues are accumulating unresolved customer impact.",
+		"explanation": "Account consumer records associate individual consumers with a business account so they can access account-scoped data such as install base and sold product information.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/configure-csm-kpis.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 22,
-		"prompt": "How do dashboard filters improve CSM operational reviews?",
+		"prompt": "Legal and billing stakeholders must appear on cases without being account team members or case assignees. Which configuration defines these parties?",
 		"choices": [
-			"They prevent drilldowns for enterprise implementation for controlled governance",
-			"They replace assignment rules for operational consistency for sustained reliability",
-			"They let leaders isolate trends by account, channel, or product line for targeted action for role-based accountability",
-			"They hide all breach data for production readiness"
+			"Related party configuration for designated stakeholder roles on cases",
+			"Inbound email flow that forwards case updates to all instance users",
+			"Entitlement modification that adds stakeholders as entitlement admins",
+			"Case type table extension that removes the account field from the form"
 		],
-		"correctIndex": 2,
-		"explanation": "Filtered views help teams detect segment-specific issues and assign focused remediation actions.",
+		"correctIndex": 0,
+		"explanation": "Related party configuration lets organizations define additional stakeholders who receive visibility or notifications on cases beyond standard account team membership.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/customize-csm-dashboard-filters.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 23,
-		"prompt": "A manager wants to improve first contact resolution. Which dashboard combination is most relevant?",
+		"prompt": "Agents must see a warning when opening cases for a VIP account with non-standard handling instructions. Which application surfaces notes from related account records on the case?",
 		"choices": [
-			"Case reopen rate and first response-to-resolution performance for sustained reliability",
-			"Asset retirement trend for measurable outcomes for role-based accountability",
-			"Discovery schedule duration for practical execution",
-			"Number of update sets for controlled governance for enterprise implementation"
+			"Special handling notes configured to display from related account records",
+			"Request parent mapping that synchronizes SC requests to case work notes",
+			"WhatsApp integration that posts account alerts into the chat transcript",
+			"MFA clock skew property that delays portal login for VIP contacts"
 		],
 		"correctIndex": 0,
-		"explanation": "Reopen and resolution timing metrics indicate whether issues are being solved effectively on initial engagement.",
+		"explanation": "Special handling notes can be configured on entity tables and set to display alerts from related records such as the account or product associated with a case.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/measure-agent-performance.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/c_OnScreenAlerts.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 24,
-		"prompt": "What practice keeps CSM dashboards trustworthy over time?",
+		"prompt": "A new CSM implementation team is preparing the instance before agents handle live cases. What should they configure first to establish core customer data?",
 		"choices": [
-			"Removing SLA fields from forms for controlled governance",
-			"Frequent KPI definition reviews and consistent case data hygiene controls for practical execution",
-			"Allowing free-form status values across teams for measurable outcomes",
-			"Disabling closed case archiving for sustained reliability for operational consistency"
+			"Accounts, contacts or consumers, and product catalog structures including product models",
+			"Advanced Work Assignment queues before any customer or product records exist",
+			"Incident integration roles before defining case types or customer entities",
+			"Playbook process pages before loading accounts or entitlements into the instance"
 		],
-		"correctIndex": 1,
-		"explanation": "Dashboard quality depends on stable metric definitions and disciplined data capture.",
+		"correctIndex": 0,
+		"explanation": "Foundational CSM setup begins with customer entities and product catalog data so cases, entitlements, and channels can reference accounts, contacts or consumers, and products.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/govern-csm-reporting.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/set-up-post-sales-support.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 25,
-		"prompt": "What is the primary value of Now Assist in Customer Service Management?",
+		"prompt": "Operations wants separate workflows for product support, billing disputes, and new customer onboarding. Which CSM artifact defines each distinct workflow?",
 		"choices": [
-			"Replacing all human case agents for production readiness",
-			"Generating contextual assistance such as summaries and draft responses to speed case handling for role-based accountability",
-			"Disabling case documentation requirements for operational consistency for sustained reliability",
-			"Automatically closing all low-priority cases for enterprise implementation"
+			"A case type with its own table extending the base Case table",
+			"A product model variant that replaces the case state field entirely",
+			"An account relationship type that auto-closes cases after seven days",
+			"A sold product record that stores the workflow diagram as an attachment"
 		],
-		"correctIndex": 1,
-		"explanation": "Now Assist helps agents work faster and more consistently by providing AI-generated case context and response support.",
+		"correctIndex": 0,
+		"explanation": "Case types extend the Case table to provide specialized fields, states, and experiences such as product support, onboarding, or billing workflows.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-assist/page/administer/now-assist-in-csm/concept/now-assist-csm.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/configure-csm-case-types.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 26,
-		"prompt": "Which use case best fits Now Assist for CSM agents?",
+		"prompt": "An administrator creates a custom onboarding workflow with unique fields and states. Which requirement must the new case type table meet?",
 		"choices": [
-			"Bypassing entitlement checks for premium customers for measurable outcomes",
-			"Changing SLA policies without approval for sustained reliability",
-			"Removing customer contact records after closure for controlled governance",
-			"Generating concise case summaries from long activity histories for practical execution"
+			"It must extend the Case [sn_customerservice_case] table",
+			"It must extend the Incident [incident] table instead of the case table",
+			"It must replace the sn_customerservice_case table and delete base cases",
+			"It must be stored only in a scoped app with no table extension allowed"
 		],
-		"correctIndex": 3,
-		"explanation": "Case summarization is a core productivity scenario that helps agents quickly understand complex issue history.",
+		"correctIndex": 0,
+		"explanation": "CSM case types are implemented as tables that extend sn_customerservice_case so they inherit core case behavior while adding type-specific configuration.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/task/use-now-assist-in-case-management.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/configure-csm-case-types.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 27,
-		"prompt": "Before enabling Now Assist suggestions broadly, what should administrators configure?",
+		"prompt": "Agents must generate standardized PDF letters from certain case types. Which role can create and maintain the document templates used by those case types?",
 		"choices": [
-			"Delete historical case content to reduce token usage for operational consistency",
-			"Turn off case templates for enterprise implementation for controlled governance",
-			"Move all cases to email-exclusively intake for production readiness documented in the runbook for operational handoff. (CIS-CSM-27-w2)",
-			"Role-based access, data governance settings, and validation workflow for AI-generated output for role-based accountability"
+			"Document template admin role for CSM document template tables",
+			"Case type configuration viewer role with read-only access to case schemas",
+			"Major issue manager role for coordinating enterprise outage communications",
+			"Incident read role for viewing ITSM records linked from customer cases"
 		],
-		"correctIndex": 3,
-		"explanation": "Governance controls ensure AI assistance aligns with security, compliance, and quality expectations.",
+		"correctIndex": 0,
+		"explanation": "The document template admin role allows creating, updating, and deleting records in document template tables used by CSM case type configurations.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-assist/page/administer/now-assist/concept/now-assist-governance.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 28,
-		"prompt": "How can a CSM manager measure whether Now Assist is improving operations?",
+		"prompt": "When an agent creates an onboarding case in CSM Configurable Workspace, where does the onboarding playbook appear?",
 		"choices": [
-			"Count exclusively the number of reopened cases for measurable outcomes evaluated against total cost of ownership and effort estimates.",
-			"Track adoption and compare average handle time and first response metrics before and after rollout for production readiness",
-			"Review chat sentiment without case outcomes for enterprise implementation",
-			"Measure incident assignment groups in ITSM for operational consistency"
+			"On the Playbook tab of the case record in the workspace",
+			"Only in the Customer Service Portal after the consumer submits a form",
+			"In the inbound email flow log before the case number is generated",
+			"On the entitlement form as a related list of approval activities"
 		],
-		"correctIndex": 1,
-		"explanation": "Adoption plus outcome metrics gives a practical view of whether AI assistance is improving service performance.",
+		"correctIndex": 0,
+		"explanation": "The Case Playbook for Onboarding appears on the Playbook tab when agents work onboarding cases in CSM Configurable Workspace or CSM Agent Workspace.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/c_CSMAnalyticsAndDashboards.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/csm-case-type-onboarding.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 29,
-		"prompt": "What is the best agent behavior when using AI-generated customer reply drafts?",
+		"prompt": "During the initiate stage of the onboarding playbook, what information does the first activity collect from the agent?",
 		"choices": [
-			"Ignore all draft suggestions permanently for practical execution",
-			"Review, edit for customer context and policy alignment, then send for controlled governance",
-			"Send every draft without review for sustained reliability",
-			"Use AI replies exclusively for internally opened cases"
+			"Channel, account, contact or consumer, product, and service details",
+			"Incident priority, impact, and urgency for ITSM escalation only",
+			"Assignment group queue capacity and AWA agent availability scores",
+			"MFA bypass count and one-time code validity for portal users"
 		],
-		"correctIndex": 1,
-		"explanation": "Human review preserves accuracy, tone, and policy compliance while still benefiting from AI-assisted drafting speed.",
+		"correctIndex": 0,
+		"explanation": "The onboarding playbook's first activity gathers customer context including channel, account, contact or consumer, product, and service to start the onboarding process.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-assist/page/administer/now-assist-in-csm/task/enable-now-assist-features-csm.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/csm-case-type-onboarding.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 30,
-		"prompt": "What is the central purpose of CSM Case Workspace?",
+		"prompt": "Support emails arrive at a dedicated mailbox and should create or update cases without custom inbound scripts. Which CSM capability handles this?",
 		"choices": [
-			"Provide a unified agent workspace for case triage, collaboration, and resolution actions for operational consistency",
-			"Remove entitlement visibility from agents for enterprise implementation",
-			"Restrict agents to email-exclusively case handling for production readiness",
-			"Replace customer records with temporary notes for role-based accountability"
+			"Inbound email flows such as Create Case from Email and Update Case via Reply",
+			"Account relationship rules that convert each email into a consumer record",
+			"Special handling notes that parse MIME attachments into case tasks",
+			"Matching rules that assign the sender's email domain to a product model"
 		],
 		"correctIndex": 0,
-		"explanation": "Case Workspace consolidates context and actions so agents can resolve issues with fewer tool switches.",
+		"explanation": "Inbound email flows use Flow Designer to create cases from new emails and update cases when customers reply, with flows taking precedence over legacy inbound actions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/case-workspace.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/define-process-incoming-emails.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 31,
-		"prompt": "Which workspace configuration most helps reduce average handle time?",
+		"prompt": "Security requires portal users to verify identity with a second factor after password login. Which external roles should be added to multi-factor authentication criteria?",
 		"choices": [
-			"Configure contextual tabs, quick actions, and visible SLA indicators for agents for measurable outcomes",
-			"Force all cases into one generic assignment group for sustained reliability",
-			"Hide related records and interaction history for controlled governance",
-			"Disable activity stream updates for practical execution"
+			"sn_customerservice.customer and sn_customerservice.consumer",
+			"sn_customerservice.agent and sn_customerservice.manager",
+			"sn_csm_doctemplate.admin and workspace_admin",
+			"sn_incident_read and sn_incident_write"
 		],
 		"correctIndex": 0,
-		"explanation": "Contextual layout and quick actions reduce navigation overhead and support faster decision making.",
+		"explanation": "MFA for Customer and Consumer Service Portals applies to external customer and consumer roles configured in multi-factor authentication role criteria.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/task/configure-case-workspace.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/customer-self-service-and-omnichannel-engagement/configure-csm-multifactor-auth.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 32,
-		"prompt": "What should be emphasized when designing CSM workspace forms?",
+		"prompt": "Consumers want to start a messaging conversation that agents accept from the Agent Workspace Inbox. Which integration enables WhatsApp chat in CSM?",
 		"choices": [
-			"Expose every field from all related tables for production readiness",
-			"Remove account and contact information for role-based accountability",
-			"Show the minimum critical data needed for triage, ownership, and next-most relevant suitable action",
-			"Disable UI policies for consistency for enterprise implementation"
+			"Conversational Integration with WhatsApp powered by Twilio",
+			"Inbound email flow named Update Case via Reply for MIME attachments",
+			"Request parent mapping entry on the sn_customerservice_case table",
+			"Customer data viewer role assigned to every WhatsApp phone number"
 		],
-		"correctIndex": 2,
-		"explanation": "Focused forms reduce cognitive load and help agents complete high-value tasks more efficiently.",
+		"correctIndex": 0,
+		"explanation": "The Conversational Integration with WhatsApp application lets contacts and consumers chat with virtual or live agents and allows agents to accept conversations through the WhatsApp service channel.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/build/workspace/concept/workspaces.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/messg-integrate-whatsapp-csm.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 33,
-		"prompt": "How do workspace playbooks improve CSM execution?",
+		"prompt": "Agents handle outbound and inbound phone calls and need customer history visible during the call. Which workspace template supports this experience?",
 		"choices": [
-			"By guiding agents through consistent, role-appropriate steps for common case scenarios for controlled governance",
-			"By replacing SLA definitions for practical execution",
-			"By forcing every case to the same priority for measurable outcomes",
-			"By disabling assignment rules for sustained reliability for operational consistency"
+			"CSM voice interaction record page template for phone interaction management",
+			"CSM centered chat interaction template used exclusively for email cases",
+			"Onboarding playbook process page variant for entitlement renewals only",
+			"Document template admin form for generating call transcripts as PDF files"
 		],
 		"correctIndex": 0,
-		"explanation": "Playbooks standardize response behavior and reduce variability in complex or recurring case types.",
+		"explanation": "CSM interaction page templates include a voice interaction record template that helps agents manage phone calls and view contextual customer information during the interaction.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/csm-playbooks.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/csm-config-workspace-page-templates.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 34,
-		"prompt": "Which indicator best signals successful Case Workspace adoption?",
+		"prompt": "When an inbound email flow executes for a message sent to the support mailbox, how does it interact with legacy inbound actions?",
 		"choices": [
-			"Increased manual spreadsheet usage for sustained reliability for operational consistency",
-			"Reduced visibility into account health for measurable outcomes",
-			"Agents complete fewer updates per case for practical execution",
-			"Higher first-contact resolution and lower average case age after workspace rollout for controlled governance"
+			"The email flow runs first and prevents inbound actions from executing",
+			"Inbound actions always override the email flow regardless of activation order",
+			"Both the flow and inbound actions run independently on every message",
+			"Neither runs until an agent manually selects a channel on the case form"
 		],
-		"correctIndex": 3,
-		"explanation": "Improved resolution outcomes and cycle times indicate that workspace design is positively impacting agent performance.",
+		"correctIndex": 0,
+		"explanation": "Inbound email flows take higher precedence than inbound actions; when a flow executes, it prevents the corresponding inbound actions from running.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/c_CSMAnalyticsAndDashboards.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/define-process-incoming-emails.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 35,
-		"prompt": "In CSM, what does B2B case management primarily emphasize?",
+		"prompt": "Supervisors want recommended agents displayed before manually assigning complex cases. Which configuration powers the assignment workbench recommendations?",
 		"choices": [
-			"Routing all cases to HR teams for enterprise implementation",
-			"Anonymous consumer-exclusively interactions for sustained reliability",
-			"Account-aware support with contacts, entitlements, and contractual context for role-based accountability",
-			"Disabling partner relationships for production readiness"
+			"A matching rule based on the Selection criteria matching type",
+			"A product model attribute that ranks agents by catalog category ownership",
+			"An entitlement field that auto-assigns cases to the contract author",
+			"A household relationship that maps consumers to assignment groups"
 		],
-		"correctIndex": 2,
-		"explanation": "B2B support requires visibility into account structures, service contracts, and business impact across customers.",
+		"correctIndex": 0,
+		"explanation": "Assignment workbench configurations are stored in matching rules using the Selection criteria type, such as the default Recommendation for Case Assignment rule.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/c_B2BCaseManagement.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/case-assignment-matching-rules.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 36,
-		"prompt": "Which data relationship is most critical for B2B CSM operations?",
+		"prompt": "Cases that meet specific product and priority conditions should auto-assign when still unassigned. Which record performs that automatic assignment?",
 		"choices": [
-			"Case to random social profile for practical execution",
-			"Case to office floorplan for controlled governance for enterprise implementation",
-			"Case to account, contact, product/asset, and entitlement for sustained reliability",
-			"Case to unrelated procurement request for measurable outcomes"
+			"Assignment rule linked to a matching rule for the case conditions",
+			"Sold product record that stores the assignee on the product model form",
+			"Contact relationship that copies the contact's manager to every new case",
+			"Inbound email flow action that sets the assigned_to field on incidents only"
 		],
-		"correctIndex": 2,
-		"explanation": "These core relationships drive eligibility, routing, and accurate support execution for business customers.",
+		"correctIndex": 0,
+		"explanation": "Assignment rules route tasks to users or groups when matching rule conditions are met, but only if the case is not already assigned.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/case-data-model.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/c_CaseRouting.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 37,
-		"prompt": "How should entitlement rules be used in B2B case handling?",
+		"prompt": "The default Recommendation for Case Assignment matching rule uses three of four default criteria. Which criterion is NOT included in that default rule?",
 		"choices": [
-			"To consistently enforce support eligibility, response commitments, and escalation paths based on customer agreements",
-			"To consistently automatically downgrade all priorities for production readiness",
-			"To consistently prevent account teams from viewing cases",
-			"exclusively for analytics after closure for sustained reliability"
+			"Case Priority Score",
+			"Availability Today",
+			"Matching Skills",
+			"Assigned Cases"
 		],
 		"correctIndex": 0,
-		"explanation": "Entitlement policies ensure contractual commitments are honored consistently during case lifecycle execution.",
+		"explanation": "The default recommendation matching rule uses Availability Today, Matching Skills, and Assigned Cases; Case Priority Score is not one of the default matching criteria.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/c_EntitlementManagement.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/case-assignment-matching-rules.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 38,
-		"prompt": "What is a key governance control for multi-contact B2B accounts?",
+		"prompt": "When mandatory skills are enabled for case assignment, which matching criterion should administrators use?",
 		"choices": [
-			"Route all communication to personal email inboxes for operational consistency",
-			"Disable case audit history for enterprise implementation for controlled governance",
-			"Allow any contact to view all account cases for production readiness",
-			"Apply role-based contact access and account-level visibility policies for role-based accountability"
+			"Matching Skills - Mandatory Skills Support",
+			"Availability Today without any skill evaluation configured",
+			"Assigned Cases as the only criterion ignoring product expertise",
+			"Contract Renewal Date matched against agent calendar entries"
 		],
-		"correctIndex": 3,
-		"explanation": "Controlled access protects customer confidentiality while still enabling collaborative support across account contacts.",
+		"correctIndex": 0,
+		"explanation": "When mandatory skills are required on cases, the Matching Skills - Mandatory Skills Support criterion ensures recommended agents possess those mandatory skills.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/task/configure-contact-access-controls.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/case-assignment-matching-rules.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 39,
-		"prompt": "Which KPI best demonstrates strong B2B CSM performance?",
+		"prompt": "An administrator changes the Applies to table on a matching rule after creating its assignment rule. What happens to the assignment rule?",
 		"choices": [
-			"Number of attachment uploads per case for measurable outcomes",
-			"Number of inactive user records for sustained reliability",
-			"Account-level SLA attainment and repeat-case reduction for contracted services for controlled governance",
-			"Count of catalog categories for practical execution packaged for deployment via scoped application repository."
+			"The assignment rule is not updated because the records are independent",
+			"The assignment rule table changes automatically to match the matching rule",
+			"Both records are deleted and must be recreated by Guided Setup",
+			"The matching rule is deleted and only the assignment rule remains active"
 		],
-		"correctIndex": 2,
-		"explanation": "Contract-driven SLA performance and reduced recurrence are direct indicators of healthy enterprise customer support.",
+		"correctIndex": 0,
+		"explanation": "Matching rules and assignment rules are independent records with no synchronization; changes to one are not reflected in the other.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/c_CSMAnalyticsAndDashboards.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/c_CaseRouting.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 40,
-		"prompt": "Why are omnichannel capabilities important in Customer Service Management?",
+		"prompt": "Agents working product support cases need guided activities for triage, research, and resolution. Where do they access the product support playbook?",
 		"choices": [
-			"They provide consistent service across phone, chat, email, and portal while preserving case context for enterprise implementation",
-			"They remove the need for case routing for operational consistency funneled into continuous improvement initiatives when trends emerge.",
-			"They disable customer communication history for role-based accountability",
-			"They force customers into one contact channel for production readiness"
+			"On the Playbook tab of the case record in CSM workspace",
+			"In the entitlement related list after modifying contract coverage terms",
+			"From the matching rule form used by the assignment workbench only",
+			"On the MFA properties page under Multi-factor Authentication settings"
 		],
 		"correctIndex": 0,
-		"explanation": "Omnichannel service allows customers to engage through preferred channels without losing continuity.",
+		"explanation": "Case playbooks such as product support appear on the Playbook tab in CSM workspaces, guiding agents through structured activities on the case record.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/c_OmnichannelCustomerService.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/csm-playbook-product-support.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 41,
-		"prompt": "Which design principle most improves channel consistency in CSM?",
+		"prompt": "Partner administrators cannot assign the customer case manager role to contacts in the portal. Which property must be updated to expose that role?",
 		"choices": [
-			"Separate knowledge and workflows by channel with no shared logic for sustained reliability",
-			"Allow each channel to use different SLA rules for measurable outcomes",
-			"Disable customer identity matching for practical execution",
-			"Use unified case models, routing policies, and knowledge across all supported channels for controlled governance"
+			"sn_customerservice.contact_role_assignment on Customer Service > Administration > Properties",
+			"glide.authenticate.multifactor on Multi-factor Authentication > Properties",
+			"request_parent_mapping on the Request Management configuration module",
+			"sn_shn.admin on the Special Handling Notes application menu"
 		],
-		"correctIndex": 3,
-		"explanation": "Shared process and data standards ensure customers receive consistent outcomes regardless of entry channel.",
+		"correctIndex": 0,
+		"explanation": "The customer case manager role is not included by default in sn_customerservice.contact_role_assignment; administrators add it under Customer Service > Administration > Properties.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/case-management.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 42,
-		"prompt": "What capability is most important for seamless channel switching?",
+		"prompt": "A UI action must appear as a button on case records in CSM Configurable Workspace. What must exist for each UI action?",
 		"choices": [
-			"Persistent conversation and case history accessible to agents in one workspace for role-based accountability",
-			"Creating a new case every time a customer changes channel for production readiness",
-			"Restricting channel transitions to supervisors exclusively for controlled governance",
-			"Hiding previous interactions from agents for operational consistency"
+			"A corresponding form action linked to the UI action",
+			"A separate incident record synchronized through the CSM-ITSM plugin",
+			"A household member relationship for every external portal user",
+			"A WhatsApp service channel queue with assignment eligibility rules"
 		],
 		"correctIndex": 0,
-		"explanation": "Unified interaction history prevents customers from repeating details and helps agents continue work effectively.",
+		"explanation": "CSM Configurable Workspace requires a form action for each UI action so the action can render and execute in the UI Builder-based workspace experience.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/interaction-management.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/config-csm-config-ws-form-action.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 43,
-		"prompt": "How should CSM teams govern new channel rollout?",
+		"questionType": "multi",
+		"prompt": "When CSM is integrated with Incident Management, which two events synchronize information to the case work notes? (Choose two.)",
 		"choices": [
-			"Disable reporting during rollout for practical execution",
-			"Pilot with defined success metrics, update routing/KB readiness, then scale for controlled governance",
-			"Launch all channels without pilot testing for sustained reliability",
-			"Require channel-specific case tables for measurable outcomes for role-based accountability"
+			"Incident state changes",
+			"Resolution notes when the incident is resolved or closed",
+			"Creation of a new product model from the incident form",
+			"Deletion of the related account record from the CMDB"
 		],
-		"correctIndex": 1,
-		"explanation": "Piloted rollout with measurable goals reduces disruption and helps validate operating readiness.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Work notes sync from the incident to the case when incident state changes and when the incident is resolved or closed with resolution notes; additional comments also sync but product models and account deletion are unrelated.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/task/plan-omnichannel-rollout.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/csm-integration-sm-incident.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 44,
-		"prompt": "Which KPI best indicates healthy omnichannel CSM operations?",
+		"prompt": "Agents must create a service catalog request from a case and keep the requester informed through case work notes. Which plugin enables this CSM-ITSM bridge?",
 		"choices": [
-			"Count of inactive chat widgets for measurable outcomes",
-			"Average attachment size per case for sustained reliability",
-			"Cross-channel first-contact resolution and customer effort score trend for controlled governance",
-			"Channel-specific duplicate case rate for practical execution"
+			"Customer Service with Request Management (com.sn_cs_sm_request)",
+			"Customer Service with Service Management (com.sn_cs_sm) for incidents only",
+			"Special Handling Notes application with no Request Management dependency",
+			"Customer Service Base Entities plugin without service catalog integration"
 		],
-		"correctIndex": 2,
-		"explanation": "Resolution quality and customer effort across channels reflect whether omnichannel design is truly effective.",
+		"correctIndex": 0,
+		"explanation": "CSM integration with Request Management requires the com.sn_cs_sm_request plugin so agents can create or associate requests from cases and synchronize fulfiller comments to case work notes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/c_CSMAnalyticsAndDashboards.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/csm-integration-sm-request.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 45,
-		"prompt": "In CSM, what is the main purpose of entitlement configuration?",
+		"prompt": "A CSM team wants cases automatically routed to the correct agent group based on the case product and priority without manual triage. Which configuration should the implementer use?",
 		"choices": [
-			"To consistently limit all customer users to one contact channel",
-			"To consistently auto-close all requests after creation for controlled governance",
-			"To consistently remove case priority controls for production readiness",
-			"To consistently determine what services, response commitments, and support levels a customer receives"
+			"Advanced work assignment with service channels and assignment eligibility conditions",
+			"A single static default assignment group applied to every incoming customer case record",
+			"A manual round-robin spreadsheet maintained outside the ServiceNow customer service platform",
+			"A read-only business rule that only recalculates the case number sequence on insert"
 		],
-		"correctIndex": 3,
-		"explanation": "Entitlements enforce contractual support terms such as eligibility and SLA-related commitments.",
+		"correctIndex": 0,
+		"explanation": "Advanced Work Assignment (AWA) uses service channels, assignment rules, and eligibility conditions to push work to agents automatically based on capacity, skills, and matching conditions such as product and priority.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/customer-service-management-overview.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/advanced-work-assignment-for-csm.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 46,
-		"prompt": "Which setup best supports account-specific support policies in CSM?",
+		"prompt": "How does Advanced Work Assignment prevent an agent from being overloaded when distributing customer cases?",
 		"choices": [
-			"Entitlements mapped to account, product, and coverage terms for controlled governance",
-			"No relationship between contracts and case handling for practical execution",
-			"One global entitlement for all customers regardless of contract for measurable outcomes",
-			"Case assignment by alphabetical account name for sustained reliability"
+			"It respects the agent capacity limits defined for each configured service channel",
+			"It permanently deletes any case that cannot be immediately assigned to an available agent",
+			"It disables all inbound communication channels until an administrator manually re-enables them",
+			"It reassigns closed cases back into the queue until every agent reaches an identical count"
 		],
 		"correctIndex": 0,
-		"explanation": "Entitlements should reflect contractual conditions by customer and offered service scope.",
+		"explanation": "AWA balances load by honoring per-channel capacity limits so agents are not assigned more concurrent work than their configured capacity allows.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/task/configure-entitlements.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/advanced-work-assignment-for-csm.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 47,
-		"prompt": "What should happen when a case is created for a non-entitled service?",
+		"prompt": "A customer service manager needs cases created from inbound email, phone, chat, and the portal to all funnel into one prioritized queue. Which construct groups these inbound sources for assignment?",
 		"choices": [
-			"Automatically grant full premium support for production readiness",
-			"Delete the case immediately for role-based accountability for measurable outcomes",
-			"Flag the case for entitlement review and route according to policy for operational consistency",
-			"Bypass all approval logic for enterprise implementation for controlled governance"
+			"Service channels that categorize each source of incoming customer work for routing",
+			"Notification email templates that only format outbound acknowledgement messages to customers",
+			"Data policies that make individual case form fields mandatory during record insertion",
+			"UI policies that hide or show related lists on the case form based on state"
 		],
-		"correctIndex": 2,
-		"explanation": "Policy-based handling prevents unsupported commitments while preserving customer transparency.",
+		"correctIndex": 0,
+		"explanation": "Service channels represent the different sources of work (chat, email, phone, case, messaging) and let Advanced Work Assignment route each source into queues consistently.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/task/validate-case-entitlements.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/service-channels-for-csm.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 48,
-		"prompt": "Which entitlement design helps avoid over-servicing customers?",
+		"prompt": "During implementation the team must decide how work is pulled or pushed to agents in a queue. What does an assignment method on a queue control in Advanced Work Assignment?",
 		"choices": [
-			"No record of contract terms in CSM for enterprise implementation",
-			"Manual case triage without entitlement checks for operational consistency",
-			"Defined service levels, channel access, and escalation thresholds per entitlement for role-based accountability",
-			"Unlimited support for every account by default for production readiness"
+			"Whether items are automatically pushed to agents or agents pull the next available item",
+			"The retention period before closed customer cases are archived from the instance permanently",
+			"The currency and language shown on the customer self-service portal landing page banner",
+			"The database index strategy used by the platform when running scheduled report aggregations"
 		],
-		"correctIndex": 2,
-		"explanation": "Specific entitlement boundaries align delivery effort with contractual obligations.",
+		"correctIndex": 0,
+		"explanation": "A queue's assignment method determines whether AWA pushes items directly to eligible agents or lets agents pull the next item, shaping how work reaches the team.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/task/manage-service-level-entitlements.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/awa-queues-for-csm.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 49,
-		"prompt": "What reporting indicator suggests entitlement configuration drift in CSM?",
+		"prompt": "An implementer wants agents to only receive chat and case work they are qualified to handle. Which mechanism links required competencies to the agent for eligibility matching?",
 		"choices": [
-			"High volume of cases manually reclassified after entitlement checks for sustained reliability",
-			"Accurate contract linkage on case records for measurable outcomes",
-			"Stable response performance by support tier for practical execution",
-			"Consistent use of entitlement-driven assignment for controlled governance"
+			"Skills and skill determination rules evaluated against the work item during assignment",
+			"A static welcome message displayed once when the agent first signs into the workspace",
+			"The account hierarchy relationship maintained between parent and child customer accounts",
+			"The knowledge base ownership group assigned to published customer-facing articles only"
 		],
 		"correctIndex": 0,
-		"explanation": "Frequent manual correction indicates entitlement rules are incomplete or misaligned with contracts.",
+		"explanation": "Skill-based routing uses skills and skill determination rules so AWA assigns items only to agents who hold the competencies the work requires.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/task/report-on-case-performance.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/skill-based-routing-for-csm.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 50,
-		"prompt": "Which analytics focus is most valuable for CSM leadership?",
+		"prompt": "A B2B organization supports businesses, while a B2C organization supports individuals. Which CSM case type distinction should the implementer configure to reflect these engagement models?",
 		"choices": [
-			"Case resolution time and customer satisfaction by account segment for practical execution",
-			"Quantity of UI policy records for controlled governance",
-			"Number of background scripts executed for sustained reliability",
-			"Count of archived knowledge attachments for measurable outcomes"
+			"Business-to-business cases tied to accounts and business-to-consumer cases tied to consumers",
+			"A single generic case type that ignores whether the customer is a company or an individual",
+			"Change request records reused directly as the only customer-facing case type in the portal",
+			"Problem tasks repurposed to represent every customer interaction across all support channels"
 		],
 		"correctIndex": 0,
-		"explanation": "Resolution efficiency and satisfaction by segment show service outcomes and account experience quality.",
+		"explanation": "CSM supports B2B models where cases relate to accounts and contacts, and B2C models where cases relate to consumers, so case type configuration must reflect the supported engagement model.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/task/analyze-customer-service-performance.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/customer-service-management-data-model.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 51,
-		"prompt": "Why should CSM analytics include first-contact resolution rate?",
+		"prompt": "An implementer needs the phone channel to create cases and capture caller context automatically when an agent answers. Which CSM capability supports this telephony intake?",
 		"choices": [
-			"It indicates efficiency of triage, knowledge usage, and agent enablement for role-based accountability",
-			"It tracks procurement cycle time for production readiness",
-			"It measures contract value exclusively for controlled governance",
-			"It replaces all SLA metrics for operational consistency"
+			"Customer Service Management integration with a computer telephony integration for the phone channel",
+			"A scheduled import set that only loads historical call detail records once every night",
+			"A catalog client script that validates variable input on unrelated hardware request items",
+			"A data lookup rule that sets priority solely from the case short description keywords"
 		],
 		"correctIndex": 0,
-		"explanation": "Higher first-contact resolution generally reflects effective routing and knowledge-driven support.",
+		"explanation": "CTI/OpenFrame integrations connect the phone channel to CSM so inbound calls surface caller identity and can generate or link cases with context during the interaction.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/case-management.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/openframe-for-csm.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 52,
-		"prompt": "What is the best way to analyze backlog risk in CSM?",
+		"prompt": "A customer service team wants proactive outbound messages sent to a targeted set of contacts about a maintenance window. Which CSM feature is designed for this outreach?",
 		"choices": [
-			"Ignore escalated cases in reporting for sustained reliability",
-			"Use random weekly samples without trends for measurable outcomes",
-			"Track open case age buckets by priority and entitlement tier for practical execution",
-			"Count exclusively closed cases each month for enterprise implementation"
+			"Targeted communications that select recipients and send campaign-style customer notifications",
+			"The incident major problem workbench used only by internal problem management coordinators",
+			"A single system property that toggles instance-wide read-only maintenance for all users",
+			"The knowledge feedback flag that customers submit against an individual published article"
 		],
-		"correctIndex": 2,
-		"explanation": "Age distribution by priority and entitlement reveals where backlog threatens commitments.",
+		"correctIndex": 0,
+		"explanation": "Targeted communications let CSM teams define recipient audiences and send proactive, campaign-style outbound messages such as maintenance or outage notices to affected customers.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/targeted-communications-for-csm.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 53,
-		"prompt": "Which analytic outcome supports proactive service improvement in CSM?",
+		"questionType": "multi",
+		"prompt": "Which two elements does a targeted communication in CSM require the implementer to define before it can be sent? (Choose two.)",
 		"choices": [
-			"Manual notes with no categorization for enterprise implementation",
-			"Recurring case drivers mapped to product, account, and channel for operational consistency",
-			"List of users with dark mode enabled for role-based accountability",
-			"Count of inactive templates for production readiness"
+			"The audience or recipient list that determines who receives the communication",
+			"The message content or template delivered to the selected recipients",
+			"A mandatory change advisory board approval recorded on every outbound customer message",
+			"A discovery schedule that scans customer devices before any communication is released"
 		],
-		"correctIndex": 1,
-		"explanation": "Driver analysis identifies systemic issues and informs targeted deflection or product fixes.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Targeted communications need a defined audience (recipients) and message content or template; they do not require CAB approval or discovery schedules.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/task/use-case-analytics.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/targeted-communications-for-csm.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 54,
-		"prompt": "What governance practice improves trust in CSM analytics?",
+		"prompt": "A support contract promises resolution of high-priority cases within four business hours. Which CSM configuration tracks and enforces that commitment on each qualifying case?",
 		"choices": [
-			"Allow every team to define metrics differently for production readiness",
-			"Maintain standardized KPI definitions and shared calculation logic for role-based accountability",
-			"Change dashboard formulas weekly for operational consistency for sustained reliability",
-			"Exclude data quality checks for enterprise implementation for controlled governance"
+			"Service level agreements with definitions and schedules attached to qualifying cases",
+			"A read-only annotation field that agents optionally fill in with a target date manually",
+			"The account contact directory listing every individual who can open a customer case",
+			"A survey trigger that sends a satisfaction questionnaire after the case is resolved"
 		],
-		"correctIndex": 1,
-		"explanation": "Consistent metric definitions ensure comparability and reliable decision-making.",
+		"correctIndex": 0,
+		"explanation": "SLA definitions with conditions and schedules measure elapsed time against commitments, driving timers, breaches, and escalations for qualifying customer cases.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/service-level-agreements-for-csm.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 55,
-		"prompt": "Which role is typically accountable for CSM process governance?",
+		"prompt": "Some enterprise customers require agents to follow account-specific handling rules, such as never contacting the customer by phone after hours. Which CSM feature surfaces these instructions to agents on the case?",
 		"choices": [
-			"Any customer contact at random for controlled governance",
-			"exclusively procurement manager for practical execution",
-			"No formal role ownership for measurable outcomes for role-based accountability",
-			"CSM process owner defining case policies and service standards for sustained reliability"
+			"Special handling notes that display account or contact-specific guidance to agents",
+			"A random tip-of-the-day banner rotated globally across every agent's home dashboard",
+			"The default incident resolution notes copied automatically from a prior unrelated case",
+			"A read-only audit history entry that records every field change on the case record"
 		],
-		"correctIndex": 3,
-		"explanation": "A process owner ensures consistent operational standards across case lifecycle workflows.",
+		"correctIndex": 0,
+		"explanation": "Special handling notes present account-, contact-, product-, or asset-specific instructions to agents at the right moment so they follow required customer handling rules.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/customer-service-management-overview.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/special-handling-notes-for-csm.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 56,
-		"prompt": "What role should own entitlement policy decisions in CSM?",
+		"prompt": "When configuring a special handling note, which setting determines the conditions under which the note appears to an agent working a case?",
 		"choices": [
-			"Contract/service owner with governance authority for operational consistency",
-			"Guest user from portal for enterprise implementation for controlled governance",
-			"Catalog item approver exclusively for production readiness",
-			"Any case agent editing the case for role-based accountability"
+			"The applies-to record and matching conditions that scope when the note is shown",
+			"The instance-wide session timeout value that logs idle agents out of the platform",
+			"The outbound email server profile used to deliver customer acknowledgement messages",
+			"The report source table selected when building a performance analytics dashboard widget"
 		],
 		"correctIndex": 0,
-		"explanation": "Entitlement policy ownership should map to contractual and service accountability.",
+		"explanation": "A special handling note is scoped by what it applies to (account, contact, product, or asset) and the conditions that control when it surfaces to agents.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/task/configure-entitlements.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/special-handling-notes-for-csm.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 57,
-		"prompt": "How should escalated CSM cases be role-assigned?",
+		"prompt": "An implementer must ensure only certain agents can view sensitive special handling notes for a regulated account. What should govern this visibility?",
 		"choices": [
-			"Route to designated escalation roles with decision authority for measurable outcomes",
-			"Leave in original queue without ownership change for sustained reliability",
-			"Close automatically when escalated for controlled governance for enterprise implementation",
-			"Assign to inactive users for practical execution"
+			"Access controls and note visibility settings that restrict which users can read the note",
+			"A public knowledge base flag that publishes the note to the external customer portal",
+			"An assignment rule that reassigns the entire account to a different regional group",
+			"A survey definition scheduled to gather feedback from the account's primary contact"
 		],
 		"correctIndex": 0,
-		"explanation": "Escalation roles should have the authority and context to resolve high-impact customer issues quickly.",
+		"explanation": "Visibility of special handling notes is controlled through access settings so only authorized agents see sensitive account guidance, keeping regulated information restricted.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/task/manage-case-escalations.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/special-handling-notes-for-csm.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 58,
-		"prompt": "What access model is best for CSM account data?",
+		"prompt": "An agent opens a newly created customer case that has not yet been picked up. Which case state typically represents this starting point in the CSM case lifecycle?",
 		"choices": [
-			"Public dashboards with customer details for practical execution",
-			"Role and account-based access controls aligned to assigned customer portfolios for controlled governance",
-			"Broad read/write access for all case agents for sustained reliability",
-			"No differentiation between internal and external users for measurable outcomes"
+			"New, indicating the case has been logged but work has not yet begun",
+			"Closed, indicating resolution was confirmed and the case is fully archived",
+			"Cancelled, indicating the customer withdrew the request before any triage occurred",
+			"Resolved, indicating a fix was applied and awaiting customer confirmation only"
 		],
-		"correctIndex": 1,
-		"explanation": "Account-scoped access reduces confidentiality risk while enabling effective support operations.",
+		"correctIndex": 0,
+		"explanation": "The CSM case lifecycle generally begins in the New state when a case is logged, then progresses through open, in-progress, resolved, and closed states as work advances.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_AccessControls.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/case-management-process.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 59,
-		"prompt": "Which symptom suggests CSM role design needs improvement?",
+		"prompt": "A customer replies with the requested information after an agent moved a case to Awaiting Info. What is the appropriate lifecycle transition for the agent to make?",
 		"choices": [
-			"Consistent entitlement enforcement for role-based accountability for measurable outcomes",
-			"Low backlog for high-priority cases for production readiness",
-			"Stable ownership and low escalation delay for enterprise implementation",
-			"Frequent manual reassignment due to unclear ownership boundaries for operational consistency"
+			"Return the case to an active in-progress state so work resumes on the response",
+			"Immediately close the case as complete without reviewing the customer's reply",
+			"Delete the case record entirely to remove it from the agent's assigned queue",
+			"Convert the case into a knowledge article before reading the submitted information"
 		],
-		"correctIndex": 3,
-		"explanation": "Repeated reassignment is a common indicator of role ambiguity and poor process routing.",
+		"correctIndex": 0,
+		"explanation": "When a customer supplies the needed information, the agent moves the case out of the awaiting-info hold back into an active working state to continue resolution.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/case-management.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/case-management-process.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 60,
-		"prompt": "Which integration most improves CSM agent efficiency?",
+		"prompt": "Multiple customers report the same outage and each has opened a separate case. Which CSM capability lets an agent link these related cases to a single coordinated record for tracking?",
 		"choices": [
-			"Manual copy-paste between tools for controlled governance for enterprise implementation",
-			"No integration with related service data for practical execution",
-			"Case linkage with product/incident records to provide complete service context for measurable outcomes",
-			"Separate customer profiles per channel for sustained reliability"
+			"Major issue management, which associates child cases to a major case for the incident",
+			"A parent change request created in the change management application for internal review",
+			"A knowledge base category that groups unrelated articles by product documentation area",
+			"A survey campaign that individually emails each affected customer a separate questionnaire"
 		],
-		"correctIndex": 2,
-		"explanation": "Connected records reduce context-switching and improve diagnosis and resolution speed.",
+		"correctIndex": 0,
+		"explanation": "Major issue management (MIM) lets agents create a major case and associate the affected customer cases as children, coordinating communication and resolution across all of them.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/case-management.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/major-issue-management-for-csm.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 61,
-		"prompt": "How should CSM integrate with external CRM data?",
+		"prompt": "After a major case is resolved in major issue management, what happens to the associated child cases as part of the coordinated workflow?",
 		"choices": [
-			"Sync all fields into free-text notes for production readiness",
-			"Use governed field mappings and reconciliation logic for account/contact synchronization for role-based accountability",
-			"Overwrite CSM account data without mapping rules for operational consistency",
-			"Disable duplicate checks for enterprise implementation for controlled governance"
+			"Resolution can be propagated to the child cases so affected customers are updated together",
+			"The child cases are permanently deleted from the instance without any customer notification",
+			"Each child case must be reopened manually and reassigned to an unrelated support queue",
+			"The child cases convert into change requests routed to the change advisory board for review"
 		],
-		"correctIndex": 1,
-		"explanation": "Governed mappings and reconciliation preserve data integrity across connected systems.",
+		"correctIndex": 0,
+		"explanation": "Major issue management propagates the major case resolution to its associated child cases, letting agents update all affected customers consistently once the underlying issue is fixed.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/integrationhub/concept/integrationhub.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/major-issue-management-for-csm.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 62,
-		"prompt": "What is a strong pattern for integrating CSM and knowledge management?",
+		"prompt": "A high-value customer's case has stalled and exceeded the response commitment. Which CSM feature lets the customer or agent formally raise the case's urgency for management attention?",
 		"choices": [
-			"Disable article feedback collection for measurable outcomes for role-based accountability",
-			"Require agents to search external sites exclusively for operational consistency",
-			"Recommend contextual articles during case handling and track deflection outcomes for controlled governance",
-			"Separate knowledge with no case linkage for practical execution"
+			"Case escalation, which records an escalation request and raises visibility for the case",
+			"A knowledge feedback rating submitted anonymously against a published support article",
+			"A targeted communication broadcast to every contact in the customer account directory",
+			"A skill determination rule that recalculates the required competencies for assignment"
 		],
-		"correctIndex": 2,
-		"explanation": "Contextual knowledge recommendations improve consistency and enable measurable deflection benefits.",
+		"correctIndex": 0,
+		"explanation": "Case escalations let customers or agents formally flag a case for heightened attention, capturing the reason and surfacing it to management for faster action.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/knowledge-management/concept/knowledge-management.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/case-escalation-for-csm.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 63,
-		"prompt": "Which integration control best protects customer data in CSM?",
+		"prompt": "An agent needs to delegate part of a complex case to a fulfillment team without changing case ownership. Which CSM construct supports assigning discrete units of work off the case?",
 		"choices": [
-			"Open API access with shared credentials for operational consistency",
-			"Bypass ACL checks for performance for enterprise implementation",
-			"No logging of integration activity for production readiness",
-			"Scoped credentials, least privilege, and monitored API transactions for role-based accountability"
+			"Case tasks that break the work into assignable items linked to the parent case",
+			"A separate unrelated incident opened in a different application with no case link",
+			"A knowledge article draft that must be published before any work can continue",
+			"A read-only activity log entry that only records who last viewed the case record"
 		],
-		"correctIndex": 3,
-		"explanation": "Scoped access and monitoring reduce exposure while preserving operational traceability.",
+		"correctIndex": 0,
+		"explanation": "Case tasks let an agent split work into discrete, assignable items connected to the parent case so other teams contribute while the case owner retains overall ownership.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_AccessControls.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/case-tasks-for-csm.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 64,
-		"prompt": "What indicates CSM integration maturity?",
+		"prompt": "An agent needs to move a stalled case forward using a standard case action rather than an administrative operation. Which option is a valid case action?",
 		"choices": [
-			"Reliable data synchronization, low duplicate rates, and measured process outcomes for role-based accountability",
-			"Ad hoc integrations with no documentation for production readiness",
-			"Frequent manual data correction between systems for enterprise implementation",
-			"No ownership for integration failures for operational consistency"
+			"Create a case task and assign it to a supporting fulfillment group for the work",
+			"Rebuild the instance search index for the entire knowledge platform globally",
+			"Change the global default language for every user across the whole deployment",
+			"Purge the audit history of unrelated cases to reduce the total database size"
 		],
 		"correctIndex": 0,
-		"explanation": "Stable sync quality and measurable outcomes signal robust integration governance.",
+		"explanation": "Creating and assigning a case task is a standard case action that moves work forward, whereas reindexing, changing global language, or purging audits are administrative operations.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/case-management-process.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 65,
-		"prompt": "What administrative baseline is most important for CSM scalability?",
+		"prompt": "A service manager wants a consolidated periodic summary of case activity, such as new, resolved, and aging cases, delivered to account stakeholders. Which CSM feature produces this rollup?",
 		"choices": [
-			"Governed case taxonomy, assignment rules, and entitlement enforcement for practical execution",
-			"No required fields on case records for controlled governance",
-			"Manual assignment exclusively for operational consistency",
-			"One queue for all case types for measurable outcomes"
+			"Case digests that summarize case activity for stakeholders on a scheduled basis",
+			"A single case form section that only shows the currently open case's short description",
+			"The OpenFrame telephony toolbar that displays live inbound call queue statistics",
+			"A UI action button that manually closes one selected case at a time from a list"
 		],
 		"correctIndex": 0,
-		"explanation": "A strong administrative baseline improves routing precision and service consistency.",
+		"explanation": "Case digests generate periodic summaries of case activity so stakeholders receive a consolidated view of volumes, status, and trends without opening individual cases.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/case-management.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/case-digest-for-csm.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 66,
-		"prompt": "How should CSM administrators manage role-based access?",
+		"prompt": "A CSM implementation ties cases to the specific offering a customer is entitled to, such as a support tier tied to a product line. Which construct defines that supported offering?",
 		"choices": [
-			"Implement account-aware ACLs and least-privilege role groups for enterprise implementation",
-			"Use shared admin credentials for operational consistency for sustained reliability",
-			"Disable role inheritance for role-based accountability for measurable outcomes",
-			"Grant broad visibility to all customer records for production readiness"
+			"Service definitions and entitlements that specify which services a customer can receive",
+			"A generic catalog item variable set reused only for internal hardware procurement requests",
+			"A discovery pattern that maps only network topology for infrastructure configuration items",
+			"An email notification layout template applied to outbound case acknowledgement messages"
 		],
 		"correctIndex": 0,
-		"explanation": "Account-aware least privilege protects customer data while supporting agent productivity.",
+		"explanation": "Service definitions and entitlements describe the services and support levels a customer is eligible for, driving what cases and offerings apply to that account or contract.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_AccessControls.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/entitlements-for-csm.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 67,
-		"prompt": "Which admin measure best reduces CSM configuration drift?",
+		"prompt": "How do entitlements influence what happens when a contact submits a new case in CSM?",
 		"choices": [
-			"Different priority logic per team with no standard for sustained reliability",
-			"Disabling update set governance for measurable outcomes for role-based accountability",
-			"Untracked dashboard edits in production for practical execution",
-			"Periodic review of assignment, SLA, and entitlement configuration against policy for controlled governance"
+			"They determine the support the contact is eligible for and which SLAs apply to the case",
+			"They set the background color theme of the agent workspace list view columns only",
+			"They control the order in which knowledge article categories appear in search results",
+			"They decide the physical data center region where the ServiceNow instance is hosted"
 		],
-		"correctIndex": 3,
-		"explanation": "Periodic policy alignment reviews keep operational logic consistent over time.",
+		"correctIndex": 0,
+		"explanation": "Entitlements define the level and type of support a customer is eligible for, which drives applicable SLAs and validates that the case falls within the customer's coverage.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/update-sets/concept/c_UpdateSets.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/entitlements-for-csm.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 68,
-		"prompt": "What KPI set is best for CSM admin health monitoring?",
+		"prompt": "During case resolution an agent references a known fix documented in the knowledge base and attaches it to the case. What benefit does this attach-knowledge action provide?",
 		"choices": [
-			"Length of case descriptions for controlled governance for enterprise implementation",
-			"Case reassignment rate, backlog aging, and SLA breach trend for practical execution",
-			"Number of opened browser tabs for measurable outcomes",
-			"Count of theme changes for sustained reliability for operational consistency"
+			"It links the article to the case and lets the agent share a proven solution with the customer",
+			"It permanently unpublishes the referenced article so no other agent can reuse it",
+			"It reassigns case ownership to the knowledge base owner instead of the current agent",
+			"It converts the customer contact record into an internal fulfiller user automatically"
 		],
-		"correctIndex": 1,
-		"explanation": "These indicators expose routing quality, workload pressure, and commitment performance.",
+		"correctIndex": 0,
+		"explanation": "Attaching a knowledge article to a case links the proven solution to the case and enables the agent to share it with the customer, promoting consistent, faster resolution.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/knowledge-management-for-csm.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 69,
-		"prompt": "Which outcome best reflects mature CSM administration?",
+		"prompt": "A team wants agents to work cases, tasks, and interactions from a single modern interface with contextual side panels and guided actions. Which environment should the implementer deploy?",
 		"choices": [
-			"Frequent emergency queue reconfiguration for production readiness",
-			"Predictable case flow, clear ownership, and stable customer experience metrics for role-based accountability",
-			"No governance board for changes for operational consistency",
-			"Escalations resolved without record updates for enterprise implementation"
+			"The Customer Service Management Configurable Workspace built for agent productivity",
+			"The classic core UI list module with no contextual side panels or guided actions",
+			"A read-only reporting portal that only displays historical performance analytics scores",
+			"The system definition table editor used solely by administrators to alter data schemas"
 		],
-		"correctIndex": 1,
-		"explanation": "Mature administration produces stable processes and consistently measured outcomes.",
+		"correctIndex": 0,
+		"explanation": "The CSM Configurable Workspace gives agents a unified, modern interface with contextual panels, guided actions, and tools to work cases and interactions efficiently.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/task/analyze-customer-service-performance.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/csm-configurable-workspace.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 70,
-		"prompt": "Which strategy best supports enterprise CSM rollout across multiple business units?",
+		"prompt": "An agent working in the CSM Configurable Workspace needs recommended next steps that adapt to the current case context. Which workspace capability presents these context-aware recommendations?",
 		"choices": [
-			"Deploy a common case model with phased domain onboarding and shared governance for sustained reliability",
-			"Keep each business unit on isolated workflows indefinitely for measurable outcomes",
-			"Prioritize branding before process and data alignment for practical execution",
-			"Launch all channels and geographies simultaneously without standards for controlled governance"
+			"Guided decisions or agent assist that surface recommended actions based on case context",
+			"A static printed runbook stored outside the platform that agents consult manually",
+			"The instance clone scheduler that copies production data into a sub-production instance",
+			"A UI theme picker that only changes the workspace accent color for the signed-in user"
 		],
 		"correctIndex": 0,
-		"explanation": "Enterprise rollout succeeds with standardized foundations and phased adoption under common governance.",
+		"explanation": "Guided decisions and agent assistance tools in the workspace surface context-aware recommended actions, helping agents follow consistent, efficient resolution paths.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/csm-overview.html",
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/case-management.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/guided-decisions-for-csm.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 71,
-		"prompt": "During CSM enterprise rollout, what should be standardized first?",
+		"prompt": "A supervisor needs real-time visibility into agent workload, queue backlogs, and case volumes across the team. Which workspace feature best provides this operational view?",
 		"choices": [
-			"Regional color themes for workspace for enterprise implementation",
-			"Case lifecycle states, assignment model, and priority definitions for operational consistency",
-			"Ad hoc SLAs per agent preference for role-based accountability",
-			"Individual team naming conventions exclusively for production readiness"
+			"Workspace dashboards and lists that display live case, queue, and agent metrics",
+			"A one-time export of last year's cases to a spreadsheet for offline manual review",
+			"The account contact form section listing individual contacts for a single account",
+			"A knowledge article template that standardizes the layout of published documents"
 		],
-		"correctIndex": 1,
-		"explanation": "Shared lifecycle and prioritization rules create consistent customer outcomes and reporting quality.",
+		"correctIndex": 0,
+		"explanation": "Configurable workspace dashboards and lists give supervisors real-time operational visibility into queues, workloads, and case metrics for proactive management.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/case-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/service-level-management/concept/service-level-management.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/csm-configurable-workspace.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 72,
-		"prompt": "Which KPI combination best measures enterprise CSM rollout success?",
+		"questionType": "multi",
+		"prompt": "Which two components make the CSM Configurable Workspace adaptable to an organization's process without heavy custom code? (Choose two.)",
 		"choices": [
-			"Count of knowledge categories created for practical execution",
-			"Total number of users with admin role for controlled governance",
-			"First-contact resolution, case resolution SLA attainment, and customer effort trend for sustained reliability",
-			"Daily number of inbound emails without resolution context for measurable outcomes"
+			"Configurable list and form layouts tailored to agent roles and case types",
+			"Contextual side panels and declarative actions defined for the workspace experience",
+			"Mandatory rewrites of the underlying case table schema for every configuration change",
+			"A separate physical server that must be provisioned for each individual agent account"
 		],
-		"correctIndex": 2,
-		"explanation": "These KPIs capture service quality, operational performance, and customer experience during rollout.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "The workspace is adapted through configurable layouts, contextual panels, and declarative actions rather than schema rewrites or per-agent servers, keeping customization low-code.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/csm-overview.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/csm-configurable-workspace.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 73,
-		"prompt": "A business unit requests custom CSM processes that conflict with enterprise standards. What is the best response?",
+		"prompt": "An organization wants customers to open cases, track status, and search knowledge from a branded self-service site. Which CSM front-end should the implementer configure?",
 		"choices": [
-			"Approve all local customizations immediately for role-based accountability",
-			"Reject all change requests without analysis for production readiness",
-			"Fork the platform into separate instances for enterprise implementation",
-			"Apply a governance review to allow exclusively justified extensions that preserve core global process controls"
+			"The Customer Service Portal that provides self-service case and knowledge access",
+			"The internal core UI application navigator restricted to fulfiller and admin users",
+			"The Advanced Work Assignment queue configuration screen used only by administrators",
+			"The performance analytics data collector job scheduler for nightly score snapshots"
 		],
-		"correctIndex": 3,
-		"explanation": "Governed extensibility keeps enterprise consistency while supporting legitimate regional or product needs.",
+		"correctIndex": 0,
+		"explanation": "The Customer Service Portal is the branded self-service experience where customers submit and track cases, browse the catalog, and search knowledge.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/csm-overview.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/customer-service-portal.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 74,
-		"prompt": "Which operating model most improves long-term CSM enterprise rollout sustainability?",
+		"prompt": "A customer wants to request a standardized service, such as a return or an upgrade, directly from the Customer Service Portal. Which construct presents these requestable offerings?",
 		"choices": [
-			"Central product team with regional champions and a managed release cadence for operational consistency",
-			"No backlog prioritization process for enterprise implementation for controlled governance",
-			"Quarterly pauses on all defect and enhancement work for production readiness",
-			"Independent regional admins deploying unreviewed updates for role-based accountability"
+			"A service catalog for CSM that publishes customer-requestable items on the portal",
+			"A read-only knowledge category that only displays reference documentation articles",
+			"An internal change request form available exclusively to the change management team",
+			"A targeted communication audience list used solely for outbound campaign messaging"
 		],
 		"correctIndex": 0,
-		"explanation": "A product operating model enables scalable governance, controlled change, and continual service improvement.",
+		"explanation": "A service catalog surfaced on the Customer Service Portal lets customers request standardized offerings, generating the appropriate case or request records for fulfillment.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/csm-overview.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/continual-improvement-management/concept/continual-improvement-management.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/service-catalog-for-csm.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 75,
-		"prompt": "Which CSM setup most improves first-contact resolution for recurring customer issues?",
+		"prompt": "An implementer must let customers register and associate with the correct account so they only see records relevant to their organization on the portal. Which portal capability handles this?",
 		"choices": [
-			"A manual free-text intake process for every channel for measurable outcomes",
-			"Case templates linked to relevant knowledge and guided agent workflows for sustained reliability",
-			"Routing all cases to one assignment group for controlled governance",
-			"Removing categorization fields to speed submission for practical execution"
+			"Customer account and contact registration that scopes portal data to the user's account",
+			"A global anonymous view that shows every customer's cases to all portal visitors alike",
+			"An internal-only ACL that blocks all external users from ever reaching the portal login",
+			"A knowledge feedback widget that only collects article ratings from signed-in agents"
 		],
-		"correctIndex": 1,
-		"explanation": "Structured case handling with contextual knowledge helps agents resolve common issues in the first interaction.",
+		"correctIndex": 0,
+		"explanation": "Portal registration ties a contact to an account and applies account-based access, ensuring customers see only the cases, assets, and entitlements for their organization.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/case-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/csm-overview.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/customer-service-portal.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 76,
-		"prompt": "A customer opens cases through chat, email, and portal for the same issue. What CSM capability should reduce duplicate handling?",
+		"prompt": "A CSM leader wants trended, historical insight into metrics like average resolution time and case backlog over months, not just current values. Which capability should be enabled?",
 		"choices": [
-			"Route chat cases directly to problem management for production readiness",
-			"Use interaction-to-case controls with account/contact context and duplicate detection for role-based accountability",
-			"Disable portal submission for operational consistency for sustained reliability",
-			"Create separate queues for each channel with no linking for enterprise implementation"
+			"Performance Analytics with indicators and scheduled data collection for trend scoring",
+			"A single real-time list filter that only shows cases open at the current moment",
+			"A one-off export to a spreadsheet that captures a static snapshot for one day only",
+			"The OpenFrame telephony toolbar that displays live inbound call queue counts only"
 		],
-		"correctIndex": 1,
-		"explanation": "Channel-aware case controls and context linking help consolidate duplicate requests into one managed flow.",
+		"correctIndex": 0,
+		"explanation": "Performance Analytics collects indicator scores on a schedule to reveal trends and historical patterns over time, unlike real-time reports that show only the current state.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/case-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/csm-overview.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/performance-analytics-for-csm.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 77,
-		"prompt": "Which measure is most useful for CSM leaders evaluating backlog risk?",
+		"prompt": "What is the key difference between a report and a Performance Analytics indicator in a CSM deployment?",
 		"choices": [
-			"Aging distribution of open high-priority cases by account and SLA breach risk for controlled governance",
-			"Total portal page views for practical execution",
-			"Number of knowledge categories per product for measurable outcomes",
-			"Daily count of newly created contacts for sustained reliability"
+			"A report shows current data while an indicator captures scores over time to reveal trends",
+			"A report can never be shared with any user while an indicator is always fully public",
+			"A report requires a telephony integration while an indicator requires a chat integration",
+			"A report deletes source records after rendering while an indicator duplicates every case"
 		],
 		"correctIndex": 0,
-		"explanation": "Backlog risk is best seen through age, priority, account impact, and SLA exposure together.",
+		"explanation": "Reports present current data at query time, whereas Performance Analytics indicators snapshot scores over time to surface trends, targets, and forecasts.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/case-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/performance-analytics-for-csm.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 78,
-		"prompt": "A premium account expects faster response targets than standard customers. What CSM design is best?",
+		"prompt": "A manager wants a single screen combining several reports, indicators, and lists for daily monitoring of the customer service operation. Which artifact should the implementer build?",
 		"choices": [
-			"Use entitlement-driven SLA policies tied to account/service terms for sustained reliability",
-			"Apply manual priority changes after breach warnings for measurable outcomes",
-			"Route premium requests to incident management exclusively for practical execution",
-			"Set one global SLA for all customers for controlled governance"
+			"A dashboard that aggregates multiple reports, indicators, and lists onto one screen",
+			"A single knowledge article that manually restates yesterday's case counts in text",
+			"A data policy that makes the case priority field mandatory during record creation",
+			"An assignment rule that pushes every new case to one designated senior agent only"
 		],
 		"correctIndex": 0,
-		"explanation": "Entitlements and SLA policies formalize differentiated support commitments by contract.",
+		"explanation": "Dashboards combine multiple reports, Performance Analytics widgets, and lists into a single monitoring view tailored to a role such as a customer service manager.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/case-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/service-level-management/concept/service-level-management.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/reporting-for-csm.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 79,
-		"prompt": "Which governance routine most improves long-term CSM process quality?",
+		"prompt": "During onboarding an agent should immediately see any critical account handling instructions while working a case in the workspace. Where do special handling notes appear to support this usage?",
 		"choices": [
-			"Ad hoc reviews exclusively after customer escalations for controlled governance",
-			"Disabling customer survey collection to reduce noise for operational consistency",
-			"Monthly review of SLA breaches, reopen trends, and knowledge deflection by case category for role-based accountability",
-			"Quarterly reassignment of every case regardless of status for production readiness"
+			"Contextually within the agent workspace when the matching case conditions are met",
+			"Only in a nightly email digest delivered after the agent's shift has already ended",
+			"Exclusively on the external customer portal where customers read the notes themselves",
+			"In the system logs table that only administrators review during scheduled audits"
 		],
-		"correctIndex": 2,
-		"explanation": "Regular KPI-driven reviews identify systemic issues and guide targeted service improvements.",
+		"correctIndex": 0,
+		"explanation": "Special handling notes surface contextually in the agent workspace when their conditions match the case, so agents see critical account guidance at the moment they need it.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/csm-overview.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/special-handling-notes-for-csm.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 80,
-		"prompt": "Which CSM practice best improves consistency for escalated customer cases?",
+		"prompt": "Before configuration begins, the implementation team must define which processes, integrations, and customer models are included in the CSM deployment. Which activity establishes these boundaries?",
 		"choices": [
-			"Agent-specific escalation criteria for measurable outcomes for role-based accountability",
-			"Bypass case priority fields during handoffs for sustained reliability",
-			"Escalate exclusively when customers call twice for enterprise implementation",
-			"Defined escalation paths with assignment rules and communication checkpoints for practical execution"
+			"Defining project scope so included capabilities and out-of-scope items are agreed upfront",
+			"Immediately building every possible workspace form before requirements are gathered",
+			"Publishing all draft knowledge articles to customers before any review takes place",
+			"Cloning production data into every sub-production instance without stakeholder input"
 		],
-		"correctIndex": 3,
-		"explanation": "Standard escalation design ensures predictable handling and transparent stakeholder communication.",
+		"correctIndex": 0,
+		"explanation": "Defining project scope during planning aligns stakeholders on included processes, integrations, and models, preventing scope creep and guiding the implementation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/case-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/service-level-management/concept/service-level-management.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/customer-service-management-implementation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 81,
-		"prompt": "What is the strongest reason to track case reopen rate in CSM?",
+		"prompt": "A ServiceNow implementation partner follows a structured delivery approach with phases such as planning, configuration, testing, and deployment. Which methodology guides this delivery?",
 		"choices": [
-			"It guarantees entitlement compliance for operational consistency for sustained reliability",
-			"It measures portal branding effectiveness for enterprise implementation",
-			"It indicates possible resolution quality issues and knowledge gaps for production readiness",
-			"It replaces customer satisfaction measurement for role-based accountability"
+			"The Now Create engagement methodology that structures phased implementation delivery",
+			"An unstructured ad-hoc approach that skips testing and moves changes straight to production",
+			"A hardware asset depreciation schedule that only tracks financial write-down of devices",
+			"A discovery credential rotation policy that only governs infrastructure scanning accounts"
 		],
-		"correctIndex": 2,
-		"explanation": "Reopen trends highlight unresolved root causes and process quality opportunities in support operations.",
+		"correctIndex": 0,
+		"explanation": "ServiceNow's engagement methodology (Now Create) provides a structured, phased delivery approach spanning planning, configuration, testing, and deployment for consistent implementations.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/case-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/customer-service-management-implementation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 82,
-		"prompt": "Which data relationship is most critical for B2B case handling in CSM?",
+		"prompt": "A CSM knowledge strategy must serve both internal agents and external customers with appropriate content. Which knowledge management practice supports this dual audience?",
 		"choices": [
-			"Case to CI class dictionary exclusively for enterprise implementation",
-			"Case to account/contact entitlement context for practical execution",
-			"Case to software model normalization record for measurable outcomes",
-			"Case to vulnerability group for sustained reliability for operational consistency"
+			"Separate knowledge bases with access controls for internal-only and customer-facing articles",
+			"A single unrestricted knowledge base that exposes every internal note to all customers",
+			"Storing all articles as attachments on individual cases with no searchable structure",
+			"Publishing draft articles directly to customers without any review or approval workflow"
 		],
-		"correctIndex": 1,
-		"explanation": "Account, contact, and entitlement context drives correct handling, access, and SLA behavior in B2B support.",
+		"correctIndex": 0,
+		"explanation": "A sound knowledge strategy uses distinct knowledge bases and access controls so internal-only guidance stays private while curated articles are shared with customers.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/case-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/csm-overview.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/knowledge-management-for-csm.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 83,
-		"prompt": "Which dashboard view best helps CSM managers identify staffing pressure early?",
+		"prompt": "A knowledge manager wants an objective measure of article health based on factors like feedback, age, and usage to prioritize maintenance. Which capability provides this score?",
 		"choices": [
-			"Case age/volume trend by queue with upcoming SLA breach projection for production readiness",
-			"List of all closed cases last year for role-based accountability",
-			"Contact count by account industry for operational consistency",
-			"Knowledge article creation totals exclusively for controlled governance"
+			"The Article Quality Index that scores knowledge articles to guide improvement efforts",
+			"A raw count of total cases opened this quarter regardless of any knowledge usage",
+			"The agent's individual login streak measured across consecutive working days only",
+			"The portal theme contrast ratio calculated for accessibility of the banner image"
 		],
 		"correctIndex": 0,
-		"explanation": "Queue aging and SLA risk trends expose workload pressure before widespread customer impact.",
+		"explanation": "The Article Quality Index (AQI) scores articles on quality dimensions such as feedback, freshness, and usage so knowledge managers can target articles needing improvement.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html",
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/csm-overview.html"
+			"https://www.servicenow.com/docs/r/knowledge-management/article-quality-index.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 84,
-		"prompt": "Which outcome best indicates a CSM program is operationally maturing?",
+		"questionType": "multi",
+		"prompt": "Which two practices strengthen a self-service strategy that deflects cases while keeping customers satisfied? (Choose two.)",
 		"choices": [
-			"Consistent SLA attainment, lower reopen rates, and strengthened customer effort trends",
-			"More manual reassignments per case for operational consistency",
-			"Increasing backlog age for priority cases for role-based accountability",
-			"Higher escalations with lower first-contact resolution for production readiness"
+			"Publishing high-quality, findable knowledge articles for common customer questions",
+			"Offering guided self-service catalog items so customers resolve routine requests independently",
+			"Hiding all knowledge from the portal so customers must always call a live agent",
+			"Disabling case creation on the portal so customers cannot log issues themselves"
 		],
 		"correctIndex": 0,
-		"explanation": "These outcomes show stronger process consistency, resolution quality, and customer experience.",
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Effective self-service deflection relies on findable, high-quality knowledge and guided catalog offerings; hiding knowledge or blocking case creation undermines the strategy.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/csm-overview.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/self-service-for-csm.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 85,
-		"prompt": "What is the most useful CSM metric for evaluating customer effort?",
+		"prompt": "An agent resolves a novel customer issue and wants the fix captured for reuse without leaving the case. Which knowledge-centered practice should the implementation encourage?",
 		"choices": [
-			"Count of open knowledge articles for sustained reliability",
-			"Daily inbound email volume for measurable outcomes for role-based accountability",
-			"Average number of internal assignment group transfers per resolved case for practical execution",
-			"Total number of active users in workspace for controlled governance"
+			"Creating a knowledge article from the case so the solution is reusable by other agents",
+			"Emailing the fix only to that one customer and discarding the details afterward",
+			"Recording the fix solely in a personal note that no other agent can ever access",
+			"Closing the case with no documentation so the same issue is investigated again later"
 		],
-		"correctIndex": 2,
-		"explanation": "Excessive handoffs usually increase friction, delay resolution, and raise customer effort.",
+		"correctIndex": 0,
+		"explanation": "Knowledge-Centered Service encourages creating articles in the flow of work so proven solutions are captured from cases and reused, reducing repeat investigation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/case-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+			"https://www.servicenow.com/docs/r/knowledge-management/knowledge-centered-service.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 86,
-		"prompt": "A case is solved, but the customer reports the issue recurring weekly. What should CSM teams do first?",
+		"prompt": "A knowledge governance process requires new customer-facing articles to be reviewed before customers can see them. Which knowledge management workflow enforces this control?",
 		"choices": [
-			"Disable customer update notifications for role-based accountability for measurable outcomes",
-			"Close the case permanently after one response for production readiness",
-			"Open root-cause follow-up using case history and related records before final closure for enterprise implementation",
-			"Reassign to a random queue for operational consistency"
+			"A knowledge approval and publish workflow that gates articles before customer visibility",
+			"An automatic publish of every draft the instant an agent clicks save on the article",
+			"A rule that deletes all articles older than thirty days regardless of ongoing usage",
+			"A setting that exposes internal working drafts to customers before any review occurs"
 		],
-		"correctIndex": 2,
-		"explanation": "Recurring issues require root-cause investigation and structured follow-up to prevent repeat contacts.",
+		"correctIndex": 0,
+		"explanation": "Knowledge workflows route articles through review and approval before publishing, ensuring customer-facing content meets quality and governance standards.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/case-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/continual-improvement-management/concept/continual-improvement-management.html"
+			"https://www.servicenow.com/docs/r/knowledge-management/knowledge-management-workflows.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 87,
-		"prompt": "Which CSM process control most improves consistency in multi-team handoffs?",
+		"prompt": "A CSM team wants generative AI to help agents summarize long case activity and draft customer replies within the workspace. Which ServiceNow capability delivers this?",
 		"choices": [
-			"Mandatory transfer reason codes and next-action ownership fields for practical execution",
-			"Free-text handoff notes exclusively for enterprise implementation",
-			"Optional assignment group updates for sustained reliability for operational consistency",
-			"Manual escalation through chat threads for measurable outcomes"
+			"Now Assist for Customer Service Management, which provides generative AI agent assistance",
+			"A basic keyword macro that only pastes a fixed canned response into every reply",
+			"The scheduled data collection job that snapshots Performance Analytics indicator scores",
+			"A discovery probe that inventories network devices unrelated to customer case handling"
 		],
 		"correctIndex": 0,
-		"explanation": "Structured transfer controls preserve context and accountability during cross-team case progression.",
+		"explanation": "Now Assist for CSM brings generative AI into the workspace to summarize cases, draft replies, and accelerate resolution while keeping the agent in control.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/case-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/data-management.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/now-assist-for-csm.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 88,
-		"prompt": "Which indicator most clearly shows CSM knowledge deflection is working?",
+		"prompt": "Which best practice helps ensure a CSM implementation remains maintainable and upgrade-friendly over time?",
 		"choices": [
-			"Increase in unresolved backlog age for measurable outcomes",
-			"Reduction in repeat low-complexity case volume for topics covered by high-use knowledge for sustained reliability",
-			"More manual case reassignments for controlled governance for enterprise implementation",
-			"Higher portal login count with no case trend changes for practical execution"
+			"Favoring configuration and low-code options over unnecessary custom scripting where possible",
+			"Rewriting core platform tables directly to force every requirement into a single form",
+			"Skipping all testing phases to accelerate the move of changes into the production instance",
+			"Publishing every internal draft article to customers to maximize total portal content volume"
 		],
-		"correctIndex": 1,
-		"explanation": "Deflection value appears when repetitive, knowledge-addressable issues generate fewer assisted cases.",
+		"correctIndex": 0,
+		"explanation": "Prioritizing configuration and low-code capabilities over heavy customization keeps CSM implementations maintainable, testable, and easier to upgrade.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/csm-overview.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/customer-service-management-implementation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 89,
-		"prompt": "Which operating practice most improves long-term CSM service quality?",
+		"prompt": "After go-live, a customer service leader wants continual improvement driven by measured outcomes and customer feedback. Which practice best supports ongoing optimization?",
 		"choices": [
-			"Case-by-case process customization with no baseline governance for operational consistency",
-			"Regular KPI-driven reviews with corrective actions on breach, reopen, and escalation trends for enterprise implementation",
-			"Closing customer feedback channels after major incidents for production readiness",
-			"Quarterly disablement of all SLA alerts for role-based accountability"
+			"Reviewing analytics, surveys, and knowledge quality to prioritize iterative improvements",
+			"Freezing the configuration permanently so no changes are ever considered after go-live",
+			"Removing all reporting so leaders are not distracted by operational performance data",
+			"Disabling customer surveys so negative feedback never reaches the service organization"
 		],
-		"correctIndex": 1,
-		"explanation": "Continuous, metric-based governance drives targeted improvements and stable customer outcomes.",
+		"correctIndex": 0,
+		"explanation": "Continual improvement uses analytics, customer surveys, and article quality signals to identify and prioritize iterative enhancements after go-live.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/csm-overview.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/performance-analytics-for-csm.html"
 		]
 	},
 	{
@@ -7327,1446 +7338,1466 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 	{
 		"trackCode": "CIS-FSM",
 		"order": 0,
-		"prompt": "A project kickoff asks for a product-oriented map of Field Service Management before scheduling go-live. Which concept documentation should the team read first?",
+		"questionType": "multi",
+		"prompt": "Which two group types are Field Service Management-specific user groups configured under Field Service > Group Management? (Choose two.)",
 		"choices": [
-			"Explore Field Service Management for operational consistency for sustained reliability",
-			"Configure SAML for legacy LDAP directories exclusively for controlled governance",
-			"Build a procurement catalog for office supplies for production readiness",
-			"Draft employee cafeteria menu rotations for role-based accountability"
+			"Qualifier Groups",
+			"Dispatch Groups",
+			"Change Advisory Board Groups",
+			"Problem Management Coordinator Groups"
 		],
 		"correctIndex": 0,
-		"explanation": "The Field Service Management documentation includes an explore topic that introduces the solution scope and how core field service capabilities fit together.",
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Field Service Management uses Qualifier Groups and Dispatch Groups under Group Management, along with Work Groups for agents, to align skills and resources to field tasks.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-field-service-management/page/product/field-service-management/concept/explore-fsm.html"
+			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/setting-up-field-service-user-groups.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 1,
-		"prompt": "Dispatch and technicians need clarity on standard operating usage after foundation data is loaded. Which concept documentation supports ongoing Field Service Management usage?",
+		"prompt": "When a user with the wm_qualifier role moves a work order from Draft to Awaiting Qualification, what happens automatically?",
 		"choices": [
-			"Plan annual performance review calibration sessions for measurable outcomes",
-			"Design employee badge printing workflows for sustained reliability",
-			"Use Field Service Management for controlled governance for enterprise implementation",
-			"Configure email ingestion for legal hold archives for practical execution"
+			"A work order task is created and populated with information from the work order",
+			"The work order is closed as Complete and removed from the dispatch queue immediately",
+			"Dynamic Scheduling assigns an agent before the qualifier reviews task details",
+			"All dispatch group memberships are cleared from the parent work order record"
 		],
-		"correctIndex": 2,
-		"explanation": "The use Field Service Management concept documentation focuses on how teams operate the application day to day after initial implementation milestones.",
+		"correctIndex": 0,
+		"explanation": "Moving a work order to Awaiting Qualification automatically creates a work order task populated from the parent work order so qualifiers can define executable field activities.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-field-service-management/page/product/field-service-management/concept/use-fsm.html"
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_WorkOrderTasks.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 2,
-		"prompt": "Implementation workshops center on how technicians receive, update, and close field jobs. Which concept documentation should anchor work order lifecycle discussions?",
+		"prompt": "In Field Service Management, how does a work order relate to work order tasks during execution?",
 		"choices": [
-			"Creating procurement blanket purchase orders for production readiness",
-			"Tuning antivirus definitions for desktops for role-based accountability",
-			"Managing work orders for operational consistency for sustained reliability",
-			"Publishing corporate social media policies for enterprise implementation"
+			"The work order is the parent record that contains one or more executable work order tasks",
+			"Work order tasks permanently replace the parent work order once dispatch assigns an agent",
+			"Each work order task must reference a separate incident record before qualification can begin",
+			"Work orders and work order tasks cannot share location, asset, or customer context data"
 		],
-		"correctIndex": 2,
-		"explanation": "Field Service Management documentation for managing work orders explains how work orders are handled through execution, which is central to field operations.",
+		"correctIndex": 0,
+		"explanation": "A work order organizes the overall field job while work order tasks represent discrete activities that agents execute, assign, and schedule independently.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-field-service-management/page/product/field-service-management/concept/managing-work-orders.html"
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_WorkOrderTasks.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 3,
-		"prompt": "A process designer must document the steps planners use to generate work orders from templates. Which task documentation should they reference for creation guidance?",
+		"prompt": "An initiator submits a draft work order for a multi-skill repair at two locations. Why should a qualifier split the request into multiple work order tasks?",
 		"choices": [
-			"Configure SNMP traps for warehouse scanners for controlled governance",
-			"Import legacy mainframe job schedules for practical execution",
-			"Create work orders for measurable outcomes for role-based accountability",
-			"Rotate database administrator passwords quarterly for sustained reliability"
+			"Different activities can be assigned to agents with different skills, locations, and schedules",
+			"Splitting tasks disables qualification and dispatch states on the parent work order record",
+			"Multiple tasks prevent any parts consumption from being tracked on the work order",
+			"Separate tasks force the work order to bypass Dispatcher Workspace assignment controls"
 		],
-		"correctIndex": 2,
-		"explanation": "The Field Service Management work order management documentation includes create work orders guidance for establishing the records planners and dispatch rely on.",
+		"correctIndex": 0,
+		"explanation": "Qualifiers split work into tasks so dispatch can route each activity to qualified agents in the right territory and time window.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_WorkOrderTasks.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 4,
+		"prompt": "Before go-live, an architect needs a high-level introduction to Field Service Management capabilities and how components fit together. Which documentation should they review first?",
+		"choices": [
+			"The configure Field Service Management overview that outlines the setup sequence and core modules",
+			"The Hardware Asset Management depreciation schedule reference for warehouse stock transfers only",
+			"The Vulnerability Response integration guide for infrastructure security scanning teams only",
+			"The Service Catalog record producer variable editor configuration for portal catalog items only"
+		],
+		"correctIndex": 0,
+		"explanation": "The configure Field Service Management topic describes the implementation sequence across workforce, work orders, scheduling, and workspace setup.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/configure-fsm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 5,
+		"prompt": "An implementation team must standardize inconsistent location names imported from legacy systems before dispatch routing goes live. Which no-code platform feature transforms field values using defined rules?",
+		"choices": [
+			"Field normalization rules that cleanse and standardize data during record updates",
+			"Client-side UI scripts that run only when administrators manually edit forms",
+			"Scheduled import sets that bypass all table-level business rules during every load",
+			"Workflow editor activities that send approval emails when location values change"
+		],
+		"correctIndex": 0,
+		"explanation": "Field normalization rules provide no-code data cleansing by transforming field values based on conditions and patterns defined by administrators.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/c_FieldNormalization.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 6,
+		"prompt": "A field service manager opens Field Service > Manager > Manage Skills to assign HVAC certification to technicians. What does Skills Management define for dispatch matching?",
+		"choices": [
+			"Agent competencies and skill levels used to match qualified resources to work requirements",
+			"Territory boundaries that replace geographic assignment logic in Dispatcher Workspace",
+			"Contract entitlement tiers that determine whether customers can open new incidents",
+			"Catalog item categories used exclusively for employee self-service portal requests"
+		],
+		"correctIndex": 0,
+		"explanation": "Skills Management lets managers create skills and assign them to agents so scheduling and dispatch can match work to qualified technicians.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/field-service-manager-agent-skills.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 7,
+		"questionType": "multi",
+		"prompt": "A dispatcher wants agent positions updated on the dispatch map in near real time. Which two items must be enabled to track field agents? (Choose two.)",
+		"choices": [
+			"The Geolocation plugin activated on the instance",
+			"The sn_fsm_customer_ex.work.management.cx.share_agent_details property set to true",
+			"The Field technician feedback survey enabled for every closed work order",
+			"The Location history map report scheduled to run once per week only"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Agent tracking on dispatch maps requires Geolocation and the share agent details property, which updates the map with the agent's latest location.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/customer-experience-components.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 8,
+		"prompt": "Dispatchers need a single workspace to view tasks, agents, locations, and schedule changes. Which Field Service Management capability provides this?",
+		"choices": [
+			"Dispatcher Workspace with configurable views, filters, and drag-and-drop assignment",
+			"Hardware Asset Management lifecycle dashboard for warehouse stock transfers only",
+			"Performance Analytics homepage widgets for HR onboarding completion metrics only",
+			"Security Incident Response playbooks for malware containment workflow execution only"
+		],
+		"correctIndex": 0,
+		"explanation": "Dispatcher Workspace is the primary scheduling console where dispatchers manage teams, tasks, and assignments with configurable layouts and filters.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/dispatcher-activities.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 9,
+		"prompt": "After qualification, an organization enables automatic assignment based on agent skills, availability, and travel time. Which capability supports this scheduling model?",
+		"choices": [
+			"Dynamic Scheduling with configurable matching criteria for field agents",
+			"Manual spreadsheet import of assignments uploaded nightly by dispatchers only",
+			"Change Management standard change templates for emergency CAB approval workflows",
+			"Knowledge Management article versioning for self-service search deflection metrics only"
+		],
+		"correctIndex": 0,
+		"explanation": "Dynamic Scheduling intelligently assigns tasks by evaluating agent skills, availability, travel time, and other matching criteria configured by administrators.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/dynamic-scheduling.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 10,
+		"prompt": "Where do you enable the qualification requirement so new work orders move through Awaiting Qualification before dispatch?",
+		"choices": [
+			"Field Service > Administration > Configuration, turning on Qualification is required for new requests",
+			"System Definition > Dictionary, editing the wm_order state choice list without saving configuration",
+			"Service Catalog > Record Producers, adding a catalog variable for qualification review notes only",
+			"MID Server > Configuration, enabling qualification polling on discovery schedules for assets"
+		],
+		"correctIndex": 0,
+		"explanation": "Work order qualification is enabled on the Field Service Configuration page by turning on Qualification is required for new requests.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/configure-qualify-fsm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 11,
+		"prompt": "A dispatcher cannot see agent assignment groups in Dispatcher Workspace. What must be configured on the dispatcher user record?",
+		"choices": [
+			"Dispatch Groups added on the Groups tab so the dispatcher can manage those user groups",
+			"A personal API key on the Credentials tab for Google Maps geocoding requests exclusively",
+			"The wm_agent role assigned directly without any group membership or dispatch group links",
+			"An elevated security admin role to bypass all field service ACL restrictions globally"
+		],
+		"correctIndex": 0,
+		"explanation": "Dispatch groups must be added to a dispatcher's user record so they can see the assignment groups covered by those dispatch groups in Dispatcher Workspace.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/configure-dispatcher-user.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 12,
+		"prompt": "Agent user groups configured under Field Service > Group Management > Work Groups receive dispatched tasks for which purpose?",
+		"choices": [
+			"Executing field work at covered locations with required parts and skills for assigned tasks",
+			"Approving change requests that require Change Advisory Board review before production deployment",
+			"Creating problem records and root cause analysis tasks for the Problem Management team queue",
+			"Managing software license reclamation for decommissioned hardware assets stored in warehouse"
+		],
+		"correctIndex": 0,
+		"explanation": "Work Groups represent field agents who execute dispatched tasks at covered locations with the parts and skills needed for assigned work.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/setting-up-field-service-user-groups.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 13,
+		"prompt": "Which Field Service role is assigned to technicians who perform dispatched work order tasks in the field?",
+		"choices": [
+			"wm_agent — field technician who executes dispatched work order tasks onsite",
+			"wm_dispatcher — scheduler who assigns tasks from Dispatcher Workspace consoles",
+			"wm_qualifier — reviewer who qualifies draft work orders before dispatch routing",
+			"wm_manager — supervisor who manages skills and monitors field team performance"
+		],
+		"correctIndex": 0,
+		"explanation": "The wm_agent role is assigned to field technicians who receive and complete dispatched work order tasks.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/r_UserRoleInstallWFieldSrvMgmnt.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 14,
+		"prompt": "Which Field Service role enables a user to assign and schedule work order tasks to field agents from Dispatcher Workspace?",
+		"choices": [
+			"wm_dispatcher with membership in a Dispatch Group covering agent assignment groups",
+			"wm_initiator who creates draft work orders but does not schedule field appointments",
+			"wm_agent who executes tasks onsite without Dispatcher Workspace assignment permissions",
+			"hr_case_writer who processes HR service delivery cases unrelated to field dispatch"
+		],
+		"correctIndex": 0,
+		"explanation": "Dispatchers use the wm_dispatcher role to manage schedules and assign qualified work order tasks to field agents.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/r_UserRoleInstallWFieldSrvMgmnt.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 15,
+		"prompt": "Service territories in Field Service Management define what operational boundary for dispatch?",
+		"choices": [
+			"Geographic or logical coverage areas used to route work to appropriate teams and agents",
+			"Financial cost centers used exclusively for annual budget forecasting reports and accruals",
+			"Software license pools used to restrict ServiceNow login counts for contractor user accounts",
+			"CMDB discovery scopes used to limit which configuration items appear in nightly import sets"
+		],
+		"correctIndex": 0,
+		"explanation": "Service territories define coverage boundaries that help dispatch route work to the right teams and reduce inefficient travel.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/c_TerritoryManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 16,
+		"prompt": "Two territories overlap the same customer address. What should administrators configure to avoid ambiguous dispatch assignments?",
+		"choices": [
+			"Clear assignment criteria such as skills, availability, and territory priority rules",
+			"A single global territory that includes every location in the instance without any boundaries",
+			"Disable Dynamic Scheduling so dispatchers never evaluate overlapping territory memberships",
+			"Remove all location records from work orders so territories are ignored during assignment"
+		],
+		"correctIndex": 0,
+		"explanation": "When territories overlap, explicit assignment criteria and priority rules prevent ambiguous routing and inconsistent dispatch decisions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/c_TerritoryManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 17,
+		"prompt": "On a field agent user group, the Locations Covered related list determines what dispatch constraint?",
+		"choices": [
+			"Which geographic areas the group can receive and execute work order tasks within",
+			"Which customer survey templates are emailed after every work order reaches Closed state",
+			"Which procurement vendor catalogs appear on the mobile app home screen for agents only",
+			"Which discovery schedules run against assets linked to the group members each night"
+		],
+		"correctIndex": 0,
+		"explanation": "Locations Covered limits which geographic areas a user group handles so dispatch assigns work only within the group's service coverage.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/setting-up-field-service-user-groups.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 18,
+		"prompt": "From Dispatcher Workspace, a dispatcher opens Assignment assistance on a work order task. Which sort option ranks agents by proximity to the task location?",
+		"choices": [
+			"Distance",
+			"Earliest start time",
+			"Parts availability count",
+			"Skills count without location consideration"
+		],
+		"correctIndex": 0,
+		"explanation": "Assignment assistance includes a Distance sort option that ranks agents based on how far each agent is from the work order task location.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/field-service-scheduling/assignment-assistance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 19,
+		"prompt": "To auto-calculate estimated travel duration using agent latitude and longitude, which capability must be active alongside geolocation tracking?",
+		"choices": [
+			"Field Service Geolocation with a supported maps integration for travel time estimates",
+			"A weekly scheduled report that compares technician seniority levels across all territories",
+			"Manual entry of travel minutes on every work order task before dispatch assignment occurs",
+			"Disabling territory membership checks so agents appear on maps by office location only"
+		],
+		"correctIndex": 0,
+		"explanation": "Estimated travel duration calculations rely on Field Service Geolocation and a supported maps provider to compute driving time from agent coordinates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/customer-experience-components.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 20,
+		"prompt": "Which capability gives field technicians job details, navigation support, and status updates while onsite?",
+		"choices": [
+			"The Field Service Management mobile experience through Now Mobile or Agent apps",
+			"Exclusive use of the Service Desk interaction portal for phone-based ticket updates only",
+			"Exporting work orders to email attachments that technicians edit and reply with daily",
+			"Running the Dispatcher Workspace interface on technician laptops without any role changes"
+		],
+		"correctIndex": 0,
+		"explanation": "FSM mobile applications provide technicians with contextual job information, navigation, and task updates directly at the customer site.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/mobile-experience-fsm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 21,
+		"prompt": "Technicians frequently work in basements and rural areas with intermittent connectivity. Which mobile design best supports continued execution?",
+		"choices": [
+			"Offline access to assigned work orders and task steps that sync when connectivity returns",
+			"Requiring live VPN sessions before any work order field can be viewed or updated on mobile",
+			"Blocking task completion until technicians return to the office and use the desktop form",
+			"Disabling photo and signature capture to reduce payload size during online sessions only"
+		],
+		"correctIndex": 0,
+		"explanation": "Offline mobile support lets technicians continue working and capture data in low-connectivity areas, syncing updates when the device reconnects.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/mobile-experience-fsm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 22,
+		"prompt": "To improve billing evidence and repeat-visit context, what should technicians capture on mobile at job completion?",
+		"choices": [
+			"Parts consumed, photos, customer signatures, and structured completion details on the task",
+			"Only the work order number typed into a personal spreadsheet stored on local devices",
+			"A verbal confirmation recorded outside ServiceNow with no updates to the work order task",
+			"The dispatcher schedule board screenshot attached as proof of attendance at the customer site"
+		],
+		"correctIndex": 0,
+		"explanation": "Rich mobile completion data—including parts, photos, signatures, and notes—supports billing, audit trails, and future service context.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/mobile-experience-fsm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 23,
+		"prompt": "Adoption testing shows technicians abandon long generic mobile forms. What configuration change best improves compliance?",
+		"choices": [
+			"Role-based mobile forms with only the fields required for each job type and persona",
+			"Adding every work order and asset field to a single universal form for all technicians",
+			"Removing mandatory fields so agents can close tasks without recording parts or time worked",
+			"Disabling push notifications so technicians are not reminded about pending task updates"
+		],
+		"correctIndex": 0,
+		"explanation": "Tailored mobile forms reduce friction by showing only the fields each role and job type requires during field execution.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/configuring-work-configs.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 24,
+		"prompt": "Which metric best indicates technicians are completing field updates at the point of work rather than end-of-day batch entry?",
+		"choices": [
+			"Percentage of task status and completion updates submitted from mobile at the job site",
+			"Count of inactive UI policies on the work order table updated more than one year ago",
+			"Total number of email notifications sent to dispatchers when tasks change state each week",
+			"Average number of catalog items published per quarter on the employee service portal"
+		],
+		"correctIndex": 0,
+		"explanation": "A high rate of mobile updates at the point of work indicates real adoption and fresher operational visibility for dispatch and managers.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/mobile-experience-fsm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 25,
+		"prompt": "Why is parts management integration important when configuring Field Service work order tasks?",
+		"choices": [
+			"Required parts data helps dispatch assign agents who can complete work on the first visit",
+			"Parts records replace all asset configuration items so CMDB discovery can be deactivated",
+			"Parts management disables qualification states on work orders created from incidents only",
+			"Inventory tracking prevents technicians from recording time worked on completed tasks"
+		],
+		"correctIndex": 0,
+		"explanation": "Defining required parts on tasks lets dispatch and assignment assistance favor agents who carry the components needed for first-time fix.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/inventory-management-fsm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 26,
+		"prompt": "After completing a repair, a technician installs a replacement component from truck stock. What should be recorded on the work order task?",
+		"choices": [
+			"The part consumption transaction so inventory levels and billing reflect usage accurately",
+			"A private chat message to the dispatcher with no update to parts or task related lists",
+			"Deletion of the original asset record without linking the new component in inventory",
+			"A manual journal entry in an external accounting system with no ServiceNow update"
+		],
+		"correctIndex": 0,
+		"explanation": "Recording part consumption on the task keeps stock levels accurate and provides traceability for billing and future service planning.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/inventory-management-fsm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 27,
+		"prompt": "Time worked entries on field service tasks support which operational need during implementation?",
+		"choices": [
+			"Labor tracking for costing, SLA reporting, and technician productivity measurement",
+			"Replacing all work order states with incident priority calculations automatically",
+			"Preventing dispatchers from viewing task schedules in the Dispatcher Workspace calendar",
+			"Disabling geolocation updates while technicians remain checked in on mobile devices"
+		],
+		"correctIndex": 0,
+		"explanation": "Time worked captures labor spent on tasks, supporting cost allocation, performance reporting, and SLA compliance analysis.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_WorkOrderTasks.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 28,
+		"prompt": "Incidentals configured on work orders allow field organizations to capture which type of cost?",
+		"choices": [
+			"Non-part expenses such as parking, tolls, or other reimbursable charges tied to the job",
+			"Annual software license true-up fees billed by external vendors at fiscal year end only",
+			"Capital lease payments for data center hardware unrelated to customer site visits",
+			"Internal HR compensation adjustments processed during enterprise payroll cycles only"
+		],
+		"correctIndex": 0,
+		"explanation": "Incidentals track reimbursable non-part costs associated with field work, such as parking fees or tolls incurred during the appointment.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_WorkOrderTasks.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 29,
+		"prompt": "Assignment assistance can sort agents by parts availability. Why should required parts be defined on tasks before dispatch?",
+		"choices": [
+			"Dispatch can favor agents who already carry parts needed to complete the work order task",
+			"Required parts remove the need for any skill matching during Dynamic Scheduling runs",
+			"Parts definitions automatically close parent incidents when the task reaches Work in Progress",
+			"Parts records convert work orders into procurement requisitions that bypass qualification"
+		],
+		"correctIndex": 0,
+		"explanation": "When required parts are defined, assignment assistance and dynamic scheduling can prioritize agents stocked with the components for the job.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/field-service-scheduling/assignment-assistance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 30,
+		"prompt": "Which Field Service persona reviews draft work orders and creates or edits tasks before dispatch?",
+		"choices": [
+			"Qualifier with the wm_qualifier role",
+			"Field agent with the wm_agent role executing tasks without task design duties",
+			"Initiator with the wm_initiator role when qualification is disabled globally on the instance",
+			"Contract auditor role used exclusively for hardware asset disposal approval workflows"
+		],
+		"correctIndex": 0,
+		"explanation": "Qualifiers review work orders, create and edit tasks, and move records through the qualification states before dispatch.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/configure-qualify-fsm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 31,
+		"prompt": "Which Field Service persona typically creates a new work order or generates one from an incident, problem, or change record?",
+		"choices": [
+			"Initiator with the wm_initiator role",
+			"Dispatcher with the wm_dispatcher role before any qualification step occurs automatically",
+			"External customer survey recipient with no Field Service roles on the user record",
+			"CMDB manager responsible for identification and reconciliation rule maintenance only"
+		],
+		"correctIndex": 0,
+		"explanation": "Initiators create work orders directly or from related records such as incidents, problems, changes, or project tasks.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/setting-up-field-service-user-groups.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 32,
+		"prompt": "A regional operations lead assigns skills to technician groups and monitors team performance. Which role aligns to this manager persona?",
+		"choices": [
+			"wm_manager with access to Manage Skills and field team performance views",
+			"wm_agent executing tasks without permissions to manage skills on Manage Skills",
+			"wm_qualifier focused on task creation without workforce performance dashboards",
+			"wm_dispatcher limited to drag-and-drop assignment without manager workspace access"
+		],
+		"correctIndex": 0,
+		"explanation": "Field Service managers use the wm_manager role to manage agent skills, assignment groups, and team performance through manager workspaces.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/field-service-manager-agent-skills.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 33,
+		"prompt": "Work order lifecycle, task templates, and qualification states are core capabilities of which Field Service module area?",
+		"choices": [
+			"Work Order Management within Field Service Management",
+			"Security Operations vulnerability response scanning for external IP address ranges only",
+			"HR Service Delivery employee onboarding case management for corporate staff only",
+			"Enterprise Asset Management depreciation schedules without work order integration"
+		],
+		"correctIndex": 0,
+		"explanation": "Work Order Management covers creating work orders and tasks, qualification, templates, and execution through closure.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/setting-up-work-orders-and-tasks.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 34,
+		"prompt": "Technician shift calendars and availability windows feed which scheduling outcome during implementation?",
+		"choices": [
+			"Realistic assignment slots that respect working hours when dispatching work order tasks",
+			"Automatic deletion of overdue tasks without notifying agents or updating task states",
+			"Removal of territory boundaries so every agent appears available twenty-four hours daily",
+			"Conversion of all work orders to catalog tasks processed by the service desk queue only"
+		],
+		"correctIndex": 0,
+		"explanation": "Agent schedules and availability data constrain dispatch and dynamic scheduling so assignments fit within working calendars and shift rules.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/dynamic-scheduling.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 35,
+		"prompt": "A field operations program prioritizes reducing friction for technicians completing jobs onsite. Which improvement target aligns to this goal?",
+		"choices": [
+			"Mobile guidance, contextual task data, and streamlined workflows that speed onsite completion",
+			"Requiring paper forms for every checklist item before agents may update task states digitally",
+			"Removing offline support so technicians verify connectivity before opening any work order",
+			"Mandatory dispatcher approval for each individual line on multi-step work order checklists"
+		],
+		"correctIndex": 0,
+		"explanation": "Improving the field agent experience focuses on reducing friction through mobile guidance, relevant context, and efficient task workflows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/mobile-experience-fsm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 36,
+		"prompt": "During a storm response, technicians lose cellular signal across a wide region. Which mobile capability remains most critical?",
+		"choices": [
+			"Offline task execution and data capture that synchronizes automatically when reconnected",
+			"Forced hourly VPN reconnections before any work order task can display customer details",
+			"Live video streaming requirements for every appointment regardless of bandwidth constraints",
+			"Animated dashboard widgets on mobile home screens replacing task completion forms entirely"
+		],
+		"correctIndex": 0,
+		"explanation": "Offline-first mobile workflows let technicians keep executing and recording work during connectivity outages and sync when service returns.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/mobile-experience-fsm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 37,
+		"prompt": "Before configuring territories and groups, an implementation lead wants packaging, licensing, and training guidance. Which resource should they start with?",
+		"choices": [
+			"Plan implementation documentation covering packaging, licensing, and recommended training paths",
+			"Production problem close notes from unrelated ITSM teams without any field service context",
+			"Legacy release notes for deprecated plugins not included in the current FSM subscription",
+			"Unrelated identity provider SAML metadata used exclusively for enterprise portal login"
+		],
+		"correctIndex": 0,
+		"explanation": "Plan implementation documentation helps teams understand FSM packaging, licensing, and training before foundation configuration begins.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/planning-implementation-fsm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 38,
+		"prompt": "A new Field Service deployment team needs a sequenced checklist to import foundation data such as users, locations, and territories. What should they use?",
+		"choices": [
+			"Field Service Management Guided Setup to import and configure foundation data in order",
+			"A manual script bundle that bypasses all Field Service tables and ACL validation rules",
+			"The HR onboarding case workflow intended for employee lifecycle requests in HRSD only",
+			"Custom discovery patterns for datacenter server classification without user group setup"
+		],
+		"correctIndex": 0,
+		"explanation": "Field Service Management Guided Setup provides a sequenced task list to import and configure foundation data such as users, locations, and territories.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/configuring-fsm-with-guided-setup.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 39,
+		"prompt": "During planning workshops, stakeholders map initiators, qualifiers, dispatchers, and agents to locations. Which configuration concept should anchor these discussions?",
+		"choices": [
+			"Field Service user groups with inherited roles and location coverage for each persona",
+			"A single global assignment group with no location or dispatch group relationships defined",
+			"Catalog client scripts that run only when employees order laptops from the service portal",
+			"Problem management root cause categories unrelated to field execution responsibilities"
+		],
+		"correctIndex": 0,
+		"explanation": "Implementation planning should align personas to user groups with inherited roles and location coverage so qualification and dispatch paths are clear.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/setting-up-field-service-user-groups.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 40,
+		"prompt": "An implementation team enables work order qualification for quality checks before dispatch. Where do they turn on Qualification is required for new requests?",
+		"choices": [
+			"Field Service > Administration > Configuration",
+			"Dispatcher Workspace > Assignment assistance sort menu",
+			"Field Service > Manager > Manage Skills form for creating parent skills only",
+			"System Scheduler > Jobs list for the Autoclose Incidents scheduled job definition"
+		],
+		"correctIndex": 0,
+		"explanation": "Administrators enable work order qualification on the Field Service Configuration page under Field Service > Administration > Configuration.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/configure-qualify-fsm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 41,
+		"prompt": "Planners must document how initiators and qualifiers create work orders from templates during cutover. Which task documentation defines manual work order creation steps?",
+		"choices": [
+			"Create work orders guidance under Work Order Management",
+			"Configure SAML integration for external identity providers on the instance",
+			"Build employee onboarding flows in HR Service Delivery case management only",
+			"Author discovery patterns for cloud middleware classification in datacenter ranges"
+		],
+		"correctIndex": 0,
+		"explanation": "The create work orders task documentation describes how planners and qualifiers establish work orders that dispatch and agents rely on.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/create-work-orders.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
-		"order": 4,
-		"prompt": "Before promoting a fix pack, the release manager wants version-specific Field Service Management changes summarized. Which release-notes documentation should they review?",
-		"choices": [
-			"Field Service Management release notes for sustained reliability",
-			"Hardware asset lease accounting policies for measurable outcomes",
-			"Legacy VPN client compatibility matrices for practical execution",
-			"Employee relations investigation templates for controlled governance for enterprise implementation"
-		],
-		"correctIndex": 0,
-		"explanation": "Field Service Management release notes summarize product changes by release, which helps teams assess impact before production promotion.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-release-notes/page/release-notes/field-service-management/field-service-management-rn.html"
-		]
-	},
-	{
-		"trackCode": "CIS-FSM",
-		"order": 5,
-		"prompt": "In Field Service Management, what is the role of a work order?",
-		"choices": [
-			"A parent record used to coordinate field tasks, scheduling, and fulfillment for enterprise implementation",
-			"A financial ledger entry for invoicing exclusively for sustained reliability",
-			"A dashboard widget for dispatchers for role-based accountability",
-			"A replacement for customer contracts for production readiness"
-		],
-		"correctIndex": 0,
-		"explanation": "Work orders organize service work and act as the control record for downstream field activities.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/concept/work-orders-overview.html"
-		]
-	},
-	{
-		"trackCode": "CIS-FSM",
-		"order": 6,
-		"prompt": "Why are work order tasks used in FSM implementations?",
-		"choices": [
-			"To consistently avoid capturing completion details for practical execution",
-			"To consistently disable dispatching for multi-step jobs for enterprise implementation",
-			"To consistently split a service job into executable units that can be assigned and tracked independently",
-			"To consistently replace all case records in CSM"
-		],
-		"correctIndex": 2,
-		"explanation": "Tasks break down field jobs into manageable actions with clear ownership and status progression.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/create-work-order-tasks.html"
-		]
-	},
-	{
-		"trackCode": "CIS-FSM",
-		"order": 7,
-		"prompt": "Which information on a work order most directly improves dispatch outcomes?",
-		"choices": [
-			"A blank short description for role-based accountability for measurable outcomes",
-			"Detailed location, required skills, and service time window for production readiness",
-			"Unrelated contract attachments exclusively for controlled governance",
-			"Analyst theme preference for operational consistency for sustained reliability"
-		],
-		"correctIndex": 1,
-		"explanation": "Dispatcher decisions depend on location, skill requirements, and timing constraints captured on work records.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/configure-work-order-fields.html"
-		]
-	},
-	{
-		"trackCode": "CIS-FSM",
-		"order": 8,
-		"prompt": "A team wants better lifecycle visibility for field jobs. What should they standardize first?",
-		"choices": [
-			"Personal notes format for each technician for operational consistency",
-			"Closing all tasks at creation time for enterprise implementation",
-			"Manual emailing instead of status updates for production readiness",
-			"Consistent state model for work orders and work order tasks for role-based accountability"
-		],
-		"correctIndex": 3,
-		"explanation": "Standard state transitions provide reliable reporting and operational control for work execution.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/concept/work-order-lifecycle.html"
-		]
-	},
-	{
-		"trackCode": "CIS-FSM",
-		"order": 9,
-		"prompt": "What is the main reason to relate a work order to a customer account or location record?",
-		"choices": [
-			"To consistently provide service context and history across repeat visits",
-			"To consistently disable inventory checks for operational consistency",
-			"To consistently avoid SLA calculations for enterprise implementation",
-			"To consistently prevent mobile updates for practical execution"
-		],
-		"correctIndex": 0,
-		"explanation": "Account and location relationships preserve context for planning, communication, and repeat service quality.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/associate-work-orders-to-accounts.html"
-		]
-	},
-	{
-		"trackCode": "CIS-FSM",
-		"order": 10,
-		"prompt": "In FSM scheduling, what is the primary value of defining technician skills?",
-		"choices": [
-			"To consistently match work order tasks with qualified resources during assignment",
-			"To consistently disable route optimization for operational consistency",
-			"To consistently convert cases into incidents automatically for enterprise implementation",
-			"To consistently suppress work order creation for practical execution"
-		],
-		"correctIndex": 0,
-		"explanation": "Skill profiles help ensure tasks are assigned to technicians who can successfully complete the work.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/configure-technician-skills.html"
-		]
-	},
-	{
-		"trackCode": "CIS-FSM",
-		"order": 11,
-		"prompt": "Why are service territories important in field scheduling?",
-		"choices": [
-			"They determine payroll taxes exclusively for sustained reliability",
-			"They define geographic assignment boundaries for efficient dispatching for enterprise implementation",
-			"They replace customer accounts for production readiness",
-			"They group agents by UI role for role-based accountability"
-		],
-		"correctIndex": 1,
-		"explanation": "Territories constrain assignment regions and improve schedule efficiency and travel outcomes.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/concept/service-territories.html"
-		]
-	},
-	{
-		"trackCode": "CIS-FSM",
-		"order": 12,
-		"prompt": "What scheduling input most directly supports realistic appointment commitments?",
-		"choices": [
-			"Technician favorite job type for controlled governance for enterprise implementation",
-			"Estimated task duration and customer availability windows for practical execution",
-			"Count of open incidents for measurable outcomes for role-based accountability",
-			"Last dashboard refresh time for sustained reliability for operational consistency"
-		],
-		"correctIndex": 1,
-		"explanation": "Duration estimates and availability windows are core constraints used to produce feasible schedules.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/schedule-work-orders.html"
-		]
-	},
-	{
-		"trackCode": "CIS-FSM",
-		"order": 13,
-		"prompt": "A dispatcher needs to reduce travel overhead. Which FSM capability should be emphasized?",
-		"choices": [
-			"Disabling appointment slots for production readiness",
-			"Territory and route-aware scheduling optimization for role-based accountability",
-			"Manual first-come assignment exclusively for sustained reliability",
-			"Assigning all work to one technician for enterprise implementation"
-		],
-		"correctIndex": 1,
-		"explanation": "Optimization features account for geography and routing constraints to reduce unnecessary travel time.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/concept/optimization-for-dispatch.html"
-		]
-	},
-	{
-		"trackCode": "CIS-FSM",
-		"order": 14,
-		"prompt": "What is a key reason to include buffer time in scheduling policies?",
-		"choices": [
-			"To consistently prevent work notes from being entered",
-			"To consistently remove SLA tracking for sustained reliability",
-			"To consistently absorb real-world variation and avoid cascading delays across appointments",
-			"To consistently lower technician utilization to zero for production readiness"
-		],
-		"correctIndex": 2,
-		"explanation": "Reasonable buffers improve reliability when jobs overrun due to access, parts, or complexity issues.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/configure-scheduling-policies.html"
-		]
-	},
-	{
-		"trackCode": "CIS-FSM",
-		"order": 15,
-		"prompt": "What is the main objective of dispatching in FSM?",
-		"choices": [
-			"Match work to the right technician at the right time based on constraints and priorities for sustained reliability",
-			"Route work exclusively by alphabetical technician name for role-based accountability",
-			"Assign all tasks manually without context for practical execution",
-			"Delay all assignments until end of day for controlled governance"
-		],
-		"correctIndex": 0,
-		"explanation": "Dispatching aligns skills, availability, territory, and urgency to optimize service execution.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/concept/dispatch-management.html"
-		]
-	},
-	{
-		"trackCode": "CIS-FSM",
-		"order": 16,
-		"prompt": "Which dispatcher action best reduces missed appointments?",
-		"choices": [
-			"Using real-time schedule boards to rebalance assignments when delays occur for role-based accountability",
-			"Assigning urgent jobs to unavailable technicians for production readiness",
-			"Ignoring travel time between jobs for enterprise implementation",
-			"Locking schedules days in advance with no exceptions for operational consistency"
-		],
-		"correctIndex": 0,
-		"explanation": "Dynamic rebalance based on schedule conditions helps maintain customer commitments.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/use-dispatch-console.html"
-		]
-	},
-	{
-		"trackCode": "CIS-FSM",
-		"order": 17,
-		"prompt": "Why is technician availability data critical to dispatch quality?",
-		"choices": [
-			"It provides payroll export exclusively for practical execution",
-			"It replaces SLA definitions for controlled governance for enterprise implementation",
-			"It confirms assignments are feasible within working calendars and shift constraints",
-			"It removes need for territory models for measurable outcomes"
-		],
-		"correctIndex": 2,
-		"explanation": "Accurate calendars and shifts prevent unrealistic assignments and reduce rework.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/configure-technician-availability.html"
-		]
-	},
-	{
-		"trackCode": "CIS-FSM",
-		"order": 18,
-		"prompt": "A high-priority outage job arrives midday. What is the best dispatch response?",
-		"choices": [
-			"Close the new task as duplicate for measurable outcomes",
-			"Pause all other work orders indefinitely for sustained reliability",
-			"Reprioritize schedule slots and reassign lower-priority work to meet the urgent commitment for controlled governance",
-			"Queue it for next week automatically for practical execution"
-		],
-		"correctIndex": 2,
-		"explanation": "Effective dispatching supports exception handling by re-optimizing current schedules for urgent work.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/reprioritize-dispatched-work.html"
-		]
-	},
-	{
-		"trackCode": "CIS-FSM",
-		"order": 19,
-		"prompt": "Which measure best indicates dispatch process maturity?",
-		"choices": [
-			"Mean dispatch-to-arrival time and first-time fix rate for operational consistency",
-			"Count of inactive locations for enterprise implementation for controlled governance",
-			"CMDB update frequency for production readiness",
-			"Number of admin users for role-based accountability for measurable outcomes"
-		],
-		"correctIndex": 0,
-		"explanation": "Faster response and higher first-time fix rates reflect stronger dispatch and assignment quality.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/measure-dispatch-performance.html"
-		]
-	},
-	{
-		"trackCode": "CIS-FSM",
-		"order": 20,
-		"prompt": "What is the key benefit of the FSM mobile experience for technicians?",
-		"choices": [
-			"It provides job details, navigation, and status updates directly in the field for operational consistency",
-			"It blocks offline work entry for enterprise implementation",
-			"It replaces all desktop admin functions for production readiness",
-			"It disables photo attachments for role-based accountability for measurable outcomes"
-		],
-		"correctIndex": 0,
-		"explanation": "FSM mobile gives technicians contextual tools needed to execute and update work on site.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/concept/fsm-mobile-overview.html"
-		]
-	},
-	{
-		"trackCode": "CIS-FSM",
-		"order": 21,
-		"prompt": "Why is offline capability important in FSM mobile deployments?",
-		"choices": [
-			"It removes all need for synchronization for measurable outcomes",
-			"It disables parts tracking for sustained reliability for operational consistency",
-			"It prevents dispatch changes for controlled governance for enterprise implementation",
-			"It allows technicians to continue updating task progress when connectivity is limited for practical execution"
-		],
-		"correctIndex": 3,
-		"explanation": "Offline support preserves execution continuity in low-connectivity environments.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/configure-offline-mobile-capabilities.html"
-		]
-	},
-	{
-		"trackCode": "CIS-FSM",
-		"order": 22,
-		"prompt": "Which mobile data capture improves first-time fix and auditability?",
-		"choices": [
-			"Updating status exclusively at day end for production readiness",
-			"Entering work notes in external apps for role-based accountability",
-			"Skipping completion notes for operational consistency for sustained reliability",
-			"Capturing parts used, photos, signatures, and structured completion details on site for enterprise implementation"
-		],
-		"correctIndex": 3,
-		"explanation": "Rich in-field documentation supports quality control, billing proof, and repeat service context.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/use-mobile-work-completion.html"
-		]
-	},
-	{
-		"trackCode": "CIS-FSM",
-		"order": 23,
-		"prompt": "What mobile governance action improves technician adoption?",
-		"choices": [
-			"Blocking push notifications for controlled governance for enterprise implementation",
-			"Deploying role-based forms with exclusively required fields for each job type",
-			"Using one long generic form for all scenarios for measurable outcomes",
-			"Disabling in-app guidance for sustained reliability for operational consistency"
-		],
-		"correctIndex": 1,
-		"explanation": "Role-tailored mobile forms reduce friction and improve data quality during execution.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/configure-mobile-forms-for-fsm.html"
-		]
-	},
-	{
-		"trackCode": "CIS-FSM",
-		"order": 24,
-		"prompt": "Which KPI best reflects successful FSM mobile usage?",
-		"choices": [
-			"Percentage of field updates completed in mobile at point of work for sustained reliability",
-			"Number of inactive dashboard tabs for measurable outcomes",
-			"Count of email-exclusively dispatches for practical execution",
-			"Total admin users for controlled governance for enterprise implementation"
-		],
-		"correctIndex": 0,
-		"explanation": "Point-of-work mobile update rate indicates real adoption and fresher operational visibility.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/track-mobile-adoption-metrics.html"
-		]
-	},
-	{
-		"trackCode": "CIS-FSM",
-		"order": 25,
-		"prompt": "In Field Service Management, why are service territories critical?",
-		"choices": [
-			"They define geographic or logical coverage used for effective dispatching and workload balancing for enterprise implementation",
-			"They are exclusively used for cost center reporting",
-			"They remove the need for technician skills data for role-based accountability",
-			"They replace assignment rules and dispatch logic for production readiness"
-		],
-		"correctIndex": 0,
-		"explanation": "Territories provide structured coverage boundaries that help route work to the right teams and reduce travel inefficiency.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/service-territories.html"
-		]
-	},
-	{
-		"trackCode": "CIS-FSM",
-		"order": 26,
-		"prompt": "What is the best approach when defining multiple overlapping territories?",
-		"choices": [
-			"Allow unlimited overlap with no prioritization rules for practical execution",
-			"Dispatch exclusively by technician first name for enterprise implementation",
-			"Disable geolocation features for sustained reliability for operational consistency",
-			"Configure clear assignment criteria such as skills, availability, and territory priority for measurable outcomes"
-		],
-		"correctIndex": 3,
-		"explanation": "Explicit dispatch criteria avoid assignment ambiguity when territory boundaries overlap.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/create-and-manage-service-territories.html"
-		]
-	},
-	{
-		"trackCode": "CIS-FSM",
-		"order": 27,
-		"prompt": "A dispatcher reports high windshield time. Which territory action should be reviewed first?",
-		"choices": [
-			"Rebalance territory boundaries and assignment rules to align with actual demand patterns for role-based accountability",
-			"Reduce case priority values for production readiness",
-			"Increase mandatory activity notes for enterprise implementation for controlled governance",
-			"Disable work order scheduling for operational consistency for sustained reliability"
-		],
-		"correctIndex": 0,
-		"explanation": "Poorly aligned territory design can increase travel distances and reduce daily job completion capacity.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/dispatch-optimization.html"
-		]
-	},
-	{
-		"trackCode": "CIS-FSM",
-		"order": 28,
-		"prompt": "Which data element most directly supports territory-based dispatch quality?",
-		"choices": [
-			"Incident state color palette for operational consistency for sustained reliability",
-			"Accurate service address geocoding and territory membership mappings for enterprise implementation",
-			"Technician avatar image size for production readiness",
-			"Number of inactive catalog items for role-based accountability"
-		],
-		"correctIndex": 1,
-		"explanation": "Territory assignment and routing reliability depend on accurate location and membership data.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/configure-dispatching.html"
-		]
-	},
-	{
-		"trackCode": "CIS-FSM",
-		"order": 29,
-		"prompt": "How should FSM leaders govern territory changes over time?",
-		"choices": [
-			"Rotate all technicians across all territories daily for measurable outcomes",
-			"Use territories exclusively for reporting, not assignment for operational consistency",
-			"Review performance metrics regularly and adjust territory design as demand, staffing, and SLAs evolve for controlled governance",
-			"Never modify territories after go-live for practical execution"
-		],
-		"correctIndex": 2,
-		"explanation": "Ongoing optimization keeps territory strategy aligned with changing operational realities and service commitments.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/field-service-management-workspace.html"
-		]
-	},
-	{
-		"trackCode": "CIS-FSM",
-		"order": 30,
-		"prompt": "Why is asset information essential in Field Service Management?",
-		"choices": [
-			"It provides service history and configuration context needed for accurate work execution for role-based accountability",
-			"It is used exclusively for annual audits for production readiness",
-			"It allows dispatch to ignore technician skills for enterprise implementation",
-			"It replaces work orders with purchase requests for operational consistency"
-		],
-		"correctIndex": 0,
-		"explanation": "Reliable asset context helps technicians diagnose issues faster and perform the correct field procedures.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/asset-centric-service.html"
-		]
-	},
-	{
-		"trackCode": "CIS-FSM",
-		"order": 31,
-		"prompt": "Which practice improves first-time fix rates for asset-based work orders?",
-		"choices": [
-			"Dispatch without referencing asset model details for practical execution",
-			"Remove asset serial number tracking for controlled governance",
-			"confirm work orders include asset model, install base history, and known issue context",
-			"Schedule work solely by technician seniority for measurable outcomes"
-		],
-		"correctIndex": 2,
-		"explanation": "Including actionable asset context before dispatch increases the chance technicians arrive prepared with the right approach.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/create-work-orders.html"
-		]
-	},
-	{
-		"trackCode": "CIS-FSM",
-		"order": 32,
-		"prompt": "How should FSM teams handle recurring failures on the same asset class?",
-		"choices": [
-			"Close work orders without resolution codes for enterprise implementation",
-			"Delete completed service appointments for operational consistency for sustained reliability",
-			"Analyze asset performance trends and update preventive maintenance or knowledge guidance for role-based accountability",
-			"Treat each failure as unrelated for production readiness"
-		],
-		"correctIndex": 2,
-		"explanation": "Trend analysis across asset classes enables proactive service improvements and reduced repeat failures.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/preventive-maintenance.html"
-		]
-	},
-	{
-		"trackCode": "CIS-FSM",
-		"order": 33,
-		"prompt": "What data quality focus is most important for FSM asset operations?",
-		"choices": [
-			"exclusively maintain asset display names for operational consistency",
-			"Use free-text fields instead of references for measurable outcomes",
-			"Purge all closed asset records monthly for practical execution",
-			"Keep ownership, location, lifecycle state, and service history accurate and current for controlled governance"
-		],
-		"correctIndex": 3,
-		"explanation": "Accurate asset master data supports dispatch quality, entitlement decisions, and field execution efficiency.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/c_AssetManagement.html"
-		]
-	},
-	{
-		"trackCode": "CIS-FSM",
-		"order": 34,
-		"prompt": "Which KPI best reflects healthy asset-enabled field service performance?",
-		"choices": [
-			"First-time fix rate and repeat-visit reduction for asset-linked work orders for controlled governance",
-			"Average password reset completion time for practical execution",
-			"Number of assets with no category for measurable outcomes",
-			"Count of inactive assignment groups for sustained reliability"
-		],
-		"correctIndex": 0,
-		"explanation": "First-time fix and repeat-visit trends directly show whether asset context is improving field outcomes.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/fsm-analytics.html"
-		]
-	},
-	{
-		"trackCode": "CIS-FSM",
-		"order": 35,
-		"prompt": "What is the main goal of improving the field agent experience in FSM?",
-		"choices": [
-			"Increase manual paperwork requirements for production readiness",
-			"Remove offline access capabilities for role-based accountability for measurable outcomes",
-			"Enable technicians to complete work efficiently with mobile guidance, context, and streamlined task flow for operational consistency",
-			"Require dispatch approval for every checklist item for enterprise implementation"
-		],
-		"correctIndex": 2,
-		"explanation": "A strong agent experience reduces friction in the field and improves productivity and service quality.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/mobile-agent-experience.html"
-		]
-	},
-	{
-		"trackCode": "CIS-FSM",
-		"order": 36,
-		"prompt": "Which mobile capability is most important for technicians in low-connectivity environments?",
-		"choices": [
-			"Offline access to work orders, task steps, and data capture that syncs when reconnected for measurable outcomes",
-			"Forced VPN reconnect every five minutes for sustained reliability",
-			"Real-time video streaming requirement for controlled governance for enterprise implementation",
-			"Animated dashboards exclusively for practical execution"
-		],
-		"correctIndex": 0,
-		"explanation": "Offline-first workflows prevent service delays when technicians work in areas with unreliable connectivity.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/configure-mobile-fsm.html"
-		]
-	},
-	{
-		"trackCode": "CIS-FSM",
-		"order": 37,
-		"prompt": "How can FSM leaders reduce technician cognitive load during appointments?",
-		"choices": [
-			"Require multiple duplicate checklists for operational consistency for sustained reliability",
-			"Hide customer and asset details for enterprise implementation",
-			"Show every possible form field for production readiness",
-			"Use guided task templates, clear status transitions, and context-aware quick actions for role-based accountability"
-		],
-		"correctIndex": 3,
-		"explanation": "Structured and focused workflows help technicians execute reliably without unnecessary UI complexity.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/work-order-tasks.html"
-		]
-	},
-	{
-		"trackCode": "CIS-FSM",
-		"order": 38,
-		"prompt": "Which feedback loop best supports ongoing field agent experience improvements?",
-		"choices": [
-			"Disable survey collection after go-live for role-based accountability",
-			"Annual review exclusively with no telemetry for production readiness",
-			"Combine technician feedback with mobile usage analytics and completion outcomes for enterprise implementation",
-			"exclusively evaluate dispatch center feedback for sustained reliability"
-		],
-		"correctIndex": 2,
-		"explanation": "Operational telemetry plus frontline feedback provides actionable insight for iterative experience improvements.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/fsm-analytics.html"
-		]
-	},
-	{
-		"trackCode": "CIS-FSM",
-		"order": 39,
-		"prompt": "Which outcome most clearly indicates an improved FSM agent experience?",
-		"choices": [
-			"Higher appointment duration with no quality gain for practical execution",
-			"Lower admin time per job and increased first-time fix performance for controlled governance",
-			"More manual dispatch overrides for sustained reliability for operational consistency",
-			"Reduced completion notes quality for measurable outcomes for role-based accountability"
-		],
-		"correctIndex": 1,
-		"explanation": "Reduced administrative burden and better field outcomes show that tools and workflows are supporting technicians effectively.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/field-service-management-workspace.html"
-		]
-	},
-	{
-		"trackCode": "CIS-FSM",
-		"order": 40,
-		"prompt": "Why is parts inventory management critical in Field Service Management?",
-		"choices": [
-			"It eliminates the need for dispatching for practical execution",
-			"It is exclusively needed for procurement audits for enterprise implementation",
-			"It replaces asset history records for sustained reliability",
-			"It confirms technicians have the right parts at the right time to avoid repeat visits"
-		],
-		"correctIndex": 3,
-		"explanation": "Accurate parts planning and availability directly improve first-time fix outcomes in field operations.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/parts-management.html"
-		]
-	},
-	{
-		"trackCode": "CIS-FSM",
-		"order": 41,
-		"prompt": "Which process best supports field parts availability?",
-		"choices": [
-			"Stockroom and van inventory controls with reservation and replenishment workflows for role-based accountability",
-			"Manual ad hoc transfers with no tracking for production readiness",
-			"Disabling part consumption updates on work completion for enterprise implementation",
-			"Keeping all parts in one central warehouse exclusively"
-		],
-		"correctIndex": 0,
-		"explanation": "Controlled reservation and replenishment across stock locations prevent shortages and service delays.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/manage-parts-inventory.html"
-		]
-	},
-	{
-		"trackCode": "CIS-FSM",
 		"order": 42,
-		"prompt": "What is the best response to frequent part stockouts for high-priority jobs?",
+		"prompt": "After tasks are qualified, dispatchers assign work from Dispatcher Workspace. Which capability lets them drag unassigned tasks onto agent time slots using proximity and skills?",
 		"choices": [
-			"Require technicians to source parts independently for sustained reliability",
-			"Adjust min/max levels and forecasting inputs based on usage patterns and service commitments for measurable outcomes",
-			"Ignore demand trends for practical execution",
-			"Disable priority-based reservation rules for controlled governance for enterprise implementation"
+			"Drag-and-drop scheduling in Dispatcher Workspace with route and availability visibility",
+			"Manual CSV upload that replaces all assignment groups nightly without validation rules",
+			"Change Management emergency CAB approvals required before every task state change",
+			"Knowledge article publishing workflow used only for self-service search deflection metrics"
 		],
-		"correctIndex": 1,
-		"explanation": "Demand-aware threshold tuning and forecasting reduce repeated stockout events on critical work.",
+		"correctIndex": 0,
+		"explanation": "Dispatcher Workspace supports drag-and-drop assignment so dispatchers can place tasks on agent schedules using proximity, availability, and skill context.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/inventory-management.html"
+			"https://www.servicenow.com/docs/r/field-service-management/dispatcher-activities.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 43,
-		"prompt": "Which data quality requirement is most important for reliable parts operations?",
+		"prompt": "Technicians finish onsite work and must close tasks with completion evidence. Which process documentation covers completing and closing work order tasks?",
 		"choices": [
-			"Store inventory in free-text notes for enterprise implementation",
-			"Delete consumption records after closure for operational consistency",
-			"Maintain accurate part numbers, substitute mappings, location balances, and consumption history for role-based accountability",
-			"Track exclusively part descriptions for production readiness"
+			"Work order task completion procedures in Work Order Management task documentation",
+			"Hardware asset lease return procedures in IT asset management financial workflows only",
+			"Identity governance certification campaigns for privileged account review cycles only",
+			"Vulnerability scanning remediation playbooks for infrastructure security operations only"
 		],
-		"correctIndex": 2,
-		"explanation": "High-quality inventory and usage data is essential for planning, fulfillment, and root-cause analysis of shortages.",
+		"correctIndex": 0,
+		"explanation": "Work Order Management task documentation covers completing and closing work order tasks with the required execution and completion details.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/task/manage-stockrooms.html"
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_WorkOrderTasks.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 44,
-		"prompt": "Which KPI most directly indicates parts inventory effectiveness in FSM?",
+		"prompt": "Operations enables automatic assignment after qualification using skills, travel time, and availability criteria. Which configuration area defines these matching rules?",
 		"choices": [
-			"Average technician profile completeness for production readiness",
-			"Number of knowledge categories for role-based accountability for measurable outcomes",
-			"Count of inactive work order tasks for operational consistency",
-			"First-time fix rate correlated with parts availability and stockout frequency for enterprise implementation"
+			"Dynamic Scheduling configuration under Field Service scheduling setup",
+			"UI policy conditions on the incident table for priority color highlighting only",
+			"Email notification templates for legal hold archival compliance review reminders",
+			"Software asset reconciliation rules for removing unused subscriptions quarterly"
 		],
-		"correctIndex": 3,
-		"explanation": "Linking service outcomes to parts availability confirms whether inventory practices are supporting field execution.",
+		"correctIndex": 0,
+		"explanation": "Dynamic Scheduling configuration defines matching criteria—such as skills, travel time, and availability—used to auto-assign qualified work order tasks.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/fsm-analytics.html"
+			"https://www.servicenow.com/docs/r/field-service-management/field-service-scheduling/create-dynamic-scheduling-config.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 45,
-		"prompt": "In FSM, what is the goal of scheduling optimization?",
+		"prompt": "A cable provider sees last-minute appointment cancellations and new repair tasks after a storm. When should the dispatcher use intra-day optimization?",
 		"choices": [
-			"Match the right technician and time window while minimizing travel and delay for controlled governance",
-			"Assign all jobs to the same technician for practical execution",
-			"Schedule work exclusively at end of day for role-based accountability",
-			"Ignore technician skills for faster dispatch for sustained reliability"
+			"When real-time schedule changes require reorganizing assignments for the current day",
+			"When annual territory boundaries are being redrawn for the next fiscal year",
+			"When stockroom min/max levels need recalculation for slow-moving parts",
+			"When contractor onboarding forms must be approved before first dispatch"
 		],
 		"correctIndex": 0,
-		"explanation": "Optimization balances customer commitments, skills, availability, and route efficiency.",
+		"explanation": "Intra-day optimization reorganizes schedules in real time when tasks are canceled, delayed, or new high-priority work arrives during the day.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/field-service-management-overview.html"
+			"https://www.servicenow.com/docs/r/field-service-management/schedule-optimization.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 46,
-		"prompt": "Which factor should be weighted heavily in dispatch optimization rules?",
+		"prompt": "A technician calls out sick mid-shift and several appointments are at risk. How does the dynamic assignment engine respond?",
 		"choices": [
-			"Work order number length for operational consistency for sustained reliability",
-			"Skill match, SLA urgency, and travel time for enterprise implementation",
-			"Technician profile photo size for production readiness",
-			"Number of inactive inventory items for role-based accountability"
+			"It locks the schedule until the next business day to prevent further changes",
+			"It automatically reassigns affected tasks using ordering rules and un-assignment constraints",
+			"It converts all open work order tasks into catalog requests for manual review",
+			"It removes SLA tracking from tasks assigned to the unavailable technician only"
 		],
 		"correctIndex": 1,
-		"explanation": "Skill, priority, and location constraints are primary drivers of successful schedule outcomes.",
+		"explanation": "Dynamic scheduling automatically reassigns tasks when agents become unavailable, using ordering rules and constraints to maintain SLA compliance.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/configure-dispatch-and-scheduling.html"
+			"https://www.servicenow.com/docs/r/field-service-management/dynamic-scheduling.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 47,
-		"prompt": "What is the best action when optimization cannot meet all commitments?",
+		"prompt": "Operations leadership wants fewer windshield miles without missing priority commitments. What outcome should the automated scheduling engine target?",
 		"choices": [
-			"Cancel all appointments automatically for measurable outcomes for role-based accountability",
-			"Disable SLA tracking for field work for sustained reliability",
-			"Surface conflicts and allow dispatcher-guided tradeoff decisions for controlled governance",
-			"Suppress alerts and keep original plan for practical execution"
+			"Assign every task to the nearest technician regardless of skills or capacity limits",
+			"Maximize completed jobs within working hours while honoring priority and SLA constraints",
+			"Eliminate all manual dispatcher actions from daily scheduling operations entirely",
+			"Schedule all work at end of day to simplify route planning for each technician"
 		],
-		"correctIndex": 2,
-		"explanation": "Conflict visibility lets dispatchers make informed tradeoffs on priority, customer impact, and resource capacity.",
+		"correctIndex": 1,
+		"explanation": "The scheduling engine balances task assignment, travel reduction, and priority or SLA commitments to improve daily completion capacity.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/manage-schedule-conflicts.html"
+			"https://www.servicenow.com/docs/r/field-service-management/schedule-optimization.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 48,
-		"prompt": "Which KPI best indicates improved scheduling optimization in FSM?",
+		"prompt": "Which capabilities does the automated scheduling engine provide in Field Service Management? (Choose two.)",
 		"choices": [
-			"Increased average travel distance for practical execution",
-			"Lower completion visibility for controlled governance for enterprise implementation",
-			"More manual reassignment per shift for sustained reliability",
-			"Higher first-time fix and on-time arrival rates for measurable outcomes"
+			"Auto-assign tasks using agent skills, availability, and travel constraints",
+			"Reorganize schedules in real time when tasks are canceled or delayed",
+			"Replace dispatcher workspace functions for all assignment decisions permanently",
+			"Remove territory membership checks from every scheduling run by default"
 		],
-		"correctIndex": 3,
-		"explanation": "On-time arrival and first-time fix performance reflect schedule quality and technician-job alignment.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"questionType": "multi",
+		"explanation": "The scheduling engine auto-assigns tasks and supports intra-day reorganization; it augments rather than replaces dispatcher tools and still respects territory constraints.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/report-on-field-service-performance.html"
+			"https://www.servicenow.com/docs/r/field-service-management/schedule-optimization.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 49,
-		"prompt": "How should emergency work be handled in an optimized FSM schedule?",
+		"prompt": "Dispatchers need agent calendar events visible when making assignment decisions. What does dynamic assignment integrate from Workforce Optimization?",
 		"choices": [
-			"Use dynamic rescheduling with priority rules and impact-aware rebalancing for role-based accountability",
-			"Close as duplicate without dispatch for production readiness",
-			"Always postpone to next week for enterprise implementation",
-			"Assign to any unavailable technician for operational consistency"
+			"Agent schedules and calendar events shown in Dispatcher Workspace",
+			"Enterprise LDAP group mappings for all internal IT service desk agents",
+			"Hardware asset depreciation schedules for stockroom replenishment planning",
+			"Change management blackout windows for standard catalog item approvals"
 		],
 		"correctIndex": 0,
-		"explanation": "Dynamic reoptimization allows urgent work insertion while minimizing disruption to existing commitments.",
+		"explanation": "Dynamic scheduling integrates with Workforce Optimization to display agent schedules and events on the Dispatcher Workspace calendar for informed assignments.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/optimize-field-service-schedules.html"
+			"https://www.servicenow.com/docs/r/field-service-management/dynamic-scheduling.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 50,
-		"prompt": "In FSM, what is the purpose of work order tasks?",
+		"prompt": "A utilities team performs the same meter-replacement steps on every job. What do work order templates create when applied?",
 		"choices": [
-			"To consistently define ordered, assignable steps required to complete a work order",
-			"To consistently bypass technician dispatching for sustained reliability",
-			"To consistently replace all inventory records for measurable outcomes",
-			"To consistently fragment one job into untracked notes"
+			"Predefined tasks and part requirements for recurring field activities",
+			"A new incident record linked to the service catalog approval workflow",
+			"An automatic change request for every customer location visit",
+			"A contractor purchase order without associated work order tasks"
 		],
 		"correctIndex": 0,
-		"explanation": "Work order tasks provide structured execution and accountability at the step level.",
+		"explanation": "Work order templates automatically populate work orders with predefined tasks and part requirements for common field activities.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/manage-work-orders.html"
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_WorkOrderTemplates.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 51,
-		"prompt": "Which design improves consistency for recurring field jobs?",
+		"prompt": "Several work order types share an identical safety-inspection task. Why create a standalone work order task template?",
 		"choices": [
-			"Store tasks in external spreadsheets for sustained reliability",
-			"Avoid mandatory task sequencing for measurable outcomes for role-based accountability",
-			"Use standardized task templates tied to work order type for practical execution",
-			"Create tasks ad hoc for every technician for controlled governance"
+			"To reuse the same task definition across multiple work order templates with filter conditions",
+			"To bypass work order state transitions for emergency dispatch scenarios only",
+			"To store contractor invoices separately from work order task completion records",
+			"To disable part requirements on every work order created from a template"
 		],
-		"correctIndex": 2,
-		"explanation": "Task templates enforce repeatable quality and reduce dispatch variation for similar jobs.",
+		"correctIndex": 0,
+		"explanation": "Standalone task templates can be linked to different work order templates with filtering conditions, avoiding duplicate task authoring.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/configure-work-order-templates.html"
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_WorkOrderTemplates.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 52,
-		"prompt": "What should happen when a prerequisite work order task is incomplete?",
+		"prompt": "A downstream repair task must not start until a safety inspection task closes. What should the work order template define?",
 		"choices": [
-			"Dispatch reassigns all tasks randomly for role-based accountability",
-			"Downstream tasks proceed regardless for production readiness",
-			"Dependent tasks remain blocked until prerequisite completion is confirmed for enterprise implementation",
-			"Work order auto-closes immediately for operational consistency for sustained reliability"
+			"A catalog variable set mapped to the customer account record only",
+			"A task dependency that blocks subsequent tasks until the prerequisite completes",
+			"A global business rule that closes the parent work order at task creation",
+			"An SLA definition that pauses when the work order enters Pending Dispatch"
 		],
-		"correctIndex": 2,
-		"explanation": "Dependency controls prevent unsafe or invalid execution sequences in field operations.",
+		"correctIndex": 1,
+		"explanation": "Task dependencies in templates prevent downstream tasks from proceeding until prerequisite tasks are completed.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/manage-task-dependencies.html"
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/t_CrtWOTskDpdWOTmplt.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 53,
-		"prompt": "Which metric best evaluates work order task execution quality?",
+		"prompt": "Template Management for Field Service is activated. Which components can a work order template use? (Choose two.)",
 		"choices": [
-			"Task completion time variance versus planned duration for practical execution",
-			"Number of profile image uploads for controlled governance",
-			"Count of active browser sessions for sustained reliability",
-			"Total email signatures used for measurable outcomes for role-based accountability"
+			"Source table mapping to populate work order fields from originating records",
+			"Standalone work order task templates linked with filtering conditions",
+			"Automated CMDB reconciliation schedules for every configuration item class",
+			"Global LDAP synchronization rules for external contractor user accounts"
 		],
 		"correctIndex": 0,
-		"explanation": "Planned-versus-actual variance highlights estimate quality and process performance.",
+		"correctIndexes": [
+			0,
+			1
+		],
+		"questionType": "multi",
+		"explanation": "Template Management adds dynamic source table mapping and standalone task templates with conditions; it does not configure CMDB reconciliation or LDAP sync.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/report-on-work-order-performance.html"
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_WorkOrderTemplates.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 54,
-		"prompt": "What is the best way to capture completion evidence for work order tasks?",
+		"prompt": "An implementation requires complex prerequisite chains beyond simple sequential ordering. What template feature supports this?",
 		"choices": [
-			"Allow closure with empty mandatory fields for measurable outcomes",
-			"Record completion status verbally exclusively for operational consistency",
-			"Delete failed task attempts for controlled governance for enterprise implementation",
-			"Use task closure criteria including required fields, notes, and proof artifacts for practical execution"
+			"Advanced task dependencies configured within the work order template",
+			"Default incident assignment rules applied to every new work order record",
+			"Catalog client scripts that run before service portal checkout completes",
+			"Hardware model normalization tables for asset discovery imports only"
 		],
-		"correctIndex": 3,
-		"explanation": "Structured closure criteria create auditable outcomes and improve downstream billing and compliance.",
+		"correctIndex": 0,
+		"explanation": "Work order templates can define advanced task dependencies that go beyond dependencies inherited from the parent work order alone.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/close-work-order-tasks.html"
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/t_CrtWOTskDpdWOTmplt.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 55,
-		"prompt": "In FSM mobile, what is the key value of offline capability?",
+		"prompt": "During workforce setup, a region reports misrouted jobs to distant technicians. Which foundational data issue is most likely?",
 		"choices": [
-			"Technicians can complete assigned work and capture updates without network connectivity for operational consistency",
-			"It exclusively works for dispatchers in office for controlled governance",
-			"It prevents attachment capture for production readiness",
-			"It disables all task forms on mobile for role-based accountability"
+			"Service locations lack accurate geocoding needed for territory-based assignment",
+			"Knowledge articles are missing approval workflows for internal authors",
+			"Timesheet categories were not activated for the Time Recording plugin",
+			"Virtual Agent topics were not published to the employee service portal"
 		],
 		"correctIndex": 0,
-		"explanation": "Offline mode enables uninterrupted field execution in low-connectivity environments.",
+		"explanation": "Territory management and routing depend on accurate geographic location data; poor geocoding leads to incorrect territory assignment.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/use-mobile-apps-for-field-service.html"
+			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/c_TerritoryManagement.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 56,
-		"prompt": "What should be configured first for reliable FSM mobile offline operations?",
+		"prompt": "A parts manager needs to track van stock and warehouse inventory separately. What FSM record type should be configured?",
 		"choices": [
-			"exclusively UI themes and icons for enterprise implementation",
-			"The company newsletter feed for practical execution",
-			"Data synchronization rules for required records and task updates for measurable outcomes",
-			"Desktop browser cache settings for sustained reliability for operational consistency"
+			"A stockroom representing a physical or virtual space for parts and assets",
+			"A change model used to approve hardware refresh project milestones",
+			"A problem task template for recurring network outage investigations",
+			"A service offering record tied to the strategic portfolio planning workspace"
 		],
-		"correctIndex": 2,
-		"explanation": "Sync scope determines what data is available and what updates can be safely queued offline.",
+		"correctIndex": 0,
+		"explanation": "Stockrooms organize inventory items such as parts and assets in physical or virtual storage locations used during field operations.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-mobile/page/administer/mobile/concept/offline-mobile.html"
+			"https://www.servicenow.com/docs/r/field-service-management/asset-management-for-field-service/configuring-stockrooms.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 57,
-		"prompt": "How should conflict handling work when offline updates sync back online?",
+		"prompt": "Technicians in a regional crew should search parts only from designated warehouses. What configuration supports this?",
 		"choices": [
-			"Discard all offline edits automatically for production readiness",
-			"Apply conflict resolution rules and surface exceptions for review for role-based accountability",
-			"Overwrite master data without controls for operational consistency",
-			"Force technician logout permanently for enterprise implementation for controlled governance"
+			"Preferred stockrooms assigned to the work group for mobile part lookup",
+			"Global incident assignment rules mapped to the default IT support group",
+			"Change advisory board delegates listed on every standard change template",
+			"Discovery schedules that run weekly against all network device classes"
 		],
-		"correctIndex": 1,
-		"explanation": "Controlled conflict handling preserves data integrity when concurrent edits occur.",
+		"correctIndex": 0,
+		"explanation": "Preferred stockrooms for work groups let agents search parts from designated stockrooms using the Now Mobile Agent application.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-mobile/page/administer/mobile/task/configure-offline-data-sync.html"
+			"https://www.servicenow.com/docs/r/field-service-management/asset-management-for-field-service/setup-preferred-stockrooms.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 58,
-		"prompt": "Which offline KPI is most useful for FSM support teams?",
+		"prompt": "Work orders are linked to customer accounts during implementation. What operational benefit does this relationship provide?",
 		"choices": [
-			"Number of desktop bookmarks for enterprise implementation for controlled governance",
-			"Count of inactive user photos for operational consistency",
-			"Average email size for role-based accountability for measurable outcomes",
-			"Percentage of successful sync retries after reconnection for production readiness"
+			"Service history and customer context are preserved across repeat visits to the account",
+			"All open incidents automatically close when the related work order is created",
+			"Contractor invoices bypass approval when the account record is populated",
+			"SLA timers are removed for work tied to accounts marked as inactive"
 		],
-		"correctIndex": 3,
-		"explanation": "Sync retry success reflects offline reliability and recovery quality in the field.",
+		"correctIndex": 0,
+		"explanation": "Account relationships on work orders preserve customer context and service history for planning, communication, and repeat visits.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-mobile/page/administer/mobile/concept/mobile-analytics.html"
+			"https://www.servicenow.com/docs/r/field-service-management/Work-order-fsm.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 59,
-		"prompt": "What administrative control improves security for FSM offline data?",
+		"prompt": "Before repairing HVAC equipment, a technician needs prior service history for that unit. Where should they find it?",
 		"choices": [
-			"Disable device authentication for sustained reliability for operational consistency",
-			"Store all field data in public folders for measurable outcomes",
-			"Allow shared credentials across technicians for practical execution",
-			"Enforce mobile security policies, encryption, and role-based data scope for controlled governance"
+			"The related asset record and linked work history on the work order",
+			"The default change management risk assessment questionnaire only",
+			"The service catalog execution plan attached to the request item",
+			"The problem management known error database for unrelated incidents"
 		],
-		"correctIndex": 3,
-		"explanation": "Offline data must remain protected through strong device and access controls.",
+		"correctIndex": 0,
+		"explanation": "Work orders store associated configuration items and assets; asset records provide install base context and prior service history.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-mobile/page/administer/mobile/concept/mobile-security.html"
+			"https://www.servicenow.com/docs/r/field-service-management/Work-order-fsm.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 60,
-		"prompt": "In FSM, why is contractor management configuration important?",
+		"prompt": "Regulatory audits require proof that safety steps were completed before closing refrigeration repairs. Which questionnaire type fits?",
 		"choices": [
-			"To consistently disable work order tracking for operational consistency",
-			"To consistently control assignment, access, compliance, and performance for third-party field workers",
-			"To consistently treat all contractors as internal admins",
-			"To consistently avoid capturing labor outcomes for enterprise implementation"
+			"Smart Assessment questionnaires configured as mandatory before task closure",
+			"Standard incident survey templates sent after password reset requests",
+			"Change management risk calculators attached to normal change records",
+			"Employee onboarding checklists managed in the HR service delivery workspace"
 		],
-		"correctIndex": 1,
-		"explanation": "Contractor governance ensures external workforce participation remains secure and accountable.",
+		"correctIndex": 0,
+		"explanation": "Smart Assessment questionnaires capture structured safety, inspection, and compliance data and can be mandatory before a task closes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/manage-external-workforce.html"
+			"https://www.servicenow.com/docs/r/field-service-management/smart-assessment-questionnaire.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 61,
-		"prompt": "Which assignment rule best supports mixed internal and contractor dispatch?",
+		"prompt": "An administrator associates a survey question set with a work order task type. When does the agent see the questionnaire?",
 		"choices": [
-			"Assign all critical jobs to contractors first for enterprise implementation",
-			"Exclude internal teams from dispatch pools for operational consistency",
-			"Skill, region, certification, and contract eligibility-based routing for role-based accountability",
-			"Random assignment with no qualification checks for production readiness"
+			"When configured trigger conditions are met on the assigned task form",
+			"Only after the work order has been closed for at least seven days",
+			"Immediately upon login to the service portal before requesting service",
+			"After every change request linked to the account reaches the Implement state"
 		],
-		"correctIndex": 2,
-		"explanation": "Eligibility-aware routing balances service quality, compliance, and capacity.",
+		"correctIndex": 0,
+		"explanation": "Survey-based questionnaires become available on the task form when the configured trigger conditions for that work order task are satisfied.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/configure-dispatch-and-scheduling.html"
+			"https://www.servicenow.com/docs/r/field-service-management/survey-based-questionnaires.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 62,
-		"prompt": "What control should be enforced for contractor mobile access in FSM?",
+		"prompt": "A dispatch director wants one place to manage skills, schedules, and routing for all field teams. Which application supports this?",
 		"choices": [
-			"Shared credentials among partner technicians for practical execution",
-			"No authentication for offline use for controlled governance",
-			"Open access to all work orders for sustained reliability",
-			"Role-scoped access and device security policy enforcement for measurable outcomes"
+			"Workforce Optimization for Field Service",
+			"Strategic Portfolio Management for project milestone tracking",
+			"Software Asset Management for license reconciliation reporting",
+			"Security Operations for vulnerability response orchestration"
 		],
-		"correctIndex": 3,
-		"explanation": "Scoped identity and secure mobile policy are essential when external staff access operational data.",
+		"correctIndex": 0,
+		"explanation": "Workforce Optimization for Field Service centralizes routing, skills, schedules, and workforce performance management.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-mobile/page/administer/mobile/concept/mobile-security.html"
+			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-fsm.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 63,
-		"prompt": "How should contractor performance be monitored in FSM?",
+		"prompt": "Before enabling automated assignment, which baseline records should the implementation team configure?",
 		"choices": [
-			"Using KPIs such as on-time arrival, first-time fix, and rework rate by vendor for role-based accountability",
-			"Without separating contractor and internal metrics for production readiness",
-			"exclusively by anecdotal dispatcher feedback for controlled governance",
-			"By counting logins exclusively for sustained reliability"
+			"Users, locations, territories, and related foundational workforce data",
+			"Change models, blackout schedules, and CAB delegate assignment groups",
+			"Discovery credentials, MID Server clusters, and identification rules",
+			"Catalog categories, record producers, and order guide variable sets"
 		],
 		"correctIndex": 0,
-		"explanation": "Vendor-level operational KPIs support objective contract governance and improvement.",
+		"explanation": "Workforce setup involves configuring users, locations, territories, and other foundational data required for scheduling and dispatch.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/report-on-field-service-performance.html"
+			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/setting-up-workforce.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 64,
-		"prompt": "Which practice improves contractor governance maturity in FSM?",
+		"prompt": "Technicians in one territory are consistently overbooked while nearby teams have open capacity. Which feature addresses this?",
 		"choices": [
-			"No review of contractor outcomes for operational consistency",
-			"Unlimited manual overrides by contractors for enterprise implementation",
-			"Regular performance reviews tied to SLA and contract obligations for production readiness",
-			"Assignment without qualification tracking for role-based accountability for measurable outcomes"
+			"Capacity and Reservations Management with reservation rules by task attributes",
+			"Knowledge subscription notifications for article authors in the region",
+			"Hardware asset lifecycle stages for retired equipment disposal tracking",
+			"Event management alert correlation rules for monitoring tool integrations"
 		],
-		"correctIndex": 2,
-		"explanation": "Periodic governance against contract and service commitments sustains quality control.",
+		"correctIndex": 0,
+		"explanation": "Capacity and Reservations Management assigns work within defined capacity limits using reservation rules for priority, work type, and other task attributes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/field-service-management-overview.html"
+			"https://www.servicenow.com/docs/r/field-service-management/capacity-management.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 65,
-		"prompt": "What is a core admin responsibility in FSM scheduling operations?",
+		"prompt": "A facilities team must run inspections and maintenance on recurring intervals. Which FSM application supports this?",
 		"choices": [
-			"Disabling all schedule rules for measurable outcomes for role-based accountability",
-			"Ignoring route efficiency metrics for sustained reliability for operational consistency",
-			"Assigning all jobs manually forever for controlled governance",
-			"Maintaining skill matrices, territories, and dispatch policies for practical execution"
+			"Planned Work Management for recurring maintenance, inspections, and audits",
+			"Problem Management for documenting known error database articles only",
+			"Service Portfolio Management for demand and capacity financial planning",
+			"Governance, Risk, and Compliance for policy attestation campaigns"
 		],
-		"correctIndex": 3,
-		"explanation": "Scheduling quality depends on accurate administrative configuration of workforce constraints.",
+		"correctIndex": 0,
+		"explanation": "Planned Work Management creates and manages planned work activities with recurring schedules such as maintenance and inspections.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/configure-dispatch-and-scheduling.html"
+			"https://www.servicenow.com/docs/r/field-service-management/planned-work-management.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 66,
-		"prompt": "Which admin control helps prevent invalid work order completion?",
+		"prompt": "An aircraft maintenance manager needs diagnostic work generated after every 25 flight hours. What should they configure?",
 		"choices": [
-			"Allow closure from any inactive device for production readiness",
-			"Disable state transition checks for role-based accountability for measurable outcomes",
-			"Optional closure fields for all tasks for operational consistency",
-			"Mandatory completion criteria and validation rules on key task states for enterprise implementation"
+			"A maintenance plan tied to asset usage that triggers work orders at the threshold",
+			"A one-time catalog task manually ordered by dispatch each quarter",
+			"An incident template that auto-closes when the asset record is updated",
+			"A change request standard template for all hangar equipment upgrades"
 		],
-		"correctIndex": 3,
-		"explanation": "Validation at closure ensures task outputs are complete and auditable.",
+		"correctIndex": 0,
+		"explanation": "Preventive maintenance plans can generate recurring work orders based on usage thresholds such as flight hours on an asset.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/close-work-order-tasks.html"
+			"https://www.servicenow.com/docs/r/field-service-management/preventive-maintenance-use-case.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 67,
-		"prompt": "How should FSM admins govern mobile offline usage?",
+		"prompt": "Operations wants visibility into parts consumed, transferred, and adjusted across field teams. Which FSM process covers this?",
 		"choices": [
-			"Allow shared logins across contractors for controlled governance",
-			"Permit unlimited unsynced data retention for practical execution",
-			"Configure secure offline scope, sync cadence, and exception monitoring for measurable outcomes",
-			"Disable authentication for field staff for sustained reliability"
+			"Inventory management including transfers, consumption, adjustments, and replenishment",
+			"Incident matching rules that deduplicate alerts from monitoring integrations",
+			"Employee document generation for offer letters in HR service delivery",
+			"Software reclamation workflows for unused SaaS license harvesting"
 		],
-		"correctIndex": 2,
-		"explanation": "Secure scope and monitored sync behavior are essential for reliable offline operations.",
+		"correctIndex": 0,
+		"explanation": "FSM inventory management tracks parts and supplies through transfers, consumption, adjustments, and related stockroom operations.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-mobile/page/administer/mobile/concept/offline-mobile.html"
+			"https://www.servicenow.com/docs/r/field-service-management/inventory-management-fsm.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 68,
-		"prompt": "Which KPI grouping best indicates FSM admin effectiveness?",
+		"prompt": "A dispatcher reserves a replacement motor from a central warehouse for tomorrow's repair task. What is this process called?",
 		"choices": [
-			"On-time arrival, first-time fix, and schedule utilization for sustained reliability",
-			"Number of portal themes for measurable outcomes for role-based accountability",
-			"Count of list layouts for practical execution",
-			"Frequency of navigation menu changes for controlled governance"
+			"Sourcing a part by reserving and obtaining the asset through stockroom transfer",
+			"Normalizing a configuration item class in the CMDB reconciliation workspace",
+			"Publishing a knowledge article version to the self-service portal catalog",
+			"Escalating a problem record to the major incident management bridge"
 		],
 		"correctIndex": 0,
-		"explanation": "These metrics capture service reliability and workforce planning quality.",
+		"explanation": "Sourcing reserves and obtains a part described in a part requirement by transferring it from one stockroom to another or to the agent.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/report-on-field-service-performance.html"
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_SourceParts.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 69,
-		"prompt": "What best signals mature FSM administration?",
+		"prompt": "Which activities are included in Field Service Management inventory operations? (Choose two.)",
 		"choices": [
-			"Stable configuration governance, low rework, and predictable field outcomes for enterprise implementation",
-			"Manual reporting exclusively for sustained reliability",
-			"No ownership for scheduling rules for role-based accountability",
-			"Frequent emergency dispatch overrides for production readiness"
+			"Recording part consumption when agents complete field repairs",
+			"Transferring parts between company stockrooms using transfer orders",
+			"Running enterprise-wide password expiration notifications for staff",
+			"Publishing change advisory board minutes to external vendor portals"
 		],
 		"correctIndex": 0,
-		"explanation": "Maturity shows through governed configuration and sustained operational performance.",
+		"correctIndexes": [
+			0,
+			1
+		],
+		"questionType": "multi",
+		"explanation": "FSM inventory management covers consumption tracking and part transfers between stockrooms; password notifications and CAB minutes are unrelated.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/field-service-management-overview.html"
+			"https://www.servicenow.com/docs/r/field-service-management/inventory-management-fsm.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 70,
-		"prompt": "Which foundation is most important for enterprise FSM operations?",
+		"prompt": "Parts must move from a regional warehouse to a technician's van before a site visit. What record should be created?",
 		"choices": [
-			"No link between work orders and assets for controlled governance",
-			"Standardized work order lifecycle, dispatch rules, and mobile execution standards for practical execution",
-			"Technician-specific manual workflows with no central model for measurable outcomes",
-			"Scheduling based exclusively on technician preference for operational consistency"
+			"A transfer order to move parts between stockrooms or to the receiving agent",
+			"A change request to document the hardware refresh approval chain",
+			"An incident task assigned to the network operations center queue",
+			"A problem record linked to a known error for the asset model class"
 		],
-		"correctIndex": 1,
-		"explanation": "Enterprise FSM needs consistent process and execution standards to coordinate field operations at scale.",
+		"correctIndex": 0,
+		"explanation": "Transfer orders move required parts between company stockrooms or to a location where an agent can receive them.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/field-service-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/work-order-management.html"
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_TransferOrders.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 71,
-		"prompt": "For enterprise FSM, what is the best method to improve dispatch efficiency?",
+		"prompt": "A task requires a specialized part already stocked on a qualified technician's route. Which workflow should dispatch use?",
 		"choices": [
-			"Use skills, territory, and availability constraints in automated scheduling policies for production readiness",
-			"Assign all work orders in first-in-first-out order exclusively",
-			"Allow each dispatcher to use private rules for operational consistency",
-			"Disable appointment windows to maximize flexibility for enterprise implementation"
+			"Source parts and assign the task to an agent who has or will receive the part",
+			"Close the work order and create a new incident for parts procurement review",
+			"Disable part requirements on the task and proceed with manual assignment",
+			"Convert the work order task into a catalog request for warehouse staff"
 		],
 		"correctIndex": 0,
-		"explanation": "Constraint-based scheduling aligns field assignments with capability and service commitments.",
+		"explanation": "The source-parts workflow reserves parts and can assign the task to agents who already have required inventory or will receive it.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/scheduling-dispatch.html",
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/field-service-management.html"
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_SourceParts.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 72,
-		"prompt": "Which KPI set best reflects enterprise FSM operational health?",
+		"prompt": "Dispatch leadership wants technicians to complete more jobs per day with less driving. Which capability should be enabled?",
 		"choices": [
-			"Total number of dispatch boards created for measurable outcomes",
-			"Count of mobile users logged in once for sustained reliability",
-			"Number of catalog items tied to field teams for controlled governance",
-			"First-time fix rate, on-time arrival, and work order cycle time by region for practical execution"
+			"Route optimization that reorders tasks to reduce travel time between stops",
+			"Incident matching that merges duplicate alerts from monitoring tools",
+			"Knowledge harvesting that drafts articles from resolved problem records",
+			"Software normalization that maps publisher titles to product models"
 		],
-		"correctIndex": 3,
-		"explanation": "These KPIs track service effectiveness, punctuality, and throughput across distributed field operations.",
+		"correctIndex": 0,
+		"explanation": "Route optimization strategically reorders assigned tasks to reduce travel time and improve daily completion capacity.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/field-service-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+			"https://www.servicenow.com/docs/r/field-service-management/field-service-scheduling/configuring-route-optimization.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 73,
-		"prompt": "A region has high repeat visits for the same issue type. What enterprise FSM action is best?",
+		"prompt": "An agent needs to collect several reserved parts before the first customer appointment. Where do they view pending pickups?",
 		"choices": [
-			"Analyze repeat-work patterns and update playbooks, parts strategy, and technician enablement for operational consistency",
-			"Close repeat work orders as duplicates exclusively for controlled governance",
-			"Route all similar work to a single dispatcher for production readiness",
-			"Increase appointment windows without root-cause review for role-based accountability"
+			"A consolidated pickup list grouped by stockroom showing assets ready to collect",
+			"The change schedule calendar filtered by blackout and maintenance windows",
+			"The service catalog homepage sorted by most requested item categories",
+			"The CMDB workspace dashboard listing unidentified configuration items"
 		],
 		"correctIndex": 0,
-		"explanation": "Reducing repeat visits requires root-cause correction across process, inventory, and execution practices.",
+		"explanation": "Agents view a consolidated list grouped by stockroom of assets waiting to be picked up before heading to job sites.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/knowledge-and-playbooks.html",
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/work-order-management.html"
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/t_PickUpAnAsset.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 74,
-		"prompt": "Which governance practice most improves enterprise FSM operations over time?",
+		"prompt": "After a job, a technician returns unused parts from a personal van stock to the depot. Which feature supports this?",
 		"choices": [
-			"Local reporting formats with no shared scorecard for role-based accountability",
-			"Monthly operational reviews by region using common KPIs and corrective action tracking for production readiness",
-			"No formal review once mobile adoption is complete for enterprise implementation",
-			"Annual review exclusively after customer escalations for sustained reliability"
+			"Drop-off lists used to return items from a personal stockroom to a company stockroom",
+			"Discovery status dashboards showing probe success rates by subnet range",
+			"Employee relations case templates for workplace investigation intake",
+			"Vendor risk assessment surveys for third-party software procurement"
 		],
-		"correctIndex": 1,
-		"explanation": "Regular KPI-driven governance ensures continuous improvement and cross-region operational consistency.",
+		"correctIndex": 0,
+		"explanation": "Drop-off lists let agents return items held in a personal stockroom to a designated company stockroom after field work.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/field-service-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html"
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_UseDropOffLists.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 75,
-		"prompt": "A dispatcher needs to assign work to the right technician automatically. Which configuration most directly controls this in Field Service Management?",
+		"prompt": "A dispatcher must rebalance today's schedule and monitor customer commitments in one interface. Which workspace should they use?",
 		"choices": [
-			"Incident state model settings for practical execution",
-			"Knowledge article approval workflows for controlled governance for enterprise implementation",
-			"Assignment rules and scheduling constraints on work orders for sustained reliability",
-			"Service catalog item variable sets for measurable outcomes"
+			"Dispatcher Workspace for managing field teams, schedules, and customer experience",
+			"Agent Workspace for IT service management incident triage and resolution",
+			"Strategic Portfolio Planning Workspace for demand and capacity forecasting",
+			"Security Operations Workspace for vulnerability response case management"
 		],
-		"correctIndex": 2,
-		"explanation": "In FSM, assignment and scheduling behavior is driven by work assignment logic such as assignment rules, skills, and scheduling constraints.",
+		"correctIndex": 0,
+		"explanation": "Dispatcher Workspace lets dispatchers manage field teams, scheduling operations, and customer experience outcomes in real time.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/field-service-management.html"
+			"https://www.servicenow.com/docs/r/field-service-management/dispatcher-activities.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 76,
-		"prompt": "What is the primary purpose of a service territory in Field Service Management?",
+		"prompt": "Operations leadership wants live visibility into agent locations and open work order statuses. Which tool provides this?",
 		"choices": [
-			"To consistently manage software license consumption for controlled governance",
-			"To consistently control catalog approval chains for sustained reliability",
-			"To consistently group service locations and technicians by geographic responsibility",
-			"To consistently define escalation policies for incidents for production readiness"
+			"The Dispatcher dashboard showing work orders, schedules, and agent locations",
+			"The service catalog manager reporting on item popularity by department",
+			"The change management schedule console for blackout window enforcement",
+			"The HR case management dashboard for employee relations intake volume"
 		],
-		"correctIndex": 2,
-		"explanation": "Service territories define geographic boundaries and operational ownership for field assignments.",
+		"correctIndex": 0,
+		"explanation": "The Dispatcher dashboard provides real-time visibility into work orders, schedules, agent locations, and task statuses.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/service-territory-management.html"
+			"https://www.servicenow.com/docs/r/field-service-management/dispatcher-activities.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 77,
-		"prompt": "A job requires a technician certified on high-voltage equipment. Which FSM capability ensures only qualified technicians are considered for scheduling?",
+		"prompt": "Customers should choose installation windows that align with technician availability. Which FSM feature enables this?",
 		"choices": [
-			"CMDB reconciliation rules for sustained reliability for operational consistency",
-			"SLA pause conditions for measurable outcomes for role-based accountability",
-			"Skill requirements matched against technician skills for practical execution",
-			"Catalog entitlement rules for controlled governance for enterprise implementation"
+			"Appointment booking to configure, manage, and create customer service appointments",
+			"Event management alert grouping to reduce duplicate monitoring notifications",
+			"Software reclamation to identify unused licenses across SaaS subscriptions",
+			"Domain separation policy enforcement for multi-tenant instance isolation"
 		],
-		"correctIndex": 2,
-		"explanation": "Skill matching in FSM filters candidate technicians to those who meet required competencies and certifications.",
+		"correctIndex": 0,
+		"explanation": "Appointment booking lets organizations configure available slots so customers or agents can schedule service visits.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/skills-in-field-service-management.html"
+			"https://www.servicenow.com/docs/r/field-service-management/appointment-booking.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 78,
-		"prompt": "Which action best helps optimize daily route efficiency for field technicians?",
+		"prompt": "Several technicians have gaps in their afternoon schedules. How can dispatch improve utilization without manual reassignment?",
 		"choices": [
-			"Disabling schedule constraints for controlled governance for enterprise implementation",
-			"Using scheduling optimization that considers travel time and availability for practical execution",
-			"Creating more incident categories for measurable outcomes for role-based accountability",
-			"Assigning all tasks manually from list view for sustained reliability"
+			"Intelligent Task Recommendation suggesting tasks agents can self-assign from mobile",
+			"Problem management root cause analysis workshops scheduled each Friday",
+			"Change management standard templates auto-approved for low-risk requests",
+			"Discovery status jobs that refresh configuration item serial numbers nightly"
 		],
-		"correctIndex": 1,
-		"explanation": "FSM scheduling optimization improves route plans by factoring availability, location, and travel time.",
+		"correctIndex": 0,
+		"explanation": "Intelligent Task Recommendation suggests tasks to fill schedule gaps; agents can view and self-assign recommended tasks in the Now Agent mobile app.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/scheduling-and-dispatching.html"
+			"https://www.servicenow.com/docs/r/field-service-management/fsm-task-recommendation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 79,
-		"prompt": "A technician reaches a customer site and needs all required job details in one place. Which FSM capability supports this outcome?",
+		"prompt": "Regional managers need to compare demand against available technician capacity by territory. Which console supports this?",
 		"choices": [
-			"Mobile work order execution with task and asset context for production readiness",
-			"Service portfolio management dashboards for role-based accountability for measurable outcomes",
-			"Problem root cause analysis templates for operational consistency",
-			"CMDB identification rules for enterprise implementation for controlled governance"
+			"Capacity Console with real-time resource utilization across territories",
+			"Knowledge Management homepage filtered by article owner and category",
+			"Hardware asset lifecycle dashboard for retired equipment disposal",
+			"Performance Analytics data collector configuration for indicator sources"
 		],
 		"correctIndex": 0,
-		"explanation": "FSM mobile workflows provide technicians with work order details, tasks, and related context while on site.",
+		"explanation": "The Capacity Console provides real-time insights into resource utilization to optimize capacity usage by territory.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/mobile-field-service-management.html"
+			"https://www.servicenow.com/docs/r/field-service-management/capacity-console.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 80,
-		"prompt": "In FSM, what is the relationship between a work order and work order tasks?",
+		"prompt": "Field agents should not manually re-enter hours worked on each task at end of day. What should the administrator activate?",
 		"choices": [
-			"Tasks can exclusively exist for incidents, not work orders",
-			"Tasks are used exclusively for catalog approvals for measurable outcomes",
-			"Work order tasks replace the need for a parent work order for operational consistency",
-			"The work order is the parent record and tasks represent executable steps for enterprise implementation"
+			"Time Recording for Field Service so entries generate time cards and timesheets",
+			"Event Management so alerts automatically create incidents for network outages",
+			"Software Asset Management so reclamation rules harvest unused SaaS licenses",
+			"Governance, Risk, and Compliance so control tests run on a quarterly cadence"
 		],
-		"correctIndex": 3,
-		"explanation": "A work order contains overall job context, while work order tasks break execution into actionable units.",
+		"correctIndex": 0,
+		"explanation": "Time Recording lets agents record time on tasks and activities; entries automatically generate time cards and timesheets for approval.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/work-order-management.html"
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/Configuring-time-recording.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 81,
-		"prompt": "A dispatcher wants to avoid assigning emergency calls to technicians who are already overbooked. Which FSM setup is most relevant?",
+		"prompt": "Finance needs different billing rates for travel time versus on-site repair labor. What should be configured?",
 		"choices": [
-			"SLA retroactive start for controlled governance for enterprise implementation",
-			"Knowledge base user criteria for practical execution",
-			"Incident business service mapping for measurable outcomes for role-based accountability",
-			"Capacity-aware scheduling policies and schedule constraints for sustained reliability"
+			"Rate types and labor rate cards defining cost rates for recorded activities",
+			"Incident priority lookup rules mapping urgency and impact to response targets",
+			"Change risk assessment questions weighting standard versus normal changes",
+			"Catalog client scripts validating variable inputs on multi-step order guides"
 		],
-		"correctIndex": 3,
-		"explanation": "Scheduling constraints and capacity settings prevent over-allocation and improve dispatch quality.",
+		"correctIndex": 0,
+		"explanation": "Rate types and labor rate cards define different cost rates applied to activities recorded by field service agents.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/scheduling-and-dispatching.html"
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/using-rate-types-labor-rate-cards.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 82,
-		"prompt": "Why would an implementation team enable appointment booking options in FSM?",
+		"prompt": "Captured labor hours must distinguish driving, diagnostic, and repair work for reporting. What should be configured?",
 		"choices": [
-			"To consistently enforce CMDB normalization for sustained reliability",
-			"To consistently create HR case templates for controlled governance",
-			"To consistently replace change approvals for production readiness",
-			"To consistently let customers or agents select available service windows"
+			"Time recording categories aligned to the types of work field agents perform",
+			"Discovery schedules that classify network gear by manufacturer and model",
+			"Knowledge article templates requiring legal review before publication",
+			"Problem task workflows that auto-generate known error articles on closure"
 		],
-		"correctIndex": 3,
-		"explanation": "Appointment booking provides available time slots so service visits can be scheduled to match customer and technician availability.",
+		"correctIndex": 0,
+		"explanation": "Time recording categories align captured labor with the work agents perform, supporting accurate reporting and billing.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/appointment-booking.html"
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/configure-time-categories.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 83,
-		"prompt": "A field technician consumes a replacement part during a repair. What should be captured to keep inventory accurate?",
+		"prompt": "After agents submit daily time cards, managers must approve labor before costs finalize. What workflow does Time Recording use?",
 		"choices": [
-			"A change request risk score for measurable outcomes",
-			"A service catalog variable choice for sustained reliability",
-			"A problem known error record for controlled governance",
-			"Part consumption on the related work execution record for practical execution"
+			"Time recorded entries roll into timesheets that managers review and approve",
+			"Time entries bypass approval and post directly to the general ledger nightly",
+			"Only dispatchers may edit time cards after agents mark tasks complete",
+			"Timesheets are archived automatically without manager review after submission"
 		],
-		"correctIndex": 3,
-		"explanation": "Recording part usage during field execution updates inventory and supports downstream replenishment processes.",
+		"correctIndex": 0,
+		"explanation": "Time recorded on tasks generates time cards and timesheets that managers approve before labor costs are finalized.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/parts-and-inventory-management.html"
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/Recording-time-spent-on-work-order-tasks.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 84,
-		"prompt": "Which workspace is primarily used by dispatchers to monitor queues and assign field work in real time?",
+		"prompt": "An agent notices a missing lunch break on yesterday's submitted hours. What can they do in the mobile experience?",
 		"choices": [
-			"Service Portfolio Workspace for practical execution",
-			"Strategic Portfolio Planning Workspace for controlled governance for enterprise implementation",
-			"Agent Workspace for ITSM incidents for sustained reliability",
-			"Dispatcher Workspace for measurable outcomes for role-based accountability"
+			"Review time recorded for work order tasks and correct entries before approval",
+			"Delete the parent work order and recreate all tasks from a blank template",
+			"Open a change request to modify timesheet approval policies globally",
+			"Escalate to the CMDB team to update asset ownership on the related CI"
 		],
-		"correctIndex": 3,
-		"explanation": "Dispatcher Workspace is designed for field scheduling visibility and assignment operations.",
+		"correctIndex": 0,
+		"explanation": "Agents can review time recorded for work order tasks and verify accuracy before managers approve the timesheet.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/dispatcher-workspace.html"
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/field-service-agent-review-time.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 85,
-		"prompt": "A company wants preventive maintenance visits to be generated automatically every quarter. Which FSM approach fits best?",
+		"prompt": "A facilities team wants HVAC inspections generated automatically every quarter. What should they configure?",
 		"choices": [
-			"Configure exclusively SLA definitions for measurable outcomes",
-			"Create ad hoc incidents each quarter for production readiness",
-			"Use one-time catalog tasks with no schedule for enterprise implementation",
-			"Use maintenance plans that generate recurring work orders for operational consistency"
+			"A maintenance plan that creates recurring work orders on the defined schedule",
+			"A one-time incident template manually opened by dispatch each quarter",
+			"A standard change model requiring CAB approval for every inspection visit",
+			"A catalog order guide that replaces work orders with request items only"
 		],
-		"correctIndex": 3,
-		"explanation": "Maintenance plans automate periodic field work creation, supporting recurring preventive service.",
+		"correctIndex": 0,
+		"explanation": "Maintenance plans automate periodic field work creation, supporting recurring preventive service on a defined schedule.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/maintenance-plans.html"
+			"https://www.servicenow.com/docs/r/field-service-management/planned-work-management.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 86,
-		"prompt": "Which KPI best reflects how effectively field jobs are completed on the first visit?",
+		"prompt": "Leadership wants to measure whether technicians resolve issues without a return trip. Which KPI should they track?",
 		"choices": [
-			"Average incident reassignments for sustained reliability for operational consistency",
-			"Catalog request backlog for measurable outcomes for role-based accountability",
-			"Count of CMDB classes for practical execution",
-			"First-time fix rate for controlled governance for enterprise implementation"
+			"First-time fix rate for work orders completed on the initial appointment",
+			"Average password reset completion time for the internal service desk",
+			"Count of inactive catalog categories in the employee service portal",
+			"Number of CMDB discovery schedules running against cloud subnets"
 		],
-		"correctIndex": 3,
-		"explanation": "First-time fix rate measures whether technicians resolve issues during the initial visit without return trips.",
+		"correctIndex": 0,
+		"explanation": "First-time fix rate measures whether field issues are resolved during the initial visit without requiring a repeat trip.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/field-service-management-analytics.html"
+			"https://www.servicenow.com/docs/r/field-service-management/monitoring-analytics-fsm.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 87,
-		"prompt": "If a work order depends on specific equipment history, where should the technician access that context?",
+		"prompt": "After a field visit, the customer should receive updates during the appointment and provide feedback afterward. Which feature supports this?",
 		"choices": [
-			"A change model template for enterprise implementation for controlled governance",
-			"The software model normalization table for operational consistency",
-			"The service catalog category record for role-based accountability",
-			"The related asset record and linked work history for production readiness"
+			"Customer Experience with automated notifications and a post-completion survey link",
+			"Problem Management with known error articles attached to every work order",
+			"Change Management with blackout schedules blocking all field work updates",
+			"Software Asset Management with reclamation rules for unused application licenses"
 		],
-		"correctIndex": 3,
-		"explanation": "Asset context and prior work history help technicians diagnose and complete field tasks accurately.",
+		"correctIndex": 0,
+		"explanation": "Customer Experience sends automated email or text updates during service and provides a survey link after work completes to gather agent feedback.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/asset-and-configuration-context-for-fsm.html"
+			"https://www.servicenow.com/docs/r/field-service-management/customer-experience.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 88,
-		"prompt": "What is the main benefit of configuring travel and work-time constraints for technicians?",
+		"prompt": "Technicians need quick answers about procedures while on site using the Now Agent mobile app. Which capability helps?",
 		"choices": [
-			"To consistently increase manual dispatcher workload for production readiness",
-			"To consistently bypass service territories for measurable outcomes",
-			"To consistently replace assignment groups with user criteria",
-			"To consistently produce feasible schedules that respect labor and travel limits"
+			"Virtual Agent for Field Service providing conversational responses to work queries",
+			"Discovery status jobs refreshing serial numbers on network device records",
+			"Change risk calculators scoring normal changes before CAB review meetings",
+			"Incident matching rules merging duplicate alerts from monitoring integrations"
 		],
-		"correctIndex": 3,
-		"explanation": "Travel and labor constraints make schedules realistic and reduce missed appointments or overtime risk.",
+		"correctIndex": 0,
+		"explanation": "Virtual Agent for Field Service lets agents get quick answers to work-related queries through the Now Agent mobile application.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/scheduling-and-dispatching.html"
+			"https://www.servicenow.com/docs/r/field-service-management/virtual-agent-fsm.html"
 		]
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 89,
-		"prompt": "A dispatcher must prioritize safety-critical work over routine tasks. Which FSM mechanism should be used?",
+		"prompt": "Technicians work in areas with unreliable connectivity and must update tasks offline. What should administrators configure?",
 		"choices": [
-			"Catalog item popularity metrics for controlled governance for enterprise implementation",
-			"Knowledge category ownership for practical execution",
-			"CMDB reconciliation identifiers for measurable outcomes for role-based accountability",
-			"Work order prioritization rules and scheduling policies for sustained reliability"
+			"Scheduled offline caching to download required records in the background automatically",
+			"Real-time video streaming requirements for every work order task closure",
+			"Forced VPN reconnect intervals that block mobile sync until authentication completes",
+			"Desktop-only work order forms that disable all field data capture on mobile"
 		],
-		"correctIndex": 3,
-		"explanation": "Prioritization rules and scheduling policies ensure high-risk work receives earlier assignment and dispatch attention.",
+		"correctIndex": 0,
+		"explanation": "Scheduled offline caching configures background download of required data so agents can continue working when connectivity is limited.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/work-order-management.html"
+			"https://www.servicenow.com/docs/r/field-service-management/mobile-experience-for-field-service-management-glide-family/configure-scheduled-offline-caching.html"
 		]
 	},
 	{

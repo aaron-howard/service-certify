@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-FSM",
+		"order": 85,
+		"prompt": "A facilities team wants HVAC inspections generated automatically every quarter. What should they configure?",
+		"choices": [
+			"A maintenance plan that creates recurring work orders on the defined schedule",
+			"A one-time incident template manually opened by dispatch each quarter",
+			"A standard change model requiring CAB approval for every inspection visit",
+			"A catalog order guide that replaces work orders with request items only"
+		],
+		"correctIndex": 0,
+		"explanation": "Maintenance plans automate periodic field work creation, supporting recurring preventive service on a defined schedule.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/planned-work-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 86,
+		"prompt": "Leadership wants to measure whether technicians resolve issues without a return trip. Which KPI should they track?",
+		"choices": [
+			"First-time fix rate for work orders completed on the initial appointment",
+			"Average password reset completion time for the internal service desk",
+			"Count of inactive catalog categories in the employee service portal",
+			"Number of CMDB discovery schedules running against cloud subnets"
+		],
+		"correctIndex": 0,
+		"explanation": "First-time fix rate measures whether field issues are resolved during the initial visit without requiring a repeat trip.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/monitoring-analytics-fsm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 87,
+		"prompt": "After a field visit, the customer should receive updates during the appointment and provide feedback afterward. Which feature supports this?",
+		"choices": [
+			"Customer Experience with automated notifications and a post-completion survey link",
+			"Problem Management with known error articles attached to every work order",
+			"Change Management with blackout schedules blocking all field work updates",
+			"Software Asset Management with reclamation rules for unused application licenses"
+		],
+		"correctIndex": 0,
+		"explanation": "Customer Experience sends automated email or text updates during service and provides a survey link after work completes to gather agent feedback.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/customer-experience.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 88,
+		"prompt": "Technicians need quick answers about procedures while on site using the Now Agent mobile app. Which capability helps?",
+		"choices": [
+			"Virtual Agent for Field Service providing conversational responses to work queries",
+			"Discovery status jobs refreshing serial numbers on network device records",
+			"Change risk calculators scoring normal changes before CAB review meetings",
+			"Incident matching rules merging duplicate alerts from monitoring integrations"
+		],
+		"correctIndex": 0,
+		"explanation": "Virtual Agent for Field Service lets agents get quick answers to work-related queries through the Now Agent mobile application.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/virtual-agent-fsm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 89,
+		"prompt": "Technicians work in areas with unreliable connectivity and must update tasks offline. What should administrators configure?",
+		"choices": [
+			"Scheduled offline caching to download required records in the background automatically",
+			"Real-time video streaming requirements for every work order task closure",
+			"Forced VPN reconnect intervals that block mobile sync until authentication completes",
+			"Desktop-only work order forms that disable all field data capture on mobile"
+		],
+		"correctIndex": 0,
+		"explanation": "Scheduled offline caching configures background download of required data so agents can continue working when connectivity is limited.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/mobile-experience-for-field-service-management-glide-family/configure-scheduled-offline-caching.html"
+		]
+	}
+]
