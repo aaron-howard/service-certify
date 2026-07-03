@@ -1,0 +1,245 @@
+[
+	{
+		"trackCode": "CSA",
+		"order": 45,
+		"prompt": "What is the primary role of a MID Server in ServiceNow?",
+		"choices": [
+			"To act as a secure agent that communicates between the ServiceNow instance and resources inside a private network",
+			"To replace ACL evaluation for all tables",
+			"To render Service Portal widgets on the client",
+			"To store update set history for all applications"
+		],
+		"correctIndex": 0,
+		"explanation": "A MID Server runs in the customer network and securely executes discovery, orchestration, and integration tasks on behalf of the instance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/mid-server/mid-server.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 46,
+		"prompt": "Why is validating MID Server status important before running Discovery?",
+		"choices": [
+			"Because Discovery depends on a validated, up MID Server to execute probes and patterns against target infrastructure",
+			"Because Discovery can only run from a client browser tab",
+			"Because MID Servers are required only for email notifications",
+			"Because Discovery automatically ignores all network credentials"
+		],
+		"correctIndex": 0,
+		"explanation": "Discovery schedules require operational MID Servers to communicate with devices and return results to the instance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html",
+			"https://www.servicenow.com/docs/r/platform-administration/mid-server/mid-server.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 47,
+		"prompt": "In a multi-node ServiceNow instance, what does clustering awareness help administrators understand?",
+		"choices": [
+			"It helps them understand that processing is distributed across nodes for scale and availability rather than tied to one app server",
+			"It means every user session is permanently bound to one MID Server",
+			"It disables load balancing during peak usage",
+			"It requires separate update sets per cluster node"
+		],
+		"correctIndex": 0,
+		"explanation": "ServiceNow instances run on clustered application nodes, and workload distribution improves reliability and performance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-platform-administration/page/administer/instances/concept/c_InstanceArchitecture.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 48,
+		"prompt": "What is a practical reason to deploy multiple MID Servers for production integrations?",
+		"choices": [
+			"To provide redundancy and workload distribution so integrations continue if one MID Server is unavailable",
+			"To ensure each MID Server can connect to only one table",
+			"To bypass ECC Queue processing",
+			"To eliminate the need for credentials in Discovery"
+		],
+		"correctIndex": 0,
+		"explanation": "Using more than one MID Server supports high availability and better throughput for integration and discovery workloads.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/mid-server/mid-server-clusters.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 49,
+		"prompt": "How does the ECC Queue relate to MID Server operations?",
+		"choices": [
+			"It is the message framework used for commands and responses between the instance and MID Servers",
+			"It is a UI policy engine for catalog forms",
+			"It stores only CMDB relationship records",
+			"It replaces import set tables during data loads"
+		],
+		"correctIndex": 0,
+		"explanation": "The ECC Queue is the communication channel where the instance sends work to MID Servers and receives execution results.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/mid-server/ecc-queue.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 45,
+		"prompt": "What is the main purpose of a Scheduled Script Execution in ServiceNow?",
+		"choices": [
+			"To run server-side logic automatically at defined times or intervals without user interaction",
+			"To enforce mandatory fields on a client form",
+			"To publish a catalog item to all users",
+			"To migrate update sets between instances"
+		],
+		"correctIndex": 0,
+		"explanation": "Scheduled jobs automate recurring backend tasks such as maintenance, cleanup, or data processing.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/scheduled-jobs/scheduled-script-execution.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 46,
+		"prompt": "In event-driven design, what does `gs.eventQueue()` do?",
+		"choices": [
+			"It queues a named event that can trigger downstream handlers such as notifications or script actions",
+			"It creates a new ACL record",
+			"It commits GlideRecord changes without `update()`",
+			"It runs a background script only in developer instances"
+		],
+		"correctIndex": 0,
+		"explanation": "Developers use `gs.eventQueue()` to publish events with optional record and parameter context for asynchronous processing.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/server-side-scripting/gs-eventqueue.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 47,
+		"prompt": "When should a Script Action be used?",
+		"choices": [
+			"When you need server-side logic to execute in response to a specific event from the Event Registry",
+			"When you need to change field visibility on a form in real time",
+			"When creating a report source for Performance Analytics only",
+			"When defining table rotations for audit records"
+		],
+		"correctIndex": 0,
+		"explanation": "Script Actions subscribe to events and execute scripted logic asynchronously when those events are fired.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/script-actions/script-actions.html",
+			"https://www.servicenow.com/docs/r/application-development/events/event-registry.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 48,
+		"prompt": "What is a key advantage of using events and script actions instead of only synchronous Business Rule logic?",
+		"choices": [
+			"They decouple follow-up processing and can reduce transaction time by handling noncritical work asynchronously",
+			"They automatically disable all business rules on the table",
+			"They run exclusively on client devices",
+			"They require no testing because events are system-managed"
+		],
+		"correctIndex": 0,
+		"explanation": "Asynchronous event handling helps keep primary user transactions responsive while still performing additional processing.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/events/events.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 49,
+		"prompt": "A nightly job must close stale tasks and log metrics. Which approach best fits this requirement?",
+		"choices": [
+			"Use a Scheduled Script Execution, and optionally fire events for downstream processing",
+			"Use a UI Policy with reverse if false",
+			"Use a Dictionary Override on task.short_description",
+			"Use a Client Script onLoad"
+		],
+		"correctIndex": 0,
+		"explanation": "Time-based backend automation is a standard use case for Scheduled Script Executions, with events used for additional asynchronous steps.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/scheduled-jobs/scheduled-script-execution.html",
+			"https://www.servicenow.com/docs/r/application-development/events/events.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 45,
+		"prompt": "What does Service Level Management primarily ensure in ITSM?",
+		"choices": [
+			"That agreed service commitments are defined, measured, and reported between providers and customers",
+			"That all incidents are resolved by one assignment group",
+			"That CMDB classes are automatically normalized",
+			"That every change is categorized as standard"
+		],
+		"correctIndex": 0,
+		"explanation": "Service Level Management governs how service commitments are structured and monitored to meet business expectations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/service-level-management/service-level-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 46,
+		"prompt": "In ServiceNow SLM, what is an SLA definition used for?",
+		"choices": [
+			"It defines when an SLA attaches, its target timing, and the conditions for pause, resume, or stop",
+			"It stores catalog item pricing models",
+			"It determines MID Server JVM heap settings",
+			"It controls ACL role inheritance"
+		],
+		"correctIndex": 0,
+		"explanation": "SLA definitions contain the rules and timing behavior that drive task SLA records on qualifying tasks.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/service-level-management/task-sla-definitions.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 47,
+		"prompt": "Which statement correctly describes the relationship between SLA and Task SLA records?",
+		"choices": [
+			"SLA definitions provide templates, while Task SLA records are runtime instances attached to specific tasks",
+			"SLA records are only for incidents, and Task SLAs are only for changes",
+			"Task SLAs are manually created and never automated",
+			"SLA definitions are generated from Knowledge articles"
+		],
+		"correctIndex": 0,
+		"explanation": "An SLA definition determines behavior, and each qualifying task gets its own Task SLA record to track actual timing.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/service-level-management/task-sla.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 48,
+		"prompt": "Why are pause conditions important in an SLA definition?",
+		"choices": [
+			"They prevent SLA time from counting during approved hold states, improving fair measurement against commitments",
+			"They permanently stop all SLA engines",
+			"They allow users to bypass assignment rules",
+			"They convert response SLAs into availability reports"
+		],
+		"correctIndex": 0,
+		"explanation": "Pause conditions align elapsed SLA time with business policy by excluding periods such as awaiting customer input.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/service-level-management/sla-pause-conditions.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 49,
+		"prompt": "What is a best practice when creating multiple SLA definitions for one process?",
+		"choices": [
+			"Ensure start and stop conditions are specific and non-overlapping to avoid unintended simultaneous attachments",
+			"Use identical conditions for every priority level",
+			"Disable SLA retroactive start to improve accuracy",
+			"Store all SLA logic in client scripts"
+		],
+		"correctIndex": 0,
+		"explanation": "Clear, precise conditions help prevent conflicting SLA behavior and make service-level reporting more reliable.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/service-level-management/task-sla-definitions.html"
+		]
+	}
+]

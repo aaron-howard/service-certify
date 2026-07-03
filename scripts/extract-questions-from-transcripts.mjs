@@ -1,12 +1,17 @@
 /**
- * One-off / local regeneration: parse Convex question batches from Cursor subagent .jsonl
- * transcripts and write src/convex/seed/devQuestionBank.ts
+ * Parse Convex question batches from Cursor subagent .jsonl transcripts or JSON batch
+ * files and write/merge src/convex/seed/devQuestionBank.ts
  *
  * Usage (from repo root):
  *   node scripts/extract-questions-from-transcripts.mjs
+ *   node scripts/extract-questions-from-transcripts.mjs --merge-batches
+ *   node scripts/extract-questions-from-transcripts.mjs --merge-batches scripts/question-batches/phase1-batch1.json
  *
- * Override transcript folder:
- *   set TRANSCRIPT_SUBAGENTS=C:\path\to\...\subagents
+ * Env:
+ *   TRANSCRIPT_SUBAGENTS — override path to subagent .jsonl folder
+ *   MIN_PER_TRACK — minimum questions per track (optional)
+ *   MAX_PER_TRACK — maximum questions per track (optional)
+ *   EXPECTED_PER_TRACK — exact count per track if set (legacy default for transcript-only mode: 5)
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -14,9 +19,11 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, '..');
+const outPath = path.join(root, 'src', 'convex', 'seed', 'devQuestionBank.ts');
+const batchesDir = path.join(root, 'scripts', 'question-batches');
 
 const defaultSubagents = path.join(
-	process.env.USERPROFILE || '',
+	process.env.USERPROFILE || process.env.HOME || '',
 	'.cursor',
 	'projects',
 	'd-repos-service-certify',
@@ -25,14 +32,16 @@ const defaultSubagents = path.join(
 	'subagents'
 );
 
-const subagentsDir = process.env.TRANSCRIPT_SUBAGENTS || defaultSubagents;
-
-const FILES = [
+const LEGACY_TRANSCRIPT_FILES = [
 	'46036090-f6d0-4337-8a58-c5d2182b55e2.jsonl',
 	'1eef110e-009e-409d-86d0-3af146308b7d.jsonl',
 	'ba2e8bd2-d47d-4603-b395-d5bb1c29ed05.jsonl',
 	'57825fc6-32ba-4614-abb7-1321601e7d87.jsonl'
 ];
+
+const args = process.argv.slice(2);
+const mergeBatches = args.includes('--merge-batches');
+const batchFileArgs = args.filter((a) => !a.startsWith('--'));
 
 /** Parse first top-level JSON array in text (handles prose before `[{...}]`). */
 function parseFirstJsonArray(text) {
@@ -90,40 +99,175 @@ function extractLargestJsonArrayFromJsonl(filePath) {
 	return best;
 }
 
-function validate(all) {
+function readExistingBank() {
+	if (!fs.existsSync(outPath)) return [];
+	const raw = fs.readFileSync(outPath, 'utf8');
+	const match = raw.match(/DEV_PRACTICE_QUESTIONS[^=]*=\s*(\[[\s\S]*\]);/);
+	if (!match) return [];
+	return JSON.parse(match[1]);
+}
+
+function loadJsonBatch(filePath) {
+	const raw = fs.readFileSync(filePath, 'utf8').trim();
+	if (raw.startsWith('[')) return JSON.parse(raw);
+	const arr = parseFirstJsonArray(raw);
+	if (!arr) throw new Error(`No JSON array in ${filePath}`);
+	return arr;
+}
+
+function resolveBatchFiles() {
+	if (batchFileArgs.length > 0) {
+		return batchFileArgs.flatMap((pattern) => {
+			if (pattern.includes('*')) {
+				const dir = path.dirname(pattern);
+				const base = path.basename(pattern);
+				const re = new RegExp('^' + base.replace(/\*/g, '.*') + '$');
+				return fs
+					.readdirSync(dir === '.' ? batchesDir : dir)
+					.filter((f) => re.test(f))
+					.map((f) => path.join(dir === '.' ? batchesDir : dir, f))
+					.sort();
+			}
+			return [path.isAbsolute(pattern) ? pattern : path.join(root, pattern)];
+		});
+	}
+	if (!fs.existsSync(batchesDir)) return [];
+	return fs
+		.readdirSync(batchesDir)
+		.filter((f) => f.endsWith('.json'))
+		.sort()
+		.map((f) => path.join(batchesDir, f));
+}
+
+function validateQuestion(q, { warnDuplicates = true } = {}) {
+	if (!q.trackCode || typeof q.order !== 'number') {
+		throw new Error('missing trackCode/order');
+	}
+	if (!Array.isArray(q.choices) || q.choices.length !== 4) {
+		throw new Error(`track ${q.trackCode} order ${q.order}: need 4 choices`);
+	}
+	if (q.correctIndex < 0 || q.correctIndex > 3) {
+		throw new Error(`track ${q.trackCode} order ${q.order}: bad correctIndex`);
+	}
+	if (!q.prompt?.trim()) {
+		throw new Error(`track ${q.trackCode} order ${q.order}: empty prompt`);
+	}
+	if (!q.explanation?.trim()) {
+		throw new Error(`track ${q.trackCode} order ${q.order}: empty explanation`);
+	}
+	if (!Array.isArray(q.sourceUrls) || q.sourceUrls.length === 0) {
+		throw new Error(`track ${q.trackCode} order ${q.order}: need sourceUrls`);
+	}
+	return warnDuplicates;
+}
+
+function validateBank(all, { expectedPerTrack, minPerTrack, maxPerTrack, tracksInBatch } = {}) {
 	const byTrack = new Map();
+	const promptsByTrack = new Map();
+
 	for (const q of all) {
-		if (!q.trackCode || typeof q.order !== 'number') throw new Error('missing trackCode/order');
-		if (!Array.isArray(q.choices) || q.choices.length !== 4) {
-			throw new Error(`track ${q.trackCode} order ${q.order}: need 4 choices`);
+		validateQuestion(q);
+		const key = `${q.trackCode}:${q.order}`;
+		if (byTrack.has(key)) {
+			throw new Error(`duplicate trackCode+order: ${key}`);
 		}
-		if (q.correctIndex < 0 || q.correctIndex > 3) {
-			throw new Error(`track ${q.trackCode} order ${q.order}: bad correctIndex`);
+		byTrack.set(key, q);
+
+		const prompts = promptsByTrack.get(q.trackCode) || new Set();
+		const norm = q.prompt.trim().toLowerCase();
+		if (prompts.has(norm)) {
+			console.warn(`WARN: duplicate prompt in track ${q.trackCode}: ${q.prompt.slice(0, 60)}...`);
 		}
-		byTrack.set(q.trackCode, (byTrack.get(q.trackCode) || 0) + 1);
+		prompts.add(norm);
+		promptsByTrack.set(q.trackCode, prompts);
 	}
-	for (const [code, n] of byTrack) {
-		if (n !== 5) throw new Error(`track ${code}: expected 5 questions, got ${n}`);
+
+	const counts = new Map();
+	for (const q of all) {
+		counts.set(q.trackCode, (counts.get(q.trackCode) || 0) + 1);
+	}
+
+	const tracksToCheck = tracksInBatch ? [...tracksInBatch] : [...counts.keys()];
+	for (const code of tracksToCheck) {
+		const n = counts.get(code) || 0;
+		if (expectedPerTrack != null && n !== expectedPerTrack) {
+			throw new Error(`track ${code}: expected ${expectedPerTrack} questions, got ${n}`);
+		}
+		if (minPerTrack != null && n < minPerTrack) {
+			throw new Error(`track ${code}: minimum ${minPerTrack} questions, got ${n}`);
+		}
+		if (maxPerTrack != null && n > maxPerTrack) {
+			throw new Error(`track ${code}: maximum ${maxPerTrack} questions, got ${n}`);
+		}
 	}
 }
 
-const all = [];
-for (const f of FILES) {
-	const fp = path.join(subagentsDir, f);
-	if (!fs.existsSync(fp)) {
-		console.error('Missing transcript file:', fp);
-		process.exit(1);
+function mergeQuestions(existing, incoming) {
+	const map = new Map();
+	for (const q of existing) {
+		map.set(`${q.trackCode}:${q.order}`, q);
 	}
-	all.push(...extractLargestJsonArrayFromJsonl(fp));
+	for (const q of incoming) {
+		map.set(`${q.trackCode}:${q.order}`, q);
+	}
+	return [...map.values()].sort((a, b) => {
+		if (a.trackCode !== b.trackCode) return a.trackCode.localeCompare(b.trackCode);
+		return a.order - b.order;
+	});
 }
 
-validate(all);
+function writeBank(all) {
+	const body = `import type { DevPracticeQuestionRow } from './devQuestionBank.types';
 
-const outPath = path.join(root, 'src', 'convex', 'seed', 'devQuestionBank.ts');
-const body = `import type { DevPracticeQuestionRow } from './devQuestionBank.types';
-
-/** Dev bank: 5 questions × 22 tracks; merged from agent batches. Regenerate: \`node scripts/extract-questions-from-transcripts.mjs\` */
+/** Dev question bank; merge batches: \`node scripts/extract-questions-from-transcripts.mjs --merge-batches\` */
 export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = ${JSON.stringify(all, null, '\t')};
 `;
-fs.writeFileSync(outPath, body, 'utf8');
-console.log('Wrote', outPath, 'count=', all.length);
+	fs.writeFileSync(outPath, body, 'utf8');
+	console.log('Wrote', outPath, 'count=', all.length);
+}
+
+function envInt(name) {
+	const v = process.env[name];
+	return v != null && v !== '' ? Number(v) : undefined;
+}
+
+let incoming = [];
+let tracksInBatch = null;
+
+if (mergeBatches) {
+	const files = resolveBatchFiles();
+	if (files.length === 0) {
+		console.error('No batch JSON files found. Pass paths or add files to scripts/question-batches/');
+		process.exit(1);
+	}
+	for (const fp of files) {
+		if (!fs.existsSync(fp)) {
+			console.error('Missing batch file:', fp);
+			process.exit(1);
+		}
+		console.log('Loading', fp);
+		incoming.push(...loadJsonBatch(fp));
+	}
+	tracksInBatch = new Set(incoming.map((q) => q.trackCode));
+	const existing = readExistingBank();
+	const merged = mergeQuestions(existing, incoming);
+	validateBank(merged, {
+		expectedPerTrack: envInt('EXPECTED_PER_TRACK'),
+		minPerTrack: envInt('MIN_PER_TRACK'),
+		maxPerTrack: envInt('MAX_PER_TRACK')
+	});
+	writeBank(merged);
+} else {
+	const subagentsDir = process.env.TRANSCRIPT_SUBAGENTS || defaultSubagents;
+	for (const f of LEGACY_TRANSCRIPT_FILES) {
+		const fp = path.join(subagentsDir, f);
+		if (!fs.existsSync(fp)) {
+			console.error('Missing transcript file:', fp);
+			process.exit(1);
+		}
+		incoming.push(...extractLargestJsonArrayFromJsonl(fp));
+	}
+	const expectedPerTrack = envInt('EXPECTED_PER_TRACK') ?? 5;
+	validateBank(incoming, { expectedPerTrack });
+	writeBank(incoming);
+}

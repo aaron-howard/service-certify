@@ -1,0 +1,402 @@
+[
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 5,
+    "prompt": "When launching a Third-Party Risk Management program, what is the most important first step in defining vendor risk scope?",
+    "choices": [
+      "Import all vendors and assign the same risk tier",
+      "Identify which vendor relationships, services, and data flows are in scope for formal assessment",
+      "Assess only vendors with expiring contracts",
+      "Defer scope decisions until after questionnaires are sent"
+    ],
+    "correctIndex": 1,
+    "explanation": "TPRM starts with clear scope boundaries so assessments target the right third parties, services, and data exposure paths.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/concept/vendor-risk-management-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 6,
+    "prompt": "Which vendor population is typically prioritized when defining initial TPRM scope?",
+    "choices": [
+      "Vendors with no system access or data handling",
+      "Vendors with critical services, privileged access, or sensitive data processing",
+      "Only new vendors created this month",
+      "Only vendors with active incidents"
+    ],
+    "correctIndex": 1,
+    "explanation": "Criticality, access level, and data sensitivity are common criteria for prioritizing scoped third parties.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/define-vendor-risk-scope.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 7,
+    "prompt": "In TPRM, why should business owners be involved in vendor risk scoping?",
+    "choices": [
+      "They can approve all findings without review",
+      "They determine legal language for every contract",
+      "They understand service dependency and operational impact if a vendor fails",
+      "They replace the risk team in platform administration"
+    ],
+    "correctIndex": 2,
+    "explanation": "Business owners provide context on process dependencies and outage impact, which improves scope accuracy.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/assign-vendor-owners.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 8,
+    "prompt": "What scoping outcome best supports repeatable vendor risk assessments?",
+    "choices": [
+      "A documented classification model linking vendor types to assessment requirements",
+      "A one-time spreadsheet of vendor names",
+      "Manual assessment decisions made per analyst preference",
+      "No segmentation until annual audits"
+    ],
+    "correctIndex": 0,
+    "explanation": "Documented scope categories enable consistent trigger criteria and repeatable assessment workflows.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/concept/vendor-tiering.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 9,
+    "prompt": "A TPRM team wants to avoid over-assessing low-impact vendors. Which scope control helps most?",
+    "choices": [
+      "Require full due diligence for every vendor regardless of profile",
+      "Skip all assessments for internal suppliers",
+      "Use inherent risk screening to determine whether full assessment is required",
+      "Assess only vendors selected by procurement"
+    ],
+    "correctIndex": 2,
+    "explanation": "Inherent risk screening helps right-size assessment effort based on business and security impact indicators.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vendor-risk-management/page/product/risk/task/run-inherent-risk-screening.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 5,
+    "prompt": "In Vulnerability Response, what is the primary objective of vulnerability intake?",
+    "choices": [
+      "Collect and normalize scanner findings into actionable vulnerability records",
+      "Close vulnerabilities automatically after import",
+      "Create incidents for every scan result",
+      "Ignore duplicate findings across sources"
+    ],
+    "correctIndex": 0,
+    "explanation": "Intake focuses on bringing external findings into VR with consistent normalization and deduplication for triage.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/concept/vulnerability-response-intake.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 6,
+    "prompt": "Why is source integration quality important during vulnerability intake?",
+    "choices": [
+      "It ensures scan data includes reliable asset and finding context used in downstream prioritization",
+      "It removes the need for remediation tasks",
+      "It allows analysts to bypass state transitions",
+      "It guarantees zero false positives"
+    ],
+    "correctIndex": 0,
+    "explanation": "Good source data quality improves correlation, ownership mapping, and triage confidence.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/task/configure-vulnerability-integrations.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 7,
+    "prompt": "What intake behavior reduces duplicate remediation effort in VR?",
+    "choices": [
+      "Creating separate vulnerability items for identical findings on the same asset each import",
+      "Disabling normalization rules",
+      "Using correlation and deduplication logic across repeated scanner observations",
+      "Deleting previous findings before each scan cycle"
+    ],
+    "correctIndex": 2,
+    "explanation": "Correlation and deduplication prevent duplicate work and keep vulnerability state history coherent.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/concept/vulnerability-grouping-and-correlation.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 8,
+    "prompt": "Which data attribute is most critical to preserve at intake for effective assignment?",
+    "choices": [
+      "Scanner UI color theme",
+      "Asset ownership and CI relationship details",
+      "Analyst personal priority notes",
+      "Dashboard widget layout preference"
+    ],
+    "correctIndex": 1,
+    "explanation": "Assignment and accountability depend on accurate asset-to-owner and CI mappings captured during intake.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/task/map-vulnerabilities-to-cis.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 9,
+    "prompt": "A vulnerability feed starts creating unusable records with missing fields. What is the best first response?",
+    "choices": [
+      "Close all imported vulnerabilities as false positives",
+      "Pause or adjust the integration mapping and validation rules before continuing imports",
+      "Manually edit every record after intake",
+      "Disable all scanner connectors permanently"
+    ],
+    "correctIndex": 1,
+    "explanation": "Fixing integration mappings and validation controls at intake prevents recurring downstream triage defects.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vulnerability-response/page/product/vulnerability-response/task/troubleshoot-vulnerability-imports.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 5,
+    "prompt": "What is the main purpose of Customer Service Management in ServiceNow?",
+    "choices": [
+      "Manage employee payroll and benefits",
+      "Handle customer interactions, cases, and issue resolution across channels",
+      "Replace CMDB discovery tools",
+      "Schedule on-site field technicians only"
+    ],
+    "correctIndex": 1,
+    "explanation": "CSM centralizes customer service operations, case workflows, and communication channels for faster resolution.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/concept/csm-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 6,
+    "prompt": "When first exploring CSM, which record type is the core unit of customer issue tracking?",
+    "choices": [
+      "Change request",
+      "Incident",
+      "Case",
+      "Knowledge feedback"
+    ],
+    "correctIndex": 2,
+    "explanation": "The case is the central transaction in CSM for managing customer-reported issues and service requests.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/concept/cases.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 7,
+    "prompt": "Why do organizations adopt account and contact models in CSM?",
+    "choices": [
+      "To track software license metering",
+      "To define customer relationships and route cases to the correct support context",
+      "To replace HR profiles",
+      "To remove need for service level definitions"
+    ],
+    "correctIndex": 1,
+    "explanation": "Account and contact data provide customer context used for entitlement checks, routing, and communications.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/configure-accounts-and-contacts.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 8,
+    "prompt": "Which CSM capability helps deflect repetitive customer questions before a case is opened?",
+    "choices": [
+      "Vulnerability calculators",
+      "Stockroom transfers",
+      "Knowledge and self-service portal experiences",
+      "Contract line depreciation schedules"
+    ],
+    "correctIndex": 2,
+    "explanation": "Knowledge and self-service enable customers to resolve common issues without agent intervention.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/concept/csm-self-service.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 9,
+    "prompt": "What is a recommended first metric when evaluating early CSM implementation success?",
+    "choices": [
+      "Mean time to resolution for customer cases",
+      "Number of CMDB classes created",
+      "Total hardware assets retired",
+      "Count of background scripts run daily"
+    ],
+    "correctIndex": 0,
+    "explanation": "Case resolution time is a direct indicator of service efficiency and customer-facing operational performance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/customer-service-management/page/product/customer-service-management/task/monitor-csm-performance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 5,
+    "prompt": "In Field Service Management, what is the role of a work order?",
+    "choices": [
+      "A financial ledger entry for invoicing only",
+      "A parent record used to coordinate field tasks, scheduling, and fulfillment",
+      "A replacement for customer contracts",
+      "A dashboard widget for dispatchers"
+    ],
+    "correctIndex": 1,
+    "explanation": "Work orders organize service work and act as the control record for downstream field activities.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/concept/work-orders-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 6,
+    "prompt": "Why are work order tasks used in FSM implementations?",
+    "choices": [
+      "To split a service job into executable units that can be assigned and tracked independently",
+      "To disable dispatching for multi-step jobs",
+      "To avoid capturing completion details",
+      "To replace all case records in CSM"
+    ],
+    "correctIndex": 0,
+    "explanation": "Tasks break down field jobs into manageable actions with clear ownership and status progression.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/create-work-order-tasks.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 7,
+    "prompt": "Which information on a work order most directly improves dispatch outcomes?",
+    "choices": [
+      "Analyst theme preference",
+      "Unrelated contract attachments only",
+      "A blank short description",
+      "Detailed location, required skills, and service time window"
+    ],
+    "correctIndex": 3,
+    "explanation": "Dispatcher decisions depend on location, skill requirements, and timing constraints captured on work records.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/configure-work-order-fields.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 8,
+    "prompt": "A team wants better lifecycle visibility for field jobs. What should they standardize first?",
+    "choices": [
+      "Personal notes format for each technician",
+      "Consistent state model for work orders and work order tasks",
+      "Manual emailing instead of status updates",
+      "Closing all tasks at creation time"
+    ],
+    "correctIndex": 1,
+    "explanation": "Standard state transitions provide reliable reporting and operational control for work execution.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/concept/work-order-lifecycle.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 9,
+    "prompt": "What is the main reason to relate a work order to a customer account or location record?",
+    "choices": [
+      "To avoid SLA calculations",
+      "To provide service context and history across repeat visits",
+      "To prevent mobile updates",
+      "To disable inventory checks"
+    ],
+    "correctIndex": 1,
+    "explanation": "Account and location relationships preserve context for planning, communication, and repeat service quality.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/field-service-management/page/product/field-service-management/task/associate-work-orders-to-accounts.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 5,
+    "prompt": "What is the primary goal of HR Service Delivery in ServiceNow?",
+    "choices": [
+      "Manage customer incident response",
+      "Support HR processes through standardized services, cases, and employee experiences",
+      "Replace payroll engines",
+      "Track software vulnerabilities"
+    ],
+    "correctIndex": 1,
+    "explanation": "HRSD digitizes and standardizes HR services, improving employee support and process consistency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/concept/hrsd-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 6,
+    "prompt": "In HRSD, which record typically tracks fulfillment of an employee HR request?",
+    "choices": [
+      "Problem record",
+      "HR case",
+      "Work order",
+      "Vendor profile"
+    ],
+    "correctIndex": 1,
+    "explanation": "HR cases are the primary fulfillment records for employee issues and HR service requests.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/concept/hr-cases.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 7,
+    "prompt": "Why are HR services important in an HRSD implementation?",
+    "choices": [
+      "They define structured request types and fulfillment patterns for HR teams",
+      "They replace legal counsel",
+      "They remove security role requirements",
+      "They bypass knowledge management"
+    ],
+    "correctIndex": 0,
+    "explanation": "HR services standardize intake and delivery so recurring HR requests are handled consistently.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/create-hr-services.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 8,
+    "prompt": "What is a key reason HRSD uses employee center experiences?",
+    "choices": [
+      "To force all requests through email",
+      "To provide a unified self-service interface for HR help, knowledge, and request submission",
+      "To hide HR policies from employees",
+      "To store vulnerability scan outputs"
+    ],
+    "correctIndex": 1,
+    "explanation": "Employee center channels HR demand through a consistent portal and improves self-service adoption.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/concept/employee-center-for-hr.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 9,
+    "prompt": "When introducing HRSD, what governance practice should be established early?",
+    "choices": [
+      "Allow unrestricted access to all HR case data",
+      "Disable assignment groups for HR",
+      "Define case confidentiality and role-based access controls for sensitive employee records",
+      "Store all case notes in public knowledge"
+    ],
+    "correctIndex": 2,
+    "explanation": "HR data is sensitive, so role-based access and confidentiality controls are foundational to compliant operations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/configure-hr-security.html"
+    ]
+  }
+]

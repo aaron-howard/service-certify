@@ -1,0 +1,87 @@
+[
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 80,
+		"prompt": "What is the primary purpose of a self-service portal in ITSM?",
+		"choices": [
+			"To give users a single place to submit requests, report issues, and track work status without contacting the service desk directly",
+			"To replace all assignment groups with one global queue",
+			"To disable incident categorization and prioritization",
+			"To run background scripts for platform upgrades"
+		],
+		"correctIndex": 0,
+		"explanation": "A self-service portal improves user experience and service desk efficiency by centralizing access to IT services and request visibility.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/build/service-portal/concept/service-portal.html",
+			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/service-catalog-management/concept/service-catalog-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 81,
+		"prompt": "How does Employee Service Center support ITSM outcomes?",
+		"choices": [
+			"It unifies employee-facing access to IT services, knowledge, and request workflows in a modern portal experience",
+			"It automatically marks all incidents as major incidents",
+			"It removes the need for service catalog governance",
+			"It is used only for CMDB relationship mapping"
+		],
+		"correctIndex": 0,
+		"explanation": "Employee Service Center helps streamline intake and self-service by presenting relevant services and knowledge in a single employee experience.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/employee-center/concept/employee-center.html",
+			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/service-catalog-management/concept/service-catalog-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 82,
+		"prompt": "What is a key best practice when exposing catalog items in Employee Service Center?",
+		"choices": [
+			"Use clear taxonomy and audience-appropriate content so users can quickly find the right service and submit complete requests",
+			"Show every internal fulfillment task to all end users",
+			"Remove all variable help text to reduce page length",
+			"Require users to open separate incidents before every request"
+		],
+		"correctIndex": 0,
+		"explanation": "A well-organized catalog with understandable content reduces misrouted requests and improves fulfillment speed and data quality.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/service-catalog-management/concept/service-catalog-management.html",
+			"https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/employee-center/concept/employee-center.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 83,
+		"prompt": "How does a knowledge portal reduce incident volume in ITSM?",
+		"choices": [
+			"By enabling users to resolve common issues through searchable, reusable articles before submitting tickets",
+			"By disabling incident creation for all users",
+			"By routing every request directly to change management",
+			"By replacing SLA policies with article ratings"
+		],
+		"correctIndex": 0,
+		"explanation": "Effective knowledge access increases self-resolution and deflects repetitive tickets, allowing agents to focus on higher-complexity work.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/knowledge-management/concept/knowledge-management.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/build/service-portal/concept/service-portal.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 84,
+		"prompt": "Which metric most directly indicates that portal and knowledge experiences are improving ITSM performance?",
+		"choices": [
+			"Increased self-service resolution and reduced repeat incidents for known issues",
+			"Higher number of mandatory approval steps per request",
+			"More assignment group transfers per ticket",
+			"Longer average time to publish knowledge articles"
+		],
+		"correctIndex": 0,
+		"explanation": "When users can find and use services and knowledge effectively, organizations typically see more self-resolution and fewer repeat contacts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/knowledge-management/concept/knowledge-management.html",
+			"https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/employee-center/concept/employee-center.html"
+		]
+	}
+]

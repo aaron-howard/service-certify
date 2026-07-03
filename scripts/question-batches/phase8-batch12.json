@@ -1,0 +1,402 @@
+[
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 60,
+    "prompt": "Which integration provides the most value at TPRM intake?",
+    "choices": [
+      "Connecting procurement onboarding events to automatically initiate vendor risk workflows",
+      "Syncing office wallpaper settings",
+      "Importing inactive user avatars",
+      "Disabling vendor records until contract close"
+    ],
+    "correctIndex": 0,
+    "explanation": "Procurement-triggered onboarding ensures risk evaluation starts early and consistently.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/vendor-risk-management/task/onboard-vendors.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 61,
+    "prompt": "How should external assessment data be integrated into TPRM?",
+    "choices": [
+      "Manually copied into comments only",
+      "Mapped into structured assessment evidence with source and timestamp lineage",
+      "Imported without validation rules",
+      "Stored in personal spreadsheets"
+    ],
+    "correctIndex": 1,
+    "explanation": "Structured ingestion with lineage maintains auditability and comparability across assessments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/vendor-risk-management/task/import-vendor-assessment-data.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 62,
+    "prompt": "What is the best way to integrate TPRM with issue management?",
+    "choices": [
+      "Keep vendor findings in isolated tables",
+      "Create linked issue records with shared ownership, due dates, and status synchronization",
+      "Close findings after data import",
+      "Track remediation through email only"
+    ],
+    "correctIndex": 1,
+    "explanation": "Linked issue lifecycles connect risk identification to accountable remediation execution.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/risk-management/task/manage-risk-issues.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 63,
+    "prompt": "Which integration safeguard helps prevent duplicate vendor records?",
+    "choices": [
+      "No matching rules during import",
+      "Canonical matching and deduplication based on defined vendor identifiers",
+      "Allow free-form vendor names only",
+      "Merge records manually once a year"
+    ],
+    "correctIndex": 1,
+    "explanation": "Identifier-based matching protects data quality and downstream reporting accuracy.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_ImportSets.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 64,
+    "prompt": "What indicates a mature TPRM integration architecture?",
+    "choices": [
+      "Many one-off scripts with no monitoring",
+      "Documented data contracts, monitored interfaces, and exception handling workflows",
+      "No ownership for inbound data quality",
+      "Disconnected tools with manual reconciliation"
+    ],
+    "correctIndex": 1,
+    "explanation": "Mature integrations depend on clear contracts, observability, and managed failure paths.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/integrationhub/concept/integrationhub.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 60,
+    "prompt": "In VR, what is patch orchestration primarily designed to achieve?",
+    "choices": [
+      "Automate coordinated remediation actions from vulnerability findings to patch execution workflows",
+      "Replace vulnerability scoring models",
+      "Disable assignment groups",
+      "Prevent scanner imports"
+    ],
+    "correctIndex": 0,
+    "explanation": "Patch orchestration links findings to actionable remediation flows and reduces manual handoffs.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/orchestrate-vulnerability-remediation.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 61,
+    "prompt": "Which condition should trigger automated patch orchestration?",
+    "choices": [
+      "Any informational finding regardless of context",
+      "Severity, exploitability, and asset criticality meeting defined policy thresholds",
+      "Only vulnerabilities older than one year",
+      "Manual user preference setting"
+    ],
+    "correctIndex": 1,
+    "explanation": "Policy thresholds ensure automation focuses on materially risky vulnerabilities.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/configure-vulnerability-groups.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 62,
+    "prompt": "What is the best integration pattern for patch status feedback into VR?",
+    "choices": [
+      "One-way export with no return status",
+      "Bidirectional updates that reflect patch job outcome and verification state",
+      "Email-only confirmations",
+      "Manual weekly reconciliation sheets"
+    ],
+    "correctIndex": 1,
+    "explanation": "Bidirectional status keeps vulnerability records accurate and supports reliable closure decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/verify-vulnerability-remediation.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 63,
+    "prompt": "Which safeguard is most important in automated patch orchestration?",
+    "choices": [
+      "No change control or rollback plan",
+      "Approval gates and rollback procedures for high-impact systems",
+      "Patch all assets simultaneously",
+      "Ignore maintenance windows"
+    ],
+    "correctIndex": 1,
+    "explanation": "Controlled approvals and rollback readiness reduce operational and service risk during remediation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 64,
+    "prompt": "What metric best evaluates patch orchestration effectiveness?",
+    "choices": [
+      "Increase in manual ticket transfers",
+      "Reduction in mean time to remediate for orchestrated vulnerability cohorts",
+      "Count of dashboard colors used",
+      "Number of inactive patch groups"
+    ],
+    "correctIndex": 1,
+    "explanation": "MTTR improvement for orchestrated cohorts demonstrates practical automation value.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/use-performance-analytics-for-vr.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 60,
+    "prompt": "Which integration most improves CSM agent efficiency?",
+    "choices": [
+      "Case linkage with product/incident records to provide complete service context",
+      "Manual copy-paste between tools",
+      "Separate customer profiles per channel",
+      "No integration with related service data"
+    ],
+    "correctIndex": 0,
+    "explanation": "Connected records reduce context-switching and improve diagnosis and resolution speed.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/case-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 61,
+    "prompt": "How should CSM integrate with external CRM data?",
+    "choices": [
+      "Overwrite CSM account data without mapping rules",
+      "Use governed field mappings and reconciliation logic for account/contact synchronization",
+      "Sync all fields into free-text notes",
+      "Disable duplicate checks"
+    ],
+    "correctIndex": 1,
+    "explanation": "Governed mappings and reconciliation preserve data integrity across connected systems.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/integrationhub/concept/integrationhub.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 62,
+    "prompt": "What is a strong pattern for integrating CSM and knowledge management?",
+    "choices": [
+      "Separate knowledge with no case linkage",
+      "Recommend contextual articles during case handling and track deflection outcomes",
+      "Disable article feedback collection",
+      "Require agents to search external sites only"
+    ],
+    "correctIndex": 1,
+    "explanation": "Contextual knowledge recommendations improve consistency and enable measurable deflection benefits.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/knowledge-management/concept/knowledge-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 63,
+    "prompt": "Which integration control best protects customer data in CSM?",
+    "choices": [
+      "Open API access with shared credentials",
+      "Scoped credentials, least privilege, and monitored API transactions",
+      "No logging of integration activity",
+      "Bypass ACL checks for performance"
+    ],
+    "correctIndex": 1,
+    "explanation": "Scoped access and monitoring reduce exposure while preserving operational traceability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_AccessControls.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 64,
+    "prompt": "What indicates CSM integration maturity?",
+    "choices": [
+      "Frequent manual data correction between systems",
+      "Reliable data synchronization, low duplicate rates, and measured process outcomes",
+      "No ownership for integration failures",
+      "Ad hoc integrations with no documentation"
+    ],
+    "correctIndex": 1,
+    "explanation": "Stable sync quality and measurable outcomes signal robust integration governance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 60,
+    "prompt": "In FSM, why is contractor management configuration important?",
+    "choices": [
+      "To treat all contractors as internal admins",
+      "To control assignment, access, compliance, and performance for third-party field workers",
+      "To disable work order tracking",
+      "To avoid capturing labor outcomes"
+    ],
+    "correctIndex": 1,
+    "explanation": "Contractor governance ensures external workforce participation remains secure and accountable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/manage-external-workforce.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 61,
+    "prompt": "Which assignment rule best supports mixed internal and contractor dispatch?",
+    "choices": [
+      "Random assignment with no qualification checks",
+      "Skill, region, certification, and contract eligibility-based routing",
+      "Assign all critical jobs to contractors first",
+      "Exclude internal teams from dispatch pools"
+    ],
+    "correctIndex": 1,
+    "explanation": "Eligibility-aware routing balances service quality, compliance, and capacity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/configure-dispatch-and-scheduling.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 62,
+    "prompt": "What control should be enforced for contractor mobile access in FSM?",
+    "choices": [
+      "Shared credentials among partner technicians",
+      "Role-scoped access and device security policy enforcement",
+      "Open access to all work orders",
+      "No authentication for offline use"
+    ],
+    "correctIndex": 1,
+    "explanation": "Scoped identity and secure mobile policy are essential when external staff access operational data.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-mobile/page/administer/mobile/concept/mobile-security.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 63,
+    "prompt": "How should contractor performance be monitored in FSM?",
+    "choices": [
+      "Only by anecdotal dispatcher feedback",
+      "Using KPIs such as on-time arrival, first-time fix, and rework rate by vendor",
+      "By counting logins only",
+      "Without separating contractor and internal metrics"
+    ],
+    "correctIndex": 1,
+    "explanation": "Vendor-level operational KPIs support objective contract governance and improvement.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/report-on-field-service-performance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 64,
+    "prompt": "Which practice improves contractor governance maturity in FSM?",
+    "choices": [
+      "No review of contractor outcomes",
+      "Regular performance reviews tied to SLA and contract obligations",
+      "Unlimited manual overrides by contractors",
+      "Assignment without qualification tracking"
+    ],
+    "correctIndex": 1,
+    "explanation": "Periodic governance against contract and service commitments sustains quality control.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/field-service-management-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 60,
+    "prompt": "Which HRSD integration creates the most value during employee lifecycle events?",
+    "choices": [
+      "Integrating HR case workflows with core HR and identity systems for data-triggered actions",
+      "Manual updates to every system separately",
+      "Disabling employee profile sync",
+      "Storing lifecycle status in attachments only"
+    ],
+    "correctIndex": 0,
+    "explanation": "Lifecycle integrations reduce manual effort and improve consistency across onboarding and transitions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-hr-service-delivery/page/product/human-resources/concept/hr-service-delivery-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 61,
+    "prompt": "What is the best pattern for HR data integration security?",
+    "choices": [
+      "Use shared admin credentials for all integrations",
+      "Apply least-privilege service accounts and encrypted data transport",
+      "Disable logging to protect privacy",
+      "Expose APIs publicly for partner access"
+    ],
+    "correctIndex": 1,
+    "explanation": "Least privilege and encrypted transport reduce risk when handling sensitive HR data.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_AccessControls.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 62,
+    "prompt": "How should HR integrations handle missing or invalid employee data?",
+    "choices": [
+      "Proceed silently with incomplete records",
+      "Use validation and exception queues with owner-driven remediation workflows",
+      "Delete all related requests",
+      "Convert errors into low-priority incidents only"
+    ],
+    "correctIndex": 1,
+    "explanation": "Validation and exception management preserve data quality and process continuity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/task/transform-map-error-handling.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 63,
+    "prompt": "Which integration outcome best improves HR case fulfillment speed?",
+    "choices": [
+      "Manual enrichment of employee context by HR agents",
+      "Pre-populated case data from integrated systems at request creation",
+      "Removing employee profile references",
+      "Requiring duplicate data entry in each task"
+    ],
+    "correctIndex": 1,
+    "explanation": "Auto-populated context reduces intake friction and accelerates resolution.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-hr-service-delivery/page/product/human-resources/task/configure-hr-case-creation.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 64,
+    "prompt": "What indicates mature HR integration operations?",
+    "choices": [
+      "Unmonitored jobs and infrequent reconciliations",
+      "Observed interface health, low error rates, and documented ownership for failures",
+      "No interface inventory",
+      "Only annual integration checks"
+    ],
+    "correctIndex": 1,
+    "explanation": "Operational maturity requires observability, ownership, and timely correction of integration issues.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/integrationhub/concept/integrationhub.html"
+    ]
+  }
+]

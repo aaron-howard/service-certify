@@ -1,0 +1,402 @@
+[
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 45,
+    "prompt": "Which contract element most directly supports third-party risk accountability in TPRM?",
+    "choices": [
+      "A clause defining control requirements, audit rights, and remediation timelines",
+      "A statement limiting all vendor communications to email",
+      "A requirement to renew the contract every month",
+      "A clause preventing any risk review after signing"
+    ],
+    "correctIndex": 0,
+    "explanation": "Control expectations and enforceable remediation terms are core to managing third-party risk through contracts.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/vendor-risk-management/concept/vendor-risk-management-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 46,
+    "prompt": "Before contract approval, what is the best TPRM practice for high-risk vendors?",
+    "choices": [
+      "Skip risk review to avoid delaying procurement",
+      "Complete inherent and residual risk assessment with required legal and security sign-off",
+      "Approve only based on lowest cost bid",
+      "Use prior-year assessment results without review"
+    ],
+    "correctIndex": 1,
+    "explanation": "High-risk vendors should pass current risk evaluation and stakeholder approvals before contractual commitment.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/vendor-risk-management/task/conduct-vendor-assessments.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 47,
+    "prompt": "How should TPRM teams handle contract obligations tied to corrective actions?",
+    "choices": [
+      "Track obligations manually in a spreadsheet outside the platform",
+      "Store obligations as linked tasks with due dates and owners on the vendor record",
+      "Close obligations after contract signature regardless of status",
+      "Assign obligations only to procurement, never to control owners"
+    ],
+    "correctIndex": 1,
+    "explanation": "Linked, assigned tasks provide traceability and operational follow-through on risk obligations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/vendor-risk-management/task/manage-vendor-issues.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 48,
+    "prompt": "What contract approach best supports ongoing compliance monitoring in TPRM?",
+    "choices": [
+      "Use one-time onboarding attestations only",
+      "Require periodic evidence submissions and right-to-audit language",
+      "Remove control references to simplify legal review",
+      "Limit reporting to contract expiration date"
+    ],
+    "correctIndex": 1,
+    "explanation": "Periodic attestations and audit rights create enforceable mechanisms for continuous oversight.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/vendor-risk-management/task/monitor-vendor-performance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 49,
+    "prompt": "Which contracting outcome indicates strong TPRM maturity?",
+    "choices": [
+      "Vendors negotiate out all security controls",
+      "Contract templates include standardized risk clauses aligned to vendor criticality tiers",
+      "Contracts are executed before risk scoring",
+      "Risk teams are excluded from contracting workflow"
+    ],
+    "correctIndex": 1,
+    "explanation": "Tier-based standardized clauses align legal terms with risk exposure and governance requirements.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/vendor-risk-management/concept/vendor-tiering.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 45,
+    "prompt": "In Vulnerability Response, what is the primary purpose of an exception request?",
+    "choices": [
+      "To bypass all remediation controls permanently",
+      "To document and approve temporary acceptance of risk when remediation is not feasible",
+      "To close vulnerabilities without any approval",
+      "To replace CMDB relationships with manual entries"
+    ],
+    "correctIndex": 1,
+    "explanation": "Exceptions formally capture compensating rationale, approvals, and time bounds for accepted risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/concept/vulnerability-response-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 46,
+    "prompt": "Which field is most important when managing vulnerability exceptions?",
+    "choices": [
+      "Requested desktop wallpaper",
+      "Expiration date with documented business justification",
+      "Asset purchase date only",
+      "Incident category preference"
+    ],
+    "correctIndex": 1,
+    "explanation": "An expiration date and justification enforce periodic review and prevent indefinite risk acceptance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/manage-risk-exceptions.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 47,
+    "prompt": "What is the best governance action when a vulnerability exception nears expiration?",
+    "choices": [
+      "Auto-extend for one year with no review",
+      "Trigger review workflow for revalidation, remediation, or closure",
+      "Delete the exception and leave vulnerability open",
+      "Convert the exception into an incident record only"
+    ],
+    "correctIndex": 1,
+    "explanation": "Review workflows ensure risk is reassessed and not silently carried forward.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/review-risk-exceptions.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 48,
+    "prompt": "How should compensating controls be represented for a VR exception?",
+    "choices": [
+      "As free-text notes without owner or evidence",
+      "As documented controls with owner, implementation evidence, and verification cadence",
+      "As unresolved vulnerability groups",
+      "As endpoint tags without risk context"
+    ],
+    "correctIndex": 1,
+    "explanation": "Structured control evidence makes exception decisions auditable and defensible.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/document-compensating-controls.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 49,
+    "prompt": "Which metric best signals weak exception handling in VR?",
+    "choices": [
+      "High percentage of expired exceptions still linked to open critical vulnerabilities",
+      "Documented exception approvals with clear owners",
+      "Short exception durations for emergency cases",
+      "Routine exception review meetings"
+    ],
+    "correctIndex": 0,
+    "explanation": "Expired exceptions tied to critical findings indicate governance breakdown and unmanaged risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/report-on-vulnerability-risk.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 45,
+    "prompt": "In CSM, what is the main purpose of entitlement configuration?",
+    "choices": [
+      "To limit all customer users to one contact channel",
+      "To determine what services, response commitments, and support levels a customer receives",
+      "To remove case priority controls",
+      "To auto-close all requests after creation"
+    ],
+    "correctIndex": 1,
+    "explanation": "Entitlements enforce contractual support terms such as eligibility and SLA-related commitments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/customer-service-management-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 46,
+    "prompt": "Which setup best supports account-specific support policies in CSM?",
+    "choices": [
+      "One global entitlement for all customers regardless of contract",
+      "Entitlements mapped to account, product, and coverage terms",
+      "Case assignment by alphabetical account name",
+      "No relationship between contracts and case handling"
+    ],
+    "correctIndex": 1,
+    "explanation": "Entitlements should reflect contractual conditions by customer and offered service scope.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/task/configure-entitlements.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 47,
+    "prompt": "What should happen when a case is created for a non-entitled service?",
+    "choices": [
+      "Automatically grant full premium support",
+      "Flag the case for entitlement review and route according to policy",
+      "Delete the case immediately",
+      "Bypass all approval logic"
+    ],
+    "correctIndex": 1,
+    "explanation": "Policy-based handling prevents unsupported commitments while preserving customer transparency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/task/validate-case-entitlements.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 48,
+    "prompt": "Which entitlement design helps avoid over-servicing customers?",
+    "choices": [
+      "Unlimited support for every account by default",
+      "Defined service levels, channel access, and escalation thresholds per entitlement",
+      "No record of contract terms in CSM",
+      "Manual case triage without entitlement checks"
+    ],
+    "correctIndex": 1,
+    "explanation": "Specific entitlement boundaries align delivery effort with contractual obligations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/task/manage-service-level-entitlements.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 49,
+    "prompt": "What reporting indicator suggests entitlement configuration drift in CSM?",
+    "choices": [
+      "High volume of cases manually reclassified after entitlement checks",
+      "Consistent use of entitlement-driven assignment",
+      "Stable response performance by support tier",
+      "Accurate contract linkage on case records"
+    ],
+    "correctIndex": 0,
+    "explanation": "Frequent manual correction indicates entitlement rules are incomplete or misaligned with contracts.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/task/report-on-case-performance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 45,
+    "prompt": "In FSM, what is the goal of scheduling optimization?",
+    "choices": [
+      "Assign all jobs to the same technician",
+      "Match the right technician and time window while minimizing travel and delay",
+      "Ignore technician skills for faster dispatch",
+      "Schedule work only at end of day"
+    ],
+    "correctIndex": 1,
+    "explanation": "Optimization balances customer commitments, skills, availability, and route efficiency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/field-service-management-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 46,
+    "prompt": "Which factor should be weighted heavily in dispatch optimization rules?",
+    "choices": [
+      "Technician profile photo size",
+      "Skill match, SLA urgency, and travel time",
+      "Work order number length",
+      "Number of inactive inventory items"
+    ],
+    "correctIndex": 1,
+    "explanation": "Skill, priority, and location constraints are primary drivers of successful schedule outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/configure-dispatch-and-scheduling.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 47,
+    "prompt": "What is the best action when optimization cannot meet all commitments?",
+    "choices": [
+      "Suppress alerts and keep original plan",
+      "Surface conflicts and allow dispatcher-guided tradeoff decisions",
+      "Cancel all appointments automatically",
+      "Disable SLA tracking for field work"
+    ],
+    "correctIndex": 1,
+    "explanation": "Conflict visibility lets dispatchers make informed tradeoffs on priority, customer impact, and resource capacity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/manage-schedule-conflicts.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 48,
+    "prompt": "Which KPI best indicates improved scheduling optimization in FSM?",
+    "choices": [
+      "Increased average travel distance",
+      "Higher first-time fix and on-time arrival rates",
+      "More manual reassignment per shift",
+      "Lower completion visibility"
+    ],
+    "correctIndex": 1,
+    "explanation": "On-time arrival and first-time fix performance reflect schedule quality and technician-job alignment.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/report-on-field-service-performance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 49,
+    "prompt": "How should emergency work be handled in an optimized FSM schedule?",
+    "choices": [
+      "Always postpone to next week",
+      "Use dynamic rescheduling with priority rules and impact-aware rebalancing",
+      "Assign to any unavailable technician",
+      "Close as duplicate without dispatch"
+    ],
+    "correctIndex": 1,
+    "explanation": "Dynamic reoptimization allows urgent work insertion while minimizing disruption to existing commitments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/optimize-field-service-schedules.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 45,
+    "prompt": "In HRSD, why are case tasks important?",
+    "choices": [
+      "They replace the need for HR cases",
+      "They break case work into accountable steps with owners and due dates",
+      "They are only used for payroll integrations",
+      "They prevent use of playbooks"
+    ],
+    "correctIndex": 1,
+    "explanation": "Case tasks structure fulfillment and improve transparency across multi-step HR processes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-hr-service-delivery/page/product/human-resources/concept/hr-service-delivery-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 46,
+    "prompt": "What is a recommended design for HR case task assignment?",
+    "choices": [
+      "Assign all tasks to one HR generalist",
+      "Route tasks by specialty team and jurisdiction with clear responsibility",
+      "Assign tasks randomly each day",
+      "Leave tasks unassigned until escalation"
+    ],
+    "correctIndex": 1,
+    "explanation": "Specialty-based routing improves cycle time and quality for domain-specific HR work.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-hr-service-delivery/page/product/human-resources/task/configure-hr-case-fulfillment.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 47,
+    "prompt": "Which control best reduces missed HR case task deadlines?",
+    "choices": [
+      "Disable due dates for flexibility",
+      "Use SLA targets, reminders, and escalation rules on critical tasks",
+      "Track status only in comments",
+      "Close parent case before tasks finish"
+    ],
+    "correctIndex": 1,
+    "explanation": "Deadline controls and escalations keep task execution aligned to employee service expectations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/service-level-management/concept/c_ServiceLevelManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 48,
+    "prompt": "How do HR case tasks support auditability?",
+    "choices": [
+      "By recording completion evidence, owner actions, and timestamps per step",
+      "By deleting completed task history monthly",
+      "By storing fulfillment status outside HRSD",
+      "By hiding task updates from case activity"
+    ],
+    "correctIndex": 0,
+    "explanation": "Task-level activity history provides evidence for compliance and policy adherence.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-hr-service-delivery/page/product/human-resources/task/audit-hr-case-activities.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 49,
+    "prompt": "What metric best indicates HR case task process health?",
+    "choices": [
+      "Average task completion timeliness by service and assignment group",
+      "Number of UI themes enabled for HR agents",
+      "Frequency of user profile updates",
+      "Count of archived closed cases"
+    ],
+    "correctIndex": 0,
+    "explanation": "Timeliness by service and team highlights where fulfillment bottlenecks exist.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  }
+]

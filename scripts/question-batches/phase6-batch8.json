@@ -1,0 +1,242 @@
+[
+  {
+    "trackCode": "CIS-RC",
+    "order": 40,
+    "prompt": "In an audit-ready GRC program, what is the primary purpose of structured evidence collection?",
+    "choices": [
+      "Demonstrate control operation with traceable, time-bound artifacts tied to specific tests",
+      "Replace control ownership assignments",
+      "Close findings before testing completes",
+      "Store only verbal confirmations from process owners"
+    ],
+    "correctIndex": 0,
+    "explanation": "Structured evidence ensures test conclusions are defensible and verifiable during internal and external audits.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-policy-and-compliance/concept/control-testing.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 41,
+    "prompt": "Which evidence practice most reduces auditor challenge risk?",
+    "choices": [
+      "Accept screenshots without source attribution",
+      "Require evidence metadata, approver attestation, and linkage to control objectives",
+      "Collect evidence only at year-end",
+      "Allow duplicate evidence for unrelated controls"
+    ],
+    "correctIndex": 1,
+    "explanation": "Metadata and attestation provide provenance and relevance, which auditors rely on for validation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-policy-and-compliance/task/collect-control-evidence.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 42,
+    "prompt": "A control test fails because required evidence is missing from one quarter. What is the best response?",
+    "choices": [
+      "Mark the test pass due to historical evidence availability",
+      "Delete the failed test and recreate next cycle",
+      "Record the gap, create remediation tasks, and enforce evidence collection checkpoints going forward",
+      "Suspend all related controls permanently"
+    ],
+    "correctIndex": 2,
+    "explanation": "Documenting the gap and remediating collection controls strengthens future reliability and governance posture.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-policy-and-compliance/task/manage-control-failures.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 43,
+    "prompt": "Which workflow design most improves evidence quality across distributed teams?",
+    "choices": [
+      "Allow ad hoc uploads with no deadlines",
+      "Collect evidence only when requested by external auditors",
+      "Route all evidence tasks to one central coordinator",
+      "Use scheduled tasks, ownership rules, and review/approval gates before test closure"
+    ],
+    "correctIndex": 3,
+    "explanation": "Defined workflow gates and ownership improve completeness, timeliness, and consistency of submitted evidence.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-policy-and-compliance/concept/compliance-workflows.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 44,
+    "prompt": "Why should evidence retention policy be aligned with regulatory and internal requirements?",
+    "choices": [
+      "It ensures artifacts remain available for audits, investigations, and defensible compliance reporting",
+      "It allows immediate deletion of all closed control tests",
+      "It eliminates the need for access controls",
+      "It replaces risk treatment plans"
+    ],
+    "correctIndex": 0,
+    "explanation": "Retention alignment prevents evidence gaps and supports long-horizon assurance obligations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-policy-and-compliance/concept/document-retention-for-compliance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 40,
+    "prompt": "What is the primary objective of containment workflows in Security Incident Response?",
+    "choices": [
+      "Capture analyst satisfaction surveys",
+      "Limit attacker movement and business impact while preserving investigative integrity",
+      "Close all incidents within one hour regardless severity",
+      "Disable threat intelligence integrations"
+    ],
+    "correctIndex": 1,
+    "explanation": "Containment workflows are designed to reduce ongoing risk while maintaining evidence needed for investigation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/containment-eradication-recovery.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 41,
+    "prompt": "Which containment action should generally happen earliest for a confirmed compromised endpoint?",
+    "choices": [
+      "Finalize post-incident report",
+      "Archive all event logs",
+      "Isolate affected assets and trigger approved response tasks per severity playbook",
+      "Reassign ownership to a non-security group"
+    ],
+    "correctIndex": 2,
+    "explanation": "Early isolation and guided response steps help stop spread while teams investigate root cause.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/contain-security-incident.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 42,
+    "prompt": "A containment playbook creates excessive service disruption for medium incidents. What should be tuned first?",
+    "choices": [
+      "Disable all containment workflows",
+      "Apply identical actions for all severities",
+      "Skip approval requirements entirely",
+      "Adjust conditional branching and approval logic by severity and asset criticality"
+    ],
+    "correctIndex": 3,
+    "explanation": "Risk-based branching and approvals balance response speed with business continuity needs.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/configure-security-playbooks.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 43,
+    "prompt": "Why should containment workflows capture execution timestamps and approver decisions?",
+    "choices": [
+      "They provide forensic timeline clarity and auditable accountability for response actions",
+      "They are only needed for low-priority incidents",
+      "They eliminate the need for root cause analysis",
+      "They replace task-level ownership"
+    ],
+    "correctIndex": 0,
+    "explanation": "Recorded decision and action timelines support investigations, audits, and post-incident lessons learned.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response-reporting.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 44,
+    "prompt": "Which KPI best indicates effective containment workflow performance?",
+    "choices": [
+      "Shorter time to containment with fewer repeat compromises on previously affected assets",
+      "Higher number of manual approvals per incident",
+      "More containment tasks created regardless closure quality",
+      "Increase in unresolved critical incidents"
+    ],
+    "correctIndex": 0,
+    "explanation": "Containment effectiveness is shown by speed and durable risk reduction, not task volume.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-operations-kpis.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 40,
+    "prompt": "In Service Mapping, what is the purpose of modeling business services?",
+    "choices": [
+      "Represent customer-facing service outcomes and their supporting technical dependencies",
+      "Replace CI classes with one generic table",
+      "Track only infrastructure patch schedules",
+      "Disable relationship discovery"
+    ],
+    "correctIndex": 0,
+    "explanation": "Business service models connect technical components to service outcomes used for impact and priority decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/business-services-and-technical-services.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 41,
+    "prompt": "Which design principle is most important when defining business services for maps?",
+    "choices": [
+      "Use ownership, criticality, and clear boundaries aligned to real customer-facing capabilities",
+      "Create one business service per CI to simplify reporting",
+      "Avoid assigning service owners to reduce maintenance",
+      "Model services only for infrastructure teams"
+    ],
+    "correctIndex": 0,
+    "explanation": "Well-bounded services with ownership and criticality provide actionable context during incidents and changes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/service-portfolio-management/concept/c_BusinessServiceManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 42,
+    "prompt": "A map contains accurate infrastructure topology but no business context. What should be added?",
+    "choices": [
+      "Random service tags for visual grouping",
+      "Extra MID Servers in every subnet",
+      "Business service relationships, owners, and criticality attributes linked to the mapped topology",
+      "Only closed incident references"
+    ],
+    "correctIndex": 2,
+    "explanation": "Business context transforms topology into operationally meaningful service-impact intelligence.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/create-business-service-maps.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 43,
+    "prompt": "Why are business services essential for event and incident prioritization?",
+    "choices": [
+      "They reduce the number of discovered CIs",
+      "They remove the need for assignment rules",
+      "They guarantee every alert is critical",
+      "They provide service impact context that guides urgency, routing, and escalation decisions"
+    ],
+    "correctIndex": 3,
+    "explanation": "Service context helps teams prioritize work according to business impact rather than raw alert volume.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/business-service-impact.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 44,
+    "prompt": "Which outcome best indicates mature business service modeling in Service Mapping?",
+    "choices": [
+      "Consistent ownership, accurate dependencies, and improved service-impact response decisions",
+      "Higher count of unmapped CIs",
+      "Fewer documented service owners",
+      "More manual reconciliation outside CMDB"
+    ],
+    "correctIndex": 0,
+    "explanation": "Maturity appears when maps reliably inform operational decisions through accurate and governed service models.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping-best-practices.html"
+    ]
+  }
+]

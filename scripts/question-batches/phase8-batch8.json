@@ -1,0 +1,402 @@
+[
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 40,
+    "prompt": "What is the primary purpose of formal third-party risk assessments?",
+    "choices": [
+      "Collect vendor logos for procurement records",
+      "Evaluate control effectiveness and residual risk to support informed risk decisions",
+      "Replace contract management processes",
+      "Automatically approve all renewal requests"
+    ],
+    "correctIndex": 1,
+    "explanation": "Assessments provide a structured method to evaluate third-party controls and determine whether residual risk is acceptable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-assessments.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 41,
+    "prompt": "Which approach best improves consistency across TPRM assessments?",
+    "choices": [
+      "Use ad hoc questionnaires per assessor preference",
+      "Use standardized assessment templates with control-domain mapping and scoring criteria",
+      "Assess only high-revenue vendors",
+      "Skip residual risk calculations"
+    ],
+    "correctIndex": 1,
+    "explanation": "Standardized templates reduce assessor variance and improve comparability across vendor populations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/task/t_CreateVendorAssessmentQuestionnaire.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 42,
+    "prompt": "When should a third-party risk assessment be reopened or repeated?",
+    "choices": [
+      "Only at contract termination",
+      "After major control, regulatory, or service-scope changes that alter risk exposure",
+      "Whenever a ticket is opened in ITSM",
+      "When the vendor requests less frequent oversight"
+    ],
+    "correctIndex": 1,
+    "explanation": "Material change events can invalidate prior conclusions and require refreshed risk evaluation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/task/t_AssessThirdPartyRisk.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 43,
+    "prompt": "What is a key output of a mature TPRM assessment process?",
+    "choices": [
+      "An unsigned spreadsheet with no owner",
+      "Documented residual risk, treatment decision, and accountable approver",
+      "A list of vendor support contacts only",
+      "Automatic closure of all control gaps"
+    ],
+    "correctIndex": 1,
+    "explanation": "Mature assessments end with clear, accountable risk treatment and acceptance documentation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/concept/c_AssessmentLifecycleTPRM.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 44,
+    "prompt": "Which KPI best reflects assessment program effectiveness in TPRM?",
+    "choices": [
+      "Count of vendors by country",
+      "Assessment completion timeliness and percentage of high-risk findings with active treatment plans",
+      "Number of contract attachments",
+      "Average questionnaire page count"
+    ],
+    "correctIndex": 1,
+    "explanation": "Timeliness and treatment follow-through show whether assessments are both operationally efficient and risk-reducing.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-performance-metrics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 40,
+    "prompt": "Why are SLAs important in Vulnerability Response?",
+    "choices": [
+      "They eliminate the need for prioritization",
+      "They define remediation deadlines aligned to severity and risk exposure",
+      "They replace vulnerability scoring",
+      "They are used only for reporting aesthetics"
+    ],
+    "correctIndex": 1,
+    "explanation": "VR SLAs create enforceable time expectations so critical vulnerabilities are addressed within acceptable risk windows.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/c_VulnerabilitySLAs.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 41,
+    "prompt": "Which factor should most strongly influence vulnerability remediation SLA targets?",
+    "choices": [
+      "Analyst shift preferences",
+      "Risk severity, exploitability, and business criticality of affected assets",
+      "Scanner vendor brand",
+      "Attachment count on findings"
+    ],
+    "correctIndex": 1,
+    "explanation": "Risk-informed SLA design ensures remediation urgency matches potential business impact.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/vulnerability-prioritization.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 42,
+    "prompt": "What is the best practice when a vulnerability is unlikely to meet SLA due to operational constraints?",
+    "choices": [
+      "Ignore the SLA breach",
+      "Use a documented exception process with risk acceptance and compensating controls",
+      "Close the vulnerability without remediation",
+      "Delete SLA definitions for that assignment group"
+    ],
+    "correctIndex": 1,
+    "explanation": "Formal exception governance preserves accountability when deadlines cannot be met.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/task/t_ManageRiskExceptions.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 43,
+    "prompt": "Which operational behavior improves VR SLA attainment?",
+    "choices": [
+      "Batch triage once per quarter",
+      "Automated prioritization, clear ownership routing, and proactive breach notifications",
+      "Manually reassign all findings daily without rules",
+      "Suppress SLA timers for critical findings"
+    ],
+    "correctIndex": 1,
+    "explanation": "Automation and ownership clarity reduce response lag and prevent avoidable deadline breaches.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/c_RemediationWorkflows.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 44,
+    "prompt": "Which KPI best represents SLA performance maturity in VR?",
+    "choices": [
+      "Total scanner count",
+      "Percentage of critical vulnerabilities remediated within SLA and trend of overdue backlog",
+      "Number of CMDB classes",
+      "Average number of comments per item"
+    ],
+    "correctIndex": 1,
+    "explanation": "On-time critical remediation and shrinking overdue backlog indicate sustained SLA execution discipline.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/vr-performance-analytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 40,
+    "prompt": "Why are omnichannel capabilities important in Customer Service Management?",
+    "choices": [
+      "They force customers into one contact channel",
+      "They provide consistent service across phone, chat, email, and portal while preserving case context",
+      "They remove the need for case routing",
+      "They disable customer communication history"
+    ],
+    "correctIndex": 1,
+    "explanation": "Omnichannel service allows customers to engage through preferred channels without losing continuity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/c_OmnichannelCustomerService.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 41,
+    "prompt": "Which design principle most improves channel consistency in CSM?",
+    "choices": [
+      "Separate knowledge and workflows by channel with no shared logic",
+      "Use unified case models, routing policies, and knowledge across all supported channels",
+      "Allow each channel to use different SLA rules",
+      "Disable customer identity matching"
+    ],
+    "correctIndex": 1,
+    "explanation": "Shared process and data standards ensure customers receive consistent outcomes regardless of entry channel.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/case-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 42,
+    "prompt": "What capability is most important for seamless channel switching?",
+    "choices": [
+      "Creating a new case every time a customer changes channel",
+      "Persistent conversation and case history accessible to agents in one workspace",
+      "Hiding previous interactions from agents",
+      "Restricting channel transitions to supervisors only"
+    ],
+    "correctIndex": 1,
+    "explanation": "Unified interaction history prevents customers from repeating details and helps agents continue work effectively.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/interaction-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 43,
+    "prompt": "How should CSM teams govern new channel rollout?",
+    "choices": [
+      "Launch all channels without pilot testing",
+      "Pilot with defined success metrics, update routing/KB readiness, then scale",
+      "Disable reporting during rollout",
+      "Require channel-specific case tables"
+    ],
+    "correctIndex": 1,
+    "explanation": "Piloted rollout with measurable goals reduces disruption and helps validate operating readiness.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/task/plan-omnichannel-rollout.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 44,
+    "prompt": "Which KPI best indicates healthy omnichannel CSM operations?",
+    "choices": [
+      "Channel-specific duplicate case rate",
+      "Cross-channel first-contact resolution and customer effort score trend",
+      "Count of inactive chat widgets",
+      "Average attachment size per case"
+    ],
+    "correctIndex": 1,
+    "explanation": "Resolution quality and customer effort across channels reflect whether omnichannel design is truly effective.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/c_CSMAnalyticsAndDashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 40,
+    "prompt": "Why is parts inventory management critical in Field Service Management?",
+    "choices": [
+      "It eliminates the need for dispatching",
+      "It ensures technicians have the right parts at the right time to avoid repeat visits",
+      "It is only needed for procurement audits",
+      "It replaces asset history records"
+    ],
+    "correctIndex": 1,
+    "explanation": "Accurate parts planning and availability directly improve first-time fix outcomes in field operations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/parts-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 41,
+    "prompt": "Which process best supports field parts availability?",
+    "choices": [
+      "Manual ad hoc transfers with no tracking",
+      "Stockroom and van inventory controls with reservation and replenishment workflows",
+      "Keeping all parts in one central warehouse only",
+      "Disabling part consumption updates on work completion"
+    ],
+    "correctIndex": 1,
+    "explanation": "Controlled reservation and replenishment across stock locations prevent shortages and service delays.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/manage-parts-inventory.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 42,
+    "prompt": "What is the best response to frequent part stockouts for high-priority jobs?",
+    "choices": [
+      "Ignore demand trends",
+      "Adjust min/max levels and forecasting inputs based on usage patterns and service commitments",
+      "Require technicians to source parts independently",
+      "Disable priority-based reservation rules"
+    ],
+    "correctIndex": 1,
+    "explanation": "Demand-aware threshold tuning and forecasting reduce repeated stockout events on critical work.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/inventory-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 43,
+    "prompt": "Which data quality requirement is most important for reliable parts operations?",
+    "choices": [
+      "Track only part descriptions",
+      "Maintain accurate part numbers, substitute mappings, location balances, and consumption history",
+      "Store inventory in free-text notes",
+      "Delete consumption records after closure"
+    ],
+    "correctIndex": 1,
+    "explanation": "High-quality inventory and usage data is essential for planning, fulfillment, and root-cause analysis of shortages.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/task/manage-stockrooms.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 44,
+    "prompt": "Which KPI most directly indicates parts inventory effectiveness in FSM?",
+    "choices": [
+      "Average technician profile completeness",
+      "First-time fix rate correlated with parts availability and stockout frequency",
+      "Number of knowledge categories",
+      "Count of inactive work order tasks"
+    ],
+    "correctIndex": 1,
+    "explanation": "Linking service outcomes to parts availability confirms whether inventory practices are supporting field execution.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/fsm-analytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 40,
+    "prompt": "Why are approvals important in HR Service Delivery workflows?",
+    "choices": [
+      "They add delays without controls",
+      "They enforce policy compliance and authorization for sensitive employee actions",
+      "They replace case documentation",
+      "They remove role-based accountability"
+    ],
+    "correctIndex": 1,
+    "explanation": "Approvals provide controlled decision points for requests involving risk, privacy, or policy constraints.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/hr-service-delivery/concept/hr-service-delivery.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 41,
+    "prompt": "Which design approach improves HR approval process efficiency?",
+    "choices": [
+      "Route every request to executive approval",
+      "Use conditional approval rules based on request type, sensitivity, and authority matrix",
+      "Disable delegation features",
+      "Require email-only approvals"
+    ],
+    "correctIndex": 1,
+    "explanation": "Conditional routing reduces unnecessary approvals while preserving control for higher-risk requests.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/workflow-automation/concept/approvals-in-flow-designer.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 42,
+    "prompt": "What control helps prevent HR approval bottlenecks?",
+    "choices": [
+      "No due dates for approvals",
+      "Escalation and delegation rules with SLA tracking for pending approvals",
+      "Manual reminder emails only",
+      "Approver selection by random assignment"
+    ],
+    "correctIndex": 1,
+    "explanation": "Time-bound escalations and delegation keep approvals moving and protect service commitments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/workflow-automation/task/configure-approval-rules.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 43,
+    "prompt": "How should HR teams handle exception requests denied at approval?",
+    "choices": [
+      "Close records without explanation",
+      "Capture denial reason, notify requester, and provide guided next steps or appeal path",
+      "Delete approval history",
+      "Convert all denials to approvals after 24 hours"
+    ],
+    "correctIndex": 1,
+    "explanation": "Transparent denial handling improves user trust and creates actionable audit trails.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/hr-service-delivery/task/manage-hr-cases.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 44,
+    "prompt": "Which KPI best indicates mature HR approval governance?",
+    "choices": [
+      "Number of approvers in the org chart",
+      "On-time approval rate, rework rate, and policy exception trend by request type",
+      "Count of portal themes",
+      "Average article word count"
+    ],
+    "correctIndex": 1,
+    "explanation": "Timeliness, quality, and exception patterns together show whether approval controls are both effective and efficient.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/hr-service-delivery/concept/hr-analytics.html"
+    ]
+  }
+]

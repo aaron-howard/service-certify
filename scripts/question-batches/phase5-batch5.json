@@ -1,0 +1,245 @@
+[
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 25,
+    "prompt": "When defining Discovery behavior, what is the primary reason to segment large networks into explicit IP ranges?",
+    "choices": [
+      "To control scan scope and reduce unnecessary probe traffic",
+      "To force all devices into a single MID Server queue",
+      "To bypass classification for unknown endpoints",
+      "To prevent ECC queue records from being created"
+    ],
+    "correctIndex": 0,
+    "explanation": "Scoped IP range definitions limit where Discovery scans, improving performance and reducing network and credential noise.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/discovery-schedules.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 26,
+    "prompt": "What is the most important governance outcome of assigning behavior to specific Discovery ranges?",
+    "choices": [
+      "Automatic CMDB normalization by subnet",
+      "Different scan settings for distinct network segments",
+      "Eliminating the need for credentials",
+      "Disabling CI identification rules"
+    ],
+    "correctIndex": 1,
+    "explanation": "Range-level behavior assignment allows scan strategy, frequency, and port choices to match each environment's requirements.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/create-discovery-behavior.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 27,
+    "prompt": "A Discovery admin needs to avoid scanning partner-owned subnets while scanning corporate ranges. Which configuration is best?",
+    "choices": [
+      "Use one broad range and filter after scan",
+      "Disable sensors for those devices",
+      "Define include ranges with explicit exclude ranges",
+      "Set all probes to low priority"
+    ],
+    "correctIndex": 2,
+    "explanation": "Include and exclude range controls let teams target only approved address space and avoid scanning prohibited segments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/create-ip-range-sets.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 28,
+    "prompt": "Why should Discovery scope be reviewed after major network changes such as cloud expansion?",
+    "choices": [
+      "To increase duplicate CI creation",
+      "To force a full CMDB rebuild weekly",
+      "To disable horizontal discovery patterns",
+      "To ensure new address spaces are covered and deprecated ranges are removed"
+    ],
+    "correctIndex": 3,
+    "explanation": "Network topology changes can create blind spots or stale scan targets, so scope must be updated to keep Discovery accurate.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/c_DiscoveryBestPractices.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 29,
+    "prompt": "What is the key reason to align Discovery schedule scope with CMDB ownership boundaries?",
+    "choices": [
+      "It improves accountability for scan quality and CI data stewardship",
+      "It automatically removes all orphan CIs without review",
+      "It converts all discovered records into assets",
+      "It disables identification reconciliation rules"
+    ],
+    "correctIndex": 0,
+    "explanation": "Ownership-aligned scope helps teams monitor discovery outcomes, investigate gaps, and maintain responsible CMDB governance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/c_Discovery.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/cmdb-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 25,
+    "prompt": "In Event Management, what is the main operational value of alert management workflows?",
+    "choices": [
+      "Standardizing triage, ownership, and lifecycle handling of alerts",
+      "Replacing all event rules with manual queue review",
+      "Disabling impact calculations for infrastructure services",
+      "Preventing connector ingestion during maintenance windows"
+    ],
+    "correctIndex": 0,
+    "explanation": "Alert management workflows define consistent states, assignments, and actions so responders can process alerts reliably.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/alert-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 26,
+    "prompt": "Which configuration most directly controls who initially works a newly created alert?",
+    "choices": [
+      "Event retention policy",
+      "Alert assignment rules",
+      "Connector transform map",
+      "MID Server capability set"
+    ],
+    "correctIndex": 1,
+    "explanation": "Assignment rules route alerts to the correct support group based on source, severity, CI context, or custom conditions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/task/configure-alert-assignment.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 27,
+    "prompt": "What is the best reason to define explicit alert state transitions such as Open, Acknowledged, and Closed?",
+    "choices": [
+      "To increase duplicate alerts for the same CI",
+      "To avoid correlation logic in event processing",
+      "To support clear handoffs and measurable responder actions",
+      "To disable incident creation from critical alerts"
+    ],
+    "correctIndex": 2,
+    "explanation": "Controlled lifecycle states improve operational clarity and provide auditable progression from detection to resolution.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/alert-lifecycle.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 28,
+    "prompt": "A team wants less alert backlog without losing critical signal. Which approach is most effective?",
+    "choices": [
+      "Ignore all warning alerts permanently",
+      "Route every alert to one assignment group",
+      "Disable event de-duplication",
+      "Tune alert thresholds, correlation, and assignment logic together"
+    ],
+    "correctIndex": 3,
+    "explanation": "Backlog reduction requires balanced tuning so noise is filtered while high-value alerts remain visible and actionable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-correlation.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/alert-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 29,
+    "prompt": "Which metric best indicates that alert management maturity is improving?",
+    "choices": [
+      "Decreasing mean time to acknowledge and close actionable alerts",
+      "Increasing number of unassigned alerts",
+      "Higher percentage of alerts with no CI binding",
+      "Longer average alert age in open state"
+    ],
+    "correctIndex": 0,
+    "explanation": "Lower response and closure times for valid alerts show stronger triage discipline and better operational readiness.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/alert-analytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 25,
+    "prompt": "In Hardware Asset Management, what is an asset bundle primarily used for?",
+    "choices": [
+      "Grouping related assets into a managed package for deployment or fulfillment",
+      "Converting consumables into fixed assets automatically",
+      "Forcing one-to-one mapping between users and stockrooms",
+      "Skipping model normalization at receiving"
+    ],
+    "correctIndex": 0,
+    "explanation": "Asset bundles help organizations manage and fulfill standard sets of hardware items together for operational consistency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/asset-bundles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 26,
+    "prompt": "Which scenario is the best fit for asset bundle usage?",
+    "choices": [
+      "One-off disposal of retired servers",
+      "Standard new-hire kit fulfillment with predefined hardware items",
+      "Manual correction of duplicate model records",
+      "Reconciliation of discovery source priorities"
+    ],
+    "correctIndex": 1,
+    "explanation": "Bundle definitions are ideal for repeatable request patterns like onboarding kits that require predictable item sets.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/task/create-asset-bundle.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 27,
+    "prompt": "What governance benefit do asset bundles provide to hardware request processes?",
+    "choices": [
+      "Eliminating all approval requirements",
+      "Auto-closing catalog tasks before fulfillment",
+      "Enforcing standardized item combinations and reducing ad hoc ordering variance",
+      "Removing the need for stockroom inventory counts"
+    ],
+    "correctIndex": 2,
+    "explanation": "By standardizing grouped items, bundles reduce fulfillment errors and improve control over cost and supportability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-request-fulfillment.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 28,
+    "prompt": "Why should bundle definitions be reviewed whenever standard device models change?",
+    "choices": [
+      "To disable all pending catalog requests",
+      "To bypass transfer order processing",
+      "To prevent purchase order generation",
+      "To keep request fulfillment aligned with current approved hardware standards"
+    ],
+    "correctIndex": 3,
+    "explanation": "Outdated bundle contents can drive incorrect fulfillment and increase support burden if model standards have shifted.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/task/manage-hardware-models.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 29,
+    "prompt": "What is the strongest indicator that bundle strategy is working well in HAM?",
+    "choices": [
+      "Higher fulfillment consistency and fewer manual substitutions per request",
+      "More free-form hardware requests outside the catalog",
+      "Increasing stockroom transfers caused by misconfigured kits",
+      "Growing backlog of partially fulfilled onboarding requests"
+    ],
+    "correctIndex": 0,
+    "explanation": "Effective bundles reduce exceptions and improve fulfillment predictability across recurring hardware request scenarios.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-request-fulfillment.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/asset-bundles.html"
+    ]
+  }
+]

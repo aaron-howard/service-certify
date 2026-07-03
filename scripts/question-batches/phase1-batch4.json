@@ -1,0 +1,242 @@
+[
+	{
+		"trackCode": "CSA",
+		"order": 20,
+		"prompt": "What do Access Control List (ACL) rules evaluate to control access?",
+		"choices": [
+			"Operations such as read, write, create, and delete against tables or fields, often with conditions and roles",
+			"Only the visual theme of dashboards",
+			"Whether discovery is licensed on the instance",
+			"The order of workflow activities exclusively"
+		],
+		"correctIndex": 0,
+		"explanation": "ACLs secure tables and fields for specific operations, evaluating roles, conditions, and scripts as configured.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/access-control/exploring-access-control-list.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 21,
+		"prompt": "How do table-level ACLs differ from field-level ACLs?",
+		"choices": [
+			"Table ACLs protect entire records; field ACLs protect individual columns on a table",
+			"Field ACLs apply only to import sets; table ACLs apply only to reports",
+			"Table ACLs run in the browser; field ACLs run on the MID Server",
+			"There is no difference; both terms mean the same rule type"
+		],
+		"correctIndex": 0,
+		"explanation": "ACLs can target a whole table or specific fields, allowing granular control over record and column access.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/access-control/acl-rule-types.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 22,
+		"prompt": "An ACL rule denies access even though the user holds a broad role. What should an administrator review?",
+		"choices": [
+			"Whether a higher-priority deny rule, condition, or security constraint applies",
+			"The catalog item picture attachment size",
+			"The problem task SLA definition only",
+			"The software model normalization schedule"
+		],
+		"correctIndex": 0,
+		"explanation": "ACL evaluation considers rule order, conditions, and security constraints; explicit denies or conditions may override broad grants.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/access-control/security-constraints.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 23,
+		"prompt": "What is the effect of ACL debugging for an administrator troubleshooting access?",
+		"choices": [
+			"It shows which ACL rules were evaluated and why access was granted or denied",
+			"It permanently disables all ACLs on the instance",
+			"It exports user passwords for verification",
+			"It converts all roles to the admin role"
+		],
+		"correctIndex": 0,
+		"explanation": "ACL debugging helps administrators trace rule evaluation to diagnose unexpected access results.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/access-control/exploring-access-control-list.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 24,
+		"prompt": "Why might an administrator create a conditional ACL?",
+		"choices": [
+			"To grant or deny access only when specified field or script conditions are met",
+			"To bypass all role checks for every user",
+			"To schedule discovery probes",
+			"To define catalog variable default values"
+		],
+		"correctIndex": 0,
+		"explanation": "Conditional ACLs restrict operations to scenarios defined by conditions, enabling context-sensitive security.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/access-control/acl-rule-types.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 20,
+		"prompt": "What does the namespace identifier prefix on application artifacts indicate?",
+		"choices": [
+			"The scoped application that owns tables, scripts, and configuration records",
+			"The geographic region of the data center only",
+			"The user's preferred language",
+			"The CMDB class hierarchy level"
+		],
+		"correctIndex": 0,
+		"explanation": "Scoped applications use namespace identifiers to uniquely prefix artifacts such as tables and scripts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/c_NamespaceIdentifier.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 21,
+		"prompt": "Cross-scope access to another application's table or script typically requires:",
+		"choices": [
+			"An approved Restricted Caller Access privilege or configured scope access",
+			"Deleting the target application's update set",
+			"Running discovery on the source scope",
+			"Disabling all business rules globally"
+		],
+		"correctIndex": 0,
+		"explanation": "Cross-scope access is controlled through Restricted Caller Access and application scope settings.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/scope-resource-access.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 22,
+		"prompt": "What is a primary benefit of building automation with Flow Designer in a scoped application?",
+		"choices": [
+			"Low-code flows that integrate actions, data, and logic within application boundaries",
+			"Elimination of all server-side scripting requirements in every scenario",
+			"Automatic CMDB certification without rules",
+			"Replacement of all ACLs with flow conditions"
+		],
+		"correctIndex": 0,
+		"explanation": "Flow Designer provides visual, low-code automation that can be scoped to applications for integrations and process logic.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/build-workflows/flow-designer/flow-designer-overview.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 23,
+		"prompt": "By default, what runtime access do new application data tables have from other scopes?",
+		"choices": [
+			"Restricted unless explicitly configured to allow API or web service access",
+			"Fully open read/write to all global scripts",
+			"No runtime access is ever configurable",
+			"Open only to the email client"
+		],
+		"correctIndex": 0,
+		"explanation": "Application table runtime access is protected by default; developers configure permissions for cross-scope API calls.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/c_RuntimeAccessToAppTables.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 24,
+		"prompt": "A developer needs a subflow reusable across multiple flows in the same application. What should they create?",
+		"choices": [
+			"A Flow Designer subflow that can be invoked from parent flows",
+			"A new CMDB relationship type",
+			"A global UI macro only",
+			"An import set transform map"
+		],
+		"correctIndex": 0,
+		"explanation": "Subflows encapsulate reusable Flow Designer logic that parent flows can call within the application.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/build-workflows/flow-designer/flow-designer-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 20,
+		"prompt": "What is the primary objective of Change Management in ITSM?",
+		"choices": [
+			"To assess, authorize, and implement changes while controlling risk to services",
+			"To log every password reset as a catalog task",
+			"To replace problem investigation entirely",
+			"To discover network devices automatically"
+		],
+		"correctIndex": 0,
+		"explanation": "Change Management governs how changes are proposed, assessed, approved, and implemented to reduce service risk.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/change-management/using-change-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 21,
+		"prompt": "How does a Standard change differ from a Normal change in typical ITSM practice?",
+		"choices": [
+			"Standard changes are pre-authorized with documented procedures; Normal changes require individual assessment and approval",
+			"Standard changes never use the CAB; Normal changes never use tasks",
+			"Standard changes apply only to hardware assets; Normal changes apply only to software",
+			"There is no practical difference between the types"
+		],
+		"correctIndex": 0,
+		"explanation": "Standard changes follow pre-approved models; Normal changes go through case-by-case evaluation and approval paths.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/change-management/change-types.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 22,
+		"prompt": "When is an Emergency change typically used?",
+		"choices": [
+			"When an urgent fix is required to restore service or prevent major impact, with expedited approval",
+			"For all routine catalog fulfillment tasks",
+			"Only during scheduled maintenance windows with no urgency",
+			"When closing aged incidents automatically"
+		],
+		"correctIndex": 0,
+		"explanation": "Emergency changes address urgent situations with accelerated approval while still documenting the change.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/change-management/change-types.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 23,
+		"prompt": "What role does the Change Advisory Board (CAB) play in many change workflows?",
+		"choices": [
+			"Reviewing and advising on significant changes before implementation",
+			"Discovering CIs on the network",
+			"Fulfilling catalog hardware orders",
+			"Authoring knowledge articles exclusively"
+		],
+		"correctIndex": 0,
+		"explanation": "The CAB provides collective review and recommendations for changes that require broader governance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/change-management/change-request-lifecycle.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 24,
+		"prompt": "Before implementing a change, conflict detection helps by:",
+		"choices": [
+			"Identifying scheduling or CI conflicts with other planned changes",
+			"Automatically resolving all incidents",
+			"Deleting duplicate users in LDAP",
+			"Normalizing software publishers"
+		],
+		"correctIndex": 0,
+		"explanation": "Conflict detection highlights overlapping changes or affected CIs to reduce implementation risk.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/change-management/change-request-lifecycle.html"
+		]
+	}
+]

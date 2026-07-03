@@ -1,0 +1,402 @@
+[
+  {
+    "trackCode": "CPOP",
+    "order": 125,
+    "prompt": "Before committing to a family upgrade date, what should a platform owner review first in Upgrade Center?",
+    "choices": [
+      "Readiness insights, prerequisite tasks, and known upgrade considerations",
+      "Only the desired production window length",
+      "The number of closed incidents last month",
+      "Widget customization backlog size"
+    ],
+    "correctIndex": 0,
+    "explanation": "Upgrade readiness signals and prerequisites identify early risk and help sequence preparation work.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/concept/upgrade-center.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 126,
+    "prompt": "What is the best first execution step after selecting a target release family?",
+    "choices": [
+      "Upgrade production immediately to preserve parity",
+      "Run the upgrade in lower environments and validate critical business scenarios",
+      "Disable all integrations before planning",
+      "Archive all current update sets"
+    ],
+    "correctIndex": 1,
+    "explanation": "Lower-environment rehearsal is essential for identifying customization impacts before production.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/task/plan-instance-upgrade.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 127,
+    "prompt": "Which criterion most strongly supports production upgrade go/no-go?",
+    "choices": [
+      "All non-critical cosmetic issues are closed",
+      "Every report has been reformatted",
+      "Critical workflows, integrations, and rollback readiness are validated",
+      "All platform users completed optional training"
+    ],
+    "correctIndex": 2,
+    "explanation": "Cutover decisions should prioritize business-critical validation and recoverability controls.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 128,
+    "prompt": "What is the primary reason to maintain a formal upgrade runbook?",
+    "choices": [
+      "To reduce the number of users on the instance",
+      "To eliminate all skipped updates",
+      "To replace CAB approvals",
+      "To define step-by-step execution, checkpoints, and rollback triggers"
+    ],
+    "correctIndex": 3,
+    "explanation": "A runbook standardizes execution and improves consistency across environments and releases.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-application-development/page/build/system-update-sets/concept/update-set-procedures.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 129,
+    "prompt": "Which planning practice best limits upgrade surprises in production?",
+    "choices": [
+      "Track customization impact and assign owners for pre-cutover remediation",
+      "Defer remediation until after production upgrade",
+      "Use only ad hoc verbal sign-offs",
+      "Disable all platform monitoring during cutover"
+    ],
+    "correctIndex": 0,
+    "explanation": "Owner-assigned remediation before cutover lowers uncertainty and improves release confidence.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/concept/upgrade-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 130,
+    "prompt": "How should a platform owner sequence multi-instance upgrades?",
+    "choices": [
+      "Production first, then test and development",
+      "Development or test, then pre-prod, then production with documented exit criteria",
+      "Any order, as long as stakeholders are informed",
+      "Clone production into all lower instances after cutover"
+    ],
+    "correctIndex": 1,
+    "explanation": "Progressive sequencing with clear criteria reduces risk before production execution.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/task/use-upgrade-center.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 131,
+    "prompt": "Which governance action best improves upgrade accountability across teams?",
+    "choices": [
+      "Keep upgrade tasks private within each team",
+      "Assign one owner to every release activity and track completion centrally",
+      "Require weekly screenshots from each team lead",
+      "Allow tasks without due dates to reduce pressure"
+    ],
+    "correctIndex": 2,
+    "explanation": "Named ownership and centralized tracking improve cross-team execution reliability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/concept/upgrade-readiness-dashboard.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 132,
+    "prompt": "What is the strongest reason to run hypercare after a major upgrade?",
+    "choices": [
+      "To delay all normal platform operations",
+      "To avoid writing a retrospective",
+      "To remove ownership from support teams",
+      "To accelerate issue detection and stabilization before returning to normal cadence"
+    ],
+    "correctIndex": 3,
+    "explanation": "Hypercare improves early detection, triage speed, and controlled stabilization after cutover.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 133,
+    "prompt": "Which metric best indicates sustained upgrade execution quality?",
+    "choices": [
+      "Reduction in upgrade-related incidents and variance from planned timeline",
+      "Number of custom themes enabled after upgrade",
+      "Count of users logged in during cutover weekend",
+      "Total catalog items created in the release quarter"
+    ],
+    "correctIndex": 0,
+    "explanation": "Fewer upgrade incidents and low schedule variance indicate predictable, governed delivery.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 134,
+    "prompt": "A dependency team misses a readiness milestone. What should happen next?",
+    "choices": [
+      "Proceed anyway and absorb risk during cutover",
+      "Escalate through governance, rebaseline plan, and update go/no-go criteria",
+      "Cancel all future upgrades indefinitely",
+      "Remove dependency testing from the runbook"
+    ],
+    "correctIndex": 1,
+    "explanation": "Escalation and rebaselining maintain control when dependencies threaten release readiness.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 135,
+    "prompt": "Which strategy best controls update collisions during upgrade preparation?",
+    "choices": [
+      "Allow unrestricted development in production",
+      "Pause all lower environment work permanently",
+      "Use controlled change windows and disciplined promotion paths",
+      "Move all updates to one shared update set"
+    ],
+    "correctIndex": 2,
+    "explanation": "Controlled windows and promotion discipline limit conflicts that complicate upgrade readiness.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-application-development/page/build/system-update-sets/concept/update-set-procedures.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 136,
+    "prompt": "What should be done with recurring upgrade defects found in sub-production?",
+    "choices": [
+      "Accept them and proceed to production",
+      "Hide them from readiness dashboards",
+      "Convert them into known errors without remediation",
+      "Track root causes, remediate systematically, and verify retest closure"
+    ],
+    "correctIndex": 3,
+    "explanation": "Systematic root-cause remediation in lower environments prevents repeated production impact.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/task/use-upgrade-center.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 137,
+    "prompt": "Which communication plan is best during a production upgrade window?",
+    "choices": [
+      "Risk-tiered stakeholder communications with status checkpoints and contingency updates",
+      "One final email after the upgrade completes",
+      "Notifications only to platform administrators",
+      "No communications unless a Sev-1 occurs"
+    ],
+    "correctIndex": 0,
+    "explanation": "Structured communication reduces uncertainty and enables faster coordinated response during cutover.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 138,
+    "prompt": "How should skip decisions be governed when time pressure increases?",
+    "choices": [
+      "Allow skip decisions by any developer",
+      "Use explicit decision criteria with accountable approver and recorded risk",
+      "Skip all optional validations automatically",
+      "Delay all decision-making to post-upgrade review"
+    ],
+    "correctIndex": 1,
+    "explanation": "Documented criteria and risk ownership preserve control when schedules are compressed.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/concept/upgrade-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 139,
+    "prompt": "What is the best closure activity after upgrade stabilization completes?",
+    "choices": [
+      "Archive artifacts without analysis",
+      "Delete temporary monitoring dashboards",
+      "Capture lessons learned and update standards for the next cycle",
+      "Freeze all platform enhancements for one year"
+    ],
+    "correctIndex": 2,
+    "explanation": "Structured retrospectives turn operational learning into future upgrade improvements.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 140,
+    "prompt": "Which anti-pattern most increases production upgrade risk?",
+    "choices": [
+      "Completing readiness tasks in lower environments first",
+      "Using a rollback decision tree",
+      "Tracking owner-level progress in dashboards",
+      "Compressing validation by skipping critical scenario tests"
+    ],
+    "correctIndex": 3,
+    "explanation": "Skipping critical validation removes confidence in business continuity during cutover.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/task/plan-instance-upgrade.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 141,
+    "prompt": "What should guide rollback trigger thresholds in an upgrade runbook?",
+    "choices": [
+      "Business-impact thresholds tied to predefined technical signals",
+      "Developer preference during hypercare",
+      "Remaining weekend hours in the maintenance window",
+      "CAB attendance percentage"
+    ],
+    "correctIndex": 0,
+    "explanation": "Rollback decisions should be objective, pre-agreed, and tied to business impact criteria.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 142,
+    "prompt": "Which governance behavior most improves upgrade predictability over time?",
+    "choices": [
+      "Reset all KPIs each quarter",
+      "Use consistent readiness criteria and trend performance across upgrade cycles",
+      "Change release gates every sprint",
+      "Approve all exceptions to avoid delays"
+    ],
+    "correctIndex": 1,
+    "explanation": "Stable criteria and trend analysis make upgrade performance measurable and improvable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 143,
+    "prompt": "What is the best approach to validating integrations before production upgrade cutover?",
+    "choices": [
+      "Rely on historical integration uptime only",
+      "Test only one low-risk integration path",
+      "Execute prioritized end-to-end integration tests with clear pass/fail evidence",
+      "Disable integrations until after go-live"
+    ],
+    "correctIndex": 2,
+    "explanation": "Prioritized end-to-end testing verifies real business dependencies before production exposure.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/web-services/concept/c_RESTAPI.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 144,
+    "prompt": "A release train includes multiple applications with different readiness levels. What should the platform owner do?",
+    "choices": [
+      "Force all applications into one fixed cutover regardless of risk",
+      "Delay all upgrades until every app reaches full readiness",
+      "Allow each app owner to choose independent production windows with no governance",
+      "Use risk-based sequencing and explicit entry criteria for each application wave"
+    ],
+    "correctIndex": 3,
+    "explanation": "Wave-based sequencing reduces aggregate risk while preserving governance control.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/task/use-upgrade-center.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 145,
+    "prompt": "Which prep activity most improves confidence in upgrade rollback readiness?",
+    "choices": [
+      "Rehearse rollback procedures with timing, owners, and validation checkpoints",
+      "Document rollback only at a high level",
+      "Assume rollback is unnecessary if tests pass",
+      "Rely on vendor support to define rollback during outage"
+    ],
+    "correctIndex": 0,
+    "explanation": "Rollback rehearsal verifies feasibility and decision timing before production risk is introduced.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 146,
+    "prompt": "How should platform owners treat upgrade tasks that repeatedly miss deadlines?",
+    "choices": [
+      "Remove deadlines to reduce pressure",
+      "Escalate blocked tasks and adjust ownership or scope based on root cause",
+      "Hide overdue tasks from readiness dashboards",
+      "Close overdue tasks automatically if no incident exists"
+    ],
+    "correctIndex": 1,
+    "explanation": "Escalation and root-cause action maintain accountability and restore schedule realism.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/concept/upgrade-readiness-dashboard.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 147,
+    "prompt": "What should be considered a minimum evidence package for upgrade sign-off?",
+    "choices": [
+      "A chat thread indicating team confidence",
+      "A verbal confirmation from one lead engineer",
+      "Readiness checklist completion, test evidence, open-risk decisions, and rollback plan",
+      "A count of completed user stories"
+    ],
+    "correctIndex": 2,
+    "explanation": "Formal sign-off needs objective evidence across readiness, testing, risk acceptance, and recoverability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/task/plan-instance-upgrade.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 148,
+    "prompt": "Which behavior most undermines continuous improvement after each upgrade?",
+    "choices": [
+      "Tracking defect categories across releases",
+      "Updating runbook steps using retrospective findings",
+      "Publishing KPI trends to governance forums",
+      "Skipping retrospective review when no Sev-1 occurred"
+    ],
+    "correctIndex": 3,
+    "explanation": "Even successful upgrades produce lessons that improve reliability and future efficiency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 149,
+    "prompt": "What is the most effective long-term upgrade strategy for platform ownership?",
+    "choices": [
+      "Treat upgrades as recurring governed programs with measurable readiness and outcomes",
+      "Delay upgrades until support deadlines force action",
+      "Prioritize feature delivery over release maintenance",
+      "Upgrade only after major audit findings"
+    ],
+    "correctIndex": 0,
+    "explanation": "A programmatic upgrade model improves predictability, reduces technical debt, and lowers release risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/concept/upgrade-center.html"
+    ]
+  }
+]

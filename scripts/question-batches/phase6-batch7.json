@@ -1,0 +1,242 @@
+[
+  {
+    "trackCode": "CIS-RC",
+    "order": 35,
+    "prompt": "When defining compliance scopes, what is the most important first step?",
+    "choices": [
+      "Identify applicable regulations, in-scope entities, and control objectives before testing",
+      "Apply every available control to all departments",
+      "Create issues before evidence is collected",
+      "Exclude third-party services from all scope discussions"
+    ],
+    "correctIndex": 0,
+    "explanation": "Compliance scoping starts with regulatory applicability and clear boundaries for who and what is assessed.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-policy-and-compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 36,
+    "prompt": "Which approach best avoids over-scoping in a compliance initiative?",
+    "choices": [
+      "Map controls to obligations and business context, then validate ownership and applicability",
+      "Treat inherited controls as directly applicable everywhere",
+      "Include all historical controls from decommissioned systems",
+      "Use only global scope without entity-level mapping"
+    ],
+    "correctIndex": 1,
+    "explanation": "Control-to-obligation mapping with applicability checks keeps scope defensible and operationally realistic.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-policy-and-compliance/task/manage-authority-documents-and-citations.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 37,
+    "prompt": "A control owner says their control should be removed from scope due to system retirement. What should happen next?",
+    "choices": [
+      "Remove immediately with no approval",
+      "Mark the control pass and keep it active",
+      "Validate retirement evidence and dependency impact, then perform governed scope update",
+      "Move the control to a personal namespace"
+    ],
+    "correctIndex": 2,
+    "explanation": "Scope changes require evidence-backed governance to avoid compliance blind spots and audit disputes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-policy-and-compliance/task/manage-controls.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 38,
+    "prompt": "Which dashboard view is most useful for monitoring scope health?",
+    "choices": [
+      "Count of form customizations per team",
+      "User login trend by department",
+      "List of inactive groups",
+      "Coverage gaps, duplicate controls, and overdue scope review attestations by framework"
+    ],
+    "correctIndex": 3,
+    "explanation": "Scope health is best evaluated through coverage, duplication, and review timeliness indicators.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-policy-and-compliance/concept/compliance-workspace.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 39,
+    "prompt": "Why should compliance scope reviews be tied to organizational and technology changes?",
+    "choices": [
+      "Control applicability can shift when services, ownership, or architecture changes",
+      "Scope reviews should occur only once per year regardless changes",
+      "Change records replace compliance scope entirely",
+      "Technology changes never affect regulatory applicability"
+    ],
+    "correctIndex": 0,
+    "explanation": "Dynamic environments require scope updates to maintain ongoing compliance relevance and defensibility.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 35,
+    "prompt": "What is the main goal of SecOps integration with Security Incident Response?",
+    "choices": [
+      "Eliminate incident prioritization",
+      "Connect detection, case management, and response actions into one coordinated workflow",
+      "Replace threat intelligence with manual spreadsheets",
+      "Route all incidents to one resolver queue"
+    ],
+    "correctIndex": 1,
+    "explanation": "SecOps integration unifies tooling and process handoffs so response teams can act faster with shared context.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/secops/concept/secops-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 36,
+    "prompt": "Which integration pattern most improves triage quality between detections and SIR records?",
+    "choices": [
+      "Store detections only as email attachments",
+      "Open incidents without source artifact references",
+      "Map normalized detection fields to incident context, indicators, and affected assets",
+      "Suppress all low-severity detections before enrichment"
+    ],
+    "correctIndex": 2,
+    "explanation": "Field normalization and context mapping preserve signal fidelity and improve analyst decision-making.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/integrate-security-tools.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 37,
+    "prompt": "A SecOps team reports duplicate records from two security tools for the same compromise. What should be adjusted?",
+    "choices": [
+      "Disable one tool permanently",
+      "Assign both records to different teams",
+      "Delete older incidents at midnight",
+      "Use correlation and deduplication rules based on shared observables and asset context"
+    ],
+    "correctIndex": 3,
+    "explanation": "Correlation and deduplication reduce duplicate handling while retaining a complete evidence timeline.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-correlation.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 38,
+    "prompt": "Why is bi-directional integration with ticketing and orchestration systems valuable in SecOps?",
+    "choices": [
+      "It enables synchronized status, task execution, and response evidence across platforms",
+      "It removes the need for RBAC",
+      "It prevents post-incident reviews",
+      "It guarantees all incidents are false positives"
+    ],
+    "correctIndex": 0,
+    "explanation": "Bi-directional sync keeps teams aligned and reduces response delays caused by fragmented tooling.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/secops/concept/security-orchestration.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SIR",
+    "order": 39,
+    "prompt": "Which KPI best demonstrates successful SecOps integration?",
+    "choices": [
+      "More manually copied notes between systems",
+      "Lower mean time to detect and respond with fewer duplicate cases and cleaner handoffs",
+      "Higher number of standalone tool dashboards",
+      "Increase in unassigned tasks"
+    ],
+    "correctIndex": 1,
+    "explanation": "Integration success is measured by faster, cleaner response execution and reduced operational friction.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/secops/concept/secops-kpis.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 35,
+    "prompt": "What is the primary objective of service map maintenance after initial onboarding?",
+    "choices": [
+      "Preserve map accuracy as application architecture and dependencies change",
+      "Freeze all CI relationships permanently",
+      "Disable mapping jobs to avoid CMDB updates",
+      "Replace ownership records with assignment groups"
+    ],
+    "correctIndex": 0,
+    "explanation": "Ongoing maintenance keeps service maps trustworthy for impact analysis, operations, and change planning.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-map-lifecycle.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 36,
+    "prompt": "Which maintenance practice best prevents stale maps?",
+    "choices": [
+      "Run quarterly map validation with owners and review unresolved discovery warnings",
+      "Update maps only after major incidents",
+      "Lock maps against all edits",
+      "Disable dependency discovery for shared components"
+    ],
+    "correctIndex": 0,
+    "explanation": "Scheduled validation with owner accountability keeps discovered relationships aligned with real architecture.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/maintain-service-maps.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 37,
+    "prompt": "A map consistently omits a middleware tier after deployments. What is the best corrective action?",
+    "choices": [
+      "Remove the middleware CIs from CMDB",
+      "Review entry points, discovery credentials, and pattern behavior for that application path",
+      "Mark the map as complete and suppress warnings",
+      "Assign maintenance to unrelated service owners"
+    ],
+    "correctIndex": 1,
+    "explanation": "Missing tiers typically point to entry point, credential, or pattern configuration issues requiring targeted review.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/troubleshoot-service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 38,
+    "prompt": "Why should service map maintenance be linked to change management processes?",
+    "choices": [
+      "Change records are only needed for network scans",
+      "It is not necessary if discovery schedules run nightly",
+      "Changes can alter dependencies, so maintenance checkpoints ensure map fidelity after implementation",
+      "It reduces the need for service owners"
+    ],
+    "correctIndex": 2,
+    "explanation": "Post-change validation prevents drift between actual architecture and mapped topology.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 39,
+    "prompt": "Which KPI most clearly shows service map maintenance maturity?",
+    "choices": [
+      "Total number of maps regardless quality",
+      "Increase in unreviewed discovery errors",
+      "Number of custom icons used",
+      "Higher map completeness, fewer stale dependencies, and quicker validation after changes"
+    ],
+    "correctIndex": 3,
+    "explanation": "Maturity is reflected by map quality outcomes and timely upkeep, not just map volume.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping-best-practices.html"
+    ]
+  }
+]

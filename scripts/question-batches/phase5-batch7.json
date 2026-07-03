@@ -1,0 +1,248 @@
+[
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 35,
+    "prompt": "What is the primary advantage of horizontal discovery patterns over many legacy probe customizations?",
+    "choices": [
+      "They provide modular, maintainable logic for platform and application discovery",
+      "They bypass the Identification and Reconciliation Engine",
+      "They write directly to asset tables only",
+      "They disable credential testing automatically"
+    ],
+    "correctIndex": 0,
+    "explanation": "Horizontal patterns are structured and reusable, making discovery logic easier to maintain, test, and govern over time.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/discovery-patterns.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 36,
+    "prompt": "When designing horizontal patterns, what practice most improves long-term reliability?",
+    "choices": [
+      "Combining all vendor checks into one unrestricted step",
+      "Using conditional steps and robust parsing for expected command variations",
+      "Hardcoding instance-specific hostnames in every step",
+      "Skipping section outputs to reduce runtime"
+    ],
+    "correctIndex": 1,
+    "explanation": "Conditional and defensive pattern logic handles environment variation and reduces brittle discovery outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/create-horizontal-pattern.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 37,
+    "prompt": "Why should custom horizontal patterns be tested in lower environments before broad deployment?",
+    "choices": [
+      "To avoid all MID Server usage in production",
+      "To replace credential aliases automatically",
+      "To validate data quality and runtime behavior before impacting production CMDB records",
+      "To disable out-of-box pattern updates"
+    ],
+    "correctIndex": 2,
+    "explanation": "Testing confirms the pattern collects expected attributes and relationships without introducing noisy or incorrect CI updates.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/test-discovery-pattern.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 38,
+    "prompt": "What is a common governance risk when teams heavily clone and diverge out-of-box patterns?",
+    "choices": [
+      "Faster upgrade adoption with no review effort",
+      "Guaranteed CI normalization improvements",
+      "Automatic reduction in pattern execution time",
+      "Higher maintenance burden and upgrade merge complexity"
+    ],
+    "correctIndex": 3,
+    "explanation": "Significant pattern divergence increases lifecycle cost and complicates alignment with new platform capabilities.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/c_DiscoveryBestPractices.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 39,
+    "prompt": "Which indicator suggests horizontal pattern design is effective?",
+    "choices": [
+      "Consistent attribute population with fewer post-discovery data corrections",
+      "Growing number of unidentified CIs after every schedule run",
+      "Increasing manual CI class changes by administrators",
+      "More probe retries caused by parsing failures"
+    ],
+    "correctIndex": 0,
+    "explanation": "Strong patterns produce stable, accurate discovery output that reduces manual cleanup and rework.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/cmdb-health-dashboard.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/discovery-patterns.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 35,
+    "prompt": "In Event Management, what does CI binding enable most directly?",
+    "choices": [
+      "Linking alerts to impacted configuration items for context and impact analysis",
+      "Replacing event transform maps with script includes",
+      "Converting all events into changes",
+      "Disabling service maps for bound alerts"
+    ],
+    "correctIndex": 0,
+    "explanation": "CI binding connects alerts to infrastructure context, which supports impact visibility, routing, and faster triage.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/alert-cmdb-binding.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 36,
+    "prompt": "Why is CI binding quality dependent on both event payloads and CMDB data hygiene?",
+    "choices": [
+      "Because either side can weaken identifier matching and produce unbound alerts",
+      "Because binding ignores all source node values",
+      "Because CI binding only runs during maintenance windows",
+      "Because binding requires stockroom data"
+    ],
+    "correctIndex": 0,
+    "explanation": "Reliable binding requires strong identifiers in incoming events and accurate CI records in CMDB.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/task/configure-cmdb-alert-binding.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/cmdb-health-dashboard.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 37,
+    "prompt": "A monitoring source sends host aliases that do not match CMDB names. What is the best first remediation?",
+    "choices": [
+      "Disable CI binding for that connector",
+      "Send all alerts to a manual triage queue permanently",
+      "Normalize source identifiers through event rules or transform logic before binding",
+      "Force all alerts to bind to one fallback CI"
+    ],
+    "correctIndex": 2,
+    "explanation": "Identifier normalization in the ingestion path improves match quality while preserving automated alert processing.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-rules.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 38,
+    "prompt": "Which KPI most directly measures CI binding health?",
+    "choices": [
+      "Total MID Server count",
+      "Number of active stockrooms",
+      "Average catalog fulfillment time",
+      "Percentage of alerts successfully bound to valid CIs"
+    ],
+    "correctIndex": 3,
+    "explanation": "Binding success rate quantifies how much incoming alert volume is receiving accurate CMDB context.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/alert-analytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 39,
+    "prompt": "What is a practical benefit of accurate CI binding for incident workflows?",
+    "choices": [
+      "Incidents can inherit CI context and service impact, improving assignment and prioritization",
+      "Incidents no longer require short descriptions",
+      "All critical alerts auto-close without investigation",
+      "Event connectors become optional"
+    ],
+    "correctIndex": 0,
+    "explanation": "CI-aware incidents provide responders with better context at creation time, reducing manual enrichment and triage delays.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/alert-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/incident-management/concept/incident-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 35,
+    "prompt": "Why is procurement integration important in Hardware Asset Management?",
+    "choices": [
+      "It links purchasing activity to asset lifecycle records for financial and operational traceability",
+      "It removes the need for receiving workflows",
+      "It disables warranty tracking",
+      "It prevents catalog-based hardware requests"
+    ],
+    "correctIndex": 0,
+    "explanation": "Integration with procurement connects requested, ordered, received, and deployed states in one governed lifecycle.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/procurement/concept/procurement-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 36,
+    "prompt": "Which record relationship is most critical for end-to-end procurement visibility?",
+    "choices": [
+      "Discovery schedule to stockroom transfer order",
+      "Purchase order line to receiving record to resulting asset",
+      "Alert group to vendor contract",
+      "Pattern step output to depreciation schedule"
+    ],
+    "correctIndex": 1,
+    "explanation": "Linking PO lines through receiving into asset records preserves traceability for audits and lifecycle reporting.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/procurement/task/manage-purchase-orders.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/task/receive-hardware-assets.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 37,
+    "prompt": "What is the main reason to automate asset creation from receiving transactions?",
+    "choices": [
+      "To bypass model approvals",
+      "To avoid stockroom assignment",
+      "To reduce manual entry errors and speed lifecycle updates",
+      "To force all assets into in-use state"
+    ],
+    "correctIndex": 2,
+    "explanation": "Receiving automation improves data accuracy and ensures timely transition from procurement to managed asset records.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/task/configure-asset-creation-from-receipt.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 38,
+    "prompt": "What risk is introduced when procurement and HAM are managed in disconnected systems with no integration?",
+    "choices": [
+      "Faster RMA turnaround",
+      "Lower reconciliation effort",
+      "Automatic duplicate prevention",
+      "Higher chance of orphan purchases and incomplete asset records"
+    ],
+    "correctIndex": 3,
+    "explanation": "Without integration, purchased items may not become governed assets, weakening controls and reporting quality.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-lifecycle.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 39,
+    "prompt": "Which outcome indicates procurement integration is mature?",
+    "choices": [
+      "Assets are traceable from request through PO, receipt, assignment, and financial lifecycle",
+      "Most assets are created manually after deployment",
+      "Receiving happens without model references",
+      "PO lines are closed before any asset record linkage"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mature integration delivers full-chain traceability and minimizes manual corrections across asset processes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/procurement/concept/procurement-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-management.html"
+    ]
+  }
+]

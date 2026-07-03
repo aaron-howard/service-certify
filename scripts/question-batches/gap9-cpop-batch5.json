@@ -1,0 +1,402 @@
+[
+  {
+    "trackCode": "CPOP",
+    "order": 175,
+    "prompt": "Which objective is most central to cloud governance for Now Platform ownership?",
+    "choices": [
+      "Balancing agility with policy controls for security, risk, and cost",
+      "Allowing unmanaged service onboarding to accelerate delivery",
+      "Reducing all governance to monthly cost reports",
+      "Delegating all governance decisions to individual project teams"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cloud governance should maintain delivery speed while enforcing risk and compliance guardrails.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 176,
+    "prompt": "A team wants to onboard a new SaaS integration quickly. What cloud governance step comes first?",
+    "choices": [
+      "Deploy directly to production and evaluate later",
+      "Apply intake governance: ownership, data classification, and risk review",
+      "Reuse another team's credentials temporarily",
+      "Skip legal and security review for pilot scope"
+    ],
+    "correctIndex": 1,
+    "explanation": "Intake governance ensures new services are onboarded with clear accountability and controls.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/integrationhub/concept/IntegrationHub.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 177,
+    "prompt": "Which control most directly reduces cloud integration sprawl risk?",
+    "choices": [
+      "Allow each team to build independent connectors without registration",
+      "Require only annual architecture review",
+      "Maintain a governed integration catalog with owners and lifecycle status",
+      "Disable all third-party integrations"
+    ],
+    "correctIndex": 2,
+    "explanation": "A governed catalog provides visibility and lifecycle control for cloud integration dependencies.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/integrationhub/concept/IntegrationHub.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 178,
+    "prompt": "What is the best model for governing cloud credential rotation?",
+    "choices": [
+      "Rotate only after known compromise",
+      "Allow each team to define its own rotation cycle informally",
+      "Store credentials in local scripts to simplify updates",
+      "Centralized secret management with policy-driven rotation and auditing"
+    ],
+    "correctIndex": 3,
+    "explanation": "Policy-driven centralized rotation reduces key exposure and strengthens compliance evidence.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/web-services/concept/c_RESTAPI.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 179,
+    "prompt": "Which KPI best reflects cloud governance effectiveness?",
+    "choices": [
+      "Policy compliance rate, exception aging, and critical risk closure time",
+      "Total number of portal widgets created",
+      "Average length of release notes",
+      "Number of archived incidents"
+    ],
+    "correctIndex": 0,
+    "explanation": "These KPIs show whether governance controls operate and whether risk is reduced over time.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 180,
+    "prompt": "How should cloud governance handle temporary policy exceptions for urgent delivery?",
+    "choices": [
+      "Convert all temporary exceptions into permanent standards",
+      "Require documented risk acceptance, compensating controls, and expiration",
+      "Allow team leads to self-approve all exceptions",
+      "Suppress exception reporting to avoid audit findings"
+    ],
+    "correctIndex": 1,
+    "explanation": "Governed temporary exceptions must remain bounded, auditable, and time-limited.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 181,
+    "prompt": "What is the strongest way to govern cloud service ownership across business units?",
+    "choices": [
+      "Assign ownership by whoever created the first integration",
+      "Rotate ownership quarterly regardless of service complexity",
+      "Define service owner, technical owner, and control owner for each critical dependency",
+      "Rely on vendor support teams as primary owners"
+    ],
+    "correctIndex": 2,
+    "explanation": "Clear multi-role ownership supports operations, risk management, and lifecycle decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/table-administration/concept/c_TableAdministration.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 182,
+    "prompt": "Which cloud governance anti-pattern most increases compliance risk?",
+    "choices": [
+      "Publishing minimum onboarding criteria",
+      "Tracking integration inventory centrally",
+      "Reviewing exceptions in governance forums",
+      "Onboarding vendors without data classification and control mapping"
+    ],
+    "correctIndex": 3,
+    "explanation": "Without classification and control mapping, teams cannot reliably enforce security and compliance requirements.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 183,
+    "prompt": "What cloud governance practice best supports resilience planning?",
+    "choices": [
+      "Map critical dependencies and test degraded-mode procedures",
+      "Assume vendor uptime removes internal risk",
+      "Skip dependency mapping for non-production services",
+      "Use one fallback process for all integrations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Dependency mapping and degraded-mode testing prepare teams for vendor and integration disruptions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 184,
+    "prompt": "A cloud vendor changes API behavior. What should platform governance require?",
+    "choices": [
+      "Immediate production deployment without validation",
+      "Impact assessment, regression testing, and controlled rollout with rollback planning",
+      "Disable all dependent workflows permanently",
+      "Ignore changes unless incidents occur"
+    ],
+    "correctIndex": 1,
+    "explanation": "Controlled change management is needed when external API changes can disrupt critical workflows.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/web-services/concept/c_RESTAPI.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 185,
+    "prompt": "Which policy is most important for governing cloud data movement?",
+    "choices": [
+      "Allow unrestricted exports for productivity",
+      "Classify data but skip retention rules",
+      "Define approved data flows, retention, and encryption requirements",
+      "Use one retention period for all data classes"
+    ],
+    "correctIndex": 2,
+    "explanation": "Data flow, retention, and protection requirements are core controls for cloud governance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 186,
+    "prompt": "How should cloud governance treat unmanaged custom integrations discovered in production?",
+    "choices": [
+      "Leave them in place if they currently work",
+      "Document them for later and continue normal operations",
+      "Migrate them to local scripts outside governance",
+      "Register, assess risk, and bring them into controlled lifecycle management"
+    ],
+    "correctIndex": 3,
+    "explanation": "Unmanaged integrations increase hidden risk and must be governed through standard controls.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/integrationhub/concept/IntegrationHub.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 187,
+    "prompt": "Which governance mechanism best aligns cloud platform changes with enterprise policy?",
+    "choices": [
+      "Predefined policy gates in the change and release process",
+      "One-time approval at project kickoff only",
+      "Voluntary controls by each scrum team",
+      "Ad hoc approval chats between developers"
+    ],
+    "correctIndex": 0,
+    "explanation": "Policy gates embedded in delivery workflows enforce compliance consistently over time.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-application-development/page/build/system-update-sets/concept/update-set-procedures.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 188,
+    "prompt": "What should trigger a cloud governance architecture review?",
+    "choices": [
+      "Only major UI redesign efforts",
+      "Material changes to data exposure, integration criticality, or compliance obligations",
+      "Every daily standup",
+      "Only after a successful release"
+    ],
+    "correctIndex": 1,
+    "explanation": "High-impact architectural changes should trigger governance review to maintain control effectiveness.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 189,
+    "prompt": "Which cloud operating model best supports continuous compliance?",
+    "choices": [
+      "Quarterly audits only",
+      "Manual evidence collection after incidents",
+      "Automated control evidence with periodic governance attestation",
+      "No evidence collection if KPIs are green"
+    ],
+    "correctIndex": 2,
+    "explanation": "Automated evidence and regular attestation reduce compliance blind spots and manual burden.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 190,
+    "prompt": "What is the most effective response to recurring cloud policy breaches by one team?",
+    "choices": [
+      "Lower policy standards for that team",
+      "Move all their work to production-only support",
+      "Suspend all roadmap delivery indefinitely",
+      "Escalate remediation with accountable leadership and tracked corrective actions"
+    ],
+    "correctIndex": 3,
+    "explanation": "Repeated breaches require structured remediation and accountable escalation to change behavior.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 191,
+    "prompt": "Which approach best governs cloud-service retirement and decommissioning?",
+    "choices": [
+      "Use formal retirement criteria, dependency mapping, and evidence of control closure",
+      "Disable integrations without notifying owners",
+      "Archive services only when budget is reduced",
+      "Leave retired services active for emergency reuse"
+    ],
+    "correctIndex": 0,
+    "explanation": "Governed retirement prevents orphaned risk and ensures dependencies are safely removed.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/table-administration/concept/c_TableAdministration.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 192,
+    "prompt": "How should platform owners govern cloud usage growth across departments?",
+    "choices": [
+      "Allow each department to define independent security baselines",
+      "Use centralized standards with delegated execution and measurable policy conformance",
+      "Defer governance until annual budgeting",
+      "Restrict all cloud services to one central team"
+    ],
+    "correctIndex": 1,
+    "explanation": "Central standards plus delegated execution create scalable governance with local accountability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 193,
+    "prompt": "What is the strongest governance control for third-party cloud change notifications?",
+    "choices": [
+      "Ignore vendor advisories unless outages occur",
+      "Track advisories in email folders only",
+      "Use owned intake, impact assessment, and release planning workflows",
+      "Route all advisories directly to developers with no triage"
+    ],
+    "correctIndex": 2,
+    "explanation": "Structured intake and impact workflows ensure vendor changes are assessed and governed before deployment.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/web-services/concept/c_RESTAPI.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 194,
+    "prompt": "Which cloud governance signal most strongly suggests control debt is growing?",
+    "choices": [
+      "Low variance in release timing",
+      "Stable ownership models across integrations",
+      "Improved exception closure rates",
+      "Rising exception backlog with increasing average exception age"
+    ],
+    "correctIndex": 3,
+    "explanation": "Aging exception backlogs indicate unresolved risk and weakening governance discipline.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 195,
+    "prompt": "What cloud governance practice best supports incident response coordination?",
+    "choices": [
+      "Defined ownership map for services, dependencies, and escalation paths",
+      "Shared emergency admin credentials",
+      "No-call rotations managed informally",
+      "One generic response plan for every service"
+    ],
+    "correctIndex": 0,
+    "explanation": "Clear ownership and escalation pathways improve triage speed and cross-team response quality.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 196,
+    "prompt": "Which governance behavior best improves cloud change predictability?",
+    "choices": [
+      "Frequent policy changes without transition plans",
+      "Consistent policy baselines, release gates, and exception governance",
+      "Approving all urgent requests as emergency changes",
+      "Limiting governance to cost optimization only"
+    ],
+    "correctIndex": 1,
+    "explanation": "Predictable controls and exception pathways reduce delivery variability and operational surprises.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 197,
+    "prompt": "A platform owner needs executive visibility into cloud governance. What dashboard focus is best?",
+    "choices": [
+      "Only open ticket count",
+      "Only release velocity by team",
+      "Control conformance, high-risk exposure, and remediation progress",
+      "Only feature adoption trend"
+    ],
+    "correctIndex": 2,
+    "explanation": "Executives need risk and control outcomes, not just activity metrics, to guide decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 198,
+    "prompt": "What is the best long-term cloud governance operating cadence?",
+    "choices": [
+      "One annual governance summit with no follow-up",
+      "Monthly cost-only reviews with no control tracking",
+      "Ad hoc meetings after outages",
+      "Recurring governance reviews with decisions, KPIs, and accountable action owners"
+    ],
+    "correctIndex": 3,
+    "explanation": "Recurring decision forums with measurable follow-up sustain governance effectiveness at scale.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 199,
+    "prompt": "What outcome indicates mature cloud governance for a platform owner?",
+    "choices": [
+      "Controlled cloud change delivery with measurable risk reduction and clear accountability",
+      "Maximum autonomy with minimal policy enforcement",
+      "No exceptions allowed under any condition",
+      "Governance metrics tracked only for audit season"
+    ],
+    "correctIndex": 0,
+    "explanation": "Maturity is shown by balanced agility and control, with transparent accountability and measurable outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html"
+    ]
+  }
+]

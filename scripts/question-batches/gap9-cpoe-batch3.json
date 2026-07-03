@@ -1,0 +1,402 @@
+[
+  {
+    "trackCode": "CPOE",
+    "order": 125,
+    "prompt": "What is the main purpose of an enterprise platform operations runbook?",
+    "choices": [
+      "To store UI theme settings",
+      "To define repeatable response steps for operational events",
+      "To replace problem management",
+      "To track personal admin preferences"
+    ],
+    "correctIndex": 1,
+    "explanation": "Runbooks standardize operational handling, reducing response variance and recovery time during incidents.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-operations/concept/operations-runbooks.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 126,
+    "prompt": "Which process most directly supports operational stability after deployments?",
+    "choices": [
+      "Post-deployment validation and hypercare monitoring",
+      "Skipping smoke tests for low-risk changes",
+      "Disabling alerts during release week",
+      "Moving all incidents to problem state"
+    ],
+    "correctIndex": 0,
+    "explanation": "Validation and hypercare catch regressions quickly, limiting production impact after releases.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-operations/task/post-deployment-validation.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 127,
+    "prompt": "What operational metric best indicates platform reliability health?",
+    "choices": [
+      "Number of list personalizations",
+      "Mean time to restore service (MTRS)",
+      "Count of catalog categories",
+      "Theme update frequency"
+    ],
+    "correctIndex": 1,
+    "explanation": "MTRS reflects recovery efficiency and is a core reliability indicator for platform operations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-operations/task/measure-reliability-kpis.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 128,
+    "prompt": "A recurring performance incident affects peak-hour users. What should happen first?",
+    "choices": [
+      "Close incidents after each outage",
+      "Run root cause analysis and create a problem record with corrective actions",
+      "Increase session timeout immediately",
+      "Archive audit tables without review"
+    ],
+    "correctIndex": 1,
+    "explanation": "Problem management and root cause analysis prevent repeated outages by targeting underlying defects.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-it-service-management/page/product/problem-management/concept/problem-management-process.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 129,
+    "prompt": "Why should enterprise platform teams maintain an on-call model with clear escalation paths?",
+    "choices": [
+      "To avoid documenting incidents",
+      "To guarantee every issue is handled only by developers",
+      "To ensure timely ownership and response during major incidents",
+      "To bypass change approvals"
+    ],
+    "correctIndex": 2,
+    "explanation": "Defined on-call and escalation structures reduce response ambiguity and speed coordinated incident handling.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-it-service-management/page/product/incident-management/concept/major-incident-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 130,
+    "prompt": "What is the primary operations benefit of proactive monitoring thresholds?",
+    "choices": [
+      "They reduce need for any logging",
+      "They detect degradation before user-impacting failure",
+      "They remove necessity for runbooks",
+      "They replace platform upgrades"
+    ],
+    "correctIndex": 1,
+    "explanation": "Threshold-based alerting identifies abnormal behavior early, enabling intervention before incidents escalate.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-operations/concept/proactive-monitoring.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 131,
+    "prompt": "Which action best supports operational readiness for a planned family upgrade?",
+    "choices": [
+      "Disable alerting until the upgrade is complete",
+      "Create a cutover checklist with rollback criteria and owner assignments",
+      "Run production-first testing",
+      "Skip stakeholder communication"
+    ],
+    "correctIndex": 1,
+    "explanation": "Cutover checklists and clear ownership improve execution quality and lower upgrade risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/task/plan-instance-upgrade.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 132,
+    "prompt": "What is the operational purpose of maintenance windows?",
+    "choices": [
+      "To perform controlled high-impact work with stakeholder awareness",
+      "To permanently block incidents",
+      "To avoid release notes",
+      "To disable ACL processing"
+    ],
+    "correctIndex": 0,
+    "explanation": "Maintenance windows provide coordinated timing and communication for disruptive operational activities.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/change-management/concept/maintenance-windows.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 133,
+    "prompt": "How does event correlation improve enterprise platform operations?",
+    "choices": [
+      "It replaces CI ownership data",
+      "It groups related alerts to reduce noise and improve triage",
+      "It disables notifications",
+      "It converts incidents directly to changes"
+    ],
+    "correctIndex": 1,
+    "explanation": "Correlation reduces alert fatigue and helps responders focus on root service impact instead of isolated symptoms.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-it-operations-management/page/product/event-management/concept/event-correlation.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 134,
+    "prompt": "What should be included in operational handoff from project delivery to platform support?",
+    "choices": [
+      "Only source code comments",
+      "Runbooks, support model, monitoring, and known-risk documentation",
+      "List layout exports",
+      "Personal user preferences"
+    ],
+    "correctIndex": 1,
+    "explanation": "A complete handoff package ensures support teams can operate and troubleshoot the new capability reliably.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-operations/task/prepare-operational-handover.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 135,
+    "prompt": "Which signal suggests alert tuning is needed?",
+    "choices": [
+      "High volume of non-actionable repeated alerts",
+      "Stable incident volume with accurate ownership",
+      "Clear priority mapping in incidents",
+      "Improved response time trends"
+    ],
+    "correctIndex": 0,
+    "explanation": "Excess noisy alerts reduce responder effectiveness and indicate thresholds or rules require adjustment.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-it-operations-management/page/product/event-management/task/tune-alert-noise.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 136,
+    "prompt": "What is the main value of platform health dashboards for operations leads?",
+    "choices": [
+      "They provide real-time visibility into service reliability and workload",
+      "They remove need for incident records",
+      "They replace release planning",
+      "They disable trend analysis"
+    ],
+    "correctIndex": 0,
+    "explanation": "Operational dashboards surface reliability and throughput signals needed for timely decisions and resource management.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-operations/task/build-operations-dashboard.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 137,
+    "prompt": "A major incident bridges multiple support teams. Which role is critical for coordination?",
+    "choices": [
+      "Theme administrator",
+      "Catalog requester",
+      "Knowledge publisher",
+      "Major incident manager"
+    ],
+    "correctIndex": 3,
+    "explanation": "The major incident manager coordinates responders, communications, and restoration actions across teams.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-it-service-management/page/product/incident-management/task/manage-major-incidents.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 138,
+    "prompt": "Which practice best improves incident categorization quality at scale?",
+    "choices": [
+      "Allow free-text category values only",
+      "Standardize category taxonomy and enforce required fields",
+      "Skip categorization for P1 incidents",
+      "Close incidents without assignment groups"
+    ],
+    "correctIndex": 1,
+    "explanation": "Consistent taxonomy improves analytics, trend identification, and routing effectiveness.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-it-service-management/page/product/incident-management/task/configure-incident-categorization.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 139,
+    "prompt": "Why are post-incident reviews important for enterprise platform operations?",
+    "choices": [
+      "They assign blame for outages",
+      "They capture lessons and preventive actions for resilience",
+      "They replace change approvals",
+      "They eliminate need for monitoring"
+    ],
+    "correctIndex": 1,
+    "explanation": "Structured reviews turn incidents into improvements by documenting root causes and corrective actions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-it-service-management/page/product/incident-management/task/conduct-post-incident-review.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 140,
+    "prompt": "Which process ensures operational controls remain effective after organization changes?",
+    "choices": [
+      "Periodic runbook and ownership review cycles",
+      "One-time go-live checklist only",
+      "Disabling support queue audits",
+      "Keeping deprecated support groups"
+    ],
+    "correctIndex": 0,
+    "explanation": "Regular review updates operational documentation and ownership to match evolving team structures.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-operations/task/review-operational-controls.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 141,
+    "prompt": "What is the most useful first step when platform performance degrades after a configuration change?",
+    "choices": [
+      "Immediately disable all customizations",
+      "Compare current state to change records and recent deployments",
+      "Archive all incidents",
+      "Rotate all user passwords"
+    ],
+    "correctIndex": 1,
+    "explanation": "Change correlation quickly narrows investigation scope to likely causes introduced near the degradation window.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/change-management/task/correlate-incidents-to-changes.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 142,
+    "prompt": "Which strategy improves global operations handoff across time zones?",
+    "choices": [
+      "Use a standardized shift handover template with active risks and actions",
+      "Rely on informal chat messages only",
+      "Close all in-progress incidents at shift end",
+      "Assign all incidents to one region"
+    ],
+    "correctIndex": 0,
+    "explanation": "Structured handovers preserve context and reduce delays between regional operations teams.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-operations/task/shift-handover-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 143,
+    "prompt": "What is the key operations advantage of a CMDB-backed service map during incidents?",
+    "choices": [
+      "It replaces change requests",
+      "It improves impact analysis and dependency-aware triage",
+      "It disables event ingestion",
+      "It limits assignment groups"
+    ],
+    "correctIndex": 1,
+    "explanation": "Service mapping clarifies dependencies so teams can prioritize restoration by business impact.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 144,
+    "prompt": "Which approach best reduces operational risk from manual repetitive tasks?",
+    "choices": [
+      "Document each repetition without change",
+      "Automate routine remediation workflows with approval guardrails",
+      "Allow unrestricted script execution by all operators",
+      "Delay automation until annual audits"
+    ],
+    "correctIndex": 1,
+    "explanation": "Automation improves consistency and speed while guardrails maintain control for sensitive actions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-operations/concept/operations-automation.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 145,
+    "prompt": "Why should problem records include known error documentation?",
+    "choices": [
+      "To increase incident count",
+      "To enable faster diagnosis and workaround reuse",
+      "To replace CMDB ownership",
+      "To bypass root cause analysis"
+    ],
+    "correctIndex": 1,
+    "explanation": "Known errors preserve validated diagnostic patterns and workarounds for quicker future incident handling.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-it-service-management/page/product/problem-management/concept/known-error-database.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 146,
+    "prompt": "Which control supports reliable operations for scheduled maintenance activities?",
+    "choices": [
+      "Change templates with pre-approved standard steps and validation tasks",
+      "Ad hoc updates without records",
+      "Manual approvals in email only",
+      "Skipping implementation plans"
+    ],
+    "correctIndex": 0,
+    "explanation": "Standardized templates reduce execution variance and ensure required checks are consistently performed.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-it-service-management/page/product/change-management/task/use-change-templates.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 147,
+    "prompt": "What does a rising backlog of unresolved high-priority incidents typically indicate?",
+    "choices": [
+      "Healthy capacity planning",
+      "Operational capacity or process bottlenecks requiring intervention",
+      "Successful event tuning",
+      "Improved first-contact resolution"
+    ],
+    "correctIndex": 1,
+    "explanation": "Sustained high-priority backlog growth signals insufficient response capacity, ineffective routing, or process delays.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-it-service-management/page/product/incident-management/task/monitor-incident-backlog.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 148,
+    "prompt": "Which practice most improves operational communication during major outages?",
+    "choices": [
+      "Unstructured updates from multiple channels",
+      "A single source of truth timeline with scheduled stakeholder updates",
+      "No customer communications until closure",
+      "Escalations only after business hours"
+    ],
+    "correctIndex": 1,
+    "explanation": "Centralized timeline updates reduce confusion and keep stakeholders aligned on impact and recovery progress.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-it-service-management/page/product/incident-management/task/communicate-major-incident-status.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 149,
+    "prompt": "What is the primary value of operational maturity assessments for platform teams?",
+    "choices": [
+      "They identify capability gaps and prioritize improvement investments",
+      "They replace all KPI reporting",
+      "They reduce need for governance",
+      "They remove team ownership boundaries"
+    ],
+    "correctIndex": 0,
+    "explanation": "Maturity assessments provide an objective baseline for targeted operational improvement planning.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-operations/concept/operations-maturity-model.html"
+    ]
+  }
+]

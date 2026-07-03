@@ -1,0 +1,402 @@
+[
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 65,
+    "prompt": "Which administrative action most improves long-term TPRM data quality?",
+    "choices": [
+      "Periodic governance reviews for vendor tiers, assessments, and issue taxonomy",
+      "Allowing free-form risk categories",
+      "Deleting historical assessment records",
+      "Disabling mandatory fields for speed"
+    ],
+    "correctIndex": 0,
+    "explanation": "Routine governance prevents taxonomy drift and preserves reporting reliability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/vendor-risk-management/concept/vendor-risk-management-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 66,
+    "prompt": "What is the best admin approach to TPRM role provisioning?",
+    "choices": [
+      "Grant full admin to all stakeholders",
+      "Use role groups aligned to least-privilege responsibilities",
+      "Assign permissions only by request email",
+      "Avoid role auditing"
+    ],
+    "correctIndex": 1,
+    "explanation": "Least-privilege role groups reduce security risk while supporting operational needs.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 67,
+    "prompt": "Which admin metric is most useful for TPRM platform health?",
+    "choices": [
+      "Count of dashboard color changes",
+      "Assessment completion timeliness and issue closure backlog by severity",
+      "Number of profile photos uploaded",
+      "Volume of archived notifications"
+    ],
+    "correctIndex": 1,
+    "explanation": "Timeliness and backlog trends show whether core risk operations are keeping pace.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 68,
+    "prompt": "How should TPRM administrators manage configuration changes?",
+    "choices": [
+      "Direct production edits without testing",
+      "Use controlled change lifecycle with testing and communication",
+      "Allow each analyst to alter scoring logic live",
+      "Remove change records after deployment"
+    ],
+    "correctIndex": 1,
+    "explanation": "Governed changes preserve stability, traceability, and stakeholder confidence.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 69,
+    "prompt": "What best indicates mature TPRM administration?",
+    "choices": [
+      "Frequent emergency fixes and inconsistent scoring",
+      "Stable processes, low exception debt, and predictable assessment cycles",
+      "No ownership of integration failures",
+      "Manual reporting only"
+    ],
+    "correctIndex": 1,
+    "explanation": "Operational stability and predictable governance cadence signal administrative maturity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/risk-management/concept/risk-management-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 65,
+    "prompt": "Which admin practice most improves VR operational consistency?",
+    "choices": [
+      "Standardized vulnerability states, assignment rules, and SLA policies",
+      "Allow each team to define independent status values",
+      "Disable prioritization logic",
+      "Use ad hoc severity overrides only"
+    ],
+    "correctIndex": 0,
+    "explanation": "Standard operational definitions improve cross-team consistency and measurable outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/concept/vulnerability-response-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 66,
+    "prompt": "How should VR administrators handle scanner source onboarding?",
+    "choices": [
+      "Enable import feeds without validation",
+      "Use governed onboarding with field mapping, deduplication, and data quality checks",
+      "Accept only CSV email attachments",
+      "Disable CI correlation"
+    ],
+    "correctIndex": 1,
+    "explanation": "Controlled onboarding protects correlation quality and remediation accuracy.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/configure-scanner-integrations.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 67,
+    "prompt": "Which control is most important for VR exception administration?",
+    "choices": [
+      "No expiration required for approved exceptions",
+      "Mandatory expiration, approver accountability, and review cadence",
+      "Exception approvals by any requester",
+      "Archive exceptions immediately after approval"
+    ],
+    "correctIndex": 1,
+    "explanation": "Time-bounded exceptions with accountable review prevent unmanaged accepted risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/manage-risk-exceptions.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 68,
+    "prompt": "What admin KPI best reflects VR process health?",
+    "choices": [
+      "Open critical vulnerability age and SLA breach rate",
+      "Count of UI actions on forms",
+      "Number of inactive users",
+      "Frequency of dashboard exports"
+    ],
+    "correctIndex": 0,
+    "explanation": "Critical-age and breach metrics reveal whether high-risk remediation is under control.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/use-performance-analytics-for-vr.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 69,
+    "prompt": "Which sign indicates mature VR administration?",
+    "choices": [
+      "Low data quality and high manual rework",
+      "Reliable ingestion, governed workflows, and improving remediation velocity",
+      "No documented ownership model",
+      "Exception backlog growing without review"
+    ],
+    "correctIndex": 1,
+    "explanation": "Mature administration combines reliable operations with measurable risk reduction outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-vulnerability-response/page/product/vulnerability-response/task/report-on-vulnerability-risk.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 65,
+    "prompt": "What administrative baseline is most important for CSM scalability?",
+    "choices": [
+      "Governed case taxonomy, assignment rules, and entitlement enforcement",
+      "Manual assignment only",
+      "No required fields on case records",
+      "One queue for all case types"
+    ],
+    "correctIndex": 0,
+    "explanation": "A strong administrative baseline improves routing precision and service consistency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/case-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 66,
+    "prompt": "How should CSM administrators manage role-based access?",
+    "choices": [
+      "Grant broad visibility to all customer records",
+      "Implement account-aware ACLs and least-privilege role groups",
+      "Disable role inheritance",
+      "Use shared admin credentials"
+    ],
+    "correctIndex": 1,
+    "explanation": "Account-aware least privilege protects customer data while supporting agent productivity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_AccessControls.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 67,
+    "prompt": "Which admin measure best reduces CSM configuration drift?",
+    "choices": [
+      "Untracked dashboard edits in production",
+      "Periodic review of assignment, SLA, and entitlement configuration against policy",
+      "Different priority logic per team with no standard",
+      "Disabling update set governance"
+    ],
+    "correctIndex": 1,
+    "explanation": "Periodic policy alignment reviews keep operational logic consistent over time.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/update-sets/concept/c_UpdateSets.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 68,
+    "prompt": "What KPI set is best for CSM admin health monitoring?",
+    "choices": [
+      "Case reassignment rate, backlog aging, and SLA breach trend",
+      "Number of opened browser tabs",
+      "Count of theme changes",
+      "Length of case descriptions"
+    ],
+    "correctIndex": 0,
+    "explanation": "These indicators expose routing quality, workload pressure, and commitment performance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 69,
+    "prompt": "Which outcome best reflects mature CSM administration?",
+    "choices": [
+      "Frequent emergency queue reconfiguration",
+      "Predictable case flow, clear ownership, and stable customer experience metrics",
+      "No governance board for changes",
+      "Escalations resolved without record updates"
+    ],
+    "correctIndex": 1,
+    "explanation": "Mature administration produces stable processes and consistently measured outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/task/analyze-customer-service-performance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 65,
+    "prompt": "What is a core admin responsibility in FSM scheduling operations?",
+    "choices": [
+      "Maintaining skill matrices, territories, and dispatch policies",
+      "Disabling all schedule rules",
+      "Assigning all jobs manually forever",
+      "Ignoring route efficiency metrics"
+    ],
+    "correctIndex": 0,
+    "explanation": "Scheduling quality depends on accurate administrative configuration of workforce constraints.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/configure-dispatch-and-scheduling.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 66,
+    "prompt": "Which admin control helps prevent invalid work order completion?",
+    "choices": [
+      "Optional closure fields for all tasks",
+      "Mandatory completion criteria and validation rules on key task states",
+      "Allow closure from any inactive device",
+      "Disable state transition checks"
+    ],
+    "correctIndex": 1,
+    "explanation": "Validation at closure ensures task outputs are complete and auditable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/close-work-order-tasks.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 67,
+    "prompt": "How should FSM admins govern mobile offline usage?",
+    "choices": [
+      "Permit unlimited unsynced data retention",
+      "Configure secure offline scope, sync cadence, and exception monitoring",
+      "Disable authentication for field staff",
+      "Allow shared logins across contractors"
+    ],
+    "correctIndex": 1,
+    "explanation": "Secure scope and monitored sync behavior are essential for reliable offline operations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-mobile/page/administer/mobile/concept/offline-mobile.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 68,
+    "prompt": "Which KPI grouping best indicates FSM admin effectiveness?",
+    "choices": [
+      "On-time arrival, first-time fix, and schedule utilization",
+      "Count of list layouts",
+      "Number of portal themes",
+      "Frequency of navigation menu changes"
+    ],
+    "correctIndex": 0,
+    "explanation": "These metrics capture service reliability and workforce planning quality.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/report-on-field-service-performance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 69,
+    "prompt": "What best signals mature FSM administration?",
+    "choices": [
+      "Frequent emergency dispatch overrides",
+      "Stable configuration governance, low rework, and predictable field outcomes",
+      "No ownership for scheduling rules",
+      "Manual reporting only"
+    ],
+    "correctIndex": 1,
+    "explanation": "Maturity shows through governed configuration and sustained operational performance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/field-service-management-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 65,
+    "prompt": "Which administrative control most improves HRSD process consistency?",
+    "choices": [
+      "Standardized HR services, templates, and fulfillment workflows",
+      "One-off case handling per agent",
+      "No service definitions",
+      "Disable task templates"
+    ],
+    "correctIndex": 0,
+    "explanation": "Standardized service and fulfillment design reduces variation and improves quality.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-hr-service-delivery/page/product/human-resources/concept/hr-service-delivery-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 66,
+    "prompt": "How should HR administrators manage sensitive access permissions?",
+    "choices": [
+      "Grant broad visibility to all HR cases",
+      "Use role and HR criteria controls to enforce need-to-know access",
+      "Share records through email attachments",
+      "Disable ACL evaluation for speed"
+    ],
+    "correctIndex": 1,
+    "explanation": "Need-to-know controls are critical for protecting confidential employee information.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_AccessControls.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 67,
+    "prompt": "Which admin practice improves HR service catalog quality over time?",
+    "choices": [
+      "Leave unused items permanently active",
+      "Run recurring catalog reviews for usage, policy fit, and duplication",
+      "Disable requester feedback",
+      "Allow duplicate services per region without governance"
+    ],
+    "correctIndex": 1,
+    "explanation": "Ongoing catalog governance keeps services relevant, compliant, and discoverable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/service-catalog-management/task/maintain-catalog-content.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 68,
+    "prompt": "What KPI set best supports HR admin health monitoring?",
+    "choices": [
+      "Case aging, task SLA attainment, and rework rate by service",
+      "Count of browser extensions",
+      "Number of color themes",
+      "Volume of dashboard exports"
+    ],
+    "correctIndex": 0,
+    "explanation": "These indicators identify operational bottlenecks and fulfillment quality issues.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 69,
+    "prompt": "Which statement best reflects mature HRSD administration?",
+    "choices": [
+      "Frequent manual exceptions with unclear ownership",
+      "Governed configuration lifecycle, clear role accountability, and consistent service outcomes",
+      "No monitoring of integration errors",
+      "Unmanaged document templates"
+    ],
+    "correctIndex": 1,
+    "explanation": "Mature administration combines governance discipline with measurable service reliability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-hr-service-delivery/page/product/human-resources/task/configure-hr-case-fulfillment.html"
+    ]
+  }
+]

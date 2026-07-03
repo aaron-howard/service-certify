@@ -1,0 +1,243 @@
+[
+	{
+		"trackCode": "CSA",
+		"order": 55,
+		"prompt": "In a basic LDAP integration, what does an LDAP server definition primarily provide to ServiceNow?",
+		"choices": [
+			"Connection and query settings used to import users and groups from the directory",
+			"A replacement for all ACL role checks",
+			"A client-side script library for form validation",
+			"A workflow approval matrix for change requests"
+		],
+		"correctIndex": 0,
+		"explanation": "LDAP server definitions store the host, bind, and search configuration required for ServiceNow to read directory data.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/ldap-integration/ldap-server.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 56,
+		"prompt": "Why are LDAP OU definitions important in user and group imports?",
+		"choices": [
+			"They scope searches to targeted directory paths so imports pull the right records",
+			"They define catalog variable sets for request items",
+			"They encrypt all outbound REST messages automatically",
+			"They set incident priority based on caller role"
+		],
+		"correctIndex": 0,
+		"explanation": "OU definitions control where ServiceNow searches in the directory, helping administrators target and optimize imports.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/ldap-integration/ldap-organizational-units.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 57,
+		"prompt": "What is the primary purpose of LDAP transform maps in ServiceNow?",
+		"choices": [
+			"To map LDAP attributes to ServiceNow user or group fields during import",
+			"To render workspace list layouts",
+			"To schedule CMDB discovery probes",
+			"To replace all business rules on sys_user"
+		],
+		"correctIndex": 0,
+		"explanation": "LDAP transform maps define how inbound directory attributes populate target fields such as name, email, and manager.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/ldap-integration/ldap-transform-maps.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 58,
+		"prompt": "In ServiceNow SSO administration, what does an Identity Provider (IdP) record represent?",
+		"choices": [
+			"The external authentication service that issues assertions used for user sign-in",
+			"A local table rotation strategy for syslog",
+			"A MID Server cluster policy",
+			"A dependency mapping relationship in CMDB"
+		],
+		"correctIndex": 0,
+		"explanation": "IdP records configure trust and authentication metadata so ServiceNow can accept federated login assertions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/single-sign-on/sso-identity-providers.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 59,
+		"prompt": "What is a common administrative validation after enabling SSO?",
+		"choices": [
+			"Test IdP-initiated and SP-initiated login flows to confirm users map correctly to accounts",
+			"Disable all local admin accounts permanently",
+			"Convert all notifications to SMS-only",
+			"Delete LDAP import schedules to avoid duplicates"
+		],
+		"correctIndex": 0,
+		"explanation": "SSO rollout should include both login flow tests and user-mapping verification to avoid authentication and access issues.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/single-sign-on/single-sign-on.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 55,
+		"prompt": "What is the main goal of Automated Test Framework (ATF) in ServiceNow development?",
+		"choices": [
+			"To automatically validate application behavior through repeatable, scripted tests",
+			"To replace update sets for deployment",
+			"To publish catalog items to all users",
+			"To run discovery patterns on network devices"
+		],
+		"correctIndex": 0,
+		"explanation": "ATF lets developers verify functionality consistently after changes, reducing regression risk across releases.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/automated-test-framework/automated-test-framework.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 56,
+		"prompt": "In ATF, what is a test step set primarily used for?",
+		"choices": [
+			"Reusing a sequence of steps across multiple tests",
+			"Creating ACLs for workspace pages",
+			"Defining import set transform scripts only",
+			"Generating CMDB reconciliation rules"
+		],
+		"correctIndex": 0,
+		"explanation": "Step sets promote maintainability by centralizing reusable test logic used by multiple ATF tests.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/automated-test-framework/atf-test-step-sets.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 57,
+		"prompt": "How do ATF test suites help a development team?",
+		"choices": [
+			"By grouping related tests so they can be executed together for broader validation",
+			"By replacing all Script Includes",
+			"By automatically approving change requests",
+			"By assigning incidents to the CAB"
+		],
+		"correctIndex": 0,
+		"explanation": "Test suites organize related ATF tests into cohesive regression runs for a feature, app, or release cycle.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/automated-test-framework/atf-test-suites.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 58,
+		"prompt": "When should developers run an ATF suite in a delivery pipeline?",
+		"choices": [
+			"After significant changes and before promotion to catch regressions early",
+			"Only once after initial app creation",
+			"Only when LDAP imports fail",
+			"Only after deleting all inactive users"
+		],
+		"correctIndex": 0,
+		"explanation": "Running suites during build and pre-release checkpoints provides confidence that recent changes did not break core flows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/automated-test-framework/automated-test-framework.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 59,
+		"prompt": "Which ATF practice most improves long-term test maintainability?",
+		"choices": [
+			"Use reusable step sets and keep tests focused on stable, business-critical behavior",
+			"Hardcode temporary sys_ids in every step",
+			"Avoid test suites to keep execution random",
+			"Run tests only in production"
+		],
+		"correctIndex": 0,
+		"explanation": "Reusable components and focused coverage reduce fragile tests and simplify updates as the application evolves.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/automated-test-framework/atf-best-practices.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 55,
+		"prompt": "What is the core purpose of the ITSM Walk-up Experience?",
+		"choices": [
+			"To manage in-person support interactions, including check-in, queueing, and fulfillment",
+			"To run vulnerability scans on endpoints",
+			"To replace all virtual agent conversations",
+			"To archive closed incidents to external storage"
+		],
+		"correctIndex": 0,
+		"explanation": "Walk-up Experience supports front-desk or on-site support workflows by organizing customer visits and service delivery.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/walk-up-experience/walk-up-experience.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 56,
+		"prompt": "In Walk-up Experience, what does queue management primarily provide?",
+		"choices": [
+			"Visibility into waiting customers and service order so agents can process requests efficiently",
+			"Automatic creation of MID Servers",
+			"CMDB class inheritance mapping",
+			"Encryption key rotation for SSO certificates"
+		],
+		"correctIndex": 0,
+		"explanation": "Queue management helps agents prioritize and handle in-person tickets using current wait and service status.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/walk-up-experience/walk-up-queues.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 57,
+		"prompt": "What benefit does Agent Workspace bring to incident management teams?",
+		"choices": [
+			"A unified workspace with contextual record views and actions that speeds investigation and resolution",
+			"A mandatory replacement for all catalog forms",
+			"A direct substitute for CMDB identification rules",
+			"A tool that disables SLA tracking"
+		],
+		"correctIndex": 0,
+		"explanation": "Agent Workspace centralizes task context, related records, and guided actions to improve agent productivity.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/agent-workspace/agent-workspace-for-itsm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 58,
+		"prompt": "Why configure workspace forms and lists for ITSM roles?",
+		"choices": [
+			"To surface role-relevant data and actions that reduce handling time and context switching",
+			"To bypass table ACLs permanently",
+			"To eliminate assignment groups",
+			"To replace all inbound email actions"
+		],
+		"correctIndex": 0,
+		"explanation": "Workspace configuration aligns UI layout to role workflows so agents can resolve tickets with fewer navigation steps.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/agent-workspace/configure-agent-workspace.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 59,
+		"prompt": "How do Walk-up Experience and Agent Workspace complement each other in ITSM operations?",
+		"choices": [
+			"Walk-up manages in-person intake and queue flow, while Agent Workspace supports efficient backend case handling",
+			"Both features are only for software asset normalization",
+			"Both features replace SLA definitions",
+			"Both features are required only for HR Service Delivery"
+		],
+		"correctIndex": 0,
+		"explanation": "Using walk-up for front-of-house support and workspace for agent execution creates an end-to-end support workflow.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/walk-up-experience/walk-up-experience.html",
+			"https://www.servicenow.com/docs/r/it-service-management/agent-workspace/agent-workspace-for-itsm.html"
+		]
+	}
+]

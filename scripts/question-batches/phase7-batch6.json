@@ -1,0 +1,172 @@
+[
+  {
+    "trackCode": "CIS-SAM",
+    "order": 30,
+    "prompt": "What is the primary objective of SaaS management within SAM?",
+    "choices": [
+      "Manage SaaS subscriptions, usage, and spend to reduce waste and compliance risk",
+      "Replace all software discovery with manual entry",
+      "Convert SaaS licenses into hardware assets",
+      "Disable reclamation for cloud applications"
+    ],
+    "correctIndex": 0,
+    "explanation": "SaaS management focuses on visibility, control, and optimization of subscription-based software.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 31,
+    "prompt": "Which signal most strongly suggests a SaaS optimization opportunity?",
+    "choices": [
+      "High number of assignment groups",
+      "Many provisioned accounts with low or no recent activity",
+      "Growth in closed incident volume",
+      "Increasing number of CMDB classes"
+    ],
+    "correctIndex": 1,
+    "explanation": "Low-activity SaaS accounts are prime candidates for right-sizing or reclamation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-reclamation.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 32,
+    "prompt": "Why should SaaS ownership be explicitly assigned for each major subscription?",
+    "choices": [
+      "To allow any user to add licenses without approval",
+      "To shift renewal responsibility to the service desk only",
+      "To establish accountability for entitlement, usage, and renewal governance",
+      "To avoid maintaining software models"
+    ],
+    "correctIndex": 2,
+    "explanation": "Clear ownership is essential for controlling spend, renewals, and compliance decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-compliance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 33,
+    "prompt": "Which governance policy best supports controlled SaaS provisioning?",
+    "choices": [
+      "Require approved entitlement checks and role-based provisioning workflows",
+      "Provision all requested SaaS seats automatically",
+      "Approve provisioning only during annual true-up periods",
+      "Remove all deprovisioning controls"
+    ],
+    "correctIndex": 0,
+    "explanation": "Entitlement checks and governed workflows reduce over-provisioning and unauthorized access.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-compliance.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 34,
+    "prompt": "Which KPI combination best reflects mature SaaS management?",
+    "choices": [
+      "Lower inactive account rate, improved license utilization, and reduced renewal waste",
+      "Higher volume of unapproved software installs",
+      "More emergency access grants",
+      "Longer entitlement reconciliation cycles"
+    ],
+    "correctIndex": 0,
+    "explanation": "These metrics indicate control over spend and stronger governance of subscription usage.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 30,
+    "prompt": "What is the main purpose of demand management in SPM?",
+    "choices": [
+      "Capture, evaluate, and prioritize incoming work against strategic and capacity constraints",
+      "Automatically fund every submitted request",
+      "Replace project governance with incident workflows",
+      "Track software entitlement consumption"
+    ],
+    "correctIndex": 0,
+    "explanation": "Demand management creates a governed intake pipeline for strategic portfolio decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/demand-management/concept/demand-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 31,
+    "prompt": "Which intake design most improves demand decision quality?",
+    "choices": [
+      "A standardized demand form capturing business value, risk, cost, and objective alignment",
+      "A free-text form with no required fields",
+      "Email-based requests only with no scoring",
+      "Automatic approvals for repeat requesters"
+    ],
+    "correctIndex": 0,
+    "explanation": "Consistent structured intake improves comparability and prioritization rigor.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/demand-management/concept/demand-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 32,
+    "prompt": "A demand item has high strategic value but no delivery capacity this quarter. What is the best governance action?",
+    "choices": [
+      "Approve immediately and bypass capacity checks",
+      "Reject permanently due to current constraints",
+      "Place in a prioritized backlog with transparent deferral rationale",
+      "Convert it to an incident to speed implementation"
+    ],
+    "correctIndex": 2,
+    "explanation": "Deferral with clear prioritization preserves strategic intent while respecting capacity limits.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/demand-management/concept/demand-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/concept/spm-workspace.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 33,
+    "prompt": "Which anti-pattern most harms demand management governance?",
+    "choices": [
+      "Reviewing demand scoring during portfolio board meetings",
+      "Maintaining objective-linked ranking criteria",
+      "Approving requests based on requester influence instead of scoring",
+      "Tracking demand aging and disposition status"
+    ],
+    "correctIndex": 2,
+    "explanation": "Influence-based approvals undermine transparency and strategic prioritization discipline.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/demand-management/concept/demand-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 34,
+    "prompt": "Which KPI best indicates healthy demand management operations?",
+    "choices": [
+      "Percent of approved demand aligned to strategic objectives and resourced delivery windows",
+      "Total number of incidents created each month",
+      "Count of catalog items in the service portal",
+      "Number of unchanged portfolio records"
+    ],
+    "correctIndex": 0,
+    "explanation": "Healthy demand management links approval quality to strategic alignment and delivery feasibility.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/demand-management/concept/demand-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html"
+    ]
+  }
+]

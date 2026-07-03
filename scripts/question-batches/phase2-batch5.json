@@ -1,0 +1,246 @@
+[
+	{
+		"trackCode": "CSA",
+		"order": 50,
+		"prompt": "A platform owner wants a visual that immediately shows whether open P1 incidents are above or below target. Which report visualization is best?",
+		"choices": [
+			"List report grouped by assignment group",
+			"Single score report",
+			"Gauge with warning and critical thresholds",
+			"Calendar report"
+		],
+		"correctIndex": 2,
+		"explanation": "A gauge is designed to compare a metric to target thresholds and quickly communicate status with color bands.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/reports-and-dashboards/gauges.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 51,
+		"prompt": "Which statement correctly describes a homepage in classic ServiceNow UI?",
+		"choices": [
+			"It is a collection of report widgets and content blocks users can view for operational monitoring.",
+			"It is the only place where ACL rules can be configured.",
+			"It replaces update sets for migrating records.",
+			"It is required to run scripted REST APIs."
+		],
+		"correctIndex": 0,
+		"explanation": "Homepages provide role-based at-a-glance views by arranging reports, gauges, and other widgets in one place.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/reports-and-dashboards/homepages.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 52,
+		"prompt": "An admin needs a chart showing incidents opened by priority during the last 30 days and refreshed daily. What should they configure first?",
+		"choices": [
+			"A scheduled import set transform",
+			"A report with a date filter and grouping by priority",
+			"A business rule on sys_user",
+			"A UI policy on the incident form"
+		],
+		"correctIndex": 1,
+		"explanation": "The core requirement is reporting logic: define the report data source, filter window, and grouping to visualize incident volume by priority.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/reports-and-dashboards/create-a-report.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 53,
+		"prompt": "Why would an administrator add multiple gauges to the same homepage?",
+		"choices": [
+			"To enforce ACLs on tables used by reports",
+			"To track several KPIs with separate thresholds in one operational view",
+			"To replace assignment rules for incidents",
+			"To prevent users from creating personal reports"
+		],
+		"correctIndex": 1,
+		"explanation": "Each gauge can represent a different KPI with distinct warning/critical limits, giving teams a compact health overview.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/reports-and-dashboards/gauges.html",
+			"https://www.servicenow.com/docs/r/platform-administration/reports-and-dashboards/homepages.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 54,
+		"prompt": "A manager says, \"I only need one number: currently open high-priority incidents.\" Which report type is most appropriate?",
+		"choices": [
+			"Pivot report",
+			"Trend report",
+			"Single score report",
+			"Calendar report"
+		],
+		"correctIndex": 2,
+		"explanation": "Single score reports are intended to display one aggregate metric, such as count of open high-priority incidents.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/reports-and-dashboards/single-score-reports.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 50,
+		"prompt": "A developer wants logic to run once after deploying a scoped app update to backfill a new field. What is the best mechanism?",
+		"choices": [
+			"Fix script",
+			"Before query business rule",
+			"Client script",
+			"Catalog UI policy"
+		],
+		"correctIndex": 0,
+		"explanation": "Fix scripts are intended for one-time data correction or backfill tasks during deployment or maintenance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/fix-scripts/fix-scripts.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 51,
+		"prompt": "What is a key characteristic of a processor in ServiceNow?",
+		"choices": [
+			"It defines table-level ACL inheritance.",
+			"It provides a URL endpoint that executes server-side script logic.",
+			"It renders Workspace component trees.",
+			"It replaces Scripted REST APIs in all cases."
+		],
+		"correctIndex": 1,
+		"explanation": "Processors expose server-side logic through a URL endpoint and are commonly used for custom request handling patterns.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/processors/processors.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 52,
+		"prompt": "Which statement about Data Policies is correct?",
+		"choices": [
+			"They only enforce field requirements on Service Portal forms.",
+			"They enforce data consistency rules on records, including data imported through non-UI channels.",
+			"They run only when a client script calls g_form.save().",
+			"They are limited to read-only behavior and cannot require fields."
+		],
+		"correctIndex": 1,
+		"explanation": "Data Policies help enforce mandatory/read-only rules beyond the standard form UI, improving consistency for imported or API-sourced data.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/data-policies/data-policies.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 53,
+		"prompt": "When executing a fix script that updates many records, what should a developer do first to reduce risk?",
+		"choices": [
+			"Run directly in production during peak hours",
+			"Test in sub-production, validate query scope, and review rollback approach",
+			"Disable all ACLs temporarily",
+			"Convert the script to a client-side onLoad script"
+		],
+		"correctIndex": 1,
+		"explanation": "Large data corrections should be validated in lower environments with precise query scope and a rollback strategy before production execution.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/fix-scripts/fix-scripts.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 54,
+		"prompt": "A team needs to reject records missing a required cost center even when loaded by import sets. Which configuration best supports this?",
+		"choices": [
+			"UI Policy on the form",
+			"Client script with g_form.showFieldMsg()",
+			"Data Policy requiring the field",
+			"Formatter on the form layout"
+		],
+		"correctIndex": 2,
+		"explanation": "Data Policies provide server-side style enforcement that can apply to imported data, not just interactive form entry.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/data-policies/data-policies.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 50,
+		"prompt": "In ITSM, what is a primary benefit of deploying Virtual Agent for common support requests?",
+		"choices": [
+			"It automatically decommissions inactive CMDB CIs.",
+			"It routes all incidents directly to Problem Management.",
+			"It deflects repetitive contacts by guiding users through conversational self-service flows.",
+			"It eliminates the need for a service catalog."
+		],
+		"correctIndex": 2,
+		"explanation": "Virtual Agent reduces service desk load by handling frequent, repeatable user intents through guided conversations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/virtual-agent/virtual-agent/virtual-agent-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 51,
+		"prompt": "A self-service strategy emphasizes \"shift-left\" support. Which outcome best aligns with that goal?",
+		"choices": [
+			"More tickets reassigned between resolver groups",
+			"Users resolve simple issues through knowledge or virtual assistant before contacting agents",
+			"All incidents are converted to change requests",
+			"Catalog approvals are bypassed for speed"
+		],
+		"correctIndex": 1,
+		"explanation": "Shift-left focuses on moving resolution closer to the user through knowledge and automation, reducing agent-handled demand.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/knowledge-management/knowledge-management.html",
+			"https://www.servicenow.com/docs/r/virtual-agent/virtual-agent/virtual-agent-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 52,
+		"prompt": "Which design choice improves Virtual Agent success for password reset and similar ITSM requests?",
+		"choices": [
+			"Use long free-text prompts with no decision buttons",
+			"Create clear intents and guided topic flows with explicit next actions",
+			"Trigger CAB approval before every conversation step",
+			"Disable handoff to live agent entirely"
+		],
+		"correctIndex": 1,
+		"explanation": "Well-defined intents and guided branching reduce ambiguity and make self-service conversations reliable and efficient.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/virtual-agent/virtual-agent/design-conversation-topics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 53,
+		"prompt": "Which KPI best indicates whether ITSM self-service is reducing service desk workload?",
+		"choices": [
+			"Increase in incident reassignment count",
+			"Decrease in first response SLA target",
+			"Growth in successful self-service/VA resolutions with fewer agent-created incidents",
+			"Number of update sets promoted per week"
+		],
+		"correctIndex": 2,
+		"explanation": "The key signal is successful user resolution through self-service channels and reduced need for agent ticket creation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/incident-management/c_IncidentManagement.html",
+			"https://www.servicenow.com/docs/r/virtual-agent/virtual-agent/virtual-agent-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 54,
+		"prompt": "When should a Virtual Agent topic hand off to a live agent in ITSM?",
+		"choices": [
+			"Only after closing the user's incident",
+			"When confidence is low, user intent is ambiguous, or policy requires human approval",
+			"Immediately for every greeting",
+			"Never, because full automation is mandatory"
+		],
+		"correctIndex": 1,
+		"explanation": "Effective VA design includes escalation paths for low-confidence or high-judgment situations to preserve user experience and compliance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/virtual-agent/virtual-agent/design-conversation-topics.html",
+			"https://www.servicenow.com/docs/r/virtual-agent/virtual-agent/virtual-agent-overview.html"
+		]
+	}
+]

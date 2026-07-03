@@ -1,0 +1,242 @@
+[
+	{
+		"trackCode": "CPOA",
+		"order": 15,
+		"prompt": "What is the primary purpose of ServiceNow Admin Center for platform owners?",
+		"choices": [
+			"To centralize visibility and management of instance administration tasks",
+			"To replace all development tooling for scoped apps",
+			"To run clone operations across different customer tenants",
+			"To bypass role requirements for temporary admins"
+		],
+		"correctIndex": 0,
+		"explanation": "Admin Center gives administrators a consolidated experience for key operational and configuration responsibilities.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/admin-center/concept/admin-center.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 16,
+		"prompt": "How does Admin Center improve execution consistency across admin teams?",
+		"choices": [
+			"By removing all role checks from admin tasks",
+			"By presenting guided workflows and centralized administration actions",
+			"By forcing all tasks into one global update set",
+			"By disabling plugin lifecycle controls"
+		],
+		"correctIndex": 1,
+		"explanation": "Guided operational tasks and shared visibility reduce variation in how administrators perform common platform activities.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/admin-center/task/use-admin-center.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 17,
+		"prompt": "A platform owner wants to reduce missed admin prerequisites. Which Admin Center outcome is most relevant?",
+		"choices": [
+			"Automatic deletion of skipped updates",
+			"Managed domain hierarchy creation",
+			"Consolidated recommendations and operational task tracking",
+			"Cross-instance source control branching"
+		],
+		"correctIndex": 2,
+		"explanation": "Central recommendations and tracked tasks help teams execute required admin steps in a predictable order.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/admin-center/concept/admin-recommendations.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 18,
+		"prompt": "Which practice best aligns Admin Center usage with platform governance?",
+		"choices": [
+			"Allow every fulfiller to execute admin actions directly",
+			"Use personal runbooks outside the platform",
+			"Apply emergency-only admin workflows for all maintenance",
+			"Pair Admin Center processes with role-based ownership and change control"
+		],
+		"correctIndex": 3,
+		"explanation": "Governance improves when Admin Center actions are tied to clear accountability and approved change procedures.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/admin-center/concept/admin-governance.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 19,
+		"prompt": "What is the most valuable KPI to monitor after broad Admin Center adoption?",
+		"choices": [
+			"Reduction in execution errors and faster completion of standardized admin tasks",
+			"Total number of temporary admin grants",
+			"Frequency of ad hoc production hotfixes",
+			"Count of skipped update records created"
+		],
+		"correctIndex": 0,
+		"explanation": "Operational quality metrics show whether centralized administration is improving reliability and efficiency.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/admin-center/task/measure-admin-center-adoption.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 15,
+		"prompt": "In ServiceNow subscription operations, what is a platform owner primarily responsible for?",
+		"choices": [
+			"Only requesting plugin activations",
+			"Tracking entitlements, usage alignment, and feature adoption planning",
+			"Managing CMDB CI reconciliation jobs",
+			"Resolving all skipped updates"
+		],
+		"correctIndex": 1,
+		"explanation": "Subscription operations include understanding what is licensed, what is enabled, and how adoption is governed operationally.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/subscriptions/concept/subscription-management.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 16,
+		"prompt": "Why should operational teams review subscription usage trends regularly?",
+		"choices": [
+			"To detect over- or under-utilization and support informed roadmap decisions",
+			"To eliminate the need for release planning",
+			"To force all apps into global scope",
+			"To bypass financial governance controls"
+		],
+		"correctIndex": 0,
+		"explanation": "Usage trends help align platform investments with actual adoption and enterprise priorities.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/subscriptions/task/monitor-subscription-usage.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 17,
+		"prompt": "A business unit requests enablement of a new subscribed capability. What should happen first?",
+		"choices": [
+			"Enable in production immediately to accelerate value",
+			"Approve automatically if the requestor is a manager",
+			"Validate entitlement, security impact, and support readiness",
+			"Create update sets before confirming licensing"
+		],
+		"correctIndex": 2,
+		"explanation": "Operational governance starts by confirming entitlement and readiness before introducing new platform capabilities.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/subscriptions/task/evaluate-feature-entitlement.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 18,
+		"prompt": "Which operating model best supports enterprise subscription governance?",
+		"choices": [
+			"Decentralized activation by any admin without review",
+			"Email approvals only with no audit trail",
+			"Quarterly clean-up with no ownership model",
+			"Centralized review board with documented approval and accountability"
+		],
+		"correctIndex": 3,
+		"explanation": "A central governance model improves traceability, compliance, and alignment to platform strategy.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/subscriptions/concept/subscription-governance.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 19,
+		"prompt": "What is a common risk when subscription adoption is not coordinated with support teams?",
+		"choices": [
+			"New capabilities go live without operational readiness, increasing incident volume",
+			"Update sets cannot be exported",
+			"Domain hierarchy becomes immutable",
+			"Skipped updates are deleted automatically"
+		],
+		"correctIndex": 0,
+		"explanation": "Without enablement planning and support readiness, teams often see avoidable incidents and slower issue resolution.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/subscriptions/task/plan-subscription-adoption.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 15,
+		"prompt": "After cloning production to a lower environment, why is update set strategy review important for enterprise teams?",
+		"choices": [
+			"Clone removes all historical update sets permanently",
+			"Clone can reset context and requires teams to re-align promotion sequencing and branch discipline",
+			"Update sets are replaced by source control in all cases",
+			"Clone automatically merges update conflicts"
+		],
+		"correctIndex": 1,
+		"explanation": "Clone events can alter development context; teams should validate update set practices and sequencing before resuming delivery.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-application-development/page/build/system-update-sets/concept/c_UpdateSetManagement.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 16,
+		"prompt": "Which practice minimizes update set loss risk after frequent environment refreshes?",
+		"choices": [
+			"Commit and promote completed update sets with disciplined cadence",
+			"Keep all active work in one long-running update set",
+			"Rely only on local browser history for record tracking",
+			"Pause all development during clone cycles"
+		],
+		"correctIndex": 0,
+		"explanation": "Frequent commit and promotion cycles reduce exposure to clone-related disruptions and simplify recovery.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-application-development/page/build/system-update-sets/task/t_CommitAnUpdateSet.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 17,
+		"prompt": "In an enterprise release train, what is the biggest benefit of using clearly scoped update sets per feature?",
+		"choices": [
+			"They eliminate all skipped updates during upgrades",
+			"They improve traceability, testing focus, and rollback decision quality",
+			"They allow unrestricted production edits without approvals",
+			"They enforce domain separation automatically"
+		],
+		"correctIndex": 1,
+		"explanation": "Feature-focused update sets improve release control by mapping changes to business outcomes and validation evidence.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-application-development/page/build/system-update-sets/concept/c_BestPracticeForUpdateSets.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 18,
+		"prompt": "What governance control is most effective when clone timing overlaps with active development?",
+		"choices": [
+			"Freeze all instances indefinitely",
+			"Allow developers to decide clone windows individually",
+			"Use a managed release calendar and update set checkpoint policy",
+			"Skip cloning until the next family upgrade"
+		],
+		"correctIndex": 2,
+		"explanation": "A shared release calendar and checkpoints create predictable recovery and handoff points around clone operations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-application-development/page/build/system-update-sets/task/plan-update-set-promotion.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 19,
+		"prompt": "Which outcome indicates mature clone-aware update set governance?",
+		"choices": [
+			"Frequent production hotfixes from untracked changes",
+			"Single shared update set for all teams",
+			"No post-clone validation process",
+			"Consistent promotion records, minimal rework, and clear release traceability"
+		],
+		"correctIndex": 3,
+		"explanation": "Maturity appears as predictable promotions, reduced rework after clone events, and strong auditability across releases.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-application-development/page/build/system-update-sets/concept/update-set-governance.html"
+		]
+	}
+]

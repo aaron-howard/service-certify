@@ -1,0 +1,242 @@
+[
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 55,
+		"prompt": "In Discovery and Service Mapping contexts, service discovery is primarily used to achieve what?",
+		"choices": [
+			"Map application service dependencies to supporting infrastructure",
+			"Replace identification and reconciliation rules",
+			"Convert all technical services to business services automatically",
+			"Retire hardware assets based on event severity"
+		],
+		"correctIndex": 0,
+		"explanation": "Service discovery and mapping establish visibility into service-to-infrastructure relationships needed for impact analysis and operations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/getting-started-service-mapping.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 56,
+		"prompt": "Which prerequisite most improves service discovery accuracy?",
+		"choices": [
+			"Disabling horizontal discovery schedules",
+			"Reliable foundational CI data and relationship baselines in CMDB",
+			"Using only manual CI creation",
+			"Running service mapping without credentials"
+		],
+		"correctIndex": 1,
+		"explanation": "Service mapping quality depends on trustworthy underlying CI and relationship data from discovery and CMDB governance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/product/configuration-management/concept/cmdb-foundation-data.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 57,
+		"prompt": "What is the strongest reason to validate service maps with application owners?",
+		"choices": [
+			"To reduce MID Server memory use",
+			"To bypass reconciliation processing",
+			"To confirm inferred dependencies reflect actual service behavior",
+			"To avoid using entry points"
+		],
+		"correctIndex": 2,
+		"explanation": "Owner review helps verify that discovered connections represent real operational dependencies and not transient noise.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/entry-points-and-service-maps.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 58,
+		"prompt": "When service maps become outdated quickly, which corrective action is most appropriate?",
+		"choices": [
+			"Disable updates to preserve historical map shape",
+			"Delete relationships not seen in one run",
+			"Move all services to one map owner",
+			"Adjust discovery cadence and review entry points or credentials for changing environments"
+		],
+		"correctIndex": 3,
+		"explanation": "Rapidly changing environments require tuned schedules and validated service mapping entry-point logic to maintain map quality.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 59,
+		"prompt": "Which KPI best indicates service discovery effectiveness over time?",
+		"choices": [
+			"Increased map completeness with fewer unresolved dependency gaps",
+			"Maximum number of probes executed per hour",
+			"Total connector templates configured in Event Management",
+			"Count of manually created stockrooms"
+		],
+		"correctIndex": 0,
+		"explanation": "Service discovery maturity is shown by dependable, actionable dependency maps with fewer missing or disputed relationships.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/use/reporting/concept/c_ReportingAndAnalytics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 55,
+		"prompt": "Why are maintenance windows important in Event Management operations?",
+		"choices": [
+			"They suppress expected noise during planned changes and reduce false-positive alerting",
+			"They permanently disable event ingestion",
+			"They replace all alert correlation policies",
+			"They enforce retirement of impacted assets"
+		],
+		"correctIndex": 0,
+		"explanation": "Maintenance windows help operations teams distinguish planned activity from actionable incidents by suppressing expected event noise.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/maintenance-windows.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 56,
+		"prompt": "What should be aligned when configuring maintenance windows?",
+		"choices": [
+			"Only catalog approval policies",
+			"Window scope, CI/service targets, and change schedule timing",
+			"Transfer order assignment groups",
+			"Cloud account API quotas"
+		],
+		"correctIndex": 1,
+		"explanation": "Windows are effective when their time boundaries and targets align with planned changes affecting those services or CIs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/change-management/change-calendar.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 57,
+		"prompt": "Which risk is reduced by maintaining accurate maintenance-window ownership?",
+		"choices": [
+			"Discovery credential expiration",
+			"CMDB class inheritance conflicts",
+			"Unexpected alert suppression outside approved change periods",
+			"Hardware lease overbilling"
+		],
+		"correctIndex": 2,
+		"explanation": "Clear ownership and governance reduce the chance of overbroad or stale windows suppressing real incidents.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/maintenance-windows.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 58,
+		"prompt": "After a major release, what review best validates maintenance-window effectiveness?",
+		"choices": [
+			"Delete all windows and recreate quarterly",
+			"Increase default suppression duration globally",
+			"Disable all event rules for impacted services",
+			"Compare suppressed-event volume against actual incident outcomes during the window"
+		],
+		"correctIndex": 3,
+		"explanation": "Post-change validation ensures windows filtered expected noise without hiding critical operational signals.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/use/reporting/concept/c_ReportingAndAnalytics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 59,
+		"prompt": "Which governance behavior supports sustainable maintenance-window operations?",
+		"choices": [
+			"Require periodic review, expiration, and ownership validation for active windows",
+			"Allow indefinite windows with no accountable owner",
+			"Suppress all events for business-critical services by default",
+			"Rely only on manual operator memory for window scope"
+		],
+		"correctIndex": 0,
+		"explanation": "Periodic governance prevents stale suppression and keeps windows aligned with current operational ownership and change practices.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/maintenance-windows.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 55,
+		"prompt": "In HAM, loaner asset workflows primarily support which scenario?",
+		"choices": [
+			"Temporary assignment of hardware while preserving accountability and return tracking",
+			"Permanent retirement of devices",
+			"Automated procurement for data center racks",
+			"Event suppression during change windows"
+		],
+		"correctIndex": 0,
+		"explanation": "Loaner processes provide controlled short-term distribution and return tracking for hardware issued to users.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/manage-loaner-assets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 56,
+		"prompt": "What data point is most critical when issuing a loaner asset?",
+		"choices": [
+			"Connector template version",
+			"Expected return date with responsible user assignment",
+			"Discovery schedule run time",
+			"Cloud account region"
+		],
+		"correctIndex": 1,
+		"explanation": "A defined return commitment and accountable assignee reduce loss risk and improve recovery cycle performance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-lifecycle.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 57,
+		"prompt": "Which control helps prevent long-term conversion of loaners into untracked assets?",
+		"choices": [
+			"Disable assignment updates",
+			"Skip stockroom check-in on return",
+			"Use return reminders and overdue escalation workflows",
+			"Delete loaner asset history after 7 days"
+		],
+		"correctIndex": 2,
+		"explanation": "Automated reminders and escalation policies increase return compliance and keep temporary assignments visible.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/administer/business-rules/concept/c_BusinessRules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 58,
+		"prompt": "Why should returned loaner assets follow a standard inspection process?",
+		"choices": [
+			"To auto-retire every returned device",
+			"To bypass warranty checks",
+			"To suppress transfer orders",
+			"To verify condition, update status, and determine readiness for reissue"
+		],
+		"correctIndex": 3,
+		"explanation": "Consistent post-return checks maintain data quality and ensure only suitable devices return to available inventory.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/manage-hardware-assets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 59,
+		"prompt": "Which KPI most directly reflects loaner program health?",
+		"choices": [
+			"On-time return rate and average overdue duration",
+			"Number of discovery probes executed daily",
+			"Count of maintenance windows per month",
+			"Connector setup lead time"
+		],
+		"correctIndex": 0,
+		"explanation": "Return timeliness metrics show whether loaner controls are effective and inventory remains available for temporary needs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/use/reporting/concept/c_ReportingAndAnalytics.html"
+		]
+	}
+]

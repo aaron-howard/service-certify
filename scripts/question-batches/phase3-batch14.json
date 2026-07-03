@@ -1,0 +1,257 @@
+[
+	{
+		"trackCode": "CIS-DF",
+		"order": 70,
+		"prompt": "Which control is most important for data governance in a ServiceNow migration program?",
+		"choices": [
+			"Define accountable data owners and enforce stewardship responsibilities for critical domains",
+			"Allow any implementation team member to change data standards ad hoc",
+			"Treat governance as a one-time pre-go-live activity only",
+			"Exclude business stakeholders from data quality decisions"
+		],
+		"correctIndex": 0,
+		"explanation": "Data governance requires clear ownership and stewardship so quality rules, definitions, and remediation decisions are consistently enforced.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/c_DataManagement.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/table-administration/concept/c_TableAdministration.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 71,
+		"prompt": "How does a canonical data model improve governance across multiple source systems?",
+		"choices": [
+			"It standardizes business definitions and mappings so data remains consistent across integrations",
+			"It eliminates the need for transformation maps",
+			"It requires all source systems to use identical table names",
+			"It allows unrestricted free-text values for governed fields"
+		],
+		"correctIndex": 0,
+		"explanation": "A canonical model aligns semantics across systems, making transformation and validation repeatable and auditable.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/task/t_CreateATransformMap.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/c_DataManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 72,
+		"prompt": "What is the strongest reason to maintain data lineage documentation for key fields?",
+		"choices": [
+			"It enables traceability from source to target for audits, defect triage, and compliance evidence",
+			"It replaces the need for validation testing",
+			"It ensures every migration can skip business sign-off",
+			"It allows schema changes without impact analysis"
+		],
+		"correctIndex": 0,
+		"explanation": "Lineage helps teams explain data provenance and transformation logic, which is essential for governance and regulated reporting.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_ImportSets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 73,
+		"prompt": "In governed data pipelines, what should trigger remediation workflows?",
+		"choices": [
+			"Rule violations that exceed defined quality thresholds for critical attributes",
+			"Any successful import completion event",
+			"The creation of new update sets in development",
+			"User preference changes in personal dashboards"
+		],
+		"correctIndex": 0,
+		"explanation": "Governed remediation is driven by threshold-based data quality exceptions tied to business-critical standards.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/c_DataManagement.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/reference/r_ImportSetTables.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 74,
+		"prompt": "Which metric best reflects data governance effectiveness after migration stabilization?",
+		"choices": [
+			"Sustained reduction in high-severity data defects and faster closure of quality issues",
+			"Total number of transform scripts created",
+			"Count of non-governed custom fields requested",
+			"Volume of manual data fixes performed outside process"
+		],
+		"correctIndex": 0,
+		"explanation": "Effective governance shows up as fewer critical defects and quicker, controlled remediation when issues do occur.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/c_DataManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 70,
+		"prompt": "What is a core responsibility of PA administration in enterprise environments?",
+		"choices": [
+			"Managing data collection schedules, indicator governance, and role-based access to analytics artifacts",
+			"Replacing all transactional reporting with external BI tools",
+			"Disabling score snapshots during business hours",
+			"Allowing unrestricted indicator creation in production"
+		],
+		"correctIndex": 0,
+		"explanation": "PA administration ensures reliable data collection and governed analytics lifecycle management across teams.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 71,
+		"prompt": "Why should PA admins baseline indicator sources before introducing new formulas?",
+		"choices": [
+			"To verify source data stability so formula changes are interpreted correctly",
+			"To avoid creating scorecards and widgets",
+			"To force all indicators to use scripted sources only",
+			"To disable historical comparisons during rollout"
+		],
+		"correctIndex": 0,
+		"explanation": "Baselining clarifies whether trend changes come from real performance shifts or from source/formula modifications.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_IndicatorSources.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 72,
+		"prompt": "Which access pattern is preferred for PA administration security?",
+		"choices": [
+			"Grant administrative roles by least privilege and separate content authors from platform administrators",
+			"Assign pa_admin to all dashboard consumers",
+			"Use only the admin role for all PA tasks",
+			"Remove role checks to simplify dashboard publishing"
+		],
+		"correctIndex": 0,
+		"explanation": "Role separation reduces risk while allowing specialized users to create content without full administrative permissions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/roles/concept/c_Roles.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 73,
+		"prompt": "What is the best operational response when PA data collection jobs repeatedly miss schedule windows?",
+		"choices": [
+			"Review job configuration, load timing, and query performance, then rebalance schedules and optimization targets",
+			"Disable all breakdowns permanently",
+			"Delete historical snapshots to reduce job runtime immediately",
+			"Move all PA work to client-side scripts"
+		],
+		"correctIndex": 0,
+		"explanation": "Missed collection windows are typically addressed by tuning job design and scheduling relative to instance load and query complexity.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 74,
+		"prompt": "Which governance artifact is most useful for long-term PA administration continuity?",
+		"choices": [
+			"A maintained catalog of indicators, ownership, formulas, schedules, and downstream dashboard dependencies",
+			"An informal list of widget names in a team chat",
+			"A one-time export of dashboard screenshots only",
+			"A policy that all indicators use identical thresholds"
+		],
+		"correctIndex": 0,
+		"explanation": "A governed analytics catalog preserves operational knowledge, supports impact analysis, and improves maintainability during team transitions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 70,
+		"prompt": "For CSP integrations, what approach best supports scalable onboarding of new partner systems?",
+		"choices": [
+			"Use standardized integration contracts with reusable authentication, mapping, and error-handling patterns",
+			"Implement each partner integration with unique undocumented scripts",
+			"Require manual CSV uploads as the primary integration method",
+			"Disable retries to prevent duplicate transactions"
+		],
+		"correctIndex": 0,
+		"explanation": "Standardized patterns reduce onboarding time, improve consistency, and simplify support as integration count grows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/integrationhub/concept/IntegrationHub.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/web-services/concept/c_RESTAPI.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 71,
+		"prompt": "Why is idempotency important in event-driven CSP integrations?",
+		"choices": [
+			"It prevents duplicate side effects when the same message is retried or delivered more than once",
+			"It guarantees external APIs never return errors",
+			"It removes the need for correlation identifiers",
+			"It allows events to bypass authorization checks"
+		],
+		"correctIndex": 0,
+		"explanation": "Idempotent processing ensures retries are safe and system state remains consistent under real-world delivery behavior.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/integrationhub/reference/r_FlowDesignerErrorHandling.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/web-services/concept/c_RESTAPI.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 72,
+		"prompt": "Which security practice is most appropriate for outbound CSP integration credentials?",
+		"choices": [
+			"Store credentials in platform-managed secure records and rotate them under policy",
+			"Embed credentials directly in scripts for faster deployment",
+			"Share one static credential across all tenants indefinitely",
+			"Disable credential encryption in non-production environments"
+		],
+		"correctIndex": 0,
+		"explanation": "Managed credential storage and rotation reduce exposure risk and support auditable security operations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_CredentialsAndSecrets.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/integrationhub/concept/IntegrationHub.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 73,
+		"prompt": "What is the primary benefit of correlation IDs across CSP integration flows?",
+		"choices": [
+			"They enable end-to-end traceability for troubleshooting across distributed systems",
+			"They replace all logging requirements",
+			"They eliminate the need for API versioning",
+			"They guarantee synchronous processing behavior"
+		],
+		"correctIndex": 0,
+		"explanation": "Correlation IDs tie related transactions together, making it far easier to diagnose failures across platform and partner boundaries.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/web-services/concept/c_OutboundRESTWebServices.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 74,
+		"prompt": "As final-track coverage reaches orders 0-74, which CSP integration metric best indicates sustainable operations?",
+		"choices": [
+			"Stable success rates with low mean time to detect and resolve integration failures",
+			"Highest possible request volume regardless of error rate",
+			"Maximum number of custom connectors per partner",
+			"Fewest documented runbook procedures"
+		],
+		"correctIndex": 0,
+		"explanation": "Sustainable integrations are measured by reliability and operational responsiveness, not raw throughput or complexity.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/integrationhub/concept/IntegrationHub.html"
+		]
+	}
+]

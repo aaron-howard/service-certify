@@ -1,0 +1,87 @@
+[
+  {
+    "trackCode": "CIS-SPM",
+    "order": 85,
+    "prompt": "Which administrative control most improves SPM data trust?",
+    "choices": [
+      "Defined ownership and stewardship for portfolio, demand, and financial records",
+      "Open edit access for all itil users",
+      "No required fields on investment records",
+      "Manual offline updates without synchronization"
+    ],
+    "correctIndex": 0,
+    "explanation": "Data stewardship and clear ownership are foundational for reliable SPM decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-portfolio-management/concept/spm-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 86,
+    "prompt": "How should SPM administrators handle configuration changes to scoring or prioritization models?",
+    "choices": [
+      "Use change governance with testing, versioning, and stakeholder communication",
+      "Apply direct production edits with no documentation",
+      "Let each PMO lead use different live logic",
+      "Reset all historical rankings after every update"
+    ],
+    "correctIndex": 0,
+    "explanation": "Controlled, versioned changes preserve comparability and governance confidence over time.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/demand-management/concept/demand-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 87,
+    "prompt": "Which role model best supports SPM administration at enterprise scale?",
+    "choices": [
+      "Central governance team with delegated portfolio managers operating under common standards",
+      "Single administrator owning all planning and reporting tasks",
+      "Unstructured local administrators with no central standards",
+      "No role separation between requesters and approvers"
+    ],
+    "correctIndex": 0,
+    "explanation": "A federated model with central standards balances consistency and domain accountability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 88,
+    "prompt": "What is the best administrative practice for SPM reporting definitions?",
+    "choices": [
+      "Maintain a governed KPI dictionary with standard formulas and threshold logic",
+      "Allow each dashboard author to define KPIs independently",
+      "Rename KPIs each quarter for flexibility",
+      "Avoid storing formula definitions"
+    ],
+    "correctIndex": 0,
+    "explanation": "Governed metric definitions reduce interpretation drift and improve cross-portfolio comparability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 89,
+    "prompt": "Which KPI combination best indicates mature SPM administration?",
+    "choices": [
+      "Low data exception rates, high on-time governance reviews, and consistent forecast accuracy",
+      "Higher number of urgent manual data fixes",
+      "More duplicate investment records each quarter",
+      "Longer delays in funding decision cycles"
+    ],
+    "correctIndex": 0,
+    "explanation": "Administrative maturity shows in data quality, governance discipline, and planning reliability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/financial-planning/concept/financial-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  }
+]

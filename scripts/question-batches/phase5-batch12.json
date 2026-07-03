@@ -1,0 +1,242 @@
+[
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 60,
+		"prompt": "How does Discovery most directly contribute to CMDB update quality?",
+		"choices": [
+			"By supplying current configuration data that is processed through identification and reconciliation",
+			"By bypassing CMDB identification rules for faster inserts",
+			"By writing only to custom extension tables",
+			"By suppressing stale CI detection"
+		],
+		"correctIndex": 0,
+		"explanation": "Discovery data quality depends on IRE-driven update logic that prevents duplication and preserves authoritative source behavior.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/product/configuration-management/concept/identification-and-reconciliation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 61,
+		"prompt": "Which control should be reviewed when discovered attributes are not updating expected CI fields?",
+		"choices": [
+			"Stockroom transfer priorities",
+			"CMDB identification and reconciliation rules for that class",
+			"Maintenance-window ownership",
+			"Loaner return reminders"
+		],
+		"correctIndex": 1,
+		"explanation": "When updates do not apply as expected, class-level identification and reconciliation policy is the first governance point to inspect.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/identification-and-reconciliation-rules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 62,
+		"prompt": "Why is source precedence important for CMDB updates from multiple discovery feeds?",
+		"choices": [
+			"It removes the need for CI relationships",
+			"It guarantees one MID Server handles all updates",
+			"It prevents lower-authority sources from overwriting trusted attribute values",
+			"It forces all updates into the cmdb_ci table only"
+		],
+		"correctIndex": 2,
+		"explanation": "Source precedence ensures data stewardship by controlling which feed is authoritative for specific attributes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/product/configuration-management/concept/reconciliation-rules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 63,
+		"prompt": "After Discovery tuning, what validation best confirms CMDB update integrity?",
+		"choices": [
+			"Only checking MID Server heartbeat",
+			"Only confirming discovery schedule completion",
+			"Only counting ECC queue rows",
+			"Sampling CIs to verify expected attributes and relationships match observed infrastructure"
+		],
+		"correctIndex": 3,
+		"explanation": "Direct CI sampling validates that updated records reflect real environments rather than just successful job execution.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/product/configuration-management/task/validate-cmdb-data.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 64,
+		"prompt": "Which metric best indicates CMDB updates from discovery are improving over time?",
+		"choices": [
+			"Higher CI completeness with fewer duplicate or disputed records",
+			"Maximum number of connector templates created",
+			"Increased manual CI edits after every discovery run",
+			"More transfer orders per stockroom"
+		],
+		"correctIndex": 0,
+		"explanation": "Improvement is reflected by better data completeness and reduced duplicate or conflicting CI records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/use/reporting/concept/c_ReportingAndAnalytics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 60,
+		"prompt": "In Event Management, event analytics is primarily used for what purpose?",
+		"choices": [
+			"Deriving operational insight from event trends and patterns to improve response",
+			"Replacing all connector ingestion logic",
+			"Preventing any alert creation",
+			"Managing hardware asset depreciation schedules"
+		],
+		"correctIndex": 0,
+		"explanation": "Event analytics helps teams interpret signal patterns and improve operational decision-making beyond single-event triage.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/exploring-event-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 61,
+		"prompt": "Which event analytics practice most improves actionable reporting?",
+		"choices": [
+			"Ignoring CI context to reduce dashboard complexity",
+			"Grouping by service, severity, and time windows to identify recurring hotspots",
+			"Deleting closed alerts daily regardless of retention policy",
+			"Disabling event normalization for all connectors"
+		],
+		"correctIndex": 1,
+		"explanation": "Contextual grouping helps reveal persistent failure patterns and supports targeted reliability improvements.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/use/reporting/concept/c_PerformanceAnalyticsAndReporting.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 62,
+		"prompt": "What should teams watch when event volume rises but actionable alerts stay flat?",
+		"choices": [
+			"Only disposal-cycle metrics",
+			"Only stockroom occupancy levels",
+			"Signal quality, deduplication, and normalization effectiveness",
+			"Only discovery schedule frequency"
+		],
+		"correctIndex": 2,
+		"explanation": "Volume growth without actionable outcomes often indicates quality issues in filtering, deduplication, or normalized classification.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/event-rules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 63,
+		"prompt": "Why should event analytics dashboards include change and maintenance context?",
+		"choices": [
+			"To remove need for alert ownership",
+			"To suppress all events during business hours",
+			"To eliminate CI relationships",
+			"To separate planned activity from true anomalies when evaluating trends"
+		],
+		"correctIndex": 3,
+		"explanation": "Overlaying operational context improves interpretation accuracy so teams can distinguish expected change-related noise from incidents.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/change-management/change-calendar.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 64,
+		"prompt": "Which KPI most directly reflects successful event analytics adoption?",
+		"choices": [
+			"Reduced mean time to detect recurring issues and fewer repeat alert storms",
+			"Highest connector count regardless of quality",
+			"No dashboard updates after initial launch",
+			"Manual event tagging by every operator"
+		],
+		"correctIndex": 0,
+		"explanation": "Strong analytics adoption produces measurable improvements in detection speed and recurring issue control.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/use/reporting/concept/c_ReportingAndAnalytics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 60,
+		"prompt": "In HAM, normalization is primarily intended to improve what?",
+		"choices": [
+			"Consistency of hardware model, manufacturer, and attribute data across asset records",
+			"Event connector throughput",
+			"Maintenance-window suppression scope",
+			"Discovery credential rotation"
+		],
+		"correctIndex": 0,
+		"explanation": "Normalization improves data consistency so reporting, lifecycle decisions, and operational workflows rely on trustworthy model data.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/normalize-hardware-models.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 61,
+		"prompt": "Which issue most strongly signals poor normalization in hardware records?",
+		"choices": [
+			"Stable model naming conventions",
+			"Duplicate model variants for the same physical item",
+			"Consistent manufacturer references",
+			"Reduced reconciliation exceptions"
+		],
+		"correctIndex": 1,
+		"explanation": "Duplicate variants and inconsistent naming usually indicate normalization gaps that fragment reporting and lifecycle automation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-model-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 62,
+		"prompt": "How does normalization improve procurement and fulfillment alignment?",
+		"choices": [
+			"It removes the need for model categories",
+			"It disables stockroom inventory controls",
+			"It maps incoming variants to governed model records used in downstream processes",
+			"It replaces transfer orders with incidents"
+		],
+		"correctIndex": 2,
+		"explanation": "Mapping variants to standard models keeps catalog, procurement, and inventory workflows aligned to authoritative data.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/manage-hardware-models.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 63,
+		"prompt": "What is the best operational response when normalization rules classify a new model incorrectly?",
+		"choices": [
+			"Disable all normalization jobs indefinitely",
+			"Delete all affected assets",
+			"Force manual edits without root-cause analysis",
+			"Refine normalization criteria and revalidate impacted records with governance review"
+		],
+		"correctIndex": 3,
+		"explanation": "Controlled rule refinement and targeted validation correct classification issues while preserving data governance discipline.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/administer/business-rules/concept/c_BusinessRules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 64,
+		"prompt": "Which KPI best indicates normalization maturity in HAM?",
+		"choices": [
+			"Lower duplicate-model rate and higher first-pass model classification accuracy",
+			"Maximum number of stockrooms per location",
+			"More manual model edits each week",
+			"Higher event ingestion volume"
+		],
+		"correctIndex": 0,
+		"explanation": "Mature normalization is reflected by fewer duplicates and more accurate model classification without recurring manual correction.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/use/reporting/concept/c_ReportingAndAnalytics.html"
+		]
+	}
+]

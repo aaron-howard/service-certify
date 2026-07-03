@@ -1,0 +1,244 @@
+[
+	{
+		"trackCode": "CIS-DF",
+		"order": 25,
+		"prompt": "In Identification and Reconciliation (I&R), what is the primary role of an identification rule?",
+		"choices": [
+			"To decide which data source can overwrite a CI attribute",
+			"To determine if incoming values violate dictionary constraints",
+			"To uniquely match incoming data to an existing CI or create a new CI",
+			"To archive stale CIs after a discovery schedule finishes"
+		],
+		"correctIndex": 2,
+		"explanation": "Identification rules define the criteria I&R uses to determine whether incoming data maps to an existing CI or requires creating a new CI.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_IdentificationAndReconciliationEngine.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 26,
+		"prompt": "What happens when multiple identification entries are configured for a CI class in I&R?",
+		"choices": [
+			"The platform randomly selects one entry at runtime",
+			"They are evaluated in sequence until a match is found",
+			"All entries must match simultaneously before update",
+			"Only the most recently edited entry is considered"
+		],
+		"correctIndex": 1,
+		"explanation": "I&R evaluates identification entries in order and stops when it can confidently identify a CI.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/task/t_CreateIdentificationRules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 27,
+		"prompt": "Which statement best describes reconciliation rules in CMDB?",
+		"choices": [
+			"They govern which source is allowed to write specific attributes after identification",
+			"They generate discovery patterns automatically",
+			"They prevent all updates from integration sources",
+			"They are only applied to non-CMDB tables"
+		],
+		"correctIndex": 0,
+		"explanation": "Reconciliation rules control attribute-level write authority by source once the CI has been identified.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/task/t_CreateReconciliationRules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 28,
+		"prompt": "Why should source precedence be defined for key CI attributes such as serial number and model?",
+		"choices": [
+			"To reduce duplicate scheduled jobs",
+			"To ensure trusted sources consistently win attribute conflicts",
+			"To force all integrations to update through import sets only",
+			"To avoid running the identification engine"
+		],
+		"correctIndex": 1,
+		"explanation": "Source precedence in reconciliation prevents low-trust data from overwriting critical CI attributes maintained by authoritative systems.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_ReconciliationRules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 29,
+		"prompt": "A CI update was identified correctly but skipped for one attribute. What is the most likely reason?",
+		"choices": [
+			"The CI class is marked read-only in dictionary",
+			"The discovery schedule was paused",
+			"A reconciliation rule blocked that source from updating the attribute",
+			"The table has no ACL for admin users"
+		],
+		"correctIndex": 2,
+		"explanation": "When identification succeeds but a field is not updated, reconciliation controls are the typical cause.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_ReconciliationRules.html",
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_IdentificationAndReconciliationEngine.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 25,
+		"prompt": "In Performance Analytics, what is a target used for?",
+		"choices": [
+			"To define a desired threshold or goal against an indicator value",
+			"To automatically assign incidents when KPI is breached",
+			"To replace collection jobs for breakdown indicators",
+			"To set ACL rules on scorecard widgets"
+		],
+		"correctIndex": 0,
+		"explanation": "Targets represent expected or desired performance values for indicators and are used to evaluate actual scores.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Targets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 26,
+		"prompt": "When configuring a target, why would an admin choose a relative target instead of a fixed value?",
+		"choices": [
+			"Relative targets allow dynamic goals that change with historical or baseline values",
+			"Relative targets disable indicator breakdowns",
+			"Relative targets are required for all automated indicators",
+			"Relative targets can only be used for scripted sources"
+		],
+		"correctIndex": 0,
+		"explanation": "Relative targets support goals that move based on trend or baseline context rather than using one static number.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_CreateATarget.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 27,
+		"prompt": "What is the benefit of setting warning and critical target states for an indicator?",
+		"choices": [
+			"They increase data collection frequency automatically",
+			"They provide visual performance status bands for interpretation",
+			"They remove the need for thresholds",
+			"They lock scorecards from manual edits"
+		],
+		"correctIndex": 1,
+		"explanation": "Warning and critical states help users quickly interpret KPI status through consistent visual thresholds.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_TargetsAndThresholds.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 28,
+		"prompt": "A KPI should improve quarter-over-quarter by 5%. Which target strategy is most appropriate?",
+		"choices": [
+			"Use a static target with no historical dependency",
+			"Use a target relative to a prior period value",
+			"Disable target evaluation and rely on reports",
+			"Use only benchmark records"
+		],
+		"correctIndex": 1,
+		"explanation": "Relative targets are designed for goals expressed as improvement or change from prior periods.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_CreateATarget.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 29,
+		"prompt": "Which artifact in PA is evaluated against targets to show whether performance is on track?",
+		"choices": [
+			"Indicator scores",
+			"Update set commits",
+			"ACL execution plans",
+			"Import set transforms"
+		],
+		"correctIndex": 0,
+		"explanation": "Targets are applied to indicator scores so users can compare actual performance to expected outcomes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Indicators.html",
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Targets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 25,
+		"prompt": "In telecom order management, what is the purpose of decomposing a customer order into technical tasks?",
+		"choices": [
+			"To avoid using catalog items for telecom products",
+			"To break high-level services into fulfillment actions for underlying systems and teams",
+			"To skip orchestration and fulfill manually",
+			"To merge all order lines into one CI update"
+		],
+		"correctIndex": 1,
+		"explanation": "Order decomposition translates customer-facing requests into executable fulfillment work across domains and systems.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/telecommunications-service-management/australia/order-management/concept/c_OrderManagementForTelecom.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 26,
+		"prompt": "Which capability is most important for managing complex telecom service orders with multiple dependencies?",
+		"choices": [
+			"Manual assignment only",
+			"Dictionary overrides",
+			"Orchestration with dependency-aware workflow sequencing",
+			"Disabling state models"
+		],
+		"correctIndex": 2,
+		"explanation": "Complex telecom fulfillment requires orchestration logic that honors dependencies between provisioning steps.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/telecommunications-service-management/australia/order-management/concept/c_ServiceOrderFulfillment.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 27,
+		"prompt": "Why is order fallout handling critical in telecom order management?",
+		"choices": [
+			"It permanently closes failed orders to simplify reporting",
+			"It helps detect, route, and resolve fulfillment exceptions before customer impact grows",
+			"It disables retries for failed orchestration steps",
+			"It only applies to test environments"
+		],
+		"correctIndex": 1,
+		"explanation": "Fallout handling provides controlled recovery paths for failed or exception-based fulfillment events.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/telecommunications-service-management/australia/order-management/concept/c_OrderFalloutManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 28,
+		"prompt": "What does end-to-end order visibility primarily provide to telecom operations teams?",
+		"choices": [
+			"A single audit view of order status across decomposition and fulfillment stages",
+			"Automatic user provisioning in all downstream systems",
+			"A replacement for service inventory",
+			"Removal of SLA tracking from order tasks"
+		],
+		"correctIndex": 0,
+		"explanation": "Operational visibility helps teams monitor status, detect blockers, and communicate progress across the full order lifecycle.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/telecommunications-service-management/australia/order-management/concept/c_OrderLifecycleManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 29,
+		"prompt": "Which data quality practice most improves telecom order automation success?",
+		"choices": [
+			"Allowing free-text product identifiers in all integrations",
+			"Maintaining consistent product/service definitions used by ordering and fulfillment systems",
+			"Running order orchestration without validation",
+			"Disabling catalog governance for speed"
+		],
+		"correctIndex": 1,
+		"explanation": "Automation reliability depends on consistent service and product data across order capture and fulfillment.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/telecommunications-service-management/australia/order-management/concept/c_ProductAndServiceCatalogAlignment.html"
+		]
+	}
+]

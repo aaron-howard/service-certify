@@ -1,0 +1,402 @@
+[
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 35,
+    "prompt": "What is the main purpose of vendor tiering in Third-Party Risk Management?",
+    "choices": [
+      "Assign all vendors the same assessment depth",
+      "Differentiate oversight and control rigor based on business criticality and risk exposure",
+      "Rank vendors only by contract value",
+      "Replace due diligence with annual surveys"
+    ],
+    "correctIndex": 1,
+    "explanation": "Tiering enables proportional governance so high-impact vendors receive stronger and more frequent risk scrutiny.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-tiering.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 36,
+    "prompt": "Which criterion is typically most important when assigning a vendor to a higher tier?",
+    "choices": [
+      "Number of vendor marketing emails",
+      "Potential operational, regulatory, or data impact if the vendor fails",
+      "Vendor office decor standards",
+      "Frequency of travel to vendor sites"
+    ],
+    "correctIndex": 1,
+    "explanation": "Tiering should reflect risk impact and dependency, not cosmetic or low-relevance attributes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/task/configure-tiering-criteria.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 37,
+    "prompt": "How does effective tiering influence assessment cadence?",
+    "choices": [
+      "All tiers use one fixed reassessment schedule",
+      "Higher tiers are assessed more frequently and with deeper control validation",
+      "Lower tiers are assessed more frequently than critical tiers",
+      "Cadence is based only on vendor response speed"
+    ],
+    "correctIndex": 1,
+    "explanation": "Risk-based cadence aligns assessment effort with potential business impact.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/concept/c_AssessmentLifecycleTPRM.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 38,
+    "prompt": "What governance issue arises when tier assignments are not periodically reviewed?",
+    "choices": [
+      "Automatic increase in evidence quality",
+      "Outdated tiering can misalign monitoring intensity with current risk and business dependency",
+      "Fewer reassessment triggers for high-risk vendors",
+      "Guaranteed improvement in SLA compliance"
+    ],
+    "correctIndex": 1,
+    "explanation": "Vendor context changes over time, so stale tiering can create over- or under-governance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/task/review-third-party-profiles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 39,
+    "prompt": "Which outcome indicates a mature vendor tiering model?",
+    "choices": [
+      "Tier exceptions are undocumented",
+      "Assessment depth, monitoring controls, and escalation paths are consistently mapped to each tier",
+      "All vendors are marked as medium tier",
+      "Tiering is managed only in offline spreadsheets"
+    ],
+    "correctIndex": 1,
+    "explanation": "Mature tiering translates into operationally consistent risk treatment and clear governance expectations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management-workspace.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 35,
+    "prompt": "What is the primary value of imported scan results in Vulnerability Response?",
+    "choices": [
+      "They replace CMDB relationships",
+      "They provide the raw vulnerability findings used for normalization, prioritization, and remediation workflows",
+      "They close vulnerabilities automatically without review",
+      "They disable assignment group routing"
+    ],
+    "correctIndex": 1,
+    "explanation": "Scan ingest is the starting point for turning detection data into actionable remediation records.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/c_VRDataIngestion.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 36,
+    "prompt": "Which practice most improves trust in scan-derived vulnerability records?",
+    "choices": [
+      "Ignore duplicate findings from multiple scanners",
+      "Use normalization and deduplication rules with CI correlation validation",
+      "Treat every scanner as equally configured and calibrated",
+      "Prioritize vulnerabilities by import timestamp only"
+    ],
+    "correctIndex": 1,
+    "explanation": "Normalization and reliable CI mapping reduce noise and improve the accuracy of remediation targeting.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/task/t_NormalizeAndCorrelateVulnData.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 37,
+    "prompt": "Why should VR teams validate scanner integration health regularly?",
+    "choices": [
+      "To eliminate remediation ownership",
+      "To ensure scan coverage, import freshness, and pipeline reliability for risk visibility",
+      "To prevent vulnerability grouping",
+      "To remove low-risk findings from history"
+    ],
+    "correctIndex": 1,
+    "explanation": "Integration issues can create blind spots or stale data that undermine prioritization and response decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/task/t_MonitorScannerIntegrations.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 38,
+    "prompt": "What is the best response when scan results show critical findings on unmanaged assets?",
+    "choices": [
+      "Close findings due to missing ownership",
+      "Initiate CI ownership remediation and route findings through exception or containment workflow",
+      "Suppress all unmanaged asset vulnerabilities",
+      "Convert findings directly into incidents only"
+    ],
+    "correctIndex": 1,
+    "explanation": "Unmanaged assets still represent exposure and should trigger ownership correction plus controlled risk treatment.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/c_AssetExposureManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 39,
+    "prompt": "Which metric best reflects scan result pipeline quality?",
+    "choices": [
+      "Number of closed change requests",
+      "Import success rate and median time from scanner detection to VR record availability",
+      "Count of assignment groups in ITSM",
+      "Total CI count in CMDB"
+    ],
+    "correctIndex": 1,
+    "explanation": "Data pipeline timeliness and reliability are essential for near-real-time vulnerability operations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/vr-performance-analytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 35,
+    "prompt": "In CSM, what does B2B case management primarily emphasize?",
+    "choices": [
+      "Anonymous consumer-only interactions",
+      "Account-aware support with contacts, entitlements, and contractual context",
+      "Disabling partner relationships",
+      "Routing all cases to HR teams"
+    ],
+    "correctIndex": 1,
+    "explanation": "B2B support requires visibility into account structures, service contracts, and business impact across customers.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/c_B2BCaseManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 36,
+    "prompt": "Which data relationship is most critical for B2B CSM operations?",
+    "choices": [
+      "Case to random social profile",
+      "Case to account, contact, product/asset, and entitlement",
+      "Case to office floorplan",
+      "Case to unrelated procurement request"
+    ],
+    "correctIndex": 1,
+    "explanation": "These core relationships drive eligibility, routing, and accurate support execution for business customers.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/case-data-model.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 37,
+    "prompt": "How should entitlement rules be used in B2B case handling?",
+    "choices": [
+      "Only for analytics after closure",
+      "To enforce support eligibility, response commitments, and escalation paths based on customer agreements",
+      "To prevent account teams from viewing cases",
+      "To automatically downgrade all priorities"
+    ],
+    "correctIndex": 1,
+    "explanation": "Entitlement policies ensure contractual commitments are honored consistently during case lifecycle execution.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/c_EntitlementManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 38,
+    "prompt": "What is a key governance control for multi-contact B2B accounts?",
+    "choices": [
+      "Allow any contact to view all account cases",
+      "Apply role-based contact access and account-level visibility policies",
+      "Route all communication to personal email inboxes",
+      "Disable case audit history"
+    ],
+    "correctIndex": 1,
+    "explanation": "Controlled access protects customer confidentiality while still enabling collaborative support across account contacts.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/task/configure-contact-access-controls.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-CSM",
+    "order": 39,
+    "prompt": "Which KPI best demonstrates strong B2B CSM performance?",
+    "choices": [
+      "Number of inactive user records",
+      "Account-level SLA attainment and repeat-case reduction for contracted services",
+      "Count of catalog categories",
+      "Number of attachment uploads per case"
+    ],
+    "correctIndex": 1,
+    "explanation": "Contract-driven SLA performance and reduced recurrence are direct indicators of healthy enterprise customer support.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-customer-service-management/page/product/customer-service-management/concept/c_CSMAnalyticsAndDashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 35,
+    "prompt": "What is the main goal of improving the field agent experience in FSM?",
+    "choices": [
+      "Increase manual paperwork requirements",
+      "Enable technicians to complete work efficiently with mobile guidance, context, and streamlined task flow",
+      "Remove offline access capabilities",
+      "Require dispatch approval for every checklist item"
+    ],
+    "correctIndex": 1,
+    "explanation": "A strong agent experience reduces friction in the field and improves productivity and service quality.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/mobile-agent-experience.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 36,
+    "prompt": "Which mobile capability is most important for technicians in low-connectivity environments?",
+    "choices": [
+      "Animated dashboards only",
+      "Offline access to work orders, task steps, and data capture that syncs when reconnected",
+      "Real-time video streaming requirement",
+      "Forced VPN reconnect every five minutes"
+    ],
+    "correctIndex": 1,
+    "explanation": "Offline-first workflows prevent service delays when technicians work in areas with unreliable connectivity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/configure-mobile-fsm.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 37,
+    "prompt": "How can FSM leaders reduce technician cognitive load during appointments?",
+    "choices": [
+      "Show every possible form field",
+      "Use guided task templates, clear status transitions, and context-aware quick actions",
+      "Require multiple duplicate checklists",
+      "Hide customer and asset details"
+    ],
+    "correctIndex": 1,
+    "explanation": "Structured and focused workflows help technicians execute reliably without unnecessary UI complexity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/work-order-tasks.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 38,
+    "prompt": "Which feedback loop best supports ongoing field agent experience improvements?",
+    "choices": [
+      "Annual review only with no telemetry",
+      "Combine technician feedback with mobile usage analytics and completion outcomes",
+      "Only evaluate dispatch center feedback",
+      "Disable survey collection after go-live"
+    ],
+    "correctIndex": 1,
+    "explanation": "Operational telemetry plus frontline feedback provides actionable insight for iterative experience improvements.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/fsm-analytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 39,
+    "prompt": "Which outcome most clearly indicates an improved FSM agent experience?",
+    "choices": [
+      "Higher appointment duration with no quality gain",
+      "Lower admin time per job and increased first-time fix performance",
+      "More manual dispatch overrides",
+      "Reduced completion notes quality"
+    ],
+    "correctIndex": 1,
+    "explanation": "Reduced administrative burden and better field outcomes show that tools and workflows are supporting technicians effectively.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/field-service-management-workspace.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 35,
+    "prompt": "What is the primary role of knowledge management in HR Service Delivery?",
+    "choices": [
+      "Replace all HR cases",
+      "Provide trusted, reusable guidance that supports self-service and consistent agent responses",
+      "Limit content creation to IT teams",
+      "Hide policy updates from employees"
+    ],
+    "correctIndex": 1,
+    "explanation": "High-quality HR knowledge improves self-service outcomes and reduces variance in assisted support.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/knowledge-management/concept/knowledge-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 36,
+    "prompt": "Which governance practice most improves HR knowledge quality?",
+    "choices": [
+      "Publish all drafts immediately",
+      "Use ownership, review cycles, and approval workflows for policy-sensitive content",
+      "Archive articles after first use",
+      "Disable feedback mechanisms"
+    ],
+    "correctIndex": 1,
+    "explanation": "Governed review and approval ensures HR content remains accurate, current, and policy-compliant.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/knowledge-management/task/configure-knowledge-workflow.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 37,
+    "prompt": "How should HR teams prioritize article improvements?",
+    "choices": [
+      "By article title length",
+      "By search analytics, deflection impact, and negative feedback trends",
+      "By oldest creation date only",
+      "By number of attachments"
+    ],
+    "correctIndex": 1,
+    "explanation": "Usage and outcome data helps prioritize updates that most improve employee experience and support efficiency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/knowledge-management/concept/knowledge-analytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 38,
+    "prompt": "What access model is best for mixed public and confidential HR knowledge?",
+    "choices": [
+      "One shared unrestricted knowledge base",
+      "Segmented knowledge bases and user criteria aligned to audience and sensitivity",
+      "No ACLs on HR articles",
+      "Manual sharing by email only"
+    ],
+    "correctIndex": 1,
+    "explanation": "Segmentation and access criteria protect sensitive HR content while preserving broad self-service where appropriate.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/knowledge-management/concept/c_KnowledgeUserCriteria.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 39,
+    "prompt": "Which KPI best indicates HR knowledge effectiveness?",
+    "choices": [
+      "Number of knowledge categories",
+      "Knowledge article usefulness ratings and HR case deflection rate",
+      "Count of admin users",
+      "Average attachment size"
+    ],
+    "correctIndex": 1,
+    "explanation": "Usefulness feedback plus deflection outcomes shows whether knowledge is solving employee needs without assisted handling.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/hr-service-delivery/concept/hr-analytics.html"
+    ]
+  }
+]

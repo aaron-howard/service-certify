@@ -1,0 +1,257 @@
+[
+	{
+		"trackCode": "CIS-DF",
+		"order": 65,
+		"prompt": "When preparing a source clone for historical migration, which action best preserves reliable timeline analytics?",
+		"choices": [
+			"Normalize legacy timestamps and retain immutable created/updated metadata mappings before load",
+			"Replace all historical timestamps with the migration execution date",
+			"Drop audit-related fields to speed up import performance",
+			"Load records without preserving source system identifiers"
+		],
+		"correctIndex": 0,
+		"explanation": "Reliable trend analysis depends on preserving temporal context, so timestamp normalization and source metadata mapping should be established before cloning and loading.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_ImportSets.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/table-administration/concept/c_ExtendingTables.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 66,
+		"prompt": "What is the most effective way to prepare clone data when duplicate users exist across merged business units?",
+		"choices": [
+			"Create deterministic reconciliation rules using unique keys and survivorship criteria before import",
+			"Keep all duplicates and resolve identity issues after go-live",
+			"Delete all user records from the source clone before transformation",
+			"Map users only by display name for easier matching"
+		],
+		"correctIndex": 0,
+		"explanation": "Identity quality must be established in clone preparation using stable keys and survivorship rules to avoid downstream assignment and reporting defects.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/c_DataManagement.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/task/t_CreateATransformMap.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 67,
+		"prompt": "During clone data preparation, why should reference integrity checks run before full-load transformations?",
+		"choices": [
+			"To prevent orphaned relationships that break workflows, lookups, and reporting",
+			"To remove all reference fields and simplify table structure",
+			"To force every missing reference to point to the System Administrator user",
+			"To avoid using coalesce logic in transform maps"
+		],
+		"correctIndex": 0,
+		"explanation": "Reference integrity validation identifies broken dependencies early, reducing failed loads and post-migration remediation effort.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_Coalescing.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/table-administration/concept/c_DictionaryAttributes.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 68,
+		"prompt": "Which clone data prep pattern most improves repeatable test migrations?",
+		"choices": [
+			"Versioning transform scripts and data quality rules so the same pipeline can be rerun consistently",
+			"Editing production records directly during each test run",
+			"Creating one-time manual fixes without documenting steps",
+			"Skipping validation in lower environments to save time"
+		],
+		"correctIndex": 0,
+		"explanation": "Repeatable migrations require controlled, versioned transformation logic so each rehearsal produces predictable outputs and measurable improvements.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_TransformEventScripts.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/update-sets/concept/c_UpdateSets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 69,
+		"prompt": "What should be included in advanced clone data readiness gates before cutover?",
+		"choices": [
+			"Completeness, conformity, uniqueness, and referential integrity thresholds tied to business acceptance criteria",
+			"Only a row-count comparison between source and target",
+			"An assumption that all transformed records are valid if imports finish",
+			"A requirement that every field be populated regardless of design"
+		],
+		"correctIndex": 0,
+		"explanation": "Cutover readiness should be measured with multi-dimensional quality gates, not just load completion, to protect operational and reporting reliability.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/c_DataManagement.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/reference/r_ImportSetTables.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 65,
+		"prompt": "For an advanced indicator breakdown strategy, which design best supports actionable operational insight?",
+		"choices": [
+			"Use breakdown sources aligned to assignment, service, and priority dimensions with controlled cardinality",
+			"Break down by every free-text field to maximize granularity",
+			"Disable breakdown relations to reduce data model complexity",
+			"Use a single global breakdown for all indicators regardless of use case"
+		],
+		"correctIndex": 0,
+		"explanation": "Useful PA breakdowns balance analytical depth with manageable cardinality by focusing on dimensions tied to operational decisions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Breakdowns.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 66,
+		"prompt": "Why are scripted breakdown mappings used in complex PA implementations?",
+		"choices": [
+			"They allow dynamic categorization when source values require normalization before trend analysis",
+			"They permanently bypass data collector jobs",
+			"They eliminate the need for indicator sources",
+			"They replace scorecards and widgets in all dashboards"
+		],
+		"correctIndex": 0,
+		"explanation": "Scripted mapping is valuable when raw data must be transformed into consistent analytical categories for accurate and comparable trends.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/task/t_CreateABreakdownMapping.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_BreakdownMappings.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 67,
+		"prompt": "What is a key benefit of combining element filters with breakdowns in PA widgets?",
+		"choices": [
+			"They let analysts isolate specific cohorts while preserving context from strategic dimensions",
+			"They automatically disable historical snapshots for filtered results",
+			"They remove the need for indicator formulas",
+			"They force all widgets to use real-time transactional queries only"
+		],
+		"correctIndex": 0,
+		"explanation": "Element filters and breakdowns together help users drill into targeted populations without losing the broader analytical framework.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/reference/r_WidgetFilters.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Breakdowns.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 68,
+		"prompt": "In advanced PA breakdown governance, what approach helps prevent dimension sprawl?",
+		"choices": [
+			"Establish approval standards for new breakdowns based on decision value, reuse, and maintenance cost",
+			"Allow any dashboard owner to create unrestricted breakdown sources in production",
+			"Create duplicate breakdowns for each indicator to avoid sharing",
+			"Delete unused indicators whenever a new breakdown is requested"
+		],
+		"correctIndex": 0,
+		"explanation": "Governance criteria maintain analytical quality and platform performance by controlling unnecessary or redundant dimensions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Breakdowns.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 69,
+		"prompt": "When evaluating advanced breakdown design quality, which metric is most meaningful?",
+		"choices": [
+			"The percentage of dashboard decisions supported by clear, stable segmented trends",
+			"The total number of breakdown elements created each month",
+			"The count of unpublished widgets in development instances",
+			"The number of users with pa_admin role"
+		],
+		"correctIndex": 0,
+		"explanation": "Breakdown quality should be judged by decision support and trend stability, not simply by volume of configured elements.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DashboardsAndWidgets.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Breakdowns.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 65,
+		"prompt": "In a multi-tenant ServiceNow architecture, what pattern best isolates tenant-specific business rules?",
+		"choices": [
+			"Scope tenant logic into separate applications with controlled cross-scope access policies",
+			"Store all tenant logic in one global script include with no access restrictions",
+			"Disable application scopes to simplify deployment",
+			"Require tenant admins to edit base system scripts directly"
+		],
+		"correctIndex": 0,
+		"explanation": "Scoped applications and explicit cross-scope controls reduce coupling and improve tenant isolation, security, and maintainability.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-application-development/page/build/applications/concept/c_ApplicationScopes.html",
+			"https://www.servicenow.com/docs/bundle/zurich-application-development/page/build/applications/concept/c_CrossScopeAccess.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 66,
+		"prompt": "Why is data partitioning strategy critical in multi-tenant CSP implementations?",
+		"choices": [
+			"It enforces tenant data boundaries and supports compliant access patterns in shared infrastructure",
+			"It guarantees every tenant can query every table for troubleshooting",
+			"It removes the need for ACLs on sensitive records",
+			"It allows cloning tenant data into global tables without controls"
+		],
+		"correctIndex": 0,
+		"explanation": "Partitioning design, combined with security controls, is foundational to preventing cross-tenant data exposure in shared platforms.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/contextual-security/concept/c_AccessControls.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/table-administration/concept/c_ExtendingTables.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 67,
+		"prompt": "Which authentication pattern is most appropriate for multi-tenant CSP portals integrating external identity providers?",
+		"choices": [
+			"Use federation standards like SAML or OpenID Connect with tenant-aware identity mapping",
+			"Create one shared local account for all tenant users",
+			"Disable SSO to avoid tenant mapping complexity",
+			"Authenticate all tenants through a single admin credential"
+		],
+		"correctIndex": 0,
+		"explanation": "Federated identity with tenant-aware mapping supports secure, scalable authentication while preserving tenant separation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/integrate/single-sign-on/concept/sso-with-external-identity-providers.html",
+			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Authentication.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 68,
+		"prompt": "What integration design choice improves resilience in multi-tenant CSP event ingestion?",
+		"choices": [
+			"Queue and process events asynchronously with tenant-aware routing and retry controls",
+			"Process all events synchronously in user sessions",
+			"Discard failed events immediately to protect throughput",
+			"Route every event to a single tenant for validation"
+		],
+		"correctIndex": 0,
+		"explanation": "Asynchronous pipelines with routing and retry logic help isolate failures and preserve stable tenant-specific processing.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/integrationhub/concept/IntegrationHub.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/web-services/concept/c_RESTAPI.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 69,
+		"prompt": "Which operational practice best supports multi-tenant CSP pattern maturity over time?",
+		"choices": [
+			"Monitor tenant-segmented performance and security indicators, then iteratively tune architecture and controls",
+			"Apply identical static thresholds to all tenants indefinitely",
+			"Disable tenant-level logging to reduce storage cost",
+			"Allow tenants to modify platform security defaults directly"
+		],
+		"correctIndex": 0,
+		"explanation": "Tenant-aware observability enables evidence-based tuning that maintains performance and security as tenant usage patterns evolve.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/security-best-practices.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+		]
+	}
+]

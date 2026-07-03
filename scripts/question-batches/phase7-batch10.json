@@ -1,0 +1,172 @@
+[
+  {
+    "trackCode": "CIS-SAM",
+    "order": 50,
+    "prompt": "In SAM, what is the main purpose of defining software model lifecycles?",
+    "choices": [
+      "Control how titles progress from requestable to retired states for compliant governance",
+      "Replace all procurement approvals",
+      "Force every entitlement into one license metric",
+      "Disable product normalization jobs"
+    ],
+    "correctIndex": 0,
+    "explanation": "Lifecycle governance standardizes how software moves through planning, use, and retirement while preserving compliance controls.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-model-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 51,
+    "prompt": "Which action best supports CAL optimization in SAM after identifying underused subscriptions?",
+    "choices": [
+      "Increase blanket purchases immediately",
+      "Reclaim inactive assignments and redeploy existing rights before new spend",
+      "Disable usage collection to avoid noise",
+      "Convert subscription software to hardware assets"
+    ],
+    "correctIndex": 1,
+    "explanation": "CAL optimization is achieved by reclaiming and reusing entitlements before purchasing additional licenses.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-reclamation.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_ManageUserSubscriptions.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 52,
+    "prompt": "A SAM team tracks request, deploy, optimize, and retire stages. What is the biggest lifecycle risk if retire is unmanaged?",
+    "choices": [
+      "Fewer catalog requests are submitted",
+      "License metrics stop calculating permanently",
+      "Unused rights remain consumed, inflating compliance and cost exposure",
+      "Normalization rules are deleted automatically"
+    ],
+    "correctIndex": 2,
+    "explanation": "Unmanaged retirement leaves stale allocations and installations, which distorts effective license position and cost posture.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-lifecycle.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_RetireSoftwareAssets.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 53,
+    "prompt": "Which dashboard view is most useful for SAM lifecycle governance reviews?",
+    "choices": [
+      "Only discovery error logs from one subnet",
+      "List of closed incidents older than 18 months",
+      "Catalog item thumbnails grouped by color",
+      "Stage-based metrics showing demand, active usage, reclaim candidates, and retirement backlog"
+    ],
+    "correctIndex": 3,
+    "explanation": "Stage-based metrics reveal bottlenecks and waste points across the full software lifecycle.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 54,
+    "prompt": "What is the best governance control when introducing a new CAL-intensive software publisher?",
+    "choices": [
+      "Define lifecycle policy, ownership, and entitlement evidence requirements before broad rollout",
+      "Allow any requester to install without approval",
+      "Skip model normalization until true-up",
+      "Use one generic contract for all publishers"
+    ],
+    "correctIndex": 0,
+    "explanation": "Up-front lifecycle and evidence controls prevent uncontrolled growth and improve audit readiness for complex publishers.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-model-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-compliance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 50,
+    "prompt": "What is the main value of Portfolio Workspace in SPM?",
+    "choices": [
+      "A unified view to prioritize investments, monitor health, and drive portfolio decisions",
+      "A replacement for CMDB dependency mapping",
+      "A tool used only for service catalog approvals",
+      "A portal exclusively for software entitlement imports"
+    ],
+    "correctIndex": 0,
+    "explanation": "Portfolio Workspace centralizes decision-making context across demand, delivery, risk, and value dimensions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/concept/spm-workspace.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 51,
+    "prompt": "Which Portfolio Workspace practice best supports lifecycle governance from idea to outcome?",
+    "choices": [
+      "Use stage gates with criteria for advancing demands, initiatives, and investments",
+      "Keep all records permanently in draft state",
+      "Allow stage transitions without approvals",
+      "Track lifecycle progress only in slide decks"
+    ],
+    "correctIndex": 0,
+    "explanation": "Stage gates enforce consistent governance and reduce portfolio drift by requiring evidence at each transition.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/task/configure-stage-gates.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/task/manage-portfolio-work.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 52,
+    "prompt": "A PMO wants faster reallocation of budget between portfolios. Which Portfolio Workspace capability helps most?",
+    "choices": [
+      "Incident assignment rules by service desk shift",
+      "Cross-portfolio financial views and scenario-based funding comparisons",
+      "Endpoint credential rotation schedules",
+      "CMDB class hierarchy visualizations"
+    ],
+    "correctIndex": 1,
+    "explanation": "Financial and scenario views enable comparative decisions on where funds should move for highest strategic return.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-financials.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/scenario-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 53,
+    "prompt": "Which anti-pattern most reduces confidence in Portfolio Workspace decisions?",
+    "choices": [
+      "Using consistent scoring criteria across portfolios",
+      "Reviewing dependency risk during prioritization",
+      "Operating with stale data and infrequent health updates",
+      "Tracking realization against planned outcomes"
+    ],
+    "correctIndex": 2,
+    "explanation": "Decisions are only as good as portfolio data quality and recency; stale status creates false priorities.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/concept/spm-workspace.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/data-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 54,
+    "prompt": "What KPI set is most appropriate for Portfolio Workspace leadership dashboards?",
+    "choices": [
+      "Total number of incident assignments per analyst",
+      "Database index fragmentation and node uptime",
+      "Count of archived change requests by month",
+      "Investment health, value delivery, financial variance, and strategic alignment coverage"
+    ],
+    "correctIndex": 3,
+    "explanation": "These KPIs combine delivery execution, value realization, and strategic fit for informed portfolio steering.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/task/configure-workspace-dashboards.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  }
+]

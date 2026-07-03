@@ -1,0 +1,402 @@
+[
+  {
+    "trackCode": "CPOE",
+    "order": 175,
+    "prompt": "An enterprise audit found inconsistent security controls across environments. What should the platform owner implement?",
+    "choices": [
+      "A baseline compliance checklist with periodic control attestation",
+      "Manual spot checks by individual teams only",
+      "One-time remediation without follow-up",
+      "Disable lower environment access"
+    ],
+    "correctIndex": 0,
+    "explanation": "Control baselines with recurring attestations ensure sustained consistency across development, test, and production.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/security/concept/security-baselines.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 176,
+    "prompt": "What is the best indicator that least-privilege access is effective?",
+    "choices": [
+      "Most users have admin role for flexibility",
+      "Users can complete required work with minimal elevated exceptions",
+      "ACL scripts are disabled",
+      "Role requests are auto-approved"
+    ],
+    "correctIndex": 1,
+    "explanation": "Effective least privilege enables productivity without broad standing elevated access.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/security/concept/security-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 177,
+    "prompt": "A platform strategy includes reducing delivery risk. Which governance control contributes most directly?",
+    "choices": [
+      "Ad hoc release timing by team preference",
+      "Mandatory peer review and test evidence for high-impact changes",
+      "Skipping documentation for minor changes",
+      "Promoting directly from development to production"
+    ],
+    "correctIndex": 1,
+    "explanation": "Peer review and test evidence improve quality assurance and reduce high-impact production defects.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/change-management/concept/change-risk-controls.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 178,
+    "prompt": "Which enterprise operating model choice best supports scalable platform ownership?",
+    "choices": [
+      "No central standards, autonomous local design only",
+      "One shared admin account across all teams",
+      "Project-only staffing without operations ownership",
+      "Center of excellence with federated execution guardrails"
+    ],
+    "correctIndex": 3,
+    "explanation": "A center of excellence with federated teams balances consistency with domain-specific delivery autonomy.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/concept/platform-center-of-excellence.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 179,
+    "prompt": "What should be prioritized when multiple integrations fail after an external provider outage?",
+    "choices": [
+      "Disable monitoring to reduce noise",
+      "Restore critical business-path interfaces first using impact-based triage",
+      "Retry all interfaces endlessly in parallel",
+      "Delete failed transactions"
+    ],
+    "correctIndex": 1,
+    "explanation": "Impact-based restoration sequencing focuses limited response capacity on highest business value paths first.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-operations/page/administer/incident-response/concept/business-impact-triage.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 180,
+    "prompt": "Why should platform owners track exception requests against architecture standards?",
+    "choices": [
+      "To prevent any innovation",
+      "To quantify risk debt and drive remediation planning",
+      "To eliminate governance meetings",
+      "To remove backlog prioritization"
+    ],
+    "correctIndex": 1,
+    "explanation": "Exception tracking reveals accumulated risk and supports targeted remediation investment decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/task/manage-architecture-exceptions.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 181,
+    "prompt": "Which control most reduces risk from emergency production access during major incidents?",
+    "choices": [
+      "Permanent elevated access for all responders",
+      "Just-in-time privileged access with auditing and expiry",
+      "Disabling incident logging",
+      "Shared break-glass credentials in chat"
+    ],
+    "correctIndex": 1,
+    "explanation": "Time-bound emergency elevation with full audit trace preserves response speed while maintaining control.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/security/concept/privileged-access-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 182,
+    "prompt": "A quarterly review shows growing cycle time for platform enhancements. What is the best first corrective action?",
+    "choices": [
+      "Increase backlog intake without limits",
+      "Analyze bottlenecks in approval, testing, and deployment stages",
+      "Pause all incidents",
+      "Disable release calendars"
+    ],
+    "correctIndex": 1,
+    "explanation": "Flow bottleneck analysis identifies the process constraints causing delay and informs targeted improvement.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/task/analyze-delivery-flow-metrics.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 183,
+    "prompt": "What integration risk is most associated with unmanaged webhook endpoints?",
+    "choices": [
+      "Unverified source calls and inconsistent payload handling",
+      "Reduced latency visibility",
+      "Automatic ACL hardening",
+      "Guaranteed idempotent processing"
+    ],
+    "correctIndex": 0,
+    "explanation": "Without verification and governance, webhook endpoints can accept spoofed or malformed traffic.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/integrate/integration-security/task/secure-webhook-endpoints.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 184,
+    "prompt": "Which practice best supports secure cross-team development in scoped applications?",
+    "choices": [
+      "Allow unrestricted cross-scope script access",
+      "Use explicit application access controls and reviewed cross-scope privileges",
+      "Disable scope boundaries for speed",
+      "Develop only in global scope"
+    ],
+    "correctIndex": 1,
+    "explanation": "Explicit cross-scope permissions reduce accidental exposure and maintain boundaries between app domains.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-application-development/page/build/applications/concept/c_CrossScopePrivilege.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 185,
+    "prompt": "What is the strongest reason to run disaster recovery exercises for platform operations?",
+    "choices": [
+      "To reduce need for incident management",
+      "To avoid backup strategy reviews",
+      "To validate recovery procedures, timing, and role coordination",
+      "To bypass communication planning"
+    ],
+    "correctIndex": 2,
+    "explanation": "Recovery exercises confirm preparedness and expose gaps in restoration procedures before real disruptions occur.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-operations/task/test-disaster-recovery-procedures.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 186,
+    "prompt": "A strategic goal is reducing duplication of custom solutions. Which governance artifact helps most?",
+    "choices": [
+      "Enterprise capability map linked to reusable platform services",
+      "Personal team wiki pages",
+      "Unstructured enhancement requests",
+      "Ad hoc naming conventions"
+    ],
+    "correctIndex": 0,
+    "explanation": "Capability mapping surfaces reusable services and prevents parallel reinvention across departments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/concept/reusable-capability-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 187,
+    "prompt": "Which condition most clearly indicates integration observability is insufficient?",
+    "choices": [
+      "Transaction failures discovered only by end users",
+      "Dashboards showing latency and failure trends",
+      "Automated alert routing to support teams",
+      "Documented owner escalation path"
+    ],
+    "correctIndex": 0,
+    "explanation": "If users detect failures before monitoring does, visibility and alerting controls need improvement.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-integrate-applications/page/administer/integrationhub/task/monitor-integration-performance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 188,
+    "prompt": "What is a key enterprise benefit of standard change templates for recurring platform operations?",
+    "choices": [
+      "They remove need for implementation plans",
+      "They enforce consistent execution and required controls",
+      "They eliminate CAB review for all changes",
+      "They prevent rollback planning"
+    ],
+    "correctIndex": 1,
+    "explanation": "Template-driven changes reduce variance and ensure required checks are performed consistently.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-it-service-management/page/product/change-management/task/use-change-templates.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 189,
+    "prompt": "Why should platform strategy include explicit technical debt capacity in quarterly plans?",
+    "choices": [
+      "Debt remediation can be deferred indefinitely",
+      "Dedicated capacity prevents compounding maintenance and risk costs",
+      "Debt work should occur only after incidents",
+      "Debt tracking is not measurable"
+    ],
+    "correctIndex": 1,
+    "explanation": "Allocating debt capacity controls long-term risk and keeps platform maintainability aligned with growth.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/task/manage-technical-debt.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 190,
+    "prompt": "Which access design choice best supports separation of duties in release operations?",
+    "choices": [
+      "Distinct roles for development, approval, and production deployment",
+      "Developers deploy directly to production without oversight",
+      "Shared credentials for release speed",
+      "No audit requirement for emergency changes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Role separation reduces conflict-of-interest risk and improves change integrity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/security/concept/separation-of-duties.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 191,
+    "prompt": "A platform owner wants stronger executive reporting. Which metric pairing is most meaningful?",
+    "choices": [
+      "Widget count and homepage visits",
+      "Business outcome progress and service reliability trend",
+      "Total scripts created and color themes",
+      "Number of inactive users only"
+    ],
+    "correctIndex": 1,
+    "explanation": "Outcome progress with reliability gives leaders a balanced view of value delivery and operational health.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/task/create-platform-scorecards.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 192,
+    "prompt": "What should be done when integration consumers repeatedly break contract expectations?",
+    "choices": [
+      "Ignore contract violations",
+      "Enforce versioned contracts and consumer conformance testing",
+      "Disable all outbound APIs",
+      "Share production credentials"
+    ],
+    "correctIndex": 1,
+    "explanation": "Contract governance with conformance tests ensures stable interactions and reduces production breakage.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-integrate-applications/page/administer/rest-api/concept/api-versioning-strategies.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 193,
+    "prompt": "Which governance response is best when unauthorized role grants are detected?",
+    "choices": [
+      "Document issue for annual review only",
+      "Revoke access, investigate root cause, and improve approval controls",
+      "Grant same role to all users for consistency",
+      "Disable role audit logging"
+    ],
+    "correctIndex": 1,
+    "explanation": "Immediate containment plus process correction prevents repeated unauthorized privilege escalation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/users-and-roles/task/audit-role-assignments.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 194,
+    "prompt": "What is the main reason to map platform services to business capabilities?",
+    "choices": [
+      "To replace CMDB classes",
+      "To align investment and support priorities to enterprise outcomes",
+      "To avoid backlog grooming",
+      "To remove ownership assignments"
+    ],
+    "correctIndex": 1,
+    "explanation": "Capability mapping connects technical services with business value, improving prioritization and funding decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/concept/platform-strategy.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 195,
+    "prompt": "Which practice improves resilience for integrations that depend on external maintenance windows?",
+    "choices": [
+      "No maintenance awareness in schedules",
+      "Planned retry/backlog buffering with provider calendar alignment",
+      "Permanent disablement during weekends",
+      "Manual queue clearing by users"
+    ],
+    "correctIndex": 1,
+    "explanation": "Coordinating with external windows and buffering requests reduces avoidable failure cascades.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-integrate-applications/page/administer/integrationhub/concept/integration-resiliency-patterns.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 196,
+    "prompt": "What is the strategic value of a documented platform operating model?",
+    "choices": [
+      "It defines decision rights, responsibilities, and escalation pathways",
+      "It removes need for governance forums",
+      "It standardizes only UI design",
+      "It replaces runbooks"
+    ],
+    "correctIndex": 0,
+    "explanation": "A clear operating model prevents ownership ambiguity and improves enterprise execution consistency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/concept/platform-operating-model.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 197,
+    "prompt": "When should a platform owner trigger a formal risk review for integrations?",
+    "choices": [
+      "After adding new sensitive data flows or privileged operations",
+      "Only after annual audits",
+      "Only if performance drops",
+      "Never, if OAuth is enabled"
+    ],
+    "correctIndex": 0,
+    "explanation": "Security-impacting data or privilege changes alter risk posture and should trigger formal review before production use.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/integrate/integration-security/concept/integration-risk-assessment.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 198,
+    "prompt": "What does a high rate of emergency changes usually indicate in platform operations?",
+    "choices": [
+      "Mature release governance",
+      "Planning or quality control gaps in normal change workflows",
+      "Successful preventive maintenance",
+      "Strong backlog prioritization"
+    ],
+    "correctIndex": 1,
+    "explanation": "Frequent emergency work often reflects insufficient preventive planning, testing, or release discipline.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-it-service-management/page/product/change-management/concept/change-success-metrics.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 199,
+    "prompt": "Which combination best represents mature CPOE governance outcomes?",
+    "choices": [
+      "Uncontrolled customizations and isolated team standards",
+      "Ad hoc approvals and shared admin credentials",
+      "Consistent security controls, strategic prioritization, reliable operations, and governed integrations",
+      "High incident noise with no ownership mapping"
+    ],
+    "correctIndex": 2,
+    "explanation": "Maturity is demonstrated by integrated governance across security, strategy, operations, and interfaces.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/concept/governance-boards.html"
+    ]
+  }
+]
