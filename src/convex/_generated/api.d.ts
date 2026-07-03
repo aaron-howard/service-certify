@@ -10,6 +10,8 @@
 
 import type * as auth from "../auth.js";
 import type * as catalog_tracksCanonical from "../catalog/tracksCanonical.js";
+import type * as lib_authorization from "../lib/authorization.js";
+import type * as lib_practiceAccess from "../lib/practiceAccess.js";
 import type * as practiceQuestions from "../practiceQuestions.js";
 import type * as seed from "../seed.js";
 import type * as seed_devQuestionBank from "../seed/devQuestionBank.js";
@@ -24,6 +26,8 @@ import type {
 declare const fullApi: ApiFromModules<{
   auth: typeof auth;
   "catalog/tracksCanonical": typeof catalog_tracksCanonical;
+  "lib/authorization": typeof lib_authorization;
+  "lib/practiceAccess": typeof lib_practiceAccess;
   practiceQuestions: typeof practiceQuestions;
   seed: typeof seed;
   "seed/devQuestionBank": typeof seed_devQuestionBank;
