@@ -1,4 +1,5 @@
 import { error, redirect } from '@sveltejs/kit';
+import { randomUUID } from 'node:crypto';
 import { getExamBySlug } from '$lib/data/exams';
 import { loadPracticeQuestions } from '$lib/practice.server';
 import type { PageServerLoad } from './$types';
@@ -17,13 +18,15 @@ export const load: PageServerLoad = async ({ params, url, parent, cookies }) => 
 
 	let serverQuestions: Awaited<ReturnType<typeof loadPracticeQuestions>> | null = null;
 	let questionsError: string | null = null;
+	const sessionSeed = mode === 'full' && user?.isAdmin ? randomUUID() : null;
 
-	if (mode === 'full' && user?.isAdmin) {
+	if (mode === 'full' && user?.isAdmin && sessionSeed) {
 		try {
 			serverQuestions = await loadPracticeQuestions({
 				trackCode: exam.code,
 				mode: 'full',
-				workosToken: cookies.get('workos_token')
+				workosToken: cookies.get('workos_token'),
+				sessionSeed
 			});
 		} catch (err) {
 			questionsError =
@@ -32,5 +35,5 @@ export const load: PageServerLoad = async ({ params, url, parent, cookies }) => 
 		}
 	}
 
-	return { exam, mode, serverQuestions, questionsError };
+	return { exam, mode, serverQuestions, questionsError, sessionSeed };
 };

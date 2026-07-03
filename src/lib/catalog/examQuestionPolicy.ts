@@ -50,3 +50,34 @@ export const EXAM_QUESTION_BANK_TARGETS: Record<string, number> = Object.fromEnt
 		getQuestionBankTarget(code)
 	])
 );
+
+/** Official proctored exam time limits (minutes), from Credentialing Program Guide. */
+export const OFFICIAL_EXAM_DURATION_MINUTES: Record<string, number> = {
+	CPOP: 240,
+	CPOE: 240
+};
+
+const DEFAULT_EXAM_DURATION_MINUTES = 90;
+
+export function getOfficialExamDurationMinutes(trackCode: string): number {
+	return OFFICIAL_EXAM_DURATION_MINUTES[trackCode] ?? DEFAULT_EXAM_DURATION_MINUTES;
+}
+
+export function getOfficialExamDurationSeconds(trackCode: string): number {
+	return getOfficialExamDurationMinutes(trackCode) * 60;
+}
+
+/** Timed practice allowance scaled to questions served in this session. */
+export function getPracticeTimeSeconds(args: {
+	trackCode: string;
+	questionCount: number;
+	mode: 'sample' | 'full';
+}): number {
+	const officialSeconds = getOfficialExamDurationSeconds(args.trackCode);
+	if (args.mode === 'full') {
+		return officialSeconds;
+	}
+	const officialCount = getOfficialQuestionCount(args.trackCode);
+	const scaled = Math.round((officialSeconds * args.questionCount) / officialCount);
+	return Math.max(300, scaled);
+}

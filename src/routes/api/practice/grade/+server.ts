@@ -48,11 +48,18 @@ export const POST: RequestHandler = async ({ request, cookies }) => {
 		});
 	}
 
-	const { trackCode, answers, mode = 'sample' } = body;
+	const { trackCode, answers, mode = 'sample', sessionSeed } = body;
 	const practiceMode = mode === 'full' ? 'full' : 'sample';
 
 	if (!trackCode || !Array.isArray(answers)) {
 		return new Response(JSON.stringify({ error: 'Missing trackCode or answers array' }), {
+			status: 400,
+			headers: { 'Content-Type': 'application/json' }
+		});
+	}
+
+	if (practiceMode === 'full' && (!sessionSeed || typeof sessionSeed !== 'string')) {
+		return new Response(JSON.stringify({ error: 'Missing sessionSeed for full mock' }), {
 			status: 400,
 			headers: { 'Content-Type': 'application/json' }
 		});
@@ -83,6 +90,7 @@ export const POST: RequestHandler = async ({ request, cookies }) => {
 		const result = await convex.mutation(api.practiceQuestions.gradeAnswers, {
 			trackCode,
 			mode: practiceMode,
+			...(practiceMode === 'full' ? { sessionSeed } : {}),
 			answers
 		});
 

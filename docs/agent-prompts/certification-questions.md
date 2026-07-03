@@ -41,6 +41,7 @@ Return **only** a JSON array (no markdown fences) of objects:
 - `choices` must have **exactly four** strings.
 - `correctIndex` must be `0`–`3`.
 - Vary `correctIndex` across a batch; no duplicate topics within a batch.
+- Keep all four choices **similar in length** (roughly within 25% of each other). The correct answer must **not** routinely be the longest option — exam takers should not be able to guess from length alone.
 
 ## Question quality
 

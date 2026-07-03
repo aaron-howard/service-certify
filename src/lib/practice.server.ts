@@ -14,6 +14,7 @@ export async function loadPracticeQuestions(args: {
 	trackCode: string;
 	mode: 'sample' | 'full';
 	workosToken?: string;
+	sessionSeed?: string;
 }): Promise<PracticeQuestionRow[]> {
 	const convexUrl = publicEnv.PUBLIC_CONVEX_URL;
 	if (!convexUrl) {
@@ -31,6 +32,7 @@ export async function loadPracticeQuestions(args: {
 
 	return await client.query(api.practiceQuestions.listByTrackCode, {
 		trackCode: args.trackCode,
-		mode: args.mode
+		mode: args.mode,
+		...(args.sessionSeed ? { sessionSeed: args.sessionSeed } : {})
 	});
 }
