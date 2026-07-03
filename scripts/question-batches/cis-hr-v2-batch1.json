@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-HR",
+		"order": 0,
+		"prompt": "In which application scope is the HR Case Management application?",
+		"choices": [
+			"Human Resources: Core",
+			"Human Resources: Integrations",
+			"Human Resources: Lifecycle Events",
+			"Human Resources: Service Portal"
+		],
+		"correctIndex": 0,
+		"explanation": "HR Case Management ships in the Human Resources: Core scoped application alongside foundational HRSD tables and roles.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 1,
+		"prompt": "Which scoped application typically contains HR integration connectors and inbound/outbound HR data flows?",
+		"choices": [
+			"The scoped application for HR system integrations",
+			"Security Operations scoped application for threat response workflows",
+			"Global scope used for cross-application platform utilities",
+			"Incident Management ITSM application scope for service outages"
+		],
+		"correctIndex": 0,
+		"explanation": "The Human Resources: Integrations scope isolates integration artifacts so HR data exchange can be maintained separately from core case logic.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 2,
+		"prompt": "Where are Journey Designer and lifecycle event configuration artifacts primarily scoped?",
+		"choices": [
+			"The scoped application for lifecycle events and Journey Designer",
+			"Vulnerability Response scoped application for security findings",
+			"IT Operations Management scope for infrastructure monitoring",
+			"Event Management scope for alert correlation workflows"
+		],
+		"correctIndex": 0,
+		"explanation": "Lifecycle Events and Journey Designer components reside in the Human Resources: Lifecycle Events scoped application.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 3,
+		"prompt": "Which table is the primary record type for employee HR requests handled by HR agents?",
+		"choices": [
+			"hr_case",
+			"problem",
+			"sc_req_item",
+			"change_request"
+		],
+		"correctIndex": 0,
+		"explanation": "HR cases capture employee HR service interactions, assignments, and fulfillment separate from ITSM incident records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 4,
+		"prompt": "What does the hr_profile table store in HR Service Delivery?",
+		"choices": [
+			"Employee-specific HR attributes linked to the user record",
+			"CMDB configuration item relationships",
+			"MID Server connection credentials",
+			"Software license entitlements"
+		],
+		"correctIndex": 0,
+		"explanation": "HR profiles extend personnel data used for eligibility, routing, and lifecycle processing beyond the base sys_user record.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-profile-management.html"
+		]
+	}
+]

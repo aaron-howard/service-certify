@@ -10244,1167 +10244,1177 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 	{
 		"trackCode": "CIS-HR",
 		"order": 0,
-		"prompt": "An HR transformation sponsor wants the platform framing for HR case, knowledge, and employee-facing experiences. Which human resources concept documentation introduces HR Service Delivery?",
+		"prompt": "In which application scope is the HR Case Management application?",
 		"choices": [
-			"Payroll garnishment legal hold procedures for practical execution",
-			"Facilities snow removal escalation policy for controlled governance",
-			"HR Service Delivery for sustained reliability for operational consistency",
-			"Employee badge reprint SOP for security for measurable outcomes"
+			"Human Resources: Core",
+			"Human Resources: Integrations",
+			"Human Resources: Lifecycle Events",
+			"Human Resources: Service Portal"
 		],
-		"correctIndex": 2,
-		"explanation": "The human resources documentation includes an HR Service Delivery concept that frames the suite of HR experiences built on the Now Platform.",
+		"correctIndex": 0,
+		"explanation": "HR Case Management ships in the Human Resources: Core scoped application alongside foundational HRSD tables and roles.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-employee-service-management/page/product/human-resources/concept/hr-service-delivery.html"
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-management.html"
 		]
 	},
 	{
 		"trackCode": "CIS-HR",
 		"order": 1,
-		"prompt": "Your team is modernizing employee learning and growth experiences alongside HR services. Which concept documentation provides an overview aligned with the learning experience platform area?",
+		"prompt": "Which scoped application typically contains HR integration connectors and inbound/outbound HR data flows?",
 		"choices": [
-			"Overview of the Learning Experience Platform (LXP) for role-based accountability",
-			"Configuring SNMP for building access controllers for production readiness",
-			"Designing data center rack thermal maps for enterprise implementation",
-			"Creating procurement requests for office furniture for operational consistency"
+			"The scoped application for HR system integrations",
+			"Security Operations scoped application for threat response workflows",
+			"Global scope used for cross-application platform utilities",
+			"Incident Management ITSM application scope for service outages"
 		],
 		"correctIndex": 0,
-		"explanation": "Employee experience documentation includes an overview of the Learning Experience Platform (LXP), which contextualizes learning capabilities adjacent to HR service delivery.",
+		"explanation": "The Human Resources: Integrations scope isolates integration artifacts so HR data exchange can be maintained separately from core case logic.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-employee-service-management/page/product/human-resources/concept/overview-lxp.html"
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
 		]
 	},
 	{
 		"trackCode": "CIS-HR",
 		"order": 2,
-		"prompt": "Consultants want a guided narrative for HR product planning workshops. Which human resources concept documentation supports playbook-style HR guidance?",
+		"prompt": "Where are Journey Designer and lifecycle event configuration artifacts primarily scoped?",
 		"choices": [
-			"HR playbook for sustained reliability for operational consistency",
-			"Legacy mainframe green-screen navigation for measurable outcomes for role-based accountability",
-			"VPN split tunneling policies for contractors for practical execution",
-			"Annual performance review calibration spreadsheets for controlled governance"
+			"The scoped application for lifecycle events and Journey Designer",
+			"Vulnerability Response scoped application for security findings",
+			"IT Operations Management scope for infrastructure monitoring",
+			"Event Management scope for alert correlation workflows"
 		],
 		"correctIndex": 0,
-		"explanation": "The human resources documentation includes an HR playbook concept that helps teams structure discovery, design, and adoption conversations for HR products.",
+		"explanation": "Lifecycle Events and Journey Designer components reside in the Human Resources: Lifecycle Events scoped application.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-employee-service-management/page/product/human-resources/concept/playbook-hr.html"
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
 		]
 	},
 	{
 		"trackCode": "CIS-HR",
 		"order": 3,
-		"prompt": "Integration engineers must enable HR data flows between ServiceNow and external human capital systems. Which task documentation should they follow to activate integrations?",
+		"prompt": "Which table is the primary record type for employee HR requests handled by HR agents?",
 		"choices": [
-			"Design facilities keycard deprovisioning scripts for enterprise implementation",
-			"Configure email archiving for legal discovery for operational consistency",
-			"Activate HR integrations for role-based accountability for measurable outcomes",
-			"Tune antivirus definitions for file servers for production readiness"
+			"hr_case",
+			"problem",
+			"sc_req_item",
+			"change_request"
 		],
-		"correctIndex": 2,
-		"explanation": "Human resources task documentation for activating HR integrations covers the steps to turn on integration capabilities needed for authoritative HR system data.",
+		"correctIndex": 0,
+		"explanation": "HR cases capture employee HR service interactions, assignments, and fulfillment separate from ITSM incident records.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-employee-service-management/page/product/human-resources/task/activate-hr-integrations.html"
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-management.html"
 		]
 	},
 	{
 		"trackCode": "CIS-HR",
 		"order": 4,
-		"prompt": "HR operations wants a manager-facing operational view for team requests and workload. Which task documentation should be reviewed for the HR manager dashboard experience?",
+		"prompt": "What does the hr_profile table store in HR Service Delivery?",
 		"choices": [
-			"Plan cafeteria vendor contract renewals for production readiness",
-			"Draft procurement policies for temporary labor for role-based accountability",
-			"Use the HR manager dashboard for operational consistency",
-			"Configure SNMP monitoring for warehouse doors for enterprise implementation"
+			"Employee-specific HR attributes linked to the user record",
+			"CMDB configuration item relationships",
+			"MID Server connection credentials",
+			"Software license entitlements"
 		],
-		"correctIndex": 2,
-		"explanation": "Human resources task documentation for using the HR manager dashboard explains how managers monitor and act on HR-related work for their teams.",
+		"correctIndex": 0,
+		"explanation": "HR profiles extend personnel data used for eligibility, routing, and lifecycle processing beyond the base sys_user record.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-employee-service-management/page/product/human-resources/task/t_UseTheHRManagerDashboard.html"
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-profile-management.html"
 		]
 	},
 	{
 		"trackCode": "CIS-HR",
 		"order": 5,
-		"prompt": "What is the primary goal of HR Service Delivery in ServiceNow?",
+		"prompt": "Which parent table does hr_case extend in the HR data model?",
 		"choices": [
-			"Replace payroll engines for controlled governance for enterprise implementation",
-			"Track software vulnerabilities for practical execution",
-			"Support HR processes through standardized services, cases, and employee experiences for measurable outcomes",
-			"Manage customer incident response for sustained reliability for operational consistency"
+			"task",
+			"cmdb_ci",
+			"sc_request",
+			"kb_knowledge"
 		],
-		"correctIndex": 2,
-		"explanation": "HRSD digitizes and standardizes HR services, improving employee support and process consistency.",
+		"correctIndex": 0,
+		"explanation": "HR cases inherit task fields such as assignment, state, and work notes from the task table hierarchy.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/concept/hrsd-overview.html"
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-management.html"
 		]
 	},
 	{
 		"trackCode": "CIS-HR",
 		"order": 6,
-		"prompt": "In HRSD, which record typically tracks fulfillment of an employee HR request?",
+		"prompt": "Why does HR Service Delivery use multiple scoped applications instead of one global scope?",
 		"choices": [
-			"Problem record for operational consistency for sustained reliability",
-			"Vendor profile for enterprise implementation for controlled governance",
-			"Work order for production readiness",
-			"HR case for role-based accountability for measurable outcomes"
+			"To isolate customizations by functional area and preserve upgradability",
+			"To disable update set capture entirely across every scoped HR application",
+			"To prevent role-based access controls from applying on all HR tables",
+			"To require all HR scripts run client-side only without server-side logic"
 		],
-		"correctIndex": 3,
-		"explanation": "HR cases are the primary fulfillment records for employee issues and HR service requests.",
+		"correctIndex": 0,
+		"explanation": "Scoped applications segment HR Core, Integrations, Lifecycle Events, and portal experiences so teams can upgrade and govern changes independently.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/concept/hr-cases.html"
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
 		]
 	},
 	{
 		"trackCode": "CIS-HR",
 		"order": 7,
-		"prompt": "Why are HR services important in an HRSD implementation?",
+		"prompt": "Which plugin family must be active to deliver HR Case Management and Employee Center experiences?",
 		"choices": [
-			"They replace legal counsel for measurable outcomes for role-based accountability",
-			"They define structured request types and fulfillment patterns for HR teams for sustained reliability",
-			"They bypass knowledge management for controlled governance for enterprise implementation",
-			"They remove security role requirements for practical execution"
+			"Human Resources Service Delivery (HRSD)",
+			"Hardware Asset Management plugin for device lifecycle tracking",
+			"Security Incident Response plugin for cyber case management",
+			"Governance Risk Compliance plugin for policy attestations"
 		],
-		"correctIndex": 1,
-		"explanation": "HR services standardize intake and delivery so recurring HR requests are handled consistently.",
+		"correctIndex": 0,
+		"explanation": "HRSD plugins install core HR tables, roles, Employee Center, and lifecycle capabilities required for the HR suite.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/create-hr-services.html"
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
 		]
 	},
 	{
 		"trackCode": "CIS-HR",
 		"order": 8,
-		"prompt": "What is a key reason HRSD uses employee center experiences?",
+		"prompt": "What is recorded on the hr_service table?",
 		"choices": [
-			"To consistently hide HR policies from employees for practical execution",
-			"To consistently provide a unified self-service interface for HR help, knowledge, and request submission",
-			"To consistently force all requests through email for operational consistency",
-			"To consistently store vulnerability scan outputs for role-based accountability"
+			"A definable HR offering employees can request through Employee Center",
+			"A network discovery schedule definition",
+			"A payroll calculation rule set",
+			"A CMDB identification rule"
 		],
-		"correctIndex": 1,
-		"explanation": "Employee center channels HR demand through a consistent portal and improves self-service adoption.",
+		"correctIndex": 0,
+		"explanation": "HR services represent catalog-style offerings that drive case creation, routing, and fulfillment configuration.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/concept/employee-center-for-hr.html"
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-services-overview.html"
 		]
 	},
 	{
 		"trackCode": "CIS-HR",
 		"order": 9,
-		"prompt": "When introducing HRSD, what governance practice should be established early?",
+		"prompt": "How are Centers of Excellence (COEs) represented in the HR architecture?",
 		"choices": [
-			"Define case confidentiality and role-based access controls for sensitive employee records for role-based accountability",
-			"Store all case notes in public knowledge for production readiness",
-			"Disable assignment groups for HR for enterprise implementation",
-			"Allow unrestricted access to all HR case data for operational consistency"
+			"As organizational segments that group HR cases and services by functional area",
+			"As MID Server clusters for HR integrations",
+			"As CMDB relationship types for employee assets",
+			"As discovery probes for HR applications"
 		],
 		"correctIndex": 0,
-		"explanation": "HR data is sensitive, so role-based access and confidentiality controls are foundational to compliant operations.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/configure-hr-security.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 10,
-		"prompt": "In HRSD, why are HR case categories and topics configured?",
-		"choices": [
-			"To consistently classify requests for routing, reporting, and fulfillment consistency",
-			"To consistently disable SLA tracking for practical execution",
-			"To consistently sort vulnerabilities by CVSS score for role-based accountability",
-			"To consistently replace employee profiles for operational consistency"
-		],
-		"correctIndex": 0,
-		"explanation": "Case categorization enables accurate assignment logic and better service analytics.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/configure-hr-case-categories.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 11,
-		"prompt": "What does proper case assignment in HRSD help prevent?",
-		"choices": [
-			"Cross-functional collaboration for production readiness",
-			"Delayed handling caused by misrouted sensitive HR requests for role-based accountability",
-			"Access control enforcement for operational consistency for sustained reliability",
-			"Employee self-service adoption for enterprise implementation for controlled governance"
-		],
-		"correctIndex": 1,
-		"explanation": "Accurate routing reduces transfer delays and protects confidentiality by directing work to the right HR groups.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/configure-hr-assignment-rules.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 12,
-		"prompt": "Which HR case feature supports consistent employee communications?",
-		"choices": [
-			"Free-form case records with no status model for measurable outcomes",
-			"Disabled notifications for sustained reliability for operational consistency",
-			"Manual notes stored outside the platform for controlled governance",
-			"Structured templates and activity timelines on case records for practical execution"
-		],
-		"correctIndex": 3,
-		"explanation": "Templates and timeline visibility improve communication quality and auditability of HR interactions.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/concept/hr-case-management.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 13,
-		"prompt": "A compliance lead needs better oversight of employee requests. Which HRSD metric is most useful?",
-		"choices": [
-			"Average time to resolve HR cases by service type for operational consistency",
-			"Count of discovery schedules for enterprise implementation for controlled governance",
-			"Technician travel distance for production readiness",
-			"Number of vulnerable CIs for role-based accountability for measurable outcomes"
-		],
-		"correctIndex": 0,
-		"explanation": "Resolution trend metrics by case type help identify process bottlenecks and policy compliance issues.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/report-on-hr-cases.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 14,
-		"prompt": "What is a common best practice for handling confidential HR case notes?",
-		"choices": [
-			"Use role-based access and case security controls to restrict sensitive detail visibility for role-based accountability",
-			"Disable audit history for private fields for production readiness",
-			"Share all notes broadly for transparency for enterprise implementation",
-			"Export all notes to public knowledge for operational consistency"
-		],
-		"correctIndex": 0,
-		"explanation": "HR cases often include sensitive information and require strict visibility controls and traceability.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/protect-sensitive-hr-data.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 15,
-		"prompt": "In HRSD, what are lifecycle events designed to support?",
-		"choices": [
-			"Vendor onboarding questionnaires for practical execution",
-			"Field technician route planning for controlled governance for enterprise implementation",
-			"Coordinated employee journeys such as onboarding, transitions, and offboarding for sustained reliability",
-			"Security patch deployments for measurable outcomes for role-based accountability"
-		],
-		"correctIndex": 2,
-		"explanation": "Lifecycle events orchestrate cross-department tasks tied to key employee moments.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/concept/lifecycle-events-overview.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 16,
-		"prompt": "Why do HR teams use lifecycle event templates?",
-		"choices": [
-			"To consistently bypass security roles for controlled governance",
-			"To consistently disable notifications for sustained reliability",
-			"To consistently eliminate HR case usage for measurable outcomes",
-			"To confirm repeatable task orchestration and role-based ownership for common employee scenarios"
-		],
-		"correctIndex": 3,
-		"explanation": "Templates provide standardized task sets and timelines for predictable employee experiences.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/create-lifecycle-event-templates.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 17,
-		"prompt": "What is a key advantage of assigning lifecycle event activities across departments?",
-		"choices": [
-			"It eliminates approvals for sustained reliability for operational consistency",
-			"It strengthens coordination among HR, IT, facilities, and other stakeholders during transitions",
-			"It reduces collaboration by centralizing all tasks in HR exclusively",
-			"It prevents visibility into task status for controlled governance"
-		],
-		"correctIndex": 1,
-		"explanation": "Cross-functional assignment ensures each team completes its responsibilities in time-sensitive events.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/configure-cross-functional-lifecycle-activities.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 18,
-		"prompt": "An organization wants better onboarding transparency. Which lifecycle event feature helps most?",
-		"choices": [
-			"Creating one generic task with no due date for controlled governance",
-			"Task timelines and progress tracking for each event participant for practical execution",
-			"Disabling employee notifications for measurable outcomes for role-based accountability",
-			"Using exclusively email threads for updates for operational consistency"
-		],
-		"correctIndex": 1,
-		"explanation": "Lifecycle event progress views make ownership and completion status visible across stakeholders.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/track-lifecycle-event-progress.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 19,
-		"prompt": "Which metric is most useful for evaluating lifecycle event effectiveness?",
-		"choices": [
-			"Number of active discovery probes for production readiness",
-			"Percentage of lifecycle activities completed on time for role-based accountability",
-			"Count of security incidents for operational consistency for sustained reliability",
-			"Total catalog categories for enterprise implementation for controlled governance"
-		],
-		"correctIndex": 1,
-		"explanation": "On-time completion rate is a direct indicator of lifecycle orchestration performance.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/report-on-lifecycle-events.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 20,
-		"prompt": "In HRSD, why are document templates used?",
-		"choices": [
-			"To consistently generate consistent, compliant HR communications and forms",
-			"To consistently disable approvals for enterprise implementation",
-			"To consistently remove employee profiles for operational consistency",
-			"To consistently replace case workflows for role-based accountability"
-		],
-		"correctIndex": 0,
-		"explanation": "Templates standardize wording and structure for recurring HR documents, reducing errors and compliance risk.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/create-hr-document-templates.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 21,
-		"prompt": "What is the primary benefit of using data placeholders in HR document templates?",
-		"choices": [
-			"They auto-populate employee and case-specific details accurately at generation time for role-based accountability",
-			"They avoid case linkage for production readiness",
-			"They disable versioning for enterprise implementation for controlled governance",
-			"They prevent localization for operational consistency for sustained reliability"
-		],
-		"correctIndex": 0,
-		"explanation": "Dynamic placeholders improve efficiency and reduce manual entry mistakes in generated HR documents.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/use-template-variables-in-hr-documents.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 22,
-		"prompt": "How do template approval workflows support HR compliance?",
-		"choices": [
-			"By bypassing legal review for sustained reliability for operational consistency",
-			"By enforcing controlled review and publication of official HR document content for measurable outcomes",
-			"By allowing any user to edit legal language directly in production for practical execution",
-			"By disabling audit tracking for controlled governance for enterprise implementation"
-		],
-		"correctIndex": 1,
-		"explanation": "Approval workflows ensure template changes are governed and legally reviewed before use.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/govern-hr-template-approvals.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 23,
-		"prompt": "A global HR team needs regional policy differences. Which template strategy works best?",
-		"choices": [
-			"Store regional edits in personal notes for enterprise implementation",
-			"Disable document versioning for operational consistency for sustained reliability",
-			"Maintain one template in one language exclusively for measurable outcomes",
-			"Use localized template variants by region and language with controlled fallback for production readiness"
-		],
-		"correctIndex": 3,
-		"explanation": "Regionalized templates maintain policy accuracy while supporting multilingual employee communications.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/localize-hr-document-templates.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 24,
-		"prompt": "What control helps validate that HR document templates remain current?",
-		"choices": [
-			"Periodic template review schedules with ownership and version history for production readiness",
-			"Publishing documents without metadata for role-based accountability for measurable outcomes",
-			"Allowing unrestricted edits by all employees for operational consistency",
-			"Removing change history from templates for enterprise implementation"
-		],
-		"correctIndex": 0,
-		"explanation": "Scheduled review and version traceability keep HR content current, accountable, and auditable.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/manage-hr-document-template-versions.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 25,
-		"prompt": "What is the primary purpose of Employee Center in HR Service Delivery?",
-		"choices": [
-			"Replace HR case tables with spreadsheets for controlled governance",
-			"Limit access to exclusively HR administrators for practical execution",
-			"Provide a unified portal for employees to find knowledge, submit requests, and track cases for measurable outcomes",
-			"Remove role-based access controls for sustained reliability for operational consistency"
-		],
-		"correctIndex": 2,
-		"explanation": "Employee Center centralizes employee interactions across knowledge and service workflows to improve self-service experience.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/employee-center/concept/employee-center.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 26,
-		"prompt": "Which configuration most improves Employee Center content relevance for HR users?",
-		"choices": [
-			"Show all internal admin pages to all users for operational consistency",
-			"Use audience criteria and topic-based navigation aligned to employee needs for enterprise implementation",
-			"Disable taxonomy and rely on random article order for production readiness",
-			"Route every search query to external websites for role-based accountability"
-		],
-		"correctIndex": 1,
-		"explanation": "Audience targeting and structured topics help employees find the right HR information quickly.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/employee-center/task/configure-employee-center.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 27,
-		"prompt": "Why should HR administrators connect catalog items and knowledge in Employee Center?",
-		"choices": [
-			"To consistently eliminate case visibility for employees for role-based accountability",
-			"To consistently bypass HR assignment rules for operational consistency",
-			"To consistently provide guided self-service with both answers and action paths",
-			"To consistently force users to submit duplicate requests"
-		],
-		"correctIndex": 2,
-		"explanation": "Combining knowledge with request options improves deflection and reduces friction when employees need support.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/hr-service-delivery/concept/hr-service-delivery.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 28,
-		"prompt": "An HR team wants to improve portal adoption. Which KPI is most useful?",
-		"choices": [
-			"Employee Center self-service completion and case deflection rate for practical execution",
-			"Average CMDB relationship depth for controlled governance for enterprise implementation",
-			"Count of deactivated user records for sustained reliability",
-			"Number of backend script includes for measurable outcomes"
-		],
-		"correctIndex": 0,
-		"explanation": "Self-service and deflection metrics indicate whether Employee Center is effectively meeting employee needs without assisted handling.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/employee-center/concept/employee-center-analytics.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 29,
-		"prompt": "What access model should be used for HR-sensitive content in Employee Center?",
-		"choices": [
-			"Apply user criteria and role-based restrictions to enforce least-privilege access for role-based accountability",
-			"Disable read ACLs for faster indexing for production readiness",
-			"Make all HR knowledge public internally for enterprise implementation",
-			"Grant editor rights to all employees for operational consistency"
-		],
-		"correctIndex": 0,
-		"explanation": "HR content often contains sensitive information and should be protected through targeted audience and ACL controls.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/knowledge-management/concept/c_KnowledgeUserCriteria.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 30,
-		"prompt": "In HR Service Delivery, what is the primary goal of onboarding lifecycle events?",
-		"choices": [
-			"Coordinate cross-department tasks to deliver a consistent and on-time new hire experience",
-			"Limit communication to hiring managers exclusively for sustained reliability",
-			"Replace HR profiles with manual spreadsheets for role-based accountability",
-			"Create ad hoc tasks without owners for production readiness"
-		],
-		"correctIndex": 0,
-		"explanation": "Onboarding lifecycle events orchestrate work across HR, IT, facilities, and managers for smooth day-one readiness.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/hr-service-delivery/concept/onboarding-lifecycle-events.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 31,
-		"prompt": "Which setup step is most important when implementing HR onboarding journeys?",
-		"choices": [
-			"Route all tasks to one HR general queue for sustained reliability",
-			"Prevent manager participation in onboarding tasks for measurable outcomes",
-			"Disable task templates to increase flexibility for practical execution",
-			"Define role-based activity sets, due dates, and dependencies aligned to onboarding milestones for controlled governance"
-		],
-		"correctIndex": 3,
-		"explanation": "Structured templates and dependencies ensure predictable, accountable delivery across multiple stakeholders.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/hr-service-delivery/task/configure-onboarding-activities.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 32,
-		"prompt": "What is a strong indicator of onboarding process health?",
-		"choices": [
-			"Count of archived knowledge articles for role-based accountability",
-			"Number of inactive HR templates for production readiness",
-			"Percentage of required onboarding tasks completed on time before start date for enterprise implementation",
-			"Volume of unrelated IT incidents for operational consistency"
-		],
-		"correctIndex": 2,
-		"explanation": "Timely completion of prerequisite tasks directly measures whether onboarding execution is meeting readiness targets.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/hr-service-delivery/concept/hr-analytics.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 33,
-		"prompt": "How should exceptions be handled in HR onboarding workflows?",
-		"choices": [
-			"Ignore missed tasks until after start date for practical execution",
-			"Escalate overdue critical tasks with ownership visibility and remediation deadlines for controlled governance",
-			"Close all pending tasks automatically at midnight for sustained reliability",
-			"Convert all onboarding tasks to catalog requests for measurable outcomes"
-		],
-		"correctIndex": 1,
-		"explanation": "Proactive exception management keeps onboarding on track and reduces first-day service failures.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/hr-service-delivery/task/manage-lifecycle-event-tasks.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 34,
-		"prompt": "Why should onboarding content be surfaced through Employee Center?",
-		"choices": [
-			"To consistently provide a single place for tasks, guidance, and progress visibility during the journey",
-			"To consistently avoid using lifecycle event templates for operational consistency",
-			"To consistently eliminate approvals for sensitive actions for enterprise implementation",
-			"To consistently hide onboarding status from new hires"
-		],
-		"correctIndex": 0,
-		"explanation": "Centralized onboarding experience improves clarity, engagement, and completion rates for new employees.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/employee-center/concept/employee-center.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 35,
-		"prompt": "What is the primary role of knowledge management in HR Service Delivery?",
-		"choices": [
-			"Replace all HR cases for operational consistency for sustained reliability",
-			"Limit content creation to IT teams for enterprise implementation",
-			"Hide policy updates from employees for production readiness",
-			"Provide trusted, reusable guidance that supports self-service and consistent agent responses for role-based accountability"
-		],
-		"correctIndex": 3,
-		"explanation": "High-quality HR knowledge improves self-service outcomes and reduces variance in assisted support.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/knowledge-management/concept/knowledge-management.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 36,
-		"prompt": "Which governance practice most improves HR knowledge quality?",
-		"choices": [
-			"Use ownership, review cycles, and approval workflows for policy-sensitive content for controlled governance",
-			"Publish all drafts immediately for practical execution",
-			"Disable feedback mechanisms for measurable outcomes for role-based accountability",
-			"Archive articles after first use for sustained reliability"
-		],
-		"correctIndex": 0,
-		"explanation": "Governed review and approval ensures HR content remains accurate, current, and policy-compliant.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/knowledge-management/task/configure-knowledge-workflow.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 37,
-		"prompt": "How should HR teams prioritize article improvements?",
-		"choices": [
-			"By oldest creation date exclusively for production readiness",
-			"By search analytics, deflection impact, and negative feedback trends for role-based accountability",
-			"By article title length for operational consistency for sustained reliability",
-			"By number of attachments for enterprise implementation for controlled governance"
-		],
-		"correctIndex": 1,
-		"explanation": "Usage and outcome data helps prioritize updates that most improve employee experience and support efficiency.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/knowledge-management/concept/knowledge-analytics.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 38,
-		"prompt": "What access model is best for mixed public and confidential HR knowledge?",
-		"choices": [
-			"Segmented knowledge bases and user criteria aligned to audience and sensitivity for enterprise implementation",
-			"No ACLs on HR articles for operational consistency",
-			"Manual sharing by email exclusively for measurable outcomes",
-			"One shared unrestricted knowledge base for production readiness"
-		],
-		"correctIndex": 0,
-		"explanation": "Segmentation and access criteria protect sensitive HR content while preserving broad self-service where appropriate.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/knowledge-management/concept/c_KnowledgeUserCriteria.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 39,
-		"prompt": "Which KPI best indicates HR knowledge effectiveness?",
-		"choices": [
-			"Number of knowledge categories for sustained reliability for operational consistency",
-			"Count of admin users for measurable outcomes for role-based accountability",
-			"Average attachment size for practical execution",
-			"Knowledge article usefulness ratings and HR case deflection rate for controlled governance"
-		],
-		"correctIndex": 3,
-		"explanation": "Usefulness feedback plus deflection outcomes shows whether knowledge is solving employee needs without assisted handling.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/hr-service-delivery/concept/hr-analytics.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 40,
-		"prompt": "Why are approvals important in HR Service Delivery workflows?",
-		"choices": [
-			"They replace case documentation for operational consistency for sustained reliability",
-			"They enforce policy compliance and authorization for sensitive employee actions for enterprise implementation",
-			"They add delays without controls for production readiness",
-			"They remove role-based accountability for role-based accountability for measurable outcomes"
-		],
-		"correctIndex": 1,
-		"explanation": "Approvals provide controlled decision points for requests involving risk, privacy, or policy constraints.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/hr-service-delivery/concept/hr-service-delivery.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 41,
-		"prompt": "Which design approach improves HR approval process efficiency?",
-		"choices": [
-			"Disable delegation features for measurable outcomes for role-based accountability",
-			"Require email-exclusively approvals for operational consistency",
-			"Use conditional approval rules based on request type, sensitivity, and authority matrix for controlled governance",
-			"Route every request to executive approval for practical execution"
-		],
-		"correctIndex": 2,
-		"explanation": "Conditional routing reduces unnecessary approvals while preserving control for higher-risk requests.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/workflow-automation/concept/approvals-in-flow-designer.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 42,
-		"prompt": "What control helps prevent HR approval bottlenecks?",
-		"choices": [
-			"No due dates for approvals for production readiness",
-			"Approver selection by random assignment for role-based accountability",
-			"Manual reminder emails exclusively for sustained reliability",
-			"Escalation and delegation rules with SLA tracking for pending approvals for enterprise implementation"
-		],
-		"correctIndex": 3,
-		"explanation": "Time-bound escalations and delegation keep approvals moving and protect service commitments.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/workflow-automation/task/configure-approval-rules.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 43,
-		"prompt": "How should HR teams handle exception requests denied at approval?",
-		"choices": [
-			"Capture denial reason, notify requester, and provide guided next steps or appeal path for controlled governance",
-			"Convert all denials to approvals after 24 hours for practical execution",
-			"Close records without explanation for measurable outcomes for role-based accountability",
-			"Delete approval history for sustained reliability for operational consistency"
-		],
-		"correctIndex": 0,
-		"explanation": "Transparent denial handling improves user trust and creates actionable audit trails.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/hr-service-delivery/task/manage-hr-cases.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 44,
-		"prompt": "Which KPI best indicates mature HR approval governance?",
-		"choices": [
-			"Number of approvers in the org chart for sustained reliability",
-			"Count of portal themes for measurable outcomes for role-based accountability",
-			"On-time approval rate, rework rate, and policy exception trend by request type for practical execution",
-			"Average article word count for controlled governance for enterprise implementation"
-		],
-		"correctIndex": 2,
-		"explanation": "Timeliness, quality, and exception patterns together show whether approval controls are both effective and efficient.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/hr-service-delivery/concept/hr-analytics.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 45,
-		"prompt": "In HRSD, why are case tasks important?",
-		"choices": [
-			"They break case work into accountable steps with owners and due dates for enterprise implementation",
-			"They prevent use of playbooks for operational consistency",
-			"They are exclusively used for payroll integrations for measurable outcomes",
-			"They replace the need for HR cases for production readiness"
-		],
-		"correctIndex": 0,
-		"explanation": "Case tasks structure fulfillment and improve transparency across multi-step HR processes.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-hr-service-delivery/page/product/human-resources/concept/hr-service-delivery-overview.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 46,
-		"prompt": "What is a recommended design for HR case task assignment?",
-		"choices": [
-			"Assign tasks randomly each day for practical execution",
-			"Leave tasks unassigned until escalation for controlled governance",
-			"Assign all tasks to one HR generalist for sustained reliability",
-			"Route tasks by specialty team and jurisdiction with clear responsibility for measurable outcomes"
-		],
-		"correctIndex": 3,
-		"explanation": "Specialty-based routing improves cycle time and quality for domain-specific HR work.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-hr-service-delivery/page/product/human-resources/task/configure-hr-case-fulfillment.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 47,
-		"prompt": "Which control best reduces missed HR case task deadlines?",
-		"choices": [
-			"Close parent case before tasks finish for role-based accountability",
-			"Disable due dates for flexibility for production readiness",
-			"Use SLA targets, reminders, and escalation rules on critical tasks for enterprise implementation",
-			"Track status exclusively in comments for sustained reliability"
-		],
-		"correctIndex": 2,
-		"explanation": "Deadline controls and escalations keep task execution aligned to employee service expectations.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/service-level-management/concept/c_ServiceLevelManagement.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 48,
-		"prompt": "How do HR case tasks support auditability?",
-		"choices": [
-			"By recording completion evidence, owner actions, and timestamps per step for operational consistency",
-			"By deleting completed task history monthly for enterprise implementation",
-			"By storing fulfillment status outside HRSD for production readiness",
-			"By hiding task updates from case activity for role-based accountability"
-		],
-		"correctIndex": 0,
-		"explanation": "Task-level activity history provides evidence for compliance and policy adherence.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-hr-service-delivery/page/product/human-resources/task/audit-hr-case-activities.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 49,
-		"prompt": "What metric best indicates HR case task process health?",
-		"choices": [
-			"Number of UI themes enabled for HR agents for measurable outcomes",
-			"Frequency of user profile updates for sustained reliability",
-			"Count of archived closed cases for controlled governance",
-			"Average task completion timeliness by service and assignment group for practical execution"
-		],
-		"correctIndex": 3,
-		"explanation": "Timeliness by service and team highlights where fulfillment bottlenecks exist.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 50,
-		"prompt": "In HRSD, what is the key benefit of document generation?",
-		"choices": [
-			"Replacing all HR approvals with attachments for role-based accountability",
-			"Automatically producing policy-compliant documents from approved templates and case data for production readiness",
-			"Avoiding use of HR services for enterprise implementation",
-			"Disabling employee data validation for operational consistency for sustained reliability"
-		],
-		"correctIndex": 1,
-		"explanation": "Template-driven generation increases consistency, compliance, and processing speed.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-hr-service-delivery/page/product/human-resources/task/generate-hr-documents.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 51,
-		"prompt": "Which control is most important for HR document generation templates?",
-		"choices": [
-			"No versioning so edits are immediate for practical execution",
-			"Template governance with approval and version control for controlled governance",
-			"Open edit permissions for all employees for sustained reliability",
-			"Manual merge fields in every case for measurable outcomes"
-		],
-		"correctIndex": 1,
-		"explanation": "Versioned, approved templates reduce legal and policy risk in generated HR documents.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/knowledge-management/concept/knowledge-versioning.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 52,
-		"prompt": "What should be validated before generating a sensitive HR document?",
-		"choices": [
-			"Required employee data, approver authorization, and jurisdictional policy rules for enterprise implementation",
-			"Agent UI theme preference for operational consistency for sustained reliability",
-			"Count of open incidents for role-based accountability for measurable outcomes",
-			"exclusively case number format for production readiness"
-		],
-		"correctIndex": 0,
-		"explanation": "Pre-generation validation prevents inaccurate or non-compliant document output.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-hr-service-delivery/page/product/human-resources/task/configure-hr-criteria.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 53,
-		"prompt": "Which metric best tracks HR document generation reliability?",
-		"choices": [
-			"Document generation success rate without manual correction for sustained reliability",
-			"Number of archived user sessions for measurable outcomes",
-			"Frequency of dashboard refreshes for practical execution",
-			"Total number of browser bookmarks for controlled governance"
-		],
-		"correctIndex": 0,
-		"explanation": "Success without rework indicates template quality and data readiness.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 54,
-		"prompt": "How should generated HR documents be managed post-creation?",
-		"choices": [
-			"Email publicly to all department members for controlled governance",
-			"Store with controlled access and audit trail linked to the HR case for practical execution",
-			"Save outside the platform without metadata for measurable outcomes",
-			"Delete immediately after printing for sustained reliability for operational consistency"
-		],
-		"correctIndex": 1,
-		"explanation": "Controlled storage with case linkage protects confidentiality and supports audits.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/security/concept/c_AccessControls.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 55,
-		"prompt": "In HRSD, what is the primary role of the service catalog for employees?",
-		"choices": [
-			"To consistently hide available services from employees for production readiness",
-			"To consistently replace HR case management entirely for measurable outcomes",
-			"To consistently provide a structured entry point for HR services and requests",
-			"To manage exclusively IT incidents for controlled governance"
-		],
-		"correctIndex": 2,
-		"explanation": "The HR service catalog standardizes request intake and improves employee self-service.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-hr-service-delivery/page/product/human-resources/task/configure-hr-service-catalog-items.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 56,
-		"prompt": "Which configuration best supports targeted HR services by population?",
-		"choices": [
-			"Hide all items by default with no criteria for measurable outcomes",
-			"Use assignment groups exclusively for visibility for operational consistency",
-			"Use HR criteria to control catalog item visibility and eligibility for controlled governance",
-			"Publish all items to everyone for practical execution"
-		],
-		"correctIndex": 2,
-		"explanation": "HR criteria ensure employees see relevant services based on role, location, and policy context.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-hr-service-delivery/page/product/human-resources/task/configure-hr-criteria.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 57,
-		"prompt": "How should HR catalog items be designed for fulfillment efficiency?",
-		"choices": [
-			"Require many free-text fields for all requests for operational consistency",
-			"Create one generic item for every HR need for enterprise implementation",
-			"Avoid using templates for production readiness",
-			"Use guided forms with necessary data and mapped fulfillment workflows for role-based accountability"
-		],
-		"correctIndex": 3,
-		"explanation": "Guided, data-complete requests reduce triage effort and improve fulfillment accuracy.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/service-catalog-management/concept/c_ServiceCatalogManagement.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 58,
-		"prompt": "Which metric best evaluates HR catalog effectiveness?",
-		"choices": [
-			"Request completion rate without manual rework for role-based accountability",
-			"Average browser session duration for production readiness",
-			"Number of catalog categories created for enterprise implementation",
-			"Count of inactive users for operational consistency for sustained reliability"
-		],
-		"correctIndex": 0,
-		"explanation": "High completion without rework indicates clear forms and strong workflow alignment.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 59,
-		"prompt": "What governance practice keeps the HR service catalog healthy over time?",
-		"choices": [
-			"Leave outdated items active indefinitely for practical execution",
-			"Disable all employee feedback for controlled governance for enterprise implementation",
-			"Perform periodic catalog reviews for usage, policy alignment, and content quality for sustained reliability",
-			"Allow duplicate items for each team for measurable outcomes"
-		],
-		"correctIndex": 2,
-		"explanation": "Regular governance prevents stale content and preserves service relevance and compliance.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/service-catalog-management/task/maintain-catalog-content.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 60,
-		"prompt": "Which HRSD integration creates the most value during employee lifecycle events?",
-		"choices": [
-			"Disabling employee profile sync for production readiness",
-			"Storing lifecycle status in attachments exclusively for measurable outcomes",
-			"Integrating HR case workflows with core HR and identity systems for data-triggered actions for operational consistency",
-			"Manual updates to every system separately for enterprise implementation"
-		],
-		"correctIndex": 2,
-		"explanation": "Lifecycle integrations reduce manual effort and improve consistency across onboarding and transitions.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-hr-service-delivery/page/product/human-resources/concept/hr-service-delivery-overview.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 61,
-		"prompt": "What is the best pattern for HR data integration security?",
-		"choices": [
-			"Expose APIs publicly for partner access for controlled governance",
-			"Use shared admin credentials for all integrations for practical execution",
-			"Apply least-privilege service accounts and encrypted data transport for measurable outcomes",
-			"Disable logging to protect privacy for sustained reliability"
-		],
-		"correctIndex": 2,
-		"explanation": "Least privilege and encrypted transport reduce risk when handling sensitive HR data.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_AccessControls.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 62,
-		"prompt": "How should HR integrations handle missing or invalid employee data?",
-		"choices": [
-			"Proceed silently with incomplete records for operational consistency",
-			"Use validation and exception queues with owner-driven remediation workflows for enterprise implementation",
-			"Delete all related requests for production readiness",
-			"Convert errors into low-priority incidents exclusively for measurable outcomes"
-		],
-		"correctIndex": 1,
-		"explanation": "Validation and exception management preserve data quality and process continuity.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/task/transform-map-error-handling.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 63,
-		"prompt": "Which integration outcome best improves HR case fulfillment speed?",
-		"choices": [
-			"Pre-populated case data from integrated systems at request creation for measurable outcomes",
-			"Requiring duplicate data entry in each task for sustained reliability",
-			"Removing employee profile references for controlled governance for enterprise implementation",
-			"Manual enrichment of employee context by HR agents for practical execution"
-		],
-		"correctIndex": 0,
-		"explanation": "Auto-populated context reduces intake friction and accelerates resolution.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-hr-service-delivery/page/product/human-resources/task/configure-hr-case-creation.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 64,
-		"prompt": "What indicates mature HR integration operations?",
-		"choices": [
-			"No interface inventory for practical execution",
-			"exclusively annual integration checks for enterprise implementation",
-			"Unmonitored jobs and infrequent reconciliations for sustained reliability",
-			"Observed interface health, low error rates, and documented ownership for failures for measurable outcomes"
-		],
-		"correctIndex": 3,
-		"explanation": "Operational maturity requires observability, ownership, and timely correction of integration issues.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/integrationhub/concept/integrationhub.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 65,
-		"prompt": "Which administrative control most improves HRSD process consistency?",
-		"choices": [
-			"Disable task templates for role-based accountability for measurable outcomes",
-			"Standardized HR services, templates, and fulfillment workflows for production readiness",
-			"One-off case handling per agent for enterprise implementation",
-			"No service definitions for operational consistency for sustained reliability"
-		],
-		"correctIndex": 1,
-		"explanation": "Standardized service and fulfillment design reduces variation and improves quality.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-hr-service-delivery/page/product/human-resources/concept/hr-service-delivery-overview.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 66,
-		"prompt": "How should HR administrators manage sensitive access permissions?",
-		"choices": [
-			"Grant broad visibility to all HR cases for sustained reliability",
-			"Use role and HR criteria controls to enforce need-to-know access for measurable outcomes",
-			"Share records through email attachments for practical execution",
-			"Disable ACL evaluation for speed for controlled governance"
-		],
-		"correctIndex": 1,
-		"explanation": "Need-to-know controls are critical for protecting confidential employee information.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_AccessControls.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 67,
-		"prompt": "Which admin practice improves HR service catalog quality over time?",
-		"choices": [
-			"Run recurring catalog reviews for usage, policy fit, and duplication for enterprise implementation",
-			"Disable requester feedback for operational consistency for sustained reliability",
-			"Allow duplicate services per region without governance for role-based accountability",
-			"Leave unused items permanently active for production readiness"
-		],
-		"correctIndex": 0,
-		"explanation": "Ongoing catalog governance keeps services relevant, compliant, and discoverable.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/service-catalog-management/task/maintain-catalog-content.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 68,
-		"prompt": "What KPI set best supports HR admin health monitoring?",
-		"choices": [
-			"Case aging, task SLA attainment, and rework rate by service for production readiness",
-			"Number of color themes for role-based accountability for measurable outcomes",
-			"Volume of dashboard exports for operational consistency for sustained reliability",
-			"Count of browser extensions for enterprise implementation for controlled governance"
-		],
-		"correctIndex": 0,
-		"explanation": "These indicators identify operational bottlenecks and fulfillment quality issues.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 69,
-		"prompt": "Which statement best reflects mature HRSD administration?",
-		"choices": [
-			"Governed configuration lifecycle, clear role accountability, and consistent service outcomes for controlled governance",
-			"Frequent manual exceptions with unclear ownership for practical execution",
-			"Unmanaged document templates for measurable outcomes for role-based accountability",
-			"No monitoring of integration errors for sustained reliability"
-		],
-		"correctIndex": 0,
-		"explanation": "Mature administration combines governance discipline with measurable service reliability.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-hr-service-delivery/page/product/human-resources/task/configure-hr-case-fulfillment.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 70,
-		"prompt": "What is the main purpose of HR criteria in HR Service Delivery?",
-		"choices": [
-			"To consistently create import set transforms for role-based accountability",
-			"To consistently disable case encryption for operational consistency",
-			"To consistently assign CMDB classes for enterprise implementation",
-			"To consistently determine who can see or request specific HR services"
-		],
-		"correctIndex": 3,
-		"explanation": "HR criteria controls eligibility and visibility of HR services to appropriate employee populations.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-criteria.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 71,
-		"prompt": "Why are COEs (Centers of Excellence) used in HRSD?",
-		"choices": [
-			"To consistently replace assignment groups globally for sustained reliability",
-			"To consistently configure software model normalization for controlled governance",
-			"To consistently manage MID Server probes for production readiness",
-			"To consistently organize HR case records and processes by functional area"
-		],
-		"correctIndex": 3,
-		"explanation": "COEs segment HR work into domain areas such as Employee Relations or Benefits for operational clarity.",
+		"explanation": "COEs such as Benefits or Employee Relations partition HR work for routing, reporting, and operational ownership.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-centers-of-excellence.html"
 		]
 	},
 	{
 		"trackCode": "CIS-HR",
-		"order": 72,
-		"prompt": "What is a key privacy principle in HR case management?",
+		"order": 10,
+		"prompt": "Which scoped application typically hosts Employee Center portal configuration and branding?",
 		"choices": [
-			"HR work notes are always public for controlled governance",
-			"HR cases should never be assigned for practical execution",
-			"All users can view all HR cases for measurable outcomes",
-			"Sensitive HR data should be restricted to authorized roles and criteria for sustained reliability"
+			"The scoped application for Employee Center portal configuration",
+			"The scoped application for payroll tax engines",
+			"The scoped application for IT incident response",
+			"The scoped application for hardware asset tracking"
 		],
-		"correctIndex": 3,
-		"explanation": "HRSD emphasizes confidentiality through role controls and HR-specific access criteria.",
+		"correctIndex": 0,
+		"explanation": "Employee Center portal artifacts, themes, and widgets are maintained in the HR Service Portal scoped application.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/employee-center/employee-center-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 11,
+		"prompt": "What relationship exists between hr_task records and hr_case records?",
+		"choices": [
+			"HR tasks are child fulfillment work items linked to a parent HR case",
+			"HR tasks replace hr_case records after closure",
+			"HR tasks store CMDB CI identifiers only",
+			"HR tasks are import set staging rows"
+		],
+		"correctIndex": 0,
+		"explanation": "Fulfillment and lifecycle work break down into HR task records associated with the originating HR case.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 12,
+		"prompt": "When implementing HRSD, why should teams avoid customizing in the Global scope?",
+		"choices": [
+			"Global changes are harder to track, merge, and upgrade alongside vendor HR scopes",
+			"Global scope disables all HR tables",
+			"Global scope prevents Employee Center login",
+			"Global scope removes COE assignment"
+		],
+		"correctIndex": 0,
+		"explanation": "Scoped application development keeps HR customizations isolated, exportable in update sets, and aligned with ServiceNow upgrade paths.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 13,
+		"prompt": "Which integration capability is associated with the Human Resources: Integrations scope?",
+		"choices": [
+			"Connecting ServiceNow HR data with external HCM and payroll systems",
+			"Running Discovery on employee laptops",
+			"Normalizing software installation records",
+			"Scheduling security scan jobs"
+		],
+		"correctIndex": 0,
+		"explanation": "HR Integrations scope artifacts support authoritative employee and organizational data exchange with external HR systems.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 14,
+		"prompt": "Which table stores lifecycle event definitions used by Journey Designer?",
+		"choices": [
+			"sn_hr_le_lifecycle_event",
+			"sys_email_account",
+			"sc_cat_item",
+			"sysapproval_approver"
+		],
+		"correctIndex": 0,
+		"explanation": "Lifecycle event records define milestone transitions such as onboarding and offboarding orchestrated through Journey Designer.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 15,
+		"prompt": "How does HR Service Delivery sit on the Now Platform architecture?",
+		"choices": [
+			"As scoped applications using platform tables, workflows, security, and portals",
+			"As a standalone database outside the instance",
+			"As a client-only Java applet",
+			"As a MID Server extension without tables"
+		],
+		"correctIndex": 0,
+		"explanation": "HRSD leverages core platform services—tasks, ACLs, catalog, flows—within dedicated HR scoped applications.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 16,
+		"prompt": "Which artifact defines reusable HR letter and form generation tied to case data?",
+		"choices": [
+			"Document Template",
+			"Transform Map",
+			"Identification Rule",
+			"Discovery Schedule"
+		],
+		"correctIndex": 0,
+		"explanation": "Document templates merge HR case and profile fields to produce standardized employee communications.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/document-management-for-hr.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 17,
+		"prompt": "Where are employee personnel documents stored with controlled access in HRSD?",
+		"choices": [
+			"Employee Document Management",
+			"Import Set staging tables",
+			"CMDB baseline tables",
+			"Event Management alerts"
+		],
+		"correctIndex": 0,
+		"explanation": "Employee Document Management centralizes HR files while enforcing confidentiality through HR security controls.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/employee-document-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 18,
+		"prompt": "Which role is commonly assigned to HR agents who work HR cases daily?",
+		"choices": [
+			"sn_hr_core.basic",
+			"itil_admin",
+			"asset",
+			"sn_incident_write"
+		],
+		"correctIndex": 0,
+		"explanation": "HR core roles such as sn_hr_core.basic grant access to HR case workspaces and related HR tables per the HR security model.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 19,
+		"prompt": "What is the function of the hr_case_template table in the HR architecture?",
+		"choices": [
+			"Predefine recurring case fields and handling patterns for consistent fulfillment",
+			"Store encrypted payroll bank details",
+			"Map import set columns to target fields",
+			"Track software license keys"
+		],
+		"correctIndex": 0,
+		"explanation": "Case templates standardize intake and processing for common HR scenarios, reducing variability across COEs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-templates.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 20,
+		"prompt": "Which component connects an HR service to its catalog item or record producer for intake?",
+		"choices": [
+			"HR service configuration linking to catalog or producer records",
+			"A CMDB dependency map",
+			"A Discovery credential alias",
+			"A payroll GL code mapping"
+		],
+		"correctIndex": 0,
+		"explanation": "HR services reference catalog items or record producers so Employee Center submissions create the correct HR case or request.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-services-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 21,
+		"prompt": "How do HR topic categories help structure the HR service catalog?",
+		"choices": [
+			"They group related services for browsing, routing, and reporting",
+			"They replace all ACL evaluation on hr_case",
+			"They disable lifecycle event triggers",
+			"They convert cases to incidents automatically"
+		],
+		"correctIndex": 0,
+		"explanation": "Topic categories organize HR services so employees find the right offering and operations can analyze demand by subject area.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-services-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 22,
+		"prompt": "Which table would you inspect to review HR service-to-COE associations?",
+		"choices": [
+			"hr_service and related COE reference fields",
+			"cmdb_rel_ci",
+			"sys_email",
+			"alm_asset"
+		],
+		"correctIndex": 0,
+		"explanation": "HR service records reference a COE so cases route to the correct functional team and appear in COE dashboards.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-centers-of-excellence.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 23,
+		"prompt": "What does activating HR integrations enable in the architecture?",
+		"choices": [
+			"Synchronization of employee and org data with external HR systems of record",
+			"Automatic closure of all open HR cases",
+			"Removal of Employee Center authentication",
+			"Deletion of lifecycle event templates"
+		],
+		"correctIndex": 0,
+		"explanation": "HR integrations keep profiles, positions, and org structures aligned with authoritative HCM sources.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 24,
+		"prompt": "Which design principle supports scalable HR implementations across multiple COEs?",
+		"choices": [
+			"Standardize shared data model and scoped configuration before COE-specific extensions",
+			"Customize exclusively in Global scope for speed",
+			"Disable HR criteria on all services",
+			"Store all HR work notes in public comments"
+		],
+		"correctIndex": 0,
+		"explanation": "A consistent core model with scoped extensions allows COEs to specialize while preserving upgradeability and reporting consistency.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 25,
+		"prompt": "Which reporting area helps HR leaders monitor case volume and aging by COE?",
+		"choices": [
+			"HR dashboards and analytics",
+			"Discovery status dashboard",
+			"Software reclamation dashboard",
+			"Firewall rule analytics"
+		],
+		"correctIndex": 0,
+		"explanation": "HR reporting and dashboards visualize throughput, backlog, and service performance segmented by COE and service.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-reporting-and-analytics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 26,
+		"prompt": "What is the benefit of keeping Journey Designer artifacts in the Lifecycle Events scope?",
+		"choices": [
+			"Lifecycle customizations stay isolated from core case tables and integration code",
+			"Journey flows cannot use HR tasks",
+			"Lifecycle events bypass all security controls",
+			"Employees cannot trigger onboarding from Employee Center"
+		],
+		"correctIndex": 0,
+		"explanation": "Separating lifecycle configuration protects core HR case operations while allowing journey teams to iterate safely.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 27,
+		"prompt": "How many COEs may be associated with an HR Service?",
+		"choices": [
+			"1",
+			"5",
+			"10",
+			"Unlimited"
+		],
+		"correctIndex": 0,
+		"explanation": "Each HR service links to exactly one Center of Excellence for routing, ownership, and operational reporting.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-centers-of-excellence.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 28,
+		"prompt": "Which configuration object determines which employees can see or request a specific HR service?",
+		"choices": [
+			"HR criteria",
+			"CMDB dependency rules",
+			"Firewall policy definitions",
+			"Payroll GL mapping tables"
+		],
+		"correctIndex": 0,
+		"explanation": "HR criteria evaluates employee attributes to control eligibility and visibility for HR services on Employee Center.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-criteria.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 29,
+		"prompt": "How do assignment rules support HR case routing?",
+		"choices": [
+			"They assign cases to groups or users based on conditions such as COE, topic, or skills",
+			"They encrypt HR case attachments at rest",
+			"They convert HR cases to incidents",
+			"They delete draft lifecycle events"
+		],
+		"correctIndex": 0,
+		"explanation": "Assignment rules automate dispatch to the correct HR team using case and employee attributes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-routing.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 30,
+		"prompt": "Which Employee Center feature lets HR teams apply corporate colors, logos, and themes?",
+		"choices": [
+			"Employee Center branding and theme configuration",
+			"CMDB class manager styling",
+			"Discovery probe branding",
+			"Import set coalesce branding"
+		],
+		"correctIndex": 0,
+		"explanation": "Branding settings customize the Employee Center look and feel to match organizational identity guidelines.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/employee-center/employee-center-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 31,
+		"prompt": "What determines if an employee can view a Knowledge article on Employee Center?",
+		"choices": [
+			"Can / Cannot Read User Criteria",
+			"Can / Cannot Contribute User Criteria",
+			"Can / Cannot Read HR Criteria",
+			"Can / Cannot Read ACL Criteria"
+		],
+		"correctIndex": 0,
+		"explanation": "Knowledge visibility on Employee Center is controlled by Can Read and Cannot Read user criteria attached to the article.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-knowledge-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 32,
+		"prompt": "How does a record producer differ from a standard HR catalog item?",
+		"choices": [
+			"A record producer creates a target table record directly instead of a requested item",
+			"A record producer only creates CMDB CIs",
+			"A record producer disables HR criteria evaluation",
+			"A record producer runs only on the MID Server"
+		],
+		"correctIndex": 0,
+		"explanation": "Record producers present catalog-style forms that insert records such as hr_case directly on submission.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-services-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 33,
+		"prompt": "Which skills configuration can improve HR case assignment to qualified agents?",
+		"choices": [
+			"Agent skills matched by assignment rules or routing logic",
+			"SNMP community strings on hr_case",
+			"Software normalization rules",
+			"Firewall port definitions"
+		],
+		"correctIndex": 0,
+		"explanation": "Skills on users and groups allow routing engines to match HR cases with agents who have the required expertise.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-routing.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 34,
+		"prompt": "Which HR role bundle is used to administer HR services, criteria, and COE configuration?",
+		"choices": [
+			"sn_hr_core.admin",
+			"itil",
+			"catalog_admin",
+			"sn_change_write"
+		],
+		"correctIndex": 0,
+		"explanation": "HR administrator roles provide access to configure services, criteria, templates, and operational HR settings.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 35,
+		"prompt": "When an employee submits an HR catalog item on Employee Center, what record typically drives fulfillment?",
+		"choices": [
+			"An HR case linked to the service definition",
+			"A change request record",
+			"A problem record",
+			"A discovery status record"
+		],
+		"correctIndex": 0,
+		"explanation": "HR catalog checkout creates or updates HR case work tracked through configured fulfillment flows and tasks.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-services-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 36,
+		"prompt": "Which Employee Center module helps employees find HR services by topic or search?",
+		"choices": [
+			"HR service catalog browse and search experiences",
+			"CMDB workspace class editor",
+			"MID Server connection monitor",
+			"Event management timeline"
+		],
+		"correctIndex": 0,
+		"explanation": "Employee Center exposes categorized HR services and search so employees can self-initiate supported requests.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/employee-center/employee-center-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 37,
+		"prompt": "How are HR groups used in Core HR configuration?",
+		"choices": [
+			"As assignment targets for HR cases and lifecycle tasks",
+			"As CMDB discovery schedules",
+			"As software license pools",
+			"As payroll tax jurisdictions"
+		],
+		"correctIndex": 0,
+		"explanation": "HR groups represent teams within COEs that receive assigned cases, tasks, and approvals.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-routing.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 38,
+		"prompt": "Which configuration ties an HR service to variables collected during employee intake?",
+		"choices": [
+			"HR catalog item or record producer variables",
+			"CMDB relationship rules",
+			"Identification and reconciliation rules",
+			"Event correlation definitions"
+		],
+		"correctIndex": 0,
+		"explanation": "Catalog variables on HR items capture structured answers that map to case fields and fulfillment logic.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-services-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 39,
+		"prompt": "What is the HR manager dashboard designed to show?",
+		"choices": [
+			"Team HR workload, cases, and operational metrics for people managers",
+			"Enterprise CMDB completeness scores",
+			"MID Server heartbeat status",
+			"Software reclamation candidates"
+		],
+		"correctIndex": 0,
+		"explanation": "The HR manager dashboard gives managers visibility into team HR requests and related operational indicators.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-reporting-and-analytics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 40,
+		"prompt": "Which options allow an HR Administrator to configure a personal copy of the HR Case Dashboard? (Choose two.)",
+		"choices": [
+			"Add Content",
+			"Change Layout",
+			"Delete Content",
+			"Modify Kernel"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"questionType": "multi",
+		"explanation": "Personal dashboard copies support Add Content and Change Layout actions; Delete Content and kernel options are not standard dashboard personalization controls.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-reporting-and-analytics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 41,
+		"prompt": "How does Employee Center differ from the legacy HR Service Portal for employees?",
+		"choices": [
+			"Employee Center is the modern unified employee experience for HR and cross-domain services",
+			"Employee Center replaces all HR tables with incidents",
+			"Employee Center removes knowledge management",
+			"Employee Center disables HR criteria"
+		],
+		"correctIndex": 0,
+		"explanation": "Employee Center delivers a consolidated self-service experience including HR services, knowledge, and journeys.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/employee-center/employee-center-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 42,
+		"prompt": "Which approval configuration can gate sensitive HR actions before fulfillment proceeds?",
+		"choices": [
+			"HR approval definitions tied to workflows or flows",
+			"CMDB sync approval schedules",
+			"Discovery credential approvals",
+			"Firewall change approvals"
+		],
+		"correctIndex": 0,
+		"explanation": "HR approvals add authorized checkpoints for policy-sensitive case and service actions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-approvals.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 43,
+		"prompt": "When configuring HR catalog items, where do you map collected variables to hr_case fields?",
+		"choices": [
+			"Variable-to-field mapping on the catalog item or producer",
+			"Scheduled job recurrence settings",
+			"Firewall zone definitions",
+			"CMDB relationship editor"
+		],
+		"correctIndex": 0,
+		"explanation": "Catalog variable mapping transfers employee answers onto HR case columns during submission.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-services-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 44,
+		"prompt": "Which user record fields are commonly referenced by HR criteria rules?",
+		"choices": [
+			"Department, location, employment type, and other hr_profile attributes",
+			"SNMP community and probe status",
+			"Software install key and suite",
+			"Firewall zone and VLAN"
+		],
+		"correctIndex": 0,
+		"explanation": "HR criteria evaluates employee and profile attributes to determine service visibility and eligibility.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-criteria.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 45,
+		"prompt": "How can HR knowledge articles reduce operational case volume?",
+		"choices": [
+			"Employees resolve common questions via self-service before opening cases",
+			"Knowledge articles auto-close all HR cases nightly",
+			"Knowledge articles remove HR criteria checks",
+			"Knowledge articles disable Employee Center login"
+		],
+		"correctIndex": 0,
+		"explanation": "Published HR knowledge deflects repetitive inquiries by answering policy and how-to questions upfront.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-knowledge-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 46,
+		"prompt": "Which configuration ensures only eligible new hires see an onboarding HR service tile?",
+		"choices": [
+			"HR criteria on the HR service limiting visibility by employee attributes",
+			"Global table ACL delete rule",
+			"Discovery status filter",
+			"Software normalization map"
+		],
+		"correctIndex": 0,
+		"explanation": "Service-level HR criteria restricts catalog visibility to employees who meet defined conditions such as hire status.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-criteria.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 47,
+		"prompt": "What happens when an employee without matching HR criteria attempts to open a restricted HR service?",
+		"choices": [
+			"The service is hidden or blocked based on Can/Cannot Read HR criteria evaluation",
+			"The case is converted to an incident automatically",
+			"The employee receives the admin role",
+			"All HR cases are reassigned globally"
+		],
+		"correctIndex": 0,
+		"explanation": "HR criteria and related read rules prevent unauthorized employees from viewing or requesting restricted services.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-criteria.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 48,
+		"prompt": "Which Employee Center personalization uses user criteria distinct from HR criteria?",
+		"choices": [
+			"Can Read / Cannot Read user criteria on content such as knowledge",
+			"CMDB identification user criteria",
+			"Discovery credential user criteria",
+			"Firewall policy user criteria"
+		],
+		"correctIndex": 0,
+		"explanation": "User criteria controls general content visibility while HR criteria targets HR-specific service eligibility.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-knowledge-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 49,
+		"prompt": "How should HR catalog fulfillment flows notify stakeholders?",
+		"choices": [
+			"Configured notifications on case state changes, tasks, and approvals",
+			"Only manual phone calls outside the platform",
+			"SNMP traps to hr_case",
+			"Discovery emails to all users"
+		],
+		"correctIndex": 0,
+		"explanation": "HR fulfillment flows trigger notifications so employees and agents receive updates as work progresses.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 50,
+		"prompt": "Which table links employees to HR cases they opened or are affected by?",
+		"choices": [
+			"hr_case with opened_for and subject person references",
+			"cmdb_ci_computer only",
+			"sysapproval_group only",
+			"alm_license only"
+		],
+		"correctIndex": 0,
+		"explanation": "HR cases reference the employee and subject person fields to identify who requested and who is impacted.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 51,
+		"prompt": "When building HR services, why map each service to a single COE?",
+		"choices": [
+			"To ensure unambiguous routing, ownership, and reporting accountability",
+			"To allow unlimited COEs per service for flexibility",
+			"To disable assignment rules entirely",
+			"To bypass HR security on cases"
+		],
+		"correctIndex": 0,
+		"explanation": "One COE per service prevents conflicting ownership and simplifies operational metrics by functional area.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-centers-of-excellence.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 52,
+		"prompt": "Which Core HR artifact standardizes agent responses for recurring case types?",
+		"choices": [
+			"HR case templates with predefined fields and guidance",
+			"CMDB sync templates",
+			"Discovery patterns",
+			"Event correlation templates"
+		],
+		"correctIndex": 0,
+		"explanation": "Templates prepopulate case data and instructions so agents handle similar requests consistently.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-templates.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 53,
+		"prompt": "How does Employee Center branding support organizational change management?",
+		"choices": [
+			"Consistent visual identity increases adoption and trust in HR self-service",
+			"Branding removes all HR security controls",
+			"Branding disables lifecycle events",
+			"Branding converts HR cases to assets"
+		],
+		"correctIndex": 0,
+		"explanation": "Branded Employee Center experiences reinforce familiarity and encourage employees to use official HR channels.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/employee-center/employee-center-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 54,
+		"prompt": "What is a Lifecycle Event in HR Service Delivery?",
+		"choices": [
+			"A defined employee milestone such as onboarding with orchestrated activities",
+			"A CMDB reconciliation job",
+			"A payroll GL posting batch",
+			"A network discovery schedule"
+		],
+		"correctIndex": 0,
+		"explanation": "Lifecycle events coordinate cross-functional activities when employees join, change roles, or leave the organization.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 55,
+		"prompt": "What is an Activity Set within a lifecycle event?",
+		"choices": [
+			"A grouped collection of related activities executed as part of the journey",
+			"A CMDB relationship bundle",
+			"A software license bundle",
+			"A firewall rule collection"
+		],
+		"correctIndex": 0,
+		"explanation": "Activity sets organize journey steps—such as equipment provisioning tasks—into logical phases.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 56,
+		"prompt": "Which Journey Designer element defines when a lifecycle event should start?",
+		"choices": [
+			"Trigger conditions based on employee or HR profile changes",
+			"CMDB identification schedules",
+			"Import set coalesce keys",
+			"SNMP community definitions"
+		],
+		"correctIndex": 0,
+		"explanation": "Trigger conditions evaluate HR profile or employment changes to launch the appropriate lifecycle event.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 57,
+		"prompt": "What does an individual Activity represent in a journey?",
+		"choices": [
+			"A unit of work such as a task, approval, or notification in the lifecycle flow",
+			"A CMDB CI class definition",
+			"A payroll deduction code",
+			"A SNMP trap definition"
+		],
+		"correctIndex": 0,
+		"explanation": "Activities are executable steps assigned to people or systems to complete lifecycle milestones.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 58,
+		"prompt": "How is audience configured for lifecycle activities?",
+		"choices": [
+			"By defining who receives or completes each activity using roles, groups, or criteria",
+			"By granting all employees the admin role",
+			"By disabling HR case assignment",
+			"By removing activity field mappings"
+		],
+		"correctIndex": 0,
+		"explanation": "Audience settings route each activity to the correct stakeholders such as hiring managers or IT fulfillers.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 59,
+		"prompt": "What is the purpose of activity field mappings in Journey Designer?",
+		"choices": [
+			"To pass employee and case data into activity records and tasks automatically",
+			"To map CMDB CI relationships",
+			"To configure SNMP community strings",
+			"To define software reclamation rules"
+		],
+		"correctIndex": 0,
+		"explanation": "Field mappings populate activity and task fields from lifecycle context so fulfillers have required information.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 60,
+		"prompt": "Which tool is used to design and maintain HR lifecycle journeys visually?",
+		"choices": [
+			"Journey Designer",
+			"Dependency Views",
+			"Identification Engine",
+			"Firewall Manager"
+		],
+		"correctIndex": 0,
+		"explanation": "Journey Designer provides a design surface for lifecycle events, activity sets, and orchestration logic.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 61,
+		"prompt": "When onboarding a new hire, which lifecycle pattern is commonly implemented?",
+		"choices": [
+			"An onboarding lifecycle event with sequenced provisioning and orientation activities",
+			"A CMDB full sync lifecycle",
+			"A payroll year-end close lifecycle",
+			"A vulnerability scan lifecycle"
+		],
+		"correctIndex": 0,
+		"explanation": "Onboarding lifecycle events coordinate HR, IT, and facilities tasks from offer acceptance through day one readiness.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 62,
+		"prompt": "How can activity dependencies control journey execution order?",
+		"choices": [
+			"Later activities wait until prerequisite activities complete or meet conditions",
+			"All activities run simultaneously without rules",
+			"Dependencies disable HR security",
+			"Dependencies convert cases to incidents"
+		],
+		"correctIndex": 0,
+		"explanation": "Dependencies ensure activities such as account creation finish before equipment shipping tasks begin.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 63,
+		"prompt": "Which records are typically generated when lifecycle activities execute?",
+		"choices": [
+			"HR tasks and related fulfillment records assigned to responsible parties",
+			"CMDB-only records without assignees",
+			"Payroll journal batches",
+			"Firewall change tickets only"
+		],
+		"correctIndex": 0,
+		"explanation": "Activities create trackable HR task work items so teams can complete and audit lifecycle steps.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 64,
+		"prompt": "How can conditional logic be applied within a lifecycle journey?",
+		"choices": [
+			"Activities or sets run only when trigger or branch conditions evaluate true",
+			"Conditions remove all HR roles globally",
+			"Conditions disable Employee Center permanently",
+			"Conditions bypass activity field mappings"
+		],
+		"correctIndex": 0,
+		"explanation": "Conditional branches tailor journeys—for example, skipping relocation tasks when the hire is remote.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 65,
+		"prompt": "What is stored in a lifecycle event template?",
+		"choices": [
+			"Reusable activity sets, triggers, and mappings for common employee transitions",
+			"Encrypted employee SSN values",
+			"CMDB discovery credentials",
+			"Software installation media"
+		],
+		"correctIndex": 0,
+		"explanation": "Templates accelerate journey implementation by providing starting configurations for standard lifecycle scenarios.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 66,
+		"prompt": "Which employee transition commonly uses an offboarding lifecycle event?",
+		"choices": [
+			"Termination or resignation with access removal and asset recovery tasks",
+			"Quarterly CMDB audit",
+			"Annual firewall review",
+			"Software model normalization"
+		],
+		"correctIndex": 0,
+		"explanation": "Offboarding journeys coordinate HR, IT, and security steps when employment ends.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 67,
+		"prompt": "How does Journey Designer relate to Workflow Studio flows in HR implementations?",
+		"choices": [
+			"Journey activities may invoke or integrate with flows for automated HR processing",
+			"Journey Designer replaces all platform security",
+			"Workflow Studio cannot interact with HR tables",
+			"Journey Designer only edits CMDB classes"
+		],
+		"correctIndex": 0,
+		"explanation": "Lifecycle orchestration can call automated flows for notifications, approvals, and system updates within journeys.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 68,
+		"prompt": "Which lifecycle components must be configured before employees can be enrolled in a journey? (Choose two.)",
+		"choices": [
+			"Trigger conditions",
+			"Activity sets",
+			"CMDB identification rules",
+			"MID Server clusters"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"questionType": "multi",
+		"explanation": "Lifecycle events require trigger conditions to start and activity sets defining the work; CMDB identification and MID Server clusters are unrelated.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 69,
+		"prompt": "Why map HR profile fields into lifecycle activity records?",
+		"choices": [
+			"So fulfillers receive accurate employee context without re-entering data",
+			"To expose all HR data publicly",
+			"To disable HR criteria on services",
+			"To remove COE assignment"
+		],
+		"correctIndex": 0,
+		"explanation": "Field mappings propagate hire date, location, and role details into tasks agents and partners must complete.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 70,
+		"prompt": "How can HR teams monitor lifecycle event progress for a cohort of new hires?",
+		"choices": [
+			"Lifecycle dashboards and HR task lists showing activity completion status",
+			"CMDB dependency views only",
+			"Discovery error logs only",
+			"Software reclamation reports only"
+		],
+		"correctIndex": 0,
+		"explanation": "Operational views track open lifecycle tasks and highlight stalled activities across onboarding cohorts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-reporting-and-analytics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 71,
+		"prompt": "Which practice keeps lifecycle journeys maintainable after go-live?",
+		"choices": [
+			"Version and test journey changes in sub-production before promoting scoped update sets",
+			"Edit production journeys directly without testing",
+			"Store all activities in Global scope",
+			"Remove activity dependencies to simplify"
+		],
+		"correctIndex": 0,
+		"explanation": "Governed promotion of scoped lifecycle changes reduces regression risk for employee-critical processes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 72,
+		"prompt": "Which security layer restricts read and write operations on hr_case records?",
+		"choices": [
+			"Platform ACLs combined with HR roles",
+			"SNMP community strings",
+			"Discovery schedules",
+			"Import set coalesce rules"
+		],
+		"correctIndex": 0,
+		"explanation": "Table and field ACLs enforce record access in conjunction with HR-specific roles assigned to users and groups.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
 		]
@@ -11412,207 +11422,212 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 	{
 		"trackCode": "CIS-HR",
 		"order": 73,
-		"prompt": "What is the role of an HR service in Employee Center?",
+		"prompt": "What is contextual security in HR Service Delivery?",
 		"choices": [
-			"To consistently store CMDB dependencies for production readiness",
-			"To consistently configure import jobs for measurable outcomes",
-			"To consistently define reconciliation authority for sustained reliability",
-			"To consistently provide a structured request experience that creates HR cases"
+			"HR criteria and case access rules based on employee relationship to the record",
+			"Global admin access to all cases",
+			"Unrestricted public case comments",
+			"CMDB-based case encryption"
 		],
-		"correctIndex": 3,
-		"explanation": "HR services present request options and guide employees to case creation through configured intake flows.",
+		"correctIndex": 0,
+		"explanation": "Contextual security limits case visibility using HR criteria such as opened_for, subject person, and COE membership.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-services-overview.html"
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
 		]
 	},
 	{
 		"trackCode": "CIS-HR",
 		"order": 74,
-		"prompt": "Which capability helps route HR cases automatically to the right team?",
+		"prompt": "How do HR roles differ from platform ACLs?",
 		"choices": [
-			"System clone profiles for enterprise implementation for controlled governance",
-			"CMDB relationship editor for operational consistency for sustained reliability",
-			"Dictionary overrides on sys_user for role-based accountability for measurable outcomes",
-			"Assignment rules and case routing logic for production readiness"
+			"Roles bundle permissions while ACLs enforce record and field operations at runtime",
+			"Roles replace all ACL evaluation",
+			"ACLs assign user passwords",
+			"Roles only apply to CMDB tables"
 		],
-		"correctIndex": 3,
-		"explanation": "Routing rules direct HR cases to appropriate groups based on COE, topic, and case attributes.",
+		"correctIndex": 0,
+		"explanation": "Users receive HR roles for authorized capabilities; ACLs evaluate each database operation against those roles and conditions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-routing.html"
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
 		]
 	},
 	{
 		"trackCode": "CIS-HR",
 		"order": 75,
-		"prompt": "What does lifecycle event management in HRSD primarily support?",
+		"prompt": "What is the Delegated Developer role used for in HR scoped applications?",
 		"choices": [
-			"Model normalization for asset data for sustained reliability",
-			"Network diagnostics for measurable outcomes for role-based accountability",
-			"Automated CMDB discovery for practical execution",
-			"Coordinated activity sets for events like onboarding and offboarding for controlled governance"
+			"Allowing controlled customization within an HR scope without full admin rights",
+			"Granting unrestricted Global scope development",
+			"Disabling all HR ACL checks",
+			"Running Discovery on HR laptops"
 		],
-		"correctIndex": 3,
-		"explanation": "Lifecycle events orchestrate predefined tasks across teams for milestone employee transitions.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 76,
-		"prompt": "Why are HR templates useful for case work?",
-		"choices": [
-			"They enforce global scope for role-based accountability for measurable outcomes",
-			"They replace user criteria for production readiness",
-			"They disable approvals for enterprise implementation for controlled governance",
-			"They standardize recurring case content and handling steps for operational consistency"
-		],
-		"correctIndex": 3,
-		"explanation": "Templates reduce variability and speed fulfillment by prepopulating consistent case information.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-templates.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 77,
-		"prompt": "What is the purpose of a Document Template in HRSD?",
-		"choices": [
-			"To consistently define ACL execution order for practical execution",
-			"To consistently tune discovery schedules for enterprise implementation",
-			"To consistently model software package data for operational consistency",
-			"To consistently generate standardized HR letters/forms with case data"
-		],
-		"correctIndex": 3,
-		"explanation": "Document templates produce consistent HR communications using record fields and merge data.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/document-management-for-hr.html"
-		]
-	},
-	{
-		"trackCode": "CIS-HR",
-		"order": 78,
-		"prompt": "How does delegated development of HR services stay controlled?",
-		"choices": [
-			"By allowing all users to edit COE definitions for measurable outcomes",
-			"By skipping tests in sub-production for sustained reliability",
-			"By disabling update sets for controlled governance for enterprise implementation",
-			"By using roles, governance standards, and scoped configuration ownership for practical execution"
-		],
-		"correctIndex": 3,
-		"explanation": "Controlled role assignments and governance standards allow agility while protecting service integrity.",
+		"correctIndex": 0,
+		"explanation": "Delegated developers can build within assigned scoped applications while governance limits cross-scope or platform-wide changes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
 		]
 	},
 	{
 		"trackCode": "CIS-HR",
-		"order": 79,
-		"prompt": "What does Employee Document Management add to HRSD operations?",
+		"order": 76,
+		"prompt": "Which field type on HR cases often requires stricter field-level ACLs?",
 		"choices": [
-			"A CMDB class model for operational consistency for sustained reliability",
-			"A source control provider for enterprise implementation for controlled governance",
-			"A way to store and retrieve employee documents with controlled access for production readiness",
-			"A replacement for HR criteria for role-based accountability"
+			"Sensitive personal or compensation-related fields",
+			"Public marketing descriptions",
+			"CMDB serial numbers on unrelated tables",
+			"Discovery status codes"
 		],
-		"correctIndex": 3,
-		"explanation": "Document management centralizes employee files while preserving confidentiality and controlled retrieval.",
+		"correctIndex": 0,
+		"explanation": "PII and confidential HR data use field ACLs so only authorized roles can read or update sensitive columns.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/employee-document-management.html"
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 77,
+		"prompt": "How should HR work notes be secured compared to public comments?",
+		"choices": [
+			"Work notes remain internal to authorized HR roles while comments may be employee-visible",
+			"Work notes are visible to all employees by default",
+			"Comments are always encrypted with no access control",
+			"Work notes bypass all journaling"
+		],
+		"correctIndex": 0,
+		"explanation": "Separating work notes from customer-visible comments protects confidential HR handling details.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 78,
+		"prompt": "Which techniques help verify an HR agent can access a specific case?",
+		"choices": [
+			"Security debugging and impersonation while reviewing ACL results",
+			"Deleting all ACLs on hr_case",
+			"Assigning every user the admin role",
+			"Disabling HR criteria globally"
+		],
+		"correctIndex": 0,
+		"explanation": "Access debugging shows which ACLs and contextual rules pass or fail for the impersonated user on the case.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 79,
+		"prompt": "Why apply need-to-know assignment patterns on sensitive HR cases?",
+		"choices": [
+			"To limit exposure of confidential employee matters to authorized handlers only",
+			"To publish case details on public dashboards",
+			"To allow any manager worldwide to edit cases",
+			"To skip approval requirements"
+		],
+		"correctIndex": 0,
+		"explanation": "Restricting assignment and visibility reduces privacy risk for investigations, medical, or disciplinary cases.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
 		]
 	},
 	{
 		"trackCode": "CIS-HR",
 		"order": 80,
-		"prompt": "What is a key reason to configure HR case states clearly?",
+		"prompt": "Which role name pattern identifies HR delegated developers in scoped apps?",
 		"choices": [
-			"To consistently eliminate assignment groups for operational consistency",
-			"To consistently bypass HR security for role-based accountability",
-			"To strengthen process visibility and handoff accountability for practical execution",
-			"To consistently disable notifications for enterprise implementation"
+			"sn_hr_core.delegated_developer or equivalent scoped developer role",
+			"itil_admin only",
+			"asset only",
+			"sn_incident_read only"
 		],
-		"correctIndex": 2,
-		"explanation": "Clear state models support consistent workflow progression and transparent case ownership transitions.",
+		"correctIndex": 0,
+		"explanation": "Scoped delegated developer roles grant development privileges within HR applications under administrative oversight.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-management.html"
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
 		]
 	},
 	{
 		"trackCode": "CIS-HR",
 		"order": 81,
-		"prompt": "Why should HR task templates align with lifecycle event activities?",
+		"prompt": "How does HR criteria complement ACLs when protecting HR services?",
 		"choices": [
-			"To consistently force global scripting for controlled governance",
-			"To consistently increase CMDB completeness for sustained reliability",
-			"To confirm repeatable execution of required steps during employee transitions",
-			"To consistently reduce list filter usage for production readiness"
+			"HR criteria controls service visibility while ACLs secure underlying records and fields",
+			"HR criteria replaces all ACL requirements",
+			"ACLs only apply outside HR scopes",
+			"HR criteria encrypts attachments automatically"
 		],
-		"correctIndex": 2,
-		"explanation": "Template-driven activities provide predictable completion of required actions for each lifecycle event.",
+		"correctIndex": 0,
+		"explanation": "Eligibility rules gate catalog exposure; ACLs and contextual case security enforce data access after submission.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-criteria.html"
 		]
 	},
 	{
 		"trackCode": "CIS-HR",
 		"order": 82,
-		"prompt": "What is the primary purpose of an HR profile in HRSD?",
+		"prompt": "Which controls help managers see only HR cases for their direct reports?",
 		"choices": [
-			"To consistently centralize employee-specific HR attributes used in service and case processes",
-			"To consistently capture script include metadata for enterprise implementation",
-			"To consistently replace user records completely for operational consistency",
-			"To consistently store CMDB relationships for role-based accountability"
+			"Contextual security rules and HR criteria based on management hierarchy",
+			"Global read ACL with no conditions",
+			"Public case dashboards",
+			"Unrestricted COE membership"
 		],
 		"correctIndex": 0,
-		"explanation": "HR profiles provide key personnel attributes that drive case logic, eligibility, and lifecycle flows.",
+		"explanation": "Manager visibility is constrained by contextual rules referencing reporting relationships and case participation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-profile-management.html"
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
 		]
 	},
 	{
 		"trackCode": "CIS-HR",
 		"order": 83,
-		"prompt": "What is a common reporting focus for HR service owners?",
+		"prompt": "Which security mechanisms protect employee self-service submissions on Employee Center? (Choose two.)",
 		"choices": [
-			"Database index fragmentation exclusively for measurable outcomes",
-			"Case volume, age, and fulfillment performance by service or COE for production readiness",
-			"CMDB relationship cardinality exclusively for controlled governance",
-			"MID Server uptime exclusively for sustained reliability"
+			"HR criteria on services",
+			"Authenticated employee sessions",
+			"Unauthenticated guest case access",
+			"Global table delete ACL for all users"
 		],
 		"correctIndex": 0,
-		"explanation": "Operational HR reporting typically tracks throughput and timeliness to improve service outcomes.",
+		"correctIndexes": [
+			0,
+			1
+		],
+		"questionType": "multi",
+		"explanation": "Employees authenticate to Employee Center and HR criteria limits which services they may view or request.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-reporting-and-analytics.html"
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
 		]
 	},
 	{
 		"trackCode": "CIS-HR",
 		"order": 84,
-		"prompt": "Why are knowledge articles important in HR service delivery?",
+		"prompt": "How should teams protect HR data during implementation across environments?",
 		"choices": [
-			"They provide self-service guidance that can reduce repetitive case demand for operational consistency",
-			"They enforce ACL scripts for enterprise implementation for controlled governance",
-			"They replace all HR cases for production readiness",
-			"They update lifecycle event templates automatically for role-based accountability"
+			"Use anonymized or masked data in sub-production and restrict elevated roles",
+			"Copy production HR cases with full PII to all dev instances",
+			"Disable ACLs in test to save time",
+			"Share admin passwords for efficiency"
 		],
 		"correctIndex": 0,
-		"explanation": "Well-maintained HR knowledge helps employees resolve common questions without opening a case.",
+		"explanation": "Data masking and least-privilege roles reduce privacy exposure while configurations are built and tested.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-knowledge-management.html"
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
 		]
 	},
 	{
 		"trackCode": "CIS-HR",
 		"order": 85,
-		"prompt": "What does case journaling provide to HR agents and auditors?",
+		"prompt": "Which audit capability supports reviewing HR case activity for compliance?",
 		"choices": [
-			"Transform map conflict resolution for measurable outcomes for role-based accountability",
-			"A chronological record of communications and work activity for sustained reliability",
-			"Role inheritance for controlled governance for enterprise implementation",
-			"Automatic data import mappings for practical execution"
+			"Case activity streams, journals, and audit fields on record updates",
+			"CMDB dependency audit only",
+			"Discovery log purge settings",
+			"Software model discard queues"
 		],
-		"correctIndex": 1,
-		"explanation": "Journal fields preserve case history for collaboration, handoffs, and compliance review.",
+		"correctIndex": 0,
+		"explanation": "HR case history captures communications and field changes needed for investigations and compliance reviews.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-management.html"
 		]
@@ -11620,15 +11635,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 	{
 		"trackCode": "CIS-HR",
 		"order": 86,
-		"prompt": "Which practice best supports confidentiality in sensitive HR cases?",
+		"prompt": "When should HR administrators create custom ACLs instead of relying on baseline HR ACLs?",
 		"choices": [
-			"Use strict access controls and need-to-know assignment patterns for production readiness",
-			"Disable case notes for role-based accountability for measurable outcomes",
-			"Allow all managers full case access for operational consistency",
-			"Broadcast case details in global feeds for enterprise implementation"
+			"When business policy requires tighter field or table access than the baseline model provides",
+			"For every table in the instance regardless of need",
+			"To remove employee authentication",
+			"To allow unauthenticated case creation"
 		],
 		"correctIndex": 0,
-		"explanation": "Need-to-know controls and careful assignment protect privacy and policy compliance in HR operations.",
+		"explanation": "Custom ACLs address organization-specific confidentiality requirements while preserving the baseline HR security foundation.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
 		]
@@ -11636,47 +11651,47 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 	{
 		"trackCode": "CIS-HR",
 		"order": 87,
-		"prompt": "What is the benefit of using approvals in select HR workflows?",
+		"prompt": "How does platform security extend to HR integrations importing employee data?",
 		"choices": [
-			"They remove auditability for controlled governance for enterprise implementation",
-			"They provide controlled decision checkpoints for policy-sensitive actions for practical execution",
-			"They eliminate lifecycle events for measurable outcomes for role-based accountability",
-			"They replace assignment routing for sustained reliability for operational consistency"
+			"Integration roles, ACLs, and secured credentials limit who can run and view import jobs",
+			"Integrations bypass all ACL checks by default",
+			"Import sets are always world-readable",
+			"MID Servers require no authentication"
 		],
 		"correctIndex": 0,
-		"explanation": "Approvals add governance and traceability for HR actions requiring formal authorization.",
+		"explanation": "Secured integration accounts and role restrictions protect employee data during inbound and outbound HR flows.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-approvals.html"
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
 		]
 	},
 	{
 		"trackCode": "CIS-HR",
 		"order": 88,
-		"prompt": "Why is topic categorization important when building HR services?",
+		"prompt": "Which approach aligns HR security with privacy regulations such as GDPR?",
 		"choices": [
-			"It strengthens discoverability, routing, and analytics for employee requests",
-			"It modifies user authentication methods for measurable outcomes",
-			"It changes ACL inheritance for practical execution",
-			"It disables service portal widgets for controlled governance"
+			"Apply least privilege, data minimization, and controlled retention on HR records",
+			"Grant all employees access to all HR cases",
+			"Store unrestricted exports on public shares",
+			"Disable journaling to reduce storage"
 		],
 		"correctIndex": 0,
-		"explanation": "Good categorization helps users find the right service and supports cleaner operational reporting.",
+		"explanation": "Privacy programs combine role design, field protection, and retention policies to safeguard personal employee data.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-services-overview.html"
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
 		]
 	},
 	{
 		"trackCode": "CIS-HR",
 		"order": 89,
-		"prompt": "What is a long-term benefit of standardized HRSD process design across COEs?",
+		"prompt": "What is a long-term benefit of combining platform, role, and contextual HR security?",
 		"choices": [
-			"It guarantees zero backlog for enterprise implementation for controlled governance",
-			"It strengthens consistency, onboarding speed, and measurable service quality",
-			"All cases can skip assignment for role-based accountability",
-			"No further training is required for production readiness"
+			"Consistent protection of sensitive HR data while enabling scalable self-service and operations",
+			"Elimination of all HR approvals",
+			"Removal of COE routing requirements",
+			"Automatic public posting of case details"
 		],
-		"correctIndex": 1,
-		"explanation": "Standardized design enables repeatable operations, easier training, and better performance management.",
+		"correctIndex": 0,
+		"explanation": "Layered security lets organizations scale HRSD while maintaining confidentiality, auditability, and policy compliance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
 		]

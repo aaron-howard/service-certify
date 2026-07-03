@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-HR",
+		"order": 35,
+		"prompt": "When an employee submits an HR catalog item on Employee Center, what record typically drives fulfillment?",
+		"choices": [
+			"An HR case linked to the service definition",
+			"A change request record",
+			"A problem record",
+			"A discovery status record"
+		],
+		"correctIndex": 0,
+		"explanation": "HR catalog checkout creates or updates HR case work tracked through configured fulfillment flows and tasks.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-services-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 36,
+		"prompt": "Which Employee Center module helps employees find HR services by topic or search?",
+		"choices": [
+			"HR service catalog browse and search experiences",
+			"CMDB workspace class editor",
+			"MID Server connection monitor",
+			"Event management timeline"
+		],
+		"correctIndex": 0,
+		"explanation": "Employee Center exposes categorized HR services and search so employees can self-initiate supported requests.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/employee-center/employee-center-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 37,
+		"prompt": "How are HR groups used in Core HR configuration?",
+		"choices": [
+			"As assignment targets for HR cases and lifecycle tasks",
+			"As CMDB discovery schedules",
+			"As software license pools",
+			"As payroll tax jurisdictions"
+		],
+		"correctIndex": 0,
+		"explanation": "HR groups represent teams within COEs that receive assigned cases, tasks, and approvals.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-routing.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 38,
+		"prompt": "Which configuration ties an HR service to variables collected during employee intake?",
+		"choices": [
+			"HR catalog item or record producer variables",
+			"CMDB relationship rules",
+			"Identification and reconciliation rules",
+			"Event correlation definitions"
+		],
+		"correctIndex": 0,
+		"explanation": "Catalog variables on HR items capture structured answers that map to case fields and fulfillment logic.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-services-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 39,
+		"prompt": "What is the HR manager dashboard designed to show?",
+		"choices": [
+			"Team HR workload, cases, and operational metrics for people managers",
+			"Enterprise CMDB completeness scores",
+			"MID Server heartbeat status",
+			"Software reclamation candidates"
+		],
+		"correctIndex": 0,
+		"explanation": "The HR manager dashboard gives managers visibility into team HR requests and related operational indicators.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-reporting-and-analytics.html"
+		]
+	}
+]

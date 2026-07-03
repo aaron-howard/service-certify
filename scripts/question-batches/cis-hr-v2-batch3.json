@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-HR",
+		"order": 10,
+		"prompt": "Which scoped application typically hosts Employee Center portal configuration and branding?",
+		"choices": [
+			"The scoped application for Employee Center portal configuration",
+			"The scoped application for payroll tax engines",
+			"The scoped application for IT incident response",
+			"The scoped application for hardware asset tracking"
+		],
+		"correctIndex": 0,
+		"explanation": "Employee Center portal artifacts, themes, and widgets are maintained in the HR Service Portal scoped application.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/employee-center/employee-center-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 11,
+		"prompt": "What relationship exists between hr_task records and hr_case records?",
+		"choices": [
+			"HR tasks are child fulfillment work items linked to a parent HR case",
+			"HR tasks replace hr_case records after closure",
+			"HR tasks store CMDB CI identifiers only",
+			"HR tasks are import set staging rows"
+		],
+		"correctIndex": 0,
+		"explanation": "Fulfillment and lifecycle work break down into HR task records associated with the originating HR case.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 12,
+		"prompt": "When implementing HRSD, why should teams avoid customizing in the Global scope?",
+		"choices": [
+			"Global changes are harder to track, merge, and upgrade alongside vendor HR scopes",
+			"Global scope disables all HR tables",
+			"Global scope prevents Employee Center login",
+			"Global scope removes COE assignment"
+		],
+		"correctIndex": 0,
+		"explanation": "Scoped application development keeps HR customizations isolated, exportable in update sets, and aligned with ServiceNow upgrade paths.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 13,
+		"prompt": "Which integration capability is associated with the Human Resources: Integrations scope?",
+		"choices": [
+			"Connecting ServiceNow HR data with external HCM and payroll systems",
+			"Running Discovery on employee laptops",
+			"Normalizing software installation records",
+			"Scheduling security scan jobs"
+		],
+		"correctIndex": 0,
+		"explanation": "HR Integrations scope artifacts support authoritative employee and organizational data exchange with external HR systems.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 14,
+		"prompt": "Which table stores lifecycle event definitions used by Journey Designer?",
+		"choices": [
+			"sn_hr_le_lifecycle_event",
+			"sys_email_account",
+			"sc_cat_item",
+			"sysapproval_approver"
+		],
+		"correctIndex": 0,
+		"explanation": "Lifecycle event records define milestone transitions such as onboarding and offboarding orchestrated through Journey Designer.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+		]
+	}
+]

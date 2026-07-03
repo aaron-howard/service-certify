@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-HR",
+		"order": 50,
+		"prompt": "Which table links employees to HR cases they opened or are affected by?",
+		"choices": [
+			"hr_case with opened_for and subject person references",
+			"cmdb_ci_computer only",
+			"sysapproval_group only",
+			"alm_license only"
+		],
+		"correctIndex": 0,
+		"explanation": "HR cases reference the employee and subject person fields to identify who requested and who is impacted.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 51,
+		"prompt": "When building HR services, why map each service to a single COE?",
+		"choices": [
+			"To ensure unambiguous routing, ownership, and reporting accountability",
+			"To allow unlimited COEs per service for flexibility",
+			"To disable assignment rules entirely",
+			"To bypass HR security on cases"
+		],
+		"correctIndex": 0,
+		"explanation": "One COE per service prevents conflicting ownership and simplifies operational metrics by functional area.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-centers-of-excellence.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 52,
+		"prompt": "Which Core HR artifact standardizes agent responses for recurring case types?",
+		"choices": [
+			"HR case templates with predefined fields and guidance",
+			"CMDB sync templates",
+			"Discovery patterns",
+			"Event correlation templates"
+		],
+		"correctIndex": 0,
+		"explanation": "Templates prepopulate case data and instructions so agents handle similar requests consistently.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-templates.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 53,
+		"prompt": "How does Employee Center branding support organizational change management?",
+		"choices": [
+			"Consistent visual identity increases adoption and trust in HR self-service",
+			"Branding removes all HR security controls",
+			"Branding disables lifecycle events",
+			"Branding converts HR cases to assets"
+		],
+		"correctIndex": 0,
+		"explanation": "Branded Employee Center experiences reinforce familiarity and encourage employees to use official HR channels.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/employee-center/employee-center-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 54,
+		"prompt": "What is a Lifecycle Event in HR Service Delivery?",
+		"choices": [
+			"A defined employee milestone such as onboarding with orchestrated activities",
+			"A CMDB reconciliation job",
+			"A payroll GL posting batch",
+			"A network discovery schedule"
+		],
+		"correctIndex": 0,
+		"explanation": "Lifecycle events coordinate cross-functional activities when employees join, change roles, or leave the organization.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+		]
+	}
+]
