@@ -1,0 +1,512 @@
+[
+  {
+    "trackCode": "CIS-RC",
+    "order": 60,
+    "prompt": "What is the main objective of GRC reporting for executive stakeholders?",
+    "choices": [
+      "Represents the approach that replace risk reviews with dashboard color indicators.",
+      "Reflects the condition that display only policy document counts by department.",
+      "Matches the scenario in which list every open task without severity or ownership context.",
+      "Describes the outcome where present risk, compliance, and audit posture trends that support oversight decisions and resource prioritization."
+    ],
+    "correctIndex": 3,
+    "explanation": "Executive GRC reporting should translate operational data into decision-ready governance insight.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/task/t_UseDashboardsAndReports.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 61,
+    "prompt": "Which report design best supports board-level RC discussions?",
+    "choices": [
+      "Matches the scenario in which a single export of all risk records with raw notes.",
+      "Captures the choice stating unfiltered policy attestation comments.",
+      "Describes the outcome where trend-based dashboards showing inherent versus residual risk, control effectiveness, and high-risk exception aging.",
+      "Reflects the condition that daily analyst activity counts without risk segmentation."
+    ],
+    "correctIndex": 2,
+    "explanation": "Board reporting should emphasize trend, impact, and accountability rather than raw record volume.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-scoring.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 62,
+    "prompt": "How should GRC reporting handle inconsistent data quality across business units?",
+    "choices": [
+      "Matches the scenario in which exclude low-quality units from all dashboards permanently.",
+      "Captures the choice stating delay reporting until every field is perfectly complete.",
+      "Reflects the condition that average all scores without transparency to improve appearance.",
+      "Corresponds to the option where include data-quality indicators, ownership gaps, and remediation plans alongside risk and compliance metrics."
+    ],
+    "correctIndex": 3,
+    "explanation": "Transparent data-quality dimensions preserve trust and drive remediation accountability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/data-quality-in-grc.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/audit-management/concept/audit-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 63,
+    "prompt": "Which cadence model is most effective for GRC reporting?",
+    "choices": [
+      "Captures the choice stating separate inconsistent report definitions per team.",
+      "Represents the approach that annual static reports for all audiences.",
+      "Corresponds to the option where run-time weekly dashboards with monthly oversight packs and quarterly executive summaries.",
+      "Reflects the condition that on-demand reporting only after major incidents."
+    ],
+    "correctIndex": 2,
+    "explanation": "Layered cadence supports tactical action and strategic governance with consistent definitions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/task/t_ConfigureScorecards.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 64,
+    "prompt": "Which outcome indicates GRC reporting maturity?",
+    "choices": [
+      "Represents the approach that more report variants with conflicting risk numbers.",
+      "Describes the outcome where longer time spent reconciling spreadsheets before reviews.",
+      "Captures the choice stating higher percentage of unowned high-risk findings.",
+      "Corresponds to the option where leaders consistently use reports to reduce exposure, close exceptions faster, and improve control performance."
+    ],
+    "correctIndex": 3,
+    "explanation": "Mature reporting drives measurable governance outcomes, not just dashboard production.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/task/t_UseDashboardsAndReports.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 65,
+    "prompt": "What is the primary objective of audit remediation in Risk and Compliance?",
+    "choices": [
+      "Represents the approach that archive findings without action once the audit report is published.",
+      "Matches the scenario in which delay remediation until the next annual audit cycle.",
+      "Corresponds to the option where close control gaps with documented corrective actions, owners, and due dates tied to findings.",
+      "Describes the outcome where convert all findings into low-priority risks automatically."
+    ],
+    "correctIndex": 2,
+    "explanation": "Audit remediation focuses on correcting identified deficiencies through accountable and traceable action plans.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/concept/policy-and-compliance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 66,
+    "prompt": "Which remediation workflow design most improves audit finding closure rates?",
+    "choices": [
+      "Represents the approach that assign all findings to one generic compliance group.",
+      "Matches the scenario in which track remediation in offline spreadsheets only.",
+      "Describes the outcome where allow remediation tasks to close without supporting evidence.",
+      "Reflects the condition that use tasks with clear ownership, evidence requirements, milestone tracking, and escalation rules."
+    ],
+    "correctIndex": 3,
+    "explanation": "Structured, accountable tasks with evidence and escalation drive consistent and timely remediation outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk/concept/risk-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/task-table/concept/task-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 67,
+    "prompt": "How should control owners prioritize audit remediation efforts?",
+    "choices": [
+      "Matches the scenario in which prioritize only by age of the finding.",
+      "Captures the choice stating prioritize by which findings are easiest to close first.",
+      "Reflects the condition that prioritize findings based on report page order.",
+      "Describes the outcome where prioritize by business impact, regulatory exposure, and likelihood of recurrence."
+    ],
+    "correctIndex": 3,
+    "explanation": "Risk-based prioritization ensures the most consequential control failures are remediated first.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk/concept/risk-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/concept/policy-and-compliance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 68,
+    "prompt": "Which evidence package best supports validation of completed audit remediation?",
+    "choices": [
+      "Captures the choice stating an email saying remediation is complete without attachments.",
+      "Corresponds to the option where a screenshot of the finding list.",
+      "Matches the scenario in which a verbal confirmation from the control owner.",
+      "Reflects the condition that updated control records, test results, implementation proof, and approver sign-off."
+    ],
+    "correctIndex": 3,
+    "explanation": "Auditable closure requires traceable evidence that corrective changes were implemented and validated.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/concept/policy-and-compliance.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 69,
+    "prompt": "Which KPI best indicates a mature audit remediation program?",
+    "choices": [
+      "Represents the approach that fewer documented control tests.",
+      "Reflects the condition that more overdue remediation tasks.",
+      "Captures the choice stating higher number of open findings each quarter.",
+      "Corresponds to the option where lower repeat findings with faster closure of high-risk issues and verified control effectiveness."
+    ],
+    "correctIndex": 3,
+    "explanation": "Maturity is reflected by reducing recurring issues and resolving material gaps quickly with validated controls.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 70,
+    "prompt": "What is the primary goal of RC administration in a production instance?",
+    "choices": [
+      "Corresponds to the option where run policy and risk workflows without role controls.",
+      "Represents the approach that disable audit history to improve performance.",
+      "Describes the outcome where allow unrestricted customization by any itil user.",
+      "Captures the choice stating maintain stable setup, access oversight, and data quality for risk and compliance processes."
+    ],
+    "correctIndex": 3,
+    "explanation": "RC administration ensures governance controls are reliable, secure, and operationally sustainable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 71,
+    "prompt": "Which administrative control best protects RC data integrity?",
+    "choices": [
+      "Corresponds to the option where grant admin privileges to all auditors and control owners.",
+      "Describes the outcome where use role-based access with separation of duties for policy, risk, and control administration.",
+      "Matches the scenario in which store risk treatment decisions only in email threads.",
+      "Represents the approach that disable mandatory fields on high-impact risk records."
+    ],
+    "correctIndex": 1,
+    "explanation": "Separation of duties and RBAC reduce unauthorized changes and preserve governance integrity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk/concept/risk-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 72,
+    "prompt": "How should RC administrators manage changes to assessment methodologies or scoring models?",
+    "choices": [
+      "Describes the outcome where apply different scoring logic per analyst for flexibility.",
+      "Represents the approach that govern updates through change control, versioning, stakeholder approval, and impact communication.",
+      "Reflects the condition that reset all historical assessments after each methodology change.",
+      "Matches the scenario in which update scoring models directly in production without notice."
+    ],
+    "correctIndex": 1,
+    "explanation": "Controlled, versioned changes preserve comparability and trust in RC reporting outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk/concept/risk-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 73,
+    "prompt": "Which administrative practice most improves RC platform maintainability?",
+    "choices": [
+      "Reflects the condition that allow duplicate policy frameworks with overlapping controls.",
+      "Matches the scenario in which avoid oversight reviews to reduce administrative overhead.",
+      "Describes the outcome where rely on undocumented scripts for core logic.",
+      "Captures the choice stating standardize setup, document design decisions, and review customizations regularly."
+    ],
+    "correctIndex": 3,
+    "explanation": "Administrative consistency and documentation reduce technical debt and operational risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/configuration-management/concept/configuration-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 74,
+    "prompt": "Which KPI mix best reflects effective RC administration?",
+    "choices": [
+      "Captures the choice stating high workflow completion quality, low unauthorized changes, and timely closure of admin exceptions.",
+      "Corresponds to the option where higher number of emergency setup updates.",
+      "Reflects the condition that increased count of duplicate control records.",
+      "Matches the scenario in which more users with elevated oversight roles."
+    ],
+    "correctIndex": 0,
+    "explanation": "Healthy administration is visible in stable operations, strong control over change, and reduced exceptions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 75,
+    "prompt": "In Risk and Compliance, what is the most important first step before scoring a new risk?",
+    "choices": [
+      "Reflects the condition that skip owner assignment until remediation starts.",
+      "Represents the approach that apply emergency change templates to all risk records.",
+      "Corresponds to the option where define clear risk statements with ownership and scope.",
+      "Captures the choice stating close the risk if no control test exists yet."
+    ],
+    "correctIndex": 2,
+    "explanation": "Accurate risk scoring depends on well-defined scope and accountable ownership from the beginning.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk/concept/risk-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 76,
+    "prompt": "Why are control objectives linked to control tests in RC implementations?",
+    "choices": [
+      "Corresponds to the option where to replace policy statements with scripts.",
+      "Describes the outcome where to suppress issue creation during audits.",
+      "Captures the choice stating to let auditors bypass evidence collection.",
+      "Represents the approach that to measure whether controls operate effectively against stated requirements."
+    ],
+    "correctIndex": 3,
+    "explanation": "Control tests provide evidence that control objectives are functioning as intended in governance workflows.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 77,
+    "prompt": "A business owner requests a policy exception. Which approach is most compliant?",
+    "choices": [
+      "Describes the outcome where route through documented approval, expiration, and compensating control review.",
+      "Represents the approach that disable related control tests until next quarter.",
+      "Corresponds to the option where allow exceptions only for technical teams.",
+      "Matches the scenario in which approve permanently by email with no record."
+    ],
+    "correctIndex": 0,
+    "explanation": "Policy exceptions need governed approvals, defined duration, and compensating controls to maintain compliance posture.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 78,
+    "prompt": "What is the best indicator that RC issue remediation workflows are healthy?",
+    "choices": [
+      "Matches the scenario in which issues are reopened frequently after closure.",
+      "Reflects the condition that issue records contain no due dates.",
+      "Describes the outcome where issues close with evidence, owner accountability, and approved risk acceptance when needed.",
+      "Represents the approach that issue owners are left blank for flexibility."
+    ],
+    "correctIndex": 2,
+    "explanation": "Strong remediation workflows require traceable ownership, evidence-backed closure, and explicit risk decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk/concept/risk-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 79,
+    "prompt": "Which RC reporting view helps leadership prioritize oversight effort?",
+    "choices": [
+      "Describes the outcome where count of MID Server upgrades.",
+      "Captures the choice stating number of scripted REST APIs.",
+      "Reflects the condition that list of inactive UI policies.",
+      "Matches the scenario in which high-impact risks and overdue control issues by business service."
+    ],
+    "correctIndex": 3,
+    "explanation": "Risk and issue concentration by business service provides decision-ready prioritization context for leadership.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk/concept/risk-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 80,
+    "prompt": "What should risk owners do when inherent risk remains high after control testing?",
+    "choices": [
+      "Matches the scenario in which document treatment plans and residual risk decisions.",
+      "Captures the choice stating reduce impact scores without approval.",
+      "Reflects the condition that delete failed control tests to avoid confusion.",
+      "Corresponds to the option where ignore the result if no incident has occurred."
+    ],
+    "correctIndex": 0,
+    "explanation": "High residual exposure requires formal treatment planning or approved acceptance with governance traceability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk/concept/risk-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 81,
+    "prompt": "Why does RC use issue records linked to failed controls?",
+    "choices": [
+      "Captures the choice stating to bypass assignment and due dates.",
+      "Represents the approach that to track remediation accountability and closure evidence.",
+      "Corresponds to the option where to hide failures from audit reports.",
+      "Reflects the condition that to replace policy management completely."
+    ],
+    "correctIndex": 1,
+    "explanation": "Linked issues provide operational workflow for remediation and audit-ready closure documentation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 82,
+    "prompt": "Which design principle best supports repeatable compliance assessments?",
+    "choices": [
+      "Represents the approach that allow direct closure with no reviewer.",
+      "Describes the outcome where standardize assessment templates and scoring guidance.",
+      "Captures the choice stating run assessments without control mappings.",
+      "Corresponds to the option where use ad hoc questions per assessor."
+    ],
+    "correctIndex": 1,
+    "explanation": "Template-driven assessments reduce variance and improve comparability across entities and periods.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk/concept/risk-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 83,
+    "prompt": "What is the best reason to enforce separation of duties in RC administration?",
+    "choices": [
+      "Matches the scenario in which to reduce conflict-of-interest risk in oversight actions.",
+      "Corresponds to the option where to avoid documenting role assignments.",
+      "Represents the approach that to let risk owners approve their own exceptions.",
+      "Describes the outcome where to increase number of emergency changes."
+    ],
+    "correctIndex": 0,
+    "explanation": "SoD controls prevent a single actor from initiating and approving sensitive governance decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 84,
+    "prompt": "Which KPI helps measure RC process effectiveness over time?",
+    "choices": [
+      "Represents the approach that mID Server installation count.",
+      "Describes the outcome where average SLA on catalog tasks.",
+      "Matches the scenario in which number of active homepages.",
+      "Reflects the condition that reduction in overdue high-severity control issues."
+    ],
+    "correctIndex": 3,
+    "explanation": "A decline in overdue critical issues indicates stronger governance execution and remediation discipline.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk/concept/risk-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 85,
+    "prompt": "What is the best reason to review risk scoring models on a defined cadence?",
+    "choices": [
+      "Matches the scenario in which to reduce the number of control objectives.",
+      "Reflects the condition that to eliminate residual risk documentation.",
+      "Captures the choice stating to allow each assessor to use personal scoring scales.",
+      "Describes the outcome where to align scoring assumptions with current business and threat context."
+    ],
+    "correctIndex": 3,
+    "explanation": "Scheduled model reviews keep risk calculations aligned with evolving organizational and threat realities.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk/concept/risk-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 86,
+    "prompt": "Which behavior most weakens RC control assurance?",
+    "choices": [
+      "Matches the scenario in which closing failed tests without remediation evidence.",
+      "Captures the choice stating linking evidence to control tests.",
+      "Corresponds to the option where assigning issue owners and due dates.",
+      "Reflects the condition that documenting compensating controls for exceptions."
+    ],
+    "correctIndex": 0,
+    "explanation": "Closing failures without evidence undermines assurance and creates audit and compliance risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 87,
+    "prompt": "How should RC teams handle recurring policy violations across multiple departments?",
+    "choices": [
+      "Captures the choice stating raise policy text only without workflow changes.",
+      "Reflects the condition that use issue trend analysis to drive targeted remediation programs.",
+      "Represents the approach that archive old violations to improve dashboard appearance.",
+      "Corresponds to the option where treat each case as isolated without trend review."
+    ],
+    "correctIndex": 1,
+    "explanation": "Trend-driven remediation helps address systemic compliance gaps beyond individual incidents.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 88,
+    "prompt": "What should be required before accepting residual risk for a critical service?",
+    "choices": [
+      "Represents the approach that automatic approval after 30 days.",
+      "Corresponds to the option where documented business justification and authorized approval trail.",
+      "Captures the choice stating no record if compensating controls exist.",
+      "Describes the outcome where only verbal approval from service owner."
+    ],
+    "correctIndex": 1,
+    "explanation": "Residual risk acceptance for critical services must be explicit, justified, and formally approved.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk/concept/risk-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-RC",
+    "order": 89,
+    "prompt": "Which KPI best indicates RC process maturity?",
+    "choices": [
+      "Represents the approach that more manual spreadsheet attestations.",
+      "Describes the outcome where lower number of documented policies.",
+      "Matches the scenario in which higher count of emergency role grants.",
+      "Corresponds to the option where improved on-time closure of high-priority control issues."
+    ],
+    "correctIndex": 3,
+    "explanation": "Timely closure of high-priority issues reflects effective ownership, workflow execution, and governance discipline.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk/concept/risk-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  }
+]

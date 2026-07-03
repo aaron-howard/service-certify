@@ -1,0 +1,482 @@
+[
+  {
+    "trackCode": "CPOE",
+    "order": 150,
+    "prompt": "What is the most important first step when onboarding a new enterprise integration?",
+    "choices": [
+      "Define the integration contract, ownership, and data classification under documented platform behavior",
+      "Create a connection without authentication for stable long-term administration",
+      "Grant admin to the external system account for cross-team production support",
+      "Skip non-production validation in enterprise release operations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Clear contracts and ownership establish security, reliability, and support expectations before implementation begins.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/integrate/integration-security/concept/integration-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 151,
+    "prompt": "Which authentication method is generally preferred for outbound REST integrations requiring token-based security?",
+    "choices": [
+      "OAuth 2.0 with managed client credentials for cross-team production support",
+      "Basic auth with shared admin credentials across governed implementation flows",
+      "Hardcoded API keys in scripts with clear operational impact",
+      "Anonymous endpoint access during controlled change windows"
+    ],
+    "correctIndex": 0,
+    "explanation": "OAuth 2.0 supports controlled token issuance and lifecycle management, improving integration security posture.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/integrate/rest/concept/oauth-2-0.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 152,
+    "prompt": "Why should integration service accounts be separate by system or function?",
+    "choices": [
+      "To simplify password sharing under documented platform behavior",
+      "To bypass role assignment for stable long-term administration",
+      "To allow broad access reuse in large shared environments",
+      "To isolate blast radius and improve auditability across governed implementation flows"
+    ],
+    "correctIndex": 3,
+    "explanation": "Segregated service identities limit impact from credential compromise and make activity tracing more precise.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/integrate/authentication/concept/integration-user-accounts.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 153,
+    "prompt": "What is the key reason to use connection and credential aliases in IntegrationHub?",
+    "choices": [
+      "They centralize credential management and decouple secrets from flows for cross-team production support",
+      "They remove all need for authentication setup in enterprise release operations",
+      "They disable encryption at rest under documented platform behavior",
+      "They increase payload size limits during controlled change windows"
+    ],
+    "correctIndex": 0,
+    "explanation": "Aliases keep credentials managed in one place and reduce hardcoding across integration assets.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-integrate-applications/page/administer/integrationhub/concept/connection-credential-alias.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 154,
+    "prompt": "Which control best protects sensitive data in integration payloads?",
+    "choices": [
+      "Apply data minimization and masking where feasible with clear operational impact",
+      "Store raw payloads indefinitely by default during controlled change windows",
+      "Log all secrets in clear text in large shared environments",
+      "Disable transport encryption for troubleshooting across governed implementation flows"
+    ],
+    "correctIndex": 0,
+    "explanation": "Minimizing and masking sensitive fields reduces compliance risk and exposure in logs and transit workflows.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/integrate/integration-security/task/protect-sensitive-integration-data.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 155,
+    "prompt": "A critical integration fails intermittently due to rate limits. Which design pattern helps most?",
+    "choices": [
+      "Use backoff, queueing, and idempotent retry logic in large shared environments",
+      "Retry with no delay in enterprise release operations",
+      "Disable failure alerts under documented platform behavior",
+      "Increase synchronous calls in peak windows for stable long-term administration"
+    ],
+    "correctIndex": 0,
+    "explanation": "Backoff and idempotent retries handle transient throttling safely and reduce duplicate downstream processing.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-integrate-applications/page/administer/integrationhub/concept/integration-error-handling.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 156,
+    "prompt": "What is the main value of integration health dashboards?",
+    "choices": [
+      "They provide visibility into throughput, failures, and latency trends with clear operational impact",
+      "They remove need for logging during controlled change windows",
+      "They replace incident workflows for cross-team production support",
+      "They disable retries in enterprise release operations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Health dashboards support proactive operations by surfacing integration performance and reliability indicators.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-integrate-applications/page/administer/integrationhub/task/monitor-integration-performance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 157,
+    "prompt": "Why is schema versioning important for enterprise integrations?",
+    "choices": [
+      "It guarantees no data transformation in large shared environments",
+      "It enables controlled change management for producers and consumers across governed implementation flows",
+      "It prevents API authentication with clear operational impact",
+      "It removes need for consumer testing for stable long-term administration"
+    ],
+    "correctIndex": 1,
+    "explanation": "Versioning helps coordinate interface changes without breaking dependent systems unexpectedly.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-integrate-applications/page/administer/rest-api/concept/api-versioning-strategies.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 158,
+    "prompt": "Which integration governance practice best reduces duplicate outbound notifications?",
+    "choices": [
+      "Manual suppression during incidents only under documented platform behavior",
+      "Multiple uncoordinated business rules for stable long-term administration",
+      "Centralized event routing with deduplication logic for cross-team production support",
+      "Randomized retry delays without IDs in enterprise release operations"
+    ],
+    "correctIndex": 2,
+    "explanation": "Centralized routing and deduplication prevent repeated downstream events from overlapping triggers.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-operations/concept/event-driven-integration-patterns.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 159,
+    "prompt": "What should be documented for every production integration as part of support readiness?",
+    "choices": [
+      "Only endpoint URL for cross-team production support",
+      "UI theme requirements across governed implementation flows",
+      "Personal developer contact list with clear operational impact",
+      "Owner, SLA targets, dependencies, and failure handling procedure during controlled change windows"
+    ],
+    "correctIndex": 3,
+    "explanation": "Operational documentation ensures support teams can diagnose and escalate issues quickly with clear accountability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-integrate-applications/page/administer/integrationhub/task/document-integration-support-model.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 160,
+    "prompt": "When should an integration call be moved from synchronous to asynchronous design?",
+    "choices": [
+      "When low latency is mandatory for user interaction under documented platform behavior",
+      "When processing is long-running or failure-prone and needs resilience for stable long-term administration",
+      "When no payload exists in large shared environments",
+      "When authentication is not required across governed implementation flows"
+    ],
+    "correctIndex": 1,
+    "explanation": "Asynchronous patterns improve resilience for lengthy or variable operations and reduce user transaction blocking.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-integrate-applications/page/administer/integrationhub/concept/synchronous-vs-asynchronous-integrations.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 161,
+    "prompt": "What is the best reason to avoid hardcoding endpoint URLs across scripts and flows?",
+    "choices": [
+      "It prevents audit logging for cross-team production support",
+      "It blocks role assignment in enterprise release operations",
+      "It slows runtime execution under documented platform behavior",
+      "It complicates environment promotion and change control during controlled change windows"
+    ],
+    "correctIndex": 3,
+    "explanation": "Externalized endpoint management enables consistent promotion across dev, test, and prod without code rewrites.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-integrate-applications/page/administer/integrationhub/task/manage-endpoint-configurations.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 162,
+    "prompt": "Which control most improves trust in inbound data from external systems?",
+    "choices": [
+      "Store records with blank mandatory fields with clear operational impact",
+      "Perform schema and business-rule validation before commit during controlled change windows",
+      "Accept all payloads without validation in large shared environments",
+      "Disable transform error handling across governed implementation flows"
+    ],
+    "correctIndex": 1,
+    "explanation": "Validation at ingress protects data quality and prevents downstream process defects caused by malformed inputs.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-integrate-applications/page/administer/import-sets/concept/import-set-validation.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 163,
+    "prompt": "A regulated integration requires evidence of every API transaction. Which capability is most relevant?",
+    "choices": [
+      "Knowledge article ratings in large shared environments",
+      "Catalog item feedback in enterprise release operations",
+      "System log and transaction auditing for interface activity under documented platform behavior",
+      "Homepage announcements for stable long-term administration"
+    ],
+    "correctIndex": 2,
+    "explanation": "Transaction logging and auditability provide trace evidence for compliance and investigation workflows.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/integrate/integration-security/task/audit-integration-activity.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 164,
+    "prompt": "Why should secret rotation be part of integration operations?",
+    "choices": [
+      "To eliminate service accounts with clear operational impact",
+      "To avoid API authentication during controlled change windows",
+      "To reduce credential exposure duration and improve security posture for cross-team production support",
+      "To increase manual maintenance in enterprise release operations"
+    ],
+    "correctIndex": 2,
+    "explanation": "Periodic secret rotation limits risk from leaked credentials and supports enterprise security policy compliance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/integrate/integration-security/task/rotate-integration-credentials.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 165,
+    "prompt": "What is the key benefit of integration retry dead-letter handling?",
+    "choices": [
+      "It by default closes all incidents in large shared environments",
+      "It removes need for ownership across governed implementation flows",
+      "It hides all failed transactions with clear operational impact",
+      "It isolates persistent failures for targeted remediation for stable long-term administration"
+    ],
+    "correctIndex": 3,
+    "explanation": "Dead-letter handling captures repeated failures separately so teams can investigate without blocking healthy traffic.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-integrate-applications/page/administer/integrationhub/task/handle-failed-integration-requests.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 166,
+    "prompt": "Which statement best describes integration idempotency in enterprise operations?",
+    "choices": [
+      "Idempotency removes authentication requirements under documented platform behavior",
+      "Integrations must run only once for stable long-term administration",
+      "Each request can be replayed safely without unintended duplicate outcomes for cross-team production support",
+      "Idempotency is only for UI actions in enterprise release operations"
+    ],
+    "correctIndex": 2,
+    "explanation": "Idempotent design prevents duplicate side effects when retries or duplicate events occur.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-integrate-applications/page/administer/integrationhub/concept/idempotent-integration-design.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 167,
+    "prompt": "A new partner integration needs limited table access. What is the correct access approach?",
+    "choices": [
+      "Use a personal developer account for cross-team production support",
+      "Create a least-privilege role set scoped to required APIs and tables across governed implementation flows",
+      "Grant admin role to simplify setup with clear operational impact",
+      "Disable ACL checks for partner traffic during controlled change windows"
+    ],
+    "correctIndex": 1,
+    "explanation": "Least-privilege role design restricts external access to only necessary operations and data surfaces.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/integrate/integration-security/task/least-privilege-for-integrations.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 168,
+    "prompt": "What integration quality control should be enforced before production cutover?",
+    "choices": [
+      "Skip environment-specific credential tests under documented platform behavior",
+      "Run end-to-end validation for success, failure, and recovery paths for stable long-term administration",
+      "Disable all negative test cases in large shared environments",
+      "Approve based on unit tests only across governed implementation flows"
+    ],
+    "correctIndex": 1,
+    "explanation": "Full path validation ensures operational reliability under expected and exceptional scenarios.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-integrate-applications/page/administer/integrationhub/task/test-integration-scenarios.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 169,
+    "prompt": "Why should platform owners maintain an integration inventory?",
+    "choices": [
+      "To enforce one integration tool only for cross-team production support",
+      "To replace source control in enterprise release operations",
+      "To track dependencies, ownership, and lifecycle risk centrally under documented platform behavior",
+      "To avoid documenting endpoint changes during controlled change windows"
+    ],
+    "correctIndex": 2,
+    "explanation": "A maintained inventory supports governance, risk assessment, and change impact analysis across the ecosystem.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/task/manage-integration-portfolio.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 170,
+    "prompt": "What is the primary purpose of integration SLAs with external providers?",
+    "choices": [
+      "To avoid incident escalation with clear operational impact",
+      "To bypass maintenance planning during controlled change windows",
+      "To eliminate retry logic in large shared environments",
+      "To define expected availability, latency, and support response commitments across governed implementation flows"
+    ],
+    "correctIndex": 3,
+    "explanation": "SLAs create measurable expectations for performance and support, improving accountability for shared services.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-integrate-applications/page/administer/integrationhub/concept/integration-service-levels.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 171,
+    "prompt": "Which issue most strongly suggests integration data mapping governance is weak?",
+    "choices": [
+      "Documented mapping approvals in large shared environments",
+      "Consistent field transformations across environments in enterprise release operations",
+      "Stable reconciliation outcomes under documented platform behavior",
+      "Frequent downstream defects from inconsistent source-to-target mappings for stable long-term administration"
+    ],
+    "correctIndex": 3,
+    "explanation": "Inconsistent mappings cause data quality failures and indicate missing standards or review controls.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-integrate-applications/page/administer/import-sets/task/manage-transform-maps.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 172,
+    "prompt": "What should happen when an external API deprecates an endpoint used by production flows?",
+    "choices": [
+      "Initiate controlled migration with impact assessment and test plan with clear operational impact",
+      "Switch to anonymous access during controlled change windows",
+      "Disable flow logging for cross-team production support",
+      "Ignore notices until failure occurs in enterprise release operations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Planned migration reduces outage risk and ensures compatibility changes are validated before cutoff.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-integrate-applications/page/administer/rest-api/task/manage-api-deprecations.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 173,
+    "prompt": "Why is TLS certificate lifecycle management important for integrations?",
+    "choices": [
+      "Certificates are optional for production in large shared environments",
+      "Certificates only affect UI themes across governed implementation flows",
+      "Expired certificates can cause secure connection failures and outages with clear operational impact",
+      "Certificates replace OAuth platform configuration for stable long-term administration"
+    ],
+    "correctIndex": 2,
+    "explanation": "Certificate expiration or trust issues can break secure channels, so lifecycle tracking is operationally critical.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/integrate/security-certificates/concept/certificates.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 174,
+    "prompt": "What integration governance outcome indicates strong enterprise maturity?",
+    "choices": [
+      "Standardized contracts, monitored health, controlled secrets, and clear ownership under documented platform behavior",
+      "Frequent direct production script edits for stable long-term administration",
+      "One shared admin account for all APIs for cross-team production support",
+      "Undocumented interfaces and ad hoc credentials in enterprise release operations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mature integration governance combines security, observability, and accountable operations across all interfaces.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/integrate/integration-security/concept/integration-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 175,
+    "prompt": "An enterprise audit found inconsistent security controls across environments. What should the platform owner implement?",
+    "choices": [
+      "Disable lower environment access for cross-team production support",
+      "A baseline compliance checklist with periodic control attestation across governed implementation flows",
+      "Manual spot checks by individual teams only with clear operational impact",
+      "One-time remediation without follow-up during controlled change windows"
+    ],
+    "correctIndex": 1,
+    "explanation": "Control baselines with recurring attestations ensure sustained consistency across development, test, and production.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/security/concept/security-baselines.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 176,
+    "prompt": "What is the best indicator that least-privilege access is effective?",
+    "choices": [
+      "Users can complete required work with minimal elevated exceptions under documented platform behavior",
+      "ACL scripts are disabled for stable long-term administration",
+      "Role requests are auto-approved in large shared environments",
+      "Most users have admin role for flexibility across governed implementation flows"
+    ],
+    "correctIndex": 0,
+    "explanation": "Effective least privilege enables productivity without broad standing elevated access.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/security/concept/security-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 177,
+    "prompt": "A platform strategy includes reducing delivery risk. Which governance control contributes most directly?",
+    "choices": [
+      "Promoting directly from development to production for cross-team production support",
+      "Ad hoc release timing by team preference in enterprise release operations",
+      "Mandatory peer review and test evidence for high-impact changes under documented platform behavior",
+      "Skipping documentation for minor changes during controlled change windows"
+    ],
+    "correctIndex": 2,
+    "explanation": "Peer review and test evidence improve quality assurance and reduce high-impact production defects.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/change-management/concept/change-risk-controls.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 178,
+    "prompt": "Which enterprise operating model choice best supports scalable platform ownership?",
+    "choices": [
+      "One shared admin account across all teams with clear operational impact",
+      "Project-only staffing without operations ownership during controlled change windows",
+      "Center of excellence with federated execution guardrails in large shared environments",
+      "No central standards, autonomous local design only across governed implementation flows"
+    ],
+    "correctIndex": 2,
+    "explanation": "A center of excellence with federated teams balances consistency with domain-specific delivery autonomy.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/platform-governance/concept/platform-center-of-excellence.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 179,
+    "prompt": "What should be prioritized when multiple integrations fail after an external provider outage?",
+    "choices": [
+      "Delete failed transactions in large shared environments",
+      "Disable monitoring to reduce noise in enterprise release operations",
+      "Restore critical business-path interfaces first using impact-based triage under documented platform behavior",
+      "Retry all interfaces endlessly in parallel for stable long-term administration"
+    ],
+    "correctIndex": 2,
+    "explanation": "Impact-based restoration sequencing focuses limited response capacity on highest business value paths first.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-operations/page/administer/incident-response/concept/business-impact-triage.html"
+    ]
+  }
+]

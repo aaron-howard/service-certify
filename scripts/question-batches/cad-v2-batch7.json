@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CAD",
+		"order": 30,
+		"prompt": "An onSubmit client script returns false. What happens?",
+		"choices": [
+			"The form submission is aborted",
+			"The record is inserted twice",
+			"The server business rules are skipped permanently",
+			"The user is logged out"
+		],
+		"correctIndex": 0,
+		"explanation": "Returning false from an onSubmit client script cancels the form submission, commonly used for client-side validation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/client-scripts.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 31,
+		"prompt": "Which pair correctly contrasts UI Policies and Client Scripts?",
+		"choices": [
+			"UI Policies are declarative for field state; Client Scripts run custom JavaScript on form events",
+			"UI Policies run only in email; Client Scripts run only on the server",
+			"Both can only run in scheduled jobs",
+			"Neither can affect the same field"
+		],
+		"correctIndex": 0,
+		"explanation": "UI Policies declaratively control field visibility/mandatory/read-only, while client scripts execute JavaScript on load, change, submit, or cell edit.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/ui-policies.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 32,
+		"prompt": "Which client script method displays a temporary informational message at the top of the form?",
+		"choices": [
+			"g_form.addInfoMessage()",
+			"gs.addInfoMessage()",
+			"current.setValue()",
+			"gs.eventQueue()"
+		],
+		"correctIndex": 0,
+		"explanation": "g_form.addInfoMessage() shows a client-side info message on the form; gs methods are server-side.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/g-form.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 33,
+		"prompt": "When a business rule needs to run without blocking the user after the record is saved, which execution timing is appropriate?",
+		"choices": [
+			"async",
+			"before",
+			"display",
+			"onCellEdit"
+		],
+		"correctIndex": 0,
+		"explanation": "An async business rule runs in a scheduled job after the transaction, avoiding delays to the user while performing follow-up work.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/business-rules.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 34,
+		"prompt": "Which methods are valid ways to make a field read-only from a client script? (Choose two.)",
+		"choices": [
+			"g_form.setReadOnly(fieldName, true)",
+			"g_form.setDisabled(fieldName, true)",
+			"gs.setReadOnly(fieldName)",
+			"current.setReadOnly(fieldName)"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"questionType": "multi",
+		"explanation": "g_form.setReadOnly() and its alias g_form.setDisabled() both make a field read-only on the client; gs and current are server-side objects.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/g-form.html"
+		]
+	}
+]

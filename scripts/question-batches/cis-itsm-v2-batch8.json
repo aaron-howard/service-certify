@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 35,
+		"prompt": "When configuring the Simplified Change Management Normal change model, what does the Available for new change requests setting control?",
+		"choices": [
+			"Whether the Normal model appears in the change type picker when creating new change requests",
+			"Whether Resolved incidents auto-close after the glide.ui.autoclose.time interval",
+			"Whether catalog items require manager approval before fulfillment",
+			"Whether problem records skip the Assess state automatically"
+		],
+		"correctIndex": 0,
+		"explanation": "The Availability setting on the Normal change model controls whether users can select Normal when creating a new change request in Simplified Change Management.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/configure-normal-change-model-scm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 36,
+		"prompt": "What can administrators configure in the Simplified Change Management Emergency change model?",
+		"choices": [
+			"Software license compliance counter schedules only",
+			"Authorized submitters, stakeholder notifications, approvals, and automatic change task creation",
+			"The default variable editor formatter on catalog requested items only",
+			"Service portfolio taxonomy layers without change approvals"
+		],
+		"correctIndex": 1,
+		"explanation": "The Emergency change model configuration console defines who may submit emergency changes, notifications, approvals, and automatic task creation behavior.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/configure-emergency-change-model-scm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 37,
+		"prompt": "In Simplified Change Management, how do requesters typically create Standard changes?",
+		"choices": [
+			"By converting open incidents to Emergency changes from the incident form",
+			"By manually running the Autoclose Incidents scheduled job for each request",
+			"By selecting a pre-defined Standard change template rather than using the change type picker",
+			"By submitting a record producer that creates Problem records instead of changes"
+		],
+		"correctIndex": 2,
+		"explanation": "Standard changes are pre-approved and accessed through templates; requesters choose a template to create the change rather than picking Standard from the change type picker.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/configure-standard-change-model-scm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 38,
+		"prompt": "A customer wants users to copy existing change requests and include the Work Notes List field in the copied record. Which approach aligns with proven Change Management configuration practices?",
+		"choices": [
+			"Modify the Copy Change UI Action script without updating any change properties",
+			"Set Enable Copy Change feature (com.snc.change_request.enable_copy) to true and add work_notes_list to com.snc.change_request.copy.attributes",
+			"Override Dictionary attributes on the Problem table to set Include in Record Copy",
+			"Disable all ACLs on the change_request table for every role"
+		],
+		"correctIndex": 1,
+		"explanation": "Copy change behavior is controlled through Change Properties, including enable copy and the comma-separated list of attributes copied from the originating change.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/change-management/configure-copy-change-request.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 39,
+		"prompt": "Which system property specifies the related lists copied when a change request is copied?",
+		"choices": [
+			"com.snc.change_request.copy.related_lists",
+			"com.snc.incident.autoclose.basedon.resolved_at",
+			"glide.ui.autoclose.time",
+			"problem.duplicate.records_to_move"
+		],
+		"correctIndex": 0,
+		"explanation": "com.snc.change_request.copy.related_lists controls copying of default related lists such as Affected CIs, Impacted Services/CIs, and Change Tasks.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/change-management/configure-copy-change-request.html"
+		]
+	}
+]

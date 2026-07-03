@@ -42,6 +42,7 @@ Return **only** a JSON array (no markdown fences) of objects:
 - `correctIndex` must be `0`–`3`.
 - Vary `correctIndex` across a batch; no duplicate topics within a batch.
 - Keep all four choices **similar in length** (roughly within 25% of each other). The correct answer must **not** routinely be the longest option — exam takers should not be able to guess from length alone.
+- Never append shared boilerplate phrases across questions (e.g. repeated “without validating scope…” suffixes). Each distractor must read as a unique, question-specific wrong answer.
 
 ## Question quality
 
@@ -51,7 +52,7 @@ Mix styles appropriate to the exam:
 |------|-------|
 | **CSA** | Platform navigation, admin configuration, "what would an admin do", tables/roles/lists |
 | **CAD** | Script scope, GlideRecord, app dev lifecycle, flows, scoped app security |
-| **CIS-ITSM** | Implementation scenarios: incident/problem/change/catalog/CMDB, state transitions |
+| **CIS-ITSM** | Implementation scenarios: incident/problem/change/catalog/CMDB, state transitions, platform config (roles, properties, business rules). See [cis-itsm-v2.md](batch-assignments/cis-itsm-v2.md). **No** choice wrapper phrases (`Captures the choice stating…`). |
 
 - Distractors must be **plausible** (common misconceptions), not joke answers.
 - No "all of the above" or "none of the above".

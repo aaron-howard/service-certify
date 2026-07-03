@@ -1,0 +1,487 @@
+[
+  {
+    "trackCode": "CAD",
+    "order": 60,
+    "prompt": "What is the ServiceNow Store primarily used for by application developers and administrators?",
+    "choices": [
+      "Operationally, discovering and installing certified applications, plugins, and integrations",
+      "From an implementation standpoint, managing LDAP authentication sources",
+      "In most deployments, hosting MID Server binaries only for stable outcomes",
+      "From a governance perspective, writing client scripts directly in production"
+    ],
+    "correctIndex": 0,
+    "explanation": "The Store provides packaged applications and integrations that can be installed into instances.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/administer/applications/concept/c_ServiceNowStore.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 61,
+    "prompt": "Why would a development team publish a scoped application to the Application Repository?",
+    "choices": [
+      "Practically speaking, to bypass application access settings under expected controls",
+      "From an admin perspective, to version and distribute app updates across instances in a controlled way",
+      "Typically, to replace source control integration with local update sets only",
+      "In platform terms, to enforce ACLs on all global tables through configured automation"
+    ],
+    "correctIndex": 1,
+    "explanation": "The repository supports versioned app publishing and installation, enabling controlled lifecycle management.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/applications/concept/c_ApplicationRepository.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 62,
+    "prompt": "When installing an app from an Application Repository, what does selecting a version determine?",
+    "choices": [
+      "In this scenario, which packaged app contents and updates are installed on the target instance",
+      "Practically speaking, which user passwords are synchronized under normal policy constraints",
+      "From an admin perspective, which outbound email account is active for governed delivery",
+      "In platform terms, which discovery probes run daily under expected controls"
+    ],
+    "correctIndex": 0,
+    "explanation": "Each repository version contains a specific packaged state of the app that is applied during installation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/applications/task/t_InstallAnApplication.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 63,
+    "prompt": "What is a key benefit of using source control together with the Application Repository for a scoped app?",
+    "choices": [
+      "Operationally, they remove the need for app testing in standard operations for consistent administration",
+      "In practice, both tools only manage knowledge article approval for consistent administration",
+      "In most deployments, source control manages code history while repository publishes installable application versions",
+      "From an implementation standpoint, they through configured automation convert all scripts to Flow Designer actions"
+    ],
+    "correctIndex": 2,
+    "explanation": "Git tracks development history, and the repository handles deployment-ready version packaging and distribution.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/applications/concept/c_SourceControlInStudio.html",
+      "https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/applications/concept/c_ApplicationRepository.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 64,
+    "prompt": "Before publishing a new app version to the Application Repository, what should developers typically do first?",
+    "choices": [
+      "In this scenario, disable cross-scope access controls globally for governed delivery",
+      "In platform terms, clone production directly into update set preview under expected controls",
+      "Practically speaking, increment the application version and validate the app in the development instance",
+      "From an admin perspective, delete all existing repository versions in standard operations"
+    ],
+    "correctIndex": 2,
+    "explanation": "Publishing should follow version updates and validation to ensure the released package is intentional and stable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/applications/task/t_PublishAnApplicationToVersionControl.html",
+      "https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/applications/concept/c_ApplicationRepository.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 65,
+    "prompt": "In a scoped application, why is it preferable to use GlideRecordSecure when appropriate?",
+    "choices": [
+      "In this scenario, this approach enforces ACL checks during record access",
+      "In platform terms, this approach bypasses all ACL checks for performance",
+      "Practically speaking, this approach auto-creates database indexes",
+      "From a governance perspective, this approach only works on client scripts"
+    ],
+    "correctIndex": 0,
+    "explanation": "GlideRecordSecure applies access control logic while querying and iterating records.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/scripting/server-side-scripting.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 66,
+    "prompt": "What is the purpose of Application Access settings on a table?",
+    "choices": [
+      "Typically, to configure MID Server probes for governed delivery for stable outcomes",
+      "Operationally, to define homepage widgets under expected controls in standard operations",
+      "From an implementation standpoint, to set report schedules for consistent administration",
+      "In practice, to control how other scopes can read, create, update, or delete table records"
+    ],
+    "correctIndex": 3,
+    "explanation": "Application Access defines cross-scope data permissions for table operations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/scoped-apps/application-access-settings.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 67,
+    "prompt": "Which server-side script type is designed to encapsulate reusable functions and APIs?",
+    "choices": [
+      "Typically, script Include in standard operations",
+      "From an admin perspective, client Script",
+      "Operationally, uI Policy under normal policy constraints",
+      "In practice, data Policy for governed delivery"
+    ],
+    "correctIndex": 0,
+    "explanation": "Script Includes package reusable logic for server-side use and optional client-callable patterns.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/scripting/script-includes.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 68,
+    "prompt": "What is the primary role of an Application Menu and Modules in a custom app?",
+    "choices": [
+      "In this scenario, provide navigation entry points to app content",
+      "From a governance perspective, generate transform maps",
+      "In most deployments, define table inheritance",
+      "In platform terms, set ACL execution order"
+    ],
+    "correctIndex": 0,
+    "explanation": "Application menus and modules structure user navigation to lists, forms, and other app resources.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/navigation/application-menus-and-modules.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 69,
+    "prompt": "Why should business logic that enforces data rules often be placed in Business Rules instead of Client Scripts?",
+    "choices": [
+      "From a governance perspective, client scripts cannot read field values",
+      "In this scenario, business rules only run in catalog for governed delivery",
+      "In most deployments, server-side logic is consistently applied regardless of UI channel",
+      "From an admin perspective, client scripts run before ACLs for stable outcomes"
+    ],
+    "correctIndex": 2,
+    "explanation": "Server-side rules apply to all entry paths, including APIs and imports, not only browser form interactions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/scripting/business-rules.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 70,
+    "prompt": "What is a key reason to avoid running expensive queries inside a loop?",
+    "choices": [
+      "In this scenario, this approach prevents client-callable script includes",
+      "Practically speaking, this approach increases chance of update set collisions",
+      "From a governance perspective, this approach disables scope protection",
+      "In platform terms, this approach can significantly degrade script performance and transaction time"
+    ],
+    "correctIndex": 3,
+    "explanation": "Repeated queries in loops multiply database calls and can harm performance at scale.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/scripting/scripting-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 71,
+    "prompt": "Which statement about Flow Designer in app development is accurate?",
+    "choices": [
+      "In most deployments, flows can only run manually from Scripts - Background under expected controls",
+      "In this scenario, flows support low-code process orchestration with triggers, actions, and branching",
+      "From a governance perspective, flows replace ACL security entirely in standard operations",
+      "In platform terms, flows cannot call subflows for stable outcomes for consistent administration"
+    ],
+    "correctIndex": 1,
+    "explanation": "Flow Designer provides declarative automation with reusable actions and subflows for process orchestration.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/process-automation/flow-designer/flow-designer-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 72,
+    "prompt": "What is the main purpose of the Studio test framework / Automated Test Framework in app lifecycle?",
+    "choices": [
+      "Typically, to generate table schema from PDFs for stable outcomes",
+      "Operationally, to run only production load tests in standard operations",
+      "In practice, to validate app behavior through repeatable automated test steps",
+      "From an admin perspective, to perform CMDB discovery under normal policy constraints"
+    ],
+    "correctIndex": 2,
+    "explanation": "Automated tests help verify app behavior and reduce regression risk during iterative development.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/automated-test-framework/atf-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 73,
+    "prompt": "What does extending the Task table provide to a custom record type?",
+    "choices": [
+      "Typically, inherited task fields and task-oriented behavior",
+      "In practice, automatic source control setup",
+      "Practically speaking, built-in CMDB reconciliation rules",
+      "From an admin perspective, automatic data replication to all domains"
+    ],
+    "correctIndex": 0,
+    "explanation": "Task extension gives common task fields and process patterns such as assignment and state handling.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/tables-and-data-models.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 74,
+    "prompt": "Why is client-side GlideAjax commonly used in custom apps?",
+    "choices": [
+      "In this scenario, to bypass cross-scope security for stable outcomes for consistent administration",
+      "From an implementation standpoint, to execute SQL directly under normal policy constraints",
+      "In most deployments, to replace all business rules for governed delivery",
+      "From a governance perspective, to call server-side logic from client scripts without full form submission"
+    ],
+    "correctIndex": 3,
+    "explanation": "GlideAjax allows efficient client-to-server calls for targeted data retrieval or processing.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/scripting/glideajax.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 75,
+    "prompt": "Which method is used to insert a new record with GlideRecord?",
+    "choices": [
+      "Practically speaking, addQuery() under normal policy constraints",
+      "From an admin perspective, query() for governed delivery",
+      "Typically, insert() under normal policy constraints",
+      "In practice, next() for governed delivery"
+    ],
+    "correctIndex": 2,
+    "explanation": "After initializing and setting field values, insert() writes the new record to the database.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/scripting/gliderecord.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 76,
+    "prompt": "What does a before Business Rule typically allow you to do?",
+    "choices": [
+      "Practically speaking, trigger only after transaction commit",
+      "Typically, modify current record values before database write",
+      "From an admin perspective, render list columns",
+      "In platform terms, enforce user preferences"
+    ],
+    "correctIndex": 0,
+    "explanation": "Before rules run prior to commit, enabling validation and value adjustments before save.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/scripting/business-rules.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 77,
+    "prompt": "Why should app developers keep scoped app artifacts within their application scope whenever possible?",
+    "choices": [
+      "In most deployments, this approach disables update set capture",
+      "From a governance perspective, this approach prevents all integration options",
+      "Operationally, this approach improves encapsulation and avoids unnecessary global dependencies",
+      "From an implementation standpoint, this approach is required for ACL evaluation"
+    ],
+    "correctIndex": 2,
+    "explanation": "Maintaining scope boundaries improves maintainability, portability, and safer app upgrades.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/scoped-apps/scoped-applications-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 78,
+    "prompt": "What is the purpose of cross-scope privileges generated during development?",
+    "choices": [
+      "In most deployments, to grant temporary admin rights for stable outcomes",
+      "In practice, to authorize interactions between app scopes for specific resources",
+      "Operationally, to disable script includes for stable outcomes for consistent administration",
+      "From an implementation standpoint, to define list layouts under normal policy constraints"
+    ],
+    "correctIndex": 1,
+    "explanation": "Cross-scope privileges explicitly allow one scope to access protected artifacts in another scope.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/scoped-apps/cross-scope-access.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 79,
+    "prompt": "Which development practice best supports maintainable server scripts?",
+    "choices": [
+      "In this scenario, centralizing reusable logic in Script Includes and calling them from rules/flows",
+      "In platform terms, disabling script debugging for stable outcomes for consistent administration",
+      "Practically speaking, embedding duplicate logic in every business rule under normal policy constraints",
+      "From an admin perspective, using global variables for all values for governed delivery"
+    ],
+    "correctIndex": 0,
+    "explanation": "Reusable service-style Script Includes reduce duplication and make logic easier to test and update.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/scripting/script-includes.html",
+      "https://www.servicenow.com/docs/r/application-development/scripting/scripting-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 80,
+    "prompt": "What is a practical use of Data Broker or scripted REST APIs in app development?",
+    "choices": [
+      "Operationally, to redesign ACL internals for stable outcomes for consistent administration",
+      "In most deployments, to force records into global scope under normal policy constraints",
+      "From a governance perspective, to expose controlled app data/services for external or decoupled consumers",
+      "From an implementation standpoint, to change dictionary table names under expected controls"
+    ],
+    "correctIndex": 2,
+    "explanation": "API layers provide secure, governed access to app functionality for integrations and external clients.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/integrationhub/scripted-rest-api-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 81,
+    "prompt": "When using source control integration for an app, what is tracked in the repository?",
+    "choices": [
+      "Practically speaking, only user table rows under normal policy constraints",
+      "In platform terms, all task transaction logs for governed delivery",
+      "Typically, application metadata artifacts and configuration records represented as files",
+      "From an admin perspective, only binary attachments for stable outcomes"
+    ],
+    "correctIndex": 2,
+    "explanation": "Source control stores app artifacts so teams can version changes and collaborate through standard Git workflows.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/source-control/source-control-integration.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 82,
+    "prompt": "Why should GlideRecord queries be filtered as narrowly as practical?",
+    "choices": [
+      "Practically speaking, to force synchronous flows for governed delivery",
+      "In platform terms, to make scripts global-only under expected controls",
+      "In this scenario, to reduce unnecessary record processing and improve performance",
+      "From an admin perspective, to disable ACL checks in standard operations"
+    ],
+    "correctIndex": 3,
+    "explanation": "Targeted filters reduce row scans and memory usage, resulting in faster and safer scripts.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/scripting/gliderecord.html",
+      "https://www.servicenow.com/docs/r/application-development/scripting/scripting-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 83,
+    "prompt": "What is the function of UI Policies in app forms?",
+    "choices": [
+      "From an implementation standpoint, to execute scheduled server jobs under expected controls",
+      "In most deployments, to dynamically set field visibility, read-only state, or mandatory status on forms",
+      "Operationally, to enforce server-side ACL authorization in standard operations",
+      "In practice, to create import set mappings for stable outcomes for consistent administration"
+    ],
+    "correctIndex": 1,
+    "explanation": "UI Policies control client-side form behavior based on conditions without custom scripting in many cases.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/ui-policies/ui-policy-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 84,
+    "prompt": "What is an advantage of creating subflows for repeated process logic?",
+    "choices": [
+      "Typically, they disable auditing for governed delivery for stable outcomes",
+      "From an implementation standpoint, they promote reuse and easier maintenance across multiple flows",
+      "Operationally, they replace all script includes for consistent administration",
+      "In practice, they bypass role checks in standard operations under normal policy constraints"
+    ],
+    "correctIndex": 1,
+    "explanation": "Subflows encapsulate reusable process blocks so changes can be made in one place.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/process-automation/flow-designer/subflows.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 85,
+    "prompt": "Which pattern helps prevent unintended recursion in business rules?",
+    "choices": [
+      "In this scenario, disable audit on the table under expected controls in standard operations",
+      "Practically speaking, use condition checks and avoid unnecessary current.update() calls in rules",
+      "From a governance perspective, consistently call current.update() in after rules",
+      "In platform terms, move all logic to client scripts for governed delivery"
+    ],
+    "correctIndex": 1,
+    "explanation": "Careful rule conditions and avoiding self-triggering updates reduce recursive executions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/scripting/business-rules.html",
+      "https://www.servicenow.com/docs/r/application-development/scripting/scripting-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 86,
+    "prompt": "What is the main purpose of dictionary attributes on fields?",
+    "choices": [
+      "Typically, to adjust advanced field behavior and metadata options",
+      "Operationally, to define transform schedules under normal policy constraints",
+      "In practice, to create update set previews for governed delivery",
+      "From an implementation standpoint, to configure source control branches"
+    ],
+    "correctIndex": 3,
+    "explanation": "Dictionary attributes extend field behavior beyond basic type and label settings.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/data-dictionary/system-dictionary-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 87,
+    "prompt": "Why might a developer use encoded queries in scripts?",
+    "choices": [
+      "Typically, to skip access controls through configured automation",
+      "Operationally, to represent complex query logic compactly and reuse tested filter syntax",
+      "In practice, to encrypt table data at rest under normal policy constraints",
+      "From an admin perspective, to replace all form filters permanently"
+    ],
+    "correctIndex": 1,
+    "explanation": "Encoded queries capture complex conditions in a concise format that mirrors list filter logic.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/scripting/gliderecord.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 88,
+    "prompt": "What does app versioning support when publishing to the Store or deploying internally?",
+    "choices": [
+      "In most deployments, unlimited script execution time",
+      "In platform terms, controlled release progression with trackable app changes",
+      "In this scenario, automatic role removal for governed delivery",
+      "From a governance perspective, random migration ordering"
+    ],
+    "correctIndex": 1,
+    "explanation": "Versioning enables structured release management and clear tracking of application evolution.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/application-repository/app-versioning.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 89,
+    "prompt": "What is a core benefit of building with App Engine Studio or Studio conventions?",
+    "choices": [
+      "In most deployments, this approach converts scoped apps to global through configured automation",
+      "In this scenario, this approach standardizes artifact creation and governance across the app lifecycle",
+      "From an implementation standpoint, this approach removes the need for testing",
+      "From a governance perspective, this approach disables all scripting capabilities"
+    ],
+    "correctIndex": 1,
+    "explanation": "Using platform development conventions improves consistency, maintainability, and team collaboration.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/app-engine-studio/app-engine-studio-overview.html"
+    ]
+  }
+]

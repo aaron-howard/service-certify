@@ -1,0 +1,483 @@
+[
+  {
+    "trackCode": "CPOE",
+    "order": 0,
+    "prompt": "An enterprise runs separate subproduction and production instances. What is the primary risk of promoting a large, unbatched configuration drop during peak hours without a prior lower-environment validation?",
+    "choices": [
+      "MID Servers will by default refuse the payload under documented platform behavior",
+      "Users will lose their UI16 theme preferences for stable long-term administration",
+      "Higher chance of service interruption from cache flush and unresolved conflicts discovered late in large shared environments",
+      "Domain separation will merge all domains by default across governed implementation flows"
+    ],
+    "correctIndex": 2,
+    "explanation": "Large configuration promotions can impact runtime behavior and benefit from staged validation; operational timing also matters when changes flush caches or stress integrations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-application-development/page/build/system-update-sets/concept/update-set-procedures.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 1,
+    "prompt": "Domain separation is most accurately described as which kind of control?",
+    "choices": [
+      "A replacement for discovery patterns for cross-team production support",
+      "A tool that deletes cross-domain references nightly in enterprise release operations",
+      "A logical separation model for data and processes within a single platform instance when multi-tenant isolation is required under documented platform behavior",
+      "A licensing feature that limits the number of MID Servers during controlled change windows"
+    ],
+    "correctIndex": 2,
+    "explanation": "Domain separation provides logical isolation domains within one instance to support segregated data and processes for different parts of the business.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/company-and-domain-separation/concept/c_DomainSeparation.html",
+      "https://www.servicenow.com/docs/r/platform-security/c_DomainSeparation.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 2,
+    "prompt": "Why do platform owners commonly prefer scoped applications over unmanaged global-scope changes for net-new capability?",
+    "choices": [
+      "Scoped applications disable all integrations by default with clear operational impact",
+      "Scoped applications prohibit testing in non-production during controlled change windows",
+      "Scoped applications cannot be moved between platform instances in large shared environments",
+      "Scoped applications bundle artifacts under an application boundary, reducing accidental cross-team collisions across governed implementation flows"
+    ],
+    "correctIndex": 3,
+    "explanation": "Application scoping isolates files and configuration boundaries, which helps teams collaborate without constantly stepping on shared global artifacts.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/app-store/dev_portal/application_model/concept/c_ApplicationScopes.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 3,
+    "prompt": "After cloning, which practice better matches documented clone administration guidance for handling many in-flight update sets?",
+    "choices": [
+      "Manually retype platform configurations to avoid XML in large shared environments",
+      "Delete all completed update set records from production before cloning",
+      "Use clone administration patterns to batch or manage update set records across the clone workflow under documented platform behavior",
+      "Ignore clone impacts because update set records are platform instance-local for stable long-term administration"
+    ],
+    "correctIndex": 2,
+    "explanation": "Clone workflows can affect how update sets are carried forward; clone administration guidance addresses batching and management rather than ad hoc manual rework.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/clone-update-sets-example.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 4,
+    "prompt": "When CMDB relationship quality degrades across many teams, what is the most systemic remediation aligned with platform documentation themes?",
+    "choices": [
+      "Store relationships only in spreadsheets outside ServiceNow with clear operational impact",
+      "Require every incident to create five relationships during controlled change windows",
+      "Turn off discovery until relationships stabilize for cross-team production support",
+      "Enforce relationship control methods and ownership so relationship creation is deliberate in enterprise release operations"
+    ],
+    "correctIndex": 3,
+    "explanation": "Relationship governance focuses on how relationships are introduced and maintained so the CMDB remains authoritative for service modeling.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/product/configuration-management/concept/relationship-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 5,
+    "prompt": "In a domain-separated enterprise instance, what does domain separation primarily provide?",
+    "choices": [
+      "A replacement for role-based access controls in large shared environments",
+      "Automatic conversion of global ACLs to scoped ACLs across governed implementation flows",
+      "A mandatory requirement for all scoped applications with clear operational impact",
+      "Data and process isolation for distinct business entities within one platform for stable long-term administration"
+    ],
+    "correctIndex": 3,
+    "explanation": "Domain separation enables segmented data and process control so business units or customers can coexist on one instance safely.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/domain-separation/concept/domain-separation.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 6,
+    "prompt": "When designing enterprise domain hierarchies, which principle is most important?",
+    "choices": [
+      "Mirror every org chart level exactly, regardless of data access needs under documented platform behavior",
+      "Keep all records in global and rely only on UI policies for practical implementation decisions",
+      "Model domains around security, data-sharing, and operational ownership boundaries for cross-team production support",
+      "Use one domain per update set in enterprise release operations"
+    ],
+    "correctIndex": 2,
+    "explanation": "Domain models should support practical isolation and sharing requirements, not purely organizational chart complexity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/domain-separation/task/design-domain-hierarchy.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 7,
+    "prompt": "A record must be visible to users in multiple child domains. Which configuration is typically used?",
+    "choices": [
+      "Convert the table to a rotated log table for cross-team production support",
+      "Set the record to private and disable ACL inheritance across governed implementation flows",
+      "Use domain visibility/sharing rules appropriate to the hierarchy with clear operational impact",
+      "Move users to global for all shared workflows during controlled change windows"
+    ],
+    "correctIndex": 2,
+    "explanation": "Domain visibility and sharing settings allow controlled cross-domain access without collapsing overall isolation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/domain-separation/concept/domain-visibility.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 8,
+    "prompt": "What is a key governance risk when domain separation is enabled but role strategy is weak?",
+    "choices": [
+      "Subscription counts are misreported under documented platform behavior",
+      "Users may receive broad privileges that bypass intended isolation boundaries for stable long-term administration",
+      "Clone operations are blocked permanently in large shared environments",
+      "Skipped updates cannot be resolved across governed implementation flows"
+    ],
+    "correctIndex": 1,
+    "explanation": "Domain structure alone is not sufficient; role design and ACL enforcement are needed to preserve least-privilege access.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/domain-separation/concept/domain-security-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 9,
+    "prompt": "Why should enterprise teams pilot domain separation in a limited scope before broad rollout?",
+    "choices": [
+      "Because shared applications cannot run in domain-separated platform instances for cross-team production support",
+      "To avoid creating ACLs for domain-separated tables in enterprise release operations",
+      "Because domain separation can be enabled only in personal developer platform instances",
+      "To validate data partitioning, shared service behaviors, and admin operating model impacts for practical implementation decisions"
+    ],
+    "correctIndex": 3,
+    "explanation": "A pilot helps uncover design and operational gaps early, reducing enterprise rollout risk and rework.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/domain-separation/task/plan-domain-separation-implementation.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 10,
+    "prompt": "For enterprise platform strategy, what is the main benefit of building in scoped applications?",
+    "choices": [
+      "Scoped apps by default bypass ACLs with clear operational impact",
+      "Scoped apps isolate artifacts and reduce unintended cross-app impact during controlled change windows",
+      "Scoped apps can only run in domain-separated platform instances in large shared environments",
+      "Scoped apps eliminate the need for source control across governed implementation flows"
+    ],
+    "correctIndex": 1,
+    "explanation": "Scoping creates modular boundaries that improve governance, upgrade safety, and lifecycle management at scale.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-application-development/page/build/applications/concept/c_ApplicationScopes.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 11,
+    "prompt": "When multiple enterprise teams deliver capabilities on one instance, which model is preferred?",
+    "choices": [
+      "Domain-separated update set records without app scopes in large shared environments",
+      "Distinct scoped apps with defined interfaces and ownership in enterprise release operations",
+      "Global-only development with unrestricted access under documented platform behavior",
+      "Single monolithic scoped app for all teams for stable long-term administration"
+    ],
+    "correctIndex": 1,
+    "explanation": "Separate scoped apps with clear contracts support team autonomy while preserving platform consistency and control.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-application-development/page/build/applications/concept/scoped-app-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 12,
+    "prompt": "What is a key enterprise risk of excessive cross-scope privileges?",
+    "choices": [
+      "Increased coupling that weakens isolation and complicates upgrades with clear operational impact",
+      "Inability to create dictionary entries during controlled change windows",
+      "Skipped updates are permanently disabled for cross-team production support",
+      "Clone duration increases by default in enterprise release operations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Loose cross-scope access can blur ownership boundaries and cause unintentional dependencies across applications.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-application-development/page/build/applications/concept/c_CrossScopePrivileges.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 13,
+    "prompt": "Which governance control helps maintain secure scoped app adoption across business units?",
+    "choices": [
+      "Disable app versioning after initial release in large shared environments",
+      "Rely only on update set naming conventions across governed implementation flows",
+      "Allow any developer to publish to production directly with clear operational impact",
+      "Use app review standards, source control, and controlled deployment pipelines for stable long-term administration"
+    ],
+    "correctIndex": 3,
+    "explanation": "Formal review and pipeline controls ensure quality and security while enabling predictable enterprise delivery.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-application-development/page/build/applications/concept/application-lifecycle-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 14,
+    "prompt": "Why should platform owners standardize shared utility APIs instead of duplicating logic across scoped apps?",
+    "choices": [
+      "Shared APIs are available only in global scope under documented platform behavior",
+      "Shared APIs reduce maintenance overhead and improve consistency across teams for stable long-term administration",
+      "Duplicated logic is required for app certification for cross-team production support",
+      "Shared APIs prevent all upgrade conflicts by default in enterprise release operations"
+    ],
+    "correctIndex": 1,
+    "explanation": "Reusable shared services limit redundant code paths and make enterprise maintenance and governance more sustainable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-application-development/page/build/applications/task/create-and-share-script-includes.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 15,
+    "prompt": "After cloning production to a lower environment, why is update set strategy review important for enterprise teams?",
+    "choices": [
+      "Update set records are replaced by source control in all cases",
+      "Clone can reset context and requires teams to re-align promotion sequencing and branch discipline for practical implementation decisions",
+      "Clone removes all historical update set records permanently with clear operational impact",
+      "Clone by default merges update conflicts during controlled change windows"
+    ],
+    "correctIndex": 1,
+    "explanation": "Clone events can alter development context; teams should validate update set practices and sequencing before resuming delivery.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-application-development/page/build/system-update-sets/concept/c_UpdateSetManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 16,
+    "prompt": "Which practice minimizes update set loss risk after frequent environment refreshes?",
+    "choices": [
+      "Rely only on local browser history for record tracking under documented platform behavior",
+      "Keep all active work in one long-running update set for stable long-term administration",
+      "Commit and promote completed update set records with disciplined cadence in large shared environments",
+      "Pause all development during clone cycles across governed implementation flows"
+    ],
+    "correctIndex": 2,
+    "explanation": "Frequent commit and promotion cycles reduce exposure to clone-related disruptions and simplify recovery.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-application-development/page/build/system-update-sets/task/t_CommitAnUpdateSet.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 17,
+    "prompt": "In an enterprise release train, what is the biggest benefit of using clearly scoped update sets per feature?",
+    "choices": [
+      "They enforce domain separation by default for cross-team production support",
+      "They improve traceability, testing focus, and rollback decision quality in enterprise release operations",
+      "They eliminate all skipped updates during upgrades under documented platform behavior",
+      "They allow unrestricted production edits without approvals during controlled change windows"
+    ],
+    "correctIndex": 1,
+    "explanation": "Feature-focused update sets improve release control by mapping changes to business outcomes and validation evidence.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-application-development/page/build/system-update-sets/concept/c_BestPracticeForUpdateSets.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 18,
+    "prompt": "What governance control is most effective when clone timing overlaps with active development?",
+    "choices": [
+      "Use a managed release calendar and update set checkpoint policy with clear operational impact",
+      "Allow developers to decide clone windows individually during controlled change windows",
+      "Freeze all platform instances indefinitely in large shared environments",
+      "Skip cloning until the next family upgrade across governed implementation flows"
+    ],
+    "correctIndex": 0,
+    "explanation": "A shared release calendar and checkpoints create predictable recovery and handoff points around clone operations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-application-development/page/build/system-update-sets/task/plan-update-set-promotion.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 19,
+    "prompt": "Which outcome indicates mature clone-aware update set governance?",
+    "choices": [
+      "No post-clone validation process in large shared environments",
+      "Single shared update set for all teams in enterprise release operations",
+      "Consistent promotion records, minimal rework, and clear release traceability under documented platform behavior",
+      "Frequent production hotfixes from untracked changes for stable long-term administration"
+    ],
+    "correctIndex": 2,
+    "explanation": "Maturity appears as predictable promotions, reduced rework after clone events, and strong auditability across releases.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-application-development/page/build/system-update-sets/concept/update-set-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 20,
+    "prompt": "Why is CMDB relationship governance critical at enterprise scale?",
+    "choices": [
+      "It eliminates the need for discovery data sources with clear operational impact",
+      "It prevents all duplicate CIs by default during controlled change windows",
+      "It replaces CI identification rules for cross-team production support",
+      "It preserves accurate dependency mapping for impact analysis and service health decisions in enterprise release operations"
+    ],
+    "correctIndex": 3,
+    "explanation": "High-quality relationship data is foundational for understanding service impact, risk, and change outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/product/configuration-management/concept/cmdb-relationships.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 21,
+    "prompt": "Which governance practice most improves trust in CMDB relationship data?",
+    "choices": [
+      "Store dependency maps outside the CMDB in large shared environments",
+      "Allow manual edits without validation rules across governed implementation flows",
+      "Define ownership, quality policies, and automated reconciliation controls with clear operational impact",
+      "Disable relationship types not used by one team for stable long-term administration"
+    ],
+    "correctIndex": 2,
+    "explanation": "Governed ownership and policy-driven controls improve consistency and confidence in relationship accuracy.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/product/configuration-management/concept/cmdb-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 22,
+    "prompt": "What is the enterprise risk of stale application-to-infrastructure relationships in CMDB?",
+    "choices": [
+      "Increase in skipped updates under documented platform behavior",
+      "Inaccurate impact analysis leading to poor change and incident decisions for stable long-term administration",
+      "Reduced flow designer performance for cross-team production support",
+      "Loss of subscription entitlement records in enterprise release operations"
+    ],
+    "correctIndex": 1,
+    "explanation": "Outdated dependency data can mislead change approvals and outage triage, increasing business disruption risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/product/configuration-management/task/improve-cmdb-data-quality.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 23,
+    "prompt": "Which model best supports CMDB relationship governance across federated teams?",
+    "choices": [
+      "Federated stewardship with central standards and quality KPIs for cross-team production support",
+      "One central team manually maintaining every relationship across governed implementation flows",
+      "Only quarterly manual audits with no automation with clear operational impact",
+      "No data steward model to maximize speed during controlled change windows"
+    ],
+    "correctIndex": 0,
+    "explanation": "Federated stewardship balances local ownership with enterprise standards, improving data quality and sustainability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/product/configuration-management/concept/cmdb-operating-model.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 24,
+    "prompt": "Which KPI best indicates progress in CMDB relationship governance maturity?",
+    "choices": [
+      "Number of manual relationship edits per admin under documented platform behavior",
+      "Percentage of CIs without ownership for stable long-term administration",
+      "Total count of relationship types created in large shared environments",
+      "Higher relationship completeness and fewer critical services with unknown dependencies for practical implementation decisions"
+    ],
+    "correctIndex": 3,
+    "explanation": "Completeness and dependency clarity directly reflect whether governance controls are improving decision-quality data.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/product/configuration-management/task/track-cmdb-quality-metrics.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 25,
+    "prompt": "For platform operating excellence, what is the strongest reason to standardize an adoption blueprint template across domains?",
+    "choices": [
+      "It removes the need for data classification for cross-team production support",
+      "It guarantees zero incidents after release in enterprise release operations",
+      "It improves comparability of outcomes and control decisions under documented platform behavior",
+      "It allows teams to skip change approvals during controlled change windows"
+    ],
+    "correctIndex": 2,
+    "explanation": "A common blueprint format creates repeatability and easier cross-domain performance assessment.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-now-platform/page/administer/portfolio-management/concept/operating-model-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 26,
+    "prompt": "Which control most directly supports reliable performance monitoring in an enterprise platform operating model?",
+    "choices": [
+      "Restricting dashboards to admin users only with clear operational impact",
+      "Collecting metrics once per fiscal year during controlled change windows",
+      "Disabling trend visualizations to reduce noise in large shared environments",
+      "Defining metric ownership, collection cadence, and threshold actions across governed implementation flows"
+    ],
+    "correctIndex": 3,
+    "explanation": "Clear ownership and collection standards ensure monitoring remains actionable and sustained over time.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/use/performance-analytics/concept/data-collection-jobs.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 27,
+    "prompt": "A Center of Excellence is reviewing data exposure risk between subsidiaries. Which approach best enforces multi-domain policy?",
+    "choices": [
+      "Disable auditing to improve query speed in large shared environments",
+      "Allow unrestricted cross-domain queries for all product teams in enterprise release operations",
+      "Apply domain-aware ACL strategy and periodic access reviews under documented platform behavior",
+      "Create one shared admin account per subsidiary for stable long-term administration"
+    ],
+    "correctIndex": 2,
+    "explanation": "Domain-aware ACLs plus recurring access reviews help maintain least privilege and policy compliance at scale.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/security/concept/access-controls.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 28,
+    "prompt": "What is the most effective way to detect adoption regressions after a major process redesign?",
+    "choices": [
+      "Compare only anecdotal feedback from one team with clear operational impact",
+      "Track leading and lagging indicators against pre-change baselines during controlled change windows",
+      "Remove target thresholds from scorecards for cross-team production support",
+      "Freeze all enhancements for 12 months in enterprise release operations"
+    ],
+    "correctIndex": 1,
+    "explanation": "Using leading and lagging indicators against baseline values reveals whether adoption is improving or declining.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/use/performance-analytics/concept/indicators-and-targets.html"
+    ]
+  },
+  {
+    "trackCode": "CPOE",
+    "order": 29,
+    "prompt": "Which governance behavior best sustains long-term platform adoption excellence?",
+    "choices": [
+      "Set annual goals without mid-year adjustment in large shared environments",
+      "Run regular value realization reviews and update blueprints from evidence for practical implementation decisions",
+      "Evaluate only technical uptime and ignore user workflow health with clear operational impact",
+      "Treat adoption data as optional in release retrospectives for stable long-term administration"
+    ],
+    "correctIndex": 1,
+    "explanation": "Continuous evidence-based reviews help teams refine adoption strategy and maintain value over time.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-now-platform/page/administer/continuous-improvement/concept/value-realization.html"
+    ]
+  }
+]

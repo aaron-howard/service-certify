@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CAD",
+		"order": 35,
+		"prompt": "How can a Record Producer serve as an application's user interface?",
+		"choices": [
+			"It presents a catalog-style form whose variables create a record on a target table when submitted",
+			"It compiles server scripts into client code",
+			"It replaces the instance login page",
+			"It stores binary attachments only"
+		],
+		"correctIndex": 0,
+		"explanation": "A record producer provides a simplified, catalog-style intake form; its variables populate and create a record on the specified target table.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/record-producers.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 36,
+		"prompt": "What is the primary mechanism ServiceNow uses to control row- and field-level access to data?",
+		"choices": [
+			"Access Control (ACL) rules",
+			"UI Policies",
+			"Client Scripts",
+			"Scheduled Jobs"
+		],
+		"correctIndex": 0,
+		"explanation": "Access Control rules (ACLs) evaluate roles, conditions, and scripts to permit or deny operations at the record and field level.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/access-control-rules.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 37,
+		"prompt": "An ACL grants access only when the user passes which combination of checks?",
+		"choices": [
+			"Required roles, the condition, and the script all evaluate to true",
+			"Any one of role, condition, or script is enough on its own",
+			"Only the client script returns false",
+			"The user is signed out"
+		],
+		"correctIndex": 0,
+		"explanation": "An ACL grants access only if the user has the required role(s) AND the condition is met AND the script (if any) returns true.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/access-control-rules.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 38,
+		"prompt": "Which GlideSystem method checks whether the current user has a specific role in an ACL script?",
+		"choices": [
+			"gs.hasRole('role_name')",
+			"g_form.hasRole('role_name')",
+			"current.hasRole('role_name')",
+			"gs.getReference('role_name')"
+		],
+		"correctIndex": 0,
+		"explanation": "gs.hasRole() returns true if the current user has the specified role (or admin), commonly used to script security in ACLs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/glidesystem.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 39,
+		"prompt": "When no ACL exists for a specific operation on a table, what is the default platform behavior?",
+		"choices": [
+			"Access is denied because the operation is not explicitly granted",
+			"Access is granted to every user by default",
+			"The table is deleted",
+			"The user gains the admin role"
+		],
+		"correctIndex": 0,
+		"explanation": "ServiceNow uses a deny-by-default model; without a matching ACL granting the operation, access is denied.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/access-control-rules.html"
+		]
+	}
+]

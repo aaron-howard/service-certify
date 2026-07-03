@@ -1,0 +1,482 @@
+[
+  {
+    "trackCode": "CIS-HR",
+    "order": 0,
+    "prompt": "An HR transformation sponsor wants the platform framing for HR case, knowledge, and employee-facing experiences. Which human resources concept documentation introduces HR Service Delivery?",
+    "choices": [
+      "Payroll garnishment legal hold procedures for practical execution",
+      "Facilities snow removal escalation policy for controlled governance",
+      "HR Service Delivery for sustained reliability for operational consistency",
+      "Employee badge reprint SOP for security for measurable outcomes"
+    ],
+    "correctIndex": 2,
+    "explanation": "The human resources documentation includes an HR Service Delivery concept that frames the suite of HR experiences built on the Now Platform.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-employee-service-management/page/product/human-resources/concept/hr-service-delivery.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 1,
+    "prompt": "Your team is modernizing employee learning and growth experiences alongside HR services. Which concept documentation provides an overview aligned with the learning experience platform area?",
+    "choices": [
+      "Overview of the Learning Experience Platform (LXP) for role-based accountability",
+      "Configuring SNMP for building access controllers for production readiness",
+      "Designing data center rack thermal maps for enterprise implementation",
+      "Creating procurement requests for office furniture for operational consistency"
+    ],
+    "correctIndex": 0,
+    "explanation": "Employee experience documentation includes an overview of the Learning Experience Platform (LXP), which contextualizes learning capabilities adjacent to HR service delivery.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-employee-service-management/page/product/human-resources/concept/overview-lxp.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 2,
+    "prompt": "Consultants want a guided narrative for HR product planning workshops. Which human resources concept documentation supports playbook-style HR guidance?",
+    "choices": [
+      "HR playbook for sustained reliability for operational consistency",
+      "Legacy mainframe green-screen navigation for measurable outcomes for role-based accountability",
+      "VPN split tunneling policies for contractors for practical execution",
+      "Annual performance review calibration spreadsheets for controlled governance"
+    ],
+    "correctIndex": 0,
+    "explanation": "The human resources documentation includes an HR playbook concept that helps teams structure discovery, design, and adoption conversations for HR products.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-employee-service-management/page/product/human-resources/concept/playbook-hr.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 3,
+    "prompt": "Integration engineers must enable HR data flows between ServiceNow and external human capital systems. Which task documentation should they follow to activate integrations?",
+    "choices": [
+      "Design facilities keycard deprovisioning scripts for enterprise implementation",
+      "Configure email archiving for legal discovery for operational consistency",
+      "Activate HR integrations for role-based accountability for measurable outcomes",
+      "Tune antivirus definitions for file servers for production readiness"
+    ],
+    "correctIndex": 2,
+    "explanation": "Human resources task documentation for activating HR integrations covers the steps to turn on integration capabilities needed for authoritative HR system data.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-employee-service-management/page/product/human-resources/task/activate-hr-integrations.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 4,
+    "prompt": "HR operations wants a manager-facing operational view for team requests and workload. Which task documentation should be reviewed for the HR manager dashboard experience?",
+    "choices": [
+      "Plan cafeteria vendor contract renewals for production readiness",
+      "Draft procurement policies for temporary labor for role-based accountability",
+      "Use the HR manager dashboard for operational consistency",
+      "Configure SNMP monitoring for warehouse doors for enterprise implementation"
+    ],
+    "correctIndex": 2,
+    "explanation": "Human resources task documentation for using the HR manager dashboard explains how managers monitor and act on HR-related work for their teams.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-employee-service-management/page/product/human-resources/task/t_UseTheHRManagerDashboard.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 5,
+    "prompt": "What is the primary goal of HR Service Delivery in ServiceNow?",
+    "choices": [
+      "Replace payroll engines for controlled governance for enterprise implementation",
+      "Track software vulnerabilities for practical execution",
+      "Support HR processes through standardized services, cases, and employee experiences for measurable outcomes",
+      "Manage customer incident response for sustained reliability for operational consistency"
+    ],
+    "correctIndex": 2,
+    "explanation": "HRSD digitizes and standardizes HR services, improving employee support and process consistency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/concept/hrsd-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 6,
+    "prompt": "In HRSD, which record typically tracks fulfillment of an employee HR request?",
+    "choices": [
+      "Problem record for operational consistency for sustained reliability",
+      "Vendor profile for enterprise implementation for controlled governance",
+      "Work order for production readiness",
+      "HR case for role-based accountability for measurable outcomes"
+    ],
+    "correctIndex": 3,
+    "explanation": "HR cases are the primary fulfillment records for employee issues and HR service requests.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/concept/hr-cases.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 7,
+    "prompt": "Why are HR services important in an HRSD implementation?",
+    "choices": [
+      "They replace legal counsel for measurable outcomes for role-based accountability",
+      "They define structured request types and fulfillment patterns for HR teams for sustained reliability",
+      "They bypass knowledge management for controlled governance for enterprise implementation",
+      "They remove security role requirements for practical execution"
+    ],
+    "correctIndex": 1,
+    "explanation": "HR services standardize intake and delivery so recurring HR requests are handled consistently.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/create-hr-services.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 8,
+    "prompt": "What is a key reason HRSD uses employee center experiences?",
+    "choices": [
+      "To consistently hide HR policies from employees for practical execution",
+      "To consistently provide a unified self-service interface for HR help, knowledge, and request submission",
+      "To consistently force all requests through email for operational consistency",
+      "To consistently store vulnerability scan outputs for role-based accountability"
+    ],
+    "correctIndex": 1,
+    "explanation": "Employee center channels HR demand through a consistent portal and improves self-service adoption.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/concept/employee-center-for-hr.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 9,
+    "prompt": "When introducing HRSD, what governance practice should be established early?",
+    "choices": [
+      "Define case confidentiality and role-based access controls for sensitive employee records for role-based accountability",
+      "Store all case notes in public knowledge for production readiness",
+      "Disable assignment groups for HR for enterprise implementation",
+      "Allow unrestricted access to all HR case data for operational consistency"
+    ],
+    "correctIndex": 0,
+    "explanation": "HR data is sensitive, so role-based access and confidentiality controls are foundational to compliant operations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/configure-hr-security.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 10,
+    "prompt": "In HRSD, why are HR case categories and topics configured?",
+    "choices": [
+      "To consistently classify requests for routing, reporting, and fulfillment consistency",
+      "To consistently disable SLA tracking for practical execution",
+      "To consistently sort vulnerabilities by CVSS score for role-based accountability",
+      "To consistently replace employee profiles for operational consistency"
+    ],
+    "correctIndex": 0,
+    "explanation": "Case categorization enables accurate assignment logic and better service analytics.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/configure-hr-case-categories.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 11,
+    "prompt": "What does proper case assignment in HRSD help prevent?",
+    "choices": [
+      "Cross-functional collaboration for production readiness",
+      "Delayed handling caused by misrouted sensitive HR requests for role-based accountability",
+      "Access control enforcement for operational consistency for sustained reliability",
+      "Employee self-service adoption for enterprise implementation for controlled governance"
+    ],
+    "correctIndex": 1,
+    "explanation": "Accurate routing reduces transfer delays and protects confidentiality by directing work to the right HR groups.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/configure-hr-assignment-rules.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 12,
+    "prompt": "Which HR case feature supports consistent employee communications?",
+    "choices": [
+      "Free-form case records with no status model for measurable outcomes",
+      "Disabled notifications for sustained reliability for operational consistency",
+      "Manual notes stored outside the platform for controlled governance",
+      "Structured templates and activity timelines on case records for practical execution"
+    ],
+    "correctIndex": 3,
+    "explanation": "Templates and timeline visibility improve communication quality and auditability of HR interactions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/concept/hr-case-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 13,
+    "prompt": "A compliance lead needs better oversight of employee requests. Which HRSD metric is most useful?",
+    "choices": [
+      "Average time to resolve HR cases by service type for operational consistency",
+      "Count of discovery schedules for enterprise implementation for controlled governance",
+      "Technician travel distance for production readiness",
+      "Number of vulnerable CIs for role-based accountability for measurable outcomes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Resolution trend metrics by case type help identify process bottlenecks and policy compliance issues.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/report-on-hr-cases.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 14,
+    "prompt": "What is a common best practice for handling confidential HR case notes?",
+    "choices": [
+      "Use role-based access and case security controls to restrict sensitive detail visibility for role-based accountability",
+      "Disable audit history for private fields for production readiness",
+      "Share all notes broadly for transparency for enterprise implementation",
+      "Export all notes to public knowledge for operational consistency"
+    ],
+    "correctIndex": 0,
+    "explanation": "HR cases often include sensitive information and require strict visibility controls and traceability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/protect-sensitive-hr-data.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 15,
+    "prompt": "In HRSD, what are lifecycle events designed to support?",
+    "choices": [
+      "Vendor onboarding questionnaires for practical execution",
+      "Field technician route planning for controlled governance for enterprise implementation",
+      "Coordinated employee journeys such as onboarding, transitions, and offboarding for sustained reliability",
+      "Security patch deployments for measurable outcomes for role-based accountability"
+    ],
+    "correctIndex": 2,
+    "explanation": "Lifecycle events orchestrate cross-department tasks tied to key employee moments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/concept/lifecycle-events-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 16,
+    "prompt": "Why do HR teams use lifecycle event templates?",
+    "choices": [
+      "To consistently bypass security roles for controlled governance",
+      "To consistently disable notifications for sustained reliability",
+      "To consistently eliminate HR case usage for measurable outcomes",
+      "To confirm repeatable task orchestration and role-based ownership for common employee scenarios"
+    ],
+    "correctIndex": 3,
+    "explanation": "Templates provide standardized task sets and timelines for predictable employee experiences.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/create-lifecycle-event-templates.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 17,
+    "prompt": "What is a key advantage of assigning lifecycle event activities across departments?",
+    "choices": [
+      "It eliminates approvals for sustained reliability for operational consistency",
+      "It strengthens coordination among HR, IT, facilities, and other stakeholders during transitions",
+      "It reduces collaboration by centralizing all tasks in HR exclusively",
+      "It prevents visibility into task status for controlled governance"
+    ],
+    "correctIndex": 1,
+    "explanation": "Cross-functional assignment ensures each team completes its responsibilities in time-sensitive events.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/configure-cross-functional-lifecycle-activities.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 18,
+    "prompt": "An organization wants better onboarding transparency. Which lifecycle event feature helps most?",
+    "choices": [
+      "Creating one generic task with no due date for controlled governance",
+      "Task timelines and progress tracking for each event participant for practical execution",
+      "Disabling employee notifications for measurable outcomes for role-based accountability",
+      "Using exclusively email threads for updates for operational consistency"
+    ],
+    "correctIndex": 1,
+    "explanation": "Lifecycle event progress views make ownership and completion status visible across stakeholders.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/track-lifecycle-event-progress.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 19,
+    "prompt": "Which metric is most useful for evaluating lifecycle event effectiveness?",
+    "choices": [
+      "Number of active discovery probes for production readiness",
+      "Percentage of lifecycle activities completed on time for role-based accountability",
+      "Count of security incidents for operational consistency for sustained reliability",
+      "Total catalog categories for enterprise implementation for controlled governance"
+    ],
+    "correctIndex": 1,
+    "explanation": "On-time completion rate is a direct indicator of lifecycle orchestration performance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/report-on-lifecycle-events.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 20,
+    "prompt": "In HRSD, why are document templates used?",
+    "choices": [
+      "To consistently generate consistent, compliant HR communications and forms",
+      "To consistently disable approvals for enterprise implementation",
+      "To consistently remove employee profiles for operational consistency",
+      "To consistently replace case workflows for role-based accountability"
+    ],
+    "correctIndex": 0,
+    "explanation": "Templates standardize wording and structure for recurring HR documents, reducing errors and compliance risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/create-hr-document-templates.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 21,
+    "prompt": "What is the primary benefit of using data placeholders in HR document templates?",
+    "choices": [
+      "They auto-populate employee and case-specific details accurately at generation time for role-based accountability",
+      "They avoid case linkage for production readiness",
+      "They disable versioning for enterprise implementation for controlled governance",
+      "They prevent localization for operational consistency for sustained reliability"
+    ],
+    "correctIndex": 0,
+    "explanation": "Dynamic placeholders improve efficiency and reduce manual entry mistakes in generated HR documents.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/use-template-variables-in-hr-documents.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 22,
+    "prompt": "How do template approval workflows support HR compliance?",
+    "choices": [
+      "By bypassing legal review for sustained reliability for operational consistency",
+      "By enforcing controlled review and publication of official HR document content for measurable outcomes",
+      "By allowing any user to edit legal language directly in production for practical execution",
+      "By disabling audit tracking for controlled governance for enterprise implementation"
+    ],
+    "correctIndex": 1,
+    "explanation": "Approval workflows ensure template changes are governed and legally reviewed before use.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/govern-hr-template-approvals.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 23,
+    "prompt": "A global HR team needs regional policy differences. Which template strategy works best?",
+    "choices": [
+      "Store regional edits in personal notes for enterprise implementation",
+      "Disable document versioning for operational consistency for sustained reliability",
+      "Maintain one template in one language exclusively for measurable outcomes",
+      "Use localized template variants by region and language with controlled fallback for production readiness"
+    ],
+    "correctIndex": 3,
+    "explanation": "Regionalized templates maintain policy accuracy while supporting multilingual employee communications.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/localize-hr-document-templates.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 24,
+    "prompt": "What control helps validate that HR document templates remain current?",
+    "choices": [
+      "Periodic template review schedules with ownership and version history for production readiness",
+      "Publishing documents without metadata for role-based accountability for measurable outcomes",
+      "Allowing unrestricted edits by all employees for operational consistency",
+      "Removing change history from templates for enterprise implementation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Scheduled review and version traceability keep HR content current, accountable, and auditable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/hr-service-delivery/page/product/human-resources/task/manage-hr-document-template-versions.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 25,
+    "prompt": "What is the primary purpose of Employee Center in HR Service Delivery?",
+    "choices": [
+      "Replace HR case tables with spreadsheets for controlled governance",
+      "Limit access to exclusively HR administrators for practical execution",
+      "Provide a unified portal for employees to find knowledge, submit requests, and track cases for measurable outcomes",
+      "Remove role-based access controls for sustained reliability for operational consistency"
+    ],
+    "correctIndex": 2,
+    "explanation": "Employee Center centralizes employee interactions across knowledge and service workflows to improve self-service experience.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/employee-center/concept/employee-center.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 26,
+    "prompt": "Which configuration most improves Employee Center content relevance for HR users?",
+    "choices": [
+      "Show all internal admin pages to all users for operational consistency",
+      "Use audience criteria and topic-based navigation aligned to employee needs for enterprise implementation",
+      "Disable taxonomy and rely on random article order for production readiness",
+      "Route every search query to external websites for role-based accountability"
+    ],
+    "correctIndex": 1,
+    "explanation": "Audience targeting and structured topics help employees find the right HR information quickly.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/employee-center/task/configure-employee-center.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 27,
+    "prompt": "Why should HR administrators connect catalog items and knowledge in Employee Center?",
+    "choices": [
+      "To consistently eliminate case visibility for employees for role-based accountability",
+      "To consistently bypass HR assignment rules for operational consistency",
+      "To consistently provide guided self-service with both answers and action paths",
+      "To consistently force users to submit duplicate requests"
+    ],
+    "correctIndex": 2,
+    "explanation": "Combining knowledge with request options improves deflection and reduces friction when employees need support.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/hr-service-delivery/concept/hr-service-delivery.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 28,
+    "prompt": "An HR team wants to improve portal adoption. Which KPI is most useful?",
+    "choices": [
+      "Employee Center self-service completion and case deflection rate for practical execution",
+      "Average CMDB relationship depth for controlled governance for enterprise implementation",
+      "Count of deactivated user records for sustained reliability",
+      "Number of backend script includes for measurable outcomes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Self-service and deflection metrics indicate whether Employee Center is effectively meeting employee needs without assisted handling.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-employee-service-management/page/product/employee-center/concept/employee-center-analytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HR",
+    "order": 29,
+    "prompt": "What access model should be used for HR-sensitive content in Employee Center?",
+    "choices": [
+      "Apply user criteria and role-based restrictions to enforce least-privilege access for role-based accountability",
+      "Disable read ACLs for faster indexing for production readiness",
+      "Make all HR knowledge public internally for enterprise implementation",
+      "Grant editor rights to all employees for operational consistency"
+    ],
+    "correctIndex": 0,
+    "explanation": "HR content often contains sensitive information and should be protected through targeted audience and ACL controls.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/knowledge-management/concept/c_KnowledgeUserCriteria.html"
+    ]
+  }
+]

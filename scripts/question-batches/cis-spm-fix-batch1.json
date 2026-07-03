@@ -1,0 +1,487 @@
+[
+  {
+    "trackCode": "CIS-SPM",
+    "order": 0,
+    "prompt": "In Strategic Planning, what is a strategic plan most commonly used to structure?",
+    "choices": [
+      "Firewall zones and IDS rules for practical execution",
+      "Vendor SOC 2 reports for measurable outcomes",
+      "Goals, initiatives, and roadmap-style planning artifacts that connect strategy to execution in real implementations",
+      "Software publisher packs in enterprise contexts for measurable outcomes"
+    ],
+    "correctIndex": 2,
+    "explanation": "Strategic Planning documentation describes creating strategic plans to organize goals and planning content within SPM-related planning workflows.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-business-management/strategic-planning/create-strategic-plan-strategy.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 1,
+    "prompt": "What does the Strategic Execution dashboard in Strategic Planning primarily provide to portfolio leaders?",
+    "choices": [
+      "Visibility into planning and execution progress aligned to strategic items in the Strategic Planning Workspace for measurable outcomes",
+      "A well-defined CMDB discovery schedule editor in real implementations",
+      "A well-defined hardware disposal certificate generator under governance oversight",
+      "A well-defined malware sandbox execution environment in real implementations"
+    ],
+    "correctIndex": 0,
+    "explanation": "The strategic execution dashboard documentation is tied to monitoring strategic planning workspace execution outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-business-management/strategic-planning/strategic-execution-dashboard-spw.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 2,
+    "prompt": "Now Assist for Strategic Portfolio Management is best described as helping teams do which of the following?",
+    "choices": [
+      "Automatically delete all project records nightly in real implementations",
+      "Configure database indexes for the CMDB in enterprise contexts",
+      "Apply generative AI assistance to SPM workflows such as summarization and intake acceleration for practical execution",
+      "Replace the need for any human portfolio decisions for measurable outcomes"
+    ],
+    "correctIndex": 2,
+    "explanation": "Now Assist for SPM documentation describes AI-assisted capabilities for strategic portfolio management processes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-business-management/now-assist-for-strategic-portfolio-management-spm/now-assist-spm.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 3,
+    "prompt": "Which distinction best separates Strategic Portfolio Management from Adaptive Project Management in common ServiceNow descriptions?",
+    "choices": [
+      "SPM focuses on selecting and maintaining the right portfolio of investments; APM focuses on how work is delivered in enterprise contexts",
+      "SPM exclusively tracks hardware warranties across operational workflows",
+      "APM replaces all GRC functions for measurable outcomes",
+      "They are identical capabilities with different icons for practical execution"
+    ],
+    "correctIndex": 0,
+    "explanation": "Public SPM positioning contrasts portfolio selection and maintenance with execution methodologies handled through adaptive project management.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-business-management/strategic-planning/create-strategic-plan-strategy.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 4,
+    "prompt": "Which work outcome is most central to Strategic Portfolio Management programs?",
+    "choices": [
+      "Align funding and work to strategic goals with transparent roadmaps and progress tracking in real implementations",
+      "Run phishing response playbooks in enterprise contexts",
+      "Perform vendor concentration mapping across operational workflows",
+      "Normalize software discovery titles under governance oversight"
+    ],
+    "correctIndex": 0,
+    "explanation": "SPM documentation themes emphasize connecting strategy, planning, and execution visibility for investment decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-business-management/now-assist-for-strategic-portfolio-management-spm/now-assist-spm.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 5,
+    "prompt": "In Strategic Portfolio Management, what is the main value of maintaining strategic plans in the platform?",
+    "choices": [
+      "They provide a structure to define goals, outcomes, and investment alignment across portfolios in enterprise contexts",
+      "They replace all project and demand records in real implementations",
+      "They eliminate the need for governance boards under governance oversight",
+      "They automatically close projects that miss milestones across operational workflows"
+    ],
+    "correctIndex": 0,
+    "explanation": "Strategic plans connect objectives to execution and funding decisions so portfolio choices are aligned to enterprise goals.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/strategic-portfolio-management/strategic-planning/strategic-plans-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 6,
+    "prompt": "A portfolio director needs to show how initiatives support organizational goals. Which configuration supports this best?",
+    "choices": [
+      "Apply cost plans without objective mappings for practical execution",
+      "Track goals exclusively in a slide deck outside ServiceNow",
+      "Map each investment and initiative to strategic objectives within the strategic plan hierarchy in real implementations",
+      "Create one objective called 'General Improvement' for all work in enterprise contexts"
+    ],
+    "correctIndex": 2,
+    "explanation": "Objective-to-investment mappings provide traceability from funded work back to declared strategic intent.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/strategic-portfolio-management/strategic-planning/map-objectives-to-investments.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 7,
+    "prompt": "What planning practice improves confidence in strategic plans during quarterly portfolio reviews?",
+    "choices": [
+      "Exclusively track completed projects, not in-flight initiatives",
+      "Prioritize initiatives with the largest teams regardless of value across operational workflows",
+      "Apply measurable key results and update progress based on portfolio execution data",
+      "Freeze all objective metrics for the fiscal year in real implementations"
+    ],
+    "correctIndex": 2,
+    "explanation": "Strategic plans are more actionable when objective progress is measured and refreshed from current execution data.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/strategic-portfolio-management/strategic-planning/measure-strategic-objectives.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 8,
+    "prompt": "Which scenario best demonstrates strategic plan governance in SPM?",
+    "choices": [
+      "Projects are approved solely by submission date for practical execution",
+      "Resource plans are hidden from portfolio managers for measurable outcomes",
+      "All demand records are auto-approved without scoring in real implementations",
+      "Objective owners review plan progress and adjust priorities before new funding decisions in enterprise contexts"
+    ],
+    "correctIndex": 3,
+    "explanation": "Governance involves periodic review of objective progress and using that evidence to steer funding and prioritization.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/strategic-portfolio-management/strategic-planning/strategic-plan-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 9,
+    "prompt": "A PMO wants to reduce misalignment between strategy and delivery. What should they enforce first?",
+    "choices": [
+      "Allow teams to create initiatives without objective links for speed for measurable outcomes",
+      "Track strategic themes exclusively in financial planning tools",
+      "Require each major initiative to reference an approved strategic objective and expected outcome in enterprise contexts",
+      "Disable strategic planning modules in non-production instances in real implementations"
+    ],
+    "correctIndex": 2,
+    "explanation": "Mandatory alignment of initiatives to approved objectives improves prioritization discipline and outcome reporting.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/strategic-portfolio-management/strategic-planning/align-investments-to-strategy.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 10,
+    "prompt": "What is the purpose of the Strategic Execution Dashboard in SPM?",
+    "choices": [
+      "To clearly manage discovery patterns for CMDB",
+      "To clearly run monthly software reconciliation jobs",
+      "To clearly replace all project workbench functionality",
+      "To clearly monitor strategic objective progress and execution health in one place for portfolio decisions"
+    ],
+    "correctIndex": 3,
+    "explanation": "The dashboard consolidates objective, investment, and delivery indicators so leadership can evaluate strategy execution effectively.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/strategic-portfolio-management/strategic-planning/strategic-execution-dashboard.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 11,
+    "prompt": "A CIO asks why a strategic objective is off track. Which dashboard capability should a portfolio analyst use first?",
+    "choices": [
+      "Delete low-performing investments from the plan for practical execution",
+      "Hide cost and resource metrics for simplicity for measurable outcomes",
+      "Export all data to spreadsheets and stop with SPM",
+      "Drill from objective scorecards into contributing initiatives and their status indicators in enterprise contexts"
+    ],
+    "correctIndex": 3,
+    "explanation": "Drill-down analysis links objective performance to underlying work items, helping identify where execution risks are occurring.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/strategic-portfolio-management/strategic-planning/use-strategic-execution-dashboard.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 12,
+    "prompt": "Which KPI combination is most useful on a strategic execution dashboard?",
+    "choices": [
+      "Exclusively total active users in the platform",
+      "Hardware lifecycle end dates across operational workflows",
+      "Exclusively number of open incidents in enterprise contexts",
+      "Objective progress, investment health, and milestone delivery trends in real implementations"
+    ],
+    "correctIndex": 3,
+    "explanation": "Combining strategic progress and execution metrics creates a balanced view for portfolio steering conversations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/strategic-portfolio-management/strategic-planning/strategic-dashboard-kpis.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 13,
+    "prompt": "How does dashboard filtering improve governance meetings in SPM?",
+    "choices": [
+      "It removes the need for strategic objectives in real implementations",
+      "It lets leaders focus by portfolio, business unit, or timeframe to prioritize corrective action in enterprise contexts",
+      "It confirms all initiatives are always marked green",
+      "It automatically approves all investment changes for measurable outcomes"
+    ],
+    "correctIndex": 1,
+    "explanation": "Targeted filtering helps decision-makers isolate issues quickly and act on the highest-priority strategy execution gaps.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/strategic-portfolio-management/strategic-planning/configure-strategic-execution-dashboard.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 14,
+    "prompt": "If objective progress looks healthy but delivery dates keep slipping, what is the best interpretation?",
+    "choices": [
+      "The well-defined strategic plan should be deleted",
+      "Financial planning is no longer required in real implementations",
+      "There may be reporting lag or weak milestone discipline, requiring deeper execution review under governance oversight",
+      "Dashboard data is always wrong when dates slip across operational workflows"
+    ],
+    "correctIndex": 2,
+    "explanation": "Divergence between strategic score and delivery timelines is a signal to inspect milestone tracking quality and execution dependencies.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/strategic-portfolio-management/strategic-planning/analyze-strategic-execution-variance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 15,
+    "prompt": "In SPM, what is a practical use of Now Assist for portfolio teams?",
+    "choices": [
+      "Automatically set all at-risk initiatives to complete in real implementations",
+      "Normalize discovered software titles in enterprise contexts",
+      "Generate contextual summaries and insights from strategic and execution data to accelerate decision-making across operational workflows",
+      "Replace all approval workflows with chatbot responses under governance oversight"
+    ],
+    "correctIndex": 2,
+    "explanation": "Now Assist can help portfolio stakeholders quickly interpret plan and execution context through AI-generated summaries and guidance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/strategic-portfolio-management/now-assist-in-spm/now-assist-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 16,
+    "prompt": "A PMO lead asks for concise status narratives ahead of governance reviews. Which Now Assist capability is most relevant?",
+    "choices": [
+      "Focus on disabling demand scoring for measurable outcomes",
+      "AI-generated recaps of objective and initiative updates across operational workflows",
+      "Auto-provisioning CMDB CIs for every project in enterprise contexts",
+      "Focus on converting all strategic goals into incident tasks"
+    ],
+    "correctIndex": 1,
+    "explanation": "Summarization assistance reduces manual preparation time while preserving key strategic and execution signals for review meetings.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/strategic-portfolio-management/now-assist-in-spm/use-now-assist-summaries.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 17,
+    "prompt": "What governance approach should accompany adoption of Now Assist in SPM?",
+    "choices": [
+      "Apply AI outputs directly for approvals without human review",
+      "Require human validation of AI-generated recommendations before portfolio decisions for measurable outcomes",
+      "Disable strategic plans to avoid bias across operational workflows",
+      "Limit access to financial data in all dashboards under governance oversight"
+    ],
+    "correctIndex": 1,
+    "explanation": "AI-assisted insights should support, not replace, accountable human judgment in formal portfolio governance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/now-assist/now-assist-governance/ai-governance-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 18,
+    "prompt": "Which outcome most clearly indicates successful use of Now Assist in SPM?",
+    "choices": [
+      "Elimination of strategic objectives under governance oversight",
+      "No need for project status reporting across operational workflows",
+      "Automatic closure of all overdue milestones for measurable outcomes",
+      "Fewer manual narrative updates and faster, better-informed portfolio review cycles for practical execution"
+    ],
+    "correctIndex": 3,
+    "explanation": "Success is measured by improved decision velocity and quality, not by removing core governance artifacts.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/strategic-portfolio-management/now-assist-in-spm/measure-now-assist-value.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 19,
+    "prompt": "When configuring Now Assist prompts for strategic updates, what is the best practice?",
+    "choices": [
+      "Apply broad generic prompts with no portfolio context",
+      "Include confidential credentials in prompt templates in enterprise contexts",
+      "Ask Now Assist to bypass role-based security controls across operational workflows",
+      "Anchor prompts to objective, risk, timeline, and financial context to strengthen response quality"
+    ],
+    "correctIndex": 3,
+    "explanation": "Context-rich prompting generally produces more relevant and actionable AI assistance for strategic portfolio workflows.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/now-assist/now-assist-guidance/prompting-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 20,
+    "prompt": "What best describes the relationship between Application Portfolio Management (APM) and Strategic Portfolio Management (SPM)?",
+    "choices": [
+      "SPM is exclusively used for infrastructure discovery",
+      "APM focuses on application inventory/rationalization insights that feed broader SPM investment and strategy decisions in enterprise contexts",
+      "APM and SPM are unrelated products with no shared data model across operational workflows",
+      "APM replaces all strategic planning workflows in SPM under governance oversight"
+    ],
+    "correctIndex": 1,
+    "explanation": "APM provides application-centric portfolio intelligence, while SPM governs strategic planning, prioritization, and execution across portfolios.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/strategic-portfolio-management/application-portfolio-management/apm-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 21,
+    "prompt": "A leadership team wants to reduce redundant applications while funding strategic priorities. Which capability pairing is most appropriate?",
+    "choices": [
+      "Apply APM exclusively and skip strategic objective mapping",
+      "Apply ITSM change requests as the sole investment mechanism",
+      "Apply SPM exclusively and ignore application lifecycle data",
+      "Apply APM rationalization insights and execute investment decisions through SPM planning and governance"
+    ],
+    "correctIndex": 3,
+    "explanation": "APM identifies rationalization opportunities; SPM converts those insights into governed investment and execution plans.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/strategic-portfolio-management/application-portfolio-management/apm-and-spm-alignment.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 22,
+    "prompt": "Which statement is accurate for CIS exam context when comparing APM and SPM?",
+    "choices": [
+      "APM is primarily about strategic objective trees, while SPM tracks exclusively software lifecycle dates",
+      "APM informs what to invest in at the application level; SPM governs how strategic investments are selected and delivered for measurable outcomes",
+      "Both modules provide identical capabilities and should be implemented interchangeably across operational workflows",
+      "SPM is strictly a project execution tool with no strategic planning under governance oversight"
+    ],
+    "correctIndex": 1,
+    "explanation": "The distinction is scope: APM provides application portfolio decision support, and SPM handles enterprise strategy-to-execution governance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/strategic-portfolio-management/strategic-portfolio-management-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 23,
+    "prompt": "What is a practical governance benefit of integrating APM data into SPM planning?",
+    "choices": [
+      "It removes the need for portfolio review boards in enterprise contexts",
+      "It automatically closes all technical debt items in real implementations",
+      "It limits visibility to exclusively one business unit",
+      "It enables investment decisions to consider business value, risk, cost, and application health together for practical execution"
+    ],
+    "correctIndex": 3,
+    "explanation": "Integrated data improves governance quality by adding application health and risk context to strategic funding decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/strategic-portfolio-management/application-portfolio-management/use-apm-insights-in-spm.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 24,
+    "prompt": "If an organization tracks app technical fit in APM but does not connect it to SPM priorities, what is the likely outcome?",
+    "choices": [
+      "Portfolio decisions may miss modernization urgency and strategic alignment opportunities for practical execution",
+      "Infrastructure incidents decrease automatically for measurable outcomes",
+      "Better strategy execution with less data in real implementations",
+      "APM data becomes mandatory for ITSM incident closure in enterprise contexts"
+    ],
+    "correctIndex": 0,
+    "explanation": "Without strategic linkage, APM insights are less likely to influence funding and roadmap decisions where they create business value.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/strategic-portfolio-management/application-portfolio-management/application-rationalization-and-strategy.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 25,
+    "prompt": "In SPM, what is the main purpose of investment funding governance?",
+    "choices": [
+      "Approve investments exclusively by submission date in enterprise contexts",
+      "Move all funding decisions to spreadsheet tools outside SPM for practical execution",
+      "Fund every demand item equally regardless of alignment in enterprise contexts",
+      "Allocate budget based on strategic value, risk, and expected outcomes in real implementations"
+    ],
+    "correctIndex": 3,
+    "explanation": "Funding governance ensures limited capital is directed toward the highest-value strategic outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 26,
+    "prompt": "Which practice most improves confidence in investment funding decisions?",
+    "choices": [
+      "Focus on applying a consistent scoring model tied to strategic objectives and benefit metrics",
+      "Focus on funding initiatives without dependency review",
+      "Basing decisions exclusively on prior-year spend in real implementations",
+      "Focus on skipping demand scoring for executive-submitted requests"
+    ],
+    "correctIndex": 0,
+    "explanation": "Consistent scoring enables transparent, repeatable funding decisions across portfolios.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/demand-management/concept/demand-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 27,
+    "prompt": "What should portfolio leaders review before approving incremental funding for an in-flight initiative?",
+    "choices": [
+      "Strategic alignment, forecast variance, and expected incremental benefit in enterprise contexts",
+      "Total number of completed catalog requests in real implementations",
+      "Exclusively the initiative name and owner in enterprise contexts",
+      "Incident backlog trends for unrelated services for practical execution"
+    ],
+    "correctIndex": 0,
+    "explanation": "Incremental funding should be evidence-based and linked to measurable strategic impact.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/concept/spm-workspace.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 28,
+    "prompt": "Which anti-pattern most weakens investment funding discipline in SPM?",
+    "choices": [
+      "With stage-gate reviews before release of additional funds",
+      "Focus on funding initiatives without objective mapping or measurable outcomes",
+      "Focus on maintaining benefit realization checkpoints across operational workflows",
+      "Focus on capturing reforecast rationale in portfolio reviews"
+    ],
+    "correctIndex": 1,
+    "explanation": "Without objective linkage and outcomes, funding decisions cannot be justified against strategy.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 29,
+    "prompt": "Which metric best indicates that investment funding is aligned to strategic intent?",
+    "choices": [
+      "Total number of active users in the platform under governance oversight",
+      "Average catalog request fulfillment time across operational workflows",
+      "Count of closed incidents in the month for measurable outcomes",
+      "Percentage of funded initiatives mapped to top-priority strategic objectives for practical execution"
+    ],
+    "correctIndex": 3,
+    "explanation": "Objective-mapped funding demonstrates direct alignment between capital allocation and strategic priorities.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-planning.html"
+    ]
+  }
+]

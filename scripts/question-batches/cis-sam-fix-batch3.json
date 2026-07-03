@@ -1,0 +1,512 @@
+[
+  {
+    "trackCode": "CIS-SAM",
+    "order": 60,
+    "prompt": "Which role in a mature SAM operating model is primarily accountable for software compliance governance?",
+    "choices": [
+      "Any requester with catalog access in enterprise contexts",
+      "Database administrators for all software publishers in real implementations",
+      "Exclusively service desk agents on night shift",
+      "SAM manager or SAM owner with defined policy authority and reporting accountability across operational workflows"
+    ],
+    "correctIndex": 3,
+    "explanation": "A clearly accountable SAM leadership role is required to govern policy, controls, and compliance outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-roles.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 61,
+    "prompt": "What is the best way to separate duties between SAM and procurement teams?",
+    "choices": [
+      "Allow procurement to edit reconciliation rules ad hoc across operational workflows",
+      "Move all SAM decisions to email approvals exclusively",
+      "Give both teams full admin rights in SAM for practical execution",
+      "Define role-based responsibilities where procurement manages buys and SAM validates compliance position for measurable outcomes"
+    ],
+    "correctIndex": 3,
+    "explanation": "Separation of duties improves control quality by distinguishing purchasing execution from compliance validation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-roles.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/procurement/concept/procurement-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 62,
+    "prompt": "Which SAM role activity most improves data quality for license reconciliation?",
+    "choices": [
+      "Focus on allowing end users to edit license metric definitions",
+      "Focus on skipping software model normalization until quarter end",
+      "Focus on disabling entitlement imports from contracts",
+      "Focus on assigning model manager responsibilities for normalization, metric mapping, and publisher hygiene"
+    ],
+    "correctIndex": 3,
+    "explanation": "A dedicated model-management role keeps core normalization and licensing metadata accurate for reliable compliance results.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-model-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_NormalizeSoftwareData.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 63,
+    "prompt": "What is the strongest reason to integrate SAM with PPM/SPM demand planning?",
+    "choices": [
+      "To clearly replace all project financial tracking",
+      "To clearly avoid capturing software costs in investment records",
+      "To clearly remove governance approvals for new software",
+      "To clearly forecast licensing impact of planned initiatives before commitments are finalized"
+    ],
+    "correctIndex": 3,
+    "explanation": "Linking SAM and portfolio planning enables earlier visibility into licensing cost and compliance impacts of planned work.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 64,
+    "prompt": "Which integration outcome best indicates SAM and PPM are working effectively together?",
+    "choices": [
+      "License compliance is reviewed exclusively after project closure",
+      "Portfolio records exclude software dependencies for practical execution",
+      "All software requests bypass demand governance in enterprise contexts",
+      "Project estimates include validated software cost and entitlement assumptions with fewer renewal surprises in real implementations"
+    ],
+    "correctIndex": 3,
+    "explanation": "Effective integration surfaces software cost and compliance assumptions early, reducing late-cycle budget and audit risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-compliance.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/concept/spm-workspace.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 65,
+    "prompt": "Which report best helps a SAM manager prioritize remediation before a vendor true-up?",
+    "choices": [
+      "A well-defined CMDB duplicate CI report with no publisher grouping",
+      "A well-defined daily change request calendar without license context",
+      "An well-defined entitlement vs. install position report filtered to high-cost publishers",
+      "A well-defined list of all open incidents assigned to software teams"
+    ],
+    "correctIndex": 2,
+    "explanation": "Effective true-up preparation starts with a publisher-focused compliance position that highlights financial exposure.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/software-asset-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-compliance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 66,
+    "prompt": "A compliance report shows sudden over-deployment for one publisher. What should be validated first?",
+    "choices": [
+      "CMDB ownership of network devices in enterprise contexts",
+      "Discovery and reconciliation data quality for installations and entitlements in real implementations",
+      "Service catalog branding and logo placement for measurable outcomes",
+      "Incident major outage communications for practical execution"
+    ],
+    "correctIndex": 1,
+    "explanation": "Before remediation decisions, SAM teams should confirm that the compliance signal is based on reliable normalized data.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-data-foundation.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/software-normalization.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 67,
+    "prompt": "Which reporting approach gives executives the clearest SAM compliance story?",
+    "choices": [
+      "Trend and exposure dashboard combining compliance status, risk, and estimated cost impact for practical execution",
+      "Raw installation list sorted alphabetically by device name for measurable outcomes",
+      "Weekly list of all software models without totals across operational workflows",
+      "A well-defined one-time screenshot of a reconciliation table"
+    ],
+    "correctIndex": 0,
+    "explanation": "Executives need summarized exposure and trend insights rather than operational raw data.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-compliance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 68,
+    "prompt": "What should a SAM compliance exception report include for audit readiness?",
+    "choices": [
+      "Exclusively the software publisher name under governance oversight",
+      "A well-defined list of affected users without context",
+      "Screenshots of workstation desktops in enterprise contexts",
+      "Exception owner, rationale, approval date, and expiration or review cycle in real implementations"
+    ],
+    "correctIndex": 3,
+    "explanation": "Audit-ready exceptions require accountable ownership, documented approval, and time-bound governance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/audit-management/concept/audit-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 69,
+    "prompt": "Which report segmentation is most useful for SAM compliance governance boards?",
+    "choices": [
+      "Exposure by publisher, business unit, and remediation status with aging for practical execution",
+      "Incident reopen counts by assignment group for measurable outcomes",
+      "Knowledge article views by category in real implementations",
+      "Hardware warranty expiration by model in enterprise contexts"
+    ],
+    "correctIndex": 0,
+    "explanation": "Governance boards need segmented exposure and remediation progress to drive accountable decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-compliance.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 70,
+    "prompt": "Which administrative control is most important for stable SAM operations?",
+    "choices": [
+      "No approval process for publisher-specific rule changes across operational workflows",
+      "Global admin access for all asset coordinators under governance oversight",
+      "Role-based access with clear separation between data stewards, analysts, and approvers in real implementations",
+      "Direct production edits by any itil user in enterprise contexts"
+    ],
+    "correctIndex": 2,
+    "explanation": "SAM administration depends on governed access to protect data integrity and accountability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 71,
+    "prompt": "How should SAM administrators manage normalization and reconciliation rule changes?",
+    "choices": [
+      "Let each analyst maintain separate private rule sets under governance oversight",
+      "Disable historical data comparisons after updates across operational workflows",
+      "Apply changes directly in production during business hours in enterprise contexts",
+      "Test in lower environments, document impacts, and promote through change control in real implementations"
+    ],
+    "correctIndex": 3,
+    "explanation": "Controlled promotion preserves trust in license positions and avoids unintended compliance shifts.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/software-normalization.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 72,
+    "prompt": "Which KPI set best indicates mature SAM administration?",
+    "choices": [
+      "Lower unresolved compliance risk, on-time reconciliations, and reduced exception aging",
+      "Increased manual spreadsheet reconciliations in enterprise contexts",
+      "More duplicate software model records across operational workflows",
+      "Higher count of emergency access grants under governance oversight"
+    ],
+    "correctIndex": 0,
+    "explanation": "Operational maturity appears in controlled risk, repeatable processing, and exception discipline.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 73,
+    "prompt": "What is the best administrative approach for managing SAM exceptions?",
+    "choices": [
+      "Allow permanent exceptions with no expiry review in enterprise contexts",
+      "Approve all exceptions automatically by workflow in real implementations",
+      "Require documented business justification, owner assignment, and scheduled revalidation under governance oversight",
+      "Store exception decisions exclusively in email in real implementations"
+    ],
+    "correctIndex": 2,
+    "explanation": "Exception governance needs traceability, ownership, and periodic challenge to prevent control drift.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/concept/policy-and-compliance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 74,
+    "prompt": "Which SAM administration activity most improves audit readiness?",
+    "choices": [
+      "Maintain evidence trails for entitlement sources, reconciliation logic, and approval history in real implementations",
+      "Allow manual entitlement edits without logging in enterprise contexts",
+      "Purge historical compliance records every month for practical execution",
+      "Restrict reporting access to prevent reviewer questions for measurable outcomes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Auditable SAM operations require traceable evidence for how compliance positions were produced and approved.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/audit-management/concept/audit-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/software-asset-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 75,
+    "prompt": "Before a major software renewal, which SAM action provides the strongest negotiation position?",
+    "choices": [
+      "Increase discovery schedule frequency without reviewing data quality in enterprise contexts",
+      "Export install counts exclusively from one business unit",
+      "Pause normalization updates until after contract signature for measurable outcomes",
+      "Reconcile entitlements and installations to establish a defensible Effective License Position for practical execution"
+    ],
+    "correctIndex": 3,
+    "explanation": "A trusted license position grounded in reconciled data gives procurement factual leverage for renewal negotiations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/software-asset-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 76,
+    "prompt": "Which data quality issue most directly weakens SAM compliance calculations?",
+    "choices": [
+      "Monthly compliance reporting cadence across operational workflows",
+      "Role-based access controls on SAM records under governance oversight",
+      "Duplicate software models and unmatched discoveries for the same product family for practical execution",
+      "Too many dashboard widgets in one homepage for measurable outcomes"
+    ],
+    "correctIndex": 2,
+    "explanation": "Normalization and matching quality are foundational for reliable entitlement-to-install reconciliation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/software-normalization.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/software-asset-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 77,
+    "prompt": "When introducing a new publisher pack update, what is the safest SAM practice?",
+    "choices": [
+      "Disable reconciliation until next quarter for measurable outcomes",
+      "Validate update scope and test impact before governed promotion for practical execution",
+      "Apply directly in production to accelerate compliance in enterprise contexts",
+      "Force all models to one metric temporarily in real implementations"
+    ],
+    "correctIndex": 1,
+    "explanation": "Publisher-content changes can shift compliance results, so controlled testing and promotion are essential.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 78,
+    "prompt": "Which governance pattern best supports sustainable software reclamation outcomes?",
+    "choices": [
+      "Defined inactivity thresholds, owner approvals, and tracked reinstate exceptions in real implementations",
+      "Manual email requests without policy in enterprise contexts",
+      "One-time uninstall campaigns with no follow-up for practical execution",
+      "Reclaim all titles regardless of business criticality for measurable outcomes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Policy-based reclamation with approvals and exception tracking balances savings with service continuity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/software-asset-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 79,
+    "prompt": "Which KPI combination best demonstrates SAM value to leadership?",
+    "choices": [
+      "Compliance risk reduction, avoided spend from optimization, and exception aging trend under governance oversight",
+      "Number of custom reports created each quarter across operational workflows",
+      "Count of users with sam_admin role in enterprise contexts",
+      "Number of discovered devices and software catalog size in real implementations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Leadership value is shown by risk posture, financial outcomes, and governance discipline over time.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 80,
+    "prompt": "What is the main SAM benefit of integrating software request workflows with entitlements?",
+    "choices": [
+      "It guarantees zero audit findings in enterprise contexts",
+      "It removes the need for license reconciliation in real implementations",
+      "It aligns provisioning decisions with available rights before deployment for measurable outcomes",
+      "It eliminates role-based approvals for practical execution"
+    ],
+    "correctIndex": 2,
+    "explanation": "Request-to-entitlement alignment helps prevent over-deployment and improves compliance control at intake.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/software-asset-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 81,
+    "prompt": "A publisher audit requests proof of license rights. Which SAM evidence is most critical?",
+    "choices": [
+      "A well-defined list of hardware models hosting software installs",
+      "Documented entitlement records and reconciliation history showing how compliance positions were derived for measurable outcomes",
+      "A well-defined screenshot of the SAM dashboard homepage",
+      "Export of all discovered software titles regardless of normalization under governance oversight"
+    ],
+    "correctIndex": 1,
+    "explanation": "Audit defensibility depends on traceable rights evidence and the logic used to calculate compliance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/software-asset-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/audit-management/concept/audit-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 82,
+    "prompt": "Which SAM anti-pattern most often causes inflated software spend?",
+    "choices": [
+      "Focus on allowing inactive allocations to remain assigned without reclamation controls",
+      "With role-based access for approvals across operational workflows",
+      "Focus on segmenting compliance reports by publisher",
+      "Scheduled normalization reviews for practical execution across operational workflows"
+    ],
+    "correctIndex": 0,
+    "explanation": "Unreclaimed inactive allocations reduce license reuse and drive unnecessary purchases.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/software-asset-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 83,
+    "prompt": "A SAM team reports inconsistent compliance positions month to month. Which root cause is most likely?",
+    "choices": [
+      "Stable normalization content with controlled change management across operational workflows",
+      "Executive review of exception aging under governance oversight",
+      "Tiered reporting by publisher for practical execution",
+      "Uncontrolled updates to reconciliation logic and model mappings for measurable outcomes"
+    ],
+    "correctIndex": 3,
+    "explanation": "Unmanaged rule and mapping changes create volatility that undermines trust in SAM outputs.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/software-normalization.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 84,
+    "prompt": "Which SAM governance control most improves audit readiness over time?",
+    "choices": [
+      "Purge historical reconciliation snapshots quarterly in enterprise contexts",
+      "Retain evidence of entitlement provenance, approvals, and reconciliation changes in real implementations",
+      "Apply external spreadsheets as system of record",
+      "Allow manual entitlement edits without logs for practical execution"
+    ],
+    "correctIndex": 1,
+    "explanation": "Traceability of rights and calculation changes is critical for defensible audit responses.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/audit-management/concept/audit-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 85,
+    "prompt": "What is the best way to reduce surprise true-up costs in SAM?",
+    "choices": [
+      "Exclude cloud subscriptions from SAM scope in real implementations",
+      "Reconcile exclusively when vendor audit notices arrive",
+      "Run periodic reconciliations and remediate shortfalls before renewal events for practical execution",
+      "Treat exceptions as permanent by default for measurable outcomes"
+    ],
+    "correctIndex": 2,
+    "explanation": "Frequent reconciliation and proactive remediation reduce financial shock at audit or renewal time.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/software-asset-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 86,
+    "prompt": "Which SAM reporting perspective is most useful for remediation planning?",
+    "choices": [
+      "List of all non-SAM requests in service catalog for measurable outcomes",
+      "Count of CMDB classes with installed software for practical execution",
+      "Total number of software models created this month for measurable outcomes",
+      "Compliance position segmented by publisher, business unit, and risk severity in real implementations"
+    ],
+    "correctIndex": 3,
+    "explanation": "Segmentation by publisher and business ownership helps target the highest-impact compliance remediation actions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 87,
+    "prompt": "Why should SAM exception records have expiration and revalidation requirements?",
+    "choices": [
+      "To clearly increase short-term compliance dashboards in real implementations",
+      "To clearly avoid annual internal audits under governance oversight",
+      "To clearly reduce the need for entitlement records",
+      "To confirm temporary risk acceptance does not become permanent control bypass"
+    ],
+    "correctIndex": 3,
+    "explanation": "Time-bound exceptions force periodic review and prevent long-term governance erosion.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html",
+      "https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/concept/policy-and-compliance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 88,
+    "prompt": "Which action best supports SaaS optimization in SAM?",
+    "choices": [
+      "Increase all SaaS subscriptions to enterprise tier in enterprise contexts",
+      "Track SaaS exclusively in procurement spreadsheets in real implementations",
+      "Review usage patterns and reclaim or down-tier underutilized subscriptions through approved workflows for measurable outcomes",
+      "Ignore role-based ownership for SaaS products for practical execution"
+    ],
+    "correctIndex": 2,
+    "explanation": "Usage-driven optimization with governance controls reduces spend while preserving service outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/software-asset-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SAM",
+    "order": 89,
+    "prompt": "Which scenario most strongly indicates SAM process maturity?",
+    "choices": [
+      "Frequent emergency admin overrides in production in real implementations",
+      "Compliance reports generated exclusively when requested by auditors",
+      "Reconciliations complete on schedule, exceptions revalidated, and renewal decisions based on usage/compliance data for practical execution",
+      "Persistent unmatched discovery titles with no owner for measurable outcomes"
+    ],
+    "correctIndex": 2,
+    "explanation": "Maturity is reflected by predictable operations, governed exceptions, and data-driven financial decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html"
+    ]
+  }
+]

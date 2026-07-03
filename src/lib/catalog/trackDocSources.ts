@@ -78,33 +78,39 @@ export const PHASE1_TRACK_DOC_SOURCES: TrackDocSource[] = [
 			'application-development',
 			'hyperautomation-low-code',
 			'build-workflows',
+			'integrate-applications',
 			'api-reference'
 		],
 		domains: [
 			{
-				name: 'Tables and data model',
+				name: 'Designing and Creating an Application',
 				weight: '20%',
 				publications: ['application-development', 'now-platform']
 			},
 			{
-				name: 'Client-side scripting',
+				name: 'Application User Interface',
 				weight: '20%',
-				publications: ['application-development']
+				publications: ['application-development', 'platform-user-interface']
 			},
 			{
-				name: 'Server-side scripting',
-				weight: '25%',
-				publications: ['application-development']
+				name: 'Security and Restricting Access',
+				weight: '20%',
+				publications: ['application-development', 'platform-security']
 			},
 			{
-				name: 'Scoped apps and flows',
+				name: 'Application Automation',
 				weight: '20%',
 				publications: ['application-development', 'hyperautomation-low-code', 'build-workflows']
 			},
 			{
-				name: 'Integrations and APIs',
-				weight: '15%',
-				publications: ['api-reference', 'application-development']
+				name: 'Working with External Data',
+				weight: '10%',
+				publications: ['integrate-applications', 'application-development']
+			},
+			{
+				name: 'Managing Applications',
+				weight: '10%',
+				publications: ['application-development']
 			}
 		]
 	},
@@ -114,11 +120,23 @@ export const PHASE1_TRACK_DOC_SOURCES: TrackDocSource[] = [
 		publications: ['it-service-management', 'it-operations-management'],
 		domains: [
 			{ name: 'Incident Management', weight: '25%', publications: ['it-service-management'] },
-			{ name: 'Service Catalog', weight: '20%', publications: ['it-service-management'] },
-			{ name: 'CMDB and Asset', weight: '18%', publications: ['it-operations-management'] },
-			{ name: 'Change Management', weight: '15%', publications: ['it-service-management'] },
-			{ name: 'Problem Management', weight: '12%', publications: ['it-service-management'] },
-			{ name: 'Knowledge and Portal', weight: '10%', publications: ['it-service-management'] }
+			{ name: 'Problem Management', weight: '15%', publications: ['it-service-management'] },
+			{ name: 'Change Management', weight: '25%', publications: ['it-service-management'] },
+			{
+				name: 'Service Portfolio Management',
+				weight: '5%',
+				publications: ['it-service-management']
+			},
+			{
+				name: 'Service Catalog and Request Management',
+				weight: '25%',
+				publications: ['it-service-management']
+			},
+			{
+				name: 'Configuration Management Database',
+				weight: '5%',
+				publications: ['it-operations-management']
+			}
 		]
 	}
 ];

@@ -1,0 +1,403 @@
+[
+  {
+    "trackCode": "CIS-EM",
+    "order": 0,
+    "prompt": "According to Event Management product documentation themes, what is a primary goal of the Event Management application?",
+    "choices": [
+      "Replace Incident Management entirely",
+      "Act as the authoritative payroll system of record",
+      "Turn monitoring signals into actionable operational visibility such as alerts on CIs and services",
+      "Perform software license true-ups"
+    ],
+    "correctIndex": 2,
+    "explanation": "Event Management ingests monitoring events to drive operational response objects like alerts tied to the environment being monitored.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/event-management/exploring-event-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 1,
+    "prompt": "Connectors and listeners in Event Management are intended to help you do what?",
+    "choices": [
+      "Replace Discovery schedules",
+      "Delete all events older than one hour unconditionally",
+      "Automatically retire hardware assets",
+      "Integrate external monitoring sources with ServiceNow event ingestion"
+    ],
+    "correctIndex": 3,
+    "explanation": "Connectors and listeners integrate third-party monitoring streams into the ServiceNow event pipeline.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 2,
+    "prompt": "Alert management rules are best described as which kind of mechanism?",
+    "choices": [
+      "Configuration that automates how alerts are handled after they are created",
+      "A Discovery pattern debugger",
+      "A hardware model normalization engine",
+      "A MID Server installation package"
+    ],
+    "correctIndex": 0,
+    "explanation": "Alert management rules operationalize alert lifecycle behaviors such as notifications, tasks, or other responses tied to alert conditions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/event-management/create-alert-management-rule.html",
+      "https://www.servicenow.com/docs/bundle/xanadu-it-operations-management/page/product/event-management/concept/alert-management-rule.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 3,
+    "prompt": "Which statement best matches how events relate to alerts in a typical Event Management flow?",
+    "choices": [
+      "Events and alerts are unrelated tables with no transforms",
+      "Events are normalized and processed so they can result in alert records",
+      "Alerts are never created from events",
+      "Events are only stored if an incident already exists"
+    ],
+    "correctIndex": 1,
+    "explanation": "The pipeline ingests events, applies processing, and can materialize or update alerts for operators to act on.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/event-management/exploring-event-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 4,
+    "prompt": "When planning connector-based ingestion, which consideration is most central to operational design?",
+    "choices": [
+      "Listeners require disabling TLS for all traffic",
+      "Email is the only supported transport",
+      "You must choose integration styles and endpoints that match how your monitoring tools can deliver events",
+      "Connectors remove the need for any CMDB CI data"
+    ],
+    "correctIndex": 2,
+    "explanation": "Connector design must reflect how each monitoring stack emits events and what protocols are supported, as described in connector and listener documentation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 5,
+    "prompt": "In Event Management, what is the first major objective of the event pipeline after receiving raw events?",
+    "choices": [
+      "Convert events into CMDB updates without rule evaluation",
+      "Create incident tasks immediately for every event",
+      "Archive all events to sys_audit before processing",
+      "Normalize and evaluate incoming events so they can be correlated and prioritized"
+    ],
+    "correctIndex": 3,
+    "explanation": "The pipeline standardizes event data and applies processing logic so downstream correlation and alerting are meaningful.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-processing.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 6,
+    "prompt": "Which event pipeline outcome directly reduces alert noise in a mature implementation?",
+    "choices": [
+      "Deduplication and correlation based on event key fields and rule logic",
+      "Allowing duplicate events to open separate alerts by default",
+      "Running only one connector with all source systems",
+      "Disabling severity mapping from source tools"
+    ],
+    "correctIndex": 0,
+    "explanation": "Deduplication and correlation prevent redundant alerts and group related signals into actionable alert context.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-correlation.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 7,
+    "prompt": "A team sees high-volume warning events that should not trigger operational action. What pipeline-level control is most appropriate?",
+    "choices": [
+      "Disable all event connectors",
+      "Use event rules to filter or lower impact before alert creation",
+      "Set every event to critical for visibility",
+      "Delete the source CI records"
+    ],
+    "correctIndex": 1,
+    "explanation": "Pipeline filtering and severity control through event rules helps suppress low-value noise while preserving signal for actionable conditions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/task/configure-event-rules.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 8,
+    "prompt": "Why is CI binding important during event pipeline processing?",
+    "choices": [
+      "It bypasses alert aggregation logic",
+      "It allows events to skip normalization",
+      "It links events and alerts to affected configuration items so impact and ownership can be determined",
+      "It replaces connector credentials with CMDB IDs"
+    ],
+    "correctIndex": 2,
+    "explanation": "Binding to a CI provides service context, enabling better triage, routing, and business impact analysis.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-binding.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 9,
+    "prompt": "What best describes a healthy event pipeline KPI for CIS-EM operations?",
+    "choices": [
+      "All events mapped to a single CI for easier dashboards",
+      "Maximum raw event volume per minute regardless of quality",
+      "No correlation so operators can see every duplicate event",
+      "High signal-to-noise ratio with timely alert generation for actionable conditions"
+    ],
+    "correctIndex": 3,
+    "explanation": "Effective pipelines prioritize actionable signal and reduce noise, enabling faster response with less operational fatigue.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-management-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 10,
+    "prompt": "What is the main function of an Event Management connector?",
+    "choices": [
+      "It ingests and maps external monitoring events into the ServiceNow event format",
+      "It archives alerts to external SIEM tools",
+      "It replaces CMDB CI identification rules",
+      "It configures assignment groups for incident creation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Connectors provide source-specific ingestion and mapping logic so external telemetry can enter the EM pipeline correctly.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-connectors.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 11,
+    "prompt": "A team onboarded a new connector and sees unknown node names. Which step most improves downstream correlation quality?",
+    "choices": [
+      "Bypass event rules until incident templates are finalized",
+      "Configure field mapping and CI binding rules so connector payloads resolve to known CIs",
+      "Disable the connector and rely on manual alerts",
+      "Set all unknown nodes to critical severity"
+    ],
+    "correctIndex": 1,
+    "explanation": "Accurate mapping and binding from connector payloads to CIs is required for meaningful correlation and service impact context.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/task/configure-event-field-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 12,
+    "prompt": "Which connector onboarding approach is best for production readiness?",
+    "choices": [
+      "Enable all source event types on day one to maximize coverage",
+      "Skip lower environment validation to accelerate go-live",
+      "Pilot in scoped environments, validate mapping/correlation, then expand source coverage iteratively",
+      "Use one shared credential across all connectors and teams"
+    ],
+    "correctIndex": 2,
+    "explanation": "Phased onboarding reduces noise and avoids large-scale misconfiguration by validating behavior before broad rollout.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-management-implementation.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 13,
+    "prompt": "Why is connector health monitoring important after go-live?",
+    "choices": [
+      "It automatically reclassifies all alerts by business service",
+      "It eliminates the need for event rules",
+      "It guarantees zero duplicate events from every source",
+      "It detects ingestion failures or latency early so alert pipelines remain trustworthy"
+    ],
+    "correctIndex": 3,
+    "explanation": "Monitoring connector status helps operations catch broken feeds quickly and maintain reliable event coverage.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/task/monitor-event-connectors.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 14,
+    "prompt": "What connector governance policy is most aligned with CIS-EM best practice?",
+    "choices": [
+      "Use change-controlled connector configuration with defined ownership and test criteria",
+      "Disable version tracking for connector updates",
+      "Store connector secrets in plain text for troubleshooting speed",
+      "Allow any team to modify production connector mappings ad hoc"
+    ],
+    "correctIndex": 0,
+    "explanation": "Connector changes affect ingestion quality and alert behavior, so controlled ownership and testing are essential.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-management-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 15,
+    "prompt": "In Event Management, what is a listener primarily responsible for?",
+    "choices": [
+      "It schedules Discovery scans by subnet",
+      "It receives inbound event streams and forwards normalized payloads into the event ingestion pipeline",
+      "It runs stockroom reconciliation jobs",
+      "It enriches hardware model records with procurement cost"
+    ],
+    "correctIndex": 1,
+    "explanation": "Listeners provide the inbound interface for external events, enabling them to enter EM processing workflows.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-listeners.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 16,
+    "prompt": "An event source sends data but no alerts are generated. Which listener check should come first?",
+    "choices": [
+      "Whether discovery credentials include WMI access",
+      "Whether CMDB CI class manager is active",
+      "Whether listener endpoint/protocol configuration is active and receiving expected payload format",
+      "Whether stockroom inventory falls below threshold"
+    ],
+    "correctIndex": 2,
+    "explanation": "If listener configuration is inactive or payload format does not match expected parsing, events may never enter rule evaluation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/task/troubleshoot-event-ingestion.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 17,
+    "prompt": "Why should listener capacity and throughput be monitored in high-volume environments?",
+    "choices": [
+      "To disable deduplication for critical events",
+      "To force one connector per business service",
+      "To bypass event rules when source tools are unavailable",
+      "To ensure event ingestion keeps pace and prevents delayed alert creation during spikes"
+    ],
+    "correctIndex": 3,
+    "explanation": "Throughput monitoring reveals bottlenecks that can delay detection and response when event rates increase.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-management-monitoring.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 18,
+    "prompt": "Which listener deployment strategy improves resilience?",
+    "choices": [
+      "Use redundant listener paths and health checks aligned with expected source load",
+      "Turn off TLS to reduce listener overhead",
+      "Bind all listeners to a single non-production MID Server",
+      "Keep one listener endpoint with no failover to simplify operations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Redundancy and health monitoring reduce ingestion outage risk and maintain event flow continuity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/high-availability-for-event-ingestion.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 19,
+    "prompt": "What is a common governance control for listener changes in production?",
+    "choices": [
+      "Allow runtime endpoint edits without validation",
+      "Require change approval, test evidence, and rollback planning before listener reconfiguration",
+      "Disable change tracking for listener records",
+      "Store listener credentials in plain text comments"
+    ],
+    "correctIndex": 1,
+    "explanation": "Listener changes affect ingestion reliability and security, so controlled change processes reduce outage and compliance risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/change-management/concept/change-management-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 20,
+    "prompt": "What is the main objective of an Event Management event rule?",
+    "choices": [
+      "To define MID Server failover sequence",
+      "To assign stockroom managers to hardware models",
+      "To transform, filter, and classify events so only meaningful signals create or update alerts",
+      "To replace CI identification and reconciliation rules"
+    ],
+    "correctIndex": 2,
+    "explanation": "Event rules control how raw events are interpreted and whether they should drive alerting actions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-rules.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 21,
+    "prompt": "A source sends heartbeat events that should not open alerts. Which rule behavior is most appropriate?",
+    "choices": [
+      "Disable listener ingestion for the source entirely",
+      "Convert heartbeat events to discovery schedules",
+      "Route all heartbeat events to critical severity",
+      "Create a rule to drop or de-prioritize heartbeat events before alert generation"
+    ],
+    "correctIndex": 3,
+    "explanation": "Filtering or lowering significance for heartbeat traffic reduces noise without losing important failure signals.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/task/configure-event-filtering-rules.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 22,
+    "prompt": "Why should event rules be tested in lower environments with representative payloads?",
+    "choices": [
+      "To validate noise reduction and prevent unintended suppression of actionable events",
+      "Because rule simulation is not available in production",
+      "To ensure stockroom transfer orders can be auto-approved",
+      "Because event rules affect only dashboard widgets"
+    ],
+    "correctIndex": 0,
+    "explanation": "Testing with realistic payloads helps verify that filtering and classification logic preserves signal while reducing noise.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/task/test-event-rules.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 23,
+    "prompt": "What is a common risk of overly broad event suppression rules?",
+    "choices": [
+      "More accurate hardware normalization",
+      "Critical conditions may be hidden, delaying incident response",
+      "Faster stockroom fulfillment",
+      "Higher discovery credential success"
+    ],
+    "correctIndex": 1,
+    "explanation": "Excessive suppression can remove important signals and create blind spots in operational monitoring.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-noise-reduction.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-EM",
+    "order": 24,
+    "prompt": "Which event rule governance practice supports sustainable CIS-EM operations?",
+    "choices": [
+      "Store rule logic only in external spreadsheets",
+      "Keep all rules unmanaged so NOC teams can tune live",
+      "Maintain rule ownership, documented intent, and periodic effectiveness reviews tied to operational KPIs",
+      "Disable change tracking for event rule records"
+    ],
+    "correctIndex": 2,
+    "explanation": "Ownership and periodic review ensure rule sets remain effective as source systems and monitoring priorities evolve.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-management-governance.html"
+    ]
+  }
+]

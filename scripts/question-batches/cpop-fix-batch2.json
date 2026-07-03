@@ -1,0 +1,461 @@
+[
+  {
+    "trackCode": "CPOP",
+    "order": 28,
+    "prompt": "What is the best way to align multi-domain data policy requirements with product prioritization?",
+    "choices": [
+      "Operationally, this means treat policy work as technical debt with no roadmap visibility.",
+      "This answer proposes document policy constraints as backlog criteria and acceptance checks.",
+      "From a platform-owner view, postpone policy controls until after broad rollout.",
+      "A team would proceed by move all policy discussions to ad hoc chat threads."
+    ],
+    "correctIndex": 1,
+    "explanation": "Capturing policy constraints in backlog definitions ensures compliance is delivered as part of the product, not after it.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/administer/grc/concept/policy-and-compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 29,
+    "prompt": "Which review artifact most helps a product owner communicate adoption progress to executive stakeholders?",
+    "choices": [
+      "For review artifact helps product, dashboard summarizing adoption KPIs, targets, and variance commentary.",
+      "From a platform-owner view, list of all active plugins in the instance.",
+      "A team would proceed by table dictionary export for custom fields.",
+      "This answer proposes raw syslog export from all application nodes."
+    ],
+    "correctIndex": 0,
+    "explanation": "An executive dashboard that pairs KPI trends with target variance provides clear and actionable adoption status.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/use/performance-analytics/task/create-dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 30,
+    "prompt": "How does Setup Hub help product owners accelerate time-to-value for a new platform domain?",
+    "choices": [
+      "This answer proposes by cloning production data into personal developer instances.",
+      "For does setup hub help, by deactivating role-based access controls.",
+      "In this does setup hub help scenario, by replacing backlog planning with admin-only scripts.",
+      "A team would proceed by by reducing foundational setup ambiguity and sequencing required readiness tasks."
+    ],
+    "correctIndex": 3,
+    "explanation": "Guided setup improves predictability for readiness milestones that product owners depend on for launch planning.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/administer/setup-hub/concept/setup-hub-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 31,
+    "prompt": "What repository decision most improves enterprise product portfolio coherence?",
+    "choices": [
+      "This answer proposes publish apps without semantic versioning.",
+      "For repository decision improves enterprise, hide ownership fields from catalog consumers.",
+      "This option centers on establish reuse-first intake criteria before authorizing net-new app builds.",
+      "In this repository decision improves enterprise scenario, maintain duplicate apps per department with no shared lifecycle policy."
+    ],
+    "correctIndex": 2,
+    "explanation": "Reuse-first repository governance reduces duplication and improves consistency across product investments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/applications/concept/reuse-application-components.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 32,
+    "prompt": "A product depends on on-prem orchestration. Which enterprise MID planning factor should be addressed early in roadmap planning?",
+    "choices": [
+      "For product depends prem orchestration, personalized list layouts for admins.",
+      "This option centers on network connectivity, credential strategy, and failover coverage.",
+      "In this product depends prem orchestration scenario, uI theme colors for integration records.",
+      "The approach here is catalog item icon style."
+    ],
+    "correctIndex": 1,
+    "explanation": "Integration roadmap risk is reduced by early planning for MID connectivity, security, and resilience.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/product/mid-server/reference/mid-server-installation-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 33,
+    "prompt": "Which KPI is most useful when measuring app repository health from a product perspective?",
+    "choices": [
+      "This option centers on reuse ratio of approved shared apps versus net-new app requests.",
+      "In this kpi useful measuring app scenario, average number of dictionary entries per table.",
+      "The approach here is count of admin users with personalize_list rights.",
+      "Operationally, this means number of inactive scheduled jobs."
+    ],
+    "correctIndex": 0,
+    "explanation": "Reuse ratio indicates whether repository governance is reducing duplicate investment and improving portfolio efficiency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-strategic-portfolio-management/page/product/application-portfolio-management/concept/application-portfolio-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 34,
+    "prompt": "What is the best release-planning approach for enterprise MID-dependent features?",
+    "choices": [
+      "This option centers on treat MID validation as optional if unit tests pass.",
+      "Operationally, this means delay all MID testing until post-go-live support.",
+      "From a platform-owner view, deploy directly to production without lower-environment validation.",
+      "The approach here is use staged readiness gates that include MID connectivity and transaction tests."
+    ],
+    "correctIndex": 3,
+    "explanation": "Readiness gates with MID validation reduce integration failures at release time.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/product/mid-server/task/test-mid-server.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 35,
+    "prompt": "For product governance, how should instance stats influence roadmap prioritization?",
+    "choices": [
+      "Operationally, this means prioritize only UI redesign stories.",
+      "From a platform-owner view, move all reliability work to a separate platform backlog.",
+      "The approach here is use stats to identify technical bottlenecks impacting product outcomes.",
+      "A team would proceed by ignore stats unless an outage occurs."
+    ],
+    "correctIndex": 2,
+    "explanation": "Operational stats should inform backlog priorities when platform constraints affect product value delivery.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-strategic-portfolio-management/page/product/agile-development/concept/data-informed-prioritization.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 36,
+    "prompt": "A product owner receives repeated complaints about permission barriers. What is the best first analysis?",
+    "choices": [
+      "Operationally, this means disable all security constraints to gather feedback faster.",
+      "From a platform-owner view, compare role model intent with observed denied-access trends by persona.",
+      "A team would proceed by delay issue review until next quarter.",
+      "This answer proposes reassign all users to admin."
+    ],
+    "correctIndex": 1,
+    "explanation": "Mapping denied-access data to expected role design helps find policy mismatches without weakening security.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/security/concept/roles-and-groups.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 37,
+    "prompt": "What is the main product risk of poorly governed cross-scope access?",
+    "choices": [
+      "A team would proceed by unintended data exposure or app dependency failures.",
+      "From a platform-owner view, longer catalog item descriptions.",
+      "This answer proposes reduced list personalization options.",
+      "For main product risk poorly, lower number of scheduled jobs."
+    ],
+    "correctIndex": 0,
+    "explanation": "Cross-scope misconfiguration can create both security leakage and fragile inter-app dependencies.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/applications/concept/application-scope.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 38,
+    "prompt": "Which KPI most directly reflects whether security constraints are balanced with product usability?",
+    "choices": [
+      "A team would proceed by median incident priority.",
+      "For kpi directly reflects whether, count of custom tables per scope.",
+      "In this kpi directly reflects whether scenario, number of active plugins.",
+      "This answer proposes successful task completion rate by authorized users."
+    ],
+    "correctIndex": 3,
+    "explanation": "Completion rate among authorized personas indicates whether controls protect data without blocking valid work.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/use/performance-analytics/concept/measure-user-journeys.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 39,
+    "prompt": "How should a product owner handle competing requests for broader cross-scope permissions?",
+    "choices": [
+      "This answer proposes approve all requests to accelerate delivery.",
+      "For should product owner handle, grant temporary admin and revisit later.",
+      "In this should product owner handle scenario, use risk-based review with explicit use cases and least-privilege design.",
+      "This option centers on reject all requests without review."
+    ],
+    "correctIndex": 2,
+    "explanation": "A risk-based model enables needed integration while maintaining platform security principles.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/security/concept/security-governance-process.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 40,
+    "prompt": "How should a product owner evaluate a request to activate a new plugin mid-release?",
+    "choices": [
+      "For should product owner evaluate, reject all plugin requests categorically.",
+      "In this should product owner evaluate scenario, assess feature value, dependency impact, and release risk before decision.",
+      "This option centers on approve immediately if a stakeholder asks.",
+      "The approach here is move activation to production first for faster feedback."
+    ],
+    "correctIndex": 1,
+    "explanation": "Product owners should weigh value against implementation and stability risk before introducing plugin dependencies.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-strategic-portfolio-management/page/product/agile-development/concept/release-risk-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 41,
+    "prompt": "What is the biggest portfolio benefit of disciplined update set promotion?",
+    "choices": [
+      "Operationally, this means it keeps release evidence traceable across environments.",
+      "In this biggest portfolio benefit disciplined scenario, it allows scope bypass for urgent features.",
+      "This option centers on it prevents all merge conflicts automatically.",
+      "The approach here is it eliminates need for testing."
+    ],
+    "correctIndex": 0,
+    "explanation": "Structured promotion provides traceability and confidence that delivered changes align with approved scope.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/system-update-sets/concept/system-update-sets.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 42,
+    "prompt": "For cloning at scale, which planning decision most protects roadmap velocity?",
+    "choices": [
+      "This option centers on no communication before clone windows.",
+      "The approach here is pause all backlog work for one quarter.",
+      "Operationally, this means clone all environments during peak business hours.",
+      "From a platform-owner view, coordinate clone schedules with sprint milestones and test cycles."
+    ],
+    "correctIndex": 3,
+    "explanation": "Coordinated clone timing reduces disruption to testing and delivery commitments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/administer/instance-administration/concept/clone-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 43,
+    "prompt": "Which KPI best shows whether plugin investments are producing product outcomes?",
+    "choices": [
+      "The approach here is count of list layouts changed by users.",
+      "Operationally, this means number of cloned records in test data.",
+      "A team would proceed by adoption and cycle-time improvement linked to plugin-enabled capabilities.",
+      "From a platform-owner view, total number of plugins ever activated."
+    ],
+    "correctIndex": 2,
+    "explanation": "Outcome-linked KPIs help determine whether plugin-enabled features delivered expected value.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/use/performance-analytics/concept/value-kpi-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 44,
+    "prompt": "What is the most effective product governance response to repeated update set rollback events?",
+    "choices": [
+      "Operationally, this means increase promotion frequency without changing controls.",
+      "This answer proposes introduce stricter release readiness criteria and root-cause reviews.",
+      "From a platform-owner view, skip collision previews for low-risk stories.",
+      "A team would proceed by hide rollback metrics from stakeholders."
+    ],
+    "correctIndex": 1,
+    "explanation": "Frequent rollbacks signal process gaps that require stronger readiness checks and systemic corrective action.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-strategic-portfolio-management/page/product/agile-development/task/conduct-release-retrospective.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 45,
+    "prompt": "What is the primary governance objective of delegated development in enterprise ServiceNow environments?",
+    "choices": [
+      "For primary governance objective delegated, enable controlled local innovation while preserving platform standards and security boundaries.",
+      "From a platform-owner view, allow unrestricted production access for all delegated developers.",
+      "A team would proceed by eliminate code review to accelerate delivery.",
+      "This answer proposes replace centralized platform ownership with independent team governance."
+    ],
+    "correctIndex": 0,
+    "explanation": "Delegated development is successful when empowerment is paired with guardrails, standards, and clear accountability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/delegated-development/concept/delegated-development.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_AccessControls.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 46,
+    "prompt": "Which control most effectively limits risk in delegated development programs?",
+    "choices": [
+      "A team would proceed by allow direct update set promotion from development to production.",
+      "This answer proposes disable ACL testing for delegated apps.",
+      "In this control effectively limits risk scenario, grant admin to all delegated developers during sprint windows.",
+      "For control effectively limits risk, scope delegated roles to specific apps and enforce policy-based approvals for elevated actions."
+    ],
+    "correctIndex": 3,
+    "explanation": "Least-privilege role design with gated approvals reduces blast radius and maintains governance discipline.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/roles/concept/c_Roles.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/delegated-development/concept/delegated-development.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 47,
+    "prompt": "How should delegated development teams handle configuration standards across multiple business units?",
+    "choices": [
+      "This answer proposes require all work to bypass source control systems.",
+      "In this should delegated development teams scenario, let each unit define independent naming and security conventions.",
+      "For should delegated development teams, adopt a shared engineering standard with architecture review checkpoints before promotion.",
+      "This option centers on skip documentation if the change is scoped."
+    ],
+    "correctIndex": 2,
+    "explanation": "Shared standards and review checkpoints keep distributed development maintainable and auditable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-application-development/page/build/team-development/concept/c_TeamDevelopment.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/delegated-development/concept/delegated-development.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 48,
+    "prompt": "Which evidence best demonstrates delegated development governance maturity?",
+    "choices": [
+      "In this evidence demonstrates delegated development scenario, a high count of emergency fixes pushed directly to production.",
+      "For evidence demonstrates delegated development, documented role matrices, review outcomes, and trend metrics for policy exceptions.",
+      "This option centers on no separation between development and admin duties.",
+      "The approach here is only verbal agreements for app ownership."
+    ],
+    "correctIndex": 1,
+    "explanation": "Mature governance is visible in measurable controls, documented decisions, and exception management.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/roles/concept/c_Roles.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 49,
+    "prompt": "What is the recommended escalation path when delegated teams repeatedly violate platform policies?",
+    "choices": [
+      "Operationally, this means temporarily reduce delegated permissions, enforce remediation plans, and re-certify access.",
+      "In this recommended escalation path delegated scenario, grant broader permissions to avoid future blockers.",
+      "This option centers on ignore violations if delivery deadlines are met.",
+      "The approach here is delete all delegated apps without impact analysis."
+    ],
+    "correctIndex": 0,
+    "explanation": "Governance requires corrective controls, targeted remediation, and formal recertification of access before restoration.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_AccessControls.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/delegated-development/concept/delegated-development.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 50,
+    "prompt": "Which control is foundational to instance security hardening governance?",
+    "choices": [
+      "This option centers on allow each team to harden according to local preference.",
+      "Operationally, this means use shared admin credentials for operational convenience.",
+      "From a platform-owner view, disable audit logs to improve instance performance.",
+      "The approach here is define and enforce a baseline configuration standard for roles, ACLs, integrations, and encryption."
+    ],
+    "correctIndex": 3,
+    "explanation": "A formal hardening baseline ensures consistent security posture and measurable compliance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Hardening.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/roles/concept/c_Roles.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 51,
+    "prompt": "What is the best governance approach for privileged access in hardened instances?",
+    "choices": [
+      "Operationally, this means grant permanent admin to all integration developers.",
+      "From a platform-owner view, allow role inheritance without documented approvals.",
+      "The approach here is enforce least privilege with periodic certification and break-glass controls.",
+      "A team would proceed by disable MFA for internal users to simplify operations."
+    ],
+    "correctIndex": 2,
+    "explanation": "Privileged access hardening requires tightly controlled entitlements and recurring recertification.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_MultiFactorAuthentication.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/roles/concept/c_Roles.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 52,
+    "prompt": "How should security hardening exceptions be managed in a professional governance model?",
+    "choices": [
+      "Operationally, this means permit undocumented exceptions during peak release periods.",
+      "This answer proposes track exceptions with risk rationale, expiration date, and explicit owner accountability.",
+      "From a platform-owner view, treat all exceptions as permanent configuration.",
+      "A team would proceed by store exception approvals in informal chat threads."
+    ],
+    "correctIndex": 1,
+    "explanation": "Exception governance must be auditable, time-bound, and risk-aware to avoid permanent control drift.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Hardening.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 53,
+    "prompt": "Which hardening metric is most valuable for executive governance reporting?",
+    "choices": [
+      "From a platform-owner view, percentage of controls compliant with baseline and time-to-remediate critical gaps.",
+      "A team would proceed by total count of update sets deployed monthly.",
+      "This answer proposes average comments added to incident records.",
+      "For hardening metric valuable executive, number of custom UI actions in production."
+    ],
+    "correctIndex": 0,
+    "explanation": "Compliance coverage and remediation speed provide direct visibility into real security posture.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Hardening.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 54,
+    "prompt": "What should happen after major platform changes to preserve hardening posture?",
+    "choices": [
+      "A team would proceed by assume prior controls remain valid without testing.",
+      "For should happen after major, delay all validation until annual audits.",
+      "In this should happen after major scenario, skip validation if no incidents are reported.",
+      "This answer proposes run post-change security validation against baseline controls before final closure."
+    ],
+    "correctIndex": 3,
+    "explanation": "Change activity can introduce drift, so baseline validation is required to confirm control integrity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Hardening.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 55,
+    "prompt": "What is the first principle of capacity planning for ServiceNow platform governance?",
+    "choices": [
+      "This answer proposes assume historical peak loads will never repeat.",
+      "For first principle capacity planning, scale only after sustained production incidents occur.",
+      "In this first principle capacity planning scenario, forecast demand using usage trends, business growth, and workload criticality.",
+      "This option centers on plan capacity by counting active update sets only."
+    ],
+    "correctIndex": 2,
+    "explanation": "Capacity planning starts with evidence-based forecasting tied to business demand and service criticality.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  }
+]

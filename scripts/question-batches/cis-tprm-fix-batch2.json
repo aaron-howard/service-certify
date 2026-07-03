@@ -1,0 +1,482 @@
+[
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 30,
+    "prompt": "What is the primary objective of continuous monitoring in Third-Party Risk Management?",
+    "choices": [
+      "Replace all periodic assessments with contract renewals across operational workflows",
+      "Detect vendor risk posture changes rapidly and trigger on-time reassessment actions",
+      "Freeze risk ratings after onboarding in real implementations",
+      "Limit monitoring to financial risk exclusively in enterprise contexts"
+    ],
+    "correctIndex": 1,
+    "explanation": "Continuous monitoring helps teams identify emerging risks between assessment cycles and act before exposure grows.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/concept/continuous-monitoring.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 31,
+    "prompt": "Which event should most likely trigger an out-of-cycle third-party reassessment?",
+    "choices": [
+      "A well-defined new marketing campaign launch under governance oversight",
+      "A well-defined routine invoice approval for practical execution",
+      "A well-defined material control failure, breach notification, or major compliance change",
+      "A well-defined vendor logo update across operational workflows"
+    ],
+    "correctIndex": 2,
+    "explanation": "Significant control or compliance events indicate changed risk and justify reassessment outside the normal cadence.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/task/manage-third-party-monitoring-events.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 32,
+    "prompt": "How should monitoring signals be prioritized in TPRM operations?",
+    "choices": [
+      "By alphabetical vendor name for practical execution",
+      "By the number of open support tickets for measurable outcomes",
+      "By age of the vendor relationship exclusively",
+      "By risk impact, criticality tier, and confidence of the monitoring evidence in enterprise contexts"
+    ],
+    "correctIndex": 3,
+    "explanation": "Risk-based prioritization ensures teams focus first on signals with the greatest potential business impact.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-tiering.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 33,
+    "prompt": "What process outcome indicates healthy TPRM monitoring governance?",
+    "choices": [
+      "Focus on monitoring alerts are triaged, documented, and linked to reassessment or mitigation workflows",
+      "Signals are logged but never dispositioned in real implementations",
+      "Focus on monitoring is paused during contract periods",
+      "All alerts are auto-closed weekly across operational workflows"
+    ],
+    "correctIndex": 0,
+    "explanation": "Governance requires clear triage and auditable follow-through from signal detection to risk treatment.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management-workspace.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 34,
+    "prompt": "Which KPI best reflects effective third-party continuous monitoring?",
+    "choices": [
+      "Total number of users with TPRM roles in real implementations",
+      "Mean time to review and disposition high-risk monitoring alerts in enterprise contexts",
+      "Average vendor contract length for practical execution",
+      "Count of archived questionnaires for measurable outcomes"
+    ],
+    "correctIndex": 1,
+    "explanation": "Response timeliness for high-risk alerts is a direct indicator of monitoring operational effectiveness.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-performance-metrics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 35,
+    "prompt": "What is the main purpose of vendor tiering in Third-Party Risk Management?",
+    "choices": [
+      "Rank vendors exclusively by contract value under governance oversight",
+      "Replace due diligence with annual surveys for practical execution",
+      "Differentiate oversight and control rigor based on business criticality and risk exposure under governance oversight",
+      "Assign all vendors the same assessment depth across operational workflows"
+    ],
+    "correctIndex": 2,
+    "explanation": "Tiering enables proportional governance so high-impact vendors receive stronger and more frequent risk scrutiny.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-tiering.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 36,
+    "prompt": "Which criterion is typically most important when assigning a vendor to a higher tier?",
+    "choices": [
+      "Number of vendor marketing emails across operational workflows",
+      "Frequency of travel to vendor sites under governance oversight",
+      "Vendor office decor standards for practical execution",
+      "Potential operational, regulatory, or data impact if the vendor fails for measurable outcomes"
+    ],
+    "correctIndex": 3,
+    "explanation": "Tiering should reflect risk impact and dependency, not cosmetic or low-relevance attributes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/task/configure-tiering-criteria.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 37,
+    "prompt": "How does effective tiering influence assessment cadence?",
+    "choices": [
+      "Higher tiers are assessed more frequently and with deeper control validation under governance oversight",
+      "Cadence is based exclusively on vendor response speed",
+      "All tiers apply one fixed reassessment schedule",
+      "Lower tiers are assessed more frequently than critical tiers for practical execution"
+    ],
+    "correctIndex": 0,
+    "explanation": "Risk-based cadence aligns assessment effort with potential business impact.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/concept/c_AssessmentLifecycleTPRM.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 38,
+    "prompt": "What governance issue arises when tier assignments are not periodically reviewed?",
+    "choices": [
+      "Automatic increase in evidence quality for practical execution",
+      "Fewer reassessment triggers for high-risk vendors for measurable outcomes",
+      "Outdated tiering can misalign monitoring intensity with current risk and business dependency across operational workflows",
+      "Guaranteed improvement in SLA compliance under governance oversight"
+    ],
+    "correctIndex": 2,
+    "explanation": "Vendor context changes over time, so stale tiering can create over- or under-governance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/task/review-third-party-profiles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 39,
+    "prompt": "Which outcome indicates a mature vendor tiering model?",
+    "choices": [
+      "Assessment depth, monitoring controls, and escalation paths are consistently mapped to each tier in enterprise contexts",
+      "Tiering is managed exclusively in offline spreadsheets",
+      "All vendors are marked as medium tier for measurable outcomes",
+      "Tier exceptions are undocumented for practical execution"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mature tiering translates into operationally consistent risk treatment and clear governance expectations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-management-workspace.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 40,
+    "prompt": "What is the primary purpose of formal third-party risk assessments?",
+    "choices": [
+      "Automatically approve all renewal requests in enterprise contexts",
+      "Collect vendor logos for procurement records in real implementations",
+      "Evaluate control effectiveness and residual risk to support informed risk decisions for measurable outcomes",
+      "Replace contract management processes for practical execution"
+    ],
+    "correctIndex": 2,
+    "explanation": "Assessments provide a structured method to evaluate third-party controls and determine whether residual risk is acceptable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-assessments.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 41,
+    "prompt": "Which approach best improves consistency across TPRM assessments?",
+    "choices": [
+      "Apply ad hoc questionnaires per assessor preference",
+      "Apply standardized assessment templates with control-domain mapping and scoring criteria",
+      "Assess exclusively high-revenue vendors across operational workflows",
+      "Skip residual risk calculations under governance oversight"
+    ],
+    "correctIndex": 1,
+    "explanation": "Standardized templates reduce assessor variance and improve comparability across vendor populations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/task/t_CreateVendorAssessmentQuestionnaire.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 42,
+    "prompt": "When should a third-party risk assessment be reopened or repeated?",
+    "choices": [
+      "After major control, regulatory, or service-scope changes that alter risk exposure in enterprise contexts",
+      "Whenever a ticket is opened in ITSM in real implementations",
+      "When the vendor requests less frequent oversight under governance oversight",
+      "Exclusively at contract termination across operational workflows"
+    ],
+    "correctIndex": 0,
+    "explanation": "Material change events can invalidate prior conclusions and require refreshed risk evaluation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/task/t_AssessThirdPartyRisk.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 43,
+    "prompt": "What is a key output of a mature TPRM assessment process?",
+    "choices": [
+      "An well-defined unsigned spreadsheet with no owner",
+      "A list of vendor support contacts exclusively",
+      "Automatic closure of all control gaps for practical execution",
+      "Documented residual risk, treatment decision, and accountable approver for measurable outcomes"
+    ],
+    "correctIndex": 3,
+    "explanation": "Mature assessments end with clear, accountable risk treatment and acceptance documentation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/concept/c_AssessmentLifecycleTPRM.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 44,
+    "prompt": "Which KPI best reflects assessment program effectiveness in TPRM?",
+    "choices": [
+      "Assessment completion timeliness and percentage of high-risk findings with active treatment plans in enterprise contexts",
+      "Count of vendors by country in real implementations",
+      "Average questionnaire page count for measurable outcomes",
+      "Number of contract attachments for practical execution"
+    ],
+    "correctIndex": 0,
+    "explanation": "Timeliness and treatment follow-through show whether assessments are both operationally efficient and risk-reducing.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-integrated-risk-management/page/product/third-party-risk-management/concept/third-party-risk-performance-metrics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 45,
+    "prompt": "Which contract element most directly supports third-party risk accountability in TPRM?",
+    "choices": [
+      "A well-defined clause defining control requirements, audit rights, and remediation timelines",
+      "A well-defined statement limiting all vendor communications to email",
+      "A well-defined requirement to renew the contract every month",
+      "A well-defined clause preventing any risk review after signing"
+    ],
+    "correctIndex": 0,
+    "explanation": "Control expectations and enforceable remediation terms are core to managing third-party risk through contracts.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/vendor-risk-management/concept/vendor-risk-management-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 46,
+    "prompt": "Before contract approval, what is the best TPRM practice for high-risk vendors?",
+    "choices": [
+      "Complete inherent and residual risk assessment with required legal and security sign-off in enterprise contexts",
+      "Approve exclusively based on lowest cost bid",
+      "Apply prior-year assessment results without review for measurable outcomes",
+      "Skip risk review to avoid delaying procurement across operational workflows"
+    ],
+    "correctIndex": 0,
+    "explanation": "High-risk vendors should pass current risk evaluation and stakeholder approvals before contractual commitment.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/vendor-risk-management/task/conduct-vendor-assessments.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 47,
+    "prompt": "How should TPRM teams handle contract obligations tied to corrective actions?",
+    "choices": [
+      "Track obligations manually in a spreadsheet outside the platform in real implementations",
+      "Close obligations after contract signature regardless of status in enterprise contexts",
+      "Assign obligations exclusively to procurement, never to control owners",
+      "Store obligations as linked tasks with due dates and owners on the vendor record under governance oversight"
+    ],
+    "correctIndex": 3,
+    "explanation": "Linked, assigned tasks provide traceability and operational follow-through on risk obligations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/vendor-risk-management/task/manage-vendor-issues.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 48,
+    "prompt": "What contract approach best supports ongoing compliance monitoring in TPRM?",
+    "choices": [
+      "Require periodic evidence submissions and right-to-audit language for measurable outcomes",
+      "Apply one-time onboarding attestations exclusively across operational workflows",
+      "Limit reporting to contract expiration date under governance oversight",
+      "Remove control references to simplify legal review across operational workflows"
+    ],
+    "correctIndex": 0,
+    "explanation": "Periodic attestations and audit rights create enforceable mechanisms for continuous oversight.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/vendor-risk-management/task/monitor-vendor-performance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 49,
+    "prompt": "Which contracting outcome indicates strong TPRM maturity?",
+    "choices": [
+      "Contracts are executed before risk scoring across operational workflows",
+      "Contract templates include standardized risk clauses aligned to vendor criticality tiers under governance oversight",
+      "Vendors negotiate out all security controls in real implementations",
+      "Risk teams are excluded from contracting workflow in enterprise contexts"
+    ],
+    "correctIndex": 1,
+    "explanation": "Tier-based standardized clauses align legal terms with risk exposure and governance requirements.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/vendor-risk-management/concept/vendor-tiering.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 50,
+    "prompt": "Which report is most useful for executive oversight in TPRM?",
+    "choices": [
+      "A well-defined dashboard showing vendor tier, open findings, and residual risk trends",
+      "A well-defined single monthly screenshot of one assessment",
+      "A report of inactive user accounts exclusively",
+      "A well-defined list of vendor logos by business unit"
+    ],
+    "correctIndex": 0,
+    "explanation": "Executives need risk exposure and trend visibility across vendor populations and criticality tiers.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/vendor-risk-management/task/report-on-vendor-risk.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 51,
+    "prompt": "What TPRM metric best reflects remediation execution quality?",
+    "choices": [
+      "Percentage of overdue vendor issues by criticality in enterprise contexts",
+      "Count of archived questionnaires in real implementations",
+      "Number of vendor phone calls per week under governance oversight",
+      "Total contract page count across operational workflows"
+    ],
+    "correctIndex": 0,
+    "explanation": "Overdue issues by severity reveal whether high-impact risk findings are being resolved on time.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/vendor-risk-management/task/manage-vendor-issues.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 52,
+    "prompt": "How should TPRM reporting distinguish inherent vs residual risk?",
+    "choices": [
+      "Combine both into one score with no context across operational workflows",
+      "Report residual risk exclusively for low-tier vendors",
+      "Show both values and the control impact that reduced risk in real implementations",
+      "Remove scoring for easier adoption in enterprise contexts"
+    ],
+    "correctIndex": 2,
+    "explanation": "Displaying both scores clarifies risk treatment effectiveness and control coverage outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/risk-management/concept/risk-scoring.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 53,
+    "prompt": "What is the best reporting approach for upcoming reassessment workload?",
+    "choices": [
+      "Apply forward-looking reports of reassessments due by date and vendor tier",
+      "Limit planning to annual meetings across operational workflows",
+      "Suppress due dates to avoid escalations in enterprise contexts",
+      "Track exclusively completed assessments in real implementations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Due-date and tier-based forecasting enables proactive staffing and timely reassessment cycles.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/vendor-risk-management/task/schedule-vendor-assessments.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 54,
+    "prompt": "Which data governance action improves TPRM report reliability?",
+    "choices": [
+      "Delete historical risk snapshots quarterly across operational workflows",
+      "Report exclusively on new vendors for measurable outcomes",
+      "Allow free-form criticality values per analyst for practical execution",
+      "Standardize taxonomy for vendor criticality, issue status, and control domains for measurable outcomes"
+    ],
+    "correctIndex": 3,
+    "explanation": "Standardized data definitions reduce interpretation drift and improve cross-report consistency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 55,
+    "prompt": "Which role is typically accountable for overall TPRM program governance?",
+    "choices": [
+      "No defined role is required under governance oversight",
+      "TPRM program owner defining policy, standards, and oversight cadence across operational workflows",
+      "Any requester who submits a vendor onboarding form for measurable outcomes",
+      "Exclusively procurement interns for practical execution"
+    ],
+    "correctIndex": 1,
+    "explanation": "A designated program owner ensures consistent policy execution and accountability across vendor lifecycles.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/vendor-risk-management/concept/vendor-risk-management-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 56,
+    "prompt": "What is the best role separation in TPRM assessment workflows?",
+    "choices": [
+      "Assessor also self-approves all findings for practical execution",
+      "Distinct roles for assessor, control owner, and approver for measurable outcomes",
+      "Exclusively one role for all activities for practical execution",
+      "Approvals delegated to unrelated users under governance oversight"
+    ],
+    "correctIndex": 1,
+    "explanation": "Segregation of duties reduces bias and strengthens review integrity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 57,
+    "prompt": "Which TPRM role should own remediation execution for vendor issues?",
+    "choices": [
+      "Any read-exclusively user under governance oversight",
+      "System diagnostics user in real implementations across operational workflows",
+      "Portal guest account for measurable outcomes under governance oversight",
+      "Vendor manager or assigned issue owner with due-date accountability for practical execution"
+    ],
+    "correctIndex": 3,
+    "explanation": "Named ownership with due dates ensures issues move from identification to closure.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/vendor-risk-management/task/manage-vendor-issues.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 58,
+    "prompt": "How should access be granted for TPRM reporting consumers?",
+    "choices": [
+      "Share raw tables without ACL controls for practical execution",
+      "Disable role-based access for dashboards for measurable outcomes",
+      "Grant full admin rights to all viewers in real implementations",
+      "Apply least-privilege role groups aligned to data sensitivity and reporting needs"
+    ],
+    "correctIndex": 3,
+    "explanation": "Least-privilege access protects vendor risk data while enabling appropriate visibility.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_AccessControls.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-TPRM",
+    "order": 59,
+    "prompt": "Which sign of role-model maturity is most meaningful in TPRM?",
+    "choices": [
+      "No distinction between assessors and approvers for measurable outcomes",
+      "Frequent reassignment of issue ownership for practical execution",
+      "Clear RACI coverage with minimal approval bottlenecks in enterprise contexts",
+      "Untracked exceptions approved by email in real implementations"
+    ],
+    "correctIndex": 2,
+    "explanation": "A clear RACI with efficient handoffs indicates sustainable governance and execution.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-integrated-risk-management/page/product/risk-management/concept/risk-management-governance.html"
+    ]
+  }
+]

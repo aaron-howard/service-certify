@@ -1,0 +1,485 @@
+[
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 30,
+    "prompt": "In Discovery, what is the main purpose of classification before identification and exploration?",
+    "choices": [
+      "Launch sensors immediately and defer endpoint typing",
+      "Identify the endpoint class and invoke matching probes or patterns",
+      "Route every response through one generic MID queue",
+      "Insert provisional CIs before any protocol checks"
+    ],
+    "correctIndex": 1,
+    "explanation": "Classification determines what endpoint is being scanned so the platform can run the right logic for accurate CI population.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/discovery-classification.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 31,
+    "prompt": "Why are classification probes often tuned differently across network segments?",
+    "choices": [
+      "Segmented tuning prevents CMDB class inheritance conflicts",
+      "Different segments require one universal credential profile",
+      "Protocol exposure varies by zone, so probe attempts must be optimized",
+      "Network segmentation removes the need for endpoint fingerprinting"
+    ],
+    "correctIndex": 2,
+    "explanation": "Different environments expose different protocols, so tuning classifications improves success rate and reduces scan overhead.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/configure-classification-probes.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 32,
+    "prompt": "A device is consistently misclassified as generic network gear. What should be reviewed first?",
+    "choices": [
+      "Classification match logic and probe response signatures for that endpoint",
+      "Incident assignment templates tied to network alerts",
+      "Asset lifecycle policies for replacement hardware",
+      "Catalog request flows for onboarding switches"
+    ],
+    "correctIndex": 0,
+    "explanation": "Misclassification usually indicates rule matching or response parsing issues in the classification stage.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/troubleshoot-classification.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 33,
+    "prompt": "What is the key risk of overly broad custom classification rules?",
+    "choices": [
+      "Higher service map refresh speed with no dependency drift",
+      "Automatic normalization of all software package names",
+      "Reduced need for ownership metadata in CMDB governance",
+      "Wrong device classes that propagate inaccurate downstream CMDB data"
+    ],
+    "correctIndex": 3,
+    "explanation": "Overly broad matching can classify endpoints incorrectly, which impacts downstream identification, attributes, and relationships.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/c_DiscoveryBestPractices.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 34,
+    "prompt": "How does strong classification governance support CMDB trust?",
+    "choices": [
+      "Governance removes the requirement for post-scan data stewardship",
+      "Consistent class assignment drives more reliable attributes and relationships",
+      "Strict governance forces a new CI to be created each run",
+      "Governance disables reconciliation checks for low-risk classes"
+    ],
+    "correctIndex": 1,
+    "explanation": "Reliable classification drives the right discovery logic, which is foundational for trustworthy CMDB records.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/cmdb-health-dashboard.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/discovery-classification.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 35,
+    "prompt": "What is the primary advantage of horizontal discovery patterns over many legacy probe customizations?",
+    "choices": [
+      "Patterns bypass identification rules and write directly to extension tables",
+      "Patterns eliminate the need for any probe-level observability output",
+      "Patterns provide modular logic that is easier to maintain and evolve",
+      "Patterns force one discovery path across every operating platform"
+    ],
+    "correctIndex": 2,
+    "explanation": "Horizontal patterns are structured and reusable, making discovery logic easier to maintain, test, and govern over time.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/discovery-patterns.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 36,
+    "prompt": "When designing horizontal patterns, what practice most improves long-term reliability?",
+    "choices": [
+      "Use conditional branches and resilient parsing for command variation",
+      "Collapse vendor checks into one unrestricted execution path",
+      "Remove intermediate validations to shorten runtime per target",
+      "Embed environment-specific hostnames in reusable pattern steps"
+    ],
+    "correctIndex": 0,
+    "explanation": "Conditional and defensive pattern logic handles environment variation and reduces brittle discovery outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/create-horizontal-pattern.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 37,
+    "prompt": "Why should custom horizontal patterns be tested in lower environments before broad deployment?",
+    "choices": [
+      "Lower environments permanently disable production pattern rollbacks",
+      "Testing preloads all credential aliases for every network zone",
+      "Sub-production tests remove the need for peer review evidence",
+      "Pre-production validation checks data quality before production CMDB impact"
+    ],
+    "correctIndex": 3,
+    "explanation": "Testing confirms the pattern collects expected attributes and relationships without introducing noisy or incorrect CI updates.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/test-discovery-pattern.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 38,
+    "prompt": "What is a common governance risk when teams heavily clone and diverge out-of-box patterns?",
+    "choices": [
+      "Cloned patterns automatically inherit future upgrade refactors",
+      "Divergence raises maintenance overhead and upgrade merge effort",
+      "Pattern cloning guarantees cleaner CMDB relation cardinality",
+      "Heavy divergence reduces test scope because behavior stabilizes"
+    ],
+    "correctIndex": 1,
+    "explanation": "Significant pattern divergence increases lifecycle cost and complicates alignment with new platform capabilities.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/c_DiscoveryBestPractices.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 39,
+    "prompt": "Which indicator suggests horizontal pattern design is effective?",
+    "choices": [
+      "Growing manual class corrections after each discovery window",
+      "Higher retry volume from parser exceptions and malformed output",
+      "Stable attribute fill rates with fewer post-discovery data fixes",
+      "Increasing counts of unknown CIs in recurring schedules"
+    ],
+    "correctIndex": 2,
+    "explanation": "Strong patterns produce stable, accurate discovery output that reduces manual cleanup and rework.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/cmdb-health-dashboard.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/discovery-patterns.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 40,
+    "prompt": "In Discovery pattern designer, what is the main purpose of sections and ordered steps?",
+    "choices": [
+      "Organize collection logic so troubleshooting and maintenance stay clear",
+      "Force every output to map into one infrastructure CI class",
+      "Bypass authentication dependency checks during command execution",
+      "Skip reconciliation processing for performance-critical schedules"
+    ],
+    "correctIndex": 0,
+    "explanation": "Pattern designer uses sequenced steps and reusable sections to organize discovery logic clearly and predictably.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/pattern-designer-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 41,
+    "prompt": "Which pattern designer practice best supports reusable discovery logic across technologies?",
+    "choices": [
+      "Hardcode specific MID identifiers to keep execution routing deterministic",
+      "Remove validation branches to increase run speed under load",
+      "Embed all logic in one vendor command to simplify governance review",
+      "Compose shared sub-patterns with conditional paths for variant platforms"
+    ],
+    "correctIndex": 3,
+    "explanation": "Reusable sub-patterns and conditional flow reduce duplication and improve maintainability across similar discovery scenarios.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/design-discovery-patterns.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 42,
+    "prompt": "Why is step output validation important in pattern designer testing?",
+    "choices": [
+      "It guarantees every CI update bypasses identification collisions",
+      "It confirms each step returns expected data before CMDB writes occur",
+      "It disables relationship creation for low-confidence dependencies",
+      "It replaces credential validation with direct API impersonation"
+    ],
+    "correctIndex": 1,
+    "explanation": "Validating outputs at each step helps catch parsing or command issues before they propagate into incorrect CMDB data.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/test-discovery-pattern.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 43,
+    "prompt": "What is a common cause of pattern designer fragility after platform upgrades?",
+    "choices": [
+      "Brittle custom parsing with limited validation around output changes",
+      "Using out-of-box patterns with controlled configuration extensions",
+      "Maintaining modular pattern segments with explicit error paths",
+      "Executing tests in lower tiers before production promotion"
+    ],
+    "correctIndex": 0,
+    "explanation": "Highly fragile parsing logic can break as command output formats or dependencies change across environments and releases.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/c_DiscoveryBestPractices.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 44,
+    "prompt": "Which governance action most improves long-term pattern designer quality?",
+    "choices": [
+      "Permit emergency production edits without peer review checkpoints",
+      "Suppress execution logs to keep retention costs consistently low",
+      "Version pattern changes with ownership and test evidence attached",
+      "Delay all maintenance until incidents force urgent correction"
+    ],
+    "correctIndex": 2,
+    "explanation": "Versioned change control with test evidence supports safe evolution of discovery patterns and faster troubleshooting.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/manage-discovery-pattern-lifecycle.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 45,
+    "prompt": "During horizontal discovery, what is the primary role of a probe in relation to a sensor?",
+    "choices": [
+      "A probe builds class schemas while a sensor launches schedules",
+      "A probe audits licenses while a sensor rotates credentials",
+      "A probe retires stale records while a sensor remaps ownership",
+      "A probe gathers raw target data and a sensor interprets it for updates"
+    ],
+    "correctIndex": 3,
+    "explanation": "Probes gather information from the target system, and sensors process that payload to identify or update CI-related data.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 46,
+    "prompt": "Which outcome best indicates a sensor is correctly mapped for a probe payload?",
+    "choices": [
+      "Schedules automatically convert to ad hoc mode for every subnet",
+      "Payload fields populate expected CI attributes and relationships",
+      "MID communication no longer writes any ECC response entries",
+      "Credentialless mode activates for each newly discovered endpoint"
+    ],
+    "correctIndex": 1,
+    "explanation": "A correctly configured sensor parses probe output and maps values to the intended CMDB classes and fields.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 47,
+    "prompt": "When troubleshooting missing CI details, which probe/sensor check is most useful first?",
+    "choices": [
+      "Force all results into the base cmdb_ci record set",
+      "Disable classification to isolate only exploration behavior",
+      "Inspect probe payloads and sensor logs for the impacted target run",
+      "Rebuild the schedule object before examining execution traces"
+    ],
+    "correctIndex": 2,
+    "explanation": "Validating payload generation and sensor parsing for the same run quickly isolates whether data was never collected or not interpreted correctly.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-it-operations-management/page/product/discovery/task/troubleshoot-discovery-errors.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 48,
+    "prompt": "Why should discovery teams avoid unnecessary customization of out-of-box probes and sensors?",
+    "choices": [
+      "Extensive customization raises upgrade effort and regression exposure",
+      "Any customization blocks CMDB writes from sensor execution paths",
+      "Out-of-box probe sets discover only Windows operating systems",
+      "Customized probes always break MID capability assignment logic"
+    ],
+    "correctIndex": 0,
+    "explanation": "Extensive customization can complicate upgrades and troubleshooting because platform updates may no longer align with modified discovery logic.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-it-operations-management/page/product/discovery/concept/discovery-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 49,
+    "prompt": "What governance practice improves probe and sensor reliability at scale?",
+    "choices": [
+      "Apply production-only changes to minimize delivery lead time",
+      "Accept any ECC response as proof of complete data mapping",
+      "Use a single sensor mapping template for all CI classes",
+      "Track changes, test in sub-prod, and verify CI outcomes post-release"
+    ],
+    "correctIndex": 3,
+    "explanation": "Controlled change management and regression validation reduce data quality drift when discovery logic evolves.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-it-operations-management/page/product/discovery/concept/discovery-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 50,
+    "prompt": "What is a primary value of cloud discovery in ServiceNow Discovery?",
+    "choices": [
+      "It removes API permission requirements across all cloud providers",
+      "It reveals cloud resources and dependencies for clearer CMDB visibility",
+      "It auto-generates disposal workflows for retired compute instances",
+      "It deactivates horizontal pattern execution in hybrid environments"
+    ],
+    "correctIndex": 1,
+    "explanation": "Cloud discovery extends visibility to cloud-native resources and their dependencies so operational data remains current in CMDB.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/discovery/cloud-discovery-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 51,
+    "prompt": "When onboarding cloud discovery, which setup area should be validated first?",
+    "choices": [
+      "Event connector inheritance behavior in shared integration profiles",
+      "Catalog taxonomies used by cloud service request item groups",
+      "Account credentials, assigned roles, and API permission scope",
+      "Stockroom transfer rules for decommissioned virtual hardware"
+    ],
+    "correctIndex": 2,
+    "explanation": "Cloud discovery success depends on authorized account access and sufficient API permissions to enumerate resources.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/discovery/configure-cloud-discovery.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 52,
+    "prompt": "Which governance practice reduces duplication during multi-account cloud discovery?",
+    "choices": [
+      "Use account-scoped schedules and clear identification boundaries",
+      "Disable relationship updates to avoid cross-account linkage drift",
+      "Ignore account ownership tags during cloud inventory collection",
+      "Run every account through one unrestricted global schedule"
+    ],
+    "correctIndex": 0,
+    "explanation": "Scoped schedules and strong identification logic help prevent duplicates when resources appear in overlapping account or region contexts.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-it-operations-management/page/product/discovery/concept/discovery-schedules.html",
+      "https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/product/configuration-management/concept/identification-and-reconciliation.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 53,
+    "prompt": "Why should cloud discovery results be reviewed with service owners after initial rollout?",
+    "choices": [
+      "Owner review eliminates the need for dependency map governance",
+      "Owner review converts technical services into business apps",
+      "Owner review suppresses noisy relationships by default policy",
+      "Owner review confirms discovered services mirror real operations"
+    ],
+    "correctIndex": 3,
+    "explanation": "Service-owner validation catches modeling gaps and improves confidence that discovered cloud topology supports operations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/product/configuration-management/concept/csdm-concepts.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 54,
+    "prompt": "Which metric best indicates cloud discovery maturity?",
+    "choices": [
+      "Peak MID server count regardless of provider account alignment",
+      "Expected account coverage with low unresolved discovery failures",
+      "Raw event ingestion volume without topology quality review",
+      "Month-over-month growth in manually entered cloud CIs"
+    ],
+    "correctIndex": 1,
+    "explanation": "Mature cloud discovery combines broad, expected coverage with stable execution quality and manageable exception rates.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-it-operations-management/page/product/discovery/concept/discovery-dashboard.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 55,
+    "prompt": "In Discovery and Service Mapping contexts, service discovery is primarily used to achieve what?",
+    "choices": [
+      "Automatically recast all technical services as business capabilities",
+      "Retire infrastructure assets based on event severity thresholds",
+      "Map service dependencies to supporting infrastructure components",
+      "Replace identification and reconciliation controls in CMDB"
+    ],
+    "correctIndex": 2,
+    "explanation": "Service discovery and mapping establish visibility into service-to-infrastructure relationships needed for impact analysis and operations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/service-mapping/getting-started-service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 56,
+    "prompt": "Which prerequisite most improves service discovery accuracy?",
+    "choices": [
+      "Dependable CI and relationship baselines in the CMDB foundation",
+      "Credential-free mapping runs across all application entry points",
+      "Manual CI creation workflows replacing automated refresh cycles",
+      "Disabled horizontal schedules during map population windows"
+    ],
+    "correctIndex": 0,
+    "explanation": "Service mapping quality depends on trustworthy underlying CI and relationship data from discovery and CMDB governance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/product/configuration-management/concept/cmdb-foundation-data.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 57,
+    "prompt": "What is the strongest reason to validate service maps with application owners?",
+    "choices": [
+      "It lowers MID memory pressure during repetitive map recalculation",
+      "It allows entry points to be removed from map maintenance scope",
+      "It bypasses reconciliation checks for inferred relationship updates",
+      "It verifies inferred dependencies match real service behavior"
+    ],
+    "correctIndex": 3,
+    "explanation": "Owner review helps verify that discovered connections represent real operational dependencies and not transient noise.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/service-mapping/entry-points-and-service-maps.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 58,
+    "prompt": "When service maps become outdated quickly, which corrective action is most appropriate?",
+    "choices": [
+      "Purge any relation absent from one scan to force convergence",
+      "Tune discovery cadence and recheck entry points plus credentials",
+      "Freeze map updates so historical topology remains visually stable",
+      "Consolidate ownership of every map under one platform team"
+    ],
+    "correctIndex": 1,
+    "explanation": "Rapidly changing environments require tuned schedules and validated service mapping entry-point logic to maintain map quality.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 59,
+    "prompt": "Which KPI best indicates service discovery effectiveness over time?",
+    "choices": [
+      "Total event connector templates enabled across all integrations",
+      "Highest hourly probe throughput across discovery schedules",
+      "Greater map completeness with fewer unresolved dependency gaps",
+      "Number of stockrooms created through manual asset operations"
+    ],
+    "correctIndex": 2,
+    "explanation": "Service discovery maturity is shown by dependable, actionable dependency maps with fewer missing or disputed relationships.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/use/reporting/concept/c_ReportingAndAnalytics.html"
+    ]
+  }
+]

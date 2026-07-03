@@ -1,0 +1,483 @@
+[
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 0,
+    "prompt": "Which statement best describes how a MID Server participates in Discovery work orchestration?",
+    "choices": [
+      "It maintains the master CMDB copy inside each subnet where it is installed",
+      "It runs discovery work assigned by the instance and exchanged through ECC queue messages",
+      "It removes the need to store or test authentication credentials for target endpoints",
+      "It is restricted to local agent health checks and cannot execute discovery instructions"
+    ],
+    "correctIndex": 1,
+    "explanation": "MID Servers pick up work from the instance and perform discovery actions in the network; the ECC queue is the standard integration path for that orchestration.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/product/mid-server/concept/c_MIDServerConfiguration.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 1,
+    "prompt": "Horizontal Discovery patterns are authored and executed differently than classic probe/sensor-only approaches in which way?",
+    "choices": [
+      "Patterns are runtime discovery artifacts, not static documentation notes outside execution",
+      "Patterns are not limited to instance-only execution and can run through MID workflows",
+      "Patterns use a dedicated language to execute staged collection logic and populate CMDB details",
+      "Patterns do not bypass classification or jump straight to final relationship creation"
+    ],
+    "correctIndex": 2,
+    "explanation": "Pattern-based horizontal discovery uses the pattern designer language and processing to interpret collected information and update configuration details.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/discovery/c-UsingPatternsForHorizontalDiscovery.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 2,
+    "prompt": "Discovery credentials are used to do what during a scan?",
+    "choices": [
+      "Authenticate to discovered targets so probes and patterns can retrieve configuration information",
+      "Register MID Server binaries with the vendor licensing portal during each schedule run",
+      "Encrypt ECC queue payload bodies using endpoint-specific symmetric key negotiation",
+      "Replace schedule definitions by embedding all network ranges inside credential aliases"
+    ],
+    "correctIndex": 0,
+    "explanation": "Credentials supply authentication material so discovery actions can log in or query targets successfully.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/product/credentials/concept/discovery-credential-alias.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 3,
+    "prompt": "A Discovery schedule primarily defines which aspects of a discovery job?",
+    "choices": [
+      "How to retire discovered hardware at end of lifecycle across managed locations and sites",
+      "How to route incidents to assignment groups after external monitoring event ingestion",
+      "How to reconcile duplicate CIs created by independent import or integration pipelines",
+      "What to scan, where those targets reside, and when discovery execution should occur"
+    ],
+    "correctIndex": 3,
+    "explanation": "Schedules bind scope, targets or ranges, timing, and discovery behavior into an executable plan.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-it-operations-management/page/product/discovery/task/t_CreateADiscoverySchedule.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 4,
+    "prompt": "Pattern-based discovery concepts in ITOM documentation are commonly associated with which benefit?",
+    "choices": [
+      "A single scripting model that permanently disables horizontal discovery processing",
+      "A modular, flow-oriented way to gather and interpret infrastructure and application details",
+      "A requirement to discover cloud resources without any MID Server deployment",
+      "A replacement for CMDB updates with temporary staging tables that are never reconciled"
+    ],
+    "correctIndex": 1,
+    "explanation": "Pattern-based discovery emphasizes structured, reusable flows for interpreting discovery results compared with ad hoc scripting-only approaches.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/service-mapping/pattern-based-discovery.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 5,
+    "prompt": "A Discovery admin needs to classify Windows servers reliably across segmented networks. Which MID Server design choice has the biggest impact on successful classification?",
+    "choices": [
+      "Assign every MID Server to a service desk approval queue before any scan begins",
+      "Run all discovery exclusively from the instance to avoid cross-network routing complexity",
+      "Place validated MID Servers in each required network zone with routing to target subnets",
+      "Disable MID capabilities so only schedules determine whether classification steps can execute"
+    ],
+    "correctIndex": 2,
+    "explanation": "Discovery depends on network reachability from MID Servers to target IP ranges, so zone-aligned placement is essential for classification and identification.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/mid-server-for-discovery.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 6,
+    "prompt": "What is the primary purpose of validating a MID Server after installation?",
+    "choices": [
+      "Confirm connectivity, compatibility, and required MID capabilities before running discovery workloads",
+      "Automatically create complete hardware CI inventories before credentials are configured",
+      "Grant CMDB ownership rights to the MID service account for every discovered class",
+      "Enable event connector packs and alert subscriptions without additional configuration checks"
+    ],
+    "correctIndex": 0,
+    "explanation": "Validation confirms the MID Server can communicate with the instance and is ready to execute Discovery workloads with the expected capabilities.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/mid-server/task/validate-a-mid-server.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 7,
+    "prompt": "During Discovery troubleshooting, the status for a subnet stays in \"Scanning\" with no probes returning. Which record type should be reviewed first?",
+    "choices": [
+      "Asset inventory records to verify purchase status for scanned network endpoints",
+      "ECC queue records tied to the run for probe requests, responses, and processing outcomes",
+      "Table dictionary entries to inspect field label translations for discovery forms",
+      "Navigation module definitions to confirm role visibility for discovery administrators"
+    ],
+    "correctIndex": 1,
+    "explanation": "Probe and sensor activity is exchanged through ECC Queue, making it the quickest way to identify execution or communication failures during a run.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/troubleshoot-discovery-status.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 8,
+    "prompt": "Why is configuring MID Server service accounts with least privilege considered a best practice for CIS-Discovery implementations?",
+    "choices": [
+      "It guarantees cloud sensors will classify every managed instance without additional tuning",
+      "It eliminates credential aliases by using one static account for all target protocols",
+      "It limits security exposure while preserving the protocol access needed for discovery operations",
+      "It forces all probes into simulation-only mode until a full privileged approval review"
+    ],
+    "correctIndex": 2,
+    "explanation": "Least-privilege service accounts lower risk and audit burden while preserving the access needed for successful probe and pattern execution.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/least-privilege-access.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 9,
+    "prompt": "A customer asks whether one MID Server can cover all datacenters globally. What is the most accurate response?",
+    "choices": [
+      "One MID Server is always prohibited when any schedule uses more than one subnet",
+      "All discovery schedules require cluster mode before the first scan can be executed",
+      "A separate MID Server is required for each CI class to support classification logic",
+      "One MID can work, but resilient designs typically use multiple nodes for locality and failover"
+    ],
+    "correctIndex": 3,
+    "explanation": "While one MID Server may function in small environments, enterprise reliability and performance usually require geographically and logically distributed MID Servers.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/mid-server/concept/mid-server-clusters.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 10,
+    "prompt": "In Discovery architecture, what is the ECC Queue's core role?",
+    "choices": [
+      "Store historical CMDB relationship snapshots for downstream impact analysis reporting",
+      "Run schedule timing calculations independently from MID Server processing responsibilities",
+      "Carry probe requests to MID Servers and return results for instance-side sensor handling",
+      "Act as a fallback credential vault used when protocol authentication records are missing"
+    ],
+    "correctIndex": 2,
+    "explanation": "ECC Queue is the communication channel between the instance and MID Servers, carrying commands and returned payloads.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/mid-server/concept/ecc-queue-mid-server.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 11,
+    "prompt": "A Discovery run is delayed even though schedules are active. Which ECC symptom most directly indicates MID processing backlog?",
+    "choices": [
+      "Large counts of output-ready or processing records waiting on the relevant MID topic",
+      "No ECC entries at all even though discovery ranges and schedules are actively configured",
+      "Recent CI updates in every class showing complete refreshes during the same interval",
+      "Credential tests marked successful with no timing drift across dependent schedule windows"
+    ],
+    "correctIndex": 0,
+    "explanation": "Backlog in relevant ECC states and topics indicates the MID Server is not keeping up with queued probe activity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/troubleshoot-discovery-with-ecc-queue.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 12,
+    "prompt": "Why should Discovery administrators monitor ECC Queue health trends over time?",
+    "choices": [
+      "To trigger automated hardware procurement when endpoint counts exceed predefined thresholds",
+      "To spot throughput, latency, or failure patterns before CMDB freshness is degraded",
+      "To map every queue message directly to depreciation policies in asset accounting",
+      "To suspend probes automatically whenever event rule mappings are modified in production"
+    ],
+    "correctIndex": 1,
+    "explanation": "Trend monitoring helps identify scaling or reliability issues early, reducing stale CI data and failed discovery outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/mid-server/concept/mid-server-monitoring.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 13,
+    "prompt": "What is the best first action if ECC Queue records show repeated payload processing errors for one probe type?",
+    "choices": [
+      "Rebuild the full instance cache and clear all background worker thread assignments",
+      "Delete all CIs previously discovered by that probe category to avoid stale records",
+      "Deactivate the complete Discovery application until the next quarterly maintenance cycle",
+      "Inspect probe and sensor logs with payload details to isolate the exact failure cause"
+    ],
+    "correctIndex": 3,
+    "explanation": "Targeted inspection of probe and sensor details avoids broad disruption and pinpoints the true processing fault.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/t_TroubleshootDiscoveryProblems.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 14,
+    "prompt": "Which ECC Queue governance practice supports stable Discovery operations in production?",
+    "choices": [
+      "Define monitoring, threshold alerts, and runbooks for backlog and queue failure response",
+      "Purge queue history every day before reviewing trends to keep table growth minimal",
+      "Route every probe workload through a single MID regardless of measured utilization",
+      "Turn off sensor logging globally so queue turnover appears faster on dashboards"
+    ],
+    "correctIndex": 0,
+    "explanation": "Operational thresholds and response procedures keep queue issues visible and manageable before they cause major CMDB impact.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/mid-server/task/set-up-mid-server-alerting.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 15,
+    "prompt": "What is the primary purpose of Discovery credential records?",
+    "choices": [
+      "Map external event severities into incident priorities for multi-source connector ingestion",
+      "Assign discovered hardware to financial stockrooms based on lifecycle state transitions",
+      "Provide protocol-specific authentication for probes and patterns accessing target systems",
+      "Replace MID Server validation checks by embedding readiness tests inside each credential"
+    ],
+    "correctIndex": 2,
+    "explanation": "Discovery credentials store the authentication details needed for protocol access across discovered endpoints.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/discovery-credentials.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 16,
+    "prompt": "A credential test succeeds for SSH but Linux devices still fail classification. What should be checked next?",
+    "choices": [
+      "Whether procurement rules are creating cost center assignments for new server models",
+      "Whether credential order, IP targeting, and pattern conditions match the failing devices",
+      "Whether incident response workflows were triggered by event deduplication policy updates",
+      "Whether depreciation classes were recalculated for asset records in the same subnet"
+    ],
+    "correctIndex": 1,
+    "explanation": "Credential success alone is not enough; matching logic and pattern prerequisites must align with the discovery target profile.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/troubleshoot-discovery-credentials.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 17,
+    "prompt": "Which credential governance approach is most appropriate for enterprise Discovery?",
+    "choices": [
+      "Segment credentials by environment or domain with least privilege and controlled rotation",
+      "Use one shared root account across protocols to simplify credential administration",
+      "Disable credential tests entirely so MID Servers spend less time during scheduling",
+      "Store discovery secrets in update-set XML payloads for easier transport between instances"
+    ],
+    "correctIndex": 0,
+    "explanation": "Segmentation and least privilege improve security and reduce blast radius while supporting compliant operations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_CredentialsAndSecrets.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 18,
+    "prompt": "When multiple credentials are configured for a schedule, why is credential affinity or ordering important?",
+    "choices": [
+      "It prevents identification and reconciliation from creating duplicate configuration items",
+      "It ensures all probes are pinned to one MID regardless of subnet availability",
+      "It allows event connector integrations to reuse protocol accounts without mapping rules",
+      "It reduces failed logins and scan duration by trying the most likely credentials first"
+    ],
+    "correctIndex": 3,
+    "explanation": "Ordered credential execution improves efficiency and lowers failed authentication attempts during scans.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/configure-credential-affinity.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 19,
+    "prompt": "Which metric most directly indicates improving Discovery credential quality over time?",
+    "choices": [
+      "Higher event ingestion volume from external monitoring products over the same period",
+      "Increasing credential success rates with fewer authentication failures during discovery runs",
+      "More hardware model categories being populated in the asset management catalog",
+      "Fewer warehouse location records maintained for stock and procurement operations"
+    ],
+    "correctIndex": 1,
+    "explanation": "Credential effectiveness is best measured by successful authentications and reduced failed login attempts in discovery jobs.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/view-discovery-status-and-logs.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 20,
+    "prompt": "What is the primary function of a Discovery schedule?",
+    "choices": [
+      "Control reorder points for spare parts consumed by endpoint maintenance activities",
+      "Create third-party event connectors and normalize incoming alert severities automatically",
+      "Define discovery timing and target scope, including ranges, behavior, and MID usage",
+      "Store canonical hardware model attributes used for software license reconciliation"
+    ],
+    "correctIndex": 2,
+    "explanation": "Schedules operationalize Discovery execution parameters so scans run predictably against intended network targets.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/discovery-schedules.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 21,
+    "prompt": "A team wants frequent cloud discovery but weekly on-prem scans. Which design is best?",
+    "choices": [
+      "Create separate schedules that match each environment's volatility and operational windows",
+      "Use a single global schedule running at the highest frequency for every infrastructure type",
+      "Trigger discovery only when event rules create incidents in the operations queue",
+      "Disable schedule behaviors and execute all scans manually through ad hoc operator actions"
+    ],
+    "correctIndex": 0,
+    "explanation": "Different infrastructure domains often require different scan cadence and windows to balance freshness and performance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/create-a-discovery-schedule.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 22,
+    "prompt": "Which schedule practice reduces production impact during business hours?",
+    "choices": [
+      "Scan wide address blocks at midday to distribute load evenly across business teams",
+      "Use blackout windows, throttling, and scoped ranges to limit production impact",
+      "Remove exclusion lists so discovery always evaluates every host in each range",
+      "Skip MID validation before runs so schedules begin without preflight dependency checks"
+    ],
+    "correctIndex": 1,
+    "explanation": "Controlled timing and scope prevents unnecessary network or endpoint load while maintaining CMDB data quality.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/discovery-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 23,
+    "prompt": "What should be reviewed first when a Discovery schedule repeatedly finishes with partial results?",
+    "choices": [
+      "Connector deduplication policies to confirm event suppression thresholds remain unchanged",
+      "Lifecycle retirement tasks to verify disposal approvals for decommissioned hardware",
+      "Warehouse assignment logic to ensure spare inventory locations are still mapped",
+      "Schedule logs, credential outcomes, and MID reachability for ranges that failed"
+    ],
+    "correctIndex": 3,
+    "explanation": "Partial completion is commonly caused by targeting or connectivity issues visible in schedule execution and credential logs.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/view-discovery-status-and-logs.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 24,
+    "prompt": "Which governance control is most useful when many teams request Discovery schedule changes?",
+    "choices": [
+      "Allow any discovery_admin user to edit production schedules without approval controls",
+      "Use one shared schedule and modify ranges ad hoc for each team request",
+      "Apply change-managed ownership with documented scope, timing, and success criteria",
+      "Disable schedule history retention so old configuration revisions cannot be reviewed"
+    ],
+    "correctIndex": 2,
+    "explanation": "Controlled ownership and change standards prevent overlapping scans, unexpected impact, and unmanaged CMDB variance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/discovery-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 25,
+    "prompt": "When defining Discovery behavior, what is the primary reason to segment large networks into explicit IP ranges?",
+    "choices": [
+      "Control discovery scope and reduce unnecessary probe traffic across large address spaces",
+      "Force every endpoint into a single MID queue regardless of network segmentation",
+      "Prevent ECC records from being created so queue tables remain nearly empty",
+      "Bypass classification for unknown hosts until manual CI mapping is completed"
+    ],
+    "correctIndex": 0,
+    "explanation": "Scoped IP range definitions limit where Discovery scans, improving performance and reducing network and credential noise.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/discovery-schedules.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 26,
+    "prompt": "What is the most important governance outcome of assigning behavior to specific Discovery ranges?",
+    "choices": [
+      "Automatically normalize CMDB classes by subnet with no reconciliation policy needed",
+      "Enable distinct scan settings that match the requirements of each network segment",
+      "Remove the need to manage credentials separately for protocol-specific discovery access",
+      "Turn off CI identification rules so each range can write records independently"
+    ],
+    "correctIndex": 1,
+    "explanation": "Range-level behavior assignment allows scan strategy, frequency, and port choices to match each environment's requirements.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/create-discovery-behavior.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 27,
+    "prompt": "A Discovery admin needs to avoid scanning partner-owned subnets while scanning corporate ranges. Which configuration is best?",
+    "choices": [
+      "Lower probe priority globally so partner addresses are naturally skipped during scans",
+      "Disable sensors for partner-owned devices while still scanning one broad network set",
+      "Scan all ranges first and filter unwanted partner hosts after CI creation completes",
+      "Define approved include ranges and explicit exclude ranges for prohibited partner subnets"
+    ],
+    "correctIndex": 3,
+    "explanation": "Include and exclude range controls let teams target only approved address space and avoid scanning prohibited segments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/create-ip-range-sets.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 28,
+    "prompt": "Why should Discovery scope be reviewed after major network changes such as cloud expansion?",
+    "choices": [
+      "Ensure new address spaces are included and obsolete ranges are removed after network changes",
+      "Disable horizontal discovery patterns whenever cloud footprint expands into new regions",
+      "Increase duplicate CI creation to verify reconciliation catches stale discovery targets",
+      "Force a full CMDB rebuild every week regardless of infrastructure topology updates"
+    ],
+    "correctIndex": 0,
+    "explanation": "Network topology changes can create blind spots or stale scan targets, so scope must be updated to keep Discovery accurate.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/c_DiscoveryBestPractices.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 29,
+    "prompt": "What is the key reason to align Discovery schedule scope with CMDB ownership boundaries?",
+    "choices": [
+      "Disable identification and reconciliation controls to simplify discovery ownership handoffs",
+      "Automatically convert all discovered CIs into asset records without governance review",
+      "Improve accountability for scan quality and stewardship of CMDB data outcomes",
+      "Remove orphaned CIs immediately without owner validation or service impact checks"
+    ],
+    "correctIndex": 2,
+    "explanation": "Ownership-aligned scope helps teams monitor discovery outcomes, investigate gaps, and maintain responsible CMDB governance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/c_Discovery.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/cmdb-governance.html"
+    ]
+  }
+]

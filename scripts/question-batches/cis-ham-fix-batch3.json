@@ -1,0 +1,507 @@
+[
+  {
+    "trackCode": "CIS-HAM",
+    "order": 60,
+    "prompt": "In HAM, normalization is primarily intended to improve what?",
+    "choices": [
+      "In most deployments, consistency of hardware model, manufacturer, and attribute data across asset records",
+      "In this scenario, maintenance-window suppression scope in standard operations",
+      "In platform terms, discovery credential rotation for stable outcomes for consistent administration",
+      "From a governance perspective, event connector throughput under normal policy constraints"
+    ],
+    "correctIndex": 0,
+    "explanation": "Normalization improves data consistency so reporting, lifecycle decisions, and operational workflows rely on trustworthy model data.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/normalize-hardware-models.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 61,
+    "prompt": "Which issue most strongly signals poor normalization in hardware records?",
+    "choices": [
+      "Typically, reduced reconciliation exceptions in standard operations",
+      "From an admin perspective, duplicate model variants for the same physical item",
+      "Operationally, stable model naming conventions under normal policy constraints",
+      "In practice, consistent manufacturer references for governed delivery"
+    ],
+    "correctIndex": 1,
+    "explanation": "Duplicate variants and inconsistent naming usually indicate normalization gaps that fragment reporting and lifecycle automation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-model-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 62,
+    "prompt": "How does normalization improve procurement and fulfillment alignment?",
+    "choices": [
+      "Practically speaking, this approach maps incoming variants to governed model records used in downstream processes",
+      "From an admin perspective, this approach replaces transfer orders with incidents",
+      "Typically, this approach removes the need for model categories for governed delivery",
+      "In practice, this approach disables stockroom inventory controls under expected controls"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mapping variants to standard models keeps catalog, procurement, and inventory workflows aligned to authoritative data.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/manage-hardware-models.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 63,
+    "prompt": "What is the best operational response when normalization rules classify a new model incorrectly?",
+    "choices": [
+      "In most deployments, disable all normalization jobs indefinitely under normal policy constraints",
+      "From a governance perspective, delete all affected assets for governed delivery",
+      "In this scenario, force manual edits without root-cause analysis under expected controls",
+      "From an implementation standpoint, refine normalization criteria and revalidate impacted records with governance review"
+    ],
+    "correctIndex": 3,
+    "explanation": "Controlled rule refinement and targeted validation correct classification issues while preserving data governance discipline.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/administer/business-rules/concept/c_BusinessRules.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 64,
+    "prompt": "Which KPI best indicates normalization maturity in HAM?",
+    "choices": [
+      "Operationally, lower duplicate-model rate and higher first-pass model classification accuracy",
+      "In most deployments, more manual model edits each week under expected controls",
+      "From a governance perspective, higher event ingestion volume for stable outcomes",
+      "From an implementation standpoint, maximum number of stockrooms per location"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mature normalization is reflected by fewer duplicates and more accurate model classification without recurring manual correction.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/use/reporting/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 65,
+    "prompt": "What is the primary purpose of an audit program in Hardware Asset Management?",
+    "choices": [
+      "Practically speaking, close reconciliation tasks without evidence under expected controls",
+      "In platform terms, increase asset count by creating placeholder records for stable outcomes",
+      "Typically, validate physical, financial, and lifecycle accuracy of hardware records against policy and controls",
+      "From an admin perspective, limit audit scope to retired assets only for consistent administration"
+    ],
+    "correctIndex": 2,
+    "explanation": "HAM audits confirm asset data integrity, control effectiveness, and compliance readiness.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 66,
+    "prompt": "Which control most improves auditability of hardware stock and assignments?",
+    "choices": [
+      "In most deployments, use shared generic assignee records for speed for stable outcomes",
+      "From an implementation standpoint, track assets only at procurement and disposal in standard operations",
+      "Operationally, enforce barcode or serial-based custody transactions with user, date, and location traceability",
+      "From a governance perspective, allow verbal handoffs without system updates under normal policy constraints"
+    ],
+    "correctIndex": 2,
+    "explanation": "End-to-end custody traceability creates defensible audit evidence for movement and assignment events.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/task/t_ManageHardwareAssets.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/asset-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 67,
+    "prompt": "How should HAM teams handle recurring audit discrepancies between discovered and tracked assets?",
+    "choices": [
+      "From an implementation standpoint, pause all discovery feeds until next fiscal year in standard operations",
+      "In most deployments, delete unmatched records to improve dashboard percentages for consistent administration",
+      "Operationally, perform root-cause analysis by lifecycle stage, then implement corrective workflows and ownership accountability",
+      "In practice, ignore discrepancies under a fixed threshold for consistent administration for governed delivery"
+    ],
+    "correctIndex": 2,
+    "explanation": "Recurring discrepancies require stage-specific remediation and accountable process owners.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/cmdb-landing.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 68,
+    "prompt": "Which evidence package is most appropriate for a HAM internal audit review?",
+    "choices": [
+      "In this scenario, an email summary from one asset manager for stable outcomes for consistent administration",
+      "From an admin perspective, a count of open incidents for hardware issues under normal policy constraints",
+      "Practically speaking, policy controls, sample transaction logs, exception remediation records, and approved attestation sign-offs",
+      "In platform terms, a screenshot of the asset list without filters under expected controls"
+    ],
+    "correctIndex": 2,
+    "explanation": "Audits require traceable control evidence, exceptions, and documented attestations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/asset-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 69,
+    "prompt": "Which metric best indicates HAM audit program maturity?",
+    "choices": [
+      "In this scenario, more manual spreadsheet reconciliations in standard operations under normal policy constraints",
+      "Practically speaking, declining repeat audit findings with faster closure of control exceptions and verified corrective actions",
+      "From a governance perspective, longer audit cycles regardless risk under expected controls",
+      "In platform terms, higher volume of waived audit controls for governed delivery for stable outcomes"
+    ],
+    "correctIndex": 1,
+    "explanation": "Mature audit programs reduce repeat findings and improve exception remediation effectiveness.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 70,
+    "prompt": "What is the primary purpose of HAM reporting for asset governance leaders?",
+    "choices": [
+      "Operationally, replace audit controls with dashboard color indicators for governed delivery under expected controls",
+      "In most deployments, track only newly purchased devices under normal policy constraints under expected controls",
+      "From an implementation standpoint, provide decision-ready visibility into lifecycle, financial exposure, compliance posture, and operational risk",
+      "In practice, list every asset record without aggregation or context in standard operations for consistent administration"
+    ],
+    "correctIndex": 2,
+    "explanation": "HAM reporting supports governance decisions by translating asset data into risk and lifecycle insight.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 71,
+    "prompt": "Which report design best supports executive review of hardware asset health?",
+    "choices": [
+      "Practically speaking, a single table export of all asset fields under expected controls",
+      "From an admin perspective, only disposal counts by quarter for stable outcomes",
+      "In this scenario, trend dashboards combining stock, assignment accuracy, contract coverage, and exception aging",
+      "In platform terms, weekly screenshots of random asset forms for consistent administration"
+    ],
+    "correctIndex": 2,
+    "explanation": "Executive reporting should present trend-based KPIs across lifecycle, compliance, and control dimensions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/asset-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 72,
+    "prompt": "How should HAM reporting address stale or low-confidence asset data?",
+    "choices": [
+      "In most deployments, include data-quality indicators, ownership gaps, and remediation backlog metrics alongside lifecycle KPIs",
+      "In practice, hide low-confidence records from all reports under expected controls in standard operations",
+      "Operationally, report only assets with active incidents for stable outcomes for consistent administration",
+      "From an implementation standpoint, reset stale records to in-stock through configured automation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Transparent data-quality dimensions make reporting actionable and prevent false governance confidence.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 73,
+    "prompt": "Which reporting cadence and model best supports operational HAM decision-making?",
+    "choices": [
+      "Typically, daily exception dashboards for operations and monthly governance packs for leadership with shared definitions",
+      "In practice, separate unaligned reports per stockroom manager for consistent administration",
+      "Operationally, ad hoc reports generated only after audit findings under normal policy constraints",
+      "From an implementation standpoint, annual static reports for all audiences for governed delivery"
+    ],
+    "correctIndex": 0,
+    "explanation": "Layered cadence and standardized definitions keep reporting relevant for both tactical and strategic decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/task/t_ManageHardwareAssets.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 74,
+    "prompt": "Which outcome indicates mature HAM reporting capability?",
+    "choices": [
+      "In this scenario, reduced visibility into aging non-compliant assets for consistent administration",
+      "Practically speaking, higher number of report variants with conflicting metrics under normal policy constraints",
+      "In platform terms, leaders use consistent KPI trends to reduce exception volume, improve reuse, and lower lifecycle cost",
+      "From a governance perspective, more manual spreadsheet reconciliation before each meeting"
+    ],
+    "correctIndex": 2,
+    "explanation": "Mature reporting drives measurable improvements in control outcomes, reuse efficiency, and cost governance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 75,
+    "prompt": "What is the main value of enforcing lifecycle states in Hardware Asset Management?",
+    "choices": [
+      "In this scenario, this approach removes the need for stockrooms",
+      "In platform terms, this approach disables depreciation calculations",
+      "In most deployments, this approach gives consistent governance from procurement through retirement",
+      "From a governance perspective, this approach prevents all incidents for assigned assets"
+    ],
+    "correctIndex": 2,
+    "explanation": "Lifecycle states create a controlled operating model for asset accountability, financial tracking, and compliance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/asset-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 76,
+    "prompt": "Which action most improves auditability for stockroom transfers?",
+    "choices": [
+      "Operationally, move assets with no transaction records to save time for governed delivery",
+      "From an admin perspective, record transfer transactions with source, destination, and responsible user",
+      "Typically, track only serial numbers in external spreadsheets for stable outcomes",
+      "In practice, mark all transferred assets as consumed under expected controls in standard operations"
+    ],
+    "correctIndex": 1,
+    "explanation": "Documented transfer transactions preserve chain-of-custody and support inventory reconciliation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/task/t_ManageHardwareAssets.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/asset-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 77,
+    "prompt": "Why should a HAM team normalize hardware models early in implementation?",
+    "choices": [
+      "In most deployments, to improve reporting accuracy and downstream lifecycle decisions",
+      "From a governance perspective, to bypass receiving and stocking processes",
+      "In this scenario, to increase duplicate model records for flexibility",
+      "In platform terms, to remove manufacturer information from assets"
+    ],
+    "correctIndex": 0,
+    "explanation": "Model normalization improves data quality, enabling reliable cost, warranty, and refresh analysis.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/c_DataManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 78,
+    "prompt": "What is the best reason to associate assets with contracts and warranties?",
+    "choices": [
+      "In most deployments, this approach allows assets to skip assignment workflows for stable outcomes",
+      "From a governance perspective, this approach replaces the need for depreciation schedules in standard operations",
+      "In this scenario, this approach prevents duplicate CI creation in Discovery for consistent administration",
+      "From an implementation standpoint, this approach supports entitlement checks, support decisions, and renewal planning"
+    ],
+    "correctIndex": 3,
+    "explanation": "Contract and warranty relationships help teams make support and financial decisions with documented coverage context.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/asset-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 79,
+    "prompt": "Which KPI is most useful for HAM governance reviews?",
+    "choices": [
+      "Practically speaking, percentage of assets with unknown owner or location",
+      "Typically, total count of UI actions on incident forms",
+      "In practice, average dashboard load time in service portal",
+      "From an admin perspective, number of open portal homepages"
+    ],
+    "correctIndex": 0,
+    "explanation": "Owner and location completeness is a core data-quality indicator for governance and accountability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 80,
+    "prompt": "What is the biggest risk of skipping receiving and stocking steps in HAM?",
+    "choices": [
+      "In this scenario, discovery scans complete more slowly for consistent administration",
+      "From a governance perspective, inventory chain-of-custody and financial accuracy degrade",
+      "In most deployments, assets are assigned faster for governed delivery",
+      "In platform terms, depreciation starts earlier under expected controls"
+    ],
+    "correctIndex": 1,
+    "explanation": "Receiving and stocking establish the official asset baseline needed for accountability and lifecycle tracking.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/task/t_ManageHardwareAssets.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/asset-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 81,
+    "prompt": "Which approach best supports controlled asset refresh planning?",
+    "choices": [
+      "From a governance perspective, use procurement request count as the only KPI",
+      "In this scenario, retire only assets with open incidents for consistent administration",
+      "In most deployments, refresh all assets every fiscal year regardless condition",
+      "From an implementation standpoint, track age, warranty end dates, and criticality in lifecycle reporting"
+    ],
+    "correctIndex": 3,
+    "explanation": "Refresh strategy should be driven by lifecycle, support coverage, and business impact rather than a single metric.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 82,
+    "prompt": "Why is assignment verification important in HAM governance?",
+    "choices": [
+      "Practically speaking, this approach confirms accountability and reduces orphaned assets",
+      "In practice, this approach disables contract entitlement checks",
+      "Typically, this approach removes the need for stockrooms",
+      "From an admin perspective, this approach is only required for mobile devices"
+    ],
+    "correctIndex": 0,
+    "explanation": "Verified assignments keep ownership accurate and reduce compliance risk from unknown device custody.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 83,
+    "prompt": "A team wants to track disposal compliance. Which data element is most important?",
+    "choices": [
+      "In most deployments, documented retirement and disposal evidence",
+      "In this scenario, widget color preference",
+      "From an implementation standpoint, incident caller locale",
+      "From a governance perspective, asset class display value"
+    ],
+    "correctIndex": 0,
+    "explanation": "Disposal governance requires verifiable retirement records and evidence that policy steps were followed.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/asset-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 84,
+    "prompt": "Which HAM dashboard metric best highlights data quality risk?",
+    "choices": [
+      "Operationally, count of assets missing model, owner, or location attributes",
+      "In most deployments, total update sets in development",
+      "From an implementation standpoint, change request approval duration",
+      "From a governance perspective, number of users with pa_viewer"
+    ],
+    "correctIndex": 0,
+    "explanation": "Missing core attributes directly affect lifecycle controls, reporting quality, and audit readiness.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/c_DataManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 85,
+    "prompt": "Why should HAM teams enforce standardized retirement workflows?",
+    "choices": [
+      "Practically speaking, to keep retired assets in active assignment pools",
+      "Typically, to prevent warranty tracking on active assets",
+      "From an admin perspective, to skip approvals for high-value equipment",
+      "In platform terms, to ensure compliant disposal, financial closure, and audit evidence"
+    ],
+    "correctIndex": 3,
+    "explanation": "Retirement workflows govern disposal and financial steps needed for compliance and audit readiness.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/asset-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 86,
+    "prompt": "Which metric most directly supports hardware reuse optimization?",
+    "choices": [
+      "In this scenario, percentage of recoverable assets redeployed from stock",
+      "From an admin perspective, number of custom UI policies under normal policy constraints",
+      "Practically speaking, count of open catalog items for governed delivery",
+      "In platform terms, average incident reopen rate under expected controls"
+    ],
+    "correctIndex": 0,
+    "explanation": "Reuse optimization is measured by how effectively recoverable assets are returned to service.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/task/t_ManageHardwareAssets.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 87,
+    "prompt": "What is the strongest reason to reconcile asset and CMDB data regularly?",
+    "choices": [
+      "Operationally, to reduce ownership mismatches and reporting inconsistencies",
+      "In most deployments, to remove all lifecycle states from assets",
+      "In practice, to simplify dashboard theming under normal policy constraints",
+      "From an implementation standpoint, to avoid assignment updates for shared devices"
+    ],
+    "correctIndex": 0,
+    "explanation": "Regular reconciliation improves data integrity across operational and financial views of the same hardware.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/asset-management/concept/asset-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/c_DataManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 88,
+    "prompt": "Which governance control best prevents unauthorized high-value asset movement?",
+    "choices": [
+      "In this scenario, role-based transfer approvals with transaction logging",
+      "Practically speaking, use spreadsheet-only transfer tracking",
+      "In platform terms, skip destination verification for urgent moves",
+      "From an admin perspective, allow any itil user to update stockroom"
+    ],
+    "correctIndex": 0,
+    "explanation": "Approval and logging controls create traceable, auditable custody movement for sensitive assets.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/task/t_ManageHardwareAssets.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/roles/concept/c_Roles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 89,
+    "prompt": "Which reporting combination best supports HAM leadership decisions?",
+    "choices": [
+      "In this scenario, incident assignment group diversity under expected controls for stable outcomes",
+      "Practically speaking, total count of transform maps for stable outcomes in standard operations",
+      "In platform terms, number of dashboard favorites and homepage visits for consistent administration",
+      "From a governance perspective, lifecycle aging, warranty exposure, and data quality exception trends"
+    ],
+    "correctIndex": 3,
+    "explanation": "Leadership needs lifecycle, support exposure, and quality trend visibility to prioritize HAM actions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/hardware-asset-management/concept/hardware-asset-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  }
+]

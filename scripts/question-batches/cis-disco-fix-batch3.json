@@ -1,0 +1,507 @@
+[
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 60,
+    "prompt": "How does Discovery most directly contribute to CMDB update quality?",
+    "choices": [
+      "By storing raw probe outputs without normalization",
+      "By delaying CI updates until quarterly audits",
+      "By feeding fresh configuration evidence through identification and reconciliation logic",
+      "By inserting every discovery result as a brand-new CI"
+    ],
+    "correctIndex": 2,
+    "explanation": "Discovery data quality depends on IRE-driven update logic that prevents duplication and preserves authoritative source behavior.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/product/configuration-management/concept/identification-and-reconciliation.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 61,
+    "prompt": "Which control should be reviewed when discovered attributes are not updating expected CI fields?",
+    "choices": [
+      "Service catalog assignment rules for request items",
+      "Knowledge article publication workflows",
+      "Class-specific CMDB identification and reconciliation definitions",
+      "Dashboard color theme preferences"
+    ],
+    "correctIndex": 2,
+    "explanation": "When updates do not apply as expected, class-level identification and reconciliation policy is the first governance point to inspect.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/identification-and-reconciliation-rules.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 62,
+    "prompt": "Why is source precedence important for CMDB updates from multiple discovery feeds?",
+    "choices": [
+      "It removes dependency mapping requirements",
+      "It assigns one MID Server to every CI class",
+      "It stops lower-trust feeds from replacing authoritative attribute values",
+      "It writes every update to generic cmdb_ci only"
+    ],
+    "correctIndex": 2,
+    "explanation": "Source precedence ensures data stewardship by controlling which feed is authoritative for specific attributes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/product/configuration-management/concept/reconciliation-rules.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 63,
+    "prompt": "After Discovery tuning, what validation best confirms CMDB update integrity?",
+    "choices": [
+      "Verifying that scheduled jobs finished on time",
+      "Comparing only ECC queue volume week over week",
+      "Sampling representative CIs to confirm attributes and relationships match reality",
+      "Checking only whether MID heartbeat remains green"
+    ],
+    "correctIndex": 2,
+    "explanation": "Direct CI sampling validates that updated records reflect real environments rather than just successful job execution.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/product/configuration-management/task/validate-cmdb-data.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 64,
+    "prompt": "Which metric best indicates CMDB updates from discovery are improving over time?",
+    "choices": [
+      "Rising completeness with declining duplicate and conflict rates",
+      "More emergency edits to CI records after scans",
+      "Increasing number of stockroom transfers each month",
+      "Higher count of integration spokes installed"
+    ],
+    "correctIndex": 0,
+    "explanation": "Improvement is reflected by better data completeness and reduced duplicate or conflicting CI records.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/use/reporting/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 65,
+    "prompt": "A Discovery schedule stopped populating new CIs after a MID Server update. What is the best first troubleshooting action?",
+    "choices": [
+      "Purge all schedules and rebuild discovery configuration",
+      "Confirm MID health, assigned capabilities, and ECC communication for that scope",
+      "Run broad credential sweeps against every subnet immediately",
+      "Turn off identification rules to force inserts"
+    ],
+    "correctIndex": 1,
+    "explanation": "Discovery troubleshooting starts by confirming MID health and ECC communication before changing data-model controls.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/c_Discovery.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/mid-server/concept/c_MIDServer.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 66,
+    "prompt": "Which signal most directly indicates credentials are causing Discovery failures?",
+    "choices": [
+      "Sudden growth in service catalog submissions",
+      "Fewer P1 incidents during office hours",
+      "Authentication failures or probe timeouts in Discovery Status and ECC responses",
+      "Spike in user logins to Employee Center"
+    ],
+    "correctIndex": 2,
+    "explanation": "Authentication and timeout errors in Discovery execution records are primary indicators of credential issues.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/t_ConfigureDiscoveryCredentials.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/mid-server/concept/c_MIDServer.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 67,
+    "prompt": "How should you troubleshoot inconsistent CI updates from horizontal Discovery patterns?",
+    "choices": [
+      "Increase pattern frequency for every class without review",
+      "Drop CI class constraints from CMDB governance",
+      "Switch to manual CI creation for affected assets",
+      "Trace pattern debug output, classification decisions, and IRE diagnostics"
+    ],
+    "correctIndex": 3,
+    "explanation": "Pattern and IRE diagnostics reveal where data extraction, classification, or reconciliation is failing.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/horizontal-discovery.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/ire.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 68,
+    "prompt": "What troubleshooting approach best reduces repeat Discovery outages after network changes?",
+    "choices": [
+      "Use pre-change checks for firewall routes, DNS, and MID-to-target reachability",
+      "Silence discovery failure notifications to reduce alerts",
+      "Remove problematic ranges from all future schedules",
+      "Raise global concurrency settings without baseline tests"
+    ],
+    "correctIndex": 0,
+    "explanation": "Network path validation and controlled pre-checks prevent common post-change Discovery failures.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/c_Discovery.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/mid-server/task/t_TestMIDServerConnectivity.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 69,
+    "prompt": "Which KPI is most useful for measuring Discovery troubleshooting effectiveness over time?",
+    "choices": [
+      "Number of installed MID Servers regardless utilization",
+      "Trend of classification success and CI update rate with fewer recurring failure types",
+      "Volume of manual attribute corrections by administrators",
+      "Total count of discovery schedules created quarterly"
+    ],
+    "correctIndex": 1,
+    "explanation": "Improved success and reduced recurring failure causes indicate troubleshooting actions are working.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/c_Discovery.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 70,
+    "prompt": "Which administrative practice most improves long-term Discovery stability?",
+    "choices": [
+      "Bypassing change approvals for discovery configuration updates",
+      "Running discovery continuously with no protected maintenance windows",
+      "Allowing any team to edit probes directly in production",
+      "Enforcing documented ownership for schedules, credentials, probes, and MID upgrades"
+    ],
+    "correctIndex": 3,
+    "explanation": "Discovery administration is most effective when operational controls and ownership are clearly defined.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/c_Discovery.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 71,
+    "prompt": "What should be part of a Discovery admin baseline before onboarding a new network segment?",
+    "choices": [
+      "Approved ranges, credential standards, behavior settings, and role-scoped schedule access",
+      "Manual CI entry until the next governance committee meeting",
+      "Granting temporary admin rights to all fulfillment staff",
+      "Launching unrestricted full-port scans before validation"
+    ],
+    "correctIndex": 0,
+    "explanation": "A controlled baseline reduces onboarding risk by ensuring scope, security, and ownership are ready.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/t_SetUpDiscovery.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 72,
+    "prompt": "How should Discovery administrators handle MID Server lifecycle governance?",
+    "choices": [
+      "Keep one legacy MID Server online for all environments",
+      "Shift probe execution to browser-based scripts",
+      "Patch and rotate MID Servers on a planned cadence with health and capability checks",
+      "Disable MID auto-start services after each reboot"
+    ],
+    "correctIndex": 2,
+    "explanation": "MID lifecycle controls prevent compatibility and reliability drift across Discovery operations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/mid-server/concept/c_MIDServer.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/mid-server/task/t_UpgradeMIDServer.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 73,
+    "prompt": "Which administrative control best protects Discovery from unauthorized scope expansion?",
+    "choices": [
+      "Require approved changes and segregated roles for schedule and range modifications",
+      "Disable record auditing on Discovery schedule tables",
+      "Permit any itil user to append new subnets",
+      "Reuse a single privileged account across domains"
+    ],
+    "correctIndex": 0,
+    "explanation": "Role segregation and change governance prevent unmanaged scanning scope and security exposure.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 74,
+    "prompt": "Which KPI set best reflects effective Discovery administration?",
+    "choices": [
+      "Total number of users with discovery_admin rights",
+      "Monthly volume of custom probe development",
+      "Maximum daily scan attempts regardless outcomes",
+      "Stable success rates, MID uptime, controlled scope changes, and prompt failure remediation"
+    ],
+    "correctIndex": 3,
+    "explanation": "Administrative quality is measured by stability, governance discipline, and issue response effectiveness.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/c_Discovery.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 75,
+    "prompt": "What is the safest way to onboard Discovery for a new subnet range?",
+    "choices": [
+      "Execute discovery from analyst laptops on the target VLAN",
+      "Turn off Discovery status reporting during onboarding",
+      "Place enterprise-wide IP space into one always-on job",
+      "Verify subnet ownership, credentials, and scan windows before enabling schedules"
+    ],
+    "correctIndex": 3,
+    "explanation": "Controlled onboarding reduces operational risk by validating scope, access, and timing before scans execute.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/t_SetUpDiscovery.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/c_Discovery.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 76,
+    "prompt": "Which credential approach best supports secure Discovery operations?",
+    "choices": [
+      "Hardcode credentials directly inside probe definitions",
+      "Use one shared domain admin for every protocol target",
+      "Track secrets only in offline spreadsheets",
+      "Use least-privilege credentials segmented by protocol and environment"
+    ],
+    "correctIndex": 3,
+    "explanation": "Credential segmentation by protocol and scope limits blast radius and improves auditability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/t_ConfigureDiscoveryCredentials.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 77,
+    "prompt": "A Discovery schedule has many probe failures after a platform update. What should an admin check first?",
+    "choices": [
+      "Validate MID version compatibility, capabilities, and runtime health first",
+      "Review PA indicator snapshot freshness",
+      "Audit catalog variable encryption settings",
+      "Disable global ACL debugging for performance"
+    ],
+    "correctIndex": 0,
+    "explanation": "Discovery execution depends heavily on MID Server health and version alignment after upgrades.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/mid-server/concept/c_MIDServer.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/mid-server/task/t_UpgradeMIDServer.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 78,
+    "prompt": "Why is CMDB identification and reconciliation important to Discovery results?",
+    "choices": [
+      "It decides whether discovered records match existing CIs or create new ones",
+      "It replaces schedule planning for all discovery jobs",
+      "It governs homepage widget publication permissions",
+      "It intentionally creates duplicate CIs per scan"
+    ],
+    "correctIndex": 0,
+    "explanation": "Identification and reconciliation rules help keep CMDB data authoritative and prevent duplicate CI creation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/c_ConfigurationManagement.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/c_Discovery.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 79,
+    "prompt": "Which metric best indicates Discovery process health?",
+    "choices": [
+      "Headcount of admins with Discovery roles",
+      "Scan success consistency plus rapid remediation of recurring probe failures",
+      "Weekly update set creation totals",
+      "Number of custom dashboard widgets"
+    ],
+    "correctIndex": 1,
+    "explanation": "Healthy Discovery operations are reflected by stable scan completion and disciplined failure remediation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/c_Discovery.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 80,
+    "prompt": "Why should Discovery schedules align with change windows?",
+    "choices": [
+      "To require all probes to execute every minute",
+      "To prevent unmanaged scanning during sensitive infrastructure changes",
+      "To automatically consolidate CMDB classes",
+      "To suspend reconciliation rules during maintenance periods"
+    ],
+    "correctIndex": 1,
+    "explanation": "Coordinating with change windows minimizes operational disruption and prevents misleading discovery results.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/c_Discovery.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 81,
+    "prompt": "What is the best control for Discovery credential rotation?",
+    "choices": [
+      "Managed credential records with scheduled rotation and validation testing",
+      "Pause Discovery after each credential update",
+      "Store shared passwords in collaboration chat channels",
+      "Rotate access secrets only during annual audits"
+    ],
+    "correctIndex": 0,
+    "explanation": "Managed credential rotation with validation maintains security without breaking discovery coverage.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/security/concept/c_CredentialsAndSecrets.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/t_ConfigureDiscoveryCredentials.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 82,
+    "prompt": "What should a Discovery admin do when duplicate server CIs appear after scans?",
+    "choices": [
+      "Disable CMDB health dashboards to hide duplicates",
+      "Increase scan frequency to overwrite conflicting records",
+      "Inspect identification and reconciliation rules for the affected CI classes",
+      "Delete duplicate CI records manually on a weekly cadence"
+    ],
+    "correctIndex": 2,
+    "explanation": "Duplicate CI issues usually point to identification or reconciliation configuration gaps for discovered classes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/c_ConfigurationManagement.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/c_Discovery.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 83,
+    "prompt": "Which MID Server practice best supports resilient Discovery execution?",
+    "choices": [
+      "Operate one MID Server across all environments without redundancy",
+      "Monitor MID health and plan cluster capacity for failover and growth",
+      "Restrict each MID Server to a single probe type forever",
+      "Block MID service restarts after patch deployment"
+    ],
+    "correctIndex": 1,
+    "explanation": "Monitoring and planning MID capacity reduces bottlenecks and improves Discovery reliability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/mid-server/concept/c_MIDServer.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/mid-server/task/t_UpgradeMIDServer.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 84,
+    "prompt": "Which reporting view is most useful for Discovery operations management?",
+    "choices": [
+      "Number of dashboard tabs created by admins",
+      "Trends in scan success and the most common recurring probe error categories",
+      "Quarterly catalog request totals by department",
+      "Count of ACL rules per scoped application"
+    ],
+    "correctIndex": 1,
+    "explanation": "Operational Discovery reporting should highlight success rates and repeat failure patterns for remediation planning.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/c_Discovery.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 85,
+    "prompt": "What should Discovery admins prioritize when scan completion rates drop suddenly?",
+    "choices": [
+      "Remove identification rules to speed up CI writes",
+      "Convert discovery activity into catalog tasks",
+      "Review schedule scope, credential validity, and MID health indicators",
+      "Permanently disable discovery schedules"
+    ],
+    "correctIndex": 2,
+    "explanation": "Completion drops are typically linked to scope, access, or MID execution issues that need targeted review.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/c_Discovery.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/mid-server/concept/c_MIDServer.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 86,
+    "prompt": "Why should a team avoid overlapping Discovery schedules on the same range without coordination?",
+    "choices": [
+      "It accelerates probe execution with no tradeoffs",
+      "It removes dependence on MID Server infrastructure",
+      "It can create contention and duplicate processing signals across runs",
+      "It lowers overall CMDB update throughput"
+    ],
+    "correctIndex": 2,
+    "explanation": "Uncoordinated overlapping schedules can create unnecessary load and inconsistent operational signals.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/t_SetUpDiscovery.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/c_Discovery.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 87,
+    "prompt": "Which practice best supports secure Discovery account management?",
+    "choices": [
+      "Save credential passwords inside update set descriptions",
+      "Use scoped least-privilege accounts with a defined rotation policy",
+      "Share one highly privileged account for all protocols and domains",
+      "Skip credential testing in non-production environments"
+    ],
+    "correctIndex": 1,
+    "explanation": "Scoped least-privilege credentials with rotation reduce risk while maintaining operational control.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/security/concept/c_CredentialsAndSecrets.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/t_ConfigureDiscoveryCredentials.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 88,
+    "prompt": "Which CMDB outcome shows Discovery is well-governed?",
+    "choices": [
+      "Consistent CI identification, low duplicate creation, and timely reconciliation outcomes",
+      "Rapid growth of unknown CI class records",
+      "Frequent manual cleanup of duplicate server entries",
+      "Increasing number of admins with unrestricted rights"
+    ],
+    "correctIndex": 0,
+    "explanation": "Well-governed discovery should produce stable CI identity and controlled reconciliation outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/c_ConfigurationManagement.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/c_Discovery.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DISCO",
+    "order": 89,
+    "prompt": "What is the best operational use of Discovery failure trend reports?",
+    "choices": [
+      "Use recurring failure patterns to prioritize remediation backlog work",
+      "Escalate every failed probe to the change advisory board",
+      "Purge failure history logs every week",
+      "Disable probes that fail more than once"
+    ],
+    "correctIndex": 0,
+    "explanation": "Failure trend analysis helps teams focus on highest-impact recurring issues and improve stability over time.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/c_Discovery.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  }
+]

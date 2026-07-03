@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 45,
+		"prompt": "Which role is required to create and manage blackout and maintenance schedules in Simplified Change Management?",
+		"choices": [
+			"sn_itsm_chg_admin.change_schedules_config",
+			"catalog_admin without Change Management schedule permissions",
+			"sn_incident_write for all change schedule records",
+			"itil_admin as the only role that can edit blackout windows"
+		],
+		"correctIndex": 0,
+		"explanation": "The change_schedules_config role on sn_itsm_chg_admin grants access to configure blackout and maintenance schedules from the Change schedules console.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/configure-schedules-for-simplified-change-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 46,
+		"prompt": "How does a maintenance window differ from a blackout schedule in Simplified Change Management?",
+		"choices": [
+			"A maintenance window permits changes only during the defined period, while a blackout schedule blocks changes during the defined period",
+			"A maintenance window permanently blocks all change types, while a blackout schedule auto-approves standard templates",
+			"A maintenance window applies only to incident records, while blackout schedules apply only to problem records",
+			"A maintenance window replaces CAB authorization, while blackout schedules disable risk assessment scoring"
+		],
+		"correctIndex": 0,
+		"explanation": "Maintenance windows designate periods when changes are expected and permitted; blackout schedules define critical periods when changes are blocked.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/configure-schedules-for-simplified-change-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 47,
+		"prompt": "When creating a change schedule in Simplified Change Management, which scope option applies the schedule to a specific class of configuration items such as all Windows servers?",
+		"choices": [
+			"All CIs across the organization without class filtering",
+			"CI class",
+			"Change request attributes such as assignment group or change model only",
+			"Record producer variable sets on catalog items"
+		],
+		"correctIndex": 1,
+		"explanation": "Schedule scope can target all CIs, a specific CI class, or change request attributes; CI class limits enforcement to CIs in the selected class.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/configure-schedules-for-simplified-change-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 48,
+		"prompt": "After a blackout or maintenance schedule is saved in Simplified Change Management, how does the platform use it?",
+		"choices": [
+			"Only for annual change volume reporting without affecting approvals",
+			"As the authoritative source for conflict detection and change enforcement logic",
+			"To auto-generate known error articles from completed change tasks",
+			"To replace the Normal change model availability settings entirely"
+		],
+		"correctIndex": 1,
+		"explanation": "Active blackout and maintenance schedules feed conflict detection and downstream change enforcement once marked configured.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/configure-schedules-for-simplified-change-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 49,
+		"prompt": "By default, who receives the Change request state change notification when a change progresses to Scheduled, Implement, Review, or Canceled?",
+		"choices": [
+			"The user who originally requested the change",
+			"The user who updated the state on the change request",
+			"Every CAB delegate listed on the change record automatically",
+			"The MID Server discovery service account configured for the instance"
+		],
+		"correctIndex": 0,
+		"explanation": "The default Change request state change notification emails the original requester on key state transitions; it does not notify the user who performed the state update.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/change-management/configure-state-change-notifications.html"
+		]
+	}
+]

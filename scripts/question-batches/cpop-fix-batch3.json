@@ -1,0 +1,469 @@
+[
+  {
+    "trackCode": "CPOP",
+    "order": 56,
+    "prompt": "Which signal most clearly indicates emerging capacity risk in enterprise instances?",
+    "choices": [
+      "For signal clearly indicates emerging, more dashboard widgets created monthly.",
+      "The approach here is increasing transaction latency and queue backlog during expected demand windows.",
+      "In this signal clearly indicates emerging scenario, growth in knowledge article attachments.",
+      "This option centers on higher number of catalog items published."
+    ],
+    "correctIndex": 1,
+    "explanation": "Latency and backlog under normal peaks are direct early warnings of constrained capacity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 57,
+    "prompt": "How should professional governance address competing capacity demands from multiple product teams?",
+    "choices": [
+      "In this should professional governance address scenario, use a prioritization framework based on business criticality, SLA impact, and risk.",
+      "This option centers on allow teams to self-assign infrastructure allocations.",
+      "The approach here is reserve all capacity for emergency change work.",
+      "Operationally, this means allocate resources equally regardless service importance."
+    ],
+    "correctIndex": 0,
+    "explanation": "Risk-based prioritization aligns finite capacity with enterprise outcomes and operational commitments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/service-level-management/concept/service-level-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 58,
+    "prompt": "What governance artifact best supports repeatable capacity planning reviews?",
+    "choices": [
+      "This option centers on a one-time architecture presentation deck.",
+      "The approach here is team-specific planning notes without shared definitions.",
+      "From a platform-owner view, an ad hoc list of performance incidents only.",
+      "Operationally, this means a capacity model with baseline metrics, demand forecasts, and trigger thresholds."
+    ],
+    "correctIndex": 3,
+    "explanation": "A formal capacity model enables consistent review, escalation, and decision-making across teams.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 59,
+    "prompt": "Which outcome demonstrates mature capacity planning governance?",
+    "choices": [
+      "Operationally, this means frequent unplanned release delays due to performance uncertainty.",
+      "From a platform-owner view, higher volume of manual ticket rerouting during surges.",
+      "The approach here is predictable peak performance with fewer emergency scaling actions and sustained SLA attainment.",
+      "A team would proceed by increasing backlog of unresolved platform bottlenecks."
+    ],
+    "correctIndex": 2,
+    "explanation": "Mature governance reduces reactive firefighting by making capacity decisions proactive and measurable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/service-level-management/concept/service-level-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 60,
+    "prompt": "What is the primary purpose of environment sequencing governance in ServiceNow delivery?",
+    "choices": [
+      "Operationally, this means use any environment order based on team preference.",
+      "A team would proceed by ensure changes flow through defined stages with validation gates before production.",
+      "From a platform-owner view, skip testing in pre-production for routine changes.",
+      "This answer proposes allow direct production deployments for low-risk updates."
+    ],
+    "correctIndex": 1,
+    "explanation": "Sequenced promotion controls reduce release risk by enforcing staged validation and approval.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-application-development/page/build/team-development/concept/c_TeamDevelopment.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 61,
+    "prompt": "Which control best prevents environment drift from undermining sequencing governance?",
+    "choices": [
+      "A team would proceed by standardize configuration baselines and run periodic drift comparisons across environments.",
+      "From a platform-owner view, rely solely on production incident trends.",
+      "This answer proposes permit each environment to evolve independently.",
+      "For control prevents environment drift, disable update set history after deployment."
+    ],
+    "correctIndex": 0,
+    "explanation": "Drift management keeps test and production behavior aligned so sequence decisions remain meaningful.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/plugins/concept/c_ActivatingPlugins.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 62,
+    "prompt": "How should urgent production fixes be handled within environment sequencing governance?",
+    "choices": [
+      "This answer proposes patch production only and skip downstream reconciliation.",
+      "For should urgent production fixes, pause all emergency fixes until normal release windows.",
+      "In this should urgent production fixes scenario, allow developers to choose personal sequencing methods.",
+      "A team would proceed by use emergency process controls and back-promote validated changes to lower environments."
+    ],
+    "correctIndex": 3,
+    "explanation": "Emergency governance requires controlled exceptions and post-fix reconciliation to preserve sequence integrity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-application-development/page/build/team-development/concept/c_TeamDevelopment.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 63,
+    "prompt": "What evidence most strongly supports compliance with environment sequencing policy?",
+    "choices": [
+      "This answer proposes a deployment calendar without execution details.",
+      "For evidence strongly supports compliance, only the final production change ticket.",
+      "This option centers on promotion records showing approvals, test outcomes, and deployment lineage across stages.",
+      "In this evidence strongly supports compliance scenario, informal handoff notes between developers."
+    ],
+    "correctIndex": 2,
+    "explanation": "Complete promotion lineage is necessary to prove process adherence and support auditability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-application-development/page/build/team-development/concept/c_TeamDevelopment.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 64,
+    "prompt": "Which outcome indicates strong environment sequencing governance?",
+    "choices": [
+      "For outcome indicates strong environment, longer approval queues with no risk differentiation.",
+      "This option centers on lower deployment failure rates with fewer rollback events and predictable release cadence.",
+      "In this outcome indicates strong environment scenario, more post-release incidents attributed to configuration mismatch.",
+      "The approach here is higher volume of direct production changes."
+    ],
+    "correctIndex": 1,
+    "explanation": "Effective sequencing governance improves release reliability and reduces avoidable deployment disruption.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 65,
+    "prompt": "In platform ownership governance, what is the strongest audit readiness control for production changes?",
+    "choices": [
+      "This option centers on maintain traceable evidence from approved request through testing, promotion, and post-implementation validation.",
+      "In this platform ownership governance strongest scenario, keep evidence only for failed changes.",
+      "The approach here is allow emergency changes without documentation when deadlines are tight.",
+      "Operationally, this means rely on verbal approvals captured in team meetings."
+    ],
+    "correctIndex": 0,
+    "explanation": "Auditors need end-to-end traceability proving changes were authorized, tested, and implemented under control.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html",
+      "https://www.servicenow.com/docs/bundle/vancouver-application-development/page/build/system-update-sets/concept/update-set-procedures.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 66,
+    "prompt": "Which role strategy best supports compliance for a platform team handling sensitive administrative functions?",
+    "choices": [
+      "The approach here is grant admin to all delivery personnel for speed.",
+      "Operationally, this means use one shared super-user account for all deployments.",
+      "From a platform-owner view, remove role reviews after initial onboarding.",
+      "This option centers on use least privilege with separation of duties between requesters, implementers, and approvers."
+    ],
+    "correctIndex": 3,
+    "explanation": "Role separation and least privilege are foundational controls for reducing fraud and operational risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/roles/concept/c_Roles.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 67,
+    "prompt": "What evidence artifact most directly supports an auditor's review of skipped updates after a family upgrade?",
+    "choices": [
+      "The approach here is a screenshot of the upgrade start time only.",
+      "Operationally, this means an informal chat transcript with no record references.",
+      "A team would proceed by a documented resolution record showing analysis, disposition, and validation results.",
+      "From a platform-owner view, a list of unrelated incidents closed that week."
+    ],
+    "correctIndex": 2,
+    "explanation": "Auditors look for specific records that demonstrate conflicts were assessed and resolved through controlled process.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/customer-support/task/t_ResolveASkippedUpdate.html",
+      "https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 68,
+    "prompt": "Which monitoring pattern best strengthens continuous compliance for platform operations?",
+    "choices": [
+      "From a platform-owner view, disable alerts to reduce operational workload.",
+      "Operationally, this means define control indicators and exception thresholds, then track and remediate breaches on schedule.",
+      "A team would proceed by rely exclusively on annual external audits.",
+      "This answer proposes perform compliance checks only after major incidents."
+    ],
+    "correctIndex": 1,
+    "explanation": "Continuous control monitoring helps detect and address compliance drift before audit or business impact escalates.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 69,
+    "prompt": "When an internal audit identifies repeated policy exceptions in change implementation, what should the platform owner do first?",
+    "choices": [
+      "A team would proceed by launch corrective actions with accountable owners and target dates, then verify closure evidence.",
+      "From a platform-owner view, archive the findings until the next quarter.",
+      "This answer proposes treat all exceptions as acceptable business variance.",
+      "For internal audit identifies repeated, pause all platform changes indefinitely."
+    ],
+    "correctIndex": 0,
+    "explanation": "Effective compliance response requires structured remediation ownership and measurable closure validation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 70,
+    "prompt": "What is the most important go/no-go criterion before a production cutover?",
+    "choices": [
+      "A team would proceed by the deployment window is the shortest available.",
+      "This answer proposes every stakeholder prefers the same dashboard layout.",
+      "For important go no go, all non-critical cosmetic defects are resolved.",
+      "In this important go no go scenario, critical business scenarios have passed validation and rollback readiness is confirmed."
+    ],
+    "correctIndex": 3,
+    "explanation": "Cutover readiness is primarily about validated business continuity and recoverability, not cosmetic completeness.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html",
+      "https://www.servicenow.com/docs/bundle/vancouver-application-development/page/build/system-update-sets/concept/update-set-procedures.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 71,
+    "prompt": "Which cutover runbook element most directly reduces production risk?",
+    "choices": [
+      "For cutover runbook element directly, a list of optional improvements for next quarter.",
+      "In this cutover runbook element directly scenario, only the name of the release manager.",
+      "This answer proposes clear step sequencing, decision checkpoints, and explicit rollback triggers.",
+      "This option centers on a long narrative history of previous projects."
+    ],
+    "correctIndex": 2,
+    "explanation": "Runbooks are risk controls when they define exact execution steps and conditions for safe rollback.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-application-development/page/build/system-update-sets/concept/update-set-procedures.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 72,
+    "prompt": "During production cutover, why should platform owners enforce a controlled change freeze scope?",
+    "choices": [
+      "For during production cutover why, to stop all service desk activity organization-wide.",
+      "This option centers on to prevent conflicting modifications that undermine validation and rollback assumptions.",
+      "In this during production cutover why scenario, to bypass approval workflows for urgent requests.",
+      "The approach here is to remove the need for post-cutover monitoring."
+    ],
+    "correctIndex": 1,
+    "explanation": "Cutover assumptions remain reliable only when concurrent change volume is constrained and governed.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html",
+      "https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 73,
+    "prompt": "What is the best post-cutover hypercare operating model for platform ownership teams?",
+    "choices": [
+      "In this post cutover hypercare operating scenario, use enhanced monitoring, rapid triage routing, and daily risk review until stability criteria are met.",
+      "This option centers on delay monitoring until weekly reporting cycles.",
+      "The approach here is close all deployment-related incidents automatically after 24 hours.",
+      "Operationally, this means route all post-cutover issues to development only."
+    ],
+    "correctIndex": 0,
+    "explanation": "Hypercare should provide fast detection and coordinated response until production behavior is stable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 74,
+    "prompt": "Which closure activity most improves future production cutovers after stabilization?",
+    "choices": [
+      "This option centers on archive all cutover artifacts immediately without review.",
+      "The approach here is skip retrospective analysis if no Sev-1 incidents occurred.",
+      "Operationally, this means keep rollback plans undocumented to reduce overhead.",
+      "From a platform-owner view, capture lessons learned, update runbooks, and formalize control improvements for the next release."
+    ],
+    "correctIndex": 3,
+    "explanation": "Structured retrospectives convert cutover experience into repeatable improvements in delivery governance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 75,
+    "prompt": "A platform owner is defining operating governance for a new platform council. Which artifact should be created first?",
+    "choices": [
+      "Operationally, this means a report that ranks developers by update set volume.",
+      "From a platform-owner view, a list of all historical incidents from legacy systems.",
+      "The approach here is a decision-rights charter with clear ownership and escalation paths.",
+      "A team would proceed by a backlog of UI enhancements requested by power users."
+    ],
+    "correctIndex": 2,
+    "explanation": "A governance charter defines who decides, who executes, and how exceptions are escalated, which is foundational for consistent platform ownership.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 76,
+    "prompt": "Which review cadence best supports governance for enterprise platform standards?",
+    "choices": [
+      "From a platform-owner view, whenever a developer requests admin rights.",
+      "Operationally, this means a recurring monthly standards and exceptions review.",
+      "A team would proceed by only after a Sev-1 outage.",
+      "This answer proposes once per year during budget season."
+    ],
+    "correctIndex": 1,
+    "explanation": "A regular governance cadence keeps standards current and prevents unmanaged exception growth.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 77,
+    "prompt": "A team wants to bypass a required standard for a critical release. What is the best governance response?",
+    "choices": [
+      "A team would proceed by use a documented exception process with risk acceptance and expiry.",
+      "From a platform-owner view, approve immediately to preserve release velocity.",
+      "This answer proposes reject all exceptions to avoid precedent.",
+      "For team wants bypass required, move the change to global scope to avoid review."
+    ],
+    "correctIndex": 0,
+    "explanation": "Governed exceptions should include risk, accountable approvers, and a defined end date.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 78,
+    "prompt": "What KPI most directly indicates governance process health?",
+    "choices": [
+      "A team would proceed by total plugins installed in production.",
+      "For kpi directly indicates governance, count of active users in self-service portal.",
+      "In this kpi directly indicates governance scenario, number of active update sets.",
+      "This answer proposes percent of changes meeting defined control gates before deployment."
+    ],
+    "correctIndex": 3,
+    "explanation": "Control-gate adherence reflects whether governance controls are actually operating before release.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 79,
+    "prompt": "For cross-functional governance, what RACI issue creates the highest operational risk?",
+    "choices": [
+      "This answer proposes weekly status reports sent in PDF format.",
+      "For cross functional governance raci, different teams using different dashboard colors.",
+      "In this cross functional governance raci scenario, unclear accountability for final production go/no-go decisions.",
+      "This option centers on a larger than expected CAB attendee list."
+    ],
+    "correctIndex": 2,
+    "explanation": "Unclear decision accountability causes delays and conflicting direction during high-risk releases.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 80,
+    "prompt": "Which governance control best reduces policy drift across product teams?",
+    "choices": [
+      "For governance control reduces policy, let each team publish local standards only.",
+      "In this governance control reduces policy scenario, maintain a centrally versioned standard and enforce periodic attestations.",
+      "This option centers on disable all customizations in sub-production.",
+      "The approach here is track compliance only after production incidents."
+    ],
+    "correctIndex": 1,
+    "explanation": "Versioned standards plus attestations create traceable alignment across distributed teams.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 81,
+    "prompt": "A governance board needs visibility into control failures. Which reporting view is most useful?",
+    "choices": [
+      "This option centers on a dashboard of breached controls, owners, and remediation due dates.",
+      "In this governance board needs visibility scenario, a count of catalog requests by assignment group.",
+      "The approach here is a snapshot of role grants in the last 24 hours only.",
+      "Operationally, this means a list of all open incidents regardless of source."
+    ],
+    "correctIndex": 0,
+    "explanation": "Governance decisions require owner-level accountability and remediation tracking, not just raw volume data.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 82,
+    "prompt": "What is the best way to govern platform design decisions across multiple agile teams?",
+    "choices": [
+      "This option centers on require every decision to be approved by all developers.",
+      "The approach here is document decisions in personal notes and share on request.",
+      "From a platform-owner view, allow architecture choices only after production deployment.",
+      "Operationally, this means use an architecture decision record process with review checkpoints."
+    ],
+    "correctIndex": 3,
+    "explanation": "A formal decision record process supports traceability, reuse, and controlled exceptions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html"
+    ]
+  },
+  {
+    "trackCode": "CPOP",
+    "order": 83,
+    "prompt": "Which practice best improves governance maturity for release communications?",
+    "choices": [
+      "The approach here is notify all stakeholders only after cutover is complete.",
+      "From a platform-owner view, send release notices only when a failure occurs.",
+      "Operationally, this means define stakeholder notification standards by change risk tier.",
+      "A team would proceed by limit release communication to platform admins."
+    ],
+    "correctIndex": 2,
+    "explanation": "Risk-based communication standards align messaging depth and timing to release impact.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+    ]
+  }
+]

@@ -1,0 +1,402 @@
+[
+  {
+    "trackCode": "CIS-SP",
+    "order": 0,
+    "prompt": "Telecommunications service operations solutions on ServiceNow commonly emphasize which outcome?",
+    "choices": [
+      "Eliminating integration with external inventory systems for enterprise implementation",
+      "Unifying customer- and network-oriented service workflows for communication service providers for operational consistency",
+      "Disabling all scoped applications for role-based accountability for measurable outcomes",
+      "Removing CMDB usage entirely for production readiness"
+    ],
+    "correctIndex": 1,
+    "explanation": "Telecom service operations documentation positions the product around CSP workflows spanning service and operations domains.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-telecom-service-ops/page/product/tmt-telecom-service-operations-mgt/concept/telecom-service-operations-mgt-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 1,
+    "prompt": "In IntegrationHub, what is a spoke best characterized as?",
+    "choices": [
+      "A scoped package that delivers actions and related artifacts to connect with external systems for sustained reliability",
+      "A PA breakdown source table for measurable outcomes",
+      "A clone preserver record for practical execution",
+      "A UI Policy applied to the email client for controlled governance"
+    ],
+    "correctIndex": 0,
+    "explanation": "Spokes package integration content such as actions for use from flows and integrations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-integrate-applications/page/administer/integrationhub/concept/integrationhub.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 2,
+    "prompt": "Delegated development is intended to help organizations:",
+    "choices": [
+      "Empower designated non-admin developers to work within governed application boundaries for role-based accountability",
+      "Disable update set tracking for production readiness",
+      "Hide all ACL evaluations for enterprise implementation for controlled governance",
+      "Remove all testing requirements before production for operational consistency"
+    ],
+    "correctIndex": 0,
+    "explanation": "Delegated development lets admins delegate scoped development tasks to trusted users under application-level controls.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-application-development/page/build/applications/concept/c_DelegatedDevelopment.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 3,
+    "prompt": "Why is accurate CMDB class modeling important for provider-scale service and impact workflows?",
+    "choices": [
+      "It replaces Flow Designer entirely for practical execution",
+      "It removes the need for import sets for controlled governance",
+      "Inherited classes and attributes support consistent impact analysis and service mapping for sustained reliability",
+      "It prevents users from opening lists for measurable outcomes"
+    ],
+    "correctIndex": 2,
+    "explanation": "CMDB class models define how CIs specialize from base classes, which underpins reporting and operational use cases.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-servicenow-platform/page/product/configuration-management/concept/cmdb-ci-class-models.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 4,
+    "prompt": "What should a platform upgrade plan explicitly include to reduce operational risk during a major release?",
+    "choices": [
+      "Skipping review of skipped updates for measurable outcomes",
+      "Scope review, environment sequencing, validation of critical integrations, and rollback considerations for sustained reliability",
+      "Global disablement of business rules without a backlog for controlled governance",
+      "Permanent deletion of sub-production instances before testing for practical execution"
+    ],
+    "correctIndex": 1,
+    "explanation": "Upgrade planning documentation stresses structured preparation, testing across environments, and managing outcomes such as skipped updates.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 5,
+    "prompt": "In telecom service operations, what is the primary value of managing service-affecting work through structured operational tasks?",
+    "choices": [
+      "It automatically closes all customer cases when network alarms clear for operational consistency",
+      "It removes the need for maintenance windows for enterprise implementation",
+      "It enforces consistent assignment, execution tracking, and accountability for service work for production readiness",
+      "It replaces integration with external OSS systems for role-based accountability"
+    ],
+    "correctIndex": 2,
+    "explanation": "Operational task workflows standardize ownership and progress tracking, improving execution quality for telecom service operations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/telecommunications-service-management/vancouver/service-provider-workflows/concept/telecom-service-operations.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 6,
+    "prompt": "A provider wants to reduce duplicate effort between NOC and customer operations teams. Which process outcome is most important?",
+    "choices": [
+      "Independent queues with no cross-team updates for controlled governance",
+      "Separate service models for each resolver group for practical execution",
+      "Manual nightly export of all incident records for measurable outcomes",
+      "Shared visibility of incidents, tasks, and service impact across teams for sustained reliability"
+    ],
+    "correctIndex": 3,
+    "explanation": "Shared operational context allows coordinated response and avoids duplicate troubleshooting activities.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/service-operations/concept/cross-team-operations.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 7,
+    "prompt": "During a telecom outage, which capability helps operations prioritize restoration work by business impact?",
+    "choices": [
+      "Knowledge article ratings for production readiness",
+      "Catalog item variables for role-based accountability for measurable outcomes",
+      "User preference records for operational consistency for sustained reliability",
+      "Service impact and dependency visibility for enterprise implementation"
+    ],
+    "correctIndex": 3,
+    "explanation": "Impact visibility across dependent services and customers supports effective triage and restoration prioritization.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/service-operations/concept/service-impact-visibility.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 8,
+    "prompt": "Which statement best describes the role of SLAs in telecom service operations?",
+    "choices": [
+      "SLAs can run exclusively on closed records for controlled governance",
+      "SLAs exclusively apply to billing disputes, not technical work",
+      "SLAs replace assignment groups for all operational tickets for role-based accountability",
+      "SLAs define commitments and measure response/resolution performance for service tickets for production readiness"
+    ],
+    "correctIndex": 3,
+    "explanation": "Service-level commitments provide measurable targets for operations teams and customer-facing service delivery.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/service-operations/concept/service-level-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 9,
+    "prompt": "What is a common benefit of connecting operational alarms to service management workflows in telecom?",
+    "choices": [
+      "Eliminating the need for incident prioritization for sustained reliability",
+      "Preventing all duplicate records without tuning for measurable outcomes",
+      "Converting every alarm directly into a resolved case for practical execution",
+      "Accelerating detection-to-action by creating or enriching operational records automatically for controlled governance"
+    ],
+    "correctIndex": 3,
+    "explanation": "Alarm-to-workflow integration shortens time to response by automating record creation and contextual updates.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/service-operations/concept/event-driven-operations.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 10,
+    "prompt": "In Service Provider workflows, what is the primary benefit of using IntegrationHub spokes with external OSS/BSS tools?",
+    "choices": [
+      "They provide reusable actions that standardize integrations and reduce custom script maintenance for practical execution",
+      "They replace the need for flow logic for controlled governance",
+      "They remove all authentication requirements for external systems for sustained reliability",
+      "They can exclusively run from client scripts for role-based accountability"
+    ],
+    "correctIndex": 0,
+    "explanation": "Spokes package prebuilt actions for common operations, accelerating integration development and consistency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/integrationhub/vancouver/integrationhub/concept/c_IntegrationHubSpokes.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 11,
+    "prompt": "A telecom operations flow needs to open incidents in an external NMS when internal alarms are raised. Which IntegrationHub capability is most relevant?",
+    "choices": [
+      "Spoke actions with authenticated connections and data mapping for role-based accountability",
+      "Knowledge article feedback tasks for production readiness",
+      "UI policy scripts on incident forms for enterprise implementation",
+      "Flow Designer data pills for operational consistency for sustained reliability"
+    ],
+    "correctIndex": 0,
+    "explanation": "Spoke actions execute external API operations through configured connections and map operational context between systems.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/integrationhub/vancouver/integrationhub/task/t_UseSpokeActionsInFlowDesigner.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 12,
+    "prompt": "Why should connection and credential aliases be used in IntegrationHub for service provider automations?",
+    "choices": [
+      "They decouple flow logic from environment-specific endpoint and credential details for sustained reliability",
+      "They disable spoke version upgrades for measurable outcomes",
+      "They are required exclusively for manual flows for practical execution",
+      "They force all actions to run as guest users for controlled governance"
+    ],
+    "correctIndex": 0,
+    "explanation": "Aliases allow flows to stay portable across environments while administrators manage endpoints and credentials separately.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/integrationhub/vancouver/integrationhub/concept/c_ConnectionAndCredentialAliases.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 13,
+    "prompt": "A spoke action intermittently fails due to rate limits from a partner API. Which design practice is most appropriate?",
+    "choices": [
+      "Implement controlled retry and exception paths in Flow Designer for enterprise implementation",
+      "Disable error handling in the flow for operational consistency",
+      "Increase incident priority for all failures for role-based accountability",
+      "Retry indefinitely without delay for production readiness"
+    ],
+    "correctIndex": 0,
+    "explanation": "Resilient integration design includes bounded retries and explicit failure handling to manage transient API limitations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/integrationhub/vancouver/integrationhub/concept/flow-error-handling.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 14,
+    "prompt": "What is a key governance reason to prefer certified spokes over ad hoc scripted REST calls for recurring telecom integrations?",
+    "choices": [
+      "Certified spokes provide maintainable, supportable integration patterns with clearer lifecycle management for production readiness",
+      "Certified spokes always execute faster than any custom code for role-based accountability",
+      "Certified spokes eliminate the need for credentials for operational consistency",
+      "Certified spokes can be used exclusively in global scope"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using managed spoke capabilities improves consistency, supportability, and operational governance of integration automations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/integrationhub/vancouver/integrationhub/concept/c_IntegrationHubSpokes.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 15,
+    "prompt": "In network inventory management, why are accurate relationships between network resources and services critical?",
+    "choices": [
+      "They are required exclusively for billing invoices for enterprise implementation",
+      "They replace incident categorization for practical execution",
+      "They prevent all discovery errors automatically for measurable outcomes",
+      "They enable impact analysis and faster fault isolation across dependent services for sustained reliability"
+    ],
+    "correctIndex": 3,
+    "explanation": "Relationship fidelity allows operations teams to assess downstream impact and prioritize remediation effectively.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/network-inventory/concept/network-service-relationships.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 16,
+    "prompt": "What is a primary operational benefit of maintaining current network inventory attributes (location, vendor, model, status)?",
+    "choices": [
+      "It guarantees zero incident volume for operational consistency",
+      "It automatically resolves configuration drift for enterprise implementation",
+      "It removes the need for assignment groups for production readiness",
+      "It strengthens troubleshooting context, planning, and lifecycle governance"
+    ],
+    "correctIndex": 3,
+    "explanation": "Accurate asset and resource attributes support better operational decisions across incident, change, and capacity processes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/network-inventory/concept/network-inventory-data-model.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 17,
+    "prompt": "How does network inventory quality affect change risk assessment?",
+    "choices": [
+      "Risk is based exclusively on CAB voting results",
+      "Inventory quality has no impact on change outcomes for sustained reliability",
+      "exclusively software versions matter, not relationships for enterprise implementation",
+      "Complete and accurate inventory strengthens dependency visibility for safer change planning"
+    ],
+    "correctIndex": 3,
+    "explanation": "Reliable inventory and relationships reduce uncertainty and help teams evaluate blast radius before implementing changes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/network-inventory/concept/network-change-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 18,
+    "prompt": "Which practice most directly improves trust in network inventory data over time?",
+    "choices": [
+      "Restrict all inventory updates to annual audits exclusively",
+      "Allow unmanaged free-text updates without controls for controlled governance",
+      "Ignore discrepancies from discovery and operations teams for sustained reliability",
+      "Implement reconciliation and governance processes for continuous data quality for measurable outcomes"
+    ],
+    "correctIndex": 3,
+    "explanation": "Regular reconciliation and governed updates maintain inventory accuracy as network environments evolve.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/network-inventory/task/improve-inventory-data-quality.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 19,
+    "prompt": "When onboarding a new network domain into inventory, what should be established first?",
+    "choices": [
+      "A report export template for executives for role-based accountability",
+      "A portal theme update for NOC users for production readiness",
+      "A universal priority of P1 for all discovered resources for enterprise implementation",
+      "A defined model for classes, key attributes, ownership, and relationship standards for operational consistency"
+    ],
+    "correctIndex": 3,
+    "explanation": "A clear data model and governance baseline ensures newly onboarded inventory remains consistent and operationally useful.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/network-inventory/concept/network-inventory-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 20,
+    "prompt": "For communications service providers, what is the main benefit of linking customer-facing cases with underlying service operations records?",
+    "choices": [
+      "It prevents customers from opening additional cases for controlled governance",
+      "It enables agents to provide accurate status based on operational progress and service impact for practical execution",
+      "It removes the need for entitlement management for measurable outcomes",
+      "It forces all cases into major incident workflows for sustained reliability"
+    ],
+    "correctIndex": 1,
+    "explanation": "Case-to-operations linkage improves customer communication quality by grounding updates in real operational work context.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/csp-customer-service/concept/customer-service-operations-linkage.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 21,
+    "prompt": "In CSP customer service, why are account and service hierarchies important?",
+    "choices": [
+      "They disable SLA calculations for child services for production readiness",
+      "They support entitlement checks, prioritization, and routing based on customer context for role-based accountability",
+      "They are used exclusively for branding in portals",
+      "They replace agent assignment rules completely for enterprise implementation"
+    ],
+    "correctIndex": 1,
+    "explanation": "Account and service structures provide critical context for support eligibility, impact scope, and response handling.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/csp-customer-service/concept/account-service-hierarchy.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 22,
+    "prompt": "Which practice most improves first-contact resolution in CSP customer support?",
+    "choices": [
+      "Providing agents with service inventory, outage context, and recent activity at case intake for measurable outcomes",
+      "Routing all cases directly to engineering teams for sustained reliability",
+      "Avoiding integration with network operations for controlled governance",
+      "Limiting agent visibility to case notes exclusively for practical execution"
+    ],
+    "correctIndex": 0,
+    "explanation": "Rich operational context at intake helps agents diagnose faster and provide effective resolution or escalation decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/csp-customer-service/task/optimize-case-intake.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 23,
+    "prompt": "What is a common reason to automate case updates from operational workflow events in CSP environments?",
+    "choices": [
+      "To consistently stop customers from receiving outage notifications",
+      "To keep customers informed with on-time, consistent status without manual rework",
+      "To confirm agents never need to review task history",
+      "To consistently avoid using SLAs on customer cases"
+    ],
+    "correctIndex": 1,
+    "explanation": "Automated status propagation reduces manual effort and improves consistency and timeliness of customer communications.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/csp-customer-service/concept/automated-customer-updates.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 24,
+    "prompt": "When designing CSP customer service KPIs, which outcome best reflects service excellence?",
+    "choices": [
+      "Tracking exclusively ticket closure count per day for measurable outcomes",
+      "Disabling customer feedback collection for production readiness",
+      "Balanced focus on restoration speed, communication quality, and customer experience measures for enterprise implementation",
+      "Prioritizing low-severity cases over high-impact outages for operational consistency"
+    ],
+    "correctIndex": 2,
+    "explanation": "Effective CSP KPI design combines operational effectiveness with customer-perceived service quality.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/csp-customer-service/concept/customer-service-kpis.html"
+    ]
+  }
+]

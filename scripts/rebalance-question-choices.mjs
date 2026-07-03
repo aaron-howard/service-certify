@@ -1,6 +1,6 @@
 /**
- * Rebalance stored MCQ choices: shuffle order (update correctIndex) and lengthen
- * short distractors when the correct answer is an obvious length outlier.
+ * Rebalance stored MCQ choices by shuffling option order (updates correctIndex).
+ * Does not append shared boilerplate text — use per-question distractor rewrites instead.
  *
  * Usage: node scripts/rebalance-question-choices.mjs
  */
@@ -10,13 +10,6 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const bankPath = path.join(__dirname, '..', 'src', 'convex', 'seed', 'devQuestionBank.ts');
-
-const GENERIC_WRONG_EXTENSIONS = [
-	' without validating scope, credentials, or operational prerequisites',
-	' while bypassing standard governance controls and increasing operational risk',
-	' regardless of reconciliation, security policy, or instance readiness requirements',
-	' even when prerequisite data quality and ownership are not confirmed'
-];
 
 function hashString(seed) {
 	let hash = 0;
@@ -37,40 +30,14 @@ function choicePermutationForSeed(length, seed) {
 	return permutation;
 }
 
-function longestCorrectCount(questions) {
-	let count = 0;
-	for (const q of questions) {
-		const max = Math.max(...q.choices.map((c) => c.length));
-		if (q.choices[q.correctIndex].length === max) count++;
-	}
-	return count;
-}
-
 function rebalanceQuestion(q) {
 	const permutation = choicePermutationForSeed(
 		q.choices.length,
 		`bank:${q.trackCode}:${q.order}`
 	);
-	const shuffledChoices = permutation.map((i) => q.choices[i]);
-	const shuffledCorrect = permutation.indexOf(q.correctIndex);
-
-	const correctLen = shuffledChoices[shuffledCorrect].length;
-	const wrongIndices = shuffledChoices.map((_, i) => i).filter((i) => i !== shuffledCorrect);
-	const avgWrongLen =
-		wrongIndices.reduce((sum, i) => sum + shuffledChoices[i].length, 0) / wrongIndices.length;
-
-	const choices = shuffledChoices.map((text, i) => {
-		if (i === shuffledCorrect) return text;
-		if (correctLen <= avgWrongLen * 1.1) return text;
-		if (text.length >= correctLen * 0.75) return text;
-		const ext =
-			GENERIC_WRONG_EXTENSIONS[
-				hashString(`${q.trackCode}:${q.order}:${i}`) % GENERIC_WRONG_EXTENSIONS.length
-			];
-		return `${text}${ext}`;
-	});
-
-	return { ...q, choices, correctIndex: shuffledCorrect };
+	const choices = permutation.map((i) => q.choices[i]);
+	const correctIndex = permutation.indexOf(q.correctIndex);
+	return { ...q, choices, correctIndex };
 }
 
 function readBank() {
@@ -90,10 +57,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = ${JSON.stringify
 }
 
 const bank = readBank();
-const before = longestCorrectCount(bank);
 const rebalanced = bank.map(rebalanceQuestion);
-const after = longestCorrectCount(rebalanced);
 
 writeBank(rebalanced);
-console.log(`Rebalanced ${rebalanced.length} questions`);
-console.log(`Longest-correct bias: ${before} -> ${after} (${((after / rebalanced.length) * 100).toFixed(1)}%)`);
+console.log(`Shuffled choice order for ${rebalanced.length} questions`);
