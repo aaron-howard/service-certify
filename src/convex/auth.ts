@@ -1,6 +1,7 @@
 import { mutation, query } from './_generated/server';
 import { v } from 'convex/values';
-import { isAdminEmail, isAdminUser, resolveUserRole } from './lib/authorization';
+import { isAdminEmail } from './lib/adminEmails';
+import { isAdminUser, resolveUserRole, getAuthenticatedUser } from './lib/authorization';
 
 /**
  * Get or create user from WorkOS identity.
@@ -69,14 +70,7 @@ export const createOrUpdateUser = mutation({
 export const getCurrentUser = query({
 	args: {},
 	handler: async (ctx) => {
-		const identity = await ctx.auth.getUserIdentity();
-		if (!identity) return null;
-
-		const user = await ctx.db
-			.query('users')
-			.withIndex('by_workosId', (q) => q.eq('workosId', identity.subject))
-			.unique();
-
+		const user = await getAuthenticatedUser(ctx);
 		if (!user) return null;
 
 		const role = resolveUserRole(user.role);
@@ -109,18 +103,9 @@ export const getUserByEmail = query({
 export const deleteAccount = mutation({
 	args: {},
 	handler: async (ctx) => {
-		const identity = await ctx.auth.getUserIdentity();
-		if (!identity) {
-			throw new Error('Not authenticated');
-		}
-
-		const user = await ctx.db
-			.query('users')
-			.withIndex('by_workosId', (q) => q.eq('workosId', identity.subject))
-			.unique();
-
+		const user = await getAuthenticatedUser(ctx);
 		if (!user) {
-			throw new Error('User not found');
+			throw new Error('Not authenticated');
 		}
 
 		const progress = await ctx.db
