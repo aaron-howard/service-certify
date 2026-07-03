@@ -19,10 +19,8 @@
 	const bank = useQuery(
 		api.practiceQuestions.listByTrackCode,
 		() =>
-			browser && env.PUBLIC_CONVEX_URL
-				? isFullMock
-					? { trackCode: exam.code, mode, sessionSeed }
-					: { trackCode: exam.code, mode }
+			browser && env.PUBLIC_CONVEX_URL && !isFullMock
+				? { trackCode: exam.code, mode: 'sample' as const }
 				: 'skip'
 	);
 
@@ -44,6 +42,14 @@
 		typeof env.PUBLIC_CONVEX_URL === 'string' && env.PUBLIC_CONVEX_URL.length > 0;
 
 	const questions = $derived.by((): Q[] => {
+		if (isFullMock && data.serverQuestions) {
+			return data.serverQuestions.map((r) => ({
+				id: r.order,
+				prompt: r.prompt,
+				choices: r.choices
+			}));
+		}
+
 		const rows = bank.data;
 		if (!rows?.length) return [];
 		return rows.map((r) => ({
@@ -52,6 +58,11 @@
 			choices: r.choices
 		}));
 	});
+
+	const questionsLoadError = $derived(
+		isFullMock ? data.questionsError : bank.error?.message ?? null
+	);
+	const questionsLoading = $derived(isFullMock ? false : bank.isLoading);
 
 	let remaining = $state(600);
 	let selected = $state<Record<number, number>>({});
@@ -108,7 +119,7 @@
 		grading = true;
 		gradeError = null;
 		try {
-			const graded = await convex.mutation(api.practiceQuestions.gradeAnswers, {
+			const payload = {
 				trackCode: exam.code,
 				mode,
 				...(isFullMock ? { sessionSeed } : {}),
@@ -116,7 +127,31 @@
 					order: q.id,
 					selectedIndex: selected[q.id]!
 				}))
-			});
+			};
+
+			type GradeResponse = {
+				correct: number;
+				total: number;
+				results: GradeResult[];
+			};
+
+			let graded: GradeResponse;
+
+			if (isFullMock) {
+				const response = await fetch('/api/practice/grade', {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify(payload)
+				});
+				const body = (await response.json()) as GradeResponse & { error?: string };
+				if (!response.ok) {
+					throw new Error(body.error ?? 'Could not grade answers');
+				}
+				graded = body;
+			} else {
+				graded = await convex.mutation(api.practiceQuestions.gradeAnswers, payload);
+			}
+
 			score = { correct: graded.correct, total: graded.total };
 			gradedByOrder = Object.fromEntries(graded.results.map((r) => [r.order, r]));
 			submitted = true;
@@ -172,10 +207,18 @@
 	</div>
 
 	<div class="mx-auto max-w-5xl px-6 py-10">
-		{#if bank.isLoading}
+		{#if questionsLoading}
 			<p class="text-center text-on-surface-variant">Loading practice questions…</p>
-		{:else if bank.error}
-			<p class="text-center text-error">Could not load questions. Check Convex configuration.</p>
+		{:else if questionsLoadError}
+			<p class="text-center text-error">
+				{questionsLoadError}
+			</p>
+			{#if isFullMock}
+				<p class="mt-2 text-center text-sm text-on-surface-variant">
+					Try signing out and back in. If this persists, confirm
+					<code class="text-primary">WORKOS_CLIENT_ID</code> is set in your Convex deployment env.
+				</p>
+			{/if}
 		{:else if !convexConfigured}
 			<p class="text-center text-on-surface-variant">
 				Practice questions require Convex. Set <code class="text-primary">PUBLIC_CONVEX_URL</code> in
