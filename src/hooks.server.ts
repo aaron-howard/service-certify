@@ -41,22 +41,7 @@ export const handle: Handle = async ({ event, resolve }) => {
 		'max-age=2592000; includeSubDomains; preload'
 	);
 
-	// Content Security Policy
-	// Allows: same-origin scripts/styles, Convex API, Sentry, Vercel Analytics
-	response.headers.set(
-		'Content-Security-Policy',
-		[
-			"default-src 'self'",
-			"script-src 'self' 'wasm-unsafe-eval' https://cdn.vercel-insights.com https://*.ingest.sentry.io",
-			"style-src 'self' 'unsafe-inline'",
-			"img-src 'self' data: https:",
-			"font-src 'self'",
-			"connect-src 'self' https://*.convex.cloud https://*.ingest.sentry.io https://cdn.vercel-insights.com",
-			"frame-ancestors 'none'",
-			"base-uri 'self'",
-			"form-action 'self'"
-		].join('; ')
-	);
+	// CSP is configured in svelte.config.js (kit.csp) so SvelteKit can nonce/hash inline scripts.
 
 	return response;
 };

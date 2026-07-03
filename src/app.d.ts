@@ -7,7 +7,9 @@ declare global {
 			workosToken?: string;
 			workosUserId?: string;
 		}
-		// interface PageData {}
+		interface PageData {
+			user: import('$lib/auth.server').SessionUser | null;
+		}
 		// interface PageState {}
 		// interface Platform {}
 	}
