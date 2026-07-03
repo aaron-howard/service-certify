@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-FSM",
+		"order": 0,
+		"questionType": "multi",
+		"prompt": "Which two group types are Field Service Management-specific user groups configured under Field Service > Group Management? (Choose two.)",
+		"choices": [
+			"Qualifier Groups",
+			"Dispatch Groups",
+			"Change Advisory Board Groups",
+			"Problem Management Coordinator Groups"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Field Service Management uses Qualifier Groups and Dispatch Groups under Group Management, along with Work Groups for agents, to align skills and resources to field tasks.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/setting-up-field-service-user-groups.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 1,
+		"prompt": "When a user with the wm_qualifier role moves a work order from Draft to Awaiting Qualification, what happens automatically?",
+		"choices": [
+			"A work order task is created and populated with information from the work order",
+			"The work order is closed as Complete and removed from the dispatch queue immediately",
+			"Dynamic Scheduling assigns an agent before the qualifier reviews task details",
+			"All dispatch group memberships are cleared from the parent work order record"
+		],
+		"correctIndex": 0,
+		"explanation": "Moving a work order to Awaiting Qualification automatically creates a work order task populated from the parent work order so qualifiers can define executable field activities.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_WorkOrderTasks.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 2,
+		"prompt": "In Field Service Management, how does a work order relate to work order tasks during execution?",
+		"choices": [
+			"The work order is the parent record that contains one or more executable work order tasks",
+			"Work order tasks permanently replace the parent work order once dispatch assigns an agent",
+			"Each work order task must reference a separate incident record before qualification can begin",
+			"Work orders and work order tasks cannot share location, asset, or customer context data"
+		],
+		"correctIndex": 0,
+		"explanation": "A work order organizes the overall field job while work order tasks represent discrete activities that agents execute, assign, and schedule independently.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_WorkOrderTasks.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 3,
+		"prompt": "An initiator submits a draft work order for a multi-skill repair at two locations. Why should a qualifier split the request into multiple work order tasks?",
+		"choices": [
+			"Different activities can be assigned to agents with different skills, locations, and schedules",
+			"Splitting tasks disables qualification and dispatch states on the parent work order record",
+			"Multiple tasks prevent any parts consumption from being tracked on the work order",
+			"Separate tasks force the work order to bypass Dispatcher Workspace assignment controls"
+		],
+		"correctIndex": 0,
+		"explanation": "Qualifiers split work into tasks so dispatch can route each activity to qualified agents in the right territory and time window.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_WorkOrderTasks.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 4,
+		"prompt": "Before go-live, an architect needs a high-level introduction to Field Service Management capabilities and how components fit together. Which documentation should they review first?",
+		"choices": [
+			"The configure Field Service Management overview that outlines the setup sequence and core modules",
+			"The Hardware Asset Management depreciation schedule reference for warehouse stock transfers only",
+			"The Vulnerability Response integration guide for infrastructure security scanning teams only",
+			"The Service Catalog record producer variable editor configuration for portal catalog items only"
+		],
+		"correctIndex": 0,
+		"explanation": "The configure Field Service Management topic describes the implementation sequence across workforce, work orders, scheduling, and workspace setup.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/configure-fsm.html"
+		]
+	}
+]

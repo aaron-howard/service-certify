@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-FSM",
+		"order": 25,
+		"prompt": "Why is parts management integration important when configuring Field Service work order tasks?",
+		"choices": [
+			"Required parts data helps dispatch assign agents who can complete work on the first visit",
+			"Parts records replace all asset configuration items so CMDB discovery can be deactivated",
+			"Parts management disables qualification states on work orders created from incidents only",
+			"Inventory tracking prevents technicians from recording time worked on completed tasks"
+		],
+		"correctIndex": 0,
+		"explanation": "Defining required parts on tasks lets dispatch and assignment assistance favor agents who carry the components needed for first-time fix.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/inventory-management-fsm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 26,
+		"prompt": "After completing a repair, a technician installs a replacement component from truck stock. What should be recorded on the work order task?",
+		"choices": [
+			"The part consumption transaction so inventory levels and billing reflect usage accurately",
+			"A private chat message to the dispatcher with no update to parts or task related lists",
+			"Deletion of the original asset record without linking the new component in inventory",
+			"A manual journal entry in an external accounting system with no ServiceNow update"
+		],
+		"correctIndex": 0,
+		"explanation": "Recording part consumption on the task keeps stock levels accurate and provides traceability for billing and future service planning.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/inventory-management-fsm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 27,
+		"prompt": "Time worked entries on field service tasks support which operational need during implementation?",
+		"choices": [
+			"Labor tracking for costing, SLA reporting, and technician productivity measurement",
+			"Replacing all work order states with incident priority calculations automatically",
+			"Preventing dispatchers from viewing task schedules in the Dispatcher Workspace calendar",
+			"Disabling geolocation updates while technicians remain checked in on mobile devices"
+		],
+		"correctIndex": 0,
+		"explanation": "Time worked captures labor spent on tasks, supporting cost allocation, performance reporting, and SLA compliance analysis.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_WorkOrderTasks.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 28,
+		"prompt": "Incidentals configured on work orders allow field organizations to capture which type of cost?",
+		"choices": [
+			"Non-part expenses such as parking, tolls, or other reimbursable charges tied to the job",
+			"Annual software license true-up fees billed by external vendors at fiscal year end only",
+			"Capital lease payments for data center hardware unrelated to customer site visits",
+			"Internal HR compensation adjustments processed during enterprise payroll cycles only"
+		],
+		"correctIndex": 0,
+		"explanation": "Incidentals track reimbursable non-part costs associated with field work, such as parking fees or tolls incurred during the appointment.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_WorkOrderTasks.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 29,
+		"prompt": "Assignment assistance can sort agents by parts availability. Why should required parts be defined on tasks before dispatch?",
+		"choices": [
+			"Dispatch can favor agents who already carry parts needed to complete the work order task",
+			"Required parts remove the need for any skill matching during Dynamic Scheduling runs",
+			"Parts definitions automatically close parent incidents when the task reaches Work in Progress",
+			"Parts records convert work orders into procurement requisitions that bypass qualification"
+		],
+		"correctIndex": 0,
+		"explanation": "When required parts are defined, assignment assistance and dynamic scheduling can prioritize agents stocked with the components for the job.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/field-service-scheduling/assignment-assistance.html"
+		]
+	}
+]

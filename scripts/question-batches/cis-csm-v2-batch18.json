@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-CSM",
+		"order": 85,
+		"prompt": "An agent resolves a novel customer issue and wants the fix captured for reuse without leaving the case. Which knowledge-centered practice should the implementation encourage?",
+		"choices": [
+			"Creating a knowledge article from the case so the solution is reusable by other agents",
+			"Emailing the fix only to that one customer and discarding the details afterward",
+			"Recording the fix solely in a personal note that no other agent can ever access",
+			"Closing the case with no documentation so the same issue is investigated again later"
+		],
+		"correctIndex": 0,
+		"explanation": "Knowledge-Centered Service encourages creating articles in the flow of work so proven solutions are captured from cases and reused, reducing repeat investigation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/knowledge-management/knowledge-centered-service.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 86,
+		"prompt": "A knowledge governance process requires new customer-facing articles to be reviewed before customers can see them. Which knowledge management workflow enforces this control?",
+		"choices": [
+			"A knowledge approval and publish workflow that gates articles before customer visibility",
+			"An automatic publish of every draft the instant an agent clicks save on the article",
+			"A rule that deletes all articles older than thirty days regardless of ongoing usage",
+			"A setting that exposes internal working drafts to customers before any review occurs"
+		],
+		"correctIndex": 0,
+		"explanation": "Knowledge workflows route articles through review and approval before publishing, ensuring customer-facing content meets quality and governance standards.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/knowledge-management/knowledge-management-workflows.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 87,
+		"prompt": "A CSM team wants generative AI to help agents summarize long case activity and draft customer replies within the workspace. Which ServiceNow capability delivers this?",
+		"choices": [
+			"Now Assist for Customer Service Management, which provides generative AI agent assistance",
+			"A basic keyword macro that only pastes a fixed canned response into every reply",
+			"The scheduled data collection job that snapshots Performance Analytics indicator scores",
+			"A discovery probe that inventories network devices unrelated to customer case handling"
+		],
+		"correctIndex": 0,
+		"explanation": "Now Assist for CSM brings generative AI into the workspace to summarize cases, draft replies, and accelerate resolution while keeping the agent in control.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/now-assist-for-csm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 88,
+		"prompt": "Which best practice helps ensure a CSM implementation remains maintainable and upgrade-friendly over time?",
+		"choices": [
+			"Favoring configuration and low-code options over unnecessary custom scripting where possible",
+			"Rewriting core platform tables directly to force every requirement into a single form",
+			"Skipping all testing phases to accelerate the move of changes into the production instance",
+			"Publishing every internal draft article to customers to maximize total portal content volume"
+		],
+		"correctIndex": 0,
+		"explanation": "Prioritizing configuration and low-code capabilities over heavy customization keeps CSM implementations maintainable, testable, and easier to upgrade.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/customer-service-management-implementation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 89,
+		"prompt": "After go-live, a customer service leader wants continual improvement driven by measured outcomes and customer feedback. Which practice best supports ongoing optimization?",
+		"choices": [
+			"Reviewing analytics, surveys, and knowledge quality to prioritize iterative improvements",
+			"Freezing the configuration permanently so no changes are ever considered after go-live",
+			"Removing all reporting so leaders are not distracted by operational performance data",
+			"Disabling customer surveys so negative feedback never reaches the service organization"
+		],
+		"correctIndex": 0,
+		"explanation": "Continual improvement uses analytics, customer surveys, and article quality signals to identify and prioritize iterative enhancements after go-live.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/performance-analytics-for-csm.html"
+		]
+	}
+]

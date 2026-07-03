@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-FSM",
+		"order": 40,
+		"prompt": "An implementation team enables work order qualification for quality checks before dispatch. Where do they turn on Qualification is required for new requests?",
+		"choices": [
+			"Field Service > Administration > Configuration",
+			"Dispatcher Workspace > Assignment assistance sort menu",
+			"Field Service > Manager > Manage Skills form for creating parent skills only",
+			"System Scheduler > Jobs list for the Autoclose Incidents scheduled job definition"
+		],
+		"correctIndex": 0,
+		"explanation": "Administrators enable work order qualification on the Field Service Configuration page under Field Service > Administration > Configuration.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/configure-qualify-fsm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 41,
+		"prompt": "Planners must document how initiators and qualifiers create work orders from templates during cutover. Which task documentation defines manual work order creation steps?",
+		"choices": [
+			"Create work orders guidance under Work Order Management",
+			"Configure SAML integration for external identity providers on the instance",
+			"Build employee onboarding flows in HR Service Delivery case management only",
+			"Author discovery patterns for cloud middleware classification in datacenter ranges"
+		],
+		"correctIndex": 0,
+		"explanation": "The create work orders task documentation describes how planners and qualifiers establish work orders that dispatch and agents rely on.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/create-work-orders.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 42,
+		"prompt": "After tasks are qualified, dispatchers assign work from Dispatcher Workspace. Which capability lets them drag unassigned tasks onto agent time slots using proximity and skills?",
+		"choices": [
+			"Drag-and-drop scheduling in Dispatcher Workspace with route and availability visibility",
+			"Manual CSV upload that replaces all assignment groups nightly without validation rules",
+			"Change Management emergency CAB approvals required before every task state change",
+			"Knowledge article publishing workflow used only for self-service search deflection metrics"
+		],
+		"correctIndex": 0,
+		"explanation": "Dispatcher Workspace supports drag-and-drop assignment so dispatchers can place tasks on agent schedules using proximity, availability, and skill context.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/dispatcher-activities.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 43,
+		"prompt": "Technicians finish onsite work and must close tasks with completion evidence. Which process documentation covers completing and closing work order tasks?",
+		"choices": [
+			"Work order task completion procedures in Work Order Management task documentation",
+			"Hardware asset lease return procedures in IT asset management financial workflows only",
+			"Identity governance certification campaigns for privileged account review cycles only",
+			"Vulnerability scanning remediation playbooks for infrastructure security operations only"
+		],
+		"correctIndex": 0,
+		"explanation": "Work Order Management task documentation covers completing and closing work order tasks with the required execution and completion details.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_WorkOrderTasks.html"
+		]
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 44,
+		"prompt": "Operations enables automatic assignment after qualification using skills, travel time, and availability criteria. Which configuration area defines these matching rules?",
+		"choices": [
+			"Dynamic Scheduling configuration under Field Service scheduling setup",
+			"UI policy conditions on the incident table for priority color highlighting only",
+			"Email notification templates for legal hold archival compliance review reminders",
+			"Software asset reconciliation rules for removing unused subscriptions quarterly"
+		],
+		"correctIndex": 0,
+		"explanation": "Dynamic Scheduling configuration defines matching criteria—such as skills, travel time, and availability—used to auto-assign qualified work order tasks.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/field-service-scheduling/create-dynamic-scheduling-config.html"
+		]
+	}
+]
