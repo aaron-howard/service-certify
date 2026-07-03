@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-HR",
+		"order": 30,
+		"prompt": "Which Employee Center feature lets HR teams apply corporate colors, logos, and themes?",
+		"choices": [
+			"Employee Center branding and theme configuration",
+			"CMDB class manager styling",
+			"Discovery probe branding",
+			"Import set coalesce branding"
+		],
+		"correctIndex": 0,
+		"explanation": "Branding settings customize the Employee Center look and feel to match organizational identity guidelines.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/employee-center/employee-center-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 31,
+		"prompt": "What determines if an employee can view a Knowledge article on Employee Center?",
+		"choices": [
+			"Can / Cannot Read User Criteria",
+			"Can / Cannot Contribute User Criteria",
+			"Can / Cannot Read HR Criteria",
+			"Can / Cannot Read ACL Criteria"
+		],
+		"correctIndex": 0,
+		"explanation": "Knowledge visibility on Employee Center is controlled by Can Read and Cannot Read user criteria attached to the article.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-knowledge-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 32,
+		"prompt": "How does a record producer differ from a standard HR catalog item?",
+		"choices": [
+			"A record producer creates a target table record directly instead of a requested item",
+			"A record producer only creates CMDB CIs",
+			"A record producer disables HR criteria evaluation",
+			"A record producer runs only on the MID Server"
+		],
+		"correctIndex": 0,
+		"explanation": "Record producers present catalog-style forms that insert records such as hr_case directly on submission.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-services-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 33,
+		"prompt": "Which skills configuration can improve HR case assignment to qualified agents?",
+		"choices": [
+			"Agent skills matched by assignment rules or routing logic",
+			"SNMP community strings on hr_case",
+			"Software normalization rules",
+			"Firewall port definitions"
+		],
+		"correctIndex": 0,
+		"explanation": "Skills on users and groups allow routing engines to match HR cases with agents who have the required expertise.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-routing.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 34,
+		"prompt": "Which HR role bundle is used to administer HR services, criteria, and COE configuration?",
+		"choices": [
+			"sn_hr_core.admin",
+			"itil",
+			"catalog_admin",
+			"sn_change_write"
+		],
+		"correctIndex": 0,
+		"explanation": "HR administrator roles provide access to configure services, criteria, templates, and operational HR settings.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
+		]
+	}
+]

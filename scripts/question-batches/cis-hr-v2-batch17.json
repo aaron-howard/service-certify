@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-HR",
+		"order": 80,
+		"prompt": "Which role name pattern identifies HR delegated developers in scoped apps?",
+		"choices": [
+			"sn_hr_core.delegated_developer or equivalent scoped developer role",
+			"itil_admin only",
+			"asset only",
+			"sn_incident_read only"
+		],
+		"correctIndex": 0,
+		"explanation": "Scoped delegated developer roles grant development privileges within HR applications under administrative oversight.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 81,
+		"prompt": "How does HR criteria complement ACLs when protecting HR services?",
+		"choices": [
+			"HR criteria controls service visibility while ACLs secure underlying records and fields",
+			"HR criteria replaces all ACL requirements",
+			"ACLs only apply outside HR scopes",
+			"HR criteria encrypts attachments automatically"
+		],
+		"correctIndex": 0,
+		"explanation": "Eligibility rules gate catalog exposure; ACLs and contextual case security enforce data access after submission.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-criteria.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 82,
+		"prompt": "Which controls help managers see only HR cases for their direct reports?",
+		"choices": [
+			"Contextual security rules and HR criteria based on management hierarchy",
+			"Global read ACL with no conditions",
+			"Public case dashboards",
+			"Unrestricted COE membership"
+		],
+		"correctIndex": 0,
+		"explanation": "Manager visibility is constrained by contextual rules referencing reporting relationships and case participation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 83,
+		"prompt": "Which security mechanisms protect employee self-service submissions on Employee Center? (Choose two.)",
+		"choices": [
+			"HR criteria on services",
+			"Authenticated employee sessions",
+			"Unauthenticated guest case access",
+			"Global table delete ACL for all users"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"questionType": "multi",
+		"explanation": "Employees authenticate to Employee Center and HR criteria limits which services they may view or request.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 84,
+		"prompt": "How should teams protect HR data during implementation across environments?",
+		"choices": [
+			"Use anonymized or masked data in sub-production and restrict elevated roles",
+			"Copy production HR cases with full PII to all dev instances",
+			"Disable ACLs in test to save time",
+			"Share admin passwords for efficiency"
+		],
+		"correctIndex": 0,
+		"explanation": "Data masking and least-privilege roles reduce privacy exposure while configurations are built and tested.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+		]
+	}
+]

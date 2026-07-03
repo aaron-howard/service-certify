@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-HR",
+		"order": 40,
+		"prompt": "Which options allow an HR Administrator to configure a personal copy of the HR Case Dashboard? (Choose two.)",
+		"choices": [
+			"Add Content",
+			"Change Layout",
+			"Delete Content",
+			"Modify Kernel"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"questionType": "multi",
+		"explanation": "Personal dashboard copies support Add Content and Change Layout actions; Delete Content and kernel options are not standard dashboard personalization controls.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-reporting-and-analytics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 41,
+		"prompt": "How does Employee Center differ from the legacy HR Service Portal for employees?",
+		"choices": [
+			"Employee Center is the modern unified employee experience for HR and cross-domain services",
+			"Employee Center replaces all HR tables with incidents",
+			"Employee Center removes knowledge management",
+			"Employee Center disables HR criteria"
+		],
+		"correctIndex": 0,
+		"explanation": "Employee Center delivers a consolidated self-service experience including HR services, knowledge, and journeys.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/employee-center/employee-center-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 42,
+		"prompt": "Which approval configuration can gate sensitive HR actions before fulfillment proceeds?",
+		"choices": [
+			"HR approval definitions tied to workflows or flows",
+			"CMDB sync approval schedules",
+			"Discovery credential approvals",
+			"Firewall change approvals"
+		],
+		"correctIndex": 0,
+		"explanation": "HR approvals add authorized checkpoints for policy-sensitive case and service actions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-approvals.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 43,
+		"prompt": "When configuring HR catalog items, where do you map collected variables to hr_case fields?",
+		"choices": [
+			"Variable-to-field mapping on the catalog item or producer",
+			"Scheduled job recurrence settings",
+			"Firewall zone definitions",
+			"CMDB relationship editor"
+		],
+		"correctIndex": 0,
+		"explanation": "Catalog variable mapping transfers employee answers onto HR case columns during submission.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-services-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 44,
+		"prompt": "Which user record fields are commonly referenced by HR criteria rules?",
+		"choices": [
+			"Department, location, employment type, and other hr_profile attributes",
+			"SNMP community and probe status",
+			"Software install key and suite",
+			"Firewall zone and VLAN"
+		],
+		"correctIndex": 0,
+		"explanation": "HR criteria evaluates employee and profile attributes to determine service visibility and eligibility.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-criteria.html"
+		]
+	}
+]
