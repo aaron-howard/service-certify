@@ -1,0 +1,487 @@
+[
+  {
+    "trackCode": "CIS-FSM",
+    "order": 60,
+    "prompt": "In FSM, why is contractor management configuration important?",
+    "choices": [
+      "To consistently disable work order tracking for operational consistency",
+      "To consistently control assignment, access, compliance, and performance for third-party field workers",
+      "To consistently treat all contractors as internal admins",
+      "To consistently avoid capturing labor outcomes for enterprise implementation"
+    ],
+    "correctIndex": 1,
+    "explanation": "Contractor governance ensures external workforce participation remains secure and accountable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/manage-external-workforce.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 61,
+    "prompt": "Which assignment rule best supports mixed internal and contractor dispatch?",
+    "choices": [
+      "Assign all critical jobs to contractors first for enterprise implementation",
+      "Exclude internal teams from dispatch pools for operational consistency",
+      "Skill, region, certification, and contract eligibility-based routing for role-based accountability",
+      "Random assignment with no qualification checks for production readiness"
+    ],
+    "correctIndex": 2,
+    "explanation": "Eligibility-aware routing balances service quality, compliance, and capacity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/configure-dispatch-and-scheduling.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 62,
+    "prompt": "What control should be enforced for contractor mobile access in FSM?",
+    "choices": [
+      "Shared credentials among partner technicians for practical execution",
+      "No authentication for offline use for controlled governance",
+      "Open access to all work orders for sustained reliability",
+      "Role-scoped access and device security policy enforcement for measurable outcomes"
+    ],
+    "correctIndex": 3,
+    "explanation": "Scoped identity and secure mobile policy are essential when external staff access operational data.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-mobile/page/administer/mobile/concept/mobile-security.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 63,
+    "prompt": "How should contractor performance be monitored in FSM?",
+    "choices": [
+      "Using KPIs such as on-time arrival, first-time fix, and rework rate by vendor for role-based accountability",
+      "Without separating contractor and internal metrics for production readiness",
+      "exclusively by anecdotal dispatcher feedback for controlled governance",
+      "By counting logins exclusively for sustained reliability"
+    ],
+    "correctIndex": 0,
+    "explanation": "Vendor-level operational KPIs support objective contract governance and improvement.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/report-on-field-service-performance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 64,
+    "prompt": "Which practice improves contractor governance maturity in FSM?",
+    "choices": [
+      "No review of contractor outcomes for operational consistency",
+      "Unlimited manual overrides by contractors for enterprise implementation",
+      "Regular performance reviews tied to SLA and contract obligations for production readiness",
+      "Assignment without qualification tracking for role-based accountability for measurable outcomes"
+    ],
+    "correctIndex": 2,
+    "explanation": "Periodic governance against contract and service commitments sustains quality control.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/field-service-management-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 65,
+    "prompt": "What is a core admin responsibility in FSM scheduling operations?",
+    "choices": [
+      "Disabling all schedule rules for measurable outcomes for role-based accountability",
+      "Ignoring route efficiency metrics for sustained reliability for operational consistency",
+      "Assigning all jobs manually forever for controlled governance",
+      "Maintaining skill matrices, territories, and dispatch policies for practical execution"
+    ],
+    "correctIndex": 3,
+    "explanation": "Scheduling quality depends on accurate administrative configuration of workforce constraints.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/configure-dispatch-and-scheduling.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 66,
+    "prompt": "Which admin control helps prevent invalid work order completion?",
+    "choices": [
+      "Allow closure from any inactive device for production readiness",
+      "Disable state transition checks for role-based accountability for measurable outcomes",
+      "Optional closure fields for all tasks for operational consistency",
+      "Mandatory completion criteria and validation rules on key task states for enterprise implementation"
+    ],
+    "correctIndex": 3,
+    "explanation": "Validation at closure ensures task outputs are complete and auditable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/close-work-order-tasks.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 67,
+    "prompt": "How should FSM admins govern mobile offline usage?",
+    "choices": [
+      "Allow shared logins across contractors for controlled governance",
+      "Permit unlimited unsynced data retention for practical execution",
+      "Configure secure offline scope, sync cadence, and exception monitoring for measurable outcomes",
+      "Disable authentication for field staff for sustained reliability"
+    ],
+    "correctIndex": 2,
+    "explanation": "Secure scope and monitored sync behavior are essential for reliable offline operations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-mobile/page/administer/mobile/concept/offline-mobile.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 68,
+    "prompt": "Which KPI grouping best indicates FSM admin effectiveness?",
+    "choices": [
+      "On-time arrival, first-time fix, and schedule utilization for sustained reliability",
+      "Number of portal themes for measurable outcomes for role-based accountability",
+      "Count of list layouts for practical execution",
+      "Frequency of navigation menu changes for controlled governance"
+    ],
+    "correctIndex": 0,
+    "explanation": "These metrics capture service reliability and workforce planning quality.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/task/report-on-field-service-performance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 69,
+    "prompt": "What best signals mature FSM administration?",
+    "choices": [
+      "Stable configuration governance, low rework, and predictable field outcomes for enterprise implementation",
+      "Manual reporting exclusively for sustained reliability",
+      "No ownership for scheduling rules for role-based accountability",
+      "Frequent emergency dispatch overrides for production readiness"
+    ],
+    "correctIndex": 0,
+    "explanation": "Maturity shows through governed configuration and sustained operational performance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/field-service-management-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 70,
+    "prompt": "Which foundation is most important for enterprise FSM operations?",
+    "choices": [
+      "No link between work orders and assets for controlled governance",
+      "Standardized work order lifecycle, dispatch rules, and mobile execution standards for practical execution",
+      "Technician-specific manual workflows with no central model for measurable outcomes",
+      "Scheduling based exclusively on technician preference for operational consistency"
+    ],
+    "correctIndex": 1,
+    "explanation": "Enterprise FSM needs consistent process and execution standards to coordinate field operations at scale.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/field-service-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/work-order-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 71,
+    "prompt": "For enterprise FSM, what is the best method to improve dispatch efficiency?",
+    "choices": [
+      "Use skills, territory, and availability constraints in automated scheduling policies for production readiness",
+      "Assign all work orders in first-in-first-out order exclusively",
+      "Allow each dispatcher to use private rules for operational consistency",
+      "Disable appointment windows to maximize flexibility for enterprise implementation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Constraint-based scheduling aligns field assignments with capability and service commitments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/scheduling-dispatch.html",
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/field-service-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 72,
+    "prompt": "Which KPI set best reflects enterprise FSM operational health?",
+    "choices": [
+      "Total number of dispatch boards created for measurable outcomes",
+      "Count of mobile users logged in once for sustained reliability",
+      "Number of catalog items tied to field teams for controlled governance",
+      "First-time fix rate, on-time arrival, and work order cycle time by region for practical execution"
+    ],
+    "correctIndex": 3,
+    "explanation": "These KPIs track service effectiveness, punctuality, and throughput across distributed field operations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/field-service-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 73,
+    "prompt": "A region has high repeat visits for the same issue type. What enterprise FSM action is best?",
+    "choices": [
+      "Analyze repeat-work patterns and update playbooks, parts strategy, and technician enablement for operational consistency",
+      "Close repeat work orders as duplicates exclusively for controlled governance",
+      "Route all similar work to a single dispatcher for production readiness",
+      "Increase appointment windows without root-cause review for role-based accountability"
+    ],
+    "correctIndex": 0,
+    "explanation": "Reducing repeat visits requires root-cause correction across process, inventory, and execution practices.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/knowledge-and-playbooks.html",
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/work-order-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 74,
+    "prompt": "Which governance practice most improves enterprise FSM operations over time?",
+    "choices": [
+      "Local reporting formats with no shared scorecard for role-based accountability",
+      "Monthly operational reviews by region using common KPIs and corrective action tracking for production readiness",
+      "No formal review once mobile adoption is complete for enterprise implementation",
+      "Annual review exclusively after customer escalations for sustained reliability"
+    ],
+    "correctIndex": 1,
+    "explanation": "Regular KPI-driven governance ensures continuous improvement and cross-region operational consistency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/field-service-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 75,
+    "prompt": "A dispatcher needs to assign work to the right technician automatically. Which configuration most directly controls this in Field Service Management?",
+    "choices": [
+      "Incident state model settings for practical execution",
+      "Knowledge article approval workflows for controlled governance for enterprise implementation",
+      "Assignment rules and scheduling constraints on work orders for sustained reliability",
+      "Service catalog item variable sets for measurable outcomes"
+    ],
+    "correctIndex": 2,
+    "explanation": "In FSM, assignment and scheduling behavior is driven by work assignment logic such as assignment rules, skills, and scheduling constraints.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/field-service-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 76,
+    "prompt": "What is the primary purpose of a service territory in Field Service Management?",
+    "choices": [
+      "To consistently manage software license consumption for controlled governance",
+      "To consistently control catalog approval chains for sustained reliability",
+      "To consistently group service locations and technicians by geographic responsibility",
+      "To consistently define escalation policies for incidents for production readiness"
+    ],
+    "correctIndex": 2,
+    "explanation": "Service territories define geographic boundaries and operational ownership for field assignments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/service-territory-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 77,
+    "prompt": "A job requires a technician certified on high-voltage equipment. Which FSM capability ensures only qualified technicians are considered for scheduling?",
+    "choices": [
+      "CMDB reconciliation rules for sustained reliability for operational consistency",
+      "SLA pause conditions for measurable outcomes for role-based accountability",
+      "Skill requirements matched against technician skills for practical execution",
+      "Catalog entitlement rules for controlled governance for enterprise implementation"
+    ],
+    "correctIndex": 2,
+    "explanation": "Skill matching in FSM filters candidate technicians to those who meet required competencies and certifications.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/skills-in-field-service-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 78,
+    "prompt": "Which action best helps optimize daily route efficiency for field technicians?",
+    "choices": [
+      "Disabling schedule constraints for controlled governance for enterprise implementation",
+      "Using scheduling optimization that considers travel time and availability for practical execution",
+      "Creating more incident categories for measurable outcomes for role-based accountability",
+      "Assigning all tasks manually from list view for sustained reliability"
+    ],
+    "correctIndex": 1,
+    "explanation": "FSM scheduling optimization improves route plans by factoring availability, location, and travel time.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/scheduling-and-dispatching.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 79,
+    "prompt": "A technician reaches a customer site and needs all required job details in one place. Which FSM capability supports this outcome?",
+    "choices": [
+      "Mobile work order execution with task and asset context for production readiness",
+      "Service portfolio management dashboards for role-based accountability for measurable outcomes",
+      "Problem root cause analysis templates for operational consistency",
+      "CMDB identification rules for enterprise implementation for controlled governance"
+    ],
+    "correctIndex": 0,
+    "explanation": "FSM mobile workflows provide technicians with work order details, tasks, and related context while on site.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/mobile-field-service-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 80,
+    "prompt": "In FSM, what is the relationship between a work order and work order tasks?",
+    "choices": [
+      "Tasks can exclusively exist for incidents, not work orders",
+      "Tasks are used exclusively for catalog approvals for measurable outcomes",
+      "Work order tasks replace the need for a parent work order for operational consistency",
+      "The work order is the parent record and tasks represent executable steps for enterprise implementation"
+    ],
+    "correctIndex": 3,
+    "explanation": "A work order contains overall job context, while work order tasks break execution into actionable units.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/work-order-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 81,
+    "prompt": "A dispatcher wants to avoid assigning emergency calls to technicians who are already overbooked. Which FSM setup is most relevant?",
+    "choices": [
+      "SLA retroactive start for controlled governance for enterprise implementation",
+      "Knowledge base user criteria for practical execution",
+      "Incident business service mapping for measurable outcomes for role-based accountability",
+      "Capacity-aware scheduling policies and schedule constraints for sustained reliability"
+    ],
+    "correctIndex": 3,
+    "explanation": "Scheduling constraints and capacity settings prevent over-allocation and improve dispatch quality.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/scheduling-and-dispatching.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 82,
+    "prompt": "Why would an implementation team enable appointment booking options in FSM?",
+    "choices": [
+      "To consistently enforce CMDB normalization for sustained reliability",
+      "To consistently create HR case templates for controlled governance",
+      "To consistently replace change approvals for production readiness",
+      "To consistently let customers or agents select available service windows"
+    ],
+    "correctIndex": 3,
+    "explanation": "Appointment booking provides available time slots so service visits can be scheduled to match customer and technician availability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/appointment-booking.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 83,
+    "prompt": "A field technician consumes a replacement part during a repair. What should be captured to keep inventory accurate?",
+    "choices": [
+      "A change request risk score for measurable outcomes",
+      "A service catalog variable choice for sustained reliability",
+      "A problem known error record for controlled governance",
+      "Part consumption on the related work execution record for practical execution"
+    ],
+    "correctIndex": 3,
+    "explanation": "Recording part usage during field execution updates inventory and supports downstream replenishment processes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/parts-and-inventory-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 84,
+    "prompt": "Which workspace is primarily used by dispatchers to monitor queues and assign field work in real time?",
+    "choices": [
+      "Service Portfolio Workspace for practical execution",
+      "Strategic Portfolio Planning Workspace for controlled governance for enterprise implementation",
+      "Agent Workspace for ITSM incidents for sustained reliability",
+      "Dispatcher Workspace for measurable outcomes for role-based accountability"
+    ],
+    "correctIndex": 3,
+    "explanation": "Dispatcher Workspace is designed for field scheduling visibility and assignment operations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/dispatcher-workspace.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 85,
+    "prompt": "A company wants preventive maintenance visits to be generated automatically every quarter. Which FSM approach fits best?",
+    "choices": [
+      "Configure exclusively SLA definitions for measurable outcomes",
+      "Create ad hoc incidents each quarter for production readiness",
+      "Use one-time catalog tasks with no schedule for enterprise implementation",
+      "Use maintenance plans that generate recurring work orders for operational consistency"
+    ],
+    "correctIndex": 3,
+    "explanation": "Maintenance plans automate periodic field work creation, supporting recurring preventive service.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/maintenance-plans.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 86,
+    "prompt": "Which KPI best reflects how effectively field jobs are completed on the first visit?",
+    "choices": [
+      "Average incident reassignments for sustained reliability for operational consistency",
+      "Catalog request backlog for measurable outcomes for role-based accountability",
+      "Count of CMDB classes for practical execution",
+      "First-time fix rate for controlled governance for enterprise implementation"
+    ],
+    "correctIndex": 3,
+    "explanation": "First-time fix rate measures whether technicians resolve issues during the initial visit without return trips.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/field-service-management-analytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 87,
+    "prompt": "If a work order depends on specific equipment history, where should the technician access that context?",
+    "choices": [
+      "A change model template for enterprise implementation for controlled governance",
+      "The software model normalization table for operational consistency",
+      "The service catalog category record for role-based accountability",
+      "The related asset record and linked work history for production readiness"
+    ],
+    "correctIndex": 3,
+    "explanation": "Asset context and prior work history help technicians diagnose and complete field tasks accurately.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/asset-and-configuration-context-for-fsm.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 88,
+    "prompt": "What is the main benefit of configuring travel and work-time constraints for technicians?",
+    "choices": [
+      "To consistently increase manual dispatcher workload for production readiness",
+      "To consistently bypass service territories for measurable outcomes",
+      "To consistently replace assignment groups with user criteria",
+      "To consistently produce feasible schedules that respect labor and travel limits"
+    ],
+    "correctIndex": 3,
+    "explanation": "Travel and labor constraints make schedules realistic and reduce missed appointments or overtime risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/scheduling-and-dispatching.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-FSM",
+    "order": 89,
+    "prompt": "A dispatcher must prioritize safety-critical work over routine tasks. Which FSM mechanism should be used?",
+    "choices": [
+      "Catalog item popularity metrics for controlled governance for enterprise implementation",
+      "Knowledge category ownership for practical execution",
+      "CMDB reconciliation identifiers for measurable outcomes for role-based accountability",
+      "Work order prioritization rules and scheduling policies for sustained reliability"
+    ],
+    "correctIndex": 3,
+    "explanation": "Prioritization rules and scheduling policies ensure high-risk work receives earlier assignment and dispatch attention.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-field-service-management/page/product/field-service-management/concept/work-order-management.html"
+    ]
+  }
+]

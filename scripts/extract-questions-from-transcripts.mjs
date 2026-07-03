@@ -43,6 +43,13 @@ const args = process.argv.slice(2);
 const mergeBatches = args.includes('--merge-batches');
 const batchFileArgs = args.filter((a) => !a.startsWith('--'));
 
+const BOILERPLATE_SUFFIXES = [
+	' without validating scope, credentials, or operational prerequisites',
+	' while bypassing standard governance controls and increasing operational risk',
+	' regardless of reconciliation, security policy, or instance readiness requirements',
+	' even when prerequisite data quality and ownership are not confirmed'
+];
+
 /** Parse first top-level JSON array in text (handles prose before `[{...}]`). */
 function parseFirstJsonArray(text) {
 	const start = text.indexOf('[');
@@ -157,6 +164,35 @@ function validateQuestion(q, { warnDuplicates = true } = {}) {
 	if (q.correctIndex < 0 || q.correctIndex > 3) {
 		throw new Error(`track ${q.trackCode} order ${q.order}: bad correctIndex`);
 	}
+	const questionType = q.questionType ?? 'single';
+	if (questionType !== 'single' && questionType !== 'multi') {
+		throw new Error(`track ${q.trackCode} order ${q.order}: bad questionType`);
+	}
+	if (questionType === 'multi') {
+		if (!Array.isArray(q.correctIndexes) || q.correctIndexes.length < 2) {
+			throw new Error(
+				`track ${q.trackCode} order ${q.order}: multi questions need 2+ correctIndexes`
+			);
+		}
+		const sorted = [...q.correctIndexes].sort((a, b) => a - b);
+		for (const idx of sorted) {
+			if (idx < 0 || idx > 3) {
+				throw new Error(`track ${q.trackCode} order ${q.order}: correctIndexes out of range`);
+			}
+		}
+		if (new Set(sorted).size !== sorted.length) {
+			throw new Error(`track ${q.trackCode} order ${q.order}: duplicate correctIndexes`);
+		}
+		if (sorted[0] !== q.correctIndex) {
+			throw new Error(
+				`track ${q.trackCode} order ${q.order}: correctIndex must equal first (lowest) correctIndexes entry`
+			);
+		}
+	} else if (q.correctIndexes !== undefined) {
+		throw new Error(
+			`track ${q.trackCode} order ${q.order}: correctIndexes only valid for multi questions`
+		);
+	}
 	if (!q.prompt?.trim()) {
 		throw new Error(`track ${q.trackCode} order ${q.order}: empty prompt`);
 	}
@@ -165,6 +201,19 @@ function validateQuestion(q, { warnDuplicates = true } = {}) {
 	}
 	if (!Array.isArray(q.sourceUrls) || q.sourceUrls.length === 0) {
 		throw new Error(`track ${q.trackCode} order ${q.order}: need sourceUrls`);
+	}
+	const normalizedChoices = q.choices.map((c) => c.trim().toLowerCase());
+	if (new Set(normalizedChoices).size !== 4) {
+		throw new Error(`track ${q.trackCode} order ${q.order}: duplicate choices in same question`);
+	}
+	for (const choice of q.choices) {
+		for (const suffix of BOILERPLATE_SUFFIXES) {
+			if (choice.includes(suffix)) {
+				throw new Error(
+					`track ${q.trackCode} order ${q.order}: choice uses shared boilerplate suffix`
+				);
+			}
+		}
 	}
 	return warnDuplicates;
 }

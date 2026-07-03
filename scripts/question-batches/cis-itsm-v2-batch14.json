@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 65,
+		"prompt": "What can employees do from the Employee Center portal in Simplified IT Service Management?",
+		"choices": [
+			"Search for information, open IT tickets, browse catalog items, and track their requests and incidents",
+			"Configure CAB approvals and blackout schedules for change requests",
+			"Edit CMDB identification and reconciliation rules without admin roles",
+			"Run the Autoclose Incidents scheduled job on Resolved incident records"
+		],
+		"correctIndex": 0,
+		"explanation": "Employee Center provides self-service search, ticket creation, catalog browsing, and simplified visibility into the employee's requests, incidents, and tasks.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/employee-experience-employee-center.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 66,
+		"prompt": "When an employee selects Open IT Ticket in Employee Center, which experience is presented?",
+		"choices": [
+			"The Create incident with Now Assist AI-enabled record producer",
+			"A Standard change template from the Simplified Change Management console",
+			"The CAB workbench for retrospective change review meetings",
+			"The Service Portfolio taxonomy node editor for portfolio_admin users"
+		],
+		"correctIndex": 0,
+		"explanation": "Open IT Ticket launches the Create incident with Now Assist record producer so employees can describe the issue and review suggested solutions before submitting.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/open-ticket-native-ai-itsm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 67,
+		"prompt": "How does an employee submit a commonly requested catalog item through Employee Center?",
+		"choices": [
+			"Select Browse catalogs, choose the item, complete required details, and submit the request",
+			"Convert an open incident to a catalog task from the Related Records tab",
+			"Run an order guide automatically from the Autoclose Incidents scheduled job",
+			"Create a Problem record and link incidents before ordering from the catalog"
+		],
+		"correctIndex": 0,
+		"explanation": "Employees use Browse catalogs in Employee Center to find commonly requested items, enter item details, and submit or save the request as a draft.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/submit-cat-request-native-ai-itsm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 68,
+		"prompt": "When an employee searches for a solution in Employee Center and Now Assist results are not relevant, what should happen next?",
+		"choices": [
+			"Proceed with incident creation or check request status instead of accepting the suggested solution",
+			"Close every open incident in the instance automatically without agent review",
+			"Disable all catalog variables on the selected catalog item permanently",
+			"Move the change request directly to Implement state without authorization"
+		],
+		"correctIndex": 0,
+		"explanation": "Search and Now Assist are deflection steps; if generated solutions do not resolve the issue, the employee can continue with incident creation or status checking.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/search-solution-native-ai-itsm.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 69,
+		"prompt": "How can an employee contact a live support agent from the Now Support chat in Employee Center?",
+		"choices": [
+			"Type live agent in the chat or choose Contact Live Agent from the Support options menu",
+			"Submit an emergency change from the Emergency change model configuration console",
+			"Open the CMDB identification rule editor as any self-service user",
+			"Disable the portfolio_viewer role for the logged-in employee session"
+		],
+		"correctIndex": 0,
+		"explanation": "Now Support chat offers self-serve troubleshooting through Now Assist and allows escalation to a live agent through chat commands or the Support options menu.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/get-support-using-chat.html"
+		]
+	}
+]

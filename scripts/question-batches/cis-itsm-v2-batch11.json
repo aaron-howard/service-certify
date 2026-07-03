@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 50,
+		"prompt": "A service portfolio in Service Portfolio Management is designed to provide which overall view?",
+		"choices": [
+			"Currently available services, possible future services, and services that existed in the past",
+			"Open incidents grouped by assignment group with no service context",
+			"Emergency change approvals submitted during the current fiscal quarter only",
+			"CMDB discovery payloads imported from MID Server schedules"
+		],
+		"correctIndex": 0,
+		"explanation": "A service portfolio is a top-level container for organizing current, future, and retired services so portfolio owners can evaluate business impact and spending.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/service-portfolio-management/SPM2-service-portfolios.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 51,
+		"prompt": "How does a service offering relate to its parent service in Service Portfolio Management?",
+		"choices": [
+			"It derives from the parent service and tailors that service to a specific business need with defined commitments",
+			"It replaces the parent service record in the CMDB and retires all taxonomy nodes automatically",
+			"It is a catalog record producer that cannot store service commitment records",
+			"It maps only to blackout schedules without participating in portfolio taxonomy"
+		],
+		"correctIndex": 0,
+		"explanation": "Each service offering extends a parent service for a specific business need and is uniquely defined by its service commitments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/service-portfolio-management/define-SPM2-service-commitments.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 52,
+		"prompt": "Before defining taxonomy nodes, an administrator must create a service portfolio. Which role can create that portfolio record?",
+		"choices": [
+			"portfolio_admin",
+			"service_viewer without portfolio create permissions",
+			"problem_task_analyst for read-only CMDB imports",
+			"sn_itsm_chg_admin.notification_config"
+		],
+		"correctIndex": 0,
+		"explanation": "Creating a service portfolio requires the portfolio_admin role at Service Portfolio Management > Service Portfolios.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/service-portfolio-management/create-or-modify-SPM2-portfolios.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 53,
+		"prompt": "In the standard Service Portfolio Management portfolio structure, how is taxonomy organized compared with the legacy structure?",
+		"choices": [
+			"Standard portfolios use flexible taxonomy nodes; legacy portfolios require taxonomy layers with assigned nodes",
+			"Standard portfolios store services only on the incident table with no taxonomy framework",
+			"Legacy portfolios report performance exclusively through DPM KPI groups",
+			"Both structures require identical layer definitions and cannot be changed after opt-in"
+		],
+		"correctIndex": 0,
+		"explanation": "The improved standard structure replaces fixed taxonomy layers with node-to-node relationships; legacy portfolios still use layer definitions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/service-portfolio-management/SPM2-taxonomy.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 54,
+		"prompt": "Which Service Portfolio Management role allows a user to view portfolios, taxonomy nodes, services, and service offerings?",
+		"choices": [
+			"portfolio_viewer",
+			"service_viewer without access to portfolio or taxonomy records",
+			"service_author limited to offerings the user created only",
+			"cmdb_read with no Service Portfolio Management foundation roles"
+		],
+		"correctIndex": 0,
+		"explanation": "The portfolio_viewer role includes service_viewer and grants read access to portfolios, taxonomy nodes, services, and service offerings.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/service-portfolio-management/r_InstalledWSPM2.html"
+		]
+	}
+]

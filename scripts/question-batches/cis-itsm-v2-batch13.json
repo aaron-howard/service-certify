@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 60,
+		"prompt": "When should the service desk direct a user to order a published catalog item instead of logging an incident?",
+		"choices": [
+			"When the user needs a standard, pre-defined service offering available in the service catalog",
+			"When the user reports an unplanned interruption to an IT service",
+			"When the issue requires immediate major incident management escalation",
+			"When CMDB identification rules fail on the affected configuration item"
+		],
+		"correctIndex": 0,
+		"explanation": "Standard, catalog-published services belong in request fulfillment; unplanned service interruptions are handled as incidents.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/incident-management/incident-management-process.html",
+			"https://www.servicenow.com/docs/r/servicenow-platform/service-catalog/exploring-service-catalog.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 61,
+		"prompt": "What event triggers the Request Management process in ServiceNow?",
+		"choices": [
+			"A user requests a catalog item from the Catalog Item [sc_cat_item] table",
+			"A record producer creates an incident without generating a Request record",
+			"A problem record is updated to the Known Error state",
+			"The Autoclose Incidents scheduled job closes a Resolved incident"
+		],
+		"correctIndex": 0,
+		"explanation": "Request Management starts when a catalog item is ordered; record producers must not be used to insert request, RITM, or catalog task records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/request-management/request-management-architecture.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 62,
+		"prompt": "In Request Management, where are catalog variables associated after a catalog item is ordered?",
+		"choices": [
+			"On the Requested Item [sc_req_item] record; variables are not supported on RITM extended tables",
+			"On the Request [sc_request] record only, with no linkage to requested items",
+			"On the Incident record created by every catalog checkout automatically",
+			"On the Change Request record during the Authorize state only"
+		],
+		"correctIndex": 0,
+		"explanation": "Variable values are tied to the Requested Item; Request Management does not support variables on extended tables of sc_req_item.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/request-management/request-management-architecture.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 63,
+		"prompt": "The Catalog Task workflow activity creates fulfillment work for which table context?",
+		"choices": [
+			"Workflows running on the Request Item [sc_req_item] table",
+			"Workflows running on the Incident table without task extension",
+			"Workflows running on Problem records during Assess state only",
+			"Workflows running on service portfolio taxonomy node records"
+		],
+		"correctIndex": 0,
+		"explanation": "The Catalog Task activity creates catalog task records and is available only for workflows running on sc_req_item.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/workflow-activities/r_CatalogTask.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 64,
+		"prompt": "When a catalog item uses a Flow Designer flow for fulfillment, what must be configured on the catalog item?",
+		"choices": [
+			"Set the Flow field on the item and clear the Workflow and Execution Plan fields",
+			"Disable all catalog variables and rely solely on execution plan delivery plans",
+			"Associate the flow with the Incident table instead of the catalog item record",
+			"Enable the Autoclose Incidents business rule on the Catalog Item form"
+		],
+		"correctIndex": 0,
+		"explanation": "A Service Catalog-triggered flow is linked through the catalog item Flow field; legacy Workflow and Execution Plan entries must be cleared to avoid conflicts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/build-workflows/workflow-studio/add-stages.html",
+			"https://www.servicenow.com/docs/r/servicenow-platform/service-catalog/catalog-item-form.html"
+		]
+	}
+]

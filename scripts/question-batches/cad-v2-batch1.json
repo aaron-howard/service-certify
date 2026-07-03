@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CAD",
+		"order": 0,
+		"prompt": "A team wants to build a custom application to track conference room bookings with related records and reporting. Why is ServiceNow a good fit for this application?",
+		"choices": [
+			"The requirement is task- and data-driven, mapping naturally to tables, forms, and workflow on the platform",
+			"The application requires a dedicated GPU rendering pipeline unavailable on the platform",
+			"The data is unstructured binary media with no relational structure",
+			"The solution must run entirely offline with no server component"
+		],
+		"correctIndex": 0,
+		"explanation": "ServiceNow fits applications built on structured, task- and data-driven records that leverage tables, forms, lists, and workflow rather than binary media or offline-only needs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/app-eng-studio-overview.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 1,
+		"prompt": "By default, what does creating a custom application in its own application scope provide?",
+		"choices": [
+			"A private namespace that restricts other applications from accessing its tables and business logic unless granted permission",
+			"Unrestricted global write access to every table in the instance",
+			"Automatic deletion of the application after each upgrade",
+			"A requirement that all scripts run only on the client"
+		],
+		"correctIndex": 0,
+		"explanation": "A scoped application gets a private namespace that protects its files and data; other applications cannot access its tables or logic without explicit permission.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/c_ApplicationScope.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 2,
+		"prompt": "You need a new table that reuses the fields and behavior of an existing table while adding its own fields. Which data-model approach should you use?",
+		"choices": [
+			"Extend the existing table so the new table inherits its fields and adds custom fields",
+			"Copy every field manually into an unrelated standalone table",
+			"Store the new data as JSON inside a single string field",
+			"Create the table only in the sys_user table's dictionary"
+		],
+		"correctIndex": 0,
+		"explanation": "Table extension creates a child table that inherits the parent's fields and can add its own, supporting reuse and polymorphic behavior in the data model.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/table-extension.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 3,
+		"prompt": "What is the role of an application menu and its modules in a custom application?",
+		"choices": [
+			"They provide navigation entries in the Application Navigator that open lists, forms, or other content",
+			"They define the database indexes used by the table",
+			"They replace access controls for the application's tables",
+			"They compile the client scripts into server code"
+		],
+		"correctIndex": 0,
+		"explanation": "An application menu groups modules that appear in the Application Navigator; modules link users to lists, new records, or other content for the application.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/application-menus-modules.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 4,
+		"prompt": "To model that one company record can be associated with many asset records, which field type establishes the relationship on the asset table?",
+		"choices": [
+			"A Reference field on the asset table pointing to the company table",
+			"A String field on the company table listing asset names",
+			"A Duration field on both tables",
+			"A Journal field storing comments only"
+		],
+		"correctIndex": 0,
+		"explanation": "A reference field creates a one-to-many relationship by storing a pointer from the many-side records (assets) to the one-side record (company).",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/reference-field.html"
+		]
+	}
+]

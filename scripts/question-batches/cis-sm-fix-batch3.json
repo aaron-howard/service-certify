@@ -1,0 +1,512 @@
+[
+  {
+    "trackCode": "CIS-SM",
+    "order": 60,
+    "prompt": "What defines a bottom-up Service Mapping approach?",
+    "choices": [
+      "Describes the outcome where map by importing static architecture diagrams without CMDB records.",
+      "Matches the scenario in which limit mapping to network devices and ignore applications.",
+      "Reflects the condition that start only from executive service catalogs and skip technical dependency discovery.",
+      "Represents the approach that start from infrastructure and application component dependencies, then assemble validated service context upward."
+    ],
+    "correctIndex": 3,
+    "explanation": "Bottom-up mapping builds service understanding from discovered technical relationships.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping-methods.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/c_Discovery.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 61,
+    "prompt": "When is bottom-up mapping especially useful?",
+    "choices": [
+      "Reflects the condition that when no CMDB classes exist for application components.",
+      "Captures the choice stating when discovery is intentionally disabled across environments.",
+      "Describes the outcome where when all services already have perfectly maintained maps.",
+      "Matches the scenario in which when business service definitions are incomplete but technical dependency data is available."
+    ],
+    "correctIndex": 3,
+    "explanation": "Bottom-up techniques help bootstrap service context from reliable technical evidence.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/cmdb-landing.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 62,
+    "prompt": "Which prerequisite most improves bottom-up mapping accuracy?",
+    "choices": [
+      "Corresponds to the option where removing ownership and support group fields from CIs.",
+      "Matches the scenario in which mapping only production databases regardless service boundaries.",
+      "Reflects the condition that weekly manual deletion of stale CI relationships.",
+      "Captures the choice stating consistent CI identification, reconciliation rules, and discovered relationship quality in CMDB."
+    ],
+    "correctIndex": 3,
+    "explanation": "Bottom-up mapping quality depends on strong CMDB identity and relationship integrity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/ire.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_TroubleshootServiceMapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 63,
+    "prompt": "How should teams convert bottom-up technical maps into business-service-aligned views?",
+    "choices": [
+      "Reflects the condition that remove non-critical dependencies to simplify every map.",
+      "Captures the choice stating create separate maps per admin without shared standards.",
+      "Corresponds to the option where publish technical maps directly to executives without context.",
+      "Represents the approach that layer application service definitions and ownership metadata over validated dependency clusters."
+    ],
+    "correctIndex": 3,
+    "explanation": "Business relevance comes from overlaying ownership and service definitions onto technical topology.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_CreateAndMaintainServiceMaps.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_UseServiceMapsForImpactAnalysis.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 64,
+    "prompt": "Which KPI indicates bottom-up mapping is delivering operational value?",
+    "choices": [
+      "Corresponds to the option where longer mean time to restore with no map updates.",
+      "Represents the approach that higher count of unclassified CIs in mapped services.",
+      "Describes the outcome where more manual reassignment of application CI ownership.",
+      "Captures the choice stating improved incident impact accuracy and faster root-cause isolation due to dependable dependency topology."
+    ],
+    "correctIndex": 3,
+    "explanation": "Operational value appears when topology quality improves impact and troubleshooting outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_UseServiceMapsForImpactAnalysis.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 65,
+    "prompt": "What is the main value of service health monitoring in Service Mapping operations?",
+    "choices": [
+      "Corresponds to the option where track only server CPU metrics outside service context.",
+      "Describes the outcome where surface service-impacting CI degradation quickly using business service context and dependency relationships.",
+      "Matches the scenario in which replace event and incident processes entirely.",
+      "Represents the approach that focus exclusively on historical monthly reports."
+    ],
+    "correctIndex": 1,
+    "explanation": "Service health is most useful when technical signals are tied to business services and dependencies.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 66,
+    "prompt": "Which prerequisite most improves confidence in service health views?",
+    "choices": [
+      "Describes the outcome where manual weekly map redraws in presentation tools.",
+      "Represents the approach that accurate CI relationships and maintained service maps in the CMDB.",
+      "Reflects the condition that suppressing all warning-level events.",
+      "Matches the scenario in which a large number of custom dashboard colors."
+    ],
+    "correctIndex": 1,
+    "explanation": "Reliable service health depends on trustworthy map topology and CI relationship accuracy.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/cmdb-landing.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 67,
+    "prompt": "How should teams handle noisy health indicators that trigger frequent false service degradation?",
+    "choices": [
+      "Reflects the condition that escalate every warning to critical severity.",
+      "Matches the scenario in which ignore recurring alerts during business hours.",
+      "Describes the outcome where disable service health indicators for all services.",
+      "Captures the choice stating tune thresholds and event rules using historical incident validation and service impact criteria."
+    ],
+    "correctIndex": 3,
+    "explanation": "Threshold and rule tuning aligned to real impact improves health signal quality.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/task/t_ConfigureEventRules.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 68,
+    "prompt": "What operating practice best supports proactive service health management?",
+    "choices": [
+      "Captures the choice stating use daily health review with ownership assignments for recurring degradations and map quality issues.",
+      "Corresponds to the option where review service health only after outages occur.",
+      "Reflects the condition that measure health solely by event volume.",
+      "Matches the scenario in which assign all health tasks to one platform admin."
+    ],
+    "correctIndex": 0,
+    "explanation": "Regular review and clear ownership help teams prevent repeat degradations before outages occur.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_MonitorServiceHealth.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/task-table/concept/task-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 69,
+    "prompt": "Which KPI set best demonstrates improvement in service health operations?",
+    "choices": [
+      "Reflects the condition that greater number of services marked critical by default.",
+      "Represents the approach that more manually edited CI relationship records.",
+      "Corresponds to the option where higher count of health widgets per dashboard.",
+      "Captures the choice stating lower duration of degraded service states and fewer repeat dependency-driven incidents."
+    ],
+    "correctIndex": 3,
+    "explanation": "Operational health gains are reflected by faster recovery and reduced recurrence of dependency-related impact.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 70,
+    "prompt": "What is the primary purpose of Service Mapping administration?",
+    "choices": [
+      "Captures the choice stating allow unrestricted map editing by any user with itil role.",
+      "Represents the approach that maintain maps only during outage investigations.",
+      "Corresponds to the option where disable dependency discovery to reduce processing.",
+      "Describes the outcome where govern map creation, ownership, credentials, and update policies to keep service topology accurate."
+    ],
+    "correctIndex": 3,
+    "explanation": "SM administration ensures service maps remain reliable, governed, and operationally useful.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 71,
+    "prompt": "Which administrative control best protects map quality over time?",
+    "choices": [
+      "Represents the approach that disable map validation checks for speed.",
+      "Matches the scenario in which permit direct production edits without review.",
+      "Describes the outcome where define ownership, review cadence, and approval gates for map changes and entry point updates.",
+      "Corresponds to the option where clone maps whenever a CI is renamed."
+    ],
+    "correctIndex": 2,
+    "explanation": "Governed change controls help prevent map drift and preserve service topology accuracy.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_MaintainServiceMap.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 72,
+    "prompt": "How should administrators manage credentials and discovery patterns for Service Mapping?",
+    "choices": [
+      "Matches the scenario in which reuse one privileged credential for every service and domain.",
+      "Reflects the condition that disable credential validation to reduce onboarding time.",
+      "Represents the approach that modify discovery patterns during active outages.",
+      "Describes the outcome where maintain least-privilege credential oversight and test pattern updates before production rollout."
+    ],
+    "correctIndex": 3,
+    "explanation": "Credential governance and controlled pattern promotion reduce risk and preserve mapping reliability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/t_ConfigureDiscoveryCredentials.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 73,
+    "prompt": "Which administrative operating model best supports scalable Service Mapping?",
+    "choices": [
+      "Matches the scenario in which completely decentralized map ownership with no standards.",
+      "Captures the choice stating no ownership assignment until map failures occur.",
+      "Describes the outcome where central platform oversight with delegated service owners and standardized onboarding checklists.",
+      "Reflects the condition that one administrator managing all maps without service input."
+    ],
+    "correctIndex": 2,
+    "explanation": "Balanced governance and delegated accountability support scale without sacrificing consistency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/configuration-management/concept/configuration-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 74,
+    "prompt": "Which KPI set best demonstrates effective Service Mapping administration?",
+    "choices": [
+      "Matches the scenario in which higher number of unmanaged entry points.",
+      "Captures the choice stating increased count of unmapped business services.",
+      "Reflects the condition that more emergency map edits in production.",
+      "Corresponds to the option where high map freshness, low orphan CI rates, and faster correction of topology discrepancies."
+    ],
+    "correctIndex": 3,
+    "explanation": "Administrative effectiveness is reflected by map currency, topology integrity, and responsive governance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 75,
+    "prompt": "A service owner reports repeated false impact on unrelated incidents. What Service Mapping improvement should be prioritized first?",
+    "choices": [
+      "Captures the choice stating move the service to a lower support group.",
+      "Represents the approach that review and correct missing or incorrect dependency relationships in the service map.",
+      "Corresponds to the option where hide upstream CIs from map views.",
+      "Reflects the condition that disable impact calculation for the business service."
+    ],
+    "correctIndex": 1,
+    "explanation": "Impact accuracy depends on correct CI relationships. Fixing topology quality reduces false blast-radius calculations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_MaintainServiceMap.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 76,
+    "prompt": "What is the best reason to integrate Service Mapping updates with change management?",
+    "choices": [
+      "Represents the approach that to defer all map maintenance until quarter end.",
+      "Describes the outcome where to replace service owners with change managers.",
+      "Captures the choice stating to confirm topology changes are reviewed and maps stay aligned with production architecture.",
+      "Corresponds to the option where to eliminate the need for CI relationships in CMDB."
+    ],
+    "correctIndex": 2,
+    "explanation": "Coordinating map updates with approved changes reduces drift between actual architecture and mapped dependencies.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_MaintainServiceMap.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 77,
+    "prompt": "Which KPI best indicates Service Mapping operational health at scale?",
+    "choices": [
+      "Matches the scenario in which number of CI classes in CMDB.",
+      "Corresponds to the option where map freshness and reduction of orphan/unmapped critical dependencies.",
+      "Represents the approach that percent of map updates performed after incidents.",
+      "Describes the outcome where count of users with map admin role."
+    ],
+    "correctIndex": 1,
+    "explanation": "Fresh maps and fewer orphan dependencies directly reflect topology reliability for operations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 78,
+    "prompt": "A mapped service repeatedly misses a middleware tier after releases. What should be done first?",
+    "choices": [
+      "Represents the approach that pause all Discovery schedules.",
+      "Describes the outcome where review entry points and related pattern logic for the changed architecture.",
+      "Matches the scenario in which rebuild the entire CMDB from scratch.",
+      "Reflects the condition that increase incident priority defaults for that service."
+    ],
+    "correctIndex": 1,
+    "explanation": "Recurring tier gaps usually indicate entry point or pattern coverage misalignment after architecture change.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_MaintainServiceMap.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 79,
+    "prompt": "Which operating model best sustains Service Mapping quality across many services?",
+    "choices": [
+      "Matches the scenario in which maps updated only after major incidents.",
+      "Reflects the condition that each team customizes mapping rules with no oversight.",
+      "Captures the choice stating central team owns all maps with no business input.",
+      "Describes the outcome where map ownership by service teams under central standards, review cadence, and shared health metrics."
+    ],
+    "correctIndex": 3,
+    "explanation": "Federated ownership with centralized governance scales mapping while preserving consistency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/configuration-management/concept/configuration-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 80,
+    "prompt": "During cloud expansion, what tagging practice most improves Service Mapping consistency?",
+    "choices": [
+      "Reflects the condition that tag only production databases.",
+      "Matches the scenario in which use a standard application/service tag taxonomy enforced across accounts.",
+      "Corresponds to the option where store service names only in DNS comments.",
+      "Captures the choice stating let each team define ad hoc tag names."
+    ],
+    "correctIndex": 1,
+    "explanation": "Consistent tagging provides reliable identifiers that support map accuracy across distributed cloud estates.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/c_CMDB.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 81,
+    "prompt": "Why should Service Mapping teams monitor map health after each significant release?",
+    "choices": [
+      "Corresponds to the option where to reduce CMDB class count.",
+      "Captures the choice stating to eliminate service owner approvals.",
+      "Reflects the condition that to archive all old maps before incident reviews.",
+      "Represents the approach that to confirm topology still reflects current architecture and dependencies."
+    ],
+    "correctIndex": 3,
+    "explanation": "Post-release validation catches drift early and preserves confidence in impact and root-cause workflows.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_MaintainServiceMap.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 82,
+    "prompt": "Which prerequisite most improves successful onboarding of a complex application into Service Mapping?",
+    "choices": [
+      "Represents the approach that accurate entry points, credential readiness, and identified service ownership.",
+      "Describes the outcome where a complete catalog of incident categories.",
+      "Corresponds to the option where a single generic discovery credential for all environments.",
+      "Captures the choice stating weekly license optimization reports."
+    ],
+    "correctIndex": 0,
+    "explanation": "Onboarding quality depends on technical access and accountable ownership for validation and maintenance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/t_ConfigureDiscoveryCredentials.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 83,
+    "prompt": "What is the strongest reason to track map suggestion acceptance outcomes?",
+    "choices": [
+      "Corresponds to the option where to reduce number of service owners.",
+      "Matches the scenario in which to replace impact calculation.",
+      "Describes the outcome where to monitor whether suggested topology changes improve accuracy versus introducing noise.",
+      "Represents the approach that to disable manual map validation."
+    ],
+    "correctIndex": 2,
+    "explanation": "Acceptance quality metrics help teams tune suggestion governance and avoid map degradation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 84,
+    "prompt": "A business service map is technically accurate but rarely used by operations teams. What should be improved?",
+    "choices": [
+      "Describes the outcome where link map context to incident/event workflows and service health views.",
+      "Reflects the condition that restrict map access to administrators only.",
+      "Represents the approach that remove noncritical dependencies.",
+      "Matches the scenario in which increase CI class count in CMDB."
+    ],
+    "correctIndex": 0,
+    "explanation": "Operational adoption increases when maps are integrated into daily triage and service health decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_MaintainServiceMap.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 85,
+    "prompt": "Which validation activity most improves trust in a newly onboarded service map?",
+    "choices": [
+      "Reflects the condition that waiting for the first outage to test map usefulness.",
+      "Matches the scenario in which publishing the map without service owner sign-off.",
+      "Describes the outcome where reviewing only CI class names.",
+      "Captures the choice stating comparing discovered dependencies with known architecture and owner feedback."
+    ],
+    "correctIndex": 3,
+    "explanation": "Cross-checking discovered topology with documented design and owner knowledge verifies practical accuracy.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_MaintainServiceMap.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 86,
+    "prompt": "Why is service ownership metadata important for Service Mapping operations?",
+    "choices": [
+      "Captures the choice stating it determines CMDB table inheritance.",
+      "Corresponds to the option where it enables accountable map validation, change approvals, and remediation routing.",
+      "Reflects the condition that it removes the need for business services.",
+      "Matches the scenario in which it replaces discovery credentials."
+    ],
+    "correctIndex": 1,
+    "explanation": "Clear ownership supports governed decisions and faster correction when mapping issues are found.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/c_CMDB.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 87,
+    "prompt": "Which governance signal suggests Service Mapping configuration drift?",
+    "choices": [
+      "Reflects the condition that documented onboarding checklists for new services.",
+      "Represents the approach that regular owner reviews after major releases.",
+      "Corresponds to the option where growing number of emergency map edits and unresolved topology discrepancies.",
+      "Captures the choice stating stable map freshness and low dependency correction backlog."
+    ],
+    "correctIndex": 2,
+    "explanation": "Frequent emergency edits and unresolved gaps indicate weak change governance and accumulating drift.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_MaintainServiceMap.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 88,
+    "prompt": "Which metric is most meaningful for measuring Service Mapping maintenance discipline?",
+    "choices": [
+      "Corresponds to the option where percentage of business-critical maps reviewed and updated within defined cadence.",
+      "Describes the outcome where average incident resolution time across all services.",
+      "Captures the choice stating number of maps created this quarter.",
+      "Represents the approach that count of CIs by operating system."
+    ],
+    "correctIndex": 0,
+    "explanation": "Cadence-based review compliance directly measures whether map governance practices are being followed.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_MaintainServiceMap.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SM",
+    "order": 89,
+    "prompt": "A newly acquired system must be mapped quickly without degrading quality. What approach is best?",
+    "choices": [
+      "Corresponds to the option where use phased onboarding with minimum oversight checks, owner validation, and post-go-live review.",
+      "Describes the outcome where map only infrastructure, not service dependencies.",
+      "Represents the approach that wait one year before creating a map.",
+      "Matches the scenario in which skip validation and accept first discovered topology."
+    ],
+    "correctIndex": 0,
+    "explanation": "Phased onboarding enables timely coverage while preserving quality and accountability controls.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_MaintainServiceMap.html"
+    ]
+  }
+]

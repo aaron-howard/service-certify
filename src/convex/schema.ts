@@ -39,8 +39,13 @@ export default defineSchema({
 		prompt: v.string(),
 		// Multiple choice options — expected 2-6 choices, 5-500 chars each
 		choices: v.array(v.string()),
-		// Correct answer index — must be valid for choices array (0-5)
+		// Correct answer index — must be valid for choices array (0-5).
+		// For multi-select questions this holds the first correct index (back-compat).
 		correctIndex: v.number(),
+		// Question format: 'single' (default when absent) or 'multi' (select all that apply)
+		questionType: v.optional(v.union(v.literal('single'), v.literal('multi'))),
+		// For multi-select: full set of correct choice indexes (sorted). Absent for single.
+		correctIndexes: v.optional(v.array(v.number())),
 		// Explanation — expected 20-3000 chars
 		explanation: v.string(),
 		// Reference URLs for learning — expected 0-10 URLs, 10-500 chars each

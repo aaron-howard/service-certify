@@ -1,0 +1,412 @@
+[
+  {
+    "trackCode": "CIS-SP",
+    "order": 50,
+    "prompt": "In Service Mapping, what is the MID Server provider responsible for?",
+    "choices": [
+      "Approving changes for production readiness",
+      "Executing probes and patterns against target environments securely for role-based accountability",
+      "Rendering PA scorecards for operational consistency for sustained reliability",
+      "Hosting service portal widgets for enterprise implementation for controlled governance"
+    ],
+    "correctIndex": 1,
+    "explanation": "MID Servers run discovery activities from inside controlled network zones to collect mapping data.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 51,
+    "prompt": "Why is MID Server placement important for service mapping accuracy?",
+    "choices": [
+      "It exclusively changes CMDB class icons for enterprise implementation",
+      "It disables credentials for practical execution",
+      "It determines network reachability to application and infrastructure endpoints for measurable outcomes",
+      "Placement has no impact for sustained reliability for operational consistency"
+    ],
+    "correctIndex": 2,
+    "explanation": "A correctly placed MID Server can reach the required endpoints and produce complete topology evidence.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 52,
+    "prompt": "Which requirement should be validated before assigning a MID Server to a mapping schedule?",
+    "choices": [
+      "Theme color compatibility for operational consistency for sustained reliability",
+      "Incident priority matrix for enterprise implementation for controlled governance",
+      "Knowledge workflow state for production readiness",
+      "Capability, credentials access, and connectivity to targets for role-based accountability"
+    ],
+    "correctIndex": 3,
+    "explanation": "Capability tags, valid credentials, and reachable paths are foundational prerequisites for reliable execution.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 53,
+    "prompt": "What is a common symptom of an unhealthy MID provider path?",
+    "choices": [
+      "Frequent probe timeout or credential failure events for measurable outcomes",
+      "Consistent identification of all dependencies for sustained reliability",
+      "Automatic certification success for controlled governance for enterprise implementation",
+      "Lower dashboard contrast for practical execution"
+    ],
+    "correctIndex": 0,
+    "explanation": "Timeouts and auth failures indicate MID provider issues that block successful data collection.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 54,
+    "prompt": "How does the ECC queue support MID provider operations?",
+    "choices": [
+      "It replaces CMDB identification rules for practical execution",
+      "It brokers command and result messages between instance and MID Server for controlled governance",
+      "It stores exclusively change requests for operational consistency",
+      "It archives PA breakdowns for measurable outcomes for role-based accountability"
+    ],
+    "correctIndex": 1,
+    "explanation": "The ECC queue is the communication backbone used to dispatch work and receive execution results from MID Servers.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 55,
+    "prompt": "What is the purpose of maintaining TNI inventory data for service mapping programs?",
+    "choices": [
+      "To consistently stop discovery schedules for measurable outcomes",
+      "To consistently avoid MID Server usage for production readiness",
+      "To consistently replace all CMDB classes with one table",
+      "To consistently provide current infrastructure context used to map service dependencies"
+    ],
+    "correctIndex": 3,
+    "explanation": "TNI inventory gives mapping processes reliable component context that supports accurate dependency modeling.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 56,
+    "prompt": "Why is inventory normalization important before TNI data is consumed by mapping logic?",
+    "choices": [
+      "Normalization is optional for topology accuracy for sustained reliability",
+      "It exclusively affects dashboard colors for role-based accountability",
+      "It removes identifier rules for practical execution",
+      "Consistent naming and attributes strengthen CI matching and relationship quality"
+    ],
+    "correctIndex": 3,
+    "explanation": "Normalized inventory values reduce ambiguity and help reconciliation identify the correct CIs.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 57,
+    "prompt": "Which risk is most likely when TNI inventory freshness is poor?",
+    "choices": [
+      "All probes run faster for enterprise implementation for controlled governance",
+      "PA indicators stop collecting for operational consistency for sustained reliability",
+      "Service maps may miss recent changes in infrastructure topology for role-based accountability",
+      "Credential rotation is automated for production readiness"
+    ],
+    "correctIndex": 2,
+    "explanation": "Outdated inventory can produce stale maps that no longer match the live environment.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 58,
+    "prompt": "How should teams handle conflicting attributes between TNI inventory and existing CMDB records?",
+    "choices": [
+      "Ignore conflicts permanently for production readiness",
+      "Delete both records for role-based accountability for measurable outcomes",
+      "Apply reconciliation policies to determine source-of-truth precedence for operational consistency",
+      "Disable discovery for enterprise implementation for controlled governance"
+    ],
+    "correctIndex": 2,
+    "explanation": "Reconciliation policy ensures attribute updates follow governed precedence rather than random overwrite behavior.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 59,
+    "prompt": "What governance control best improves confidence in TNI inventory ingestion?",
+    "choices": [
+      "One-time import with no monitoring for controlled governance",
+      "Turning off identification rules for practical execution",
+      "Manual renaming in spreadsheets exclusively for role-based accountability",
+      "Periodic completeness and accuracy audits with exception tracking for sustained reliability"
+    ],
+    "correctIndex": 3,
+    "explanation": "Recurring audits and exception workflows keep inventory ingestion measurable and continuously improvable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 60,
+    "prompt": "In Service Mapping, what is the intent of proactive workflows?",
+    "choices": [
+      "To consistently approve change requests for measurable outcomes",
+      "To consistently automatically detect and address mapping/data issues before major impact",
+      "To consistently replace CMDB entirely for controlled governance",
+      "To consistently stop all discovery runs for sustained reliability"
+    ],
+    "correctIndex": 1,
+    "explanation": "Proactive workflows focus on early detection and automation to reduce service mapping disruption risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 61,
+    "prompt": "Which event is a strong trigger for a proactive service mapping workflow?",
+    "choices": [
+      "Repeated pattern execution failure on critical business services for practical execution",
+      "A user changing theme preferences for controlled governance",
+      "Creation of a non-IT catalog item for sustained reliability",
+      "A one-time successful discovery result for measurable outcomes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Repeated failures on critical services indicate systemic risk and should trigger automated response workflows.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 62,
+    "prompt": "How can proactive workflows improve mapping reliability?",
+    "choices": [
+      "By disabling alerts for enterprise implementation for controlled governance",
+      "By removing service entry points for operational consistency",
+      "By forcing manual-exclusively updates for measurable outcomes",
+      "By correlating health signals and launching guided remediation tasks for production readiness"
+    ],
+    "correctIndex": 3,
+    "explanation": "Signal correlation plus automated tasking helps teams respond quickly and consistently to mapping degradation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 63,
+    "prompt": "Why should proactive workflows include stakeholder notifications?",
+    "choices": [
+      "To confirm service owners are informed of topology risk and remediation status",
+      "exclusively admins should know about failures for role-based accountability",
+      "To consistently suppress operational dashboards for practical execution",
+      "Notifications are unnecessary for mapping issues for controlled governance"
+    ],
+    "correctIndex": 0,
+    "explanation": "Transparent communication keeps service owners aligned on impact, risk, and remediation progress.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 64,
+    "prompt": "What governance measure best supports sustainable proactive workflow automation?",
+    "choices": [
+      "Create workflows without documentation for controlled governance for enterprise implementation",
+      "Define runbooks, ownership, and success metrics for each automated response for practical execution",
+      "Use one workflow for every failure type for measurable outcomes",
+      "Disable audit logging for sustained reliability for operational consistency"
+    ],
+    "correctIndex": 1,
+    "explanation": "Documented runbooks and measurable success criteria keep automation reliable, auditable, and continuously improvable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 65,
+    "prompt": "In a multi-tenant ServiceNow architecture, what pattern best isolates tenant-specific business rules?",
+    "choices": [
+      "Scope tenant logic into separate applications with controlled cross-scope access policies for production readiness",
+      "Store all tenant logic in one global script include with no access restrictions for role-based accountability",
+      "Disable application scopes to simplify deployment for operational consistency",
+      "Require tenant admins to edit base system scripts directly for enterprise implementation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Scoped applications and explicit cross-scope controls reduce coupling and improve tenant isolation, security, and maintainability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-application-development/page/build/applications/concept/c_ApplicationScopes.html",
+      "https://www.servicenow.com/docs/bundle/zurich-application-development/page/build/applications/concept/c_CrossScopeAccess.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 66,
+    "prompt": "Why is data partitioning strategy critical in multi-tenant CSP implementations?",
+    "choices": [
+      "It guarantees every tenant can query every table for troubleshooting for measurable outcomes",
+      "It removes the need for ACLs on sensitive records for sustained reliability",
+      "It allows cloning tenant data into global tables without controls for controlled governance",
+      "It enforces tenant data boundaries and supports compliant access patterns in shared infrastructure for practical execution"
+    ],
+    "correctIndex": 3,
+    "explanation": "Partitioning design, combined with security controls, is foundational to preventing cross-tenant data exposure in shared platforms.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/contextual-security/concept/c_AccessControls.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/table-administration/concept/c_ExtendingTables.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 67,
+    "prompt": "Which authentication pattern is most appropriate for multi-tenant CSP portals integrating external identity providers?",
+    "choices": [
+      "Use federation standards like SAML or OpenID Connect with tenant-aware identity mapping for operational consistency",
+      "Disable SSO to avoid tenant mapping complexity for enterprise implementation",
+      "Authenticate all tenants through a single admin credential for production readiness",
+      "Create one shared local account for all tenant users for role-based accountability"
+    ],
+    "correctIndex": 0,
+    "explanation": "Federated identity with tenant-aware mapping supports secure, scalable authentication while preserving tenant separation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/integrate/single-sign-on/concept/sso-with-external-identity-providers.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Authentication.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 68,
+    "prompt": "What integration design choice improves resilience in multi-tenant CSP event ingestion?",
+    "choices": [
+      "Process all events synchronously in user sessions for role-based accountability",
+      "Queue and process events asynchronously with tenant-aware routing and retry controls for production readiness",
+      "Route every event to a single tenant for validation for enterprise implementation",
+      "Discard failed events immediately to protect throughput for operational consistency"
+    ],
+    "correctIndex": 1,
+    "explanation": "Asynchronous pipelines with routing and retry logic help isolate failures and preserve stable tenant-specific processing.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/integrationhub/concept/IntegrationHub.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/web-services/concept/c_RESTAPI.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 69,
+    "prompt": "Which operational practice best supports multi-tenant CSP pattern maturity over time?",
+    "choices": [
+      "Disable tenant-level logging to reduce storage cost for practical execution",
+      "Apply identical static thresholds to all tenants indefinitely for controlled governance",
+      "Monitor tenant-segmented performance and security indicators, then iteratively tune architecture and controls for sustained reliability",
+      "Allow tenants to modify platform security defaults directly for measurable outcomes"
+    ],
+    "correctIndex": 2,
+    "explanation": "Tenant-aware observability enables evidence-based tuning that maintains performance and security as tenant usage patterns evolve.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/security-best-practices.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 70,
+    "prompt": "For CSP integrations, what approach best supports scalable onboarding of new partner systems?",
+    "choices": [
+      "Use standardized integration contracts with reusable authentication, mapping, and error-handling patterns for operational consistency",
+      "Disable retries to prevent duplicate transactions for enterprise implementation",
+      "Require manual CSV uploads as the core integration method",
+      "Implement each partner integration with unique undocumented scripts for role-based accountability"
+    ],
+    "correctIndex": 0,
+    "explanation": "Standardized patterns reduce onboarding time, improve consistency, and simplify support as integration count grows.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/integrationhub/concept/IntegrationHub.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/web-services/concept/c_RESTAPI.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 71,
+    "prompt": "Why is idempotency important in event-driven CSP integrations?",
+    "choices": [
+      "It guarantees external APIs never return errors for measurable outcomes",
+      "It allows events to bypass authorization checks for sustained reliability",
+      "It prevents duplicate side effects when the same message is retried or delivered more than once for controlled governance",
+      "It removes the need for correlation identifiers for practical execution"
+    ],
+    "correctIndex": 2,
+    "explanation": "Idempotent processing ensures retries are safe and system state remains consistent under real-world delivery behavior.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/integrationhub/reference/r_FlowDesignerErrorHandling.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/web-services/concept/c_RESTAPI.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 72,
+    "prompt": "Which security practice is most appropriate for outbound CSP integration credentials?",
+    "choices": [
+      "Store credentials in platform-managed secure records and rotate them under policy for production readiness",
+      "Share one static credential across all tenants indefinitely for role-based accountability",
+      "Embed credentials directly in scripts for faster deployment for operational consistency",
+      "Disable credential encryption in non-production environments for enterprise implementation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Managed credential storage and rotation reduce exposure risk and support auditable security operations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_CredentialsAndSecrets.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/integrationhub/concept/IntegrationHub.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 73,
+    "prompt": "What is the primary benefit of correlation IDs across CSP integration flows?",
+    "choices": [
+      "They replace all logging requirements for controlled governance",
+      "They guarantee synchronous processing behavior for practical execution",
+      "They eliminate the need for API versioning for measurable outcomes",
+      "They enable end-to-end traceability for troubleshooting across distributed systems for sustained reliability"
+    ],
+    "correctIndex": 3,
+    "explanation": "Correlation IDs tie related transactions together, making it far easier to diagnose failures across platform and partner boundaries.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/web-services/concept/c_OutboundRESTWebServices.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SP",
+    "order": 74,
+    "prompt": "As final-track coverage reaches orders 0-74, which CSP integration metric best indicates sustainable operations?",
+    "choices": [
+      "Maximum number of custom connectors per partner for sustained reliability",
+      "Fewest documented runbook procedures for measurable outcomes for role-based accountability",
+      "Stable success rates with low mean time to detect and resolve integration failures for practical execution",
+      "Highest possible request volume regardless of error rate for controlled governance"
+    ],
+    "correctIndex": 2,
+    "explanation": "Sustainable integrations are measured by reliability and operational responsiveness, not raw throughput or complexity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/integrationhub/concept/IntegrationHub.html"
+    ]
+  }
+]

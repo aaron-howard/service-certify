@@ -1,0 +1,484 @@
+[
+  {
+    "trackCode": "CAD",
+    "order": 0,
+    "prompt": "In application development, where should reusable server-side functions or classes usually be placed for maintainability?",
+    "choices": [
+      "Typically, exclusively in homepages for governed delivery for stable outcomes",
+      "Operationally, only in scheduled jobs that run weekly in standard operations",
+      "From an implementation standpoint, in Script Includes that other server scripts instantiate or call",
+      "In practice, only in global Client Scripts in standard operations under normal policy constraints"
+    ],
+    "correctIndex": 2,
+    "explanation": "Script Includes encapsulate reusable server-side logic and support scoped application boundaries.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/vancouver-application-development/page/script/server-scripting/concept/c_ScriptIncludes.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 1,
+    "prompt": "A Business Rule set to run Before insert executes at which point in the save lifecycle?",
+    "choices": [
+      "In this scenario, only when a user prints the form",
+      "From a governance perspective, before the new row is written to the database",
+      "Practically speaking, after related records are committed in every case",
+      "In platform terms, only after all asynchronous jobs complete"
+    ],
+    "correctIndex": 1,
+    "explanation": "Before rules run prior to database operations so you can adjust values, validate, or abort the transaction.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-application-development/page/script/business-rules/concept/c_BusinessRules.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 2,
+    "prompt": "Which server-side API is commonly used to query and modify rows in a table from scripts such as Business Rules?",
+    "choices": [
+      "Operationally, glideAjax for consistent administration",
+      "In practice, spModal in standard operations",
+      "Typically, glideRecord for governed delivery",
+      "From an implementation standpoint, g_form"
+    ],
+    "correctIndex": 2,
+    "explanation": "GlideRecord is the standard server-side interface for database operations in most server scripts.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/xanadu/application-development/scripts/c_UsingGlideRecordToQueryTables.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 3,
+    "prompt": "Which pairing best contrasts UI Policies and Client Scripts on forms?",
+    "choices": [
+      "Typically, uI Policies run only on the email client in standard operations under normal policy constraints for governed delivery",
+      "In practice, client Scripts cannot reference g_form for consistent administration for governed delivery under expected controls",
+      "Operationally, neither can apply on the same table under normal policy constraints under expected controls for stable outcomes",
+      "From an admin perspective, uI Policies often control visibility and mandatory state declaratively; Client Scripts implement imperative client logic with JavaScript"
+    ],
+    "correctIndex": 3,
+    "explanation": "UI Policies provide declarative form behavior; Client Scripts add scripted client-side behavior when needed.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/form-administration/task/t_CreateAUIPolicy.html",
+      "https://www.servicenow.com/docs/bundle/washingtondc-application-development/page/script/client-scripts/concept/client-scripts.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 4,
+    "prompt": "Which component defines a custom HTTP method, resource path, and script for inbound REST integration in a scoped application?",
+    "choices": [
+      "In most deployments, transform Map",
+      "In this scenario, data source",
+      "In platform terms, scripted REST API resource",
+      "From a governance perspective, homepage gauge"
+    ],
+    "correctIndex": 2,
+    "explanation": "Scripted REST APIs expose resources backed by scripts that handle request and response processing.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/api-reference/rest-api-explorer/t_CreateAScriptedRESTAPIResource.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 5,
+    "prompt": "In application development, what do tables primarily define in a ServiceNow application?",
+    "choices": [
+      "In most deployments, mID Server polling intervals for discovery under expected controls",
+      "From an implementation standpoint, what data is stored and how it is structured through fields and data types",
+      "In this scenario, that visual theme of the Service Portal only in standard operations",
+      "From a governance perspective, that order of workflow activities in Flow Designer exclusively"
+    ],
+    "correctIndex": 1,
+    "explanation": "Tables are the foundation of applications; they define stored data and structure via fields such as strings, dates, numbers, and references.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/tables-and-data-models.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 6,
+    "prompt": "How is a one-to-many relationship between two tables typically modeled?",
+    "choices": [
+      "Typically, by extending both tables from the same parent without references",
+      "From an admin perspective, by using only many-to-many junction tables in every case",
+      "Practically speaking, by duplicating all columns from both tables into a third table",
+      "In practice, by placing a reference field on the many side pointing to the one side"
+    ],
+    "correctIndex": 3,
+    "explanation": "One-to-many relationships use a reference field on the many side (for example, many incidents referencing one user).",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/tables-and-data-models.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 7,
+    "prompt": "Which approach is required to model a many-to-many relationship between users and roles?",
+    "choices": [
+      "From a governance perspective, a junction table with two reference fields connecting the related tables",
+      "In this scenario, deleting the role table and storing roles in a string field for consistent administration",
+      "In most deployments, a single reference field on the user table only under normal policy constraints",
+      "From an implementation standpoint, a UI Policy that copies values between forms for governed delivery"
+    ],
+    "correctIndex": 0,
+    "explanation": "Many-to-many relationships require an intermediate junction table with reference fields to each related table.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/tables-and-data-models.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 8,
+    "prompt": "When a custom table extends a parent table, what do records on the child table receive?",
+    "choices": [
+      "Operationally, only the fields explicitly created on the child, with no parent fields for consistent administration",
+      "From a governance perspective, parent fields only after a nightly reconciliation job runs under normal policy constraints",
+      "In most deployments, a separate database with no shared dictionary entries for governed delivery",
+      "From an implementation standpoint, all parent fields through configured automation plus any custom fields defined on the child"
+    ],
+    "correctIndex": 3,
+    "explanation": "Table extension lets child tables inherit all parent fields and functionality while adding their own fields.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/tables-and-data-models.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 9,
+    "prompt": "Incident, Problem, and Change records share common task fields such as assignment and state because they extend which table?",
+    "choices": [
+      "Practically speaking, that Contract [ast_contract] table",
+      "Typically, that User [sys_user] table for consistent administration",
+      "In platform terms, that Task table under normal policy constraints",
+      "From an admin perspective, that Metric Definition [asmt_metric_definition] table"
+    ],
+    "correctIndex": 2,
+    "explanation": "ITSM process tables such as Incident, Problem, and Change extend Task, inheriting common workflow fields while adding process-specific fields.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/tables-and-data-models.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 10,
+    "prompt": "When do client scripts execute in the classic form experience?",
+    "choices": [
+      "In this scenario, only on the email client after inbound processing for governed delivery",
+      "Practically speaking, exclusively during scheduled job execution on the server under expected controls",
+      "In platform terms, only when a transform map runs on an import set for stable outcomes",
+      "From a governance perspective, when client-based events occur such as form load, field change, or form submit"
+    ],
+    "correctIndex": 3,
+    "explanation": "Client scripts run in the browser in response to client events such as onLoad, onChange, and onSubmit.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/servicenow-sdk/client-script-api-now-ts.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 11,
+    "prompt": "Which API object is commonly used in client scripts to read and modify field values on a form?",
+    "choices": [
+      "Operationally, glideRecord under expected controls",
+      "From an implementation standpoint, rESTMessageV2",
+      "Typically, glideSystem in standard operations",
+      "In practice, g_form for stable outcomes"
+    ],
+    "correctIndex": 3,
+    "explanation": "The g_form client API provides methods to get, set, and control field behavior on forms.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/servicenow-sdk/client-script-api-now-ts.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 12,
+    "prompt": "How do UI Policies differ from Client Scripts for form behavior?",
+    "choices": [
+      "Operationally, uI Policies provide declarative control of visibility and mandatory state; Client Scripts add imperative JavaScript logic",
+      "From an admin perspective, client Scripts cannot reference form fields in standard operations",
+      "Typically, uI Policies replace the need for any ACL rules for stable outcomes for consistent administration",
+      "In practice, uI Policies run only on the server during database commit under normal policy constraints"
+    ],
+    "correctIndex": 0,
+    "explanation": "UI Policies configure form behavior declaratively; Client Scripts implement custom client-side logic when needed.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/platform-administration/form-administration/t_CreateAUIPolicy.html",
+      "https://www.servicenow.com/docs/r/application-development/ui-builder/define-client-scripts.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 13,
+    "prompt": "In UI Builder, how are client scripts typically associated with page behavior?",
+    "choices": [
+      "In most deployments, by binding scripts to components through event handlers",
+      "From a governance perspective, by attaching scripts exclusively to scheduled jobs",
+      "In this scenario, by compiling scripts into CMDB relationship rules",
+      "In platform terms, by storing scripts only in the system log table"
+    ],
+    "correctIndex": 0,
+    "explanation": "UI Builder lets developers define client scripts and bind them to components via event handlers to update client state.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/ui-builder/define-client-scripts.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 14,
+    "prompt": "A developer needs to call server-side logic from a client script without exposing database queries in the browser. Which approach is appropriate?",
+    "choices": [
+      "In most deployments, disable all ACLs on the target table",
+      "In this scenario, store credentials in a client script global variable",
+      "From a governance perspective, embed GlideRecord queries directly in the client script",
+      "From an implementation standpoint, use GlideAjax to invoke a Script Include on the server"
+    ],
+    "correctIndex": 3,
+    "explanation": "GlideAjax calls server-side Script Includes so sensitive database operations stay on the server.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/servicenow-sdk/client-script-api-now-ts.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 15,
+    "prompt": "What is the primary purpose of a Script Include in application development?",
+    "choices": [
+      "Typically, to render Service Portal widgets in the browser under normal policy constraints",
+      "In practice, to define inbound email actions only for governed delivery",
+      "Practically speaking, to encapsulate reusable server-side logic callable from other server scripts",
+      "From an admin perspective, to schedule discovery probes for stable outcomes"
+    ],
+    "correctIndex": 2,
+    "explanation": "Script Includes store reusable server-side functions or classes invoked by business rules, script actions, and other server code.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/c_ScriptIncludes.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 16,
+    "prompt": "A Business Rule configured as Before update runs at which point?",
+    "choices": [
+      "In this scenario, before the record update is written to the database",
+      "From an implementation standpoint, only after the user closes the browser tab",
+      "In most deployments, after all workflow activities complete in every case",
+      "From a governance perspective, during inbound email parsing exclusively"
+    ],
+    "correctIndex": 0,
+    "explanation": "Before rules execute prior to the database operation, allowing validation or field changes before commit.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/c_BusinessRules.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 17,
+    "prompt": "Which GlideRecord method is commonly used to retrieve a single matching record when you expect at most one result?",
+    "choices": [
+      "Operationally, deleteMultiple() before insert under normal policy constraints",
+      "From an implementation standpoint, setWorkflow(false) on the client",
+      "In most deployments, addQuery() followed by query() only, with no get",
+      "From a governance perspective, get() after setting encoded query or sys_id"
+    ],
+    "correctIndex": 3,
+    "explanation": "After constraining the query, get() retrieves a single record when one match is expected.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/c_UsingGlideRecordToQueryTables.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 18,
+    "prompt": "Why might a developer call setWorkflow(false) on a GlideRecord in a server script?",
+    "choices": [
+      "Practically speaking, to prevent business rules and workflow from firing during that operation",
+      "From an admin perspective, to enable client scripts on import sets in standard operations",
+      "Typically, to grant admin access to the current user for consistent administration",
+      "In platform terms, to convert the table to a fulfillment table under normal policy constraints"
+    ],
+    "correctIndex": 0,
+    "explanation": "Disabling workflow on GlideRecord operations prevents cascading business rules and workflow during controlled updates.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/c_UsingGlideRecordToQueryTables.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 19,
+    "prompt": "An After business rule is most appropriate when the script must:",
+    "choices": [
+      "In this scenario, run after the database operation completes, such as to act on committed data",
+      "Practically speaking, execute only in the user's browser for consistent administration",
+      "From an admin perspective, replace ACL evaluation entirely under normal policy constraints",
+      "In platform terms, block the transaction before any validation occurs for governed delivery"
+    ],
+    "correctIndex": 0,
+    "explanation": "After rules run following the database operation when logic depends on the record being saved.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/c_BusinessRules.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 20,
+    "prompt": "What does the namespace identifier prefix on application artifacts indicate?",
+    "choices": [
+      "In most deployments, that CMDB class hierarchy level for stable outcomes",
+      "From an implementation standpoint, that user's preferred language",
+      "Operationally, that scoped application that owns tables, scripts, and configuration records",
+      "From a governance perspective, that geographic region of the data center only"
+    ],
+    "correctIndex": 2,
+    "explanation": "Scoped applications use namespace identifiers to uniquely prefix artifacts such as tables and scripts.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/c_NamespaceIdentifier.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 21,
+    "prompt": "Cross-scope access to another application's table or script typically requires:",
+    "choices": [
+      "From an admin perspective, disabling all business rules globally under normal policy constraints",
+      "Typically, running discovery on the source scope for consistent administration",
+      "Practically speaking, an approved Restricted Caller Access privilege or configured scope access",
+      "In platform terms, deleting the target application's update set for stable outcomes"
+    ],
+    "correctIndex": 2,
+    "explanation": "Cross-scope access is controlled through Restricted Caller Access and application scope settings.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/scope-resource-access.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 22,
+    "prompt": "What is a primary benefit of building automation with Flow Designer in a scoped application?",
+    "choices": [
+      "Operationally, low-code flows that integrate actions, data, and logic within application boundaries",
+      "From a governance perspective, replacement of all ACLs with flow conditions",
+      "In most deployments, automatic CMDB certification without rules for governed delivery",
+      "From an implementation standpoint, elimination of all server-side scripting requirements in every scenario"
+    ],
+    "correctIndex": 0,
+    "explanation": "Flow Designer provides visual, low-code automation that can be scoped to applications for integrations and process logic.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/build-workflows/flow-designer/flow-designer-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 23,
+    "prompt": "By default, what runtime access do new application data tables have from other scopes?",
+    "choices": [
+      "Operationally, no runtime access is ever configurable under expected controls",
+      "In most deployments, restricted unless explicitly configured to allow API or web service access",
+      "In practice, fully open read/write to all global scripts in standard operations",
+      "From an implementation standpoint, open only to the email client for consistent administration"
+    ],
+    "correctIndex": 1,
+    "explanation": "Application table runtime access is protected by default; developers configure permissions for cross-scope API calls.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/c_RuntimeAccessToAppTables.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 24,
+    "prompt": "A developer needs a subflow reusable across multiple flows in the same application. What should they create?",
+    "choices": [
+      "In this scenario, a Flow Designer subflow that can be invoked from parent flows",
+      "Practically speaking, an import set transform map in standard operations",
+      "In platform terms, a global UI macro only for stable outcomes",
+      "From an admin perspective, a new CMDB relationship type under normal policy constraints"
+    ],
+    "correctIndex": 0,
+    "explanation": "Subflows encapsulate reusable Flow Designer logic that parent flows can call within the application.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/build-workflows/flow-designer/flow-designer-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 25,
+    "prompt": "Which component defines a custom HTTP method, path, and script for inbound REST integration in a scoped app?",
+    "choices": [
+      "In this scenario, a Scripted REST API resource",
+      "Practically speaking, a homepage gauge",
+      "In platform terms, a discovery schedule",
+      "From a governance perspective, a Transform Map"
+    ],
+    "correctIndex": 0,
+    "explanation": "Scripted REST API resources expose endpoints backed by scripts that process requests and responses.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/api-reference/rest-api-explorer/t_CreateAScriptedRESTAPIResource.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 26,
+    "prompt": "What is the purpose of an outbound REST message?",
+    "choices": [
+      "Operationally, to call external REST APIs from server-side scripts on the instance",
+      "From an implementation standpoint, to replace GlideRecord for all queries",
+      "Typically, to discover devices on the network for consistent administration",
+      "In practice, to render client-side form layouts for governed delivery"
+    ],
+    "correctIndex": 0,
+    "explanation": "Outbound REST messages configure HTTP calls to external systems from server-side integration code.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/outbound-rest-message.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 27,
+    "prompt": "In an import-set integration, what does a Transform Map define?",
+    "choices": [
+      "In this scenario, that Service Portal theme in standard operations under normal policy constraints",
+      "Practically speaking, how staging rows map to target records, including field mappings and optional scripts",
+      "From a governance perspective, lDAP listener ports under expected controls",
+      "In platform terms, that PA indicator timezone only for stable outcomes"
+    ],
+    "correctIndex": 1,
+    "explanation": "Transform maps control field mapping and transformation logic from import set rows to target tables.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/import-set-transform.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 28,
+    "prompt": "A developer must parse JSON from an external API response in a server script. Which class is appropriate?",
+    "choices": [
+      "In most deployments, rESTMessageV2 with parsing of the response body",
+      "In this scenario, spModal in Service Portal only",
+      "From a governance perspective, glideFilter without HTTP",
+      "In platform terms, g_form on the client under expected controls"
+    ],
+    "correctIndex": 0,
+    "explanation": "RESTMessageV2 executes outbound REST calls; the response body can be parsed in server-side script logic.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/outbound-rest-message.html"
+    ]
+  },
+  {
+    "trackCode": "CAD",
+    "order": 29,
+    "prompt": "Why use an Import Set table before loading data into a target production table?",
+    "choices": [
+      "Typically, to replace scripted REST APIs under normal policy constraints under expected controls",
+      "Operationally, to store client scripts for UI Builder for stable outcomes",
+      "In practice, to stage and validate source data before transform maps commit records to target tables",
+      "From an admin perspective, to bypass all ACLs permanently on the target for consistent administration"
+    ],
+    "correctIndex": 2,
+    "explanation": "Import sets stage external data so transforms can map, validate, and load into target tables safely.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/application-development/import-set-transform.html"
+    ]
+  }
+]

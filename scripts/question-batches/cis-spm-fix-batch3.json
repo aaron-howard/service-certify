@@ -1,0 +1,512 @@
+[
+  {
+    "trackCode": "CIS-SPM",
+    "order": 60,
+    "prompt": "Why does SPM governance benefit from clearly defined role separation across portfolio manager, product owner, and finance roles?",
+    "choices": [
+      "It clarifies decision rights, accountability, and control quality across investment lifecycle stages for practical execution",
+      "It removes the need for portfolio review boards for measurable outcomes",
+      "It allows all roles to approve their own funding exceptions in real implementations",
+      "It eliminates dependency management requirements in enterprise contexts"
+    ],
+    "correctIndex": 0,
+    "explanation": "Clear role boundaries reduce conflict and improve governance consistency from planning through delivery.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/concept/spm-governance.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 61,
+    "prompt": "Which integration with PPM capabilities most improves strategic execution in SPM?",
+    "choices": [
+      "Focus on replacing initiative hierarchy with incident categories",
+      "Tracking exclusively completed projects in SPM for practical execution",
+      "Focus on moving all roadmap decisions to spreadsheets",
+      "Focus on linking strategy objects to projects and epics with traceable financial and delivery status"
+    ],
+    "correctIndex": 3,
+    "explanation": "Strategy-to-delivery traceability is essential for governing whether portfolio work is producing expected outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/project-management/concept/project-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 62,
+    "prompt": "A PMO wants stronger role-based governance for portfolio changes. What should be implemented first?",
+    "choices": [
+      "Allow all project managers to edit fiscal plans without controls across operational workflows",
+      "Restrict status updates to annual planning windows under governance oversight",
+      "Disable approval workflows for budget updates in real implementations",
+      "Configure role-scoped approvals and audit trails for investment, funding, and scope changes in enterprise contexts"
+    ],
+    "correctIndex": 3,
+    "explanation": "Role-scoped approval and audit controls are foundational for governed portfolio change management.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/task/configure-investment-governance.html",
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 63,
+    "prompt": "Which anti-pattern most harms PPM and SPM integration value?",
+    "choices": [
+      "Focus on keeping strategic plans disconnected from project financials and capacity data",
+      "Focus on maintaining common taxonomy for investment categories",
+      "With consistent periodic reforecast cadence under governance oversight",
+      "Focus on mapping benefits to delivery milestones"
+    ],
+    "correctIndex": 0,
+    "explanation": "Disconnected strategy and delivery data prevents realistic prioritization and weakens portfolio governance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-financials.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/project-management/concept/resource-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 64,
+    "prompt": "Which KPI combination best reflects effective role design and PPM integration in SPM?",
+    "choices": [
+      "Faster governance decisions, lower funding variance, and stronger benefit realization traceability in real implementations",
+      "More manual status updates outside the platform in enterprise contexts",
+      "Higher count of bypassed approval records across operational workflows",
+      "Longer cycle time to align strategic goals to active work under governance oversight"
+    ],
+    "correctIndex": 0,
+    "explanation": "This KPI mix captures governance velocity, financial predictability, and strategy-to-delivery transparency.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/performance-analytics/concept/performance-analytics-in-spm.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 65,
+    "prompt": "Which SPM metric best indicates whether investments align to strategic objectives?",
+    "choices": [
+      "Number of active users in the platform in enterprise contexts",
+      "Average catalog item fulfillment time in real implementations",
+      "Count of closed incidents by priority under governance oversight",
+      "Percentage of funded demand mapped to approved strategic goals across operational workflows"
+    ],
+    "correctIndex": 3,
+    "explanation": "Strategic alignment is measured by how much funded work traces directly to agreed business objectives.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-portfolio-management/concept/spm-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 66,
+    "prompt": "What is the most effective way to maintain strategic alignment during quarterly planning changes?",
+    "choices": [
+      "Re-score demand with objective-linked criteria and update portfolio ranking",
+      "Approve all requests from the largest department for measurable outcomes",
+      "Ignore objective changes to preserve historical ranking across operational workflows",
+      "Freeze all demand records until year end under governance oversight"
+    ],
+    "correctIndex": 0,
+    "explanation": "When strategy changes, objective-linked scoring keeps funding and prioritization aligned to current direction.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/demand-management/concept/demand-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 67,
+    "prompt": "Which practice most improves strategic alignment across portfolios?",
+    "choices": [
+      "Allow each portfolio to define private objective names in enterprise contexts",
+      "Apply a shared objective taxonomy and mandatory objective mapping on proposals",
+      "Remove objective fields from intake forms for measurable outcomes",
+      "Rank work exclusively by requester seniority for practical execution"
+    ],
+    "correctIndex": 1,
+    "explanation": "Consistent taxonomy and required mapping create enterprise-level comparability and alignment governance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 68,
+    "prompt": "A portfolio is fully funded but weakly aligned to strategy. Which action is best?",
+    "choices": [
+      "Delay all governance reviews until delivery closes across operational workflows",
+      "Increase budget uniformly across all initiatives under governance oversight",
+      "Rebalance funding toward initiatives with higher objective contribution scores for practical execution",
+      "Convert all initiatives to operational work items for measurable outcomes"
+    ],
+    "correctIndex": 2,
+    "explanation": "Rebalancing by contribution score improves strategic value realization within the same funding envelope.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 69,
+    "prompt": "What is the strongest evidence that SPM strategic alignment is improving over time?",
+    "choices": [
+      "More projects running without benefit measures under governance oversight",
+      "Lower usage of strategic planning records across operational workflows",
+      "An well-defined increasing number of unplanned enhancement requests",
+      "A well-defined growing share of completed value tied to top strategic objectives"
+    ],
+    "correctIndex": 3,
+    "explanation": "Improvement is demonstrated when delivered outcomes increasingly map to priority objectives and value targets.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/program-management/concept/program-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 70,
+    "prompt": "Which SPM report best supports executive steering committee decisions?",
+    "choices": [
+      "A well-defined list of all pending catalog requests",
+      "Incident assignment group heat map exclusively across operational workflows",
+      "Portfolio health dashboard with strategy alignment, benefit status, and financial variance in enterprise contexts",
+      "A well-defined CMDB class count by table name"
+    ],
+    "correctIndex": 2,
+    "explanation": "Steering decisions require integrated views of value, risk, and financial performance across portfolios.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 71,
+    "prompt": "Which reporting design principle most improves SPM data consumption?",
+    "choices": [
+      "Rename KPIs differently on each dashboard in real implementations",
+      "Expose one large raw table to all stakeholders in enterprise contexts",
+      "Apply role-specific dashboards with consistent definitions for value, risk, and status",
+      "Exclude target values from scorecards for measurable outcomes"
+    ],
+    "correctIndex": 2,
+    "explanation": "Role-aligned reporting and consistent metric definitions improve clarity and decision quality.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-portfolio-management/concept/spm-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 72,
+    "prompt": "A VP asks for one report to compare investment performance across portfolios. What is best?",
+    "choices": [
+      "An well-defined incident SLA report for service desk teams",
+      "A well-defined static screenshot of last quarter budget totals",
+      "A well-defined list of projects sorted by sys_id",
+      "A well-defined normalized portfolio scorecard with baseline, current forecast, and benefit realization variance"
+    ],
+    "correctIndex": 3,
+    "explanation": "Cross-portfolio comparison requires standardized measures against baseline and realized outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/financial-planning/concept/financial-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 73,
+    "prompt": "Which reporting pattern helps detect strategic drift early in SPM?",
+    "choices": [
+      "Trend views showing objective alignment and benefit forecast movement over time in real implementations",
+      "Budget totals without objective mapping in enterprise contexts",
+      "Project name listings without KPI context across operational workflows",
+      "One-time quarterly PDF with no historical comparison under governance oversight"
+    ],
+    "correctIndex": 0,
+    "explanation": "Time-series tracking reveals deviation earlier than static snapshots, enabling timely governance actions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 74,
+    "prompt": "Which KPI combination is most useful in an SPM reporting cadence?",
+    "choices": [
+      "Number of reopened incidents and problem tickets for measurable outcomes",
+      "Mean time to acknowledge security incidents for practical execution",
+      "Strategic alignment score, forecast-to-actual spend variance, and benefit realization rate under governance oversight",
+      "Count of software installs by operating system across operational workflows"
+    ],
+    "correctIndex": 2,
+    "explanation": "These KPIs together show strategic fit, financial control, and delivered value.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/financial-planning/concept/financial-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 75,
+    "prompt": "Which portfolio analytics measure best supports investment rebalancing decisions?",
+    "choices": [
+      "Value contribution versus risk exposure by strategic objective for practical execution",
+      "Count of users with itil role for measurable outcomes",
+      "Number of project records created this month across operational workflows",
+      "Average incident resolution time under governance oversight"
+    ],
+    "correctIndex": 0,
+    "explanation": "Rebalancing decisions require a joint view of delivered value and associated portfolio risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 76,
+    "prompt": "A portfolio shows strong delivery throughput but weak outcomes. What analytics view should be prioritized?",
+    "choices": [
+      "Total number of tasks completed per sprint exclusively",
+      "Catalog request approval rates across operational workflows",
+      "Monthly count of closed change requests for measurable outcomes",
+      "Benefit realization against planned outcome KPIs by initiative for practical execution"
+    ],
+    "correctIndex": 3,
+    "explanation": "Outcome-focused analytics reveal whether throughput is translating into intended business value.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/program-management/concept/program-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 77,
+    "prompt": "Which analytic segmentation is most useful for identifying underperforming portfolio segments?",
+    "choices": [
+      "Sort records by creation date without filters for practical execution",
+      "Aggregate all data into one total value for measurable outcomes",
+      "Slice by business unit, objective, and funding type with trend comparisons in real implementations",
+      "Group exclusively by project short description in enterprise contexts"
+    ],
+    "correctIndex": 2,
+    "explanation": "Segmented analytics expose concentration of risk and weak value patterns that totals can hide.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/financial-planning/concept/financial-planning.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 78,
+    "prompt": "What is the primary purpose of leading indicators in SPM portfolio analytics?",
+    "choices": [
+      "Measure exclusively closed projects under governance oversight",
+      "Detect likely variance early so governance can intervene before outcomes degrade for practical execution",
+      "Replace all lagging outcome metrics permanently under governance oversight",
+      "Eliminate the need for portfolio review meetings across operational workflows"
+    ],
+    "correctIndex": 1,
+    "explanation": "Leading indicators provide early warning signals that allow corrective action during execution.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 79,
+    "prompt": "Which dashboard design choice most improves portfolio analytics decision-making?",
+    "choices": [
+      "Combine strategic alignment, financial variance, and benefit trends in one governed scorecard for practical execution",
+      "Display every available field with no prioritization for measurable outcomes",
+      "Hide target thresholds to reduce noise across operational workflows",
+      "Apply separate metric definitions for each portfolio"
+    ],
+    "correctIndex": 0,
+    "explanation": "Decision-ready dashboards pair integrated KPIs with consistent definitions and clear thresholds.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-portfolio-management/concept/spm-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 80,
+    "prompt": "What is the primary benefit of using investment scenarios in SPM?",
+    "choices": [
+      "Compare alternative funding and sequencing choices before committing portfolio changes across operational workflows",
+      "Replace strategic planning with ad hoc requests under governance oversight",
+      "Eliminate dependency management activities in real implementations",
+      "Automatically approve all high-cost initiatives in enterprise contexts"
+    ],
+    "correctIndex": 0,
+    "explanation": "Scenario analysis enables evidence-based tradeoff decisions before capital is committed.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/financial-planning/concept/financial-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 81,
+    "prompt": "When evaluating two investment scenarios, which criterion is most important?",
+    "choices": [
+      "Which scenario has the most relevant project records",
+      "Expected strategic value relative to risk and resource constraints across operational workflows",
+      "Which scenario has the longest timeline in enterprise contexts",
+      "Which scenario was submitted first in real implementations"
+    ],
+    "correctIndex": 1,
+    "explanation": "Scenario selection should optimize value while respecting risk appetite and delivery capacity.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-planning/concept/strategic-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/resource-management/concept/resource-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 82,
+    "prompt": "What makes an investment scenario comparison credible for executives?",
+    "choices": [
+      "No baseline scenario for comparison in real implementations",
+      "Different scoring logic for each business unit in enterprise contexts",
+      "Consistent assumptions, documented constraints, and transparent scoring methodology across operational workflows",
+      "Hidden cost assumptions to simplify review under governance oversight"
+    ],
+    "correctIndex": 2,
+    "explanation": "Credibility depends on comparable assumptions and transparent methods across all options.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/financial-planning/concept/financial-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 83,
+    "prompt": "A proposed scenario increases value but exceeds resource capacity. What is the best next step?",
+    "choices": [
+      "Cancel all initiatives and restart planning under governance oversight",
+      "Convert every initiative to mandatory work across operational workflows",
+      "Approve the scenario and ignore staffing limits for measurable outcomes",
+      "Adjust sequencing and scope to fit capacity while preserving highest-value outcomes for practical execution"
+    ],
+    "correctIndex": 3,
+    "explanation": "Capacity-aware sequencing is a core scenario technique for balancing ambition and feasibility.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/resource-management/concept/resource-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/program-management/concept/program-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 84,
+    "prompt": "Which outcome indicates investment scenario governance is working well?",
+    "choices": [
+      "Selected scenario assumptions are tracked post-approval and variances trigger review actions in real implementations",
+      "No variance monitoring occurs until project closure in enterprise contexts",
+      "Focus on funding changes are made without scenario updates",
+      "Scenarios are archived immediately after approval for measurable outcomes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Effective governance connects scenario assumptions to execution monitoring and corrective decision loops.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 85,
+    "prompt": "Which administrative control most improves SPM data trust?",
+    "choices": [
+      "Open edit access for all itil users for measurable outcomes",
+      "Defined ownership and stewardship for portfolio, demand, and financial records for practical execution",
+      "Manual offline updates without synchronization under governance oversight",
+      "No required fields on investment records across operational workflows"
+    ],
+    "correctIndex": 1,
+    "explanation": "Data stewardship and clear ownership are foundational for reliable SPM decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/strategic-portfolio-management/concept/spm-overview.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 86,
+    "prompt": "How should SPM administrators handle configuration changes to scoring or prioritization models?",
+    "choices": [
+      "Let each PMO lead apply different live logic",
+      "Apply direct production edits with no documentation for measurable outcomes",
+      "Apply change governance with testing, versioning, and stakeholder communication",
+      "Reset all historical rankings after every update in enterprise contexts"
+    ],
+    "correctIndex": 2,
+    "explanation": "Controlled, versioned changes preserve comparability and governance confidence over time.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/demand-management/concept/demand-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 87,
+    "prompt": "Which role model best supports SPM administration at enterprise scale?",
+    "choices": [
+      "Unstructured local administrators with no central standards for measurable outcomes",
+      "No role separation between requesters and approvers for practical execution",
+      "Single administrator owning all planning and reporting tasks in enterprise contexts",
+      "Central governance team with delegated portfolio managers operating under common standards in real implementations"
+    ],
+    "correctIndex": 3,
+    "explanation": "A federated model with central standards balances consistency and domain accountability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 88,
+    "prompt": "What is the best administrative practice for SPM reporting definitions?",
+    "choices": [
+      "Maintain a governed KPI dictionary with standard formulas and threshold logic for practical execution",
+      "Avoid storing formula definitions for measurable outcomes",
+      "Rename KPIs each quarter for flexibility across operational workflows",
+      "Allow each dashboard author to define KPIs independently under governance oversight"
+    ],
+    "correctIndex": 0,
+    "explanation": "Governed metric definitions reduce interpretation drift and improve cross-portfolio comparability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-SPM",
+    "order": 89,
+    "prompt": "Which KPI combination best indicates mature SPM administration?",
+    "choices": [
+      "Higher number of urgent manual data fixes in enterprise contexts",
+      "Longer delays in funding decision cycles in real implementations",
+      "Low data exception rates, high on-time governance reviews, and consistent forecast accuracy for measurable outcomes",
+      "More duplicate investment records each quarter for practical execution"
+    ],
+    "correctIndex": 2,
+    "explanation": "Administrative maturity shows in data quality, governance discipline, and planning reliability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/financial-planning/concept/financial-planning.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+    ]
+  }
+]

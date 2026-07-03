@@ -1,0 +1,487 @@
+[
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 0,
+    "prompt": "In Incident Management, what is the primary process goal emphasized in ITSM documentation?",
+    "choices": [
+      "Matches the scenario in which perform root-cause analysis for every alert before any workaround.",
+      "Describes the outcome where restore normal service operation as quickly as practical.",
+      "Represents the approach that normalize software publishers.",
+      "Reflects the condition that approve all infrastructure purchases."
+    ],
+    "correctIndex": 1,
+    "explanation": "Incident Management prioritizes restoration of service to minimize business impact, distinct from deeper problem investigation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-it-service-management/page/product/incident-management/concept/c_IncidentManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 1,
+    "prompt": "Change Management in ITSM is primarily designed to do what?",
+    "choices": [
+      "Reflects the condition that automatically close all incidents nightly.",
+      "Captures the choice stating control how changes are proposed, assessed, approved, and implemented to reduce service risk.",
+      "Matches the scenario in which replace the CMDB with spreadsheets.",
+      "Describes the outcome where log every password reset as a catalog task."
+    ],
+    "correctIndex": 1,
+    "explanation": "Change Management provides controlled workflows for planning and governance of changes rather than ad hoc production edits.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/using-change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 2,
+    "prompt": "How does Problem Management differ from Incident Management in purpose?",
+    "choices": [
+      "Matches the scenario in which problems are only for printer issues.",
+      "Corresponds to the option where problem Management targets underlying causes and preventive action, while Incident Management targets rapid restoration.",
+      "Captures the choice stating incident Management never uses knowledge.",
+      "Reflects the condition that problem Management never uses tasks."
+    ],
+    "correctIndex": 1,
+    "explanation": "Problem Management focuses on root cause and recurrence prevention complementary to incident restoration goals.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-it-service-management/page/product/problem-management/concept/problem-mgmt-lifecycle.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 3,
+    "prompt": "On an incident, priority is commonly derived from which inputs in a standard configuration?",
+    "choices": [
+      "Captures the choice stating impact and urgency interpreted through priority rules.",
+      "Represents the approach that only the short description length.",
+      "Reflects the condition that only the caller’s department.",
+      "Corresponds to the option where only the assigned group’s cost center."
+    ],
+    "correctIndex": 0,
+    "explanation": "Incident priority is typically driven from impact and urgency using configured priority data or rules associated with incident management.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-it-service-management/page/product/incident-management/concept/c_IncidentManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 4,
+    "prompt": "Which request type best fits the Service Catalog request experience versus a break-fix incident?",
+    "choices": [
+      "Captures the choice stating a post-mortem for a security breach.",
+      "Represents the approach that a Sev-1 outage bridge for an email service.",
+      "Corresponds to the option where a user orders a standard service offering through the catalog.",
+      "Describes the outcome where a monitoring alert storm review."
+    ],
+    "correctIndex": 2,
+    "explanation": "Catalog requests represent planned service consumption, whereas incidents represent unplanned service degradation.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/product/service-catalog-management/concept/c_RequestingAServiceCatalogItem.html",
+      "https://www.servicenow.com/docs/bundle/xanadu-it-service-management/page/product/incident-management/concept/c_IncidentManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 5,
+    "prompt": "In the Incident Management process, what is the first step after a potential issue is reported?",
+    "choices": [
+      "Represents the approach that automatic conversion to a change request.",
+      "Matches the scenario in which assignment to the CAB for approval.",
+      "Describes the outcome where incident identification to determine whether the issue is truly an incident or a request.",
+      "Corresponds to the option where immediate closure with no logging."
+    ],
+    "correctIndex": 2,
+    "explanation": "Incident identification is the first lifecycle step; the service desk determines if the issue is an incident versus a service request.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/incident-management/incident-management-process.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 6,
+    "prompt": "During incident logging, what does incident categorization typically require?",
+    "choices": [
+      "Matches the scenario in which entering the hardware serial number for every ticket.",
+      "Reflects the condition that assigning a category and at least one subcategory.",
+      "Represents the approach that selecting only the caller's location.",
+      "Describes the outcome where choosing a change type of Normal, Standard, or Emergency."
+    ],
+    "correctIndex": 1,
+    "explanation": "Categorization assigns a category and at least one subcategory to support routing, reporting, and prioritization.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/incident-management/incident-management-process.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 7,
+    "prompt": "How is incident priority typically determined in a standard ITSM configuration?",
+    "choices": [
+      "Matches the scenario in which by the age of the related setup item only.",
+      "Captures the choice stating by impact on users or business and urgency, interpreted through priority rules.",
+      "Describes the outcome where by alphabetical order of the short description.",
+      "Reflects the condition that by the number of attachments on the record."
+    ],
+    "correctIndex": 1,
+    "explanation": "Priority is driven by impact and urgency to support SLA response and work ordering.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/incident-management/incident-management-process.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 8,
+    "prompt": "When should incident escalation occur during resolution?",
+    "choices": [
+      "Matches the scenario in which before incident identification is complete.",
+      "Captures the choice stating when the incident requires advanced support such as on-site technicians or certified staff.",
+      "Reflects the condition that only after the incident is closed and surveyed.",
+      "Corresponds to the option where whenever any user opens the self-service portal."
+    ],
+    "correctIndex": 1,
+    "explanation": "Escalation happens when incidents need advanced support beyond initial service desk capabilities.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/incident-management/incident-management-process.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 9,
+    "prompt": "Besides manual closure, how can resolved incidents be closed in ServiceNow Incident Management?",
+    "choices": [
+      "Captures the choice stating automatically based on last updated date or resolution date per setup.",
+      "Represents the approach that through MID Server rediscovery schedules.",
+      "Corresponds to the option where by converting every incident to a problem record.",
+      "Reflects the condition that only by deleting the caller's user record."
+    ],
+    "correctIndex": 0,
+    "explanation": "Incidents can be closed manually or automatically based on configured rules tied to resolution or last updated dates.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/incident-management/incident-management-process.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 10,
+    "prompt": "What is the primary purpose of the Service Catalog in ITSM?",
+    "choices": [
+      "Corresponds to the option where to replace incident management for all outages.",
+      "Captures the choice stating to let users request standard services through defined catalog items and fulfillment workflows.",
+      "Describes the outcome where to manage software license compliance audits only.",
+      "Represents the approach that to store discovery results from the MID Server."
+    ],
+    "correctIndex": 1,
+    "explanation": "The Service Catalog provides a structured way for users to order services with defined items, variables, and fulfillment.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/service-catalog-management/service-catalog-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 11,
+    "prompt": "After a user submits a catalog request, what does request fulfillment typically involve?",
+    "choices": [
+      "Describes the outcome where converting the request to a change record in every case.",
+      "Represents the approach that deleting the user's roles until delivery completes.",
+      "Corresponds to the option where executing approval, provisioning, and task workflows to deliver the requested service.",
+      "Matches the scenario in which automatically closing all open incidents."
+    ],
+    "correctIndex": 2,
+    "explanation": "Request fulfillment coordinates approvals, tasks, and automation to complete the ordered service.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/service-catalog-management/request-fulfillment.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 12,
+    "prompt": "Why are variable sets used in catalog item design?",
+    "choices": [
+      "Matches the scenario in which to map CI relationships in the CMDB.",
+      "Reflects the condition that to replace the need for any approval workflows.",
+      "Describes the outcome where to encrypt catalog attachments at rest.",
+      "Represents the approach that to reuse common questions across multiple catalog items."
+    ],
+    "correctIndex": 3,
+    "explanation": "Variable sets let designers reuse groups of variables across catalog items for consistent data collection.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/service-catalog-management/catalog-item-design.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 13,
+    "prompt": "A catalog item requires manager approval before fulfillment. Where is that control typically configured?",
+    "choices": [
+      "Describes the outcome where in the incident priority matrix only.",
+      "Captures the choice stating in the discovery status field on cmdb_ci.",
+      "Reflects the condition that in the global email property exclusively.",
+      "Matches the scenario in which in the catalog item or flow approval setup as part of the request workflow."
+    ],
+    "correctIndex": 3,
+    "explanation": "Catalog approvals are configured on the item or its fulfillment flow to gate provisioning until approvers act.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/service-catalog-management/request-fulfillment.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 14,
+    "prompt": "How does a standard catalog request differ from a break-fix incident?",
+    "choices": [
+      "Reflects the condition that a catalog request always has higher priority than any incident.",
+      "Corresponds to the option where catalog requests cannot reference setup items.",
+      "Matches the scenario in which incidents always create catalog tasks automatically.",
+      "Captures the choice stating a catalog request represents planned service consumption; an incident represents unplanned service degradation."
+    ],
+    "correctIndex": 3,
+    "explanation": "Catalog requests are for ordered services; incidents address unplanned interruptions to restore normal service.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/service-catalog-management/service-catalog-management.html",
+      "https://www.servicenow.com/docs/r/it-service-management/incident-management/c_IncidentManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 15,
+    "prompt": "What is the Configuration Management Database (CMDB) primarily used for?",
+    "choices": [
+      "Reflects the condition that scheduling employee onboarding tasks only.",
+      "Corresponds to the option where replacing the service catalog for all requests.",
+      "Captures the choice stating managing software subscription invoices exclusively.",
+      "Represents the approach that storing and managing setup items and their relationships to support IT processes."
+    ],
+    "correctIndex": 3,
+    "explanation": "The CMDB holds CIs and relationships that underpin incident, change, and other ITSM processes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/configuration-management-database/configuration-management-database.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 16,
+    "prompt": "In CSDM, why is foundation data such as services and locations important?",
+    "choices": [
+      "Corresponds to the option where it stores only user password history.",
+      "Describes the outcome where it eliminates the need for discovery.",
+      "Represents the approach that it replaces all incident categories.",
+      "Captures the choice stating it provides consistent reference data that underpins CMDB and process alignment."
+    ],
+    "correctIndex": 3,
+    "explanation": "CSDM foundation data establishes common services, locations, and related entities for accurate CMDB and ITSM alignment.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/configuration-management-database/csdm-foundation-data.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 17,
+    "prompt": "What is the purpose of CI identification and reconciliation?",
+    "choices": [
+      "Describes the outcome where to match incoming data to existing CIs and maintain accurate CMDB records.",
+      "Matches the scenario in which to close incidents after 24 hours.",
+      "Corresponds to the option where to approve catalog requests automatically.",
+      "Represents the approach that to assign problem tasks to the CAB only."
+    ],
+    "correctIndex": 0,
+    "explanation": "Identification and reconciliation rules determine how discovered or imported data maps to authoritative CI records.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/configuration-management-database/ci-identification-and-reconciliation.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 18,
+    "prompt": "An incident references a configuration item. What benefit does that association provide?",
+    "choices": [
+      "Reflects the condition that removal of the need for assignment groups.",
+      "Represents the approach that context about the affected asset or service for diagnosis and impact analysis.",
+      "Describes the outcome where immediate conversion to a normal change.",
+      "Matches the scenario in which automatic admin access for the caller."
+    ],
+    "correctIndex": 1,
+    "explanation": "Linking incidents to CIs provides asset and service context for troubleshooting and reporting.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/configuration-management-database/configuration-management-database.html",
+      "https://www.servicenow.com/docs/r/it-service-management/incident-management/c_IncidentManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 19,
+    "prompt": "Duplicate CI records in the CMDB are most commonly addressed by:",
+    "choices": [
+      "Describes the outcome where deleting all relationships and rediscovering weekly only.",
+      "Reflects the condition that converting duplicates to catalog tasks.",
+      "Matches the scenario in which disabling the incident table.",
+      "Captures the choice stating identification and reconciliation rules that match and merge authoritative data."
+    ],
+    "correctIndex": 3,
+    "explanation": "Identification and reconciliation processes reduce duplicates by matching incoming sources to existing CIs.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/configuration-management-database/ci-identification-and-reconciliation.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 20,
+    "prompt": "What is the primary objective of Change Management in ITSM?",
+    "choices": [
+      "Captures the choice stating to log every password reset as a catalog task.",
+      "Corresponds to the option where to replace problem investigation entirely.",
+      "Matches the scenario in which to discover network devices automatically.",
+      "Reflects the condition that to assess, authorize, and implement changes while controlling risk to services."
+    ],
+    "correctIndex": 3,
+    "explanation": "Change Management governs how changes are proposed, assessed, approved, and implemented to reduce service risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/change-management/using-change-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 21,
+    "prompt": "How does a Standard change differ from a Normal change in typical ITSM practice?",
+    "choices": [
+      "Represents the approach that there is no practical difference between the types.",
+      "Reflects the condition that standard changes are pre-authorized with documented procedures; Normal changes require individual assessment and approval.",
+      "Captures the choice stating standard changes never use the CAB; Normal changes never use tasks.",
+      "Corresponds to the option where standard changes apply only to hardware assets; Normal changes apply only to software."
+    ],
+    "correctIndex": 1,
+    "explanation": "Standard changes follow pre-approved models; Normal changes go through case-by-case evaluation and approval paths.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/change-management/change-types.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 22,
+    "prompt": "When is an Emergency change typically used?",
+    "choices": [
+      "Captures the choice stating for all routine catalog fulfillment tasks.",
+      "Corresponds to the option where when closing aged incidents automatically.",
+      "Represents the approach that only during scheduled maintenance windows with no urgency.",
+      "Describes the outcome where when an urgent fix is required to restore service or prevent major impact, with expedited approval."
+    ],
+    "correctIndex": 3,
+    "explanation": "Emergency changes address urgent situations with accelerated approval while still documenting the change.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/change-management/change-types.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 23,
+    "prompt": "What role does the Change Advisory Board (CAB) play in many change workflows?",
+    "choices": [
+      "Represents the approach that authoring knowledge articles exclusively.",
+      "Describes the outcome where reviewing and advising on significant changes before implementation.",
+      "Matches the scenario in which discovering CIs on the network.",
+      "Corresponds to the option where fulfilling catalog hardware orders."
+    ],
+    "correctIndex": 1,
+    "explanation": "The CAB provides collective review and recommendations for changes that require broader governance.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/change-management/change-request-lifecycle.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 24,
+    "prompt": "Before implementing a change, conflict detection helps by:",
+    "choices": [
+      "Represents the approach that normalizing software publishers.",
+      "Matches the scenario in which automatically resolving all incidents.",
+      "Reflects the condition that deleting duplicate users in LDAP.",
+      "Describes the outcome where identifying scheduling or CI conflicts with other planned changes."
+    ],
+    "correctIndex": 3,
+    "explanation": "Conflict detection highlights overlapping changes or affected CIs to reduce implementation risk.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/change-management/change-request-lifecycle.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 25,
+    "prompt": "What is the primary outcome of Problem Management?",
+    "choices": [
+      "Matches the scenario in which restoring service within minutes for every outage.",
+      "Describes the outcome where identifying root cause and preventing recurrence of incidents.",
+      "Captures the choice stating fulfilling catalog hardware requests.",
+      "Reflects the condition that approving all infrastructure purchases."
+    ],
+    "correctIndex": 1,
+    "explanation": "Problem Management focuses on underlying causes and preventive action, complementing incident restoration.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/problem-management/problem-mgmt-lifecycle.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 26,
+    "prompt": "What is a Known Error record used for?",
+    "choices": [
+      "Captures the choice stating scheduling discovery on the MID Server.",
+      "Reflects the condition that replacing change requests for emergency fixes.",
+      "Matches the scenario in which storing catalog item images.",
+      "Corresponds to the option where documenting a problem with a workaround until a permanent fix is available."
+    ],
+    "correctIndex": 3,
+    "explanation": "Known errors capture diagnosed problems and workarounds to help teams resolve recurring incidents faster.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/problem-management/known-error-database.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 27,
+    "prompt": "How can Problem Management reduce incident volume over time?",
+    "choices": [
+      "Corresponds to the option where by converting all changes to standard changes.",
+      "Represents the approach that by auto-closing every incident at creation.",
+      "Captures the choice stating by removing the CMDB from the instance.",
+      "Reflects the condition that by eliminating root causes and publishing workarounds through known errors and knowledge."
+    ],
+    "correctIndex": 3,
+    "explanation": "Addressing root causes and sharing known errors and knowledge helps prevent repeat incidents.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/problem-management/problem-mgmt-lifecycle.html",
+      "https://www.servicenow.com/docs/r/it-service-management/problem-management/known-error-database.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 28,
+    "prompt": "What is the knowledge article lifecycle intended to support?",
+    "choices": [
+      "Captures the choice stating discovering software installations only.",
+      "Describes the outcome where approving emergency changes exclusively.",
+      "Represents the approach that importing user records from LDAP.",
+      "Corresponds to the option where creating, reviewing, publishing, and retiring articles for self-service and agent use."
+    ],
+    "correctIndex": 3,
+    "explanation": "Knowledge Management governs article authoring, review, publication, and retirement to support resolution and self-service.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/knowledge-management/knowledge-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-ITSM",
+    "order": 29,
+    "prompt": "Linking a knowledge article to an incident benefits the service desk by:",
+    "choices": [
+      "Represents the approach that automatically assigning the incident to the CAB.",
+      "Matches the scenario in which skipping all approval workflows on catalog items.",
+      "Corresponds to the option where deleting related problem records.",
+      "Describes the outcome where providing documented resolution steps and reducing repeat research for similar issues."
+    ],
+    "correctIndex": 3,
+    "explanation": "Attached knowledge gives agents and users proven resolution content, improving consistency and speed.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-service-management/knowledge-management/knowledge-management.html",
+      "https://www.servicenow.com/docs/r/it-service-management/incident-management/c_IncidentManagement.html"
+    ]
+  }
+]

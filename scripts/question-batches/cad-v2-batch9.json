@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CAD",
+		"order": 40,
+		"prompt": "In what order are ACLs of different types evaluated for a field on a record?",
+		"choices": [
+			"The table-level ACL is checked, then the more specific field-level ACL",
+			"Only the field ACL is ever checked",
+			"ACLs are evaluated alphabetically by sys_id",
+			"Client scripts are checked before any ACL"
+		],
+		"correctIndex": 0,
+		"explanation": "ServiceNow evaluates matching ACLs from most general to most specific; a user must pass the table ACL and then the field ACL to access a field.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/access-control-rules.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 41,
+		"prompt": "You need to restrict who can open an application's modules in the navigator. What controls module visibility by role?",
+		"choices": [
+			"The roles specified on the application menu and its modules",
+			"The color of the module label",
+			"A scheduled job that hides modules nightly",
+			"The record producer variable set"
+		],
+		"correctIndex": 0,
+		"explanation": "Application menus and modules can require roles, so only users with those roles see and open them in the Application Navigator.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/application-menus-modules.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 42,
+		"prompt": "Which operations can an Access Control rule secure? (Choose two.)",
+		"choices": [
+			"read",
+			"write",
+			"upgrade",
+			"clone"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"questionType": "multi",
+		"explanation": "ACLs secure record operations such as read, write (create/update), and delete; upgrade and clone are instance-level activities, not ACL operations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/access-control-rules.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 43,
+		"prompt": "How does application scope protect an application's artifacts from other scoped applications?",
+		"choices": [
+			"Cross-scope access must be explicitly granted; otherwise runtime access is restricted",
+			"All scopes share unrestricted write access automatically",
+			"Scope removes the need for ACLs entirely",
+			"Scope encrypts every attachment"
+		],
+		"correctIndex": 0,
+		"explanation": "Scope enforces runtime access restrictions between applications; a scoped app cannot access another scope's artifacts unless cross-scope access is explicitly authorized.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/c_RuntimeAccessToAppTables.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 44,
+		"prompt": "Which GlideSystem method returns the sys_id of the currently logged-in user in a server script?",
+		"choices": [
+			"gs.getUserID()",
+			"g_form.getUniqueValue()",
+			"current.getUserID()",
+			"gs.getRoles()"
+		],
+		"correctIndex": 0,
+		"explanation": "gs.getUserID() returns the current user's sys_id, useful for scripting security and ownership checks.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/glidesystem.html"
+		]
+	}
+]

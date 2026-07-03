@@ -1,0 +1,83 @@
+[
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 5,
+		"prompt": "Which platform mechanisms are used to track and escalate incidents that are not being resolved according to organizational standards?",
+		"choices": [
+			"Service level agreements (SLAs) and the inactivity monitor",
+			"MID Server discovery schedules and software license counters",
+			"Change conflict detection rules and CAB approval records",
+			"CMDB identification and reconciliation scheduled jobs"
+		],
+		"correctIndex": 0,
+		"explanation": "Incident Management uses SLAs to monitor progress against agreed targets and the inactivity monitor to generate events when records go without updates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/incident-management/work-on-incidents.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 6,
+		"prompt": "An administrator must enable the Create Child Incident UI action on the incident form. Which configuration is required?",
+		"choices": [
+			"Activate the Enable copy incident feature property only",
+			"Select the Enable create child incident feature (com.snc.incident.create.child.enable) incident property",
+			"Set glide.ui.autoclose.time to zero on the System Properties page",
+			"Install the Major Incident Management Taxonomy Content Pack plugin"
+		],
+		"correctIndex": 1,
+		"explanation": "Copy and create-child capabilities are controlled by incident properties at Incident > Incident Properties, including com.snc.incident.create.child.enable.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/incident-management/copy-incident-or-create-child-incident.html",
+			"https://www.servicenow.com/docs/r/it-service-management/incident-management/incident-management-properties.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 7,
+		"prompt": "When a fulfiller uses Create Child Incident from an active parent incident, which field is copied to the new record by default?",
+		"choices": [
+			"The Closed by field from the parent incident",
+			"The resolution code after the parent is Resolved",
+			"Category",
+			"The major incident communication plan assignment"
+		],
+		"correctIndex": 2,
+		"explanation": "Default copied fields include category, subcategory, business service, configuration item, impact, urgency, assignment group, and related lists such as affected CIs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/incident-management/copy-incident-or-create-child-incident.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 8,
+		"prompt": "When should an implementation team classify an incident as a major incident according to ITSM guidance?",
+		"choices": [
+			"When the incident results in significant business disruption or affects many users",
+			"When any caller opens a self-service password reset request",
+			"Whenever the incident is assigned to the default Service Desk group",
+			"Only after a related problem record reaches the Known Error state"
+		],
+		"correctIndex": 0,
+		"explanation": "Major incidents are high business-impact events that require a response beyond routine incident management, such as critical service outages or widespread user impact.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/incident-management/major-incident-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 9,
+		"prompt": "A service desk agent believes an open incident requires accelerated major incident handling. Which action proposes the record as a major incident candidate?",
+		"choices": [
+			"Convert the incident to a Normal change request from the Related Records tab",
+			"Click Propose Major Incident from the incident form context menu",
+			"Manually run the Autoclose Incidents scheduled job for the record",
+			"Set the incident state to Closed and create a new catalog task"
+		],
+		"correctIndex": 1,
+		"explanation": "Agents can propose an incident as a major incident candidate using the Propose Major Incident context menu action before a major incident manager promotes it.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/incident-management/major-incident-management.html"
+		]
+	}
+]

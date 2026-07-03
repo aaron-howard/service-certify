@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 0,
+		"prompt": "In the base platform configuration, what automatically happens to a standard incident that remains in the Resolved state after the configured auto-close interval elapses?",
+		"choices": [
+			"The incident is automatically moved to a Closed state",
+			"A notification is sent to the assignment group manager requesting review of the incident record",
+			"A notification is sent to the user assigned to review the incident record",
+			"A post-incident report is automatically created and attached to the incident"
+		],
+		"correctIndex": 0,
+		"explanation": "When auto-closure is enabled, the Autoclose Incidents scheduled job runs the Incident Autoclose business rule to close Resolved incidents after the glide.ui.autoclose.time interval.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/incident-management/configure-incident-auto-close.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 1,
+		"prompt": "An incident is placed On Hold with the On hold reason Awaiting Caller. When the caller updates the incident, what is the expected state change?",
+		"choices": [
+			"The On hold reason is cleared and the incident state changes to In Progress",
+			"The incident remains On Hold until an agent manually changes the state",
+			"The incident is automatically moved to Resolved and then Closed",
+			"The On hold reason changes to Awaiting Problem and the state stays On Hold"
+		],
+		"correctIndex": 0,
+		"explanation": "When the on-hold reason is Awaiting Caller and the caller updates the incident, the platform clears the on-hold reason and sets the state to In Progress.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/incident-management/c_IncidentManagementStateModel.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 2,
+		"prompt": "During the incident identification step of the Incident Management workflow, what must the service desk determine before logging the record?",
+		"choices": [
+			"Whether the reported issue is truly an incident or a service request",
+			"Which change model should be used if the issue requires a production fix",
+			"Whether the caller has the itil_admin role to open high-priority incidents",
+			"Which CMDB identification rule should run for the affected configuration item"
+		],
+		"correctIndex": 0,
+		"explanation": "Incident identification is the first lifecycle step: the service desk decides if the issue is an unplanned service interruption (incident) or a standard request before logging and categorizing it.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/incident-management/incident-management-process.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 3,
+		"prompt": "In a standard ServiceNow Incident Management configuration, how is incident priority determined?",
+		"choices": [
+			"From impact and urgency values interpreted through configured priority rules",
+			"From the number of related problem records linked to the incident",
+			"From the assignment group's default priority on the sys_user_group record",
+			"From the catalog item category selected on the incident form"
+		],
+		"correctIndex": 0,
+		"explanation": "After categorization, incidents are prioritized using impact and urgency so SLA response targets can be applied consistently.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/incident-management/incident-management-process.html"
+		]
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 4,
+		"prompt": "When a parent incident is updated to the Resolved state, how are associated child incidents synchronized by default?",
+		"choices": [
+			"Child incidents are set to Resolved and resolution notes are copied to the child activity log",
+			"Child incidents are automatically Closed at the same time as the parent incident",
+			"Child incidents remain unchanged until the caller closes each child record manually",
+			"Child incidents inherit the parent On Hold reason and stay in the On Hold state"
+		],
+		"correctIndex": 0,
+		"explanation": "Parent-child synchronization sets child incidents to Resolved when the parent resolves and copies resolution notes into the child activity log; child incidents are not auto-closed with the parent.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/incident-management/parent-child-state-sync.html"
+		]
+	}
+]

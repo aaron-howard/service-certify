@@ -1,0 +1,492 @@
+[
+  {
+    "trackCode": "CIS-DF",
+    "order": 60,
+    "prompt": "What is the primary objective of a data health scan in a governed data platform?",
+    "choices": [
+      "To prevent metadata capture",
+      "To detect quality, completeness, and conformance issues early",
+      "To remove stewardship roles",
+      "To replace all ETL jobs"
+    ],
+    "correctIndex": 1,
+    "explanation": "Health scans surface data reliability risks so remediation can occur before downstream consumers are impacted.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 61,
+    "prompt": "Which metric is most useful in a recurring data health scan program?",
+    "choices": [
+      "Color theme usage",
+      "Count of inactive users",
+      "Rule pass/fail trend by dataset over time",
+      "Number of dashboard viewers"
+    ],
+    "correctIndex": 2,
+    "explanation": "Trend-based pass/fail metrics show whether data quality posture is improving or degrading across scan cycles.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 62,
+    "prompt": "Why should health scan findings be linked to ownership metadata?",
+    "choices": [
+      "It auto-deletes failing rows",
+      "Ownership is unrelated to remediation",
+      "It removes need for SLAs",
+      "It routes issues to accountable teams for timely correction"
+    ],
+    "correctIndex": 3,
+    "explanation": "Assigning findings to dataset owners is essential for measurable and accountable issue resolution.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 63,
+    "prompt": "How should critical health scan failures be handled for certified data products?",
+    "choices": [
+      "Trigger incident-style remediation workflows with defined timelines",
+      "Hide the dataset immediately without notice",
+      "Archive all scan history",
+      "Ignore until annual review"
+    ],
+    "correctIndex": 0,
+    "explanation": "Critical failures on trusted datasets need structured, time-bound response to protect consumer confidence.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 64,
+    "prompt": "What is the best reason to retain historical health scan results?",
+    "choices": [
+      "To avoid stakeholder reporting",
+      "To support root-cause analysis and evidence-based quality improvements",
+      "To prevent audits",
+      "To reduce storage costs"
+    ],
+    "correctIndex": 1,
+    "explanation": "Historical scan evidence helps teams identify recurring defect patterns and validate sustained remediation outcomes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 65,
+    "prompt": "When preparing a source clone for historical migration, which action best preserves reliable timeline analytics?",
+    "choices": [
+      "Replace all historical timestamps with the migration execution date",
+      "Load records without preserving source system identifiers",
+      "Normalize legacy timestamps and retain immutable created/updated metadata mappings before load",
+      "Drop audit-related fields to speed up import performance"
+    ],
+    "correctIndex": 2,
+    "explanation": "Reliable trend analysis depends on preserving temporal context, so timestamp normalization and source metadata mapping should be established before cloning and loading.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_ImportSets.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/table-administration/concept/c_ExtendingTables.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 66,
+    "prompt": "What is the most effective way to prepare clone data when duplicate users exist across merged business units?",
+    "choices": [
+      "Delete all user records from the source clone before transformation",
+      "Keep all duplicates and resolve identity issues after go-live",
+      "Map users only by display name for easier matching",
+      "Create deterministic reconciliation rules using unique keys and survivorship criteria before import"
+    ],
+    "correctIndex": 3,
+    "explanation": "Identity quality must be established in clone preparation using stable keys and survivorship rules to avoid downstream assignment and reporting defects.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/c_DataManagement.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/task/t_CreateATransformMap.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 67,
+    "prompt": "During clone data preparation, why should reference integrity checks run before full-load transformations?",
+    "choices": [
+      "To prevent orphaned relationships that break workflows, lookups, and reporting",
+      "To force every missing reference to point to the System Administrator user",
+      "To avoid using coalesce logic in transform maps",
+      "To remove all reference fields and simplify table structure"
+    ],
+    "correctIndex": 0,
+    "explanation": "Reference integrity validation identifies broken dependencies early, reducing failed loads and post-migration remediation effort.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_Coalescing.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/table-administration/concept/c_DictionaryAttributes.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 68,
+    "prompt": "Which clone data prep pattern most improves repeatable test migrations?",
+    "choices": [
+      "Skipping validation in lower environments to save time",
+      "Versioning transform scripts and data quality rules so the same pipeline can be rerun consistently",
+      "Creating one-time manual fixes without documenting steps",
+      "Editing production records directly during each test run"
+    ],
+    "correctIndex": 1,
+    "explanation": "Repeatable migrations require controlled, versioned transformation logic so each rehearsal produces predictable outputs and measurable improvements.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_TransformEventScripts.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/update-sets/concept/c_UpdateSets.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 69,
+    "prompt": "What should be included in advanced clone data readiness gates before cutover?",
+    "choices": [
+      "Only a row-count comparison between source and target",
+      "A requirement that every field be populated regardless of design",
+      "Completeness, conformity, uniqueness, and referential integrity thresholds tied to business acceptance criteria",
+      "An assumption that all transformed records are valid if imports finish"
+    ],
+    "correctIndex": 2,
+    "explanation": "Cutover readiness should be measured with multi-dimensional quality gates, not just load completion, to protect operational and reporting reliability.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/c_DataManagement.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/reference/r_ImportSetTables.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 70,
+    "prompt": "Which control is most important for data governance in a ServiceNow migration program?",
+    "choices": [
+      "Allow any implementation team member to change data standards ad hoc",
+      "Exclude business stakeholders from data quality decisions",
+      "Treat governance as a one-time pre-go-live activity only",
+      "Define accountable data owners and enforce stewardship responsibilities for critical domains"
+    ],
+    "correctIndex": 3,
+    "explanation": "Data governance requires clear ownership and stewardship so quality rules, definitions, and remediation decisions are consistently enforced.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/c_DataManagement.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/table-administration/concept/c_TableAdministration.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 71,
+    "prompt": "How does a canonical data model improve governance across multiple source systems?",
+    "choices": [
+      "It standardizes business definitions and mappings so data remains consistent across integrations",
+      "It requires all source systems to use identical table names",
+      "It allows unrestricted free-text values for governed fields",
+      "It eliminates the need for transformation maps"
+    ],
+    "correctIndex": 0,
+    "explanation": "A canonical model aligns semantics across systems, making transformation and validation repeatable and auditable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/task/t_CreateATransformMap.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/c_DataManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 72,
+    "prompt": "What is the strongest reason to maintain data lineage documentation for key fields?",
+    "choices": [
+      "It allows schema changes without impact analysis",
+      "It enables traceability from source to target for audits, defect triage, and compliance evidence",
+      "It replaces the need for validation testing",
+      "It ensures every migration can skip business sign-off"
+    ],
+    "correctIndex": 1,
+    "explanation": "Lineage helps teams explain data provenance and transformation logic, which is essential for governance and regulated reporting.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_ImportSets.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 73,
+    "prompt": "In governed data pipelines, what should trigger remediation workflows?",
+    "choices": [
+      "Any successful import completion event",
+      "The creation of new update sets in development",
+      "Rule violations that exceed defined quality thresholds for critical attributes",
+      "User preference changes in personal dashboards"
+    ],
+    "correctIndex": 2,
+    "explanation": "Governed remediation is driven by threshold-based data quality exceptions tied to business-critical standards.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/c_DataManagement.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/reference/r_ImportSetTables.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 74,
+    "prompt": "Which metric best reflects data governance effectiveness after migration stabilization?",
+    "choices": [
+      "Total number of transform scripts created",
+      "Count of non-governed custom fields requested",
+      "Volume of manual data fixes performed outside process",
+      "Sustained reduction in high-severity data defects and faster closure of quality issues"
+    ],
+    "correctIndex": 3,
+    "explanation": "Effective governance shows up as fewer critical defects and quicker, controlled remediation when issues do occur.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
+      "https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/c_DataManagement.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 75,
+    "prompt": "In CMDB health management, what does the completeness metric primarily evaluate?",
+    "choices": [
+      "Whether required CI attributes are populated",
+      "Whether imports run through IntegrationHub",
+      "Whether every CI has two owners",
+      "Whether CI records are archived after 30 days"
+    ],
+    "correctIndex": 0,
+    "explanation": "Completeness checks if required fields on CI records contain values needed for operational use.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/cmdb-health-dashboard-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 76,
+    "prompt": "What is the purpose of the CSDM Design and Planning domain?",
+    "choices": [
+      "To store incident work notes",
+      "To model strategy, business capabilities, and supporting architecture decisions",
+      "To replace assignment groups",
+      "To define SCCM connector schedules"
+    ],
+    "correctIndex": 1,
+    "explanation": "The Design and Planning domain captures strategic and architectural context used to align services and technology.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/common-service-data-model/csdm-concepts.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 77,
+    "prompt": "Which relationship type best links an application service to the CI it depends on?",
+    "choices": [
+      "Contains::Contained by",
+      "Owned by::Owns",
+      "Depends on::Used by",
+      "Located in::Location of"
+    ],
+    "correctIndex": 2,
+    "explanation": "Dependency relationships are used to represent service impact paths and upstream/downstream behavior.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/service-mapping-relationships.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 78,
+    "prompt": "When implementing identification and reconciliation rules, what defines a strong identifier entry?",
+    "choices": [
+      "A scripted transform map only",
+      "A mandatory assignment group",
+      "Any display value field",
+      "A set of attributes likely to uniquely match one CI"
+    ],
+    "correctIndex": 3,
+    "explanation": "Identifier entries combine stable attributes so incoming data can match exactly one existing CI where possible.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 79,
+    "prompt": "What does CMDB correctness focus on?",
+    "choices": [
+      "Whether CI values match trusted source reality",
+      "Whether records have long descriptions",
+      "Whether all relationships are manual",
+      "Whether all CIs are assigned to admins"
+    ],
+    "correctIndex": 0,
+    "explanation": "Correctness measures the accuracy of CI data compared to authoritative systems and actual environment state.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/cmdb-health-dashboard-overview.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 80,
+    "prompt": "In CSDM, what is a key role of a Business Application record?",
+    "choices": [
+      "It stores MID Server credentials",
+      "It represents an application from a business portfolio perspective",
+      "It replaces technical service records",
+      "It defines ACL inheritance"
+    ],
+    "correctIndex": 1,
+    "explanation": "Business Application represents the portfolio-facing view and connects business context to technical services.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/common-service-data-model/csdm-foundation-domain.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 81,
+    "prompt": "Why are reconciliation rules used in CMDB data ingestion?",
+    "choices": [
+      "To auto-create users for each CI class",
+      "To choose how import set rows are encrypted",
+      "To control which data source can update specific CI fields",
+      "To force all updates from low-priority sources"
+    ],
+    "correctIndex": 2,
+    "explanation": "Reconciliation defines field-level update authority so trusted sources can override less reliable inputs.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 82,
+    "prompt": "What is a practical benefit of CI class hierarchy in the CMDB?",
+    "choices": [
+      "It removes all need for relationships",
+      "It limits records to one data source",
+      "It disables inheritance for child classes",
+      "It lets child classes inherit common attributes from parent classes"
+    ],
+    "correctIndex": 3,
+    "explanation": "Class hierarchy supports reuse by inheriting shared dictionary attributes and behavior from parent CI classes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/cmdb-class-manager.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 83,
+    "prompt": "Which CSDM domain typically contains technical service constructs consumed by operations?",
+    "choices": [
+      "Build domain",
+      "Foundation domain",
+      "Portfolio domain",
+      "Sell domain"
+    ],
+    "correctIndex": 0,
+    "explanation": "The Build domain organizes technical models and service constructs used for implementation and operational mapping.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/common-service-data-model/csdm-concepts.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 84,
+    "prompt": "How should duplicate CI creation from multiple discovery sources be reduced?",
+    "choices": [
+      "Disable identification rules",
+      "Tune identifier rules and source data quality to improve matching",
+      "Convert every CI to a custom table",
+      "Use only manual imports"
+    ],
+    "correctIndex": 1,
+    "explanation": "Improving identification criteria and source normalization helps match to existing CIs instead of inserting duplicates.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 85,
+    "prompt": "What does a CI relationship in the CMDB primarily represent?",
+    "choices": [
+      "A scheduled script execution",
+      "A transform map source-to-target mapping",
+      "How one configuration item is connected to or depends on another",
+      "A user's password policy"
+    ],
+    "correctIndex": 2,
+    "explanation": "Relationships capture topology and dependency context needed for impact analysis and service visibility.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/cmdb-relationship-management.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 86,
+    "prompt": "What is the objective of CMDB data certification tasks?",
+    "choices": [
+      "To change CI classes in bulk automatically",
+      "To auto-close incidents nightly",
+      "To remove all orphaned users",
+      "To have owners attest that CI records remain accurate"
+    ],
+    "correctIndex": 3,
+    "explanation": "Certification workflows ask designated owners to validate and attest the quality and current accuracy of CI data.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/cmdb-data-certification.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 87,
+    "prompt": "In CSDM, what does a Business Service best describe?",
+    "choices": [
+      "A customer-facing service outcome consumed by users",
+      "A UI action category",
+      "A hardware model specification",
+      "A transform script include"
+    ],
+    "correctIndex": 0,
+    "explanation": "Business Service represents a service offering from the consumer perspective, not a specific technical component.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/common-service-data-model/csdm-build-domain.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 88,
+    "prompt": "Why are ownership fields such as managed by and owned by important in CMDB governance?",
+    "choices": [
+      "They establish accountability for CI lifecycle and data quality",
+      "They automatically assign admin roles",
+      "They replace ACL rules",
+      "They disable reconciliation updates"
+    ],
+    "correctIndex": 1,
+    "explanation": "Ownership attributes define responsibility for maintaining operationally useful and trustworthy CI records.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/cmdb-governance.html"
+    ]
+  },
+  {
+    "trackCode": "CIS-DF",
+    "order": 89,
+    "prompt": "Which outcome indicates good CMDB relationship quality?",
+    "choices": [
+      "Relationships are limited to one class",
+      "Only manual relationships exist",
+      "Dependency paths support accurate impact analysis and outage visibility",
+      "All CIs have identical parents"
+    ],
+    "correctIndex": 2,
+    "explanation": "High-quality relationships enable reliable service impact calculations and root-cause investigations.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-operations-management/cmdb-relationship-management.html"
+    ]
+  }
+]

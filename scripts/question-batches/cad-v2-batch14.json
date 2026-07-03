@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CAD",
+		"order": 65,
+		"prompt": "How can a flow reuse logic across multiple flows without duplicating steps?",
+		"choices": [
+			"By calling a Subflow with defined inputs and outputs",
+			"By copying the same actions into every flow",
+			"By storing steps in a client script",
+			"By adding the steps to an ACL"
+		],
+		"correctIndex": 0,
+		"explanation": "A Subflow packages reusable steps with inputs and outputs so multiple flows can call the same logic.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/hyperautomation-low-code/flow-designer.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 66,
+		"prompt": "Which trigger type starts a flow when a record is created or updated matching a condition?",
+		"choices": [
+			"Record trigger (Created / Updated)",
+			"Inbound email trigger only",
+			"Scheduled Job Day field",
+			"UI Policy condition"
+		],
+		"correctIndex": 0,
+		"explanation": "A record-based trigger fires a flow when records are created, updated, or both, based on the specified table and condition.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/hyperautomation-low-code/flow-designer.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 67,
+		"prompt": "To reuse a custom operation as a step in Flow Designer, what do you build?",
+		"choices": [
+			"A custom Action with defined inputs, steps, and outputs",
+			"A new sign-in page",
+			"A dictionary override entry",
+			"An import set staging table"
+		],
+		"correctIndex": 0,
+		"explanation": "A custom Action defines inputs, steps (including scripts), and outputs, becoming a reusable building block in flows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/hyperautomation-low-code/flow-designer.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 68,
+		"prompt": "Which statements about application properties are correct? (Choose two.)",
+		"choices": [
+			"They let administrators change behavior without modifying code",
+			"They can be read at runtime with gs.getProperty()",
+			"They are stored as browser cookies only",
+			"They replace the need for business rules"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"questionType": "multi",
+		"explanation": "Application properties externalize configurable values read via gs.getProperty(), letting admins adjust behavior without code changes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/application-properties.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 69,
+		"prompt": "What is the recommended way to run periodic maintenance logic, such as cleaning old records nightly?",
+		"choices": [
+			"A Scheduled Job that runs a script or job on a nightly schedule",
+			"An onLoad client script",
+			"A UI Policy",
+			"A dictionary attribute"
+		],
+		"correctIndex": 0,
+		"explanation": "Scheduled Jobs execute maintenance scripts automatically on defined schedules, such as nightly cleanup routines.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/scheduled-jobs.html"
+		]
+	}
+]

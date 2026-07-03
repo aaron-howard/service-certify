@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CAD",
+		"order": 55,
+		"prompt": "How do you configure a Scheduled Job to execute on the last day of every month?",
+		"choices": [
+			"Set the Run field to Monthly and the Day field to Last Day",
+			"Set the Run field to Periodically and the Repeat Interval to 31",
+			"Set the Run field to Daily and the Time to 23:59",
+			"Set the Run field to Weekly and the Day to Sunday"
+		],
+		"correctIndex": 0,
+		"explanation": "A Scheduled Job with Run = Monthly and Day = Last Day executes on the final day of each month regardless of month length.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/scheduled-jobs.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 56,
+		"prompt": "What is the purpose of an Application Property (System Property scoped to an app)?",
+		"choices": [
+			"To store a configurable value that scripts read at runtime without hard-coding it",
+			"To define the table's primary key",
+			"To grant the admin role to all users",
+			"To render the login page"
+		],
+		"correctIndex": 0,
+		"explanation": "Application properties store configurable values (read via gs.getProperty) so behavior can change without editing code.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/application-properties.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 57,
+		"prompt": "Which server-side method reads the value of a system property in a script?",
+		"choices": [
+			"gs.getProperty('property.name')",
+			"g_form.getValue('property.name')",
+			"current.getProperty('property.name')",
+			"gs.eventQueue('property.name')"
+		],
+		"correctIndex": 0,
+		"explanation": "gs.getProperty() retrieves the string value of a system (application) property at runtime.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/application-properties.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 58,
+		"prompt": "How do you register a custom event so business logic and notifications can respond to it?",
+		"choices": [
+			"Create an entry in the Event Registry and fire it with gs.eventQueue()",
+			"Add the event name to a UI Policy",
+			"Store the event in an attachment field",
+			"Define the event as a dictionary column"
+		],
+		"correctIndex": 0,
+		"explanation": "Custom events are declared in the Event Registry and triggered with gs.eventQueue(); script actions and notifications can subscribe to them.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/events.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 59,
+		"prompt": "Which components make up a Flow Designer flow? (Choose two.)",
+		"choices": [
+			"A trigger that starts the flow",
+			"Actions that perform steps",
+			"An import set transform map",
+			"A dictionary override"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"questionType": "multi",
+		"explanation": "A flow is composed of a trigger (record, schedule, etc.) and one or more actions/steps that execute the automation logic.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/hyperautomation-low-code/flow-designer.html"
+		]
+	}
+]
