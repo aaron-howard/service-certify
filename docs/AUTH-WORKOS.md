@@ -318,7 +318,15 @@ Use a **single** variable with comma-separated emails (not one variable per admi
 
 - `role` is stored on the Convex `users` table (`user` or `admin`).
 - `ADMIN_EMAILS` only **bootstraps** admins on login; promote or demote users later in the Convex dashboard without redeploying.
+- After changing `ADMIN_EMAILS`, refresh any page while signed in (profile sync runs on each request) or sign out and back in.
+- Verify the exact email in Convex matches WorkOS (e.g. `mr.aaronjhoward@outlook.com`). Quotes in the env value are stripped automatically.
 - Full-mode access is enforced in Convex (`listByTrackCode`, `gradeAnswers`), not only in the UI.
+
+### Profile fields (`name`, `provider`, `profileImage`)
+
+- **`name`** — from WorkOS `firstName`/`lastName`, then WorkOS `name` (common for Microsoft), then a formatted email local-part fallback.
+- **`provider`** — set from the sign-in button you used (`google`, `microsoft`, `github`).
+- **`profileImage`** — URL from your OAuth provider when available (shown in the nav avatar). There is no manual photo upload; it comes from Microsoft/Google/GitHub.
 
 ### Convex auth wiring
 

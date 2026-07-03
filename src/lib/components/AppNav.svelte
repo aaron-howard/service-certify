@@ -45,12 +45,21 @@
 		<div class="hidden items-center gap-4 md:flex">
 			{#if user}
 				<div class="flex items-center gap-3">
-					<span
-						class="flex h-9 w-9 items-center justify-center rounded-full bg-primary-container text-xs font-bold text-on-primary-container"
-						aria-hidden="true"
-					>
-						{userInitials}
-					</span>
+					{#if user.profileImage}
+						<img
+							src={user.profileImage}
+							alt=""
+							class="h-9 w-9 rounded-full object-cover"
+							referrerpolicy="no-referrer"
+						/>
+					{:else}
+						<span
+							class="flex h-9 w-9 items-center justify-center rounded-full bg-primary-container text-xs font-bold text-on-primary-container"
+							aria-hidden="true"
+						>
+							{userInitials}
+						</span>
+					{/if}
 					<span class="max-w-[12rem] truncate text-sm font-medium text-on-surface" title={user.email}>
 						{user.name}
 					</span>
@@ -105,12 +114,21 @@
 			>
 			{#if user}
 				<div class="flex items-center gap-3">
-					<span
-						class="flex h-9 w-9 items-center justify-center rounded-full bg-primary-container text-xs font-bold text-on-primary-container"
-						aria-hidden="true"
-					>
-						{userInitials}
-					</span>
+					{#if user.profileImage}
+						<img
+							src={user.profileImage}
+							alt=""
+							class="h-9 w-9 rounded-full object-cover"
+							referrerpolicy="no-referrer"
+						/>
+					{:else}
+						<span
+							class="flex h-9 w-9 items-center justify-center rounded-full bg-primary-container text-xs font-bold text-on-primary-container"
+							aria-hidden="true"
+						>
+							{userInitials}
+						</span>
+					{/if}
 					<span class="font-medium text-primary">{user.name}</span>
 				</div>
 				<a class="font-medium text-primary" href="/auth/signout" onclick={() => (menuOpen = false)}

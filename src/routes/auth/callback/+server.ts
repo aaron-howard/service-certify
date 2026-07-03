@@ -1,6 +1,7 @@
 import { redirect } from '@sveltejs/kit';
 import type { RequestHandler } from '@sveltejs/kit';
-import { getWorkOS, getWorkOSClientId, isWorkOSConfigured } from '$lib/workos.server';
+import { getWorkOS, getWorkOSClientId, isWorkOSConfigured, type OAuthProviderSlug } from '$lib/workos.server';
+import { buildConvexUserSyncPayload } from '$lib/auth.server';
 
 export const GET: RequestHandler = async ({ url, cookies }) => {
 	if (!isWorkOSConfigured()) {
@@ -54,16 +55,15 @@ export const GET: RequestHandler = async ({ url, cookies }) => {
 		});
 
 		const { syncUserToConvex } = await import('$lib/convex.server');
-		const displayName =
-			[user.firstName, user.lastName].filter(Boolean).join(' ').trim() || user.email;
+		const oauthProvider = cookies.get('auth_provider') as OAuthProviderSlug | undefined;
+		if (oauthProvider) {
+			cookies.delete('auth_provider', { path: '/' });
+		}
+
+		const syncPayload = buildConvexUserSyncPayload(user, oauthProvider);
 
 		try {
-			await syncUserToConvex({
-				workosId: user.id,
-				email: user.email,
-				name: displayName,
-				profileImage: user.profilePictureUrl ?? undefined
-			});
+			await syncUserToConvex(syncPayload);
 		} catch (syncError) {
 			// OAuth succeeded; log sync failure but still sign the user in.
 			console.error('Convex user sync failed after OAuth:', syncError);
