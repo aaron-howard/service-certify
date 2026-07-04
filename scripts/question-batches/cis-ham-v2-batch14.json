@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-HAM",
+		"order": 65,
+		"prompt": "Internal audit asks how HAM verifies that assigned laptops in a branch office match system records. Which program best answers that question?",
+		"choices": [
+			"A scheduled or ad-hoc asset audit with documented scan results",
+			"A weekly export of incident categories without asset linkage",
+			"A catalog home page popularity report for requesters",
+			"A discovery credential test on unrelated network gear"
+		],
+		"correctIndex": 0,
+		"explanation": "Asset audits compare expected inventory to scanned or verified results, producing evidence for compliance reviews.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-audit-record-fields.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 66,
+		"prompt": "Which practice most improves custody traceability when assets move between users and stockrooms?",
+		"choices": [
+			"Capture barcode or serial-based transactions with user, date, and location",
+			"Allow verbal handoffs without updating assignment fields",
+			"Use one shared generic assignee for all field staff",
+			"Track assets only at procurement and skip in-use updates"
+		],
+		"correctIndex": 0,
+		"explanation": "Documented custody transactions create an auditable chain for assignments, returns, and stockroom movements.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/manage-hardware-assets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 67,
+		"prompt": "Discovery repeatedly finds devices that do not match any in-use asset assignment. What is the best sustained response?",
+		"choices": [
+			"Analyze lifecycle stage gaps and implement corrective workflows with named owners",
+			"Pause all discovery feeds until the next fiscal year begins",
+			"Delete unmatched CI records to improve dashboard percentages",
+			"Ignore variances below a fixed count threshold permanently"
+		],
+		"correctIndex": 0,
+		"explanation": "Recurring mismatches require process fixes at the stage where records diverge, not one-time data deletes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 68,
+		"prompt": "Which items should be included in an internal HAM audit evidence package? (Choose three.)",
+		"choices": [
+			"Sample transaction logs for assignments and transfers",
+			"Approved policy controls and attestation sign-offs",
+			"Exception remediation records with closure evidence",
+			"Unfiltered screenshots of unrelated incident queues"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1, 2],
+		"questionType": "multi",
+		"explanation": "Audit evidence should include controls, traceable transactions, and documented remediation of exceptions rather than unrelated operational views.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/audit-results.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 69,
+		"prompt": "Asset managers need a single pane to monitor stock rules, procurement requests, and contract renewals. Which interface is designed for this?",
+		"choices": [
+			"The Asset operations view in Hardware Asset Workspace",
+			"The Event Management alert console exclusively",
+			"The Agile Development board for scrum teams",
+			"The Knowledge homepage without asset analytics"
+		],
+		"correctIndex": 0,
+		"explanation": "The Asset operations view consolidates operational tasks such as stock rules, orders, sourcing, and contract renewals in the workspace.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-operations-view.html"
+		]
+	}
+]

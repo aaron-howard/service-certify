@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-HAM",
+		"order": 60,
+		"prompt": "Received laptops sit in a stockroom without assigned aisle and space values. Which workspace task helps organize their physical placement?",
+		"choices": [
+			"An Asset put away task with a defined drop-off location",
+			"A procurement sourcing request for the same model",
+			"A discovery credential rotation for the stockroom subnet",
+			"A change request to modify the catalog item icon"
+		],
+		"correctIndex": 0,
+		"explanation": "Asset put away tasks track movement of in-stock assets to specific locations within a stockroom.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/create-asset-put-away-task.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 61,
+		"prompt": "Your organization requires executive approval before high-value assets leave the primary data center stockroom. How can you adapt the platform process?",
+		"choices": [
+			"Customize the Transfer Order or Transfer Order Line flow in Workflow Studio",
+			"Disable asset-to-CI synchronization for all hardware classes",
+			"Remove receiving checkpoints from every stockroom globally",
+			"Convert transfer orders into manual spreadsheet tracking"
+		],
+		"correctIndex": 0,
+		"explanation": "Transfer order flows can be edited or extended to add approvals and checkpoints that match organizational controls.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/asset-management/transfer-order-flows.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 62,
+		"prompt": "Keyboard inventory at a campus stockroom falls below the defined threshold. With HAM and procurement active, what does the stock rule runner typically initiate?",
+		"choices": [
+			"A replenishment action such as a transfer order, purchase order, or catalog request",
+			"A discovery schedule rescan of every assigned laptop",
+			"Automatic retirement of all assets in the stockroom",
+			"Deletion of consumable model records tied to the stockroom"
+		],
+		"correctIndex": 0,
+		"explanation": "Stock rules trigger restocking workflows based on threshold, stock rule type, and activated procurement integrations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/asset-management/c_StockRules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 63,
+		"prompt": "A completed stockroom audit shows several assets marked Missing. What is the recommended next step?",
+		"choices": [
+			"Review audit results and open remediation tasks for unmatched items",
+			"Close the audit and ignore variances under ten percent",
+			"Delete missing assets from the CMDB without asset manager review",
+			"Disable future audits for that stockroom indefinitely"
+		],
+		"correctIndex": 0,
+		"explanation": "Audit results highlight exceptions that should be investigated and corrected to restore inventory accuracy.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/audit-results.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 64,
+		"prompt": "Which asset record section is available for hardware assets to document lease and support agreements?",
+		"choices": [
+			"The Contract section with lease and service contract references",
+			"The Depreciation section on consumable quantity records",
+			"The Discovery section on software entitlement models",
+			"The Event section on alert correlation policies"
+		],
+		"correctIndex": 0,
+		"explanation": "Hardware assets expose contract fields for lease, service, and warranty relationships used throughout the lifecycle.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-record-fields.html"
+		]
+	}
+]

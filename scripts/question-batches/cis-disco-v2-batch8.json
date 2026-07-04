@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 35,
+		"prompt": "When multiple credentials are configured for a Discovery schedule, why is credential ordering important?",
+		"choices": [
+			"It prevents identification and reconciliation from creating duplicate configuration items",
+			"It ensures all probes are pinned to one MID regardless of subnet availability",
+			"It allows event connector integrations to reuse protocol accounts without mapping rules",
+			"It reduces failed logins and scan duration by trying the most likely credentials first"
+		],
+		"correctIndex": 3,
+		"explanation": "Ordered credential execution improves efficiency and lowers failed authentication attempts during discovery runs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 36,
+		"prompt": "A credential test succeeds for SSH but Linux devices still fail classification. What should be checked next?",
+		"choices": [
+			"Whether procurement rules are creating cost center assignments for new server models",
+			"Whether credential order, IP targeting, and pattern conditions match the failing devices",
+			"Whether incident response workflows were triggered by event deduplication policy updates",
+			"Whether depreciation classes were recalculated for asset records in the same subnet"
+		],
+		"correctIndex": 1,
+		"explanation": "Credential success alone is not enough; matching logic, range targeting, and pattern prerequisites must align with the discovery target profile.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 37,
+		"prompt": "During Discovery troubleshooting, subnet status stays in \"Scanning\" with no probes returning. Which record type should be reviewed first?",
+		"choices": [
+			"Asset inventory records to verify purchase status for scanned network endpoints",
+			"ECC queue records tied to the run for probe requests, responses, and processing outcomes",
+			"Table dictionary entries to inspect field label translations for discovery forms",
+			"Navigation module definitions to confirm role visibility for discovery administrators"
+		],
+		"correctIndex": 1,
+		"explanation": "Probe activity is exchanged through ECC Queue, making it the quickest way to identify execution or communication failures during a run.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 38,
+		"prompt": "Which credential governance approach is most appropriate for enterprise Discovery deployments?",
+		"choices": [
+			"Segment credentials by environment or domain with least privilege and controlled rotation",
+			"Use one shared root account across protocols to simplify credential administration",
+			"Disable credential tests entirely so MID Servers spend less time during scheduling",
+			"Store discovery secrets in update-set XML payloads for easier transport between instances"
+		],
+		"correctIndex": 0,
+		"explanation": "Segmentation and least privilege improve security and reduce blast radius while supporting compliant discovery operations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 39,
+		"prompt": "What should be reviewed first when a Discovery schedule repeatedly finishes with partial results?",
+		"choices": [
+			"Connector deduplication policies to confirm event suppression thresholds remain unchanged",
+			"Lifecycle retirement tasks to verify disposal approvals for decommissioned hardware",
+			"Warehouse assignment logic to ensure spare inventory locations are still mapped",
+			"Schedule logs, credential outcomes, and MID reachability for ranges that failed"
+		],
+		"correctIndex": 3,
+		"explanation": "Partial completion is commonly caused by targeting, credential, or connectivity issues visible in schedule execution logs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
+		]
+	}
+]

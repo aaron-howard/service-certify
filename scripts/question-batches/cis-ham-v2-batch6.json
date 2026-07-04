@@ -1,0 +1,85 @@
+[
+	{
+		"trackCode": "CIS-HAM",
+		"order": 25,
+		"prompt": "Receiving teams created duplicate hardware model records for the same vendor SKU. What is the best remediation?",
+		"choices": [
+			"Consolidate to a canonical model and remap assets to the governed record",
+			"Delete all assets tied to duplicate models without review or reassignment planning",
+			"Convert duplicates to consumable models to avoid serialized asset tracking requirements",
+			"Disable normalization for the affected stockroom only while keeping duplicate models"
+		],
+		"correctIndex": 0,
+		"explanation": "Maintaining a canonical model record avoids fragmented reporting and inconsistent lifecycle controls across equivalent hardware.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/manage-hardware-models.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 26,
+		"prompt": "An administrator selects Revert Normalization on a hardware model. What happens when the scheduled job runs next?",
+		"choices": [
+			"Normalization is reversed, the rule deactivates, and models reprocess against active rules",
+			"The model is permanently deleted from the product catalog along with all related assets",
+			"All assets assigned to the model auto-retire without workflow or disposal documentation",
+			"Stock rules stop generating transfer orders globally across every active stockroom"
+		],
+		"correctIndex": 0,
+		"explanation": "Revert Normalization clears applied normalization, deactivates the rule, and allows the next job run to re-evaluate models with active rules.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/hardware-normalization.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 27,
+		"prompt": "When should a hardware model be marked Exclude from content service?",
+		"choices": [
+			"When the organization must keep proprietary model data out of the HAM Content Service",
+			"When the model category requires a CI relationship before receiving at the stockroom",
+			"When the asset is in In stock and Available substatus for bundling into a kit",
+			"When discovery creates the model automatically from install evidence on a laptop CI"
+		],
+		"correctIndex": 0,
+		"explanation": "The Exclude from content service option prevents a model's data from being shared with the Hardware Asset Management Content Service.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/create-hardware-consumable-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 28,
+		"prompt": "Which report helps identify overall hardware model normalization progress?",
+		"choices": [
+			"Hardware Product Overall Normalization Status",
+			"Discovery Status dashboard for all subnets scoped to infrastructure classes",
+			"Incident backlog aging by assignment group for priority one tickets",
+			"Change success rate by category for standard production change models"
+		],
+		"correctIndex": 0,
+		"explanation": "The Hardware Product Overall Normalization Status report summarizes normalization progress across hardware models in the estate.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/hardware-normalization.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 29,
+		"questionType": "multi",
+		"prompt": "Which two fields are examples of normalization-related values on a hardware model? (Choose two.)",
+		"choices": [
+			"Normalized Manufacturer",
+			"Model Number",
+			"Normalized Product",
+			"Stockroom Manager"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 2],
+		"explanation": "Normalized Manufacturer and Normalized Product are populated by the normalization job; Model Number and Stockroom Manager are not normalization output fields.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/hardware-normalization.html",
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/normalize-hardware-models.html"
+		]
+	}
+]

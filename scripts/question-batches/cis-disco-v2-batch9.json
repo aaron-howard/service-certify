@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 40,
+		"prompt": "What information does the Discovery Status form provide during an active schedule run?",
+		"choices": [
+			"Real-time progress, probe outcomes, and errors for the current discovery execution",
+			"Annual hardware depreciation schedules for assets in scanned subnets",
+			"Service catalog fulfillment queues tied to discovered endpoint requests",
+			"Change advisory board votes for pending infrastructure modifications"
+		],
+		"correctIndex": 0,
+		"explanation": "Discovery Status shows execution progress, probe results, and errors so administrators can monitor and troubleshoot active runs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-status.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 41,
+		"prompt": "A customer needs to reuse the same login across multiple Windows discovery schedules. Which credential feature supports this?",
+		"choices": [
+			"Credential alias that maps one credential record to multiple schedules",
+			"Shared ECC queue topic bound to a single subnet range per alias",
+			"Classification probe that embeds username tokens in pattern steps",
+			"Schedule behavior flag that disables authentication for trusted zones"
+		],
+		"correctIndex": 0,
+		"explanation": "Credential aliases let one tested credential record serve multiple schedules without duplicating secret material.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-credentials.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 42,
+		"prompt": "An admin adds a /24 subnet to a discovery schedule but excludes a smaller range within it. What controls this behavior?",
+		"choices": [
+			"IP address range inclusion with excluded address ranges on the schedule",
+			"Reconciliation rule priority that suppresses CI creation in excluded zones",
+			"MID Server cluster failover order for overlapping network segments",
+			"Classification criteria that skip devices without open SNMP ports"
+		],
+		"correctIndex": 0,
+		"explanation": "Schedules support included IP ranges plus excluded ranges so discovery can scan a subnet while skipping sensitive segments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-schedule.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 43,
+		"prompt": "How many CI Identifiers should be configured per CI Class for Discovery identification?",
+		"choices": [
+			"One CI Identifier configured per CI Class",
+			"Two identifiers minimum so reconciliation can compare competing values",
+			"One identifier per discovered attribute returned by the classification probe",
+			"No identifiers are required when horizontal patterns populate serial numbers"
+		],
+		"correctIndex": 0,
+		"explanation": "ServiceNow Discovery identification expects one CI Identifier per CI Class to match incoming data to existing records reliably.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 44,
+		"prompt": "Classification fails with \"No credentials would authenticate\" during the Classification phase. What is the most likely cause?",
+		"choices": [
+			"No valid discovery credential is assigned or credentials fail authentication on the target",
+			"The horizontal pattern attached to the classification lacks a parse step",
+			"Identification rules are missing for the inferred CI class on the subnet",
+			"Reconciliation precedence favors a lower-trust import feed over discovery"
+		],
+		"correctIndex": 0,
+		"explanation": "This error indicates discovery could not authenticate with any configured credential during classification probing.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/troubleshoot-discovery-errors.html"
+		]
+	}
+]

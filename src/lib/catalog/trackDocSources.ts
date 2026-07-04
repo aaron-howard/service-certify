@@ -268,34 +268,97 @@ export const PHASE5_TRACK_DOC_SOURCES: TrackDocSource[] = [
 	{
 		trackCode: 'CIS-DISCO',
 		officialName: 'Certified Implementation Specialist - Discovery',
-		publications: ['it-operations-management', 'servicenow-platform', 'platform-security'],
+		publications: ['it-operations-management', 'discovery'],
 		domains: [
-			{ name: 'MID Server and ECC', weight: '25%', publications: ['servicenow-platform'] },
-			{ name: 'Discovery schedules and credentials', weight: '25%', publications: ['it-operations-management'] },
-			{ name: 'Patterns and horizontal discovery', weight: '30%', publications: ['it-operations-management'] },
-			{ name: 'CMDB integration', weight: '20%', publications: ['it-operations-management'] }
+			{
+				name: 'Discovery Pattern Design',
+				weight: '35%',
+				publications: ['discovery', 'it-operations-management']
+			},
+			{
+				name: 'Discovery Configuration',
+				weight: '35%',
+				publications: ['discovery', 'it-operations-management']
+			},
+			{
+				name: 'Configuration Management Database',
+				weight: '15%',
+				publications: ['cmdb', 'it-operations-management']
+			},
+			{
+				name: 'Discovery Engagement Readiness',
+				weight: '15%',
+				publications: ['discovery']
+			}
 		]
 	},
 	{
 		trackCode: 'CIS-EM',
 		officialName: 'Certified Implementation Specialist - Event Management',
-		publications: ['it-operations-management'],
+		publications: ['it-operations-management', 'event-management'],
 		domains: [
-			{ name: 'Event pipeline and ingestion', weight: '28%', publications: ['it-operations-management'] },
-			{ name: 'Connectors and listeners', weight: '24%', publications: ['it-operations-management'] },
-			{ name: 'Alerts and alert rules', weight: '28%', publications: ['it-operations-management'] },
-			{ name: 'Remediation and operations', weight: '20%', publications: ['it-operations-management'] }
+			{
+				name: 'Event Management Overview',
+				weight: '7%',
+				publications: ['event-management', 'it-operations-management']
+			},
+			{
+				name: 'Architecture and Discovery',
+				weight: '10%',
+				publications: ['event-management', 'it-operations-management']
+			},
+			{
+				name: 'Event Configuration and Use',
+				weight: '27%',
+				publications: ['event-management']
+			},
+			{
+				name: 'Alerts and Tasks',
+				weight: '30%',
+				publications: ['event-management']
+			},
+			{
+				name: 'Event Sources',
+				weight: '16%',
+				publications: ['event-management']
+			},
+			{
+				name: 'Metric Intelligence',
+				weight: '10%',
+				publications: ['event-management']
+			}
 		]
 	},
 	{
 		trackCode: 'CIS-HAM',
 		officialName: 'Certified Implementation Specialist - Hardware Asset Management',
-		publications: ['it-asset-management'],
+		publications: ['it-asset-management', 'hardware-asset-management'],
 		domains: [
-			{ name: 'Hardware models and lifecycle', weight: '28%', publications: ['it-asset-management'] },
-			{ name: 'Stockrooms and inventory', weight: '26%', publications: ['it-asset-management'] },
-			{ name: 'Asset bundles and consumables', weight: '23%', publications: ['it-asset-management'] },
-			{ name: 'Catalog fulfillment', weight: '23%', publications: ['it-asset-management'] }
+			{
+				name: 'IT Asset Management Overview and Fundamentals',
+				weight: '20%',
+				publications: ['it-asset-management', 'hardware-asset-management']
+			},
+			{
+				name: 'Data Integrity Attributes and Data Sources',
+				weight: '27%',
+				publications: ['hardware-asset-management']
+			},
+			{
+				name: 'Practical Management of IT Assets',
+				weight: '30%',
+				publications: ['hardware-asset-management']
+			},
+			{
+				name: 'Operational Integration of IT Asset Management Processes',
+				weight: '18%',
+				publications: ['hardware-asset-management']
+			},
+			{
+				name: 'Financial Management of IT Assets',
+				weight: '5%',
+				publications: ['hardware-asset-management']
+			}
 		]
 	}
 ];

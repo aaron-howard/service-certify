@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-HAM",
+		"order": 70,
+		"prompt": "Leadership asks for visibility into lifecycle cost exposure and compliance exceptions across the hardware estate. What should HAM reporting emphasize?",
+		"choices": [
+			"Decision-ready KPIs on lifecycle, financial exposure, compliance, and operational risk",
+			"A raw export of every asset field without filters or aggregation",
+			"Only counts of newly purchased devices from the current quarter",
+			"Dashboard color themes without underlying metric definitions"
+		],
+		"correctIndex": 0,
+		"explanation": "HAM reporting translates asset data into governance insight on lifecycle, cost, compliance, and control effectiveness.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/it-asset-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 71,
+		"prompt": "Which of the following are considered operational expenses for hardware assets? (Choose three.)",
+		"choices": [
+			"Maintenance agreement costs",
+			"Replacement parts",
+			"Resource costs for support",
+			"Delivery costs for initial purchase shipment"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1, 2],
+		"questionType": "multi",
+		"explanation": "Operational expenses include ongoing maintenance, parts, and support labor. Initial delivery of purchased hardware is typically capital-related rather than operational expense in TCO context.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-mgmt-tco.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 72,
+		"prompt": "An executive steering committee reviews quarterly hardware health. Which report design is most appropriate?",
+		"choices": [
+			"Trend dashboards combining stock levels, assignment accuracy, contract coverage, and exception aging",
+			"A single unfiltered table of all asset columns exported to CSV",
+			"Weekly random screenshots of individual asset forms",
+			"Disposal counts only with no assignment or contract context"
+		],
+		"correctIndex": 0,
+		"explanation": "Executive views should present trend-based KPIs spanning inventory, custody, contracts, and open control exceptions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-operations-view.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 73,
+		"prompt": "Reporting shows many assets with stale owner or location values. How should dashboards treat this data quality issue?",
+		"choices": [
+			"Surface data-quality indicators and remediation backlog alongside lifecycle KPIs",
+			"Hide low-confidence records from every report permanently",
+			"Report only assets that currently have open incidents",
+			"Reset stale records to In stock through bulk automation without review"
+		],
+		"correctIndex": 0,
+		"explanation": "Transparent quality metrics prevent false confidence and drive remediation of incomplete ownership and location data.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 74,
+		"prompt": "Operations wants daily exception visibility while executives need monthly governance summaries. Which reporting model fits both audiences?",
+		"choices": [
+			"Layered cadence with daily operational dashboards and monthly leadership packs using shared definitions",
+			"Separate ad hoc reports per stockroom manager with conflicting metric names",
+			"One static annual PDF for all stakeholders regardless of role",
+			"Reports generated only after external audit findings arrive"
+		],
+		"correctIndex": 0,
+		"explanation": "Different cadences and consistent metric definitions keep tactical and strategic reporting aligned to the same data standards.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/it-asset-management.html"
+		]
+	}
+]

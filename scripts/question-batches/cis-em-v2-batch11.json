@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-EM",
+		"order": 50,
+		"prompt": "SNMP traps arrive at a MID Server listener instead of being retrieved by API polling. Which statement describes that ingestion path?",
+		"choices": [
+			"The MID Server acts as a collection endpoint and forwards traps to the instance for event processing",
+			"The instance pulls traps directly from the monitoring tool every 120 seconds by default",
+			"Discovery credentials on the MID Server convert traps into hardware asset records",
+			"Catalog inbound actions parse trap payloads into service request line items"
+		],
+		"correctIndex": 0,
+		"explanation": "SNMP listeners run on the MID Server as inbound collection endpoints and send received traps to the instance for Event Management processing.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 51,
+		"prompt": "Email-based event ingestion for Event Management relies on which platform mechanism to transform messages into events?",
+		"choices": [
+			"Inbound email actions configured to parse and create event records",
+			"Hardware asset workflows that convert messages into transfer orders",
+			"Performance Analytics indicators that aggregate mailbox volume hourly",
+			"Change approval flows that open normal changes from message subjects"
+		],
+		"correctIndex": 0,
+		"explanation": "Event Management supports email ingestion through inbound email actions that process notification messages into the event pipeline.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 52,
+		"prompt": "A team deploys Agent Client Collector agents to gather endpoint telemetry for ITOM monitoring. Before connector instances can collect Metric Intelligence data, what prerequisite applies?",
+		"choices": [
+			"The Metric Intelligence plugin must be activated on the instance",
+			"Every CI must be converted to a consumable model category first",
+			"All event rules must be deactivated during the initial pilot week",
+			"Discovery schedules must scan every subnet before metrics arrive"
+		],
+		"correctIndex": 0,
+		"explanation": "Metric Intelligence connectors and metrics collection on connector instances require the Metric Intelligence plugin (com.snc.sa.metric) to be activated.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/t_EMConfigureConnectorInstance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 53,
+		"prompt": "Push connectors that deliver events through the MID Server differ from instance-level push connectors primarily because they do what?",
+		"choices": [
+			"Route inbound event traffic via MID Server endpoints rather than direct instance ingestion",
+			"Require pull scheduling on the Event collection schedule field every 120 seconds",
+			"Disable event rules until a hardware asset record is bound to each alert",
+			"Convert all alerts into procurement purchase orders for affected CIs"
+		],
+		"correctIndex": 0,
+		"explanation": "Generic push connectors are provided for event collection through either the MID Server or directly through the instance, depending on integration architecture.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 54,
+		"prompt": "When Metrics collection is enabled on a supported connector instance, what type of analysis does Metric Intelligence perform on ingested data?",
+		"choices": [
+			"Trend analysis, threshold definition, and anomaly detection on collected metrics",
+			"Automatic retirement of CIs that exceed warranty expiration dates",
+			"Replacement of all alert correlation rules with manual queue triage",
+			"Conversion of every event into a standard change request record"
+		],
+		"correctIndex": 0,
+		"explanation": "Metric Intelligence analyzes collected metric data for trends, thresholds, and anomalies after raw data is mapped to CIs through the event pipeline.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/t_EMConfigureConnectorInstance.html"
+		]
+	}
+]

@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 25,
+		"prompt": "When defining Discovery scope for a large enterprise network, why should administrators segment address space into explicit IP ranges?",
+		"choices": [
+			"Control discovery scope and reduce unnecessary probe traffic across wide address blocks",
+			"Force every endpoint into a single MID queue regardless of network segmentation design",
+			"Prevent ECC records from being created so queue tables remain nearly empty always",
+			"Bypass classification for unknown hosts until manual CI mapping is completed by operators"
+		],
+		"correctIndex": 0,
+		"explanation": "Scoped IP range definitions limit where Discovery scans, improving performance and reducing network and credential noise.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 26,
+		"prompt": "What is the most important outcome of assigning a Discovery behavior to a specific IP range?",
+		"choices": [
+			"Automatically normalize CMDB classes by subnet with no reconciliation policy needed",
+			"Enable distinct scan settings—such as ports and frequency—that match each network segment",
+			"Remove the need to manage credentials separately for protocol-specific discovery access",
+			"Turn off CI identification rules so each range can write records independently"
+		],
+		"correctIndex": 1,
+		"explanation": "Range-level behavior assignment allows scan strategy, frequency, and port choices to match each environment's requirements.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 27,
+		"prompt": "A Discovery admin must scan corporate subnets but exclude partner-owned address space. Which configuration approach is best?",
+		"choices": [
+			"Lower probe priority globally so partner addresses are naturally skipped during scans",
+			"Disable sensors for partner-owned devices while still scanning one broad network set",
+			"Scan all ranges first and filter unwanted partner hosts after CI creation completes",
+			"Define approved include ranges and explicit exclude ranges for prohibited partner subnets"
+		],
+		"correctIndex": 3,
+		"explanation": "Include and exclude range controls let teams target only approved address space and avoid scanning prohibited segments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 28,
+		"prompt": "Why should Discovery administrators deploy MID Servers in clusters for production environments?",
+		"choices": [
+			"Clusters provide failover and load distribution so discovery workloads remain resilient",
+			"Clusters eliminate the ECC queue by executing all probes directly on the instance server",
+			"Clusters replace credential aliases with a single shared root account for every protocol",
+			"Clusters force all schedules to run synchronously across every datacenter globally"
+		],
+		"correctIndex": 0,
+		"explanation": "MID Server clusters improve availability and throughput by distributing probe work and supporting failover when a node is unavailable.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 29,
+		"prompt": "In Discovery architecture, what is the ECC Queue's core role during a scheduled scan?",
+		"choices": [
+			"Store historical CMDB relationship snapshots for downstream impact analysis reporting",
+			"Run schedule timing calculations independently from MID Server processing responsibilities",
+			"Carry probe requests to MID Servers and return results for instance-side sensor handling",
+			"Act as a fallback credential vault used when protocol authentication records are missing"
+		],
+		"correctIndex": 2,
+		"explanation": "ECC Queue is the communication channel between the instance and MID Servers, carrying commands and returned payloads.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html"
+		]
+	}
+]

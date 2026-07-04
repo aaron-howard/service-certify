@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-HAM",
+		"order": 50,
+		"prompt": "An end user submits a Service Catalog request for a standard corporate laptop. What typically happens regarding asset creation when fulfillment completes?",
+		"choices": [
+			"An asset record is created or updated automatically through the hardware fulfillment workflow",
+			"The request closes without any asset linkage unless an admin manually imports a spreadsheet",
+			"Discovery creates the asset only after the device first connects to the corporate network",
+			"A consumable model record replaces the need for an individual asset tag"
+		],
+		"correctIndex": 0,
+		"explanation": "Catalog-driven hardware fulfillment integrates with HAM so fulfilled items become governed asset records tied to the requester.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/service-catalog-var-form-fields.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 51,
+		"prompt": "How are consumable assets tracked differently from serialized laptops in HAM?",
+		"choices": [
+			"Consumables are managed by quantity in stockrooms rather than as individual tagged units",
+			"Consumables require a unique serial number before they can be received",
+			"Consumables always generate a CI record through the Identification and Reconciliation engine",
+			"Consumables use depreciation schedules identical to data center servers"
+		],
+		"correctIndex": 0,
+		"explanation": "Consumable models support quantity-based inventory tracking, while serialized hardware uses individual asset records with custody fields.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 52,
+		"prompt": "A security policy requires proof of data sanitization before laptops leave the organization. Which HAM process addresses this requirement?",
+		"choices": [
+			"The hardware asset disposal workflow with documented retirement evidence",
+			"The stock rule runner job that replenishes keyboard inventory",
+			"The normalization job that merges duplicate hardware models",
+			"The loaner return reminder notification sent to assignees"
+		],
+		"correctIndex": 0,
+		"explanation": "Disposal workflows capture controlled retirement steps, including vendor processing and compliance evidence for retired hardware.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/dispose-hardware-assets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 53,
+		"prompt": "Support engineers need to verify warranty coverage before dispatching a onsite repair for a server asset. Which asset relationship is most relevant?",
+		"choices": [
+			"The service or maintenance contract linked on the asset record",
+			"The discovery credential alias on the MID Server",
+			"The catalog variable order value on the original request item",
+			"The change schedule blackout window for the data center"
+		],
+		"correctIndex": 0,
+		"explanation": "Contract and warranty fields on hardware assets document coverage used for support entitlement and renewal planning.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-record-fields.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 54,
+		"prompt": "After completing a transfer order, receiving staff find two units missing at the destination stockroom. What should they do next?",
+		"choices": [
+			"Document the variance during receiving and initiate reconciliation follow-up",
+			"Mark all lines received to close the order regardless of physical count",
+			"Retire the missing assets immediately without investigation",
+			"Delete the transfer order to reset inventory to the source stockroom"
+		],
+		"correctIndex": 0,
+		"explanation": "Receiving discrepancies should be recorded and reconciled so inventory balances and custody history remain trustworthy.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/transfer-stockrooms.html"
+		]
+	}
+]

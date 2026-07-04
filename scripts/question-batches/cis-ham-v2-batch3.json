@@ -1,0 +1,85 @@
+[
+	{
+		"trackCode": "CIS-HAM",
+		"order": 10,
+		"prompt": "What does a model category configuration determine for a hardware CI class?",
+		"choices": [
+			"Whether an asset is created from a CI and which asset class is used",
+			"Which discovery credential alias runs on the MID Server for subnet scans",
+			"The default incident assignment group for server outage tickets",
+			"Whether software entitlements import from spreadsheet rows during reconciliation"
+		],
+		"correctIndex": 0,
+		"explanation": "Model categories associate CI classes with asset classes and control whether platform asset creation occurs from discovered or manual CIs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/product-catalog/c_ModelCategories.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 11,
+		"questionType": "multi",
+		"prompt": "Which two practices improve hardware model data quality in HAM? (Choose two.)",
+		"choices": [
+			"Maintain governed hardware models with deduplication and intake standards",
+			"Allow requesters to create duplicate vendor SKU models directly in production",
+			"Associate assets to normalized models rather than free-text descriptions",
+			"Disable stockroom inventory tracking for all serialized hardware assets"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 2],
+		"explanation": "Governed model maintenance and normalized model references preserve reporting integrity and predictable lifecycle behavior at scale.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/hardware-normalization.html",
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/manage-hardware-models.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 12,
+		"prompt": "In Hardware Asset Management, stockrooms primarily support which operational need?",
+		"choices": [
+			"Track physical or logical inventory locations for receiving, storing, and issuing assets",
+			"Replace assignment groups on incident and change records for fulfillment routing",
+			"Store discovery credential passwords for MID Server probes and SNMP communities",
+			"Define depreciation schedules for each hardware manufacturer in the product catalog"
+		],
+		"correctIndex": 0,
+		"explanation": "Stockrooms represent controlled inventory locations that support accurate on-hand balances and fulfillment from receiving through issue.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/manage-your-stockrooms.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 13,
+		"prompt": "What is an asset bundle in Hardware Asset Management?",
+		"choices": [
+			"A managed package of related in-stock hardware and consumable assets treated as one entity",
+			"A discovery feed that imports vendor advanced shipment notifications without stockroom context",
+			"A software entitlement grouping for publisher part numbers and license metrics",
+			"A change window template for data center maintenance blackout scheduling"
+		],
+		"correctIndex": 0,
+		"explanation": "Asset bundles group existing in-stock assets into a single managed package for deployment, allocation, and lifecycle handling.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-bundles-concept.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 14,
+		"prompt": "Which HAM benefit supports receiving assets into stockrooms using mobile devices?",
+		"choices": [
+			"Mobile asset scanning for receiving and on-site audit validation",
+			"Automated software reclamation from unused installations across the estate",
+			"Cloud subscription chargeback allocation rules for multi-account billing",
+			"Service Mapping entry point discovery for application dependency maps"
+		],
+		"correctIndex": 0,
+		"explanation": "Mobile asset scanning enables receiving and audit activities at the stockroom or user location using barcode or RFID capture.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/exploring-ham.html"
+		]
+	}
+]

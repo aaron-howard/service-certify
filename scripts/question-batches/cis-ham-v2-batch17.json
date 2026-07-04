@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-HAM",
+		"order": 80,
+		"prompt": "A fulfillment team skips receiving and stocking steps to deliver laptops faster. What is the primary HAM risk?",
+		"choices": [
+			"Inventory chain-of-custody and financial accuracy degrade",
+			"Discovery scans on the subnet complete more slowly",
+			"Depreciation begins earlier than the purchase date",
+			"Catalog items become unavailable to all requesters"
+		],
+		"correctIndex": 0,
+		"explanation": "Receiving and stocking establish the official baseline for custody, inventory balances, and financial tracking.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/manage-your-stockrooms.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 81,
+		"prompt": "Facilities planning a laptop refresh wants evidence-based timing instead of calendar-only replacements. Which data should drive the plan?",
+		"choices": [
+			"Asset age, warranty end dates, and business criticality in lifecycle reporting",
+			"Procurement request volume as the sole planning metric",
+			"Retirement of only assets with open incidents regardless of age",
+			"Mandatory replacement of every device each fiscal year"
+		],
+		"correctIndex": 0,
+		"explanation": "Refresh decisions should combine lifecycle age, support coverage, and impact rather than a single proxy metric.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/ham-landing-page.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 82,
+		"prompt": "Why should HAM teams verify assignments after major reorganizations or office moves?",
+		"choices": [
+			"Verified assignments confirm accountability and reduce orphaned assets",
+			"Verified assignments disable contract entitlement checks on servers",
+			"Verified assignments remove the need for stockroom records",
+			"Verified assignments apply only to mobile phones, not laptops"
+		],
+		"correctIndex": 0,
+		"explanation": "Assignment verification keeps custody accurate after organizational change, lowering compliance and loss risk.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/manage-hardware-assets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 83,
+		"prompt": "Environmental compliance requires proof that retired drives were destroyed responsibly. Which HAM data element satisfies auditors?",
+		"choices": [
+			"Documented retirement and disposal evidence linked to the asset lifecycle",
+			"Catalog widget color preferences on the request form",
+			"Incident caller locale on unrelated service tickets",
+			"Asset class display value without disposal certificates"
+		],
+		"correctIndex": 0,
+		"explanation": "Disposal governance depends on verifiable retirement records showing policy steps and vendor certification were followed.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/dispose-hardware-assets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 84,
+		"prompt": "A data certification initiative targets incomplete hardware records. Which workspace metric highlights the highest-risk gaps?",
+		"choices": [
+			"Count of assets missing model, owner, or location attributes",
+			"Total update sets checked into the development instance",
+			"Average change request approval duration in ITSM",
+			"Number of users holding the report_user role"
+		],
+		"correctIndex": 0,
+		"explanation": "Missing core attributes directly affect lifecycle controls, analytics, and certification readiness.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
+		]
+	}
+]

@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 15,
+		"prompt": "WMI-based scripting steps in horizontal discovery patterns are commonly used to collect what from Windows hosts?",
+		"choices": [
+			"Running processes, services, and OS configuration attributes via Windows Management Instrumentation",
+			"OAuth tokens from Azure Active Directory for cloud tag synchronization workflows",
+			"SNMP trap definitions exported from third-party network monitoring appliances",
+			"Change calendar entries linked to maintenance windows in the ITSM application"
+		],
+		"correctIndex": 0,
+		"explanation": "WMI steps query Windows hosts for process lists, service details, and other OS-level data used to identify applications and populate CI attributes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/c-UsingPatternsForHorizontalDiscovery.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 16,
+		"prompt": "SSH-based pattern steps require which prerequisite before they can execute on a Linux target?",
+		"choices": [
+			"A valid SSH Discovery credential authorized to run the configured commands on the host",
+			"An active Event Management connector subscribed to the host syslog stream",
+			"A business service record in the Operational Status of Retired state",
+			"A tag-based mapping rule published to the cloud provider resource group"
+		],
+		"correctIndex": 0,
+		"explanation": "SSH steps depend on Discovery credentials that authenticate to the host and authorize execution of the remote commands defined in the pattern.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 17,
+		"prompt": "SNMP-based steps in a horizontal discovery pattern depend on what target-side configuration?",
+		"choices": [
+			"SSH key exchange configured on the MID Server for privileged command execution",
+			"WMI firewall rules allowing remote registry access from every subnet in scope",
+			"SNMP agent enabled on the device with credentials matching Discovery settings",
+			"Azure resource tags formatted with the discovery namespace prefix on each VM"
+		],
+		"correctIndex": 2,
+		"explanation": "SNMP steps require an accessible SNMP agent and community strings or credentials configured consistently with Discovery credential records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 18,
+		"prompt": "When designing horizontal patterns, why should implementers use conditional steps for command output variation?",
+		"choices": [
+			"Conditional branches handle platform or vendor differences without brittle single-path logic",
+			"Conditional steps permanently disable pattern versioning across all MID Servers",
+			"Conditional logic removes the need for any credential testing before schedule runs",
+			"Conditional paths force every device into cmdb_ci_computer regardless of scan results"
+		],
+		"correctIndex": 0,
+		"explanation": "Conditional and defensive pattern logic handles environment variation and reduces brittle discovery outcomes when command output differs across targets.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-pattern-best-practices.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 19,
+		"prompt": "What is a common cause of horizontal pattern fragility after platform upgrades?",
+		"choices": [
+			"Brittle custom parsing with limited validation around changing command output formats",
+			"Using out-of-box patterns with controlled configuration extensions only",
+			"Maintaining modular pattern segments with explicit error-handling paths",
+			"Executing pattern tests in lower tiers before production promotion"
+		],
+		"correctIndex": 0,
+		"explanation": "Highly fragile parsing logic can break when command output formats or dependencies change across environments and releases.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-pattern-best-practices.html"
+		]
+	}
+]

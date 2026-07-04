@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-HAM",
+		"order": 15,
+		"prompt": "What does an asset lifecycle state represent in Hardware Asset Management?",
+		"choices": [
+			"The operational stage such as in stock, in use, or retired that drives allowed actions",
+			"The discovery schedule interval assigned to the asset subnet for horizontal scans",
+			"The event rule priority correlated to infrastructure alerts on monitored CIs",
+			"The service catalog item icon theme selected at request submission time"
+		],
+		"correctIndex": 0,
+		"explanation": "Lifecycle states reflect where an asset sits in its managed process and often gate workflows, approvals, and financial treatment.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 16,
+		"prompt": "A retired asset still appears assigned to an employee in active inventory reports. Which control likely failed?",
+		"choices": [
+			"Lifecycle transition governance",
+			"Discovery probe timeout values configured on the MID Server for the affected subnet range",
+			"Service portal widget visibility settings on the employee self-service catalog homepage",
+			"Change advisory board approval thresholds for standard production change requests"
+		],
+		"correctIndex": 0,
+		"explanation": "State transition controls should enforce consistency so retired assets are cleared from active assignment and inventory views.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 17,
+		"prompt": "Why should lifecycle state changes follow governed workflows instead of ad hoc manual edits?",
+		"choices": [
+			"Workflows enforce approvals, required field updates, and audit traceability for transitions",
+			"Manual edits are required for every stockroom transfer recorded in Hardware Asset Management",
+			"Workflows prevent integration with procurement purchase orders and receiving transactions",
+			"Ad hoc edits automatically improve normalization hit ratios across duplicate model records"
+		],
+		"correctIndex": 0,
+		"explanation": "Governed workflows ensure lifecycle transitions occur with policy-compliant controls and complete audit records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 18,
+		"prompt": "How do ServiceNow docs distinguish assets from configuration items (CIs)?",
+		"choices": [
+			"Assets focus on financial ownership while CIs in the CMDB support service delivery visibility",
+			"Assets exist only for consumables while CIs exist only for servers and network gear",
+			"Assets are created exclusively by discovery with no manual entry or receiving path",
+			"CIs track procurement costs while assets track only MAC addresses without lifecycle states"
+		],
+		"correctIndex": 0,
+		"explanation": "Assets emphasize financial and inventory ownership; CIs in the CMDB represent items used to deliver services and require synchronized governance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 19,
+		"prompt": "When glide.create_alm_asset.async is true, how are assets created from new configuration items?",
+		"choices": [
+			"By the Asset - Create asset delayed sync scheduled job rather than immediately at CI insert",
+			"Only when a catalog request is manually closed by the requester after delivery confirmation",
+			"Automatically after every discovery error record is deleted from the normalization queue",
+			"Never, because async mode disables all asset creation from configuration items globally"
+		],
+		"correctIndex": 0,
+		"explanation": "Delayed sync creates assets through a scheduled job so large CI creation batches complete quickly while assets populate asynchronously.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
+		]
+	}
+]
