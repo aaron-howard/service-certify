@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOE",
+		"order": 75,
+		"prompt": "Given a case study where finance requests a three-year total cost of ownership view before approving platform expansion, which cost planning artifact should the platform owner present first?",
+		"choices": [
+			"A TCO model covering licenses, implementation, operations, and change capacity by horizon",
+			"A spreadsheet listing only current subscription line items without labor estimates",
+			"A catalog of open defects sorted by severity without financial linkage",
+			"A historical incident count chart with no forward-looking resource assumptions"
+		],
+		"correctIndex": 0,
+		"explanation": "Executive cost planning requires a horizon-based TCO view that includes licenses, delivery, and ongoing operations—not isolated license rows or unrelated operational metrics.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 76,
+		"prompt": "A global enterprise forecasts 40% growth in platform demand over two years. Given this scenario, how should the platform owner align capacity planning with delivery commitments?",
+		"choices": [
+			"Model instance sizing, admin capacity, and release throughput against projected workload and SLAs",
+			"Defer all capacity analysis until performance incidents occur in production",
+			"Add headcount only after each product team submits identical staffing templates",
+			"Rely on vendor default sizing without validating peak transaction patterns"
+		],
+		"correctIndex": 0,
+		"explanation": "Capacity planning ties infrastructure sizing, operational staffing, and release cadence to forecasted demand so commitments remain achievable.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 77,
+		"questionType": "multi",
+		"prompt": "Given a scenario where three product lines compete for the same implementation budget, which resource allocation principles should the platform owner apply? (Choose two.)",
+		"choices": [
+			"Prioritize work that unlocks shared platform capabilities used by multiple teams",
+			"Fund initiatives with documented ROI and dependency alignment to the roadmap",
+			"Allocate budget proportionally by loudest stakeholder without scoring criteria",
+			"Reserve all capacity for cosmetic portal changes until backlog is cleared"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Shared-capability investments and scored ROI alignment maximize enterprise value; political allocation and cosmetic-only funding undermine portfolio discipline.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 78,
+		"questionType": "match",
+		"prompt": "Match each cost and resource planning artifact to its primary executive purpose.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Capacity forecast",
+			"Partner mix plan",
+			"Run-rate budget",
+			"Benefits tracker"
+		],
+		"matchRightItems": [
+			"Project infrastructure and staffing needs against growth scenarios",
+			"Balance internal teams and SI capacity for delivery waves",
+			"Show ongoing operational spend after go-live stabilization",
+			"Compare realized outcomes to approved investment baselines"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Cost planning artifacts serve distinct executive needs: forecasting capacity, structuring partner investment, governing run-rate spend, and validating benefits realization.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 79,
+		"prompt": "The CEO requests a concise update before a major go-live. Given this case study, how should the platform owner structure C-Suite communication about delivery readiness?",
+		"choices": [
+			"Lead with business outcomes, milestone status, risks, and decisions needed from sponsors",
+			"Present detailed script-level change lists without summarizing business impact",
+			"Share only technical test pass rates with no adoption or change readiness context",
+			"Defer executive briefing until every open defect is closed regardless of schedule"
+		],
+		"correctIndex": 0,
+		"explanation": "Executive delivery updates emphasize outcomes, progress, risks, and sponsor decisions— not low-level technical detail or indefinite delay.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	}
+]

@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOE",
+		"order": 120,
+		"prompt": "Given a case study where a ServiceNow program nears completion, which handoff deliverable best prepares operations teams for steady-state support?",
+		"choices": [
+			"Documented runbooks, support tier definitions, known-issue register, and training materials aligned to live workflows",
+			"A slide deck summarizing project budget without operational procedures",
+			"Access credentials shared informally without role-based support documentation",
+			"An archive of sprint retrospectives with no mapping to production support processes"
+		],
+		"correctIndex": 0,
+		"explanation": "Operations handoff requires actionable runbooks, support models, and training tied to live workflows—not budget summaries or informal credential sharing.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 121,
+		"prompt": "A release manager asks what criteria should gate promotion from user acceptance testing to production. What should the platform owner require?",
+		"choices": [
+			"Passed automated and acceptance tests, approved change record, rollback plan, and stakeholder sign-off on release scope",
+			"Developer confirmation that code compiled without errors",
+			"Availability of a maintenance window regardless of test outcomes",
+			"Verbal approval from a single team lead without documented evidence"
+		],
+		"correctIndex": 0,
+		"explanation": "Production promotion requires verified test results, governed change approval, rollback readiness, and documented stakeholder consent.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/australia/install-and-upgrade/concept/c_UpgradeBestPractices.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 122,
+		"prompt": "Multiple product teams request conflicting production release dates. Which release cadence governance approach should the platform owner implement?",
+		"choices": [
+			"Establish a published release calendar with intake deadlines, risk tiers, and a governance board that adjudicates conflicts",
+			"Allow first-come scheduling without coordination or impact assessment",
+			"Restrict all releases to one annual maintenance window regardless of business need",
+			"Let each team deploy independently on any date without change records"
+		],
+		"correctIndex": 0,
+		"explanation": "Release cadence governance uses a shared calendar, intake rules, and board oversight to balance speed with platform stability.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 123,
+		"questionType": "multi",
+		"prompt": "Technical debt is accumulating across custom applications and CMDB data quality is declining. Which governance actions should the platform owner prioritize? (Choose two.)",
+		"choices": [
+			"Create a visible technical debt register with remediation priorities tied to business risk",
+			"Establish CMDB data ownership with health KPIs reviewed by a governance board",
+			"Ignore debt until a major upgrade forces emergency remediation",
+			"Grant all developers admin access to accelerate ungoverned fixes"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Sustainable governance tracks technical debt transparently and assigns CMDB ownership with measurable health reviews—not reactive crisis management or ungoverned access.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-governance.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 124,
+		"questionType": "match",
+		"prompt": "Match each ServiceNow governance body to its primary decision scope.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Executive platform board",
+			"Demand governance board",
+			"Technical architecture board",
+			"CMDB governance council"
+		],
+		"matchRightItems": [
+			"Set enterprise platform direction, funding, and strategic priorities",
+			"Prioritize and approve demand against capacity and value criteria",
+			"Review design standards, integration patterns, and technical debt trade-offs",
+			"Define CI ownership, data quality targets, and reconciliation policies"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Governance boards operate at different scopes: enterprise direction, demand prioritization, technical standards, and CMDB data stewardship.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/demand-governance.html"
+		]
+	}
+]

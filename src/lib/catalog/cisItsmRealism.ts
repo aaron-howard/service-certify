@@ -1,5 +1,7 @@
 /** CIS-ITSM exam-realism rules (KB0011560 / ServiceNowDocs-aligned). */
 
+import type { QuestionType } from './questionTypes';
+
 export const CIS_ITSM_DOMAIN_TARGETS = {
 	'Incident Management': 23,
 	'Problem Management': 14,

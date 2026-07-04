@@ -1,0 +1,95 @@
+[
+	{
+		"trackCode": "CPOE",
+		"order": 10,
+		"prompt": "During annual planning, the CEO asks how ServiceNow supports digital transformation. Which message should the platform owner emphasize in the strategy narrative?",
+		"choices": [
+			"The platform unifies workflows, data, and experiences to accelerate innovation at enterprise scale",
+			"The platform replaces all SaaS contracts with a single user interface skin",
+			"Success depends solely on increasing the number of custom applications built per quarter",
+			"Transformation is limited to IT ticket deflection without business process change"
+		],
+		"correctIndex": 0,
+		"explanation": "Digital transformation strategy highlights unified workflows and experiences that scale innovation—not superficial UI changes or narrow IT metrics.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 11,
+		"questionType": "multi",
+		"prompt": "Given a case study outlining siloed demand intake across departments, which elements belong in a documented ServiceNow platform strategy? (Choose two.)",
+		"choices": [
+			"Current-state pain points and stakeholder map",
+			"Target outcomes and guiding principles for platform use",
+			"Detailed script includes for every planned customization",
+			"A fixed list of admin UI themes for each business unit"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Strategy documents capture organizational context, pain, outcomes, and principles; low-level technical artifacts belong in delivery plans, not the strategy itself.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 12,
+		"prompt": "Comparing delivery options with different cost, resource, and timeline profiles, how should the platform owner recommend a path to the C-Suite?",
+		"choices": [
+			"Present scenarios with explicit trade-offs, risks, and expected value tied to strategic priorities",
+			"Recommend the lowest license tier regardless of capability gaps",
+			"Select the option requiring the fewest meetings without analyzing outcomes",
+			"Default to the vendor's generic reference architecture without local context"
+		],
+		"correctIndex": 0,
+		"explanation": "Executive decisions require transparent trade-offs linking cost, resources, timing, and strategic alignment—not shortcuts based on price or convenience alone.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 13,
+		"questionType": "match",
+		"prompt": "Match each roadmap horizon to the type of content executives typically expect at that stage.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Near term (0–12 months)",
+			"Mid term (1–2 years)",
+			"Long term (3+ years)"
+		],
+		"matchRightItems": [
+			"Defined initiatives with funding and measurable quick wins",
+			"Capability expansion themes tied to enterprise priorities",
+			"Directional bets aligned to market and technology trends"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 }
+		],
+		"explanation": "Roadmaps progress from concrete near-term plans to thematic mid-term capabilities and long-range directional alignment.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 14,
+		"prompt": "Business intelligence leaders need ServiceNow operational data for enterprise dashboards. What integration principle should the platform strategy articulate?",
+		"choices": [
+			"Publish trusted, governed datasets through agreed interfaces rather than ad hoc exports",
+			"Block all external BI access to preserve a single ServiceNow dashboard",
+			"Duplicate every transaction into spreadsheets maintained by each team",
+			"Defer data sharing until all analytics are native to ServiceNow only"
+		],
+		"correctIndex": 0,
+		"explanation": "Enterprise BI integration requires governed, consistent data exchange so analytics teams can trust platform-sourced metrics.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	}
+]

@@ -250,16 +250,43 @@ export const PHASE4_TRACK_DOC_SOURCES: TrackDocSource[] = [
 		trackCode: 'CPOE',
 		officialName: 'Certified Platform Owner Expert',
 		publications: [
+			'platform-administration',
 			'platform-security',
 			'servicenow-platform',
-			'it-operations-management',
-			'integrate-applications'
+			'impact',
+			'cloud-governance-suite'
 		],
 		domains: [
-			{ name: 'Domain and enterprise isolation', weight: '25%', publications: ['platform-security'] },
-			{ name: 'Multi-instance and clone strategy', weight: '25%', publications: ['platform-administration'] },
-			{ name: 'CMDB and data governance', weight: '25%', publications: ['it-operations-management'] },
-			{ name: 'Enterprise integration architecture', weight: '25%', publications: ['integrate-applications'] }
+			{
+				name: 'Strategy',
+				weight: '21.20%',
+				publications: ['impact', 'platform-administration']
+			},
+			{
+				name: 'Cost/Resource Planning',
+				weight: '14.48%',
+				publications: ['platform-administration', 'cloud-governance-suite']
+			},
+			{
+				name: 'Implementation and Delivery',
+				weight: '19.26%',
+				publications: ['platform-administration', 'impact']
+			},
+			{
+				name: 'ServiceNow Governance',
+				weight: '17.60%',
+				publications: ['platform-administration', 'cloud-governance-suite']
+			},
+			{
+				name: 'Compliance and Security',
+				weight: '14.76%',
+				publications: ['platform-security']
+			},
+			{
+				name: 'Innovation',
+				weight: '12.70%',
+				publications: ['impact', 'servicenow-platform']
+			}
 		]
 	}
 ];

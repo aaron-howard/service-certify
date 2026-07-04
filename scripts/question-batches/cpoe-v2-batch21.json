@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOE",
+		"order": 100,
+		"prompt": "Given a case study where a global ServiceNow rollout reports slow catalog response times immediately after go-live, what should the platform owner prioritize first?",
+		"choices": [
+			"Establish a war room with cross-functional leads to triage symptoms, isolate root cause, and communicate status to executives",
+			"Schedule a full platform upgrade before analyzing performance data",
+			"Disable the service catalog until the next quarterly release window",
+			"Assign troubleshooting solely to the development vendor without internal operations involvement"
+		],
+		"correctIndex": 0,
+		"explanation": "Post-go-live performance issues require coordinated triage across teams with transparent executive communication—not isolated vendor work or disruptive shutdowns.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 101,
+		"prompt": "A program director asks how testing should be structured before a multi-wave HR and ITSM deployment. Which approach best balances risk and delivery speed?",
+		"choices": [
+			"Layer unit, integration, and business acceptance testing with automated regression on critical paths before each wave",
+			"Rely exclusively on developer self-testing without formal acceptance cycles",
+			"Defer all user testing until every wave is deployed to production",
+			"Limit validation to visual review of portal themes without workflow verification"
+		],
+		"correctIndex": 0,
+		"explanation": "Enterprise rollouts need layered testing—automated regression plus structured acceptance—so each wave ships with validated critical workflows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/automated-test-framework/atf-best-practices.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 102,
+		"questionType": "multi",
+		"prompt": "Before promoting a major platform release to production, which validation activities should the platform owner require? (Choose two.)",
+		"choices": [
+			"Automated test suite execution covering changed workflows and integrations",
+			"Business sign-off from process owners on acceptance criteria for affected domains",
+			"Skipping regression testing to meet an arbitrary launch date",
+			"Deploying directly to production without a rollback plan"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Release readiness depends on automated regression plus business acceptance; skipping tests or omitting rollback plans increases production risk.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/automated-test-framework/atf-overview.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 103,
+		"questionType": "match",
+		"prompt": "Match each rollout phase to its primary platform owner focus.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Pre-go-live readiness",
+			"Cutover weekend",
+			"Hypercare period",
+			"Steady-state transition"
+		],
+		"matchRightItems": [
+			"Confirm test evidence, training completion, and rollback criteria",
+			"Coordinate real-time decision making across delivery and operations teams",
+			"Monitor adoption metrics and resolve priority defects quickly",
+			"Hand off to operational governance with documented runbooks"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Rollout phases shift focus from readiness validation through cutover coordination, hypercare stabilization, and operational handoff.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 104,
+		"prompt": "Integration teams and business process owners disagree on cutover sequencing for a shared ServiceNow instance. How should the platform owner resolve the conflict?",
+		"choices": [
+			"Facilitate a dependency workshop mapping technical constraints to business priorities with executive decision criteria",
+			"Defer the decision until both teams reach unanimous agreement without escalation",
+			"Default to the integration team's preferred order regardless of business impact",
+			"Split the instance into ungoverned silos so each team deploys independently"
+		],
+		"correctIndex": 0,
+		"explanation": "Cross-team sequencing conflicts require structured dependency analysis tied to business priorities and clear escalation paths—not indefinite delay or ungoverned fragmentation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	}
+]

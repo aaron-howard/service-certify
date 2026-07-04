@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOE",
+		"order": 210,
+		"prompt": "Given a case study where HR and Finance both sponsor citizen development cohorts, the platform owner sees duplicated training and conflicting guardrails. What organizational adjustment best supports enterprise strategy?",
+		"choices": [
+			"Unify cohort curriculum, shared success metrics, and a single CoEI-sponsored certification path across sponsoring functions",
+			"Allow each function to maintain separate untracked builder programs without central coordination",
+			"Disband both cohorts and require all requests through a single IT ticket queue",
+			"Mandate that only HR employees may enroll as citizen developers going forward"
+		],
+		"correctIndex": 0,
+		"explanation": "Citizen development in organizational strategy requires unified curriculum, metrics, and certification across functions—not siloed programs or arbitrary enrollment restrictions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 211,
+		"prompt": "After acquiring a subsidiary, the platform owner must integrate the subsidiary's builders into the corporate CoEI model. Which approach preserves innovation momentum while aligning governance?",
+		"choices": [
+			"Run a federated onboarding with mapped guardrails, shared asset repositories, and joint intake into the parent CoEI funding cycle",
+			"Immediate decommission of all subsidiary applications without migration assessment",
+			"Permanent isolation of subsidiary builders from parent CoEI standards to avoid change fatigue",
+			"Outsource subsidiary innovation entirely and exclude it from enterprise platform metrics"
+		],
+		"correctIndex": 0,
+		"explanation": "CoEI integration after acquisition succeeds through federated onboarding with shared assets and joint intake—not forced decommission, permanent isolation, or outsourced exclusion.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 212,
+		"prompt": "A retail conglomerate plans a major Now Platform expansion into customer service and supply chain. The platform owner wants enterprise architects to accelerate innovation without becoming a bottleneck. How should architects be engaged?",
+		"choices": [
+			"Assign architects as advisors on intake triage with time-boxed design clinics and pre-approved pattern libraries for common integrations",
+			"Require full architecture documents for every configuration change regardless of scope or risk",
+			"Remove architects from innovation forums to shorten meeting schedules",
+			"Limit architects to reviewing vendor invoices rather than solution designs"
+		],
+		"correctIndex": 0,
+		"explanation": "Enterprise architects accelerate innovation through triage advisory, time-boxed clinics, and pattern libraries—not blanket documentation mandates or exclusion from design decisions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 213,
+		"questionType": "multi",
+		"prompt": "The implementation leadership team wants innovation metrics that justify continued platform investment. Which measurement practices should the platform owner adopt? (Choose two.)",
+		"choices": [
+			"Track cycle-time and error-rate improvements on automated processes against pre-automation baselines",
+			"Benchmark instance health scores and adoption indexes against anonymized peer cohorts each quarter",
+			"Report only the total number of developer licenses purchased without utilization analysis",
+			"Measure success exclusively by counting CoEI slide decks delivered to executives"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Innovation investment is justified through automation outcome tracking and peer benchmarking—not license counts alone or presentation volume without delivery evidence.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 214,
+		"questionType": "match",
+		"prompt": "Match each scaling lever to the innovation capability it strengthens.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Shared automation runbooks",
+			"Regional champion chapters",
+			"Architecture pattern library",
+			"Benchmark scorecards"
+		],
+		"matchRightItems": [
+			"Accelerates safe citizen delivery by providing pre-validated integration and data templates",
+			"Standardizes repeatable bot and workflow deployments across business units with audit trails",
+			"Extends grassroots demand capture and coaching into geographically distributed operations",
+			"Identifies underperforming processes relative to industry peers to focus automation funding"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 1 },
+			{ "left": 1, "right": 2 },
+			{ "left": 2, "right": 0 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Runbooks standardize automation deployment, champion chapters extend grassroots reach, pattern libraries accelerate citizen delivery, and scorecards focus funding on benchmark gaps.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	}
+]

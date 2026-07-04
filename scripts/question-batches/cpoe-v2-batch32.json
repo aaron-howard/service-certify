@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOE",
+		"order": 155,
+		"prompt": "The CFO withholds funding for technical debt until business value is demonstrated. Given this scenario, how should the platform owner frame the investment case?",
+		"choices": [
+			"Quantify risk reduction, upgrade readiness, and operational cost of incidents linked to unresolved debt",
+			"Argue that all customizations must be removed before any financial analysis is possible",
+			"Request unlimited budget without tying debt items to measurable outcomes",
+			"Defer all debt discussion until the next major outage occurs"
+		],
+		"correctIndex": 0,
+		"explanation": "Debt funding cases connect remediation to measurable risk, upgrade readiness, and incident cost—not vague requests or crisis-only timing.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 156,
+		"questionType": "match",
+		"prompt": "Match each legacy deprecation phase to the platform owner's primary activity.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Discovery",
+			"Impact assessment",
+			"Migration execution",
+			"Verification and retirement"
+		],
+		"matchRightItems": [
+			"Identify affected workflows, integrations, and owners across the instance",
+			"Evaluate business disruption, compliance exposure, and sequencing constraints",
+			"Implement supported replacements within governed release windows",
+			"Confirm decommission criteria are met and remove obsolete components safely"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Legacy deprecation progresses through discovery, impact analysis, governed migration, and verified retirement—not skipped phases.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 157,
+		"prompt": "CMDB reconciliation reports show persistent duplicate CIs after discovery expansion. Which governance action should the platform owner enforce?",
+		"choices": [
+			"Assign reconciliation rules, CI ownership, and health KPIs reviewed by the CMDB governance council",
+			"Disable identification rules so duplicates are no longer flagged",
+			"Allow each discovery source to create records without merge standards",
+			"Archive all CIs monthly and rebuild the CMDB from scratch"
+		],
+		"correctIndex": 0,
+		"explanation": "Reconciliation governance combines rules, ownership, and measurable health reviews; disabling rules or uncontrolled creation worsens data quality.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-governance.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 158,
+		"prompt": "A demand board approves a high-visibility project that the technical architecture board flags as non-conformant. How should the platform owner resolve the conflict?",
+		"choices": [
+			"Facilitate a joint session to align value delivery with standards, documenting accepted exceptions or required redesign",
+			"Override the technical board because demand funding has already been allocated",
+			"Cancel the project without exploring design alternatives that meet both goals",
+			"Implement the project in production first and seek architecture approval afterward"
+		],
+		"correctIndex": 0,
+		"explanation": "Governance conflicts are resolved through joint alignment on standards and value—not unilateral overrides, cancellation without options, or retroactive approval.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/demand-governance.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 159,
+		"questionType": "multi",
+		"prompt": "Given a case study launching CSDM-aligned service mapping, which governance investments should the platform owner secure? (Choose two.)",
+		"choices": [
+			"Named data stewards for foundation classes with escalation paths for quality defects",
+			"Service mapping workshops that tie technical CIs to business services and owners",
+			"Immediate retirement of every discovery connector before ownership is assigned",
+			"Exemption from executive reporting until CMDB completeness reaches one hundred percent"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "CSDM success requires stewards, escalation, and business-aligned mapping—not premature connector removal or absent executive visibility.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-governance.html"
+		]
+	}
+]

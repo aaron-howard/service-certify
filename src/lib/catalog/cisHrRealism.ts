@@ -1,6 +1,9 @@
 /** CIS-HR (Certified Implementation Specialist - Human Resources) exam-realism rules. */
 
+import type { QuestionType } from './questionTypes';
+
 /** Bank distribution for 90 questions scaled 1.5x from the 60-question official exam. */
+
 export const CIS_HR_DOMAIN_TARGETS = {
 	'HR System Architecture': 27,
 	'Core HR Applications and Employee Center': 27,
@@ -45,7 +48,7 @@ export type CisHrQuestionRow = {
 	prompt: string;
 	choices: string[];
 	sourceUrls: string[];
-	questionType?: 'single' | 'multi';
+	questionType?: QuestionType;
 	correctIndexes?: number[];
 	correctIndex?: number;
 };

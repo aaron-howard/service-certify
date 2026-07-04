@@ -13,7 +13,7 @@ export const OFFICIAL_EXAM_QUESTION_COUNTS: Record<string, number> = {
 	'CIS-SP': 45,
 	CPOA: 70,
 	CPOP: 192,
-	CPOE: 180,
+	CPOE: 192,
 	'CIS-DISCO': 45,
 	'CIS-EM': 30,
 	'CIS-HAM': 60,

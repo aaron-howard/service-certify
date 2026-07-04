@@ -1,6 +1,9 @@
 /** CIS-SPM (Certified Implementation Specialist - Strategic Portfolio Management) exam-realism rules. */
 
+import type { QuestionType } from './questionTypes';
+
 /** Bank distribution for 90 questions scaled 1.5x from the 60-question official exam. */
+
 export const CIS_SPM_DOMAIN_TARGETS = {
 	'SPM Implementation Overview': 2,
 	'SPM Financials': 9,
@@ -50,7 +53,7 @@ export type CisSpmQuestionRow = {
 	prompt: string;
 	choices: string[];
 	sourceUrls: string[];
-	questionType?: 'single' | 'multi';
+	questionType?: QuestionType;
 	correctIndexes?: number[];
 	correctIndex?: number;
 };

@@ -6,7 +6,9 @@ export type PracticeQuestionRow = {
 	order: number;
 	prompt: string;
 	choices: string[];
-	questionType?: 'single' | 'multi';
+	questionType?: 'single' | 'multi' | 'match';
+	matchLeftItems?: string[];
+	matchRightItems?: string[];
 	explanation: string;
 };
 

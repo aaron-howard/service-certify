@@ -1,0 +1,96 @@
+[
+	{
+		"trackCode": "CPOE",
+		"order": 20,
+		"prompt": "The CIO asks how platform strategy aligns with corporate strategy during an annual planning cycle. Given this scenario, what should the platform owner present first?",
+		"choices": [
+			"A mapping of platform initiatives to enterprise strategic pillars and measurable contributions",
+			"A catalog of every plugin installed on the production instance",
+			"A chronological list of past incidents without forward-looking plans",
+			"Technical debt items with no linkage to business priorities"
+		],
+		"correctIndex": 0,
+		"explanation": "Corporate alignment starts by showing how platform investments advance enterprise strategic goals with measurable impact.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 21,
+		"prompt": "When time-to-market pressure conflicts with thorough change management, which option best balances C-Suite urgency with sustainable adoption?",
+		"choices": [
+			"Release a pilot with targeted OCM for critical roles, then scale enablement with each wave",
+			"Skip OCM entirely to meet the launch date without exception",
+			"Delay launch indefinitely until every user completes certification",
+			"Launch globally without communications to avoid resistance"
+		],
+		"correctIndex": 0,
+		"explanation": "Pilot-based delivery with focused OCM satisfies urgency while building adoption patterns that scale with subsequent releases.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 22,
+		"questionType": "match",
+		"prompt": "Match each platform strategy artifact to its primary audience and use.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Executive summary",
+			"Capability map",
+			"Value realization plan",
+			"Dependency register"
+		],
+		"matchRightItems": [
+			"C-Suite sponsors approving direction and funding",
+			"Product and program leaders aligning solution areas",
+			"Finance partners tracking ROI milestones",
+			"Delivery teams sequencing work across teams"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Strategy artifacts serve distinct audiences: executives for direction, leaders for capability alignment, finance for ROI, and teams for sequencing.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 23,
+		"prompt": "Operations leaders doubt platform ROI midway through a multi-year program. Which sponsorship step should the platform owner revisit?",
+		"choices": [
+			"Reconfirm baseline metrics and communicate progress against agreed success criteria",
+			"Increase custom development scope without measuring outcomes",
+			"Remove executive sponsors to reduce meeting overhead",
+			"Stop publishing metrics until the program reaches full maturity"
+		],
+		"correctIndex": 0,
+		"explanation": "When ROI is questioned, revisiting agreed baselines and transparent progress reporting rebuilds sponsor confidence.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 24,
+		"prompt": "A global manufacturer documents fragmented service requests across plants. Given this case study, how should the platform owner document the strategy after discovery workshops?",
+		"choices": [
+			"Capture pain points, target outcomes, guiding principles, and a phased roadmap with owners",
+			"Publish only technical integration specifications without business context",
+			"List vendor license counts as the sole strategy deliverable",
+			"Defer documentation until every plant uses identical catalog items"
+		],
+		"correctIndex": 0,
+		"explanation": "Documented strategy ties organizational pain and outcomes to principles, phased delivery, and accountable owners.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	}
+]

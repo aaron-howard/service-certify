@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOE",
+		"order": 30,
+		"prompt": "Given a case study where year-one funding covers only foundational ITSM and identity capabilities, how should the platform owner sequence ROI for a three-year roadmap?",
+		"choices": [
+			"Deliver measurable service improvements in year one, then fund dependent domains at value gates",
+			"Defer all user-facing capabilities until year three regardless of early wins available",
+			"Purchase every product SKU upfront to maximize license utilization before delivery",
+			"Sequence solely by alphabetical product name without dependency or value analysis"
+		],
+		"correctIndex": 0,
+		"explanation": "ROI sequencing invests in foundational capabilities first, demonstrates value early, and funds downstream domains at agreed gates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 31,
+		"prompt": "A newly appointed CEO expects visible platform wins within two quarters. Which sponsorship engagement step should the platform owner take first?",
+		"choices": [
+			"Align on a short list of high-visibility outcomes tied to the CEO's stated priorities",
+			"Present a five-year technical architecture without near-term deliverables defined",
+			"Request unlimited budget before sharing any planned milestones or metrics",
+			"Focus exclusively on backend integrations invisible to business stakeholders"
+		],
+		"correctIndex": 0,
+		"explanation": "New executive sponsors need aligned, visible outcomes connected to their priorities—not distant architecture or unfunded ambition.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 32,
+		"prompt": "The CHRO sponsors a digital employee experience initiative on ServiceNow. Which vision statement best connects the roadmap to C-Suite expectations?",
+		"choices": [
+			"Unified, intuitive employee journeys that reduce friction and improve retention across the lifecycle",
+			"A portal reskin project that changes colors without altering underlying service processes",
+			"Maximum custom widgets per page regardless of measurable employee satisfaction gains",
+			"Replacement of every HR system in a single release without phased adoption planning"
+		],
+		"correctIndex": 0,
+		"explanation": "Employee experience vision ties platform work to measurable lifecycle outcomes—not cosmetic changes or unsupported big-bang replacement.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 33,
+		"questionType": "multi",
+		"prompt": "When presenting platform investment options to the C-Suite, which persuasion elements strengthen the recommendation? (Choose two.)",
+		"choices": [
+			"Explicit trade-offs among cost, speed, and capability depth for each scenario",
+			"Documented risks with mitigation plans tied to executive decision criteria",
+			"A single option presented without alternatives to reduce meeting duration",
+			"Technical jargon without translation to business outcomes or financial impact"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Executive persuasion requires transparent scenarios with trade-offs and honest risk discussion—not single options or untranslated technical detail.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 34,
+		"questionType": "match",
+		"prompt": "Match each platform roadmap artifact to the decision it primarily supports.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Capability heat map",
+			"Investment portfolio view",
+			"Dependency timeline",
+			"Benefits traceability matrix"
+		],
+		"matchRightItems": [
+			"Prioritize solution areas by maturity and business criticality",
+			"Allocate funding across horizons and product lines",
+			"Sequence work when technical prerequisites must complete first",
+			"Show how initiatives connect to agreed outcome metrics"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Roadmap artifacts support distinct executive decisions: prioritization, funding, sequencing, and benefits accountability.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	}
+]

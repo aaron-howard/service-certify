@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOE",
+		"order": 80,
+		"prompt": "Six weeks after launch, transaction volume remains 30% below target and help desk tickets cite unfamiliar workflows. Given this case study, what should the platform owner prioritize next?",
+		"choices": [
+			"Diagnose adoption barriers, reinforce role-based enablement, and adjust communications with sponsors",
+			"Proceed to the next release wave without addressing user feedback",
+			"Disable legacy tools immediately without transition support or training",
+			"Reduce scope reporting to executives until usage metrics improve on their own"
+		],
+		"correctIndex": 0,
+		"explanation": "Low adoption recovery requires targeted diagnosis, enablement, and visible sponsor messaging—not forced cutover or hiding metrics from leadership.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 81,
+		"prompt": "A regulated utility prepares for a major platform release affecting integrations and peak-hour workflows. Which specialized testing approach should the platform owner require before production promotion?",
+		"choices": [
+			"End-to-end regression plus performance and integration validation in a production-like environment",
+			"Developer unit tests only on isolated developer instances",
+			"Manual spot checks of the login page without scenario coverage",
+			"User acceptance testing deferred until after production deployment"
+		],
+		"correctIndex": 0,
+		"explanation": "Enterprise releases need regression, performance, and integration testing in representative environments—not isolated unit checks or post-production UAT.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 82,
+		"questionType": "multi",
+		"prompt": "Given a scenario where IT, HR, and finance each maintain separate delivery teams on one instance, which focus areas should the platform owner coordinate across teams? (Choose two.)",
+		"choices": [
+			"Shared data standards and integration patterns that prevent duplicate master records",
+			"Release calendar alignment so changes do not conflict during the same maintenance window",
+			"Independent custom scopes with no cross-team design reviews or standards",
+			"Separate upgrade schedules per team without enterprise regression planning"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Multi-team platform ownership requires coordinated data standards and release timing; isolated scopes and uncoordinated upgrades increase risk and rework.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 83,
+		"questionType": "match",
+		"prompt": "Match each specialized testing type to the primary risk it validates before enterprise release.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"User acceptance testing",
+			"Performance testing",
+			"Regression testing",
+			"Security testing"
+		],
+		"matchRightItems": [
+			"Business workflows meet stakeholder expectations in realistic scenarios",
+			"Peak load and response times remain within agreed thresholds",
+			"Existing capabilities still function after new changes are applied",
+			"Access controls and sensitive data handling meet policy requirements"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Each testing discipline targets a distinct release risk: business fit, scalability, functional stability, and security compliance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 84,
+		"prompt": "Three product teams deliver capabilities on a shared platform roadmap. Given this case study, how should the platform owner demonstrate value delivery across product teams to the C-Suite?",
+		"choices": [
+			"Report cumulative outcomes by product line against shared KPIs and dependency milestones",
+			"List story points completed per team without linking to business results",
+			"Highlight only the team with the fastest sprint velocity each quarter",
+			"Wait until all teams finish before sharing any progress with sponsors"
+		],
+		"correctIndex": 0,
+		"explanation": "Cross-team value reporting ties each product line's outcomes to enterprise KPIs and shared milestones—not activity metrics or delayed disclosure.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	}
+]

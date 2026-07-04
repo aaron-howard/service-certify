@@ -1,0 +1,48 @@
+[
+	{
+		"trackCode": "CPOE",
+		"order": 220,
+		"prompt": "A multinational logistics firm is preparing its three-year platform innovation roadmap. The CEO expects measurable returns from citizen development, CoEI expansion, and automation. Which integrated strategy best positions the platform owner to deliver?",
+		"choices": [
+			"Combine benchmark-driven automation waves, federated CoEI cells with shared guardrails, and citizen programs linked to architecture-approved pattern libraries",
+			"Pursue citizen development without guardrails while deferring automation until all regions adopt identical processes",
+			"Centralize every innovation decision at headquarters and eliminate regional champion forums",
+			"Invest exclusively in vendor-led custom development and sunset all internal builder enablement programs"
+		],
+		"correctIndex": 0,
+		"explanation": "A mature innovation roadmap integrates benchmarked automation, federated CoEI scaling, and governed citizen development—not ungoverned builders, centralized bottlenecks, or vendor-only delivery.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 221,
+		"questionType": "match",
+		"prompt": "Match each innovation program element to the executive outcome it enables for the platform owner.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Enterprise architect design clinics",
+			"Citizen developer certification tiers",
+			"CoEI regional playbook rollout",
+			"Quarterly benchmark automation review"
+		],
+		"matchRightItems": [
+			"Reduces integration rework by validating cross-domain designs before funding commitments",
+			"Expands governed low-code capacity beyond central IT without sacrificing compliance standards",
+			"Replicates proven innovation methods across geographies with consistent quality oversight",
+			"Directs investment toward high-ROI manual processes identified through peer performance gaps"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Each innovation element delivers a distinct executive outcome: architectural alignment, governed capacity expansion, scalable methods, and benchmark-informed investment.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
+		]
+	}
+]

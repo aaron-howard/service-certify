@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOE",
+		"order": 95,
+		"prompt": "The CFO asks for evidence that year-one platform investments delivered promised savings. Given this case study, how should the platform owner report value realization?",
+		"choices": [
+			"Compare baseline and current metrics for agreed KPIs with narrative on variance and next actions",
+			"Present license utilization percentages without linking to financial outcomes",
+			"Share internal team satisfaction scores as the sole proof of success",
+			"Delay reporting until every product team completes identical maturity assessments"
+		],
+		"correctIndex": 0,
+		"explanation": "Value realization reporting contrasts agreed baselines with current KPIs and explains variance— not isolated utilization or delayed disclosure.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 96,
+		"prompt": "Given a scenario where sponsors debate pilot scope versus enterprise rollout for a new employee service, which delivery approach should the platform owner recommend?",
+		"choices": [
+			"Pilot with a representative population, validate outcomes, then scale using a repeatable playbook",
+			"Deploy enterprise-wide on day one to maximize subscription consumption immediately",
+			"Limit the pilot to IT staff only and skip business stakeholder validation",
+			"Postpone all delivery until every legacy system contract expires"
+		],
+		"correctIndex": 0,
+		"explanation": "Pilot-then-scale validates outcomes with real users before enterprise rollout; big-bang or IT-only pilots fail to de-risk business adoption.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 97,
+		"questionType": "multi",
+		"prompt": "Given a scenario preparing a quarterly platform briefing for the C-Suite, which communication elements should the platform owner include? (Choose two.)",
+		"choices": [
+			"Progress against strategic outcomes and agreed success measures",
+			"Top risks with mitigation status and decisions required from leadership",
+			"Detailed list of every configuration change made during the quarter",
+			"Internal team seating charts for the platform center of excellence"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Executive briefings emphasize outcome progress, risks, and decisions needed—not low-level change logs or administrative trivia.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 98,
+		"questionType": "match",
+		"prompt": "Match each specialized testing activity to the delivery phase where it is most critical.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Sandbox functional testing",
+			"UAT with business owners",
+			"Performance baseline test",
+			"Production smoke test"
+		],
+		"matchRightItems": [
+			"Early build verification before promoting to integrated test environments",
+			"Formal acceptance that workflows meet business requirements before release approval",
+			"Capacity validation before peak-season or major event workloads",
+			"Immediate confirmation that core paths work after deployment completes"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Testing activities align to delivery phases: early build checks, formal acceptance, capacity validation, and post-deploy smoke confirmation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 99,
+		"prompt": "A retail enterprise has separate product teams for stores, supply chain, and corporate HR on one instance. Given this case study, how should the platform owner coordinate value delivery across product teams?",
+		"choices": [
+			"Establish shared release governance, outcome scorecards per domain, and joint dependency reviews",
+			"Let each team publish independent roadmaps without enterprise alignment sessions",
+			"Centralize all development in one team and eliminate product ownership",
+			"Report value only for the domain with the highest license consumption"
+		],
+		"correctIndex": 0,
+		"explanation": "Cross-team value delivery needs shared governance, domain scorecards, and dependency reviews—not siloed roadmaps or license-based favoritism.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	}
+]

@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOE",
+		"order": 190,
+		"prompt": "Given a scenario where a prior access review identified orphaned privileged roles, the audit committee expects measurable progress before year-end. What should the platform owner deliver?",
+		"choices": [
+			"Documented revocation of excess access, root-cause analysis, and preventive controls with attestation metrics for leadership",
+			"A verbal assurance that roles will be reviewed eventually without remediation evidence",
+			"Temporary role suspension for all admins until a new policy is drafted",
+			"Transfer of accountability to HR without platform team involvement"
+		],
+		"correctIndex": 0,
+		"explanation": "Audit committees expect demonstrated remediation, causal analysis, and preventive controls—not deferred promises or blanket suspensions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 191,
+		"prompt": "Legal counsel requires proof that sensitive employee health records on the platform meet encryption and access standards. How should the platform owner contribute to regulatory alignment?",
+		"choices": [
+			"Map data classifications to field-level protection, role restrictions, and audit evidence validated with privacy officers",
+			"Apply a single global encryption setting without field-level classification review",
+			"Rely on transport encryption alone while storing sensitive fields in clear text at rest",
+			"Defer encryption design until after the first privacy incident occurs"
+		],
+		"correctIndex": 0,
+		"explanation": "Regulatory alignment for sensitive data requires classification-driven protection, access restrictions, and validated evidence—not generic or incomplete controls.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 192,
+		"questionType": "multi",
+		"prompt": "The enterprise compliance program asks the platform owner to demonstrate ongoing governance value. Which contributions best satisfy that request? (Choose two.)",
+		"choices": [
+			"Quarterly control health dashboards tied to remediation SLAs and executive risk reporting",
+			"Participation in enterprise risk committees with platform-specific control test results",
+			"Eliminating change records for low-risk updates to reduce audit volume",
+			"Granting compliance analysts permanent admin access for convenience"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Platform owners add compliance value through visible control health metrics and active risk committee engagement—not audit avoidance or excessive privileged access.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 193,
+		"questionType": "match",
+		"prompt": "Match each compliance exception governance element to the regulatory alignment outcome it supports.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Time-bound approval",
+			"Compensating controls",
+			"Executive risk acceptance",
+			"Remediation roadmap"
+		],
+		"matchRightItems": [
+			"Prevents indefinite deviation from required security standards",
+			"Mitigates residual risk when full standard compliance is not immediately feasible",
+			"Documents accountable leadership decision for audit and legal review",
+			"Defines a path back to compliant state with measurable milestones"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Exception governance elements each serve regulatory alignment: limiting duration, mitigating risk, documenting accountability, and planning return to compliance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 194,
+		"prompt": "Given a scenario where enterprise architects are underutilized in platform decisions, the CIO wants stronger innovation governance. How should the platform owner engage enterprise architecture?",
+		"choices": [
+			"Embed architects in demand intake, design reviews, and capability roadmapping with decision rights on cross-domain patterns",
+			"Limit architect involvement to post-production documentation only",
+			"Replace architecture review with developer peer code review for all platform changes",
+			"Defer architecture engagement until every legacy system is decommissioned"
+		],
+		"correctIndex": 0,
+		"explanation": "Enterprise architecture adds innovation value when engaged early in demand, design, and roadmap decisions—not relegated to after-the-fact documentation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	}
+]
