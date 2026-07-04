@@ -17,11 +17,7 @@ describe('DEV_PRACTICE_QUESTIONS bank', () => {
 			expect(rows.length).toBeGreaterThanOrEqual(DEFAULT_QUESTIONS_PER_TRACK);
 			const orders = rows.map((q) => q.order).sort((a, b) => a - b);
 			expect(orders).toEqual([...Array(rows.length).keys()]);
-			if (rows.length < target) {
-				expect(rows.length).toBeLessThan(target);
-			} else {
-				expect(rows.length).toBeGreaterThanOrEqual(target);
-			}
+			expect(rows.length).toBe(target);
 		}
 	});
 
