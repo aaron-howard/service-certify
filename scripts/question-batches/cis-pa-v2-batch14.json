@@ -1,0 +1,89 @@
+[
+	{
+		"trackCode": "CIS-PA",
+		"order": 65,
+		"prompt": "A director wants to see whether mean time to resolve is improving over the last six months. Which visualization type is the best fit?",
+		"choices": [
+			"A time series chart showing the indicator trend across collection periods",
+			"A score widget displaying only the latest single value",
+			"A breakdown pie chart with no date axis configured",
+			"A list report of raw incident records without PA scores"
+		],
+		"correctIndex": 0,
+		"explanation": "Time series charts plot indicator scores across periods, making them the standard choice for evaluating directional change over time.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/data-visualizations.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DashboardsAndWidgets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 66,
+		"prompt": "A team lead should view a certified operations dashboard but must not edit its visualizations. Which access pattern is appropriate?",
+		"choices": [
+			"Grant dashboard read access and a PA role that allows viewing without authoring privileges",
+			"Assign pa_admin so the user can open every library artifact in edit mode",
+			"Share the dashboard only by exporting screenshots to email each week",
+			"Remove ACLs on pa_dashboards so all users inherit write access"
+		],
+		"correctIndex": 0,
+		"explanation": "Dashboard sharing combines record-level access with PA roles so consumers can view certified content without configuration rights.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 67,
+		"prompt": "A Next Experience dashboard loads slowly because it contains many heavy visualizations. Which design change most directly improves performance?",
+		"choices": [
+			"Reduce widget count, limit breakdown cardinality, and align filters to required decision scope",
+			"Increase collection frequency to every five minutes for all indicators on the page",
+			"Convert every widget to a scripted REST query against transactional tables at load time",
+			"Disable Run as on all collector jobs so widgets query as the admin user"
+		],
+		"correctIndex": 0,
+		"explanation": "Dashboard performance improves when visualizations are scoped to necessary widgets, manageable breakdown volume, and purposeful filtering.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/performance-analytics-performance.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 68,
+		"prompt": "From a KPI Details view, what can an analyst typically inspect beyond the headline score?",
+		"choices": [
+			"Trend history, breakdown segments, target status, and contributing score context",
+			"Only the indicator name with no access to underlying scores or breakdowns",
+			"The raw sys_dictionary definition for every field on the source table",
+			"A list of all update sets that modified the dashboard layout"
+		],
+		"correctIndex": 0,
+		"explanation": "KPI Details surfaces trend, segmentation, target evaluation, and related score context so users can interpret a KPI without leaving the analytics experience.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/kpi-details.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 69,
+		"questionType": "multi",
+		"prompt": "When selecting a Platform Analytics visualization for an executive briefing, which criteria should guide the choice? (Choose two.)",
+		"choices": [
+			"The decision question the audience must answer from the metric",
+			"Whether the view needs trend, comparison, or current-state emphasis",
+			"Using a different chart type for every widget regardless of data shape",
+			"Preferring the visualization with the highest number of breakdown elements"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Effective visualization selection matches chart type to the decision and whether stakeholders need trends, comparisons, or a current snapshot.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/data-visualizations.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DashboardsAndWidgets.html"
+		]
+	}
+]

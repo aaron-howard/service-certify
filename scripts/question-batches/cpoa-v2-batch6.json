@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOA",
+		"order": 25,
+		"prompt": "A regional rollout team asks what an OCM Community Champion should focus on during adoption. Which scope best fits the champion role?",
+		"choices": [
+			"Peer advocacy, localized feedback, and reinforcing sponsor messaging for affected roles",
+			"Approving platform budgets and signing vendor contracts for the program",
+			"Designing integration architecture and writing production script includes",
+			"Replacing executive sponsors as the final authority on program scope"
+		],
+		"correctIndex": 0,
+		"explanation": "Community Champions extend sponsorship through trusted peers by gathering feedback and driving adoption; they do not own funding, architecture, or executive authority.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 26,
+		"prompt": "IT operations and security each maintain separate ticketing tools that overlap with planned ServiceNow capabilities. How should the platform owner begin resolving the conflict?",
+		"choices": [
+			"Mandate immediate shutdown of both tools without stakeholder workshops",
+			"Document overlapping processes, quantify duplicate effort, and align sponsors on a consolidated target state",
+			"Defer consolidation until every legacy contract expires regardless of user impact",
+			"Grant both teams permanent admin rights in production to preserve parallel workflows"
+		],
+		"correctIndex": 1,
+		"explanation": "Tool conflicts are resolved by mapping overlap, quantifying pain, and securing sponsor alignment on consolidation—not abrupt shutdowns or indefinite delay.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 27,
+		"prompt": "Before scheduling enablement sessions for a new ServiceNow workflow, which OCM step should the platform owner complete first?",
+		"choices": [
+			"Publish production update sets without user communication",
+			"Disable legacy access for all users on day one of training",
+			"Assess stakeholder impact, resistance risks, and role-specific readiness needs",
+			"Skip discovery because the technical configuration is already complete"
+		],
+		"correctIndex": 2,
+		"explanation": "OCM begins with impact and readiness assessment so enablement targets the right audiences and addresses likely resistance before go-live.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 28,
+		"questionType": "match",
+		"prompt": "Match each OCM orchestration activity to its primary purpose during a platform rollout.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Stakeholder impact assessment",
+			"Champion network activation",
+			"Communication plan execution",
+			"Adoption measurement"
+		],
+		"matchRightItems": [
+			"Identify affected roles and likely resistance before launch",
+			"Extend executive messaging through trusted peer advocates",
+			"Deliver consistent updates through agreed channels and cadence",
+			"Track usage and outcomes against agreed success measures"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "OCM orchestration sequences impact analysis, champions, structured communication, and adoption metrics to sustain transformation momentum.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 29,
+		"questionType": "multi",
+		"prompt": "Executive sponsors seem disengaged midway through a ServiceNow program. Which sponsorship engagement actions should the platform owner take? (Choose two.)",
+		"choices": [
+			"Reconfirm business outcomes, baseline metrics, and visible wins tied to sponsor priorities",
+			"Schedule focused sponsor briefings with concise evidence of progress and remaining risks",
+			"Remove sponsors from communications so delivery teams can work without interference",
+			"Pause all enablement until a new steering committee is formed from scratch"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Re-engaging sponsors requires refreshed outcome alignment and concise evidence of value; excluding sponsors or halting enablement undermines adoption.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	}
+]

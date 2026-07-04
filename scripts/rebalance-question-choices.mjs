@@ -31,13 +31,22 @@ function choicePermutationForSeed(length, seed) {
 }
 
 function rebalanceQuestion(q) {
+	if (q.questionType === 'match' || !q.choices?.length) return q;
 	const permutation = choicePermutationForSeed(
 		q.choices.length,
 		`bank:${q.trackCode}:${q.order}`
 	);
 	const choices = permutation.map((i) => q.choices[i]);
 	const correctIndex = permutation.indexOf(q.correctIndex);
-	return { ...q, choices, correctIndex };
+	const next = { ...q, choices, correctIndex };
+	if (q.questionType === 'multi' && Array.isArray(q.correctIndexes)) {
+		const remapped = q.correctIndexes
+			.map((i) => permutation.indexOf(i))
+			.sort((a, b) => a - b);
+		next.correctIndexes = remapped;
+		next.correctIndex = remapped[0] ?? correctIndex;
+	}
+	return next;
 }
 
 function readBank() {

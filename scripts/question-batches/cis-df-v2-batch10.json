@@ -1,0 +1,101 @@
+[
+	{
+		"trackCode": "CIS-DF",
+		"order": 45,
+		"prompt": "CMDB Data Manager shows a queue of stale database CIs with no active relationships. What is the recommended remediation approach?",
+		"choices": [
+			"Review each task, validate ownership, then retire or re-link CIs through governed workflows",
+			"Delete all cmdb_rel_ci records globally and rebuild maps from scratch overnight",
+			"Disable Discovery until every business service has a named owner",
+			"Accept all machine-learning relationship suggestions without steward review"
+		],
+		"correctIndex": 0,
+		"explanation": "Data Manager tasks should be reviewed and remediated through governed retire or re-link actions rather than uncontrolled bulk deletes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBDataManager.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 46,
+		"prompt": "A health KPI shows required attributes missing on Linux server CIs after a new feed went live. What should the governance team investigate first?",
+		"choices": [
+			"Feed mapping, identification match results, and reconciliation write authority for affected attributes",
+			"Service Portal widget CSS variables tied to the server list layout",
+			"MID Server JVM heap settings on the discovery cluster",
+			"Catalog item fulfillment flows for hardware stockroom requests"
+		],
+		"correctIndex": 0,
+		"explanation": "Missing required attributes after a feed launch usually trace to mapping gaps, failed identification, or reconciliation blocking the authoritative source.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBHealthDashboard.html",
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_ReconciliationRules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 47,
+		"prompt": "A custom cmdb_ci_load_balancer class needs unique identification keys before a new discovery feed onboards. Which tool should define the principal class extension and identifiers?",
+		"choices": [
+			"CI Class Manager to configure the class hierarchy and identification entries",
+			"Import set coalesce editor on the sys_user staging table",
+			"Event Management connector mapping for SNMP trap payloads",
+			"Service Catalog record producer for load balancer requests"
+		],
+		"correctIndex": 0,
+		"explanation": "CI Class Manager is the supported interface for extending principal classes and aligning identification entries before feed onboarding.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CIClassModels.html",
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/task/t_CreateIdentificationRules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 48,
+		"questionType": "multi",
+		"prompt": "Which two controls reduce duplicate CIs when multiple governed sources update the same class? (Choose two.)",
+		"choices": [
+			"Strong identification entries evaluated in priority order",
+			"Reconciliation rules with datasource precedence on key attributes",
+			"Disabling CMDB Health KPIs to avoid false positives",
+			"Loading all sources directly into cmdb_ci without IRE"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Identification prevents duplicate CI creation while reconciliation governs which source updates each attribute after a match is found.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_IdentificationAndReconciliationEngine.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 49,
+		"questionType": "match",
+		"prompt": "Match each CMDB workspace or Data Manager feature to the governance activity it supports.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Health trend chart",
+			"Orphan CI task queue",
+			"Class compliance view",
+			"Bulk retire action"
+		],
+		"matchRightItems": [
+			"Tracks KPI movement over time for executive review",
+			"Lists CIs lacking valid dependency context for steward action",
+			"Highlights classes missing required attributes or identifiers",
+			"Removes stale records through a governed lifecycle workflow"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "CMDB workspace and Data Manager features connect health monitoring, orphan remediation, class compliance, and governed retirement workflows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBWorkspace.html",
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBDataManager.html"
+		]
+	}
+]

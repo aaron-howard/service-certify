@@ -1,0 +1,85 @@
+[
+	{
+		"trackCode": "CIS-SP",
+		"order": 40,
+		"prompt": "A domain manager maintains catalog workflows but cannot alter global ACL design. Which statement describes data-driven process responsibilities?",
+		"choices": [
+			"Domain managers maintain selected process elements while instance owners govern platform-wide process creation",
+			"Domain managers own every table, field, and ACL on the instance without restriction",
+			"Only global administrators may view catalog records in any domain",
+			"Data-driven processes eliminate the need for update set promotion"
+		],
+		"correctIndex": 0,
+		"explanation": "Delegated administration lets domain managers maintain approved data-driven process areas while instance owners retain responsibility for core platform process design.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 41,
+		"prompt": "A developer captures a UI policy change while working in a child domain. How should the update set record the domain context?",
+		"choices": [
+			"Strip the domain field so the change applies globally on commit",
+			"Tag captured records with the domain where the change was made",
+			"Move all captured items into the global domain before completing the set",
+			"Reject capture unless the administrator impersonates the global domain"
+		],
+		"correctIndex": 1,
+		"explanation": "Update sets preserve the domain context of captured process records so promotion applies changes to the intended domain rather than forcing global scope.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/update-sets/concept/update-sets.html",
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 42,
+		"prompt": "What domain will a record be written to when applying an update set?",
+		"choices": [
+			"Always the global domain regardless of source context",
+			"The record's domain from the source instance",
+			"The domain of the administrator applying the update set",
+			"A new process domain created automatically during commit"
+		],
+		"correctIndex": 1,
+		"explanation": "Update set application honors the domain stamped on captured records from the source instance so process overrides land in the correct domain on the target.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/update-sets/concept/update-sets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 43,
+		"prompt": "After using Expand Domain Scope to audit overrides, a global administrator wants the business rules list to show only global-relevant records again. Which action restores the filtered view?",
+		"choices": [
+			"Collapse Domain Scope",
+			"Rollback the current update set",
+			"Flush the instance cache from System Diagnostics",
+			"Deactivate the domain separation plugin"
+		],
+		"correctIndex": 0,
+		"explanation": "Collapse Domain Scope returns process table lists to the domain-specific view after an expanded audit of override records across the hierarchy.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 44,
+		"questionType": "multi",
+		"prompt": "A global administrator expanded domain scope on the Email Notifications list. Which items become visible? (Choose two.)",
+		"choices": [
+			"Override notifications created in child operating company domains",
+			"Parent global notifications alongside domain-specific copies",
+			"Inbound email actions that parse messages into incidents",
+			"User preference records stored per individual account"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Expand Domain Scope reveals process overrides and parent records across domains; inbound actions and user preferences are separate configuration areas.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
+		]
+	}
+]

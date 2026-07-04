@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-SP",
+		"order": 20,
+		"prompt": "An MSP administrator working in the parent TOP domain creates an incident while impersonating a tenant workflow. Can users in a child tenant domain see that incident by default?",
+		"choices": [
+			"No, data in a parent domain is not visible to users in child domains below it",
+			"Yes, child domains always inherit visibility to all parent domain records",
+			"Yes, but only when the incident priority is set to Critical",
+			"No, unless the incident sys_domain field is set to global"
+		],
+		"correctIndex": 0,
+		"explanation": "Data visibility rises up the hierarchy—parents see child data—but child domain users cannot see records that exist only in a parent domain above them.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/bp-domain-hierarchy.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 21,
+		"prompt": "An ACME ITIL user with domain_expand_scope edits an incident in the ACME APJ child domain with record scope active. Which users appear when selecting Assigned to?",
+		"choices": [
+			"Users with the required role in the incident's domain or global only",
+			"All active users across every tenant domain on the instance",
+			"Only users who share the same company as the assigned-to field",
+			"Users in parent domains above the incident domain but not the incident domain itself"
+		],
+		"correctIndex": 0,
+		"explanation": "With record scope active, reference fields constrain choices to the record's domain and global; toggling to session scope expands to the user's domain and child domains.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/bp-terms-conditions.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 22,
+		"prompt": "A change task is created from a change request assigned to the ACME tenant domain. Which domain value applies to the new change task record?",
+		"choices": [
+			"The change task inherits the domain of the parent change request record",
+			"The change task always inherits the creating user's home domain",
+			"The change task is assigned to global unless manually updated",
+			"The change task domain is determined by the assignment group only"
+		],
+		"correctIndex": 0,
+		"explanation": "Related child records inherit the parent record's domain by default, so a change task created from an ACME change request stays in the ACME domain.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainAssignment.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 23,
+		"questionType": "multi",
+		"prompt": "Which properties define a domain-separated ServiceNow application for service provider deployments? (Choose three.)",
+		"choices": [
+			"Data separation so tenants see only authorized records",
+			"Business logic separation supporting tenant-specific policies and overrides",
+			"Hierarchical modeling with nested multitenancy and parent access to child resources",
+			"Mandatory separate MID Server infrastructure per tenant domain"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1, 2],
+		"explanation": "Domain-separated applications provide data separation, business logic separation, hierarchical modeling, UI separation, and cross-customer intelligence—not separate MID infrastructure per tenant.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/bp-dom-sep-definition.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 24,
+		"prompt": "A developer proposes adding sys_domain to the Dictionary Entry [sys_dictionary] table for tenant-specific field labels. What does ServiceNow recommend?",
+		"choices": [
+			"Do not domain-separate platform sys_ tables because it can produce unexpected results",
+			"Domain-separate all sys_ tables to maximize tenant isolation",
+			"Domain-separate sys_dictionary but never sys_properties",
+			"Use visibility domains on sys_dictionary instead of sys_domain"
+		],
+		"correctIndex": 0,
+		"explanation": "ServiceNow warns against domain-separating platform tables with the sys_ prefix, including sys_dictionary and sys_properties, due to unpredictable platform behavior.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainAssignment.html"
+		]
+	}
+]

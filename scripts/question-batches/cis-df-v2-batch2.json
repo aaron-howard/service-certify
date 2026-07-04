@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CIS-DF",
+		"order": 5,
+		"prompt": "Duplicate Linux Server CIs appear after each SCCM import even though serial numbers match. Which configuration should the CMDB engineer review in CI Class Manager?",
+		"choices": [
+			"Identification rule identifier entries for the Linux Server class",
+			"Service Portal widget themes tied to cmdb_ci_linux_server lists",
+			"Catalog fulfillment flows that generate alm_asset records only",
+			"Event Management correlation rules for Linux process monitoring"
+		],
+		"correctIndex": 0,
+		"explanation": "Identification rules and their identifier entries define the attribute combinations IRE uses to match incoming SCCM data to an existing CI instead of inserting duplicates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 6,
+		"prompt": "Operations wants to compare hostname values proposed by Discovery, SCCM, and a manual spreadsheet import for one Windows Server CI. Which workspace view exposes per-source attribute history?",
+		"choices": [
+			"CMDB 360 view in CMDB Workspace with multisource attribute detail",
+			"Incident Agent Workspace filtered by assignment group only",
+			"Service Catalog editor showing record producer checkout history",
+			"Knowledge Management homepage sorted by article view count"
+		],
+		"correctIndex": 0,
+		"explanation": "CMDB 360 retains proposed and accepted attribute values from each discovery source in cmdb_multisource_data and exposes them in the CMDB 360 workspace view.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/multisource-cmdb.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 7,
+		"prompt": "The team adds a mandatory compliance_tag attribute to cmdb_ci_computer through CI Class Manager. What happens to existing computer CIs after the attribute is saved?",
+		"choices": [
+			"They inherit the new dictionary field and can be populated through governed updates",
+			"They are automatically deleted and recreated by the next discovery schedule",
+			"They move to alm_asset and lose all cmdb_ci relationships permanently",
+			"They bypass IRE because custom attributes disable identification rules"
+		],
+		"correctIndex": 0,
+		"explanation": "Attributes added through CI Class Manager extend the class dictionary so existing CIs in that hierarchy can store values once data stewards populate them.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-class-manager.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 8,
+		"questionType": "multi",
+		"prompt": "Which steps are required before CMDB 360 can capture multisource attribute history for CMDB classes? (Choose two.)",
+		"choices": [
+			"Activate the ITOM Discovery License plugin on the instance",
+			"Set glide.identification_engine.multisource_enabled to true",
+			"Disable all static reconciliation rules for every CI class",
+			"Convert cmdb_ci tables to non-CMDB application tables"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "CMDB 360 requires the ITOM Discovery License and the multisource_enabled property; disabling reconciliation or converting CMDB tables is not part of enablement.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/multisource-cmdb.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 9,
+		"questionType": "match",
+		"prompt": "Match each IRE configuration object to its primary function during CMDB updates.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Identification rule",
+			"Reconciliation rule",
+			"Dependent identification rule",
+			"CMDB 360 dynamic reconciliation rule"
+		],
+		"matchRightItems": [
+			"Determines whether incoming data matches an existing CI or creates a new one",
+			"Controls which source may write a specific attribute after a match",
+			"Links child CIs to a parent CI during hierarchical identification",
+			"Selects attribute values using multisource reported data rather than static priority alone"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "IRE separates matching logic, attribute authority, dependent class relationships, and CMDB 360-driven dynamic reconciliation behaviors.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/r_ReconciliationRulesPrinciples.html"
+		]
+	}
+]

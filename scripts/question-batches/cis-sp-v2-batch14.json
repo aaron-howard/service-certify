@@ -1,0 +1,88 @@
+[
+	{
+		"trackCode": "CIS-SP",
+		"order": 65,
+		"prompt": "A multi-domain import links users to departments through reference fields. What validation prevents silent data defects?",
+		"choices": [
+			"Confirm referenced department records exist in the same domain as the user being loaded",
+			"Require all reference fields to point to records in the global domain only",
+			"Skip reference checks when the source file has fewer than one thousand rows",
+			"Clear sys_domain on departments so references resolve by display name alone"
+		],
+		"correctIndex": 0,
+		"explanation": "Cross-domain reference defects are avoided by validating that lookup targets exist within the tenant domain of the record being imported.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_Coalescing.html",
+			"https://www.servicenow.com/docs/r/platform-security/bp-dom-sep-definition.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 66,
+		"prompt": "According to domain separation support levels, which description matches the Basic category?",
+		"choices": [
+			"Business logic ensures records are created and queried within the proper tenant domain for SP use cases",
+			"Tenants independently configure all process policies without provider-managed overrides",
+			"Support is limited to adding a domain column with no tenant-aware routing at run time",
+			"Instance owners cannot configure the application to function across multiple tenants"
+		],
+		"correctIndex": 0,
+		"explanation": "Basic support requires application logic to route data to the correct tenant domain at run time across UI, reporting, and aggregations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/bp-domain-levels.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 67,
+		"prompt": "Service Catalog is rated Standard for domain separation support. Which outcome can a service provider achieve at that level?",
+		"choices": [
+			"Configure tenant-specific catalog behavior and process parameters while preserving shared platform governance",
+			"Guarantee tenants can alter core engine code for the catalog application independently",
+			"Prevent any catalog data from being stored with a domain value on base tables",
+			"Run catalog fulfillment without considering the user's or record's domain context"
+		],
+		"correctIndex": 0,
+		"explanation": "Standard support includes Basic data routing plus provider-managed per-tenant process configuration for defined catalog use cases.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/domain-separated-apps.html",
+			"https://www.servicenow.com/docs/r/platform-security/bp-domain-levels.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 68,
+		"prompt": "Knowledge Management supports Standard domain separation. What does that enable in a multi-tenant service provider instance?",
+		"choices": [
+			"Domain-aware knowledge content and provider-managed process differences per tenant customer",
+			"Exclusive storage of articles in global with no tenant visibility controls",
+			"Automatic deletion of articles when a child domain is created",
+			"Removal of user criteria because domain separation replaces all content filtering"
+		],
+		"correctIndex": 0,
+		"explanation": "Standard Knowledge support combines tenant data routing with provider-configurable per-customer process behavior for knowledge workflows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/domain-separated-apps.html",
+			"https://www.servicenow.com/docs/r/servicenow-platform/domain-separation-knowledge.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 69,
+		"questionType": "multi",
+		"prompt": "Which statements correctly describe Standard domain separation support in supported applications? (Choose two.)",
+		"choices": [
+			"Includes Basic-level tenant data routing at application run time",
+			"Allows service provider administrators to configure per-tenant process behavior for defined use cases",
+			"Permits tenants to modify core application source code for each domain",
+			"Indicates the application has no sys_domain column on its primary data tables"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Standard support builds on Basic data routing and adds provider-managed per-tenant process configuration without tenant source-code changes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/bp-domain-levels.html",
+			"https://www.servicenow.com/docs/r/platform-security/domain-separated-apps.html"
+		]
+	}
+]

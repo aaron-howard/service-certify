@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-SP",
+		"order": 10,
+		"prompt": "MSP operators must work with tenant incident data without making the MSP domain a parent of tenant domains. Which relationship grants that cross-hierarchy data access?",
+		"choices": [
+			"A contains domain relationship from MSP to the tenant domain",
+			"Promoting the MSP domain to primary over TOP",
+			"Assigning every tenant user to the MSP domain",
+			"Setting sys_domain to global on all tenant incidents"
+		],
+		"correctIndex": 0,
+		"explanation": "Contains domains relate domains outside strict parent-child hierarchy and grant the containing domain visibility to contained domain data without inheriting MSP process logic into tenants.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainVisibility.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 11,
+		"prompt": "An SP security review compares visibility domains and contains domains for granting MSP technicians access to a restricted customer domain. What is the key distinction?",
+		"choices": [
+			"Visibility domains grant explicit user or group access; contains domains grant an entire domain access to another domain's data",
+			"Visibility domains affect process inheritance; contains domains affect UI themes only",
+			"Contains domains apply only to process tables; visibility domains apply only to task tables",
+			"Visibility domains are inherited by child domains; contains domains are never used with the domain picker"
+		],
+		"correctIndex": 0,
+		"explanation": "Visibility domains are user-to-domain or group-to-domain grants, while contains domains are domain-to-domain relationships that make contained data visible to users in the containing domain.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainVisibility.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 12,
+		"questionType": "multi",
+		"prompt": "In which domains can a user see an assignment group? (Choose three.)",
+		"choices": [
+			"The parent domain of the assignment group's domain",
+			"Child domains of the assignment group's domain",
+			"Domains granted through visibility domain configuration on the user's group membership",
+			"Domains linked through a contains relationship to the assignment group's domain"
+		],
+		"correctIndex": 1,
+		"correctIndexes": [1, 2, 3],
+		"explanation": "Assignment groups are domain-separated data visible in the group's domain, child domains, and any domains granted through visibility or contains relationships—not in parent domains above the group.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainVisibility.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 13,
+		"prompt": "An SP process administrator needs to view all process override records across the domain hierarchy from a process table. What role is required to use the Expand Domain Scope feature?",
+		"choices": [
+			"domain_admin",
+			"domain_expand_scope",
+			"admin",
+			"security_admin"
+		],
+		"correctIndex": 1,
+		"explanation": "Users with the domain_expand_scope role can expand domain scope on process tables to see override records across the hierarchy and toggle between record and session scope on forms.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/bp-terms-conditions.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 14,
+		"prompt": "An instance architect plans broad visibility domain grants for dozens of MSP support groups. Why do ServiceNow recommended practices discourage excessive visibility domain use?",
+		"choices": [
+			"Visibility domains add OR conditions to queries and should be a last resort after hierarchy and contains design",
+			"Visibility domains disable ACL evaluation for affected tables entirely",
+			"Visibility domains force all affected users into the global domain session scope",
+			"Visibility domains prevent the domain picker from listing child domains"
+		],
+		"correctIndex": 0,
+		"explanation": "Visibility domains expand database queries with OR conditions that can degrade performance; recommended practice favors proper hierarchy and contains relationships first.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/bp-contains-domain-visibility.html"
+		]
+	}
+]

@@ -1,0 +1,86 @@
+[
+	{
+		"trackCode": "CIS-PA",
+		"order": 30,
+		"prompt": "A KPI must show the percentage of incidents resolved within SLA. Separate automated indicators already capture the numerator and denominator. How should the KPI be modeled?",
+		"choices": [
+			"A formula indicator that references both source indicators",
+			"A single automated indicator with no formula expression",
+			"A manual indicator entered by executives each month",
+			"A list report widget with no Performance Analytics indicator"
+		],
+		"correctIndex": 0,
+		"explanation": "Formula indicators combine values from other indicators using expressions, which suits ratio KPIs built from existing automated metrics.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_FormulaIndicators.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 31,
+		"prompt": "An indicator source condition uses dot-walking to reference assignment_group.name. What must remain true for collection to succeed?",
+		"choices": [
+			"Referenced fields exist along the dot-walk path and are available to PA collection",
+			"Every breakdown on the indicator must use scripted mappings",
+			"The indicator must be manual with a monthly frequency",
+			"The linked dashboard widget must use a pie chart type"
+		],
+		"correctIndex": 0,
+		"explanation": "Dot-walk conditions are valid only when each referenced table and field in the path exists and is accessible during indicator source evaluation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_IndicatorSources.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 32,
+		"prompt": "What does a breakdown mapping accomplish in Performance Analytics?",
+		"choices": [
+			"Connects an indicator source field to breakdown source values for segmented scores",
+			"Schedules the daily execution time of all collection jobs",
+			"Replaces indicator sources on manual indicators",
+			"Assigns PA admin roles to dashboard viewers automatically"
+		],
+		"correctIndex": 0,
+		"explanation": "Breakdown mappings define how records from the indicator source relate to dimensional values supplied by a breakdown source.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_BreakdownMappings.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 33,
+		"prompt": "A field-based breakdown source on Assignment Group is linked to an incident indicator, but no segments appear in analysis. What should be verified first?",
+		"choices": [
+			"The breakdown mapping aligns the indicator source assignment group field with the breakdown source",
+			"The indicator frequency is set to Realtime instead of Daily",
+			"The dashboard uses a list widget rather than a scorecard",
+			"Target warning thresholds are configured on the indicator"
+		],
+		"correctIndex": 0,
+		"explanation": "Missing segments usually indicate the breakdown mapping does not correctly relate indicator records to breakdown source values.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_BreakdownMappings.html",
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_ConfigureBreakdownSources.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 34,
+		"questionType": "multi",
+		"prompt": "Which Performance Analytics artifacts work together to segment an automated indicator by assignment group? (Choose two.)",
+		"choices": [
+			"Breakdown source listing assignment group values",
+			"Breakdown mapping from the indicator source assignment group field",
+			"Data collection export schedule for external BI",
+			"Spotlight benchmark comparison record"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Segmentation requires a breakdown source that supplies dimension values and a mapping that ties indicator records to those values.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html",
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_BreakdownMappings.html"
+		]
+	}
+]

@@ -1,0 +1,99 @@
+[
+	{
+		"trackCode": "CIS-DF",
+		"order": 80,
+		"prompt": "A change manager needs a single graphical view of upstream and downstream CIs for a production server without opening legacy maps separately. Which CMDB Workspace feature should they use?",
+		"choices": [
+			"Unified Map, which combines dependency and service mapping context around a chosen home node CI",
+			"The import set transform history list filtered by coalesce failures",
+			"A catalog item variable that stores related CI sys_ids as free text",
+			"The system properties module sorted alphabetically by name"
+		],
+		"correctIndex": 0,
+		"explanation": "Unified Map delivers a cohesive hierarchical map centered on a home node CI, integrating capabilities from Dependency Views and Service Mapping.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-workspace-unified-map.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 81,
+		"prompt": "An operations team still uses Dependency Views for impact walks but is migrating to CMDB Workspace. How should the implementer describe Unified Map relative to Dependency Views?",
+		"choices": [
+			"Unified Map extends the legacy dependency experience with workspace navigation, contextual modules, and integrated service context",
+			"Unified Map removes all relationship data that Dependency Views previously displayed",
+			"Dependency Views remain the only supported map when Service Mapping is not licensed",
+			"Unified Map replaces CI forms so technicians cannot edit attributes from a map"
+		],
+		"correctIndex": 0,
+		"explanation": "Unified Map modernizes dependency visualization within CMDB Workspace while retaining hierarchical relationship context teams relied on in Dependency Views.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-workspace-unified-map.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 82,
+		"prompt": "On the Data Foundations dashboard, a metric shows a low compliance percentage and priority 1 - Critical. What is the recommended next step for the CMDB administrator?",
+		"choices": [
+			"Open the linked remediation playbook article and follow its analysis and fix guidance for that metric",
+			"Delete all non-compliant CIs immediately without stakeholder review",
+			"Disable the CMDB Get Well Metric Collection scheduled job to hide the score",
+			"Convert the metric into a personal dashboard widget with no drill-down access"
+		],
+		"correctIndex": 0,
+		"explanation": "Critical Data Foundations metrics include playbook links that document problem context, analysis steps, and remediation guidance for the measured issue.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 83,
+		"questionType": "multi",
+		"prompt": "Which two statements accurately describe CMDB business value for service and operations leaders? (Choose two.)",
+		"choices": [
+			"Accurate CI relationships improve blast-radius analysis during incidents and planned changes",
+			"Governed configuration data supports portfolio decisions by connecting services to supporting technology",
+			"CMDB value depends only on maximizing total CI count regardless of ownership or quality",
+			"Business value requires disabling reconciliation so every source can freely overwrite attributes"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "CMDB business value stems from trustworthy relationships and service linkage that inform impact and portfolio decisions—not unchecked record volume or ungoverned updates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBOverview.html",
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 84,
+		"questionType": "match",
+		"prompt": "A CMDB administrator explaining Data Foundations remediation playbooks to a CIO must describe the sequential structure of each playbook. Match each playbook section to its purpose.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"First",
+			"Second",
+			"Third",
+			"Fourth"
+		],
+		"matchRightItems": [
+			"Summary of indicator",
+			"Overview of problem",
+			"Importance of addressing issue",
+			"Fix or Improve"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Official CIS-DF sample guidance sequences playbook sections from indicator summary through problem overview, business importance, and fix-or-improve remediation steps.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html"
+		]
+	}
+]

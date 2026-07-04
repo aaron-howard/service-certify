@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOA",
+		"order": 50,
+		"prompt": "Before a family upgrade enters the production window, which process step best validates that custom workflows still behave as expected?",
+		"choices": [
+			"Execute regression and user acceptance testing in sub-production on the upgraded baseline",
+			"Apply the upgrade directly in production and rely on user tickets to surface defects",
+			"Skip functional testing when release notes show no breaking changes",
+			"Disable all business rules in production until stakeholders confirm adoption"
+		],
+		"correctIndex": 0,
+		"explanation": "Upgrade process guidance requires validating critical workflows in sub-production before production cutover so customization impact is understood early.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/upgrade-center.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 51,
+		"prompt": "A platform owner is defining the release promotion process for scoped application updates. Which practice aligns with ServiceNow governance expectations?",
+		"choices": [
+			"Capture changes in development, preview and resolve conflicts in test, then commit with approved change records",
+			"Allow developers to commit update sets in production whenever test capacity is unavailable",
+			"Merge parallel update sets without preview because naming conventions prevent collisions",
+			"Retire the test instance once production reaches the target family release"
+		],
+		"correctIndex": 0,
+		"explanation": "Controlled promotion flows move tracked changes through preview, test validation, and approved production commit rather than bypassing environments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/system-update-sets.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 52,
+		"questionType": "match",
+		"prompt": "Match each upgrade process phase to the platform owner activity performed in that phase.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Prepare",
+			"Test in sub-production",
+			"Resolve skipped updates",
+			"Production cutover"
+		],
+		"matchRightItems": [
+			"Review readiness insights, customization inventory, and maintenance window constraints",
+			"Validate integrations and critical workflows on the upgraded baseline",
+			"Reconcile customer changes with new vendor baselines before commit",
+			"Execute the upgrade with documented rollback criteria and stakeholder communication"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "The upgrade lifecycle sequences preparation, staged validation, conflict resolution, and governed production execution to reduce surprise and rollback frequency.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/upgrade-center.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 53,
+		"prompt": "Operations needs a full production copy in a lower environment to reproduce a complex integration defect. Which cloning scenario best fits this requirement?",
+		"choices": [
+			"Schedule a full instance clone with post-clone cleanup and suspended outbound integrations",
+			"Export selected tables to CSV and import them manually without clone profiles",
+			"Grant developers direct read-only SQL access to the production database",
+			"Copy individual update sets from production without cloning instance data"
+		],
+		"correctIndex": 0,
+		"explanation": "Full instance clones provide representative data and configuration for troubleshooting when paired with cleanup scripts and integration safeguards.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/instance-clone.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 54,
+		"questionType": "multi",
+		"prompt": "A team maintains seeded reference data in sub-production that must survive recurring production clones. Which capabilities should the platform owner configure? (Choose two.)",
+		"choices": [
+			"Clone data preservers for the protected reference tables",
+			"Clone exclusions for tables that should not overwrite preserved datasets",
+			"Unrestricted admin access for every developer in the cloned target",
+			"Automatic rollback of all plugins after each clone completes"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Data preservers protect designated datasets during clones while exclusions prevent unwanted tables from overwriting preserved reference data.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/clone-data-preservation.html"
+		]
+	}
+]

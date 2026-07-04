@@ -1,0 +1,99 @@
+[
+	{
+		"trackCode": "CIS-DF",
+		"order": 40,
+		"prompt": "Two integration feeds create separate server CIs with the same serial number and class. Which governance control should be tuned first to merge duplicates going forward?",
+		"choices": [
+			"Identification entries and matching criteria for the server CI class",
+			"Discovery cluster failover order on the MID Server configuration",
+			"Service Portal catalog layout for hardware request items",
+			"Event rule correlation fields on monitoring alert payloads"
+		],
+		"correctIndex": 0,
+		"explanation": "Identification rules define how incoming records match existing CIs; weak or missing criteria are the primary cause of duplicate server records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/task/t_CreateIdentificationRules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 41,
+		"prompt": "A CMDB program team needs a unified workspace to review health trends, launch cleanup tasks, and monitor class compliance. Which interface is purpose-built for that workflow?",
+		"choices": [
+			"CMDB workspace combining health dashboards and Data Manager actions",
+			"Import set loader form used only for spreadsheet uploads",
+			"Discovery status page listing probe execution timestamps",
+			"System properties editor for instance-wide SMTP settings"
+		],
+		"correctIndex": 0,
+		"explanation": "The CMDB workspace integrates health visibility and Data Manager remediation so teams can govern configuration data from one place.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBWorkspace.html",
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBDataManager.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 42,
+		"prompt": "When extending the CMDB class model, why should new CI types extend an appropriate principal class rather than cmdb_ci directly?",
+		"choices": [
+			"Principal classes provide the correct inherited attributes and identification behavior for the CI type",
+			"Extending cmdb_ci directly disables all reconciliation rules globally",
+			"Principal classes prevent relationships from being created on child records",
+			"Only principal classes may appear on incident forms"
+		],
+		"correctIndex": 0,
+		"explanation": "Extending the right principal class ensures specialized CIs inherit appropriate fields, lifecycle behavior, and identification patterns.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CIClassModels.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 43,
+		"questionType": "multi",
+		"prompt": "Which two CMDB Health metrics most directly indicate deduplication problems? (Choose two.)",
+		"choices": [
+			"Duplicate CI records sharing the same identification keys",
+			"Orphan CIs with no valid upstream or downstream relationships",
+			"Widget drilldown latency on operational dashboards",
+			"SMTP failure counts on scheduled report subscriptions"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Duplicate CI and orphan relationship metrics highlight records that break identification integrity and dependency accuracy.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBHealthDashboard.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 44,
+		"questionType": "match",
+		"prompt": "Match each CMDB governance role to its primary accountability.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"CMDB administrator",
+			"Data steward",
+			"Integration owner",
+			"Service owner"
+		],
+		"matchRightItems": [
+			"Configures health policies, IRE rules, and workspace access",
+			"Remediates quality issues for assigned configuration domains",
+			"Ensures inbound feeds follow mapping and reconciliation standards",
+			"Validates that service dependencies reflect operational reality"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Effective CMDB governance distributes platform configuration, domain remediation, feed quality, and service validation across defined roles.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBGovernanceAndHealth.html"
+		]
+	}
+]

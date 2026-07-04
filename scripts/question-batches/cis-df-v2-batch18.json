@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CIS-DF",
+		"order": 85,
+		"prompt": "An administrator disables Intelligent Search in CMDB Query Builder after a security review. Which system property controls that integration?",
+		"choices": [
+			"glide.cmdb.query.nlq.activated set to false removes NLQ from the Query Builder search box",
+			"glide.ui.cmdb.dependency.max_depth set to zero hides all relationship nodes",
+			"sn_cmdb.unified_map.enabled set to false deletes saved CMDB queries",
+			"glide.import_set.coalesce.strict set to true blocks transform map execution"
+		],
+		"correctIndex": 0,
+		"explanation": "The glide.cmdb.query.nlq.activated property enables or disables Intelligent Search for CMDB within Query Builder; it is true by default.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/querying-cmdb.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 86,
+		"prompt": "A data governance lead wants analysts across regions to run the same CMDB investigation weekly without rebuilding filters. What should they publish?",
+		"choices": [
+			"A saved CMDB Query Builder query shared with the appropriate roles or groups",
+			"A one-time CSV export stored on a local laptop outside the platform",
+			"A UI action that hard-codes sys_ids for every CI in the enterprise",
+			"An update set containing only dashboard theme CSS changes"
+		],
+		"correctIndex": 0,
+		"explanation": "Saved CMDB queries capture reusable filter and relationship logic so teams execute consistent investigations on a recurring basis.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/querying-cmdb.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 87,
+		"prompt": "During a change window review, a change manager opens Unified Map from an application CI and needs upstream and downstream dependency chains without leaving the CMDB workspace. Which map capability supports this investigation?",
+		"choices": [
+			"Dependency view with the selected CI as the home node and related CMDB relationships expanded",
+			"Import set staging view grouped by transform map coalesce rules only",
+			"Data Manager policy editor showing identification exclusion tables",
+			"Class Manager table inheritance diagram for CMDB metadata classes"
+		],
+		"correctIndex": 0,
+		"explanation": "Unified Map dependency view centers on a home CI and visualizes related upstream and downstream CMDB relationships for impact analysis during change and incident work.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-workspace-unified-map.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 88,
+		"questionType": "multi",
+		"prompt": "Which two Unified Map capabilities help incident and change teams during live investigations? (Choose two.)",
+		"choices": [
+			"Contextual side panel modules such as Related items and Changes for the selected CI",
+			"Hierarchical visualization of CI relationships centered on a chosen home node",
+			"Automatic retirement of stale CIs without governance review",
+			"Direct replacement of all identification rules with map layout preferences"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Unified Map combines relationship visualization with contextual modules for related records and changes; it does not alter I&R logic or retire CIs automatically.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-workspace-unified-map.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 89,
+		"questionType": "match",
+		"prompt": "Match each CMDB Data Foundations dashboard tab to the type of health checks it contains.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Best Practices",
+			"Customizations",
+			"Data Management Practices",
+			"ITSM Processes"
+		],
+		"matchRightItems": [
+			"CSDM-aligned standards such as service population and expected relationships",
+			"Appropriate use and scope of CMDB customizations",
+			"Integrity of third-party data imported into the CMDB",
+			"Whether ITSM processes leverage CMDB data effectively"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Data Foundations groups metrics into Best Practices, Customizations, Data Management Practices, and ITSM Processes tabs with distinct compliance focus areas.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html"
+		]
+	}
+]

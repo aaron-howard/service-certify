@@ -1,0 +1,88 @@
+[
+	{
+		"trackCode": "CIS-DF",
+		"order": 90,
+		"prompt": "Before a major data center change window, the change advisory board asks how CMDB insight reduces risk. Which answer best reflects CMDB business value in that scenario?",
+		"choices": [
+			"Dependency and service maps expose affected CIs so planners can scope impact before approving the change",
+			"CMDB record volume alone satisfies change approval without reviewing relationships",
+			"Insight dashboards replace the need to link changes to any configuration items",
+			"Business value is limited to hardware asset depreciation reporting"
+		],
+		"correctIndex": 0,
+		"explanation": "CMDB insight connects changes to dependent CIs and services so teams assess blast radius using governed configuration data rather than assumptions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-workspace-unified-map.html",
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBOverview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 91,
+		"prompt": "An incident manager traces upstream failures for a database CI and needs a hierarchical relationship walk. Which legacy CMDB visualization capability still informs the modern workspace map experience?",
+		"choices": [
+			"Dependency Views, which show upstream and downstream CI relationships for impact analysis",
+			"Import set staging tables used during CSV loads",
+			"Catalog client scripts that validate variable input",
+			"Update set preview diffs for application scope"
+		],
+		"correctIndex": 0,
+		"explanation": "Dependency Views established hierarchical relationship walks for impact analysis; Unified Map builds on that dependency context within CMDB Workspace.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-workspace-unified-map.html",
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_DependencyViews.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 92,
+		"prompt": "A CMDB administrator reviewing a failing Best Practices metric wants step-by-step remediation aligned to ServiceNow guidance. Where do Data Foundations dashboards surface that content?",
+		"choices": [
+			"Remediation playbook knowledge articles linked from the metric list view",
+			"The transform map field map coalesce checkbox on import sets",
+			"A personal notification preference on the user record",
+			"The MID Server log bundle downloaded from the ECC queue"
+		],
+		"correctIndex": 0,
+		"explanation": "Each Data Foundations metric can link to a remediation playbook article in Now Support with structured analysis and fix guidance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 93,
+		"questionType": "multi",
+		"prompt": "Which two CMDB insight practices help sustain data foundation improvements after initial remediation? (Choose two.)",
+		"choices": [
+			"Monitor Data Foundations metric trends through PA widgets and prioritize by calculated priority score",
+			"Reuse saved queries and playbooks so teams apply consistent investigation and fix patterns",
+			"Disable CMDB Get Well collection jobs once scores reach one hundred percent once",
+			"Remove ownership fields to simplify certification workflows"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Sustained improvement relies on ongoing metric monitoring plus repeatable queries and playbooks—not turning off collection or stripping ownership accountability.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html",
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/querying-cmdb.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 94,
+		"prompt": "At the start of a CSDM program, workshop facilitators need to identify who owns business services, technical services, and foundation data. Which activity should they schedule first?",
+		"choices": [
+			"Stakeholder mapping workshops that document accountable owners and decision makers per domain",
+			"Bulk import of every cmdb_ci record before defining any service boundaries",
+			"Immediate customization of all CSDM tables to match a legacy spreadsheet layout",
+			"Disabling reconciliation so each team can populate fields independently"
+		],
+		"correctIndex": 0,
+		"explanation": "CSDM engagements begin with stakeholder mapping so service, application, and foundation data have named owners before model and load activities scale.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_GovernanceInCSDM.html",
+			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/csdm-foundation-planning.html"
+		]
+	}
+]

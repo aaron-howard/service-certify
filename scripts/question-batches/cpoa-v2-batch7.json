@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOA",
+		"order": 30,
+		"prompt": "During OCM planning, leaders confuse the platform owner role with the Community Champion role. Which responsibility belongs to the platform owner rather than a champion?",
+		"choices": [
+			"Coordinating cross-functional adoption strategy, sponsor alignment, and program-level governance",
+			"Delivering peer coaching in a single department without escalation paths",
+			"Collecting informal hallway feedback with no tie to readiness metrics",
+			"Replacing line managers as approvers for every catalog request"
+		],
+		"correctIndex": 0,
+		"explanation": "Platform owners orchestrate adoption strategy and sponsor alignment enterprise-wide; champions provide localized peer support within that framework.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 31,
+		"prompt": "A platform owner is asked how knowledge management supports post-go-live operations. Which practice best answers the question?",
+		"choices": [
+			"Disable article feedback so agents are not distracted by ratings",
+			"Store fixes only in closed incident records with no searchable reuse",
+			"Govern article lifecycle, ownership, and quality reviews so proven solutions are findable",
+			"Publish every draft article directly to end users without approval"
+		],
+		"correctIndex": 2,
+		"explanation": "Sustainable knowledge management relies on governed article lifecycle, ownership, and quality so users can find trusted solutions after rollout.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/knowledge-management/knowledge-management.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 32,
+		"prompt": "Procurement is evaluating external support for a ServiceNow implementation. Which supplier type typically delivers hands-on configuration using the Now Create methodology?",
+		"choices": [
+			"A certified ServiceNow implementation partner engaged under a scoped statement of work",
+			"An unrelated hardware leasing firm with no platform delivery credentials",
+			"A generic staffing broker providing temporary admins without methodology oversight",
+			"An internal audit function that only reviews financial controls"
+		],
+		"correctIndex": 0,
+		"explanation": "Implementation partners apply ServiceNow delivery methodology and certified skills under governed SOWs; staffing brokers or unrelated vendors do not fulfill that role.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 33,
+		"questionType": "multi",
+		"prompt": "The communications lead asks which factors must be defined in a platform rollout communication plan. Which elements should the platform owner include? (Choose two.)",
+		"choices": [
+			"Target audiences mapped to message content and delivery channels",
+			"Cadence and accountable owners for each communication stream",
+			"A single generic email sent once with no follow-up schedule",
+			"Technical table schemas without linking messages to business outcomes"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Communication plans define who receives what, through which channels, on what schedule, and who owns each stream—not one-off generic notices.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 34,
+		"questionType": "match",
+		"prompt": "Match each ServiceNow ecosystem participant to its typical responsibility during an implementation.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Executive sponsor",
+			"Platform owner",
+			"Implementation partner",
+			"Community Champion"
+		],
+		"matchRightItems": [
+			"Advocate for funding and visible support of business outcomes",
+			"Align adoption, governance, and cross-functional delivery priorities",
+			"Execute scoped configuration and testing per Now Create phases",
+			"Reinforce new ways of working among peers in affected teams"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Sponsors advocate, platform owners orchestrate, partners deliver scoped work, and champions drive peer adoption—each role has distinct accountability.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	}
+]

@@ -1,0 +1,101 @@
+[
+	{
+		"trackCode": "CIS-DF",
+		"order": 75,
+		"prompt": "During an executive briefing, leadership asks why CMDB investment matters beyond inventory counts. Which business outcome best justifies a governed CMDB program?",
+		"choices": [
+			"Trusted configuration data enables accurate change risk, incident impact, and service continuity decisions",
+			"CMDB completeness guarantees every integration can skip identification and reconciliation rules",
+			"A populated CMDB eliminates the need for service ownership or data stewardship",
+			"Inventory volume alone satisfies audit requirements without relationship or ownership context"
+		],
+		"correctIndex": 0,
+		"explanation": "CMDB business value comes from reliable dependency and ownership context that supports operational decisions, not from record counts alone.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html",
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBOverview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 76,
+		"prompt": "A CMDB program manager opens the CMDB Data Foundations dashboard to prioritize remediation work. Which dashboard element links each metric to structured remediation guidance?",
+		"choices": [
+			"The Remediation playbook URL column that opens Now Support knowledge articles for the metric",
+			"The widget color palette selector on the Analytics Hub page",
+			"The import set coalesce field list attached to each metric row",
+			"The MID Server status tile on the Discovery home module"
+		],
+		"correctIndex": 0,
+		"explanation": "Data Foundations metrics include remediation playbook URLs that connect non-compliant indicators to documented analysis and fix guidance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 77,
+		"prompt": "An analyst wants to build a CMDB query using everyday language instead of manually adding nodes on the canvas. Which capability should they use in CMDB Query Builder?",
+		"choices": [
+			"Intelligent Search for CMDB, which parses natural language into a valid query on the builder canvas",
+			"The transform map onBefore script editor attached to import set tables",
+			"A business rule that converts list filter strings into relationship records",
+			"The scheduled job that rotates cmdb_ci audit fields nightly"
+		],
+		"correctIndex": 0,
+		"explanation": "Intelligent Search for CMDB accepts natural language query input, resolves table and relationship references, and constructs the query on the Query Builder canvas.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/querying-cmdb.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 78,
+		"questionType": "multi",
+		"prompt": "Which two outcomes explain why teams save and reuse CMDB Query Builder queries during data foundation engagements? (Choose two.)",
+		"choices": [
+			"Saved queries provide repeatable investigation patterns for governance reviews and remediation campaigns",
+			"Shared queries reduce rework when multiple analysts investigate the same class or relationship pattern",
+			"Saved queries permanently disable Intelligent Search so only manual canvas edits are allowed",
+			"Query saves automatically merge duplicate CIs without running identification rules"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Saved CMDB queries standardize repeatable analysis across teams; they do not replace I&R matching or disable NLQ capabilities.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/querying-cmdb.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 79,
+		"questionType": "match",
+		"prompt": "Match each CMDB insight capability to the operational need it primarily supports.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"CMDB Data Foundations dashboard",
+			"Natural language query in Query Builder",
+			"Saved CMDB queries",
+			"Unified Map"
+		],
+		"matchRightItems": [
+			"Monitor foundational health metrics and prioritize remediation by priority score",
+			"Build complex CI and relationship searches without manual canvas assembly",
+			"Reuse governed query definitions across analysts and recurring reviews",
+			"Visualize hierarchical CI dependencies centered on a selected home node"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Insight tooling spans health dashboards, NLQ-assisted query building, reusable saved queries, and Unified Map visualization for dependency context.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html",
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/querying-cmdb.html",
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-workspace-unified-map.html"
+		]
+	}
+]

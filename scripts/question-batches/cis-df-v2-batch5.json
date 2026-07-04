@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CIS-DF",
+		"order": 20,
+		"prompt": "The Configuration Management team wants to identify which CIs have been created from an asset but have not been discovered. The team creates a report on the target CI Class. How does the team identify these CIs in the report?",
+		"choices": [
+			"All CIs with a Discovery source value of 'SNAssetManagement'",
+			"All CIs with the Updated field older than a month",
+			"All CIs where the Last Discovered field is empty",
+			"All CIs with a Discovery source value of 'ServiceNow'"
+		],
+		"correctIndex": 0,
+		"explanation": "CIs automatically created from assets without a technical discovery update typically carry Discovery source SNAssetManagement, indicating asset-origin rather than scan-based population.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/create-ci-manual-cmdb-workspace.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 21,
+		"prompt": "A data steward creates a missing production server through the CMDB Workspace Create CI experience. What Discovery source value is set on the new CI?",
+		"choices": [
+			"Manual via IRE",
+			"SNAssetManagement",
+			"ServiceNow",
+			"Import Set"
+		],
+		"correctIndex": 0,
+		"explanation": "Manual CI creation in CMDB Workspace applies IRE rules and sets Discovery source to Manual via IRE to distinguish steward-entered records from automated feeds.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/create-ci-manual-cmdb-workspace.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 22,
+		"prompt": "HAM is configured so eligible hardware assets automatically create linked CIs when received. Which system property enables IRE-based CI creation from assets?",
+		"choices": [
+			"glide.asset.create_ci_with_ire set to true",
+			"glide.identification_engine.multisource_enabled set to false",
+			"glide.ui.update_on_refresh set to true",
+			"glide.sys.domain.partition set to global"
+		],
+		"correctIndex": 0,
+		"explanation": "When glide.asset.create_ci_with_ire is true, eligible asset records create CIs through the IRE API with governed identification and reconciliation behavior.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 23,
+		"questionType": "multi",
+		"prompt": "Which practices improve asset-to-CI alignment and compliance identifier quality during ingestion? (Choose two.)",
+		"choices": [
+			"Populate authoritative serial numbers and asset tags on alm_asset before CI creation",
+			"Use IRE identification on serial-number classes when enabling asset-driven CI creation",
+			"Skip reconciliation rules so asset and discovery sources overwrite each other freely",
+			"Store compliance identifiers only in incident work notes without CMDB fields"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Clean asset identifiers and IRE-based creation reduce mismatches between alm_asset and cmdb_ci; disabling reconciliation or hiding compliance data in incidents undermines alignment.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/c_ITILConfigurationManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 24,
+		"questionType": "match",
+		"prompt": "Match each CMDB ingestion channel to how it typically enters the Identification and Reconciliation Engine.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"ServiceNow Discovery schedule",
+			"Import set transform to cmdb_ci",
+			"CMDB Workspace manual Create CI",
+			"Asset record with glide.asset.create_ci_with_ire enabled"
+		],
+		"matchRightItems": [
+			"Probe payloads processed as a discovery source through IRE",
+			"Staged rows mapped and submitted as an integration discovery source",
+			"Steward entry evaluated by IRE with Discovery source Manual via IRE",
+			"Asset lifecycle event creating a CI with Discovery source SNAssetManagement"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Discovery, imports, manual creation, and asset-driven CI creation each feed IRE with distinct discovery source values and ingestion mechanics.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
+		]
+	}
+]
