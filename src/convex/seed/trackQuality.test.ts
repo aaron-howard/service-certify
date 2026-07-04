@@ -30,11 +30,12 @@ describe('track question choice quality', () => {
 				}
 			});
 
-			it('has four unique choices per question', () => {
+			it('has at least four unique choices per question', () => {
 				for (const q of rows) {
 					if (q.questionType === 'match') continue;
 					const normalized = q.choices.map((c) => c.trim().toLowerCase());
-					expect(new Set(normalized).size).toBe(4);
+					expect(normalized.length).toBeGreaterThanOrEqual(4);
+					expect(new Set(normalized).size).toBe(normalized.length);
 				}
 			});
 

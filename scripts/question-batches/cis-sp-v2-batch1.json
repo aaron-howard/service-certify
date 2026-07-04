@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-SP",
+		"order": 0,
+		"prompt": "A managed service provider is implementing ServiceNow Multitenant Platform Architecture on a single production instance. Which outcome does domain separation deliver for tenant operations?",
+		"choices": [
+			"Segregates application data, UI, and business logic while supporting hierarchical tenant modeling",
+			"Creates a dedicated database schema per tenant with no shared platform code",
+			"Removes the need for ACLs because domains enforce all authorization automatically",
+			"Forces every tenant to share identical process definitions without override capability"
+		],
+		"correctIndex": 0,
+		"explanation": "Domain separation (Multitenant Platform Architecture) segregates data, UI, and business logic on one instance and supports nested tenant hierarchies with cross-tenant intelligence.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/bp-dom-sep-definition.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 1,
+		"prompt": "An SP operations lead needs to validate parent-child relationships across TOP, MSP, and tenant domains before onboarding a new customer. Which navigation path opens the visual domain hierarchy?",
+		"choices": [
+			"System Definition > Tables > Domain [domain]",
+			"Domain Admin > Domain Map",
+			"System Properties > Domain Separation > Hierarchy",
+			"Company > All > Domain Relationships"
+		],
+		"correctIndex": 1,
+		"explanation": "Domain Admin > Domain Map displays the configured domain hierarchy so administrators can review parent-child structure before adding tenants.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/bp-domain-hierarchy.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 2,
+		"prompt": "During tenant onboarding, user records must automatically inherit the correct domain when created. Which assignment pattern is the standard default?",
+		"choices": [
+			"Assign the user to a company that is linked to the target domain",
+			"Manually set sys_domain on every user record after import",
+			"Grant the user the domain_admin role without a domain value",
+			"Leave the user in global and rely on visibility domains for all access"
+		],
+		"correctIndex": 0,
+		"explanation": "Assigning users to a company mapped to a domain automatically places the user in that domain; records they create inherit the same domain.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainAssignment.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 3,
+		"prompt": "An SP architect evaluates whether to use domain separation on one instance or provision a separate instance per enterprise customer. When is a separate instance typically the better fit?",
+		"choices": [
+			"When customers require fully isolated environments with independent release cycles and minimal cross-tenant coupling",
+			"When all customers must share one upgrade window and identical customizations",
+			"When the SP needs a single shared CMDB class model across unrelated industries",
+			"When tenant count is high but each tenant needs identical delegated administration"
+		],
+		"correctIndex": 0,
+		"explanation": "Separate instances provide stronger isolation and independent lifecycle management when domain separation on a shared instance cannot meet customer separation requirements.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/bp-domain-sep-recommended.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 4,
+		"questionType": "multi",
+		"prompt": "Which are true of a domain record marked as Primary? (Choose three.)",
+		"choices": [
+			"It must be linked to the Service Provider company record",
+			"Only one domain can be marked as primary at a time",
+			"The primary domain cannot have a parent domain",
+			"It appears as the top-level domain in Domain Map"
+		],
+		"correctIndex": 1,
+		"correctIndexes": [1, 2, 3],
+		"explanation": "The primary domain is the single top-level node in Domain Map with no parent; selecting a new primary replaces the previous designation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/t_SelectAPrimaryDomain.html"
+		]
+	}
+]

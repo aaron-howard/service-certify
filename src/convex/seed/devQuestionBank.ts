@@ -72,9 +72,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "To model that one company record can be associated with many asset records, which field type establishes the relationship on the asset table?",
 		"choices": [
 			"A Reference field on the asset table pointing to the company table",
-			"A String field on the company table listing asset names",
 			"A Duration field on both tables",
-			"A Journal field storing comments only"
+			"A Journal field storing comments only",
+			"A String field on the company table listing asset names"
 		],
 		"correctIndex": 0,
 		"explanation": "A reference field creates a one-to-many relationship by storing a pointer from the many-side records (assets) to the one-side record (company).",
@@ -141,9 +141,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "What does the Application Access section of a table record control?",
 		"choices": [
 			"Whether other application scopes can read, create, update, or delete that table's data",
-			"The color theme of the form for that table",
 			"How many rows the table can store",
-			"The order of fields on the list view"
+			"The order of fields on the list view",
+			"The color theme of the form for that table"
 		],
 		"correctIndex": 0,
 		"explanation": "Application Access on the table record defines cross-scope permissions (can read/create/update/delete and accessible from other scopes) that protect the table.",
@@ -300,12 +300,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 18,
 		"prompt": "Which UI element lets you group related fields into collapsible sections on a form?",
 		"choices": [
-			"Form sections (and form layout) configured with the Form Designer",
 			"Access control rules on the table",
+			"Transform maps for imports",
 			"Scheduled jobs that run nightly",
-			"Transform maps for imports"
+			"Form sections (and form layout) configured with the Form Designer"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Form sections, arranged with the Form Designer or Form Layout, group fields into organized, collapsible areas on a form.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/form-design.html"
@@ -365,9 +365,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which onChange client script parameter contains the field value before the user's change?",
 		"choices": [
 			"oldValue",
-			"newValue",
 			"isLoading",
-			"control"
+			"control",
+			"newValue"
 		],
 		"correctIndex": 0,
 		"explanation": "The onChange handler receives control, oldValue, newValue, and isLoading; oldValue holds the prior field value.",
@@ -429,9 +429,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "In a server-side script, which API queries and updates records in a table?",
 		"choices": [
 			"GlideRecord",
-			"g_form (client form object)",
 			"g_scratchpad (server-to-client data)",
-			"spModal (Service Portal dialog)"
+			"spModal (Service Portal dialog)",
+			"g_form (client form object)"
 		],
 		"correctIndex": 0,
 		"explanation": "GlideRecord is the server-side API for querying, inserting, updating, and deleting records.",
@@ -524,12 +524,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 32,
 		"prompt": "Which client script method displays a temporary informational message at the top of the form?",
 		"choices": [
-			"g_form.addInfoMessage()",
 			"gs.addInfoMessage()",
+			"gs.eventQueue()",
 			"current.setValue()",
-			"gs.eventQueue()"
+			"g_form.addInfoMessage()"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "g_form.addInfoMessage() shows a client-side info message on the form; gs methods are server-side.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/g-form.html"
@@ -564,7 +564,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"questionType": "multi",
 		"explanation": "g_form.setReadOnly() and its alias g_form.setDisabled() both make a field read-only on the client; gs and current are server-side objects.",
@@ -593,12 +593,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 36,
 		"prompt": "What is the primary mechanism ServiceNow uses to control row- and field-level access to data?",
 		"choices": [
-			"Access Control (ACL) rules",
 			"UI Policies",
+			"Scheduled Jobs",
 			"Client Scripts",
-			"Scheduled Jobs"
+			"Access Control (ACL) rules"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Access Control rules (ACLs) evaluate roles, conditions, and scripts to permit or deny operations at the record and field level.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/access-control-rules.html"
@@ -658,9 +658,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "In what order are ACLs of different types evaluated for a field on a record?",
 		"choices": [
 			"The table-level ACL is checked, then the more specific field-level ACL",
-			"Only the field ACL is ever checked",
 			"ACLs are evaluated alphabetically by sys_id",
-			"Client scripts are checked before any ACL"
+			"Client scripts are checked before any ACL",
+			"Only the field ACL is ever checked"
 		],
 		"correctIndex": 0,
 		"explanation": "ServiceNow evaluates matching ACLs from most general to most specific; a user must pass the table ACL and then the field ACL to access a field.",
@@ -694,10 +694,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"upgrade",
 			"clone"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			2
 		],
 		"questionType": "multi",
 		"explanation": "ACLs secure record operations such as read, write (create/update), and delete; upgrade and clone are instance-level activities, not ACL operations.",
@@ -774,12 +774,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 47,
 		"prompt": "To debug why a user cannot see a field, which tool shows how ACLs were evaluated for that user?",
 		"choices": [
-			"Enable Debug Security (Access Control debugging) and impersonate the user",
 			"Run a scheduled job report",
+			"Check the MID Server log",
 			"Open the transform map history",
-			"Check the MID Server log"
+			"Enable Debug Security (Access Control debugging) and impersonate the user"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Access Control (Security) debugging displays which ACLs were checked and their pass/fail results while impersonating the user.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/access-control-rules.html"
@@ -822,12 +822,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 50,
 		"prompt": "An ACL has a condition and a script. How are they combined to grant access?",
 		"choices": [
-			"Both the condition and the script must evaluate to true (in addition to any required role)",
 			"Only one of them needs to be true",
+			"They are averaged into a numeric score",
 			"The script is ignored if a condition exists",
-			"They are averaged into a numeric score"
+			"Both the condition and the script must evaluate to true (in addition to any required role)"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "An ACL grants access only when the role, condition, and script requirements are all satisfied.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/access-control-rules.html"
@@ -862,7 +862,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"questionType": "multi",
 		"explanation": "Both the application menu and its modules can require roles; users without those roles cannot see or open the module.",
@@ -908,9 +908,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "How do you configure a Scheduled Job to execute on the last day of every month?",
 		"choices": [
 			"Set the Run field to Monthly and the Day field to Last Day",
-			"Set the Run field to Periodically and the Repeat Interval to 31",
 			"Set the Run field to Daily and the Time to 23:59",
-			"Set the Run field to Weekly and the Day to Sunday"
+			"Set the Run field to Weekly and the Day to Sunday",
+			"Set the Run field to Periodically and the Repeat Interval to 31"
 		],
 		"correctIndex": 0,
 		"explanation": "A Scheduled Job with Run = Monthly and Day = Last Day executes on the final day of each month regardless of month length.",
@@ -979,7 +979,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"questionType": "multi",
 		"explanation": "A flow is composed of a trigger (record, schedule, etc.) and one or more actions/steps that execute the automation logic.",
@@ -1072,12 +1072,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 65,
 		"prompt": "How can a flow reuse logic across multiple flows without duplicating steps?",
 		"choices": [
-			"By calling a Subflow with defined inputs and outputs",
 			"By copying the same actions into every flow",
+			"By adding the steps to an ACL",
 			"By storing steps in a client script",
-			"By adding the steps to an ACL"
+			"By calling a Subflow with defined inputs and outputs"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "A Subflow packages reusable steps with inputs and outputs so multiple flows can call the same logic.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/hyperautomation-low-code/flow-designer.html"
@@ -1206,9 +1206,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "When importing data from a CSV or Excel file, where does the data land before it is transformed onto the target table?",
 		"choices": [
 			"A staging Import Set table",
-			"Directly into the sys_user table",
 			"Into the browser cache",
-			"Into an ACL record"
+			"Into an ACL record",
+			"Directly into the sys_user table"
 		],
 		"correctIndex": 0,
 		"explanation": "Imported rows first populate a staging Import Set table, then a Transform Map moves them to the target table.",
@@ -1290,10 +1290,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"setMandatory()",
 			"addInfoMessage()"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			3
 		],
 		"questionType": "multi",
 		"explanation": "The REST response object exposes getBody() for payload and getStatusCode() for the HTTP status; the other methods belong to unrelated client APIs.",
@@ -1327,10 +1327,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"Compiled Java bytecode",
 			"Raw disk images"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"correctIndexes": [
-			0,
-			1
+			2,
+			3
 		],
 		"questionType": "multi",
 		"explanation": "Import Sets accept structured data files such as CSV and Excel, staging rows for transformation onto target tables.",
@@ -1392,9 +1392,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "When managing global application files, which action is allowed?",
 		"choices": [
 			"Adding files from global scope to a global application",
-			"Moving application files into or out of a scoped application",
 			"Changing the scope of a global application",
-			"Removing an application's scope"
+			"Removing an application's scope",
+			"Moving application files into or out of a scoped application"
 		],
 		"correctIndex": 0,
 		"explanation": "For global applications, you can add global-scope files to the global app; you cannot move files across scopes, change a global app's scope, or remove an application's scope.",
@@ -1456,9 +1456,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which source control actions are available for a scoped application linked to Git? (Choose two.)",
 		"choices": [
 			"Commit changes to a branch",
-			"Apply remote changes into the instance",
 			"Rename the sys_user table globally",
-			"Disable the instance login page"
+			"Disable the instance login page",
+			"Apply remote changes into the instance"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -1530,10 +1530,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"sn_customerservice.agent",
 			"sn_customerservice.manager"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			3
 		],
 		"explanation": "External portal users receive customer or consumer roles depending on whether they represent a business contact or an individual consumer; agent and manager are internal fulfillment roles.",
 		"sourceUrls": [
@@ -1561,12 +1561,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 4,
 		"prompt": "How does a consumer differ from a B2B contact in the CSM data model?",
 		"choices": [
-			"A consumer is an individual end customer, while a contact is an employee of a business account",
 			"A consumer always has the agent role, while a contact always has the admin role",
+			"A consumer is created only from inbound email, while a contact is created only from chat",
 			"A consumer record stores contract entitlements, while a contact stores install base serial numbers",
-			"A consumer is created only from inbound email, while a contact is created only from chat"
+			"A consumer is an individual end customer, while a contact is an employee of a business account"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "B2C deployments use consumers as individual customers who manage cases for products they purchased, whereas B2B contacts represent people employed by customer accounts.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
@@ -1648,9 +1648,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A sold product record is created after a customer completes an online purchase. How does it relate to the product model?",
 		"choices": [
 			"The sold product is a customer-specific instance that references the product model definition",
-			"The sold product replaces the product model and deletes the catalog entry permanently",
 			"The sold product stores only contract PDF attachments with no catalog relationship",
-			"The sold product is identical to a product model and uses the same table without extension"
+			"The sold product is identical to a product model and uses the same table without extension",
+			"The sold product replaces the product model and deletes the catalog entry permanently"
 		],
 		"correctIndex": 0,
 		"explanation": "Sold products represent items purchased by a customer and reference the underlying product model that defines the product in the CSM catalog structure.",
@@ -1775,12 +1775,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 17,
 		"prompt": "Two customer accounts have a reseller relationship rather than a parent-child hierarchy. Which table defines this type of association?",
 		"choices": [
-			"Account relationship with a configured relationship type",
 			"Contact relationship that converts both accounts into one consumer",
+			"Request parent mapping entry for ITSM integration on cases",
 			"Household member relationship used only in B2C deployments",
-			"Request parent mapping entry for ITSM integration on cases"
+			"Account relationship with a configured relationship type"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Account relationships and account relationship types model non-hierarchical links between accounts such as reseller, partner, or other defined business relationships.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
@@ -1840,9 +1840,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A B2B account also sells to individual end users who need portal access under that account. Which record links a consumer to the business account?",
 		"choices": [
 			"Account consumer association on the account consumer table",
-			"Contact relationship that converts the consumer into a contact employee",
 			"Matching rule that routes the consumer's cases to the account manager",
-			"Product model extension that stores consumer login credentials"
+			"Product model extension that stores consumer login credentials",
+			"Contact relationship that converts the consumer into a contact employee"
 		],
 		"correctIndex": 0,
 		"explanation": "Account consumer records associate individual consumers with a business account so they can access account-scoped data such as install base and sold product information.",
@@ -1904,9 +1904,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Operations wants separate workflows for product support, billing disputes, and new customer onboarding. Which CSM artifact defines each distinct workflow?",
 		"choices": [
 			"A case type with its own table extending the base Case table",
-			"A product model variant that replaces the case state field entirely",
 			"An account relationship type that auto-closes cases after seven days",
-			"A sold product record that stores the workflow diagram as an attachment"
+			"A sold product record that stores the workflow diagram as an attachment",
+			"A product model variant that replaces the case state field entirely"
 		],
 		"correctIndex": 0,
 		"explanation": "Case types extend the Case table to provide specialized fields, states, and experiences such as product support, onboarding, or billing workflows.",
@@ -1999,12 +1999,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 31,
 		"prompt": "Security requires portal users to verify identity with a second factor after password login. Which external roles should be added to multi-factor authentication criteria?",
 		"choices": [
-			"sn_customerservice.customer and sn_customerservice.consumer",
 			"sn_customerservice.agent and sn_customerservice.manager",
+			"sn_incident_read and sn_incident_write",
 			"sn_csm_doctemplate.admin and workspace_admin",
-			"sn_incident_read and sn_incident_write"
+			"sn_customerservice.customer and sn_customerservice.consumer"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "MFA for Customer and Consumer Service Portals applies to external customer and consumer roles configured in multi-factor authentication role criteria.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/customer-self-service-and-omnichannel-engagement/configure-csm-multifactor-auth.html"
@@ -2063,12 +2063,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 35,
 		"prompt": "Supervisors want recommended agents displayed before manually assigning complex cases. Which configuration powers the assignment workbench recommendations?",
 		"choices": [
-			"A matching rule based on the Selection criteria matching type",
 			"A product model attribute that ranks agents by catalog category ownership",
+			"A household relationship that maps consumers to assignment groups",
 			"An entitlement field that auto-assigns cases to the contract author",
-			"A household relationship that maps consumers to assignment groups"
+			"A matching rule based on the Selection criteria matching type"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Assignment workbench configurations are stored in matching rules using the Selection criteria type, such as the default Recommendation for Case Assignment rule.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/case-assignment-matching-rules.html"
@@ -2200,7 +2200,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"explanation": "Work notes sync from the incident to the case when incident state changes and when the incident is resolved or closed with resolution notes; additional comments also sync but product models and account deletion are unrelated.",
 		"sourceUrls": [
@@ -2244,12 +2244,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 46,
 		"prompt": "How does Advanced Work Assignment prevent an agent from being overloaded when distributing customer cases?",
 		"choices": [
-			"It respects the agent capacity limits defined for each configured service channel",
 			"It permanently deletes any case that cannot be immediately assigned to an available agent",
+			"It reassigns closed cases back into the queue until every agent reaches an identical count",
 			"It disables all inbound communication channels until an administrator manually re-enables them",
-			"It reassigns closed cases back into the queue until every agent reaches an identical count"
+			"It respects the agent capacity limits defined for each configured service channel"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "AWA balances load by honoring per-channel capacity limits so agents are not assigned more concurrent work than their configured capacity allows.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/advanced-work-assignment-for-csm.html"
@@ -2362,10 +2362,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"A mandatory change advisory board approval recorded on every outbound customer message",
 			"A discovery schedule that scans customer devices before any communication is released"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			2
 		],
 		"explanation": "Targeted communications need a defined audience (recipients) and message content or template; they do not require CAB approval or discovery schedules.",
 		"sourceUrls": [
@@ -2378,9 +2378,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A support contract promises resolution of high-priority cases within four business hours. Which CSM configuration tracks and enforces that commitment on each qualifying case?",
 		"choices": [
 			"Service level agreements with definitions and schedules attached to qualifying cases",
-			"A read-only annotation field that agents optionally fill in with a target date manually",
 			"The account contact directory listing every individual who can open a customer case",
-			"A survey trigger that sends a satisfaction questionnaire after the case is resolved"
+			"A survey trigger that sends a satisfaction questionnaire after the case is resolved",
+			"A read-only annotation field that agents optionally fill in with a target date manually"
 		],
 		"correctIndex": 0,
 		"explanation": "SLA definitions with conditions and schedules measure elapsed time against commitments, driving timers, breaches, and escalations for qualifying customer cases.",
@@ -2537,12 +2537,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 64,
 		"prompt": "An agent needs to move a stalled case forward using a standard case action rather than an administrative operation. Which option is a valid case action?",
 		"choices": [
-			"Create a case task and assign it to a supporting fulfillment group for the work",
 			"Rebuild the instance search index for the entire knowledge platform globally",
+			"Purge the audit history of unrelated cases to reduce the total database size",
 			"Change the global default language for every user across the whole deployment",
-			"Purge the audit history of unrelated cases to reduce the total database size"
+			"Create a case task and assign it to a supporting fulfillment group for the work"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Creating and assigning a case task is a standard case action that moves work forward, whereas reindexing, changing global language, or purging audits are administrative operations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/case-management-process.html"
@@ -2618,9 +2618,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A team wants agents to work cases, tasks, and interactions from a single modern interface with contextual side panels and guided actions. Which environment should the implementer deploy?",
 		"choices": [
 			"The Customer Service Management Configurable Workspace built for agent productivity",
-			"The classic core UI list module with no contextual side panels or guided actions",
 			"A read-only reporting portal that only displays historical performance analytics scores",
-			"The system definition table editor used solely by administrators to alter data schemas"
+			"The system definition table editor used solely by administrators to alter data schemas",
+			"The classic core UI list module with no contextual side panels or guided actions"
 		],
 		"correctIndex": 0,
 		"explanation": "The CSM Configurable Workspace gives agents a unified, modern interface with contextual panels, guided actions, and tools to work cases and interactions efficiently.",
@@ -2667,9 +2667,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which two components make the CSM Configurable Workspace adaptable to an organization's process without heavy custom code? (Choose two.)",
 		"choices": [
 			"Configurable list and form layouts tailored to agent roles and case types",
-			"Contextual side panels and declarative actions defined for the workspace experience",
 			"Mandatory rewrites of the underlying case table schema for every configuration change",
-			"A separate physical server that must be provisioned for each individual agent account"
+			"A separate physical server that must be provisioned for each individual agent account",
+			"Contextual side panels and declarative actions defined for the workspace experience"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -2782,12 +2782,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 79,
 		"prompt": "During onboarding an agent should immediately see any critical account handling instructions while working a case in the workspace. Where do special handling notes appear to support this usage?",
 		"choices": [
-			"Contextually within the agent workspace when the matching case conditions are met",
 			"Only in a nightly email digest delivered after the agent's shift has already ended",
+			"In the system logs table that only administrators review during scheduled audits",
 			"Exclusively on the external customer portal where customers read the notes themselves",
-			"In the system logs table that only administrators review during scheduled audits"
+			"Contextually within the agent workspace when the matching case conditions are met"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Special handling notes surface contextually in the agent workspace when their conditions match the case, so agents see critical account guidance at the moment they need it.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/special-handling-notes-for-csm.html"
@@ -2847,9 +2847,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A knowledge manager wants an objective measure of article health based on factors like feedback, age, and usage to prioritize maintenance. Which capability provides this score?",
 		"choices": [
 			"The Article Quality Index that scores knowledge articles to guide improvement efforts",
-			"A raw count of total cases opened this quarter regardless of any knowledge usage",
 			"The agent's individual login streak measured across consecutive working days only",
-			"The portal theme contrast ratio calculated for accessibility of the banner image"
+			"The portal theme contrast ratio calculated for accessibility of the banner image",
+			"A raw count of total cases opened this quarter regardless of any knowledge usage"
 		],
 		"correctIndex": 0,
 		"explanation": "The Article Quality Index (AQI) scores articles on quality dimensions such as feedback, freshness, and usage so knowledge managers can target articles needing improvement.",
@@ -2871,7 +2871,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"explanation": "Effective self-service deflection relies on findable, high-quality knowledge and guided catalog offerings; hiding knowledge or blocking case creation undermines the strategy.",
 		"sourceUrls": [
@@ -2916,9 +2916,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A CSM team wants generative AI to help agents summarize long case activity and draft customer replies within the workspace. Which ServiceNow capability delivers this?",
 		"choices": [
 			"Now Assist for Customer Service Management, which provides generative AI agent assistance",
-			"A basic keyword macro that only pastes a fixed canned response into every reply",
 			"The scheduled data collection job that snapshots Performance Analytics indicator scores",
-			"A discovery probe that inventories network devices unrelated to customer case handling"
+			"A discovery probe that inventories network devices unrelated to customer case handling",
+			"A basic keyword macro that only pastes a fixed canned response into every reply"
 		],
 		"correctIndex": 0,
 		"explanation": "Now Assist for CSM brings generative AI into the workspace to summarize cases, draft replies, and accelerate resolution while keeping the agent in control.",
@@ -2961,1695 +2961,2347 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 	{
 		"trackCode": "CIS-DF",
 		"order": 0,
-		"prompt": "In an import-set workflow, what does a Transform Map define?",
+		"prompt": "A CMDB program needs a governed workspace to extend the Linux Server class with two custom attributes before Discovery goes live. Which capability should the implementer use?",
 		"choices": [
-			"The Service Portal theme",
-			"How staging rows map into target records, including field mappings and optional scripts",
-			"LDAP listener ports onboarded through the standard integration framework pattern. (CIS-DF-0-w2)",
-			"The PA indicator time zone only"
+			"CI Class Manager to extend the parent class and define dictionary attributes",
+			"Service Mapping manual entry to bypass identification rules for new fields",
+			"Update Set capture from production to clone unrelated catalog variables",
+			"Import Set table designer to replace cmdb_ci_linux_server table inheritance"
 		],
-		"correctIndex": 1,
-		"explanation": "Transform maps connect a source staging table to a target table and control how rows become or update target records.",
+		"correctIndex": 0,
+		"explanation": "CI Class Manager is the governance workspace for extending CI classes, managing attributes, and configuring identification settings per class.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/washingtondc/integrate-applications/system-import-sets/c_CreatingNewTransformMaps.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-class-manager.html"
 		]
 	},
 	{
 		"trackCode": "CIS-DF",
 		"order": 1,
-		"prompt": "What is a typical purpose of marking a field as coalesce on a Transform Map?",
+		"prompt": "During data modeling workshops, stakeholders ask why Windows and Linux servers share fields such as serial number and install status. What CMDB design principle explains that reuse?",
 		"choices": [
-			"To disable field-level security weighted by criticality when competing for the same resource pool.",
-			"To schedule a daily data collection job",
-			"To locate an existing target row so the transform updates instead of inserting duplicates",
-			"To force the field to store JSON only"
+			"Class hierarchy inheritance lets child classes reuse attributes defined on parent classes",
+			"Each CI class must remain a standalone table with no shared columns",
+			"Import sets require every CI to load directly into cmdb_ci without subclassing",
+			"Discovery patterns copy parent attributes only after a full subnet scan completes"
 		],
-		"correctIndex": 2,
-		"explanation": "Coalesce fields participate in matching logic so transforms can merge into existing records when keys align.",
+		"correctIndex": 0,
+		"explanation": "CMDB classes form a hierarchy where specialized classes extend parent classes and inherit shared dictionary attributes and behavior.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/washingtondc/integrate-applications/system-import-sets/c_CreatingNewTransformMaps.html"
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-class-hierarchy.html"
 		]
 	},
 	{
 		"trackCode": "CIS-DF",
 		"order": 2,
-		"prompt": "How are most Configuration Item (CI) classes structured in the CMDB data model?",
+		"prompt": "SCCM and ServiceNow Discovery both update the same server CI, but hostname values conflict after each run. Which IRE component should the implementer tune first?",
 		"choices": [
-			"As flat spreadsheet uploads only",
-			"As exclusively client-side objects",
-			"As unrelated tables that cannot reference cmdb_ci",
-			"As a hierarchy where specialized classes extend more general base classes"
+			"CMDB Health completeness KPIs to archive stale hostname values automatically",
+			"Reconciliation rules to define which discovery source may update specific attributes",
+			"Identification rules to match incoming payloads to the correct CI record",
+			"Service catalog item variables to normalize hostname text before checkout"
 		],
-		"correctIndex": 3,
-		"explanation": "CMDB classes use inheritance so specialized CIs reuse attributes and behavior from parent classes.",
+		"correctIndex": 1,
+		"explanation": "After identification matches a CI, reconciliation rules govern attribute-level write authority so trusted sources win conflicts on fields such as hostname.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vancouver-servicenow-platform/page/product/configuration-management/concept/cmdb-ci-class-models.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-DF",
 		"order": 3,
-		"prompt": "What problem does the Identification and Reconciliation process primarily help address when multiple sources feed the CMDB?",
-		"choices": [
-			"Duplicate or conflicting CI representations by identifying matches and reconciling attributes",
-			"Eliminating the need for Discovery",
-			"Replacing all ACLs with data policies",
-			"Disabling import sets permanently validated using golden transaction sets in automated pipelines."
-		],
+		"questionType": "match",
+		"prompt": "Match each CMDB configuration artifact to the implementer outcome it primarily supports.",
+		"choices": [],
 		"correctIndex": 0,
-		"explanation": "Identification finds candidate matches while reconciliation applies source precedence so attributes stay consistent.",
+		"matchLeftItems": [
+			"CI Class Manager class extension",
+			"Identification rule identifier entry",
+			"Static reconciliation rule",
+			"CMDB 360 multisource data store"
+		],
+		"matchRightItems": [
+			"Governed schema and attributes for a specialized CI type",
+			"Stable keys that match incoming data to one existing CI",
+			"Source precedence that controls which writer updates a field",
+			"Audit trail of proposed and accepted attribute values per source"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Configuration work spans class modeling, identification keys, reconciliation precedence, and multisource provenance captured in CMDB 360.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/c_CMDBIdentifyandReconcile.html"
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/multisource-cmdb.html"
 		]
 	},
 	{
 		"trackCode": "CIS-DF",
 		"order": 4,
-		"prompt": "Before bulk-loading reference data with import sets, which practice most reduces downstream transform errors?",
+		"questionType": "multi",
+		"prompt": "Which table attributes on a CI record are commonly used for operational reporting and multisource governance? (Choose three.)",
 		"choices": [
-			"Load directly into sys_user without a staging table",
-			"Validate source keys, formats, and relationships in staging before running transforms",
-			"Turn off all business rules forever",
-			"Run transforms without reviewing staging rows"
+			"last_discovered timestamp showing when discovery last updated the CI",
+			"short_description from the caller's most recent incident only",
+			"install_status reflecting the CI lifecycle stage in the CMDB",
+			"sys_updated_by on the import set row staging table exclusively",
+			"discovery_source indicating which data source last influenced the CI"
 		],
-		"correctIndex": 1,
-		"explanation": "Import-set guidance emphasizes staging, mapping, and validation so transforms produce clean target data.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			2,
+			4
+		],
+		"explanation": "Discovery source, last discovered, and install status are core CMDB attributes for source traceability, freshness, and lifecycle reporting; incident short descriptions and staging metadata are not CI governance fields.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vancouver-integrate-applications/page/administer/import-sets/concept/c_ImportDataUsingImportSets.html"
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/c_ITILConfigurationManagement.html"
 		]
 	},
 	{
 		"trackCode": "CIS-DF",
 		"order": 5,
-		"prompt": "In IntegrationHub ETL, why is imported data first loaded into a staging table before being promoted to target tables?",
+		"prompt": "Duplicate Linux Server CIs appear after each SCCM import even though serial numbers match. Which configuration should the CMDB engineer review in CI Class Manager?",
 		"choices": [
-			"To automatically delete duplicate source rows without configuration",
-			"To encrypt every imported field regardless of table settings",
-			"To separate raw inbound data from production records and allow controlled transformation",
-			"To bypass transform maps and write directly to CMDB"
+			"Service Portal widget themes tied to cmdb_ci_linux_server lists",
+			"Identification rule identifier entries for the Linux Server class",
+			"Event Management correlation rules for Linux process monitoring",
+			"Catalog fulfillment flows that generate alm_asset records only"
 		],
-		"correctIndex": 2,
-		"explanation": "Staging tables provide a controlled landing zone for source data so teams can validate, normalize, and troubleshoot before updating destination records.",
+		"correctIndex": 1,
+		"explanation": "Identification rules and their identifier entries define the attribute combinations IRE uses to match incoming SCCM data to an existing CI instead of inserting duplicates.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/data-foundations/vancouver/integrationhub-etl/concept/staging-tables.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-DF",
 		"order": 6,
-		"prompt": "During import set processing, what is the primary purpose of coalesce fields on a transform map?",
+		"prompt": "Operations wants to compare hostname values proposed by Discovery, SCCM, and a manual spreadsheet import for one Windows Server CI. Which workspace view exposes per-source attribute history?",
 		"choices": [
-			"To decide which import rows are skipped based on domain separation",
-			"To generate import set run history records",
-			"To convert all date values into the instance time zone",
-			"To identify matching target records for update instead of always inserting"
+			"Service Catalog editor showing record producer checkout history",
+			"Incident Agent Workspace filtered by assignment group only",
+			"CMDB 360 view in CMDB Workspace with multisource attribute detail",
+			"Knowledge Management homepage sorted by article view count"
 		],
-		"correctIndex": 3,
-		"explanation": "Coalesce fields determine record matching logic between source and target, enabling upsert behavior and reducing duplicates.",
+		"correctIndex": 2,
+		"explanation": "CMDB 360 retains proposed and accepted attribute values from each discovery source in cmdb_multisource_data and exposes them in the CMDB 360 workspace view.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/servicenow-platform/vancouver/platform-administration/concept/c_TransformMaps.html"
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/multisource-cmdb.html"
 		]
 	},
 	{
 		"trackCode": "CIS-DF",
 		"order": 7,
-		"prompt": "A data engineer needs to inspect rows that failed transformation. Which record type is most useful to review first?",
+		"prompt": "The team adds a mandatory compliance_tag attribute to cmdb_ci_computer through CI Class Manager. What happens to existing computer CIs after the attribute is saved?",
 		"choices": [
-			"Import set run and transform error records",
-			"Sys_trigger",
-			"Sys_ui_action",
-			"Sys_user_grmember"
+			"They move to alm_asset and lose all cmdb_ci relationships permanently",
+			"They bypass IRE because custom attributes disable identification rules",
+			"They are automatically deleted and recreated by the next discovery schedule",
+			"They inherit the new dictionary field and can be populated through governed updates"
 		],
-		"correctIndex": 0,
-		"explanation": "Import set run and transform logs capture row-level processing details, including failures and script errors, which are essential for troubleshooting.",
+		"correctIndex": 3,
+		"explanation": "Attributes added through CI Class Manager extend the class dictionary so existing CIs in that hierarchy can store values once data stewards populate them.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/servicenow-platform/vancouver/platform-administration/task/t_ViewImportSetRunHistory.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-class-manager.html"
 		]
 	},
 	{
 		"trackCode": "CIS-DF",
 		"order": 8,
-		"prompt": "Which statement about staging table design is a best practice for repeatable ETL pipelines?",
+		"questionType": "multi",
+		"prompt": "Which steps are required before CMDB 360 can capture multisource attribute history for CMDB classes? (Choose two.)",
 		"choices": [
-			"Use one staging table for all source systems and all entities",
-			"Align staging columns to source payload structure and map downstream in transforms",
-			"Disable indexing on staging tables to speed inserts",
-			"Store only derived and transformed data in staging tables"
+			"Activate the ITOM Discovery License plugin on the instance",
+			"Convert cmdb_ci tables to non-CMDB application tables",
+			"Disable all static reconciliation rules for every CI class",
+			"Set glide.identification_engine.multisource_enabled to true"
 		],
-		"correctIndex": 1,
-		"explanation": "Staging models should capture source payloads clearly, while transformation logic handles normalization into destination schema.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			3
+		],
+		"explanation": "CMDB 360 requires the ITOM Discovery License and the multisource_enabled property; disabling reconciliation or converting CMDB tables is not part of enablement.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/data-foundations/vancouver/integrationhub-etl/concept/import-staging-design.html"
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/multisource-cmdb.html"
 		]
 	},
 	{
 		"trackCode": "CIS-DF",
 		"order": 9,
-		"prompt": "What is the main reason to apply field maps in a transform map instead of writing all logic in scripts?",
-		"choices": [
-			"Field maps are required only when importing XML attachments",
-			"Field maps run only after business rules on target tables",
-			"Field maps provide declarative, maintainable mapping for straightforward source-to-target assignments",
-			"Field maps prevent the use of coalesce on any field"
+		"questionType": "match",
+		"prompt": "Match each IRE configuration object to its primary function during CMDB updates.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Identification rule",
+			"Reconciliation rule",
+			"Dependent identification rule",
+			"CMDB 360 dynamic reconciliation rule"
 		],
-		"correctIndex": 2,
-		"explanation": "Declarative field mapping keeps simple mappings readable and easier to govern, reserving scripts for exceptional logic.",
+		"matchRightItems": [
+			"Determines whether incoming data matches an existing CI or creates a new one",
+			"Controls which source may write a specific attribute after a match",
+			"Links child CIs to a parent CI during hierarchical identification",
+			"Selects attribute values using multisource reported data rather than static priority alone"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "IRE separates matching logic, attribute authority, dependent class relationships, and CMDB 360-driven dynamic reconciliation behaviors.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/servicenow-platform/vancouver/platform-administration/concept/c_TransformMaps.html"
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/r_ReconciliationRulesPrinciples.html"
 		]
 	},
 	{
 		"trackCode": "CIS-DF",
 		"order": 10,
-		"prompt": "In a transform map, when does an onBefore transform script execute?",
+		"prompt": "After enabling CMDB 360, auditors ask which table stores every discovery source's proposed CI attribute values, including rejected updates. Which table should the implementer reference?",
 		"choices": [
-			"After target business rules complete",
-			"Only after all rows finish transforming",
-			"Only when coalesce fields are empty",
-			"Before each source row is transformed into a target operation"
+			"ecc_queue",
+			"alm_asset",
+			"sys_audit_delete",
+			"cmdb_multisource_data"
 		],
 		"correctIndex": 3,
-		"explanation": "onBefore scripts run per row prior to field mapping commit, allowing conditional control like ignore or value normalization.",
+		"explanation": "CMDB 360 persists per-source attribute proposals and outcomes in cmdb_multisource_data for reporting, audit, and recomputation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/servicenow-platform/vancouver/platform-administration/concept/c_TransformEventScripts.html"
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/multisource-cmdb.html"
 		]
 	},
 	{
 		"trackCode": "CIS-DF",
 		"order": 11,
-		"prompt": "Which transform script approach is best for skipping invalid source rows without failing the entire import run?",
+		"prompt": "A new cmdb_ci_cloud_database class must inherit common cloud account fields while adding database-specific identifiers. Which modeling approach aligns to CMDB standards?",
 		"choices": [
-			"Set ignore = true when validation conditions fail",
-			"Throw an unhandled exception in every invalid row",
-			"Delete the entire import set on first error",
-			"Disable coalesce so all rows insert"
+			"Store cloud databases only in alm_asset without any cmdb_ci record",
+			"Duplicate the entire cmdb_ci dictionary for each new cloud vendor manually",
+			"Extend an appropriate parent cloud or database class rather than creating an unrelated table",
+			"Load all cloud databases into cmdb_ci and avoid subclassing to simplify imports"
 		],
-		"correctIndex": 0,
-		"explanation": "Setting ignore to true in row-level script logic lets processing continue while excluding invalid rows from target updates.",
+		"correctIndex": 2,
+		"explanation": "Extending the correct parent class preserves hierarchy inheritance so shared attributes remain consistent while specialized identifiers are added on the child class.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/servicenow-platform/vancouver/platform-administration/concept/c_TransformEventScripts.html"
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-class-hierarchy.html"
 		]
 	},
 	{
 		"trackCode": "CIS-DF",
 		"order": 12,
-		"prompt": "A transform script needs to convert a source status code into a target reference value using lookup logic. Where should this custom logic live?",
+		"prompt": "Before changing identification keys on the Application Server class, the CMDB lead requires peer review and version control. Which tool is purpose-built for that governance workflow?",
 		"choices": [
-			"In an import set run schedule record",
-			"In a transform script or scripted field map",
-			"In a UI action on the target table",
-			"In a dashboard interactive filter"
+			"Performance Analytics data collector job scheduler",
+			"CI Class Manager with sn_cmdb_admin stewardship of class and IRE settings",
+			"Catalog Builder for record producer variable design only",
+			"Flow Designer for HR onboarding case routing"
 		],
 		"correctIndex": 1,
-		"explanation": "Transform scripts and scripted field maps are designed for row-level mapping and lookup conversions during transformation.",
+		"explanation": "CI Class Manager centralizes class schema, attribute, and identification configuration changes under CMDB administrator governance.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/servicenow-platform/vancouver/platform-administration/concept/c_TransformMaps.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-class-manager.html"
 		]
 	},
 	{
 		"trackCode": "CIS-DF",
 		"order": 13,
-		"prompt": "Why should transform scripts avoid unnecessary GlideRecord queries inside every row loop?",
-		"choices": [
-			"GlideRecord cannot be used in transform scripts",
-			"Queries are blocked when coalesce is enabled",
-			"Repeated queries can significantly increase transform runtime and contention",
-			"Row-level queries improve performance in all cases"
+		"questionType": "match",
+		"prompt": "Match each level of the CMDB class hierarchy to an example CI type.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"cmdb_ci",
+			"cmdb_ci_hardware",
+			"cmdb_ci_server",
+			"cmdb_ci_linux_server"
 		],
-		"correctIndex": 2,
-		"explanation": "High-volume row transforms can degrade quickly with per-row database calls; efficient caching or precomputed maps reduce overhead.",
+		"matchRightItems": [
+			"Base class for all configuration items",
+			"Parent class for physical infrastructure components",
+			"Parent class for server operating system instances",
+			"Specialized class for Linux server CIs"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "The CMDB hierarchy progresses from the base cmdb_ci class through hardware and server parents to specialized operating system classes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/data-foundations/vancouver/integrationhub-etl/concept/etl-transform-performance.html"
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-class-hierarchy.html"
 		]
 	},
 	{
 		"trackCode": "CIS-DF",
 		"order": 14,
-		"prompt": "What is a safe strategy when introducing new transform script logic in production data pipelines?",
+		"questionType": "multi",
+		"prompt": "Which attributes are strong candidates for identification rule identifier entries on hardware server classes? (Choose three.)",
 		"choices": [
-			"Enable scripts directly in production and monitor complaints",
-			"Run only onBefore scripts and remove field maps",
-			"Disable all target business rules permanently",
-			"Test in sub-production with representative data and review transform history before rollout"
+			"Serial number when reliably reported by authoritative sources",
+			"Class name combined with other stable identifiers such as UUID or asset tag",
+			"Manufacturer and model when used as part of a defined identifier entry",
+			"Short description free-text entered by callers on related incidents",
+			"Widget drilldown color preferences on CMDB dashboards"
 		],
-		"correctIndex": 3,
-		"explanation": "Validating with realistic datasets and run logs helps catch mapping regressions and performance issues before production impact.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1,
+			2
+		],
+		"explanation": "Identifier entries should combine stable, source-reported attributes like serial number, class, UUID, asset tag, manufacturer, and model; incident text and UI preferences are not identification keys.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/data-foundations/vancouver/integrationhub-etl/task/test-transforms.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-DF",
 		"order": 15,
-		"prompt": "When defining a data source for file-based imports, what does the data source record primarily control?",
+		"prompt": "Infrastructure CIs in the Network Gear class lack a consistent Managed by Group value, and no Technology management offering applies. How can an administrator set the group for all CIs in that class?",
 		"choices": [
-			"How ServiceNow locates and interprets the inbound file for loading",
-			"How dashboard widgets display imported metrics",
-			"How SLAs are calculated for imported records",
-			"How update sets capture source rows"
+			"Configure Managed by Group on the class in CI Class Manager and save the synchronization",
+			"Disable identification rules so Discovery assigns groups automatically",
+			"Create a catalog item that generates change requests for each network device",
+			"Run a one-time background script that hard-codes sys_id values on every CI"
 		],
 		"correctIndex": 0,
-		"explanation": "The data source configuration specifies file type, retrieval method, and parsing properties used by import processing.",
+		"explanation": "CI Class Manager can synchronize Managed by Group across all CIs in a class when no Technology management offering overrides group assignment.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/servicenow-platform/vancouver/platform-administration/concept/c_DataSources.html"
+			"https://www.servicenow.com/docs/r/servicenow-platform/common-service-data-model-csdm/csdm-data-synchronize-enable.html"
 		]
 	},
 	{
 		"trackCode": "CIS-DF",
 		"order": 16,
-		"prompt": "Which statement best describes a JDBC data source in ServiceNow data ingestion scenarios?",
+		"prompt": "Service Mapping shows an application service depending on a database CI, but impact analysis misses the link. Which relationship type should the data engineer create?",
 		"choices": [
-			"It can run only from client-side scripts",
-			"It enables importing data from external relational databases through configured connections",
-			"It bypasses import sets and writes directly to task tables",
-			"It is used only for importing XML attachments"
+			"Contains::Contained by between the MID Server and the application service",
+			"Depends on::Used by between the application service and the database CI",
+			"Owned by::Owns between the database CI and the caller's user record",
+			"Located in::Location of between the database CI and the data center rack only"
 		],
 		"correctIndex": 1,
-		"explanation": "JDBC data sources connect to supported external databases and feed import set processing in controlled ETL workflows.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/servicenow-platform/vancouver/platform-administration/task/t_CreateAJDBCDataSource.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 17,
-		"prompt": "Why should data source credentials and endpoints be managed carefully across environments?",
-		"choices": [
-			"Because credentials are copied into each imported target record",
-			"To ensure transform maps always run in global scope",
-			"To maintain secure access and avoid accidental imports from the wrong external system",
-			"Because data sources cannot be promoted via update sets"
-		],
-		"correctIndex": 2,
-		"explanation": "Environment-specific endpoint and credential governance prevents data leakage, authentication failures, and incorrect ingestion.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/servicenow-platform/vancouver/platform-administration/concept/c_DataSources.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 18,
-		"prompt": "A scheduled import job succeeds but loads no rows. Which area should be checked first?",
-		"choices": [
-			"Knowledge category permissions",
-			"PA dashboard drilldowns",
-			"Service Portal theme settings",
-			"Data source accessibility and file/query retrieval configuration"
-		],
-		"correctIndex": 3,
-		"explanation": "No-row outcomes commonly originate from data retrieval issues such as missing file access, empty source query results, or bad parsing settings.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/servicenow-platform/vancouver/platform-administration/task/t_TroubleshootImportSets.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 19,
-		"prompt": "What is the main reason to separate data source configuration from transform map logic?",
-		"choices": [
-			"It isolates ingestion connection concerns from downstream mapping and normalization rules",
-			"It disables coalesce requirements for target matching",
-			"It ensures all imports run only in manual mode",
-			"It prevents import set history from being retained"
-		],
-		"correctIndex": 0,
-		"explanation": "Decoupling source retrieval from transformation improves maintainability and allows source changes without rewriting mapping behavior.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/data-foundations/vancouver/integrationhub-etl/concept/data-pipelines.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 20,
-		"prompt": "Why should imported infrastructure records be mapped to the most appropriate CMDB class rather than a generic table?",
-		"choices": [
-			"Class selection affects only dashboard colors",
-			"Class-specific attributes and lifecycle behavior improve data usefulness and governance",
-			"Specific classes prevent relationship creation",
-			"Generic classes are required for all Discovery updates"
-		],
-		"correctIndex": 1,
-		"explanation": "Using the correct CI class enables accurate attributes, identification behavior, and operational processes tied to that asset type.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/common-service-data-model/vancouver/csdm/concept/c_CMDBClasses.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 21,
-		"prompt": "A pipeline imports server records but keeps creating duplicates. Which CMDB concept should be evaluated first?",
-		"choices": [
-			"Catalog item variable sets",
-			"Widget drilldowns",
-			"Identification and reconciliation rules for the target CI class",
-			"Knowledge base ownership"
-		],
-		"correctIndex": 2,
-		"explanation": "CMDB identification logic determines whether incoming data matches an existing CI or creates a new one.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/vancouver/cmdb/concept/c_IdentificationAndReconciliation.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 22,
-		"prompt": "What is the primary purpose of CI class hierarchy inheritance in CMDB modeling?",
-		"choices": [
-			"To disable class extensions for custom applications",
-			"To enforce one-to-one mapping with incident categories",
-			"To prevent all imports into base classes",
-			"To share common attributes while allowing specialized subclasses for specific CI types"
-		],
-		"correctIndex": 3,
-		"explanation": "Inheritance reduces redundancy by keeping shared fields in parent classes while child classes capture type-specific details.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/vancouver/cmdb/concept/cmdb-class-hierarchy.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 23,
-		"prompt": "Why is relationship data as important as CI attribute data when loading CMDB records?",
-		"choices": [
-			"Relationships provide dependency context needed for impact analysis and operational decision-making",
-			"Relationships are optional for service mapping and impact analysis",
-			"Attributes alone are sufficient for outage impact determination",
-			"Relationships are used only by reports, not operations"
-		],
-		"correctIndex": 0,
-		"explanation": "Service impact, change risk, and root-cause analysis rely on accurate CI dependencies, not just isolated attributes.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/vancouver/cmdb/concept/c_CIRelationships.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 24,
-		"prompt": "When expanding a data foundation to new CMDB domains, what is the recommended first step?",
-		"choices": [
-			"Disable reconciliation until all classes are populated",
-			"Define class model, required identifiers, and governance standards before bulk loading data",
-			"Load all records into cmdb_ci and avoid subclassing",
-			"Start with bulk inserts and classify records later"
-		],
-		"correctIndex": 1,
-		"explanation": "A defined model and governance baseline prevents large-scale rework and improves long-term CMDB quality.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/common-service-data-model/vancouver/csdm/concept/csdm-foundation-planning.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 25,
-		"prompt": "In Identification and Reconciliation (I&R), what is the primary role of an identification rule?",
-		"choices": [
-			"To archive stale CIs after a discovery schedule finishes",
-			"To decide which data source can overwrite a CI attribute",
-			"To uniquely match incoming data to an existing CI or create a new CI",
-			"To determine if incoming values violate dictionary constraints"
-		],
-		"correctIndex": 2,
-		"explanation": "Identification rules define the criteria I&R uses to determine whether incoming data maps to an existing CI or requires creating a new CI.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_IdentificationAndReconciliationEngine.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 26,
-		"prompt": "What happens when multiple identification entries are configured for a CI class in I&R?",
-		"choices": [
-			"The platform randomly selects one entry at runtime",
-			"All entries must match simultaneously before update",
-			"Only the most recently edited entry is considered",
-			"They are evaluated in sequence until a match is found"
-		],
-		"correctIndex": 3,
-		"explanation": "I&R evaluates identification entries in order and stops when it can confidently identify a CI.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/task/t_CreateIdentificationRules.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 27,
-		"prompt": "Which statement best describes reconciliation rules in CMDB?",
-		"choices": [
-			"They govern which source is allowed to write specific attributes after identification",
-			"They generate discovery patterns automatically",
-			"They prevent all updates from integration sources",
-			"They are only applied to non-CMDB tables"
-		],
-		"correctIndex": 0,
-		"explanation": "Reconciliation rules control attribute-level write authority by source once the CI has been identified.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/task/t_CreateReconciliationRules.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 28,
-		"prompt": "Why should source precedence be defined for key CI attributes such as serial number and model?",
-		"choices": [
-			"To force all integrations to update through import sets only",
-			"To ensure trusted sources consistently win attribute conflicts",
-			"To avoid running the identification engine",
-			"To reduce duplicate scheduled jobs"
-		],
-		"correctIndex": 1,
-		"explanation": "Source precedence in reconciliation prevents low-trust data from overwriting critical CI attributes maintained by authoritative systems.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_ReconciliationRules.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 29,
-		"prompt": "A CI update was identified correctly but skipped for one attribute. What is the most likely reason?",
-		"choices": [
-			"The table has no ACL for admin users",
-			"The CI class is marked read-only in dictionary",
-			"A reconciliation rule blocked that source from updating the attribute",
-			"The discovery schedule was paused"
-		],
-		"correctIndex": 2,
-		"explanation": "When identification succeeds but a field is not updated, reconciliation controls are the typical cause.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_ReconciliationRules.html",
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_IdentificationAndReconciliationEngine.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 30,
-		"prompt": "Why is mapping business services to technical services in CSDM important for CMDB governance?",
-		"choices": [
-			"It ensures all CIs are discovered by one MID Server",
-			"It enables unrestricted writes to cmdb_ci",
-			"It removes the need for CI relationships",
-			"It links outcomes to supporting architecture for impact analysis and ownership"
-		],
-		"correctIndex": 3,
-		"explanation": "CSDM service modeling ties business context to technical infrastructure so teams can understand ownership and impact.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_CSDMServices.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 31,
-		"prompt": "Which CSDM practice most improves service health reporting accuracy?",
-		"choices": [
-			"Defining clear service boundaries and relating supporting application/infrastructure CIs",
-			"Using one generic service CI for the entire enterprise",
-			"Creating services without ownership fields",
-			"Skipping relationship types to reduce complexity"
-		],
-		"correctIndex": 0,
-		"explanation": "Accurate health reporting depends on properly scoped services with explicit dependencies and ownership.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_ServiceModelingGuidelines.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 32,
-		"prompt": "In a CSDM-aligned model, what does a service offering primarily represent?",
-		"choices": [
-			"A deployment package for update sets",
-			"A consumable commitment variant of a service for a specific audience",
-			"A technical CI class used only by Discovery",
-			"A replacement for assignment groups"
-		],
-		"correctIndex": 1,
-		"explanation": "Service offerings provide a consumer-facing variant of a service with defined commitments and context.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_ServiceOfferings.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 33,
-		"prompt": "What is the value of assigning accountable owners to CSDM service records?",
-		"choices": [
-			"It eliminates the need for reconciliation rules",
-			"It automatically creates discovery schedules",
-			"It establishes governance responsibility for lifecycle and data quality",
-			"It prevents incident association with services"
-		],
-		"correctIndex": 2,
-		"explanation": "Named ownership is a core governance control for maintaining service accuracy and lifecycle accountability.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_GovernanceInCSDM.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 34,
-		"prompt": "Which outcome is most likely when CSDM service relationships are incomplete?",
-		"choices": [
-			"Automatic dependency inference in all reports",
-			"Reduced need for event management",
-			"Faster identification engine performance",
-			"Weaker impact analysis during incidents and changes"
-		],
-		"correctIndex": 3,
-		"explanation": "Missing dependencies lead to blind spots in impact analysis for operations, incident, and change processes.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_CSDMAndOperationalProcesses.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 35,
-		"prompt": "Why are CI relationships critical in CMDB beyond storing standalone CI records?",
-		"choices": [
-			"They reveal dependency chains used for impact analysis and service context",
-			"They increase list load speed by denormalizing all classes",
-			"They are required only for hardware lifecycle fields",
-			"They replace reconciliation rules for all attributes"
-		],
-		"correctIndex": 0,
-		"explanation": "Relationships provide the dependency model needed to understand upstream and downstream impact across services and infrastructure.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CIRelationships.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 36,
-		"prompt": "Which relationship strategy improves change risk analysis quality?",
-		"choices": [
-			"Linking all CIs directly to business services without intermediate layers",
-			"Maintaining accurate typed relationships that reflect real operational dependencies",
-			"Using generic related-to links for all CI pairs",
-			"Removing relationships for retired CIs only"
-		],
-		"correctIndex": 1,
-		"explanation": "Typed and accurate relationships allow impact engines and change assessments to model real dependency paths.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_RelationshipTypes.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 37,
-		"prompt": "What is a common consequence of stale CMDB relationship data?",
-		"choices": [
-			"Improved event correlation precision",
-			"Automatic reconciliation conflict resolution",
-			"Misleading blast-radius and outage impact analysis",
-			"Faster discovery pattern execution"
-		],
-		"correctIndex": 2,
-		"explanation": "Outdated dependencies can produce inaccurate impact results during incidents and planned changes.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBDataQuality.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 38,
-		"prompt": "When modeling application dependencies, which relationship approach is preferred?",
-		"choices": [
-			"Use one custom relationship type for all links to simplify reports",
-			"Avoid relationships for cloud resources",
-			"Store dependencies only in free-text fields",
-			"Use relationship types that reflect actual hosting and communication patterns"
-		],
-		"correctIndex": 3,
-		"explanation": "Accurate relationship semantics are essential for trustworthy dependency and service maps.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/task/t_CreateAndManageRelationships.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 39,
-		"prompt": "What governance control best sustains CMDB relationship integrity over time?",
-		"choices": [
-			"Regular quality checks with ownership and remediation workflows",
-			"Disabling relationship discovery to reduce noise",
-			"Limiting relationships to production CIs only",
-			"Manual relationship edits by any itil user"
-		],
-		"correctIndex": 0,
-		"explanation": "Ongoing governance with ownership and remediation is needed to prevent relationship drift.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBGovernanceAndHealth.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 40,
-		"prompt": "What is a key benefit of using discovery feeds in a CMDB strategy?",
-		"choices": [
-			"They replace identification and reconciliation entirely",
-			"They consolidate data ingestion from multiple tools into governed CMDB updates",
-			"They are required only for non-production environments",
-			"They disable integration schedules by default"
-		],
-		"correctIndex": 1,
-		"explanation": "Discovery feeds help normalize and ingest source data while still applying CMDB governance patterns like I&R.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/australia/discovery/concept/c_DiscoveryDataSourcesAndFeeds.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 41,
-		"prompt": "Why should discovery feed mappings align to CI class and attribute standards?",
-		"choices": [
-			"To prevent use of MID Servers",
-			"To force all feeds to run hourly",
-			"To reduce model drift and ensure data lands in the correct CMDB structures",
-			"To avoid creating dependency views"
-		],
-		"correctIndex": 2,
-		"explanation": "Standardized mappings preserve data quality by ensuring feed payloads map to intended classes and fields.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBDataIngestionBestPractices.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 42,
-		"prompt": "How do discovery feeds and reconciliation rules work together?",
-		"choices": [
-			"Reconciliation applies only to manual CI edits",
-			"Feeds can update any attribute when discovery is active",
-			"Feed ingestion bypasses reconciliation for faster writes",
-			"Reconciliation still governs whether feed sources can update controlled attributes"
-		],
-		"correctIndex": 3,
-		"explanation": "Even feed-driven updates are subject to reconciliation governance for attribute-level source authority.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_ReconciliationRules.html",
-			"https://www.servicenow.com/docs/r/it-operations-management/australia/discovery/concept/c_DiscoveryDataSourcesAndFeeds.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 43,
-		"prompt": "What monitoring practice most improves discovery feed reliability?",
-		"choices": [
-			"Tracking ingestion errors, transform exceptions, and stale feed timestamps",
-			"Running all feeds with identical credentials",
-			"Ignoring partial failures when at least one CI updates",
-			"Disabling error logs to improve throughput"
-		],
-		"correctIndex": 0,
-		"explanation": "Operational monitoring of error and freshness metrics is key to maintaining trustworthy feed-based CMDB data.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/australia/discovery/task/t_TroubleshootDiscoveryDataIngestion.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 44,
-		"prompt": "A provider wants to onboard a new network discovery source quickly without degrading CMDB quality. What should they do first?",
-		"choices": [
-			"Load data directly into production cmdb_ci",
-			"Map data to CIs, validate identification keys, and test reconciliation outcomes in sub-production",
-			"Disable duplicate CI checks documented in the operational level agreement appendix. (CIS-DF-44-w2)",
-			"Exclude all existing sources during onboarding"
-		],
-		"correctIndex": 1,
-		"explanation": "Controlled onboarding with mapping and governance validation prevents duplicate and low-quality CI updates.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_IdentificationAndReconciliationEngine.html",
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBDataQuality.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 45,
-		"prompt": "In an ETL design, what is the primary purpose of a staging layer?",
-		"choices": [
-			"To store only dashboard screenshots",
-			"To bypass data quality checks",
-			"To isolate raw extracts for validation and transformation before publish",
-			"To permanently replace the source system"
-		],
-		"correctIndex": 2,
-		"explanation": "A staging layer buffers inbound data so transformations and checks can run before curated data is published.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 46,
-		"prompt": "Which ETL pattern is best for reducing load volume when source tables are large and frequently updated?",
-		"choices": [
-			"Full reload every run",
-			"Manual CSV uploads only",
-			"Random sampling",
-			"Incremental extraction using change markers or watermarks"
-		],
-		"correctIndex": 3,
-		"explanation": "Incremental extraction captures only changed records and is the standard pattern for efficient large-table pipelines.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 47,
-		"prompt": "Why is an idempotent load strategy important in ETL pipelines?",
-		"choices": [
-			"It allows reruns without corrupting target datasets",
-			"It guarantees every run inserts duplicates",
-			"It forces all records into one table",
-			"It eliminates the need for keys"
-		],
-		"correctIndex": 0,
-		"explanation": "Idempotent logic ensures retries or reruns produce consistent outcomes without duplicate or conflicting records.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 48,
-		"prompt": "How should ETL pipelines typically handle records that fail validation rules?",
-		"choices": [
-			"Publish invalid rows with no flags",
-			"Route failed rows to an error quarantine for remediation",
-			"Drop the entire batch immediately",
-			"Automatically mark all rows as valid"
-		],
-		"correctIndex": 1,
-		"explanation": "Quarantining invalid rows preserves observability and supports controlled remediation without blocking all valid data.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 49,
-		"prompt": "What ETL approach best supports late-arriving reference attributes in dimensional models?",
-		"choices": [
-			"Convert all dimensions to free text",
-			"Overwrite historical data with nulls",
-			"Use surrogate keys and controlled backfill updates",
-			"Ignore late attributes permanently"
-		],
-		"correctIndex": 2,
-		"explanation": "Surrogate keys plus backfill processes allow dimensions to be corrected when reference values arrive after fact loads.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 50,
-		"prompt": "What is the primary goal of data certification in an enterprise data program?",
-		"choices": [
-			"To disable data pipelines",
-			"To increase duplicate records",
-			"To prevent all schema evolution",
-			"To establish trusted, governed datasets for business use"
-		],
-		"correctIndex": 3,
-		"explanation": "Data certification identifies datasets that meet defined quality, governance, and stewardship standards.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 51,
-		"prompt": "Why should a certified dataset include a named data owner and steward?",
-		"choices": [
-			"Named accountability ensures issue resolution and policy adherence",
-			"Ownership is optional for certified data",
-			"It allows skipping metadata",
-			"It removes the need for access controls"
-		],
-		"correctIndex": 0,
-		"explanation": "Certification requires clear accountability so quality and lifecycle decisions can be managed reliably.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 52,
-		"prompt": "Which control most directly supports ongoing certification confidence?",
-		"choices": [
-			"Disabling all data lineage",
-			"Recurring quality scorecards with threshold alerts",
-			"Manual screenshots in slides",
-			"One-time validation at initial publish only"
-		],
-		"correctIndex": 1,
-		"explanation": "Recurring scorecards continuously validate that certified data still meets required standards.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 53,
-		"prompt": "How does lineage help a certification review board?",
-		"choices": [
-			"Lineage removes source dependencies",
-			"Lineage replaces access audits",
-			"Lineage shows upstream/downstream impact before approving changes",
-			"Lineage only affects UI themes"
-		],
-		"correctIndex": 2,
-		"explanation": "Lineage visibility helps reviewers evaluate risk and blast radius when certified data structures change.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 54,
-		"prompt": "What should happen when a certified dataset drops below a required quality threshold?",
-		"choices": [
-			"Publish without notification",
-			"Keep certification status unchanged forever",
-			"Delete all historical records",
-			"Temporarily revoke or warn certification until remediation completes"
-		],
-		"correctIndex": 3,
-		"explanation": "Certification status should reflect current quality posture and trigger transparent remediation workflows.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 55,
-		"prompt": "Why are reference data loads often handled separately from transactional loads?",
-		"choices": [
-			"Reference data usually changes slowly and drives consistent lookups across datasets",
-			"Separate loads are only for UI reasons",
-			"Transactional data does not require keys",
-			"Reference data should never be versioned"
-		],
-		"correctIndex": 0,
-		"explanation": "Reference datasets provide controlled lookup values and are typically managed with different cadence and governance than transactions.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 56,
-		"prompt": "What is the main benefit of assigning surrogate keys during reference data loads?",
-		"choices": [
-			"To avoid lineage tracking",
-			"To create stable internal identifiers independent of source system codes",
-			"To prevent dimension joins",
-			"To remove all uniqueness constraints"
-		],
-		"correctIndex": 1,
-		"explanation": "Surrogate keys decouple internal models from volatile source codes and improve integration resilience.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 57,
-		"prompt": "How should ETL processes treat retired or deprecated reference values?",
-		"choices": [
-			"Continue using retired values forever",
-			"Convert to random new values",
-			"Track effective dating or status flags for controlled deprecation",
-			"Hard delete immediately with no audit"
-		],
-		"correctIndex": 2,
-		"explanation": "Effective dating and status controls preserve history while guiding consumers toward current reference values.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 58,
-		"prompt": "Which validation is most important before publishing reference data to downstream consumers?",
-		"choices": [
-			"Skip stewardship review",
-			"Confirm dark mode is enabled",
-			"Disable source attribution",
-			"Verify conformance to approved domains and uniqueness rules"
-		],
-		"correctIndex": 3,
-		"explanation": "Reference data must conform to governed domains and uniqueness constraints to prevent downstream semantic drift.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 59,
-		"prompt": "Why should reference data load jobs include change impact notifications?",
-		"choices": [
-			"So consumers can assess model and mapping effects before values are used in production",
-			"Because notifications replace testing",
-			"Because only DBAs need awareness",
-			"To avoid maintaining metadata correlated with vendor risk tier reassessments annually. (CIS-DF-59-w3)"
-		],
-		"correctIndex": 0,
-		"explanation": "Communicating value additions or deprecations helps dependent teams update mappings and avoid report inconsistencies.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 60,
-		"prompt": "What is the primary objective of a data health scan in a governed data platform?",
-		"choices": [
-			"To prevent metadata capture",
-			"To detect quality, completeness, and conformance issues early",
-			"To remove stewardship roles",
-			"To replace all ETL jobs"
-		],
-		"correctIndex": 1,
-		"explanation": "Health scans surface data reliability risks so remediation can occur before downstream consumers are impacted.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 61,
-		"prompt": "Which metric is most useful in a recurring data health scan program?",
-		"choices": [
-			"Color theme usage",
-			"Count of inactive users",
-			"Rule pass/fail trend by dataset over time",
-			"Number of dashboard viewers"
-		],
-		"correctIndex": 2,
-		"explanation": "Trend-based pass/fail metrics show whether data quality posture is improving or degrading across scan cycles.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 62,
-		"prompt": "Why should health scan findings be linked to ownership metadata?",
-		"choices": [
-			"It auto-deletes failing rows",
-			"Ownership is unrelated to remediation",
-			"It removes need for SLAs",
-			"It routes issues to accountable teams for timely correction"
-		],
-		"correctIndex": 3,
-		"explanation": "Assigning findings to dataset owners is essential for measurable and accountable issue resolution.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 63,
-		"prompt": "How should critical health scan failures be handled for certified data products?",
-		"choices": [
-			"Trigger incident-style remediation workflows with defined timelines",
-			"Hide the dataset immediately without notice",
-			"Archive all scan history",
-			"Ignore until annual review"
-		],
-		"correctIndex": 0,
-		"explanation": "Critical failures on trusted datasets need structured, time-bound response to protect consumer confidence.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 64,
-		"prompt": "What is the best reason to retain historical health scan results?",
-		"choices": [
-			"To avoid stakeholder reporting",
-			"To support root-cause analysis and evidence-based quality improvements",
-			"To prevent audits",
-			"To reduce storage costs"
-		],
-		"correctIndex": 1,
-		"explanation": "Historical scan evidence helps teams identify recurring defect patterns and validate sustained remediation outcomes.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/reference-pages/concept/c_DataManagement.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 65,
-		"prompt": "When preparing a source clone for historical migration, which action best preserves reliable timeline analytics?",
-		"choices": [
-			"Replace all historical timestamps with the migration execution date",
-			"Load records without preserving source system identifiers",
-			"Normalize legacy timestamps and retain immutable created/updated metadata mappings before load",
-			"Drop audit-related fields to speed up import performance"
-		],
-		"correctIndex": 2,
-		"explanation": "Reliable trend analysis depends on preserving temporal context, so timestamp normalization and source metadata mapping should be established before cloning and loading.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_ImportSets.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/table-administration/concept/c_ExtendingTables.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 66,
-		"prompt": "What is the most effective way to prepare clone data when duplicate users exist across merged business units?",
-		"choices": [
-			"Delete all user records from the source clone before transformation",
-			"Keep all duplicates and resolve identity issues after go-live",
-			"Map users only by display name for easier matching",
-			"Create deterministic reconciliation rules using unique keys and survivorship criteria before import"
-		],
-		"correctIndex": 3,
-		"explanation": "Identity quality must be established in clone preparation using stable keys and survivorship rules to avoid downstream assignment and reporting defects.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/c_DataManagement.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/task/t_CreateATransformMap.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 67,
-		"prompt": "During clone data preparation, why should reference integrity checks run before full-load transformations?",
-		"choices": [
-			"To prevent orphaned relationships that break workflows, lookups, and reporting",
-			"To force every missing reference to point to the System Administrator user",
-			"To avoid using coalesce logic in transform maps",
-			"To remove all reference fields and simplify table structure"
-		],
-		"correctIndex": 0,
-		"explanation": "Reference integrity validation identifies broken dependencies early, reducing failed loads and post-migration remediation effort.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_Coalescing.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/table-administration/concept/c_DictionaryAttributes.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 68,
-		"prompt": "Which clone data prep pattern most improves repeatable test migrations?",
-		"choices": [
-			"Skipping validation in lower environments to save time",
-			"Versioning transform scripts and data quality rules so the same pipeline can be rerun consistently",
-			"Creating one-time manual fixes without documenting steps",
-			"Editing production records directly during each test run"
-		],
-		"correctIndex": 1,
-		"explanation": "Repeatable migrations require controlled, versioned transformation logic so each rehearsal produces predictable outputs and measurable improvements.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_TransformEventScripts.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/update-sets/concept/c_UpdateSets.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 69,
-		"prompt": "What should be included in advanced clone data readiness gates before cutover?",
-		"choices": [
-			"Only a row-count comparison between source and target",
-			"A requirement that every field be populated regardless of design",
-			"Completeness, conformity, uniqueness, and referential integrity thresholds tied to business acceptance criteria",
-			"An assumption that all transformed records are valid if imports finish"
-		],
-		"correctIndex": 2,
-		"explanation": "Cutover readiness should be measured with multi-dimensional quality gates, not just load completion, to protect operational and reporting reliability.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/c_DataManagement.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/reference/r_ImportSetTables.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 70,
-		"prompt": "Which control is most important for data governance in a ServiceNow migration program?",
-		"choices": [
-			"Allow any implementation team member to change data standards ad hoc",
-			"Exclude business stakeholders from data quality decisions",
-			"Treat governance as a one-time pre-go-live activity only",
-			"Define accountable data owners and enforce stewardship responsibilities for critical domains"
-		],
-		"correctIndex": 3,
-		"explanation": "Data governance requires clear ownership and stewardship so quality rules, definitions, and remediation decisions are consistently enforced.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/c_DataManagement.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/table-administration/concept/c_TableAdministration.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 71,
-		"prompt": "How does a canonical data model improve governance across multiple source systems?",
-		"choices": [
-			"It standardizes business definitions and mappings so data remains consistent across integrations",
-			"It requires all source systems to use identical table names",
-			"It allows unrestricted free-text values for governed fields",
-			"It eliminates the need for transformation maps"
-		],
-		"correctIndex": 0,
-		"explanation": "A canonical model aligns semantics across systems, making transformation and validation repeatable and auditable.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/task/t_CreateATransformMap.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/c_DataManagement.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 72,
-		"prompt": "What is the strongest reason to maintain data lineage documentation for key fields?",
-		"choices": [
-			"It allows schema changes without impact analysis",
-			"It enables traceability from source to target for audits, defect triage, and compliance evidence",
-			"It replaces the need for validation testing",
-			"It ensures every migration can skip business sign-off"
-		],
-		"correctIndex": 1,
-		"explanation": "Lineage helps teams explain data provenance and transformation logic, which is essential for governance and regulated reporting.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_ImportSets.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 73,
-		"prompt": "In governed data pipelines, what should trigger remediation workflows?",
-		"choices": [
-			"Any successful import completion event",
-			"The creation of new update sets in development",
-			"Rule violations that exceed defined quality thresholds for critical attributes",
-			"User preference changes in personal dashboards"
-		],
-		"correctIndex": 2,
-		"explanation": "Governed remediation is driven by threshold-based data quality exceptions tied to business-critical standards.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/c_DataManagement.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/reference/r_ImportSetTables.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 74,
-		"prompt": "Which metric best reflects data governance effectiveness after migration stabilization?",
-		"choices": [
-			"Total number of transform scripts created",
-			"Count of non-governed custom fields requested",
-			"Volume of manual data fixes performed outside process",
-			"Sustained reduction in high-severity data defects and faster closure of quality issues"
-		],
-		"correctIndex": 3,
-		"explanation": "Effective governance shows up as fewer critical defects and quicker, controlled remediation when issues do occur.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/c_DataManagement.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 75,
-		"prompt": "In CMDB health management, what does the completeness metric primarily evaluate?",
-		"choices": [
-			"Whether required CI attributes are populated",
-			"Whether imports run through IntegrationHub",
-			"Whether every CI has two owners",
-			"Whether CI records are archived after 30 days"
-		],
-		"correctIndex": 0,
-		"explanation": "Completeness checks if required fields on CI records contain values needed for operational use.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-health-dashboard-overview.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 76,
-		"prompt": "What is the purpose of the CSDM Design and Planning domain?",
-		"choices": [
-			"To store incident work notes consolidated into a single pane using performance analytics.",
-			"To model strategy, business capabilities, and supporting architecture decisions",
-			"To replace assignment groups",
-			"To define SCCM connector schedules"
-		],
-		"correctIndex": 1,
-		"explanation": "The Design and Planning domain captures strategic and architectural context used to align services and technology.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/common-service-data-model/csdm-concepts.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 77,
-		"prompt": "Which relationship type best links an application service to the CI it depends on?",
-		"choices": [
-			"Contains::Contained by",
-			"Owned by::Owns",
-			"Depends on::Used by",
-			"Located in::Location of"
-		],
-		"correctIndex": 2,
-		"explanation": "Dependency relationships are used to represent service impact paths and upstream/downstream behavior.",
+		"explanation": "Depends on::Used by models operational dependencies so impact analysis can traverse from services to supporting infrastructure CIs.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping-relationships.html"
 		]
 	},
 	{
 		"trackCode": "CIS-DF",
-		"order": 78,
-		"prompt": "When implementing identification and reconciliation rules, what defines a strong identifier entry?",
+		"order": 17,
+		"prompt": "A vendor sends weekly CSV extracts of network gear that must upsert into cmdb_ci_netgear through governed CMDB rules. Which ingestion pattern fits best?",
 		"choices": [
-			"A scripted transform map only",
-			"A mandatory assignment group",
-			"Any display value field",
-			"A set of attributes likely to uniquely match one CI"
+			"Import set with transform map, coalesce keys, and IRE-controlled target updates",
+			"Direct JDBC insert into cmdb_ci_netgear bypassing staging and transform history",
+			"Manual list edits on the CI table without transform maps or coalesce fields",
+			"Update set promotion from a developer personal instance each week"
 		],
-		"correctIndex": 3,
-		"explanation": "Identifier entries combine stable attributes so incoming data can match exactly one existing CI where possible.",
+		"correctIndex": 0,
+		"explanation": "Import sets with transform maps and coalesce matching provide repeatable staging, mapping, and IRE-integrated upserts for external file feeds.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/washingtondc/integrate-applications/system-import-sets/c_CreatingNewTransformMaps.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 18,
+		"questionType": "multi",
+		"prompt": "Which ingestion methods can populate CMDB CI records while participating in Identification and Reconciliation? (Choose three.)",
+		"choices": [
+			"ServiceNow Discovery and Service Mapping probes",
+			"IntegrationHub ETL or spoke flows writing through IRE APIs",
+			"Import sets with transform maps targeting CMDB tables",
+			"Ad hoc direct table updates that bypass IRE for every insert",
+			"Knowledge article publishing that replaces cmdb_ci records"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1,
+			2
+		],
+		"explanation": "Discovery, import sets, and IntegrationHub ETL can feed IRE-governed CMDB updates; bypassing IRE or using knowledge articles are not valid CMDB ingestion paths.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-DF",
-		"order": 79,
-		"prompt": "What does CMDB correctness focus on?",
+		"order": 19,
+		"questionType": "match",
+		"prompt": "Match each CMDB relationship type to the dependency it best represents.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Runs on::Runs",
+			"Hosted on::Hosts",
+			"Uses::Used by",
+			"Connects to::Connected by"
+		],
+		"matchRightItems": [
+			"Software or process executing on a host CI",
+			"Infrastructure hosting another CI such as a VM on a hypervisor",
+			"Application or service consuming another CI such as a database",
+			"Network connectivity between two infrastructure CIs"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Typed CMDB relationships express hosting, execution, consumption, and connectivity patterns used in dependency and impact models.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_RelationshipTypes.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 20,
+		"prompt": "The Configuration Management team wants to identify which CIs have been created from an asset but have not been discovered. The team creates a report on the target CI Class. How does the team identify these CIs in the report?",
 		"choices": [
-			"Whether CI values match trusted source reality",
-			"Whether records have long descriptions",
-			"Whether all relationships are manual",
-			"Whether all CIs are assigned to admins"
+			"All CIs where the Last Discovered field is empty",
+			"All CIs with the Updated field older than a month",
+			"All CIs with a Discovery source value of 'SNAssetManagement'",
+			"All CIs with a Discovery source value of 'ServiceNow'"
+		],
+		"correctIndex": 2,
+		"explanation": "CIs automatically created from assets without a technical discovery update typically carry Discovery source SNAssetManagement, indicating asset-origin rather than scan-based population.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/create-ci-manual-cmdb-workspace.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 21,
+		"prompt": "A data steward creates a missing production server through the CMDB Workspace Create CI experience. What Discovery source value is set on the new CI?",
+		"choices": [
+			"ServiceNow",
+			"Import Set",
+			"SNAssetManagement",
+			"Manual via IRE"
+		],
+		"correctIndex": 3,
+		"explanation": "Manual CI creation in CMDB Workspace applies IRE rules and sets Discovery source to Manual via IRE to distinguish steward-entered records from automated feeds.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/create-ci-manual-cmdb-workspace.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 22,
+		"prompt": "HAM is configured so eligible hardware assets automatically create linked CIs when received. Which system property enables IRE-based CI creation from assets?",
+		"choices": [
+			"glide.asset.create_ci_with_ire set to true",
+			"glide.sys.domain.partition set to global",
+			"glide.ui.update_on_refresh set to true",
+			"glide.identification_engine.multisource_enabled set to false"
 		],
 		"correctIndex": 0,
-		"explanation": "Correctness measures the accuracy of CI data compared to authoritative systems and actual environment state.",
+		"explanation": "When glide.asset.create_ci_with_ire is true, eligible asset records create CIs through the IRE API with governed identification and reconciliation behavior.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 23,
+		"questionType": "multi",
+		"prompt": "Which practices improve asset-to-CI alignment and compliance identifier quality during ingestion? (Choose two.)",
+		"choices": [
+			"Use IRE identification on serial-number classes when enabling asset-driven CI creation",
+			"Store compliance identifiers only in incident work notes without CMDB fields",
+			"Populate authoritative serial numbers and asset tags on alm_asset before CI creation",
+			"Skip reconciliation rules so asset and discovery sources overwrite each other freely"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			2
+		],
+		"explanation": "Clean asset identifiers and IRE-based creation reduce mismatches between alm_asset and cmdb_ci; disabling reconciliation or hiding compliance data in incidents undermines alignment.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/c_ITILConfigurationManagement.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 24,
+		"questionType": "match",
+		"prompt": "Match each CMDB ingestion channel to how it typically enters the Identification and Reconciliation Engine.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"ServiceNow Discovery schedule",
+			"Import set transform to cmdb_ci",
+			"CMDB Workspace manual Create CI",
+			"Asset record with glide.asset.create_ci_with_ire enabled"
+		],
+		"matchRightItems": [
+			"Probe payloads processed as a discovery source through IRE",
+			"Staged rows mapped and submitted as an integration discovery source",
+			"Steward entry evaluated by IRE with Discovery source Manual via IRE",
+			"Asset lifecycle event creating a CI with Discovery source SNAssetManagement"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Discovery, imports, manual creation, and asset-driven CI creation each feed IRE with distinct discovery source values and ingestion mechanics.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 25,
+		"prompt": "A cloud inventory vendor exposes APIs that must feed the CMDB on a recurring schedule. Which integration pattern is designed for governed third-party data ingestion into ServiceNow?",
+		"choices": [
+			"Direct JDBC writes to cmdb_ci that bypass Identification and Reconciliation",
+			"Client-side UI scripts that insert CIs when a form loads",
+			"Manual CSV uploads to sys_user without a staging table",
+			"Service Graph Connect with mapped inbound payloads and scheduled retrieval"
+		],
+		"correctIndex": 3,
+		"explanation": "Service Graph Connect provides a governed connector framework for recurring third-party ingestion with mapping into CMDB structures.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/integrate-applications/australia/service-graph-connect/concept/c_ServiceGraphConnect.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 26,
+		"prompt": "An operations team loads weekly spreadsheet extracts into staging before promoting rows to CMDB tables. Which artifact orchestrates that bulk load workflow?",
+		"choices": [
+			"Event rule that correlates alerts into configuration items",
+			"Service Portal widget that renders spreadsheet previews only",
+			"Import set with data source, staging table, and transform map",
+			"CMDB Health dashboard KPI without a staging layer"
+		],
+		"correctIndex": 2,
+		"explanation": "Import sets combine data sources, staging tables, and transform maps to land, validate, and promote bulk data into target tables.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/integrate-applications/australia/system-import-sets/concept/c_ImportDataUsingImportSets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 27,
+		"prompt": "During transform processing, a row must be rejected when a mandatory serial number is missing without stopping the entire import run. Which transform script technique supports that behavior?",
+		"choices": [
+			"Throw an unhandled exception that aborts all remaining rows",
+			"Set ignore = true in an onBefore or onAfter script when validation fails",
+			"Delete the transform map after the first invalid row is encountered",
+			"Disable coalesce on every field map to force duplicate inserts"
+		],
+		"correctIndex": 1,
+		"explanation": "Row-level ignore logic lets transforms skip invalid staging rows while continuing to process the rest of the import set run.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/integrate-applications/australia/system-import-sets/concept/c_TransformEventScripts.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 28,
+		"questionType": "multi",
+		"prompt": "When an asset state is updated, which fields sync to the related CI? (Choose two.)",
+		"choices": [
+			"Operational status",
+			"Hardware Status",
+			"Install Status",
+			"Asset tag"
+		],
+		"correctIndex": 1,
+		"correctIndexes": [
+			1,
+			2
+		],
+		"explanation": "Asset-to-CI synchronization updates Install Status and Hardware Status on the related configuration item when asset state changes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/australia/asset-management/concept/c_AssetAndCIFieldSynchronization.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 29,
+		"questionType": "match",
+		"prompt": "Match each data ingestion artifact to its primary role in an import-set pipeline.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Data source",
+			"Staging table",
+			"Transform map",
+			"Coalesce fields"
+		],
+		"matchRightItems": [
+			"Defines how inbound files or queries are retrieved and parsed",
+			"Holds raw source rows before target promotion",
+			"Maps staging columns to target tables and optional scripts",
+			"Match existing target records for update instead of insert"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Import-set pipelines separate retrieval, staging, transformation, and matching concerns so teams can govern each step independently.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/integrate-applications/australia/system-import-sets/concept/c_ImportDataUsingImportSets.html",
+			"https://www.servicenow.com/docs/r/integrate-applications/australia/system-import-sets/concept/c_CreatingNewTransformMaps.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 30,
+		"prompt": "Discovery populates server CIs while a separate import set loads the same serial numbers from a legacy asset database. Which CMDB process prevents duplicate records when both feeds are active?",
+		"choices": [
+			"Removing reconciliation rules so the newest feed always wins every attribute",
+			"Identification and Reconciliation matching incoming rows to existing CIs",
+			"Disabling all transform maps until Discovery completes nightly",
+			"Storing Discovery results only in staging tables permanently"
+		],
+		"correctIndex": 1,
+		"explanation": "Identification finds or creates the CI match while reconciliation governs attribute updates, reducing duplicates from overlapping ingestion sources.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_IdentificationAndReconciliationEngine.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 31,
+		"prompt": "A network monitoring tool pushes topology through a discovery feed instead of classic probes. What must be validated before production onboarding?",
+		"choices": [
+			"Feed mappings align to CI classes, identification keys, and reconciliation outcomes in sub-production",
+			"All existing CMDB relationships are deleted to simplify feed matching",
+			"Reconciliation is disabled so feed payloads write every attribute immediately",
+			"Discovery schedules are paused globally until the feed runs for one year"
+		],
+		"correctIndex": 0,
+		"explanation": "Controlled feed onboarding validates class mapping, identification behavior, and reconciliation results before production CMDB updates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/australia/discovery/concept/c_DiscoveryDataSourcesAndFeeds.html",
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBDataIngestionBestPractices.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 32,
+		"prompt": "Repeated one-off transform scripts and undocumented field maps slow every new ingestion project. Which practice best addresses that technical debt?",
+		"choices": [
+			"Copy each transform map without coalesce fields to maximize insert volume",
+			"Run all imports in production first and fix errors after stakeholders complain",
+			"Disable import set run history to reduce database growth",
+			"Document standard mapping patterns, reusable scripts, and governed transform templates"
+		],
+		"correctIndex": 3,
+		"explanation": "Standardized, documented ingestion patterns reduce rework and make pipelines easier to maintain as new sources are onboarded.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/integrate-applications/australia/system-import-sets/concept/c_ImportDataUsingImportSets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 33,
+		"questionType": "multi",
+		"prompt": "Which two practices improve asset-to-CI synchronization quality during hardware ingestion? (Choose two.)",
+		"choices": [
+			"Align asset and CI classes so related records share consistent identifiers",
+			"Disable Identification and Reconciliation for all hardware classes",
+			"Load assets and CIs into unrelated tables without reference fields",
+			"Configure field synchronization maps for state attributes that must stay aligned"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			3
+		],
+		"explanation": "Consistent class alignment and configured synchronization maps keep asset lifecycle changes reflected on related CIs without duplicate records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/australia/asset-management/concept/c_AssetAndCIFieldSynchronization.html",
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_IdentificationAndReconciliationEngine.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 34,
+		"questionType": "match",
+		"prompt": "Match each discovery or Service Graph ingestion mechanism to what it primarily delivers.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Horizontal Discovery pattern",
+			"Service Graph Connect connector",
+			"Discovery feed",
+			"Import set transform"
+		],
+		"matchRightItems": [
+			"Probes and sensors that classify infrastructure during scheduled runs",
+			"Third-party API ingestion mapped through the connector framework",
+			"External tool payloads normalized into governed CMDB updates",
+			"Staging rows promoted to target tables with field maps and scripts"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Discovery patterns, Service Graph Connect, discovery feeds, and import set transforms each address different ingestion paths into the CMDB.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/australia/discovery/concept/c_Discovery.html",
+			"https://www.servicenow.com/docs/r/integrate-applications/australia/service-graph-connect/concept/c_ServiceGraphConnect.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/australia/discovery/concept/c_DiscoveryDataSourcesAndFeeds.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 35,
+		"prompt": "A SaaS inventory API delivers daily JSON payloads that must land in cmdb_ci_cloud_resource records. Which ingestion path applies Service Graph mapping before IRE processing?",
+		"choices": [
+			"Exporting CMDB snapshots to CSV and re-importing through sys_user",
+			"Direct update of cmdb_ci from a UI action without staging or identification",
+			"Service Graph Connect inbound integration with class and attribute maps",
+			"Creating manual CI records and disabling all reconciliation rules"
+		],
+		"correctIndex": 2,
+		"explanation": "Service Graph Connect inbound integrations map external payloads into CMDB classes so Identification and Reconciliation can govern the resulting updates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/integrate-applications/australia/service-graph-connect/concept/c_ServiceGraphConnect.html",
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBDataIngestionBestPractices.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 36,
+		"prompt": "Leadership wants a scorecard of duplicate CIs, stale relationships, and required fields missing on server classes. Which capability provides those KPIs out of the box?",
+		"choices": [
+			"Service Portal theme editor showing widget color compliance",
+			"ECC queue listing MID Server heartbeat messages",
+			"Import set run history filtered by transform script name only",
+			"CMDB Health dashboard with configurable health metrics and trends"
+		],
+		"correctIndex": 3,
+		"explanation": "CMDB Health aggregates KPIs such as duplicate CIs, stale relationships, and attribute completeness to monitor data quality over time.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBHealthDashboard.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 37,
+		"prompt": "An administrator must bulk-retire orphaned middleware CIs identified during a health review. Which workspace supports governed remediation tasks?",
+		"choices": [
+			"CMDB Data Manager with views and tasks for orphaned or stale CIs",
+			"Update set preview comparing widget themes across instances",
+			"Event Management maintenance calendar for alert suppression only",
+			"Discovery schedule editor used to increase probe thread counts"
+		],
+		"correctIndex": 0,
+		"explanation": "CMDB Data Manager provides workspace views and remediation tasks to find and clean up orphaned or stale configuration items.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBDataManager.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 38,
+		"questionType": "multi",
+		"prompt": "Which two roles are typically involved in CMDB data governance accountability? (Choose two.)",
+		"choices": [
+			"Data steward who resolves quality issues for assigned CI domains",
+			"catalog_admin who maintains service catalog item variables only",
+			"CMDB administrator who owns platform configuration and health policies",
+			"evt_mgmt_operator who triages monitoring alerts without CMDB access"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			2
+		],
+		"explanation": "CMDB administrators configure governance controls while data stewards remediate quality issues within their assigned configuration domains.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBGovernanceAndHealth.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 39,
+		"questionType": "match",
+		"prompt": "Match each CMDB governance capability to the quality problem it primarily addresses.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"CMDB Health KPI",
+			"CMDB Data Manager task",
+			"Identification rule",
+			"Reconciliation rule"
+		],
+		"matchRightItems": [
+			"Surfaces duplicate or incomplete records through scored metrics",
+			"Executes bulk remediation on orphaned or stale CIs",
+			"Matches incoming data to an existing CI or creates a new one",
+			"Controls which source may update a specific attribute after match"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Health metrics expose issues, Data Manager remediates them, and IRE rules prevent duplicates and unauthorized attribute overwrites during ingestion.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBHealthDashboard.html",
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_IdentificationAndReconciliationEngine.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 40,
+		"prompt": "Two integration feeds create separate server CIs with the same serial number and class. Which governance control should be tuned first to merge duplicates going forward?",
+		"choices": [
+			"Service Portal catalog layout for hardware request items",
+			"Event rule correlation fields on monitoring alert payloads",
+			"Identification entries and matching criteria for the server CI class",
+			"Discovery cluster failover order on the MID Server configuration"
+		],
+		"correctIndex": 2,
+		"explanation": "Identification rules define how incoming records match existing CIs; weak or missing criteria are the primary cause of duplicate server records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/task/t_CreateIdentificationRules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 41,
+		"prompt": "A CMDB program team needs a unified workspace to review health trends, launch cleanup tasks, and monitor class compliance. Which interface is purpose-built for that workflow?",
+		"choices": [
+			"Import set loader form used only for spreadsheet uploads",
+			"System properties editor for instance-wide SMTP settings",
+			"CMDB workspace combining health dashboards and Data Manager actions",
+			"Discovery status page listing probe execution timestamps"
+		],
+		"correctIndex": 2,
+		"explanation": "The CMDB workspace integrates health visibility and Data Manager remediation so teams can govern configuration data from one place.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBWorkspace.html",
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBDataManager.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 42,
+		"prompt": "When extending the CMDB class model, why should new CI types extend an appropriate principal class rather than cmdb_ci directly?",
+		"choices": [
+			"Principal classes provide the correct inherited attributes and identification behavior for the CI type",
+			"Principal classes prevent relationships from being created on child records",
+			"Extending cmdb_ci directly disables all reconciliation rules globally",
+			"Only principal classes may appear on incident forms"
+		],
+		"correctIndex": 0,
+		"explanation": "Extending the right principal class ensures specialized CIs inherit appropriate fields, lifecycle behavior, and identification patterns.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CIClassModels.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 43,
+		"questionType": "multi",
+		"prompt": "Which two CMDB Health metrics most directly indicate deduplication problems? (Choose two.)",
+		"choices": [
+			"Orphan CIs with no valid upstream or downstream relationships",
+			"SMTP failure counts on scheduled report subscriptions",
+			"Widget drilldown latency on operational dashboards",
+			"Duplicate CI records sharing the same identification keys"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			3
+		],
+		"explanation": "Duplicate CI and orphan relationship metrics highlight records that break identification integrity and dependency accuracy.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBHealthDashboard.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 44,
+		"questionType": "match",
+		"prompt": "Match each CMDB governance role to its primary accountability.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"CMDB administrator",
+			"Data steward",
+			"Integration owner",
+			"Service owner"
+		],
+		"matchRightItems": [
+			"Configures health policies, IRE rules, and workspace access",
+			"Remediates quality issues for assigned configuration domains",
+			"Ensures inbound feeds follow mapping and reconciliation standards",
+			"Validates that service dependencies reflect operational reality"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Effective CMDB governance distributes platform configuration, domain remediation, feed quality, and service validation across defined roles.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBGovernanceAndHealth.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 45,
+		"prompt": "CMDB Data Manager shows a queue of stale database CIs with no active relationships. What is the recommended remediation approach?",
+		"choices": [
+			"Accept all machine-learning relationship suggestions without steward review",
+			"Review each task, validate ownership, then retire or re-link CIs through governed workflows",
+			"Delete all cmdb_rel_ci records globally and rebuild maps from scratch overnight",
+			"Disable Discovery until every business service has a named owner"
+		],
+		"correctIndex": 1,
+		"explanation": "Data Manager tasks should be reviewed and remediated through governed retire or re-link actions rather than uncontrolled bulk deletes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBDataManager.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 46,
+		"prompt": "A health KPI shows required attributes missing on Linux server CIs after a new feed went live. What should the governance team investigate first?",
+		"choices": [
+			"Feed mapping, identification match results, and reconciliation write authority for affected attributes",
+			"Service Portal widget CSS variables tied to the server list layout",
+			"MID Server JVM heap settings on the discovery cluster",
+			"Catalog item fulfillment flows for hardware stockroom requests"
+		],
+		"correctIndex": 0,
+		"explanation": "Missing required attributes after a feed launch usually trace to mapping gaps, failed identification, or reconciliation blocking the authoritative source.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBHealthDashboard.html",
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_ReconciliationRules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 47,
+		"prompt": "A custom cmdb_ci_load_balancer class needs unique identification keys before a new discovery feed onboards. Which tool should define the principal class extension and identifiers?",
+		"choices": [
+			"Import set coalesce editor on the sys_user staging table",
+			"Event Management connector mapping for SNMP trap payloads",
+			"Service Catalog record producer for load balancer requests",
+			"CI Class Manager to configure the class hierarchy and identification entries"
+		],
+		"correctIndex": 3,
+		"explanation": "CI Class Manager is the supported interface for extending principal classes and aligning identification entries before feed onboarding.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CIClassModels.html",
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/task/t_CreateIdentificationRules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 48,
+		"questionType": "multi",
+		"prompt": "Which two controls reduce duplicate CIs when multiple governed sources update the same class? (Choose two.)",
+		"choices": [
+			"Strong identification entries evaluated in priority order",
+			"Disabling CMDB Health KPIs to avoid false positives",
+			"Loading all sources directly into cmdb_ci without IRE",
+			"Reconciliation rules with datasource precedence on key attributes"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			3
+		],
+		"explanation": "Identification prevents duplicate CI creation while reconciliation governs which source updates each attribute after a match is found.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_IdentificationAndReconciliationEngine.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 49,
+		"questionType": "match",
+		"prompt": "Match each CMDB workspace or Data Manager feature to the governance activity it supports.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Health trend chart",
+			"Orphan CI task queue",
+			"Class compliance view",
+			"Bulk retire action"
+		],
+		"matchRightItems": [
+			"Tracks KPI movement over time for executive review",
+			"Lists CIs lacking valid dependency context for steward action",
+			"Highlights classes missing required attributes or identifiers",
+			"Removes stale records through a governed lifecycle workflow"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "CMDB workspace and Data Manager features connect health monitoring, orphan remediation, class compliance, and governed retirement workflows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBWorkspace.html",
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBDataManager.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 50,
+		"prompt": "On the CMDB Health dashboard, which metric category evaluates whether CI attribute values align with trusted source data?",
+		"choices": [
+			"Compliance scores that measure SLA breach duration on incidents",
+			"Catalog utilization scores that track service request volume",
+			"Completeness scores that count populated required attributes only",
+			"Correctness scores that compare field values against authoritative systems"
+		],
+		"correctIndex": 3,
+		"explanation": "Correctness measures whether CI values reflect trusted source reality, while completeness focuses on required field population.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-health-dashboard-overview.html"
 		]
 	},
 	{
 		"trackCode": "CIS-DF",
-		"order": 80,
-		"prompt": "In CSDM, what is a key role of a Business Application record?",
+		"order": 51,
+		"prompt": "During a data foundation workshop, sponsors define critical success factors for CMDB trust. What should the implementer deliver next to operationalize those CSFs?",
 		"choices": [
-			"It stores MID Server credentials",
-			"It represents an application from a business portfolio perspective",
-			"It replaces technical service records",
-			"It defines ACL inheritance"
-		],
-		"correctIndex": 1,
-		"explanation": "Business Application represents the portfolio-facing view and connects business context to technical services.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/common-service-data-model/csdm-foundation-domain.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 81,
-		"prompt": "Why are reconciliation rules used in CMDB data ingestion?",
-		"choices": [
-			"To auto-create users for each CI class",
-			"To choose how import set rows are encrypted",
-			"To control which data source can update specific CI fields",
-			"To force all updates from low-priority sources"
-		],
-		"correctIndex": 2,
-		"explanation": "Reconciliation defines field-level update authority so trusted sources can override less reliable inputs.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 82,
-		"prompt": "What is a practical benefit of CI class hierarchy in the CMDB?",
-		"choices": [
-			"It removes all need for relationships",
-			"It limits records to one data source",
-			"It disables inheritance for child classes",
-			"It lets child classes inherit common attributes from parent classes"
-		],
-		"correctIndex": 3,
-		"explanation": "Class hierarchy supports reuse by inheriting shared dictionary attributes and behavior from parent CI classes.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-class-manager.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 83,
-		"prompt": "Which CSDM domain typically contains technical service constructs consumed by operations?",
-		"choices": [
-			"Build domain",
-			"Foundation domain",
-			"Portfolio domain",
-			"Sell domain"
+			"KPI definitions mapped to health metrics, accountable owners, and remediation thresholds",
+			"Custom tables that bypass identification and reconciliation entirely",
+			"Discovery schedules for every subnet before any governance model is agreed",
+			"A one-time export of all cmdb_ci records without quality targets"
 		],
 		"correctIndex": 0,
-		"explanation": "The Build domain organizes technical models and service constructs used for implementation and operational mapping.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/common-service-data-model/csdm-concepts.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 84,
-		"prompt": "How should duplicate CI creation from multiple discovery sources be reduced?",
-		"choices": [
-			"Disable identification rules",
-			"Tune identifier rules and source data quality to improve matching",
-			"Convert every CI to a custom table",
-			"Use only manual imports"
-		],
-		"correctIndex": 1,
-		"explanation": "Improving identification criteria and source normalization helps match to existing CIs instead of inserting duplicates.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 85,
-		"prompt": "What does a CI relationship in the CMDB primarily represent?",
-		"choices": [
-			"A scheduled script execution",
-			"A transform map source-to-target mapping",
-			"How one configuration item is connected to or depends on another",
-			"A user's password policy"
-		],
-		"correctIndex": 2,
-		"explanation": "Relationships capture topology and dependency context needed for impact analysis and service visibility.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-relationship-management.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 86,
-		"prompt": "What is the objective of CMDB data certification tasks?",
-		"choices": [
-			"To change CI classes in bulk automatically",
-			"To auto-close incidents nightly",
-			"To remove all orphaned users",
-			"To have owners attest that CI records remain accurate"
-		],
-		"correctIndex": 3,
-		"explanation": "Certification workflows ask designated owners to validate and attest the quality and current accuracy of CI data.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-data-certification.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 87,
-		"prompt": "In CSDM, what does a Business Service best describe?",
-		"choices": [
-			"A customer-facing service outcome consumed by users",
-			"A UI action category",
-			"A hardware model specification",
-			"A transform script include"
-		],
-		"correctIndex": 0,
-		"explanation": "Business Service represents a service offering from the consumer perspective, not a specific technical component.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/common-service-data-model/csdm-build-domain.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 88,
-		"prompt": "Why are ownership fields such as managed by and owned by important in CMDB governance?",
-		"choices": [
-			"They establish accountability for CI lifecycle and data quality",
-			"They automatically assign admin roles",
-			"They replace ACL rules",
-			"They disable reconciliation updates"
-		],
-		"correctIndex": 1,
-		"explanation": "Ownership attributes define responsibility for maintaining operationally useful and trustworthy CI records.",
+		"explanation": "CSFs become actionable when translated into measurable KPIs tied to CMDB health indicators, ownership, and threshold-based remediation.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-governance.html"
 		]
 	},
 	{
 		"trackCode": "CIS-DF",
-		"order": 89,
-		"prompt": "Which outcome indicates good CMDB relationship quality?",
+		"order": 52,
+		"prompt": "An analyst sees duplicate server CIs in CMDB Health test results. What is the first remediation step aligned with govern best practice?",
 		"choices": [
-			"Relationships are limited to one class",
-			"Only manual relationships exist",
-			"Dependency paths support accurate impact analysis and outage visibility",
-			"All CIs have identical parents"
+			"Delete all CIs in the class and reload from the oldest import set",
+			"Convert duplicates into knowledge articles without updating the CMDB",
+			"Review identification rule coverage for the class before merging duplicate records",
+			"Disable reconciliation so the newest feed always wins every attribute"
 		],
 		"correctIndex": 2,
-		"explanation": "High-quality relationships enable reliable service impact calculations and root-cause investigations.",
+		"explanation": "Duplicate remediation should confirm identification keys and rules are tuned so merges resolve current duplicates and reduce recurrence.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-relationship-management.html"
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/deduplicate-cis.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-DF",
-		"order": 90,
-		"prompt": "What is a recommended approach when a new CI class is needed?",
+		"order": 53,
+		"questionType": "multi",
+		"prompt": "Which two CMDB Health dashboard signals most strongly indicate a duplicate CI problem? (Choose two.)",
 		"choices": [
-			"Create random class names",
-			"Skip class manager and insert directly in dictionary tables",
-			"Use global scripts to force class behavior",
-			"Extend an appropriate parent class and define required attributes carefully"
-		],
-		"correctIndex": 3,
-		"explanation": "Thoughtful class extension preserves inheritance, reporting consistency, and maintainable data modeling practices.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-class-manager.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 91,
-		"prompt": "What does the CSDM Foundation domain provide?",
-		"choices": [
-			"Core records and shared entities used across products and domains",
-			"Incident major outage workflows only",
-			"Payroll integrations for HR",
-			"MID Server installation binaries"
-		],
-		"correctIndex": 0,
-		"explanation": "Foundation supplies common entities, such as organization and location structures, reused across the model.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/common-service-data-model/csdm-foundation-domain.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 92,
-		"prompt": "How can stale CIs be managed without immediately deleting records?",
-		"choices": [
-			"Convert CIs to knowledge records",
-			"Disable health dashboards",
-			"Move records to sys_user table",
-			"Mark CIs with lifecycle status and governance review criteria"
+			"Higher count of MID Server clusters provisioned in the datacenter",
+			"Declining correctness scores tied to duplicate-related health tests",
+			"Growing backlog of open de-duplication tasks generated by health jobs",
+			"Increased number of catalog items published to the service portal"
 		],
 		"correctIndex": 1,
-		"explanation": "Lifecycle statuses and governance reviews help retire or remediate stale records safely and audibly.",
+		"correctIndexes": [
+			1,
+			2
+		],
+		"explanation": "Duplicate issues surface through health test failures, declining correctness, and de-duplication tasks—not infrastructure or catalog volume metrics.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-health-dashboard-overview.html",
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/deduplicate-cis.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 54,
+		"questionType": "match",
+		"prompt": "Match each CMDB Health metric to the quality dimension it primarily measures.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Completeness",
+			"Correctness",
+			"Compliance",
+			"Health score"
+		],
+		"matchRightItems": [
+			"Required CI attributes are populated for operational use",
+			"Field values align with authoritative source systems",
+			"CIs meet configured health test and policy rules",
+			"Weighted rollup of class-level quality indicators"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "CMDB Health separates completeness, correctness, compliance, and an overall health score so teams can target specific quality gaps.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-health-dashboard-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 55,
+		"prompt": "An operator must remediate a small set of duplicate Linux server CIs flagged by a de-duplication task. Which tool is best suited for this scenario?",
+		"choices": [
+			"The Duplicate CI Remediator wizard to select a primary CI and merge attributes",
+			"A catalog item that retires assignment groups tied to the servers",
+			"An event rule that suppresses alerts until duplicates age out naturally",
+			"A transform map that reloads every server row without coalesce keys"
+		],
+		"correctIndex": 0,
+		"explanation": "The de-duplication wizard guides operators through selecting a primary CI, merging attributes and relationships, and retiring or deleting duplicates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/deduplicate-cis.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 56,
+		"prompt": "Lab hardware is decommissioned but must remain auditable and excluded from active operational reporting. Which lifecycle approach is most appropriate?",
+		"choices": [
+			"Hard-delete every related CI and relationship without retention policy",
+			"Disable CMDB Health jobs so retired CIs no longer appear in lists",
+			"Update install or operational lifecycle status to retired while retaining the CI record",
+			"Move the records to the sys_user table for long-term storage"
+		],
+		"correctIndex": 2,
+		"explanation": "Lifecycle attributes such as install and operational status support governed retirement without losing audit history.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-lifecycle-management.html"
 		]
 	},
 	{
 		"trackCode": "CIS-DF",
-		"order": 93,
-		"prompt": "Which import pattern is preferred for repeatable CI ingestion from external systems?",
+		"order": 57,
+		"prompt": "A govern team needs consistent attribute values when stewards bulk-update server CIs. Which CMDB Data Manager control supports this?",
 		"choices": [
-			"Manually editing CI records each week",
-			"Running only background scripts without mappings",
-			"Using import sets and transform maps with identification/reconciliation controls",
-			"Using update sets from production"
-		],
-		"correctIndex": 2,
-		"explanation": "Import sets with transforms provide controlled, repeatable ingestion pipelines that integrate with CMDB rules.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/import-sets.html",
-			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 94,
-		"prompt": "In CSDM terminology, what does a Service Offering represent?",
-		"choices": [
-			"An ACL rule bundle",
-			"A CI class for Linux servers",
-			"A transform map variant",
-			"A specific consumable version or tier of a service"
-		],
-		"correctIndex": 3,
-		"explanation": "Service Offerings describe concrete consumable variants of a service, such as tiers, regions, or support levels.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/common-service-data-model/csdm-build-domain.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 95,
-		"prompt": "What is the main governance reason to define authoritative data sources per CI attribute?",
-		"choices": [
-			"To avoid conflicting updates and improve trust in field values",
-			"To disable imports from discovery tools",
-			"To reduce ACL evaluations",
-			"To force all CIs into one class"
+			"Data policy rules that validate or standardize field values on targeted CI sets",
+			"Event correlation rules that group monitoring alerts by severity",
+			"Discovery behavior settings that change ICMP timeout intervals per subnet",
+			"Catalog client scripts that hide variables on unrelated request items"
 		],
 		"correctIndex": 0,
-		"explanation": "Authoritative source definitions reduce field conflicts and keep CI attributes aligned with trusted systems of record.",
+		"explanation": "CMDB Data Manager policies enforce validation and standardization during bulk lifecycle and attribute operations.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-data-manager.html"
 		]
 	},
 	{
 		"trackCode": "CIS-DF",
-		"order": 96,
-		"prompt": "Why is normalization important in CMDB data foundations?",
+		"order": 58,
+		"questionType": "multi",
+		"prompt": "Which two remediation activities are commonly executed through CMDB Data Manager? (Choose two.)",
 		"choices": [
-			"It replaces identifier rules",
-			"It deletes duplicate CIs automatically without review",
-			"It converts relationships into tags",
-			"It standardizes values like manufacturer/model naming for cleaner reporting and matching"
-		],
-		"correctIndex": 1,
-		"explanation": "Normalization makes source values consistent so matching, analytics, and operational reporting are more reliable.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/normalization-data-services-overview.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 97,
-		"prompt": "Which CSDM concept links technical implementation back to business context?",
-		"choices": [
-			"Only assignment groups",
-			"Only sys_properties consolidated when duplicate capabilities create user confusion. (CIS-DF-97-w1)",
-			"Mapped relationships between business applications, services, and technical services",
-			"Only transform maps"
-		],
-		"correctIndex": 2,
-		"explanation": "CSDM alignment is achieved through relationships connecting portfolio and business entities to technical service data.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/common-service-data-model/csdm-concepts.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 98,
-		"prompt": "What is a common reason a CI fails identification during import?",
-		"choices": [
-			"The CI has an assigned support group",
-			"The record has too many related incidents",
-			"The CI has work notes disabled",
-			"Incoming values do not satisfy any configured identifier rule"
-		],
-		"correctIndex": 3,
-		"explanation": "If source attributes do not match identifier criteria, the engine cannot confidently match to an existing CI.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
-		]
-	},
-	{
-		"trackCode": "CIS-DF",
-		"order": 99,
-		"prompt": "How does CMDB health support continual data improvement?",
-		"choices": [
-			"By surfacing quality scores and issues that teams can prioritize and remediate",
-			"By replacing reconciliation precedence",
-			"By auto-approving all CI changes",
-			"By disabling relationship creation"
+			"Orphaned relationship cleanup tasks for stale dependency links",
+			"Event Management connector template deployment for monitoring tools",
+			"Horizontal discovery schedule creation for new network ranges",
+			"Bulk lifecycle status updates across selected CI populations"
 		],
 		"correctIndex": 0,
-		"explanation": "Health dashboards provide measurable quality indicators that drive targeted remediation and governance cycles.",
+		"correctIndexes": [
+			0,
+			3
+		],
+		"explanation": "Data Manager focuses on governed bulk lifecycle operations and relationship hygiene—not discovery scheduling or event connector setup.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-data-manager.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 59,
+		"questionType": "match",
+		"prompt": "Match each duplicate remediation approach to the scenario where it fits best.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Duplicate CI Remediator wizard",
+			"De-duplication template",
+			"Identification rule tuning",
+			"CMDB Health duplicate detection rule"
+		],
+		"matchRightItems": [
+			"A handful of duplicates need guided manual merge review",
+			"Large duplicate volumes require repeatable automated selection logic",
+			"Incoming feeds keep creating new duplicates for the same keys",
+			"Existing duplicate groups must be surfaced as remediation tasks"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Govern teams combine detection rules, identification tuning, wizard merges, and templates depending on duplicate volume and recurrence patterns.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/deduplicate-cis.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-health-dashboard-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 60,
+		"prompt": "On the CMDB Data Foundations dashboard, which scheduled job supplies Performance Analytics widgets with trending non-compliant CI counts?",
+		"choices": [
+			"CMDB Data Foundations PA Metric Collection",
+			"CMDB Get Well CIs Processed Via IRE Metric Batch Collection only",
+			"Discovery status ECC queue processing job",
+			"Import set transform onBefore script scheduler"
+		],
+		"correctIndex": 0,
+		"explanation": "The CMDB Data Foundations PA Metric Collection job populates PA widgets with counts and trends for non-compliant CIs per metric.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 61,
+		"prompt": "A steward reviewing CMDB Health metric results needs context to start remediation. Which dashboard field provides guided next steps?",
+		"choices": [
+			"The sys_ui_theme record applied to the CMDB workspace",
+			"The MID Server version installed in each datacenter",
+			"The catalog item short description for hardware requests",
+			"Remediation playbook URLs linked from the metric list view"
+		],
+		"correctIndex": 3,
+		"explanation": "Health metrics include remediation playbook links to Now Support knowledge articles with issue context and correction guidance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-health-dashboard-overview.html"
 		]
 	},
 	{
 		"trackCode": "CIS-DF",
-		"order": 100,
-		"prompt": "In CSDM, why should organizations avoid over-customizing core model tables too early?",
+		"order": 62,
+		"prompt": "Before executing a bulk de-duplication template, what govern checkpoint reduces the risk of merging unrelated CIs?",
 		"choices": [
-			"It forces all services to become retired",
-			"It blocks all API access",
-			"It disables role inheritance",
-			"It can break alignment with product data expectations and upgrade paths"
+			"Confirm identification entries and matching keys cover the duplicate CI class",
+			"Assign every duplicate to the System Administrator user permanently",
+			"Remove reconciliation rules so imports overwrite all attributes",
+			"Disable all business rules on cmdb_ci until the template completes"
+		],
+		"correctIndex": 0,
+		"explanation": "Verification of identification rule coverage ensures duplicates share the same authoritative keys before automated merge logic runs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/deduplicate-cis.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 63,
+		"questionType": "multi",
+		"prompt": "Which two CMDB Data Foundations dashboard tabs focus on CSDM alignment and third-party import integrity? (Choose two.)",
+		"choices": [
+			"Data Management Practices metrics for properly configured imported data",
+			"Best Practices metrics for services, relationships, and intended table usage",
+			"Customizations metrics for excessive UI theme changes on forms",
+			"ITSM Processes metrics for incident assignment group coverage only"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Best Practices checks CSDM-related standards while Data Management Practices validates import configuration that preserves CMDB integrity.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 64,
+		"questionType": "match",
+		"prompt": "Match each CMDB Data Foundations dashboard tab to its primary govern focus.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Best Practices",
+			"Customizations",
+			"Data Management Practices",
+			"ITSM Processes"
+		],
+		"matchRightItems": [
+			"CSDM service and relationship standards in the CMDB",
+			"Controlled and justified CMDB class and attribute extensions",
+			"Integrity of third-party data imported into CMDB tables",
+			"Whether ITSM processes consume CMDB data effectively"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "The four dashboard tabs group metrics for standards adherence, customization discipline, import integrity, and process leverage.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 65,
+		"prompt": "After initial CMDB cleanup, how should a data foundation team operationalize ongoing govern practices?",
+		"choices": [
+			"Run health scans only during major platform upgrades every few years",
+			"Delegate all CMDB updates to end users without stewardship standards",
+			"Archive every health test result immediately after each dashboard refresh",
+			"Embed recurring health and KPI review cadences with accountable remediation owners"
+		],
+		"correctIndex": 3,
+		"explanation": "Sustained CMDB governance depends on routine reviews of health KPIs, assigned owners, and tracked remediation—not one-time or ad hoc efforts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-governance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 66,
+		"prompt": "CMDB Health compliance for a critical server class stays below target for three reporting cycles. What govern response is most appropriate?",
+		"choices": [
+			"Escalate through governance reviews with documented remediation plans and timelines",
+			"Deactivate all health tests for the class to remove visible failures",
+			"Delete non-compliant CIs without notifying application owners",
+			"Lower the compliance threshold until scores appear green on dashboards"
+		],
+		"correctIndex": 0,
+		"explanation": "Persistent KPI threshold breaches require formal escalation, remediation plans, and leadership visibility—not threshold manipulation or data deletion.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-governance.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-health-dashboard-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 67,
+		"prompt": "Stewards use CMDB Data Manager to retire stale lab equipment in bulk. Which lifecycle attributes are most relevant to the update?",
+		"choices": [
+			"SMTP server name and outbound email authentication profile",
+			"Install status and operational status reflecting retired or non-operational state",
+			"Flow Designer trigger type and subflow execution order",
+			"Catalog item picture URL and variable set display sequence"
 		],
 		"correctIndex": 1,
-		"explanation": "Excessive early customization can reduce compatibility with out-of-box capabilities and future model evolution.",
+		"explanation": "Bulk lifecycle operations target governed status fields such as install and operational status to retire CIs while preserving history.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/common-service-data-model/csdm-guidance.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-lifecycle-management.html",
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-data-manager.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 68,
+		"questionType": "multi",
+		"prompt": "Which two CMDB Data Manager policy controls reduce inconsistent bulk updates? (Choose two.)",
+		"choices": [
+			"Permanent deactivation of all identification and reconciliation rules",
+			"Data policy validation applied to targeted CI populations",
+			"Approval workflows required before mass attribute changes execute",
+			"Mandatory deletion of custom CI classes after every import run"
+		],
+		"correctIndex": 1,
+		"correctIndexes": [
+			1,
+			2
+		],
+		"explanation": "Governed bulk operations combine approval gates and data policies; disabling IRE or deleting classes undermines CMDB integrity.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-data-manager.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 69,
+		"questionType": "match",
+		"prompt": "Match each lifecycle attribute to its typical govern use.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"install_status",
+			"operational_status",
+			"Life cycle stage",
+			"managed_by_group"
+		],
+		"matchRightItems": [
+			"Tracks deployment state such as installed, in stock, or retired",
+			"Indicates whether the CI is actively in service",
+			"Supports phased retirement and audit review workflows",
+			"Identifies the accountable support group for the CI"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Lifecycle attributes communicate deployment, operational, retirement, and ownership context for governed CMDB records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-lifecycle-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 70,
+		"prompt": "As CMDB govern matures, what practice keeps executive KPIs actionable beyond the initial remediation wave?",
+		"choices": [
+			"Publish dashboards once and rely on ad hoc interpretation by individual admins",
+			"Track KPIs only during annual platform upgrade windows",
+			"Integrate health score and KPI reviews into recurring operating governance meetings",
+			"Restrict CMDB Health access to a single administrator account permanently"
+		],
+		"correctIndex": 2,
+		"explanation": "Operationalizing CMDB KPIs requires embedding metric review, decisions, and follow-up actions into routine governance cadences.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-governance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 71,
+		"questionType": "multi",
+		"prompt": "Which two artifacts connect business critical success factors to measurable CMDB govern outcomes? (Choose two.)",
+		"choices": [
+			"KPI trees linking program goals to health metrics and remediation owners",
+			"One-time spreadsheet exports stored outside the platform without owners",
+			"Health scorecards with threshold alerts reviewed by data stewards",
+			"Disabled CMDB Get Well jobs to reduce visible non-compliance counts"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			2
+		],
+		"explanation": "CSFs become govern outcomes when mapped to KPI trees and steward-reviewed scorecards—not offline exports or suppressed metric jobs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-governance.html",
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 72,
+		"questionType": "match",
+		"prompt": "Match each CMDB govern capability to its primary purpose.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"CMDB Health dashboard",
+			"CMDB Data Foundations dashboard",
+			"CMDB Data Manager",
+			"Duplicate CI Remediator wizard"
+		],
+		"matchRightItems": [
+			"Class-level quality scores and remediation task visibility",
+			"Foundational metric compliance with PA trend widgets",
+			"Policy-driven bulk lifecycle and relationship operations",
+			"Guided merge for individual de-duplication tasks"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Govern teams use Health for operational quality, Data Foundations for program metrics, Data Manager for bulk policy work, and the wizard for targeted duplicate merges.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-health-dashboard-overview.html",
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html",
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-data-manager.html",
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/deduplicate-cis.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 73,
+		"prompt": "Completeness scores improved on server CIs, but service impact analysis still misses upstream dependencies. Which Insight area should be investigated next?",
+		"choices": [
+			"Knowledge article vote totals for self-service deflection",
+			"Flow Designer subflow execution order for onboarding tasks",
+			"Relationship quality and dependency completeness across mapped services",
+			"Catalog item base price currency conversion settings"
+		],
+		"correctIndex": 2,
+		"explanation": "Strong attribute completeness alone does not guarantee impact visibility; relationship and dependency quality drive accurate service insight.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-relationship-management.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-health-dashboard-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 74,
+		"prompt": "From the CMDB Data Foundations dashboard Analytics Hub, how can an analyst list CIs causing a metric failure in near real time?",
+		"choices": [
+			"Run a transform map that deletes every CI below the compliance threshold",
+			"Select Real-time, drill into the PA widget, and use Show Records for non-compliant CIs",
+			"Export the sys_properties table and filter rows manually in a spreadsheet",
+			"Disable the CMDB Get Well Metric Collection job until scores reset"
+		],
+		"correctIndex": 1,
+		"explanation": "The Analytics Hub Real-time option with Show Records exposes the current non-compliant CI population behind a failing metric.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 75,
+		"prompt": "During an executive briefing, leadership asks why CMDB investment matters beyond inventory counts. Which business outcome best justifies a governed CMDB program?",
+		"choices": [
+			"Trusted configuration data enables accurate change risk, incident impact, and service continuity decisions",
+			"CMDB completeness guarantees every integration can skip identification and reconciliation rules",
+			"A populated CMDB eliminates the need for service ownership or data stewardship",
+			"Inventory volume alone satisfies audit requirements without relationship or ownership context"
+		],
+		"correctIndex": 0,
+		"explanation": "CMDB business value comes from reliable dependency and ownership context that supports operational decisions, not from record counts alone.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html",
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBOverview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 76,
+		"prompt": "A CMDB program manager opens the CMDB Data Foundations dashboard to prioritize remediation work. Which dashboard element links each metric to structured remediation guidance?",
+		"choices": [
+			"The widget color palette selector on the Analytics Hub page",
+			"The import set coalesce field list attached to each metric row",
+			"The MID Server status tile on the Discovery home module",
+			"The Remediation playbook URL column that opens Now Support knowledge articles for the metric"
+		],
+		"correctIndex": 3,
+		"explanation": "Data Foundations metrics include remediation playbook URLs that connect non-compliant indicators to documented analysis and fix guidance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 77,
+		"prompt": "An analyst wants to build a CMDB query using everyday language instead of manually adding nodes on the canvas. Which capability should they use in CMDB Query Builder?",
+		"choices": [
+			"A business rule that converts list filter strings into relationship records",
+			"The scheduled job that rotates cmdb_ci audit fields nightly",
+			"Intelligent Search for CMDB, which parses natural language into a valid query on the builder canvas",
+			"The transform map onBefore script editor attached to import set tables"
+		],
+		"correctIndex": 2,
+		"explanation": "Intelligent Search for CMDB accepts natural language query input, resolves table and relationship references, and constructs the query on the Query Builder canvas.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/querying-cmdb.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 78,
+		"questionType": "multi",
+		"prompt": "Which two outcomes explain why teams save and reuse CMDB Query Builder queries during data foundation engagements? (Choose two.)",
+		"choices": [
+			"Query saves automatically merge duplicate CIs without running identification rules",
+			"Saved queries provide repeatable investigation patterns for governance reviews and remediation campaigns",
+			"Shared queries reduce rework when multiple analysts investigate the same class or relationship pattern",
+			"Saved queries permanently disable Intelligent Search so only manual canvas edits are allowed"
+		],
+		"correctIndex": 1,
+		"correctIndexes": [
+			1,
+			2
+		],
+		"explanation": "Saved CMDB queries standardize repeatable analysis across teams; they do not replace I&R matching or disable NLQ capabilities.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/querying-cmdb.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 79,
+		"questionType": "match",
+		"prompt": "Match each CMDB insight capability to the operational need it primarily supports.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"CMDB Data Foundations dashboard",
+			"Natural language query in Query Builder",
+			"Saved CMDB queries",
+			"Unified Map"
+		],
+		"matchRightItems": [
+			"Monitor foundational health metrics and prioritize remediation by priority score",
+			"Build complex CI and relationship searches without manual canvas assembly",
+			"Reuse governed query definitions across analysts and recurring reviews",
+			"Visualize hierarchical CI dependencies centered on a selected home node"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Insight tooling spans health dashboards, NLQ-assisted query building, reusable saved queries, and Unified Map visualization for dependency context.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html",
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/querying-cmdb.html",
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-workspace-unified-map.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 80,
+		"prompt": "A change manager needs a single graphical view of upstream and downstream CIs for a production server without opening legacy maps separately. Which CMDB Workspace feature should they use?",
+		"choices": [
+			"Unified Map, which combines dependency and service mapping context around a chosen home node CI",
+			"A catalog item variable that stores related CI sys_ids as free text",
+			"The system properties module sorted alphabetically by name",
+			"The import set transform history list filtered by coalesce failures"
+		],
+		"correctIndex": 0,
+		"explanation": "Unified Map delivers a cohesive hierarchical map centered on a home node CI, integrating capabilities from Dependency Views and Service Mapping.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-workspace-unified-map.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 81,
+		"prompt": "An operations team still uses Dependency Views for impact walks but is migrating to CMDB Workspace. How should the implementer describe Unified Map relative to Dependency Views?",
+		"choices": [
+			"Unified Map removes all relationship data that Dependency Views previously displayed",
+			"Unified Map extends the legacy dependency experience with workspace navigation, contextual modules, and integrated service context",
+			"Unified Map replaces CI forms so technicians cannot edit attributes from a map",
+			"Dependency Views remain the only supported map when Service Mapping is not licensed"
+		],
+		"correctIndex": 1,
+		"explanation": "Unified Map modernizes dependency visualization within CMDB Workspace while retaining hierarchical relationship context teams relied on in Dependency Views.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-workspace-unified-map.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 82,
+		"prompt": "On the Data Foundations dashboard, a metric shows a low compliance percentage and priority 1 - Critical. What is the recommended next step for the CMDB administrator?",
+		"choices": [
+			"Disable the CMDB Get Well Metric Collection scheduled job to hide the score",
+			"Delete all non-compliant CIs immediately without stakeholder review",
+			"Open the linked remediation playbook article and follow its analysis and fix guidance for that metric",
+			"Convert the metric into a personal dashboard widget with no drill-down access"
+		],
+		"correctIndex": 2,
+		"explanation": "Critical Data Foundations metrics include playbook links that document problem context, analysis steps, and remediation guidance for the measured issue.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 83,
+		"questionType": "multi",
+		"prompt": "Which two statements accurately describe CMDB business value for service and operations leaders? (Choose two.)",
+		"choices": [
+			"CMDB value depends only on maximizing total CI count regardless of ownership or quality",
+			"Business value requires disabling reconciliation so every source can freely overwrite attributes",
+			"Governed configuration data supports portfolio decisions by connecting services to supporting technology",
+			"Accurate CI relationships improve blast-radius analysis during incidents and planned changes"
+		],
+		"correctIndex": 2,
+		"correctIndexes": [
+			2,
+			3
+		],
+		"explanation": "CMDB business value stems from trustworthy relationships and service linkage that inform impact and portfolio decisions—not unchecked record volume or ungoverned updates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBOverview.html",
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 84,
+		"questionType": "match",
+		"prompt": "A CMDB administrator explaining Data Foundations remediation playbooks to a CIO must describe the sequential structure of each playbook. Match each playbook section to its purpose.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"First",
+			"Second",
+			"Third",
+			"Fourth"
+		],
+		"matchRightItems": [
+			"Summary of indicator",
+			"Overview of problem",
+			"Importance of addressing issue",
+			"Fix or Improve"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Official CIS-DF sample guidance sequences playbook sections from indicator summary through problem overview, business importance, and fix-or-improve remediation steps.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 85,
+		"prompt": "An administrator disables Intelligent Search in CMDB Query Builder after a security review. Which system property controls that integration?",
+		"choices": [
+			"glide.ui.cmdb.dependency.max_depth set to zero hides all relationship nodes",
+			"glide.import_set.coalesce.strict set to true blocks transform map execution",
+			"glide.cmdb.query.nlq.activated set to false removes NLQ from the Query Builder search box",
+			"sn_cmdb.unified_map.enabled set to false deletes saved CMDB queries"
+		],
+		"correctIndex": 2,
+		"explanation": "The glide.cmdb.query.nlq.activated property enables or disables Intelligent Search for CMDB within Query Builder; it is true by default.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/querying-cmdb.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 86,
+		"prompt": "A data governance lead wants analysts across regions to run the same CMDB investigation weekly without rebuilding filters. What should they publish?",
+		"choices": [
+			"A saved CMDB Query Builder query shared with the appropriate roles or groups",
+			"A UI action that hard-codes sys_ids for every CI in the enterprise",
+			"A one-time CSV export stored on a local laptop outside the platform",
+			"An update set containing only dashboard theme CSS changes"
+		],
+		"correctIndex": 0,
+		"explanation": "Saved CMDB queries capture reusable filter and relationship logic so teams execute consistent investigations on a recurring basis.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/querying-cmdb.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 87,
+		"prompt": "During a change window review, a change manager opens Unified Map from an application CI and needs upstream and downstream dependency chains without leaving the CMDB workspace. Which map capability supports this investigation?",
+		"choices": [
+			"Dependency view with the selected CI as the home node and related CMDB relationships expanded",
+			"Import set staging view grouped by transform map coalesce rules only",
+			"Data Manager policy editor showing identification exclusion tables",
+			"Class Manager table inheritance diagram for CMDB metadata classes"
+		],
+		"correctIndex": 0,
+		"explanation": "Unified Map dependency view centers on a home CI and visualizes related upstream and downstream CMDB relationships for impact analysis during change and incident work.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-workspace-unified-map.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 88,
+		"questionType": "multi",
+		"prompt": "Which two Unified Map capabilities help incident and change teams during live investigations? (Choose two.)",
+		"choices": [
+			"Automatic retirement of stale CIs without governance review",
+			"Direct replacement of all identification rules with map layout preferences",
+			"Contextual side panel modules such as Related items and Changes for the selected CI",
+			"Hierarchical visualization of CI relationships centered on a chosen home node"
+		],
+		"correctIndex": 2,
+		"correctIndexes": [
+			2,
+			3
+		],
+		"explanation": "Unified Map combines relationship visualization with contextual modules for related records and changes; it does not alter I&R logic or retire CIs automatically.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-workspace-unified-map.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 89,
+		"questionType": "match",
+		"prompt": "Match each CMDB Data Foundations dashboard tab to the type of health checks it contains.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Best Practices",
+			"Customizations",
+			"Data Management Practices",
+			"ITSM Processes"
+		],
+		"matchRightItems": [
+			"CSDM-aligned standards such as service population and expected relationships",
+			"Appropriate use and scope of CMDB customizations",
+			"Integrity of third-party data imported into the CMDB",
+			"Whether ITSM processes leverage CMDB data effectively"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Data Foundations groups metrics into Best Practices, Customizations, Data Management Practices, and ITSM Processes tabs with distinct compliance focus areas.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 90,
+		"prompt": "Before a major data center change window, the change advisory board asks how CMDB insight reduces risk. Which answer best reflects CMDB business value in that scenario?",
+		"choices": [
+			"CMDB record volume alone satisfies change approval without reviewing relationships",
+			"Business value is limited to hardware asset depreciation reporting",
+			"Insight dashboards replace the need to link changes to any configuration items",
+			"Dependency and service maps expose affected CIs so planners can scope impact before approving the change"
+		],
+		"correctIndex": 3,
+		"explanation": "CMDB insight connects changes to dependent CIs and services so teams assess blast radius using governed configuration data rather than assumptions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-workspace-unified-map.html",
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBOverview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 91,
+		"prompt": "An incident manager traces upstream failures for a database CI and needs a hierarchical relationship walk. Which legacy CMDB visualization capability still informs the modern workspace map experience?",
+		"choices": [
+			"Catalog client scripts that validate variable input",
+			"Update set preview diffs for application scope",
+			"Dependency Views, which show upstream and downstream CI relationships for impact analysis",
+			"Import set staging tables used during CSV loads"
+		],
+		"correctIndex": 2,
+		"explanation": "Dependency Views established hierarchical relationship walks for impact analysis; Unified Map builds on that dependency context within CMDB Workspace.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-workspace-unified-map.html",
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_DependencyViews.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 92,
+		"prompt": "A CMDB administrator reviewing a failing Best Practices metric wants step-by-step remediation aligned to ServiceNow guidance. Where do Data Foundations dashboards surface that content?",
+		"choices": [
+			"The MID Server log bundle downloaded from the ECC queue",
+			"Remediation playbook knowledge articles linked from the metric list view",
+			"The transform map field map coalesce checkbox on import sets",
+			"A personal notification preference on the user record"
+		],
+		"correctIndex": 1,
+		"explanation": "Each Data Foundations metric can link to a remediation playbook article in Now Support with structured analysis and fix guidance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 93,
+		"questionType": "multi",
+		"prompt": "Which two CMDB insight practices help sustain data foundation improvements after initial remediation? (Choose two.)",
+		"choices": [
+			"Monitor Data Foundations metric trends through PA widgets and prioritize by calculated priority score",
+			"Reuse saved queries and playbooks so teams apply consistent investigation and fix patterns",
+			"Disable CMDB Get Well collection jobs once scores reach one hundred percent once",
+			"Remove ownership fields to simplify certification workflows"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Sustained improvement relies on ongoing metric monitoring plus repeatable queries and playbooks—not turning off collection or stripping ownership accountability.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html",
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/querying-cmdb.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 94,
+		"prompt": "At the start of a CSDM program, workshop facilitators need to identify who owns business services, technical services, and foundation data. Which activity should they schedule first?",
+		"choices": [
+			"Bulk import of every cmdb_ci record before defining any service boundaries",
+			"Immediate customization of all CSDM tables to match a legacy spreadsheet layout",
+			"Disabling reconciliation so each team can populate fields independently",
+			"Stakeholder mapping workshops that document accountable owners and decision makers per domain"
+		],
+		"correctIndex": 3,
+		"explanation": "CSDM engagements begin with stakeholder mapping so service, application, and foundation data have named owners before model and load activities scale.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_GovernanceInCSDM.html",
+			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/csdm-foundation-planning.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 95,
+		"prompt": "A new CSDM lead must explain how the model is organized to architecture reviewers. Which description accurately reflects CSDM domain structure?",
+		"choices": [
+			"Domains such as Foundation, Design and Planning, Build, and Sell group related service and portfolio constructs",
+			"Domains exist only for HR payroll integrations and exclude operational services",
+			"Each domain maps one-to-one with Discovery patterns and MID Server clusters",
+			"CSDM replaces CMDB classes with a single flat table for all infrastructure"
+		],
+		"correctIndex": 0,
+		"explanation": "CSDM organizes records into domains—Foundation, Design and Planning, Build, Sell, and related areas—that align business and technical service modeling.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_CSDMOverview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 96,
+		"prompt": "Executive sponsors ask why the organization should adopt CSDM instead of maintaining ad hoc CMDB spreadsheets. Which benefit should the implementer emphasize?",
+		"choices": [
+			"CSDM eliminates the need for any CMDB relationships or identification rules",
+			"A shared service vocabulary improves cross-product reporting, ownership clarity, and upgrade compatibility",
+			"The model restricts all services to a single generic CI class",
+			"Adoption guarantees every integration can skip data validation permanently"
+		],
+		"correctIndex": 1,
+		"explanation": "CSDM delivers a common data language that connects business and technical views, improving governance and platform consistency across applications.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_CSDMAndOperationalProcesses.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 97,
+		"prompt": "Which CSDM implementation approach best reduces rework during a multi-phase data foundation rollout?",
+		"choices": [
+			"Customize every core domain table before documenting any stakeholders",
+			"Load all custom tables and retire CSDM foundation records after go-live",
+			"Establish foundation and ownership first, then expand Build and service relationships in prioritized increments",
+			"Defer service modeling until every CI in the enterprise reaches one hundred percent completeness"
+		],
+		"correctIndex": 2,
+		"explanation": "Phased CSDM adoption starts with foundation data and governance, then iteratively expands service and relationship modeling aligned to business priorities.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/csdm-foundation-planning.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 98,
+		"questionType": "multi",
+		"prompt": "During stakeholder mapping for CSDM, which two roles should be identified before detailed service modeling workshops? (Choose two.)",
+		"choices": [
+			"Every instance user with the admin role regardless of domain expertise",
+			"External auditors who will never interact with service records",
+			"Technical service or application owners responsible for supporting CIs and relationships",
+			"Business service owners accountable for consumer-facing outcomes"
+		],
+		"correctIndex": 2,
+		"correctIndexes": [
+			2,
+			3
+		],
+		"explanation": "Effective CSDM stakeholder mapping names business and technical ownership; broad admin access or passive audit contacts do not substitute for service accountability.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_GovernanceInCSDM.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 99,
+		"questionType": "match",
+		"prompt": "Match each CSDM domain to the type of records it primarily contains.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Foundation",
+			"Design and Planning",
+			"Build",
+			"Sell"
+		],
+		"matchRightItems": [
+			"Shared organizational entities such as company, location, and group structures",
+			"Strategy, business capabilities, and portfolio planning constructs",
+			"Technical services, application services, and supporting CMDB relationships",
+			"Market-facing offerings and commercial service definitions"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "CSDM domains separate foundation master data, planning artifacts, operational build constructs, and sell-side offering definitions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_CSDMOverview.html",
+			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_CSDMServices.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 100,
+		"prompt": "A program manager drafting a CSDM roadmap asks which sequencing principle ServiceNow recommends for data foundation maturity. What should the implementer advise?",
+		"choices": [
+			"Begin with unrestricted custom tables and migrate to CSDM only after production go-live",
+			"Skip stakeholder engagement until every CMDB metric reaches full compliance",
+			"Align foundation master data and governance first, then connect business and technical services with measured expansion",
+			"Implement Sell domain offerings before any location or company records exist"
+		],
+		"correctIndex": 2,
+		"explanation": "CSDM approach prioritizes governed foundation data and ownership before scaling service relationships and portfolio constructs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/csdm-foundation-planning.html"
 		]
 	},
 	{
 		"trackCode": "CIS-DF",
 		"order": 101,
-		"prompt": "Which table strategy best supports broad platform reuse for CI-like records?",
+		"prompt": "Foundation data workshops reveal conflicting location hierarchies across business units. Which stakeholder mapping outcome resolves the conflict before CMDB loads continue?",
 		"choices": [
-			"Store all asset classes in a single string field",
-			"Disable inheritance for performance",
-			"Use class extension and shared parent attributes where appropriate",
-			"Create unrelated custom tables for every integration"
+			"Documented data owners and agreed reference standards for location and organization records",
+			"Removal of all location fields from CI classes to avoid validation",
+			"A decision to load every variant without reconciliation or ownership",
+			"Assignment of the admin role to every workshop participant"
 		],
-		"correctIndex": 2,
-		"explanation": "Using class extension and shared attributes enables consistent behavior, reporting, and governance across CI families.",
+		"correctIndex": 0,
+		"explanation": "Foundation stakeholder mapping establishes accountable owners and reference standards so shared entities remain consistent across integrations and services.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-class-manager.html"
+			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_GovernanceInCSDM.html",
+			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/csdm-foundation-domain.html"
 		]
 	},
 	{
 		"trackCode": "CIS-DF",
 		"order": 102,
-		"prompt": "What does a CI owner typically validate during data certification?",
+		"prompt": "After CSDM alignment, portfolio leaders report faster impact assessments during outages. Which benefit best explains that improvement?",
 		"choices": [
-			"Only user avatar images",
-			"Only the instance timezone",
-			"Only update set names",
-			"That key CI attributes and relationships are still accurate"
+			"CSDM removes all need for CMDB dependency views and saved queries",
+			"Foundation domains replace incident categorization with catalog variables",
+			"Service modeling automatically disables duplicate CI creation without I&R configuration",
+			"Mapped business-to-technical service relationships clarify which consumer services depend on failed infrastructure"
 		],
 		"correctIndex": 3,
-		"explanation": "Certification asks owners to confirm critical attributes and relationship fidelity for their governed CIs.",
+		"explanation": "CSDM links business services to technical dependencies so impact analysis reflects consumer outcomes—not isolated CI lists.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-data-certification.html"
+			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_CSDMServices.html",
+			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_CSDMAndOperationalProcesses.html"
 		]
 	},
 	{
 		"trackCode": "CIS-DF",
 		"order": 103,
-		"prompt": "What is the primary value of mapping technical services to business services in CSDM?",
+		"questionType": "multi",
+		"prompt": "Which two practices align a CSDM rollout with CMDB data foundation goals? (Choose two.)",
 		"choices": [
-			"It improves service visibility and impact tracing from infrastructure to business outcomes",
-			"It replaces all incident categorization",
-			"It removes the need for CMDB relationships",
-			"It disables event management constrained by export control classifications on shared data sets."
+			"Defer all relationship modeling until custom CMDB classes replace out-of-box tables",
+			"Allow each integration to invent local service definitions without central review",
+			"Define service boundaries and relate supporting CIs before declaring services production-ready",
+			"Use foundation domain standards for shared entities consumed by multiple applications"
 		],
-		"correctIndex": 0,
-		"explanation": "Service mappings create end-to-end context so teams can understand technical failures in business terms.",
+		"correctIndex": 2,
+		"correctIndexes": [
+			2,
+			3
+		],
+		"explanation": "CSDM and CMDB foundations converge on governed shared entities and explicit service-to-CI relationships rather than unconstrained local definitions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/common-service-data-model/csdm-build-domain.html"
+			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_ServiceModelingGuidelines.html",
+			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/csdm-foundation-domain.html"
 		]
 	},
 	{
 		"trackCode": "CIS-DF",
 		"order": 104,
-		"prompt": "What is a best-practice first step before enabling new CMDB governance policies?",
-		"choices": [
-			"Grant every user cmdb_admin",
-			"Delete all custom classes",
-			"Disable imports for 90 days",
-			"Assess current data quality baseline and ownership model"
+		"questionType": "match",
+		"prompt": "Match each CSDM adoption activity to the program outcome it primarily delivers.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Stakeholder mapping",
+			"Foundation data certification",
+			"Service relationship modeling",
+			"Portfolio alignment workshops"
 		],
-		"correctIndex": 1,
-		"explanation": "A baseline of quality scores and ownership responsibilities is needed to design realistic governance improvements.",
+		"matchRightItems": [
+			"Named owners and decision rights for each CSDM domain and data set",
+			"Validated organizational and location master data before dependent services go live",
+			"Traceable links between business services and supporting technical CIs",
+			"Business capabilities and offerings connected to measurable platform investments"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "CSDM programs sequence stakeholder accountability, foundation certification, service linkage, and portfolio alignment to deliver governed end-to-end service data.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-governance.html"
+			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_GovernanceInCSDM.html",
+			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/csdm-foundation-planning.html"
 		]
 	},
 	{
@@ -4705,12 +5357,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 3,
 		"prompt": "What is the role of an Identification section in a horizontal discovery pattern?",
 		"choices": [
-			"Schedule recurring port scans against every subnet defined in the discovery behavior",
 			"Evaluate collected data to decide whether the pattern applies to the discovered CI",
+			"Generate PDF topology reports for service owners reviewing dependency maps",
 			"Replace CMDB identification rules so reconciliation is skipped for matched devices",
-			"Generate PDF topology reports for service owners reviewing dependency maps"
+			"Schedule recurring port scans against every subnet defined in the discovery behavior"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "Identification sections contain conditional logic that determines if a device matches the pattern before connection and extension steps execute.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-patterns-overview.html"
@@ -4817,12 +5469,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 10,
 		"prompt": "How do horizontal discovery patterns differ from relying solely on legacy probe customizations?",
 		"choices": [
-			"Patterns provide modular, maintainable logic that is easier to test and govern over time",
 			"Patterns bypass the Identification and Reconciliation Engine for all CI classes",
+			"Patterns disable credential testing so MID Servers execute scans faster",
 			"Patterns write only to asset tables and never update configuration item records",
-			"Patterns disable credential testing so MID Servers execute scans faster"
+			"Patterns provide modular, maintainable logic that is easier to test and govern over time"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Horizontal patterns offer structured, reusable flows for interpreting discovery results compared with scattered probe script customizations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/c-UsingPatternsForHorizontalDiscovery.html"
@@ -4898,9 +5550,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "WMI-based scripting steps in horizontal discovery patterns are commonly used to collect what from Windows hosts?",
 		"choices": [
 			"Running processes, services, and OS configuration attributes via Windows Management Instrumentation",
-			"OAuth tokens from Azure Active Directory for cloud tag synchronization workflows",
 			"SNMP trap definitions exported from third-party network monitoring appliances",
-			"Change calendar entries linked to maintenance windows in the ITSM application"
+			"Change calendar entries linked to maintenance windows in the ITSM application",
+			"OAuth tokens from Azure Active Directory for cloud tag synchronization workflows"
 		],
 		"correctIndex": 0,
 		"explanation": "WMI steps query Windows hosts for process lists, service details, and other OS-level data used to identify applications and populate CI attributes.",
@@ -4993,10 +5645,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 21,
 		"prompt": "Which governance action most improves long-term horizontal pattern quality in a Discovery program?",
 		"choices": [
-			"Permit emergency production edits without peer review or test evidence",
 			"Suppress execution logs globally to keep retention costs consistently low",
+			"Delay all pattern maintenance until incidents force urgent correction",
 			"Version pattern changes with documented ownership and test results attached",
-			"Delay all pattern maintenance until incidents force urgent correction"
+			"Permit emergency production edits without peer review or test evidence"
 		],
 		"correctIndex": 2,
 		"explanation": "Versioned change control with test evidence supports safe evolution of discovery patterns and faster troubleshooting when issues arise.",
@@ -5050,7 +5702,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			2
 		],
 		"explanation": "Production promotion requires verified pattern output on representative targets and review of credentials and parsing logic to prevent CMDB quality regressions.",
 		"sourceUrls": [
@@ -5062,12 +5714,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 25,
 		"prompt": "When defining Discovery scope for a large enterprise network, why should administrators segment address space into explicit IP ranges?",
 		"choices": [
-			"Control discovery scope and reduce unnecessary probe traffic across wide address blocks",
 			"Force every endpoint into a single MID queue regardless of network segmentation design",
+			"Bypass classification for unknown hosts until manual CI mapping is completed by operators",
 			"Prevent ECC records from being created so queue tables remain nearly empty always",
-			"Bypass classification for unknown hosts until manual CI mapping is completed by operators"
+			"Control discovery scope and reduce unnecessary probe traffic across wide address blocks"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Scoped IP range definitions limit where Discovery scans, improving performance and reducing network and credential noise.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
@@ -5367,9 +6019,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Classification fails with \"No credentials would authenticate\" during the Classification phase. What is the most likely cause?",
 		"choices": [
 			"No valid discovery credential is assigned or credentials fail authentication on the target",
-			"The horizontal pattern attached to the classification lacks a parse step",
 			"Identification rules are missing for the inferred CI class on the subnet",
-			"Reconciliation precedence favors a lower-trust import feed over discovery"
+			"Reconciliation precedence favors a lower-trust import feed over discovery",
+			"The horizontal pattern attached to the classification lacks a parse step"
 		],
 		"correctIndex": 0,
 		"explanation": "This error indicates discovery could not authenticate with any configured credential during classification probing.",
@@ -5431,11 +6083,11 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "During Discovery implementation, what should customers always configure?",
 		"choices": [
 			"Event management correlation rules for every monitored infrastructure class",
-			"Hardware asset stockroom transfers for each discovered server serial number",
 			"Service mapping entry points before the first horizontal schedule executes",
-			"Credentials for target devices and systems being discovered"
+			"Credentials for target devices and systems being discovered",
+			"Hardware asset stockroom transfers for each discovered server serial number"
 		],
-		"correctIndex": 3,
+		"correctIndex": 2,
 		"explanation": "Discovery cannot classify or collect configuration data without credentials configured and tested for target systems.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-credentials.html"
@@ -5531,12 +6183,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 54,
 		"prompt": "Reconciliation rules primarily control what aspect of CMDB updates from Discovery?",
 		"choices": [
-			"How attribute values from competing sources are merged on matched CIs",
 			"Which subnets are excluded when a schedule performs ICMP exploration",
+			"The order MID Servers are selected when multiple nodes serve one zone",
 			"Whether classification probes run before or after sensor parsing completes",
-			"The order MID Servers are selected when multiple nodes serve one zone"
+			"How attribute values from competing sources are merged on matched CIs"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Reconciliation rules govern attribute-level merge behavior when multiple data sources update the same CI.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/reconciliation-rules.html"
@@ -5600,12 +6252,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 58,
 		"prompt": "Before enabling broad discovery schedules, why validate CMDB foundation data classes?",
 		"choices": [
-			"Discovery updates assume stable class hierarchy and attribute definitions exist",
 			"Foundation validation removes the requirement for credentials on Linux targets",
+			"CMDB foundation checks disable reconciliation for the first thirty discovery runs",
 			"Class validation automatically deploys MID Servers into every network segment",
-			"CMDB foundation checks disable reconciliation for the first thirty discovery runs"
+			"Discovery updates assume stable class hierarchy and attribute definitions exist"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Discovery writes depend on well-defined CI classes and attributes; foundation validation prevents misclassified or incomplete updates.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/cmdb-foundation-data.html"
@@ -5665,9 +6317,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Who should own CI class changes that affect Discovery identification keys?",
 		"choices": [
 			"CMDB governance owners coordinating through CI Class Manager change controls",
-			"Any operator with the itil role editing cmdb_ci records ad hoc in production",
 			"External monitoring vendors updating class schemas through email requests",
-			"Discovery schedule owners without consultation from configuration management"
+			"Discovery schedule owners without consultation from configuration management",
+			"Any operator with the itil role editing cmdb_ci records ad hoc in production"
 		],
 		"correctIndex": 0,
 		"explanation": "Identification keys are class-level CMDB governance decisions managed through CI Class Manager with appropriate stewardship.",
@@ -5776,10 +6428,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 69,
 		"prompt": "Which artifacts demonstrate Discovery Engagement Readiness before go-live? (Choose two.)",
 		"choices": [
-			"Tested credentials and validated MID Server connectivity to scoped targets",
 			"Signed scope document with network, cloud, and operational ownership contacts",
+			"Complete service mapping dependency graphs for all business capabilities globally",
 			"Production incident major incident process workflow diagrams for every team",
-			"Complete service mapping dependency graphs for all business capabilities globally"
+			"Tested credentials and validated MID Server connectivity to scoped targets"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -5829,12 +6481,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 72,
 		"prompt": "What training should Discovery administrators receive before taking operational ownership?",
 		"choices": [
-			"Schedule management, credential testing, status troubleshooting, and IRE basics",
 			"Advanced service catalog designer scripting for hardware request fulfillment only",
+			"Event correlation pack authoring for third-party monitoring integrations exclusively",
 			"Vendor-specific ERP procurement workflows unrelated to configuration data",
-			"Event correlation pack authoring for third-party monitoring integrations exclusively"
+			"Schedule management, credential testing, status troubleshooting, and IRE basics"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Discovery admins need hands-on skills for schedules, credentials, troubleshooting, and understanding how updates flow through IRE.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/set-up-discovery.html"
@@ -5910,9 +6562,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Alert management rules are best described as which kind of mechanism?",
 		"choices": [
 			"Configuration that automates how alerts are handled after they are created",
-			"A Discovery pattern debugger",
 			"A hardware model normalization engine",
-			"A MID Server installation package"
+			"A MID Server installation package",
+			"A Discovery pattern debugger"
 		],
 		"correctIndex": 0,
 		"explanation": "Alert management rules operationalize alert lifecycle behaviors such as notifications, tasks, or other responses tied to alert conditions.",
@@ -6022,12 +6674,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 9,
 		"prompt": "What best describes a healthy event pipeline KPI for CIS-EM operations?",
 		"choices": [
-			"All events mapped to a single CI for easier dashboards",
 			"Maximum raw event volume per minute regardless of quality",
+			"High signal-to-noise ratio with timely alert generation for actionable conditions",
 			"No correlation so operators can see every duplicate event",
-			"High signal-to-noise ratio with timely alert generation for actionable conditions"
+			"All events mapped to a single CI for easier dashboards"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "Effective pipelines prioritize actionable signal and reduce noise, enabling faster response with less operational fatigue.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-management-best-practices.html"
@@ -6070,10 +6722,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 12,
 		"prompt": "Which connector onboarding approach is best for production readiness?",
 		"choices": [
-			"Enable all source event types on day one to maximize coverage",
 			"Skip lower environment validation to accelerate go-live",
+			"Use one shared credential across all connectors and teams",
 			"Pilot in scoped environments, validate mapping/correlation, then expand source coverage iteratively",
-			"Use one shared credential across all connectors and teams"
+			"Enable all source event types on day one to maximize coverage"
 		],
 		"correctIndex": 2,
 		"explanation": "Phased onboarding reduces noise and avoids large-scale misconfiguration by validating behavior before broad rollout.",
@@ -6199,11 +6851,11 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "What is the main objective of an Event Management event rule?",
 		"choices": [
 			"To define MID Server failover sequence",
-			"To assign stockroom managers to hardware models",
 			"To transform, filter, and classify events so only meaningful signals create or update alerts",
-			"To replace CI identification and reconciliation rules"
+			"To replace CI identification and reconciliation rules",
+			"To assign stockroom managers to hardware models"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"explanation": "Event rules control how raw events are interpreted and whether they should drive alerting actions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-rules.html"
@@ -6310,12 +6962,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 27,
 		"prompt": "What is the best reason to define explicit alert state transitions such as Open, Acknowledged, and Closed?",
 		"choices": [
-			"To disable incident creation from critical alerts",
 			"To support clear handoffs and measurable responder actions",
+			"To avoid correlation logic in event processing",
 			"To increase duplicate alerts for the same CI",
-			"To avoid correlation logic in event processing"
+			"To disable incident creation from critical alerts"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "Controlled lifecycle states improve operational clarity and provide auditable progression from detection to resolution.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/alert-lifecycle.html"
@@ -6359,12 +7011,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 30,
 		"prompt": "What is the primary role of alert groups in Event Management?",
 		"choices": [
-			"Organize related alerts into a single operational context for responders",
 			"Convert all grouped alerts directly into changes",
+			"Disable impact calculation for grouped alerts",
 			"Replace event ingestion connectors",
-			"Disable impact calculation for grouped alerts"
+			"Organize related alerts into a single operational context for responders"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Alert groups reduce noise and help teams manage correlated issues as one operational unit.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/alert-groups.html"
@@ -6440,11 +7092,11 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "In Event Management, what does CI binding enable most directly?",
 		"choices": [
 			"Converting all events into changes",
-			"Linking alerts to impacted configuration items for context and impact analysis",
 			"Replacing event transform maps with script includes",
-			"Disabling service maps for bound alerts"
+			"Disabling service maps for bound alerts",
+			"Linking alerts to impacted configuration items for context and impact analysis"
 		],
-		"correctIndex": 1,
+		"correctIndex": 3,
 		"explanation": "CI binding connects alerts to infrastructure context, which supports impact visibility, routing, and faster triage.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/alert-cmdb-binding.html"
@@ -6537,12 +7189,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 41,
 		"prompt": "Why should event filter conditions be reviewed with operations teams regularly?",
 		"choices": [
-			"To avoid CI binding completely",
 			"To disable alert grouping for critical services",
+			"To ensure filtering still matches current monitoring signal and business priorities",
 			"To reroute events to MID Server logs",
-			"To ensure filtering still matches current monitoring signal and business priorities"
+			"To avoid CI binding completely"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "Monitoring environments evolve, so regular review ensures filters keep suppressing noise without hiding actionable events.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/task/configure-event-filters.html"
@@ -6601,12 +7253,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 45,
 		"prompt": "In Event Management, why are connector templates useful for onboarding new monitoring tools?",
 		"choices": [
-			"They disable event rules until incidents are opened",
 			"They eliminate the need for event field mapping",
+			"They provide reusable ingestion configuration patterns that speed implementation consistency",
 			"They convert alerts directly into hardware assets",
-			"They provide reusable ingestion configuration patterns that speed implementation consistency"
+			"They disable event rules until incidents are opened"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "Templates standardize connector setup and reduce manual rework when integrating multiple sources with similar ingestion requirements.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
@@ -6906,11 +7558,11 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which KPI most directly reflects successful event analytics adoption?",
 		"choices": [
 			"No dashboard updates after initial launch",
-			"Highest connector count regardless of quality",
 			"Reduced mean time to detect recurring issues and fewer repeat alert storms",
-			"Manual event tagging by every operator"
+			"Manual event tagging by every operator",
+			"Highest connector count regardless of quality"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"explanation": "Strong analytics adoption produces measurable improvements in detection speed and recurring issue control.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/use/reporting/concept/c_ReportingAndAnalytics.html"
@@ -6973,11 +7625,11 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which operating model best supports AIOps-assisted event response at scale?",
 		"choices": [
 			"Auto-close all medium and low events by default",
-			"Require senior engineers to manually review every event before action",
 			"Use tiered triage with automation for known patterns and human escalation for ambiguous situations",
-			"Route events only through weekly CAB reviews"
+			"Route events only through weekly CAB reviews",
+			"Require senior engineers to manually review every event before action"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"explanation": "Blended automation and human oversight provides scalable response while maintaining operational control.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-management.html",
@@ -7074,12 +7726,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 74,
 		"prompt": "Which KPI mix best demonstrates effective Event Management operations?",
 		"choices": [
-			"Lower mean time to acknowledge, fewer duplicate incidents, and improved service availability trends",
 			"Increased manual reassignment volume mapped to the correct service offering and fulfillment flow. (CIS-EM-74-w1)",
+			"More custom dashboards per team documented in the runbook for operational handoff. (CIS-EM-74-w3)",
 			"Higher count of generated raw events",
-			"More custom dashboards per team documented in the runbook for operational handoff. (CIS-EM-74-w3)"
+			"Lower mean time to acknowledge, fewer duplicate incidents, and improved service availability trends"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Strong EM operations improve response speed, reduce noise-induced duplication, and protect availability.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
@@ -7129,9 +7781,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "In Field Service Management, how does a work order relate to work order tasks during execution?",
 		"choices": [
 			"The work order is the parent record that contains one or more executable work order tasks",
-			"Work order tasks permanently replace the parent work order once dispatch assigns an agent",
 			"Each work order task must reference a separate incident record before qualification can begin",
-			"Work orders and work order tasks cannot share location, asset, or customer context data"
+			"Work orders and work order tasks cannot share location, asset, or customer context data",
+			"Work order tasks permanently replace the parent work order once dispatch assigns an agent"
 		],
 		"correctIndex": 0,
 		"explanation": "A work order organizes the overall field job while work order tasks represent discrete activities that agents execute, assign, and schedule independently.",
@@ -7193,9 +7845,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A field service manager opens Field Service > Manager > Manage Skills to assign HVAC certification to technicians. What does Skills Management define for dispatch matching?",
 		"choices": [
 			"Agent competencies and skill levels used to match qualified resources to work requirements",
-			"Territory boundaries that replace geographic assignment logic in Dispatcher Workspace",
 			"Contract entitlement tiers that determine whether customers can open new incidents",
-			"Catalog item categories used exclusively for employee self-service portal requests"
+			"Catalog item categories used exclusively for employee self-service portal requests",
+			"Territory boundaries that replace geographic assignment logic in Dispatcher Workspace"
 		],
 		"correctIndex": 0,
 		"explanation": "Skills Management lets managers create skills and assign them to agents so scheduling and dispatch can match work to qualified technicians.",
@@ -7357,12 +8009,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 16,
 		"prompt": "Two territories overlap the same customer address. What should administrators configure to avoid ambiguous dispatch assignments?",
 		"choices": [
-			"Clear assignment criteria such as skills, availability, and territory priority rules",
 			"A single global territory that includes every location in the instance without any boundaries",
+			"Remove all location records from work orders so territories are ignored during assignment",
 			"Disable Dynamic Scheduling so dispatchers never evaluate overlapping territory memberships",
-			"Remove all location records from work orders so territories are ignored during assignment"
+			"Clear assignment criteria such as skills, availability, and territory priority rules"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "When territories overlap, explicit assignment criteria and priority rules prevent ambiguous routing and inconsistent dispatch decisions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/c_TerritoryManagement.html"
@@ -7486,9 +8138,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which metric best indicates technicians are completing field updates at the point of work rather than end-of-day batch entry?",
 		"choices": [
 			"Percentage of task status and completion updates submitted from mobile at the job site",
-			"Count of inactive UI policies on the work order table updated more than one year ago",
 			"Total number of email notifications sent to dispatchers when tasks change state each week",
-			"Average number of catalog items published per quarter on the employee service portal"
+			"Average number of catalog items published per quarter on the employee service portal",
+			"Count of inactive UI policies on the work order table updated more than one year ago"
 		],
 		"correctIndex": 0,
 		"explanation": "A high rate of mobile updates at the point of work indicates real adoption and fresher operational visibility for dispatch and managers.",
@@ -7581,12 +8233,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 30,
 		"prompt": "Which Field Service persona reviews draft work orders and creates or edits tasks before dispatch?",
 		"choices": [
-			"Qualifier with the wm_qualifier role",
 			"Field agent with the wm_agent role executing tasks without task design duties",
+			"Contract auditor role used exclusively for hardware asset disposal approval workflows",
 			"Initiator with the wm_initiator role when qualification is disabled globally on the instance",
-			"Contract auditor role used exclusively for hardware asset disposal approval workflows"
+			"Qualifier with the wm_qualifier role"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Qualifiers review work orders, create and edit tasks, and move records through the qualification states before dispatch.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/configure-qualify-fsm.html"
@@ -7645,12 +8297,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 34,
 		"prompt": "Technician shift calendars and availability windows feed which scheduling outcome during implementation?",
 		"choices": [
-			"Realistic assignment slots that respect working hours when dispatching work order tasks",
 			"Automatic deletion of overdue tasks without notifying agents or updating task states",
+			"Conversion of all work orders to catalog tasks processed by the service desk queue only",
 			"Removal of territory boundaries so every agent appears available twenty-four hours daily",
-			"Conversion of all work orders to catalog tasks processed by the service desk queue only"
+			"Realistic assignment slots that respect working hours when dispatching work order tasks"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Agent schedules and availability data constrain dispatch and dynamic scheduling so assignments fit within working calendars and shift rules.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/dynamic-scheduling.html"
@@ -7726,9 +8378,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "During planning workshops, stakeholders map initiators, qualifiers, dispatchers, and agents to locations. Which configuration concept should anchor these discussions?",
 		"choices": [
 			"Field Service user groups with inherited roles and location coverage for each persona",
-			"A single global assignment group with no location or dispatch group relationships defined",
 			"Catalog client scripts that run only when employees order laptops from the service portal",
-			"Problem management root cause categories unrelated to field execution responsibilities"
+			"Problem management root cause categories unrelated to field execution responsibilities",
+			"A single global assignment group with no location or dispatch group relationships defined"
 		],
 		"correctIndex": 0,
 		"explanation": "Implementation planning should align personas to user groups with inherited roles and location coverage so qualification and dispatch paths are clear.",
@@ -7877,7 +8529,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			2
 		],
 		"questionType": "multi",
 		"explanation": "The scheduling engine auto-assigns tasks and supports intra-day reorganization; it augments rather than replaces dispatcher tools and still respects territory constraints.",
@@ -7890,12 +8542,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 49,
 		"prompt": "Dispatchers need agent calendar events visible when making assignment decisions. What does dynamic assignment integrate from Workforce Optimization?",
 		"choices": [
-			"Agent schedules and calendar events shown in Dispatcher Workspace",
 			"Enterprise LDAP group mappings for all internal IT service desk agents",
+			"Change management blackout windows for standard catalog item approvals",
 			"Hardware asset depreciation schedules for stockroom replenishment planning",
-			"Change management blackout windows for standard catalog item approvals"
+			"Agent schedules and calendar events shown in Dispatcher Workspace"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Dynamic scheduling integrates with Workforce Optimization to display agent schedules and events on the Dispatcher Workspace calendar for informed assignments.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/dynamic-scheduling.html"
@@ -7955,9 +8607,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Template Management for Field Service is activated. Which components can a work order template use? (Choose two.)",
 		"choices": [
 			"Source table mapping to populate work order fields from originating records",
-			"Standalone work order task templates linked with filtering conditions",
 			"Automated CMDB reconciliation schedules for every configuration item class",
-			"Global LDAP synchronization rules for external contractor user accounts"
+			"Global LDAP synchronization rules for external contractor user accounts",
+			"Standalone work order task templates linked with filtering conditions"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -8024,9 +8676,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Technicians in a regional crew should search parts only from designated warehouses. What configuration supports this?",
 		"choices": [
 			"Preferred stockrooms assigned to the work group for mobile part lookup",
-			"Global incident assignment rules mapped to the default IT support group",
 			"Change advisory board delegates listed on every standard change template",
-			"Discovery schedules that run weekly against all network device classes"
+			"Discovery schedules that run weekly against all network device classes",
+			"Global incident assignment rules mapped to the default IT support group"
 		],
 		"correctIndex": 0,
 		"explanation": "Preferred stockrooms for work groups let agents search parts from designated stockrooms using the Now Mobile Agent application.",
@@ -8119,12 +8771,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 63,
 		"prompt": "Before enabling automated assignment, which baseline records should the implementation team configure?",
 		"choices": [
-			"Users, locations, territories, and related foundational workforce data",
 			"Change models, blackout schedules, and CAB delegate assignment groups",
+			"Catalog categories, record producers, and order guide variable sets",
 			"Discovery credentials, MID Server clusters, and identification rules",
-			"Catalog categories, record producers, and order guide variable sets"
+			"Users, locations, territories, and related foundational workforce data"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Workforce setup involves configuring users, locations, territories, and other foundational data required for scheduling and dispatch.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/setting-up-workforce.html"
@@ -8183,12 +8835,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 67,
 		"prompt": "Operations wants visibility into parts consumed, transferred, and adjusted across field teams. Which FSM process covers this?",
 		"choices": [
-			"Inventory management including transfers, consumption, adjustments, and replenishment",
 			"Incident matching rules that deduplicate alerts from monitoring integrations",
+			"Software reclamation workflows for unused SaaS license harvesting",
 			"Employee document generation for offer letters in HR service delivery",
-			"Software reclamation workflows for unused SaaS license harvesting"
+			"Inventory management including transfers, consumption, adjustments, and replenishment"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "FSM inventory management tracks parts and supplies through transfers, consumption, adjustments, and related stockroom operations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/inventory-management-fsm.html"
@@ -8223,7 +8875,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"questionType": "multi",
 		"explanation": "FSM inventory management covers consumption tracking and part transfers between stockrooms; password notifications and CAB minutes are unrelated.",
@@ -8253,9 +8905,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A task requires a specialized part already stocked on a qualified technician's route. Which workflow should dispatch use?",
 		"choices": [
 			"Source parts and assign the task to an agent who has or will receive the part",
-			"Close the work order and create a new incident for parts procurement review",
 			"Disable part requirements on the task and proceed with manual assignment",
-			"Convert the work order task into a catalog request for warehouse staff"
+			"Convert the work order task into a catalog request for warehouse staff",
+			"Close the work order and create a new incident for parts procurement review"
 		],
 		"correctIndex": 0,
 		"explanation": "The source-parts workflow reserves parts and can assign the task to agents who already have required inventory or will receive it.",
@@ -8364,12 +9016,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 78,
 		"prompt": "Several technicians have gaps in their afternoon schedules. How can dispatch improve utilization without manual reassignment?",
 		"choices": [
-			"Intelligent Task Recommendation suggesting tasks agents can self-assign from mobile",
 			"Problem management root cause analysis workshops scheduled each Friday",
+			"Discovery status jobs that refresh configuration item serial numbers nightly",
 			"Change management standard templates auto-approved for low-risk requests",
-			"Discovery status jobs that refresh configuration item serial numbers nightly"
+			"Intelligent Task Recommendation suggesting tasks agents can self-assign from mobile"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Intelligent Task Recommendation suggests tasks to fill schedule gaps; agents can view and self-assign recommended tasks in the Now Agent mobile app.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/fsm-task-recommendation.html"
@@ -8412,12 +9064,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 81,
 		"prompt": "Finance needs different billing rates for travel time versus on-site repair labor. What should be configured?",
 		"choices": [
-			"Rate types and labor rate cards defining cost rates for recorded activities",
 			"Incident priority lookup rules mapping urgency and impact to response targets",
+			"Catalog client scripts validating variable inputs on multi-step order guides",
 			"Change risk assessment questions weighting standard versus normal changes",
-			"Catalog client scripts validating variable inputs on multi-step order guides"
+			"Rate types and labor rate cards defining cost rates for recorded activities"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Rate types and labor rate cards define different cost rates applied to activities recorded by field service agents.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/using-rate-types-labor-rate-cards.html"
@@ -8493,9 +9145,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Leadership wants to measure whether technicians resolve issues without a return trip. Which KPI should they track?",
 		"choices": [
 			"First-time fix rate for work orders completed on the initial appointment",
-			"Average password reset completion time for the internal service desk",
 			"Count of inactive catalog categories in the employee service portal",
-			"Number of CMDB discovery schedules running against cloud subnets"
+			"Number of CMDB discovery schedules running against cloud subnets",
+			"Average password reset completion time for the internal service desk"
 		],
 		"correctIndex": 0,
 		"explanation": "First-time fix rate measures whether field issues are resolved during the initial visit without requiring a repeat trip.",
@@ -8589,9 +9241,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "How does Discovery help ensure trustworthy IT asset data in a Hardware Asset Management program?",
 		"choices": [
 			"It automatically discovers deployed hardware and feeds data that can reconcile with asset and CI records",
-			"It replaces stockroom receiving with SNMP trap correlation only across all inventory locations",
 			"It eliminates the need for hardware model categories in the product catalog permanently",
-			"It converts consumable quantities into perpetual software entitlements without model references"
+			"It converts consumable quantities into perpetual software entitlements without model references",
+			"It replaces stockroom receiving with SNMP trap correlation only across all inventory locations"
 		],
 		"correctIndex": 0,
 		"explanation": "Discovery provides current hardware evidence that HAM can reconcile with asset records, improving data accuracy and reducing manual entry gaps.",
@@ -8656,9 +9308,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which two roles commonly grant operational access to Hardware Asset Management tasks? (Choose two.)",
 		"choices": [
 			"The asset role for day-to-day hardware asset and stockroom operations",
-			"The ham_admin role for full Hardware Asset Management administration",
 			"The itil role for incident and change management without HAM module access",
-			"The evt_mgmt_admin role for Event Management connector administration only"
+			"The evt_mgmt_admin role for Event Management connector administration only",
+			"The ham_admin role for full Hardware Asset Management administration"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -8749,7 +9401,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			2
+			1
 		],
 		"explanation": "Governed model maintenance and normalized model references preserve reporting integrity and predictable lifecycle behavior at scale.",
 		"sourceUrls": [
@@ -8762,12 +9414,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 12,
 		"prompt": "In Hardware Asset Management, stockrooms primarily support which operational need?",
 		"choices": [
-			"Track physical or logical inventory locations for receiving, storing, and issuing assets",
 			"Replace assignment groups on incident and change records for fulfillment routing",
+			"Define depreciation schedules for each hardware manufacturer in the product catalog",
 			"Store discovery credential passwords for MID Server probes and SNMP communities",
-			"Define depreciation schedules for each hardware manufacturer in the product catalog"
+			"Track physical or logical inventory locations for receiving, storing, and issuing assets"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Stockrooms represent controlled inventory locations that support accurate on-hand balances and fulfillment from receiving through issue.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/manage-your-stockrooms.html"
@@ -8843,9 +9495,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Why should lifecycle state changes follow governed workflows instead of ad hoc manual edits?",
 		"choices": [
 			"Workflows enforce approvals, required field updates, and audit traceability for transitions",
-			"Manual edits are required for every stockroom transfer recorded in Hardware Asset Management",
 			"Workflows prevent integration with procurement purchase orders and receiving transactions",
-			"Ad hoc edits automatically improve normalization hit ratios across duplicate model records"
+			"Ad hoc edits automatically improve normalization hit ratios across duplicate model records",
+			"Manual edits are required for every stockroom transfer recorded in Hardware Asset Management"
 		],
 		"correctIndex": 0,
 		"explanation": "Governed workflows ensure lifecycle transitions occur with policy-compliant controls and complete audit records.",
@@ -9003,12 +9655,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 27,
 		"prompt": "When should a hardware model be marked Exclude from content service?",
 		"choices": [
-			"When the organization must keep proprietary model data out of the HAM Content Service",
 			"When the model category requires a CI relationship before receiving at the stockroom",
+			"When discovery creates the model automatically from install evidence on a laptop CI",
 			"When the asset is in In stock and Available substatus for bundling into a kit",
-			"When discovery creates the model automatically from install evidence on a laptop CI"
+			"When the organization must keep proprietary model data out of the HAM Content Service"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "The Exclude from content service option prevents a model's data from being shared with the Hardware Asset Management Content Service.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/create-hardware-consumable-model.html"
@@ -9041,10 +9693,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"Normalized Product",
 			"Stockroom Manager"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			2
+			1,
+			3
 		],
 		"explanation": "Normalized Manufacturer and Normalized Product are populated by the normalization job; Model Number and Stockroom Manager are not normalization output fields.",
 		"sourceUrls": [
@@ -9074,9 +9726,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Where can administrators review assets waiting to be created from CIs when delayed sync is enabled?",
 		"choices": [
 			"Asset > Administration > Asset Creation Queue",
-			"Discovery > Shazzam > Credentials configured for horizontal subnet scans",
 			"System Logs > Email > Outbound notifications for stock rule runner alerts",
-			"Change > Planning > Schedule board for upcoming maintenance windows"
+			"Change > Planning > Schedule board for upcoming maintenance windows",
+			"Discovery > Shazzam > Credentials configured for horizontal subnet scans"
 		],
 		"correctIndex": 0,
 		"explanation": "The Asset Creation Queue shows assets pending creation and errors from the delayed sync job; errors can be reprocessed by setting state to Ready.",
@@ -9138,9 +9790,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which Discovery outcome most directly improves hardware asset record accuracy in HAM?",
 		"choices": [
 			"Current hardware attributes and serial numbers reconciled with modeled asset classes",
-			"Removal of all CMDB relationships for network gear discovered on corporate subnets",
 			"Automatic closure of open transfer orders at the time each discovery schedule completes",
-			"Conversion of every open incident into an asset task without stockroom validation"
+			"Conversion of every open incident into an asset task without stockroom validation",
+			"Removal of all CMDB relationships for network gear discovered on corporate subnets"
 		],
 		"correctIndex": 0,
 		"explanation": "Discovery supplies current hardware attributes that HAM can reconcile with models, serials, and asset classes for trustworthy records.",
@@ -9243,12 +9895,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 41,
 		"prompt": "What is a common risk when model categories are misconfigured for hardware CIs?",
 		"choices": [
-			"Incorrect asset class creation leading to wrong workflows and financial treatment",
 			"Permanent deletion of all CMDB relationship rules for discovered infrastructure classes",
+			"Mandatory conversion of all laptop assets to consumable models without review",
 			"Automatic disablement of the Hardware Model Normalization plugin across the instance",
-			"Mandatory conversion of all laptop assets to consumable models without review"
+			"Incorrect asset class creation leading to wrong workflows and financial treatment"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Model category drives asset class selection and process behavior, so misclassification can cause operational and financial errors downstream.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/product-catalog/c_ModelCategories.html"
@@ -9314,11 +9966,11 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"Mouse",
 			"Laptop"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
 			1,
-			2
+			2,
+			3
 		],
 		"questionType": "multi",
 		"explanation": "Consumables such as CDs, keyboards, and mice are tracked by quantity rather than as individually serialized hardware assets. Laptops are serialized hardware assets, not consumables.",
@@ -9332,9 +9984,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A regional IT team must move spare monitors from a central stockroom to a field location. Which record type best supports this movement with traceability?",
 		"choices": [
 			"A transfer order with source and destination stockrooms defined",
-			"A change request without associated asset tasks",
 			"A procurement purchase order directed to the end user",
-			"A discovery schedule scoped to the destination building"
+			"A discovery schedule scoped to the destination building",
+			"A change request without associated asset tasks"
 		],
 		"correctIndex": 0,
 		"explanation": "Transfer orders formalize inventory movement between stockrooms while preserving shipment, receiving, and status history.",
@@ -9491,12 +10143,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 56,
 		"prompt": "During a quarterly stockroom audit, the team wants barcode scans to include toner cartridges stored with other supplies. Which setting enables this?",
 		"choices": [
-			"Include consumables set to Yes on a Stockroom audit",
 			"Include consumables set to No on a Location audit",
+			"Scheduled date left blank on a Vendor audit",
 			"Scan method set to Multi Scan with audit type Contract",
-			"Scheduled date left blank on a Vendor audit"
+			"Include consumables set to Yes on a Stockroom audit"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Stockroom audits can include consumables when Include consumables is Yes, limiting scan method options accordingly.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-audit-record-fields.html"
@@ -9620,9 +10272,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which asset record section is available for hardware assets to document lease and support agreements?",
 		"choices": [
 			"The Contract section with lease and service contract references",
-			"The Depreciation section on consumable quantity records",
 			"The Discovery section on software entitlement models",
-			"The Event section on alert correlation policies"
+			"The Event section on alert correlation policies",
+			"The Depreciation section on consumable quantity records"
 		],
 		"correctIndex": 0,
 		"explanation": "Hardware assets expose contract fields for lease, service, and warranty relationships used throughout the lifecycle.",
@@ -9691,8 +10343,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1,
-			2
+			2,
+			3
 		],
 		"questionType": "multi",
 		"explanation": "Audit evidence should include controls, traceable transactions, and documented remediation of exceptions rather than unrelated operational views.",
@@ -9721,12 +10373,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 70,
 		"prompt": "Leadership asks for visibility into lifecycle cost exposure and compliance exceptions across the hardware estate. What should HAM reporting emphasize?",
 		"choices": [
-			"Decision-ready KPIs on lifecycle, financial exposure, compliance, and operational risk",
 			"A raw export of every asset field without filters or aggregation",
+			"Dashboard color themes without underlying metric definitions",
 			"Only counts of newly purchased devices from the current quarter",
-			"Dashboard color themes without underlying metric definitions"
+			"Decision-ready KPIs on lifecycle, financial exposure, compliance, and operational risk"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "HAM reporting translates asset data into governance insight on lifecycle, cost, compliance, and control effectiveness.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/it-asset-management.html"
@@ -9745,8 +10397,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1,
-			2
+			2,
+			3
 		],
 		"questionType": "multi",
 		"explanation": "Operational expenses include ongoing maintenance, parts, and support labor. Initial delivery of purchased hardware is typically capital-related rather than operational expense in TCO context.",
@@ -9791,12 +10443,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 74,
 		"prompt": "Operations wants daily exception visibility while executives need monthly governance summaries. Which reporting model fits both audiences?",
 		"choices": [
-			"Layered cadence with daily operational dashboards and monthly leadership packs using shared definitions",
 			"Separate ad hoc reports per stockroom manager with conflicting metric names",
+			"Reports generated only after external audit findings arrive",
 			"One static annual PDF for all stakeholders regardless of role",
-			"Reports generated only after external audit findings arrive"
+			"Layered cadence with daily operational dashboards and monthly leadership packs using shared definitions"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Different cadences and consistent metric definitions keep tactical and strategic reporting aligned to the same data standards.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/it-asset-management.html"
@@ -9832,7 +10484,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndexes": [
 			0,
 			1,
-			2
+			3
 		],
 		"questionType": "multi",
 		"explanation": "Auditable transfers retain location context, custody handoffs, and status history. Removing historical lines destroys evidence.",
@@ -9878,9 +10530,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which KPI most directly signals hardware data hygiene risk during governance reviews?",
 		"choices": [
 			"Percentage of assets missing owner or location attributes",
-			"Total count of UI policies on the incident form",
 			"Average homepage load time in the service portal",
-			"Number of open knowledge article drafts"
+			"Number of open knowledge article drafts",
+			"Total count of UI policies on the incident form"
 		],
 		"correctIndex": 0,
 		"explanation": "Missing owner and location attributes undermine accountability, reporting quality, and audit readiness.",
@@ -10014,7 +10666,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndexes": [
 			0,
 			1,
-			2
+			3
 		],
 		"questionType": "multi",
 		"explanation": "Asset TCO sums capital and operational expense lines on the asset, including costs rolled up from child assets when applicable.",
@@ -10043,12 +10695,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 89,
 		"prompt": "A CFO asks to compare projected TCO for two laptop models against model benchmark costs. Which workspace capability supports this analysis?",
 		"choices": [
-			"TCO comparative reports in Asset analytics within Hardware Asset Workspace",
 			"Incident priority matrix reports in the ITSM dashboard",
+			"Knowledge article view counts grouped by category",
 			"Discovery classification logs filtered by probe type",
-			"Knowledge article view counts grouped by category"
+			"TCO comparative reports in Asset analytics within Hardware Asset Workspace"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Hardware Asset Workspace TCO reports compare asset or model costs against benchmarks for capital planning decisions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/create-ham-tco-report.html"
@@ -10124,9 +10776,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "What does the hr_profile table store in HR Service Delivery?",
 		"choices": [
 			"Employee-specific HR attributes linked to the user record",
-			"CMDB configuration item relationships",
 			"MID Server connection credentials",
-			"Software license entitlements"
+			"Software license entitlements",
+			"CMDB configuration item relationships"
 		],
 		"correctIndex": 0,
 		"explanation": "HR profiles extend personnel data used for eligibility, routing, and lifecycle processing beyond the base sys_user record.",
@@ -10188,9 +10840,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "What is recorded on the hr_service table?",
 		"choices": [
 			"A definable HR offering employees can request through Employee Center",
-			"A network discovery schedule definition",
 			"A payroll calculation rule set",
-			"A CMDB identification rule"
+			"A CMDB identification rule",
+			"A network discovery schedule definition"
 		],
 		"correctIndex": 0,
 		"explanation": "HR services represent catalog-style offerings that drive case creation, routing, and fulfillment configuration.",
@@ -10347,12 +10999,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 18,
 		"prompt": "Which role is commonly assigned to HR agents who work HR cases daily?",
 		"choices": [
-			"sn_hr_core.basic",
 			"itil_admin",
+			"sn_incident_write",
 			"asset",
-			"sn_incident_write"
+			"sn_hr_core.basic"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "HR core roles such as sn_hr_core.basic grant access to HR case workspaces and related HR tables per the HR security model.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
@@ -10412,9 +11064,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which table would you inspect to review HR service-to-COE associations?",
 		"choices": [
 			"hr_service and related COE reference fields",
-			"cmdb_rel_ci",
 			"sys_email",
-			"alm_asset"
+			"alm_asset",
+			"cmdb_rel_ci"
 		],
 		"correctIndex": 0,
 		"explanation": "HR service records reference a COE so cases route to the correct functional team and appear in COE dashboards.",
@@ -10476,9 +11128,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "What is the benefit of keeping Journey Designer artifacts in the Lifecycle Events scope?",
 		"choices": [
 			"Lifecycle customizations stay isolated from core case tables and integration code",
-			"Journey flows cannot use HR tasks",
 			"Lifecycle events bypass all security controls",
-			"Employees cannot trigger onboarding from Employee Center"
+			"Employees cannot trigger onboarding from Employee Center",
+			"Journey flows cannot use HR tasks"
 		],
 		"correctIndex": 0,
 		"explanation": "Separating lifecycle configuration protects core HR case operations while allowing journey teams to iterate safely.",
@@ -10571,12 +11223,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 32,
 		"prompt": "How does a record producer differ from a standard HR catalog item?",
 		"choices": [
-			"A record producer creates a target table record directly instead of a requested item",
 			"A record producer only creates CMDB CIs",
+			"A record producer runs only on the MID Server",
 			"A record producer disables HR criteria evaluation",
-			"A record producer runs only on the MID Server"
+			"A record producer creates a target table record directly instead of a requested item"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Record producers present catalog-style forms that insert records such as hr_case directly on submission.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-services-overview.html"
@@ -10652,9 +11304,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "How are HR groups used in Core HR configuration?",
 		"choices": [
 			"As assignment targets for HR cases and lifecycle tasks",
-			"As CMDB discovery schedules",
 			"As software license pools",
-			"As payroll tax jurisdictions"
+			"As payroll tax jurisdictions",
+			"As CMDB discovery schedules"
 		],
 		"correctIndex": 0,
 		"explanation": "HR groups represent teams within COEs that receive assigned cases, tasks, and approvals.",
@@ -10700,9 +11352,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which options allow an HR Administrator to configure a personal copy of the HR Case Dashboard? (Choose two.)",
 		"choices": [
 			"Add Content",
-			"Change Layout",
 			"Delete Content",
-			"Modify Kernel"
+			"Modify Kernel",
+			"Change Layout"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -10816,12 +11468,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 47,
 		"prompt": "What happens when an employee without matching HR criteria attempts to open a restricted HR service?",
 		"choices": [
-			"The service is hidden or blocked based on Can/Cannot Read HR criteria evaluation",
 			"The case is converted to an incident automatically",
+			"All HR cases are reassigned globally",
 			"The employee receives the admin role",
-			"All HR cases are reassigned globally"
+			"The service is hidden or blocked based on Can/Cannot Read HR criteria evaluation"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "HR criteria and related read rules prevent unauthorized employees from viewing or requesting restricted services.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-criteria.html"
@@ -10945,9 +11597,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "What is an Activity Set within a lifecycle event?",
 		"choices": [
 			"A grouped collection of related activities executed as part of the journey",
-			"A CMDB relationship bundle",
 			"A software license bundle",
-			"A firewall rule collection"
+			"A firewall rule collection",
+			"A CMDB relationship bundle"
 		],
 		"correctIndex": 0,
 		"explanation": "Activity sets organize journey steps—such as equipment provisioning tasks—into logical phases.",
@@ -11040,12 +11692,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 61,
 		"prompt": "When onboarding a new hire, which lifecycle pattern is commonly implemented?",
 		"choices": [
-			"An onboarding lifecycle event with sequenced provisioning and orientation activities",
 			"A CMDB full sync lifecycle",
+			"A vulnerability scan lifecycle",
 			"A payroll year-end close lifecycle",
-			"A vulnerability scan lifecycle"
+			"An onboarding lifecycle event with sequenced provisioning and orientation activities"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Onboarding lifecycle events coordinate HR, IT, and facilities tasks from offer acceptance through day one readiness.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
@@ -11104,12 +11756,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 65,
 		"prompt": "What is stored in a lifecycle event template?",
 		"choices": [
-			"Reusable activity sets, triggers, and mappings for common employee transitions",
 			"Encrypted employee SSN values",
+			"Software installation media",
 			"CMDB discovery credentials",
-			"Software installation media"
+			"Reusable activity sets, triggers, and mappings for common employee transitions"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Templates accelerate journey implementation by providing starting configurations for standard lifecycle scenarios.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
@@ -11402,10 +12054,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"Unauthenticated guest case access",
 			"Global table delete ACL for all users"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			2
 		],
 		"questionType": "multi",
 		"explanation": "Employees authenticate to Employee Center and HR criteria limits which services they may view or request.",
@@ -11419,9 +12071,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "How should teams protect HR data during implementation across environments?",
 		"choices": [
 			"Use anonymized or masked data in sub-production and restrict elevated roles",
-			"Copy production HR cases with full PII to all dev instances",
 			"Disable ACLs in test to save time",
-			"Share admin passwords for efficiency"
+			"Share admin passwords for efficiency",
+			"Copy production HR cases with full PII to all dev instances"
 		],
 		"correctIndex": 0,
 		"explanation": "Data masking and least-privilege roles reduce privacy exposure while configurations are built and tested.",
@@ -11483,9 +12135,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which approach aligns HR security with privacy regulations such as GDPR?",
 		"choices": [
 			"Apply least privilege, data minimization, and controlled retention on HR records",
-			"Grant all employees access to all HR cases",
 			"Store unrestricted exports on public shares",
-			"Disable journaling to reduce storage"
+			"Disable journaling to reduce storage",
+			"Grant all employees access to all HR cases"
 		],
 		"correctIndex": 0,
 		"explanation": "Privacy programs combine role design, field protection, and retention policies to safeguard personal employee data.",
@@ -11514,12 +12166,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 0,
 		"prompt": "In the base platform configuration, what automatically happens to a standard incident that remains in the Resolved state after the configured auto-close interval elapses?",
 		"choices": [
-			"The incident is automatically moved to a Closed state",
 			"A notification is sent to the assignment group manager requesting review of the incident record",
+			"A post-incident report is automatically created and attached to the incident",
 			"A notification is sent to the user assigned to review the incident record",
-			"A post-incident report is automatically created and attached to the incident"
+			"The incident is automatically moved to a Closed state"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "When auto-closure is enabled, the Autoclose Incidents scheduled job runs the Incident Autoclose business rule to close Resolved incidents after the glide.ui.autoclose.time interval.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/incident-management/configure-incident-auto-close.html"
@@ -11578,12 +12230,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 4,
 		"prompt": "When a parent incident is updated to the Resolved state, how are associated child incidents synchronized by default?",
 		"choices": [
-			"Child incidents are set to Resolved and resolution notes are copied to the child activity log",
 			"Child incidents are automatically Closed at the same time as the parent incident",
+			"Child incidents inherit the parent On Hold reason and stay in the On Hold state",
 			"Child incidents remain unchanged until the caller closes each child record manually",
-			"Child incidents inherit the parent On Hold reason and stay in the On Hold state"
+			"Child incidents are set to Resolved and resolution notes are copied to the child activity log"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Parent-child synchronization sets child incidents to Resolved when the parent resolves and copies resolution notes into the child activity log; child incidents are not auto-closed with the parent.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/incident-management/parent-child-state-sync.html"
@@ -11660,11 +12312,11 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A service desk agent believes an open incident requires accelerated major incident handling. Which action proposes the record as a major incident candidate?",
 		"choices": [
 			"Convert the incident to a Normal change request from the Related Records tab",
-			"Click Propose Major Incident from the incident form context menu",
 			"Manually run the Autoclose Incidents scheduled job for the record",
-			"Set the incident state to Closed and create a new catalog task"
+			"Set the incident state to Closed and create a new catalog task",
+			"Click Propose Major Incident from the incident form context menu"
 		],
-		"correctIndex": 1,
+		"correctIndex": 3,
 		"explanation": "Agents can propose an incident as a major incident candidate using the Propose Major Incident context menu action before a major incident manager promotes it.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/incident-management/major-incident-management.html"
@@ -11723,10 +12375,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 13,
 		"prompt": "Which plugins must be active to use Predictive Intelligence classification solutions such as Incident Assignment and Incident Categorization?",
 		"choices": [
-			"com.snc.software_asset_management only",
 			"com.snc.incident.mim.ml_solution without com.glide.platform_ml",
+			"com.snc.best_practice.problem.jakarta only",
 			"com.glide.platform_ml and com.snc.incident.ml_solution",
-			"com.snc.best_practice.problem.jakarta only"
+			"com.snc.software_asset_management only"
 		],
 		"correctIndex": 2,
 		"explanation": "Classification solutions for incident assignment and categorization require both the platform ML plugin (com.glide.platform_ml) and Predictive Intelligence for Incident Management (com.snc.incident.ml_solution).",
@@ -11807,11 +12459,11 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which Incident form feature helps an agent quickly research other tickets logged by the same caller?",
 		"choices": [
 			"The Change Conflict Detection related list on the change request form",
-			"The show related incidents icon beside the Caller field",
 			"The software counter summary report in Software Asset Management",
-			"The service offering SLA commitment editor in Service Portfolio Management"
+			"The service offering SLA commitment editor in Service Portfolio Management",
+			"The show related incidents icon beside the Caller field"
 		],
-		"correctIndex": 1,
+		"correctIndex": 3,
 		"explanation": "When the Caller field is populated, the show related incidents icon appears so agents can view incidents for the same caller; the Incidents by Same Caller related list provides another research option.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/incident-management/work-on-incidents.html"
@@ -11856,11 +12508,11 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A customer reports multiple recurring incidents caused by the same underlying failure. What is the appropriate Problem Management action?",
 		"choices": [
 			"Close all related incidents without creating a problem record",
-			"Convert each incident directly to an Emergency change request",
 			"Create a problem to identify the root cause and help prevent recurrence",
-			"Disable the inactivity monitor on the Incident table for that caller"
+			"Disable the inactivity monitor on the Incident table for that caller",
+			"Convert each incident directly to an Emergency change request"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"explanation": "Problems are created to identify and permanently fix underlying causes, especially after recurring incidents or major incident resolution.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/problem-management/exploring-problem-management.html"
@@ -11969,12 +12621,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 28,
 		"prompt": "During problem assessment, an analyst discovers an existing problem that already tracks the same issue. Which action should they take on the new problem?",
 		"choices": [
-			"Create an Emergency change request without linking any incidents",
 			"Disable the Autoclose Incidents scheduled job for the instance",
+			"Click Mark Duplicate so related records move to the existing problem",
 			"Delete both problem records and rerun CMDB identification",
-			"Click Mark Duplicate so related records move to the existing problem"
+			"Create an Emergency change request without linking any incidents"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "Mark Duplicate closes the duplicate problem and moves configured related task records to the existing problem per problem management properties.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/problem-management/assess-a-problem.html"
@@ -12035,9 +12687,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "When should an implementation team select the Emergency change type?",
 		"choices": [
 			"When a fix must be implemented as soon as possible to resolve a major incident or apply a critical patch",
-			"For every routine catalog hardware request submitted through the service portal",
 			"Whenever a user opens a self-service password reset catalog item",
-			"Only when the change can wait for a scheduled maintenance window with no urgency"
+			"Only when the change can wait for a scheduled maintenance window with no urgency",
+			"For every routine catalog hardware request submitted through the service portal"
 		],
 		"correctIndex": 0,
 		"explanation": "Emergency changes address urgent fix-on-fail or fail-or-fail situations and move quickly to Authorize state for CAB approval group review.",
@@ -12100,11 +12752,11 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "What can administrators configure in the Simplified Change Management Emergency change model?",
 		"choices": [
 			"Software license compliance counter schedules only",
-			"Authorized submitters, stakeholder notifications, approvals, and automatic change task creation",
 			"The default variable editor formatter on catalog requested items only",
-			"Service portfolio taxonomy layers without change approvals"
+			"Service portfolio taxonomy layers without change approvals",
+			"Authorized submitters, stakeholder notifications, approvals, and automatic change task creation"
 		],
-		"correctIndex": 1,
+		"correctIndex": 3,
 		"explanation": "The Emergency change model configuration console defines who may submit emergency changes, notifications, approvals, and automatic task creation behavior.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/configure-emergency-change-model-scm.html"
@@ -12195,12 +12847,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 42,
 		"prompt": "When risk assessment is configured for Simplified Change Management, how is a submitted change request routed?",
 		"choices": [
-			"Manually by the caller's department manager for every request regardless of score",
 			"Based on the total risk assessment score mapped to Low, Moderate, or High approval workflows",
+			"Using the incident priority matrix without evaluating change-specific questions",
 			"By alphabetical order of the change short description field only",
-			"Using the incident priority matrix without evaluating change-specific questions"
+			"Manually by the caller's department manager for every request regardless of score"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "Risk survey answers produce a score that maps to risk levels and automatically routes the change to the matching approval workflow.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/configure-risk-change-mgmt.html"
@@ -12259,12 +12911,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 46,
 		"prompt": "How does a maintenance window differ from a blackout schedule in Simplified Change Management?",
 		"choices": [
-			"A maintenance window permits changes only during the defined period, while a blackout schedule blocks changes during the defined period",
 			"A maintenance window permanently blocks all change types, while a blackout schedule auto-approves standard templates",
+			"A maintenance window replaces CAB authorization, while blackout schedules disable risk assessment scoring",
 			"A maintenance window applies only to incident records, while blackout schedules apply only to problem records",
-			"A maintenance window replaces CAB authorization, while blackout schedules disable risk assessment scoring"
+			"A maintenance window permits changes only during the defined period, while a blackout schedule blocks changes during the defined period"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Maintenance windows designate periods when changes are expected and permitted; blackout schedules define critical periods when changes are blocked.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/configure-schedules-for-simplified-change-management.html"
@@ -12324,9 +12976,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A service portfolio in Service Portfolio Management is designed to provide which overall view?",
 		"choices": [
 			"Currently available services, possible future services, and services that existed in the past",
-			"Open incidents grouped by assignment group with no service context",
 			"Emergency change approvals submitted during the current fiscal quarter only",
-			"CMDB discovery payloads imported from MID Server schedules"
+			"CMDB discovery payloads imported from MID Server schedules",
+			"Open incidents grouped by assignment group with no service context"
 		],
 		"correctIndex": 0,
 		"explanation": "A service portfolio is a top-level container for organizing current, future, and retired services so portfolio owners can evaluate business impact and spending.",
@@ -12483,12 +13135,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 60,
 		"prompt": "When should the service desk direct a user to order a published catalog item instead of logging an incident?",
 		"choices": [
-			"When the user needs a standard, pre-defined service offering available in the service catalog",
 			"When the user reports an unplanned interruption to an IT service",
+			"When CMDB identification rules fail on the affected configuration item",
 			"When the issue requires immediate major incident management escalation",
-			"When CMDB identification rules fail on the affected configuration item"
+			"When the user needs a standard, pre-defined service offering available in the service catalog"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Standard, catalog-published services belong in request fulfillment; unplanned service interruptions are handled as incidents.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/incident-management/incident-management-process.html",
@@ -12566,9 +13218,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "What can employees do from the Employee Center portal in Simplified IT Service Management?",
 		"choices": [
 			"Search for information, open IT tickets, browse catalog items, and track their requests and incidents",
-			"Configure CAB approvals and blackout schedules for change requests",
 			"Edit CMDB identification and reconciliation rules without admin roles",
-			"Run the Autoclose Incidents scheduled job on Resolved incident records"
+			"Run the Autoclose Incidents scheduled job on Resolved incident records",
+			"Configure CAB approvals and blackout schedules for change requests"
 		],
 		"correctIndex": 0,
 		"explanation": "Employee Center provides self-service search, ticket creation, catalog browsing, and simplified visibility into the employee's requests, incidents, and tasks.",
@@ -12725,12 +13377,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 75,
 		"prompt": "When ITSM processes require service impact analysis, what does the Configuration Management Database primarily provide?",
 		"choices": [
-			"Logical representations of configuration items and relationships between infrastructure components",
 			"Automatic closure of Resolved incidents after the configured autoclose interval",
+			"Service portfolio taxonomy layers managed only by portfolio_viewer users",
 			"Pre-approved Standard change templates for every catalog request",
-			"Service portfolio taxonomy layers managed only by portfolio_viewer users"
+			"Logical representations of configuration items and relationships between infrastructure components"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "The CMDB stores CIs and their relationships so ITSM teams can understand infrastructure dependencies, integrity, and service context.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/c_ITILConfigurationManagement.html"
@@ -12855,9 +13507,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "After a problem coordinator confirms a valid problem during assessment, which state does the problem enter next?",
 		"choices": [
 			"The problem enters the Root Cause Analysis state",
-			"Closed with Risk accepted as the resolution code",
 			"New awaiting the Update Problem State to Assess business rule",
-			"Scheduled waiting for the planned start date"
+			"Scheduled waiting for the planned start date",
+			"Closed with Risk accepted as the resolution code"
 		],
 		"correctIndex": 0,
 		"explanation": "Confirming a valid problem during Assess moves it into Root Cause Analysis for investigation and proposed fix identification.",
@@ -12965,1450 +13617,1488 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 	{
 		"trackCode": "CIS-PA",
 		"order": 0,
-		"prompt": "In Performance Analytics, an indicator is best described as:",
+		"prompt": "A new Platform Analytics engagement must explain how KPIs reach executive dashboards. Which sequence best describes how PA solution components connect?",
 		"choices": [
-			"Practically speaking, a tracked metric whose scores are collected over time for analysis",
-			"From an admin perspective, a MID Server configuration record in standard operations",
-			"Typically, a role used only by report admins for stable outcomes for consistent administration",
-			"In platform terms, a type of ACL for dashboards under normal policy constraints"
+			"Dashboards define indicator source conditions before any facts table is selected",
+			"Indicator sources filter facts tables, indicators aggregate scores, breakdowns segment results, and widgets visualize scores on dashboards",
+			"Targets create indicator records automatically from unfiltered table exports",
+			"Breakdown sources replace indicator sources during the first data collection run"
 		],
-		"correctIndex": 0,
-		"explanation": "Indicators define what you measure; scores are stored and trended for widgets and analytics.",
+		"correctIndex": 1,
+		"explanation": "PA builds from filtered facts through indicators and breakdowns to collected scores that widgets and dashboards present to stakeholders.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_UseIndicatorOverview.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/workflow-automated-indicators.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 1,
-		"prompt": "What is the main purpose of a breakdown for an indicator?",
+		"prompt": "During a greenfield PA deployment, the technical team is ready to build KPIs from incident data. Which implementation step comes first in the standard bottom-up workflow?",
 		"choices": [
-			"Operationally, to segment scores by dimensions such as assignment group, priority, or location",
-			"In most deployments, to store integration credentials for consistent administration",
-			"From a governance perspective, to disable automated collection under normal policy constraints",
-			"From an implementation standpoint, to define SMTP relay hostnames for governed delivery"
+			"Create indicator sources for each relevant record subset on the Incident table",
+			"Publish executive dashboards before any indicator definitions exist",
+			"Schedule data collection jobs before identifying the facts table",
+			"Configure breakdown matrices before searching for existing indicator sources"
 		],
 		"correctIndex": 0,
-		"explanation": "Breakdowns slice indicator results by reference data or other dimensions for comparative views.",
+		"explanation": "Technical PA implementation starts by identifying tables and creating indicator sources that filter record subsets before indicators and collection jobs are defined.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/use/performance-analytics/concept/c_CreatingBreakdowns.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/workflow-automated-indicators.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 2,
-		"prompt": "Data collection for Performance Analytics is primarily responsible for:",
+		"prompt": "The CIO wants quarterly visibility into service performance trends without ad hoc spreadsheet reports. Which PA use case best addresses this need?",
 		"choices": [
-			"Operationally, publishing scoped applications to the Store",
-			"In practice, gathering indicator scores on a schedule or through manual actions",
-			"In most deployments, creating update sets for widgets",
-			"From an implementation standpoint, rotating database encryption keys"
+			"CMDB discovery schedules that populate dashboard filters automatically",
+			"Real-time event rules that replace all historical trend analysis",
+			"One-time report exports run manually by each business analyst",
+			"Scheduled indicator score collection with trend widgets shared on role-based dashboards"
 		],
-		"correctIndex": 1,
-		"explanation": "Collection jobs populate PA tables from defined sources so dashboards reflect current and historical scores.",
+		"correctIndex": 3,
+		"explanation": "PA delivers recurring score snapshots and trend visualizations on dashboards so executives can monitor performance over time without manual reporting.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/use/performance-analytics/concept/optimized-data-collection.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/designing-pa-solution.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 3,
-		"prompt": "Which statement about Performance Analytics dashboards is most accurate?",
+		"prompt": "A business analyst needs to create automated indicators and associate breakdowns but should not manage data collection jobs. Which role aligns to that persona?",
 		"choices": [
-			"Practically speaking, dashboards assemble widgets that visualize indicators and related scores for consumers",
-			"In platform terms, targets cannot be associated with indicators for governed delivery",
-			"In this scenario, widgets may only show static text without queries under expected controls",
-			"From an admin perspective, dashboards cannot reference PA indicators for stable outcomes"
+			"pa_power_user",
+			"pa_data_collector",
+			"pa_target_admin without pa_viewer",
+			"admin because indicators always require full system access"
 		],
 		"correctIndex": 0,
-		"explanation": "Dashboards compose visual elements fed by indicators and other PA content.",
+		"explanation": "pa_power_user creates indicators, breakdowns, and PA widgets; pa_data_collector owns indicator sources and data collection jobs.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/use/performance-analytics/task/t_CreateADashboard.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/r_PARoles.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 4,
-		"prompt": "A formula indicator is most appropriate when you need to:",
+		"questionType": "multi",
+		"prompt": "Which artifacts are foundational Performance Analytics solution components an implementer configures before dashboards go live? (Choose three.)",
 		"choices": [
-			"In platform terms, configure SAML single logout for governed delivery",
-			"Practically speaking, replace CMDB identification rules under expected controls",
-			"In this scenario, derive a value from arithmetic or functions on other indicators",
-			"From a governance perspective, define email routing rules in standard operations"
+			"Indicator sources that filter facts table records",
+			"Indicators that define what is measured and how scores aggregate",
+			"Breakdowns that segment scores by dimensions such as assignment group",
+			"MID Server clusters dedicated to each indicator frequency",
+			"Update sets that version-control widget CSS themes"
 		],
-		"correctIndex": 2,
-		"explanation": "Formula indicators compute results from other indicators using expressions defined in PA.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1,
+			2
+		],
+		"explanation": "Indicator sources, indicators, and breakdowns form the core PA data model; MID Server clusters and update sets are not PA solution components.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/workflow-automated-indicators.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 5,
+		"prompt": "The program team completed KPI Composer workshops mapping business goals to measurements. How does that design phase relate to technical indicator implementation?",
+		"choices": [
+			"KPI Composer drives top-down KPI design while indicator build follows a bottom-up workflow from tables to jobs",
+			"KPI Composer replaces the need to create indicator sources on the instance",
+			"Technical implementers must finish all dashboards before KPI Composer artifacts are reviewed",
+			"KPI Composer only documents manual indicators and excludes automated KPIs"
+		],
+		"correctIndex": 0,
+		"explanation": "KPI Composer aligns stakeholders on goals and measurements top-down; implementers then build indicator sources, indicators, and jobs bottom-up from platform tables.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/designing-pa-solution.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 6,
+		"prompt": "Before creating Incidents.Open and Incidents.Resolved sources, what should the PA team do to avoid redundant configuration?",
+		"choices": [
+			"Copy indicator sources from production without reviewing condition overlap",
+			"Run a full platform upgrade to regenerate indicator libraries",
+			"Delete all OOTB PA content so custom naming conventions apply cleanly",
+			"Search existing indicator sources and indicators for matching filters and KPI definitions"
+		],
+		"correctIndex": 3,
+		"explanation": "The standard workflow requires verifying that no suitable indicator source or indicator already exists before creating duplicates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/workflow-automated-indicators.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 7,
+		"prompt": "Executive sponsors approved a PA program but want assurance that technical work maps to agreed outcomes before build starts. Which KPI Composer capability supports that alignment?",
+		"choices": [
+			"Visual KPI trees linking business goals, critical success factors, and required measurements",
+			"Automated MID Server provisioning for each dashboard consumer",
+			"Default incident SLAs that replace indicator target definitions",
+			"Global system properties that hide unpublished widgets from all roles"
+		],
+		"correctIndex": 0,
+		"explanation": "KPI Composer KPI trees visualize how business goals, success factors, and measurements connect so sponsors and implementers share the same scope.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/designing-pa-solution.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 8,
+		"questionType": "multi",
+		"prompt": "Which tasks complete deployment of a new automated indicator with ongoing collection? (Choose two.)",
+		"choices": [
+			"Convert the indicator to manual entry after the first successful collection",
+			"Run an unscheduled job to backfill historical scores when source data exists",
+			"Delete all pa_scores_l1 rows before running the first source preview",
+			"Activate a scheduled job aligned to indicator frequency for ongoing collection"
+		],
+		"correctIndex": 1,
+		"correctIndexes": [
+			1,
+			3
+		],
+		"explanation": "New indicators typically get a one-time historical backfill job plus an active scheduled job for recurring collection at the indicator frequency.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/workflow-automated-indicators.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 9,
+		"prompt": "Leadership asks for a KPI showing open incidents reassigned at least once this week. Which PA artifact defines the measurable metric and aggregation on filtered incident records?",
+		"choices": [
+			"An automated indicator on an indicator source that filters open incidents",
+			"A breakdown source that replaces the facts table for the Incident module",
+			"A database view that stores pre-rendered chart images for executives",
+			"A business rule that writes scores directly to the sys_properties table"
+		],
+		"correctIndex": 0,
+		"explanation": "Automated indicators define the KPI measurement and aggregation logic on records returned by a shared indicator source.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_IndicatorSources.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 10,
+		"prompt": "An indicator source must count resolved change requests closed last month. Which indicator source field identifies the underlying transactional table?",
+		"choices": [
+			"Facts table",
+			"Widget data visualization type",
+			"Report source refresh timestamp",
+			"Breakdown matrix"
+		],
+		"correctIndex": 0,
+		"explanation": "The facts table on an indicator source specifies the ServiceNow table or database view whose filtered records feed associated indicators.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_IndicatorSources.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 11,
+		"prompt": "A daily incident KPI should reflect records opened today. Which indicator source condition pattern follows PA best practice?",
+		"choices": [
+			"[Opened][on][Today] on the Incident facts table",
+			"[Number][is][Active] without any date filter on the source",
+			"[Assigned to][is][Empty] as the only filter with monthly frequency",
+			"Dot-walk to [Caller ID][Name][contains][VIP] on every source"
+		],
+		"correctIndex": 0,
+		"explanation": "Indicator sources should include at least one date-related condition aligned to the collection frequency, such as Opened on Today for daily incident KPIs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_IndicatorSources.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 12,
+		"prompt": "Where are indicator scores stored?",
+		"choices": [
+			"pa_scores (legacy table only)",
+			"pa_scores_l1 and pa_scores_l2",
+			"sys_audit for every collected snapshot",
+			"pa_indicator_definition staging tables"
+		],
+		"correctIndex": 1,
+		"explanation": "Current PA score data is stored in pa_scores_l1 for indicator scores and pa_scores_l2 for breakdown scores; pa_scores is the legacy table.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_IndicatorSources.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 13,
+		"prompt": "A KPI must divide one automated indicator by another to produce a percentage. Which indicator type implements that calculation?",
+		"choices": [
+			"Manual indicator entered on a weekly scoresheet only",
+			"Formula indicator referencing other indicators",
+			"Breakdown source scripted with no facts table",
+			"External indicator fed exclusively by JDBC without scores"
+		],
+		"correctIndex": 1,
+		"explanation": "Formula indicators compute values from arithmetic or functions applied to other indicators, including ratios and percentages.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/formula-indicators.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
-		"order": 5,
-		"prompt": "In Performance Analytics, what does an indicator primarily represent?",
-		"choices": [
-			"Typically, a one-time report export format under normal policy constraints",
-			"From an implementation standpoint, a user criterion for homepage access",
-			"Operationally, a measurable metric tracked over time as scores",
-			"In practice, a scripted REST API endpoint for dashboard widgets"
-		],
-		"correctIndex": 2,
-		"explanation": "Indicators are time-series metrics used to monitor trend and performance in PA.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/concept/c_Indicators.html"
-		]
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 6,
-		"prompt": "Which configuration determines where an automated indicator retrieves its source records?",
-		"choices": [
-			"In this scenario, widget preferences",
-			"Operationally, indicator source",
-			"From a governance perspective, breakdown mapping",
-			"In platform terms, pA threshold template"
-		],
-		"correctIndex": 1,
-		"explanation": "The indicator source defines the table and filter conditions that feed data collection for automated indicators.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/concept/c_IndicatorSources.html"
-		]
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 7,
-		"prompt": "What is the key difference between an automated indicator and a manual indicator?",
-		"choices": [
-			"In most deployments, automated indicators collect scores from platform data, while manual indicators are entered by users",
-			"In this scenario, automated indicators can only be used in scorecards for consistent administration",
-			"From a governance perspective, manual indicators require a scripted data collector under normal policy constraints",
-			"In platform terms, manual indicators cannot have targets or thresholds for governed delivery"
-		],
-		"correctIndex": 0,
-		"explanation": "Automated indicators derive values from data collections, while manual indicators rely on user-entered periodic scores.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/concept/c_ManualIndicators.html"
-		]
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 8,
-		"prompt": "A PA admin wants to compare an indicator's current score with a predefined objective line. Which feature should be configured?",
-		"choices": [
-			"Typically, breakdown relation",
-			"Operationally, collection source script",
-			"In practice, forecast definition",
-			"From an admin perspective, target"
-		],
-		"correctIndex": 3,
-		"explanation": "Targets define expected performance values that can be displayed alongside actual scores for comparison.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/task/t_CreateTargets.html"
-		]
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 9,
-		"prompt": "Why are indicator scores collected at regular intervals instead of being recalculated only on demand?",
-		"choices": [
-			"Typically, interval collection disables breakdowns through configured automation",
-			"In practice, regular collections are required only for scripted indicators",
-			"Practically speaking, regular collections preserve historical snapshots needed for trend analysis",
-			"From an admin perspective, on-demand calculations are not allowed in PA"
-		],
-		"correctIndex": 2,
-		"explanation": "PA depends on periodic snapshots to track metric movement over time and support time-based analytics.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/concept/c_DataCollection.html"
-		]
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 10,
-		"prompt": "In Performance Analytics, what is a breakdown source?",
-		"choices": [
-			"Practically speaking, a report export for external BI tools for governed delivery",
-			"Typically, a schedule that runs data collection jobs under expected controls",
-			"In practice, a target line configuration for score widgets for stable outcomes",
-			"From an admin perspective, that dataset that defines available values used to segment indicator scores"
-		],
-		"correctIndex": 3,
-		"explanation": "Breakdown sources provide the dimension values (for example, assignment groups) used to slice indicator results.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/concept/c_Breakdowns.html"
-		]
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 11,
-		"prompt": "A breakdown is configured but no values appear during analysis. Which setup should be verified first?",
-		"choices": [
-			"In most deployments, chart legend placement under normal policy constraints",
-			"From an implementation standpoint, forecast confidence interval",
-			"In this scenario, indicator source and breakdown source alignment for the same data context",
-			"From a governance perspective, homepage font and color settings"
-		],
-		"correctIndex": 2,
-		"explanation": "If breakdown source data does not align with indicator source records, segmentation values will not populate as expected.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/task/t_ConfigureBreakdownSources.html"
-		]
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 12,
-		"prompt": "What is the purpose of a breakdown mapping in PA?",
-		"choices": [
-			"In most deployments, to run ad hoc collections on demand for stable outcomes",
-			"From an implementation standpoint, to clone widgets between dashboards in standard operations",
-			"Operationally, to encrypt breakdown values before storage for consistent administration",
-			"From a governance perspective, to connect an indicator source field to the correct breakdown source values"
-		],
-		"correctIndex": 3,
-		"explanation": "Breakdown mapping defines how indicator data relates to dimension values, enabling accurate segmented scores.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/concept/c_BreakdownMappings.html"
-		]
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 13,
-		"prompt": "Why would an admin use scripted breakdown sources?",
-		"choices": [
-			"From an admin perspective, to force all widgets to display as heatmaps",
-			"Typically, to generate dynamic segmentation values when table data alone is insufficient",
-			"Practically speaking, to disable indicator collections for specific groups",
-			"In platform terms, to replace all indicator sources with JavaScript"
-		],
-		"correctIndex": 1,
-		"explanation": "Scripted breakdown sources support custom value generation and labeling for advanced dimensional analysis needs.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/task/t_CreateScriptedBreakdowns.html"
-		]
-	},
-	{
-		"trackCode": "CIS-PA",
 		"order": 14,
-		"prompt": "What is a common reason to restrict the values in a breakdown source?",
+		"questionType": "multi",
+		"prompt": "Which settings are defined when creating an indicator source? (Choose three.)",
 		"choices": [
-			"In this scenario, to prevent scheduled collections from running for consistent administration",
-			"From an admin perspective, to improve analytical focus and performance by excluding irrelevant segments",
-			"Practically speaking, to ensure indicator scores can does not be trended for governed delivery",
-			"In platform terms, to reduce duplicate user accounts under normal policy constraints"
+			"KPI Composer project task assignee groups",
+			"Facts table or reused report source",
+			"Filter conditions on the selected table records",
+			"Valid for frequency aligned to the collection calendar",
+			"Dashboard role restrictions for widget consumers"
 		],
 		"correctIndex": 1,
-		"explanation": "Limiting dimensional values to meaningful segments keeps dashboards relevant and can reduce processing overhead.",
+		"correctIndexes": [
+			1,
+			2,
+			3
+		],
+		"explanation": "Indicator sources require a facts table or report source, filtering conditions, and a frequency; dashboard roles and KPI Composer assignees are configured elsewhere.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/concept/c_Breakdowns.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_IndicatorSources.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 15,
-		"prompt": "In PA, what does a data collection job do?",
+		"prompt": "An automated indicator on open incidents should count matching records each day. Which aggregation approach applies on the indicator?",
 		"choices": [
-			"Operationally, synchronizes user preferences between instances under normal policy constraints",
-			"In most deployments, creates update sets for indicator definitions for governed delivery",
-			"In practice, deletes stale dashboard widgets under normal policy constraints under expected controls",
-			"From an implementation standpoint, runs indicator calculations on schedule and stores resulting scores"
+			"Count aggregation on records returned by the indicator source",
+			"Sum of breakdown element weights without a facts table",
+			"Average of sys_updated_on timestamps across all tables",
+			"Scripted export that bypasses indicator score tables"
 		],
-		"correctIndex": 3,
-		"explanation": "Collection jobs execute indicator logic at defined intervals and persist score snapshots for trending and analysis.",
+		"correctIndex": 0,
+		"explanation": "Automated indicators aggregate records from their indicator source; count is the standard aggregation when the KPI measures record volume.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/concept/c_DataCollectionJobs.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/workflow-automated-indicators.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 16,
-		"prompt": "Why is collection schedule design important for high-volume indicators?",
+		"prompt": "Two indicators share Incidents.Open but one KPI needs only P1 incidents. Where should that additional P1 filter be applied?",
 		"choices": [
-			"In this scenario, this approach controls instance load and ensures timely score freshness for stakeholders",
-			"Practically speaking, this approach disables target comparisons during business hours",
-			"In platform terms, this approach applies only to manual indicators for governed delivery",
-			"From an implementation standpoint, this approach determines whether indicators can use breakdowns"
+			"Additional conditions on the individual indicator record",
+			"Replacement of the shared indicator source facts table",
+			"Global system property com.snc.pa.dc.disable_filtering",
+			"Dashboard visualization color scheme settings"
 		],
 		"correctIndex": 0,
-		"explanation": "Proper schedule timing balances analytical freshness with platform performance and operational constraints.",
+		"explanation": "Shared indicator sources carry high-level filters; indicator-specific conditions refine subsets for individual KPIs on the same source.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/task/t_ScheduleDataCollection.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_IndicatorSources.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 17,
-		"prompt": "An indicator score is stale even though the source table has new records. What should be validated first?",
+		"prompt": "Which field type is frequently used in Indicator Source Conditions?",
 		"choices": [
-			"In this scenario, that UI actions are visible on indicator forms under expected controls",
-			"Practically speaking, that the report export format is CSV for stable outcomes",
-			"In platform terms, that the related collection job executed successfully for the expected period",
-			"From a governance perspective, that homepage announcements are active for consistent administration"
+			"Phone Number",
+			"URL",
+			"Date-Time",
+			"Duration"
 		],
 		"correctIndex": 2,
-		"explanation": "Stale values often indicate missed or failed collection executions rather than issues with source table updates.",
+		"explanation": "Indicator source conditions typically include date-related filters on Date-Time fields such as Opened on Today or Closed on This month.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/task/t_MonitorCollectionJobs.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_IndicatorSources.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 18,
-		"prompt": "What is the role of historical backfill collection in Performance Analytics?",
+		"prompt": "When standard count or sum aggregation cannot express a KPI, what PA feature lets implementers customize how scores are calculated from source records?",
 		"choices": [
-			"Operationally, this approach disables breakdown collection to improve speed for stable outcomes",
-			"From an implementation standpoint, this approach is required only for scripted REST integrations",
-			"Typically, this approach removes all existing scores before recollecting for consistent administration",
-			"In practice, this approach populates prior periods so trend analysis is available before ongoing schedules accumulate history"
+			"Aggregation script on the indicator",
+			"MID Server script include invoked at login",
+			"UI policy that hides invalid breakdown elements",
+			"Report color palette assigned to the data collector job"
 		],
-		"correctIndex": 3,
-		"explanation": "Backfill jobs collect past periods to establish usable historical context for dashboards and scorecards.",
+		"correctIndex": 0,
+		"explanation": "Aggregation scripts on indicators allow custom score calculations when built-in aggregation types do not meet the KPI requirement.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/task/t_RunHistoricalDataCollection.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/workflow-automated-indicators.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 19,
-		"prompt": "A collection job is timing out on a complex indicator source. Which remediation is most appropriate?",
+		"questionType": "multi",
+		"prompt": "Which practices help keep indicator sources efficient and reusable across multiple KPIs? (Choose two.)",
 		"choices": [
-			"Operationally, delete indicator scores and stop collecting",
-			"From an admin perspective, switch all indicators to manual entry",
-			"Typically, optimize source filters/indexing and adjust collection strategy",
-			"In practice, disable all breakdowns globally for consistent administration"
+			"Remove all date conditions so jobs scan entire tables each run",
+			"Create a separate source for every indicator even when conditions overlap",
+			"Place reusable subset filters on the source and indicator-specific filters on each indicator",
+			"Minimize the number of sources by sharing high-level date and status filters"
 		],
 		"correctIndex": 2,
-		"explanation": "Performance issues should be addressed by improving source query efficiency and collection design, not by disabling analytics capability.",
+		"correctIndexes": [
+			2,
+			3
+		],
+		"explanation": "Fewer shared sources improve collection efficiency; high-level filters belong on the source while KPI-specific refinements stay on individual indicators.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/concept/performance-analytics-performance.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_IndicatorSources.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 20,
-		"prompt": "When is a manual indicator the best choice in Performance Analytics?",
+		"prompt": "A KPI requires logic that cannot be expressed with conditions and standard aggregation alone on Incident records. Which indicator type should the implementer evaluate?",
 		"choices": [
-			"In this scenario, when metric values come from external or qualitative assessments not directly available in platform tables",
-			"In platform terms, when real-time row-level event processing is required under normal policy constraints",
-			"Practically speaking, when indicator sources are heavily indexed for governed delivery",
-			"From a governance perspective, when automated collection jobs are preferred under expected controls"
+			"Breakdown relation used as a standalone score",
+			"Scripted indicator",
+			"External indicator with no ServiceNow table reference",
+			"Manual indicator updated by executives each quarter"
 		],
-		"correctIndex": 0,
-		"explanation": "Manual indicators support metrics that cannot be reliably derived from existing ServiceNow transactional data.",
+		"correctIndex": 1,
+		"explanation": "Scripted indicators support custom score logic when table conditions and standard aggregation types are insufficient for the KPI.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/concept/c_ManualIndicators.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/workflow-automated-indicators.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 21,
-		"prompt": "What control helps ensure manual indicator score quality over time?",
+		"prompt": "Satisfaction survey scores arrive from a third-party tool and are not stored in a ServiceNow facts table. How should the KPI be modeled?",
 		"choices": [
-			"Operationally, allowing any role to overwrite historical values without audit",
-			"From an implementation standpoint, recalculating manual indicators from incident tables nightly",
-			"Typically, disabling score comments for all users under normal policy constraints",
-			"In practice, defining clear ownership, submission cadence, and review criteria for entered scores"
+			"Manual indicator with periodic score entry by designated contributors",
+			"Automated indicator on the Incident table with a blank indicator source",
+			"Formula indicator that divides two empty automated indicators",
+			"Data collection job that queries sys_audit every minute"
 		],
-		"correctIndex": 3,
-		"explanation": "Ownership and governance practices are essential to keep manually entered PA data consistent and trustworthy.",
+		"correctIndex": 0,
+		"explanation": "Manual indicators capture metrics that cannot be derived from ServiceNow transactional data, with contributors entering scores on a defined cadence.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/task/t_ManageManualIndicatorData.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/workflow-automated-indicators.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 22,
-		"prompt": "A KPI combines automated incident backlog and a leadership-entered readiness score. How should this be modeled?",
+		"prompt": "A broad incident source approaches the default row limit during nightly collection. Which indicator source setting overrides the global maximum records collected?",
 		"choices": [
-			"Practically speaking, as a single automated indicator with no formula",
-			"From a governance perspective, as two independent widgets with no linkage",
-			"In this scenario, as a formula indicator referencing both automated and manual indicator inputs",
-			"In platform terms, as a report-only metric outside PA under expected controls"
+			"Change the widget visualization to a single-score type",
+			"Assign pa_viewer to all dashboard consumers",
+			"Override record collection with Maximum number of records collected",
+			"Disable the indicator library for that facts table"
 		],
 		"correctIndex": 2,
-		"explanation": "Formula indicators can combine multiple source indicators, including manual and automated values, into one KPI expression.",
+		"explanation": "Override record collection on the indicator source sets a source-specific maximum, overriding the com.snc.pa.dc.max_row_count_indicator_source property.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/concept/c_FormulaIndicators.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_IndicatorSources.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 23,
-		"prompt": "What is an important risk if manual indicator governance is weak?",
+		"prompt": "Operations wants near real-time incident backlog visibility on a dashboard widget. Where can an implementer set qualifying filters so scores reflect current open records?",
 		"choices": [
-			"In most deployments, breakdown mappings cannot be created under expected controls",
-			"From a governance perspective, widgets cannot render time series for stable outcomes",
-			"In this scenario, inconsistent or delayed entries can reduce confidence in trend interpretation",
-			"In platform terms, targets will be deleted through configured automation"
+			"Conditions on the indicator or its indicator source",
+			"Only on the breakdown mapping related list",
+			"Exclusively in the dashboard filter bar with no indicator changes",
+			"On the MID Server heartbeat interval property"
 		],
-		"correctIndex": 2,
-		"explanation": "Without disciplined data entry practices, manual score trends may reflect process inconsistency rather than true performance changes.",
+		"correctIndex": 0,
+		"explanation": "Real-time or current-state scores require qualifying conditions on the indicator or indicator source so collections reflect the intended record subset.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/concept/c_ManualIndicators.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_IndicatorSources.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 24,
-		"prompt": "Which approach best supports auditability for manual indicator changes?",
+		"questionType": "multi",
+		"prompt": "Which Performance Analytics roles match typical deployment responsibilities? (Choose three.)",
 		"choices": [
-			"Typically, require score rationale and maintain visibility into who entered or adjusted values",
-			"In practice, restrict manual indicators from using targets in standard operations",
-			"Operationally, overwrite prior period scores without retaining history for consistent administration",
-			"From an admin perspective, allow anonymous updates to encourage participation"
+			"pa_data_collector manages indicator sources and data collection jobs",
+			"pa_power_user creates indicators, breakdowns, and PA widgets",
+			"pa_admin provides full administrative access including dependency assessment",
+			"pa_viewer creates indicator sources and schedules collection jobs",
+			"pa_spotlight_viewer CRUD all indicator sources and collection scripts"
 		],
 		"correctIndex": 0,
-		"explanation": "Documented rationale and traceable ownership improve trust and accountability for manually maintained PA metrics.",
+		"correctIndexes": [
+			0,
+			1,
+			2
+		],
+		"explanation": "pa_data_collector owns sources and jobs, pa_power_user builds indicators and visualizations, and pa_admin has full PA administration; pa_viewer and pa_spotlight_viewer do not create sources.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/vancouver/performance-analytics/task/t_ManageManualIndicatorData.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/r_PARoles.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 25,
-		"prompt": "In Performance Analytics, what is a target used for?",
+		"prompt": "An automated indicator must count only incident records that meet specific filter criteria on the source table. Which indicator source element defines that filter?",
 		"choices": [
-			"Practically speaking, to define a desired threshold or goal against an indicator value",
-			"Typically, to replace collection jobs for breakdown indicators",
-			"In practice, to set ACL rules on scorecard widgets in standard operations",
-			"From an admin perspective, to through configured automation assign incidents when KPI is breached"
+			"Conditions on the indicator source",
+			"Target warning and critical states",
+			"Breakdown matrix exclusion rows",
+			"Dashboard widget visualization type"
 		],
 		"correctIndex": 0,
-		"explanation": "Targets represent expected or desired performance values for indicators and are used to evaluate actual scores.",
+		"explanation": "Indicator source conditions limit which records are included when PA collects scores for an automated indicator.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Targets.html"
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_IndicatorSources.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 26,
-		"prompt": "When configuring a target, why would an admin choose a relative target instead of a fixed value?",
+		"prompt": "A service owner needs an indicator that reports the daily average resolution time rather than a total count. Which indicator setting should be changed?",
 		"choices": [
-			"In most deployments, relative targets are required for all automated indicators",
-			"From an implementation standpoint, relative targets disable indicator breakdowns",
-			"In this scenario, relative targets allow dynamic goals that change with historical or baseline values",
-			"From a governance perspective, relative targets can only be used for scripted sources"
+			"Spotlight walkthrough assignment",
+			"Import set transform map script",
+			"Aggregate function on the indicator source field",
+			"Breakdown relation drill path"
 		],
 		"correctIndex": 2,
-		"explanation": "Relative targets support goals that move based on trend or baseline context rather than using one static number.",
+		"explanation": "The aggregate function on the indicator source field controls whether PA stores counts, sums, averages, or other aggregations.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_CreateATarget.html"
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_IndicatorSources.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 27,
-		"prompt": "What is the benefit of setting warning and critical target states for an indicator?",
+		"prompt": "When configuring an automated indicator, what does the frequency setting control?",
 		"choices": [
-			"Typically, they lock scorecards from manual edits in standard operations",
-			"From an admin perspective, they remove the need for thresholds",
-			"Practically speaking, they increase data collection frequency through configured automation",
-			"In practice, they provide visual performance status bands for interpretation"
+			"How often PA collects and stores new scores for the indicator",
+			"Which roles may edit breakdown mappings on the indicator",
+			"Whether scorecards display target comparison lines",
+			"The retention period for closed incident records"
 		],
-		"correctIndex": 3,
-		"explanation": "Warning and critical states help users quickly interpret KPI status through consistent visual thresholds.",
+		"correctIndex": 0,
+		"explanation": "Indicator frequency defines the collection cadence that determines when score snapshots are gathered and persisted.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_TargetsAndThresholds.html"
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Indicators.html",
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_DataCollection.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 28,
-		"prompt": "A KPI should improve quarter-over-quarter by 5%. Which target strategy is most appropriate?",
+		"prompt": "An admin needs an indicator value from a GlideAggregate query that table conditions alone cannot express. What should they configure?",
 		"choices": [
-			"From an admin perspective, use only benchmark records",
-			"Typically, disable target evaluation and rely on reports",
-			"Practically speaking, use a static target with no historical dependency",
-			"In platform terms, use a target relative to a prior period value"
+			"A breakdown bucket group without an indicator source",
+			"A report chart exported to a flat file weekly",
+			"A scripted indicator source",
+			"A manual indicator updated by team leads each quarter"
 		],
-		"correctIndex": 3,
-		"explanation": "Relative targets are designed for goals expressed as improvement or change from prior periods.",
+		"correctIndex": 2,
+		"explanation": "Scripted indicator sources let administrators define custom server-side logic when standard table and condition filters are insufficient.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_CreateATarget.html"
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_IndicatorSources.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 29,
-		"prompt": "Which artifact in PA is evaluated against targets to show whether performance is on track?",
+		"questionType": "multi",
+		"prompt": "Which elements are typically configured when creating an automated indicator backed by platform data? (Choose three.)",
 		"choices": [
-			"Operationally, aCL execution plans",
-			"From a governance perspective, import set transforms",
-			"In most deployments, indicator scores",
-			"From an implementation standpoint, update set commits"
+			"Indicator source table and conditions",
+			"SMTP relay server for dashboard email",
+			"Aggregate field and function",
+			"Indicator frequency on the collector job"
 		],
-		"correctIndex": 2,
-		"explanation": "Targets are applied to indicator scores so users can compare actual performance to expected outcomes.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			2,
+			3
+		],
+		"explanation": "Automated indicators require a source definition, aggregation settings, and an indicator frequency on the collector job; mail relay is unrelated to indicator configuration.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Indicators.html",
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Targets.html"
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_IndicatorSources.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 30,
-		"prompt": "In Performance Analytics, what is the primary purpose of a benchmark?",
+		"prompt": "A KPI must show the percentage of incidents resolved within SLA. Separate automated indicators already capture the numerator and denominator. How should the KPI be modeled?",
 		"choices": [
-			"Practically speaking, to compare indicator performance against external or reference standards",
-			"Typically, to disable historical snapshots under expected controls in standard operations",
-			"From an admin perspective, to run ad hoc SQL against indicator tables for consistent administration",
-			"In practice, to replace all targets for scorecards under normal policy constraints"
+			"A formula indicator that references both source indicators",
+			"A single automated indicator with no formula expression",
+			"A manual indicator entered by executives each month",
+			"A list report widget with no Performance Analytics indicator"
 		],
 		"correctIndex": 0,
-		"explanation": "Benchmarks provide comparative context so teams can evaluate performance relative to peers or defined reference groups.",
+		"explanation": "Formula indicators combine values from other indicators using expressions, which suits ratio KPIs built from existing automated metrics.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Benchmarks.html"
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_FormulaIndicators.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 31,
-		"prompt": "How are targets and benchmarks best used together?",
+		"prompt": "An indicator source condition uses dot-walking to reference assignment_group.name. What must remain true for collection to succeed?",
 		"choices": [
-			"Practically speaking, both are identical and interchangeable in standard operations",
-			"Typically, targets are only valid when benchmark data is absent for consistent administration",
-			"From an admin perspective, targets set internal goals while benchmarks provide external or comparative context",
-			"In platform terms, benchmarks replace all threshold logic for governed delivery"
+			"Every breakdown on the indicator must use scripted mappings",
+			"Referenced fields exist along the dot-walk path and are available to PA collection",
+			"The linked dashboard widget must use a pie chart type",
+			"The indicator must be manual with a monthly frequency"
 		],
-		"correctIndex": 2,
-		"explanation": "Targets measure progress against your objective; benchmarks add comparison to broader performance baselines.",
+		"correctIndex": 1,
+		"explanation": "Dot-walk conditions are valid only when each referenced table and field in the path exists and is accessible during indicator source evaluation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Targets.html",
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Benchmarks.html"
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_IndicatorSources.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 32,
-		"prompt": "What should an admin verify before trusting a benchmark comparison?",
+		"prompt": "What does a breakdown mapping accomplish in Performance Analytics?",
 		"choices": [
-			"In most deployments, that indicator definitions and measurement periods are comparable",
-			"From a governance perspective, that all widgets use the same color palette",
-			"Operationally, that update sets are in committed state for consistent administration",
-			"From an implementation standpoint, that only scripted indicators are included"
+			"Connects an indicator source field to breakdown source values for segmented scores",
+			"Schedules the daily execution time of all collection jobs",
+			"Replaces indicator sources on manual indicators",
+			"Assigns PA admin roles to dashboard viewers automatically"
 		],
 		"correctIndex": 0,
-		"explanation": "Benchmark validity depends on comparing like-for-like definitions, sampling windows, and calculation logic.",
+		"explanation": "Breakdown mappings define how records from the indicator source relate to dimensional values supplied by a breakdown source.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_BenchmarkDataQuality.html"
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_BreakdownMappings.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 33,
-		"prompt": "A KPI is above internal target but below industry benchmark. What does this indicate?",
+		"prompt": "A field-based breakdown source on Assignment Group is linked to an incident indicator, but no segments appear in analysis. What should be verified first?",
 		"choices": [
-			"Practically speaking, that indicator should be deleted under normal policy constraints",
-			"Typically, data collection failed for consistent administration for governed delivery",
-			"In platform terms, internal goals may be conservative relative to external performance",
-			"From an admin perspective, benchmarks cannot be used for that KPI for stable outcomes"
+			"Target warning thresholds are configured on the indicator",
+			"The dashboard uses a list widget rather than a scorecard",
+			"The indicator frequency is set to Realtime instead of Daily",
+			"The breakdown mapping aligns the indicator source assignment group field with the breakdown source"
 		],
-		"correctIndex": 2,
-		"explanation": "This scenario suggests internal targets are being met but there may be room to improve when viewed against benchmark peers.",
+		"correctIndex": 3,
+		"explanation": "Missing segments usually indicate the breakdown mapping does not correctly relate indicator records to breakdown source values.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Benchmarks.html"
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_BreakdownMappings.html",
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_ConfigureBreakdownSources.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 34,
-		"prompt": "Which dashboard outcome is enabled by properly configured benchmark data?",
+		"questionType": "multi",
+		"prompt": "Which Performance Analytics artifacts work together to segment an automated indicator by assignment group? (Choose two.)",
 		"choices": [
-			"In this scenario, real-time CMDB reconciliation for consistent administration",
-			"Practically speaking, comparison views that show organizational performance versus reference cohorts",
-			"In platform terms, automatic upgrade conflict resolution for stable outcomes",
-			"From an admin perspective, automatic ACL generation for all scorecards in standard operations"
+			"Breakdown source listing assignment group values",
+			"Breakdown mapping from the indicator source assignment group field",
+			"Data collection export schedule for external BI",
+			"Spotlight benchmark comparison record"
 		],
-		"correctIndex": 1,
-		"explanation": "Benchmarks allow comparative visuals that help stakeholders interpret relative performance.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Segmentation requires a breakdown source that supplies dimension values and a mapping that ties indicator records to those values.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_ConfigureBenchmarking.html"
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html",
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_BreakdownMappings.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 35,
-		"prompt": "In Performance Analytics, what is an analytics group primarily used for?",
+		"prompt": "When creating a field-based breakdown source, what does the Facts table and field selection define?",
 		"choices": [
-			"Operationally, to cluster users or entities for segmented score analysis and targeted visibility",
-			"In most deployments, to define indicator formulas in script includes for stable outcomes",
-			"From an implementation standpoint, to replace all breakdown mappings in standard operations",
-			"In practice, to move indicators between applications for stable outcomes for consistent administration"
+			"The arithmetic expression for a formula indicator",
+			"The table and field whose values become available breakdown segments",
+			"The ACL role required to view PA scorecards",
+			"The SMTP server used for scheduled dashboard subscriptions"
 		],
-		"correctIndex": 0,
-		"explanation": "Analytics groups support segmentation so stakeholders can analyze KPI performance for specific populations.",
+		"correctIndex": 1,
+		"explanation": "Field-based breakdown sources read dimension values from a specified table and field, such as assignment group or category on incident.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_AnalyticsGroups.html"
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_ConfigureBreakdownSources.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 36,
-		"prompt": "Why would a PA admin map assignment groups into analytics groups?",
+		"prompt": "What is the purpose of a breakdown matrix on an indicator?",
 		"choices": [
-			"Operationally, to avoid creating breakdowns entirely",
-			"From an implementation standpoint, to convert scorecards into reports",
-			"Typically, to create segmented KPI views by operational team",
-			"In practice, to disable historical score collection"
+			"Control which breakdown source values are collected for that indicator",
+			"Define the aggregate function used by the indicator source",
+			"Schedule historical backfill for manual indicator scores",
+			"Assign domain visibility rules to PA dashboards"
 		],
-		"correctIndex": 2,
-		"explanation": "Grouping by assignment ownership allows operations leaders to compare KPI performance across teams.",
+		"correctIndex": 0,
+		"explanation": "Breakdown matrices link indicators to breakdown sources and let administrators include or exclude specific dimensional values from collection.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_CreateAnalyticsGroups.html"
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 37,
-		"prompt": "Which data management practice helps keep analytics groups reliable?",
+		"questionType": "multi",
+		"prompt": "Which fields are effective breakdown sources? (Choose three.)",
 		"choices": [
-			"Practically speaking, allowing duplicate group membership with no ownership",
-			"From a governance perspective, maintaining clear membership criteria and periodic group reviews",
-			"In this scenario, building groups directly from update set history under normal policy constraints",
-			"In platform terms, using only dynamic scripts without validation for governed delivery"
+			"State",
+			"Assignment Group",
+			"Short Description",
+			"Last updated",
+			"Category"
 		],
-		"correctIndex": 1,
-		"explanation": "Reliable segmentation requires controlled membership logic and regular governance checks.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1,
+			4
+		],
+		"explanation": "Reference and choice fields such as State, Category, and Assignment Group provide stable dimensional values; free-text and timestamp fields like Short Description and Last updated are poor breakdown sources.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_AnalyticsGroupsGovernance.html"
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html",
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_ConfigureBreakdownSources.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 38,
-		"prompt": "What is the reporting benefit of combining analytics groups with indicator breakdowns?",
+		"prompt": "When field-based breakdown mappings cannot produce the required segments, what feature allows custom mapping logic?",
 		"choices": [
-			"Typically, this approach forces monthly-only collection frequency for consistent administration",
-			"In practice, this approach turns all indicators into automated indicators under normal policy constraints",
-			"Operationally, this approach eliminates the need for score histories for governed delivery",
-			"From an implementation standpoint, this approach enables multidimensional analysis across population and KPI dimensions"
+			"Scripted breakdown mapping",
+			"Manual indicator score entry form",
+			"Remote update set import from another instance",
+			"Business rule on the sys_user table"
 		],
-		"correctIndex": 3,
-		"explanation": "Using both constructs supports richer analysis by comparing segmented populations across breakdown perspectives.",
+		"correctIndex": 0,
+		"explanation": "Scripted breakdown mappings use server-side scripts to derive segment values when standard field mappings are insufficient.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html",
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_AnalyticsGroups.html"
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_CreateScriptedBreakdowns.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 39,
-		"prompt": "A leader needs KPI visibility for only their operational cohort. Which PA approach fits best?",
+		"prompt": "What are bucket groups used for in Performance Analytics breakdowns?",
 		"choices": [
-			"Typically, create an analytics group for that cohort and filter scorecards accordingly",
-			"In practice, disable all global indicators for consistent administration",
-			"Operationally, clone the entire PA application under expected controls",
-			"From an admin perspective, use system properties to hide score values"
+			"Replacing indicator sources on automated indicators",
+			"Grouping breakdown values into labeled ranges or bands for analysis",
+			"Storing encrypted credentials for PA data collectors",
+			"Defining MID Server failover order during data collection"
 		],
-		"correctIndex": 0,
-		"explanation": "Analytics groups are designed for cohort-specific KPI segmentation and controlled visibility.",
+		"correctIndex": 1,
+		"explanation": "Bucket groups let administrators combine numeric or duration values into meaningful bands, such as age ranges, for clearer segmented reporting.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_UseAnalyticsGroupsInDashboards.html"
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 40,
-		"prompt": "What is the primary purpose of PA Spotlight in stakeholder dashboards?",
+		"prompt": "An admin must stop collecting breakdown scores for two assignment groups on one indicator while keeping all other segments. Which configuration should they use?",
 		"choices": [
-			"In this scenario, to configure transform maps for indicator sources",
-			"From a governance perspective, to replace all scorecard and breakdown views",
-			"Practically speaking, to highlight key KPIs, trends, and exceptions for focused executive review",
-			"In platform terms, to manage update set promotions under expected controls"
+			"Homepage filter hiding the dashboard widget",
+			"Import set error handling policy on the source table",
+			"Breakdown matrix exclusions for those assignment group values",
+			"Manual indicator score overrides each collection period"
 		],
 		"correctIndex": 2,
-		"explanation": "Spotlight is designed to surface the most important performance signals and outliers for rapid decision-making.",
+		"explanation": "Breakdown matrix exclusions remove specific dimensional values from collection for a given indicator without deleting the breakdown source.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_PAStakeholderSpotlight.html"
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 41,
-		"prompt": "Which KPI characteristics make an indicator a good candidate for PA Spotlight?",
+		"prompt": "What does configuring a breakdown relation between two breakdown sources enable?",
 		"choices": [
-			"Operationally, any indicator that has does not breached target under expected controls",
-			"In practice, indicators with no historical trend data for stable outcomes",
-			"Typically, low business relevance with volatile definitions in standard operations",
-			"From an implementation standpoint, high business impact, clear ownership, and actionability"
+			"Drilling from one breakdown dimension into a related dimension during analysis",
+			"Converting the indicator from automated to manual entry",
+			"Skipping all breakdown collection for the indicator",
+			"Recalculating targets using benchmark scores only"
 		],
-		"correctIndex": 3,
-		"explanation": "Spotlight KPIs should represent outcomes that matter and drive action by accountable teams.",
+		"correctIndex": 0,
+		"explanation": "Breakdown relations define hierarchical or associated paths so users can navigate from one segment dimension to another in PA analytics.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_KPISelectionBestPractices.html"
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 42,
-		"prompt": "How do targets improve PA Spotlight usefulness?",
+		"prompt": "A breakdown mapping references incident priority, but segmented counts do not match expected distribution. What should be verified first?",
 		"choices": [
-			"In practice, they prevent benchmark comparisons for governed delivery for stable outcomes",
-			"Operationally, they through configured automation open incidents in standard operations",
-			"Typically, they remove the need for historical data collection for consistent administration",
-			"From an admin perspective, they add context by showing if spotlight metrics are on, near, or off goal"
+			"The MID Server version matches the target release",
+			"All users have the admin role on pa_breakdowns",
+			"The mapped field type and stored values align with the breakdown source definition",
+			"The dashboard widget is configured as a list report"
 		],
-		"correctIndex": 3,
-		"explanation": "Target context allows leaders to quickly interpret whether highlighted KPI values require action.",
+		"correctIndex": 2,
+		"explanation": "Incorrect segments often trace to a mismatch between the indicator source field values and the breakdown source value set being mapped.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_TargetsAndThresholds.html",
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_PAStakeholderSpotlight.html"
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_BreakdownMappings.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 43,
-		"prompt": "What implementation choice keeps PA Spotlight dashboards credible over time?",
+		"prompt": "Why would an administrator apply bucket groups to a duration-based breakdown source?",
 		"choices": [
-			"In most deployments, using only manually collected indicators",
-			"In platform terms, removing all drill-down options for stable outcomes",
-			"In this scenario, locking KPI definitions indefinitely even when processes change",
-			"From a governance perspective, periodic review of spotlight KPIs, thresholds, and owners"
+			"To present SLA age bands such as 0–4 hours and 4–8 hours in segmented views",
+			"To eliminate the need for any breakdown mapping on the indicator",
+			"To disable scripted breakdown mappings for the indicator",
+			"To force realtime collection every minute regardless of load"
 		],
-		"correctIndex": 3,
-		"explanation": "Governance reviews keep spotlight metrics aligned with current business priorities and process realities.",
+		"correctIndex": 0,
+		"explanation": "Bucket groups convert continuous duration or numeric values into discrete bands that are easier to interpret in scorecards and widgets.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_PerformanceAnalyticsGovernance.html"
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 44,
-		"prompt": "A director asks for one page showing top wins and risks for service desk outcomes. Which PA approach best fits?",
+		"questionType": "multi",
+		"prompt": "Which actions help limit breakdown collection to meaningful segments? (Choose two.)",
 		"choices": [
-			"Typically, disable breakdown filtering to simplify visuals for consistent administration",
-			"Operationally, create a Spotlight view with selected KPI tiles, trends, and threshold status",
-			"From an admin perspective, use only platform reports without PA for governed delivery",
-			"In practice, export raw indicator tables to CSV weekly under expected controls"
+			"Configure breakdown matrix exclusions for irrelevant values",
+			"Filter breakdown source values to an active or in-scope subset",
+			"Delete all historical indicator scores each week",
+			"Remove all conditions from the indicator source"
 		],
-		"correctIndex": 1,
-		"explanation": "Spotlight views are intended for concise executive visibility into prioritized KPI performance and risk signals.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Matrix exclusions and filtered breakdown sources keep collection focused; wiping scores or removing source conditions undermines accurate analytics.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_BuildAStakeholderSpotlight.html"
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html",
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_ConfigureBreakdownSources.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 45,
-		"prompt": "In KPI Composer, what is the role of an indicator source?",
+		"prompt": "When is a scripted breakdown source the best option?",
 		"choices": [
-			"Typically, this approach stores only color themes for dashboards",
-			"From an admin perspective, this approach replaces automated data collection jobs",
-			"Practically speaking, this approach defines who can log in to Workspace",
-			"In practice, this approach provides the data stream that KPI indicators evaluate"
+			"When dimension values must be generated dynamically beyond what table fields alone provide",
+			"When every breakdown mapping must remain a default field mapping",
+			"When the indicator is manual and updated once per quarter",
+			"When breakdown data should never be collected for the indicator"
 		],
-		"correctIndex": 3,
-		"explanation": "Indicator sources define where KPI data comes from so indicators can compute values correctly.",
+		"correctIndex": 0,
+		"explanation": "Scripted breakdown sources support custom logic to build segment lists when field-based sources cannot supply the needed dimensional values.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_CreateScriptedBreakdowns.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 46,
-		"prompt": "When configuring a KPI formula, why should aggregation logic match business intent?",
+		"prompt": "To segment an incident indicator by location, what must the breakdown mapping specify?",
 		"choices": [
-			"From a governance perspective, because aggregation has no reporting impact for governed delivery",
-			"In this scenario, because formulas are ignored by scorecards under expected controls",
-			"In most deployments, because aggregation only affects user avatars for stable outcomes",
-			"From an implementation standpoint, because incorrect aggregation can distort trend interpretation"
+			"The SMTP notification template for score threshold alerts",
+			"The indicator source field containing the location reference matched to the breakdown source",
+			"The forecast algorithm selected on the analytics widget",
+			"The update set applied when cloning PA content between instances"
 		],
-		"correctIndex": 3,
-		"explanation": "Choosing sum, average, percent, or weighted logic incorrectly can produce misleading KPI results.",
+		"correctIndex": 1,
+		"explanation": "Breakdown mappings must identify the indicator source field whose values correspond to entries in the location breakdown source.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_BreakdownMappings.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 47,
-		"prompt": "What is the best reason to assign targets to KPIs in KPI Composer?",
+		"prompt": "In a breakdown matrix linked to an indicator, what does excluding a breakdown value accomplish?",
 		"choices": [
-			"Operationally, to hide historical KPI data under normal policy constraints",
-			"From a governance perspective, to remove threshold colors",
-			"In most deployments, to compare actual performance against expected outcomes",
-			"From an implementation standpoint, to disable breakdowns"
+			"Prevents collection of scores for that segment on the indicator",
+			"Deletes the breakdown source record from the instance",
+			"Converts the indicator to a manual indicator automatically",
+			"Purges all archived PA scores from prior collection periods"
 		],
-		"correctIndex": 2,
-		"explanation": "Targets establish measurable expectations that make KPI performance status and variance meaningful.",
+		"correctIndex": 0,
+		"explanation": "Excluded matrix rows tell PA not to collect breakdown scores for those values on the associated indicator while leaving the source intact.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 48,
-		"prompt": "How do KPI breakdowns improve analysis?",
+		"prompt": "Bucket groups on a numeric breakdown source allow an administrator to:",
 		"choices": [
-			"Practically speaking, they replace indicators with static text for stable outcomes",
-			"Typically, they prevent filtering by assignment or service in standard operations",
-			"In platform terms, they segment KPI results by dimensions like group, service, or location",
-			"From an admin perspective, they only export data to PDF under normal policy constraints"
+			"Remove the requirement for any breakdown mapping on the indicator",
+			"Grant pa_admin automatically to all dashboard viewers",
+			"Bypass indicator source conditions during every collection run",
+			"Display grouped bands such as backlog age ranges instead of raw numeric values"
 		],
-		"correctIndex": 2,
-		"explanation": "Breakdowns allow teams to analyze KPI behavior by relevant dimensions instead of only viewing a global value.",
+		"correctIndex": 3,
+		"explanation": "Bucket groups translate continuous numeric data into named ranges that improve readability in breakdown analysis and widgets.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 49,
-		"prompt": "Why should data collection frequency be reviewed when composing KPIs?",
+		"questionType": "multi",
+		"prompt": "Which statements about breakdown sources are correct? (Choose two.)",
 		"choices": [
-			"Operationally, this approach only changes dashboard font size in standard operations",
-			"In most deployments, this approach controls whether users can open lists for consistent administration",
-			"From an implementation standpoint, this approach disables score history under normal policy constraints",
-			"From a governance perspective, this approach determines how current KPI values are and impacts trend granularity"
+			"They supply the dimension values used to segment indicator scores",
+			"They may be field-based, scripted, or use bucket groups depending on requirements",
+			"They replace indicator sources for automated score collection",
+			"They store historical indicator score snapshots over time"
 		],
-		"correctIndex": 3,
-		"explanation": "Collection schedules should align with operational cadence so KPI insights remain timely and actionable.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Breakdown sources define dimensional values and support multiple creation methods; indicator sources and score storage remain separate PA artifacts.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html",
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_ConfigureBreakdownSources.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 50,
-		"prompt": "Which Performance Analytics role is typically required to configure indicators, breakdowns, and widgets?",
+		"prompt": "A PA admin needs two indicators to share the same dimensional values without duplicating breakdown source records. Which configuration achieves this?",
 		"choices": [
-			"Typically, sn_incident_write",
-			"In practice, knowledge_admin",
-			"Practically speaking, itil",
-			"From an admin perspective, pa_admin"
+			"Create a breakdown relation that links the indicators to one shared breakdown source",
+			"Clone the breakdown source for each indicator and disable breakdown mappings",
+			"Convert both indicators to manual entry and skip breakdown collection",
+			"Add a scripted indicator source that replaces breakdown sources entirely"
 		],
-		"correctIndex": 3,
-		"explanation": "The pa_admin role includes administrative capabilities for configuring core Performance Analytics artifacts.",
+		"correctIndex": 0,
+		"explanation": "Breakdown relations let multiple indicators reuse the same breakdown source so dimensional values stay consistent across related KPIs.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_BreakdownRelations.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 51,
-		"prompt": "Why should organizations separate PA administration from broad itil access?",
+		"prompt": "An incident indicator should segment scores by assignment group, but grouped scores show as Unassigned. What should be verified first?",
 		"choices": [
-			"Typically, because PA roles have no effect under normal policy constraints",
-			"In platform terms, to enforce least privilege for analytics configuration changes",
-			"Practically speaking, to prevent data collection under expected controls",
-			"From an admin perspective, to disable dashboards for stable outcomes"
-		],
-		"correctIndex": 1,
-		"explanation": "Role separation helps control who can change analytics definitions and reduces governance risk.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
-		]
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 52,
-		"prompt": "What is the practical purpose of granting pa_power_user in many implementations?",
-		"choices": [
-			"Operationally, to create LDAP integrations for consistent administration",
-			"From an implementation standpoint, to bypass ACLs globally",
-			"In most deployments, to allow advanced analytics usage without full admin rights",
-			"From a governance perspective, to manage MID Server certificates"
-		],
-		"correctIndex": 2,
-		"explanation": "Power-user roles enable deeper analytics work while preserving stricter control over platform-wide administration.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
-		]
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 53,
-		"prompt": "How do PA role assignments affect dashboard sharing outcomes?",
-		"choices": [
-			"Operationally, roles are ignored when dashboards load under expected controls",
-			"From an implementation standpoint, users need both access to content and permission to underlying analytics data",
-			"In most deployments, any user can edit all widgets under expected controls in standard operations",
-			"In practice, sharing is controlled only by browser settings for consistent administration"
-		],
-		"correctIndex": 1,
-		"explanation": "Dashboard visibility depends on both record access and PA role-based capability to view analytics artifacts.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
-		]
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 54,
-		"prompt": "Which governance practice is most effective for PA role management?",
-		"choices": [
-			"In this scenario, grant pa_admin to all analysts",
-			"Practically speaking, assign roles directly without review",
-			"From an admin perspective, avoid documenting role purpose",
-			"In platform terms, use role groups with periodic access recertification"
+			"That the data collection job runs exclusively on weekends",
+			"That the indicator formula references a manual indicator only",
+			"That the dashboard widget uses a pie chart instead of a column chart",
+			"That the breakdown mapping connects the indicator source assignment field to the breakdown source elements"
 		],
 		"correctIndex": 3,
-		"explanation": "Group-based assignments and regular recertification keep analytics privileges aligned to job responsibilities.",
+		"explanation": "Breakdown mappings define how source field values map to breakdown elements; missing or incorrect mappings produce empty or unassigned segments.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
-		]
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 55,
-		"prompt": "Which visualization is generally best for showing KPI trend over time?",
-		"choices": [
-			"Operationally, static image under expected controls",
-			"In practice, time series chart for stable outcomes",
-			"In most deployments, single value widget only",
-			"From an implementation standpoint, pivot list without dates"
-		],
-		"correctIndex": 1,
-		"explanation": "Time series views are designed to represent directional change and seasonality across periods.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
-		]
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 56,
-		"prompt": "When should a score visualization be preferred over a detailed trend chart?",
-		"choices": [
-			"Operationally, when exporting raw logs for stable outcomes",
-			"In practice, when collecting breakdown values for consistent administration",
-			"Typically, when stakeholders need quick current-state status at a glance",
-			"From an implementation standpoint, when trend analysis is required"
-		],
-		"correctIndex": 2,
-		"explanation": "Score widgets highlight present performance quickly, while trend charts are better for temporal analysis.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
-		]
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 57,
-		"prompt": "How do breakdown-based visualizations improve dashboard usefulness?",
-		"choices": [
-			"In this scenario, they enable slicing indicator values by dimensions like group, service, or region",
-			"In platform terms, they only apply to catalog items for governed delivery",
-			"Practically speaking, they disable drilldowns under normal policy constraints",
-			"From a governance perspective, they remove historical context for stable outcomes"
-		],
-		"correctIndex": 0,
-		"explanation": "Breakdown visuals let users compare segments and identify where performance variance originates.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
-		]
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 58,
-		"prompt": "What is a key design rule for effective PA dashboard visualization layouts?",
-		"choices": [
-			"In most deployments, hide labels to reduce clutter for governed delivery",
-			"In this scenario, use as many chart types as possible under expected controls",
-			"In platform terms, avoid threshold coloring for governed delivery",
-			"From a governance perspective, align each widget to a clear decision question and audience"
-		],
-		"correctIndex": 3,
-		"explanation": "Dashboards are most effective when each visualization directly supports a decision the audience must make.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
-		]
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 59,
-		"prompt": "Why should visualization filters be tested against role-specific audiences?",
-		"choices": [
-			"Typically, filters disable data collection under normal policy constraints",
-			"From an admin perspective, only admins can use filters for stable outcomes",
-			"Operationally, filters can expose or hide critical context depending on access and scope",
-			"In practice, filters have no effect on displayed data for consistent administration"
-		],
-		"correctIndex": 2,
-		"explanation": "Role-aware filter testing ensures users see relevant and authorized analytics views for their responsibilities.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
-		]
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 60,
-		"prompt": "What is the purpose of advanced breakdowns in Performance Analytics?",
-		"choices": [
-			"In platform terms, to segment indicators across complex, multi-level dimensions for deeper analysis",
-			"Practically speaking, to replace all indicators in standard operations",
-			"In this scenario, to configure MID capabilities for consistent administration",
-			"From a governance perspective, to disable drilldowns under normal policy constraints"
-		],
-		"correctIndex": 0,
-		"explanation": "Advanced breakdowns enable richer slicing paths that reveal where performance drivers differ across segments.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
-		]
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 61,
-		"prompt": "When should a breakdown source be optimized for cardinality?",
-		"choices": [
-			"Typically, when dimensions contain many unique values that could degrade query performance",
-			"From an implementation standpoint, only for catalog tasks for consistent administration",
-			"Operationally, only when building incident forms under normal policy constraints",
-			"In practice, does not, cardinality is irrelevant for governed delivery"
-		],
-		"correctIndex": 0,
-		"explanation": "High-cardinality dimensions can impact analytics performance, so design should balance detail and usability.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
-		]
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 62,
-		"prompt": "How do element filtering and advanced breakdowns work together?",
-		"choices": [
-			"Typically, they only apply to SLA records for stable outcomes for consistent administration",
-			"Operationally, filtering narrows analysis to relevant segments within the breakdown hierarchy",
-			"From an admin perspective, filtering removes all historical values for governed delivery",
-			"In practice, they cannot be combined under normal policy constraints under expected controls"
-		],
-		"correctIndex": 1,
-		"explanation": "Element filters focus analysis on meaningful slices while preserving the overall breakdown model.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
-		]
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 63,
-		"prompt": "Why should advanced breakdown definitions be governed with naming standards?",
-		"choices": [
-			"In most deployments, standards make reusable analytics artifacts easier to find and maintain",
-			"In this scenario, standards block dashboard sharing for governed delivery",
-			"From a governance perspective, standards disable data collection jobs",
-			"In platform terms, names do not affect maintainability for stable outcomes"
-		],
-		"correctIndex": 0,
-		"explanation": "Clear naming and governance reduce duplicate artifacts and improve long-term analytics maintainability.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
-		]
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 64,
-		"prompt": "What is a common validation step before promoting advanced breakdowns to production?",
-		"choices": [
-			"In most deployments, remove role-based access checks for governed delivery",
-			"In this scenario, disable threshold logic under normal policy constraints under expected controls",
-			"From a governance perspective, confirm trend and score widgets still resolve correctly with expected drilldowns",
-			"From an implementation standpoint, delete indicator history in standard operations"
-		],
-		"correctIndex": 2,
-		"explanation": "Promotion validation ensures dashboards and drilldowns behave as expected after advanced breakdown changes.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
-		]
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 65,
-		"prompt": "For an advanced indicator breakdown strategy, which design best supports actionable operational insight?",
-		"choices": [
-			"Typically, break down by every free-text field to maximize granularity under expected controls",
-			"In practice, use a single global breakdown for all indicators regardless of use case for stable outcomes",
-			"Practically speaking, use breakdown sources aligned to assignment, service, and priority dimensions with controlled cardinality",
-			"From an admin perspective, disable breakdown relations to reduce data model complexity for consistent administration"
-		],
-		"correctIndex": 2,
-		"explanation": "Useful PA breakdowns balance analytical depth with manageable cardinality by focusing on dimensions tied to operational decisions.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Breakdowns.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html"
-		]
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 66,
-		"prompt": "Why are scripted breakdown mappings used in complex PA implementations?",
-		"choices": [
-			"In this scenario, they allow dynamic categorization when source values require normalization before trend analysis",
-			"From an implementation standpoint, they permanently bypass data collector jobs in standard operations",
-			"In most deployments, they replace scorecards and widgets in all dashboards for consistent administration",
-			"From a governance perspective, they eliminate the need for indicator sources under normal policy constraints"
-		],
-		"correctIndex": 0,
-		"explanation": "Scripted mapping is valuable when raw data must be transformed into consistent analytical categories for accurate and comparable trends.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/task/t_CreateABreakdownMapping.html",
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_BreakdownMappings.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
-		"order": 67,
-		"prompt": "What is a key benefit of combining element filters with breakdowns in PA widgets?",
+		"order": 52,
+		"prompt": "A scorecard shows too many low-volume assignment groups. Which breakdown feature narrows the visible segments without changing the underlying breakdown source?",
 		"choices": [
-			"Operationally, they remove the need for indicator formulas under expected controls",
-			"From an implementation standpoint, they force all widgets to use real-time transactional queries only",
-			"In most deployments, they let analysts isolate specific cohorts while preserving context from strategic dimensions",
-			"From a governance perspective, they through configured automation disable historical snapshots for filtered results"
+			"Element filters that limit which breakdown values appear in the analysis",
+			"Deleting unused breakdown elements from the source table permanently",
+			"Switching the indicator from automated to manual collection",
+			"Removing the breakdown relation and rebuilding indicator sources"
+		],
+		"correctIndex": 0,
+		"explanation": "Element filters restrict displayed breakdown values for a given view while preserving the full breakdown source for other analyses.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Breakdowns.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/reference/r_WidgetFilters.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 53,
+		"questionType": "multi",
+		"prompt": "When building a scripted breakdown source, which practices help keep segmented scores accurate? (Choose two.)",
+		"choices": [
+			"Run the script only when a user opens a dashboard widget on demand",
+			"Return stable element labels that align with how stakeholders interpret the dimension",
+			"Disable breakdown mappings so the script replaces all indicator source logic",
+			"Validate script output against expected cardinality before promoting to production"
+		],
+		"correctIndex": 1,
+		"correctIndexes": [
+			1,
+			3
+		],
+		"explanation": "Scripted breakdown sources must produce consistent, meaningful element values and be validated for volume and correctness before production use.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/task/t_CreateScriptedBreakdowns.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 54,
+		"prompt": "After breakdowns are configured for an automated indicator, what must run before segmented scores appear in widgets and scorecards?",
+		"choices": [
+			"A data collection job that evaluates the indicator and stores scores with breakdown values",
+			"A dashboard export that copies breakdown tables to an external BI tool",
+			"A transform map that loads breakdown elements from an import set",
+			"A business rule that copies breakdown mappings into sys_user records"
+		],
+		"correctIndex": 0,
+		"explanation": "Breakdown configuration defines how scores will be segmented; data collection jobs populate the score tables that widgets and scorecards read.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectionJobs.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Breakdowns.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 55,
+		"prompt": "In the Performance Analytics collection process, what happens immediately after a data collector job reads records from an indicator source?",
+		"choices": [
+			"Dashboard widgets are republished to every user homepage automatically",
+			"Breakdown relations are regenerated from sys_dictionary entries",
+			"Indicator scores and breakdown values are calculated and persisted for the collection period",
+			"The indicator source table is truncated so the next run starts with empty data"
 		],
 		"correctIndex": 2,
-		"explanation": "Element filters and breakdowns together help users drill into targeted populations without losing the broader analytical framework.",
+		"explanation": "Collection jobs query the configured source, compute indicator and breakdown scores for the period, and store the results for trending and visualization.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/reference/r_WidgetFilters.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Breakdowns.html"
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectionJobs.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 56,
+		"prompt": "Which property on a data collector job definition controls how frequently recurring scores are gathered for its indicators?",
+		"choices": [
+			"Run as user",
+			"Collection frequency",
+			"Widget refresh interval",
+			"Benchmark comparison window"
+		],
+		"correctIndex": 1,
+		"explanation": "Collection frequency on the job determines the recurring schedule that drives when indicator snapshots are taken and stored.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/task/t_ScheduleDataCollection.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 57,
+		"prompt": "A data collector job shows repeated failures in the job log while scores remain stale. What is the most appropriate first troubleshooting step?",
+		"choices": [
+			"Convert every automated indicator on the job to manual entry",
+			"Remove the job from the schedule and rely on real-time list reports instead",
+			"Review job log errors and validate indicator source conditions and query performance",
+			"Delete all historical scores for the indicator and disable breakdowns permanently"
+		],
+		"correctIndex": 2,
+		"explanation": "Job logs surface execution errors; validating source filters, permissions, and query efficiency addresses the most common collection failure causes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/task/t_MonitorCollectionJobs.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/performance-analytics-performance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 58,
+		"prompt": "Which indicator should be excluded from a historic data collection because its scores cannot be accurately reconstructed for past periods?",
+		"choices": [
+			"Number of incidents resolved within SLA",
+			"Number of new incidents opened today",
+			"Number of open incidents not updated in last 90 days",
+			"Number of incidents closed last month"
+		],
+		"correctIndex": 2,
+		"explanation": "Rolling time-window conditions on fields such as sys_updated_on depend on values that change during a record lifecycle, so past intervals cannot be reliably recalculated.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/task/t_RunHistoricalDataCollection.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollection.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 59,
+		"questionType": "multi",
+		"prompt": "When fine-tuning a high-volume data collector job, which adjustments reduce missed schedule windows? (Choose two.)",
+		"choices": [
+			"Optimize indicator source filters and indexed fields used in conditions",
+			"Stagger job start times away from peak transactional load",
+			"Disable all breakdown relations so widgets cannot drill down",
+			"Set collection frequency to every minute for all indicators on the job"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Efficient source queries and load-aware scheduling help collection jobs complete within their windows without sacrificing score freshness.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/performance-analytics-performance.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/task/t_ScheduleDataCollection.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 60,
+		"prompt": "An admin runs historic data collection for a new indicator. What outcome should they expect after the job completes successfully?",
+		"choices": [
+			"All breakdown mappings are removed and must be recreated manually",
+			"Prior-period scores are populated so trend analysis is available before ongoing schedules accumulate history",
+			"Dashboard widgets switch to real-time transactional queries instead of stored scores",
+			"Future scheduled collections are disabled until the backfill is deleted"
+		],
+		"correctIndex": 1,
+		"explanation": "Historic collection backfills past intervals so stakeholders can analyze trends immediately rather than waiting for recurring jobs to build history.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/task/t_RunHistoricalDataCollection.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 61,
+		"prompt": "Which collection configuration property specifies the user context under which a data collector job executes its queries?",
+		"choices": [
+			"Run as",
+			"Benchmark group",
+			"Breakdown relation",
+			"Target type"
+		],
+		"correctIndex": 0,
+		"explanation": "The Run as user on a collector job determines ACL and domain visibility applied when indicator sources are evaluated during collection.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 62,
+		"prompt": "Scores for one indicator on a shared collector job are consistently lower than a matching list report. What should be compared first?",
+		"choices": [
+			"Whether the breakdown source uses a scripted element generator",
+			"Whether the indicator uses a relative target instead of a fixed target",
+			"Dashboard widget color palette and legend position settings",
+			"Indicator source conditions and the Run as user on the collector job versus the report viewer"
+		],
+		"correctIndex": 3,
+		"explanation": "Collection results reflect source filters and the Run as user's access; mismatches with list reports often trace to different conditions or security context.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_IndicatorSources.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 63,
+		"prompt": "A stakeholder needs to compare open incident volume across assignment groups for the current period. Which Platform Analytics visualization fits best?",
+		"choices": [
+			"A breakdown column or bar chart showing segmented counts by assignment group",
+			"A single-value widget with no breakdown applied",
+			"A pivot list sorted by sys_created_on without indicator scores",
+			"A static image widget pinned to the dashboard header"
+		],
+		"correctIndex": 0,
+		"explanation": "Breakdown column and bar charts display comparative segmented counts, making them suitable for comparing volumes across groups.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DashboardsAndWidgets.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/data-visualizations.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 64,
+		"questionType": "multi",
+		"prompt": "Which statements describe unified filters in the Platform Analytics experience? (Choose two.)",
+		"choices": [
+			"They let consumers refine views by shared dimensions such as date range or assignment group",
+			"They can apply consistently across multiple data visualizations on a dashboard",
+			"They are available only on Core UI dashboards outside Next Experience",
+			"They replace the need for indicator sources and data collection jobs"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Unified filters provide shared filtering across Platform Analytics visualizations so dashboard consumers slice multiple widgets with the same criteria.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/unified-filters.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/par-workspace.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 65,
+		"prompt": "A director wants to see whether mean time to resolve is improving over the last six months. Which visualization type is the best fit?",
+		"choices": [
+			"A time series chart showing the indicator trend across collection periods",
+			"A score widget displaying only the latest single value",
+			"A breakdown pie chart with no date axis configured",
+			"A list report of raw incident records without PA scores"
+		],
+		"correctIndex": 0,
+		"explanation": "Time series charts plot indicator scores across periods, making them the standard choice for evaluating directional change over time.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/data-visualizations.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DashboardsAndWidgets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 66,
+		"prompt": "A team lead should view a certified operations dashboard but must not edit its visualizations. Which access pattern is appropriate?",
+		"choices": [
+			"Remove ACLs on pa_dashboards so all users inherit write access",
+			"Share the dashboard only by exporting screenshots to email each week",
+			"Assign pa_admin so the user can open every library artifact in edit mode",
+			"Grant dashboard read access and a PA role that allows viewing without authoring privileges"
+		],
+		"correctIndex": 3,
+		"explanation": "Dashboard sharing combines record-level access with PA roles so consumers can view certified content without configuration rights.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 67,
+		"prompt": "A Next Experience dashboard loads slowly because it contains many heavy visualizations. Which design change most directly improves performance?",
+		"choices": [
+			"Reduce widget count, limit breakdown cardinality, and align filters to required decision scope",
+			"Increase collection frequency to every five minutes for all indicators on the page",
+			"Convert every widget to a scripted REST query against transactional tables at load time",
+			"Disable Run as on all collector jobs so widgets query as the admin user"
+		],
+		"correctIndex": 0,
+		"explanation": "Dashboard performance improves when visualizations are scoped to necessary widgets, manageable breakdown volume, and purposeful filtering.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/performance-analytics-performance.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 68,
-		"prompt": "In advanced PA breakdown governance, what approach helps prevent dimension sprawl?",
+		"prompt": "From a KPI Details view, what can an analyst typically inspect beyond the headline score?",
 		"choices": [
-			"Practically speaking, establish approval standards for new breakdowns based on decision value, reuse, and maintenance cost",
-			"From an admin perspective, allow any dashboard owner to create unrestricted breakdown sources in production",
-			"Typically, create duplicate breakdowns for each indicator to avoid sharing for governed delivery",
-			"In platform terms, delete unused indicators whenever a new breakdown is requested under expected controls"
+			"A list of all update sets that modified the dashboard layout",
+			"Trend history, breakdown segments, target status, and contributing score context",
+			"The raw sys_dictionary definition for every field on the source table",
+			"Only the indicator name with no access to underlying scores or breakdowns"
 		],
-		"correctIndex": 0,
-		"explanation": "Governance criteria maintain analytical quality and platform performance by controlling unnecessary or redundant dimensions.",
+		"correctIndex": 1,
+		"explanation": "KPI Details surfaces trend, segmentation, target evaluation, and related score context so users can interpret a KPI without leaving the analytics experience.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Breakdowns.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/kpi-details.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 69,
-		"prompt": "When evaluating advanced breakdown design quality, which metric is most meaningful?",
+		"questionType": "multi",
+		"prompt": "When selecting a Platform Analytics visualization for an executive briefing, which criteria should guide the choice? (Choose two.)",
 		"choices": [
-			"In this scenario, that percentage of dashboard decisions supported by clear, stable segmented trends",
-			"Practically speaking, that count of unpublished widgets in development instances",
-			"From an admin perspective, that number of users with pa_admin role",
-			"In platform terms, that total number of breakdown elements created each month"
+			"The decision question the audience must answer from the metric",
+			"Whether the view needs trend, comparison, or current-state emphasis",
+			"Using a different chart type for every widget regardless of data shape",
+			"Preferring the visualization with the highest number of breakdown elements"
 		],
 		"correctIndex": 0,
-		"explanation": "Breakdown quality should be judged by decision support and trend stability, not simply by volume of configured elements.",
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Effective visualization selection matches chart type to the decision and whether stakeholders need trends, comparisons, or a current snapshot.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DashboardsAndWidgets.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Breakdowns.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/data-visualizations.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DashboardsAndWidgets.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 70,
-		"prompt": "What is a core responsibility of PA administration in enterprise environments?",
+		"prompt": "Which Platform Analytics visualization is most appropriate when stakeholders need a quick read of whether a KPI is above or below target right now?",
 		"choices": [
-			"In most deployments, allowing unrestricted indicator creation in production for governed delivery",
-			"From an implementation standpoint, disabling score snapshots during business hours under expected controls",
-			"Operationally, managing data collection schedules, indicator governance, and role-based access to analytics artifacts",
-			"From a governance perspective, replacing all transactional reporting with external BI tools in standard operations"
+			"A score visualization with target and threshold coloring",
+			"A time series chart spanning twelve months of history",
+			"A breakdown treemap with dozens of low-volume segments",
+			"A pivot table listing every source record in the indicator query"
 		],
-		"correctIndex": 2,
-		"explanation": "PA administration ensures reliable data collection and governed analytics lifecycle management across teams.",
+		"correctIndex": 0,
+		"explanation": "Score visualizations emphasize the current value and target status, which supports at-a-glance performance checks.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/data-visualizations.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_TargetsAndThresholds.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 71,
-		"prompt": "Why should PA admins baseline indicator sources before introducing new formulas?",
+		"prompt": "A dashboard author adds a unified date filter to a Platform Analytics dashboard. What is the primary benefit for consumers?",
 		"choices": [
-			"Practically speaking, to verify source data stability so formula changes are interpreted correctly",
-			"From an admin perspective, to disable historical comparisons during rollout",
-			"Typically, to force all indicators to use scripted sources only in standard operations",
-			"In platform terms, to avoid creating scorecards and widgets for consistent administration"
+			"Indicator sources are rewritten to match the filter script include",
+			"Breakdown mappings are deleted and rebuilt from the filter definition",
+			"One filter updates the time scope across linked visualizations without reconfiguring each widget",
+			"Collection jobs run automatically every time a user changes the filter value"
 		],
-		"correctIndex": 0,
-		"explanation": "Baselining clarifies whether trend changes come from real performance shifts or from source/formula modifications.",
+		"correctIndex": 2,
+		"explanation": "Unified filters apply shared criteria—such as date range—across dashboard visualizations so consumers analyze a consistent scope.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_IndicatorSources.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/unified-filters.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 72,
-		"prompt": "Which access pattern is preferred for PA administration security?",
+		"prompt": "Users report timeouts when opening a shared dashboard during business hours. Which investigation aligns with Platform Analytics performance guidance?",
 		"choices": [
-			"Operationally, use only the admin role for all PA tasks for governed delivery for stable outcomes",
-			"In most deployments, grant administrative roles by least privilege and separate content authors from platform administrators",
-			"From a governance perspective, remove role checks to simplify dashboard publishing for consistent administration",
-			"From an implementation standpoint, assign pa_admin to all dashboard consumers under normal policy constraints"
+			"Review widget count, breakdown cardinality, filter breadth, and collection job timing relative to peak load",
+			"Convert the dashboard to a Core UI homepage without data visualizations",
+			"Disable all targets so widgets skip threshold evaluation entirely",
+			"Remove certified dashboards from the library so only personal copies load"
 		],
-		"correctIndex": 1,
-		"explanation": "Role separation reduces risk while allowing specialized users to create content without full administrative permissions.",
+		"correctIndex": 0,
+		"explanation": "Dashboard timeouts often trace to heavy visualizations, high-cardinality breakdowns, broad filters, or collection load overlapping peak usage.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/roles/concept/c_Roles.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
-		]
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 73,
-		"prompt": "What is the best operational response when PA data collection jobs repeatedly miss schedule windows?",
-		"choices": [
-			"Operationally, move all PA work to client-side scripts under expected controls in standard operations",
-			"In practice, delete historical snapshots to reduce job runtime without delay for consistent administration",
-			"In most deployments, review job configuration, load timing, and query performance, then rebalance schedules and optimization targets",
-			"From an implementation standpoint, disable all breakdowns permanently for governed delivery"
-		],
-		"correctIndex": 2,
-		"explanation": "Missed collection windows are typically addressed by tuning job design and scheduling relative to instance load and query complexity.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/performance-analytics-performance.html",
 			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
-		"order": 74,
-		"prompt": "Which governance artifact is most useful for long-term PA administration continuity?",
+		"order": 73,
+		"questionType": "multi",
+		"prompt": "Which capabilities are available from KPI Details in the Platform Analytics experience? (Choose two.)",
 		"choices": [
-			"Practically speaking, a one-time export of dashboard screenshots only for consistent administration",
-			"In platform terms, a policy that all indicators use identical thresholds under normal policy constraints",
-			"In this scenario, a maintained catalog of indicators, ownership, formulas, schedules, and downstream dashboard dependencies",
-			"From an admin perspective, an informal list of widget names in a team chat under expected controls"
+			"Review trend movement and breakdown contributions for the selected KPI",
+			"Evaluate target and threshold status for the displayed score",
+			"Edit indicator source table names without pa_admin access",
+			"Run historic data collection jobs directly from the widget header"
 		],
-		"correctIndex": 2,
-		"explanation": "A governed analytics catalog preserves operational knowledge, supports impact analysis, and improves maintainability during team transitions.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "KPI Details focuses on interpreting the KPI through trends, breakdown context, and target status rather than on administrative collection tasks.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/kpi-details.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 74,
+		"prompt": "What are the two main sections of the Platform Analytics experience in Next Experience?",
+		"choices": [
+			"Analytics Center and Library",
+			"Reports Designer and Migration Center",
+			"KPI Composer and Data Collector",
+			"Core UI Dashboards and Service Portal Analytics"
+		],
+		"correctIndex": 0,
+		"explanation": "The Platform Analytics experience is organized into Analytics Center for curated and certified content and Library for browsing and managing analytics artifacts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/par-workspace.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/analytics-center.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 75,
-		"prompt": "When building a new indicator in Platform Analytics, what should be validated first to keep trend data trustworthy?",
+		"prompt": "A service desk director's dashboard must default to their assignment group while allowing peers to compare other teams. Which dashboard filter design best supports both needs?",
 		"choices": [
-			"In platform terms, score snapshots are disabled during peak hours",
-			"Practically speaking, every user can edit indicator formulas",
-			"In this scenario, that indicator source returns stable records on the expected schedule",
-			"From a governance perspective, all dashboard widgets use the same color palette"
+			"Configure a breakdown filter mapped to assignment group with role-aware default values",
+			"Hard-code the director's group into every widget query with no override option",
+			"Remove all filters so every user sees identical global aggregates only",
+			"Create a separate copy of each indicator for every assignment group permanently"
 		],
-		"correctIndex": 2,
-		"explanation": "A reliable indicator starts with a consistent source and predictable collection behavior so trend lines reflect real performance changes.",
+		"correctIndex": 0,
+		"explanation": "Breakdown filters on shared indicators let audiences compare segments while role-aware defaults scope the initial view to each leader's team.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_IndicatorSources.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html"
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Breakdowns.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 76,
-		"prompt": "A PA admin wants daily scores ready before business hours. Which action best supports that goal?",
+		"prompt": "An analyst clicks a KPI score on a dashboard and expects record-level context behind the metric. Which PA capability provides that drill-down experience?",
 		"choices": [
-			"Typically, run collection only when a dashboard is viewed",
-			"From an implementation standpoint, move indicator logic to client scripts",
-			"Operationally, disable all breakdowns on the indicator",
-			"In practice, schedule data collector jobs to run before users open dashboards"
+			"A UI policy that hides score fields until the user refreshes the browser session",
+			"A transform map that exports indicator tables nightly to an external spreadsheet",
+			"KPI Details linking the widget to underlying records contributing to the indicator score",
+			"A MID Server probe that rescans the network before each dashboard load"
 		],
-		"correctIndex": 3,
-		"explanation": "Scheduling data collection before the business day ensures snapshots are available when scorecards and widgets load.",
+		"correctIndex": 2,
+		"explanation": "KPI Details connects dashboard scores to the transactional records that drove the collection, supporting credible root-cause review.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_KPIDetails.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 77,
-		"prompt": "Why does a PA team configure breakdowns for an incident resolution indicator?",
+		"prompt": "A PA dashboard with twelve breakdown-heavy widgets loads slowly during morning peak usage. What should the implementer evaluate first?",
 		"choices": [
-			"In this scenario, to replace scorecards with list reports under expected controls",
-			"Practically speaking, to remove historical snapshots from the indicator for stable outcomes",
-			"From a governance perspective, to analyze performance by dimensions such as assignment group or priority",
-			"In platform terms, to bypass indicator source filtering for consistent administration"
-		],
-		"correctIndex": 2,
-		"explanation": "Breakdowns let analysts compare indicator results across meaningful dimensions while keeping one governed metric definition.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Breakdowns.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html"
-		]
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 78,
-		"prompt": "Which option best describes the difference between a scorecard and a dashboard widget in PA?",
-		"choices": [
-			"In most deployments, both are only used to define indicator sources for stable outcomes",
-			"In this scenario, scorecards compare indicator scores over time, while widgets present curated visualizations on dashboards",
-			"From a governance perspective, scorecards are only for administrators and cannot be shared",
-			"In platform terms, widgets can create indicators, while scorecards cannot under normal policy constraints"
-		],
-		"correctIndex": 1,
-		"explanation": "Scorecards focus on KPI trend and status evaluation, while dashboard widgets package analytics views for consumers.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
-		]
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 79,
-		"prompt": "A KPI is consistently green even when service quality drops. What should be reviewed first?",
-		"choices": [
-			"Typically, transform map coalesce fields in standard operations",
-			"Operationally, cMDB class manager settings for consistent administration",
-			"In practice, threshold and target definitions for the indicator",
-			"From an admin perspective, mID Server memory allocation"
-		],
-		"correctIndex": 2,
-		"explanation": "If KPI status does not reflect actual performance, threshold and target logic is usually the first governance element to verify.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
-		]
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 80,
-		"prompt": "A new PA indicator is returning unexpected counts. What should an administrator review first?",
-		"choices": [
-			"Practically speaking, that indicator source condition and aggregation logic",
-			"From a governance perspective, that list layout for incident forms",
-			"In this scenario, that change schedule blackout window",
-			"In platform terms, that MID Server service account"
-		],
-		"correctIndex": 0,
-		"explanation": "Indicator accuracy depends on the source query and aggregation setup that drive score collection.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_IndicatorSources.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html"
-		]
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 81,
-		"prompt": "Which strategy improves trust in monthly executive PA reviews?",
-		"choices": [
-			"In most deployments, hide indicators with negative trends",
-			"From a governance perspective, allow viewers to edit thresholds during review meetings",
-			"In this scenario, change indicator formulas each month to match narrative",
-			"In platform terms, document indicator ownership, targets, and data definitions"
+			"Converting every widget to a static image updated manually each quarter",
+			"Deleting historical indicator snapshots to shrink database size without reviewing queries",
+			"Disabling ACLs on indicator tables so widgets skip security checks entirely",
+			"Widget breakdown cardinality, query complexity, and whether collection completed before peak access"
 		],
 		"correctIndex": 3,
-		"explanation": "Governed ownership and definitions keep KPI interpretation consistent across reporting periods.",
+		"explanation": "Dashboard performance usually traces to heavy breakdown dimensions, expensive queries, or stale snapshots when collection has not finished before users arrive.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
-		]
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 82,
-		"prompt": "Why are historical snapshots important in Platform Analytics?",
-		"choices": [
-			"Typically, they replace all transactional reports for consistent administration",
-			"In practice, they remove the need for data collector jobs",
-			"Operationally, they preserve trend history even when source records change later",
-			"From an admin perspective, they force every indicator to use scripted sources"
-		],
-		"correctIndex": 2,
-		"explanation": "Snapshots store point-in-time scores so trend analysis remains stable despite changes in underlying records.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html",
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
-		"order": 83,
-		"prompt": "A dashboard audience needs only regional incident performance. What is the best PA design choice?",
+		"order": 78,
+		"prompt": "Leadership wants Platform Analytics dashboards reachable from the Next Experience shell without separate bookmarks. Which approach aligns with unified navigation?",
 		"choices": [
-			"In this scenario, use unrestricted global dashboards with no filters",
-			"In platform terms, use breakdown-based filtering for region-specific views",
-			"In most deployments, create a separate table for each region",
-			"From a governance perspective, disable breakdowns to simplify scorecards"
+			"Publish dashboards to audiences accessible through Next Experience navigation and role-based modules",
+			"Require users to paste direct sys_id URLs into browser favorites for each widget",
+			"Disable Next Experience entirely and restrict analytics to classic UI themes only",
+			"Embed dashboard iframes inside personal knowledge articles without access controls"
+		],
+		"correctIndex": 0,
+		"explanation": "Governed dashboard publishing with audience and role access lets executives open PA content from the Next Experience navigation they already use daily.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html",
+			"https://www.servicenow.com/docs/bundle/zurich-platform-user-interface/page/administer/navigation/concept/c_NextExperienceUnifiedNavigation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 79,
+		"questionType": "multi",
+		"prompt": "When rolling out interactive dashboard filters to multiple PA audiences, which practices reduce misinterpretation risk? (Choose two.)",
+		"choices": [
+			"Map each filter to governed breakdown dimensions tied to the same indicator context",
+			"Test filter defaults and visibility with representative user roles before production cutover",
+			"Hide threshold coloring on all widgets so filtered segments always appear green",
+			"Allow every viewer to edit indicator source conditions directly from the filter panel"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Filter rollouts should validate role-specific behavior and align filters to governed breakdowns so segmented views remain accurate and authorized.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Breakdowns.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 80,
+		"prompt": "A PA team publishes an executive dashboard consumed by vice presidents across business units. Which sharing model preserves governed access?",
+		"choices": [
+			"Copy indicator formulas into personal update sets owned by each vice president",
+			"Grant every consumer the pa_admin role to avoid permission errors during reviews",
+			"Export widget SQL to email attachments so each executive runs queries locally",
+			"Share the dashboard with defined audiences and roles while keeping indicator definitions centrally maintained"
+		],
+		"correctIndex": 3,
+		"explanation": "Audience-based dashboard sharing with centralized indicator governance keeps executive views consistent without elevating every consumer to administrative privileges.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 81,
+		"prompt": "Operations managers need one incident backlog dashboard filtered by region without cloning indicators. Which visualization technique applies?",
+		"choices": [
+			"Build a new automated indicator per region with identical logic duplicated sixteen times",
+			"Apply a breakdown-based dashboard filter scoped to the region dimension on shared KPI widgets",
+			"Disable breakdowns globally and rely on ad hoc list reports for each region instead",
+			"Move all incident records into region-specific tables before enabling collection"
 		],
 		"correctIndex": 1,
-		"explanation": "Breakdown filtering supports targeted views while preserving one governed indicator structure.",
+		"explanation": "Breakdown filters on shared KPI widgets deliver regional views while preserving one governed indicator definition and collection schedule.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Breakdowns.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Breakdowns.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 82,
+		"prompt": "During a service review, stakeholders ask why a KPI worsened last month. Which dashboard path gives the fastest credible answer?",
+		"choices": [
+			"Delete last month's snapshots so the trend line restarts from the current week only",
+			"Regenerate every indicator score manually without reviewing underlying transactional data",
+			"Open KPI Details from the widget and inspect contributing records alongside trend and breakdown context",
+			"Replace the KPI with a single-value widget that hides historical periods entirely"
+		],
+		"correctIndex": 2,
+		"explanation": "KPI Details combined with trend and breakdown context lets implementers explain score movement with record-level evidence instead of anecdote.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_KPIDetails.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 83,
+		"prompt": "Widgets on a critical outage dashboard show yesterday's scores at mid-morning despite an overnight collection schedule. What is the most likely cause to investigate?",
+		"choices": [
+			"Dashboard filters automatically disable all automated indicators during business hours",
+			"KPI Details removes scores whenever breakdown filters are applied to a widget",
+			"Next Experience navigation blocks collection jobs until each user signs out fully",
+			"Data collector jobs missed or completed after users opened the dashboard, leaving stale snapshots"
+		],
+		"correctIndex": 3,
+		"explanation": "When collection jobs fail or finish late, widgets continue displaying the last successful snapshot until the next collection cycle completes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html",
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
 		]
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 84,
-		"prompt": "Which action best supports least-privilege access in PA?",
+		"questionType": "multi",
+		"prompt": "Which two design choices improve readability of a Platform Analytics executive dashboard? (Choose two.)",
 		"choices": [
-			"In this scenario, separate content authors from PA administrators using role-based access",
-			"From an implementation standpoint, assign admin to all dashboard consumers",
-			"In most deployments, allow anonymous users to edit indicators",
-			"From a governance perspective, remove all role checks from analytics records"
+			"Mix ten unrelated chart types on one row to showcase visualization variety",
+			"Remove breakdown labels to reduce text even when leaders compare segments weekly",
+			"Place highest-priority KPIs above the fold with consistent threshold coloring tied to targets",
+			"Limit widget count to decision-critical metrics instead of loading every available indicator"
 		],
-		"correctIndex": 0,
-		"explanation": "Role separation reduces risk while still enabling governed analytics authoring and administration.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/roles/concept/c_Roles.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
-		]
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 85,
-		"prompt": "Why should PA administrators monitor failed data collection jobs daily?",
-		"choices": [
-			"Practically speaking, to ensure score snapshots stay current and dashboards remain reliable",
-			"From an admin perspective, to remove all breakdowns from existing KPIs",
-			"Typically, to convert PA widgets into list reports in standard operations",
-			"In practice, to disable indicators with small sample sizes"
+		"correctIndex": 2,
+		"correctIndexes": [
+			2,
+			3
 		],
-		"correctIndex": 0,
-		"explanation": "Missed collection jobs can create stale or missing KPI values, so routine monitoring protects analytics reliability.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
-		]
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 86,
-		"prompt": "A KPI changed behavior after a formula update. Which governance step should have happened first?",
-		"choices": [
-			"Practically speaking, delete historical scores for consistent administration",
-			"From an admin perspective, disable scorecards that use the KPI",
-			"Typically, convert the indicator to a scripted REST API for governed delivery",
-			"In platform terms, document and approve the formula change with impact review"
-		],
-		"correctIndex": 3,
-		"explanation": "Formula updates should be controlled and documented so teams can interpret trend changes correctly.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
-		]
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 87,
-		"prompt": "What is the best reason to assign explicit owners to PA indicators?",
-		"choices": [
-			"Operationally, to let only one user view dashboards in standard operations",
-			"In most deployments, to enforce accountability for definition quality and data stewardship",
-			"From a governance perspective, to grant owner users the admin role through configured automation",
-			"From an implementation standpoint, to avoid threshold configuration entirely"
-		],
-		"correctIndex": 1,
-		"explanation": "Indicator ownership drives accountable maintenance of formulas, thresholds, and source alignment.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html"
-		]
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 88,
-		"prompt": "Which dashboard pattern best supports executive Platform Analytics consumption?",
-		"choices": [
-			"Practically speaking, admin-only dashboards with unrestricted edits",
-			"In platform terms, raw table exports only under normal policy constraints",
-			"Typically, dozens of unrelated widgets with no KPI context",
-			"From an admin perspective, curated KPI widgets with clear targets and drilldown paths"
-		],
-		"correctIndex": 3,
-		"explanation": "Executive dashboards should emphasize governed KPI context, targets, and actionable drilldowns.",
+		"explanation": "Executive dashboards work best when priority KPIs are visible immediately, thresholds provide context, and widget count stays focused on decisions leaders must make.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html",
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html"
@@ -14416,18 +15106,91 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 	},
 	{
 		"trackCode": "CIS-PA",
-		"order": 89,
-		"prompt": "Which control helps prevent unauthorized PA configuration drift?",
+		"order": 85,
+		"prompt": "A municipal IT team deploys Platform Analytics for directors using Next Experience. Which rollout step validates the visualization experience?",
 		"choices": [
-			"Practically speaking, disable audit history for PA records under expected controls",
-			"In platform terms, move indicator definitions to personal update sets for stable outcomes",
-			"In this scenario, limit write access with role-based governance and periodic configuration reviews",
-			"From an admin perspective, allow dashboard consumers to edit indicator formulas"
+			"Confirm directors can open governed dashboards from Next Experience with correct role-based filter defaults",
+			"Migrate all PA tables to external BI before enabling any in-platform widgets",
+			"Disable drill-down on every widget so navigation never leaves the home page",
+			"Require directors to use classic UI only because Next Experience cannot render PA content"
+		],
+		"correctIndex": 0,
+		"explanation": "Next Experience rollout for PA should verify that target audiences reach the right dashboards with authorized filter defaults before broad communication.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html",
+			"https://www.servicenow.com/docs/bundle/zurich-platform-user-interface/page/administer/navigation/concept/c_NextExperienceUnifiedNavigation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 86,
+		"prompt": "A new PA implementation team needs starter indicators, breakdowns, and dashboards aligned to ITSM processes. Which artifact accelerates time to value?",
+		"choices": [
+			"A personal developer instance clone without documentation of dependent indicator relationships",
+			"An update set containing only UI themes with no indicator or dashboard definitions",
+			"A blank instance with every analytics plugin disabled until manual scripting is complete",
+			"A Platform Analytics content pack installed and configured through guided setup before customization"
+		],
+		"correctIndex": 3,
+		"explanation": "Platform Analytics content packs deliver prebuilt indicators, breakdowns, and dashboards that teams tailor through guided setup instead of building from scratch.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_PAContentPacks.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 87,
+		"prompt": "Historical scores are required for a revamped incident KPI, but collection started only last week. Which advanced collection scenario addresses the gap?",
+		"choices": [
+			"Wait for six months of daily collections before showing any dashboard widgets to users",
+			"Convert the indicator to manual entry and ask agents to recreate past months from memory",
+			"Run a historical backfill data collection job for the indicator across the required prior periods",
+			"Disable snapshots permanently so the KPI always recalculates live from open incidents only"
 		],
 		"correctIndex": 2,
-		"explanation": "Role governance and periodic review reduce unmanaged changes that can compromise analytics integrity.",
+		"explanation": "Historical backfill collection populates prior-period snapshots so trend widgets reflect performance before the indicator went live.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/roles/concept/c_Roles.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/optimized-data-collection.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 88,
+		"prompt": "A CIO wants a quarterly Stakeholder Spotlight highlighting five enterprise KPIs with target context. What should the PA administrator configure first?",
+		"choices": [
+			"Grant Spotlight edit rights to all dashboard viewers so they can swap KPIs during meetings",
+			"Select governed high-impact indicators with defined targets and owners for the Spotlight group layout",
+			"Publish every indicator on the instance to Spotlight without reviewing threshold relevance",
+			"Remove target definitions so Spotlight tiles show only raw numbers without status coloring"
+		],
+		"correctIndex": 1,
+		"explanation": "Stakeholder Spotlight credibility starts with curated KPIs that have clear ownership, targets, and business relevance before layout and publishing.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_PAStakeholderSpotlight.html",
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_BuildAStakeholderSpotlight.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 89,
+		"questionType": "multi",
+		"prompt": "When promoting Platform Analytics from pilot to production, which administrative practices reduce long-term maintenance risk? (Choose two.)",
+		"choices": [
+			"Document content pack versions, customized artifacts, and rollback plans before production import",
+			"Schedule advanced collection jobs after reviewing instance load and indicator source complexity",
+			"Allow unrestricted editing of indicator sources by all dashboard consumers without review",
+			"Skip ownership assignment because Spotlight tiles self-correct when processes change"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Production promotion should capture content pack lineage and tune collection schedules for load while keeping indicator governance and ownership intact.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_PAContentPacks.html",
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
 		]
 	},
@@ -14442,10 +15205,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"GRC: Incident Management",
 			"GRC: Knowledge Management"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			2
 		],
 		"explanation": "GRC: Profiles and GRC: Risk Management are scoped applications within the GRC product suite; incident and knowledge management are core platform applications, not GRC scopes.",
 		"sourceUrls": [
@@ -14458,11 +15221,11 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "An organization tracks regulatory obligations in spreadsheets and wants continuous visibility into its compliance posture. Which ServiceNow GRC capability most directly addresses this need?",
 		"choices": [
 			"Manual quarterly export of control evidence into shared network drives for later review by external auditors",
-			"Indicators that automatically collect evidence from platform data and update control status",
 			"A standalone reporting database that copies compliance records nightly to an external warehouse",
-			"Email reminders sent to process owners asking them to update the spreadsheets on time"
+			"Email reminders sent to process owners asking them to update the spreadsheets on time",
+			"Indicators that automatically collect evidence from platform data and update control status"
 		],
-		"correctIndex": 1,
+		"correctIndex": 3,
 		"explanation": "Indicators run automated or manual checks against live platform data, giving ongoing visibility into control health instead of point-in-time spreadsheet snapshots.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/indicators.html"
@@ -14623,10 +15386,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"External regulator liaisons",
 			"End-user hardware support technicians"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			3
 		],
 		"explanation": "A GRC implementation pairs risk and compliance subject matter experts, who own requirements and methodology, with the ServiceNow developer team that configures the platform.",
 		"sourceUrls": [
@@ -14654,12 +15417,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 13,
 		"prompt": "Which persona is typically responsible for responding to control attestations and completing issue remediation tasks for their area?",
 		"choices": [
-			"The control owner assigned to the entity where the control applies",
 			"The instance administrator who manages update sets and clone schedules",
+			"The platform capacity planner who monitors database growth trends",
 			"The external auditor who signs off the final engagement report each cycle",
-			"The platform capacity planner who monitors database growth trends"
+			"The control owner assigned to the entity where the control applies"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Control owners attest to the operation of controls on their entities and act on issues raised when controls fail or attestations identify gaps.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/attestations.html"
@@ -14718,12 +15481,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 17,
 		"prompt": "A GRC design workshop debates whether to scope entities by entity type or by class. What is the key difference between the two approaches?",
 		"choices": [
-			"The class approach ties entity generation to an entire table or CI class, while entity types use filters to define flexible, condition-based groupings",
 			"Entity types can reference only CMDB tables, while the class approach can reference any table in the instance including custom ones",
+			"Entity types are read-only after creation, while class-based records can be modified freely at any time by any GRC user",
 			"The class approach requires a custom scripted REST API, while entity types require importing an XML template for each grouping",
-			"Entity types are read-only after creation, while class-based records can be modified freely at any time by any GRC user"
+			"The class approach ties entity generation to an entire table or CI class, while entity types use filters to define flexible, condition-based groupings"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Class-based scoping maps all records of a table or CI class to entities, whereas entity types with filters let implementers define precise, condition-driven membership.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-entities.html"
@@ -14783,11 +15546,11 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "What role do entity owners play in the GRC entity framework?",
 		"choices": [
 			"They approve every platform upgrade before GRC plugins can be patched to a new family release",
-			"They are limited to viewing dashboards and cannot receive any assigned GRC work",
 			"They configure the instance-wide scoring methodology used for all risk calculations",
-			"They are accountable for the entity and typically receive attestation and issue work related to its controls and risks"
+			"They are accountable for the entity and typically receive attestation and issue work related to its controls and risks",
+			"They are limited to viewing dashboards and cannot receive any assigned GRC work"
 		],
-		"correctIndex": 3,
+		"correctIndex": 2,
 		"explanation": "The entity owner is the accountable person for an entity; assignment of attestations, issues, and reviews for that entity's controls and risks flows to them by default.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-entities.html"
@@ -14836,10 +15599,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"A UI theme applied to the platform login page",
 			"A scheduled clone of production down to a sub-production instance"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"correctIndexes": [
-			0,
-			1
+			2,
+			3
 		],
 		"explanation": "Business services and vendors are typical entities because risk and compliance obligations attach to them; UI themes and clone schedules are platform administration items.",
 		"sourceUrls": [
@@ -14948,10 +15711,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which two design decisions belong to the entity scoping phase of a GRC implementation? (Choose two.)",
 		"choices": [
-			"Selecting which source tables and conditions define the organization's entities",
 			"Deciding whether content will be associated at the entity type level or to individual entities",
+			"Setting the SMTP relay server used for outbound notification email",
 			"Choosing the font family displayed on executive compliance dashboards",
-			"Setting the SMTP relay server used for outbound notification email"
+			"Selecting which source tables and conditions define the organization's entities"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -14993,7 +15756,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"explanation": "Control and Citation are Policy and Compliance Management scoped tables; Incident and Asset belong to core platform applications outside the GRC scope.",
 		"sourceUrls": [
@@ -15038,9 +15801,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A control fails its attestation because the owner reports the safeguard is not operating. What does Policy and Compliance Management create to track remediation?",
 		"choices": [
 			"An issue record associated with the control, assigned for remediation or acceptance",
-			"A change request that freezes the entity until the compliance manager approves reopening",
 			"A knowledge article documenting the failure for future audit reference purposes",
-			"A new authority document capturing the internal deviation from the standard"
+			"A new authority document capturing the internal deviation from the standard",
+			"A change request that freezes the entity until the compliance manager approves reopening"
 		],
 		"correctIndex": 0,
 		"explanation": "Failed attestations and non-compliant results generate issues linked to the control, driving remediation, exception, or acceptance workflows.",
@@ -15158,7 +15921,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"explanation": "The compliance library holds authority documents and the policy statements mapped to their citations; SLAs and update sets are platform artifacts outside the library.",
 		"sourceUrls": [
@@ -15202,12 +15965,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 46,
 		"prompt": "During a multi-framework rollout, auditors ask which artifact stores the source regulation such as SOX or GDPR before citations are created.",
 		"choices": [
-			"Authority document representing the external obligation",
 			"Risk Framework grouping risk statements by category",
+			"Content pack MID Server configuration record",
 			"Audit engagement scoping the control universe",
-			"Content pack MID Server configuration record"
+			"Authority document representing the external obligation"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Authority documents are the top-level regulatory or standards sources that citations and controls trace back to.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/manage-authority-documents-and-citations.html",
@@ -15276,9 +16039,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A policy owner publishes a revised acceptable-use standard. Which GRC artifact should be updated first to preserve compliance traceability?",
 		"choices": [
 			"Policy statement with versioned lifecycle and mapped control references",
-			"Discovery schedule targeting decommissioned subnets",
 			"Risk heat map widget on the IRM workspace homepage",
-			"Catalog item variable for employee onboarding requests"
+			"Catalog item variable for employee onboarding requests",
+			"Discovery schedule targeting decommissioned subnets"
 		],
 		"correctIndex": 0,
 		"explanation": "Policy statements anchor internal standards and must stay linked to controls and citations when content changes.",
@@ -15341,9 +16104,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A control owner asks how often evidence must be collected for a high-impact encryption control under continuous monitoring.",
 		"choices": [
 			"Follow the defined test frequency on the control test with automated indicators where applicable",
-			"Collect evidence only when external auditors request samples",
 			"Run tests once at implementation and mark the control effective permanently",
-			"Defer all testing until the risk register review cycle completes"
+			"Defer all testing until the risk register review cycle completes",
+			"Collect evidence only when external auditors request samples"
 		],
 		"correctIndex": 0,
 		"explanation": "Control tests specify evidence collection cadence; continuous monitoring extends that with indicator-driven exceptions.",
@@ -15446,12 +16209,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 60,
 		"prompt": "During a risk assessment workshop, facilitators ask participants to rate likelihood and impact before controls are considered. Which score does that produce?",
 		"choices": [
-			"Inherent risk score based on pre-control exposure",
 			"Residual risk score after mitigation actions complete",
+			"Audit observation severity for fieldwork deficiencies",
 			"Compliance attestation score for mapped policy statements",
-			"Audit observation severity for fieldwork deficiencies"
+			"Inherent risk score based on pre-control exposure"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Inherent scoring captures exposure assuming no compensating controls; residual scoring reflects control effectiveness.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-response-and-treatment.html",
@@ -15489,7 +16252,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"explanation": "Assessment campaigns require a consistent methodology and clear entity scope so results are comparable across units.",
 		"sourceUrls": [
@@ -15519,12 +16282,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 64,
 		"prompt": "Leadership publishes a risk appetite statement capping high residual scores in public-facing services. How should IRM Workspace enforce that guidance?",
 		"choices": [
-			"Configure scoring thresholds and escalation when residual ratings exceed appetite limits",
 			"Hide high risks from dashboards until the next quarterly review",
+			"Disable treatment planning tasks for risks rated moderate",
 			"Automatically accept all risks below the maximum impact scale value",
-			"Disable treatment planning tasks for risks rated moderate"
+			"Configure scoring thresholds and escalation when residual ratings exceed appetite limits"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Appetite thresholds drive escalation, treatment decisions, and visibility when exposure exceeds tolerated levels.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-governance.html",
@@ -15605,9 +16368,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Executives request a heat map of top residual risks by business service after an assessment cycle. Which workspace output satisfies that request?",
 		"choices": [
 			"Risk heat map and trend views highlighting residual scores and overdue treatments",
-			"Raw export of every risk field without filters or grouping",
 			"List of inactive assignment groups sorted alphabetically",
-			"Count of UI policies modified in the past week"
+			"Count of UI policies modified in the past week",
+			"Raw export of every risk field without filters or grouping"
 		],
 		"correctIndex": 0,
 		"explanation": "Heat maps and trend dashboards translate assessment results into prioritized oversight views for leadership.",
@@ -15774,12 +16537,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 79,
 		"prompt": "Compliance operations wants automated alerts when encryption control indicators breach thresholds. Which design supports continuous monitoring?",
 		"choices": [
-			"Control indicators tied to objectives with threshold-based exception creation",
 			"Annual manual evidence uploads stored as unattached files",
+			"Static control tests executed once during initial implementation",
 			"Email-only summaries with no structured control records",
-			"Static control tests executed once during initial implementation"
+			"Control indicators tied to objectives with threshold-based exception creation"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Automated control indicators generate exceptions when telemetry shows drift from expected control operation.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/control-testing-and-evidence.html",
@@ -15843,9 +16606,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Program managers need cross-module reporting spanning policy tests, risk treatments, and open issues. Which approach meets that need?",
 		"choices": [
 			"Unified GRC dashboards and reports with consistent definitions across modules",
-			"Separate offline spreadsheets maintained by each module lead",
 			"Incident-only analytics excluding compliance and risk tables",
-			"Ad hoc list exports with different filters for every meeting"
+			"Ad hoc list exports with different filters for every meeting",
+			"Separate offline spreadsheets maintained by each module lead"
 		],
 		"correctIndex": 0,
 		"explanation": "Shared GRC reporting definitions provide consistent oversight across policy, risk, and remediation workflows.",
@@ -15869,7 +16632,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndexes": [
 			0,
 			1,
-			2
+			3
 		],
 		"explanation": "The sn_audit.user role inherits sn_grc.reader, sn_compliance.reader, and sn_risk.reader so auditors can view GRC data across modules.",
 		"sourceUrls": [
@@ -15917,9 +16680,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Testers execute control procedures, gather evidence, and document exceptions during an engagement. Which record type tracks that work?",
 		"choices": [
 			"Audit tasks representing fieldwork activities on the engagement",
-			"Risk statements cataloged in the enterprise risk library",
 			"Citations extracted from authority documents only",
-			"Entity filters limiting scoped CMDB table visibility"
+			"Entity filters limiting scoped CMDB table visibility",
+			"Risk statements cataloged in the enterprise risk library"
 		],
 		"correctIndex": 0,
 		"explanation": "Audit tasks are the work items auditors execute during fieldwork, including testing and evidence collection.",
@@ -16020,9 +16783,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "During a bulk entitlement import, an administrator reviews Entitlement Import Error records. Which message is NOT a valid import error reason?",
 		"choices": [
 			"Purchased rights should be less than 20",
-			"Purchased rights should be greater than 0",
 			"Publisher part number not found",
-			"Software model not found"
+			"Software model not found",
+			"Purchased rights should be greater than 0"
 		],
 		"correctIndex": 0,
 		"explanation": "Valid entitlement import errors include zero purchased rights, missing publisher part numbers, and missing software models. A minimum threshold of 20 is not a documented import validation rule.",
@@ -16084,9 +16847,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A finance stakeholder needs read-only access to SAM compliance dashboards without editing entitlements or running reconciliation. Which role fits this requirement?",
 		"choices": [
 			"The sam_user role providing read-only access to SAM dashboards without edit privileges",
-			"The sam_admin role providing full configuration control over reconciliation and entitlement tables",
 			"The sam role providing standard analyst access including entitlement creation and reconciliation",
-			"The sam_developer role providing script development access for custom SAM automation logic"
+			"The sam_developer role providing script development access for custom SAM automation logic",
+			"The sam_admin role providing full configuration control over reconciliation and entitlement tables"
 		],
 		"correctIndex": 0,
 		"explanation": "The sam_user role provides read-only access to SAM views and reports for stakeholders who need visibility without configuration or data modification rights.",
@@ -16147,12 +16910,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 11,
 		"prompt": "Before a publisher true-up, a SAM manager must verify the legal measurement basis for license rights. Which entitlement attributes are most critical to confirm first?",
 		"choices": [
-			"License metric and purchased rights quantity aligned to contract terms",
 			"Number of attachments on unrelated software model records in the catalog",
+			"Color theme settings applied to the entitlement list view",
 			"UI policy names configured on the entitlement form layout",
-			"Color theme settings applied to the entitlement list view"
+			"License metric and purchased rights quantity aligned to contract terms"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "License metric and purchased rights define how consumption is counted against contractual entitlements, directly driving compliance calculations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/manage-software-entitlements.html"
@@ -16169,10 +16932,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"The sam_user role for read-only SAM dashboard and report consumption",
 			"The itil role for incident and change management without SAM module access"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"correctIndexes": [
-			0,
-			1
+			2,
+			3
 		],
 		"explanation": "The sam role supports day-to-day SAM operations while sam_admin provides full administrative control; sam_user is read-only and itil covers ITSM modules.",
 		"sourceUrls": [
@@ -16216,12 +16979,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 15,
 		"prompt": "Why is selecting the correct license metric critical when configuring SAM entitlements?",
 		"choices": [
-			"It determines how consumption is measured against purchased rights during reconciliation",
 			"It controls which users can authenticate into the ServiceNow instance at login",
+			"It replaces software normalization rules applied during discovery model mapping",
 			"It eliminates the need to maintain contract records linked to entitlement records",
-			"It replaces software normalization rules applied during discovery model mapping"
+			"It determines how consumption is measured against purchased rights during reconciliation"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "The license metric defines the counting logic for compliance; an incorrect metric can materially misstate license position during reconciliation.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/license-metrics-overview.html"
@@ -16392,12 +17155,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 26,
 		"prompt": "A SAM administrator reviews normalization status on discovered software records. Which status value indicates the title still requires mapping work?",
 		"choices": [
-			"Partially normalized status where discovery evidence has not fully mapped to a software model",
 			"Matched status where the discovery record is fully linked to a supported software model",
+			"Match not found status when no software model rule applies to the discovery evidence",
 			"Manually normalized status set by an administrator override of automatic mapping",
-			"Match not found status when no software model rule applies to the discovery evidence"
+			"Partially normalized status where discovery evidence has not fully mapped to a software model"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Partially normalized indicates discovery evidence has not fully mapped to a software model and requires administrator review or additional mapping rules.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-normalization-status.html"
@@ -16521,9 +17284,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which action best improves confidence that entitlement records are audit-ready?",
 		"choices": [
 			"Store purchase proof and contractual evidence linked to entitlement records",
-			"Delete expired entitlements immediately without retaining historical audit context",
 			"Disable reconciliation jobs during quarter close to prevent position changes",
-			"Move entitlement quantities into custom text fields outside standard SAM tables"
+			"Move entitlement quantities into custom text fields outside standard SAM tables",
+			"Delete expired entitlements immediately without retaining historical audit context"
 		],
 		"correctIndex": 0,
 		"explanation": "Attaching entitlement evidence supports defensible license positions and reduces response time during publisher audits and true-ups.",
@@ -16574,10 +17337,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"An incident record linked to the import error for ITSM tracking",
 			"A hardware asset tag matching the discovery serial number"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"correctIndexes": [
-			0,
-			1
+			2,
+			3
 		],
 		"explanation": "Import errors for missing publisher part numbers are resolved by ensuring the part number exists and maps to the correct software model for the product.",
 		"sourceUrls": [
@@ -16646,7 +17409,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"explanation": "Non-compliance is remediated by either acquiring additional license rights or removing installs that exceed entitlements, aligning consumption with purchased rights.",
 		"sourceUrls": [
@@ -16690,12 +17453,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 44,
 		"prompt": "After remediation, a SAM administrator reruns reconciliation. What outcome confirms the compliance gap was resolved?",
 		"choices": [
-			"The software model shows a compliant or balanced license position matching contract terms",
 			"The discovery schedule status changes to inactive for all related publishers",
+			"The software model normalization status changes to Match not found",
 			"The entitlement import error list contains only Ignored status records",
-			"The software model normalization status changes to Match not found"
+			"The software model shows a compliant or balanced license position matching contract terms"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Successful remediation is verified when reconciliation shows the entitlement position aligns with installed and allocated consumption for the software model.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/validate-reconciliation-results.html"
@@ -16778,9 +17541,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "After reconciliation completes, which outcome represents a defensible Effective License Position for renewal planning?",
 		"choices": [
 			"Entitlement totals reconciled to normalized installs using the contractual license metric",
-			"Raw discovery titles counted without software model mapping",
 			"Procurement PO line items summed without entitlement linkage",
-			"Catalog request volume used as a proxy for license consumption"
+			"Catalog request volume used as a proxy for license consumption",
+			"Raw discovery titles counted without software model mapping"
 		],
 		"correctIndex": 0,
 		"explanation": "Effective License Position depends on reconciling contract-backed entitlements to normalized consumption using the correct metric.",
@@ -16826,9 +17589,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "When remediating reconciliation results in SAM, which remediation options are available? (Choose all that apply.)",
 		"choices": [
 			"Create Allocations",
-			"Remove Allocations",
 			"Purchase Rights",
-			"Remove Unlicensed Installs"
+			"Remove Unlicensed Installs",
+			"Remove Allocations"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -16951,12 +17714,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 59,
 		"prompt": "A contract amendment increases license quantity mid-term. How should SAM maintain compliance integrity?",
 		"choices": [
-			"Update the entitlement record and document the contract change with effective dates",
 			"Create a duplicate software model for the additional quantity only",
+			"Wait until renewal to reflect the amended quantity in SAM",
 			"Adjust install counts manually without updating entitlements",
-			"Wait until renewal to reflect the amended quantity in SAM"
+			"Update the entitlement record and document the contract change with effective dates"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Contract changes must be reflected in entitlement records with traceable effective dates so reconciliation stays aligned with current rights.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/software-entitlement-best-practices.html"
@@ -17016,9 +17779,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A SAM administrator schedules recurring reconciliation and compliance reporting jobs. What operational outcome does this maintenance support?",
 		"choices": [
 			"Timely visibility into compliance drift before renewals and vendor audits",
-			"Permanent elimination of all software model normalization exceptions",
 			"Automatic retirement of every software title after ninety days",
-			"Removal of procurement approvals from the request workflow"
+			"Removal of procurement approvals from the request workflow",
+			"Permanent elimination of all software model normalization exceptions"
 		],
 		"correctIndex": 0,
 		"explanation": "Scheduled reconciliation and reporting maintain current compliance posture and reduce surprise exposure at renewal or audit time.",
@@ -17080,9 +17843,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which platform areas commonly integrate with SAM operational workflows? (Choose all that apply.)",
 		"choices": [
 			"Service catalog software request and fulfillment",
-			"Procurement purchase orders and contracts",
 			"Change management for SAM configuration updates",
-			"Discovery and normalization feeding install records"
+			"Discovery and normalization feeding install records",
+			"Procurement purchase orders and contracts"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -17182,12 +17945,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 73,
 		"prompt": "A new catalog item requests software governed by a retired lifecycle state. What should the integrated workflow enforce?",
 		"choices": [
-			"Block or redirect requests because the software model is retired from active lifecycle",
 			"Auto-approve fulfillment without checking lifecycle or entitlements",
+			"Map the request to a hardware model to bypass SAM controls",
 			"Create entitlements on the fly without contract backing",
-			"Map the request to a hardware model to bypass SAM controls"
+			"Block or redirect requests because the software model is retired from active lifecycle"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Catalog integration should respect software model lifecycle states to prevent provisioning of retired or unsupported products.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/now-assist-for-software-asset-management-sam/calculated-lifecycles.html"
@@ -17246,12 +18009,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 77,
 		"prompt": "A SAM team receives a new publisher pack version with updated normalization rules. What is the safest extension practice?",
 		"choices": [
-			"Test the update in sub-production, compare reconciliation deltas, and promote through change control",
 			"Apply the pack in production during business hours without impact analysis",
+			"Delete existing software models before importing the new pack content",
 			"Disable normalization until the pack version matches the previous release",
-			"Delete existing software models before importing the new pack content"
+			"Test the update in sub-production, compare reconciliation deltas, and promote through change control"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Publisher pack changes can shift normalization and compliance results and should be validated before governed promotion.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-model-normalization-governance.html"
@@ -17311,9 +18074,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A publisher audit requests proof of license ownership. Which SAM evidence set is most defensible?",
 		"choices": [
 			"Entitlement records with contract references and reconciliation history showing position calculations",
-			"Unnormalized discovery export sorted alphabetically by install name",
 			"Service catalog item description text without linked entitlements",
-			"List of hardware assets hosting software with no metric context"
+			"List of hardware assets hosting software with no metric context",
+			"Unnormalized discovery export sorted alphabetically by install name"
 		],
 		"correctIndex": 0,
 		"explanation": "Audit defensibility requires traceable entitlement provenance and documented reconciliation logic for compliance positions.",
@@ -17487,11 +18250,11 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "How is Security Incident Response defined in ServiceNow documentation?",
 		"choices": [
 			"A discovery framework that maps application dependencies across the CMDB only",
-			"An action plan to mitigate security incidents and any imminent threats to the organization",
 			"A service catalog workflow for provisioning laptops to new employees",
-			"A change advisory board process for approving emergency production releases"
+			"A change advisory board process for approving emergency production releases",
+			"An action plan to mitigate security incidents and any imminent threats to the organization"
 		],
-		"correctIndex": 1,
+		"correctIndex": 3,
 		"explanation": "Documentation defines SIR as an action plan that helps organizations mitigate active security incidents and imminent threats through structured response.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response.html"
@@ -17511,7 +18274,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"explanation": "SIR coordinates response through security incident records for lifecycle management and security incident tasks for assigned investigative and remediation work.",
 		"sourceUrls": [
@@ -17556,9 +18319,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which dashboard widget type best visualizes the count of security incidents grouped by priority over the last thirty days?",
 		"choices": [
 			"Bar or column chart driven by a filtered security incident report",
-			"Single score widget showing total active CMDB configuration items",
 			"Calendar heat map of employee vacation balances by department",
-			"Gauge displaying average catalog checkout fulfillment duration"
+			"Gauge displaying average catalog checkout fulfillment duration",
+			"Single score widget showing total active CMDB configuration items"
 		],
 		"correctIndex": 0,
 		"explanation": "Grouped bar or column charts on filtered incident reports are standard for showing priority distribution trends over time.",
@@ -17581,7 +18344,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndexes": [
 			0,
 			1,
-			2
+			3
 		],
 		"explanation": "SIR reporting targets security practitioners, SOC leadership, and executive security stakeholders rather than unrelated operational teams.",
 		"sourceUrls": [
@@ -17721,12 +18484,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 16,
 		"prompt": "Why do security teams associate MITRE ATT&CK tactics and techniques with a security incident record?",
 		"choices": [
-			"To add structured adversary behavior context that supports prioritization and investigation",
 			"To automatically patch every endpoint without analyst review or validation",
+			"To normalize software publisher names for annual license audit reporting",
 			"To replace vulnerability scanning tools across the entire security stack",
-			"To normalize software publisher names for annual license audit reporting"
+			"To add structured adversary behavior context that supports prioritization and investigation"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "MITRE ATT&CK alignment enriches incidents with standardized threat behavior context for defensive planning and consistent analysis.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/security-incident-response/mitre-attack-defend-graph-sir.html"
@@ -17786,9 +18549,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "An organization wants incidents auto-tagged as ransomware when certain observables match threat feed entries. Which SIR feature supports this?",
 		"choices": [
 			"Security tags applied through threat intelligence and classification rules",
-			"Discovery identification rules that create printer CI records automatically",
 			"Service catalog client scripts that validate mobile phone number formats",
-			"Project workspace demand scoring thresholds for strategic portfolio themes"
+			"Project workspace demand scoring thresholds for strategic portfolio themes",
+			"Discovery identification rules that create printer CI records automatically"
 		],
 		"correctIndex": 0,
 		"explanation": "Security tags classify incidents based on intelligence matches and configured rules to drive routing and response playbooks.",
@@ -17850,9 +18613,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "During Major Security Incident Management, which practice keeps business and technical stakeholders aligned in real time?",
 		"choices": [
 			"War-room operations with shared timeline, tasks, and communication in SIR",
-			"Disabling all integrations until the incident reaches closed state",
 			"Routing every update through annual compliance attestation workflows",
-			"Assigning all response tasks to a single catalog administrator only"
+			"Assigning all response tasks to a single catalog administrator only",
+			"Disabling all integrations until the incident reaches closed state"
 		],
 		"correctIndex": 0,
 		"explanation": "MSIM war-room operations centralize coordination, tasks, and communications so cross-functional teams share a single response view.",
@@ -17922,7 +18685,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"explanation": "SIR pre-built integrations focus on security tools such as SIEM and EDR platforms that feed incidents and observables into the platform.",
 		"sourceUrls": [
@@ -17950,12 +18713,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 30,
 		"prompt": "An organization uses Splunk as its primary SIEM. Where should implementers start the SIR connection in ServiceNow?",
 		"choices": [
-			"Integration Configurations, selecting the Splunk pre-built integration template",
 			"Discovery schedules, adding Splunk servers as horizontal probe targets",
+			"Project Workspace, linking Splunk alerts to portfolio demand records",
 			"Service Catalog, publishing a Splunk checkout item for analysts",
-			"Project Workspace, linking Splunk alerts to portfolio demand records"
+			"Integration Configurations, selecting the Splunk pre-built integration template"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Pre-built Splunk integrations are configured through Integration Configurations with guided setup for alert ingestion.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integration-configurations.html"
@@ -18014,12 +18777,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 34,
 		"prompt": "An implementer needs to store API keys for a custom threat feed integration securely. What is the recommended approach?",
 		"choices": [
-			"Use integration credentials or connection credentials referenced by the integration record",
 			"Paste keys into incident work notes so analysts can copy them during triage",
+			"Email credentials to the SOC distribution list for shared spreadsheet storage",
 			"Save keys in an unencrypted system property visible to all authenticated users",
-			"Email credentials to the SOC distribution list for shared spreadsheet storage"
+			"Use integration credentials or connection credentials referenced by the integration record"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Integration and connection credentials protect API secrets while allowing authorized integration processes to authenticate.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integration-configurations.html"
@@ -18095,9 +18858,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "An analyst opens the Security Incident Response Workspace to work a critical phishing case. What does the workspace provide?",
 		"choices": [
 			"Contextual incident details, related tasks, evidence, and response tools in one view",
-			"A catalog checkout flow for ordering replacement hardware for affected users",
 			"A discovery dashboard listing MID Server heartbeat status by datacenter",
-			"A project financial plan editor for reallocating portfolio investment funds"
+			"A project financial plan editor for reallocating portfolio investment funds",
+			"A catalog checkout flow for ordering replacement hardware for affected users"
 		],
 		"correctIndex": 0,
 		"explanation": "The SIR Workspace consolidates incident context, tasks, and response actions so analysts can investigate without leaving the screen.",
@@ -18164,10 +18927,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"Catalog fulfillment tasks for employee laptop shipping and imaging",
 			"Discovery error tasks for MID Server subnet probe failure logging"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			3
 		],
 		"explanation": "SIR uses investigation tasks for analytical work and remediation tasks for active response actions on affected systems.",
 		"sourceUrls": [
@@ -18195,12 +18958,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 45,
 		"prompt": "An administrator leaves the Script include field empty on a custom process definition record. Which process definition does Security Incident Response use by default?",
 		"choices": [
-			"NIST Open with bidirectional transitions between any valid states",
 			"NIST Stateful with sequential forward-only progression through incident states",
+			"Analyst-defined custom states without process validation rules",
 			"Standard ITIL incident state model from core Incident Management",
-			"Analyst-defined custom states without process validation rules"
+			"NIST Open with bidirectional transitions between any valid states"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "When no valid script include is configured, the base system defaults to the NIST Stateful process definition for security incidents.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/security-incident-response/setup-assistant-reference.html",
@@ -18262,12 +19025,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 49,
 		"prompt": "A SecOps program needs phishing, malware, and policy violations to follow different automated response paths. Which configuration drives those variations?",
 		"choices": [
-			"Security incident categories and subcategories mapped to playbooks",
 			"Universal request templates shared across all ITSM record types",
+			"Reconciliation rules on cmdb_ci_computer hostname attributes",
 			"Global UI16 theme settings controlling form color palettes",
-			"Reconciliation rules on cmdb_ci_computer hostname attributes"
+			"Security incident categories and subcategories mapped to playbooks"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Category and subcategory management ties incident types to the playbooks and workflows that govern each response path.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/security-incident-response/category-management-sir.html",
@@ -18319,11 +19082,11 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"CIOs and CISOs reviewing executive risk and trend summaries",
 			"Facilities and HR staff approving office supply requisitions"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
 			1,
-			2
+			2,
+			3
 		],
 		"explanation": "Analyst, manager, and executive dashboards serve operational, supervisory, and leadership audiences; facilities and HR requisitions are unrelated to SIR reporting.",
 		"sourceUrls": [
@@ -18338,9 +19101,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Reopen rates for closed security incidents climb steadily over several weeks. What is the most likely root cause?",
 		"choices": [
 			"Containment or eradication was incomplete and closure validation is too weak",
-			"Threat intelligence enrichment feeds were disabled during the period",
 			"Shift handover templates were recently updated for the SOC",
-			"Process definition selector was switched from Stateful to Open"
+			"Process definition selector was switched from Stateful to Open",
+			"Threat intelligence enrichment feeds were disabled during the period"
 		],
 		"correctIndex": 0,
 		"explanation": "Rising reopen rates usually indicate premature closure or unresolved root issues that fail post-closure validation.",
@@ -18507,12 +19270,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 63,
 		"prompt": "A Flow Designer flow is linked to the security incident table for automated enrichment. When does that flow execute?",
 		"choices": [
-			"When the configured trigger condition for the flow is met on the target record",
 			"Only when an administrator manually runs the flow from Flow Designer weekly",
+			"Before any security incident record is inserted into the database unconditionally",
 			"After every incident reaches Closed Complete regardless of filter logic",
-			"Before any security incident record is inserted into the database unconditionally"
+			"When the configured trigger condition for the flow is met on the target record"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Flows tied to Security Incident Response run when their defined trigger conditions evaluate true against the triggering record.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/security-incident-response/define-trigger-conditions.html",
@@ -18581,10 +19344,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"Playbooks replace the need for any security incident record fields",
 			"Runbooks execute only after incidents reach Closed Complete state"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			2
 		],
 		"explanation": "Playbooks automate orchestrated response steps; runbooks provide task-level knowledge guidance without replacing workflow logic.",
 		"sourceUrls": [
@@ -18598,9 +19361,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Integration teams need to launch third-party containment actions from a security incident. Which module provides orchestration workflow templates for those actions?",
 		"choices": [
 			"Security Incident Response orchestration workflows in SecOps integrations",
-			"CMDB Data Manager workspace for orphaned relationship cleanup",
 			"Service Mapping pattern designer for top-down entry point tracing",
-			"Employee Center onboarding flows for new hire provisioning"
+			"Employee Center onboarding flows for new hire provisioning",
+			"CMDB Data Manager workspace for orphaned relationship cleanup"
 		],
 		"correctIndex": 0,
 		"explanation": "SecOps orchestration workflows connect Security Incident Response with external security tools for automated response actions.",
@@ -18649,9 +19412,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "An orchestration action should run only when a specific configuration item appears on the security incident. Which configuration defines that scope?",
 		"choices": [
 			"Trigger conditions scoped to the affected configuration item on the incident",
-			"Discovery credentials assigned to the MID Server cluster for the subnet",
 			"Service catalog approval workflows for employee laptop requests",
-			"CMDB health KPI thresholds for duplicate CI remediation tasks"
+			"CMDB health KPI thresholds for duplicate CI remediation tasks",
+			"Discovery credentials assigned to the MID Server cluster for the subnet"
 		],
 		"correctIndex": 0,
 		"explanation": "Trigger conditions restrict when orchestration actions and flows execute based on incident fields such as affected CIs.",
@@ -18773,10 +19536,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which two outcomes occur when an automated phishing playbook runs successfully? (Choose two.)",
 		"choices": [
-			"Response tasks are created for analysts to execute defined remediation steps",
 			"Reported message observables are enriched and linked to the incident record",
+			"Discovery schedules are disabled to prevent CMDB updates during triage",
 			"All security incidents in the instance are closed automatically",
-			"Discovery schedules are disabled to prevent CMDB updates during triage"
+			"Response tasks are created for analysts to execute defined remediation steps"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -18846,9 +19609,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "After configuring orchestration trigger filters, an administrator needs to confirm they match expected incidents. What is the recommended validation step?",
 		"choices": [
 			"Verify configured trigger conditions against sample security incident records",
-			"Disable all playbooks until the next major platform upgrade completes",
 			"Delete existing incidents so triggers only apply to future records",
-			"Remove affected CI references from every open incident manually"
+			"Remove affected CI references from every open incident manually",
+			"Disable all playbooks until the next major platform upgrade completes"
 		],
 		"correctIndex": 0,
 		"explanation": "Verifying trigger conditions against representative incidents confirms automation fires only when intended criteria are satisfied.",
@@ -18902,10 +19665,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"Permanent removal of analyst review from every incident category",
 			"Automatic closure of all incidents regardless of containment evidence"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			2
 		],
 		"explanation": "Process automation speeds handoffs and standardizes response, but analysts still govern categories that require judgment and validated closure.",
 		"sourceUrls": [
@@ -18919,9 +19682,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "An analyst confirms a phishing incident and must start the approved response workflow from the record. Which action should they take in SIR Workspace?",
 		"choices": [
 			"Run the phishing playbook from the Playbooks area on the incident record",
-			"Rebuild CMDB relationships manually before any response task is created",
 			"Disable discovery schedules globally to prevent CI updates during triage",
-			"Convert the incident to a hardware catalog request for endpoint replacement"
+			"Convert the incident to a hardware catalog request for endpoint replacement",
+			"Rebuild CMDB relationships manually before any response task is created"
 		],
 		"correctIndex": 0,
 		"explanation": "Analysts launch playbooks directly from the incident record in SIR Workspace to execute structured phishing response tasks.",
@@ -18987,9 +19750,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "During top-down Service Mapping, no Pattern Identification Section matches the discovered process on a host. What application CI type is created for that component?",
 		"choices": [
 			"A generic application CI representing the unmatched process until a pattern is assigned",
-			"A business service record linked directly to the cmdb_ci_computer record with full dependency rollup",
 			"A discovery error log entry that blocks all further mapping on the subnet and disables MID Server probes",
-			"A manual relationship stub with no CI created in the CMDB"
+			"A manual relationship stub with no CI created in the CMDB",
+			"A business service record linked directly to the cmdb_ci_computer record with full dependency rollup"
 		],
 		"correctIndex": 0,
 		"explanation": "When identification sections do not match, Service Mapping creates a generic application so the topology can continue while the pattern gap is resolved.",
@@ -19098,12 +19861,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 7,
 		"prompt": "What capability does the Pattern Designer command line console provide during pattern development?",
 		"choices": [
-			"Bulk import of service map schedules from external monitoring tools",
 			"Direct execution and testing of pattern commands against a selected target CI",
+			"One-click deployment of tag-based mapping rules to cloud provider accounts",
 			"Automatic generation of business service ownership records from LDAP groups",
-			"One-click deployment of tag-based mapping rules to cloud provider accounts"
+			"Bulk import of service map schedules from external monitoring tools"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "The command line console lets implementers run individual pattern commands interactively to validate syntax and output before embedding them in steps.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
@@ -19146,12 +19909,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 10,
 		"prompt": "A Parse File operation in Pattern Designer is most appropriate when the pattern must do what?",
 		"choices": [
-			"Read configuration or log file contents from a target host and extract dependency details",
 			"Generate PDF reports of service map topology for executive dashboard consumption",
+			"Convert event management alert rules into service map entry point definitions",
 			"Import software entitlement records from a publisher CSV into the SAM application",
-			"Convert event management alert rules into service map entry point definitions"
+			"Read configuration or log file contents from a target host and extract dependency details"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Parse File steps retrieve file content—such as application config files—and parse structured data needed for identification or connection mapping.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
@@ -19227,9 +19990,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "During pattern execution, what does a Pattern Identification Section evaluate before connection logic runs?",
 		"choices": [
 			"Whether discovered attributes on the CI satisfy the pattern matching criteria for that application type",
-			"Whether the business service owner approved the latest change request for the application",
 			"Whether the CMDB health dashboard score exceeds the corporate compliance threshold",
-			"Whether the event management maintenance window is active for the mapped service group"
+			"Whether the event management maintenance window is active for the mapped service group",
+			"Whether the business service owner approved the latest change request for the application"
 		],
 		"correctIndex": 0,
 		"explanation": "Identification sections gate pattern execution by testing process names, ports, files, or other attributes against defined match conditions.",
@@ -19322,12 +20085,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 21,
 		"prompt": "Before broad deployment, why should a custom Service Mapping pattern be tested against a single known host?",
 		"choices": [
-			"To validate identification and connection output against expected topology before scaling scope",
 			"To permanently lock the pattern version so content updates cannot be applied",
+			"To auto-assign business service ownership from the host assignment group field",
 			"To bypass CMDB reconciliation for all CIs discovered during the test run",
-			"To auto-assign business service ownership from the host assignment group field"
+			"To validate identification and connection output against expected topology before scaling scope"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Controlled single-host testing confirms pattern logic produces accurate CIs and relationships before running against production entry points.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
@@ -19379,7 +20142,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			2
 		],
 		"explanation": "Production promotion requires verified pattern output on representative targets and review of credentials and parsing logic to prevent map quality regressions.",
 		"sourceUrls": [
@@ -19391,12 +20154,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 25,
 		"prompt": "A Connection Section references a temporary variable that was never populated by an earlier step. What symptom appears during mapping?",
 		"choices": [
-			"Downstream connection steps fail or skip because required parsed values are empty or undefined",
 			"The service map schedule automatically doubles its run frequency until the variable resolves",
+			"The pattern is promoted to production status without requiring further testing",
 			"All CIs on the map display a green check mark indicating successful credential validation",
-			"The pattern is promoted to production status without requiring further testing"
+			"Downstream connection steps fail or skip because required parsed values are empty or undefined"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Missing variable values break connection logic that depends on parsed data, resulting in incomplete dependency maps.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
@@ -19597,7 +20360,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"explanation": "Production mapping requires working credentials and validated entry points so discovery can authenticate and start from accurate topology anchors.",
 		"sourceUrls": [
@@ -19666,7 +20429,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"explanation": "Warning icons on mapped CIs and authentication errors in discovery logs are primary signals that credentials need correction.",
 		"sourceUrls": [
@@ -19711,9 +20474,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Application service ownership affects Service Mapping operations in what way?",
 		"choices": [
 			"Owners validate map accuracy, prioritize remediation of gaps, and approve changes to entry points or scope",
-			"Owners automatically receive admin credentials for every MID Server in the environment",
 			"Owners disable CMDB reconciliation globally when a map run exceeds the timeout threshold",
-			"Owners convert technical services to incident categories without review"
+			"Owners convert technical services to incident categories without review",
+			"Owners automatically receive admin credentials for every MID Server in the environment"
 		],
 		"correctIndex": 0,
 		"explanation": "Service owners provide business context for validating maps, governing scope changes, and driving remediation when dependencies are missing or incorrect.",
@@ -19777,11 +20540,11 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A subnet stays in Scanning status but no probe results appear in Discovery Status. Which communication channel should be reviewed first?",
 		"choices": [
 			"CMDB Health dashboard compliance score for the affected CI class",
-			"Service Mapping Workspace candidate queue for unreviewed suggestions",
 			"ECC Queue records carrying probe requests and MID Server responses",
-			"Identification rule order for the cmdb_ci_computer table"
+			"Identification rule order for the cmdb_ci_computer table",
+			"Service Mapping Workspace candidate queue for unreviewed suggestions"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"explanation": "Probe and sensor activity flows through the ECC Queue between the instance and MID Servers, making it the first place to diagnose stalled runs.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/mid-server/ecc-queue.html",
@@ -19850,10 +20613,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"Schedule definition",
 			"Alert correlation"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			3
 		],
 		"explanation": "After Probe completes, Discovery classifies devices into CI classes and then identifies whether each result matches an existing CI or requires creation.",
 		"sourceUrls": [
@@ -19883,12 +20646,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 54,
 		"prompt": "Several application teams request Discovery schedule changes that expand IP scope weekly. Which governance practice best protects Service Mapping data quality?",
 		"choices": [
-			"Approve scope increases only after CMDB ownership review and controlled test runs",
 			"Allow any schedule editor to add global /8 ranges without validation gates",
+			"Run all expanded schedules in production first and reconcile issues afterward",
 			"Disable schedule change history so administrators cannot audit prior scope",
-			"Run all expanded schedules in production first and reconcile issues afterward"
+			"Approve scope increases only after CMDB ownership review and controlled test runs"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Controlled scope changes with ownership review prevent noisy or unauthorized discovery from degrading CMDB quality used by service maps.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/discovery-schedules.html",
@@ -19951,10 +20714,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 58,
 		"prompt": "Before enabling credential-based Discovery for a new datacenter, which credential practice best supports both security and mapping accuracy?",
 		"choices": [
-			"Share one domain administrator account across every schedule and environment",
 			"Store privileged passwords in schedule descriptions for faster troubleshooting",
+			"Disable credential validation to shorten MID Server onboarding time",
 			"Use least-privilege credential aliases tested against representative targets first",
-			"Disable credential validation to shorten MID Server onboarding time"
+			"Share one domain administrator account across every schedule and environment"
 		],
 		"correctIndex": 2,
 		"explanation": "Least-privilege credentials validated on sample targets reduce security exposure while confirming access needed for classification and exploration.",
@@ -20020,11 +20783,11 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "When should a team choose ML-powered mapping over manual top-down entry point design for a new application?",
 		"choices": [
 			"When no discovery data exists and all CIs are created manually each week",
-			"When traffic and discovery signals exist but documented entry points are incomplete",
 			"When the goal is to disable CMDB identification rules for faster imports",
-			"When every dependency must be drawn without any automated suggestions"
+			"When every dependency must be drawn without any automated suggestions",
+			"When traffic and discovery signals exist but documented entry points are incomplete"
 		],
-		"correctIndex": 1,
+		"correctIndex": 3,
 		"explanation": "ML mapping is most valuable when technical signals are available but formal entry points or architecture documentation are incomplete.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/getting-started-service-mapping.html",
@@ -20143,12 +20906,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 69,
 		"prompt": "An administrator must extend the CMDB schema with a new CI class for a custom middleware tier used in maps. Which tool should they use?",
 		"choices": [
-			"CI Class Manager to define classes, attributes, and identification behavior",
 			"Event rule designer to correlate monitoring alerts by severity",
+			"Service candidate queue to accept ML proposals automatically",
 			"Discovery schedule wizard to assign MID Server clusters by region",
-			"Service candidate queue to accept ML proposals automatically"
+			"CI Class Manager to define classes, attributes, and identification behavior"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "CI Class Manager governs CMDB class hierarchy and attributes so identification and mapping logic can target the correct CI types.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-data-manager.html",
@@ -20194,12 +20957,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 72,
 		"prompt": "An operator reclassifies a CI from cmdb_ci_server to cmdb_ci_win_server after Discovery confirms the OS. What type of CMDB change is this?",
 		"choices": [
-			"Class Upgrade moving the CI to a more specific subclass",
 			"Identification failure that forces creation of a duplicate record",
+			"Service map deletion that removes all dependency relationships",
 			"Reconciliation rollback that restores the previous datasource values",
-			"Service map deletion that removes all dependency relationships"
+			"Class Upgrade moving the CI to a more specific subclass"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Reclassifying a server CI to a Windows-specific subclass is a Class Upgrade that preserves identity while applying specialized attributes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/identification-and-reconciliation.html",
@@ -20280,9 +21043,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "CMDB Health shows many stale relationships blocking accurate impact analysis. Which remediation path is most appropriate?",
 		"choices": [
 			"Use CMDB Health and Data Manager tasks to retire stale CIs and fix relationships",
-			"Delete all cmdb_rel_ci records globally and rebuild maps from scratch",
 			"Turn off Discovery until every business service has an assigned owner",
-			"Accept all ML candidates without owner review to overwrite stale links"
+			"Accept all ML candidates without owner review to overwrite stale links",
+			"Delete all cmdb_rel_ci records globally and rebuild maps from scratch"
 		],
 		"correctIndex": 0,
 		"explanation": "CMDB Health and Data Manager provide governed remediation workflows for stale CIs and relationships that distort service maps.",
@@ -20454,12 +21217,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 87,
 		"prompt": "Which KPI pair best demonstrates Service Mapping engagement success for incident operations?",
 		"choices": [
-			"Reduced Mean Time to Resolve on mapped services and fewer repeat dependency-related incidents",
 			"Total number of ECC queue records processed per day across all MID Servers",
+			"Volume of rejected ML candidates without any owner feedback captured",
 			"Count of custom CI classes created without class manager review",
-			"Volume of rejected ML candidates without any owner feedback captured"
+			"Reduced Mean Time to Resolve on mapped services and fewer repeat dependency-related incidents"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Operational value appears when mapped services show faster resolution and fewer recurring incidents caused by unknown dependencies.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-kpis.html",
@@ -20503,1212 +21266,1299 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 	{
 		"trackCode": "CIS-SP",
 		"order": 0,
-		"prompt": "Telecommunications service operations solutions on ServiceNow commonly emphasize which outcome?",
+		"prompt": "A managed service provider is implementing ServiceNow Multitenant Platform Architecture on a single production instance. Which outcome does domain separation deliver for tenant operations?",
 		"choices": [
-			"Eliminating integration with external inventory systems for enterprise implementation",
-			"Unifying customer- and network-oriented service workflows for communication service providers for operational consistency",
-			"Disabling all scoped applications for role-based accountability for measurable outcomes",
-			"Removing CMDB usage entirely for production readiness"
+			"Forces every tenant to share identical process definitions without override capability",
+			"Removes the need for ACLs because domains enforce all authorization automatically",
+			"Segregates application data, UI, and business logic while supporting hierarchical tenant modeling",
+			"Creates a dedicated database schema per tenant with no shared platform code"
 		],
-		"correctIndex": 1,
-		"explanation": "Telecom service operations documentation positions the product around CSP workflows spanning service and operations domains.",
+		"correctIndex": 2,
+		"explanation": "Domain separation (Multitenant Platform Architecture) segregates data, UI, and business logic on one instance and supports nested tenant hierarchies with cross-tenant intelligence.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-telecom-service-ops/page/product/tmt-telecom-service-operations-mgt/concept/telecom-service-operations-mgt-overview.html"
+			"https://www.servicenow.com/docs/r/platform-security/bp-dom-sep-definition.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 1,
-		"prompt": "In IntegrationHub, what is a spoke best characterized as?",
+		"prompt": "An SP operations lead needs to validate parent-child relationships across TOP, MSP, and tenant domains before onboarding a new customer. Which navigation path opens the visual domain hierarchy?",
 		"choices": [
-			"A scoped package that delivers actions and related artifacts to connect with external systems for sustained reliability",
-			"A PA breakdown source table for measurable outcomes",
-			"A clone preserver record for practical execution consolidated into a single pane using performance analytics. (CIS-SP-1-w2)",
-			"A UI Policy applied to the email client for controlled governance"
+			"System Definition > Tables > Domain [domain]",
+			"Company > All > Domain Relationships",
+			"System Properties > Domain Separation > Hierarchy",
+			"Domain Admin > Domain Map"
 		],
-		"correctIndex": 0,
-		"explanation": "Spokes package integration content such as actions for use from flows and integrations.",
+		"correctIndex": 3,
+		"explanation": "Domain Admin > Domain Map displays the configured domain hierarchy so administrators can review parent-child structure before adding tenants.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-integrate-applications/page/administer/integrationhub/concept/integrationhub.html"
+			"https://www.servicenow.com/docs/r/platform-security/bp-domain-hierarchy.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 2,
-		"prompt": "Delegated development is intended to help organizations:",
+		"prompt": "During tenant onboarding, user records must automatically inherit the correct domain when created. Which assignment pattern is the standard default?",
 		"choices": [
-			"Empower designated non-admin developers to work within governed application boundaries for role-based accountability",
-			"Disable update set tracking for production readiness",
-			"Hide all ACL evaluations for enterprise implementation for controlled governance",
-			"Remove all testing requirements before production for operational consistency"
+			"Grant the user the domain_admin role without a domain value",
+			"Assign the user to a company that is linked to the target domain",
+			"Leave the user in global and rely on visibility domains for all access",
+			"Manually set sys_domain on every user record after import"
 		],
-		"correctIndex": 0,
-		"explanation": "Delegated development lets admins delegate scoped development tasks to trusted users under application-level controls.",
+		"correctIndex": 1,
+		"explanation": "Assigning users to a company mapped to a domain automatically places the user in that domain; records they create inherit the same domain.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-application-development/page/build/applications/concept/c_DelegatedDevelopment.html"
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainAssignment.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 3,
-		"prompt": "Why is accurate CMDB class modeling important for provider-scale service and impact workflows?",
+		"prompt": "An SP architect evaluates whether to use domain separation on one instance or provision a separate instance per enterprise customer. When is a separate instance typically the better fit?",
 		"choices": [
-			"It replaces Flow Designer entirely for practical execution sequenced after firewall rules allow required connectivity.",
-			"It removes the need for import sets for controlled governance",
-			"Inherited classes and attributes support consistent impact analysis and service mapping for sustained reliability",
-			"It prevents users from opening lists for measurable outcomes"
+			"When the SP needs a single shared CMDB class model across unrelated industries",
+			"When all customers must share one upgrade window and identical customizations",
+			"When customers require fully isolated environments with independent release cycles and minimal cross-tenant coupling",
+			"When tenant count is high but each tenant needs identical delegated administration"
 		],
 		"correctIndex": 2,
-		"explanation": "CMDB class models define how CIs specialize from base classes, which underpins reporting and operational use cases.",
+		"explanation": "Separate instances provide stronger isolation and independent lifecycle management when domain separation on a shared instance cannot meet customer separation requirements.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vancouver-servicenow-platform/page/product/configuration-management/concept/cmdb-ci-class-models.html"
+			"https://www.servicenow.com/docs/r/platform-security/bp-domain-sep-recommended.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 4,
-		"prompt": "What should a platform upgrade plan explicitly include to reduce operational risk during a major release?",
+		"questionType": "multi",
+		"prompt": "Which are true of a domain record marked as Primary? (Choose three.)",
 		"choices": [
-			"Skipping review of skipped updates for measurable outcomes propagated through robotic automation queues with SLA timers. (CIS-SP-4-w0)",
-			"Scope review, environment sequencing, validation of critical integrations, and rollback considerations for sustained reliability",
-			"Global disablement of business rules without a backlog for controlled governance",
-			"Permanent deletion of sub-production instances before testing for practical execution"
+			"It appears as the top-level domain in Domain Map",
+			"The primary domain cannot have a parent domain",
+			"It must be linked to the Service Provider company record",
+			"Only one domain can be marked as primary at a time"
 		],
-		"correctIndex": 1,
-		"explanation": "Upgrade planning documentation stresses structured preparation, testing across environments, and managing outcomes such as skipped updates.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1,
+			3
+		],
+		"explanation": "The primary domain is the single top-level node in Domain Map with no parent; selecting a new primary replaces the previous designation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html"
+			"https://www.servicenow.com/docs/r/platform-security/t_SelectAPrimaryDomain.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 5,
-		"prompt": "In telecom service operations, what is the primary value of managing service-affecting work through structured operational tasks?",
+		"prompt": "An SP platform team is preparing a new domain-separated instance for tenant onboarding. Which prerequisite must be completed before domain extensions and MSP demo data are available?",
 		"choices": [
-			"It automatically closes all customer cases when network alarms clear for operational consistency",
-			"It removes the need for maintenance windows for enterprise implementation",
-			"It enforces consistent assignment, execution tracking, and accountability for service work for production readiness",
-			"It replaces integration with external OSS systems for role-based accountability"
+			"Activation of the Domain Support - Domain Extensions Installer plugin by ServiceNow personnel",
+			"Creating a contains relationship between global and every tenant domain",
+			"Enabling the Customer Service Management plugin on every child domain",
+			"Installation of a separate MID Server per tenant domain"
 		],
-		"correctIndex": 2,
-		"explanation": "Operational task workflows standardize ownership and progress tracking, improving execution quality for telecom service operations.",
+		"correctIndex": 0,
+		"explanation": "The Domain Support - Domain Extensions Installer plugin must be activated by ServiceNow personnel and includes MSP extension capabilities required for SP domain separation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/telecommunications-service-management/vancouver/service-provider-workflows/concept/telecom-service-operations.html"
+			"https://www.servicenow.com/docs/r/platform-security/bp-domain-sep-recommended.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 6,
-		"prompt": "A provider wants to reduce duplicate effort between NOC and customer operations teams. Which process outcome is most important?",
+		"prompt": "Task and user records with no explicit domain assignment are landing in global on a new SP instance. Which configuration prevents unintended cross-tenant visibility?",
 		"choices": [
-			"Independent queues with no cross-team updates for controlled governance",
-			"Separate service models for each resolver group for practical execution",
-			"Manual nightly export of all incident records for measurable outcomes",
-			"Shared visibility of incidents, tasks, and service impact across teams for sustained reliability"
+			"Move every table to process separation level 3 before go-live",
+			"Designate a default domain so unassigned records inherit the intended tenant scope",
+			"Set all companies to the global domain until tenants request access",
+			"Disable the domain picker for all non-admin users"
 		],
-		"correctIndex": 3,
-		"explanation": "Shared operational context allows coordinated response and avoids duplicate troubleshooting activities.",
+		"correctIndex": 1,
+		"explanation": "Without a default domain, unassigned records go to global where they may be visible broadly; setting a default domain routes new records to the intended scope.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/service-operations/concept/cross-team-operations.html"
+			"https://www.servicenow.com/docs/r/platform-security/bp-default-domain.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 7,
-		"prompt": "During a telecom outage, which capability helps operations prioritize restoration work by business impact?",
+		"prompt": "A scoped application stores tenant-specific fulfillment data that must not leak across customers. Which field identifies the domain ownership of each record?",
 		"choices": [
-			"Knowledge article ratings for production readiness",
-			"Catalog item variables for role-based accountability for measurable outcomes",
-			"User preference records for operational consistency for sustained reliability",
-			"Service impact and dependency visibility for enterprise implementation"
+			"sys_domain on the table storing the tenant data",
+			"company on the user who last updated the record",
+			"sys_scope on the application record only",
+			"sys_overrides on every operational table by default"
 		],
-		"correctIndex": 3,
-		"explanation": "Impact visibility across dependent services and customers supports effective triage and restoration prioritization.",
+		"correctIndex": 0,
+		"explanation": "Each domain-separated record is assigned a single domain stored in sys_domain; custom tables must add this field to participate in data separation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/service-operations/concept/service-impact-visibility.html"
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainAssignment.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 8,
-		"prompt": "Which statement best describes the role of SLAs in telecom service operations?",
+		"prompt": "In a parent-child domain hierarchy, an SP administrator configures business rules globally and tenant incidents in child domains. How do process definitions and operational data flow in this model?",
 		"choices": [
-			"SLAs can run exclusively on closed records for controlled governance",
-			"SLAs exclusively apply to billing disputes, not technical work",
-			"SLAs replace assignment groups for all operational tickets for role-based accountability",
-			"SLAs define commitments and measure response/resolution performance for service tickets for production readiness"
+			"Process definitions flow down the hierarchy; data visibility rises up to parent domains",
+			"Both process definitions and data flow upward from child to parent only",
+			"Data flows down to child domains; process definitions rise up to parents",
+			"Process and data both flow horizontally across peer domains by default"
 		],
-		"correctIndex": 3,
-		"explanation": "Service-level commitments provide measurable targets for operations teams and customer-facing service delivery.",
+		"correctIndex": 0,
+		"explanation": "Domain hierarchy design applies process inheritance downward while parent domains can access data in their domain and child domains below them in the hierarchy.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/service-operations/concept/service-level-management.html"
+			"https://www.servicenow.com/docs/r/platform-security/bp-domain-hierarchy.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 9,
-		"prompt": "What is a common benefit of connecting operational alarms to service management workflows in telecom?",
+		"questionType": "multi",
+		"prompt": "When a new operational record is created on a domain-separated instance, which sources can populate the sys_domain field? (Choose three.)",
 		"choices": [
-			"Eliminating the need for incident prioritization for sustained reliability",
-			"Preventing all duplicate records without tuning for measurable outcomes enforced through data policies and reference qualifiers.",
-			"Converting every alarm directly into a resolved case for practical execution",
-			"Accelerating detection-to-action by creating or enriching operational records automatically for controlled governance"
+			"The domain of the parent record for related child records",
+			"The sys_updated_by user reference field on the form",
+			"The company specified on the record when the table includes Company",
+			"A business rule that sets sys_domain during insert"
 		],
-		"correctIndex": 3,
-		"explanation": "Alarm-to-workflow integration shortens time to response by automating record creation and contextual updates.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			2,
+			3
+		],
+		"explanation": "sys_domain can be set from company mapping, business rules, parent record inheritance, modules, form templates, or the creating user's domain when no other rule applies.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/service-operations/concept/event-driven-operations.html"
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainAssignment.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 10,
-		"prompt": "In Service Provider workflows, what is the primary benefit of using IntegrationHub spokes with external OSS/BSS tools?",
+		"prompt": "MSP operators must work with tenant incident data without making the MSP domain a parent of tenant domains. Which relationship grants that cross-hierarchy data access?",
 		"choices": [
-			"They provide reusable actions that standardize integrations and reduce custom script maintenance for practical execution",
-			"They replace the need for flow logic for controlled governance",
-			"They remove all authentication requirements for external systems for sustained reliability",
-			"They can exclusively run from client scripts for role-based accountability"
+			"A contains domain relationship from MSP to the tenant domain",
+			"Setting sys_domain to global on all tenant incidents",
+			"Assigning every tenant user to the MSP domain",
+			"Promoting the MSP domain to primary over TOP"
 		],
 		"correctIndex": 0,
-		"explanation": "Spokes package prebuilt actions for common operations, accelerating integration development and consistency.",
+		"explanation": "Contains domains relate domains outside strict parent-child hierarchy and grant the containing domain visibility to contained domain data without inheriting MSP process logic into tenants.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/integrationhub/vancouver/integrationhub/concept/c_IntegrationHubSpokes.html"
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainVisibility.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 11,
-		"prompt": "A telecom operations flow needs to open incidents in an external NMS when internal alarms are raised. Which IntegrationHub capability is most relevant?",
+		"prompt": "An SP security review compares visibility domains and contains domains for granting MSP technicians access to a restricted customer domain. What is the key distinction?",
 		"choices": [
-			"Spoke actions with authenticated connections and data mapping for role-based accountability",
-			"Knowledge article feedback tasks for production readiness",
-			"UI policy scripts on incident forms for enterprise implementation",
-			"Flow Designer data pills for operational consistency for sustained reliability"
+			"Contains domains apply only to process tables; visibility domains apply only to task tables",
+			"Visibility domains grant explicit user or group access; contains domains grant an entire domain access to another domain's data",
+			"Visibility domains are inherited by child domains; contains domains are never used with the domain picker",
+			"Visibility domains affect process inheritance; contains domains affect UI themes only"
 		],
-		"correctIndex": 0,
-		"explanation": "Spoke actions execute external API operations through configured connections and map operational context between systems.",
+		"correctIndex": 1,
+		"explanation": "Visibility domains are user-to-domain or group-to-domain grants, while contains domains are domain-to-domain relationships that make contained data visible to users in the containing domain.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/integrationhub/vancouver/integrationhub/task/t_UseSpokeActionsInFlowDesigner.html"
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainVisibility.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 12,
-		"prompt": "Why should connection and credential aliases be used in IntegrationHub for service provider automations?",
+		"questionType": "multi",
+		"prompt": "In which domains can a user see an assignment group? (Choose three.)",
 		"choices": [
-			"They decouple flow logic from environment-specific endpoint and credential details for sustained reliability",
-			"They disable spoke version upgrades for measurable outcomes",
-			"They are required exclusively for manual flows for practical execution",
-			"They force all actions to run as guest users for controlled governance"
+			"The parent domain of the assignment group's domain",
+			"Domains granted through visibility domain configuration on the user's group membership",
+			"Child domains of the assignment group's domain",
+			"Domains linked through a contains relationship to the assignment group's domain"
 		],
-		"correctIndex": 0,
-		"explanation": "Aliases allow flows to stay portable across environments while administrators manage endpoints and credentials separately.",
+		"correctIndex": 1,
+		"correctIndexes": [
+			1,
+			2,
+			3
+		],
+		"explanation": "Assignment groups are domain-separated data visible in the group's domain, child domains, and any domains granted through visibility or contains relationships—not in parent domains above the group.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/integrationhub/vancouver/integrationhub/concept/c_ConnectionAndCredentialAliases.html"
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainVisibility.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 13,
-		"prompt": "A spoke action intermittently fails due to rate limits from a partner API. Which design practice is most appropriate?",
+		"prompt": "An SP process administrator needs to view all process override records across the domain hierarchy from a process table. What role is required to use the Expand Domain Scope feature?",
 		"choices": [
-			"Implement controlled retry and exception paths in Flow Designer for enterprise implementation",
-			"Disable error handling in the flow for operational consistency",
-			"Increase incident priority for all failures for role-based accountability",
-			"Retry indefinitely without delay for production readiness"
+			"domain_admin",
+			"domain_expand_scope",
+			"admin",
+			"security_admin"
 		],
-		"correctIndex": 0,
-		"explanation": "Resilient integration design includes bounded retries and explicit failure handling to manage transient API limitations.",
+		"correctIndex": 1,
+		"explanation": "Users with the domain_expand_scope role can expand domain scope on process tables to see override records across the hierarchy and toggle between record and session scope on forms.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/integrationhub/vancouver/integrationhub/concept/flow-error-handling.html"
+			"https://www.servicenow.com/docs/r/platform-security/bp-terms-conditions.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 14,
-		"prompt": "What is a key governance reason to prefer certified spokes over ad hoc scripted REST calls for recurring telecom integrations?",
+		"prompt": "An instance architect plans broad visibility domain grants for dozens of MSP support groups. Why do ServiceNow recommended practices discourage excessive visibility domain use?",
 		"choices": [
-			"Certified spokes provide maintainable, supportable integration patterns with clearer lifecycle management for production readiness",
-			"Certified spokes always execute faster than any custom code for role-based accountability",
-			"Certified spokes eliminate the need for credentials for operational consistency",
-			"Certified spokes can be used exclusively in global scope synchronized with discovery credentials and schedule windows. (CIS-SP-14-w3)"
+			"Visibility domains force all affected users into the global domain session scope",
+			"Visibility domains prevent the domain picker from listing child domains",
+			"Visibility domains add OR conditions to queries and should be a last resort after hierarchy and contains design",
+			"Visibility domains disable ACL evaluation for affected tables entirely"
 		],
-		"correctIndex": 0,
-		"explanation": "Using managed spoke capabilities improves consistency, supportability, and operational governance of integration automations.",
+		"correctIndex": 2,
+		"explanation": "Visibility domains expand database queries with OR conditions that can degrade performance; recommended practice favors proper hierarchy and contains relationships first.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/integrationhub/vancouver/integrationhub/concept/c_IntegrationHubSpokes.html"
+			"https://www.servicenow.com/docs/r/platform-security/bp-contains-domain-visibility.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 15,
-		"prompt": "In network inventory management, why are accurate relationships between network resources and services critical?",
+		"prompt": "A domain administrator must place a contractor user in the Initech domain even though the user's company maps to a different tenant domain. Which field supports that manual domain override on the user record?",
 		"choices": [
-			"They are required exclusively for billing invoices for enterprise implementation",
-			"They replace incident categorization for practical execution",
-			"They prevent all discovery errors automatically for measurable outcomes",
-			"They enable impact analysis and faster fault isolation across dependent services for sustained reliability"
+			"sys_overrides on the user record",
+			"Default domain on the Company record",
+			"Primary check box on the Domain record",
+			"Managed domain on the user record in a managed domain configuration"
 		],
 		"correctIndex": 3,
-		"explanation": "Relationship fidelity allows operations teams to assess downstream impact and prioritize remediation effectively.",
+		"explanation": "In a managed domain, the Managed domain field lets administrators manually select the user's domain instead of inheriting automatically from the company record.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/network-inventory/concept/network-service-relationships.html"
+			"https://www.servicenow.com/docs/r/platform-security/bp-terms-conditions.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 16,
-		"prompt": "What is a primary operational benefit of maintaining current network inventory attributes (location, vendor, model, status)?",
+		"prompt": "An MSP engineer selects the ACME domain from the domain picker before triaging incidents. Which data becomes visible in list and form views for that session?",
 		"choices": [
-			"It guarantees zero incident volume for operational consistency",
-			"It automatically resolves configuration drift for enterprise implementation",
-			"It removes the need for assignment groups for production readiness",
-			"It strengthens troubleshooting context, planning, and lifecycle governance"
+			"Records in the ACME domain and its child domains based on session scope",
+			"Only records explicitly tagged global regardless of hierarchy",
+			"Records in the ACME domain and all parent domains above ACME",
+			"All records in every domain where the user holds the itil role"
 		],
-		"correctIndex": 3,
-		"explanation": "Accurate asset and resource attributes support better operational decisions across incident, change, and capacity processes.",
+		"correctIndex": 0,
+		"explanation": "Session scope reflects the selected domain and its child domains; users see data in their home or picked domain plus domains below them in the hierarchy.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/network-inventory/concept/network-inventory-data-model.html"
+			"https://www.servicenow.com/docs/r/platform-security/bp-domain-picker-config-process.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 17,
-		"prompt": "How does network inventory quality affect change risk assessment?",
+		"prompt": "Performance review shows slow list queries after an SP team added many contains relationships across tenant domains. What is the underlying cause?",
 		"choices": [
-			"Risk is based exclusively on CAB voting results",
-			"Inventory quality has no impact on change outcomes for sustained reliability",
-			"exclusively software versions matter, not relationships for enterprise implementation",
-			"Complete and accurate inventory strengthens dependency visibility for safer change planning"
+			"Contains relationships add OR conditions to domain queries, increasing query complexity",
+			"Contains relationships move all contained records into the global domain",
+			"Contains relationships disable domain path indexing on affected tables",
+			"Contains relationships require a separate MID Server per contained domain"
 		],
-		"correctIndex": 3,
-		"explanation": "Reliable inventory and relationships reduce uncertainty and help teams evaluate blast radius before implementing changes.",
+		"correctIndex": 0,
+		"explanation": "Each contains relationship adds OR conditions to database queries; broad contains design can significantly impact instance performance at scale.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/network-inventory/concept/network-change-planning.html"
+			"https://www.servicenow.com/docs/r/platform-security/bp-contains-domain-visibility.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 18,
-		"prompt": "Which practice most directly improves trust in network inventory data over time?",
+		"prompt": "MSP technicians in a shared support group need persistent access to the Initech tenant domain without individual user configuration. Where should the architect define that access?",
 		"choices": [
-			"Restrict all inventory updates to annual audits exclusively",
-			"Allow unmanaged free-text updates without controls for controlled governance",
-			"Ignore discrepancies from discovery and operations teams for sustained reliability",
-			"Implement reconciliation and governance processes for continuous data quality for measurable outcomes"
+			"sys_overrides field on the Group table definition",
+			"Primary check box on the Initech domain record",
+			"Visibility domains related list on the support group record",
+			"Contains domains related list on each incident record"
 		],
-		"correctIndex": 3,
-		"explanation": "Regular reconciliation and governed updates maintain inventory accuracy as network environments evolve.",
+		"correctIndex": 2,
+		"explanation": "Assigning visibility domains to a group grants all group members access to the specified domain; users inherit group visibility domains through membership.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/network-inventory/task/improve-inventory-data-quality.html"
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainVisibility.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 19,
-		"prompt": "When onboarding a new network domain into inventory, what should be established first?",
+		"questionType": "multi",
+		"prompt": "Which statements describe characteristics of a contains domain relationship? (Choose three.)",
 		"choices": [
-			"A report export template for executives for role-based accountability",
-			"A portal theme update for NOC users for production readiness",
-			"A universal priority of P1 for all discovered resources for enterprise implementation",
-			"A defined model for classes, key attributes, ownership, and relationship standards for operational consistency"
+			"It grants visibility to data in the contained domain without affecting process flow",
+			"Visibility through contains is controlled by the domain picker selection",
+			"It automatically makes the containing domain the parent of the contained domain",
+			"It is a many-to-many domain-to-domain relationship independent of parent-child hierarchy"
 		],
-		"correctIndex": 3,
-		"explanation": "A clear data model and governance baseline ensures newly onboarded inventory remains consistent and operationally useful.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1,
+			3
+		],
+		"explanation": "Contains domains are many-to-many data visibility links outside hierarchy, do not change process inheritance, and respect domain picker context when viewing contained data.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/network-inventory/concept/network-inventory-governance.html"
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainVisibility.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 20,
-		"prompt": "For communications service providers, what is the main benefit of linking customer-facing cases with underlying service operations records?",
+		"prompt": "An MSP administrator working in the parent TOP domain creates an incident while impersonating a tenant workflow. Can users in a child tenant domain see that incident by default?",
 		"choices": [
-			"It prevents customers from opening additional cases for controlled governance",
-			"It enables agents to provide accurate status based on operational progress and service impact for practical execution",
-			"It removes the need for entitlement management for measurable outcomes",
-			"It forces all cases into major incident workflows for sustained reliability"
+			"No, unless the incident sys_domain field is set to global",
+			"No, data in a parent domain is not visible to users in child domains below it",
+			"Yes, child domains always inherit visibility to all parent domain records",
+			"Yes, but only when the incident priority is set to Critical"
 		],
 		"correctIndex": 1,
-		"explanation": "Case-to-operations linkage improves customer communication quality by grounding updates in real operational work context.",
+		"explanation": "Data visibility rises up the hierarchy—parents see child data—but child domain users cannot see records that exist only in a parent domain above them.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/csp-customer-service/concept/customer-service-operations-linkage.html"
+			"https://www.servicenow.com/docs/r/platform-security/bp-domain-hierarchy.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 21,
-		"prompt": "In CSP customer service, why are account and service hierarchies important?",
+		"prompt": "An ACME ITIL user with domain_expand_scope edits an incident in the ACME APJ child domain with record scope active. Which users appear when selecting Assigned to?",
 		"choices": [
-			"They disable SLA calculations for child services for production readiness",
-			"They support entitlement checks, prioritization, and routing based on customer context for role-based accountability",
-			"They are used exclusively for branding in portals",
-			"They replace agent assignment rules completely for enterprise implementation"
+			"Users with the required role in the incident's domain or global only",
+			"All active users across every tenant domain on the instance",
+			"Only users who share the same company as the assigned-to field",
+			"Users in parent domains above the incident domain but not the incident domain itself"
 		],
-		"correctIndex": 1,
-		"explanation": "Account and service structures provide critical context for support eligibility, impact scope, and response handling.",
+		"correctIndex": 0,
+		"explanation": "With record scope active, reference fields constrain choices to the record's domain and global; toggling to session scope expands to the user's domain and child domains.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/csp-customer-service/concept/account-service-hierarchy.html"
+			"https://www.servicenow.com/docs/r/platform-security/bp-terms-conditions.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 22,
-		"prompt": "Which practice most improves first-contact resolution in CSP customer support?",
+		"prompt": "A change task is created from a change request assigned to the ACME tenant domain. Which domain value applies to the new change task record?",
 		"choices": [
-			"Providing agents with service inventory, outage context, and recent activity at case intake for measurable outcomes",
-			"Routing all cases directly to engineering teams for sustained reliability",
-			"Avoiding integration with network operations for controlled governance",
-			"Limiting agent visibility to case notes exclusively for practical execution"
+			"The change task always inherits the creating user's home domain",
+			"The change task inherits the domain of the parent change request record",
+			"The change task domain is determined by the assignment group only",
+			"The change task is assigned to global unless manually updated"
 		],
-		"correctIndex": 0,
-		"explanation": "Rich operational context at intake helps agents diagnose faster and provide effective resolution or escalation decisions.",
+		"correctIndex": 1,
+		"explanation": "Related child records inherit the parent record's domain by default, so a change task created from an ACME change request stays in the ACME domain.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/csp-customer-service/task/optimize-case-intake.html"
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainAssignment.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 23,
-		"prompt": "What is a common reason to automate case updates from operational workflow events in CSP environments?",
+		"questionType": "multi",
+		"prompt": "Which properties define a domain-separated ServiceNow application for service provider deployments? (Choose three.)",
 		"choices": [
-			"To consistently stop customers from receiving outage notifications",
-			"To keep customers informed with on-time, consistent status without manual rework",
-			"To confirm agents never need to review task history",
-			"To consistently avoid using SLAs on customer cases"
+			"Hierarchical modeling with nested multitenancy and parent access to child resources",
+			"Business logic separation supporting tenant-specific policies and overrides",
+			"Data separation so tenants see only authorized records",
+			"Mandatory separate MID Server infrastructure per tenant domain"
 		],
-		"correctIndex": 1,
-		"explanation": "Automated status propagation reduces manual effort and improves consistency and timeliness of customer communications.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1,
+			2
+		],
+		"explanation": "Domain-separated applications provide data separation, business logic separation, hierarchical modeling, UI separation, and cross-customer intelligence—not separate MID infrastructure per tenant.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/csp-customer-service/concept/automated-customer-updates.html"
+			"https://www.servicenow.com/docs/r/platform-security/bp-dom-sep-definition.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 24,
-		"prompt": "When designing CSP customer service KPIs, which outcome best reflects service excellence?",
+		"prompt": "A developer proposes adding sys_domain to the Dictionary Entry [sys_dictionary] table for tenant-specific field labels. What does ServiceNow recommend?",
 		"choices": [
-			"Tracking exclusively ticket closure count per day for measurable outcomes",
-			"Disabling customer feedback collection for production readiness",
-			"Balanced focus on restoration speed, communication quality, and customer experience measures for enterprise implementation",
-			"Prioritizing low-severity cases over high-impact outages for operational consistency"
+			"Use visibility domains on sys_dictionary instead of sys_domain",
+			"Domain-separate sys_dictionary but never sys_properties",
+			"Do not domain-separate platform sys_ tables because it can produce unexpected results",
+			"Domain-separate all sys_ tables to maximize tenant isolation"
 		],
 		"correctIndex": 2,
-		"explanation": "Effective CSP KPI design combines operational effectiveness with customer-perceived service quality.",
+		"explanation": "ServiceNow warns against domain-separating platform tables with the sys_ prefix, including sys_dictionary and sys_properties, due to unpredictable platform behavior.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/service-provider-workflows/vancouver/csp-customer-service/concept/customer-service-kpis.html"
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainAssignment.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 25,
-		"prompt": "In telecom order management, what is the purpose of decomposing a customer order into technical tasks?",
+		"prompt": "A domain administrator edits a business rule that was authored in the global domain. What does the platform do automatically to support process separation?",
 		"choices": [
-			"To consistently avoid using catalog items for telecom products",
-			"To consistently skip orchestration and fulfill manually for enterprise implementation",
-			"To consistently break high-level services into fulfillment actions for underlying systems and teams",
-			"To consistently merge all order lines into one CI update"
+			"Sets the sys_overrides field to reference the parent record being replaced",
+			"Deletes the global rule so only the domain copy remains active",
+			"Moves the original global rule into the administrator's personal scope",
+			"Copies the rule into every child domain without administrator action"
 		],
-		"correctIndex": 2,
-		"explanation": "Order decomposition translates customer-facing requests into executable fulfillment work across domains and systems.",
+		"correctIndex": 0,
+		"explanation": "When a domain admin modifies process logic owned by a higher domain, the system creates an override and populates sys_overrides to link the domain record to the parent it replaces.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/telecommunications-service-management/australia/order-management/concept/c_OrderManagementForTelecom.html"
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 26,
-		"prompt": "Which capability is most important for managing complex telecom service orders with multiple dependencies?",
+		"prompt": "Process separation in a domain-separated service provider instance is also referred to as:",
 		"choices": [
-			"Dictionary overrides for enterprise implementation for controlled governance",
-			"Disabling state models for operational consistency for sustained reliability",
-			"Orchestration with dependency-aware workflow sequencing for role-based accountability",
-			"Manual assignment exclusively for production readiness"
+			"Scoped application packaging",
+			"Delegated administration",
+			"Update set promotion",
+			"Instance cloning"
 		],
-		"correctIndex": 2,
-		"explanation": "Complex telecom fulfillment requires orchestration logic that honors dependencies between provisioning steps.",
+		"correctIndex": 1,
+		"explanation": "Process separation enables delegated administration so domain teams can maintain domain-specific process logic under instance-owner governance.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/telecommunications-service-management/australia/order-management/concept/c_ServiceOrderFulfillment.html"
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/domain-separation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 27,
-		"prompt": "Why is order fallout handling critical in telecom order management?",
+		"prompt": "A subsidiary needs a domain-specific email notification without altering the global template. What is the recommended override workflow?",
 		"choices": [
-			"It permanently closes failed orders to simplify reporting for sustained reliability",
-			"It exclusively applies to test environments for role-based accountability",
-			"It disables retries for failed orchestration steps for practical execution",
-			"It helps detect, route, and resolve fulfillment exceptions before customer impact grows for controlled governance"
+			"Deactivate the global notification and create a new record with no reference",
+			"Edit the global notification in place and restrict it with a domain condition",
+			"Duplicate the notification in the target domain and set sys_overrides to the global record",
+			"Export the notification to an update set and import it into the subsidiary MID Server"
 		],
-		"correctIndex": 3,
-		"explanation": "Fallout handling provides controlled recovery paths for failed or exception-based fulfillment events.",
+		"correctIndex": 2,
+		"explanation": "Process overrides preserve the parent record while the domain copy references it through sys_overrides, keeping global logic intact for other domains.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/telecommunications-service-management/australia/order-management/concept/c_OrderFalloutManagement.html"
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 28,
-		"prompt": "What does end-to-end order visibility primarily provide to telecom operations teams?",
+		"prompt": "A service provider must present different assignment group choices on incident forms per operating company. Which configuration supports domain-specific pick lists?",
 		"choices": [
-			"Automatic user provisioning in all downstream systems for controlled governance",
-			"Removal of SLA tracking from order tasks for practical execution",
-			"A single audit view of order status across decomposition and fulfillment stages for measurable outcomes",
-			"A replacement for service inventory for sustained reliability"
+			"Import sets that overwrite sys_choice records nightly from a spreadsheet",
+			"Client scripts that hard-code group sys_ids in each domain",
+			"Choice lists scoped to the domain with optional overrides of global lists",
+			"System properties that store comma-separated group names for all domains"
 		],
 		"correctIndex": 2,
-		"explanation": "Operational visibility helps teams monitor status, detect blockers, and communicate progress across the full order lifecycle.",
+		"explanation": "Choice lists are process-separated and can be overridden per domain so each operating company sees governed values without sharing one global list.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/telecommunications-service-management/australia/order-management/concept/c_OrderLifecycleManagement.html"
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 29,
-		"prompt": "Which data quality practice most improves telecom order automation success?",
+		"questionType": "multi",
+		"prompt": "Which process artifacts can domain administrators create or override within their domain? (Choose two.)",
 		"choices": [
-			"Allowing free-text product identifiers in all integrations for production readiness",
-			"Running order orchestration without validation for role-based accountability",
-			"Maintaining consistent product/service definitions used by ordering and fulfillment systems for operational consistency",
-			"Disabling catalog governance for speed for enterprise implementation"
+			"UI policies that govern form behavior for domain users",
+			"CMDB class models that redefine the global data schema",
+			"System properties that apply instance-wide to every domain",
+			"Email notifications tailored to domain-specific workflows"
 		],
-		"correctIndex": 2,
-		"explanation": "Automation reliability depends on consistent service and product data across order capture and fulfillment.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			3
+		],
+		"explanation": "Domain teams can maintain process-separated artifacts such as UI policies and email notifications; system properties and core data models remain global concerns.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/telecommunications-service-management/australia/order-management/concept/c_ProductAndServiceCatalogAlignment.html"
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 30,
-		"prompt": "When planning an upgrade for telecom service management capabilities, what should happen first?",
+		"prompt": "A domain manager must maintain approval routing for catalog requests without changing global flows. Which process separation concept applies?",
 		"choices": [
-			"Disable all custom apps before cloning for sustained reliability",
-			"Delete deprecated records from CMDB for measurable outcomes",
-			"Upgrade production directly to minimize dual-maintenance effort for practical execution",
-			"Run impact assessment for customizations, integrations, and data model changes for controlled governance"
+			"Data-driven processes that domain managers can extend within governed boundaries",
+			"Clone preserver records that snapshot catalog items before upgrades",
+			"Global-only flow authoring that prohibits any domain customization",
+			"Performance analytics indicators that replace workflow conditions"
 		],
-		"correctIndex": 3,
-		"explanation": "Upgrade planning starts with impact assessment so teams can scope risk across customizations and integrations.",
+		"correctIndex": 0,
+		"explanation": "Data-driven processes allow designated domain managers to maintain selected workflow elements while instance owners govern broader platform process design.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/australia/install-and-upgrade/concept/c_PlanningAnUpgrade.html"
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 31,
-		"prompt": "Why is sub-production testing essential during service provider upgrade planning?",
+		"prompt": "Which is a process-separated entity?",
 		"choices": [
-			"It guarantees zero data transformation changes for enterprise implementation",
-			"It allows skipping ATF execution in production for operational consistency",
-			"It validates custom telecom flows and integrations before customer-facing impact for role-based accountability",
-			"It removes the need for change approval for production readiness"
+			"Tasks",
+			"Script Includes",
+			"System Properties",
+			"Email Notifications"
 		],
-		"correctIndex": 2,
-		"explanation": "Testing in lower environments surfaces regression risk in provider-specific workflows and integrations before go-live.",
+		"correctIndex": 3,
+		"explanation": "Email notifications are process-separated and can be overridden per domain. Tasks and script includes are data-separated, and system properties are global.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/australia/install-and-upgrade/concept/c_TestingUpgradeReadiness.html"
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 32,
-		"prompt": "Which upgrade practice best supports telecom operations continuity?",
+		"prompt": "A global administrator reviewing UI policies needs to see override records created in child domains. Which related link should be used on the process table list?",
 		"choices": [
-			"Executing upgrades during peak order windows for practical execution",
-			"Using a communication plan and blackout-aware scheduling for operational teams for controlled governance",
-			"Applying all skipped versions in one untested leap for sustained reliability",
-			"Deferring integration validation until after go-live for measurable outcomes"
+			"Export to XML",
+			"Merge Update Sets",
+			"Expand Domain Scope",
+			"Run Point Scan"
 		],
-		"correctIndex": 1,
-		"explanation": "Coordinated communications and timing around business critical windows reduces operational disruption risk.",
+		"correctIndex": 2,
+		"explanation": "Expand Domain Scope on process tables in the global domain reveals override records and domain-specific process logic maintained by delegated administrators.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/australia/install-and-upgrade/concept/c_UpgradeBestPractices.html"
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 33,
-		"prompt": "For telecom-specific customizations, what should be reviewed as part of upgrade readiness?",
+		"prompt": "An administrator opens the Business Rules list while impersonating a child domain. Which records appear by default?",
 		"choices": [
-			"Script includes, flows, and integrations tied to order and inventory processes for role-based accountability",
-			"Inactive users in sys_user exclusively for production readiness",
-			"Knowledge article translations for enterprise implementation for controlled governance",
-			"exclusively login pages and branding assets for sustained reliability"
+			"Only process records relevant to the selected domain and its inherited logic",
+			"Exclusively rules created in the global domain with no domain copies",
+			"Rules captured in the current update set regardless of domain ownership",
+			"Every business rule stored anywhere on the instance including all overrides"
 		],
 		"correctIndex": 0,
-		"explanation": "Critical provider customizations are often implemented in scripts, flows, and integration points that must be regression-tested.",
+		"explanation": "Process table views from a domain show records applicable to that domain; global administrators use Expand Domain Scope to audit overrides across the hierarchy.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/australia/install-and-upgrade/concept/c_UpgradeCustomizationReview.html"
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 34,
-		"prompt": "What is the main value of a rollback or contingency plan in upgrade execution?",
+		"questionType": "multi",
+		"prompt": "A domain team must stop using a process override without deleting the parent global record. Which approaches align with domain separation best practices? (Choose two.)",
 		"choices": [
-			"It guarantees no defects will occur for operational consistency",
-			"It replaces post-upgrade validation for enterprise implementation for controlled governance",
-			"It avoids the need for stakeholder approvals for production readiness",
-			"It enables quick recovery if upgrade issues threaten service delivery for role-based accountability"
+			"Set the override condition to false so it never evaluates",
+			"Set a condition of sys_id is empty on the override record",
+			"Mark the override inactive and expect the platform to ignore it automatically",
+			"Delete the global parent record so the override becomes standalone"
 		],
-		"correctIndex": 3,
-		"explanation": "Contingency planning provides an operational safety net when issues are discovered during or immediately after upgrade activities.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Inactive override records are ignored; deactivation is achieved by conditions that never evaluate, such as false or sys_id is empty, while preserving the parent record.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/australia/install-and-upgrade/concept/c_UpgradeFallbackPlanning.html"
+			"https://www.servicenow.com/docs/bundle/australia-platform-security/page/administer/company-and-domain-separation/concept/c_DomainSeparation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 35,
-		"prompt": "What is the goal of delegated development in a service provider implementation?",
+		"prompt": "A service provider consolidates shared automations into dedicated process domains for easier maintenance. What is the recommended handling of those domains?",
 		"choices": [
-			"To consistently remove all role-based restrictions from Studio",
-			"To consistently let non-admin teams build approved app artifacts while preserving governance guardrails",
-			"To consistently prohibit local updates in scoped apps",
-			"To consistently bypass application scope requirements for practical execution"
+			"Merge process domains with data domains so ACL and process rules share one table",
+			"Use process domains to group related overrides and keep inheritance predictable",
+			"Store all process records only in the global domain to avoid hierarchy complexity",
+			"Disable process domains and rely on personal developer scopes for each team"
 		],
 		"correctIndex": 1,
-		"explanation": "Delegated development allows broader builder participation while enforcing governance through controlled permissions.",
+		"explanation": "Process domains consolidate related process updates so delegated teams can maintain overrides without scattering logic across unrelated domains.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/australia/developing-applications/concept/c_DelegatedDevelopment.html"
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 36,
-		"prompt": "Which control is most important when enabling delegated developers for telecom process apps?",
+		"prompt": "A domain administrator sets a process override to inactive expecting it to stop firing in that domain. What actually happens?",
 		"choices": [
-			"Disabling source control integration for production readiness",
-			"Defined delegated privileges scoped to approved application records for role-based accountability",
-			"Unrestricted access to global tables for operational consistency",
-			"Forcing all scripts to run client-side for enterprise implementation"
+			"The platform ignores the inactive override and the parent process may still run",
+			"The override runs in every child domain below the administrator's scope",
+			"The parent record is automatically deleted from the global domain",
+			"All business rules in the domain are disabled until the override is reactivated"
 		],
-		"correctIndex": 1,
-		"explanation": "Delegation should be role- and scope-based so teams can extend apps safely without broad platform risk.",
+		"correctIndex": 0,
+		"explanation": "Inactive override records are ignored by the platform; to suppress behavior, set a condition that never evaluates rather than relying on the active flag alone.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/australia/developing-applications/task/t_SetupDelegatedDevelopment.html"
+			"https://www.servicenow.com/docs/bundle/australia-platform-security/page/administer/company-and-domain-separation/concept/c_DomainSeparation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 37,
-		"prompt": "How does delegated development support faster telecom service changes?",
+		"prompt": "What mechanism assigns records to the default domain?",
 		"choices": [
-			"It disables update set promotion for controlled governance",
-			"It automatically publishes to production for practical execution",
-			"It allows domain teams to implement low-risk enhancements without central bottlenecks for measurable outcomes",
-			"It removes testing requirements for sustained reliability for operational consistency"
+			"Inbound email actions parsing message headers",
+			"UI policies evaluated on form load",
+			"Discovery schedules tagging CIs by subnet",
+			"Business Rules"
 		],
-		"correctIndex": 2,
-		"explanation": "By empowering trained domain teams within guardrails, delivery throughput improves while central teams focus on higher-risk work.",
+		"correctIndex": 3,
+		"explanation": "Business rules commonly set the domain field on insert or update so new records land in the correct default domain for the operating company.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/australia/developing-applications/concept/c_DelegatedDevelopmentGovernance.html"
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/domain-separation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 38,
-		"prompt": "Which risk is reduced by using delegated development with clear code review standards?",
+		"prompt": "A subsidiary wants a different incident form layout without affecting other operating companies. Which UI configuration approach fits process separation?",
 		"choices": [
-			"Duplicate local admin accounts for sustained reliability for operational consistency",
-			"Need for release documentation for measurable outcomes for role-based accountability",
-			"Need for application testing for practical execution",
-			"Uncontrolled customization drift across service domains for controlled governance"
+			"Disable the form for all domains and require list-only editing",
+			"Modify the global form and hide sections with client-side display:none scripts",
+			"Create a domain-specific form view or override UI policies for that domain",
+			"Copy the incident table into a scoped application with a new name"
 		],
-		"correctIndex": 3,
-		"explanation": "Governed delegation limits ad hoc customization and improves consistency through shared standards and reviews.",
+		"correctIndex": 2,
+		"explanation": "Form views and UI policies are process-separated, allowing domain-specific presentation while global defaults remain available to other domains.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/australia/developing-applications/concept/c_ApplicationGovernance.html"
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 39,
-		"prompt": "A provider wants delegated teams to configure catalog and workflows but not platform-wide security. What is the best approach?",
+		"questionType": "multi",
+		"prompt": "Which automation types are process-separated and can be overridden per domain? (Choose two.)",
 		"choices": [
-			"Use delegated development roles with scoped, task-specific permissions for enterprise implementation",
-			"Grant admin to all delegated developers for operational consistency",
-			"Allow exclusively global development for measurable outcomes",
-			"Disable scoped applications for production readiness"
+			"System dictionary entries that define the physical schema",
+			"Task records stored on operational tables",
+			"Flows authored for domain-specific fulfillment steps",
+			"Client scripts that control on-load form behavior"
 		],
-		"correctIndex": 0,
-		"explanation": "Delegated access should align with job responsibilities and remain constrained to approved functional areas.",
+		"correctIndex": 2,
+		"correctIndexes": [
+			2,
+			3
+		],
+		"explanation": "Flows and client scripts are process artifacts that support domain overrides; task rows are data records and dictionary definitions are global platform structure.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/australia/developing-applications/task/t_AssignDelegatedDeveloperRoles.html"
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 40,
-		"prompt": "For a communications provider with millions of CIs, what is the primary CMDB scale requirement?",
+		"prompt": "A domain manager maintains catalog workflows but cannot alter global ACL design. Which statement describes data-driven process responsibilities?",
 		"choices": [
-			"Manual CI updates by service owners for measurable outcomes",
-			"Disabling reconciliation to strengthen ingest speed for operational consistency",
-			"Strong data governance, class strategy, and automated quality controls for controlled governance",
-			"One CI class for all assets for practical execution"
+			"Only global administrators may view catalog records in any domain",
+			"Domain managers maintain selected process elements while instance owners govern platform-wide process creation",
+			"Data-driven processes eliminate the need for update set promotion",
+			"Domain managers own every table, field, and ACL on the instance without restriction"
 		],
-		"correctIndex": 2,
-		"explanation": "At provider scale, CMDB success depends on disciplined modeling and automation that sustain data quality and operational trust.",
+		"correctIndex": 1,
+		"explanation": "Delegated administration lets domain managers maintain approved data-driven process areas while instance owners retain responsibility for core platform process design.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBBestPractices.html"
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 41,
-		"prompt": "Which approach best supports CMDB provider-scale discovery operations?",
+		"prompt": "A developer captures a UI policy change while working in a child domain. How should the update set record the domain context?",
 		"choices": [
-			"Centralize all scans through one minimally sized MID Server for operational consistency",
-			"Disable credential management rotation for enterprise implementation for controlled governance",
-			"Run discovery exclusively after incidents occur for production readiness",
-			"Design distributed discovery and ingestion architecture aligned to network and domain boundaries for role-based accountability"
+			"Move all captured items into the global domain before completing the set",
+			"Tag captured records with the domain where the change was made",
+			"Strip the domain field so the change applies globally on commit",
+			"Reject capture unless the administrator impersonates the global domain"
 		],
-		"correctIndex": 3,
-		"explanation": "Large-scale environments require distributed collection architecture to maintain performance and coverage.",
+		"correctIndex": 1,
+		"explanation": "Update sets preserve the domain context of captured process records so promotion applies changes to the intended domain rather than forcing global scope.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/australia/discovery/concept/c_MIDServerPlanning.html"
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/update-sets/concept/update-sets.html",
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 42,
-		"prompt": "Why is domain-aware ownership important for CMDB at telecom provider scale?",
+		"prompt": "What domain will a record be written to when applying an update set?",
 		"choices": [
-			"It confirms accountable stewardship for CI data quality across organizational boundaries",
-			"It disables duplicate detection logic for practical execution",
-			"It eliminates the need for class hierarchy for measurable outcomes",
-			"It replaces ACL controls for sustained reliability for operational consistency"
+			"A new process domain created automatically during commit",
+			"The domain of the administrator applying the update set",
+			"Always the global domain regardless of source context",
+			"The record's domain from the source instance"
 		],
-		"correctIndex": 0,
-		"explanation": "Large organizations need explicit stewardship responsibilities so each domain maintains trusted CMDB data.",
+		"correctIndex": 3,
+		"explanation": "Update set application honors the domain stamped on captured records from the source instance so process overrides land in the correct domain on the target.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBGovernanceAndHealth.html"
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/update-sets/concept/update-sets.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 43,
-		"prompt": "What is a practical strategy for sustaining CMDB performance as provider data volume grows?",
+		"prompt": "After using Expand Domain Scope to audit overrides, a global administrator wants the business rules list to show only global-relevant records again. Which action restores the filtered view?",
 		"choices": [
-			"Increase ad hoc manual data entry for production readiness",
-			"Flatten all CI relationships to reduce record count for role-based accountability",
-			"Apply lifecycle controls, archival strategy, and regular health dashboards for operational consistency",
-			"Disable CI class extensions for enterprise implementation for controlled governance"
+			"Collapse Domain Scope",
+			"Deactivate the domain separation plugin",
+			"Flush the instance cache from System Diagnostics",
+			"Rollback the current update set"
 		],
-		"correctIndex": 2,
-		"explanation": "Scale requires lifecycle and health-management disciplines to keep CMDB performant and actionable.",
+		"correctIndex": 0,
+		"explanation": "Collapse Domain Scope returns process table lists to the domain-specific view after an expanded audit of override records across the hierarchy.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBLifecycleManagement.html",
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBHealthDashboard.html"
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 44,
-		"prompt": "Which outcome best indicates a CMDB is operating effectively at provider scale?",
+		"questionType": "multi",
+		"prompt": "A global administrator expanded domain scope on the Email Notifications list. Which items become visible? (Choose two.)",
 		"choices": [
-			"Trusted dependency maps that support incident, change, and service assurance decisions for enterprise implementation",
-			"All CI classes managed by one assignment group for operational consistency",
-			"No integration sources connected for role-based accountability for measurable outcomes",
-			"High CI count regardless of relationship quality for production readiness"
+			"Inbound email actions that parse messages into incidents",
+			"Override notifications created in child operating company domains",
+			"User preference records stored per individual account",
+			"Parent global notifications alongside domain-specific copies"
 		],
-		"correctIndex": 0,
-		"explanation": "Provider-scale effectiveness is measured by decision-quality outcomes driven by accurate, trusted CMDB dependency data.",
+		"correctIndex": 1,
+		"correctIndexes": [
+			1,
+			3
+		],
+		"explanation": "Expand Domain Scope reveals process overrides and parent records across domains; inbound actions and user preferences are separate configuration areas.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBAndOperationalValue.html"
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 45,
-		"prompt": "In Service Mapping, what is a provider primarily used for?",
+		"prompt": "A new architect asks how process separation differs from data separation on a shared service provider instance. Which distinction is correct?",
 		"choices": [
-			"Deleting CMDB classes for sustained reliability for operational consistency",
-			"Managing PA indicators for measurable outcomes for role-based accountability",
-			"Creating catalog request approvals for practical execution",
-			"Collecting topology data from a specific discovery source for controlled governance"
+			"Process separation governs how domain-specific logic runs; data separation governs which records users can see",
+			"Process separation applies only to CMDB tables; data separation applies only to task tables",
+			"Process separation replaces ACLs; data separation replaces business rules",
+			"Process separation and data separation are interchangeable terms for domain visibility"
 		],
-		"correctIndex": 3,
-		"explanation": "Providers retrieve data from underlying technologies so mapping logic can build accurate service topology.",
+		"correctIndex": 0,
+		"explanation": "Data separation controls record visibility while process separation lets domains maintain their own business logic, notifications, and UI behavior through overrides.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/domain-separation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 46,
-		"prompt": "Why is selecting the correct entry point critical for provider-based service mapping?",
+		"prompt": "A service provider plans domain-separated catalog items for multiple operating companies. What must be in place before catalog process separation can work?",
 		"choices": [
-			"Entry points replace identifier rules for role-based accountability",
-			"Entry points are exclusively used for dashboard color rules",
-			"Entry points anchor traversal to the right application boundary for enterprise implementation",
-			"Entry points disable credentials for operational consistency for sustained reliability"
+			"A defined domain hierarchy with domain separation enabled and governed roles assigned",
+			"Deletion of all global catalog items so domains start with empty tables",
+			"Disabling update sets for catalog tables to prevent cross-domain capture",
+			"Converting every catalog item into a scoped application manually"
 		],
-		"correctIndex": 2,
-		"explanation": "Correct entry points ensure the provider starts discovery from components that represent the target service.",
+		"correctIndex": 0,
+		"explanation": "Domain-separated catalog management requires an established domain hierarchy, separation enabled, and roles that restrict catalog administration to the appropriate domain.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/task/plan-domain-separation-implementation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 47,
-		"prompt": "What is the benefit of provider pattern sections that model connection dependencies?",
+		"prompt": "A reporting lead needs domain-specific operational dashboards without overwriting global reports. Which process separation field supports this pattern?",
 		"choices": [
-			"They avoid creating any relationships for practical execution",
-			"They define how components communicate to build end-to-end maps for controlled governance",
-			"They exclusively rename CI classes for operational consistency",
-			"They remove hosting information for measurable outcomes for role-based accountability"
+			"The glide_duration field on scheduled report jobs",
+			"The assignment_group field on the Report Designer module",
+			"The Overrides field on report records, similar to other process tables",
+			"The sys_class_name field on the Report Statistics table"
 		],
-		"correctIndex": 1,
-		"explanation": "Connection logic in patterns is what allows Service Mapping to establish meaningful dependency chains.",
+		"correctIndex": 2,
+		"explanation": "Reports are process-separated and include an Overrides field so domain teams can tailor analytics while global definitions remain available through expand scope.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 48,
-		"prompt": "When provider results produce duplicate CIs, which control should be reviewed first?",
+		"prompt": "Two operating companies need different Flow Designer automations for the same catalog item. How should the implementation specialist configure process separation?",
 		"choices": [
-			"CMDB identification and reconciliation rules for measurable outcomes",
-			"Incident SLAs for sustained reliability for operational consistency",
-			"Dashboard filters for controlled governance for enterprise implementation",
-			"System notification templates for practical execution"
+			"Disable Flow Designer globally and move logic into background scripts only",
+			"Store both flows in the global domain and filter with unrelated UI policies",
+			"Copy the catalog item table into Excel for each domain and reimport weekly",
+			"Author domain-specific flow overrides while retaining the global flow as the parent reference"
 		],
-		"correctIndex": 0,
-		"explanation": "Duplicate infrastructure usually indicates identification rules need adjustment for consistent CI matching.",
+		"correctIndex": 3,
+		"explanation": "Flows are process-separated; domain-specific automations should override parent flows through the standard sys_overrides pattern rather than replacing global logic in place.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 49,
-		"prompt": "Which practice best supports troubleshooting provider execution failures?",
+		"questionType": "multi",
+		"prompt": "A service provider is promoting update sets between domain-separated sub-production and production instances. Which practices reduce deployment risk? (Choose two.)",
 		"choices": [
-			"Run patterns without logging for operational consistency for sustained reliability",
-			"Disable all MID Servers for enterprise implementation for controlled governance",
-			"Delete the service map and restart for production readiness",
-			"Review discovery and pattern logs for failed probes and parse errors for role-based accountability"
+			"Verify captured records retain the intended domain before committing the update set",
+			"Test process overrides in the target domain with expand scope audits after promotion",
+			"Force all captured records into the global domain to simplify comparison",
+			"Skip regression of business rules because domains isolate logic automatically"
 		],
-		"correctIndex": 3,
-		"explanation": "Execution logs show where provider collection or parsing failed and are the first source for root-cause analysis.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Domain-aware promotion requires validating captured domain context and regression-testing overrides in the target environment; forcing global scope or skipping tests increases risk.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/update-sets/concept/update-sets.html",
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 50,
-		"prompt": "In Service Mapping, what is the MID Server provider responsible for?",
+		"prompt": "When an administrator in a child domain modifies a business rule that exists in the global domain, what does the platform do?",
 		"choices": [
-			"Approving changes for production readiness",
-			"Executing probes and patterns against target environments securely for role-based accountability",
-			"Rendering PA scorecards for operational consistency for sustained reliability",
-			"Hosting service portal widgets for enterprise implementation for controlled governance"
+			"Creates a domain-specific override record linked through sys_overrides instead of updating the global record",
+			"Deletes the global business rule and copies it into the child domain table",
+			"Moves the global record into the child domain by changing its Domain field value",
+			"Disables business rules globally until the override record is manually removed"
 		],
-		"correctIndex": 1,
-		"explanation": "MID Servers run discovery activities from inside controlled network zones to collect mapping data.",
+		"correctIndex": 0,
+		"explanation": "Process administration converts attempted updates to higher-domain policies into domain-specific inserts with sys_overrides pointing to the original record.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+			"https://www.servicenow.com/docs/r/platform-security/c_DelegatedAdministration.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 51,
-		"prompt": "Why is MID Server placement important for service mapping accuracy?",
+		"prompt": "Process administration determines which policies apply during a transaction. Which precedence rule is correct?",
 		"choices": [
-			"It exclusively changes CMDB class icons for enterprise implementation",
-			"It disables credentials for practical execution",
-			"It determines network reachability to application and infrastructure endpoints for measurable outcomes",
-			"Placement has no impact for sustained reliability for operational consistency"
+			"The logged-in user's home domain always overrides the domain on the record being processed",
+			"The record's domain is evaluated first, then policies are searched up the hierarchy to global",
+			"Policies from sibling domains are merged before any domain-specific rule is applied",
+			"Global policies execute exclusively and child domains cannot customize process behavior"
 		],
-		"correctIndex": 2,
-		"explanation": "A correctly placed MID Server can reach the required endpoints and produce complete topology evidence.",
+		"correctIndex": 1,
+		"explanation": "Delegated administration starts with the record domain and walks up the domain hierarchy until a matching policy is found.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+			"https://www.servicenow.com/docs/r/platform-security/c_DelegatedAdministration.html",
+			"https://www.servicenow.com/docs/r/platform-security/bp-terms-conditions.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 52,
-		"prompt": "Which requirement should be validated before assigning a MID Server to a mapping schedule?",
+		"prompt": "A service provider must load tenant reference data into domain-separated tables. What should the transform map ensure for each inserted row?",
 		"choices": [
-			"Theme color compatibility for operational consistency for sustained reliability",
-			"Incident priority matrix for enterprise implementation for controlled governance",
-			"Knowledge workflow state for production readiness",
-			"Capability, credentials access, and connectivity to targets for role-based accountability"
+			"All rows load into global regardless of the source file tenant identifier",
+			"The sys_domain field is cleared so ACLs route records automatically after insert",
+			"The target record domain aligns with the tenant scope defined for that data load",
+			"Domain assignment is deferred until end users open the records in the portal"
 		],
-		"correctIndex": 3,
-		"explanation": "Capability tags, valid credentials, and reachable paths are foundational prerequisites for reliable execution.",
+		"correctIndex": 2,
+		"explanation": "Domain-aware foundational loads must stamp records with the correct tenant domain so queries, references, and ACLs enforce separation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_ImportSets.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/domain-separation/concept/domain-separation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 53,
-		"prompt": "What is a common symptom of an unhealthy MID provider path?",
+		"prompt": "During a tenant bulk user load, a transform map maps a source company code to a sys_user.company reference. What reduces cross-domain reference errors?",
 		"choices": [
-			"Frequent probe timeout or credential failure events for measurable outcomes",
-			"Consistent identification of all dependencies for sustained reliability",
-			"Automatic certification success for controlled governance for enterprise implementation",
-			"Lower dashboard contrast for practical execution"
+			"Import users into global and reassign domains with a UI action after the load completes",
+			"Qualify company lookups to the target tenant domain and validate matches before insert",
+			"Disable reference fields on sys_user during import to improve transform throughput",
+			"Coalesce exclusively on email while ignoring company reference resolution"
 		],
-		"correctIndex": 0,
-		"explanation": "Timeouts and auth failures indicate MID provider issues that block successful data collection.",
+		"correctIndex": 1,
+		"explanation": "Reference resolution must respect domain visibility so imported users link to company records in the same tenant scope.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/task/t_CreateATransformMap.html",
+			"https://www.servicenow.com/docs/r/platform-security/bp-dom-sep-definition.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 54,
-		"prompt": "How does the ECC queue support MID provider operations?",
+		"questionType": "multi",
+		"prompt": "A recurring tenant location import must update existing rows instead of creating duplicates. Which transform map settings should the implementation team configure? (Choose two.)",
 		"choices": [
-			"It replaces CMDB identification rules for practical execution",
-			"It brokers command and result messages between instance and MID Server for controlled governance",
-			"It stores exclusively change requests for operational consistency",
-			"It archives PA breakdowns for measurable outcomes for role-based accountability"
+			"Mark stable natural keys as coalesce fields on the transform map",
+			"Map the domain column so updates stay within the correct tenant scope",
+			"Disable transform scripts to prevent any field mapping from executing",
+			"Set Run business rules to false on every production import run"
 		],
-		"correctIndex": 1,
-		"explanation": "The ECC queue is the communication backbone used to dispatch work and receive execution results from MID Servers.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Coalesce fields enable upsert behavior while explicit domain mapping keeps updates scoped to the intended tenant.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_Coalescing.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/task/t_CreateATransformMap.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 55,
-		"prompt": "What is the purpose of maintaining TNI inventory data for service mapping programs?",
+		"prompt": "In domain-separated foundational data loads, why is staging data in an import set table before transform execution recommended?",
 		"choices": [
-			"To consistently stop discovery schedules for measurable outcomes",
-			"To consistently avoid MID Server usage for production readiness",
-			"To consistently replace all CMDB classes with one table",
-			"To consistently provide current infrastructure context used to map service dependencies"
+			"It bypasses ACL evaluation permanently for all subsequent target table updates",
+			"It isolates raw source payloads for validation and transformation before updating tenant production tables",
+			"It replaces the need for coalesce logic on the transform map",
+			"It automatically assigns sys_overrides for every imported row in process tables"
 		],
-		"correctIndex": 3,
-		"explanation": "TNI inventory gives mapping processes reliable component context that supports accurate dependency modeling.",
+		"correctIndex": 1,
+		"explanation": "Import set staging provides a controlled landing zone to validate and transform inbound data before promoting records into tenant tables.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_ImportSets.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 56,
-		"prompt": "Why is inventory normalization important before TNI data is consumed by mapping logic?",
+		"prompt": "What behavior do coalesce fields enable when the same tenant reference file is imported weekly?",
 		"choices": [
-			"Normalization is optional for topology accuracy for sustained reliability",
-			"It exclusively affects dashboard colors for role-based accountability",
-			"It removes identifier rules for practical execution",
-			"Consistent naming and attributes strengthen CI matching and relationship quality"
+			"Routing all rows to the global domain during the first import run only",
+			"Skipping transform map execution whenever any source column value changes",
+			"Matching existing target rows for update instead of inserting duplicate records",
+			"Encrypting source values before they reach the staging table"
 		],
-		"correctIndex": 3,
-		"explanation": "Normalized inventory values reduce ambiguity and help reconciliation identify the correct CIs.",
+		"correctIndex": 2,
+		"explanation": "Coalesce fields define match keys between source and target, supporting repeatable upsert behavior across scheduled loads.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_Coalescing.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 57,
-		"prompt": "Which risk is most likely when TNI inventory freshness is poor?",
+		"prompt": "A data engineer maps straightforward source columns in a tenant location import. When is a declarative field map preferred over an onBefore script?",
 		"choices": [
-			"All probes run faster for enterprise implementation for controlled governance",
-			"PA indicators stop collecting for operational consistency for sustained reliability",
-			"Service maps may miss recent changes in infrastructure topology for role-based accountability",
-			"Credential rotation is automated for production readiness"
+			"When reference fields should be removed from the target table schema",
+			"When coalesce must be disabled to guarantee inserts on every run",
+			"When source-to-target assignments are direct and do not require complex conditional logic",
+			"When every imported row must be forced into the TOP process domain"
 		],
 		"correctIndex": 2,
-		"explanation": "Outdated inventory can produce stale maps that no longer match the live environment.",
+		"explanation": "Declarative field maps keep simple mappings readable and maintainable, reserving scripts for exceptional transformation logic.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/task/t_CreateATransformMap.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 58,
-		"prompt": "How should teams handle conflicting attributes between TNI inventory and existing CMDB records?",
+		"prompt": "A transform must set a reference to a catalog item owned by another tenant. What design choice respects domain separation?",
 		"choices": [
-			"Ignore conflicts permanently for production readiness",
-			"Delete both records for role-based accountability for measurable outcomes",
-			"Apply reconciliation policies to determine source-of-truth precedence for operational consistency",
-			"Disable discovery for enterprise implementation for controlled governance"
+			"Restrict lookups and reference resolution to items visible in the record's target domain",
+			"Resolve references from any domain by selecting the highest sys_id value",
+			"Disable domain on the reference field dictionary entry for the target table",
+			"Copy catalog items into global before each import run completes"
 		],
-		"correctIndex": 2,
-		"explanation": "Reconciliation policy ensures attribute updates follow governed precedence rather than random overwrite behavior.",
+		"correctIndex": 0,
+		"explanation": "Reference fields in multi-domain environments must resolve within the tenant scope of the record being created or updated.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/task/t_CreateATransformMap.html",
+			"https://www.servicenow.com/docs/r/platform-security/bp-dom-sep-definition.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 59,
-		"prompt": "What governance control best improves confidence in TNI inventory ingestion?",
+		"questionType": "multi",
+		"prompt": "Before enabling scheduled tenant data loads in production, which controls should be validated? (Choose two.)",
 		"choices": [
-			"One-time import with no monitoring for controlled governance",
-			"Turning off identification rules for practical execution",
-			"Manual renaming in spreadsheets exclusively for role-based accountability",
-			"Periodic completeness and accuracy audits with exception tracking for sustained reliability"
+			"All imports execute as the System Administrator account in the global domain only",
+			"Transform maps assign sys_domain values consistent with tenant scope for new and updated rows",
+			"Business rules are globally deactivated during every scheduled load window",
+			"Coalesce keys uniquely identify records within each tenant's data set"
 		],
-		"correctIndex": 3,
-		"explanation": "Recurring audits and exception workflows keep inventory ingestion measurable and continuously improvable.",
+		"correctIndex": 1,
+		"correctIndexes": [
+			1,
+			3
+		],
+		"explanation": "Production tenant loads require correct domain stamping and stable coalesce keys to prevent cross-tenant defects and duplicate records.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_ImportSets.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_Coalescing.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 60,
-		"prompt": "In Service Mapping, what is the intent of proactive workflows?",
+		"prompt": "An import populates incident records that reference configuration items in the same tenant domain. What failure mode should reference integrity checks catch early?",
 		"choices": [
-			"To consistently approve change requests for measurable outcomes",
-			"To consistently automatically detect and address mapping/data issues before major impact",
-			"To consistently replace CMDB entirely for controlled governance",
-			"To consistently stop all discovery runs for sustained reliability"
+			"Orphaned references pointing to CIs that are missing or belong to a different domain",
+			"Duplicate sys_overrides records on process tables used by the import job",
+			"Service portal widgets rendering in the wrong theme for imported incidents",
+			"Mobile offline cache entries expiring before transform completion"
 		],
-		"correctIndex": 1,
-		"explanation": "Proactive workflows focus on early detection and automation to reduce service mapping disruption risk.",
+		"correctIndex": 0,
+		"explanation": "Reference integrity validation identifies broken or cross-domain dependencies before transformed records enter production workflows.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_Coalescing.html",
+			"https://www.servicenow.com/docs/r/platform-security/bp-dom-sep-definition.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 61,
-		"prompt": "Which event is a strong trigger for a proactive service mapping workflow?",
+		"prompt": "After a tenant data load, multiple rows appear in the Transform Errors related list. What is the best first troubleshooting step?",
 		"choices": [
-			"Repeated pattern execution failure on critical business services for practical execution",
-			"A user changing theme preferences for controlled governance",
-			"Creation of a non-IT catalog item for sustained reliability",
-			"A one-time successful discovery result for measurable outcomes"
+			"Disable domain separation until the load completes successfully",
+			"Rebuild the domain hierarchy to match the source file column order",
+			"Review transform error records and import set run history for script or mapping failures",
+			"Delete the target table and rerun the import without coalesce fields"
 		],
-		"correctIndex": 0,
-		"explanation": "Repeated failures on critical services indicate systemic risk and should trigger automated response workflows.",
+		"correctIndex": 2,
+		"explanation": "Import set run history and transform error logs provide row-level failure detail needed to diagnose mapping and script issues.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_ImportSets.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 62,
-		"prompt": "How can proactive workflows improve mapping reliability?",
+		"prompt": "Which record type provides row-level processing status during an import set run in a domain-separated instance?",
 		"choices": [
-			"By disabling alerts for enterprise implementation for controlled governance",
-			"By removing service entry points for operational consistency",
-			"By forcing manual-exclusively updates for measurable outcomes",
-			"By correlating health signals and launching guided remediation tasks for production readiness"
+			"Skipped update records from the most recent platform upgrade",
+			"MID Server ECC queue entries unrelated to the data load job",
+			"Domain path records for the Default domain only",
+			"Import set run and transform history entries for the executed data source"
 		],
 		"correctIndex": 3,
-		"explanation": "Signal correlation plus automated tasking helps teams respond quickly and consistently to mapping degradation.",
+		"explanation": "Import set run and transform history capture per-run processing outcomes, including errors encountered during transformation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/reference/r_ImportSetTables.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 63,
-		"prompt": "Why should proactive workflows include stakeholder notifications?",
+		"prompt": "When a transform map inserts a new company record for a tenant, how should the domain field typically be set?",
 		"choices": [
-			"To confirm service owners are informed of topology risk and remediation status",
-			"exclusively admins should know about failures for role-based accountability",
-			"To consistently suppress operational dashboards for practical execution",
-			"Notifications are unnecessary for mapping issues for controlled governance"
+			"Assign sys_domain to the tenant domain the company belongs to before related records are created",
+			"Leave sys_domain empty and rely on the Default domain for all company inserts",
+			"Force every company into global so child tenants inherit visibility automatically",
+			"Copy the administrator's current picker domain regardless of company ownership"
 		],
 		"correctIndex": 0,
-		"explanation": "Transparent communication keeps service owners aligned on impact, risk, and remediation progress.",
+		"explanation": "Foundational company loads must establish the correct tenant domain early because related entities inherit that domain context.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/domain-separation/concept/domain-separation.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/task/t_CreateATransformMap.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 64,
-		"prompt": "What governance measure best supports sustainable proactive workflow automation?",
+		"questionType": "multi",
+		"prompt": "Which practices improve repeatable foundational data migrations across tenant domains? (Choose two.)",
 		"choices": [
-			"Create workflows without documentation for controlled governance for enterprise implementation",
-			"Define runbooks, ownership, and success metrics for each automated response for practical execution",
-			"Use one workflow for every failure type for measurable outcomes",
-			"Disable audit logging for sustained reliability for operational consistency"
+			"Remove coalesce fields after the first successful dry run to speed imports",
+			"Version transform maps and data quality scripts so rehearsal runs produce predictable outcomes",
+			"Define completeness and referential integrity gates before cutover to production",
+			"Edit production records manually during each test without documenting changes"
 		],
 		"correctIndex": 1,
-		"explanation": "Documented runbooks and measurable success criteria keep automation reliable, auditable, and continuously improvable.",
+		"correctIndexes": [
+			1,
+			2
+		],
+		"explanation": "Repeatable tenant migrations depend on versioned transform logic and measurable quality gates rather than ad hoc production edits.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_TransformEventScripts.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/c_DataManagement.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 65,
-		"prompt": "In a multi-tenant ServiceNow architecture, what pattern best isolates tenant-specific business rules?",
+		"prompt": "A multi-domain import links users to departments through reference fields. What validation prevents silent data defects?",
 		"choices": [
-			"Scope tenant logic into separate applications with controlled cross-scope access policies for production readiness",
-			"Store all tenant logic in one global script include with no access restrictions for role-based accountability",
-			"Disable application scopes to simplify deployment for operational consistency",
-			"Require tenant admins to edit base system scripts directly for enterprise implementation"
+			"Skip reference checks when the source file has fewer than one thousand rows",
+			"Clear sys_domain on departments so references resolve by display name alone",
+			"Confirm referenced department records exist in the same domain as the user being loaded",
+			"Require all reference fields to point to records in the global domain only"
 		],
-		"correctIndex": 0,
-		"explanation": "Scoped applications and explicit cross-scope controls reduce coupling and improve tenant isolation, security, and maintainability.",
+		"correctIndex": 2,
+		"explanation": "Cross-domain reference defects are avoided by validating that lookup targets exist within the tenant domain of the record being imported.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-application-development/page/build/applications/concept/c_ApplicationScopes.html",
-			"https://www.servicenow.com/docs/bundle/zurich-application-development/page/build/applications/concept/c_CrossScopeAccess.html"
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_Coalescing.html",
+			"https://www.servicenow.com/docs/r/platform-security/bp-dom-sep-definition.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 66,
-		"prompt": "Why is data partitioning strategy critical in multi-tenant CSP implementations?",
+		"prompt": "According to domain separation support levels, which description matches the Basic category?",
 		"choices": [
-			"It guarantees every tenant can query every table for troubleshooting for measurable outcomes",
-			"It removes the need for ACLs on sensitive records for sustained reliability",
-			"It allows cloning tenant data into global tables without controls for controlled governance",
-			"It enforces tenant data boundaries and supports compliant access patterns in shared infrastructure for practical execution"
+			"Tenants independently configure all process policies without provider-managed overrides",
+			"Support is limited to adding a domain column with no tenant-aware routing at run time",
+			"Instance owners cannot configure the application to function across multiple tenants",
+			"Business logic ensures records are created and queried within the proper tenant domain for SP use cases"
 		],
 		"correctIndex": 3,
-		"explanation": "Partitioning design, combined with security controls, is foundational to preventing cross-tenant data exposure in shared platforms.",
+		"explanation": "Basic support requires application logic to route data to the correct tenant domain at run time across UI, reporting, and aggregations.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/contextual-security/concept/c_AccessControls.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/table-administration/concept/c_ExtendingTables.html"
+			"https://www.servicenow.com/docs/r/platform-security/bp-domain-levels.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 67,
-		"prompt": "Which authentication pattern is most appropriate for multi-tenant CSP portals integrating external identity providers?",
+		"prompt": "Service Catalog is rated Standard for domain separation support. Which outcome can a service provider achieve at that level?",
 		"choices": [
-			"Use federation standards like SAML or OpenID Connect with tenant-aware identity mapping for operational consistency",
-			"Disable SSO to avoid tenant mapping complexity for enterprise implementation",
-			"Authenticate all tenants through a single admin credential for production readiness",
-			"Create one shared local account for all tenant users for role-based accountability"
+			"Configure tenant-specific catalog behavior and process parameters while preserving shared platform governance",
+			"Guarantee tenants can alter core engine code for the catalog application independently",
+			"Prevent any catalog data from being stored with a domain value on base tables",
+			"Run catalog fulfillment without considering the user's or record's domain context"
 		],
 		"correctIndex": 0,
-		"explanation": "Federated identity with tenant-aware mapping supports secure, scalable authentication while preserving tenant separation.",
+		"explanation": "Standard support includes Basic data routing plus provider-managed per-tenant process configuration for defined catalog use cases.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/integrate/single-sign-on/concept/sso-with-external-identity-providers.html",
-			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Authentication.html"
+			"https://www.servicenow.com/docs/r/platform-security/domain-separated-apps.html",
+			"https://www.servicenow.com/docs/r/platform-security/bp-domain-levels.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 68,
-		"prompt": "What integration design choice improves resilience in multi-tenant CSP event ingestion?",
+		"prompt": "Knowledge Management supports Standard domain separation. What does that enable in a multi-tenant service provider instance?",
 		"choices": [
-			"Process all events synchronously in user sessions for role-based accountability",
-			"Queue and process events asynchronously with tenant-aware routing and retry controls for production readiness",
-			"Route every event to a single tenant for validation for enterprise implementation",
-			"Discard failed events immediately to protect throughput for operational consistency"
+			"Removal of user criteria because domain separation replaces all content filtering",
+			"Domain-aware knowledge content and provider-managed process differences per tenant customer",
+			"Exclusive storage of articles in global with no tenant visibility controls",
+			"Automatic deletion of articles when a child domain is created"
 		],
 		"correctIndex": 1,
-		"explanation": "Asynchronous pipelines with routing and retry logic help isolate failures and preserve stable tenant-specific processing.",
+		"explanation": "Standard Knowledge support combines tenant data routing with provider-configurable per-customer process behavior for knowledge workflows.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/integrationhub/concept/IntegrationHub.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/web-services/concept/c_RESTAPI.html"
+			"https://www.servicenow.com/docs/r/platform-security/domain-separated-apps.html",
+			"https://www.servicenow.com/docs/r/servicenow-platform/domain-separation-knowledge.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 69,
-		"prompt": "Which operational practice best supports multi-tenant CSP pattern maturity over time?",
+		"questionType": "multi",
+		"prompt": "Which statements correctly describe Standard domain separation support in supported applications? (Choose two.)",
 		"choices": [
-			"Disable tenant-level logging to reduce storage cost for practical execution staged behind feature flags for controlled enablement. (CIS-SP-69-w0)",
-			"Apply identical static thresholds to all tenants indefinitely for controlled governance",
-			"Monitor tenant-segmented performance and security indicators, then iteratively tune architecture and controls for sustained reliability",
-			"Allow tenants to modify platform security defaults directly for measurable outcomes"
+			"Includes Basic-level tenant data routing at application run time",
+			"Allows service provider administrators to configure per-tenant process behavior for defined use cases",
+			"Permits tenants to modify core application source code for each domain",
+			"Indicates the application has no sys_domain column on its primary data tables"
 		],
-		"correctIndex": 2,
-		"explanation": "Tenant-aware observability enables evidence-based tuning that maintains performance and security as tenant usage patterns evolve.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Standard support builds on Basic data routing and adds provider-managed per-tenant process configuration without tenant source-code changes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/security-best-practices.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+			"https://www.servicenow.com/docs/r/platform-security/bp-domain-levels.html",
+			"https://www.servicenow.com/docs/r/platform-security/domain-separated-apps.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 70,
-		"prompt": "For CSP integrations, what approach best supports scalable onboarding of new partner systems?",
+		"prompt": "Mobile is supported at Basic domain separation level. What must the instance owner ensure for mobile clients in an MSP environment?",
 		"choices": [
-			"Use standardized integration contracts with reusable authentication, mapping, and error-handling patterns for operational consistency",
-			"Disable retries to prevent duplicate transactions for enterprise implementation",
-			"Require manual CSV uploads as the core integration method",
-			"Implement each partner integration with unique undocumented scripts for role-based accountability"
+			"Mobile removes sys_domain from forms so field workers can edit any tenant record",
+			"Each mobile device stores all tenant data locally without domain filtering",
+			"Mobile experiences respect tenant domain context after platform web domain separation is configured",
+			"Domain separation on mobile requires disabling the domain separation plugin on web"
 		],
-		"correctIndex": 0,
-		"explanation": "Standardized patterns reduce onboarding time, improve consistency, and simplify support as integration count grows.",
+		"correctIndex": 2,
+		"explanation": "Mobile domain separation extends platform web configuration so native clients honor tenant domain context at run time.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/integrationhub/concept/IntegrationHub.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/web-services/concept/c_RESTAPI.html"
+			"https://www.servicenow.com/docs/r/mobile/mobile-domain-separation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 71,
-		"prompt": "Why is idempotency important in event-driven CSP integrations?",
+		"prompt": "Service Portal is listed as No support for domain separation in the application matrix. What is a typical provider mitigation?",
 		"choices": [
-			"It guarantees external APIs never return errors for measurable outcomes compared with innovation funnel candidates for funding cycles.",
-			"It allows events to bypass authorization checks for sustained reliability",
-			"It prevents duplicate side effects when the same message is retried or delivered more than once for controlled governance",
-			"It removes the need for correlation identifiers for practical execution"
+			"Rely on sys_overrides on incident tables to filter portal search results",
+			"Disable the Service Portal plugin for every child domain permanently",
+			"Use domain-aware user criteria and separate portal experiences to scope content per tenant",
+			"Merge all portal pages into one global site without access controls"
 		],
 		"correctIndex": 2,
-		"explanation": "Idempotent processing ensures retries are safe and system state remains consistent under real-world delivery behavior.",
+		"explanation": "When native domain support is absent, providers commonly scope portal content with user criteria and tenant-specific portal configurations.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/integrationhub/reference/r_FlowDesignerErrorHandling.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/web-services/concept/c_RESTAPI.html"
+			"https://www.servicenow.com/docs/r/platform-security/domain-separated-apps.html",
+			"https://www.servicenow.com/docs/r/platform-user-interface/domain-separation-service-portal.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 72,
-		"prompt": "Which security practice is most appropriate for outbound CSP integration credentials?",
+		"prompt": "Before using domain separation with Customer Service Management, which setup step aligns accounts to tenant isolation?",
 		"choices": [
-			"Store credentials in platform-managed secure records and rotate them under policy for production readiness",
-			"Share one static credential across all tenants indefinitely for role-based accountability",
-			"Embed credentials directly in scripts for faster deployment for operational consistency",
-			"Disable credential encryption in non-production environments for enterprise implementation"
+			"Enable CSM account-to-domain generation so new accounts receive matching tenant domains",
+			"Create one shared account record referenced by every tenant contact",
+			"Disable the domain separation plugin because CSM manages only global accounts",
+			"Move all agents to the global domain and disable account-domain mapping"
 		],
 		"correctIndex": 0,
-		"explanation": "Managed credential storage and rotation reduce exposure risk and support auditable security operations.",
+		"explanation": "CSM domain separation aligns each customer account to a tenant domain, often using automatic domain generation for newly created accounts.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_CredentialsAndSecrets.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/integrationhub/concept/IntegrationHub.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/domain-separation-customer-service.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 73,
-		"prompt": "What is the primary benefit of correlation IDs across CSP integration flows?",
+		"prompt": "Discovery in IT Operations Management is rated Standard for domain separation. What does that indicate for an MSP operating multiple tenants?",
 		"choices": [
-			"They replace all logging requirements for controlled governance",
-			"They guarantee synchronous processing behavior for practical execution",
-			"They eliminate the need for API versioning for measurable outcomes",
-			"They enable end-to-end traceability for troubleshooting across distributed systems for sustained reliability"
+			"Discovery requires separate ServiceNow instances per tenant and cannot run domain-separated",
+			"Discovery can route and manage tenant-scoped discovery data with provider-configurable process differences",
+			"Discovery support is limited to data-only separation without any process configuration",
+			"Discovery ignores sys_domain on all CI tables and writes exclusively to global"
 		],
-		"correctIndex": 3,
-		"explanation": "Correlation IDs tie related transactions together, making it far easier to diagnose failures across platform and partner boundaries.",
+		"correctIndex": 1,
+		"explanation": "Standard ITOM Discovery support includes tenant data routing plus provider-managed per-tenant process configuration for discovery use cases.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/web-services/concept/c_OutboundRESTWebServices.html"
+			"https://www.servicenow.com/docs/r/platform-security/domain-separated-apps.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/c_DiscoveryDomainSeparation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 74,
-		"prompt": "As final-track coverage reaches orders 0-74, which CSP integration metric best indicates sustainable operations?",
+		"questionType": "multi",
+		"prompt": "When planning domain support across ITSM, CSM, and ITOM applications on one MSP instance, which practices reduce rollout risk? (Choose two.)",
 		"choices": [
-			"Maximum number of custom connectors per partner for sustained reliability",
-			"Fewest documented runbook procedures for measurable outcomes for role-based accountability",
-			"Stable success rates with low mean time to detect and resolve integration failures for practical execution",
-			"Highest possible request volume regardless of error rate for controlled governance"
+			"Review each application's documented support level before promising tenant-specific behavior",
+			"Assume every application provides Enhanced tenant self-administration by default",
+			"Pilot domain-aware workflows with representative tenants before enterprise-wide cutover",
+			"Disable process overrides globally to simplify initial catalog and knowledge deployments"
 		],
-		"correctIndex": 2,
-		"explanation": "Sustainable integrations are measured by reliability and operational responsiveness, not raw throughput or complexity.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			2
+		],
+		"explanation": "MSP rollouts should align expectations to documented support levels and validate cross-application behavior in a limited pilot before broad deployment.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/integrationhub/concept/IntegrationHub.html"
+			"https://www.servicenow.com/docs/r/platform-security/domain-separated-apps.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/domain-separation/task/plan-domain-separation-implementation.html"
 		]
 	},
 	{
@@ -21725,7 +22575,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			2
 		],
 		"explanation": "The PPM Standard bundle includes Project Portfolio Suite and Financial Planning as core SPM foundation plugins.",
 		"sourceUrls": [
@@ -21737,12 +22587,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 1,
 		"prompt": "Before go-live, an implementation team must confirm that foundational SPM data and configuration are in place. Which activity best aligns with SPM implementation preparation?",
 		"choices": [
-			"Validate portfolio hierarchy, fiscal periods, and role-based access for SPM personas",
 			"Disable all financial planning tables to reduce upgrade complexity",
+			"Remove resource management plugins to simplify the initial deployment scope",
 			"Convert every open incident to a demand record for portfolio intake",
-			"Remove resource management plugins to simplify the initial deployment scope"
+			"Validate portfolio hierarchy, fiscal periods, and role-based access for SPM personas"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "SPM implementation preparation includes configuring portfolio structure, fiscal calendars, and persona access before teams begin planning and execution workflows.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/strategic-portfolio-management/spm-implementation-overview.html"
@@ -21759,10 +22609,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"Revenue",
 			"Depreciation"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"correctIndexes": [
-			0,
-			1
+			2,
+			3
 		],
 		"explanation": "Expense lines use the Expense type field with Capex and Opex values to distinguish capital from operating spend in financial planning.",
 		"sourceUrls": [
@@ -21823,9 +22673,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "During annual portfolio planning, leadership allocates funding envelopes before projects are fully scoped. Which artifact represents that top-down budget allocation?",
 		"choices": [
 			"Budget plan linked to portfolio or investment hierarchy",
-			"Resource assignment on a project task record",
 			"Idea assessment scorecard completed in the portal",
-			"Demand workbench filter saved by the portfolio manager"
+			"Demand workbench filter saved by the portfolio manager",
+			"Resource assignment on a project task record"
 		],
 		"correctIndex": 0,
 		"explanation": "Budget plans distribute approved funding across portfolios and investments, providing the financial ceiling that cost plans reference during planning cycles.",
@@ -21918,12 +22768,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 12,
 		"prompt": "An administrator configures planning attributes so resource plans can filter staff by skill and location. Where are the attribute values for each employee maintained?",
 		"choices": [
-			"On the Employee profile record in Resource Management",
 			"On the Idea Portal theme configuration record",
+			"On the Time sheet policy assigned to the project",
 			"On the Budget plan header for the fiscal year",
-			"On the Time sheet policy assigned to the project"
+			"On the Employee profile record in Resource Management"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Planning attribute values are defined on the Employee profile so resource plans and assignments can match people to work based on skills, location, and other criteria.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/resource-management/planning-attributes.html"
@@ -21999,9 +22849,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "An employee will be unavailable for two weeks during a critical project phase. Which record type blocks that time from allocation calculations?",
 		"choices": [
 			"Resource schedule entry marking the unavailability period",
-			"Expense line with Opex classification on the cost plan",
 			"Idea record in the Evaluating state awaiting scoring",
-			"Demand assessment template attached to the intake form"
+			"Demand assessment template attached to the intake form",
+			"Expense line with Opex classification on the cost plan"
 		],
 		"correctIndex": 0,
 		"explanation": "Resource schedules define working hours, holidays, and time off so capacity calculations exclude periods when staff cannot be assigned.",
@@ -22158,12 +23008,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 27,
 		"prompt": "An administrator enables group-based resource planning for a shared testing team. Which approach assigns the group rather than named individuals?",
 		"choices": [
-			"Create a resource group assignment on the resource plan",
 			"Add a single Opex expense line for the entire team cost",
+			"Set the demand state to Approved without a resource plan",
 			"Submit one consolidated idea through the employee portal",
-			"Set the demand state to Approved without a resource plan"
+			"Create a resource group assignment on the resource plan"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Group assignments allow resource plans to reserve capacity from a team before specific members are named in individual assignments.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-assignment.html"
@@ -22223,9 +23073,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which outcome indicates that planning attributes are configured effectively for resource matching?",
 		"choices": [
 			"Resource plans filter to qualified employees based on skill and location attributes",
-			"All expense lines default to Capex regardless of spend category",
 			"Every demand record skips assessment and auto-approves on submit",
-			"Idea submissions bypass scoring and convert directly to projects"
+			"Idea submissions bypass scoring and convert directly to projects",
+			"All expense lines default to Capex regardless of spend category"
 		],
 		"correctIndex": 0,
 		"explanation": "Effective planning attributes enable accurate staff filtering when building resource plans, reducing manual searches and mismatched assignments.",
@@ -22287,9 +23137,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A demand intake team uses weighted scoring to compare business value, risk, and strategic alignment. Which configuration artifact defines those evaluation criteria?",
 		"choices": [
 			"Demand assessment template with scored criteria",
-			"Resource schedule entry blocking employee vacation",
 			"Rate type record for contractor hourly billing",
-			"Budget plan header for the portfolio fiscal year"
+			"Budget plan header for the portfolio fiscal year",
+			"Resource schedule entry blocking employee vacation"
 		],
 		"correctIndex": 0,
 		"explanation": "Demand assessment templates define scored criteria so intake teams evaluate and compare demand items consistently during portfolio reviews.",
@@ -22340,10 +23190,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"Closed Complete",
 			"Cancelled"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"correctIndexes": [
-			0,
-			1
+			2,
+			3
 		],
 		"explanation": "Assessment In Progress and Qualified are mid-pipeline states where demand items are being evaluated before final approval and conversion.",
 		"sourceUrls": [
@@ -22387,12 +23237,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 41,
 		"prompt": "A demand item remains in the backlog because delivery capacity is unavailable this quarter. Which Demand Workbench action preserves the item for future review?",
 		"choices": [
-			"Defer the demand with documented rationale while keeping it ranked",
 			"Delete the demand record and require resubmission through the portal",
+			"Remove all assessment scores so the record returns to Draft",
 			"Convert the demand to a closed incident for tracking purposes",
-			"Remove all assessment scores so the record returns to Draft"
+			"Defer the demand with documented rationale while keeping it ranked"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Deferral allows portfolio teams to retain strategically valuable demand in the pipeline with transparent rationale when capacity constraints prevent immediate approval.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/demand-management/demand-workbench.html"
@@ -22628,12 +23478,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 56,
 		"prompt": "A PMO wants to accelerate new project setup with predefined phases and tasks. Which feature supports that repeatable structure?",
 		"choices": [
-			"Project template applying standard phases and task structures",
 			"Demand workbench bubble chart with weighted scoring criteria",
+			"Timecard category for non-project meetings and training hours",
 			"Rate model assigning contractor hourly charges by role type",
-			"Timecard category for non-project meetings and training hours"
+			"Project template applying standard phases and task structures"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Project templates provide predefined phases and tasks so teams launch new investments with consistent structure instead of building schedules from scratch.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/project-management/t_CreateAProject.html"
@@ -22757,9 +23607,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Leadership asks how far a project has progressed toward completion this quarter. Which metric answers that question?",
 		"choices": [
 			"Percent complete calculated from task and milestone progress",
-			"Number of idea submissions received through the employee portal",
 			"Count of rate types configured on the organizational rate model",
-			"Total active users with the itil role on the production instance"
+			"Total active users with the itil role on the production instance",
+			"Number of idea submissions received through the employee portal"
 		],
 		"correctIndex": 0,
 		"explanation": "Percent complete rolls up task and milestone progress to show how much of the approved scope has been delivered at a given point.",
@@ -22852,12 +23702,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 70,
 		"prompt": "All deliverables are accepted and open tasks are resolved. Which action moves the project to its final lifecycle state?",
 		"choices": [
-			"Close the project after verifying deliverables and tasks are complete",
 			"Delete the parent program and recreate it from a portal submission",
+			"Disable the budget allocation property on the instance immediately",
 			"Reset demand assessments to Draft for the next fiscal intake cycle",
-			"Disable the budget allocation property on the instance immediately"
+			"Close the project after verifying deliverables and tasks are complete"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Projects are closed once deliverables are accepted and remaining tasks are resolved, moving the investment to its completed lifecycle state.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/project-management/t_CreateAProject.html"
@@ -22916,12 +23766,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 74,
 		"prompt": "What does a time sheet policy define for users recording time worked in the platform?",
 		"choices": [
-			"Requirements and rules governing how users create and submit time cards",
 			"Default project templates applied when a new investment is approved",
+			"Scoring weights used when comparing demands in the workbench",
 			"Lens hierarchy for Portfolio Planning Workspace roadmap views",
-			"Scoring weights used when comparing demands in the workbench"
+			"Requirements and rules governing how users create and submit time cards"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Time sheet policies define the requirements for users to record time worked, including week start day, rate type visibility, and approval routing.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/time-card-management/worker-portal.html"
@@ -22997,9 +23847,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A product manager wants to prioritize demands and projects from a single planning workspace using waterfall delivery. Which application supports that approach?",
 		"choices": [
 			"Portfolio Planning Workspace for traditional portfolio planning and roadmaps",
-			"Vulnerability Response workspace for remediation task assignment",
 			"Security Incident Response playbook for threat containment workflows",
-			"Hardware Asset Management dashboard for disposal certificate tracking"
+			"Hardware Asset Management dashboard for disposal certificate tracking",
+			"Vulnerability Response workspace for remediation task assignment"
 		],
 		"correctIndex": 0,
 		"explanation": "Portfolio Planning Workspace enhances traditional project and product portfolio management with lenses, roadmaps, and planning items for waterfall delivery.",
@@ -23157,10 +24007,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which two ServiceNow security applications commonly integrate with SPM for vulnerability and incident visibility? (Choose two.)",
 		"choices": [
-			"Vulnerability Response for grouping and remediating vulnerable items",
 			"Security Incident Response for managing security incident workflows",
+			"Discovery for MID Server heartbeat interval configuration tuning",
 			"Hardware Asset Management for disposal certificate generation only",
-			"Discovery for MID Server heartbeat interval configuration tuning"
+			"Vulnerability Response for grouping and remediating vulnerable items"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -23234,7 +24084,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"explanation": "Every third party must have a primary contact designated, and the email field triggers the automated notification containing portal login credentials.",
 		"sourceUrls": [
@@ -23279,12 +24129,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 6,
 		"prompt": "An organization wants ongoing visibility into vendor posture between full assessment cycles. Which TPRM capability addresses this requirement?",
 		"choices": [
-			"Monitor third-party risk using continuous monitoring signals, risk intelligence scores, and event-driven rules",
 			"Disable all vendor portal access until the next annual contract renewal date arrives on the calendar",
+			"Convert monitoring alerts into employee HR cases routed through the internal service catalog portal",
 			"Export vendor records to offline spreadsheets and review them manually once every five years",
-			"Convert monitoring alerts into employee HR cases routed through the internal service catalog portal"
+			"Monitor third-party risk using continuous monitoring signals, risk intelligence scores, and event-driven rules"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "TPRM monitoring ingests external risk intelligence and internal signals to detect posture changes and trigger reassessment or remediation between periodic assessments.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-monitoring-tpr.html"
@@ -23301,10 +24151,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"Field service dispatcher who assigns mobile technicians to on-site vendor hardware repairs",
 			"Catalog administrator who publishes employee-facing service catalog items for internal requests"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"correctIndexes": [
-			0,
-			1
+			2,
+			3
 		],
 		"explanation": "Due diligence approval workflows involve TPR managers and configured approvers who review questionnaire results and process outcomes before granting or denying engagement approval.",
 		"sourceUrls": [
@@ -23402,10 +24252,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"Discovery assessment (discovery_assessment) scanning network segments for configuration items",
 			"Vulnerability assessment (sn_vul_vulnerability) importing CVE findings from external scanner feeds"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			3
 		],
 		"explanation": "TPRM supports external assessments distributed to vendor contacts and internal assessments completed by organizational respondents before or alongside vendor questionnaires.",
 		"sourceUrls": [
@@ -23433,12 +24283,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 15,
 		"prompt": "A risk team wants external provider scores that indicate how trustworthy a vendor may be. Which TPRM feature should they configure?",
 		"choices": [
-			"Risk intelligence provider integration to ingest external trust and safety scores for third parties",
 			"Discovery credentials to scan vendor internal networks and populate CMDB configuration items",
+			"Change Management standard models to route infrastructure deployment approvals through CAB",
 			"Employee onboarding workflows to provision badges and desk assignments for new internal staff",
-			"Change Management standard models to route infrastructure deployment approvals through CAB"
+			"Risk intelligence provider integration to ingest external trust and safety scores for third parties"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Risk intelligence integrations import external provider scores that offer insight into third-party trustworthiness and can trigger event-driven reassessment rules.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-riskintelprvdr-overview.html"
@@ -23497,12 +24347,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 19,
 		"prompt": "Which workspace provides the primary operational interface for third-party risk managers to manage the vendor portfolio?",
 		"choices": [
-			"Vendor Management Workspace (sn_vrm_ws) included with the Third-party Risk Management application",
 			"Dispatcher Workspace for field service mobile technician assignment and route optimization tasks",
+			"Employee Center portal for internal staff to submit HR benefit requests and payroll inquiries",
 			"Security Operations Workspace for vulnerability response remediation and scanner integration",
-			"Employee Center portal for internal staff to submit HR benefit requests and payroll inquiries"
+			"Vendor Management Workspace (sn_vrm_ws) included with the Third-party Risk Management application"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "The GRC Vendor Management Workspace is the primary interface for managing third parties, engagements, assessments, and related risk activities.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/third-party-risk-mgt-landing-page.html"
@@ -23563,9 +24413,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which two contact form fields help personalize the Third-party Portal experience for external users? (Choose two.)",
 		"choices": [
 			"Language preference for displaying portal content in the contact's preferred locale",
-			"Time Zone setting for scheduling assessment reminders and due date notifications",
 			"Depreciation method for calculating hardware asset value over the procurement lifecycle",
-			"Change type for categorizing infrastructure deployment requests in the CAB approval queue"
+			"Change type for categorizing infrastructure deployment requests in the CAB approval queue",
+			"Time Zone setting for scheduling assessment reminders and due date notifications"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -23726,12 +24576,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 33,
 		"prompt": "Which table stores due diligence requests initiated to evaluate the risk level of a third-party engagement?",
 		"choices": [
-			"Third-party due diligence request (sn_tprm_dd_request) driving the inherent risk and assessment workflow",
 			"Incident (incident) capturing IT service disruption tickets submitted by internal organizational staff",
+			"Catalog Task (sc_task) fulfilling employee-facing service catalog item requests from internal users",
 			"Change Request (change_request) tracking infrastructure deployment approvals awaiting CAB sign-off",
-			"Catalog Task (sc_task) fulfilling employee-facing service catalog item requests from internal users"
+			"Third-party due diligence request (sn_tprm_dd_request) driving the inherent risk and assessment workflow"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Due diligence requests initiate the process to determine engagement risk level and configure subsequent assessment and approval workflows.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html",
@@ -23811,9 +24661,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which two tables are involved when a TPRM assessment questionnaire is sent to a third-party contact? (Choose two.)",
 		"choices": [
 			"Third-party risk assessment (sn_vdr_risk_asmt_assessment) as the parent assessment record",
-			"Questionnaire instance (asmt_assessment_instance) representing the sent questionnaire to the respondent",
 			"Software asset (alm_asset) tracking licensed application installations across the enterprise CMDB",
-			"Known error (problem) storing documented workarounds for recurring platform configuration defects"
+			"Known error (problem) storing documented workarounds for recurring platform configuration defects",
+			"Questionnaire instance (asmt_assessment_instance) representing the sent questionnaire to the respondent"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -23974,12 +24824,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 48,
 		"prompt": "High-tier vendors require annual reassessment without manual recreation each cycle. How should the TPR manager configure this in TPRM?",
 		"choices": [
-			"Scheduled external assessment using a defined recurrence on the assessment record",
 			"Daily import set that deletes and recreates all vendor company records",
+			"Change request template that blocks vendor updates until CAB approval",
 			"Manual clone of each assessment only when procurement sends email notice",
-			"Change request template that blocks vendor updates until CAB approval"
+			"Scheduled external assessment using a defined recurrence on the assessment record"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "TPRM supports on-demand and recurring assessments so teams can automate periodic due diligence cadences.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-create-assessment.html"
@@ -24039,9 +24889,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which records are core to storing an external third-party assessment and its answered questionnaire instance? (Choose two.)",
 		"choices": [
 			"sn_vdr_risk_asmt_assessment external assessment header record",
-			"asmt_assessment_instance questionnaire response instance linked to the assessment",
 			"alm_hardware asset record used for warranty tracking",
-			"sn_publications_publication catalog for knowledge article publishing"
+			"sn_publications_publication catalog for knowledge article publishing",
+			"asmt_assessment_instance questionnaire response instance linked to the assessment"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -24108,9 +24958,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A questionnaire requires vendor attestation with a captured signature before submission. What must be enabled on the template?",
 		"choices": [
 			"E-signature requirement on the questionnaire or document request before submit",
-			"Automatic closure of all related issues when the assessment opens",
 			"Mandatory attachment of employee performance reviews for each contact",
-			"Conversion of the assessment into a standard change record"
+			"Conversion of the assessment into a standard change record",
+			"Automatic closure of all related issues when the assessment opens"
 		],
 		"correctIndex": 0,
 		"explanation": "Questionnaires configured for e-signature require the vendor or reviewer to save and sign before the assessment can be submitted.",
@@ -24203,12 +25053,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 62,
 		"prompt": "After external assessment scores are finalized, where do aggregated ratings typically surface for vendor oversight dashboards?",
 		"choices": [
-			"Engagement level risk rating and third-party scoring rule results on the company record",
 			"Incident category field updated from the service catalog variable set",
+			"Discovery credential row showing last successful login attempt",
 			"Knowledge article quality score calculated from view counts",
-			"Discovery credential row showing last successful login attempt"
+			"Engagement level risk rating and third-party scoring rule results on the company record"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Scoring rules aggregate assessment results to engagements and third parties using engagement level risk ratings and vendor scoring rules.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/vendor-ratings-scoring.html"
@@ -24272,10 +25122,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"Approve internal due diligence requests as TPR manager",
 			"Edit scoring rules on sn_vdr_risk_asmt_vendor_risk_scoring_rule"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			2
 		],
 		"questionType": "multi",
 		"explanation": "Portal contacts complete assigned assessments and maintain their contact roster; approval and scoring configuration remain internal functions.",
@@ -24289,9 +25139,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A vendor must attach an updated SOC report to an open assessment from outside the corporate network. Where should they upload it?",
 		"choices": [
 			"Third-party portal Documents section linked to the assessment or engagement",
-			"Internal change request attachment tab visible only to CAB members",
 			"Employee Center profile page used for personal preference settings",
-			"Discovery credential store for MID Server authentication secrets"
+			"Discovery credential store for MID Server authentication secrets",
+			"Internal change request attachment tab visible only to CAB members"
 		],
 		"correctIndex": 0,
 		"explanation": "The portal supports uploading and managing documents such as policies and compliance evidence tied to assessments and engagements.",
@@ -24337,9 +25187,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A vendor contact logs into the portal to check remediation work assigned after an assessment. Which items appear in their typical portal view?",
 		"choices": [
 			"Open assessments, related tasks, issues, and document requests for their engagement",
-			"Internal CAB agenda and pending change approvals for all departments",
 			"Full CMDB dependency map including unrelated infrastructure CIs",
-			"Employee salary bands and HR case details for corporate staff"
+			"Employee salary bands and HR case details for corporate staff",
+			"Internal CAB agenda and pending change approvals for all departments"
 		],
 		"correctIndex": 0,
 		"explanation": "Portal users see assessments, tasks, issues, and evidence requests scoped to their third-party relationship.",
@@ -24448,12 +25298,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 77,
 		"prompt": "A due diligence owner attempts to request approval while one external assessment remains open. What prerequisite blocks that action?",
 		"choices": [
-			"All linked assessments must be closed before entering Ready for TPRM approval",
 			"Every vendor contact must hold the security_admin role",
+			"All CMDB relationships must be deleted from the engagement",
 			"The company record vendor flag must be set to false",
-			"All CMDB relationships must be deleted from the engagement"
+			"All linked assessments must be closed before entering Ready for TPRM approval"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "The due diligence request enters Ready for TPRM approval only after all assessments in the package have been closed.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-approving.html"
@@ -24513,9 +25363,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "All remediation tasks linked to a third-party risk issue reach Closed status. What common platform behavior follows?",
 		"choices": [
 			"The parent issue can auto-close once every related remediation task is complete",
-			"The vendor company record is deleted from core_company automatically",
 			"All assessments reopen and reset questionnaire scores to zero",
-			"The due diligence request skips approval and executes contracts immediately"
+			"The due diligence request skips approval and executes contracts immediately",
+			"The vendor company record is deleted from core_company automatically"
 		],
 		"correctIndex": 0,
 		"explanation": "Issue management can automatically close the parent issue when all associated remediation tasks are finished.",
@@ -24577,9 +25427,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Leadership asks how Third-party Risk Management fits within the broader ServiceNow GRC product suite. Which description is accurate?",
 		"choices": [
 			"TPRM is a Governance, Risk, and Compliance application for third-party assessment and monitoring",
-			"TPRM is a standalone ITSM module replacing incident and problem management",
 			"TPRM is an HR application for employee performance review cycles",
-			"TPRM is a discovery plugin that maps network topology without risk records"
+			"TPRM is a discovery plugin that maps network topology without risk records",
+			"TPRM is a standalone ITSM module replacing incident and problem management"
 		],
 		"correctIndex": 0,
 		"explanation": "Third-party Risk Management is delivered as part of the GRC suite alongside risk, compliance, and policy capabilities.",
@@ -24613,10 +25463,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"Facilities space management floor plans for office seating assignments",
 			"Project portfolio cost plan lines for capital expenditure forecasting"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			2
 		],
 		"questionType": "multi",
 		"explanation": "Engagements connect to Risk and Control components so teams monitor residual risk and control compliance alongside assessments.",
@@ -24700,9 +25550,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which two statements accurately describe NIST National Vulnerability Database (NVD) vulnerability data feeds? (Choose two.)",
 		"choices": [
 			"Feed files organize CVE records by the first four digits of the CVE identifier (for example, CVE-2024)",
-			"Each feed contains only vulnerabilities that share the same CVSS base score numeric value",
 			"Modified feeds include vulnerabilities that were published or updated within the previous eight days",
-			"NVD feeds exclude CPE data entirely and cannot be used with Vulnerability Response enrichment"
+			"NVD feeds exclude CPE data entirely and cannot be used with Vulnerability Response enrichment",
+			"Each feed contains only vulnerabilities that share the same CVSS base score numeric value"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -24769,9 +25619,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A remediation owner in IT Operations must work assigned fix tasks for vulnerable configuration items. Which workspace should they use?",
 		"choices": [
 			"IT Remediation Workspace to view and complete remediation tasks assigned to their team",
-			"Vulnerability Manager Workspace to configure NVD integrations and scanner import schedules",
 			"Security Incident Response Workspace to manage major security incident war room operations",
-			"Performance Analytics Workspace to design KPI indicator sources for HR onboarding metrics"
+			"Performance Analytics Workspace to design KPI indicator sources for HR onboarding metrics",
+			"Vulnerability Manager Workspace to configure NVD integrations and scanner import schedules"
 		],
 		"correctIndex": 0,
 		"explanation": "Remediation owners execute fix work from the IT Remediation Workspace, while vulnerability analysts monitor and initiate work from the Vulnerability Manager Workspace.",
@@ -24864,12 +25714,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 12,
 		"prompt": "Why do Vulnerability Response, Application Vulnerability Response, and third-party integrations reference CSDM tables in the ServiceNow platform?",
 		"choices": [
-			"VR applications consume and contribute configuration and service data that aligns assets with vulnerability findings",
 			"CSDM tables replace all third-party scanner libraries so external CVE identifiers are no longer stored",
+			"CSDM tables store only HR employee records and are unrelated to security operations workflows",
 			"CSDM tables are read-only lookup tables that VR applications cannot write vulnerability records into",
-			"CSDM tables store only HR employee records and are unrelated to security operations workflows"
+			"VR applications consume and contribute configuration and service data that aligns assets with vulnerability findings"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Vulnerability Response applications manage and use CSDM-aligned CMDB data so scanner findings can be tied to authoritative configuration items and service context.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
@@ -24945,9 +25795,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A remediation task cannot be completed within the standard SLA because patching requires an approved change window. Which Vulnerability Response process should the remediation owner initiate?",
 		"choices": [
 			"Coordinated change or exception management to document controlled deferral or extended remediation",
-			"Immediate closure of the vulnerable item without verification or follow-up scanner confirmation",
 			"Deletion of the third-party vulnerability entry so the finding disappears from all related lists",
-			"Conversion of the vulnerable item into a hardware asset lease record for procurement tracking"
+			"Conversion of the vulnerable item into a hardware asset lease record for procurement tracking",
+			"Immediate closure of the vulnerable item without verification or follow-up scanner confirmation"
 		],
 		"correctIndex": 0,
 		"explanation": "Vulnerability Response supports change and exception management when remediation requires approved maintenance windows or formal risk acceptance.",
@@ -24993,9 +25843,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Before importing Qualys vulnerability detections, which integration sequence does Vulnerability Response documentation recommend?",
 		"choices": [
 			"Run NVD and CWE integrations first to enrich vulnerability libraries before third-party scanner imports",
-			"Import Qualys detections first, then disable NVD integrations to prevent duplicate CVE records",
 			"Skip NVD imports entirely because third-party libraries never reference CVE identifiers",
-			"Run scanner imports before any NVD job so CI lookup rules can create NVD entries automatically"
+			"Run scanner imports before any NVD job so CI lookup rules can create NVD entries automatically",
+			"Import Qualys detections first, then disable NVD integrations to prevent duplicate CVE records"
 		],
 		"correctIndex": 0,
 		"explanation": "NVD and CWE data should be imported before third-party scanner products so third-party library entries can reference enriched CVE, CWE, and CPE metadata.",
@@ -25104,12 +25954,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 27,
 		"prompt": "Remediation owners complain that scanner imports omit vendor fix guidance on vulnerable item forms. Which system property enables parsing solution text from third-party integrations?",
 		"choices": [
-			"sn_vul.populate_scanner_solutions to parse remediation solution content from scanner integrations",
 			"glide.ui.autoclose.time to automatically close resolved incidents after the configured interval",
+			"sn_hr_core.batch_size to limit employee onboarding case creation during VR import windows",
 			"com.snc.sandbox.enable to route all VR imports through an isolated mid-server sandbox only",
-			"sn_hr_core.batch_size to limit employee onboarding case creation during VR import windows"
+			"sn_vul.populate_scanner_solutions to parse remediation solution content from scanner integrations"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "The sn_vul.populate_scanner_solutions property controls parsing of solution guidance supplied by supported third-party scanner integrations into VR records.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
@@ -25233,9 +26083,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Microsoft TVM is configured with both full and delta machine vulnerability imports. What is the intended purpose of the delta import schedule?",
 		"choices": [
 			"Retrieve new, fixed, and updated vulnerability detections since the last full organization import",
-			"Replace the CMDB with a static export of TVM machine records that disables CI lookup rules",
 			"Import only CPE strings while excluding all CVE identifiers from the TVM recommendation API",
-			"Create change requests for every TVM machine record regardless of open vulnerability status"
+			"Create change requests for every TVM machine record regardless of open vulnerability status",
+			"Replace the CMDB with a static export of TVM machine records that disables CI lookup rules"
 		],
 		"correctIndex": 0,
 		"explanation": "The MS TVM delta machines vulnerabilities integration retrieves changes since the full import, including new, remediated, and updated detections across the estate.",
@@ -25328,12 +26178,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 41,
 		"prompt": "Why do VR teams configure classification rules before assignment rules on high-volume vulnerability entries?",
 		"choices": [
-			"To categorize findings once so downstream rules use direct field matches instead of repeated expensive queries",
 			"To replace all remediation task grouping logic with manual analyst triage queues exclusively",
+			"To disable vulnerability calculators from evaluating risk scores on vulnerable items",
 			"To bypass CMDB dependency mapping during every third-party scanner import cycle",
-			"To disable vulnerability calculators from evaluating risk scores on vulnerable items"
+			"To categorize findings once so downstream rules use direct field matches instead of repeated expensive queries"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Classification rules normalize data at ingestion so assignment and other configurations can reference stable classification values rather than re-evaluating heavy conditions per record.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/vulnerability-response/classification-rules.html"
@@ -25392,12 +26242,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 45,
 		"prompt": "When multiple remediation target rules could match a vulnerable item, how does Vulnerability Response determine which rule applies?",
 		"choices": [
-			"Match First evaluates rules in sequence and applies the first matching rule by priority order",
 			"Random selection among all active rules assigns deadlines with equal probability weighting",
+			"Only rules authored by users holding sn_vul.vulnerability_admin execute on existing records",
 			"Every matching rule applies simultaneously and overwrites prior results regardless of sequence",
-			"Only rules authored by users holding sn_vul.vulnerability_admin execute on existing records"
+			"Match First evaluates rules in sequence and applies the first matching rule by priority order"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Match First execution stops at the first satisfied rule, giving administrators explicit control over which target date logic wins.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-target-rules.html"
@@ -25461,10 +26311,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"Password expiration business rules",
 			"LDAP synchronization scheduled jobs"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			2
 		],
 		"questionType": "multi",
 		"explanation": "Classification rules categorize intake data and assignment rules route vulnerable items to remediation groups; password and LDAP jobs are unrelated platform functions.",
@@ -25691,11 +26541,11 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"Remediation task rules that group items into shared tasks",
 			"Manual CSV export to spreadsheet for offline review"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
 			1,
-			2
+			2,
+			3
 		],
 		"questionType": "multi",
 		"explanation": "Classification, assignment, and remediation task rules automate categorization, routing, and grouping; spreadsheet export is a manual workaround.",
@@ -25710,9 +26560,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "When a remediation task moves to Closed / False Positive, what should happen to in-flight false positive approval records?",
 		"choices": [
 			"Related state change approval records in Draft or In Review should be cancelled",
-			"Approval records auto-advance to Approved without analyst or approver intervention",
 			"Approval records convert to change requests linked to the CAB schedule board",
-			"Approval records duplicate onto every unrelated open vulnerable item in the queue"
+			"Approval records duplicate onto every unrelated open vulnerable item in the queue",
+			"Approval records auto-advance to Approved without analyst or approver intervention"
 		],
 		"correctIndex": 0,
 		"explanation": "Cancelling stale approvals keeps vulnerable item state aligned with the remediation task disposition and prevents orphaned review work.",
@@ -25774,9 +26624,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "What is the role of state change approval records in VR exception and false positive workflows?",
 		"choices": [
 			"They capture approver decisions before vulnerable items change to deferred or closed states",
-			"They replace vulnerability calculators when scoring critical internet-facing asset findings",
 			"They import NVD CVE feeds when the primary integration fails during ingestion cycles",
-			"They map scanner credentials to MID Server capability definitions during discovery"
+			"They map scanner credentials to MID Server capability definitions during discovery",
+			"They replace vulnerability calculators when scoring critical internet-facing asset findings"
 		],
 		"correctIndex": 0,
 		"explanation": "State change approvals enforce governance checkpoints before disposition changes take effect on vulnerable items.",
@@ -25861,7 +26711,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			2
 		],
 		"questionType": "multi",
 		"explanation": "Executive consumers need concise overview tiles and a small set of decisive health indicators rather than operational record-level detail.",
@@ -25874,12 +26724,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 74,
 		"prompt": "Which visualization best communicates whether the organization is reducing critical vulnerability exposure over time?",
 		"choices": [
-			"Trend lines showing open critical and high findings with closure velocity overlays",
 			"Pie chart of scanner vendor names without severity or age context on the dashboard",
+			"Single static count of total CMDB configuration items regardless of vulnerability state",
 			"Table of inactive user accounts who have never logged into the VR application module",
-			"Single static count of total CMDB configuration items regardless of vulnerability state"
+			"Trend lines showing open critical and high findings with closure velocity overlays"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Time-based severity trends combined with closure velocity show whether remediation capacity is outpacing newly discovered critical risk.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/vulnerability-response/vr-dashboards.html"
@@ -25888,1632 +26738,2252 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 	{
 		"trackCode": "CPOA",
 		"order": 0,
-		"prompt": "Why do platform owners maintain separate production and sub-production instances?",
+		"prompt": "The executive sponsor asks for next year's platform roadmap. Which input set should the associate platform owner gather first?",
 		"choices": [
-			"To ensure every user edits production forms directly",
-			"To eliminate backups",
-			"To store integrations only on workstations",
-			"To test changes safely, validate integrations, and promote work without risking live service"
+			"Stated business objectives, current adoption metrics, and open risk or compliance gaps",
+			"Every open incident record sorted by oldest create date",
+			"A complete export of all sys_script records regardless of scope",
+			"Informal developer preferences without linking them to business outcomes"
 		],
-		"correctIndex": 3,
-		"explanation": "Clone and environment practices separate live operations from development and test cycles.",
+		"correctIndex": 0,
+		"explanation": "Roadmap planning starts with business objectives, measured adoption, and known risks so investments align to outcomes the sponsor cares about.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/managing-data/task/t_CreateACloneTarget.html"
+			"https://www.servicenow.com/docs/r/impact/impact.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 1,
-		"prompt": "Which activity is central to governing platform upgrades over time?",
+		"prompt": "While drafting a platform security implementation plan, the team lists penetration testing as an external dependency. Which group should the platform owner engage to coordinate penetration testing?",
 		"choices": [
-			"Following a defined upgrade process that includes preparation, testing, and review of outcomes",
-			"Ignoring release notes rationalized during annual application portfolio reviews. (CPOA-1-w1)",
-			"Disabling the Upgrade Center permanently constrained to business hours unless emergency criteria apply.",
-			"Deploying patches to production without a test cycle"
+			"Internal security team",
+			"End-user community champions only",
+			"Individual application developers without security oversight",
+			"External marketing vendors"
 		],
 		"correctIndex": 0,
-		"explanation": "Platform upgrade documentation describes lifecycle steps for preparing and executing family upgrades.",
+		"explanation": "Penetration testing requires coordination with the internal security team that owns security assessment processes, scope, and remediation follow-up.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/administer/platform-upgrades/concept/platform-upgrades.html"
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 2,
-		"prompt": "Why should platform owners review skipped updates after an upgrade?",
+		"prompt": "Self-service adoption is low because employees abandon the portal after two clicks. Which UX consideration should the platform owner prioritize with the design team?",
 		"choices": [
-			"Skipped updates delete all Script Includes",
-			"Skipped updates highlight conflicts between customer changes and base versions that must be resolved",
-			"Skipped updates are always safe to ignore indefinitely",
-			"Skipped updates only affect email logs retired when superseded by the next-generation integration pattern."
+			"Simplify navigation paths and reduce steps to complete common requests",
+			"Hide catalog categories until users complete mandatory training videos",
+			"Remove mobile access to force desktop-only interactions",
+			"Display every available module on the homepage regardless of audience"
 		],
-		"correctIndex": 1,
-		"explanation": "Resolving skipped updates reconciles customization with new baseline changes using guided tasks.",
+		"correctIndex": 0,
+		"explanation": "Associate platform owners advocate for streamlined self-service journeys so users can complete frequent tasks with minimal friction.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/customer-support/task/t_ResolveASkippedUpdate.html"
+			"https://www.servicenow.com/docs/r/platform-user-interface/platform-user-interface.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 3,
-		"prompt": "Before scheduling a production upgrade, what should owners prioritize from a risk perspective?",
+		"questionType": "multi",
+		"prompt": "The PMO is scheduling the next portfolio planning cycle and wants platform demand included. Which practices should the associate platform owner recommend? (Choose two.)",
 		"choices": [
-			"Removing sub-production clones distributed through the vendor marketplace submission pipeline. (CPOA-3-w0)",
-			"Deferring all security patches",
-			"Assessing customization, integrations, and regression test coverage documented in the upgrade plan",
-			"Increasing unaudited direct production edits"
+			"Submit platform initiatives with business value, dependencies, and capacity estimates",
+			"Bypass the PMO intake form to accelerate individual team requests",
+			"Exclude upgrade and maintenance work because only new features belong in portfolio planning",
+			"Align proposed work to enterprise priorities documented in the portfolio intake process"
 		],
-		"correctIndex": 2,
-		"explanation": "Upgrade planning materials emphasize analyzing scope and validating critical capabilities before production cutover.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "PMO engagement requires structured demand with value and dependencies tied to enterprise priorities; bypassing intake or omitting maintenance creates planning blind spots.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html"
+			"https://www.servicenow.com/docs/r/impact/impact.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 4,
-		"prompt": "What is a sound practice for governing many third-party integrations on the Now Platform?",
-		"choices": [
-			"Use a single unnamed integration user for every system tested in a subproduction clone with representative data. (CPOA-4-w0)",
-			"Avoid documenting spokes or flows packaged for deployment via scoped application repository. (CPOA-4-w1)",
-			"Share production credentials in chat for speed decommissioned using the established retirement checklist. (CPOA-4-w2)",
-			"Use centralized integration capabilities, managed connections, and reusable actions rather than one-off bespoke endpoints per team"
+		"questionType": "match",
+		"prompt": "Match each platform roadmap input to the planning question it helps answer.",
+		"choices": [],
+		"correctIndex": -1,
+		"matchLeftItems": [
+			"Business objective statement",
+			"Current adoption metrics",
+			"Open compliance findings",
+			"Delivery capacity forecast"
 		],
-		"correctIndex": 3,
-		"explanation": "IntegrationHub documentation describes managed integrations through spokes, actions, and connection management.",
+		"matchRightItems": [
+			"What outcome must the platform investment support?",
+			"Are users actually consuming the capabilities we already delivered?",
+			"Which risks must the roadmap address before new scope is approved?",
+			"How much change can teams absorb in the next planning window?"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Roadmap inputs connect business intent, measured usage, risk posture, and capacity so sequencing decisions are evidence-based.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-integrate-applications/page/administer/integrationhub/concept/integrationhub.html"
+			"https://www.servicenow.com/docs/r/impact/impact.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 5,
-		"prompt": "Before cloning a production instance for troubleshooting, what should a platform owner verify first?",
+		"prompt": "A delivery team proposes storing API keys in a client-side UI script for faster testing. Which technical governance response aligns with platform coding best practices?",
 		"choices": [
-			"That clone profiles include data-preservation and post-clone cleanup requirements",
-			"That update sets are committed in source and target before clone starts",
-			"That all integrations are permanently disabled in production",
-			"That all users have local admin rights in the target instance"
+			"Direct the team to use server-side scripting and secured credential stores instead of exposing secrets in the browser",
+			"Approve the approach because sub-production testing always justifies embedded secrets",
+			"Disable all client scripts platform-wide to avoid any future risk",
+			"Allow each developer to choose their own secret storage method without standards"
 		],
 		"correctIndex": 0,
-		"explanation": "Clone profiles and related policies define what data is preserved or excluded and what automation runs after the clone, reducing operational risk.",
+		"explanation": "Platform owners enforce secure coding practices such as keeping credentials out of client scripts and using approved server-side patterns.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/instance-clone.html"
+			"https://www.servicenow.com/docs/r/application-development/application-development.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 6,
-		"prompt": "Why are clone cleanup scripts commonly used in lower environments after a production clone?",
+		"prompt": "Business units want to build their own low-code apps without waiting for central IT. What is the associate platform owner's first citizen development step under senior guidance?",
 		"choices": [
-			"To force all cloned records into a separate domain automatically",
-			"To remove or mask sensitive data and reset environment-specific settings",
-			"To copy update set history back to production",
-			"To rollback all plugins installed in production"
+			"Define guardrails, approved scopes, and an intake path before broad self-service building begins",
+			"Grant every business user the admin role so delivery is never delayed",
+			"Prohibit all citizen development until every legacy process is retired",
+			"Skip documentation because low-code tools eliminate the need for standards"
 		],
-		"correctIndex": 1,
-		"explanation": "Post-clone scripts help sanitize data and reconfigure non-prod integrations, email, and endpoints so cloned environments are safe for testing.",
+		"correctIndex": 0,
+		"explanation": "Citizen development succeeds when guardrails, scope boundaries, and intake are established before teams create unsupportable applications.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/task/t_CreateCloneCleanupScript.html"
+			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 7,
-		"prompt": "A team needs to protect a small reference dataset in sub-prod during recurring clones. Which capability is most appropriate?",
+		"prompt": "Leadership asks why the organization should follow a defined SDLC on the Now Platform. Which benefit should the associate platform owner highlight?",
 		"choices": [
-			"Domain map exclusions",
-			"Scheduled jobs",
-			"Data preservation policy for clone",
-			"Clone source locking"
+			"Structured phases reduce production defects and improve traceability from requirement to release",
+			"Following an SDLC guarantees zero skipped updates after upgrades",
+			"SDLC adoption removes the need for change advisory review on all work",
+			"An SDLC eliminates the need for any sub-production testing environments"
 		],
-		"correctIndex": 2,
-		"explanation": "Data preservation policies allow defined table records to be retained in the target while the broader clone refresh is applied.",
+		"correctIndex": 0,
+		"explanation": "A defined SDLC improves quality and auditability by connecting requirements, build, test, and promotion steps rather than ad hoc production edits.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/clone-data-preservation.html"
+			"https://www.servicenow.com/docs/r/application-development/application-development.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 8,
-		"prompt": "What is the primary reason to suspend outbound email and external integrations in a cloned test instance?",
+		"questionType": "multi",
+		"prompt": "The security office asks which platform security methods the associate platform owner should include in the annual plan. (Choose two.)",
 		"choices": [
-			"To avoid clone lock contention",
-			"To enable skipped update resolution",
-			"To improve indexing speed for cloned tables",
-			"To prevent unintended notifications or calls to production-connected systems"
+			"Role-based access reviews with least-privilege design for admin and developer personas",
+			"Regular health scan and hardening assessments on production and sub-production instances",
+			"Sharing production credentials in team chat to speed integration troubleshooting",
+			"Disabling audit logs on security-sensitive tables to improve list performance"
 		],
-		"correctIndex": 3,
-		"explanation": "Cloned data can trigger business logic; disabling outbound paths prevents accidental communication with customers or third-party systems.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Sound security planning combines access governance and proactive instance assessment; credential sharing and disabled auditing increase exposure.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/task/t_PrepareTargetInstanceForClone.html"
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 9,
-		"prompt": "Which statement best describes clone governance for enterprise platform ownership?",
-		"choices": [
-			"Clone scheduling should align with release windows, data sensitivity controls, and stakeholder communication",
-			"Clone history is not required if backups exist",
-			"Clone plans are needed only for production-to-production operations",
-			"Clones should be run ad hoc by any admin when environments drift"
+		"questionType": "match",
+		"prompt": "Match each recommended implementation phase to its primary outcome on the Now Platform.",
+		"choices": [],
+		"correctIndex": -1,
+		"matchLeftItems": [
+			"Foundation",
+			"Run",
+			"Walk",
+			"Crawl",
+			"Fly"
 		],
-		"correctIndex": 0,
-		"explanation": "A governed clone process includes timing, approvals, risk controls, and notifications to minimize disruption and compliance issues.",
+		"matchRightItems": [
+			"Expand advanced features and broader service coverage",
+			"Reach full maturity with AI/ML governance and predictive capabilities",
+			"Deliver quick wins using foundational data and core services",
+			"Scale additional modules, automations, and integrations",
+			"Establish core setup, ownership, and baseline governance"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 4
+			},
+			{
+				"left": 1,
+				"right": 3
+			},
+			{
+				"left": 2,
+				"right": 0
+			},
+			{
+				"left": 3,
+				"right": 2
+			},
+			{
+				"left": 4,
+				"right": 1
+			}
+		],
+		"explanation": "ServiceNow recommends sequencing from Foundation setup through Crawl quick wins, Walk expansion, Run scaling, and Fly maturity including advanced analytics and AI governance.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/c_CloneManagement.html"
+			"https://www.servicenow.com/docs/r/common-service-data-model/csdm.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 10,
-		"prompt": "In the ServiceNow upgrade lifecycle, which activity should occur first for a platform owner?",
+		"prompt": "Before a major store release, the delivery lead asks how to regression-test custom applications efficiently. Which capability should the associate platform owner recommend?",
 		"choices": [
-			"Schedule production cutover immediately",
-			"Assess release notes, feature impacts, and prerequisite changes",
-			"Disable all custom applications before planning",
-			"Merge skipped updates directly in production"
+			"Automated Test Framework test suites executed in sub-production before promotion",
+			"Manual spot checks on production only after the release window opens",
+			"Disabling all business rules during testing to avoid false failures",
+			"Skipping automated tests because update sets already capture every change"
 		],
-		"correctIndex": 1,
-		"explanation": "Lifecycle execution starts with assessment to understand impact, effort, and risk before timelines and environments are committed.",
+		"correctIndex": 0,
+		"explanation": "Automated Test Framework supports repeatable regression coverage in lower environments, reducing production surprises after platform or application updates.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade/concept/upgrade-planning.html"
+			"https://www.servicenow.com/docs/r/application-development/automated-test-framework.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 11,
-		"prompt": "Why is validating customizations in sub-production a core lifecycle requirement?",
+		"prompt": "A sponsor asks why CMDB quality matters when setting platform strategy for change and incident processes. Which answer best reflects associate-level CMDB context?",
 		"choices": [
-			"Because only sub-production can process family upgrades",
-			"Because skipped updates are generated only in development instances",
-			"Because it identifies regressions in configurations and custom code before production impact",
-			"Because production upgrades do not support rollback windows"
+			"Accurate configuration items and relationships improve impact analysis for changes and outages",
+			"CMDB records replace the need for any discovery or integration governance",
+			"CMDB quality affects only hardware asset tracking and not service workflows",
+			"Populating the CMDB once at go-live eliminates all future data stewardship"
 		],
-		"correctIndex": 2,
-		"explanation": "Testing customizations across lower tiers reduces production defects and confirms business-critical behavior after upgrade.",
+		"correctIndex": 0,
+		"explanation": "Platform strategy tied to ITSM outcomes depends on trustworthy CI and dependency data so teams can assess blast radius during changes and incidents.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade/task/test-instance-upgrade.html"
+			"https://www.servicenow.com/docs/r/configuration-management/cmdb.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 12,
-		"prompt": "Which governance artifact best supports an auditable upgrade lifecycle?",
+		"prompt": "Data stewards report inconsistent ownership labels across business applications. Which data strategy action should the associate platform owner take first?",
 		"choices": [
-			"Personal notes from the lead admin",
-			"Only final release notes",
-			"Unstructured chat transcripts",
-			"Documented plan with risks, test evidence, and approval checkpoints"
+			"Work with stewards to define ownership standards and a remediation plan for critical data domains",
+			"Postpone data cleanup until every module is fully deployed",
+			"Allow each team to invent local naming without central guidance",
+			"Delete all records missing owners so lists load faster"
 		],
-		"correctIndex": 3,
-		"explanation": "An auditable lifecycle includes formal plans and evidence for readiness, controls, and stakeholder approvals.",
+		"correctIndex": 0,
+		"explanation": "Data strategy at associate level focuses on agreed ownership rules and prioritized cleanup so downstream processes trust shared records.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade/concept/upgrade-governance.html"
+			"https://www.servicenow.com/docs/r/common-service-data-model/csdm.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 13,
-		"prompt": "During release execution, what is the main purpose of a predefined outage communication plan?",
+		"questionType": "multi",
+		"prompt": "The CoEI wants to expand citizen development safely next quarter. Which enablement steps should the associate platform owner support? (Choose two.)",
 		"choices": [
-			"To ensure stakeholders receive consistent status, impact, and recovery updates",
-			"To bypass change approvals during emergency upgrades",
-			"To automate skipped update acceptance decisions",
-			"To replace upgrade testing in lower environments"
+			"Publish starter templates and approved scope patterns for common departmental use cases",
+			"Provide training on intake, testing expectations, and escalation when apps need admin support",
+			"Grant elevated admin access to every requester to remove delivery bottlenecks",
+			"Skip lifecycle reviews because citizen apps are always low risk"
 		],
 		"correctIndex": 0,
-		"explanation": "Communication plans improve coordination and user trust by setting expectations before and during maintenance windows.",
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Citizen development scales with reusable templates, training, and clear escalation paths—not blanket admin access or absent lifecycle oversight.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade/task/prepare-upgrade-communications.html"
+			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 14,
-		"prompt": "What is the best post-upgrade lifecycle practice after production validation is complete?",
-		"choices": [
-			"Delete upgrade logs to reduce storage",
-			"Capture lessons learned and update runbooks and standards",
-			"Clone production to development immediately without review",
-			"Freeze all platform changes for the next family release"
+		"questionType": "match",
+		"prompt": "Match each SDLC activity to the outcome it supports on the Now Platform.",
+		"choices": [],
+		"correctIndex": -1,
+		"matchLeftItems": [
+			"Requirements intake",
+			"Sub-production validation",
+			"Update set promotion",
+			"Post-release monitoring"
 		],
-		"correctIndex": 1,
-		"explanation": "Lifecycle maturity improves when teams codify what worked, what failed, and how procedures should evolve for future upgrades.",
+		"matchRightItems": [
+			"Work is prioritized against business need before build starts",
+			"Defects are caught before changes reach production users",
+			"Approved configuration moves through controlled environments",
+			"Teams detect regressions or adoption gaps after go-live"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "SDLC benefits come from connecting intake, testing, controlled promotion, and post-release feedback rather than skipping any stage.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade/concept/continuous-upgrade-improvement.html"
+			"https://www.servicenow.com/docs/r/application-development/application-development.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 15,
-		"prompt": "What is the primary purpose of ServiceNow Admin Center for platform owners?",
+		"prompt": "The PMO reports overlapping platform projects funded by different departments. Which associate platform owner action best supports portfolio alignment?",
 		"choices": [
-			"To bypass role requirements for temporary admins",
-			"To replace all development tooling for scoped apps",
-			"To centralize visibility and management of instance administration tasks",
-			"To run clone operations across different customer tenants"
+			"Facilitate a cross-functional review to consolidate duplicate efforts and clarify executive priorities",
+			"Allow each department to continue independently without shared milestones",
+			"Cancel all active projects until a new vendor is selected",
+			"Move every initiative to production simultaneously to show progress"
 		],
-		"correctIndex": 2,
-		"explanation": "Admin Center gives administrators a consolidated experience for key operational and configuration responsibilities.",
+		"correctIndex": 0,
+		"explanation": "PMO engagement includes reconciling duplicate demand and aligning work to shared priorities so capacity is not wasted on redundant delivery.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/admin-center/concept/admin-center.html"
+			"https://www.servicenow.com/docs/r/impact/impact.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 16,
-		"prompt": "How does Admin Center improve execution consistency across admin teams?",
+		"prompt": "Developers debate whether to use global business rules for all new applications. Which technical governance guidance should the associate platform owner provide?",
 		"choices": [
-			"By removing all role checks from admin tasks",
-			"By forcing all tasks into one global update set",
-			"By disabling plugin lifecycle controls",
-			"By presenting guided workflows and centralized administration actions"
+			"Prefer scoped application logic and shared libraries within guardrails to limit unintended cross-app impact",
+			"Require global business rules for every customization regardless of scope",
+			"Discourage all server-side logic in favor of manual admin updates",
+			"Allow unaudited direct production edits when deadlines are tight"
 		],
-		"correctIndex": 3,
-		"explanation": "Guided operational tasks and shared visibility reduce variation in how administrators perform common platform activities.",
+		"correctIndex": 0,
+		"explanation": "Coding best practices favor scoped implementations and reusable patterns that reduce risk of platform-wide side effects from global changes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/admin-center/task/use-admin-center.html"
+			"https://www.servicenow.com/docs/r/application-development/application-development.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 17,
-		"prompt": "A platform owner wants to reduce missed admin prerequisites. Which Admin Center outcome is most relevant?",
+		"prompt": "Employee feedback shows the new workspace theme fails accessibility checks on mobile devices. Which UX action should the associate platform owner prioritize?",
 		"choices": [
-			"Consolidated recommendations and operational task tracking",
-			"Managed domain hierarchy creation",
-			"Cross-instance source control branching",
-			"Automatic deletion of skipped updates"
+			"Partner with design leads to remediate accessibility gaps before broad rollout continues",
+			"Disable mobile access entirely so accessibility testing is unnecessary",
+			"Defer all UX fixes until the next major upgrade cycle with no interim work",
+			"Ignore feedback because power users primarily work on desktop"
 		],
 		"correctIndex": 0,
-		"explanation": "Central recommendations and tracked tasks help teams execute required admin steps in a predictable order.",
+		"explanation": "Platform owners advocate for inclusive experiences and should address accessibility findings before scaling a workspace that excludes part of the workforce.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/admin-center/concept/admin-recommendations.html"
+			"https://www.servicenow.com/docs/r/platform-user-interface/platform-user-interface.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 18,
-		"prompt": "Which practice best aligns Admin Center usage with platform governance?",
+		"questionType": "multi",
+		"prompt": "The architecture review board asks which technical governance standards the platform program should publish first. (Choose two.)",
 		"choices": [
-			"Apply emergency-only admin workflows for all maintenance",
-			"Pair Admin Center processes with role-based ownership and change control",
-			"Allow every fulfiller to execute admin actions directly",
-			"Use personal runbooks outside the platform"
+			"Naming conventions and update set promotion rules for scoped applications",
+			"Secure coding expectations including credential handling and logging practices",
+			"A policy allowing unaudited production changes when business sponsors approve verbally",
+			"A guideline to store integration secrets in public wiki pages for visibility"
 		],
-		"correctIndex": 1,
-		"explanation": "Governance improves when Admin Center actions are tied to clear accountability and approved change procedures.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			2
+		],
+		"explanation": "Foundational governance covers consistent delivery mechanics and secure development; unaudited production edits and exposed secrets undermine enterprise control.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/admin-center/concept/admin-governance.html"
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 19,
-		"prompt": "What is the most valuable KPI to monitor after broad Admin Center adoption?",
-		"choices": [
-			"Count of skipped update records created",
-			"Total number of temporary admin grants",
-			"Reduction in execution errors and faster completion of standardized admin tasks",
-			"Frequency of ad hoc production hotfixes"
+		"questionType": "match",
+		"prompt": "Match each data strategy element to the platform outcome it enables.",
+		"choices": [],
+		"correctIndex": -1,
+		"matchLeftItems": [
+			"Data ownership model",
+			"Quality KPIs",
+			"Integration standards",
+			"Retention policies"
 		],
-		"correctIndex": 2,
-		"explanation": "Operational quality metrics show whether centralized administration is improving reliability and efficiency.",
+		"matchRightItems": [
+			"Teams know who resolves conflicts for shared records",
+			"Stewards can measure progress on completeness and accuracy",
+			"Inbound and outbound feeds follow consistent validation rules",
+			"Records are kept only as long as policy and compliance require"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Data strategy ties ownership, measurable quality, integration discipline, and retention to trustworthy platform decisions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/admin-center/task/measure-admin-center-adoption.html"
+			"https://www.servicenow.com/docs/r/common-service-data-model/csdm.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 20,
-		"prompt": "What is the primary value of IntegrationHub for a platform owner?",
+		"prompt": "Quarterly business reviews show strong project delivery but flat self-service adoption. Which strategic response fits associate platform owner guidance?",
 		"choices": [
-			"To replace all inbound REST APIs with email-based imports",
-			"To bypass credential management requirements",
-			"To eliminate the need for flow testing",
-			"To provide governed, reusable integrations without custom middleware for every use case"
+			"Diagnose adoption barriers and adjust the roadmap to include enablement and UX improvements",
+			"Report only on-time delivery metrics and omit user feedback from executive materials",
+			"Pause all new features indefinitely because adoption cannot change after one slow quarter",
+			"Shift every remaining developer to incident queue assignment full time"
 		],
-		"correctIndex": 3,
-		"explanation": "IntegrationHub supports standardized integration patterns that reduce custom code and improve maintainability.",
+		"correctIndex": 0,
+		"explanation": "Strategy balances delivery with adoption; associate platform owners should surface usage gaps and reprioritize enablement rather than ignoring user experience.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/administer/integrationhub/concept/integrationhub.html"
+			"https://www.servicenow.com/docs/r/impact/impact.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 21,
-		"prompt": "When implementing IntegrationHub spokes, which approach best supports secure operations?",
+		"prompt": "Organizational change leaders ask how to sustain momentum after a major ServiceNow rollout. Which people-focused step should the associate platform owner recommend?",
 		"choices": [
-			"Use Connection & Credential aliases with least-privilege accounts",
-			"Store credentials in script includes for easier reuse",
-			"Embed secrets directly in flow actions",
-			"Reuse production credentials in all sub-prod instances"
+			"Stand up a network of community champions who provide peer support and feedback loops",
+			"Eliminate all training because the initial go-live communication was sufficient",
+			"Centralize every user question through a single admin mailbox with no local advocates",
+			"Disable feedback channels to avoid negative comments during stabilization"
 		],
 		"correctIndex": 0,
-		"explanation": "Connection and credential management centralizes secret handling and enforces safer account-scoping practices.",
+		"explanation": "Champion networks extend enablement beyond launch by connecting peers, surfacing friction early, and reinforcing new ways of working.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/administer/integrationhub/task/configure-connections-and-credentials.html"
+			"https://www.servicenow.com/docs/r/impact/impact.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 22,
-		"prompt": "Why should platform owners standardize reusable subflows for common integration patterns?",
+		"prompt": "A business unit hires analysts who will build low-code workflows. Which people enablement should the associate platform owner schedule under senior guidance?",
 		"choices": [
-			"They eliminate the need for error handling",
-			"They improve consistency and reduce duplicated logic across teams",
-			"They automatically remove all API rate limits",
-			"They convert all asynchronous calls to synchronous execution"
+			"Immediate admin role assignment so new hires never wait for support",
+			"Mandatory certification in unrelated products before any ServiceNow access",
+			"Self-study only with no office hours or office-of-platform contact",
+			"Role-based training on approved tools, intake steps, and when to escalate to platform admins"
 		],
-		"correctIndex": 1,
-		"explanation": "Reusable subflows create consistent design patterns and reduce maintenance burden for enterprise integration automation.",
+		"correctIndex": 3,
+		"explanation": "Targeted training and clear escalation paths help new builders contribute safely without granting unnecessary privileged access on day one.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/administer/flow-designer/concept/subflows.html"
+			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 23,
-		"prompt": "Which control should be implemented to reduce impact from external API outages in IntegrationHub flows?",
+		"questionType": "multi",
+		"prompt": "Two departments disagree on which application should be the system of record for employee requests. Which people practices should the associate platform owner apply? (Choose two.)",
 		"choices": [
-			"Skip logging to preserve performance",
-			"Force every integration to run as a single transaction",
-			"Use robust error handling, retry logic, and alerting for failed actions",
-			"Disable all retries for failed calls"
+			"Facilitate a stakeholder session to document requirements and decision criteria",
+			"Escalate unresolved conflict to executive sponsors with fact-based options",
+			"Implement both solutions in production without alignment to end the debate quickly",
+			"Withdraw from the discussion because platform owners never mediate business conflict"
 		],
 		"correctIndex": 2,
-		"explanation": "Resilience patterns such as retries, exception paths, and alerts help contain failures and improve recovery times.",
+		"correctIndexes": [
+			2,
+			3
+		],
+		"explanation": "Associate platform owners help stakeholders align through structured discovery and appropriate executive escalation rather than parallel conflicting solutions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/administer/flow-designer/task/handle-flow-errors.html"
+			"https://www.servicenow.com/docs/r/impact/impact.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 24,
-		"prompt": "What metric best indicates healthy IntegrationHub operations at associate platform-owner level?",
-		"choices": [
-			"Count of outbound REST steps per flow",
-			"Number of personal developer integrations",
-			"Total number of flow versions created monthly",
-			"Successful execution rate with low incident-causing flow failures"
+		"questionType": "match",
+		"prompt": "Match each platform role to its primary people responsibility during a multi-wave rollout.",
+		"choices": [],
+		"correctIndex": -1,
+		"matchLeftItems": [
+			"Executive sponsor",
+			"Community champion",
+			"Platform admin",
+			"Business process owner"
 		],
-		"correctIndex": 3,
-		"explanation": "Execution success and failure impact provide direct operational signals about integration reliability.",
+		"matchRightItems": [
+			"Secures funding and removes organizational blockers",
+			"Provides peer coaching and collects frontline feedback",
+			"Maintains environment health and supports approved changes",
+			"Defines process outcomes and signs off on fit-for-purpose design"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Successful rollouts clarify people responsibilities across sponsorship, local enablement, technical operations, and business ownership.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/administer/flow-designer/task/monitor-flow-executions.html"
+			"https://www.servicenow.com/docs/r/impact/impact.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 25,
-		"prompt": "When launching a platform adoption blueprint, what should a platform owner define first to guide all later enablement work?",
+		"prompt": "A regional rollout team asks what an OCM Community Champion should focus on during adoption. Which scope best fits the champion role?",
 		"choices": [
-			"Business outcomes, success measures, and adoption personas",
-			"Scoped app naming conventions for all development teams",
-			"Database maintenance windows for non-production clones",
-			"Update set naming prefixes by assignment group"
+			"Peer advocacy, localized feedback, and reinforcing sponsor messaging for affected roles",
+			"Approving platform budgets and signing vendor contracts for the program",
+			"Designing integration architecture and writing production script includes",
+			"Replacing executive sponsors as the final authority on program scope"
 		],
 		"correctIndex": 0,
-		"explanation": "Adoption blueprints should begin with clear outcomes and measurable user adoption goals so enablement activities stay aligned with value delivery.",
+		"explanation": "Community Champions extend sponsorship through trusted peers by gathering feedback and driving adoption; they do not own funding, architecture, or executive authority.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/use/digital-portfolio-management/concept/adoption-and-value-roadmap.html"
+			"https://www.servicenow.com/docs/r/impact/impact.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 26,
-		"prompt": "Which KPI set is most appropriate for monitoring adoption performance after a new workflow goes live?",
+		"prompt": "IT operations and security each maintain separate ticketing tools that overlap with planned ServiceNow capabilities. How should the platform owner begin resolving the conflict?",
 		"choices": [
-			"Only node memory usage and JVM thread count",
-			"Unique active users, completion rate, cycle time, and deflection trend",
-			"Total number of ACL records in the instance",
-			"Plugin activation count and number of update sets"
+			"Mandate immediate shutdown of both tools without stakeholder workshops",
+			"Document overlapping processes, quantify duplicate effort, and align sponsors on a consolidated target state",
+			"Defer consolidation until every legacy contract expires regardless of user impact",
+			"Grant both teams permanent admin rights in production to preserve parallel workflows"
 		],
 		"correctIndex": 1,
-		"explanation": "Adoption performance should combine usage and business process outcomes, not only technical administration statistics.",
+		"explanation": "Tool conflicts are resolved by mapping overlap, quantifying pain, and securing sponsor alignment on consolidation—not abrupt shutdowns or indefinite delay.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/use/performance-analytics/concept/performance-metrics-and-kpis.html"
+			"https://www.servicenow.com/docs/r/impact/impact.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 27,
-		"prompt": "A platform owner needs to enforce multi-domain data policies across departments. What is the best governance action?",
+		"prompt": "Before scheduling enablement sessions for a new ServiceNow workflow, which OCM step should the platform owner complete first?",
 		"choices": [
-			"Disable domain separation so all teams can view all records",
-			"Move sensitive data to client-side local storage",
-			"Use domain separation rules and role-based data access controls",
-			"Require all users to have admin privileges during audits"
+			"Publish production update sets without user communication",
+			"Assess stakeholder impact, resistance risks, and role-specific readiness needs",
+			"Skip discovery because the technical configuration is already complete",
+			"Disable legacy access for all users on day one of training"
 		],
-		"correctIndex": 2,
-		"explanation": "Domain separation and role-aware controls support policy boundaries while allowing shared platform governance.",
+		"correctIndex": 1,
+		"explanation": "OCM begins with impact and readiness assessment so enablement targets the right audiences and addresses likely resistance before go-live.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/company-and-domain-separation/concept/domain-separation.html"
+			"https://www.servicenow.com/docs/r/impact/impact.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 28,
-		"prompt": "Why should a platform owner baseline process performance before publishing an adoption blueprint?",
-		"choices": [
-			"To avoid creating user training artifacts",
-			"To bypass stakeholder sign-off requirements",
-			"To auto-generate all stories in Agile Development",
-			"To compare post-release gains against known pre-adoption metrics"
+		"questionType": "match",
+		"prompt": "Match each OCM orchestration activity to its primary purpose during a platform rollout.",
+		"choices": [],
+		"correctIndex": -1,
+		"matchLeftItems": [
+			"Stakeholder impact assessment",
+			"Champion network activation",
+			"Communication plan execution",
+			"Adoption measurement"
 		],
-		"correctIndex": 3,
-		"explanation": "A baseline enables objective measurement of whether adoption efforts improved targeted outcomes.",
+		"matchRightItems": [
+			"Identify affected roles and likely resistance before launch",
+			"Extend executive messaging through trusted peer advocates",
+			"Deliver consistent updates through agreed channels and cadence",
+			"Track usage and outcomes against agreed success measures"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "OCM orchestration sequences impact analysis, champions, structured communication, and adoption metrics to sustain transformation momentum.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/use/performance-analytics/task/create-baselines.html"
+			"https://www.servicenow.com/docs/r/impact/impact.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 29,
-		"prompt": "Which operating rhythm best supports continuous adoption monitoring in a platform administration team?",
+		"questionType": "multi",
+		"prompt": "Executive sponsors seem disengaged midway through a ServiceNow program. Which sponsorship engagement actions should the platform owner take? (Choose two.)",
 		"choices": [
-			"Regular scorecard reviews with action owners for lagging indicators",
-			"Quarterly review only after all projects close",
-			"No cadence; react only to incidents",
-			"Daily emergency CAB sessions for every enhancement"
+			"Reconfirm business outcomes, baseline metrics, and visible wins tied to sponsor priorities",
+			"Schedule focused sponsor briefings with concise evidence of progress and remaining risks",
+			"Remove sponsors from communications so delivery teams can work without interference",
+			"Pause all enablement until a new steering committee is formed from scratch"
 		],
-		"correctIndex": 0,
-		"explanation": "Recurring scorecard reviews with assigned owners keep adoption objectives visible and drive corrective action.",
+		"correctIndex": 1,
+		"correctIndexes": [
+			1,
+			2
+		],
+		"explanation": "Re-engaging sponsors requires refreshed outcome alignment and concise evidence of value; excluding sponsors or halting enablement undermines adoption.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/use/performance-analytics/task/use-scorecards.html"
+			"https://www.servicenow.com/docs/r/impact/impact.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 30,
-		"prompt": "What is the primary purpose of Setup Hub during initial platform onboarding?",
+		"prompt": "During OCM planning, leaders confuse the platform owner role with the Community Champion role. Which responsibility belongs to the platform owner rather than a champion?",
 		"choices": [
-			"To monitor only MID Server JVM performance",
-			"To configure foundational instance settings through guided steps",
-			"To replace update sets in production deployment",
-			"To migrate all historical audit records across domains"
+			"Coordinating cross-functional adoption strategy, sponsor alignment, and program-level governance",
+			"Delivering peer coaching in a single department without escalation paths",
+			"Collecting informal hallway feedback with no tie to readiness metrics",
+			"Replacing line managers as approvers for every catalog request"
 		],
-		"correctIndex": 1,
-		"explanation": "Setup Hub helps administrators complete baseline configuration activities in a consistent guided process.",
+		"correctIndex": 0,
+		"explanation": "Platform owners orchestrate adoption strategy and sponsor alignment enterprise-wide; champions provide localized peer support within that framework.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/administer/setup-hub/concept/setup-hub.html"
+			"https://www.servicenow.com/docs/r/impact/impact.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 31,
-		"prompt": "When governing an internal app repository, which policy best improves reuse and quality?",
+		"prompt": "A platform owner is asked how knowledge management supports post-go-live operations. Which practice best answers the question?",
 		"choices": [
-			"Publish apps without dependency documentation",
-			"Disable source control integration by default",
-			"Require ownership metadata, review checks, and version standards",
-			"Allow unlimited direct edits in production apps"
+			"Disable article feedback so agents are not distracted by ratings",
+			"Store fixes only in closed incident records with no searchable reuse",
+			"Govern article lifecycle, ownership, and quality reviews so proven solutions are findable",
+			"Publish every draft article directly to end users without approval"
 		],
 		"correctIndex": 2,
-		"explanation": "Repository governance standards make app assets discoverable, supportable, and safer to adopt across teams.",
+		"explanation": "Sustainable knowledge management relies on governed article lifecycle, ownership, and quality so users can find trusted solutions after rollout.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/applications/concept/application-repository.html"
+			"https://www.servicenow.com/docs/r/knowledge-management/knowledge-management.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 32,
-		"prompt": "An enterprise MID strategy should prioritize which architecture outcome?",
+		"prompt": "Procurement is evaluating external support for a ServiceNow implementation. Which supplier type typically delivers hands-on configuration using the Now Create methodology?",
 		"choices": [
-			"Running MID only on developer laptops",
-			"Single MID Server for all business-critical integrations globally",
-			"No clustering so failover can be tested manually",
-			"Segmented, redundant MID placement aligned to network zones and workloads"
+			"A certified ServiceNow implementation partner engaged under a scoped statement of work",
+			"An unrelated hardware leasing firm with no platform delivery credentials",
+			"A generic staffing broker providing temporary admins without methodology oversight",
+			"An internal audit function that only reviews financial controls"
 		],
-		"correctIndex": 3,
-		"explanation": "Distributed and redundant MID deployment improves resilience, security boundary alignment, and integration reliability.",
+		"correctIndex": 0,
+		"explanation": "Implementation partners apply ServiceNow delivery methodology and certified skills under governed SOWs; staffing brokers or unrelated vendors do not fulfill that role.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/product/mid-server/concept/mid-server-architecture.html"
+			"https://www.servicenow.com/docs/r/impact/impact.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 33,
-		"prompt": "Which Setup Hub governance practice helps avoid environment drift?",
+		"questionType": "multi",
+		"prompt": "The communications lead asks which factors must be defined in a platform rollout communication plan. Which elements should the platform owner include? (Choose two.)",
 		"choices": [
-			"Track setup tasks to completion with accountable owners and evidence",
-			"Run setup tasks once and never review completion status",
-			"Let each admin skip steps without documenting exceptions",
-			"Store setup checklists in personal notes only"
+			"Target audiences mapped to message content and delivery channels",
+			"Cadence and accountable owners for each communication stream",
+			"A single generic email sent once with no follow-up schedule",
+			"Technical table schemas without linking messages to business outcomes"
 		],
-		"correctIndex": 0,
-		"explanation": "Formal tracking and evidence improve consistency and auditability of baseline instance configuration.",
+		"correctIndex": 2,
+		"correctIndexes": [
+			2,
+			3
+		],
+		"explanation": "Communication plans define who receives what, through which channels, on what schedule, and who owns each stream—not one-off generic notices.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/administer/setup-hub/task/complete-setup-tasks.html"
+			"https://www.servicenow.com/docs/r/impact/impact.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 34,
-		"prompt": "Why should platform admins classify app repository entries by business capability and support tier?",
-		"choices": [
-			"It forces all apps to use the same custom table prefix",
-			"It helps consumers choose reusable apps with clear ownership and lifecycle expectations",
-			"It prevents any scoped app from being installed",
-			"It removes the need for technical documentation"
+		"questionType": "match",
+		"prompt": "Match each ServiceNow ecosystem participant to its typical responsibility during an implementation.",
+		"choices": [],
+		"correctIndex": -1,
+		"matchLeftItems": [
+			"Executive sponsor",
+			"Platform owner",
+			"Implementation partner",
+			"Community Champion"
 		],
-		"correctIndex": 1,
-		"explanation": "Capability and tier metadata improves app discoverability, reuse decisions, and support planning.",
+		"matchRightItems": [
+			"Advocate for funding and visible support of business outcomes",
+			"Align adoption, governance, and cross-functional delivery priorities",
+			"Execute scoped configuration and testing per Now Create phases",
+			"Reinforce new ways of working among peers in affected teams"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Sponsors advocate, platform owners orchestrate, partners deliver scoped work, and champions drive peer adoption—each role has distinct accountability.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/applications/task/publish-to-application-repository.html"
+			"https://www.servicenow.com/docs/r/impact/impact.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 35,
-		"prompt": "Which instance statistic is most useful for tracking whether transaction demand is outpacing platform capacity?",
+		"prompt": "A business unit wants to engage a ServiceNow partner for a phased rollout. What should the platform owner expect the partner to bring to the engagement?",
 		"choices": [
-			"Number of update sets promoted this month",
-			"Count of active catalog categories",
-			"Transaction throughput trend with response time percentiles",
-			"Total knowledge article views"
+			"Unlimited production admin credentials shared across all partner staff",
+			"A structured Now Create delivery approach with phased planning, build, test, and deploy activities",
+			"Exclusive authority to override internal change governance without documentation",
+			"A guarantee that no organizational change management will be required"
 		],
-		"correctIndex": 2,
-		"explanation": "Throughput and latency trends provide direct visibility into demand and performance pressure on the instance.",
+		"correctIndex": 1,
+		"explanation": "Qualified partners follow ServiceNow's structured delivery methodology across phases; they do not bypass governance or eliminate OCM needs.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/administer/instance-administration/concept/instance-performance-dashboard.html"
+			"https://www.servicenow.com/docs/r/impact/impact.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 36,
-		"prompt": "A security review identifies over-permissive table access. What is the best immediate administrative response?",
+		"prompt": "The primary executive sponsor transfers to another division before the second release wave. Which sponsorship issue should the platform owner address immediately?",
 		"choices": [
-			"Disable all ACLs for the affected table",
-			"Grant admin to all support users temporarily",
-			"Move records to a global table to simplify access",
-			"Tighten ACL conditions and roles using least-privilege principles"
+			"Continue without sponsor replacement because technical work is already underway",
+			"Cancel the program until every business unit signs identical process templates",
+			"Identify a successor sponsor and refresh outcome messaging before the next wave launches",
+			"Shift all accountability to Community Champions so executives are no longer involved"
 		],
-		"correctIndex": 3,
-		"explanation": "Least-privilege ACL adjustments are the correct response to over-broad access findings.",
+		"correctIndex": 2,
+		"explanation": "Sponsor transitions require successor identification and refreshed messaging so adoption and funding support do not stall between waves.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/security/task/create-an-acl-rule.html"
+			"https://www.servicenow.com/docs/r/impact/impact.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 37,
-		"prompt": "When enabling cross-scope access between two applications, what should platform admins prioritize first?",
+		"prompt": "A team is starting its first Now Create deployment for a scoped application. Which stage should occur before configuration work begins in sub-production?",
 		"choices": [
-			"Using explicit application access settings and minimal required privileges",
-			"Allowing unrestricted runtime access for speed",
-			"Disabling scope protections during testing",
-			"Converting both apps to global scope"
+			"Hypercare support with end-user surveys only",
+			"Immediate bulk import of update sets into the production instance",
+			"Discovery and planning that confirms scope, outcomes, and readiness criteria",
+			"Production cutover with rollback plans finalized"
 		],
-		"correctIndex": 0,
-		"explanation": "Explicit and minimal cross-scope permissions reduce security risk while enabling necessary integrations.",
+		"correctIndex": 2,
+		"explanation": "Now Create deployments begin with discovery and planning to align scope and success criteria before build and test activities start.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/applications/reference/cross-scope-access-controls.html"
+			"https://www.servicenow.com/docs/r/application-development/application-development.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 38,
-		"prompt": "Which metric combination best highlights potential security constraints impacting adoption?",
+		"questionType": "multi",
+		"prompt": "Developers propose making urgent fixes directly in the production instance. Which development location practices should the platform owner enforce instead? (Choose two.)",
 		"choices": [
-			"Plugin activation count and node uptime",
-			"Denied ACL attempts, role request turnaround, and task completion drop-off",
-			"Script include count and clone frequency",
-			"Business rule execution order and UI policy count"
+			"Build and capture changes in a dedicated development instance before promotion",
+			"Validate promoted packages in a test instance with regression coverage",
+			"Treat production as the default workspace for all configuration experiments",
+			"Skip test validation whenever the change appears small or low risk"
 		],
-		"correctIndex": 1,
-		"explanation": "Access denials plus user flow degradation can reveal security controls that are misaligned with intended process use.",
+		"correctIndex": 2,
+		"correctIndexes": [
+			2,
+			3
+		],
+		"explanation": "Governed delivery requires development in non-production instances and validation in test before production commit; production-first edits bypass controls.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/security/concept/security-monitoring-and-auditing.html"
+			"https://www.servicenow.com/docs/r/application-development/system-update-sets.html",
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 39,
-		"prompt": "Why should instance statistics reviews be part of a regular admin governance cadence?",
-		"choices": [
-			"They eliminate the need for access reviews",
-			"They remove the need for performance analytics",
-			"They detect trends early so teams can remediate before user impact grows",
-			"They automatically approve all change requests"
+		"questionType": "match",
+		"prompt": "Match each Now Create deployment stage to the primary activity performed there.",
+		"choices": [],
+		"correctIndex": -1,
+		"matchLeftItems": [
+			"Discover and plan",
+			"Configure and build",
+			"Test",
+			"Deploy"
 		],
-		"correctIndex": 2,
-		"explanation": "Routine trend review supports proactive performance and security management rather than reactive firefighting.",
+		"matchRightItems": [
+			"Confirm scope, stakeholders, and readiness criteria for the release",
+			"Develop and capture changes in controlled sub-production environments",
+			"Execute UAT and regression validation against promoted packages",
+			"Commit approved changes through governed release procedures"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Now Create sequences discovery, build, test, and deploy so each phase produces evidence before the next stage begins.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/administer/instance-administration/task/monitor-instance-health.html"
+			"https://www.servicenow.com/docs/r/application-development/application-development.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 40,
-		"prompt": "What is the best administrative control for plugin management in a governed enterprise instance?",
+		"prompt": "Two teams need to move scoped application changes from development to production. Which code promotion method aligns with ServiceNow governance expectations?",
 		"choices": [
-			"Activate plugins directly in production whenever requested",
-			"Allow any fulfilled user to manage plugins",
-			"Disable all plugin documentation requirements",
-			"Use formal impact assessment and approval before plugin activation"
+			"Email XML exports of records to production admins for manual paste",
+			"Direct edits on production during business hours without change records",
+			"Tracked update sets or application repository versions promoted through test with preview and approval",
+			"Shared personal developer accounts that bypass update set capture"
 		],
-		"correctIndex": 3,
-		"explanation": "Plugin activation can affect data model and behavior, so impact assessment and governance approvals are essential.",
+		"correctIndex": 2,
+		"explanation": "Governed promotion uses captured change packages—update sets or app repo versions—previewed in test and approved before production commit.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/administer/plugins/concept/plugin-management.html"
+			"https://www.servicenow.com/docs/r/application-development/system-update-sets.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 41,
-		"prompt": "During update set promotion, which step most reduces migration risk?",
+		"prompt": "Leadership asks why a strict Waterfall schedule is a poor fit for iterative ServiceNow enhancements. Which drawback should the platform owner highlight?",
 		"choices": [
-			"Preview and resolve collisions before committing in target instances",
-			"Promote directly from dev to production with no test instance validation",
-			"Bundle unrelated features in one large emergency update set",
-			"Skip back-out planning for low-priority changes"
+			"Late stakeholder feedback because working increments are not demonstrated until the end of a long phase",
+			"Excessive daily standups that prevent developers from writing code",
+			"Mandatory backlog refinement that eliminates the need for documentation",
+			"Too many sprint retrospectives that slow executive decision making"
 		],
 		"correctIndex": 0,
-		"explanation": "Collision preview and resolution in lower environments prevents avoidable production conflicts.",
+		"explanation": "Waterfall defers demonstrable increments, delaying feedback and adaptation—problematic for platform programs that benefit from iterative validation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/system-update-sets/task/t_PreviewAnUpdateSet.html"
+			"https://www.servicenow.com/docs/r/application-development/application-development.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 42,
-		"prompt": "For cloning at scale, which safeguard is most important for non-production environments?",
+		"prompt": "A delivery team must choose an SDLC approach for ongoing platform enhancements. Which benefit best explains why Agile is commonly recommended on ServiceNow programs?",
 		"choices": [
-			"Allow integrations to call production endpoints immediately",
-			"Apply post-clone data protection and environment-specific sanitization",
-			"Skip clone profiles to reduce clone duration",
-			"Retain all production outbound email settings unchanged"
+			"It eliminates the need for test instances and change approvals",
+			"It delivers working increments in short cycles so stakeholders can inspect and adapt frequently",
+			"It requires all requirements to be frozen before any configuration begins",
+			"It prevents developers from collaborating with business owners during delivery"
 		],
 		"correctIndex": 1,
-		"explanation": "Post-clone controls and sanitization reduce data exposure and prevent unintended external impacts.",
+		"explanation": "Agile SDLC emphasizes short iterations and frequent stakeholder feedback, improving alignment as platform capabilities evolve.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/administer/instance-administration/concept/clone-management.html"
+			"https://www.servicenow.com/docs/r/application-development/application-development.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 43,
-		"prompt": "Why should plugin activation history be tracked as part of platform governance?",
+		"questionType": "multi",
+		"prompt": "A squad new to Scrum asks which ceremony purposes are correct for ServiceNow delivery. Which pairings should the platform owner confirm? (Choose two.)",
 		"choices": [
-			"It enables automatic rollback of all customizations",
-			"It allows unrestricted admin delegation",
-			"It supports auditability and impact troubleshooting across releases",
-			"It replaces update set documentation"
+			"Sprint review: demonstrate completed work and gather stakeholder feedback",
+			"Retrospective: inspect team process and agree improvements for the next sprint",
+			"Daily stand-up: a session where the product owner assigns every task for the day",
+			"Sprint planning: reopen stories already accepted in prior sprints for re-voting"
 		],
-		"correctIndex": 2,
-		"explanation": "Activation history provides change context for audits and helps diagnose behavior shifts after release events.",
+		"correctIndex": 1,
+		"correctIndexes": [
+			1,
+			2
+		],
+		"explanation": "Reviews showcase increments for feedback and retrospectives improve process; stand-ups synchronize the team and planning selects new sprint work.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/administer/plugins/task/view-plugin-status.html"
+			"https://www.servicenow.com/docs/r/application-development/application-development.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 44,
-		"prompt": "Which clone strategy best supports many development teams while reducing contention?",
-		"choices": [
-			"Allow ad hoc full clones at any time",
-			"Ban all clone activities during release cycles",
-			"Clone only production to every personal developer instance daily",
-			"Use scheduled clone waves with role-specific clone profiles and blackout windows"
+		"questionType": "match",
+		"prompt": "Match each code promotion stage to the activity performed there.",
+		"choices": [],
+		"correctIndex": -1,
+		"matchLeftItems": [
+			"Development instance",
+			"Test instance",
+			"Production instance",
+			"Post-deployment"
 		],
-		"correctIndex": 3,
-		"explanation": "Planned clone waves and profiles balance data freshness with operational stability at scale.",
+		"matchRightItems": [
+			"Build changes captured in update sets or scoped application versions",
+			"Run UAT and regression validation on promoted packages",
+			"Commit approved changes through the release change record",
+			"Verify functionality and monitor for defects after go-live"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "The promotion path sequences build, validation, controlled commit, and post-release verification to reduce production risk.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/administer/instance-administration/task/schedule-a-clone.html"
+			"https://www.servicenow.com/docs/r/application-development/system-update-sets.html",
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 45,
-		"prompt": "What is the strongest governance control for outbound email in a ServiceNow platform owner model?",
+		"prompt": "During sprint execution, external teams keep pulling developers into unplanned work. Which Agile role is accountable for shielding the team and escalating the impediment?",
 		"choices": [
-			"Define approved sender domains, templates, and notification ownership with periodic audits",
-			"Disable notification logs to reduce storage usage",
-			"Allow any admin to create production email notifications directly",
-			"Route all outbound email through personal mailboxes"
+			"The scrum master, who protects sprint focus and removes blockers",
+			"The Community Champion, who approves production deployments",
+			"The steering committee, which assigns daily tasks to each developer",
+			"The product owner, who rewrites all acceptance criteria mid-sprint"
 		],
 		"correctIndex": 0,
-		"explanation": "Email governance relies on controlled templates, sender policies, and accountable ownership to reduce risk and inconsistency.",
+		"explanation": "The scrum master facilitates process and removes impediments, including protecting the team from distractions that threaten sprint commitments.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/notification/concept/c_Notifications.html",
-			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_EmailSecurity.html"
+			"https://www.servicenow.com/docs/r/application-development/application-development.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 46,
-		"prompt": "Why should a platform owner establish notification design standards across business apps?",
+		"prompt": "Stakeholders disagree on which enhancement should ship next. In Scrum, who owns sequencing the product backlog by business value?",
 		"choices": [
-			"To eliminate all event-driven communications",
-			"To prevent duplicate, conflicting, or low-value notifications that degrade user trust",
-			"To bypass approval for emergency communication changes",
-			"To require every team to build custom mail scripts"
+			"The development team, based on whichever stories are most technically interesting",
+			"The scrum master, who orders items to balance developer skill sets",
+			"The product owner, who prioritizes backlog items using stakeholder input and value",
+			"The service desk manager, who schedules work around shift coverage"
 		],
-		"correctIndex": 1,
-		"explanation": "Consistent standards reduce noise and support a predictable notification experience for users and stakeholders.",
+		"correctIndex": 2,
+		"explanation": "Backlog prioritization is the product owner's responsibility; the team owns how work is done, not what comes first.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/notification/concept/c_Notifications.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/system-properties/concept/c_SystemProperties.html"
+			"https://www.servicenow.com/docs/r/application-development/application-development.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 47,
-		"prompt": "Which metric best signals notification governance health in production?",
+		"prompt": "An auditor asks why platform configuration should not occur directly in production. What is the strongest governance reason?",
 		"choices": [
-			"Maximum use of custom scripts in every notification",
-			"Number of email templates created without review",
-			"Stable delivery success with reduced duplicate sends and lower opt-out complaints",
-			"Highest possible number of notifications sent per day"
+			"Production instances lack tables for storing update set records",
+			"Direct production edits bypass test validation, change control, and audit trails required for safe promotion",
+			"Developers cannot log in to production instances under any role assignment",
+			"Update sets can only be created from personal laptops outside the platform"
 		],
-		"correctIndex": 2,
-		"explanation": "Governance effectiveness is reflected in reliable delivery and reduced communication fatigue, not raw volume.",
+		"correctIndex": 1,
+		"explanation": "Production-first changes skip controlled build, test, and approval steps, increasing defect risk and weakening auditability.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/notification/concept/c_Notifications.html"
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 48,
-		"prompt": "How should emergency notification changes be governed to balance speed and control?",
+		"questionType": "multi",
+		"prompt": "Before promoting a release package from test to production, which SDLC controls should the platform owner require? (Choose two.)",
 		"choices": [
-			"Allow each support analyst to publish independent templates",
-			"Permit direct edits in production without records for faster resolution",
-			"Delay all urgent updates until the next monthly release window",
-			"Use expedited change procedures with post-implementation review and rollback readiness"
+			"Preview-validated update sets or app versions with collisions resolved",
+			"Documented UAT and regression sign-off in the sub-production environment",
+			"Committing directly on production to shorten the release calendar",
+			"Skipping test whenever the developer is confident in the change"
 		],
-		"correctIndex": 3,
-		"explanation": "Expedited but documented change control protects reliability while enabling rapid response when communication must change quickly.",
+		"correctIndex": 2,
+		"correctIndexes": [
+			2,
+			3
+		],
+		"explanation": "Safe SDLC promotion requires conflict-free change packages and documented test evidence; bypassing test or editing production defeats governance.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/notification/concept/c_Notifications.html"
+			"https://www.servicenow.com/docs/r/application-development/system-update-sets.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 49,
-		"prompt": "What ownership model most improves long-term notification governance?",
-		"choices": [
-			"Assign business service owners to notification portfolios with defined review cadences",
-			"Centralize all notifications under a single ungoverned global script",
-			"Disable role-based access controls for notification administration",
-			"Treat notification content as purely technical configuration"
+		"questionType": "match",
+		"prompt": "Match each Agile role on a ServiceNow delivery team to its primary responsibility.",
+		"choices": [],
+		"correctIndex": -1,
+		"matchLeftItems": [
+			"Product owner",
+			"Scrum master",
+			"Development team",
+			"Stakeholders"
 		],
-		"correctIndex": 0,
-		"explanation": "Named ownership with scheduled reviews aligns communication quality with business outcomes and compliance obligations.",
+		"matchRightItems": [
+			"Maximize product value and accept completed stories against criteria",
+			"Facilitate ceremonies, remove impediments, and coach Agile practice",
+			"Estimate, build, and test committed sprint backlog items",
+			"Provide requirements input and feedback during sprint reviews"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Agile role clarity keeps delivery healthy: the product owner owns value, the scrum master owns facilitation, the team owns execution, and stakeholders contribute feedback.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/roles/concept/c_Roles.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/notification/concept/c_Notifications.html"
+			"https://www.servicenow.com/docs/r/application-development/application-development.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 50,
-		"prompt": "What is the main goal of running HealthScan in a platform owner governance cycle?",
+		"prompt": "Before a family upgrade enters the production window, which process step best validates that custom workflows still behave as expected?",
 		"choices": [
-			"Automatically remediate every issue without ownership",
-			"Identify architectural, performance, and maintainability risks before they become operational incidents",
-			"Generate deployment approvals with no human validation",
-			"Replace all code review activities across teams bounded by transaction quotas defined in the integration contract."
-		],
-		"correctIndex": 1,
-		"explanation": "HealthScan supports proactive governance by highlighting risk patterns that require prioritized remediation.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
-		]
-	},
-	{
-		"trackCode": "CPOA",
-		"order": 51,
-		"prompt": "How should HealthScan findings be converted into actionable governance outcomes?",
-		"choices": [
-			"Archive reports without review to preserve historical records",
-			"Delegate remediation ownership to external users",
-			"Map findings to accountable owners, remediation deadlines, and risk severity thresholds",
-			"Treat all findings as informational with no follow-up"
-		],
-		"correctIndex": 2,
-		"explanation": "Findings only create value when they are tracked with ownership, priority, and closure criteria.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/problem-management/concept/problem-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
-		]
-	},
-	{
-		"trackCode": "CPOA",
-		"order": 52,
-		"prompt": "Which cadence is most appropriate for enterprise HealthScan governance?",
-		"choices": [
-			"Run only when incidents breach SLA",
-			"Run once after initial go-live only",
-			"Run daily in production without analyzing trends",
-			"Run on a recurring schedule aligned to release milestones and major architectural changes"
-		],
-		"correctIndex": 3,
-		"explanation": "Regular scanning aligned with change velocity enables trend analysis and early intervention.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html"
-		]
-	},
-	{
-		"trackCode": "CPOA",
-		"order": 53,
-		"prompt": "What is a strong indicator that HealthScan governance is improving platform quality?",
-		"choices": [
-			"A sustained reduction in high-risk findings across consecutive scans",
-			"More emergency changes to address recurring architecture issues",
-			"Higher backlog age for critical remediation tasks",
-			"An increase in exempted findings with no justification"
+			"Execute regression and user acceptance testing in sub-production on the upgraded baseline",
+			"Apply the upgrade directly in production and rely on user tickets to surface defects",
+			"Skip functional testing when release notes show no breaking changes",
+			"Disable all business rules in production until stakeholders confirm adoption"
 		],
 		"correctIndex": 0,
-		"explanation": "Downward risk trends across scans show that remediation controls are effective and durable.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
-		]
-	},
-	{
-		"trackCode": "CPOA",
-		"order": 54,
-		"prompt": "How should platform owners handle repeated HealthScan findings that span multiple teams?",
-		"choices": [
-			"Assign all items to one developer for faster completion",
-			"Create a cross-team remediation program with common standards and executive visibility",
-			"Defer remediation until the next platform upgrade",
-			"Close all repeated findings as accepted risk"
-		],
-		"correctIndex": 1,
-		"explanation": "Shared recurring issues require coordinated governance and standardization, not isolated fixes.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html"
-		]
-	},
-	{
-		"trackCode": "CPOA",
-		"order": 55,
-		"prompt": "What is the core governance purpose of ServiceNow Store and app management for platform owners?",
-		"choices": [
-			"Install every available app to accelerate feature adoption",
-			"Disable version tracking for simpler administration",
-			"Control app intake, risk review, and lifecycle ownership before installation and updates",
-			"Allow business teams to deploy Store apps directly to production"
-		],
-		"correctIndex": 2,
-		"explanation": "Store governance ensures only approved, supportable apps enter the platform lifecycle.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/app-store/concept/app-repository-and-store.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
-		]
-	},
-	{
-		"trackCode": "CPOA",
-		"order": 56,
-		"prompt": "How should a platform owner evaluate third-party Store apps before approval?",
-		"choices": [
-			"Skip compatibility checks if installation succeeds in development",
-			"Approve based only on popularity ratings in the Store",
-			"Delegate all evaluation to requester teams without governance",
-			"Assess security posture, dependency impact, upgrade compatibility, and support model fit"
-		],
-		"correctIndex": 3,
-		"explanation": "App approval requires technical, operational, and security due diligence beyond basic functionality.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/app-store/concept/app-repository-and-store.html",
-			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Hardening.html"
-		]
-	},
-	{
-		"trackCode": "CPOA",
-		"order": 57,
-		"prompt": "Which practice best controls Store app upgrade risk across environments?",
-		"choices": [
-			"Use staged rollout with documented test evidence and rollback plans before production",
-			"Rely on vendor release notes without internal validation",
-			"Disable application version governance during fiscal close",
-			"Upgrade directly in production to minimize cycle time"
-		],
-		"correctIndex": 0,
-		"explanation": "Staged rollout validates compatibility and prevents broad impact from unexpected regressions.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-application-development/page/build/applications/concept/c_ApplicationLifecycleManagement.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
-		]
-	},
-	{
-		"trackCode": "CPOA",
-		"order": 58,
-		"prompt": "What inventory artifact most improves governance for installed apps and plugins?",
-		"choices": [
-			"An informal channel thread with installation notes",
-			"A maintained catalog of app versions, owners, dependencies, and approval status",
-			"A one-time screenshot of installed plugins",
-			"A list of app names without version details"
-		],
-		"correctIndex": 1,
-		"explanation": "Structured inventory enables impact analysis, upgrade planning, and ownership accountability.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/plugins/concept/c_ActivatingPlugins.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/app-store/concept/app-repository-and-store.html"
-		]
-	},
-	{
-		"trackCode": "CPOA",
-		"order": 59,
-		"prompt": "Which KPI best reflects effective Store and app governance outcomes?",
-		"choices": [
-			"Maximum number of apps installed per quarter",
-			"Most customizations applied to vendor apps",
-			"High percentage of approved apps with successful upgrades and low post-release incidents",
-			"Longest average approval turnaround regardless risk"
-		],
-		"correctIndex": 2,
-		"explanation": "Governance success combines controlled adoption with stable operations after deployment.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/app-store/concept/app-repository-and-store.html"
-		]
-	},
-	{
-		"trackCode": "CPOA",
-		"order": 60,
-		"prompt": "What is the primary objective of release testing governance for platform owners?",
-		"choices": [
-			"Run only smoke tests on production after release",
-			"Depend solely on developer unit tests for enterprise readiness",
-			"Skip testing when changes are labeled low effort",
-			"Validate business-critical functionality, integrations, and non-functional risks before deployment"
-		],
-		"correctIndex": 3,
-		"explanation": "Release testing governance ensures changes meet quality and risk expectations before customer impact.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-application-development/page/build/team-development/concept/c_TestManagement.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
-		]
-	},
-	{
-		"trackCode": "CPOA",
-		"order": 61,
-		"prompt": "Which testing scope best supports owner-level release confidence?",
-		"choices": [
-			"Combine regression, integration, and user acceptance testing with documented entry and exit criteria",
-			"Execute tests only after production deployment",
-			"Approve releases based on past performance trends",
-			"Limit testing to updated records only distributed using update sets merged in dependency order. (CPOA-61-w3)"
-		],
-		"correctIndex": 0,
-		"explanation": "A layered test scope with clear criteria provides meaningful evidence for release decisions.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-application-development/page/build/team-development/concept/c_TestManagement.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
-		]
-	},
-	{
-		"trackCode": "CPOA",
-		"order": 62,
-		"prompt": "How should failed release tests be governed when delivery deadlines are tight?",
-		"choices": [
-			"Push release and resolve issues in production",
-			"Use risk-based go/no-go decisions with remediation plans and explicit stakeholder sign-off",
-			"Override failures when sprint commitments are at risk",
-			"Hide failed results from release notes until after go-live"
-		],
-		"correctIndex": 1,
-		"explanation": "Risk-based governance preserves control by making exception decisions transparent and accountable.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
-		]
-	},
-	{
-		"trackCode": "CPOA",
-		"order": 63,
-		"prompt": "Which artifact most improves auditability of release testing governance?",
-		"choices": [
-			"A simple pass/fail status message in team chat",
-			"Screenshots of selected test runs without metadata",
-			"A traceability matrix linking requirements, test cases, defects, and release approvals",
-			"An undocumented list of high-priority user stories"
-		],
-		"correctIndex": 2,
-		"explanation": "Traceability demonstrates that release decisions are evidence-based and repeatable.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-application-development/page/build/team-development/concept/c_TestManagement.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
-		]
-	},
-	{
-		"trackCode": "CPOA",
-		"order": 64,
-		"prompt": "What KPI best indicates release testing governance maturity over time?",
-		"choices": [
-			"Greater number of waived test cases per release",
-			"Longer manual testing cycles regardless risk profile",
-			"Increased emergency post-release hotfix count",
-			"Reduced escaped defects in production with stable release predictability"
-		],
-		"correctIndex": 3,
-		"explanation": "Mature governance improves quality outcomes while maintaining predictable delivery performance.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/problem-management/concept/problem-management.html"
-		]
-	},
-	{
-		"trackCode": "CPOA",
-		"order": 65,
-		"prompt": "For a platform owner, what is the primary purpose of an executive analytics view?",
-		"choices": [
-			"Provide a concise, outcome-focused view of platform health, adoption, and risk for decision-making",
-			"Eliminate the need for data collection schedules",
-			"Display only raw table records without aggregation",
-			"Replace all operational dashboards used by administrators"
-		],
-		"correctIndex": 0,
-		"explanation": "Owner views should summarize strategic platform performance so leadership can prioritize actions and investments.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html"
-		]
-	},
-	{
-		"trackCode": "CPOA",
-		"order": 66,
-		"prompt": "Which metric category is most valuable in a platform owner analytics view for early risk detection?",
-		"choices": [
-			"Only total number of users in the instance",
-			"Leading indicators such as backlog aging trends and change failure rate movement",
-			"Only yearly license counts",
-			"Only number of dashboard widgets created"
-		],
-		"correctIndex": 1,
-		"explanation": "Leading indicators signal emerging operational issues before lagging outcomes become severe.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
-		]
-	},
-	{
-		"trackCode": "CPOA",
-		"order": 67,
-		"prompt": "When an owner dashboard shows SLA compliance dropping in one business service, what is the best next action?",
-		"choices": [
-			"Hide the indicator until the next quarter",
-			"Disable data collection to avoid noise",
-			"Drill down into supporting indicators and assign targeted remediation with clear owners",
-			"Assume the decline is temporary and take no action"
-		],
-		"correctIndex": 2,
-		"explanation": "Owner views should be actionable, enabling deeper analysis and accountable follow-through when risks appear.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
-		]
-	},
-	{
-		"trackCode": "CPOA",
-		"order": 68,
-		"prompt": "What design choice best improves trust in an owner-facing analytics view?",
-		"choices": [
-			"Allow each team to define metrics ad hoc without standards",
-			"Refresh scores manually only when leadership asks",
-			"Use duplicated indicators with conflicting formulas",
-			"Document indicator definitions, data sources, and update cadence directly in dashboard context"
-		],
-		"correctIndex": 3,
-		"explanation": "Transparent metric definitions and collection behavior reduce ambiguity and improve confidence in analytics.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html"
-		]
-	},
-	{
-		"trackCode": "CPOA",
-		"order": 69,
-		"prompt": "Which governance practice keeps a platform owner analytics view aligned with business priorities over time?",
-		"choices": [
-			"Run a recurring KPI review cycle to retire low-value metrics and add outcome-aligned indicators",
-			"Allow unrestricted metric changes in production",
-			"Track only technical uptime regardless of service outcomes",
-			"Lock all KPIs permanently after first publication"
-		],
-		"correctIndex": 0,
-		"explanation": "Periodic KPI governance ensures analytics remain relevant as strategy, services, and operating goals evolve.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
-		]
-	},
-	{
-		"trackCode": "CPOA",
-		"order": 70,
-		"prompt": "For final owner KPI design, which principle most directly ties platform analytics to business value?",
-		"choices": [
-			"Prioritize metrics that are easiest to collect over those that are meaningful",
-			"Map each KPI to a defined service outcome and accountable owner",
-			"Track only infrastructure uptime regardless of service context",
-			"Use identical KPI targets for every business function"
-		],
-		"correctIndex": 1,
-		"explanation": "Outcome-aligned KPIs with clear ownership keep platform reporting focused on measurable business impact.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
-		]
-	},
-	{
-		"trackCode": "CPOA",
-		"order": 71,
-		"prompt": "Which KPI set gives a platform owner the strongest balanced view of operational performance?",
-		"choices": [
-			"Only number of active plugins",
-			"Only yearly user growth",
-			"Reliability, delivery speed, quality/compliance, and adoption outcomes",
-			"Only ticket volume by assignment group"
-		],
-		"correctIndex": 2,
-		"explanation": "A balanced KPI portfolio reduces blind spots and helps leadership optimize for both stability and value delivery.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html"
-		]
-	},
-	{
-		"trackCode": "CPOA",
-		"order": 72,
-		"prompt": "What is the best way to keep owner KPIs trustworthy as data sources change over time?",
-		"choices": [
-			"Archive historic scores whenever schema changes occur",
-			"Disable data collector jobs during source transitions",
-			"Allow formula updates directly in production without review",
-			"Implement metric governance for source validation, formula change control, and baseline rechecks"
-		],
-		"correctIndex": 3,
-		"explanation": "Change control and periodic baselining protect trend integrity and prevent misleading KPI movement.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
-		]
-	},
-	{
-		"trackCode": "CPOA",
-		"order": 73,
-		"prompt": "How should platform owners handle KPI threshold breaches that persist for multiple reporting cycles?",
-		"choices": [
-			"Trigger escalation with documented corrective plans and track closure in governance reviews",
-			"Lower thresholds until results appear green",
-			"Treat repeated breaches as normal variance benchmarked during performance test cycles before rollout.",
-			"Pause reporting until the issue is resolved"
-		],
-		"correctIndex": 0,
-		"explanation": "Persistent KPI failures require formal remediation and leadership visibility to restore control and confidence.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
-		]
-	},
-	{
-		"trackCode": "CPOA",
-		"order": 74,
-		"prompt": "As the final batch reaches order 74, what is the most effective way to operationalize owner KPIs long-term?",
-		"choices": [
-			"Restrict KPI access to one administrator account",
-			"Embed KPI review into recurring operating cadence with decisions, owners, and follow-up actions",
-			"Publish KPI dashboards once and rely on ad hoc interpretation",
-			"Track KPIs only during major upgrade windows"
-		],
-		"correctIndex": 1,
-		"explanation": "KPIs create value when tied to routine governance meetings and explicit decision workflows.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
-		]
-	},
-	{
-		"trackCode": "CPOA",
-		"order": 75,
-		"prompt": "What is a key responsibility of a platform owner in instance governance?",
-		"choices": [
-			"Write every client script personally",
-			"Own only HR workflows",
-			"Define operating standards, guardrails, and decision rights for platform teams",
-			"Approve only hardware purchases"
-		],
-		"correctIndex": 2,
-		"explanation": "Platform owners establish governance structures that keep implementation teams aligned with enterprise standards.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-administration/concept/platform-governance.html"
-		]
-	},
-	{
-		"trackCode": "CPOA",
-		"order": 76,
-		"prompt": "Why should a platform owner maintain a release and upgrade readiness process?",
-		"choices": [
-			"To replace CAB approvals",
-			"To disable plugin dependencies",
-			"To avoid all testing activities",
-			"To assess impact, validate customizations, and reduce upgrade risk"
-		],
-		"correctIndex": 3,
-		"explanation": "Upgrade readiness planning identifies risks early and validates that custom behavior remains compatible.",
+		"explanation": "Upgrade process guidance requires validating critical workflows in sub-production before production cutover so customization impact is understood early.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/upgrade-center.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
-		"order": 77,
-		"prompt": "Which metric most directly helps a platform owner evaluate request fulfillment bottlenecks?",
+		"order": 51,
+		"prompt": "A platform owner is defining the release promotion process for scoped application updates. Which practice aligns with ServiceNow governance expectations?",
 		"choices": [
-			"Lead time and queue aging by assignment group",
-			"Total sys_user records",
-			"Number of update sets created",
-			"Count of active plugins"
+			"Allow developers to commit update sets in production whenever test capacity is unavailable",
+			"Retire the test instance once production reaches the target family release",
+			"Merge parallel update sets without preview because naming conventions prevent collisions",
+			"Capture changes in development, preview and resolve conflicts in test, then commit with approved change records"
+		],
+		"correctIndex": 3,
+		"explanation": "Controlled promotion flows move tracked changes through preview, test validation, and approved production commit rather than bypassing environments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/system-update-sets.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 52,
+		"questionType": "match",
+		"prompt": "Match each upgrade process phase to the platform owner activity performed in that phase.",
+		"choices": [],
+		"correctIndex": -1,
+		"matchLeftItems": [
+			"Prepare",
+			"Test in sub-production",
+			"Resolve skipped updates",
+			"Production cutover"
+		],
+		"matchRightItems": [
+			"Review readiness insights, customization inventory, and maintenance window constraints",
+			"Validate integrations and critical workflows on the upgraded baseline",
+			"Reconcile customer changes with new vendor baselines before commit",
+			"Execute the upgrade with documented rollback criteria and stakeholder communication"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "The upgrade lifecycle sequences preparation, staged validation, conflict resolution, and governed production execution to reduce surprise and rollback frequency.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/upgrade-center.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 53,
+		"prompt": "Operations needs a full production copy in a lower environment to reproduce a complex integration defect. Which cloning scenario best fits this requirement?",
+		"choices": [
+			"Schedule a full instance clone with post-clone cleanup and suspended outbound integrations",
+			"Export selected tables to CSV and import them manually without clone profiles",
+			"Grant developers direct read-only SQL access to the production database",
+			"Copy individual update sets from production without cloning instance data"
 		],
 		"correctIndex": 0,
-		"explanation": "Lead time and aging trends expose queue constraints and process friction in delivery workflows.",
+		"explanation": "Full instance clones provide representative data and configuration for troubleshooting when paired with cleanup scripts and integration safeguards.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/instance-clone.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 54,
+		"questionType": "multi",
+		"prompt": "A team maintains seeded reference data in sub-production that must survive recurring production clones. Which capabilities should the platform owner configure? (Choose two.)",
+		"choices": [
+			"Clone data preservers for the protected reference tables",
+			"Clone exclusions for tables that should not overwrite preserved datasets",
+			"Unrestricted admin access for every developer in the cloned target",
+			"Automatic rollback of all plugins after each clone completes"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Data preservers protect designated datasets during clones while exclusions prevent unwanted tables from overwriting preserved reference data.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/clone-data-preservation.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 55,
+		"prompt": "When planning a major family upgrade, which components should a platform owner treat as critical to validate before production cutover?",
+		"choices": [
+			"Custom integrations, scoped applications, MID Server connectivity, and security hardening settings",
+			"Homepage theme colors, personal dashboard layouts, and user avatar images",
+			"Historical chat transcripts unrelated to platform configuration",
+			"Individual browser bookmark collections stored outside the instance"
+		],
+		"correctIndex": 0,
+		"explanation": "Upgrade planning emphasizes integrations, application scope, connectivity, and security posture because failures in these areas disrupt core platform operations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/upgrade-center.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 56,
+		"questionType": "multi",
+		"prompt": "Which are features in ServiceNow Security Center? (Choose two.)",
+		"choices": [
+			"Security hardening",
+			"Catalog item bundling",
+			"Update set batch preview",
+			"Security metrics"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Security Center provides hardening settings with compliance scoring and built-in security metrics dashboards for monitoring instance posture.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/security-center/sec-center-v2.html",
+			"https://www.servicenow.com/docs/r/platform-security/instance-security-hardening-settings/security-hardening-settings.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 57,
+		"prompt": "Developers request weekly full clones of production into a shared development instance. Which cloning scenario creates the highest operational risk if cleanup is skipped?",
+		"choices": [
+			"Cloned production data triggering outbound email and live integration calls from a non-production instance",
+			"Cloning a sandbox with no production data into an empty developer instance",
+			"Refreshing a personal developer instance from a sanitized sub-production template",
+			"Copying a single scoped application repository without instance data"
+		],
+		"correctIndex": 0,
+		"explanation": "Production clones without post-clone sanitization can expose sensitive data and trigger unintended external actions from lower environments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/instance-clone.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 58,
+		"questionType": "match",
+		"prompt": "Match each Now Platform service area to its primary technical characteristic.",
+		"choices": [],
+		"correctIndex": -1,
+		"matchLeftItems": [
+			"Platform Core",
+			"Admin and Configuration",
+			"Integration Services",
+			"Security and Compliance"
+		],
+		"matchRightItems": [
+			"Foundational runtime, data model, and workflow engine shared by all applications",
+			"Instance administration, user access, and system configuration tooling",
+			"APIs, spokes, and orchestration for connecting external systems",
+			"Hardening, access controls, and audit capabilities for regulatory alignment"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Platform service areas divide core runtime, administration, integration, and security responsibilities that platform owners must understand at associate level.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 59,
+		"prompt": "During clone profile design, when are table-level exclusions most appropriate?",
+		"choices": [
+			"When specific large or sensitive tables should not be copied into the target instance",
+			"When every table must always be copied without exception",
+			"When developers need unrestricted production database credentials",
+			"When clone duration should increase by copying unnecessary audit archives"
+		],
+		"correctIndex": 0,
+		"explanation": "Clone exclusions omit designated tables from the copy operation to reduce exposure, duration, or overwrite of preserved lower-environment data.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/clone-data-preservation.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 60,
+		"prompt": "An associate platform owner explains the ServiceNow Support Portal to a new team member. Which description best reflects portal characteristics?",
+		"choices": [
+			"Licensed customers access product documentation, release information, known issues, and support case management",
+			"Any internet user can download unrestricted production database backups on demand",
+			"The portal replaces internal change advisory board approvals for all production deployments",
+			"Developers use the portal solely to purchase hardware unrelated to platform subscriptions"
+		],
+		"correctIndex": 0,
+		"explanation": "The Support Portal centralizes official documentation, defect information, release content, and customer support interactions for licensed products.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 61,
+		"prompt": "A mid-size agency with one IT operations team and moderate customization asks which implementation model fits best. What should the platform owner recommend?",
+		"choices": [
+			"A single production instance with standard environment sequencing and shared maintenance windows",
+			"Separate production instances per department with independent and uncoordinated upgrade calendars",
+			"On-premises hosting requiring the agency to manage all infrastructure patching alone",
+			"Domain separation for every internal team regardless of data isolation requirements"
+		],
+		"correctIndex": 0,
+		"explanation": "Organizations with unified governance and limited isolation needs typically benefit from one production instance with disciplined promotion paths.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 62,
+		"questionType": "match",
+		"prompt": "Match each Support Portal resource to the step a platform owner takes when using it during upgrade planning.",
+		"choices": [],
+		"correctIndex": -1,
+		"matchLeftItems": [
+			"Review release notes",
+			"Search known error articles",
+			"Consult product documentation",
+			"Open a support case"
+		],
+		"matchRightItems": [
+			"Identify new features and breaking changes before scheduling the upgrade window",
+			"Check documented defects that may affect the targeted version",
+			"Validate configuration guidance for capabilities being deployed",
+			"Escalate blockers with vendor engineering when internal remediation stalls"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Support Portal resources support a sequenced approach: release awareness, defect review, implementation guidance, and vendor escalation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 63,
+		"prompt": "During an active upgrade cycle, where should functional testing of custom workflows occur before production commit?",
+		"choices": [
+			"In sub-production on the upgraded baseline with documented test evidence",
+			"Only after production cutover when end users report issues",
+			"Exclusively on developer laptops without instance connectivity",
+			"In production during peak business hours without a rollback plan"
+		],
+		"correctIndex": 0,
+		"explanation": "Testing inside the upgrade cycle occurs in sub-production so customization impact is validated on the new baseline before production workloads are affected.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/upgrade-center.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 64,
+		"questionType": "multi",
+		"prompt": "After a security patch is applied in test, which next steps should the platform owner require before production deployment? (Choose two.)",
+		"choices": [
+			"Documented regression results for affected integrations and critical workflows",
+			"Approved change record with defined rollback criteria and maintenance window",
+			"Immediate production deployment without change tracking to minimize delay",
+			"Permanent deferral of all future patches until the next family upgrade"
+		],
+		"correctIndex": 1,
+		"correctIndexes": [
+			1,
+			3
+		],
+		"explanation": "Patch promotion requires validated test evidence and governed change approval with rollback planning before touching production.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 65,
+		"prompt": "Which statement best describes a technical characteristic of the ServiceNow Platform Core service?",
+		"choices": [
+			"It provides the shared data model, workflow engine, and runtime foundation for all applications",
+			"It exclusively manages third-party hardware asset serial numbers",
+			"It replaces the need for any user access controls or audit logging",
+			"It hosts only email notification templates without supporting business logic"
+		],
+		"correctIndex": 0,
+		"explanation": "Platform Core delivers the foundational runtime, tables, and workflow capabilities that every ServiceNow application builds upon.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 66,
+		"prompt": "Which capability best reflects the Now Intelligence service area on the platform?",
+		"choices": [
+			"Physical data center rack provisioning for on-premises customers",
+			"Disabling all dashboards to reduce storage consumption",
+			"Manual spreadsheet imports as the only reporting option",
+			"Analytics, machine learning, and performance insights that support data-driven decisions"
+		],
+		"correctIndex": 3,
+		"explanation": "Now Intelligence encompasses analytics, AI, and performance capabilities that help organizations measure and improve platform outcomes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-analytics-and-reporting/performance-analytics/performance-analytics-overview.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 67,
+		"questionType": "match",
+		"prompt": "Match each platform service area to an associate-level characteristic a platform owner should recognize.",
+		"choices": [],
+		"correctIndex": -1,
+		"matchLeftItems": [
+			"Admin and Configuration",
+			"Integration Services",
+			"Security and Compliance",
+			"Now Intelligence"
+		],
+		"matchRightItems": [
+			"User administration, system properties, and instance configuration tools",
+			"REST APIs, IntegrationHub spokes, and orchestrated external connectivity",
+			"Access controls, hardening guidance, and audit evidence for regulatory needs",
+			"Reporting, Performance Analytics, and AI-assisted insights on platform data"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Associate platform owners distinguish administration, integration, security, and intelligence capabilities when guiding teams and sponsors.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html",
+			"https://www.servicenow.com/docs/r/platform-security/security-center/sec-center-v2.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 68,
+		"prompt": "An auditor asks where to find ServiceNow cloud compliance attestations and security documentation. Which resource should the platform owner reference?",
+		"choices": [
+			"The ServiceNow TRUST Center and compliance documentation portal",
+			"A developer's personal wiki page without vendor attestation",
+			"Unverified third-party exam preparation forums",
+			"The instance login banner text alone"
+		],
+		"correctIndex": 0,
+		"explanation": "The TRUST Center publishes compliance certifications, security white papers, and shared-responsibility guidance for customer audit needs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/company/trust/compliance.html",
+			"https://www.servicenow.com/company/trust/security.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 69,
+		"questionType": "multi",
+		"prompt": "Which compliance-related resources does ServiceNow provide for platform owners evaluating vendor security posture? (Choose two.)",
+		"choices": [
+			"Third-party audit reports and certification summaries in the TRUST Center",
+			"Shared responsibility model documentation describing customer and provider duties",
+			"Unrestricted production credential sharing guides for all integrations",
+			"Instructions to disable all audit logs to simplify compliance reviews"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			2
+		],
+		"explanation": "TRUST Center materials include audit attestations and shared-responsibility guidance that help customers understand compliance boundaries.",
+		"sourceUrls": [
+			"https://www.servicenow.com/company/trust/compliance.html",
+			"https://www.servicenow.com/standard/resource-center/white-paper/wp-shared-responsibility-model.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 70,
+		"prompt": "Which Admin and Configuration capability is most relevant when a platform owner standardizes instance setup across environments?",
+		"choices": [
+			"System properties, user administration, and guided setup tools such as Setup Hub",
+			"Disabling all ACLs so administrators can edit records without restriction",
+			"Removing sub-production instances to eliminate environment drift checks",
+			"Routing every configuration change directly to production without tracking"
+		],
+		"correctIndex": 0,
+		"explanation": "Admin and Configuration services provide the tooling to configure instances consistently, manage users, and apply standardized setup patterns.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 71,
+		"prompt": "A department wants to connect HR and finance systems to ServiceNow workflows. Which Integration Services characteristic best supports this goal?",
+		"choices": [
+			"Reusable spokes, REST APIs, and orchestrated flows with managed credentials",
+			"Hard-coded credentials embedded in every client script without rotation",
+			"One-off custom endpoints per team with no connection governance",
+			"Blocking all inbound and outbound integration traffic permanently"
+		],
+		"correctIndex": 0,
+		"explanation": "Integration Services emphasize managed connections, reusable integration patterns, and API-based connectivity rather than ad hoc bespoke endpoints.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/integrate-applications/integrationhub/integrationhub.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 72,
+		"questionType": "match",
+		"prompt": "Match each testing context to when a platform owner should apply it relative to the upgrade cycle.",
+		"choices": [],
+		"correctIndex": -1,
+		"matchLeftItems": [
+			"Inside the upgrade cycle",
+			"Outside the upgrade cycle",
+			"Skipped update remediation testing",
+			"Post-cutover hypercare validation"
+		],
+		"matchRightItems": [
+			"Validate custom workflows on the upgraded sub-production baseline before production commit",
+			"Run ongoing regression suites between major releases to catch drift early",
+			"Confirm merged or retired local changes behave correctly after baseline updates",
+			"Verify critical capabilities and integrations immediately after production upgrade"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Testing spans in-cycle validation on upgraded baselines, between-release regression, skipped-update verification, and post-cutover hypercare checks.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/upgrade-center.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 73,
+		"prompt": "Which Security and Compliance platform characteristic should an associate platform owner emphasize when briefing executives?",
+		"choices": [
+			"Layered access controls, hardening guidance, and audit evidence supporting regulatory alignment",
+			"Elimination of all role-based access to speed up development",
+			"Disabling encryption because the cloud provider handles all data protection",
+			"Granting admin privileges to all requesters for faster self-service"
+		],
+		"correctIndex": 0,
+		"explanation": "Security and Compliance services combine access management, hardening tools such as Security Center, and audit capabilities for governance and regulatory needs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/security-center/sec-center-v2.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 74,
+		"questionType": "multi",
+		"prompt": "Before requesting a production clone, which preparations align with platform owner technology governance? (Choose two.)",
+		"choices": [
+			"Define clone profile requirements including data preservers, exclusions, and cleanup scripts",
+			"Skip clone profiles to minimize duration regardless of data sensitivity",
+			"Enable live outbound email from the cloned instance to speed user acceptance testing",
+			"Verify maintenance window approval and post-clone integration suspension plans"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Clone governance requires profile design for data handling and approved windows with safeguards that prevent unintended external impact from cloned environments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/instance-clone.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/clone-data-preservation.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 75,
+		"prompt": "A municipal agency must synchronize employee identities from on-premises Active Directory into ServiceNow with scheduled updates and password policy alignment. Which integration approach best fits this requirement?",
+		"choices": [
+			"LDAP integration with a defined update schedule and mapped identity attributes",
+			"Manual CSV imports uploaded by each department supervisor every quarter",
+			"Custom REST endpoints that write directly to production without a service account",
+			"Shared local ServiceNow accounts created once and reused across all departments"
+		],
+		"correctIndex": 0,
+		"explanation": "LDAP integration supports scheduled synchronization from Active Directory with attribute mapping and governed service credentials for identity lifecycle management.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/user-administration/concept/c_LDAPIntegration.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-integrate-applications/page/administer/integration-hub/concept/integration-hub.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 76,
+		"prompt": "Before expanding application service mapping, a platform owner discovers location and company records are incomplete. Which data classification explains why those records must be corrected first?",
+		"choices": [
+			"Transactional data that records daily incident volume by assignment group",
+			"Foundational data that provides organizational context for downstream CMDB modeling",
+			"Analytical data stored only in Performance Analytics indicator snapshots",
+			"Ephemeral session data cleared automatically after each user logout event"
+		],
+		"correctIndex": 1,
+		"explanation": "CSDM foundation data such as companies and locations establishes organizational context that application services and configuration items depend on.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/common-service-data-model/concept/csdm-foundation-data.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/common-service-data-model/concept/csdm-overview.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 77,
+		"prompt": "An operations director asks for a one-time export of open change records filtered by assignment group for an audit packet. Which capability should the platform owner recommend?",
+		"choices": [
+			"Performance Analytics indicator with quarterly targets and automated threshold alerts",
+			"Strategic Planning Workspace initiative linked to a portfolio investment theme",
+			"Standard reporting with list filters and export to share the current record set",
+			"IntegrationHub spoke that polls the change table every minute for trend scoring"
+		],
+		"correctIndex": 2,
+		"explanation": "Ad hoc filtered exports of current records are best served by native reporting; Performance Analytics is designed for trend-based KPI monitoring over time.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/reporting/concept/reporting-overview.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 78,
-		"prompt": "What is the platform owner’s objective when defining a development intake model?",
-		"choices": [
-			"To block all enhancement requests",
-			"To prioritize demand using consistent criteria and strategic alignment",
-			"To route all work to one developer",
-			"To remove stakeholder involvement"
+		"questionType": "match",
+		"prompt": "Match each platform data concept to the associate-level outcome it supports.",
+		"choices": [],
+		"correctIndex": -1,
+		"matchLeftItems": [
+			"Foundational data stewardship",
+			"Transactional process records",
+			"Standard operational reporting",
+			"Performance Analytics indicators"
 		],
-		"correctIndex": 1,
-		"explanation": "A structured intake model helps evaluate demand by value, risk, and capacity rather than ad hoc urgency.",
+		"matchRightItems": [
+			"Reliable organizational context before service and CI relationships scale",
+			"Day-to-day workflow evidence such as incidents, changes, and requests",
+			"Point-in-time filtered views for audits and operational snapshots",
+			"Trend-based KPIs with targets that signal sustained improvement or decline"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Platform owners distinguish foundation data, transactional records, ad hoc reporting, and PA indicators because each supports different governance and decision-making needs.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/demand-governance.html"
+			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/common-service-data-model/concept/csdm-overview.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 79,
-		"prompt": "Why is role-based access governance important for platform ownership?",
+		"questionType": "multi",
+		"prompt": "Leadership adopted Strategic Planning Workspace to connect platform investments to business outcomes. Which practices should the platform owner establish? (Choose two.)",
 		"choices": [
-			"It replaces all auditing requirements",
-			"It disables delegated administration",
-			"It enforces least privilege and reduces operational/security risk",
-			"It eliminates the need for groups"
+			"Define value-driven metrics with baselines before funding new platform initiatives",
+			"Link strategic objectives to measurable platform KPIs reviewed on a regular cadence",
+			"Track only technical uptime metrics without tying them to business objectives",
+			"Replace all CMDB foundation data reviews because strategy workspace supersedes CSDM"
 		],
-		"correctIndex": 2,
-		"explanation": "Least-privilege access design limits unnecessary entitlements and supports compliance controls.",
+		"correctIndex": 1,
+		"correctIndexes": [
+			1,
+			3
+		],
+		"explanation": "Strategic Planning Workspace gains value when initiatives connect to measurable outcomes with baselines and recurring KPI review—not isolated technical metrics or abandoned data stewardship.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/access-control/access-controls.html",
-			"https://www.servicenow.com/docs/r/platform-administration/user-administration/audit-user-roles.html"
+			"https://www.servicenow.com/docs/bundle/washingtondc-impact/page/impact/strategic-planning-workspace/concept/strategic-planning-workspace.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 80,
-		"prompt": "What is a practical use of a platform standards playbook?",
+		"prompt": "Executive sponsors question whether platform spending is improving service delivery. Which data-driven response best demonstrates why trustworthy data matters to platform ownership?",
 		"choices": [
-			"It replaces test environments",
-			"It defines naming, design, and lifecycle patterns for consistent implementation",
-			"It controls MID Server certificates",
-			"It stores encrypted attachment binaries"
+			"Share anecdotal feedback from one team without validating record completeness",
+			"Defer all metrics until every CMDB CI reaches one hundred percent completeness",
+			"Report only total user count because volume proves platform value automatically",
+			"Present trend KPIs sourced from governed indicators with documented data ownership"
 		],
 		"correctIndex": 3,
-		"explanation": "Standards playbooks align teams on repeatable implementation patterns and quality expectations.",
+		"explanation": "Platform owners justify investment with governed, trend-based KPIs backed by clear data ownership—not unverified anecdotes or unrelated volume counts.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/common-service-data-model/concept/csdm-overview.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 81,
-		"prompt": "How does a platform owner typically use Performance Analytics?",
+		"prompt": "A regulated agency must demonstrate that configuration and access data supports audit requirements. Which ServiceNow resource should the platform owner reference first?",
 		"choices": [
-			"To monitor KPI trends and support data-driven platform decisions",
-			"To create ACL scripts automatically",
-			"To enforce update set conflicts",
-			"To replace all native reports"
+			"Cloud Governance Suite compliance guidance and data stewardship practices",
+			"UI theme designer defaults for the employee service portal homepage",
+			"Catalog item icon library standards for request presentation consistency",
+			"Virtual Agent conversation script templates for password reset deflection"
 		],
 		"correctIndex": 0,
-		"explanation": "Performance Analytics tracks trends and targets, helping owners make informed governance and investment decisions.",
+		"explanation": "Cloud Governance Suite and CSDM stewardship guidance help platform owners align configuration data and access controls with compliance expectations.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-analytics-and-reporting/performance-analytics/performance-analytics-overview.html"
+			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/cloud-governance-suite/concept/cloud-governance-suite.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/security/concept/c_Hardening.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 82,
-		"prompt": "What is the value of separating duties across admin, developer, and approver personas?",
+		"prompt": "Portfolio leaders want to prioritize three competing platform initiatives for the next fiscal year. Which Strategic Planning Workspace outcome should the platform owner deliver?",
 		"choices": [
-			"It guarantees zero incidents",
-			"It reduces risk by limiting concentration of privileged control",
-			"It removes need for logging",
-			"Fewer test environments are needed"
+			"A ranked initiative list with linked objectives, expected value, and accountable sponsors",
+			"A complete disablement of all non-production instances to reduce storage cost",
+			"A single global update set containing every team's in-flight customization",
+			"An unrestricted admin role grant so sponsors can edit production records directly"
 		],
-		"correctIndex": 1,
-		"explanation": "Segregation of duties improves control effectiveness and reduces fraud or accidental misuse risk.",
+		"correctIndex": 0,
+		"explanation": "Strategic Planning Workspace supports prioritizing initiatives against objectives and expected value with clear sponsorship—not ad hoc production access or environment shortcuts.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/identity-governance/segregation-of-duties.html"
+			"https://www.servicenow.com/docs/bundle/washingtondc-impact/page/impact/strategic-planning-workspace/concept/strategic-planning-workspace.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 83,
-		"prompt": "What should drive platform roadmap prioritization most strongly?",
-		"choices": [
-			"Number of open list filters",
-			"Color scheme updates",
-			"Business value, risk reduction, and strategic outcomes",
-			"Personal preference of one team"
+		"questionType": "match",
+		"prompt": "Match each data governance activity to the compliance or quality outcome it primarily supports.",
+		"choices": [],
+		"correctIndex": -1,
+		"matchLeftItems": [
+			"Foundation data certification",
+			"Table rotation and archival policy",
+			"Indicator data source validation",
+			"Access recertification campaigns"
 		],
-		"correctIndex": 2,
-		"explanation": "Roadmaps should align with measurable business outcomes and risk posture, not ad hoc requests alone.",
+		"matchRightItems": [
+			"Confirms organizational master data is accurate before dependent services rely on it",
+			"Controls retention volume on high-growth tables within regulatory limits",
+			"Ensures KPI trends reflect trusted fields rather than stale or mis-mapped data",
+			"Verifies elevated roles remain justified and reduces unauthorized entitlement risk"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Compliance scenarios span master data certification, retention controls, analytics integrity, and access governance—each addressing a distinct risk platform owners must manage.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
+			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/common-service-data-model/concept/csdm-foundation-data.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/table-administration/concept/c_TableRotationAndArchival.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 84,
-		"prompt": "Why is environment strategy (dev/test/prod) important to platform ownership?",
+		"questionType": "multi",
+		"prompt": "An internal audit flagged inconsistent incident categorization that skews executive dashboards. Which remediation steps should the platform owner prioritize? (Choose two.)",
 		"choices": [
-			"It supports controlled promotion, testing, and release reliability",
-			"It removes need for update sets",
-			"It allows direct prod-only development",
-			"It prevents all defects from occurring"
+			"Review Performance Analytics indicator sources to confirm they reference governed fields",
+			"Allow each team to create private category values without a shared reference list",
+			"Disable all breakdowns so dashboards show only aggregate totals without detail",
+			"Define data ownership and validation rules for categorization fields used in KPIs"
 		],
-		"correctIndex": 3,
-		"explanation": "Clear environment purpose and promotion flow reduce release risk and improve change quality.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Audit findings on skewed dashboards require governed categorization ownership and validated PA sources—not hidden breakdowns or unconstrained local values.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/instance-management.html"
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/cloud-governance-suite/concept/cloud-governance-suite.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 85,
-		"prompt": "What is the primary reason to establish a plugin review process?",
+		"prompt": "A platform owner is selecting KPIs for a quarterly business review on request fulfillment. Which metric best reflects a value-driven outcome rather than raw activity volume?",
 		"choices": [
-			"To assess feature overlap, dependencies, and operational impact before activation",
-			"To avoid licensing conversations",
-			"To disable all new functionality",
-			"To prevent incident creation constrained by export control classifications on shared data sets."
+			"Total number of catalog items published regardless of usage or fulfillment quality",
+			"Average time from request submission to fulfilled delivery against a defined target",
+			"Count of update sets created by developers during the reporting period",
+			"Number of active UI policies configured on the Request Item table"
 		],
-		"correctIndex": 0,
-		"explanation": "A review process avoids unmanaged complexity by validating plugin value, dependencies, and support requirements.",
+		"correctIndex": 1,
+		"explanation": "Value-driven metrics tie to outcomes such as fulfillment cycle time against targets—not catalog volume or development artifact counts unrelated to service delivery.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/plugin-management.html"
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-impact/page/impact/strategic-planning-workspace/concept/strategic-planning-workspace.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 86,
-		"prompt": "What does a platform owner gain from a formal architecture review board?",
+		"questionType": "multi",
+		"prompt": "A service desk manager needs both a weekly trend of mean time to resolve and a same-day list of breached incidents for escalation. Which capability pairing should the platform owner recommend? (Choose two.)",
 		"choices": [
-			"Unlimited script runtime",
-			"Consistent design decisions across teams and solutions",
-			"Automatic role assignment",
-			"A replacement for change management"
+			"Performance Analytics indicator tracking resolution time with weekly aggregation",
+			"Operational report filtered to breached incidents exported for the current day",
+			"Strategic Planning Workspace initiative record replacing all operational dashboards",
+			"IntegrationHub flow that deletes resolved incidents to improve trend appearance"
 		],
-		"correctIndex": 1,
-		"explanation": "Architecture reviews create consistent technical direction and reduce divergent solution patterns.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			3
+		],
+		"explanation": "Trend monitoring belongs in Performance Analytics while point-in-time breach lists are operational reports—each serves a distinct associate-level analytics need.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/reporting/concept/reporting-overview.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 87,
-		"prompt": "Which practice best supports platform resiliency and continuity?",
+		"prompt": "A new platform governance council must decide who approves enterprise standards versus who reviews individual application designs. Which governance level owns the enterprise standards decision?",
 		"choices": [
-			"Remove health dashboards",
-			"Use only manual approvals",
-			"Define backup, recovery, and operational response procedures",
-			"Disable all event processing"
+			"Technical governance focused on code review for a single scoped application team",
+			"Portfolio governance that prioritizes funding for one business unit's backlog only",
+			"Strategic governance setting enterprise direction, investment themes, and guardrails",
+			"Local team governance where each developer group defines its own naming conventions"
 		],
 		"correctIndex": 2,
-		"explanation": "Documented resiliency procedures and response ownership improve continuity during incidents or outages.",
+		"explanation": "Strategic governance establishes enterprise direction and guardrails; portfolio governance prioritizes investments; technical governance executes standards within those boundaries.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/high-availability-and-disaster-recovery.html"
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-administration/concept/platform-governance.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-impact/page/impact/impact.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 88,
-		"prompt": "How should a platform owner treat technical debt in customizations?",
-		"choices": [
-			"Delete all custom apps immediately",
-			"Track it visibly and prioritize remediation alongside new demand",
-			"Move it to production comments only",
-			"Ignore it until upgrades fail"
+		"questionType": "match",
+		"prompt": "Match each ServiceNow governance level to its primary platform owner focus.",
+		"choices": [],
+		"correctIndex": -1,
+		"matchLeftItems": [
+			"Strategic governance",
+			"Portfolio governance",
+			"Technical governance"
 		],
-		"correctIndex": 3,
-		"explanation": "Technical debt needs intentional backlog management to avoid compounding maintenance and upgrade risk.",
+		"matchRightItems": [
+			"Enterprise vision, investment themes, and cross-domain standards",
+			"Prioritization of demand, capacity, and value across programs",
+			"Solution design reviews, coding standards, and release quality controls"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			}
+		],
+		"explanation": "Three governance levels divide responsibilities: strategy sets direction, portfolio allocates investment, and technical execution ensures quality within guardrails.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/technical-debt-management.html"
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-administration/concept/platform-governance.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-impact/page/impact/impact.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 89,
-		"prompt": "What is the main benefit of defining service ownership metadata for platform capabilities?",
+		"prompt": "Finance asks the platform owner to explain which document records the products and quantities the organization is entitled to use. Which artifact should be referenced?",
 		"choices": [
-			"It clarifies accountability for support, decision-making, and lifecycle management",
-			"It replaces assignment groups",
-			"It removes ACL requirements documented in the operational run cost model spreadsheet.",
-			"It forces all work into one queue"
+			"Subscription entitlement baseline aligned to contracted SKUs and product modules",
+			"Update set batch label naming convention used by the development team",
+			"HealthScan report listing skipped security hardening recommendations",
+			"Clone schedule calendar showing last production-to-test refresh dates"
 		],
 		"correctIndex": 0,
-		"explanation": "Ownership metadata makes escalation and governance decisions clear across operating teams.",
+		"explanation": "Subscription and entitlement baselines document contracted products and limits that platform teams must operate within during provisioning and true-up cycles.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
+			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/cloud-governance-suite/concept/cloud-governance-suite.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/subscription-management/concept/subscription-management.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 90,
-		"prompt": "What should platform owners emphasize in stakeholder communication?",
+		"prompt": "After HR Service Delivery go-live, fulfillment agent headcount doubled but finance sees no matching subscription increase. Which licensing distinction should the platform owner clarify first?",
 		"choices": [
-			"Only release dates",
-			"Outcome-focused reporting on value, risk, and progress",
-			"Only raw sys_id values",
-			"Only outage details"
+			"Fulfiller licenses apply to agents performing work on records, separate from requester access",
+			"Every internal employee automatically consumes a fulfiller license when logging in once",
+			"Capacity licensing replaces all role-based entitlements for ITSM and HR products",
+			"Requester and fulfiller licenses are interchangeable without product-specific rules"
 		],
-		"correctIndex": 1,
-		"explanation": "Outcome-oriented communication helps stakeholders understand impact beyond technical activity metrics.",
+		"correctIndex": 0,
+		"explanation": "Fulfiller, requester, and capacity licensing models apply differently by role and product; platform owners must map active roles to the correct subscription types.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
+			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/cloud-governance-suite/concept/cloud-governance-suite.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/subscription-management/concept/subscription-management.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 91,
-		"prompt": "What is a primary governance reason to maintain naming conventions across artifacts?",
+		"prompt": "A business unit wants to publish twenty new catalog items that trigger workflow for specialized agents. What licensing consideration should the platform owner raise during intake review?",
 		"choices": [
-			"They prevent all update conflicts",
-			"They encrypt table records",
-			"They improve discoverability, supportability, and operational consistency",
-			"They replace dictionary entries"
+			"Catalog visibility alone never affects licensing because browsing is unrestricted",
+			"New fulfillment workflows may increase licensed agent roles tied to subscribed products",
+			"Catalog items inherit only hardware asset licenses regardless of workflow design",
+			"Service catalog licensing applies exclusively to external customer portals"
 		],
-		"correctIndex": 2,
-		"explanation": "Consistent naming reduces confusion and improves troubleshooting and lifecycle management.",
+		"correctIndex": 1,
+		"explanation": "Catalog items that route work to specialized fulfillers can increase consumption of product-specific agent licenses beyond requester access alone.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-standards.html"
+			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/cloud-governance-suite/concept/cloud-governance-suite.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/product/service-catalog/concept/c_ServiceCatalog.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 92,
-		"prompt": "Why should a platform owner monitor instance health indicators regularly?",
-		"choices": [
-			"To identify performance or stability trends before they become major incidents",
-			"To disable all background jobs",
-			"To remove audit tables",
-			"To reduce the number of users"
+		"questionType": "match",
+		"prompt": "Match each subscription governance artifact to the platform owner responsibility it supports.",
+		"choices": [],
+		"correctIndex": -1,
+		"matchLeftItems": [
+			"Entitlement baseline register",
+			"Role-to-license mapping standard",
+			"Usage anomaly dashboard",
+			"True-up readiness report"
 		],
-		"correctIndex": 3,
-		"explanation": "Routine health monitoring enables proactive remediation and better service reliability.",
+		"matchRightItems": [
+			"Documents contracted products and limits teams must operate within",
+			"Defines which roles consume which subscription types during provisioning",
+			"Highlights sudden growth in licensed capabilities that may trigger fees",
+			"Supplies finance with verified consumption evidence before vendor reconciliation"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Subscription governance combines documented entitlements, role mapping, usage monitoring, and finance-ready reporting—each an associate-level platform owner responsibility.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/instance-health.html"
+			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/cloud-governance-suite/concept/cloud-governance-suite.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/subscription-management/concept/subscription-management.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 93,
-		"prompt": "Which approach best supports sustainable platform scaling?",
+		"prompt": "An integration team proposes four options to connect a legacy payroll system: LDAP, IntegrationHub spoke, third-party connector, and custom REST. Who should approve the pattern that aligns with enterprise integration standards?",
 		"choices": [
-			"Reusable patterns, shared components, and governance automation",
-			"Single-developer ownership of all apps",
-			"Disabling standards reviews",
-			"One-off customizations for every team"
+			"The developer with the shortest backlog regardless of security review status",
+			"Platform governance reviewing fit to standards, licensing, and operational support",
+			"End users voting on the connector with the simplest UI configuration screen",
+			"Vendor sales representatives selecting the option bundled in the latest promotion"
 		],
-		"correctIndex": 0,
-		"explanation": "Reusable components and automated governance reduce duplication and improve long-term scalability.",
+		"correctIndex": 1,
+		"explanation": "Platform governance evaluates integration options against enterprise standards, security, licensing implications, and long-term support—not individual convenience or vendor promotions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
+			"https://www.servicenow.com/docs/bundle/washingtondc-integrate-applications/page/administer/integration-hub/concept/integration-hub.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-administration/concept/platform-governance.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 94,
-		"prompt": "What is the purpose of periodic access recertification?",
+		"questionType": "multi",
+		"prompt": "Before the annual subscription true-up, which inputs should the platform owner validate with procurement? (Choose two.)",
 		"choices": [
-			"To remove historical incidents",
-			"To confirm users still need privileged roles and remove excess access",
-			"To rotate UI themes",
-			"To recalculate list layout defaults"
+			"Active plugin and product activation compared against contracted SKU coverage",
+			"Growth trends in specialized roles such as approvers and fulfillment agents",
+			"Total number of homepage themes configured per business unit portal",
+			"Average handle time for chat sessions unrelated to licensed products"
 		],
 		"correctIndex": 1,
-		"explanation": "Recertification validates that elevated access remains justified and supports least-privilege compliance.",
+		"correctIndexes": [
+			1,
+			2
+		],
+		"explanation": "True-up readiness requires matching activated products and role growth to contracted entitlements—not cosmetic portal settings or unrelated operational metrics.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/identity-governance/access-review.html"
+			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/cloud-governance-suite/concept/cloud-governance-suite.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/subscription-management/concept/subscription-management.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 95,
-		"prompt": "What does effective demand governance reduce most directly?",
+		"prompt": "Customer experience leadership asks which ServiceNow KPI best measures satisfaction after major portal changes. Which indicator should the platform owner recommend tracking?",
 		"choices": [
-			"Need for role models",
-			"Need for all KPIs",
-			"Unplanned work and low-value backlog growth",
-			"Importance of testing"
+			"Customer Satisfaction (CSAT) score trend following defined survey methodology",
+			"Total count of knowledge articles published without response-rate context",
+			"Number of MID Server heartbeat events recorded during discovery windows",
+			"Volume of update set collisions detected in the development instance"
 		],
-		"correctIndex": 2,
-		"explanation": "Demand governance filters and prioritizes requests so teams focus on strategic and high-value work.",
+		"correctIndex": 0,
+		"explanation": "CSAT surveys provide a standard ServiceNow KPI for measuring customer or employee satisfaction trends after experience changes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/demand-governance.html"
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/product/service-catalog/concept/c_ServiceCatalog.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 96,
-		"prompt": "What is a core reason to document platform decision records?",
+		"prompt": "A team wants to build a point-to-point scripted integration instead of using an IntegrationHub spoke available in the store. Which governance factor should the platform owner weigh most heavily?",
 		"choices": [
-			"To preserve rationale for architectural and governance choices over time",
-			"To bypass CAB approvals",
-			"To hide technical debt",
-			"To replace source control commits"
+			"Whether the custom approach bypasses reusable patterns, supportability, and license coverage",
+			"Whether the script editor theme matches the developer's personal IDE color preferences",
+			"Whether the integration uses fewer than ten lines of JavaScript regardless of risk",
+			"Whether the vendor published a marketing blog endorsing custom integrations last quarter"
 		],
-		"correctIndex": 3,
-		"explanation": "Decision records make future maintenance and governance reviews more transparent and defensible.",
+		"correctIndex": 0,
+		"explanation": "Governance compares custom integrations against reusable spokes for maintainability, operational support, and entitlement coverage—not cosmetic or arbitrary preferences.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
+			"https://www.servicenow.com/docs/bundle/washingtondc-integrate-applications/page/administer/integration-hub/concept/integration-hub.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-administration/concept/platform-governance.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 97,
-		"prompt": "Which indicator helps evaluate whether platform operations are improving over time?",
-		"choices": [
-			"Trend-based KPIs for reliability, throughput, and quality",
-			"Amount of homepage text",
-			"Count of inactive users only",
-			"Number of favorite records"
+		"questionType": "match",
+		"prompt": "Match each integration option to the scenario where it is most appropriate for a platform owner to recommend it.",
+		"choices": [],
+		"correctIndex": -1,
+		"matchLeftItems": [
+			"LDAP / Active Directory integration",
+			"IntegrationHub spoke from the store",
+			"Third-party connector application",
+			"Custom scoped REST integration"
 		],
-		"correctIndex": 0,
-		"explanation": "Trend KPIs provide time-based evidence of operational improvement or degradation.",
+		"matchRightItems": [
+			"Scheduled identity synchronization from corporate directory services",
+			"Standardized vendor-supported flow for a common SaaS endpoint with reusable subflows",
+			"Certified partner app when store spoke coverage is limited but support is required",
+			"Unique legacy protocol with no maintained connector and accepted maintenance ownership"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Platform owners match integration patterns to scenario fit: directory sync, reusable spokes, partner connectors, or governed custom builds when no standard option exists.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-analytics-and-reporting/performance-analytics/performance-analytics-overview.html"
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/user-administration/concept/c_LDAPIntegration.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-integrate-applications/page/administer/integration-hub/concept/integration-hub.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 98,
-		"prompt": "What outcome is expected from a mature platform ownership model?",
+		"questionType": "multi",
+		"prompt": "The platform governance council is formalizing operating model responsibilities across three levels. Which assignments should the platform owner document? (Choose two.)",
 		"choices": [
-			"No change approvals required",
-			"Predictable delivery with controlled risk and measurable business value",
-			"All development moved to global scope",
-			"Unlimited customization without standards"
+			"Strategic forum sets enterprise guardrails and investment themes for the platform",
+			"Portfolio forum prioritizes demand and capacity across business programs",
+			"Technical forum replaces all change advisory board approvals for production outages",
+			"Strategic forum performs daily incident queue assignment for every support team"
 		],
-		"correctIndex": 1,
-		"explanation": "Mature ownership balances speed, quality, and risk with governance and value transparency.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			2
+		],
+		"explanation": "Strategic governance sets direction and guardrails while portfolio governance prioritizes programs; technical governance supports quality without replacing incident operations or CAB roles.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-administration/concept/platform-governance.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-impact/page/impact/impact.html"
 		]
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 99,
-		"prompt": "Why should platform owners encourage reusable integration patterns?",
+		"prompt": "As the CPOA bank reaches its final orders, which outcome best summarizes a mature ServiceNow governance model for an associate platform owner?",
 		"choices": [
-			"They eliminate security requirements",
-			"They prevent data ownership decisions",
-			"They lower maintenance cost and improve consistency across teams",
-			"They remove all need for API documentation"
+			"Predictable delivery with controlled risk, verified entitlements, and measurable value",
+			"Complete elimination of KPI reviews once initial adoption targets are met",
+			"All development performed directly in production to eliminate environment cost",
+			"Unlimited customization without standards to maximize team autonomy"
 		],
-		"correctIndex": 2,
-		"explanation": "Reusable patterns improve reliability, reduce duplication, and simplify future enhancement work.",
+		"correctIndex": 0,
+		"explanation": "Mature platform governance balances predictable delivery and controlled risk with verified licensing and value transparency—not unconstrained customization or abandoned measurement.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/integration-patterns/integration-patterns-overview.html"
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-administration/concept/platform-governance.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/cloud-governance-suite/concept/cloud-governance-suite.html"
 		]
 	},
 	{
@@ -27554,7 +29024,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each element of a platform vision document to what it should primarily communicate to executive stakeholders.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Target outcomes",
 			"Capability roadmap",
@@ -27596,9 +29066,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A regional agency documents chronic duplicate workflows across HR, IT, and facilities. Given this case study, what is the first step in creating a ServiceNow platform strategy to address the problem?",
 		"choices": [
 			"Facilitate cross-functional discovery to map shared processes, pain points, and desired outcomes",
-			"Purchase additional product SKUs before validating common workflow patterns",
 			"Mandate a single application team to rebuild all processes without stakeholder input",
-			"Postpone strategy work until every legacy system is fully decommissioned"
+			"Postpone strategy work until every legacy system is fully decommissioned",
+			"Purchase additional product SKUs before validating common workflow patterns"
 		],
 		"correctIndex": 0,
 		"explanation": "Strategy starts with understanding organizational pain and aligning stakeholders on shared outcomes before committing to platform capabilities or sequencing.",
@@ -27665,7 +29135,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each step in seeking sponsorship engagement to its purpose when demonstrating business value.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Identify executive champions",
 			"Quantify baseline pain",
@@ -27755,10 +29225,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Given a case study outlining siloed demand intake across departments, which elements belong in a documented ServiceNow platform strategy? (Choose two.)",
 		"choices": [
-			"Current-state pain points and stakeholder map",
 			"Target outcomes and guiding principles for platform use",
+			"A fixed list of admin UI themes for each business unit",
 			"Detailed script includes for every planned customization",
-			"A fixed list of admin UI themes for each business unit"
+			"Current-state pain points and stakeholder map"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -27792,7 +29262,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each roadmap horizon to the type of content executives typically expect at that stage.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Near term (0–12 months)",
 			"Mid term (1–2 years)",
@@ -27843,12 +29313,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 15,
 		"prompt": "A healthcare organization cites clinician resistance after a failed portal rollout. Given this case study, which OCM orchestration should the platform owner lead before the next wave?",
 		"choices": [
-			"Co-design sessions with affected roles to align workflows, training, and success measures",
 			"Re-launch identical workflows with a new logo and color scheme only",
+			"Postpone user involvement until development completes all custom modules",
 			"Mandate usage through policy enforcement without enablement support",
-			"Postpone user involvement until development completes all custom modules"
+			"Co-design sessions with affected roles to align workflows, training, and success measures"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Recovery from adoption failure requires collaborative redesign and enablement so users see how the platform improves their work.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -27876,7 +29346,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each strategic persuasion technique to when a platform owner should apply it with executive stakeholders.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Outcome storytelling",
 			"Scenario comparison",
@@ -27939,10 +29409,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"Maximum number of isolated custom applications per department",
 			"Elimination of all governance boards to speed decisions"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			2
 		],
 		"explanation": "Federated enterprises benefit from unified experiences and shared data standards; fragmentation and absent governance undermine platform strategy.",
 		"sourceUrls": [
@@ -27987,7 +29457,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each platform strategy artifact to its primary audience and use.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Executive summary",
 			"Capability map",
@@ -28109,7 +29579,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each organizational change management activity to its primary purpose during a platform transformation.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Stakeholder impact assessment",
 			"Champion network activation",
@@ -28159,7 +29629,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			2
 		],
 		"explanation": "Strategy documents articulate outcomes and principles; sprint-level technical tasks belong in delivery backlogs, not executive strategy artifacts.",
 		"sourceUrls": [
@@ -28225,10 +29695,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"A single option presented without alternatives to reduce meeting duration",
 			"Technical jargon without translation to business outcomes or financial impact"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			2
 		],
 		"explanation": "Executive persuasion requires transparent scenarios with trade-offs and honest risk discussion—not single options or untranslated technical detail.",
 		"sourceUrls": [
@@ -28241,7 +29711,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each platform roadmap artifact to the decision it primarily supports.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Capability heat map",
 			"Investment portfolio view",
@@ -28315,7 +29785,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each executive sponsorship role to its primary accountability during a platform program.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Executive sponsor",
 			"Business owner",
@@ -28358,9 +29828,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Before launching a major ServiceNow capability wave, which OCM readiness factors should the platform owner validate? (Choose three.)",
 		"choices": [
 			"Executive messaging aligned to the outcomes users should expect",
-			"Training and support paths tailored to affected roles and regions",
 			"Feedback channels to capture adoption issues during early rollout",
-			"Complete retirement of every legacy system before any pilot begins"
+			"Complete retirement of every legacy system before any pilot begins",
+			"Training and support paths tailored to affected roles and regions"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -28432,10 +29902,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"Daily stand-up notes from the development team for the prior week",
 			"Individual performance ratings for every contractor on the program"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			3
 		],
 		"explanation": "Annual strategy updates reflect measured progress and reprioritized roadmaps—not operational meeting notes or HR records.",
 		"sourceUrls": [
@@ -28448,7 +29918,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each enterprise BI integration pattern to the scenario where it best applies.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Scheduled data product feeds",
 			"Event-driven streaming updates",
@@ -28489,12 +29959,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 44,
 		"prompt": "The primary executive sponsor announces retirement mid-program. Which action should the platform owner take to preserve sponsorship momentum?",
 		"choices": [
-			"Identify a successor sponsor, transfer context, and reconfirm committed outcomes and funding",
 			"Pause all delivery until the organization completes a full reorganization",
+			"Reduce scope silently to avoid briefing incoming leadership on program status",
 			"Continue without sponsor engagement assuming funding will renew automatically",
-			"Reduce scope silently to avoid briefing incoming leadership on program status"
+			"Identify a successor sponsor, transfer context, and reconfirm committed outcomes and funding"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Sponsor transitions require deliberate succession, context transfer, and reaffirmed outcomes—not silent scope cuts or unmanaged drift.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -28575,7 +30045,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each cost and resource planning term to what it primarily helps executives evaluate.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Total cost of ownership model",
 			"Capacity heat map",
@@ -28649,7 +30119,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each cost and resource planning artifact to what it should primarily enable for executive stakeholders.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"License entitlement forecast",
 			"Implementation cost model",
@@ -28712,10 +30182,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"Eliminating all data validation to shorten the statement of work",
 			"Assuming zero ongoing maintenance after initial connection testing"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			2
 		],
 		"explanation": "Integration TCO includes infrastructure, partner labor, and sustainment; skipping validation or maintenance underestimates long-term cost and risk.",
 		"sourceUrls": [
@@ -28765,10 +30235,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"Number of UI themes configured per business unit",
 			"Historical incident ticket volume unrelated to subscription metrics"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			3
 		],
 		"explanation": "License overruns usually trace to entitlement gaps between contracted SKUs and actual roles, products, and usage—not cosmetic or unrelated metrics.",
 		"sourceUrls": [
@@ -28797,7 +30267,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each ServiceNow solution area workstream to its primary cost and resource planning focus.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Technology",
 			"Customer",
@@ -28871,7 +30341,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each resource forecasting method to when a platform owner should apply it.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Bottom-up estimation",
 			"Top-down capacity ceiling",
@@ -28918,10 +30388,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"Executive parking reimbursements unrelated to delivery activities",
 			"Legacy desktop software licenses that will not integrate with ServiceNow"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"correctIndexes": [
-			0,
-			1
+			2,
+			3
 		],
 		"explanation": "Implementation cost models capture discovery, build, test, migration, and hypercare—the labor categories executives expect in phased funding requests.",
 		"sourceUrls": [
@@ -28983,9 +30453,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "When multiple C-Suite leaders resource forecasts missed two consecutive quarters, which inputs should the platform owner recalibrate? (Choose two.)",
 		"choices": [
 			"Velocity trends and unplanned production support demand on platform teams",
-			"Partner contract utilization versus committed hours by workstream",
 			"Number of knowledge articles published without measuring author effort",
-			"Count of scheduled town halls regardless of delivery output"
+			"Count of scheduled town halls regardless of delivery output",
+			"Partner contract utilization versus committed hours by workstream"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -29003,7 +30473,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each cost planning role to its primary accountability in a platform program.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Platform owner",
 			"Finance partner",
@@ -29093,7 +30563,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each Agile workstream dependency to the cost decision it should drive for platform executives.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Shared data model",
 			"Identity and access",
@@ -29135,10 +30605,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Before closing the Cost/Resource Planning phase, which artifacts should the platform owner confirm are executive-ready? (Choose two.)",
 		"choices": [
-			"Multi-year license and true-up forecast tied to adoption milestones",
 			"Resource capacity plan with partner and internal FTE assumptions by wave",
+			"Complete list of UI macros without linkage to funding decisions",
 			"Detailed script library for every planned client-side extension",
-			"Complete list of UI macros without linkage to funding decisions"
+			"Multi-year license and true-up forecast tied to adoption milestones"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -29204,10 +30674,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Following a quarterly business review, three product lines compete for the same implementation budget, which resource allocation principles should the platform owner apply? (Choose two.)",
 		"choices": [
-			"Prioritize work that unlocks shared platform capabilities used by multiple teams",
 			"Fund initiatives with documented ROI and dependency alignment to the roadmap",
+			"Reserve all capacity for cosmetic portal changes until backlog is cleared",
 			"Allocate budget proportionally by loudest stakeholder without scoring criteria",
-			"Reserve all capacity for cosmetic portal changes until backlog is cleared"
+			"Prioritize work that unlocks shared platform capabilities used by multiple teams"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -29225,7 +30695,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each cost and resource planning artifact to its primary executive purpose.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Capacity forecast",
 			"Partner mix plan",
@@ -29299,9 +30769,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A regulated utility prepares for a major platform release affecting integrations and peak-hour workflows. Which specialized testing approach should the platform owner require before production promotion?",
 		"choices": [
 			"End-to-end regression plus performance and integration validation in a production-like environment",
-			"Developer unit tests only on isolated developer instances",
 			"Manual spot checks of the login page without scenario coverage",
-			"User acceptance testing deferred until after production deployment"
+			"User acceptance testing deferred until after production deployment",
+			"Developer unit tests only on isolated developer instances"
 		],
 		"correctIndex": 0,
 		"explanation": "Enterprise releases need regression, performance, and integration testing in representative environments—not isolated unit checks or post-production UAT.",
@@ -29336,7 +30806,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each specialized testing type to the primary risk it validates before enterprise release.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"User acceptance testing",
 			"Performance testing",
@@ -29431,10 +30901,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"Approval to skip regression testing when the change set is small",
 			"Deferral of training until six months after go-live"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			2
 		],
 		"explanation": "Release readiness requires accepted scope and rehearsed rollback and communications; skipping tests or delaying training undermines delivery quality.",
 		"sourceUrls": [
@@ -29447,7 +30917,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each low-adoption intervention to when the platform owner should apply it after a troubled rollout.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Executive reinforcement message",
 			"Role-based office hours",
@@ -29520,12 +30990,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 91,
 		"prompt": "Finance and ITSM teams share identity data but maintain separate backlogs. Given this scenario, how should the platform owner manage cross-team delivery dependencies?",
 		"choices": [
-			"Maintain a shared dependency map with agreed integration milestones and joint release checkpoints",
 			"Allow each team to deploy independently without coordinating data contract changes",
+			"Defer integration work until both teams complete unrelated enhancements first",
 			"Merge all backlogs into one team without clarifying ownership boundaries",
-			"Defer integration work until both teams complete unrelated enhancements first"
+			"Maintain a shared dependency map with agreed integration milestones and joint release checkpoints"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Cross-team delivery requires visible dependencies and joint checkpoints; uncoordinated releases or unclear ownership create integration failures.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
@@ -29542,10 +31012,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"Elimination of UAT to meet the maintenance window deadline",
 			"Testing limited to the developer who authored the largest change set"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"correctIndexes": [
-			0,
-			1
+			2,
+			3
 		],
 		"explanation": "Combined releases need broad regression and post-deploy integration checks; skipping UAT or solo testing leaves enterprise risk unvalidated.",
 		"sourceUrls": [
@@ -29558,7 +31028,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each platform owner focus area to its primary responsibility during multi-team delivery.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Standards enforcement",
 			"Release orchestration",
@@ -29632,9 +31102,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "The CIO requests guidance when sponsors debate pilot scope versus enterprise rollout for a new employee service, which delivery approach should the platform owner recommend?",
 		"choices": [
 			"Pilot with a representative population, validate outcomes, then scale using a repeatable playbook",
-			"Deploy enterprise-wide on day one to maximize subscription consumption immediately",
 			"Limit the pilot to IT staff only and skip business stakeholder validation",
-			"Postpone all delivery until every legacy system contract expires"
+			"Postpone all delivery until every legacy system contract expires",
+			"Deploy enterprise-wide on day one to maximize subscription consumption immediately"
 		],
 		"correctIndex": 0,
 		"explanation": "Pilot-then-scale validates outcomes with real users before enterprise rollout; big-bang or IT-only pilots fail to de-risk business adoption.",
@@ -29669,7 +31139,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each specialized testing activity to the delivery phase where it is most critical.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Sandbox functional testing",
 			"UAT with business owners",
@@ -29760,9 +31230,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Before promoting a major platform release to production, which validation activities should the platform owner require? (Choose two.)",
 		"choices": [
 			"Automated test suite execution covering changed workflows and integrations",
-			"Business sign-off from process owners on acceptance criteria for affected domains",
 			"Skipping regression testing to meet an arbitrary launch date",
-			"Deploying directly to production without a rollback plan"
+			"Deploying directly to production without a rollback plan",
+			"Business sign-off from process owners on acceptance criteria for affected domains"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -29780,7 +31250,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each rollout phase to its primary platform owner focus.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Pre-go-live readiness",
 			"Cutover weekend",
@@ -29854,9 +31324,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "An organization completing its second inbound integration jobs fail silently after a ServiceNow release, what troubleshooting step should the platform owner champion first?",
 		"choices": [
 			"Review integration logs, compare pre- and post-release configurations, and validate credential and endpoint health",
-			"Rollback the entire instance to the prior major version without impact analysis",
 			"Disable all inbound integrations until the next maintenance window",
-			"Assign resolution only to the external source system team without platform coordination"
+			"Assign resolution only to the external source system team without platform coordination",
+			"Rollback the entire instance to the prior major version without impact analysis"
 		],
 		"correctIndex": 0,
 		"explanation": "Silent integration failures after release typically require coordinated log analysis and configuration comparison—not blind rollbacks or siloed troubleshooting.",
@@ -29891,7 +31361,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each testing layer to its primary purpose in an enterprise ServiceNow delivery program.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Automated regression suite",
 			"System integration testing",
@@ -29981,10 +31451,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "A major rollout experiences widespread login failures on day one. Which executive communication actions should the platform owner take immediately? (Choose two.)",
 		"choices": [
-			"Notify sponsors with confirmed user impact scope and estimated recovery timeline",
 			"Activate a coordinated incident response with clear internal and external messaging owners",
+			"Blame the identity provider publicly without internal verification",
 			"Wait until root cause is fully confirmed before informing any stakeholders",
-			"Blame the identity provider publicly without internal verification"
+			"Notify sponsors with confirmed user impact scope and estimated recovery timeline"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -30002,7 +31472,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each rollout troubleshooting activity to when it should occur.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Review deployment audit logs",
 			"Compare configuration baselines",
@@ -30097,10 +31567,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"Skip clone testing when the vendor marks the release as low risk",
 			"Deploy to production first and backfill test evidence afterward"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"correctIndexes": [
-			0,
-			1
+			2,
+			3
 		],
 		"explanation": "Upgrade readiness in regulated environments requires clone-based automated testing plus release note review; skipping tests or reverse-order deployment increases compliance risk.",
 		"sourceUrls": [
@@ -30113,7 +31583,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each cross-team role to its primary responsibility during ServiceNow implementation delivery.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Platform owner",
 			"Business process owner",
@@ -30171,9 +31641,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "During a transformation checkpoint, a ServiceNow program nears completion, which handoff deliverable best prepares operations teams for steady-state support?",
 		"choices": [
 			"Documented runbooks, support tier definitions, known-issue register, and training materials aligned to live workflows",
-			"A slide deck summarizing project budget without operational procedures",
 			"Access credentials shared informally without role-based support documentation",
-			"An archive of sprint retrospectives with no mapping to production support processes"
+			"An archive of sprint retrospectives with no mapping to production support processes",
+			"A slide deck summarizing project budget without operational procedures"
 		],
 		"correctIndex": 0,
 		"explanation": "Operations handoff requires actionable runbooks, support models, and training tied to live workflows—not budget summaries or informal credential sharing.",
@@ -30224,10 +31694,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"Ignore debt until a major upgrade forces emergency remediation",
 			"Grant all developers admin access to accelerate ungoverned fixes"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"correctIndexes": [
-			0,
-			1
+			2,
+			3
 		],
 		"explanation": "Sustainable governance tracks technical debt transparently and assigns CMDB ownership with measurable health reviews—not reactive crisis management or ungoverned access.",
 		"sourceUrls": [
@@ -30240,7 +31710,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each ServiceNow governance body to its primary decision scope.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Executive platform board",
 			"Demand governance board",
@@ -30314,10 +31784,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Executive sponsors ask how release cadence governance will scale as the platform portfolio grows. Which artifacts should the platform owner institutionalize? (Choose two.)",
 		"choices": [
-			"A published release calendar with intake deadlines tied to dependency and test readiness gates",
 			"Risk-tiered change categories with defined approval paths and rollback expectations",
+			"A policy allowing production pushes whenever developers finish coding",
 			"Verbal stand-up agreements that replace documented release criteria",
-			"A policy allowing production pushes whenever developers finish coding"
+			"A published release calendar with intake deadlines tied to dependency and test readiness gates"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -30351,7 +31821,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each release governance element to the outcome it primarily enables for enterprise platform stability.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Release calendar",
 			"Intake cutoff dates",
@@ -30392,12 +31862,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 130,
 		"prompt": "While preparing a platform roadmap, undocumented customizations block upgrade readiness, how should the platform owner initiate technical debt lifecycle governance?",
 		"choices": [
-			"Stand up a debt register with business owners, severity scoring, remediation targets, and quarterly board review cadence",
 			"Wait until the next major upgrade fails before cataloging customization issues",
+			"Grant blanket developer admin rights so teams can fix debt independently overnight",
 			"Delete all custom records without impact analysis to accelerate the upgrade window",
-			"Grant blanket developer admin rights so teams can fix debt independently overnight"
+			"Stand up a debt register with business owners, severity scoring, remediation targets, and quarterly board review cadence"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Technical debt lifecycle governance starts with a visible register, accountable owners, scored priorities, and recurring board review—not reactive crisis cleanup or ungoverned access.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
@@ -30433,7 +31903,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"explanation": "Debt lifecycle governance couples intake controls with transparent tracking—new scope should address related debt, and registers must remain visible to leadership.",
 		"sourceUrls": [
@@ -30462,7 +31932,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each technical debt lifecycle stage to the governance activity that should occur at that stage.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Identification",
 			"Triage and scoring",
@@ -30504,9 +31974,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "The CPOE candidate learns that executives define reliability and auditability as core organizational values, how should the platform owner align CMDB governance?",
 		"choices": [
 			"Define CI classes, ownership, and quality thresholds that map directly to those values with executive-approved KPIs",
-			"Populate the CMDB opportunistically during incidents without ownership or quality targets",
 			"Limit CMDB scope to hardware inventory while ignoring applications and services",
-			"Postpone CMDB standards until every legacy system is fully retired"
+			"Postpone CMDB standards until every legacy system is fully retired",
+			"Populate the CMDB opportunistically during incidents without ownership or quality targets"
 		],
 		"correctIndex": 0,
 		"explanation": "CMDB governance aligned to organizational values translates executive priorities into CI scope, ownership, quality thresholds, and measurable KPIs.",
@@ -30541,10 +32011,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"Exclude financial attributes from CI records to simplify data entry",
 			"Defer all discovery integration until CMDB completeness reaches one hundred percent"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			2
 		],
 		"explanation": "Value-aligned CMDB governance connects services to supporting CIs for impact visibility and uses scorecards with accountable remediation—not incomplete or perfection-gated models.",
 		"sourceUrls": [
@@ -30573,7 +32043,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each CMDB governance pillar to the organizational value it most directly supports.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Authoritative ownership",
 			"Reconciliation policy",
@@ -30630,12 +32100,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 141,
 		"prompt": "A demand governance board must rank competing ServiceNow initiatives with limited funding. What should the platform owner supply to enable effective prioritization?",
 		"choices": [
-			"Value hypotheses, dependency maps, resource estimates, and risk profiles for each demand item",
 			"A list of requested features sorted only by loudest stakeholder advocacy",
+			"An open-ended backlog with no scoring model or capacity baseline",
 			"Technical design documents without business outcome or cost context",
-			"An open-ended backlog with no scoring model or capacity baseline"
+			"Value hypotheses, dependency maps, resource estimates, and risk profiles for each demand item"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Demand board decisions require value, dependencies, estimates, and risk—not advocacy volume or technical detail without business context.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/demand-governance.html"
@@ -30655,7 +32125,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"explanation": "Multi-board coordination relies on traceable decision logs and cross-board syncs for escalations—isolated or ungoverned overrides undermine enterprise alignment.",
 		"sourceUrls": [
@@ -30684,7 +32154,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each CSDM framework domain to the governance outcome it primarily enables for platform owners.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Foundation domain",
 			"Ideation and strategy domain",
@@ -30725,12 +32195,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 145,
 		"prompt": "A legacy ITSM tool reaches end-of-life in six months while dependent workflows remain active. How should the platform owner govern deprecation data management?",
 		"choices": [
-			"Define a data migration and archival plan with retention rules, CI lifecycle updates, and verified cutover criteria",
 			"Export a flat file on decommission day without validating record completeness or relationships",
+			"Delete all historical records immediately without legal or operational retention review",
 			"Leave orphaned CI and ticket references in ServiceNow indefinitely to avoid migration effort",
-			"Delete all historical records immediately without legal or operational retention review"
+			"Define a data migration and archival plan with retention rules, CI lifecycle updates, and verified cutover criteria"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Legacy deprecation data management requires migration, archival, retention governance, CI lifecycle updates, and verified cutover—not ad hoc exports or orphaned records.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/configuration-management.html"
@@ -30766,7 +32236,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"explanation": "Deprecation governance updates CI lifecycle and relationships after validated migration and applies compliant retention policies—not reactive fixes or skipped change control.",
 		"sourceUrls": [
@@ -30795,7 +32265,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each legacy system deprecation phase to the data management activity the platform owner should govern.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Discovery and inventory",
 			"Migration and validation",
@@ -30893,7 +32363,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"explanation": "Executive debt prioritization weighs business risk and feasible remediation capacity—not arbitrary ordering or informal popularity.",
 		"sourceUrls": [
@@ -30906,7 +32376,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each release governance artifact to its primary purpose for the platform owner.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Release calendar",
 			"Intake cutoff dates",
@@ -30964,7 +32434,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each legacy deprecation phase to the platform owner's primary activity.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Discovery",
 			"Impact assessment",
@@ -31046,7 +32516,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			2
 		],
 		"explanation": "CSDM success requires stewards, escalation, and business-aligned mapping—not premature connector removal or absent executive visibility.",
 		"sourceUrls": [
@@ -31083,7 +32553,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"explanation": "SOX alignment requires mapped controls and retained change evidence—not standing admin access or disabled auditing.",
 		"sourceUrls": [
@@ -31128,7 +32598,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each compliance control area to the ServiceNow capability the platform owner should leverage.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Segregation of duties",
 			"Privileged access review",
@@ -31207,10 +32677,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"Disable all ACLs temporarily so assessors can browse every table",
 			"Share a single break-glass admin password across the operations team"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			2
 		],
 		"explanation": "Pre-assessment hardening strengthens MFA and integration boundaries—not ACL removal or shared break-glass credentials.",
 		"sourceUrls": [
@@ -31223,9 +32693,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Sales leadership asks whether ServiceNow security certifications accelerate enterprise deals. Given this scenario, how should the platform owner connect security to business advantage?",
 		"choices": [
 			"Demonstrate how documented controls, audit readiness, and incident response maturity reduce customer due-diligence friction and contract delays",
-			"Argue that security certifications are marketing artifacts with no deal impact",
 			"Recommend removing security documentation from RFP responses to shorten proposals",
-			"Defer security posture discussions until after contracts are signed retired from automation rules when the trigger condition changes. (CPOE-168-w3)"
+			"Defer security posture discussions until after contracts are signed retired from automation rules when the trigger condition changes. (CPOE-168-w3)",
+			"Argue that security certifications are marketing artifacts with no deal impact"
 		],
 		"correctIndex": 0,
 		"explanation": "Security maturity shortens enterprise sales cycles by satisfying due diligence efficiently; treating certifications as irrelevant or hiding posture undermines competitive positioning.",
@@ -31239,7 +32709,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each security capability to the business advantage it primarily enables.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Multi-factor authentication",
 			"Encryption at rest and in transit",
@@ -31297,7 +32767,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each audit artifact to the question it best answers for compliance reviewers.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Change approval history",
 			"Access certification results",
@@ -31371,10 +32841,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "The risk committee asks how ongoing compliance will be monitored after go-live. Which activities should the platform owner commit to? (Choose two.)",
 		"choices": [
-			"Quarterly control effectiveness reviews with metrics for access, changes, and data protection",
 			"Automated alerting on policy violations such as unauthorized exports or failed login spikes",
+			"Exclusive reliance on user self-attestation without system evidence",
 			"Annual deletion of audit tables to control database growth",
-			"Exclusive reliance on user self-attestation without system evidence"
+			"Quarterly control effectiveness reviews with metrics for access, changes, and data protection"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -31444,12 +32914,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 178,
 		"prompt": "A multinational firm must keep EU employee data within approved regions while sharing ITSM processes globally. Given this scenario, which platform approach best satisfies regulatory alignment?",
 		"choices": [
-			"Design domain separation, data residency, and integration patterns validated with legal and privacy officers before rollout",
 			"Store all records in a single global domain to simplify reporting regardless of residency rules",
+			"Rely on end-user discretion to avoid entering restricted data in shared forms",
 			"Replicate production data to every subsidiary instance without classification review",
-			"Rely on end-user discretion to avoid entering restricted data in shared forms"
+			"Design domain separation, data residency, and integration patterns validated with legal and privacy officers before rollout"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Cross-border compliance requires deliberate domain, residency, and integration design validated with privacy stakeholders—not undifferentiated global data pools.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/c_DomainSeparation.html"
@@ -31461,7 +32931,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each compliance governance artifact to its primary value for executive and audit stakeholders.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Control mapping matrix",
 			"Role certification campaign",
@@ -31536,9 +33006,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "An external auditor evaluates platform logging and monitoring for a regulated workload. Which practices should the platform owner highlight as audit contributions? (Choose two.)",
 		"choices": [
 			"Immutable audit trails for privileged actions with retention aligned to policy",
-			"Security event monitoring integrated with enterprise SIEM correlation rules",
 			"Disabling login failure logging to reduce noise in support queues",
-			"Purging audit records after thirty days regardless of regulatory retention requirements"
+			"Purging audit records after thirty days regardless of regulatory retention requirements",
+			"Security event monitoring integrated with enterprise SIEM correlation rules"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -31572,7 +33042,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each platform security control to the compliance outcome it primarily supports.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Multi-factor authentication",
 			"Field-level encryption",
@@ -31651,10 +33121,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"Disable security plugins temporarily to improve instance performance during the audit window",
 			"Restrict auditor access until all findings from prior years are fully remediated"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			3
 		],
 		"explanation": "Audit readiness depends on maintained control mappings and proactive dry runs—not performance shortcuts or withholding auditor engagement.",
 		"sourceUrls": [
@@ -31683,7 +33153,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each audit or compliance activity to the stakeholder benefit it primarily delivers.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Control self-assessment",
 			"Penetration test remediation",
@@ -31757,10 +33227,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "The enterprise compliance program asks the platform owner to demonstrate ongoing governance value. Which contributions best satisfy that request? (Choose two.)",
 		"choices": [
-			"Quarterly control health dashboards tied to remediation SLAs and executive risk reporting",
 			"Participation in enterprise risk committees with platform-specific control test results",
+			"Granting compliance analysts permanent admin access for convenience",
 			"Eliminating change records for low-risk updates to reduce audit volume",
-			"Granting compliance analysts permanent admin access for convenience"
+			"Quarterly control health dashboards tied to remediation SLAs and executive risk reporting"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -31778,7 +33248,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each compliance exception governance element to the regulatory alignment outcome it supports.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Time-bound approval",
 			"Compensating controls",
@@ -31869,9 +33339,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Executive sponsors want measurable innovation outcomes across the platform program. Which practices should the platform owner institutionalize? (Choose two.)",
 		"choices": [
 			"Instance and process benchmarks compared against peer cohorts to identify improvement opportunities",
-			"Automation of repeatable platform operations with guardrails for sensitive actions",
 			"Eliminating pilot programs to deploy all ideas directly to production",
-			"Tracking only the number of new applications without adoption or outcome metrics"
+			"Tracking only the number of new applications without adoption or outcome metrics",
+			"Automation of repeatable platform operations with guardrails for sensitive actions"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -31905,7 +33375,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each innovation practice to the platform outcome it primarily enables.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Enterprise architect engagement",
 			"Citizen developer program",
@@ -31963,9 +33433,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "During platform strategy workshops, the CIO mandates citizen development as a pillar of digital strategy, regional leaders fear uncontrolled sprawl. Which organizational approach best embeds citizen development responsibly?",
 		"choices": [
 			"Define tiered citizen roles, a center-led enablement program, and business-unit sponsorship tied to audited use-case catalogs",
-			"Publish an open invitation for any employee to build production applications without enrollment criteria",
 			"Restrict all app creation to centralized IT and eliminate the citizen development mandate",
-			"Outsource citizen enablement entirely to a staffing vendor without internal governance forums"
+			"Outsource citizen enablement entirely to a staffing vendor without internal governance forums",
+			"Publish an open invitation for any employee to build production applications without enrollment criteria"
 		],
 		"correctIndex": 0,
 		"explanation": "Citizen development belongs in organizational strategy through tiered roles, center-led enablement, and audited catalogs—not open production access or outsourcing without governance.",
@@ -32016,7 +33486,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each implementation strategy activity to the innovation outcome it primarily drives.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Peer cohort benchmarking",
 			"Automation backlog prioritization",
@@ -32058,9 +33528,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A manufacturing enterprise relies on innovation champions embedded in plants worldwide. What role scope best positions champions as durable agents of platform adoption?",
 		"choices": [
 			"Act as local translators who validate use cases, mentor citizen builders, and surface compliance risks to the CoEI",
-			"Serve as part-time marketers who distribute newsletters without participating in delivery governance",
 			"Function as shadow developers with silent admin credentials for expediting unreviewed changes",
-			"Operate as one-time event facilitators with no accountability for post-pilot production handoffs"
+			"Operate as one-time event facilitators with no accountability for post-pilot production handoffs",
+			"Serve as part-time marketers who distribute newsletters without participating in delivery governance"
 		],
 		"correctIndex": 0,
 		"explanation": "Champions sustain adoption by validating demand, mentoring builders, and escalating compliance risks—not through marketing-only roles or unchecked admin access.",
@@ -32111,10 +33581,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"Waiving design standards for citizen apps to maximize the count of new applications launched each quarter",
 			"Prohibiting citizen developers from accessing any shared integration endpoints"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"correctIndexes": [
-			0,
-			1
+			2,
+			3
 		],
 		"explanation": "Citizen development aligns with enterprise architecture through pattern reviews and reusable approved assets—not through waived standards or blocked integrations.",
 		"sourceUrls": [
@@ -32127,7 +33597,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each innovation governance forum to its primary input and output.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Enterprise architecture board",
 			"Citizen developer guild",
@@ -32184,12 +33654,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 211,
 		"prompt": "After acquiring a subsidiary, the platform owner must integrate the subsidiary's builders into the corporate CoEI model. Which approach preserves innovation momentum while aligning governance?",
 		"choices": [
-			"Run a federated onboarding with mapped guardrails, shared asset repositories, and joint intake into the parent CoEI funding cycle",
 			"Immediate decommission of all subsidiary applications without migration assessment",
+			"Outsource subsidiary innovation entirely and exclude it from enterprise platform metrics",
 			"Permanent isolation of subsidiary builders from parent CoEI standards to avoid change fatigue",
-			"Outsource subsidiary innovation entirely and exclude it from enterprise platform metrics"
+			"Run a federated onboarding with mapped guardrails, shared asset repositories, and joint intake into the parent CoEI funding cycle"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "CoEI integration after acquisition succeeds through federated onboarding with shared assets and joint intake—not forced decommission, permanent isolation, or outsourced exclusion.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
@@ -32225,7 +33695,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"explanation": "Innovation investment is justified through automation outcome tracking and peer benchmarking—not license counts alone or presentation volume without delivery evidence.",
 		"sourceUrls": [
@@ -32238,7 +33708,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each scaling lever to the innovation capability it strengthens.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Shared automation runbooks",
 			"Regional champion chapters",
@@ -32279,12 +33749,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 215,
 		"prompt": "Program sponsors disagree on priorities when champion forums have become irregular and backlog conversion is stalling, the platform owner must reset cadence discipline. Which operating rhythm best restores input-to-delivery flow?",
 		"choices": [
-			"Monthly champion councils with pre-submitted use cases, same-day scoring, and published SLA for CoEI handoff",
 			"Annual champion gatherings without structured intake or documented follow-up actions",
+			"Quarterly surveys replacing live forums while eliminating backlog transparency",
 			"Ad hoc champion chats in messaging apps with no connection to funded delivery pipelines",
-			"Quarterly surveys replacing live forums while eliminating backlog transparency"
+			"Monthly champion councils with pre-submitted use cases, same-day scoring, and published SLA for CoEI handoff"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Champion cadence restores delivery flow through regular councils, pre-submitted intake, scoring, and defined CoEI handoff SLAs—not irregular or disconnected forums.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
@@ -32349,7 +33819,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each citizen development governance control to the organizational risk it mitigates.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Tiered builder certification",
 			"Scoped application roles",
@@ -32407,7 +33877,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each innovation program element to the executive outcome it enables for the platform owner.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Enterprise architect design clinics",
 			"Citizen developer certification tiers",
@@ -32449,9 +33919,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A regional university wants to improve onboarding for new staff and faculty by automating account setup, access provisioning, and equipment readiness. Which ServiceNow capability best addresses this objective?",
 		"choices": [
 			"HR Service Delivery with Lifecycle Events",
-			"IT Service Management with major incident management",
 			"Customer Service Management with omnichannel routing",
-			"Security Operations with vulnerability response playbooks"
+			"Security Operations with vulnerability response playbooks",
+			"IT Service Management with major incident management"
 		],
 		"correctIndex": 0,
 		"explanation": "Lifecycle Events in HR Service Delivery orchestrate onboarding journeys across HR, IT, and facilities tasks such as account creation, access, and equipment fulfillment.",
@@ -32497,7 +33967,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each recommended CoEI implementation phase to its primary outcome.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Establish vision and sponsorship",
 			"Define standards and governance",
@@ -32547,7 +34017,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"explanation": "Effective KPIs map to business objectives with baselines, targets, and ownership; technical metrics alone or shifting definitions undermine strategic alignment.",
 		"sourceUrls": [
@@ -32576,7 +34046,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each Support Portal resource type to how a platform owner should use it during upgrade planning.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Release notes",
 			"Known error articles",
@@ -32617,12 +34087,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 7,
 		"prompt": "A prior platform wave delivered strong automation but weak adoption. When the CoEI reviews lessons learned, what response best turns that pitfall into future success?",
 		"choices": [
-			"Embed change enablement and feedback loops in the next wave before declaring completion",
 			"Repeat the same rollout pattern because automation metrics already exceeded targets",
+			"Defer all user training until every legacy tool is decommissioned globally",
 			"Remove executive sponsors from communications to avoid overselling results",
-			"Defer all user training until every legacy tool is decommissioned globally"
+			"Embed change enablement and feedback loops in the next wave before declaring completion"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "CoEI retrospectives should address adoption gaps with enablement and feedback, not rely solely on automation metrics or delayed training.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -32658,7 +34128,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"explanation": "Solution design starts with outcomes and reuse assessment; premature custom builds or absent success criteria increase delivery risk.",
 		"sourceUrls": [
@@ -32687,9 +34157,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Before recommending a product line expansion, the platform owner must gather product line data. Which information set is most essential?",
 		"choices": [
 			"Licensed entitlements, planned use cases, integration dependencies, and upgrade compatibility",
-			"Every employee's personal device serial number regardless of CMDB relevance",
 			"Historical stock prices of unrelated technology vendors",
-			"Informal chat transcripts without linking them to business outcomes"
+			"Informal chat transcripts without linking them to business outcomes",
+			"Every employee's personal device serial number regardless of CMDB relevance"
 		],
 		"correctIndex": 0,
 		"explanation": "Product line decisions require entitlement status, intended use, dependencies, and version compatibility—not unrelated device or financial data.",
@@ -32740,7 +34210,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each release decision input to the question it helps the platform owner answer.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Known defect list",
 			"Regression test results",
@@ -32782,7 +34252,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each missing CoEI component to the risk it creates for the platform program.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"No innovation intake",
 			"Weak standards enforcement",
@@ -32880,8 +34350,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1,
-			2
+			2,
+			3
 		],
 		"explanation": "Effective intake uses standardized forms, cross-functional triage, and transparent status; rejecting non-SKU ideas prematurely blocks legitimate improvements.",
 		"sourceUrls": [
@@ -32909,12 +34379,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 21,
 		"prompt": "An agile release train needs platform capabilities to support iterative delivery. Which ServiceNow capability best enables agile development practices on the instance?",
 		"choices": [
-			"Agile Development with stories, sprints, and backlog management integrated to work items",
 			"Static PDF exports of configuration tables without workflow linkage",
+			"Disabling version control to accelerate unreviewed production edits",
 			"Manual ticket numbering in spreadsheets external to the platform",
-			"Disabling version control to accelerate unreviewed production edits"
+			"Agile Development with stories, sprints, and backlog management integrated to work items"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Agile Development provides backlog, sprint, and story management tied to platform work, supporting iterative delivery rather than external tracking.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/application-development.html"
@@ -32950,7 +34420,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"explanation": "Testing oversight requires milestone criteria and traceability; production-only discovery or skipped regression increases release risk.",
 		"sourceUrls": [
@@ -32963,7 +34433,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each Scrum event to its primary purpose for platform delivery teams.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Sprint planning",
 			"Sprint review",
@@ -33022,9 +34492,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Operations reports that a fulfillment workflow fails when related CI records are stale. Which data dependency practices should the platform owner reinforce? (Choose two.)",
 		"choices": [
 			"Document upstream and downstream tables required for each critical process",
-			"Establish data quality checks before workflow stages that rely on CMDB accuracy",
 			"Assume integrations will self-heal without ownership or monitoring",
-			"Remove dependency mapping to simplify project documentation"
+			"Remove dependency mapping to simplify project documentation",
+			"Establish data quality checks before workflow stages that rely on CMDB accuracy"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -33074,7 +34544,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each security practice area to the platform owner action that best supports it.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Regulatory compliance",
 			"Access control",
@@ -33185,7 +34655,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each agile platform capability to the delivery need it supports.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Agile Development stories",
 			"DevOps change pipelines",
@@ -33242,12 +34712,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 36,
 		"prompt": "Product management asks whether to apply the latest store release for ITSM or defer one cycle. What decision framework should the platform owner apply?",
 		"choices": [
-			"Weigh defect fixes and features against test results, blackout periods, and rollback readiness",
 			"Always skip releases to avoid any short-term disruption regardless of open defects",
+			"Base the decision solely on vendor marketing announcements without internal assessment",
 			"Apply every release on production day one without sub-production validation",
-			"Base the decision solely on vendor marketing announcements without internal assessment"
+			"Weigh defect fixes and features against test results, blackout periods, and rollback readiness"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Store release decisions balance value against test evidence, calendar constraints, and recovery options—not automatic skip/apply or marketing alone.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
@@ -33259,7 +34729,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each process data dependency to why the platform owner must govern it.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Authoritative CMDB CI",
 			"Active user account record",
@@ -33338,9 +34808,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A university wants to improve onboarding for new staff and faculty by automating account setup, access provisioning, and equipment readiness before day one. Which platform capability should the platform owner map to this business objective?",
 		"choices": [
 			"HR Service Delivery with Lifecycle Events orchestrating onboarding tasks across departments",
-			"Walk-up Experience queues so new hires can request equipment at an IT counter",
 			"A custom scoped application built on the incident table to track onboarding tickets",
-			"Predictive Intelligence clustering of historical HR cases to surface onboarding trends"
+			"Predictive Intelligence clustering of historical HR cases to surface onboarding trends",
+			"Walk-up Experience queues so new hires can request equipment at an IT counter"
 		],
 		"correctIndex": 0,
 		"explanation": "Improving onboarding through automated account setup, access, and equipment readiness maps directly to HR Service Delivery with Lifecycle Events, which orchestrates cross-departmental onboarding activities.",
@@ -33392,7 +34862,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each stakeholder group to the engagement practice that best sustains its support for the platform program.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Executive sponsor",
 			"Process owners",
@@ -33434,9 +34904,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Demand for ServiceNow enhancements at a growing insurer now outstrips what one administrator can deliver. Which team structure scales implementation support most sustainably?",
 		"choices": [
 			"A dedicated platform team with defined owner, administrator, and developer roles operating under Center of Excellence governance",
-			"A single administrator handling all configuration, development, and support requests alone",
 			"Independent shadow development squads in each department with no shared standards",
-			"Full outsourcing to a partner with no internal role retaining platform accountability"
+			"Full outsourcing to a partner with no internal role retaining platform accountability",
+			"A single administrator handling all configuration, development, and support requests alone"
 		],
 		"correctIndex": 0,
 		"explanation": "Scalable support requires a structured platform team with clear roles governed by a Center of Excellence; heroics, shadow teams, and total outsourcing all fail as demand grows.",
@@ -33467,7 +34937,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each stated business objective to the KPI an executive dashboard should feature for it.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Improve employee service satisfaction",
 			"Lower cost per service request",
@@ -33533,7 +35003,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"explanation": "Disengagement is a stakeholder management signal: re-engage individually and recalibrate the stakeholder analysis and communication plan rather than excluding or punishing participants.",
 		"sourceUrls": [
@@ -33562,12 +35032,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 50,
 		"prompt": "During sprint planning, the platform team debates who decides the order of items in the product backlog. In the Agile model ServiceNow recommends, which role owns backlog prioritization?",
 		"choices": [
-			"The product owner, who sequences the backlog by business value and stakeholder input",
 			"The scrum master, who assigns backlog items to developers by skill set",
+			"The executive sponsor, who dictates sprint-by-sprint scope from the steering committee",
 			"The development team, which selects whichever stories look most technically interesting",
-			"The executive sponsor, who dictates sprint-by-sprint scope from the steering committee"
+			"The product owner, who sequences the backlog by business value and stakeholder input"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Backlog prioritization belongs to the product owner, who represents business value; the scrum master facilitates process and the team owns how work gets done, not what comes first.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -33579,7 +35049,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each Agile role on a ServiceNow delivery team to its primary responsibility.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Product owner",
 			"Scrum master",
@@ -33654,10 +35124,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Before a release wave moves from the test instance to production, which controls should the platform owner require in the promotion process? (Choose two.)",
 		"choices": [
-			"Completed and preview-validated update sets or app repo versions with conflicts resolved before commit",
 			"User acceptance and regression testing signed off in the sub-production environment",
+			"Committing changes directly on production during business hours for faster feedback",
 			"Skipping the test instance whenever the developer is confident in the change",
-			"Committing changes directly on production during business hours for faster feedback"
+			"Completed and preview-validated update sets or app repo versions with conflicts resolved before commit"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -33707,7 +35177,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each stage of ServiceNow's recommended code promotion path to the activity performed there.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Development instance",
 			"Test instance",
@@ -33755,10 +35225,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"Daily stand-up: a status report where the product owner assigns the day's tasks to each developer",
 			"Sprint planning: a session where stakeholders vote to reopen stories accepted in prior sprints"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			2
 		],
 		"explanation": "Reviews showcase the increment for stakeholder feedback and retrospectives improve team process; stand-ups are team-led synchronization, and planning selects new work rather than reopening accepted stories.",
 		"sourceUrls": [
@@ -33771,9 +35241,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "An auditor asks how emergency fixes reach production without bypassing control. How should the platform owner describe the compliant path for urgent changes?",
 		"choices": [
 			"Apply an expedited change record with retroactive-capable approvals while still capturing the fix in a tracked update set",
-			"Grant the on-call developer permanent admin access to production for direct hotfixes",
 			"Hold every urgent fix until the next scheduled quarterly release window regardless of impact",
-			"Disable update set tracking during emergencies so fixes can be applied faster"
+			"Disable update set tracking during emergencies so fixes can be applied faster",
+			"Grant the on-call developer permanent admin access to production for direct hotfixes"
 		],
 		"correctIndex": 0,
 		"explanation": "Even urgent changes stay inside the promotion framework: an expedited change process with tracked update sets preserves auditability without the delay of a standard release cycle.",
@@ -33822,7 +35292,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each upgrade sequence activity to the platform owner outcome it primarily supports.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Review Upgrade Center readiness insights",
 			"Execute upgrade in sub-production first",
@@ -33870,10 +35340,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"Verbal team agreements replacing documented rollback expectations for hotfixes",
 			"A policy allowing developers to self-schedule production patches without change records"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			3
 		],
 		"explanation": "Patch schedules need published windows tied to blackout policy plus intake deadlines that leave time for regression and security validation before deployment.",
 		"sourceUrls": [
@@ -33938,7 +35408,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each platform maintenance implication to the implementation condition that drives it.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Expanded skipped-update triage",
 			"Coordinated clone and refresh windows",
@@ -33998,10 +35468,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "An audit team asks how the platform owner verifies patch contents before production deployment. Which evidence types should be included in the standard review packet? (Choose two.)",
 		"choices": [
-			"Marketing slide decks describing unrelated product roadmaps",
 			"Vendor patch documentation listing fixed defects, security items, and affected modules",
+			"Screenshots of unrelated legacy systems retained for historical reference",
 			"Regression test results showing critical business scenarios passed in sub-production",
-			"Screenshots of unrelated legacy systems retained for historical reference"
+			"Marketing slide decks describing unrelated product roadmaps"
 		],
 		"correctIndex": 1,
 		"correctIndexes": [
@@ -34054,7 +35524,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each implementation model to the enterprise scenario where it is most appropriate.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Single production instance",
 			"Domain separation",
@@ -34097,11 +35567,11 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Two acquired divisions operate under different regulatory frameworks and cannot share production data. The platform owner must recommend an architecture. What is the best fit?",
 		"choices": [
 			"Enable domain separation on one instance and disable all ACL reviews to speed delivery",
-			"Use a single production instance because duplicate environments always increase licensing waste without benefit",
 			"Consolidate both divisions into one developer instance and promote directly to production",
-			"Deploy separate production instances with independent upgrade, patching, and data boundaries per division"
+			"Deploy separate production instances with independent upgrade, patching, and data boundaries per division",
+			"Use a single production instance because duplicate environments always increase licensing waste without benefit"
 		],
-		"correctIndex": 3,
+		"correctIndex": 2,
 		"explanation": "When regulatory boundaries prohibit commingled production data, separate production instances provide hard isolation with independent maintenance lifecycles per division.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/company-and-domain-separation/concept/c_DomainSeparation.html",
@@ -34170,7 +35640,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each upgrade or patch activity to the supporting information the platform owner should gather first.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Family upgrade planning",
 			"Monthly patch deployment",
@@ -34235,10 +35705,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"Complete elimination of sub-production environments because each production node is isolated",
 			"Shared super-user credentials across all instances to simplify on-call response"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			2
 		],
 		"explanation": "Multiple production instances multiply upgrade cycles and require baseline synchronization and drift control—they do not remove non-production testing or justify shared privileged accounts.",
 		"sourceUrls": [
@@ -34292,7 +35762,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			2
 		],
 		"explanation": "Governed rotation and archival control data volume while PA trend monitoring surfaces growth before it degrades query performance.",
 		"sourceUrls": [
@@ -34304,12 +35774,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 83,
 		"prompt": "Discovery is populating duplicate server CIs because manual imports and MID Server results disagree on serial numbers. What CMDB data governance control should the platform owner enforce?",
 		"choices": [
-			"Configure Identification and Reconciliation Engine rules with authoritative data sources and ownership",
 			"Delete all manually created CIs each weekend to force rediscovery only",
+			"Merge duplicate classes into a single catch-all table without attribute mapping",
 			"Suspend IRE processing so operators can reconcile records in spreadsheets offline",
-			"Merge duplicate classes into a single catch-all table without attribute mapping"
+			"Configure Identification and Reconciliation Engine rules with authoritative data sources and ownership"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "IRE with defined authoritative sources and ownership prevents duplicate CIs while preserving trusted data feeds from Discovery and integrations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
@@ -34321,7 +35791,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each CMDB or CSDM data governance activity to the outcome it primarily supports.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Foundation data stewardship",
 			"CMDB Health KPI reviews",
@@ -34412,9 +35882,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Multiple product teams propose new integrations that write CI attributes nightly. Which CMDB data governance practices should the platform owner mandate before approving the feeds? (Choose two.)",
 		"choices": [
 			"Documented authoritative source precedence in IRE for overlapping attributes",
-			"Named data stewards accountable for class-level quality on affected CI types",
 			"Unrestricted write access for every integration account to accelerate delivery",
-			"Defer reconciliation until after all feeds are live in production"
+			"Defer reconciliation until after all feeds are live in production",
+			"Named data stewards accountable for class-level quality on affected CI types"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -34432,7 +35902,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each platform performance capability to the requirement it best addresses.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Node monitoring and capacity dashboards",
 			"Database indexing review",
@@ -34490,9 +35960,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A custom scoped application team wants to bypass peer review to meet a regulatory deadline. Which coding governance standard should the platform owner uphold?",
 		"choices": [
 			"Require code review, static analysis, and promotion through defined sub-production environments",
-			"Allow direct production commits when the developer holds the admin role",
 			"Store all scripts in global scope so any developer can patch them quickly",
-			"Skip update sets entirely and paste changes into the script editor on production"
+			"Skip update sets entirely and paste changes into the script editor on production",
+			"Allow direct production commits when the developer holds the admin role"
 		],
 		"correctIndex": 0,
 		"explanation": "Technical governance through review, analysis, and staged promotion protects production stability even under deadline pressure.",
@@ -34527,10 +35997,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"Total number of UI themes deployed per business unit",
 			"Average incident ticket count unrelated to subscription metrics"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			2
 		],
 		"explanation": "True-up readiness depends on matching activated capabilities and role growth to contracted SKUs—not cosmetic or unrelated operational metrics.",
 		"sourceUrls": [
@@ -34543,7 +36013,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each licensing governance activity to its primary platform owner responsibility.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Entitlement baseline documentation",
 			"Role-to-license mapping standards",
@@ -34634,10 +36104,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which controls should the platform owner require in the technical governance standard for custom application delivery? (Choose two.)",
 		"choices": [
-			"Automated linting and static code analysis in the CI pipeline before merge",
 			"Peer review checkpoints with documented approval for production-bound changes",
+			"Mandatory use of global scope for all new integrations regardless of ownership",
 			"Unlimited direct production editing for certified developers during incidents",
-			"Mandatory use of global scope for all new integrations regardless of ownership"
+			"Automated linting and static code analysis in the CI pipeline before merge"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -34655,7 +36125,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "match",
 		"prompt": "Match each technical governance control to the coding risk it mitigates.",
 		"choices": [],
-		"correctIndex": 0,
+		"correctIndex": -1,
 		"matchLeftItems": [
 			"Scoped application boundaries",
 			"Update set collision review",
@@ -34766,10 +36236,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"GPU ray tracing",
 			"Offline-only file storage"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"correctIndexes": [
-			0,
-			1
+			2,
+			3
 		],
 		"questionType": "multi",
 		"explanation": "ServiceNow instances include workflow, automation, reporting, and dashboards as platform services; GPU rendering and offline-only storage are not platform capabilities.",
@@ -34830,12 +36300,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 8,
 		"prompt": "Which interface is used to view and edit a single record's fields?",
 		"choices": [
-			"Form layout designer",
 			"Import set staging list",
+			"Update set comparison preview",
 			"Transform history log",
-			"Update set comparison preview"
+			"Form layout designer"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "A form displays one record's fields for viewing and editing; lists show many records in tabular format.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-user-interface/forms.html"
@@ -34863,9 +36333,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "What does the System Settings > System Properties module store?",
 		"choices": [
 			"To view and edit instance-wide configuration name-value pairs",
-			"To design catalog client scripts only",
 			"To run Discovery schedules",
-			"To manage CMDB reconciliation rules only"
+			"To manage CMDB reconciliation rules only",
+			"To design catalog client scripts only"
 		],
 		"correctIndex": 0,
 		"explanation": "System properties store instance configuration values referenced by the platform and applications.",
@@ -35022,12 +36492,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 20,
 		"prompt": "Which form feature lets users pick from predefined templates when creating certain records?",
 		"choices": [
-			"Form templates",
 			"Data import field maps",
+			"Staging import tables",
 			"Migration update set bundles",
-			"Staging import tables"
+			"Form templates"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Form templates provide predefined field values and layouts when creating new records of supported types.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-user-interface/form-templates.html"
@@ -35103,9 +36573,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which list feature lets a user export the currently displayed rows to a spreadsheet format?",
 		"choices": [
 			"Export to Excel or CSV from the list context menu",
-			"Commit a migration update set",
 			"Enable a licensed plugin module",
-			"Run an import field map"
+			"Run an import field map",
+			"Commit a migration update set"
 		],
 		"correctIndex": 0,
 		"explanation": "Lists support exporting filtered results to Excel or CSV for offline analysis.",
@@ -35262,12 +36732,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 35,
 		"prompt": "What does the Service Catalog provide to end users?",
 		"choices": [
-			"A structured way to browse and order services and products",
 			"A CMDB reconciliation engine",
+			"A plugin activation wizard only",
 			"A MID Server configuration tool",
-			"A plugin activation wizard only"
+			"A structured way to browse and order services and products"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "The Service Catalog presents orderable items with variables and fulfillment workflows for standardized service delivery.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/service-catalog-overview.html"
@@ -35331,10 +36801,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"CMDB Relationship",
 			"Plugin Dependency"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			2
 		],
 		"questionType": "multi",
 		"explanation": "Catalog items use variable types such as Single Line Text and Multiple Choice; CMDB relationships and plugin dependencies are not catalog variable types.",
@@ -35396,9 +36866,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which knowledge feature lets users rate whether an article was helpful?",
 		"choices": [
 			"Article feedback and voting",
-			"Transform map coalesce",
 			"Import set coalesce preview",
-			"Plugin activation log"
+			"Plugin activation log",
+			"Transform map coalesce"
 		],
 		"correctIndex": 0,
 		"explanation": "Knowledge articles support feedback mechanisms so authors and owners can measure usefulness.",
@@ -35572,9 +37042,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "When no ACL grants an operation, what is the default platform behavior?",
 		"choices": [
 			"Access is denied",
-			"Access is granted to all users",
 			"The table is deleted",
-			"The user becomes admin"
+			"The user becomes admin",
+			"Access is granted to all users"
 		],
 		"correctIndex": 0,
 		"explanation": "ServiceNow uses deny-by-default security; an explicit ACL must grant the operation.",
@@ -35636,9 +37106,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Where does imported data land before a transform map loads it onto the target table?",
 		"choices": [
 			"An Import Set table (staging)",
-			"The sys_user table directly",
 			"The CMDB only",
-			"A homepage gauge"
+			"A homepage gauge",
+			"The sys_user table directly"
 		],
 		"correctIndex": 0,
 		"explanation": "Import sets stage incoming rows; transform maps then move validated data to the target table.",
@@ -35731,12 +37201,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 64,
 		"prompt": "In the Shared Responsibility Model, who is responsible for securing the underlying cloud infrastructure?",
 		"choices": [
-			"ServiceNow as the platform provider",
 			"The end user on every laptop",
+			"The MID Server exclusively",
 			"The catalog requester only",
-			"The MID Server exclusively"
+			"ServiceNow as the platform provider"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "ServiceNow secures the platform infrastructure; customers configure and secure their instance data, users, and integrations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/shared-responsibility-model.html"
@@ -35787,7 +37257,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			2
 		],
 		"questionType": "multi",
 		"explanation": "Table ACLs govern record operations such as read, write, create, and delete; instance clone and kernel upgrade are not ACL operations.",
@@ -35800,12 +37270,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 68,
 		"prompt": "What is a reference field used for in the data schema?",
 		"choices": [
-			"To link a record to another record in a related table",
 			"To store binary attachments only",
+			"To run Discovery credential tests",
 			"To replace roles",
-			"To run Discovery credential tests"
+			"To link a record to another record in a related table"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Reference fields store a pointer (sys_id) to a record in another table, forming relationships.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/reference-fields.html"
@@ -35865,9 +37335,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which import formats can be loaded into an Import Set? (Choose two.)",
 		"choices": [
 			"CSV",
-			"Excel (XLS/XLSX)",
 			"Compiled Java bytecode",
-			"Raw disk images"
+			"Raw disk images",
+			"Excel (XLS/XLSX)"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -36029,12 +37499,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 82,
 		"prompt": "What language is used for scripting in ServiceNow?",
 		"choices": [
-			"JavaScript",
 			"Java",
+			"COBOL",
 			"Python",
-			"COBOL"
+			"JavaScript"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Client scripts, business rules, and most platform scripts use JavaScript (Rhino engine on the server).",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/scripting-in-servicenow.html"
@@ -36110,9 +37580,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which artifacts are commonly moved between instances using Update Sets? (Choose two.)",
 		"choices": [
 			"Business Rules",
-			"UI Policies",
 			"User password hashes",
-			"All incident transactional data by default"
+			"All incident transactional data by default",
+			"UI Policies"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [

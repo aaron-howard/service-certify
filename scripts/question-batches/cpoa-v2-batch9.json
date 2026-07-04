@@ -1,0 +1,99 @@
+[
+	{
+		"trackCode": "CPOA",
+		"order": 40,
+		"prompt": "Two teams need to move scoped application changes from development to production. Which code promotion method aligns with ServiceNow governance expectations?",
+		"choices": [
+			"Email XML exports of records to production admins for manual paste",
+			"Direct edits on production during business hours without change records",
+			"Tracked update sets or application repository versions promoted through test with preview and approval",
+			"Shared personal developer accounts that bypass update set capture"
+		],
+		"correctIndex": 2,
+		"explanation": "Governed promotion uses captured change packages—update sets or app repo versions—previewed in test and approved before production commit.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/system-update-sets.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 41,
+		"prompt": "Leadership asks why a strict Waterfall schedule is a poor fit for iterative ServiceNow enhancements. Which drawback should the platform owner highlight?",
+		"choices": [
+			"Late stakeholder feedback because working increments are not demonstrated until the end of a long phase",
+			"Too many sprint retrospectives that slow executive decision making",
+			"Excessive daily standups that prevent developers from writing code",
+			"Mandatory backlog refinement that eliminates the need for documentation"
+		],
+		"correctIndex": 0,
+		"explanation": "Waterfall defers demonstrable increments, delaying feedback and adaptation—problematic for platform programs that benefit from iterative validation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/application-development.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 42,
+		"prompt": "A delivery team must choose an SDLC approach for ongoing platform enhancements. Which benefit best explains why Agile is commonly recommended on ServiceNow programs?",
+		"choices": [
+			"It eliminates the need for test instances and change approvals",
+			"It delivers working increments in short cycles so stakeholders can inspect and adapt frequently",
+			"It requires all requirements to be frozen before any configuration begins",
+			"It prevents developers from collaborating with business owners during delivery"
+		],
+		"correctIndex": 1,
+		"explanation": "Agile SDLC emphasizes short iterations and frequent stakeholder feedback, improving alignment as platform capabilities evolve.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/application-development.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 43,
+		"questionType": "multi",
+		"prompt": "A squad new to Scrum asks which ceremony purposes are correct for ServiceNow delivery. Which pairings should the platform owner confirm? (Choose two.)",
+		"choices": [
+			"Sprint review: demonstrate completed work and gather stakeholder feedback",
+			"Retrospective: inspect team process and agree improvements for the next sprint",
+			"Daily stand-up: a session where the product owner assigns every task for the day",
+			"Sprint planning: reopen stories already accepted in prior sprints for re-voting"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Reviews showcase increments for feedback and retrospectives improve process; stand-ups synchronize the team and planning selects new sprint work.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/application-development.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 44,
+		"questionType": "match",
+		"prompt": "Match each code promotion stage to the activity performed there.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Development instance",
+			"Test instance",
+			"Production instance",
+			"Post-deployment"
+		],
+		"matchRightItems": [
+			"Build changes captured in update sets or scoped application versions",
+			"Run UAT and regression validation on promoted packages",
+			"Commit approved changes through the release change record",
+			"Verify functionality and monitor for defects after go-live"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "The promotion path sequences build, validation, controlled commit, and post-release verification to reduce production risk.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/system-update-sets.html",
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
+		]
+	}
+]

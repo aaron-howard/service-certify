@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOA",
+		"order": 15,
+		"prompt": "The PMO reports overlapping platform projects funded by different departments. Which associate platform owner action best supports portfolio alignment?",
+		"choices": [
+			"Facilitate a cross-functional review to consolidate duplicate efforts and clarify executive priorities",
+			"Allow each department to continue independently without shared milestones",
+			"Cancel all active projects until a new vendor is selected",
+			"Move every initiative to production simultaneously to show progress"
+		],
+		"correctIndex": 0,
+		"explanation": "PMO engagement includes reconciling duplicate demand and aligning work to shared priorities so capacity is not wasted on redundant delivery.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 16,
+		"prompt": "Developers debate whether to use global business rules for all new applications. Which technical governance guidance should the associate platform owner provide?",
+		"choices": [
+			"Prefer scoped application logic and shared libraries within guardrails to limit unintended cross-app impact",
+			"Require global business rules for every customization regardless of scope",
+			"Discourage all server-side logic in favor of manual admin updates",
+			"Allow unaudited direct production edits when deadlines are tight"
+		],
+		"correctIndex": 0,
+		"explanation": "Coding best practices favor scoped implementations and reusable patterns that reduce risk of platform-wide side effects from global changes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/application-development.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 17,
+		"prompt": "Employee feedback shows the new workspace theme fails accessibility checks on mobile devices. Which UX action should the associate platform owner prioritize?",
+		"choices": [
+			"Partner with design leads to remediate accessibility gaps before broad rollout continues",
+			"Disable mobile access entirely so accessibility testing is unnecessary",
+			"Defer all UX fixes until the next major upgrade cycle with no interim work",
+			"Ignore feedback because power users primarily work on desktop"
+		],
+		"correctIndex": 0,
+		"explanation": "Platform owners advocate for inclusive experiences and should address accessibility findings before scaling a workspace that excludes part of the workforce.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/platform-user-interface.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 18,
+		"questionType": "multi",
+		"prompt": "The architecture review board asks which technical governance standards the platform program should publish first. (Choose two.)",
+		"choices": [
+			"Naming conventions and update set promotion rules for scoped applications",
+			"Secure coding expectations including credential handling and logging practices",
+			"A policy allowing unaudited production changes when business sponsors approve verbally",
+			"A guideline to store integration secrets in public wiki pages for visibility"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Foundational governance covers consistent delivery mechanics and secure development; unaudited production edits and exposed secrets undermine enterprise control.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 19,
+		"questionType": "match",
+		"prompt": "Match each data strategy element to the platform outcome it enables.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Data ownership model",
+			"Quality KPIs",
+			"Integration standards",
+			"Retention policies"
+		],
+		"matchRightItems": [
+			"Teams know who resolves conflicts for shared records",
+			"Stewards can measure progress on completeness and accuracy",
+			"Inbound and outbound feeds follow consistent validation rules",
+			"Records are kept only as long as policy and compliance require"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Data strategy ties ownership, measurable quality, integration discipline, and retention to trustworthy platform decisions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/common-service-data-model/csdm.html"
+		]
+	}
+]

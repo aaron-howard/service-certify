@@ -1,0 +1,100 @@
+[
+	{
+		"trackCode": "CIS-DF",
+		"order": 65,
+		"prompt": "After initial CMDB cleanup, how should a data foundation team operationalize ongoing govern practices?",
+		"choices": [
+			"Embed recurring health and KPI review cadences with accountable remediation owners",
+			"Run health scans only during major platform upgrades every few years",
+			"Delegate all CMDB updates to end users without stewardship standards",
+			"Archive every health test result immediately after each dashboard refresh"
+		],
+		"correctIndex": 0,
+		"explanation": "Sustained CMDB governance depends on routine reviews of health KPIs, assigned owners, and tracked remediation—not one-time or ad hoc efforts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-governance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 66,
+		"prompt": "CMDB Health compliance for a critical server class stays below target for three reporting cycles. What govern response is most appropriate?",
+		"choices": [
+			"Escalate through governance reviews with documented remediation plans and timelines",
+			"Lower the compliance threshold until scores appear green on dashboards",
+			"Deactivate all health tests for the class to remove visible failures",
+			"Delete non-compliant CIs without notifying application owners"
+		],
+		"correctIndex": 0,
+		"explanation": "Persistent KPI threshold breaches require formal escalation, remediation plans, and leadership visibility—not threshold manipulation or data deletion.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-governance.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-health-dashboard-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 67,
+		"prompt": "Stewards use CMDB Data Manager to retire stale lab equipment in bulk. Which lifecycle attributes are most relevant to the update?",
+		"choices": [
+			"Install status and operational status reflecting retired or non-operational state",
+			"SMTP server name and outbound email authentication profile",
+			"Catalog item picture URL and variable set display sequence",
+			"Flow Designer trigger type and subflow execution order"
+		],
+		"correctIndex": 0,
+		"explanation": "Bulk lifecycle operations target governed status fields such as install and operational status to retire CIs while preserving history.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-lifecycle-management.html",
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-data-manager.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 68,
+		"questionType": "multi",
+		"prompt": "Which two CMDB Data Manager policy controls reduce inconsistent bulk updates? (Choose two.)",
+		"choices": [
+			"Approval workflows required before mass attribute changes execute",
+			"Data policy validation applied to targeted CI populations",
+			"Permanent deactivation of all identification and reconciliation rules",
+			"Mandatory deletion of custom CI classes after every import run"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Governed bulk operations combine approval gates and data policies; disabling IRE or deleting classes undermines CMDB integrity.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-data-manager.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 69,
+		"questionType": "match",
+		"prompt": "Match each lifecycle attribute to its typical govern use.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"install_status",
+			"operational_status",
+			"Life cycle stage",
+			"managed_by_group"
+		],
+		"matchRightItems": [
+			"Tracks deployment state such as installed, in stock, or retired",
+			"Indicates whether the CI is actively in service",
+			"Supports phased retirement and audit review workflows",
+			"Identifies the accountable support group for the CI"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Lifecycle attributes communicate deployment, operational, retirement, and ownership context for governed CMDB records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-lifecycle-management.html"
+		]
+	}
+]

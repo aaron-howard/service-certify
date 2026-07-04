@@ -1,0 +1,103 @@
+[
+	{
+		"trackCode": "CPOA",
+		"order": 95,
+		"prompt": "Customer experience leadership asks which ServiceNow KPI best measures satisfaction after major portal changes. Which indicator should the platform owner recommend tracking?",
+		"choices": [
+			"Customer Satisfaction (CSAT) score trend following defined survey methodology",
+			"Total count of knowledge articles published without response-rate context",
+			"Number of MID Server heartbeat events recorded during discovery windows",
+			"Volume of update set collisions detected in the development instance"
+		],
+		"correctIndex": 0,
+		"explanation": "CSAT surveys provide a standard ServiceNow KPI for measuring customer or employee satisfaction trends after experience changes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/product/service-catalog/concept/c_ServiceCatalog.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 96,
+		"prompt": "A team wants to build a point-to-point scripted integration instead of using an IntegrationHub spoke available in the store. Which governance factor should the platform owner weigh most heavily?",
+		"choices": [
+			"Whether the custom approach bypasses reusable patterns, supportability, and license coverage",
+			"Whether the script editor theme matches the developer's personal IDE color preferences",
+			"Whether the integration uses fewer than ten lines of JavaScript regardless of risk",
+			"Whether the vendor published a marketing blog endorsing custom integrations last quarter"
+		],
+		"correctIndex": 0,
+		"explanation": "Governance compares custom integrations against reusable spokes for maintainability, operational support, and entitlement coverage—not cosmetic or arbitrary preferences.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-integrate-applications/page/administer/integration-hub/concept/integration-hub.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-administration/concept/platform-governance.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 97,
+		"questionType": "match",
+		"prompt": "Match each integration option to the scenario where it is most appropriate for a platform owner to recommend it.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"LDAP / Active Directory integration",
+			"IntegrationHub spoke from the store",
+			"Third-party connector application",
+			"Custom scoped REST integration"
+		],
+		"matchRightItems": [
+			"Scheduled identity synchronization from corporate directory services",
+			"Standardized vendor-supported flow for a common SaaS endpoint with reusable subflows",
+			"Certified partner app when store spoke coverage is limited but support is required",
+			"Unique legacy protocol with no maintained connector and accepted maintenance ownership"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Platform owners match integration patterns to scenario fit: directory sync, reusable spokes, partner connectors, or governed custom builds when no standard option exists.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/user-administration/concept/c_LDAPIntegration.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-integrate-applications/page/administer/integration-hub/concept/integration-hub.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 98,
+		"questionType": "multi",
+		"prompt": "The platform governance council is formalizing operating model responsibilities across three levels. Which assignments should the platform owner document? (Choose two.)",
+		"choices": [
+			"Strategic forum sets enterprise guardrails and investment themes for the platform",
+			"Portfolio forum prioritizes demand and capacity across business programs",
+			"Technical forum replaces all change advisory board approvals for production outages",
+			"Strategic forum performs daily incident queue assignment for every support team"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Strategic governance sets direction and guardrails while portfolio governance prioritizes programs; technical governance supports quality without replacing incident operations or CAB roles.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-administration/concept/platform-governance.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-impact/page/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 99,
+		"prompt": "As the CPOA bank reaches its final orders, which outcome best summarizes a mature ServiceNow governance model for an associate platform owner?",
+		"choices": [
+			"Unlimited customization without standards to maximize team autonomy",
+			"Predictable delivery with controlled risk, verified entitlements, and measurable value",
+			"All development performed directly in production to eliminate environment cost",
+			"Complete elimination of KPI reviews once initial adoption targets are met"
+		],
+		"correctIndex": 1,
+		"explanation": "Mature platform governance balances predictable delivery and controlled risk with verified licensing and value transparency—not unconstrained customization or abandoned measurement.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-administration/concept/platform-governance.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/cloud-governance-suite/concept/cloud-governance-suite.html"
+		]
+	}
+]

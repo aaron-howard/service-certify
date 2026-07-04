@@ -1,0 +1,88 @@
+[
+	{
+		"trackCode": "CIS-SP",
+		"order": 50,
+		"prompt": "When an administrator in a child domain modifies a business rule that exists in the global domain, what does the platform do?",
+		"choices": [
+			"Creates a domain-specific override record linked through sys_overrides instead of updating the global record",
+			"Deletes the global business rule and copies it into the child domain table",
+			"Moves the global record into the child domain by changing its Domain field value",
+			"Disables business rules globally until the override record is manually removed"
+		],
+		"correctIndex": 0,
+		"explanation": "Process administration converts attempted updates to higher-domain policies into domain-specific inserts with sys_overrides pointing to the original record.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/c_DelegatedAdministration.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 51,
+		"prompt": "Process administration determines which policies apply during a transaction. Which precedence rule is correct?",
+		"choices": [
+			"The record's domain is evaluated first, then policies are searched up the hierarchy to global",
+			"The logged-in user's home domain always overrides the domain on the record being processed",
+			"Global policies execute exclusively and child domains cannot customize process behavior",
+			"Policies from sibling domains are merged before any domain-specific rule is applied"
+		],
+		"correctIndex": 0,
+		"explanation": "Delegated administration starts with the record domain and walks up the domain hierarchy until a matching policy is found.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/c_DelegatedAdministration.html",
+			"https://www.servicenow.com/docs/r/platform-security/bp-terms-conditions.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 52,
+		"prompt": "A service provider must load tenant reference data into domain-separated tables. What should the transform map ensure for each inserted row?",
+		"choices": [
+			"The target record domain aligns with the tenant scope defined for that data load",
+			"The sys_domain field is cleared so ACLs route records automatically after insert",
+			"All rows load into global regardless of the source file tenant identifier",
+			"Domain assignment is deferred until end users open the records in the portal"
+		],
+		"correctIndex": 0,
+		"explanation": "Domain-aware foundational loads must stamp records with the correct tenant domain so queries, references, and ACLs enforce separation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_ImportSets.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/domain-separation/concept/domain-separation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 53,
+		"prompt": "During a tenant bulk user load, a transform map maps a source company code to a sys_user.company reference. What reduces cross-domain reference errors?",
+		"choices": [
+			"Qualify company lookups to the target tenant domain and validate matches before insert",
+			"Disable reference fields on sys_user during import to improve transform throughput",
+			"Coalesce exclusively on email while ignoring company reference resolution",
+			"Import users into global and reassign domains with a UI action after the load completes"
+		],
+		"correctIndex": 0,
+		"explanation": "Reference resolution must respect domain visibility so imported users link to company records in the same tenant scope.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/task/t_CreateATransformMap.html",
+			"https://www.servicenow.com/docs/r/platform-security/bp-dom-sep-definition.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 54,
+		"questionType": "multi",
+		"prompt": "A recurring tenant location import must update existing rows instead of creating duplicates. Which transform map settings should the implementation team configure? (Choose two.)",
+		"choices": [
+			"Mark stable natural keys as coalesce fields on the transform map",
+			"Map the domain column so updates stay within the correct tenant scope",
+			"Disable transform scripts to prevent any field mapping from executing",
+			"Set Run business rules to false on every production import run"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Coalesce fields enable upsert behavior while explicit domain mapping keeps updates scoped to the intended tenant.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_Coalescing.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/task/t_CreateATransformMap.html"
+		]
+	}
+]

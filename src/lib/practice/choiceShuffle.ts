@@ -53,3 +53,31 @@ export function shuffleChoicesForDisplay(
 		permutation
 	};
 }
+
+/** Shuffle match columns for display; permutations map display index → original bank index. */
+export function shuffleMatchForDisplay(
+	leftItems: string[],
+	rightItems: string[],
+	sessionSeed: string,
+	questionOrder: number
+): {
+	matchLeftItems: string[];
+	matchRightItems: string[];
+	matchLeftPermutation: number[];
+	matchRightPermutation: number[];
+} {
+	const matchLeftPermutation = choicePermutationForSeed(
+		leftItems.length,
+		`${sessionSeed}:matchL:${questionOrder}`
+	);
+	const matchRightPermutation = choicePermutationForSeed(
+		rightItems.length,
+		`${sessionSeed}:matchR:${questionOrder}`
+	);
+	return {
+		matchLeftItems: applyChoicePermutation(leftItems, matchLeftPermutation),
+		matchRightItems: applyChoicePermutation(rightItems, matchRightPermutation),
+		matchLeftPermutation,
+		matchRightPermutation
+	};
+}

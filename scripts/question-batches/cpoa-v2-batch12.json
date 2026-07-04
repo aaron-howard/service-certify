@@ -1,0 +1,99 @@
+[
+	{
+		"trackCode": "CPOA",
+		"order": 55,
+		"prompt": "When planning a major family upgrade, which components should a platform owner treat as critical to validate before production cutover?",
+		"choices": [
+			"Custom integrations, scoped applications, MID Server connectivity, and security hardening settings",
+			"Homepage theme colors, personal dashboard layouts, and user avatar images",
+			"Historical chat transcripts unrelated to platform configuration",
+			"Individual browser bookmark collections stored outside the instance"
+		],
+		"correctIndex": 0,
+		"explanation": "Upgrade planning emphasizes integrations, application scope, connectivity, and security posture because failures in these areas disrupt core platform operations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/upgrade-center.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 56,
+		"questionType": "multi",
+		"prompt": "Which are features in ServiceNow Security Center? (Choose two.)",
+		"choices": [
+			"Security hardening",
+			"Security metrics",
+			"Catalog item bundling",
+			"Update set batch preview"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Security Center provides hardening settings with compliance scoring and built-in security metrics dashboards for monitoring instance posture.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/security-center/sec-center-v2.html",
+			"https://www.servicenow.com/docs/r/platform-security/instance-security-hardening-settings/security-hardening-settings.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 57,
+		"prompt": "Developers request weekly full clones of production into a shared development instance. Which cloning scenario creates the highest operational risk if cleanup is skipped?",
+		"choices": [
+			"Cloned production data triggering outbound email and live integration calls from a non-production instance",
+			"Cloning a sandbox with no production data into an empty developer instance",
+			"Refreshing a personal developer instance from a sanitized sub-production template",
+			"Copying a single scoped application repository without instance data"
+		],
+		"correctIndex": 0,
+		"explanation": "Production clones without post-clone sanitization can expose sensitive data and trigger unintended external actions from lower environments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/instance-clone.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 58,
+		"questionType": "match",
+		"prompt": "Match each Now Platform service area to its primary technical characteristic.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Platform Core",
+			"Admin and Configuration",
+			"Integration Services",
+			"Security and Compliance"
+		],
+		"matchRightItems": [
+			"Foundational runtime, data model, and workflow engine shared by all applications",
+			"Instance administration, user access, and system configuration tooling",
+			"APIs, spokes, and orchestration for connecting external systems",
+			"Hardening, access controls, and audit capabilities for regulatory alignment"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Platform service areas divide core runtime, administration, integration, and security responsibilities that platform owners must understand at associate level.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 59,
+		"prompt": "During clone profile design, when are table-level exclusions most appropriate?",
+		"choices": [
+			"When specific large or sensitive tables should not be copied into the target instance",
+			"When every table must always be copied without exception",
+			"When developers need unrestricted production database credentials",
+			"When clone duration should increase by copying unnecessary audit archives"
+		],
+		"correctIndex": 0,
+		"explanation": "Clone exclusions omit designated tables from the copy operation to reduce exposure, duration, or overwrite of preserved lower-environment data.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/clone-data-preservation.html"
+		]
+	}
+]

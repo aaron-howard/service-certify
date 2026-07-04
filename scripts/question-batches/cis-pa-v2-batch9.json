@@ -1,0 +1,85 @@
+[
+	{
+		"trackCode": "CIS-PA",
+		"order": 40,
+		"prompt": "An admin must stop collecting breakdown scores for two assignment groups on one indicator while keeping all other segments. Which configuration should they use?",
+		"choices": [
+			"Breakdown matrix exclusions for those assignment group values",
+			"Manual indicator score overrides each collection period",
+			"Homepage filter hiding the dashboard widget",
+			"Import set error handling policy on the source table"
+		],
+		"correctIndex": 0,
+		"explanation": "Breakdown matrix exclusions remove specific dimensional values from collection for a given indicator without deleting the breakdown source.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 41,
+		"prompt": "What does configuring a breakdown relation between two breakdown sources enable?",
+		"choices": [
+			"Drilling from one breakdown dimension into a related dimension during analysis",
+			"Converting the indicator from automated to manual entry",
+			"Skipping all breakdown collection for the indicator",
+			"Recalculating targets using benchmark scores only"
+		],
+		"correctIndex": 0,
+		"explanation": "Breakdown relations define hierarchical or associated paths so users can navigate from one segment dimension to another in PA analytics.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 42,
+		"prompt": "A breakdown mapping references incident priority, but segmented counts do not match expected distribution. What should be verified first?",
+		"choices": [
+			"The mapped field type and stored values align with the breakdown source definition",
+			"The dashboard widget is configured as a list report",
+			"The MID Server version matches the target release",
+			"All users have the admin role on pa_breakdowns"
+		],
+		"correctIndex": 0,
+		"explanation": "Incorrect segments often trace to a mismatch between the indicator source field values and the breakdown source value set being mapped.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_BreakdownMappings.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 43,
+		"prompt": "Why would an administrator apply bucket groups to a duration-based breakdown source?",
+		"choices": [
+			"To present SLA age bands such as 0–4 hours and 4–8 hours in segmented views",
+			"To disable scripted breakdown mappings for the indicator",
+			"To force realtime collection every minute regardless of load",
+			"To eliminate the need for any breakdown mapping on the indicator"
+		],
+		"correctIndex": 0,
+		"explanation": "Bucket groups convert continuous duration or numeric values into discrete bands that are easier to interpret in scorecards and widgets.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 44,
+		"questionType": "multi",
+		"prompt": "Which actions help limit breakdown collection to meaningful segments? (Choose two.)",
+		"choices": [
+			"Configure breakdown matrix exclusions for irrelevant values",
+			"Filter breakdown source values to an active or in-scope subset",
+			"Delete all historical indicator scores each week",
+			"Remove all conditions from the indicator source"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Matrix exclusions and filtered breakdown sources keep collection focused; wiping scores or removing source conditions undermines accurate analytics.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html",
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_ConfigureBreakdownSources.html"
+		]
+	}
+]

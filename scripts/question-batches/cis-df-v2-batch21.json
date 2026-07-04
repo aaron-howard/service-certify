@@ -1,0 +1,102 @@
+[
+	{
+		"trackCode": "CIS-DF",
+		"order": 100,
+		"prompt": "A program manager drafting a CSDM roadmap asks which sequencing principle ServiceNow recommends for data foundation maturity. What should the implementer advise?",
+		"choices": [
+			"Align foundation master data and governance first, then connect business and technical services with measured expansion",
+			"Begin with unrestricted custom tables and migrate to CSDM only after production go-live",
+			"Implement Sell domain offerings before any location or company records exist",
+			"Skip stakeholder engagement until every CMDB metric reaches full compliance"
+		],
+		"correctIndex": 0,
+		"explanation": "CSDM approach prioritizes governed foundation data and ownership before scaling service relationships and portfolio constructs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/csdm-foundation-planning.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 101,
+		"prompt": "Foundation data workshops reveal conflicting location hierarchies across business units. Which stakeholder mapping outcome resolves the conflict before CMDB loads continue?",
+		"choices": [
+			"Documented data owners and agreed reference standards for location and organization records",
+			"A decision to load every variant without reconciliation or ownership",
+			"Removal of all location fields from CI classes to avoid validation",
+			"Assignment of the admin role to every workshop participant"
+		],
+		"correctIndex": 0,
+		"explanation": "Foundation stakeholder mapping establishes accountable owners and reference standards so shared entities remain consistent across integrations and services.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_GovernanceInCSDM.html",
+			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/csdm-foundation-domain.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 102,
+		"prompt": "After CSDM alignment, portfolio leaders report faster impact assessments during outages. Which benefit best explains that improvement?",
+		"choices": [
+			"Mapped business-to-technical service relationships clarify which consumer services depend on failed infrastructure",
+			"CSDM removes all need for CMDB dependency views and saved queries",
+			"Service modeling automatically disables duplicate CI creation without I&R configuration",
+			"Foundation domains replace incident categorization with catalog variables"
+		],
+		"correctIndex": 0,
+		"explanation": "CSDM links business services to technical dependencies so impact analysis reflects consumer outcomes—not isolated CI lists.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_CSDMServices.html",
+			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_CSDMAndOperationalProcesses.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 103,
+		"questionType": "multi",
+		"prompt": "Which two practices align a CSDM rollout with CMDB data foundation goals? (Choose two.)",
+		"choices": [
+			"Define service boundaries and relate supporting CIs before declaring services production-ready",
+			"Use foundation domain standards for shared entities consumed by multiple applications",
+			"Defer all relationship modeling until custom CMDB classes replace out-of-box tables",
+			"Allow each integration to invent local service definitions without central review"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "CSDM and CMDB foundations converge on governed shared entities and explicit service-to-CI relationships rather than unconstrained local definitions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_ServiceModelingGuidelines.html",
+			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/csdm-foundation-domain.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 104,
+		"questionType": "match",
+		"prompt": "Match each CSDM adoption activity to the program outcome it primarily delivers.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Stakeholder mapping",
+			"Foundation data certification",
+			"Service relationship modeling",
+			"Portfolio alignment workshops"
+		],
+		"matchRightItems": [
+			"Named owners and decision rights for each CSDM domain and data set",
+			"Validated organizational and location master data before dependent services go live",
+			"Traceable links between business services and supporting technical CIs",
+			"Business capabilities and offerings connected to measurable platform investments"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "CSDM programs sequence stakeholder accountability, foundation certification, service linkage, and portfolio alignment to deliver governed end-to-end service data.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_GovernanceInCSDM.html",
+			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/csdm-foundation-planning.html"
+		]
+	}
+]

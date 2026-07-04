@@ -1,0 +1,99 @@
+[
+	{
+		"trackCode": "CIS-DF",
+		"order": 95,
+		"prompt": "A new CSDM lead must explain how the model is organized to architecture reviewers. Which description accurately reflects CSDM domain structure?",
+		"choices": [
+			"Domains such as Foundation, Design and Planning, Build, and Sell group related service and portfolio constructs",
+			"CSDM replaces CMDB classes with a single flat table for all infrastructure",
+			"Domains exist only for HR payroll integrations and exclude operational services",
+			"Each domain maps one-to-one with Discovery patterns and MID Server clusters"
+		],
+		"correctIndex": 0,
+		"explanation": "CSDM organizes records into domains—Foundation, Design and Planning, Build, Sell, and related areas—that align business and technical service modeling.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_CSDMOverview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 96,
+		"prompt": "Executive sponsors ask why the organization should adopt CSDM instead of maintaining ad hoc CMDB spreadsheets. Which benefit should the implementer emphasize?",
+		"choices": [
+			"A shared service vocabulary improves cross-product reporting, ownership clarity, and upgrade compatibility",
+			"CSDM eliminates the need for any CMDB relationships or identification rules",
+			"Adoption guarantees every integration can skip data validation permanently",
+			"The model restricts all services to a single generic CI class"
+		],
+		"correctIndex": 0,
+		"explanation": "CSDM delivers a common data language that connects business and technical views, improving governance and platform consistency across applications.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_CSDMAndOperationalProcesses.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 97,
+		"prompt": "Which CSDM implementation approach best reduces rework during a multi-phase data foundation rollout?",
+		"choices": [
+			"Establish foundation and ownership first, then expand Build and service relationships in prioritized increments",
+			"Load all custom tables and retire CSDM foundation records after go-live",
+			"Customize every core domain table before documenting any stakeholders",
+			"Defer service modeling until every CI in the enterprise reaches one hundred percent completeness"
+		],
+		"correctIndex": 0,
+		"explanation": "Phased CSDM adoption starts with foundation data and governance, then iteratively expands service and relationship modeling aligned to business priorities.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/csdm-foundation-planning.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 98,
+		"questionType": "multi",
+		"prompt": "During stakeholder mapping for CSDM, which two roles should be identified before detailed service modeling workshops? (Choose two.)",
+		"choices": [
+			"Business service owners accountable for consumer-facing outcomes",
+			"Technical service or application owners responsible for supporting CIs and relationships",
+			"Every instance user with the admin role regardless of domain expertise",
+			"External auditors who will never interact with service records"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Effective CSDM stakeholder mapping names business and technical ownership; broad admin access or passive audit contacts do not substitute for service accountability.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_GovernanceInCSDM.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 99,
+		"questionType": "match",
+		"prompt": "Match each CSDM domain to the type of records it primarily contains.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Foundation",
+			"Design and Planning",
+			"Build",
+			"Sell"
+		],
+		"matchRightItems": [
+			"Shared organizational entities such as company, location, and group structures",
+			"Strategy, business capabilities, and portfolio planning constructs",
+			"Technical services, application services, and supporting CMDB relationships",
+			"Market-facing offerings and commercial service definitions"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "CSDM domains separate foundation master data, planning artifacts, operational build constructs, and sell-side offering definitions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_CSDMOverview.html",
+			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_CSDMServices.html"
+		]
+	}
+]

@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-SP",
+		"order": 15,
+		"prompt": "A domain administrator must place a contractor user in the Initech domain even though the user's company maps to a different tenant domain. Which field supports that manual domain override on the user record?",
+		"choices": [
+			"Managed domain on the user record in a managed domain configuration",
+			"sys_overrides on the user record",
+			"Default domain on the Company record",
+			"Primary check box on the Domain record"
+		],
+		"correctIndex": 0,
+		"explanation": "In a managed domain, the Managed domain field lets administrators manually select the user's domain instead of inheriting automatically from the company record.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/bp-terms-conditions.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 16,
+		"prompt": "An MSP engineer selects the ACME domain from the domain picker before triaging incidents. Which data becomes visible in list and form views for that session?",
+		"choices": [
+			"Records in the ACME domain and its child domains based on session scope",
+			"Records in the ACME domain and all parent domains above ACME",
+			"Only records explicitly tagged global regardless of hierarchy",
+			"All records in every domain where the user holds the itil role"
+		],
+		"correctIndex": 0,
+		"explanation": "Session scope reflects the selected domain and its child domains; users see data in their home or picked domain plus domains below them in the hierarchy.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/bp-domain-picker-config-process.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 17,
+		"prompt": "Performance review shows slow list queries after an SP team added many contains relationships across tenant domains. What is the underlying cause?",
+		"choices": [
+			"Contains relationships add OR conditions to domain queries, increasing query complexity",
+			"Contains relationships move all contained records into the global domain",
+			"Contains relationships disable domain path indexing on affected tables",
+			"Contains relationships require a separate MID Server per contained domain"
+		],
+		"correctIndex": 0,
+		"explanation": "Each contains relationship adds OR conditions to database queries; broad contains design can significantly impact instance performance at scale.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/bp-contains-domain-visibility.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 18,
+		"prompt": "MSP technicians in a shared support group need persistent access to the Initech tenant domain without individual user configuration. Where should the architect define that access?",
+		"choices": [
+			"Visibility domains related list on the support group record",
+			"Contains domains related list on each incident record",
+			"sys_overrides field on the Group table definition",
+			"Primary check box on the Initech domain record"
+		],
+		"correctIndex": 0,
+		"explanation": "Assigning visibility domains to a group grants all group members access to the specified domain; users inherit group visibility domains through membership.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainVisibility.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 19,
+		"questionType": "multi",
+		"prompt": "Which statements describe characteristics of a contains domain relationship? (Choose three.)",
+		"choices": [
+			"It is a many-to-many domain-to-domain relationship independent of parent-child hierarchy",
+			"It grants visibility to data in the contained domain without affecting process flow",
+			"Visibility through contains is controlled by the domain picker selection",
+			"It automatically makes the containing domain the parent of the contained domain"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1, 2],
+		"explanation": "Contains domains are many-to-many data visibility links outside hierarchy, do not change process inheritance, and respect domain picker context when viewing contained data.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainVisibility.html"
+		]
+	}
+]

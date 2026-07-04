@@ -1,0 +1,85 @@
+[
+	{
+		"trackCode": "CIS-PA",
+		"order": 0,
+		"prompt": "A new Platform Analytics engagement must explain how KPIs reach executive dashboards. Which sequence best describes how PA solution components connect?",
+		"choices": [
+			"Indicator sources filter facts tables, indicators aggregate scores, breakdowns segment results, and widgets visualize scores on dashboards",
+			"Dashboards define indicator source conditions before any facts table is selected",
+			"Breakdown sources replace indicator sources during the first data collection run",
+			"Targets create indicator records automatically from unfiltered table exports"
+		],
+		"correctIndex": 0,
+		"explanation": "PA builds from filtered facts through indicators and breakdowns to collected scores that widgets and dashboards present to stakeholders.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/workflow-automated-indicators.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 1,
+		"prompt": "During a greenfield PA deployment, the technical team is ready to build KPIs from incident data. Which implementation step comes first in the standard bottom-up workflow?",
+		"choices": [
+			"Create indicator sources for each relevant record subset on the Incident table",
+			"Publish executive dashboards before any indicator definitions exist",
+			"Schedule data collection jobs before identifying the facts table",
+			"Configure breakdown matrices before searching for existing indicator sources"
+		],
+		"correctIndex": 0,
+		"explanation": "Technical PA implementation starts by identifying tables and creating indicator sources that filter record subsets before indicators and collection jobs are defined.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/workflow-automated-indicators.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 2,
+		"prompt": "The CIO wants quarterly visibility into service performance trends without ad hoc spreadsheet reports. Which PA use case best addresses this need?",
+		"choices": [
+			"Scheduled indicator score collection with trend widgets shared on role-based dashboards",
+			"One-time report exports run manually by each business analyst",
+			"Real-time event rules that replace all historical trend analysis",
+			"CMDB discovery schedules that populate dashboard filters automatically"
+		],
+		"correctIndex": 0,
+		"explanation": "PA delivers recurring score snapshots and trend visualizations on dashboards so executives can monitor performance over time without manual reporting.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/designing-pa-solution.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 3,
+		"prompt": "A business analyst needs to create automated indicators and associate breakdowns but should not manage data collection jobs. Which role aligns to that persona?",
+		"choices": [
+			"pa_power_user",
+			"pa_data_collector",
+			"pa_target_admin without pa_viewer",
+			"admin because indicators always require full system access"
+		],
+		"correctIndex": 0,
+		"explanation": "pa_power_user creates indicators, breakdowns, and PA widgets; pa_data_collector owns indicator sources and data collection jobs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/r_PARoles.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 4,
+		"questionType": "multi",
+		"prompt": "Which artifacts are foundational Performance Analytics solution components an implementer configures before dashboards go live? (Choose three.)",
+		"choices": [
+			"Indicator sources that filter facts table records",
+			"Indicators that define what is measured and how scores aggregate",
+			"Breakdowns that segment scores by dimensions such as assignment group",
+			"MID Server clusters dedicated to each indicator frequency",
+			"Update sets that version-control widget CSS themes"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1, 2],
+		"explanation": "Indicator sources, indicators, and breakdowns form the core PA data model; MID Server clusters and update sets are not PA solution components.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/workflow-automated-indicators.html"
+		]
+	}
+]

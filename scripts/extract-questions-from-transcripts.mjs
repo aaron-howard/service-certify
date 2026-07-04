@@ -181,14 +181,21 @@ function validateQuestion(q, { warnDuplicates = true } = {}) {
 			);
 		}
 	} else {
-		if (!Array.isArray(q.choices) || q.choices.length !== 4) {
+		const choiceCount = Array.isArray(q.choices) ? q.choices.length : 0;
+		if (questionType === 'multi') {
+			if (choiceCount < 4 || choiceCount > 5) {
+				throw new Error(
+					`track ${q.trackCode} order ${q.order}: multi questions need 4-5 choices`
+				);
+			}
+		} else if (choiceCount !== 4) {
 			throw new Error(`track ${q.trackCode} order ${q.order}: need 4 choices`);
 		}
-		if (q.correctIndex < 0 || q.correctIndex > 3) {
+		if (q.correctIndex < 0 || q.correctIndex >= choiceCount) {
 			throw new Error(`track ${q.trackCode} order ${q.order}: bad correctIndex`);
 		}
 		const normalizedChoices = q.choices.map((c) => c.trim().toLowerCase());
-		if (new Set(normalizedChoices).size !== 4) {
+		if (new Set(normalizedChoices).size !== choiceCount) {
 			throw new Error(`track ${q.trackCode} order ${q.order}: duplicate choices in same question`);
 		}
 		for (const choice of q.choices) {
@@ -210,7 +217,7 @@ function validateQuestion(q, { warnDuplicates = true } = {}) {
 		}
 		const sorted = [...q.correctIndexes].sort((a, b) => a - b);
 		for (const idx of sorted) {
-			if (idx < 0 || idx > 3) {
+			if (idx < 0 || idx >= q.choices.length) {
 				throw new Error(`track ${q.trackCode} order ${q.order}: correctIndexes out of range`);
 			}
 		}

@@ -1,0 +1,89 @@
+[
+	{
+		"trackCode": "CIS-PA",
+		"order": 70,
+		"prompt": "Which Platform Analytics visualization is most appropriate when stakeholders need a quick read of whether a KPI is above or below target right now?",
+		"choices": [
+			"A score visualization with target and threshold coloring",
+			"A time series chart spanning twelve months of history",
+			"A breakdown treemap with dozens of low-volume segments",
+			"A pivot table listing every source record in the indicator query"
+		],
+		"correctIndex": 0,
+		"explanation": "Score visualizations emphasize the current value and target status, which supports at-a-glance performance checks.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/data-visualizations.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_TargetsAndThresholds.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 71,
+		"prompt": "A dashboard author adds a unified date filter to a Platform Analytics dashboard. What is the primary benefit for consumers?",
+		"choices": [
+			"One filter updates the time scope across linked visualizations without reconfiguring each widget",
+			"Collection jobs run automatically every time a user changes the filter value",
+			"Indicator sources are rewritten to match the filter script include",
+			"Breakdown mappings are deleted and rebuilt from the filter definition"
+		],
+		"correctIndex": 0,
+		"explanation": "Unified filters apply shared criteria—such as date range—across dashboard visualizations so consumers analyze a consistent scope.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/unified-filters.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 72,
+		"prompt": "Users report timeouts when opening a shared dashboard during business hours. Which investigation aligns with Platform Analytics performance guidance?",
+		"choices": [
+			"Review widget count, breakdown cardinality, filter breadth, and collection job timing relative to peak load",
+			"Disable all targets so widgets skip threshold evaluation entirely",
+			"Remove certified dashboards from the library so only personal copies load",
+			"Convert the dashboard to a Core UI homepage without data visualizations"
+		],
+		"correctIndex": 0,
+		"explanation": "Dashboard timeouts often trace to heavy visualizations, high-cardinality breakdowns, broad filters, or collection load overlapping peak usage.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/performance-analytics-performance.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 73,
+		"questionType": "multi",
+		"prompt": "Which capabilities are available from KPI Details in the Platform Analytics experience? (Choose two.)",
+		"choices": [
+			"Review trend movement and breakdown contributions for the selected KPI",
+			"Evaluate target and threshold status for the displayed score",
+			"Edit indicator source table names without pa_admin access",
+			"Run historic data collection jobs directly from the widget header"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "KPI Details focuses on interpreting the KPI through trends, breakdown context, and target status rather than on administrative collection tasks.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/kpi-details.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 74,
+		"prompt": "What are the two main sections of the Platform Analytics experience in Next Experience?",
+		"choices": [
+			"Analytics Center and Library",
+			"Reports Designer and Migration Center",
+			"KPI Composer and Data Collector",
+			"Core UI Dashboards and Service Portal Analytics"
+		],
+		"correctIndex": 0,
+		"explanation": "The Platform Analytics experience is organized into Analytics Center for curated and certified content and Library for browsing and managing analytics artifacts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/par-workspace.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/analytics-center.html"
+		]
+	}
+]

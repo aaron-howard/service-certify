@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOA",
+		"order": 20,
+		"prompt": "Quarterly business reviews show strong project delivery but flat self-service adoption. Which strategic response fits associate platform owner guidance?",
+		"choices": [
+			"Diagnose adoption barriers and adjust the roadmap to include enablement and UX improvements",
+			"Report only on-time delivery metrics and omit user feedback from executive materials",
+			"Pause all new features indefinitely because adoption cannot change after one slow quarter",
+			"Shift every remaining developer to incident queue assignment full time"
+		],
+		"correctIndex": 0,
+		"explanation": "Strategy balances delivery with adoption; associate platform owners should surface usage gaps and reprioritize enablement rather than ignoring user experience.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 21,
+		"prompt": "Organizational change leaders ask how to sustain momentum after a major ServiceNow rollout. Which people-focused step should the associate platform owner recommend?",
+		"choices": [
+			"Stand up a network of community champions who provide peer support and feedback loops",
+			"Eliminate all training because the initial go-live communication was sufficient",
+			"Centralize every user question through a single admin mailbox with no local advocates",
+			"Disable feedback channels to avoid negative comments during stabilization"
+		],
+		"correctIndex": 0,
+		"explanation": "Champion networks extend enablement beyond launch by connecting peers, surfacing friction early, and reinforcing new ways of working.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 22,
+		"prompt": "A business unit hires analysts who will build low-code workflows. Which people enablement should the associate platform owner schedule under senior guidance?",
+		"choices": [
+			"Role-based training on approved tools, intake steps, and when to escalate to platform admins",
+			"Immediate admin role assignment so new hires never wait for support",
+			"Self-study only with no office hours or office-of-platform contact",
+			"Mandatory certification in unrelated products before any ServiceNow access"
+		],
+		"correctIndex": 0,
+		"explanation": "Targeted training and clear escalation paths help new builders contribute safely without granting unnecessary privileged access on day one.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 23,
+		"questionType": "multi",
+		"prompt": "Two departments disagree on which application should be the system of record for employee requests. Which people practices should the associate platform owner apply? (Choose two.)",
+		"choices": [
+			"Facilitate a stakeholder session to document requirements and decision criteria",
+			"Escalate unresolved conflict to executive sponsors with fact-based options",
+			"Implement both solutions in production without alignment to end the debate quickly",
+			"Withdraw from the discussion because platform owners never mediate business conflict"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Associate platform owners help stakeholders align through structured discovery and appropriate executive escalation rather than parallel conflicting solutions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 24,
+		"questionType": "match",
+		"prompt": "Match each platform role to its primary people responsibility during a multi-wave rollout.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Executive sponsor",
+			"Community champion",
+			"Platform admin",
+			"Business process owner"
+		],
+		"matchRightItems": [
+			"Secures funding and removes organizational blockers",
+			"Provides peer coaching and collects frontline feedback",
+			"Maintains environment health and supports approved changes",
+			"Defines process outcomes and signs off on fit-for-purpose design"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Successful rollouts clarify people responsibilities across sponsorship, local enablement, technical operations, and business ownership.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	}
+]

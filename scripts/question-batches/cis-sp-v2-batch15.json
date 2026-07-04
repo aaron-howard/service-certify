@@ -1,0 +1,87 @@
+[
+	{
+		"trackCode": "CIS-SP",
+		"order": 70,
+		"prompt": "Mobile is supported at Basic domain separation level. What must the instance owner ensure for mobile clients in an MSP environment?",
+		"choices": [
+			"Mobile experiences respect tenant domain context after platform web domain separation is configured",
+			"Each mobile device stores all tenant data locally without domain filtering",
+			"Mobile removes sys_domain from forms so field workers can edit any tenant record",
+			"Domain separation on mobile requires disabling the domain separation plugin on web"
+		],
+		"correctIndex": 0,
+		"explanation": "Mobile domain separation extends platform web configuration so native clients honor tenant domain context at run time.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/mobile/mobile-domain-separation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 71,
+		"prompt": "Service Portal is listed as No support for domain separation in the application matrix. What is a typical provider mitigation?",
+		"choices": [
+			"Use domain-aware user criteria and separate portal experiences to scope content per tenant",
+			"Merge all portal pages into one global site without access controls",
+			"Disable the Service Portal plugin for every child domain permanently",
+			"Rely on sys_overrides on incident tables to filter portal search results"
+		],
+		"correctIndex": 0,
+		"explanation": "When native domain support is absent, providers commonly scope portal content with user criteria and tenant-specific portal configurations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/domain-separated-apps.html",
+			"https://www.servicenow.com/docs/r/platform-user-interface/domain-separation-service-portal.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 72,
+		"prompt": "Before using domain separation with Customer Service Management, which setup step aligns accounts to tenant isolation?",
+		"choices": [
+			"Enable CSM account-to-domain generation so new accounts receive matching tenant domains",
+			"Move all agents to the global domain and disable account-domain mapping",
+			"Disable the domain separation plugin because CSM manages only global accounts",
+			"Create one shared account record referenced by every tenant contact"
+		],
+		"correctIndex": 0,
+		"explanation": "CSM domain separation aligns each customer account to a tenant domain, often using automatic domain generation for newly created accounts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/domain-separation-customer-service.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 73,
+		"prompt": "Discovery in IT Operations Management is rated Standard for domain separation. What does that indicate for an MSP operating multiple tenants?",
+		"choices": [
+			"Discovery can route and manage tenant-scoped discovery data with provider-configurable process differences",
+			"Discovery ignores sys_domain on all CI tables and writes exclusively to global",
+			"Discovery requires separate ServiceNow instances per tenant and cannot run domain-separated",
+			"Discovery support is limited to data-only separation without any process configuration"
+		],
+		"correctIndex": 0,
+		"explanation": "Standard ITOM Discovery support includes tenant data routing plus provider-managed per-tenant process configuration for discovery use cases.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/domain-separated-apps.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/c_DiscoveryDomainSeparation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 74,
+		"questionType": "multi",
+		"prompt": "When planning domain support across ITSM, CSM, and ITOM applications on one MSP instance, which practices reduce rollout risk? (Choose two.)",
+		"choices": [
+			"Review each application's documented support level before promising tenant-specific behavior",
+			"Pilot domain-aware workflows with representative tenants before enterprise-wide cutover",
+			"Assume every application provides Enhanced tenant self-administration by default",
+			"Disable process overrides globally to simplify initial catalog and knowledge deployments"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "MSP rollouts should align expectations to documented support levels and validate cross-application behavior in a limited pilot before broad deployment.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/domain-separated-apps.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/domain-separation/task/plan-domain-separation-implementation.html"
+		]
+	}
+]

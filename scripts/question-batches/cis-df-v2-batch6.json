@@ -1,0 +1,99 @@
+[
+	{
+		"trackCode": "CIS-DF",
+		"order": 25,
+		"prompt": "A cloud inventory vendor exposes APIs that must feed the CMDB on a recurring schedule. Which integration pattern is designed for governed third-party data ingestion into ServiceNow?",
+		"choices": [
+			"Service Graph Connect with mapped inbound payloads and scheduled retrieval",
+			"Direct JDBC writes to cmdb_ci that bypass Identification and Reconciliation",
+			"Manual CSV uploads to sys_user without a staging table",
+			"Client-side UI scripts that insert CIs when a form loads"
+		],
+		"correctIndex": 0,
+		"explanation": "Service Graph Connect provides a governed connector framework for recurring third-party ingestion with mapping into CMDB structures.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/integrate-applications/australia/service-graph-connect/concept/c_ServiceGraphConnect.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 26,
+		"prompt": "An operations team loads weekly spreadsheet extracts into staging before promoting rows to CMDB tables. Which artifact orchestrates that bulk load workflow?",
+		"choices": [
+			"Import set with data source, staging table, and transform map",
+			"CMDB Health dashboard KPI without a staging layer",
+			"Event rule that correlates alerts into configuration items",
+			"Service Portal widget that renders spreadsheet previews only"
+		],
+		"correctIndex": 0,
+		"explanation": "Import sets combine data sources, staging tables, and transform maps to land, validate, and promote bulk data into target tables.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/integrate-applications/australia/system-import-sets/concept/c_ImportDataUsingImportSets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 27,
+		"prompt": "During transform processing, a row must be rejected when a mandatory serial number is missing without stopping the entire import run. Which transform script technique supports that behavior?",
+		"choices": [
+			"Set ignore = true in an onBefore or onAfter script when validation fails",
+			"Delete the transform map after the first invalid row is encountered",
+			"Disable coalesce on every field map to force duplicate inserts",
+			"Throw an unhandled exception that aborts all remaining rows"
+		],
+		"correctIndex": 0,
+		"explanation": "Row-level ignore logic lets transforms skip invalid staging rows while continuing to process the rest of the import set run.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/integrate-applications/australia/system-import-sets/concept/c_TransformEventScripts.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 28,
+		"questionType": "multi",
+		"prompt": "When an asset state is updated, which fields sync to the related CI? (Choose two.)",
+		"choices": [
+			"Operational status",
+			"Install Status",
+			"Hardware Status",
+			"Asset tag"
+		],
+		"correctIndex": 1,
+		"correctIndexes": [1, 2],
+		"explanation": "Asset-to-CI synchronization updates Install Status and Hardware Status on the related configuration item when asset state changes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/australia/asset-management/concept/c_AssetAndCIFieldSynchronization.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 29,
+		"questionType": "match",
+		"prompt": "Match each data ingestion artifact to its primary role in an import-set pipeline.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Data source",
+			"Staging table",
+			"Transform map",
+			"Coalesce fields"
+		],
+		"matchRightItems": [
+			"Defines how inbound files or queries are retrieved and parsed",
+			"Holds raw source rows before target promotion",
+			"Maps staging columns to target tables and optional scripts",
+			"Match existing target records for update instead of insert"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Import-set pipelines separate retrieval, staging, transformation, and matching concerns so teams can govern each step independently.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/integrate-applications/australia/system-import-sets/concept/c_ImportDataUsingImportSets.html",
+			"https://www.servicenow.com/docs/r/integrate-applications/australia/system-import-sets/concept/c_CreatingNewTransformMaps.html"
+		]
+	}
+]

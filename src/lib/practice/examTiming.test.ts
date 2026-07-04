@@ -16,6 +16,11 @@ describe('exam timing policy', () => {
 		expect(getOfficialExamDurationMinutes('CPOE')).toBe(240);
 	});
 
+	it('uses 60 minutes for CIS-SP', () => {
+		expect(getOfficialExamDurationMinutes('CIS-SP')).toBe(60);
+		expect(getOfficialExamDurationSeconds('CIS-SP')).toBe(60 * 60);
+	});
+
 	it('allocates full official time for full mocks', () => {
 		expect(
 			getPracticeTimeSeconds({ trackCode: 'CIS-DISCO', questionCount: 60, mode: 'full' })
