@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-SP",
+		"order": 5,
+		"prompt": "An SP platform team is preparing a new domain-separated instance for tenant onboarding. Which prerequisite must be completed before domain extensions and MSP demo data are available?",
+		"choices": [
+			"Activation of the Domain Support - Domain Extensions Installer plugin by ServiceNow personnel",
+			"Installation of a separate MID Server per tenant domain",
+			"Enabling the Customer Service Management plugin on every child domain",
+			"Creating a contains relationship between global and every tenant domain"
+		],
+		"correctIndex": 0,
+		"explanation": "The Domain Support - Domain Extensions Installer plugin must be activated by ServiceNow personnel and includes MSP extension capabilities required for SP domain separation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/bp-domain-sep-recommended.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 6,
+		"prompt": "Task and user records with no explicit domain assignment are landing in global on a new SP instance. Which configuration prevents unintended cross-tenant visibility?",
+		"choices": [
+			"Designate a default domain so unassigned records inherit the intended tenant scope",
+			"Disable the domain picker for all non-admin users",
+			"Move every table to process separation level 3 before go-live",
+			"Set all companies to the global domain until tenants request access"
+		],
+		"correctIndex": 0,
+		"explanation": "Without a default domain, unassigned records go to global where they may be visible broadly; setting a default domain routes new records to the intended scope.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/bp-default-domain.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 7,
+		"prompt": "A scoped application stores tenant-specific fulfillment data that must not leak across customers. Which field identifies the domain ownership of each record?",
+		"choices": [
+			"sys_domain on the table storing the tenant data",
+			"sys_scope on the application record only",
+			"company on the user who last updated the record",
+			"sys_overrides on every operational table by default"
+		],
+		"correctIndex": 0,
+		"explanation": "Each domain-separated record is assigned a single domain stored in sys_domain; custom tables must add this field to participate in data separation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainAssignment.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 8,
+		"prompt": "In a parent-child domain hierarchy, an SP administrator configures business rules globally and tenant incidents in child domains. How do process definitions and operational data flow in this model?",
+		"choices": [
+			"Process definitions flow down the hierarchy; data visibility rises up to parent domains",
+			"Both process definitions and data flow upward from child to parent only",
+			"Data flows down to child domains; process definitions rise up to parents",
+			"Process and data both flow horizontally across peer domains by default"
+		],
+		"correctIndex": 0,
+		"explanation": "Domain hierarchy design applies process inheritance downward while parent domains can access data in their domain and child domains below them in the hierarchy.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/bp-domain-hierarchy.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 9,
+		"questionType": "multi",
+		"prompt": "When a new operational record is created on a domain-separated instance, which sources can populate the sys_domain field? (Choose three.)",
+		"choices": [
+			"The company specified on the record when the table includes Company",
+			"A business rule that sets sys_domain during insert",
+			"The domain of the parent record for related child records",
+			"The sys_updated_by user reference field on the form"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1, 2],
+		"explanation": "sys_domain can be set from company mapping, business rules, parent record inheritance, modules, form templates, or the creating user's domain when no other rule applies.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainAssignment.html"
+		]
+	}
+]

@@ -1,0 +1,89 @@
+[
+	{
+		"trackCode": "CIS-PA",
+		"order": 85,
+		"prompt": "A municipal IT team deploys Platform Analytics for directors using Next Experience. Which rollout step validates the visualization experience?",
+		"choices": [
+			"Confirm directors can open governed dashboards from Next Experience with correct role-based filter defaults",
+			"Migrate all PA tables to external BI before enabling any in-platform widgets",
+			"Disable drill-down on every widget so navigation never leaves the home page",
+			"Require directors to use classic UI only because Next Experience cannot render PA content"
+		],
+		"correctIndex": 0,
+		"explanation": "Next Experience rollout for PA should verify that target audiences reach the right dashboards with authorized filter defaults before broad communication.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html",
+			"https://www.servicenow.com/docs/bundle/zurich-platform-user-interface/page/administer/navigation/concept/c_NextExperienceUnifiedNavigation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 86,
+		"prompt": "A new PA implementation team needs starter indicators, breakdowns, and dashboards aligned to ITSM processes. Which artifact accelerates time to value?",
+		"choices": [
+			"A blank instance with every analytics plugin disabled until manual scripting is complete",
+			"A Platform Analytics content pack installed and configured through guided setup before customization",
+			"A personal developer instance clone without documentation of dependent indicator relationships",
+			"An update set containing only UI themes with no indicator or dashboard definitions"
+		],
+		"correctIndex": 1,
+		"explanation": "Platform Analytics content packs deliver prebuilt indicators, breakdowns, and dashboards that teams tailor through guided setup instead of building from scratch.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_PAContentPacks.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 87,
+		"prompt": "Historical scores are required for a revamped incident KPI, but collection started only last week. Which advanced collection scenario addresses the gap?",
+		"choices": [
+			"Wait for six months of daily collections before showing any dashboard widgets to users",
+			"Convert the indicator to manual entry and ask agents to recreate past months from memory",
+			"Run a historical backfill data collection job for the indicator across the required prior periods",
+			"Disable snapshots permanently so the KPI always recalculates live from open incidents only"
+		],
+		"correctIndex": 2,
+		"explanation": "Historical backfill collection populates prior-period snapshots so trend widgets reflect performance before the indicator went live.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/optimized-data-collection.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 88,
+		"prompt": "A CIO wants a quarterly Stakeholder Spotlight highlighting five enterprise KPIs with target context. What should the PA administrator configure first?",
+		"choices": [
+			"Publish every indicator on the instance to Spotlight without reviewing threshold relevance",
+			"Remove target definitions so Spotlight tiles show only raw numbers without status coloring",
+			"Grant Spotlight edit rights to all dashboard viewers so they can swap KPIs during meetings",
+			"Select governed high-impact indicators with defined targets and owners for the Spotlight group layout"
+		],
+		"correctIndex": 3,
+		"explanation": "Stakeholder Spotlight credibility starts with curated KPIs that have clear ownership, targets, and business relevance before layout and publishing.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_PAStakeholderSpotlight.html",
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_BuildAStakeholderSpotlight.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 89,
+		"questionType": "multi",
+		"prompt": "When promoting Platform Analytics from pilot to production, which administrative practices reduce long-term maintenance risk? (Choose two.)",
+		"choices": [
+			"Document content pack versions, customized artifacts, and rollback plans before production import",
+			"Schedule advanced collection jobs after reviewing instance load and indicator source complexity",
+			"Allow unrestricted editing of indicator sources by all dashboard consumers without review",
+			"Skip ownership assignment because Spotlight tiles self-correct when processes change"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Production promotion should capture content pack lineage and tune collection schedules for load while keeping indicator governance and ownership intact.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_PAContentPacks.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+		]
+	}
+]

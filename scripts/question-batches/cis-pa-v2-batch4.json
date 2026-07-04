@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-PA",
+		"order": 15,
+		"prompt": "An automated indicator on open incidents should count matching records each day. Which aggregation approach applies on the indicator?",
+		"choices": [
+			"Count aggregation on records returned by the indicator source",
+			"Sum of breakdown element weights without a facts table",
+			"Average of sys_updated_on timestamps across all tables",
+			"Scripted export that bypasses indicator score tables"
+		],
+		"correctIndex": 0,
+		"explanation": "Automated indicators aggregate records from their indicator source; count is the standard aggregation when the KPI measures record volume.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/workflow-automated-indicators.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 16,
+		"prompt": "Two indicators share Incidents.Open but one KPI needs only P1 incidents. Where should that additional P1 filter be applied?",
+		"choices": [
+			"Additional conditions on the individual indicator record",
+			"Replacement of the shared indicator source facts table",
+			"Global system property com.snc.pa.dc.disable_filtering",
+			"Dashboard visualization color scheme settings"
+		],
+		"correctIndex": 0,
+		"explanation": "Shared indicator sources carry high-level filters; indicator-specific conditions refine subsets for individual KPIs on the same source.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_IndicatorSources.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 17,
+		"prompt": "Which field type is frequently used in Indicator Source Conditions?",
+		"choices": [
+			"URL",
+			"Phone Number",
+			"Duration",
+			"Date-Time"
+		],
+		"correctIndex": 3,
+		"explanation": "Indicator source conditions typically include date-related filters on Date-Time fields such as Opened on Today or Closed on This month.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_IndicatorSources.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 18,
+		"prompt": "When standard count or sum aggregation cannot express a KPI, what PA feature lets implementers customize how scores are calculated from source records?",
+		"choices": [
+			"Aggregation script on the indicator",
+			"MID Server script include invoked at login",
+			"UI policy that hides invalid breakdown elements",
+			"Report color palette assigned to the data collector job"
+		],
+		"correctIndex": 0,
+		"explanation": "Aggregation scripts on indicators allow custom score calculations when built-in aggregation types do not meet the KPI requirement.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/workflow-automated-indicators.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 19,
+		"questionType": "multi",
+		"prompt": "Which practices help keep indicator sources efficient and reusable across multiple KPIs? (Choose two.)",
+		"choices": [
+			"Minimize the number of sources by sharing high-level date and status filters",
+			"Place reusable subset filters on the source and indicator-specific filters on each indicator",
+			"Create a separate source for every indicator even when conditions overlap",
+			"Remove all date conditions so jobs scan entire tables each run"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Fewer shared sources improve collection efficiency; high-level filters belong on the source while KPI-specific refinements stay on individual indicators.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_IndicatorSources.html"
+		]
+	}
+]

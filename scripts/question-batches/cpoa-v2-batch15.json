@@ -1,0 +1,99 @@
+[
+	{
+		"trackCode": "CPOA",
+		"order": 70,
+		"prompt": "Which Admin and Configuration capability is most relevant when a platform owner standardizes instance setup across environments?",
+		"choices": [
+			"System properties, user administration, and guided setup tools such as Setup Hub",
+			"Disabling all ACLs so administrators can edit records without restriction",
+			"Removing sub-production instances to eliminate environment drift checks",
+			"Routing every configuration change directly to production without tracking"
+		],
+		"correctIndex": 0,
+		"explanation": "Admin and Configuration services provide the tooling to configure instances consistently, manage users, and apply standardized setup patterns.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 71,
+		"prompt": "A department wants to connect HR and finance systems to ServiceNow workflows. Which Integration Services characteristic best supports this goal?",
+		"choices": [
+			"Reusable spokes, REST APIs, and orchestrated flows with managed credentials",
+			"Hard-coded credentials embedded in every client script without rotation",
+			"One-off custom endpoints per team with no connection governance",
+			"Blocking all inbound and outbound integration traffic permanently"
+		],
+		"correctIndex": 0,
+		"explanation": "Integration Services emphasize managed connections, reusable integration patterns, and API-based connectivity rather than ad hoc bespoke endpoints.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/integrate-applications/integrationhub/integrationhub.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 72,
+		"questionType": "match",
+		"prompt": "Match each testing context to when a platform owner should apply it relative to the upgrade cycle.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Inside the upgrade cycle",
+			"Outside the upgrade cycle",
+			"Skipped update remediation testing",
+			"Post-cutover hypercare validation"
+		],
+		"matchRightItems": [
+			"Validate custom workflows on the upgraded sub-production baseline before production commit",
+			"Run ongoing regression suites between major releases to catch drift early",
+			"Confirm merged or retired local changes behave correctly after baseline updates",
+			"Verify critical capabilities and integrations immediately after production upgrade"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Testing spans in-cycle validation on upgraded baselines, between-release regression, skipped-update verification, and post-cutover hypercare checks.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/upgrade-center.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 73,
+		"prompt": "Which Security and Compliance platform characteristic should an associate platform owner emphasize when briefing executives?",
+		"choices": [
+			"Layered access controls, hardening guidance, and audit evidence supporting regulatory alignment",
+			"Elimination of all role-based access to speed up development",
+			"Disabling encryption because the cloud provider handles all data protection",
+			"Granting admin privileges to all requesters for faster self-service"
+		],
+		"correctIndex": 0,
+		"explanation": "Security and Compliance services combine access management, hardening tools such as Security Center, and audit capabilities for governance and regulatory needs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/security-center/sec-center-v2.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 74,
+		"questionType": "multi",
+		"prompt": "Before requesting a production clone, which preparations align with platform owner technology governance? (Choose two.)",
+		"choices": [
+			"Define clone profile requirements including data preservers, exclusions, and cleanup scripts",
+			"Verify maintenance window approval and post-clone integration suspension plans",
+			"Skip clone profiles to minimize duration regardless of data sensitivity",
+			"Enable live outbound email from the cloned instance to speed user acceptance testing"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Clone governance requires profile design for data handling and approved windows with safeguards that prevent unintended external impact from cloned environments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/instance-clone.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/clone-data-preservation.html"
+		]
+	}
+]

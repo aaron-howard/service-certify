@@ -1,0 +1,87 @@
+[
+	{
+		"trackCode": "CIS-SP",
+		"order": 60,
+		"prompt": "An import populates incident records that reference configuration items in the same tenant domain. What failure mode should reference integrity checks catch early?",
+		"choices": [
+			"Orphaned references pointing to CIs that are missing or belong to a different domain",
+			"Duplicate sys_overrides records on process tables used by the import job",
+			"Service portal widgets rendering in the wrong theme for imported incidents",
+			"Mobile offline cache entries expiring before transform completion"
+		],
+		"correctIndex": 0,
+		"explanation": "Reference integrity validation identifies broken or cross-domain dependencies before transformed records enter production workflows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_Coalescing.html",
+			"https://www.servicenow.com/docs/r/platform-security/bp-dom-sep-definition.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 61,
+		"prompt": "After a tenant data load, multiple rows appear in the Transform Errors related list. What is the best first troubleshooting step?",
+		"choices": [
+			"Review transform error records and import set run history for script or mapping failures",
+			"Delete the target table and rerun the import without coalesce fields",
+			"Disable domain separation until the load completes successfully",
+			"Rebuild the domain hierarchy to match the source file column order"
+		],
+		"correctIndex": 0,
+		"explanation": "Import set run history and transform error logs provide row-level failure detail needed to diagnose mapping and script issues.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_ImportSets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 62,
+		"prompt": "Which record type provides row-level processing status during an import set run in a domain-separated instance?",
+		"choices": [
+			"Import set run and transform history entries for the executed data source",
+			"Skipped update records from the most recent platform upgrade",
+			"MID Server ECC queue entries unrelated to the data load job",
+			"Domain path records for the Default domain only"
+		],
+		"correctIndex": 0,
+		"explanation": "Import set run and transform history capture per-run processing outcomes, including errors encountered during transformation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/reference/r_ImportSetTables.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 63,
+		"prompt": "When a transform map inserts a new company record for a tenant, how should the domain field typically be set?",
+		"choices": [
+			"Assign sys_domain to the tenant domain the company belongs to before related records are created",
+			"Leave sys_domain empty and rely on the Default domain for all company inserts",
+			"Force every company into global so child tenants inherit visibility automatically",
+			"Copy the administrator's current picker domain regardless of company ownership"
+		],
+		"correctIndex": 0,
+		"explanation": "Foundational company loads must establish the correct tenant domain early because related entities inherit that domain context.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/domain-separation/concept/domain-separation.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/task/t_CreateATransformMap.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 64,
+		"questionType": "multi",
+		"prompt": "Which practices improve repeatable foundational data migrations across tenant domains? (Choose two.)",
+		"choices": [
+			"Version transform maps and data quality scripts so rehearsal runs produce predictable outcomes",
+			"Define completeness and referential integrity gates before cutover to production",
+			"Edit production records manually during each test without documenting changes",
+			"Remove coalesce fields after the first successful dry run to speed imports"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Repeatable tenant migrations depend on versioned transform logic and measurable quality gates rather than ad hoc production edits.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_TransformEventScripts.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/c_DataManagement.html"
+		]
+	}
+]

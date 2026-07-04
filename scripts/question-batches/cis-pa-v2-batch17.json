@@ -1,0 +1,89 @@
+[
+	{
+		"trackCode": "CIS-PA",
+		"order": 80,
+		"prompt": "A PA team publishes an executive dashboard consumed by vice presidents across business units. Which sharing model preserves governed access?",
+		"choices": [
+			"Share the dashboard with defined audiences and roles while keeping indicator definitions centrally maintained",
+			"Export widget SQL to email attachments so each executive runs queries locally",
+			"Grant every consumer the pa_admin role to avoid permission errors during reviews",
+			"Copy indicator formulas into personal update sets owned by each vice president"
+		],
+		"correctIndex": 0,
+		"explanation": "Audience-based dashboard sharing with centralized indicator governance keeps executive views consistent without elevating every consumer to administrative privileges.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 81,
+		"prompt": "Operations managers need one incident backlog dashboard filtered by region without cloning indicators. Which visualization technique applies?",
+		"choices": [
+			"Build a new automated indicator per region with identical logic duplicated sixteen times",
+			"Apply a breakdown-based dashboard filter scoped to the region dimension on shared KPI widgets",
+			"Disable breakdowns globally and rely on ad hoc list reports for each region instead",
+			"Move all incident records into region-specific tables before enabling collection"
+		],
+		"correctIndex": 1,
+		"explanation": "Breakdown filters on shared KPI widgets deliver regional views while preserving one governed indicator definition and collection schedule.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Breakdowns.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 82,
+		"prompt": "During a service review, stakeholders ask why a KPI worsened last month. Which dashboard path gives the fastest credible answer?",
+		"choices": [
+			"Regenerate every indicator score manually without reviewing underlying transactional data",
+			"Replace the KPI with a single-value widget that hides historical periods entirely",
+			"Open KPI Details from the widget and inspect contributing records alongside trend and breakdown context",
+			"Delete last month's snapshots so the trend line restarts from the current week only"
+		],
+		"correctIndex": 2,
+		"explanation": "KPI Details combined with trend and breakdown context lets implementers explain score movement with record-level evidence instead of anecdote.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_KPIDetails.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 83,
+		"prompt": "Widgets on a critical outage dashboard show yesterday's scores at mid-morning despite an overnight collection schedule. What is the most likely cause to investigate?",
+		"choices": [
+			"Dashboard filters automatically disable all automated indicators during business hours",
+			"KPI Details removes scores whenever breakdown filters are applied to a widget",
+			"Next Experience navigation blocks collection jobs until each user signs out fully",
+			"Data collector jobs missed or completed after users opened the dashboard, leaving stale snapshots"
+		],
+		"correctIndex": 3,
+		"explanation": "When collection jobs fail or finish late, widgets continue displaying the last successful snapshot until the next collection cycle completes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 84,
+		"questionType": "multi",
+		"prompt": "Which two design choices improve readability of a Platform Analytics executive dashboard? (Choose two.)",
+		"choices": [
+			"Place highest-priority KPIs above the fold with consistent threshold coloring tied to targets",
+			"Limit widget count to decision-critical metrics instead of loading every available indicator",
+			"Mix ten unrelated chart types on one row to showcase visualization variety",
+			"Remove breakdown labels to reduce text even when leaders compare segments weekly"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Executive dashboards work best when priority KPIs are visible immediately, thresholds provide context, and widget count stays focused on decisions leaders must make.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html"
+		]
+	}
+]

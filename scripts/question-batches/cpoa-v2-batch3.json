@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOA",
+		"order": 10,
+		"prompt": "Before a major store release, the delivery lead asks how to regression-test custom applications efficiently. Which capability should the associate platform owner recommend?",
+		"choices": [
+			"Automated Test Framework test suites executed in sub-production before promotion",
+			"Manual spot checks on production only after the release window opens",
+			"Disabling all business rules during testing to avoid false failures",
+			"Skipping automated tests because update sets already capture every change"
+		],
+		"correctIndex": 0,
+		"explanation": "Automated Test Framework supports repeatable regression coverage in lower environments, reducing production surprises after platform or application updates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/automated-test-framework.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 11,
+		"prompt": "A sponsor asks why CMDB quality matters when setting platform strategy for change and incident processes. Which answer best reflects associate-level CMDB context?",
+		"choices": [
+			"Accurate configuration items and relationships improve impact analysis for changes and outages",
+			"CMDB records replace the need for any discovery or integration governance",
+			"CMDB quality affects only hardware asset tracking and not service workflows",
+			"Populating the CMDB once at go-live eliminates all future data stewardship"
+		],
+		"correctIndex": 0,
+		"explanation": "Platform strategy tied to ITSM outcomes depends on trustworthy CI and dependency data so teams can assess blast radius during changes and incidents.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/cmdb.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 12,
+		"prompt": "Data stewards report inconsistent ownership labels across business applications. Which data strategy action should the associate platform owner take first?",
+		"choices": [
+			"Work with stewards to define ownership standards and a remediation plan for critical data domains",
+			"Delete all records missing owners so lists load faster",
+			"Postpone data cleanup until every module is fully deployed",
+			"Allow each team to invent local naming without central guidance"
+		],
+		"correctIndex": 0,
+		"explanation": "Data strategy at associate level focuses on agreed ownership rules and prioritized cleanup so downstream processes trust shared records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/common-service-data-model/csdm.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 13,
+		"questionType": "multi",
+		"prompt": "The CoEI wants to expand citizen development safely next quarter. Which enablement steps should the associate platform owner support? (Choose two.)",
+		"choices": [
+			"Publish starter templates and approved scope patterns for common departmental use cases",
+			"Provide training on intake, testing expectations, and escalation when apps need admin support",
+			"Grant elevated admin access to every requester to remove delivery bottlenecks",
+			"Skip lifecycle reviews because citizen apps are always low risk"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Citizen development scales with reusable templates, training, and clear escalation paths—not blanket admin access or absent lifecycle oversight.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 14,
+		"questionType": "match",
+		"prompt": "Match each SDLC activity to the outcome it supports on the Now Platform.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Requirements intake",
+			"Sub-production validation",
+			"Update set promotion",
+			"Post-release monitoring"
+		],
+		"matchRightItems": [
+			"Work is prioritized against business need before build starts",
+			"Defects are caught before changes reach production users",
+			"Approved configuration moves through controlled environments",
+			"Teams detect regressions or adoption gaps after go-live"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "SDLC benefits come from connecting intake, testing, controlled promotion, and post-release feedback rather than skipping any stage.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/application-development.html"
+		]
+	}
+]

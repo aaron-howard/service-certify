@@ -1,0 +1,102 @@
+[
+	{
+		"trackCode": "CIS-DF",
+		"order": 30,
+		"prompt": "Discovery populates server CIs while a separate import set loads the same serial numbers from a legacy asset database. Which CMDB process prevents duplicate records when both feeds are active?",
+		"choices": [
+			"Identification and Reconciliation matching incoming rows to existing CIs",
+			"Disabling all transform maps until Discovery completes nightly",
+			"Storing Discovery results only in staging tables permanently",
+			"Removing reconciliation rules so the newest feed always wins every attribute"
+		],
+		"correctIndex": 0,
+		"explanation": "Identification finds or creates the CI match while reconciliation governs attribute updates, reducing duplicates from overlapping ingestion sources.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_IdentificationAndReconciliationEngine.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 31,
+		"prompt": "A network monitoring tool pushes topology through a discovery feed instead of classic probes. What must be validated before production onboarding?",
+		"choices": [
+			"Feed mappings align to CI classes, identification keys, and reconciliation outcomes in sub-production",
+			"All existing CMDB relationships are deleted to simplify feed matching",
+			"Reconciliation is disabled so feed payloads write every attribute immediately",
+			"Discovery schedules are paused globally until the feed runs for one year"
+		],
+		"correctIndex": 0,
+		"explanation": "Controlled feed onboarding validates class mapping, identification behavior, and reconciliation results before production CMDB updates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/australia/discovery/concept/c_DiscoveryDataSourcesAndFeeds.html",
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBDataIngestionBestPractices.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 32,
+		"prompt": "Repeated one-off transform scripts and undocumented field maps slow every new ingestion project. Which practice best addresses that technical debt?",
+		"choices": [
+			"Document standard mapping patterns, reusable scripts, and governed transform templates",
+			"Copy each transform map without coalesce fields to maximize insert volume",
+			"Run all imports in production first and fix errors after stakeholders complain",
+			"Disable import set run history to reduce database growth"
+		],
+		"correctIndex": 0,
+		"explanation": "Standardized, documented ingestion patterns reduce rework and make pipelines easier to maintain as new sources are onboarded.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/integrate-applications/australia/system-import-sets/concept/c_ImportDataUsingImportSets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 33,
+		"questionType": "multi",
+		"prompt": "Which two practices improve asset-to-CI synchronization quality during hardware ingestion? (Choose two.)",
+		"choices": [
+			"Align asset and CI classes so related records share consistent identifiers",
+			"Configure field synchronization maps for state attributes that must stay aligned",
+			"Disable Identification and Reconciliation for all hardware classes",
+			"Load assets and CIs into unrelated tables without reference fields"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Consistent class alignment and configured synchronization maps keep asset lifecycle changes reflected on related CIs without duplicate records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/australia/asset-management/concept/c_AssetAndCIFieldSynchronization.html",
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_IdentificationAndReconciliationEngine.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 34,
+		"questionType": "match",
+		"prompt": "Match each discovery or Service Graph ingestion mechanism to what it primarily delivers.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Horizontal Discovery pattern",
+			"Service Graph Connect connector",
+			"Discovery feed",
+			"Import set transform"
+		],
+		"matchRightItems": [
+			"Probes and sensors that classify infrastructure during scheduled runs",
+			"Third-party API ingestion mapped through the connector framework",
+			"External tool payloads normalized into governed CMDB updates",
+			"Staging rows promoted to target tables with field maps and scripts"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Discovery patterns, Service Graph Connect, discovery feeds, and import set transforms each address different ingestion paths into the CMDB.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/australia/discovery/concept/c_Discovery.html",
+			"https://www.servicenow.com/docs/r/integrate-applications/australia/service-graph-connect/concept/c_ServiceGraphConnect.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/australia/discovery/concept/c_DiscoveryDataSourcesAndFeeds.html"
+		]
+	}
+]

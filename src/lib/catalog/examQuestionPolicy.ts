@@ -53,6 +53,7 @@ export const EXAM_QUESTION_BANK_TARGETS: Record<string, number> = Object.fromEnt
 
 /** Official proctored exam time limits (minutes), from Credentialing Program Guide. */
 export const OFFICIAL_EXAM_DURATION_MINUTES: Record<string, number> = {
+	'CIS-SP': 60,
 	CPOE: 240
 };
 

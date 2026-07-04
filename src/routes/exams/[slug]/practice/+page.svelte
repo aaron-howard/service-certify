@@ -7,7 +7,8 @@
 	import {
 		displayIndexToOriginal,
 		originalIndexToDisplay,
-		shuffleChoicesForDisplay
+		shuffleChoicesForDisplay,
+		shuffleMatchForDisplay
 	} from '$lib/practice/choiceShuffle';
 	import { useConvexClient, useQuery } from 'convex-svelte';
 	import { api } from '$convex/_generated/api.js';
@@ -40,6 +41,8 @@
 		questionType: 'single' | 'multi' | 'match';
 		matchLeftItems?: string[];
 		matchRightItems?: string[];
+		matchLeftPermutation?: number[];
+		matchRightPermutation?: number[];
 	};
 
 	type GradeResult = {
@@ -71,14 +74,19 @@
 		return rows.map((r) => {
 			const questionType = r.questionType ?? 'single';
 			if (questionType === 'match') {
+				const leftItems = r.matchLeftItems ?? [];
+				const rightItems = r.matchRightItems ?? [];
+				const shuffled = shuffleMatchForDisplay(leftItems, rightItems, sessionSeed, r.order);
 				return {
 					id: r.order,
 					prompt: r.prompt,
 					choices: [],
 					permutation: [],
 					questionType,
-					matchLeftItems: r.matchLeftItems ?? [],
-					matchRightItems: r.matchRightItems ?? []
+					matchLeftItems: shuffled.matchLeftItems,
+					matchRightItems: shuffled.matchRightItems,
+					matchLeftPermutation: shuffled.matchLeftPermutation,
+					matchRightPermutation: shuffled.matchRightPermutation
 				};
 			}
 			const { choices, permutation } = shuffleChoicesForDisplay(
@@ -215,12 +223,14 @@
 				answers: questions.map((q) => {
 					if (q.questionType === 'match') {
 						const pairs = selectedMatch[q.id] ?? {};
+						const leftPerm = q.matchLeftPermutation ?? [];
+						const rightPerm = q.matchRightPermutation ?? [];
 						return {
 							order: q.id,
 							selectedIndex: 0,
-							matchAnswers: Object.entries(pairs).map(([left, right]) => ({
-								left: Number(left),
-								right: Number(right)
+							matchAnswers: Object.entries(pairs).map(([displayLeft, displayRight]) => ({
+								left: displayIndexToOriginal(Number(displayLeft), leftPerm),
+								right: displayIndexToOriginal(Number(displayRight), rightPerm)
 							}))
 						};
 					}
@@ -363,6 +373,8 @@
 						<MatchQuestion
 							leftItems={q.matchLeftItems}
 							rightItems={q.matchRightItems}
+							leftPermutation={q.matchLeftPermutation ?? []}
+							rightPermutation={q.matchRightPermutation ?? []}
 							selections={selectedMatch[q.id] ?? {}}
 							disabled={submitted || grading}
 							submitted={submitted}

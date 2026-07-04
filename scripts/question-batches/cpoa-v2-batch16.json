@@ -1,0 +1,103 @@
+[
+	{
+		"trackCode": "CPOA",
+		"order": 75,
+		"prompt": "A municipal agency must synchronize employee identities from on-premises Active Directory into ServiceNow with scheduled updates and password policy alignment. Which integration approach best fits this requirement?",
+		"choices": [
+			"LDAP integration with a defined update schedule and mapped identity attributes",
+			"Manual CSV imports uploaded by each department supervisor every quarter",
+			"Custom REST endpoints that write directly to production without a service account",
+			"Shared local ServiceNow accounts created once and reused across all departments"
+		],
+		"correctIndex": 0,
+		"explanation": "LDAP integration supports scheduled synchronization from Active Directory with attribute mapping and governed service credentials for identity lifecycle management.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/user-administration/concept/c_LDAPIntegration.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-integrate-applications/page/administer/integration-hub/concept/integration-hub.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 76,
+		"prompt": "Before expanding application service mapping, a platform owner discovers location and company records are incomplete. Which data classification explains why those records must be corrected first?",
+		"choices": [
+			"Transactional data that records daily incident volume by assignment group",
+			"Foundational data that provides organizational context for downstream CMDB modeling",
+			"Analytical data stored only in Performance Analytics indicator snapshots",
+			"Ephemeral session data cleared automatically after each user logout event"
+		],
+		"correctIndex": 1,
+		"explanation": "CSDM foundation data such as companies and locations establishes organizational context that application services and configuration items depend on.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/common-service-data-model/concept/csdm-foundation-data.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/common-service-data-model/concept/csdm-overview.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 77,
+		"prompt": "An operations director asks for a one-time export of open change records filtered by assignment group for an audit packet. Which capability should the platform owner recommend?",
+		"choices": [
+			"Performance Analytics indicator with quarterly targets and automated threshold alerts",
+			"Strategic Planning Workspace initiative linked to a portfolio investment theme",
+			"Standard reporting with list filters and export to share the current record set",
+			"IntegrationHub spoke that polls the change table every minute for trend scoring"
+		],
+		"correctIndex": 2,
+		"explanation": "Ad hoc filtered exports of current records are best served by native reporting; Performance Analytics is designed for trend-based KPI monitoring over time.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/reporting/concept/reporting-overview.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 78,
+		"questionType": "match",
+		"prompt": "Match each platform data concept to the associate-level outcome it supports.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Foundational data stewardship",
+			"Transactional process records",
+			"Standard operational reporting",
+			"Performance Analytics indicators"
+		],
+		"matchRightItems": [
+			"Reliable organizational context before service and CI relationships scale",
+			"Day-to-day workflow evidence such as incidents, changes, and requests",
+			"Point-in-time filtered views for audits and operational snapshots",
+			"Trend-based KPIs with targets that signal sustained improvement or decline"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Platform owners distinguish foundation data, transactional records, ad hoc reporting, and PA indicators because each supports different governance and decision-making needs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/common-service-data-model/concept/csdm-overview.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 79,
+		"questionType": "multi",
+		"prompt": "Leadership adopted Strategic Planning Workspace to connect platform investments to business outcomes. Which practices should the platform owner establish? (Choose two.)",
+		"choices": [
+			"Define value-driven metrics with baselines before funding new platform initiatives",
+			"Link strategic objectives to measurable platform KPIs reviewed on a regular cadence",
+			"Track only technical uptime metrics without tying them to business objectives",
+			"Replace all CMDB foundation data reviews because strategy workspace supersedes CSDM"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Strategic Planning Workspace gains value when initiatives connect to measurable outcomes with baselines and recurring KPI review—not isolated technical metrics or abandoned data stewardship.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-impact/page/impact/strategic-planning-workspace/concept/strategic-planning-workspace.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+		]
+	}
+]

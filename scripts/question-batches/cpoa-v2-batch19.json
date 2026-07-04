@@ -1,0 +1,103 @@
+[
+	{
+		"trackCode": "CPOA",
+		"order": 90,
+		"prompt": "After HR Service Delivery go-live, fulfillment agent headcount doubled but finance sees no matching subscription increase. Which licensing distinction should the platform owner clarify first?",
+		"choices": [
+			"Fulfiller licenses apply to agents performing work on records, separate from requester access",
+			"Every internal employee automatically consumes a fulfiller license when logging in once",
+			"Capacity licensing replaces all role-based entitlements for ITSM and HR products",
+			"Requester and fulfiller licenses are interchangeable without product-specific rules"
+		],
+		"correctIndex": 0,
+		"explanation": "Fulfiller, requester, and capacity licensing models apply differently by role and product; platform owners must map active roles to the correct subscription types.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/cloud-governance-suite/concept/cloud-governance-suite.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/subscription-management/concept/subscription-management.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 91,
+		"prompt": "A business unit wants to publish twenty new catalog items that trigger workflow for specialized agents. What licensing consideration should the platform owner raise during intake review?",
+		"choices": [
+			"Catalog visibility alone never affects licensing because browsing is unrestricted",
+			"New fulfillment workflows may increase licensed agent roles tied to subscribed products",
+			"Catalog items inherit only hardware asset licenses regardless of workflow design",
+			"Service catalog licensing applies exclusively to external customer portals"
+		],
+		"correctIndex": 1,
+		"explanation": "Catalog items that route work to specialized fulfillers can increase consumption of product-specific agent licenses beyond requester access alone.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/cloud-governance-suite/concept/cloud-governance-suite.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/product/service-catalog/concept/c_ServiceCatalog.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 92,
+		"questionType": "match",
+		"prompt": "Match each subscription governance artifact to the platform owner responsibility it supports.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Entitlement baseline register",
+			"Role-to-license mapping standard",
+			"Usage anomaly dashboard",
+			"True-up readiness report"
+		],
+		"matchRightItems": [
+			"Documents contracted products and limits teams must operate within",
+			"Defines which roles consume which subscription types during provisioning",
+			"Highlights sudden growth in licensed capabilities that may trigger fees",
+			"Supplies finance with verified consumption evidence before vendor reconciliation"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Subscription governance combines documented entitlements, role mapping, usage monitoring, and finance-ready reporting—each an associate-level platform owner responsibility.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/cloud-governance-suite/concept/cloud-governance-suite.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/subscription-management/concept/subscription-management.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 93,
+		"prompt": "An integration team proposes four options to connect a legacy payroll system: LDAP, IntegrationHub spoke, third-party connector, and custom REST. Who should approve the pattern that aligns with enterprise integration standards?",
+		"choices": [
+			"The developer with the shortest backlog regardless of security review status",
+			"Platform governance reviewing fit to standards, licensing, and operational support",
+			"End users voting on the connector with the simplest UI configuration screen",
+			"Vendor sales representatives selecting the option bundled in the latest promotion"
+		],
+		"correctIndex": 1,
+		"explanation": "Platform governance evaluates integration options against enterprise standards, security, licensing implications, and long-term support—not individual convenience or vendor promotions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-integrate-applications/page/administer/integration-hub/concept/integration-hub.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-administration/concept/platform-governance.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 94,
+		"questionType": "multi",
+		"prompt": "Before the annual subscription true-up, which inputs should the platform owner validate with procurement? (Choose two.)",
+		"choices": [
+			"Active plugin and product activation compared against contracted SKU coverage",
+			"Growth trends in specialized roles such as approvers and fulfillment agents",
+			"Total number of homepage themes configured per business unit portal",
+			"Average handle time for chat sessions unrelated to licensed products"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "True-up readiness requires matching activated products and role growth to contracted entitlements—not cosmetic portal settings or unrelated operational metrics.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/cloud-governance-suite/concept/cloud-governance-suite.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/subscription-management/concept/subscription-management.html"
+		]
+	}
+]

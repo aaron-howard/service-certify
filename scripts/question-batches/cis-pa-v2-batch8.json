@@ -1,0 +1,86 @@
+[
+	{
+		"trackCode": "CIS-PA",
+		"order": 35,
+		"prompt": "When creating a field-based breakdown source, what does the Facts table and field selection define?",
+		"choices": [
+			"The table and field whose values become available breakdown segments",
+			"The SMTP server used for scheduled dashboard subscriptions",
+			"The ACL role required to view PA scorecards",
+			"The arithmetic expression for a formula indicator"
+		],
+		"correctIndex": 0,
+		"explanation": "Field-based breakdown sources read dimension values from a specified table and field, such as assignment group or category on incident.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_ConfigureBreakdownSources.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 36,
+		"prompt": "What is the purpose of a breakdown matrix on an indicator?",
+		"choices": [
+			"Control which breakdown source values are collected for that indicator",
+			"Define the aggregate function used by the indicator source",
+			"Schedule historical backfill for manual indicator scores",
+			"Assign domain visibility rules to PA dashboards"
+		],
+		"correctIndex": 0,
+		"explanation": "Breakdown matrices link indicators to breakdown sources and let administrators include or exclude specific dimensional values from collection.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 37,
+		"questionType": "multi",
+		"prompt": "Which fields are effective breakdown sources? (Choose three.)",
+		"choices": [
+			"State",
+			"Last updated",
+			"Short Description",
+			"Category",
+			"Assignment Group"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 3, 4],
+		"explanation": "Reference and choice fields such as State, Category, and Assignment Group provide stable dimensional values; free-text and timestamp fields like Short Description and Last updated are poor breakdown sources.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html",
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_ConfigureBreakdownSources.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 38,
+		"prompt": "When field-based breakdown mappings cannot produce the required segments, what feature allows custom mapping logic?",
+		"choices": [
+			"Scripted breakdown mapping",
+			"Manual indicator score entry form",
+			"Remote update set import from another instance",
+			"Business rule on the sys_user table"
+		],
+		"correctIndex": 0,
+		"explanation": "Scripted breakdown mappings use server-side scripts to derive segment values when standard field mappings are insufficient.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_CreateScriptedBreakdowns.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 39,
+		"prompt": "What are bucket groups used for in Performance Analytics breakdowns?",
+		"choices": [
+			"Grouping breakdown values into labeled ranges or bands for analysis",
+			"Defining MID Server failover order during data collection",
+			"Storing encrypted credentials for PA data collectors",
+			"Replacing indicator sources on automated indicators"
+		],
+		"correctIndex": 0,
+		"explanation": "Bucket groups let administrators combine numeric or duration values into meaningful bands, such as age ranges, for clearer segmented reporting.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html"
+		]
+	}
+]

@@ -1,0 +1,86 @@
+[
+	{
+		"trackCode": "CIS-PA",
+		"order": 50,
+		"prompt": "A PA admin needs two indicators to share the same dimensional values without duplicating breakdown source records. Which configuration achieves this?",
+		"choices": [
+			"Create a breakdown relation that links the indicators to one shared breakdown source",
+			"Clone the breakdown source for each indicator and disable breakdown mappings",
+			"Convert both indicators to manual entry and skip breakdown collection",
+			"Add a scripted indicator source that replaces breakdown sources entirely"
+		],
+		"correctIndex": 0,
+		"explanation": "Breakdown relations let multiple indicators reuse the same breakdown source so dimensional values stay consistent across related KPIs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_BreakdownRelations.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 51,
+		"prompt": "An incident indicator should segment scores by assignment group, but grouped scores show as Unassigned. What should be verified first?",
+		"choices": [
+			"That the breakdown mapping connects the indicator source assignment field to the breakdown source elements",
+			"That the dashboard widget uses a pie chart instead of a column chart",
+			"That the indicator formula references a manual indicator only",
+			"That the data collection job runs exclusively on weekends"
+		],
+		"correctIndex": 0,
+		"explanation": "Breakdown mappings define how source field values map to breakdown elements; missing or incorrect mappings produce empty or unassigned segments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_BreakdownMappings.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 52,
+		"prompt": "A scorecard shows too many low-volume assignment groups. Which breakdown feature narrows the visible segments without changing the underlying breakdown source?",
+		"choices": [
+			"Element filters that limit which breakdown values appear in the analysis",
+			"Deleting unused breakdown elements from the source table permanently",
+			"Switching the indicator from automated to manual collection",
+			"Removing the breakdown relation and rebuilding indicator sources"
+		],
+		"correctIndex": 0,
+		"explanation": "Element filters restrict displayed breakdown values for a given view while preserving the full breakdown source for other analyses.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Breakdowns.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/reference/r_WidgetFilters.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 53,
+		"questionType": "multi",
+		"prompt": "When building a scripted breakdown source, which practices help keep segmented scores accurate? (Choose two.)",
+		"choices": [
+			"Return stable element labels that align with how stakeholders interpret the dimension",
+			"Validate script output against expected cardinality before promoting to production",
+			"Disable breakdown mappings so the script replaces all indicator source logic",
+			"Run the script only when a user opens a dashboard widget on demand"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Scripted breakdown sources must produce consistent, meaningful element values and be validated for volume and correctness before production use.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/task/t_CreateScriptedBreakdowns.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 54,
+		"prompt": "After breakdowns are configured for an automated indicator, what must run before segmented scores appear in widgets and scorecards?",
+		"choices": [
+			"A data collection job that evaluates the indicator and stores scores with breakdown values",
+			"A dashboard export that copies breakdown tables to an external BI tool",
+			"A transform map that loads breakdown elements from an import set",
+			"A business rule that copies breakdown mappings into sys_user records"
+		],
+		"correctIndex": 0,
+		"explanation": "Breakdown configuration defines how scores will be segmented; data collection jobs populate the score tables that widgets and scorecards read.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectionJobs.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Breakdowns.html"
+		]
+	}
+]

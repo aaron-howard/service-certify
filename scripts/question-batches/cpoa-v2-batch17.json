@@ -1,0 +1,102 @@
+[
+	{
+		"trackCode": "CPOA",
+		"order": 80,
+		"prompt": "Executive sponsors question whether platform spending is improving service delivery. Which data-driven response best demonstrates why trustworthy data matters to platform ownership?",
+		"choices": [
+			"Present trend KPIs sourced from governed indicators with documented data ownership",
+			"Share anecdotal feedback from one team without validating record completeness",
+			"Report only total user count because volume proves platform value automatically",
+			"Defer all metrics until every CMDB CI reaches one hundred percent completeness"
+		],
+		"correctIndex": 0,
+		"explanation": "Platform owners justify investment with governed, trend-based KPIs backed by clear data ownership—not unverified anecdotes or unrelated volume counts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/common-service-data-model/concept/csdm-overview.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 81,
+		"prompt": "A regulated agency must demonstrate that configuration and access data supports audit requirements. Which ServiceNow resource should the platform owner reference first?",
+		"choices": [
+			"Cloud Governance Suite compliance guidance and data stewardship practices",
+			"UI theme designer defaults for the employee service portal homepage",
+			"Catalog item icon library standards for request presentation consistency",
+			"Virtual Agent conversation script templates for password reset deflection"
+		],
+		"correctIndex": 0,
+		"explanation": "Cloud Governance Suite and CSDM stewardship guidance help platform owners align configuration data and access controls with compliance expectations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/cloud-governance-suite/concept/cloud-governance-suite.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/security/concept/c_Hardening.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 82,
+		"prompt": "Portfolio leaders want to prioritize three competing platform initiatives for the next fiscal year. Which Strategic Planning Workspace outcome should the platform owner deliver?",
+		"choices": [
+			"A ranked initiative list with linked objectives, expected value, and accountable sponsors",
+			"A complete disablement of all non-production instances to reduce storage cost",
+			"A single global update set containing every team's in-flight customization",
+			"An unrestricted admin role grant so sponsors can edit production records directly"
+		],
+		"correctIndex": 0,
+		"explanation": "Strategic Planning Workspace supports prioritizing initiatives against objectives and expected value with clear sponsorship—not ad hoc production access or environment shortcuts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-impact/page/impact/strategic-planning-workspace/concept/strategic-planning-workspace.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 83,
+		"questionType": "match",
+		"prompt": "Match each data governance activity to the compliance or quality outcome it primarily supports.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Foundation data certification",
+			"Table rotation and archival policy",
+			"Indicator data source validation",
+			"Access recertification campaigns"
+		],
+		"matchRightItems": [
+			"Confirms organizational master data is accurate before dependent services rely on it",
+			"Controls retention volume on high-growth tables within regulatory limits",
+			"Ensures KPI trends reflect trusted fields rather than stale or mis-mapped data",
+			"Verifies elevated roles remain justified and reduces unauthorized entitlement risk"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Compliance scenarios span master data certification, retention controls, analytics integrity, and access governance—each addressing a distinct risk platform owners must manage.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/common-service-data-model/concept/csdm-foundation-data.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/table-administration/concept/c_TableRotationAndArchival.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 84,
+		"questionType": "multi",
+		"prompt": "An internal audit flagged inconsistent incident categorization that skews executive dashboards. Which remediation steps should the platform owner prioritize? (Choose two.)",
+		"choices": [
+			"Define data ownership and validation rules for categorization fields used in KPIs",
+			"Review Performance Analytics indicator sources to confirm they reference governed fields",
+			"Disable all breakdowns so dashboards show only aggregate totals without detail",
+			"Allow each team to create private category values without a shared reference list"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Audit findings on skewed dashboards require governed categorization ownership and validated PA sources—not hidden breakdowns or unconstrained local values.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/cloud-governance-suite/concept/cloud-governance-suite.html"
+		]
+	}
+]

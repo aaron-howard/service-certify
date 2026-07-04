@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOA",
+		"order": 60,
+		"prompt": "An associate platform owner explains the ServiceNow Support Portal to a new team member. Which description best reflects portal characteristics?",
+		"choices": [
+			"Licensed customers access product documentation, release information, known issues, and support case management",
+			"Any internet user can download unrestricted production database backups on demand",
+			"The portal replaces internal change advisory board approvals for all production deployments",
+			"Developers use the portal solely to purchase hardware unrelated to platform subscriptions"
+		],
+		"correctIndex": 0,
+		"explanation": "The Support Portal centralizes official documentation, defect information, release content, and customer support interactions for licensed products.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 61,
+		"prompt": "A mid-size agency with one IT operations team and moderate customization asks which implementation model fits best. What should the platform owner recommend?",
+		"choices": [
+			"A single production instance with standard environment sequencing and shared maintenance windows",
+			"Separate production instances per department with independent and uncoordinated upgrade calendars",
+			"On-premises hosting requiring the agency to manage all infrastructure patching alone",
+			"Domain separation for every internal team regardless of data isolation requirements"
+		],
+		"correctIndex": 0,
+		"explanation": "Organizations with unified governance and limited isolation needs typically benefit from one production instance with disciplined promotion paths.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 62,
+		"questionType": "match",
+		"prompt": "Match each Support Portal resource to the step a platform owner takes when using it during upgrade planning.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Review release notes",
+			"Search known error articles",
+			"Consult product documentation",
+			"Open a support case"
+		],
+		"matchRightItems": [
+			"Identify new features and breaking changes before scheduling the upgrade window",
+			"Check documented defects that may affect the targeted version",
+			"Validate configuration guidance for capabilities being deployed",
+			"Escalate blockers with vendor engineering when internal remediation stalls"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Support Portal resources support a sequenced approach: release awareness, defect review, implementation guidance, and vendor escalation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 63,
+		"prompt": "During an active upgrade cycle, where should functional testing of custom workflows occur before production commit?",
+		"choices": [
+			"In sub-production on the upgraded baseline with documented test evidence",
+			"Only after production cutover when end users report issues",
+			"Exclusively on developer laptops without instance connectivity",
+			"In production during peak business hours without a rollback plan"
+		],
+		"correctIndex": 0,
+		"explanation": "Testing inside the upgrade cycle occurs in sub-production so customization impact is validated on the new baseline before production workloads are affected.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/upgrade-center.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 64,
+		"questionType": "multi",
+		"prompt": "After a security patch is applied in test, which next steps should the platform owner require before production deployment? (Choose two.)",
+		"choices": [
+			"Documented regression results for affected integrations and critical workflows",
+			"Approved change record with defined rollback criteria and maintenance window",
+			"Immediate production deployment without change tracking to minimize delay",
+			"Permanent deferral of all future patches until the next family upgrade"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Patch promotion requires validated test evidence and governed change approval with rollback planning before touching production.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html"
+		]
+	}
+]

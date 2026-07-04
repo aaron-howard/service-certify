@@ -1,0 +1,99 @@
+[
+	{
+		"trackCode": "CIS-DF",
+		"order": 55,
+		"prompt": "An operator must remediate a small set of duplicate Linux server CIs flagged by a de-duplication task. Which tool is best suited for this scenario?",
+		"choices": [
+			"The Duplicate CI Remediator wizard to select a primary CI and merge attributes",
+			"A transform map that reloads every server row without coalesce keys",
+			"An event rule that suppresses alerts until duplicates age out naturally",
+			"A catalog item that retires assignment groups tied to the servers"
+		],
+		"correctIndex": 0,
+		"explanation": "The de-duplication wizard guides operators through selecting a primary CI, merging attributes and relationships, and retiring or deleting duplicates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/deduplicate-cis.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 56,
+		"prompt": "Lab hardware is decommissioned but must remain auditable and excluded from active operational reporting. Which lifecycle approach is most appropriate?",
+		"choices": [
+			"Update install or operational lifecycle status to retired while retaining the CI record",
+			"Hard-delete every related CI and relationship without retention policy",
+			"Move the records to the sys_user table for long-term storage",
+			"Disable CMDB Health jobs so retired CIs no longer appear in lists"
+		],
+		"correctIndex": 0,
+		"explanation": "Lifecycle attributes such as install and operational status support governed retirement without losing audit history.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-lifecycle-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 57,
+		"prompt": "A govern team needs consistent attribute values when stewards bulk-update server CIs. Which CMDB Data Manager control supports this?",
+		"choices": [
+			"Data policy rules that validate or standardize field values on targeted CI sets",
+			"Discovery behavior settings that change ICMP timeout intervals per subnet",
+			"Event correlation rules that group monitoring alerts by severity",
+			"Catalog client scripts that hide variables on unrelated request items"
+		],
+		"correctIndex": 0,
+		"explanation": "CMDB Data Manager policies enforce validation and standardization during bulk lifecycle and attribute operations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-data-manager.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 58,
+		"questionType": "multi",
+		"prompt": "Which two remediation activities are commonly executed through CMDB Data Manager? (Choose two.)",
+		"choices": [
+			"Bulk lifecycle status updates across selected CI populations",
+			"Orphaned relationship cleanup tasks for stale dependency links",
+			"Horizontal discovery schedule creation for new network ranges",
+			"Event Management connector template deployment for monitoring tools"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Data Manager focuses on governed bulk lifecycle operations and relationship hygiene—not discovery scheduling or event connector setup.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-data-manager.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 59,
+		"questionType": "match",
+		"prompt": "Match each duplicate remediation approach to the scenario where it fits best.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Duplicate CI Remediator wizard",
+			"De-duplication template",
+			"Identification rule tuning",
+			"CMDB Health duplicate detection rule"
+		],
+		"matchRightItems": [
+			"A handful of duplicates need guided manual merge review",
+			"Large duplicate volumes require repeatable automated selection logic",
+			"Incoming feeds keep creating new duplicates for the same keys",
+			"Existing duplicate groups must be surfaced as remediation tasks"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Govern teams combine detection rules, identification tuning, wizard merges, and templates depending on duplicate volume and recurrence patterns.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/deduplicate-cis.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-health-dashboard-overview.html"
+		]
+	}
+]

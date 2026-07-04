@@ -1,0 +1,86 @@
+[
+	{
+		"trackCode": "CIS-SP",
+		"order": 55,
+		"prompt": "In domain-separated foundational data loads, why is staging data in an import set table before transform execution recommended?",
+		"choices": [
+			"It isolates raw source payloads for validation and transformation before updating tenant production tables",
+			"It bypasses ACL evaluation permanently for all subsequent target table updates",
+			"It automatically assigns sys_overrides for every imported row in process tables",
+			"It replaces the need for coalesce logic on the transform map"
+		],
+		"correctIndex": 0,
+		"explanation": "Import set staging provides a controlled landing zone to validate and transform inbound data before promoting records into tenant tables.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_ImportSets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 56,
+		"prompt": "What behavior do coalesce fields enable when the same tenant reference file is imported weekly?",
+		"choices": [
+			"Matching existing target rows for update instead of inserting duplicate records",
+			"Skipping transform map execution whenever any source column value changes",
+			"Routing all rows to the global domain during the first import run only",
+			"Encrypting source values before they reach the staging table"
+		],
+		"correctIndex": 0,
+		"explanation": "Coalesce fields define match keys between source and target, supporting repeatable upsert behavior across scheduled loads.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_Coalescing.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 57,
+		"prompt": "A data engineer maps straightforward source columns in a tenant location import. When is a declarative field map preferred over an onBefore script?",
+		"choices": [
+			"When source-to-target assignments are direct and do not require complex conditional logic",
+			"When every imported row must be forced into the TOP process domain",
+			"When coalesce must be disabled to guarantee inserts on every run",
+			"When reference fields should be removed from the target table schema"
+		],
+		"correctIndex": 0,
+		"explanation": "Declarative field maps keep simple mappings readable and maintainable, reserving scripts for exceptional transformation logic.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/task/t_CreateATransformMap.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 58,
+		"prompt": "A transform must set a reference to a catalog item owned by another tenant. What design choice respects domain separation?",
+		"choices": [
+			"Restrict lookups and reference resolution to items visible in the record's target domain",
+			"Copy catalog items into global before each import run completes",
+			"Disable domain on the reference field dictionary entry for the target table",
+			"Resolve references from any domain by selecting the highest sys_id value"
+		],
+		"correctIndex": 0,
+		"explanation": "Reference fields in multi-domain environments must resolve within the tenant scope of the record being created or updated.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/task/t_CreateATransformMap.html",
+			"https://www.servicenow.com/docs/r/platform-security/bp-dom-sep-definition.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 59,
+		"questionType": "multi",
+		"prompt": "Before enabling scheduled tenant data loads in production, which controls should be validated? (Choose two.)",
+		"choices": [
+			"Transform maps assign sys_domain values consistent with tenant scope for new and updated rows",
+			"Coalesce keys uniquely identify records within each tenant's data set",
+			"All imports execute as the System Administrator account in the global domain only",
+			"Business rules are globally deactivated during every scheduled load window"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Production tenant loads require correct domain stamping and stable coalesce keys to prevent cross-tenant defects and duplicate records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_ImportSets.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_Coalescing.html"
+		]
+	}
+]

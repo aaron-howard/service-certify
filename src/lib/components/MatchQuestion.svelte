@@ -1,8 +1,16 @@
 <script lang="ts">
+	import {
+		displayIndexToOriginal,
+		originalIndexToDisplay
+	} from '$lib/practice/choiceShuffle';
+
 	type Props = {
 		leftItems: string[];
 		rightItems: string[];
-		/** Map of left index → right index chosen by the user. */
+		/** display index → original bank index for each column */
+		leftPermutation: number[];
+		rightPermutation: number[];
+		/** Map of display left index → display right index chosen by the user. */
 		selections: Record<number, number>;
 		disabled?: boolean;
 		/** After grade: correct pairings in original index space. */
@@ -14,6 +22,8 @@
 	let {
 		leftItems,
 		rightItems,
+		leftPermutation,
+		rightPermutation,
 		selections,
 		disabled = false,
 		correctMatches = [],
@@ -62,21 +72,33 @@
 		draggingLeft = null;
 	}
 
-	function pairStatus(leftIdx: number): 'correct' | 'wrong' | 'neutral' {
+	function pairStatus(displayLeftIdx: number): 'correct' | 'wrong' | 'neutral' {
 		if (!submitted || !correctMatches.length) return 'neutral';
-		const chosen = selections[leftIdx];
-		if (chosen === undefined) return 'wrong';
-		const expected = correctMatches.find((p) => p.left === leftIdx)?.right;
-		return expected === chosen ? 'correct' : 'wrong';
+		const chosenDisplayRight = selections[displayLeftIdx];
+		if (chosenDisplayRight === undefined) return 'wrong';
+		const originalLeft = displayIndexToOriginal(displayLeftIdx, leftPermutation);
+		const chosenOriginalRight = displayIndexToOriginal(chosenDisplayRight, rightPermutation);
+		const expectedOriginalRight = correctMatches.find((p) => p.left === originalLeft)?.right;
+		return expectedOriginalRight === chosenOriginalRight ? 'correct' : 'wrong';
 	}
 
-	function rightHighlight(rightIdx: number): 'correct' | 'wrong' | 'neutral' {
+	function rightHighlight(displayRightIdx: number): 'correct' | 'wrong' | 'neutral' {
 		if (!submitted || !correctMatches.length) return 'neutral';
-		const matchedLeft = Object.entries(selections).find(([, r]) => r === rightIdx)?.[0];
+		const matchedLeft = Object.entries(selections).find(([, r]) => r === displayRightIdx)?.[0];
 		if (matchedLeft === undefined) return 'neutral';
-		const leftIdx = Number(matchedLeft);
-		const expected = correctMatches.find((p) => p.left === leftIdx)?.right;
-		return expected === rightIdx ? 'correct' : 'wrong';
+		const displayLeftIdx = Number(matchedLeft);
+		const originalLeft = displayIndexToOriginal(displayLeftIdx, leftPermutation);
+		const originalRight = displayIndexToOriginal(displayRightIdx, rightPermutation);
+		const expectedOriginalRight = correctMatches.find((p) => p.left === originalLeft)?.right;
+		return expectedOriginalRight === originalRight ? 'correct' : 'wrong';
+	}
+
+	/** Correct display-right index for a left row after grade (for showing missed answers). */
+	function expectedDisplayRight(displayLeftIdx: number): number | undefined {
+		const originalLeft = displayIndexToOriginal(displayLeftIdx, leftPermutation);
+		const expectedOriginalRight = correctMatches.find((p) => p.left === originalLeft)?.right;
+		if (expectedOriginalRight === undefined) return undefined;
+		return originalIndexToDisplay(expectedOriginalRight, rightPermutation);
 	}
 </script>
 
@@ -106,6 +128,10 @@
 					{#if rightForLeft(leftIdx) !== undefined}
 						<span class="text-xs text-secondary">
 							→ {rightItems[rightForLeft(leftIdx)!]}
+						</span>
+					{:else if submitted && expectedDisplayRight(leftIdx) !== undefined}
+						<span class="text-xs text-secondary">
+							→ {rightItems[expectedDisplayRight(leftIdx)!]}
 						</span>
 					{/if}
 					{#if !disabled && rightForLeft(leftIdx) !== undefined}
