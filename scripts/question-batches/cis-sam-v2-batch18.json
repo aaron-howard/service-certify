@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-SAM",
+		"order": 85,
+		"prompt": "Finance leadership wants to avoid surprise true-up invoices. Which extending SAM practice is most effective?",
+		"choices": [
+			"Run periodic reconciliations and remediate shortfalls before renewal events",
+			"Exclude SaaS subscriptions from SAM scope until audit notices arrive",
+			"Treat compliance exceptions as permanent without revalidation dates",
+			"Defer all entitlement updates until the vendor initiates an audit"
+		],
+		"correctIndex": 0,
+		"explanation": "Proactive reconciliation and remediation reduce financial shock at renewal or audit by addressing gaps early.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 86,
+		"prompt": "A SAM team plans remediation for multiple under-licensed publishers. Which reporting view best prioritizes effort?",
+		"choices": [
+			"Compliance position segmented by publisher, business unit, and risk severity with cost exposure",
+			"Complete list of every software model in the catalog without compliance status",
+			"Count of non-SAM catalog items submitted this quarter",
+			"Discovery schedule frequency by MID Server without install context"
+		],
+		"correctIndex": 0,
+		"explanation": "Segmentation by publisher, ownership, and severity helps target remediation on the highest-impact compliance gaps.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/validate-reconciliation-results.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 87,
+		"prompt": "Why should SAM compliance exceptions include expiration dates and scheduled revalidation?",
+		"choices": [
+			"Temporary risk acceptance must be reviewed so exceptions do not become permanent control bypasses",
+			"Expiration dates eliminate the need to maintain entitlement records",
+			"Revalidation replaces reconciliation for publishers under exception",
+			"Exceptions with expiry dates automatically purchase missing licenses"
+		],
+		"correctIndex": 0,
+		"explanation": "Time-bound exceptions force periodic review and prevent long-term erosion of compliance governance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/software-entitlement-best-practices.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 88,
+		"prompt": "A SaaS portfolio shows high subscription counts but low active usage. Which extending SAM action best reduces spend?",
+		"choices": [
+			"Review usage patterns and reclaim or down-tier underutilized subscriptions through approved workflows",
+			"Upgrade every subscription to enterprise tier for uniform licensing",
+			"Track SaaS entitlements exclusively in procurement email threads",
+			"Ignore subscription usage because SaaS is outside SAM scope"
+		],
+		"correctIndex": 0,
+		"explanation": "Usage-driven SaaS optimization with governed workflows recovers spend while preserving necessary service access.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/subscription-entitlements.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 89,
+		"prompt": "Which scenario best indicates mature SAM process extension across the organization?",
+		"choices": [
+			"Reconciliations complete on schedule, exceptions are revalidated, and renewals use verified compliance data",
+			"Compliance reports are generated only when external auditors request them",
+			"Unmatched discovery titles accumulate without assigned normalization owners",
+			"Emergency admin overrides are required for routine entitlement updates"
+		],
+		"correctIndex": 0,
+		"explanation": "Maturity appears in predictable operations, governed exceptions, and data-driven renewal and optimization decisions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
+		]
+	}
+]

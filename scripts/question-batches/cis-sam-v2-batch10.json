@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-SAM",
+		"order": 45,
+		"prompt": "A SAM analyst reviews a per-device license metric where entitlements exceed active installations. Which allocation practice best reflects available rights?",
+		"choices": [
+			"Assign entitlement quantities to devices with verified installs before opening new purchases",
+			"Delete entitlement records until install counts exceed purchased rights",
+			"Convert all device metrics to named-user metrics without contract review",
+			"Skip allocation and rely on spreadsheet totals during publisher audits"
+		],
+		"correctIndex": 0,
+		"explanation": "Allocations tie purchased rights to consumption records so reconciliation reflects defensible license position before procurement actions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/manage-software-entitlements.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 46,
+		"prompt": "When importing entitlements from a software contract, which field linkage is most critical for audit-ready compliance?",
+		"choices": [
+			"Contract record tied to publisher, metric, quantity, and effective dates on the entitlement",
+			"Incident category mapped to the software model display name",
+			"Change request number stored only in entitlement short description",
+			"Hardware asset tag referenced as the primary license key"
+		],
+		"correctIndex": 0,
+		"explanation": "Contract-backed entitlements preserve traceable rights evidence that supports reconciliation and publisher audit responses.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/software-entitlement-best-practices.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 47,
+		"prompt": "Which value is NOT a valid normalization status for a discovery model in Software Asset Management?",
+		"choices": [
+			"Matched",
+			"Partially normalized",
+			"Fully normalized",
+			"Publisher normalized"
+		],
+		"correctIndex": 2,
+		"explanation": "Fully normalized is not a valid SAM normalization status; supported statuses include matched, partially normalized, and publisher normalized.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-normalization-rules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 48,
+		"prompt": "In the License Workbench publisher view, which calculations are provided? (Choose all that apply.)",
+		"choices": [
+			"Total Spend",
+			"True-up Cost",
+			"Potential Savings",
+			"Over-licensed amount"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1, 2, 3],
+		"questionType": "multi",
+		"explanation": "The License Workbench publisher calculations include Total Spend, True-up Cost, Potential Savings, and Over-licensed amount for financial compliance analysis.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/license-workbench.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 49,
+		"prompt": "After reconciliation completes, which outcome represents a defensible Effective License Position for renewal planning?",
+		"choices": [
+			"Entitlement totals reconciled to normalized installs using the contractual license metric",
+			"Raw discovery titles counted without software model mapping",
+			"Procurement PO line items summed without entitlement linkage",
+			"Catalog request volume used as a proxy for license consumption"
+		],
+		"correctIndex": 0,
+		"explanation": "Effective License Position depends on reconciling contract-backed entitlements to normalized consumption using the correct metric.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
+		]
+	}
+]

@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-SAM",
+		"order": 25,
+		"prompt": "Which data source provides the install evidence that SAM uses as input for normalization and reconciliation?",
+		"choices": [
+			"Software discovery results collected from agents, probes, or integration imports",
+			"Closed incident records tagged with software-related categories in ITSM",
+			"Approved change request records awaiting CAB review in the change module",
+			"Knowledge article view counts tracked in the knowledge management application"
+		],
+		"correctIndex": 0,
+		"explanation": "SAM relies on software discovery to identify installed titles and versions on managed devices, forming the consumption side of compliance calculations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/software-discovery.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 26,
+		"prompt": "A SAM administrator reviews normalization status on discovered software records. Which status value indicates the title still requires mapping work?",
+		"choices": [
+			"Partially normalized status where discovery evidence has not fully mapped to a software model",
+			"Matched status where the discovery record is fully linked to a supported software model",
+			"Manually normalized status set by an administrator override of automatic mapping",
+			"Match not found status when no software model rule applies to the discovery evidence"
+		],
+		"correctIndex": 0,
+		"explanation": "Partially normalized indicates discovery evidence has not fully mapped to a software model and requires administrator review or additional mapping rules.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-normalization-status.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 27,
+		"prompt": "How does the SAM Content Service benefit an implementation team maintaining publisher and product data?",
+		"choices": [
+			"It delivers updated publisher part numbers, software models, and normalization content from ServiceNow",
+			"It replaces all local discovery probes with a single cloud-only inventory scan engine",
+			"It automatically purchases license renewals when entitlements approach expiration dates",
+			"It converts hardware asset records into software entitlement records during imports"
+		],
+		"correctIndex": 0,
+		"explanation": "SAM Content Service provides curated publisher catalogs, part numbers, and normalization data that keep software models current without manual research.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/sam-content-service.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 28,
+		"prompt": "When importing entitlements, why must the Publisher part number field match an existing record?",
+		"choices": [
+			"It ties the imported row to a licensable product definition used for metric and model association",
+			"It determines the default assignment group for software-related incident routing rules",
+			"It sets the fiscal period for cost allocation in the financial management module",
+			"It controls whether discovery scans run on weekends for that publisher's products"
+		],
+		"correctIndex": 0,
+		"explanation": "Publisher part numbers connect entitlement imports to software models and license metrics, ensuring imported rights associate with the correct product.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/publisher-part-numbers.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 29,
+		"prompt": "Why are software models important when normalizing discovered installations in SAM?",
+		"choices": [
+			"They provide a consistent product definition used in entitlement logic and compliance reporting",
+			"They replace all CMDB configuration item classes with a single software table",
+			"They store ransomware response playbooks linked to each publisher portfolio",
+			"They configure single sign-on providers for SaaS applications in the catalog"
+		],
+		"correctIndex": 0,
+		"explanation": "Software models standardize how discovered or purchased software is represented, enabling reliable reconciliation and publisher-level reporting.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-models-overview.html"
+		]
+	}
+]

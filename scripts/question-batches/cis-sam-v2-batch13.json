@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-SAM",
+		"order": 60,
+		"prompt": "An employee submits a service catalog request for licensed design software. Which SAM check should occur before fulfillment?",
+		"choices": [
+			"Verify available entitlements and allocation capacity for the requested software model",
+			"Approve the request based on manager preference without license validation",
+			"Fulfill from stockroom hardware inventory regardless of software rights",
+			"Create a change request instead of checking entitlement position"
+		],
+		"correctIndex": 0,
+		"explanation": "Catalog fulfillment should validate entitlement availability so provisioning does not create unlicensed deployments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 61,
+		"prompt": "Procurement completes a software purchase order. What is the correct SAM follow-up to maintain compliance?",
+		"choices": [
+			"Create or update entitlements from the PO and link them to the contract record",
+			"Wait for discovery to infer purchased quantity from new installs",
+			"Store the PO PDF in a personal drive without creating entitlement records",
+			"Increase catalog item price without updating license rights in SAM"
+		],
+		"correctIndex": 0,
+		"explanation": "Procurement integration creates traceable entitlement records so purchased rights are available for allocation and reconciliation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/manage-software-entitlements.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 62,
+		"prompt": "Installation optimization analysis shows the same user with duplicate installs of one product on multiple devices. What is the best first response?",
+		"choices": [
+			"Review usage and license metric rules to determine if duplicate installs are compliant",
+			"Delete all but one install record without business validation",
+			"Purchase additional licenses equal to the duplicate install count immediately",
+			"Disable software normalization until the next quarterly audit"
+		],
+		"correctIndex": 0,
+		"explanation": "Duplicate installs may or may not violate license terms depending on metric and contract; validation against rules precedes remediation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/validate-software-model-mappings.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 63,
+		"prompt": "A SAM administrator schedules recurring reconciliation and compliance reporting jobs. What operational outcome does this maintenance support?",
+		"choices": [
+			"Timely visibility into compliance drift before renewals and vendor audits",
+			"Permanent elimination of all software model normalization exceptions",
+			"Automatic retirement of every software title after ninety days",
+			"Removal of procurement approvals from the request workflow"
+		],
+		"correctIndex": 0,
+		"explanation": "Scheduled reconciliation and reporting maintain current compliance posture and reduce surprise exposure at renewal or audit time.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/validate-reconciliation-results.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 64,
+		"prompt": "Leadership asks for a publisher spend and compliance summary before budget planning. Which report view best supports that decision?",
+		"choices": [
+			"License Workbench or compliance dashboard segmented by publisher with spend and position trends",
+			"Alphabetical list of all discovery models without entitlement totals",
+			"Count of open incidents assigned to the SAM team this month",
+			"Hardware warranty expiration report filtered by stockroom location"
+		],
+		"correctIndex": 0,
+		"explanation": "Publisher-segmented spend and compliance views connect financial exposure to license position for informed budget decisions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/license-workbench.html"
+		]
+	}
+]
