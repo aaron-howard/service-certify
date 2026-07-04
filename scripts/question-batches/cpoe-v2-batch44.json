@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOE",
+		"order": 215,
+		"prompt": "Given a scenario where champion forums have become irregular and backlog conversion is stalling, the platform owner must reset cadence discipline. Which operating rhythm best restores input-to-delivery flow?",
+		"choices": [
+			"Monthly champion councils with pre-submitted use cases, same-day scoring, and published SLA for CoEI handoff",
+			"Annual champion gatherings without structured intake or documented follow-up actions",
+			"Ad hoc champion chats in messaging apps with no connection to funded delivery pipelines",
+			"Quarterly surveys replacing live forums while eliminating backlog transparency"
+		],
+		"correctIndex": 0,
+		"explanation": "Champion cadence restores delivery flow through regular councils, pre-submitted intake, scoring, and defined CoEI handoff SLAs—not irregular or disconnected forums.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 216,
+		"prompt": "A platform owner receives Industry Benchmarks showing lower-than-peer fulfillment automation rates. How should this data shape the next implementation wave?",
+		"choices": [
+			"Prioritize high-volume manual fulfillment candidates with documented ROI models tied to benchmark gaps",
+			"Shelve benchmark insights because internal politics outweigh external comparisons",
+			"Reallocate all budget to training without addressing automation backlog items",
+			"Replace benchmark review with anecdotal feedback from a single business unit"
+		],
+		"correctIndex": 0,
+		"explanation": "Benchmark data should drive implementation by prioritizing high-impact manual processes with ROI models tied to identified gaps—not be ignored or replaced by anecdote.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 217,
+		"prompt": "The CoEI published a successful innovation playbook after a pilot region exceeded adoption targets. Other regions request localized copies. What should the platform owner do?",
+		"choices": [
+			"Maintain a master playbook with mandatory core guardrails and optional regional appendices reviewed by the central CoEI",
+			"Allow each region to rewrite fundamentals independently without central visibility",
+			"Retire the playbook after the pilot to encourage unstructured experimentation",
+			"Restrict playbook access to headquarters staff only"
+		],
+		"correctIndex": 0,
+		"explanation": "CoEI playbook scaling preserves core guardrails centrally while allowing reviewed regional appendices—not uncontrolled rewrites or headquarters-only access.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 218,
+		"questionType": "multi",
+		"prompt": "Integration sprawl threatens innovation velocity at a healthcare system. The CIO asks the platform owner to strengthen enterprise architecture engagement. Which actions should be prioritized? (Choose two.)",
+		"choices": [
+			"Publish integration standards with approved API patterns and data exchange models for all platform teams",
+			"Embed architects in CoEI intake to assess cross-domain impacts before work is funded",
+			"Eliminate architecture review for projects under a fixed dollar threshold without risk assessment",
+			"Delegate all integration decisions to individual citizen developers without oversight"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Stronger architecture engagement requires published integration standards and CoEI intake participation—not waived reviews or ungoverned citizen developer decisions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 219,
+		"questionType": "match",
+		"prompt": "Match each citizen development governance control to the organizational risk it mitigates.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Tiered builder certification",
+			"Scoped application roles",
+			"Production promotion gates",
+			"Use-case catalog attestation"
+		],
+		"matchRightItems": [
+			"Prevents unqualified builders from deploying changes that affect regulated data domains",
+			"Limits blast radius when citizen-built apps require elevated platform privileges",
+			"Blocks untested configurations from reaching users who depend on stable services",
+			"Ensures business sponsors acknowledge accountability before apps enter shared environments"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Citizen development controls address distinct risks: certification for skill gaps, scoped roles for privilege exposure, promotion gates for stability, and attestation for sponsor accountability.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
+		]
+	}
+]

@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOE",
+		"order": 115,
+		"prompt": "The CIO requests weekly rollout status during a six-month ServiceNow program. Which reporting format best serves executive oversight?",
+		"choices": [
+			"A dashboard showing milestone progress, risks with mitigation owners, adoption metrics, and decisions required",
+			"A raw export of every development task regardless of business relevance",
+			"Verbal updates without documented metrics or risk tracking",
+			"Detailed technical configuration diffs without linking to program outcomes"
+		],
+		"correctIndex": 0,
+		"explanation": "Executive status reporting should highlight milestones, risks, adoption, and pending decisions—not undifferentiated task lists or technical minutiae.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 116,
+		"prompt": "Two weeks after go-live, transaction volumes meet targets but user satisfaction scores remain low. Given this scenario, what should the platform owner investigate first?",
+		"choices": [
+			"Analyze adoption feedback, training gaps, and workflow friction points reported by affected roles",
+			"Declare the rollout successful because volume metrics are on target",
+			"Increase licensing costs to improve perceived platform value",
+			"Remove satisfaction surveys to avoid negative executive visibility"
+		],
+		"correctIndex": 0,
+		"explanation": "Volume without satisfaction often signals adoption or enablement gaps; investigating user feedback and workflow friction addresses the root cause.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 117,
+		"questionType": "multi",
+		"prompt": "Before each platform upgrade in a regulated enterprise, which testing activities should the platform owner require? (Choose two.)",
+		"choices": [
+			"Execute ATF suites against customized workflows in a clone environment",
+			"Review vendor release notes for breaking changes affecting governed integrations",
+			"Skip clone testing when the vendor marks the release as low risk",
+			"Deploy to production first and backfill test evidence afterward"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Upgrade readiness in regulated environments requires clone-based automated testing plus release note review; skipping tests or reverse-order deployment increases compliance risk.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/australia/install-and-upgrade/concept/c_TestingUpgradeReadiness.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 118,
+		"questionType": "match",
+		"prompt": "Match each cross-team role to its primary responsibility during ServiceNow implementation delivery.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Platform owner",
+			"Business process owner",
+			"Enterprise architect",
+			"Operations lead"
+		],
+		"matchRightItems": [
+			"Align delivery outcomes with enterprise strategy and sponsor expectations",
+			"Validate that configured workflows meet business requirements",
+			"Ensure solutions conform to integration and data standards",
+			"Prepare runbooks and support models for steady-state operations"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Implementation delivery depends on distinct roles: strategic alignment, business validation, architectural conformance, and operational readiness.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 119,
+		"prompt": "Hypercare begins after a successful ServiceNow cutover. Which platform owner action best stabilizes the platform while building long-term operational capability?",
+		"choices": [
+			"Staff a time-boxed hypercare team with escalation paths, defect triage criteria, and knowledge transfer to operations",
+			"Extend hypercare indefinitely without transition criteria or operational handoff",
+			"Redirect all hypercare issues back to the implementation vendor permanently",
+			"Close the hypercare period on day one regardless of open priority defects"
+		],
+		"correctIndex": 0,
+		"explanation": "Effective hypercare combines focused stabilization with defined escalation, triage, and knowledge transfer—not indefinite vendor dependency or premature closure.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	}
+]

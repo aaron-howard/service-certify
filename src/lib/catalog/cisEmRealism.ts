@@ -1,6 +1,9 @@
 /** CIS-EM (Certified Implementation Specialist - Event Management) exam-realism rules. */
 
+import type { QuestionType } from './questionTypes';
+
 /** Bank distribution for 60 questions scaled 2x from the 30-question official exam. */
+
 export const CIS_EM_DOMAIN_TARGETS = {
 	'Event Management Overview': 4,
 	'Architecture and Discovery': 6,
@@ -53,7 +56,7 @@ export type CisEmQuestionRow = {
 	prompt: string;
 	choices: string[];
 	sourceUrls: string[];
-	questionType?: 'single' | 'multi';
+	questionType?: QuestionType;
 	correctIndexes?: number[];
 	correctIndex?: number;
 };

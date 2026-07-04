@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOE",
+		"order": 165,
+		"prompt": "A multinational firm must demonstrate GDPR-aligned processing for employee records in ServiceNow. Which regulatory alignment step should the platform owner lead?",
+		"choices": [
+			"Document lawful basis, data minimization, retention schedules, and subject-access procedures in the governance register",
+			"Collect all available HR attributes by default because storage is inexpensive",
+			"Rely on end-user training slides as the sole privacy control",
+			"Export production data to local spreadsheets for easier analytics"
+		],
+		"correctIndex": 0,
+		"explanation": "GDPR alignment requires documented lawful basis, minimization, retention, and access procedures—not excessive collection or informal controls.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 166,
+		"prompt": "External auditors arrive for a SOC 2 Type II review of the ServiceNow environment. What preparation approach should the platform owner direct?",
+		"choices": [
+			"Pre-stage control narratives, sampled change records, access certifications, and monitoring evidence mapped to trust criteria",
+			"Wait until auditors request items and assemble evidence ad hoc during the site visit",
+			"Provide only marketing materials describing platform security features",
+			"Restrict auditor access to a single demo instance with no production history"
+		],
+		"correctIndex": 0,
+		"explanation": "SOC 2 readiness pre-stages mapped control evidence across changes, access, and monitoring—not ad hoc assembly or non-representative demos.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 167,
+		"questionType": "multi",
+		"prompt": "Given a scenario hardening a production instance before a security assessment, which security options should the platform owner implement? (Choose two.)",
+		"choices": [
+			"Enforce multi-factor authentication for interactive privileged users",
+			"Restrict inbound integration traffic to approved endpoints and credential aliases",
+			"Disable all ACLs temporarily so assessors can browse every table",
+			"Share a single break-glass admin password across the operations team"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Pre-assessment hardening strengthens MFA and integration boundaries—not ACL removal or shared break-glass credentials.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 168,
+		"prompt": "Sales leadership asks whether ServiceNow security certifications accelerate enterprise deals. Given this scenario, how should the platform owner connect security to business advantage?",
+		"choices": [
+			"Demonstrate how documented controls, audit readiness, and incident response maturity reduce customer due-diligence friction and contract delays",
+			"Argue that security certifications are marketing artifacts with no deal impact",
+			"Recommend removing security documentation from RFP responses to shorten proposals",
+			"Defer security posture discussions until after contracts are signed"
+		],
+		"correctIndex": 0,
+		"explanation": "Security maturity shortens enterprise sales cycles by satisfying due diligence efficiently; treating certifications as irrelevant or hiding posture undermines competitive positioning.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 169,
+		"questionType": "match",
+		"prompt": "Match each security capability to the business advantage it primarily enables.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Multi-factor authentication",
+			"Encryption at rest and in transit",
+			"Security incident response playbooks",
+			"Third-party risk assessments"
+		],
+		"matchRightItems": [
+			"Reduces credential compromise risk supporting uninterrupted service delivery",
+			"Protects sensitive data enabling regulated and cross-border operations",
+			"Limits breach duration and reputational damage through coordinated recovery",
+			"Accelerates vendor onboarding with verified security posture"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Security capabilities translate into business advantages: operational continuity, regulatory enablement, incident resilience, and trusted partner ecosystems.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		]
+	}
+]

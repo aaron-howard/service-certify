@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOE",
+		"order": 110,
+		"prompt": "A ServiceNow implementation partners with a systems integrator and three internal product teams. Which coordination model best prevents duplicate configuration and conflicting releases?",
+		"choices": [
+			"Define a federated delivery model with shared standards, a central release board, and named integration owners per domain",
+			"Allow each team to configure production independently with no shared change calendar",
+			"Outsource all decisions to the integrator without internal product accountability",
+			"Mandate that only the integrator may access sub-production environments"
+		],
+		"correctIndex": 0,
+		"explanation": "Multi-vendor delivery succeeds with shared standards, centralized release coordination, and clear domain ownership—not ungoverned parallel changes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 111,
+		"prompt": "The platform team plans biweekly production releases across multiple scoped applications. Which testing strategy should the platform owner mandate?",
+		"choices": [
+			"Maintain automated regression suites executed in CI pipelines with risk-based manual testing for high-impact changes",
+			"Test only in production and rely on user reports to identify defects",
+			"Run full manual test scripts for every change regardless of scope or risk",
+			"Skip sub-production testing when release volume exceeds two per month"
+		],
+		"correctIndex": 0,
+		"explanation": "Frequent releases require automated regression in pipelines supplemented by targeted manual testing for high-risk changes—not production-only validation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/automated-test-framework/atf-test-suites.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 112,
+		"questionType": "multi",
+		"prompt": "A major rollout experiences widespread login failures on day one. Which executive communication actions should the platform owner take immediately? (Choose two.)",
+		"choices": [
+			"Notify sponsors with confirmed user impact scope and estimated recovery timeline",
+			"Activate a coordinated incident response with clear internal and external messaging owners",
+			"Wait until root cause is fully confirmed before informing any stakeholders",
+			"Blame the identity provider publicly without internal verification"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Critical rollout failures demand prompt sponsor notification and coordinated messaging; silence or premature blame undermines trust and recovery.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 113,
+		"questionType": "match",
+		"prompt": "Match each rollout troubleshooting activity to when it should occur.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Review deployment audit logs",
+			"Compare configuration baselines",
+			"Validate integration health checks",
+			"Conduct stakeholder impact assessment"
+		],
+		"matchRightItems": [
+			"Immediately after unexpected post-release behavior is reported",
+			"When customizations may have drifted between environments",
+			"When external system connectivity is suspected as the failure point",
+			"Before communicating recovery timelines to executives and users"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Troubleshooting follows a logical sequence: audit review, baseline comparison, integration validation, and impact assessment before executive communication.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 114,
+		"prompt": "Given a case study where a retailer must deploy ServiceNow to 40 stores over six months, which phased rollout approach best manages risk?",
+		"choices": [
+			"Pilot in a representative region, refine based on feedback, then scale in waves with shared lessons learned",
+			"Deploy to all stores simultaneously on a single weekend",
+			"Roll out alphabetically by store name without regard to operational similarity",
+			"Delay store deployment until headquarters processes reach full maturity"
+		],
+		"correctIndex": 0,
+		"explanation": "Large-scale rollouts benefit from representative pilots, feedback-driven refinement, and sequenced waves—not big-bang or arbitrary ordering.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	}
+]

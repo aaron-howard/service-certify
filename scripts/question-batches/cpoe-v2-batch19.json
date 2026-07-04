@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOE",
+		"order": 90,
+		"prompt": "Given a case study where incident volume spikes during the first week after a major HR rollout, what stabilization step should the platform owner lead?",
+		"choices": [
+			"Triage defects by user impact, assign owners, and report daily recovery metrics to sponsors",
+			"Pause all defect fixes until the next scheduled release train",
+			"Direct users to email individual developers instead of the service desk",
+			"Remove executive dashboards to avoid highlighting negative trends"
+		],
+		"correctIndex": 0,
+		"explanation": "Stabilization prioritizes high-impact defects with accountable owners and transparent sponsor reporting—not deferred fixes or hidden metrics.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 91,
+		"prompt": "Finance and ITSM teams share identity data but maintain separate backlogs. Given this scenario, how should the platform owner manage cross-team delivery dependencies?",
+		"choices": [
+			"Maintain a shared dependency map with agreed integration milestones and joint release checkpoints",
+			"Allow each team to deploy independently without coordinating data contract changes",
+			"Merge all backlogs into one team without clarifying ownership boundaries",
+			"Defer integration work until both teams complete unrelated enhancements first"
+		],
+		"correctIndex": 0,
+		"explanation": "Cross-team delivery requires visible dependencies and joint checkpoints; uncoordinated releases or unclear ownership create integration failures.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 92,
+		"questionType": "multi",
+		"prompt": "Given a scenario where a platform upgrade and custom application release occur in the same window, which testing scope items should the platform owner require? (Choose two.)",
+		"choices": [
+			"Automated regression of critical business flows across affected domains",
+			"Smoke validation of integrations and scheduled jobs after deployment",
+			"Elimination of UAT to meet the maintenance window deadline",
+			"Testing limited to the developer who authored the largest change set"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Combined releases need broad regression and post-deploy integration checks; skipping UAT or solo testing leaves enterprise risk unvalidated.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 93,
+		"questionType": "match",
+		"prompt": "Match each platform owner focus area to its primary responsibility during multi-team delivery.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Standards enforcement",
+			"Release orchestration",
+			"Value tracking",
+			"Stakeholder alignment"
+		],
+		"matchRightItems": [
+			"Ensure teams follow agreed architecture and data conventions",
+			"Coordinate calendars, environments, and deployment sequencing",
+			"Measure outcomes against baselines for each product increment",
+			"Keep sponsors and product leads aligned on priorities and trade-offs"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Multi-team delivery demands standards, coordinated releases, outcome measurement, and continuous stakeholder alignment from the platform owner.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 94,
+		"prompt": "Field managers report they revert to spreadsheets because approval steps feel slower on the new platform. Given this case study, what is the platform owner's best next step?",
+		"choices": [
+			"Facilitate process review with affected managers, measure cycle time, and co-design simplified paths",
+			"Announce mandatory usage penalties without investigating workflow pain points",
+			"Remove approval controls entirely to maximize submission speed",
+			"Wait for annual training refresh before collecting structured feedback"
+		],
+		"correctIndex": 0,
+		"explanation": "Adoption recovery starts with understanding workflow friction and co-designing improvements—not punitive mandates or removing necessary controls.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	}
+]

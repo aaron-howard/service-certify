@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOE",
+		"order": 140,
+		"prompt": "Given a case study where the executive platform board questions rising demand intake, how should the platform owner frame the interaction?",
+		"choices": [
+			"Present portfolio health metrics, capacity constraints, strategic alignment criteria, and recommended investment trade-offs",
+			"Accept every request to maintain goodwill without discussing capacity limits",
+			"Decline to attend board sessions until demand volume decreases",
+			"Redirect all executive questions to individual scrum teams without consolidated analysis"
+		],
+		"correctIndex": 0,
+		"explanation": "Executive board interaction requires portfolio metrics, capacity reality, alignment criteria, and clear trade-offs—not uncritical acceptance or fragmented responses.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 141,
+		"prompt": "A demand governance board must rank competing ServiceNow initiatives with limited funding. What should the platform owner supply to enable effective prioritization?",
+		"choices": [
+			"Value hypotheses, dependency maps, resource estimates, and risk profiles for each demand item",
+			"A list of requested features sorted only by loudest stakeholder advocacy",
+			"Technical design documents without business outcome or cost context",
+			"An open-ended backlog with no scoring model or capacity baseline"
+		],
+		"correctIndex": 0,
+		"explanation": "Demand board decisions require value, dependencies, estimates, and risk—not advocacy volume or technical detail without business context.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/demand-governance.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 142,
+		"questionType": "multi",
+		"prompt": "The platform owner coordinates across executive, demand, and technical architecture boards. Which interaction practices should be institutionalized? (Choose two.)",
+		"choices": [
+			"Publish decision logs that trace executive priorities through demand approval to technical design constraints",
+			"Hold regular cross-board syncs when escalations or dependency conflicts span governance scopes",
+			"Keep each board isolated so decisions never influence other governance bodies",
+			"Allow technical teams to override demand outcomes without executive visibility"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Multi-board coordination relies on traceable decision logs and cross-board syncs for escalations—isolated or ungoverned overrides undermine enterprise alignment.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 143,
+		"prompt": "Given a scenario where teams propose CMDB changes without mapping to business services or technical assets, how should the platform owner apply the CSDM framework?",
+		"choices": [
+			"Require proposals to identify affected CSDM domains—foundation, ideation, build, or service delivery—and align data to those layers",
+			"Treat CSDM as optional documentation that teams can adopt after go-live",
+			"Limit governance to the CMDB table list without domain context",
+			"Defer CSDM alignment until all applications migrate off legacy tools"
+		],
+		"correctIndex": 0,
+		"explanation": "CSDM framework application maps work to foundation, ideation, build, and service delivery domains so data and services stay coherent across the platform.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/configuration-management.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 144,
+		"questionType": "match",
+		"prompt": "Match each CSDM framework domain to the governance outcome it primarily enables for platform owners.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Foundation domain",
+			"Ideation and strategy domain",
+			"Build domain",
+			"Service delivery domain"
+		],
+		"matchRightItems": [
+			"Trusted location, group, and company data that underpins all downstream records",
+			"Traceability from business demand and portfolio decisions to funded work",
+			"Governed design and configuration artifacts linked to deployable assets",
+			"Operational services mapped to supporting CIs for impact and change analysis"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "CSDM domains connect foundational master data, portfolio ideation, build artifacts, and service delivery mapping to coherent platform governance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/configuration-management.html"
+		]
+	}
+]

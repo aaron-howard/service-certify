@@ -1,6 +1,9 @@
 /** CIS-TPRM (Certified Implementation Specialist - Third-Party Risk Management) exam-realism rules. */
 
+import type { QuestionType } from './questionTypes';
+
 /** Bank distribution for 90 questions scaled 1.5x from the 60-question official exam. */
+
 export const CIS_TPRM_DOMAIN_TARGETS = {
 	'TPRM Fundamentals and Review': 20,
 	'Core Configuration': 13,
@@ -47,7 +50,7 @@ export type CisTprmQuestionRow = {
 	prompt: string;
 	choices: string[];
 	sourceUrls: string[];
-	questionType?: 'single' | 'multi';
+	questionType?: QuestionType;
 	correctIndexes?: number[];
 	correctIndex?: number;
 };

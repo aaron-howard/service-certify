@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOE",
+		"order": 135,
+		"prompt": "Given a case study where executives define reliability and auditability as core organizational values, how should the platform owner align CMDB governance?",
+		"choices": [
+			"Define CI classes, ownership, and quality thresholds that map directly to those values with executive-approved KPIs",
+			"Populate the CMDB opportunistically during incidents without ownership or quality targets",
+			"Limit CMDB scope to hardware inventory while ignoring applications and services",
+			"Postpone CMDB standards until every legacy system is fully retired"
+		],
+		"correctIndex": 0,
+		"explanation": "CMDB governance aligned to organizational values translates executive priorities into CI scope, ownership, quality thresholds, and measurable KPIs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/configuration-management.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 136,
+		"prompt": "A CMDB governance council discovers duplicate CIs and conflicting relationship data across regions. What should the platform owner mandate first?",
+		"choices": [
+			"Assign authoritative data stewards per domain with reconciliation rules and escalation paths for conflicts",
+			"Merge all records manually once per year without documented matching criteria",
+			"Disable relationship modeling to reduce data inconsistencies",
+			"Allow each region to maintain independent CMDB instances without federation"
+		],
+		"correctIndex": 0,
+		"explanation": "Effective CMDB governance assigns stewards, reconciliation rules, and escalation paths before scale makes duplicate and conflicting data unmanageable.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/deduplicate-cis.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 137,
+		"questionType": "multi",
+		"prompt": "The enterprise values customer-obsessed service delivery and cost transparency. Which CMDB governance actions should the platform owner prioritize? (Choose two.)",
+		"choices": [
+			"Link business services to supporting CIs so impact analysis reflects customer-facing outcomes",
+			"Publish data quality scorecards with remediation owners reviewed at governance cadences",
+			"Exclude financial attributes from CI records to simplify data entry",
+			"Defer all discovery integration until CMDB completeness reaches one hundred percent"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Value-aligned CMDB governance connects services to supporting CIs for impact visibility and uses scorecards with accountable remediation—not incomplete or perfection-gated models.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 138,
+		"prompt": "Given a scenario where audit findings cite incomplete CI ownership, how should the platform owner respond to the executive platform board?",
+		"choices": [
+			"Present an ownership model, phased remediation plan, quality KPIs, and funding tied to risk reduction milestones",
+			"Commit to full CMDB accuracy within one week without resource or process changes",
+			"Recommend disabling CMDB access for auditors to limit exposure",
+			"Shift ownership accountability entirely to external discovery vendors"
+		],
+		"correctIndex": 0,
+		"explanation": "Executive response to CMDB audit gaps requires an ownership model, phased plan, KPIs, and resourced milestones—not unrealistic timelines or accountability shifts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 139,
+		"questionType": "match",
+		"prompt": "Match each CMDB governance pillar to the organizational value it most directly supports.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Authoritative ownership",
+			"Reconciliation policy",
+			"Service-to-CI mapping",
+			"Quality scorecards"
+		],
+		"matchRightItems": [
+			"Accountability when incidents or changes affect regulated assets",
+			"Trustworthy data through consistent matching and source-of-record rules",
+			"Customer impact visibility during outages and major changes",
+			"Transparent progress toward reliability and audit readiness goals"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "CMDB governance pillars translate into accountability, data trust, customer impact visibility, and measurable progress toward enterprise values.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/configuration-management.html"
+		]
+	}
+]

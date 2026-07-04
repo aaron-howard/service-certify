@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOE",
+		"order": 25,
+		"prompt": "An executive steering committee questions consolidating departmental ticketing tools onto ServiceNow. Which persuasion approach should the platform owner use with C-Suite sponsors?",
+		"choices": [
+			"Quantify duplicate cost, service gaps, and outcome improvements using peer benchmarks and pilot results",
+			"Present detailed table schemas and field-level mappings without business impact context",
+			"Recommend delaying consolidation until every legacy contract expires regardless of cost",
+			"Argue that technical elegance alone justifies migration without financial evidence"
+		],
+		"correctIndex": 0,
+		"explanation": "Executive persuasion combines quantified pain, expected outcomes, and credible comparisons—not technical detail or indefinite delay.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 26,
+		"prompt": "Given a case study where finance and operations each maintain separate KPI definitions, how should the platform owner align ServiceNow data with enterprise BI strategy?",
+		"choices": [
+			"Establish a governed metric catalog with agreed definitions before publishing datasets to the BI layer",
+			"Allow each department to export raw tables on demand without shared definitions",
+			"Restrict all analytics to native ServiceNow dashboards and block external BI tools",
+			"Postpone metric alignment until every workflow is fully automated across the enterprise"
+		],
+		"correctIndex": 0,
+		"explanation": "BI integration succeeds when platform data uses enterprise-governed definitions so analytics teams trust cross-functional reporting.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 27,
+		"prompt": "Regional managers report uneven adoption after a global ServiceNow rollout. Which OCM orchestration should the platform owner prioritize for the next release wave?",
+		"choices": [
+			"Role-based enablement plans co-designed with regional champions and localized success measures",
+			"Identical training videos distributed globally without regional workflow differences addressed",
+			"Mandatory usage policies enforced before any user feedback is collected or analyzed",
+			"Suspension of regional releases until headquarters approves identical process templates"
+		],
+		"correctIndex": 0,
+		"explanation": "Effective OCM adapts enablement to regional roles and champions rather than one-size-fits-all mandates or halted delivery.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 28,
+		"questionType": "match",
+		"prompt": "Match each organizational change management activity to its primary purpose during a platform transformation.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Stakeholder impact assessment",
+			"Champion network activation",
+			"Readiness pulse surveys",
+			"Benefits realization tracking"
+		],
+		"matchRightItems": [
+			"Identify roles affected and resistance risks before launch",
+			"Extend sponsor messaging through trusted peer advocates",
+			"Measure adoption confidence and training gaps across waves",
+			"Connect platform usage to agreed business outcome metrics"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "OCM spans impact analysis, champion networks, readiness measurement, and tying adoption to validated business benefits.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 29,
+		"questionType": "multi",
+		"prompt": "When formalizing a multi-year platform strategy after discovery workshops, which elements should appear in the published document? (Choose two.)",
+		"choices": [
+			"Target outcomes linked to enterprise strategic priorities",
+			"Guiding principles that constrain future design decisions",
+			"Complete list of planned script includes for every release train",
+			"Individual developer task assignments for the first sprint only"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Strategy documents articulate outcomes and principles; sprint-level technical tasks belong in delivery backlogs, not executive strategy artifacts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	}
+]
