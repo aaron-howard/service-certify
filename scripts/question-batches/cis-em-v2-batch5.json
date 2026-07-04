@@ -1,0 +1,83 @@
+[
+	{
+		"trackCode": "CIS-EM",
+		"order": 20,
+		"prompt": "During event processing, what does CI binding enable for an operator reviewing a new alert?",
+		"choices": [
+			"Linking the alert to affected configuration items for impact and ownership context",
+			"Bypassing normalization so raw JSON payloads display on the alert without parsing",
+			"Replacing connector credentials with manual spreadsheet uploads from the NOC team",
+			"Disabling correlation logic for all warning-level monitoring signals by default"
+		],
+		"correctIndex": 0,
+		"explanation": "CI binding associates events and alerts with configuration items so responders can assess service impact and route work to the correct owners.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/create-event-rule.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 21,
+		"prompt": "An implementation team needs to extract a host name from a nested JSON attribute in connector payloads. Which event rule feature supports this?",
+		"choices": [
+			"Stockroom audit scan methods configured for multi-serial asset intake workflows",
+			"Regular expression or JavaScript processing in field mapping or rule scripts",
+			"Hardware model normalization rules tied to procurement vendor catalog records",
+			"Incident state model transitions from Resolved to Closed after auto-close intervals"
+		],
+		"correctIndex": 1,
+		"explanation": "Event rules and field mapping support regular expressions and JavaScript to transform source payload values into normalized event attributes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/create-event-rule.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/event-rules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 22,
+		"prompt": "What risk increases when event field mapping maps every unknown node to a generic placeholder CI?",
+		"choices": [
+			"Discovery credentials expire faster on Linux MID Server deployments in remote sites",
+			"Connectors cannot poll more frequently than the default 120-second interval allows",
+			"Operators lose accurate service impact context and may mis-prioritize response",
+			"Alert management rules stop creating tasks for any severity level above warning"
+		],
+		"correctIndex": 2,
+		"explanation": "Placeholder CI binding hides the true affected asset, which degrades triage quality and can delay response to the correct service owners.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/create-event-rule.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 23,
+		"prompt": "Why should event rules be validated with representative production-like payloads before go-live?",
+		"choices": [
+			"Because rule simulation is unavailable in subproduction instances entirely without plugins",
+			"To ensure stockroom receiving workflows auto-approve every transfer order line item",
+			"Because event rules affect dashboard portlet themes but not alert generation logic",
+			"To confirm filtering preserves actionable signals while reducing operational noise"
+		],
+		"correctIndex": 3,
+		"explanation": "Testing with realistic payloads verifies that suppression and classification logic keeps critical signals visible while reducing alert noise.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/event-rules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 24,
+		"prompt": "Which governance practice keeps event rule sets effective as monitoring sources evolve?",
+		"choices": [
+			"Documented ownership, change control, and periodic effectiveness reviews",
+			"Allow any operator to edit production rules without test evidence or rollback plans",
+			"Disable version history on event rule records to speed up ad hoc tuning sessions",
+			"Store all rule logic only in external email threads without CMDB references"
+		],
+		"correctIndex": 0,
+		"explanation": "Sustainable rule governance requires clear ownership, controlled changes, and periodic review against operational KPIs as sources change.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/event-rules.html"
+		]
+	}
+]

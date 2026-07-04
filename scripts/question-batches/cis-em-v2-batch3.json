@@ -1,0 +1,83 @@
+[
+	{
+		"trackCode": "CIS-EM",
+		"order": 10,
+		"prompt": "What does an Event Management connector primarily do for external monitoring tools?",
+		"choices": [
+			"Polls or receives source events and maps them into the ServiceNow event format",
+			"Retires unused hardware models from the product catalog during nightly batch jobs",
+			"Creates change requests for every warning-level SNMP trap without rule evaluation",
+			"Replaces alert assignment groups with procurement workflows for stockroom managers"
+		],
+		"correctIndex": 0,
+		"explanation": "Connectors provide source-specific ingestion and mapping so external monitoring telemetry can enter the Event Management processing pipeline.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 11,
+		"prompt": "A new connector sends host names that do not match CMDB records. Which configuration step should be prioritized first?",
+		"choices": [
+			"Disable all event rules until discovery completes every subnet in the estate globally",
+			"Define event field mapping so source attributes resolve to known configuration items",
+			"Set every unmatched event to critical severity for maximum operational visibility",
+			"Remove the connector and rely on manual alert logging maintained in spreadsheets"
+		],
+		"correctIndex": 1,
+		"explanation": "Event field mapping translates connector payload attributes into ServiceNow event fields and supports CI binding for meaningful correlation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/create-event-rule.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 12,
+		"prompt": "What is the message key used for during event processing in Event Management?",
+		"choices": [
+			"Encrypting listener credentials stored on the MID Server host file system",
+			"Assigning hardware asset tags during stockroom receiving and audit operations",
+			"Identifying and deduplicating related events from the same source condition",
+			"Scheduling discovery credentials for nightly subnet scans across data centers"
+		],
+		"correctIndex": 2,
+		"explanation": "The message key helps the platform recognize related events so deduplication and correlation can reduce redundant alerts for the same underlying condition.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/create-event-rule.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 13,
+		"prompt": "When multiple event rules match the same incoming event, how does Event Management apply them?",
+		"choices": [
+			"Only the rule with the highest order of execution runs and others are skipped",
+			"Only the first rule encountered in alphabetical name order executes once",
+			"The platform randomly selects one rule and ignores the remaining matches",
+			"All matching rules run sequentially from lowest to highest order of execution"
+		],
+		"correctIndex": 3,
+		"explanation": "When several rules match, Event Management executes all of them in ascending order of execution so each rule can apply its configured processing logic.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/event-rules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 14,
+		"prompt": "Which connector onboarding approach aligns with Event Management implementation best practices?",
+		"choices": [
+			"Pilot in a scoped environment, validate mapping, then expand source coverage iteratively",
+			"Enable every event type on day one without lower-environment validation or tuning",
+			"Skip CI binding tests to accelerate production connector activation timelines",
+			"Use one shared credential across all connectors without documented ownership controls"
+		],
+		"correctIndex": 0,
+		"explanation": "Phased onboarding with validated mapping and correlation reduces noise and misconfiguration risk before broad production rollout.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
+		]
+	}
+]

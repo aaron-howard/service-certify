@@ -1,0 +1,83 @@
+[
+	{
+		"trackCode": "CIS-EM",
+		"order": 25,
+		"prompt": "Which Event Management module is used to configure suppression or transformation logic applied before alerts are created?",
+		"choices": [
+			"Event rules",
+			"Hardware asset bundles",
+			"Software reclamation schedules",
+			"Service catalog fulfillment flows"
+		],
+		"correctIndex": 0,
+		"explanation": "Event rules define how incoming events are filtered, transformed, and classified before they drive alert creation or updates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/event-rules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 26,
+		"prompt": "Which Event Management module is used to create rules that automatically generate tasks when alert conditions are met?",
+		"choices": [
+			"MID Server capability definitions",
+			"Alert Management Rules",
+			"Discovery schedules by IP range",
+			"Transfer order line processing flows"
+		],
+		"correctIndex": 1,
+		"explanation": "Alert Management Rules automate responses such as task creation, notifications, or other actions when configured alert conditions occur.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/create-alert-management-rule.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 27,
+		"prompt": "Which configuration most directly determines the initial assignment group for a newly created alert?",
+		"choices": [
+			"Event retention settings that archive raw payloads after seven days in the instance",
+			"Connector polling interval stored on the listener endpoint configuration record",
+			"Alert assignment rules based on severity, CI, source, or custom conditions",
+			"Discovery classification probes for Linux MID Server subnets in remote offices"
+		],
+		"correctIndex": 2,
+		"explanation": "Alert assignment rules route new alerts to the appropriate support group using severity, CI context, source, or other configured criteria.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/create-alert-management-rule.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/alert-management-rule.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 28,
+		"prompt": "Why define explicit alert lifecycle states such as Open, Acknowledged, and Closed?",
+		"choices": [
+			"They disable incident creation from every critical severity alert in the pipeline",
+			"They force duplicate alerts for each related configuration item event received",
+			"They remove the need for event correlation during ingestion from all connectors",
+			"They provide auditable handoffs and measurable responder progression"
+		],
+		"correctIndex": 3,
+		"explanation": "Defined lifecycle states give operators clear progression from detection through acknowledgment and closure with auditable handoffs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/alert-management-rule.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 29,
+		"prompt": "Which KPI best indicates improving alert management maturity in a NOC implementation?",
+		"choices": [
+			"Lower mean time to acknowledge and close actionable alerts",
+			"Higher count of unassigned alerts waiting in the operational queue",
+			"Longer average age for alerts remaining in Open state without ownership",
+			"Greater percentage of alerts with no CI binding context on the record"
+		],
+		"correctIndex": 0,
+		"explanation": "Reduced acknowledgment and closure times for valid alerts demonstrate stronger triage discipline and operational readiness.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/alert-management-rule.html"
+		]
+	}
+]

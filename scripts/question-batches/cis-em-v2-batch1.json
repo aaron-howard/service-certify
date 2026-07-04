@@ -1,0 +1,85 @@
+[
+	{
+		"trackCode": "CIS-EM",
+		"order": 0,
+		"questionType": "multi",
+		"prompt": "Which customer challenges does ServiceNow Event Management help address? (Choose three.)",
+		"choices": [
+			"Understanding the current state of IT infrastructure from monitoring signals",
+			"Automating and prioritizing remediation tasks and notifications",
+			"Consolidating multiple monitoring tools into a single management system",
+			"Deprecating configuration items the organization does not own"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1, 2],
+		"explanation": "Event Management addresses visibility gaps, remediation automation, and tool consolidation. Deprecating CIs the organization does not own is not a documented customer challenge for the product.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/exploring-event-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 1,
+		"prompt": "How does ServiceNow Event Management transform external monitoring data for IT operations teams?",
+		"choices": [
+			"By ingesting events and correlating them into alerts on configuration items and services",
+			"By replacing CMDB discovery schedules with manual spreadsheet imports from operators",
+			"By converting all incidents into passive SNMP trap subscriptions without normalization",
+			"By archiving hardware procurement records from stockroom transfer order fulfillment"
+		],
+		"correctIndex": 0,
+		"explanation": "Event Management ingests monitoring signals, applies processing logic, and produces actionable alerts tied to the environment being monitored.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/exploring-event-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 2,
+		"prompt": "After events enter the Event Management pipeline and are normalized, what is the typical next outcome?",
+		"choices": [
+			"They are purged unless an open incident already references the source node",
+			"They are evaluated by rules and may create or update alerts on related CIs",
+			"They skip correlation and remain in raw format without severity mapping applied",
+			"They are archived exclusively when no active connector instance is configured"
+		],
+		"correctIndex": 1,
+		"explanation": "Normalized events flow through rule evaluation and correlation, which can materialize or update alert records for operators to act on.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/exploring-event-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 3,
+		"prompt": "Compared with passive monitoring log storage, what operational advantage does Event Management provide?",
+		"choices": [
+			"Spreadsheet-only trending without CMDB relationship mapping or alert lifecycle",
+			"Hardware procurement cost allocation for data center racks without event ingestion",
+			"Correlated alerting and response workflows tied to configuration and service context",
+			"Software entitlement optimization reports unrelated to monitoring signal processing"
+		],
+		"correctIndex": 2,
+		"explanation": "Event Management adds correlation, alerting, and response workflows grounded in CI and service context rather than passive log retention alone.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/exploring-event-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 4,
+		"prompt": "During architecture planning, why do Event Management teams prioritize accurate CMDB data?",
+		"choices": [
+			"Connectors uninstall discovery credentials when CI classes are incomplete in the CMDB",
+			"Listeners reject all TLS connections unless hardware models are fully normalized first",
+			"Alert assignment groups are deleted automatically when CI counts fall below thresholds",
+			"CI binding links events and alerts to ownership, impact, and service context"
+		],
+		"correctIndex": 3,
+		"explanation": "Accurate CI records enable event and alert binding so teams can assess impact, route work, and understand ownership during operational response.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/exploring-event-management.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
+		]
+	}
+]

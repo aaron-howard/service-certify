@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-HAM",
+		"order": 45,
+		"prompt": "Which of the following are examples of consumable assets in Hardware Asset Management? (Choose three.)",
+		"choices": [
+			"CD",
+			"Keyboard",
+			"Mouse",
+			"Laptop"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1, 2],
+		"questionType": "multi",
+		"explanation": "Consumables such as CDs, keyboards, and mice are tracked by quantity rather than as individually serialized hardware assets. Laptops are serialized hardware assets, not consumables.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/consumable-model-fields.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 46,
+		"prompt": "A regional IT team must move spare monitors from a central stockroom to a field location. Which record type best supports this movement with traceability?",
+		"choices": [
+			"A transfer order with source and destination stockrooms defined",
+			"A change request without associated asset tasks",
+			"A procurement purchase order directed to the end user",
+			"A discovery schedule scoped to the destination building"
+		],
+		"correctIndex": 0,
+		"explanation": "Transfer orders formalize inventory movement between stockrooms while preserving shipment, receiving, and status history.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/create-transfer-order.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 47,
+		"prompt": "Stockroom managers notice on-hand counts no longer match physical shelf quantities after several fulfillment weeks. What is the best first remediation step?",
+		"choices": [
+			"Run a hardware inventory reconciliation and investigate unmatched variances",
+			"Delete the stockroom record and recreate it under a new name",
+			"Disable all catalog items tied to models in that stockroom",
+			"Convert every serialized asset in the room to a consumable model"
+		],
+		"correctIndex": 0,
+		"explanation": "Reconciliation compares system inventory to expected balances so teams can identify and correct the root cause of stock discrepancies.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/reconcile-hardware-inventory.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 48,
+		"prompt": "An asset manager schedules a stockroom audit that must include consumable inventory. Which audit configuration is required?",
+		"choices": [
+			"Set audit type to Stockroom and Include consumables to Yes",
+			"Set audit type to Location and scan method to Multi Scan",
+			"Set audit type to Vendor and disable barcode scanning",
+			"Set audit type to Contract and link only retired assets"
+		],
+		"correctIndex": 0,
+		"explanation": "Consumables can be included only on stockroom audits by setting Include consumables to Yes, which also drives the scan method behavior.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-audit-record-fields.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 49,
+		"prompt": "When multiple assets ship under one transfer order, which flow handles processing of each line item?",
+		"choices": [
+			"The Transfer Order Line flow",
+			"The Discovery Status flow",
+			"The Incident Assignment flow",
+			"The Contract Renewal flow"
+		],
+		"correctIndex": 0,
+		"explanation": "The Transfer Order flow tracks overall movement while the Transfer Order Line flow processes individual line items within the order.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/asset-management/transfer-order-flows.html"
+		]
+	}
+]

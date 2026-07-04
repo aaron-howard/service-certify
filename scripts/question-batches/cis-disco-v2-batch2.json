@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 5,
+		"prompt": "When should a Parse File operation be used in a horizontal discovery pattern?",
+		"choices": [
+			"To read configuration or log file contents from a target host and extract attribute values",
+			"To generate executive dashboard PDFs summarizing CMDB completeness by business unit",
+			"To rotate Discovery credential passwords stored in the instance credential table",
+			"To rebuild MID Server cluster membership after a failover event completes"
+		],
+		"correctIndex": 0,
+		"explanation": "Parse File steps retrieve file content from targets—such as application config files—and extract structured data needed for identification or attribute population.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 6,
+		"prompt": "Regular expression operations in Pattern Designer are most commonly used to do what?",
+		"choices": [
+			"Calculate CMDB health scores from duplicate CI counts per reconciliation policy",
+			"Extract ports, paths, version tokens, or connection strings from unstructured text output",
+			"Assign discovery_admin roles to operators who edit horizontal pattern libraries",
+			"Generate machine learning labels for cloud tag-based service classification workflows"
+		],
+		"correctIndex": 1,
+		"explanation": "Regex parsing isolates structured tokens—such as IP addresses, ports, or version strings—from command or file output for use in later pattern steps.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 7,
+		"prompt": "What is the purpose of Connection sections in a horizontal discovery pattern?",
+		"choices": [
+			"Define how the pattern discovers relationships between CIs after identification succeeds",
+			"Configure ECC queue topics used when MID Servers report probe execution failures",
+			"Set blackout windows that prevent schedules from running during maintenance periods",
+			"Map procurement purchase order lines to hardware asset records after receiving"
+		],
+		"correctIndex": 0,
+		"explanation": "Connection sections contain steps that explore dependencies and create relationships between identified configuration items.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-patterns-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 8,
+		"prompt": "In Pattern Designer, why are discovery patterns organized into sections with ordered steps?",
+		"choices": [
+			"To force every output into a single cmdb_ci record regardless of device type",
+			"To bypass authentication checks during SSH and WMI command execution",
+			"To skip identification and reconciliation for performance-critical schedules",
+			"To structure collection logic so troubleshooting, reuse, and maintenance remain clear"
+		],
+		"correctIndex": 3,
+		"explanation": "Sections and sequenced steps organize discovery logic into readable, testable units that implementers can debug and evolve independently.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 9,
+		"prompt": "An operations team needs horizontal discovery to identify Apache Tomcat application CIs on Linux servers. Which pattern design approach is most appropriate?",
+		"choices": [
+			"Disable all identification rules globally so Tomcat CIs are created manually",
+			"Build or extend a horizontal pattern with identification logic keyed to Tomcat process or config signatures",
+			"Convert every Linux server CI to cmdb_ci_business_app before the next schedule run",
+			"Rely solely on port scanning without any pattern-based classification or exploration steps"
+		],
+		"correctIndex": 1,
+		"explanation": "Application identification requires pattern logic—often process, port, or config checks—that matches Tomcat signatures and populates the correct CI class.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/c-UsingPatternsForHorizontalDiscovery.html"
+		]
+	}
+]

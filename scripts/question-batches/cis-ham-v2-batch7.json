@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-HAM",
+		"order": 30,
+		"prompt": "For which CI classes can IRE create CIs from assets when glide.asset.create_ci_with_ire is enabled?",
+		"choices": [
+			"Classes with identification rules on serial number and no dependent CI relationships",
+			"All CI classes regardless of identification rules or dependent relationship requirements",
+			"Only consumable model categories without serialized assets in any stockroom",
+			"Only retired assets marked for disposal in the hardware asset disposal workflow"
+		],
+		"correctIndex": 0,
+		"explanation": "IRE-based CI creation from assets applies to CI classes that identify on serial number and have no dependent CI class relationships.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 31,
+		"prompt": "Where can administrators review assets waiting to be created from CIs when delayed sync is enabled?",
+		"choices": [
+			"Asset > Administration > Asset Creation Queue",
+			"Discovery > Shazzam > Credentials configured for horizontal subnet scans",
+			"System Logs > Email > Outbound notifications for stock rule runner alerts",
+			"Change > Planning > Schedule board for upcoming maintenance windows"
+		],
+		"correctIndex": 0,
+		"explanation": "The Asset Creation Queue shows assets pending creation and errors from the delayed sync job; errors can be reprocessed by setting state to Ready.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 32,
+		"prompt": "When csdm.lifecycle.sync.between.ci.and.asset.activated is true, which fields synchronize between assets and CIs?",
+		"choices": [
+			"CSDM Life Cycle Stage and Status fields directly",
+			"Only the Assigned to field on incident records linked to the asset CI",
+			"Discovery credential alias and MID Server name on the discovery schedule",
+			"Catalog item price and recurring price variables on hardware catalog items"
+		],
+		"correctIndex": 0,
+		"explanation": "When enabled, CSDM Life Cycle Stage and Status synchronize directly between assets and CIs instead of legacy State and Substate only.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 33,
+		"prompt": "Which system property enables asset and CI synchronization using MAC address?",
+		"choices": [
+			"sn_itam_common.mac_address_sync",
+			"glide.sc.checkout.twostep on the service catalog checkout configuration path",
+			"csdm.lifecycle.migration.activated for all platform integrations globally",
+			"sn_hamp.disable_stock_rules for replenishment automation across stockrooms"
+		],
+		"correctIndex": 0,
+		"explanation": "The sn_itam_common.mac_address_sync property in the Asset Property table enables MAC-address-based synchronization between assets and CIs when set to true.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 34,
+		"prompt": "Why enable sn_itam_enable_cache_for_asset_ci_mapping on large HAM deployments?",
+		"choices": [
+			"Cache asset-to-CI field mappings to reduce performance impact on updates",
+			"Disable all stockroom transfers during business hours across regional locations",
+			"Prevent hardware models from receiving weekly content service normalization updates",
+			"Force immediate asset retirement when related CI records are deleted from CMDB"
+		],
+		"correctIndex": 0,
+		"explanation": "Caching mapping tables reduces lookup overhead when assets and CIs update frequently in high-volume environments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
+		]
+	}
+]

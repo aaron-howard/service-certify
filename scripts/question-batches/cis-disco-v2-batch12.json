@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 55,
+		"prompt": "Why configure data source precedence in reconciliation for Discovery feeds?",
+		"choices": [
+			"Higher-trust sources win attribute updates when multiple feeds supply the same field",
+			"Lower-numbered schedules always cancel probes from higher-numbered schedules",
+			"Discovery imports bypass identification whenever precedence ranks above manual entry",
+			"MID Server logs rotate faster when precedence tiers are defined per subnet"
+		],
+		"correctIndex": 0,
+		"explanation": "Source precedence ensures authoritative feeds control attribute values when discovery and other sources update the same CI.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/reconciliation-rules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 56,
+		"prompt": "Duplicate CIs appear after overlapping discovery schedules scan the same subnet. What CMDB control addresses this?",
+		"choices": [
+			"Identification rules that match on authoritative keys plus deduplication remediation",
+			"Disabling all sensors so probe data never writes to the CMDB foundation tables",
+			"Assigning a unique MID Server to every CI class without shared credentials",
+			"Converting discovery schedules to cloud-only mode for hybrid environments"
+		],
+		"correctIndex": 0,
+		"explanation": "Strong identification keys prevent duplicates, and deduplication tools merge records when overlapping scans create matches on the same device.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 57,
+		"prompt": "Which IRE components govern how Discovery data updates the CMDB? (Choose two.)",
+		"choices": [
+			"Identification rules that locate or create CI records",
+			"Reconciliation rules that apply source precedence to attributes",
+			"Discovery behavior settings that tune ICMP timeout intervals",
+			"ECC queue topics that transport probe payloads to MID Servers"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"questionType": "multi",
+		"explanation": "IRE uses identification rules to match or create CIs and reconciliation rules to merge attribute updates from discovery and other sources.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 58,
+		"prompt": "Before enabling broad discovery schedules, why validate CMDB foundation data classes?",
+		"choices": [
+			"Discovery updates assume stable class hierarchy and attribute definitions exist",
+			"Foundation validation removes the requirement for credentials on Linux targets",
+			"Class validation automatically deploys MID Servers into every network segment",
+			"CMDB foundation checks disable reconciliation for the first thirty discovery runs"
+		],
+		"correctIndex": 0,
+		"explanation": "Discovery writes depend on well-defined CI classes and attributes; foundation validation prevents misclassified or incomplete updates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/cmdb-foundation-data.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 59,
+		"prompt": "When Discovery creates a CI that later receives updates from an import feed, what ensures consistent attribute stewardship?",
+		"choices": [
+			"Reconciliation with defined source precedence for each attribute on the class",
+			"Re-running exploration probes without classification on every schedule cycle",
+			"Deleting the CI and forcing discovery to insert a replacement after each conflict",
+			"Assigning every import row to the cmdb_ci table regardless of device type"
+		],
+		"correctIndex": 0,
+		"explanation": "Reconciliation rules with source precedence control which feed owns each attribute when discovery and imports update the same CI.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/reconciliation-rules.html"
+		]
+	}
+]

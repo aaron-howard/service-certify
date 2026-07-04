@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 30,
+		"prompt": "What does a Discovery schedule primarily define for an IT operations team?",
+		"choices": [
+			"How to retire discovered hardware at end of lifecycle across managed locations",
+			"How to route incidents to assignment groups after monitoring event ingestion",
+			"How to reconcile duplicate CIs created by independent import pipelines",
+			"What to scan, where targets reside, and when discovery execution should occur"
+		],
+		"correctIndex": 3,
+		"explanation": "Schedules bind scope, targets or ranges, timing, and discovery behavior into an executable plan.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 31,
+		"prompt": "Discovery IP Services records are used to do what during the classification process?",
+		"choices": [
+			"Match open ports and service signatures on targets to help identify device or application types",
+			"Assign financial depreciation schedules to hardware assets after procurement receiving",
+			"Convert event management alerts into incident records with priority mapping rules",
+			"Generate software license reclamation reports from installed application inventories"
+		],
+		"correctIndex": 0,
+		"explanation": "IP Services define port and protocol signatures that Discovery uses alongside probes to classify devices during the scan.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 32,
+		"prompt": "Which sequence reflects the major Discovery phases executed during a typical network scan?",
+		"choices": [
+			"Port Scanning, Classification, Identification, and Exploration",
+			"Reconciliation, Retirement, Procurement, and Asset Disposal",
+			"Event Ingestion, Alert Correlation, Incident Creation, and Closure",
+			"Catalog Submission, Approval, Fulfillment, and Knowledge Publishing"
+		],
+		"correctIndex": 0,
+		"explanation": "Discovery progresses through port scanning to find devices, classification to determine type, identification to create or match CIs, and exploration to gather deeper details.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 33,
+		"prompt": "During a CIS-Discovery implementation, what role do Discovery credential records serve?",
+		"choices": [
+			"Map external event severities into incident priorities for connector ingestion",
+			"Assign discovered hardware to financial stockrooms based on lifecycle transitions",
+			"Provide protocol-specific authentication for probes and patterns accessing target systems",
+			"Replace MID Server validation checks by embedding readiness tests inside each credential"
+		],
+		"correctIndex": 2,
+		"explanation": "Discovery credentials store authentication details needed for protocol access so probes and patterns can retrieve configuration from targets.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 34,
+		"prompt": "A team wants frequent cloud discovery but weekly on-premises scans. Which schedule design is best?",
+		"choices": [
+			"Create separate schedules that match each environment's volatility and operational windows",
+			"Use a single global schedule running at the highest frequency for every infrastructure type",
+			"Trigger discovery only when event rules create incidents in the operations queue",
+			"Disable schedule behaviors and execute all scans manually through ad hoc operator actions"
+		],
+		"correctIndex": 0,
+		"explanation": "Different infrastructure domains often require different scan cadence and windows to balance CMDB freshness and production impact.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
+		]
+	}
+]
