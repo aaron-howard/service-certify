@@ -11,8 +11,8 @@ describe('exam timing policy', () => {
 		expect(getOfficialExamDurationSeconds('CSA')).toBe(90 * 60);
 	});
 
-	it('uses 4 hours for CPOP and CPOE', () => {
-		expect(getOfficialExamDurationMinutes('CPOP')).toBe(240);
+	it('uses 90 minutes for CPOP and 4 hours for CPOE', () => {
+		expect(getOfficialExamDurationMinutes('CPOP')).toBe(90);
 		expect(getOfficialExamDurationMinutes('CPOE')).toBe(240);
 	});
 

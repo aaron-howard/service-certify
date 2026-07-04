@@ -237,13 +237,21 @@ export const PHASE4_TRACK_DOC_SOURCES: TrackDocSource[] = [
 			'platform-administration',
 			'platform-security',
 			'application-development',
-			'cloud-governance-suite'
+			'cloud-governance-suite',
+			'impact',
+			'servicenow-platform'
 		],
 		domains: [
-			{ name: 'Upgrade governance', weight: '28%', publications: ['platform-administration'] },
-			{ name: 'Security and access governance', weight: '24%', publications: ['platform-security'] },
-			{ name: 'Application lifecycle', weight: '24%', publications: ['application-development'] },
-			{ name: 'Operational excellence', weight: '24%', publications: ['platform-administration', 'cloud-governance-suite'] }
+			{ name: 'Strategy', weight: '40%', publications: ['impact', 'platform-administration'] },
+			{ name: 'People', weight: '10%', publications: ['impact', 'servicenow-platform'] },
+			{ name: 'Process', weight: '10%', publications: ['application-development', 'platform-administration'] },
+			{ name: 'Technology', weight: '20%', publications: ['platform-administration', 'platform-security'] },
+			{ name: 'Data', weight: '10%', publications: ['platform-administration', 'cloud-governance-suite'] },
+			{
+				name: 'ServiceNow Governance',
+				weight: '10%',
+				publications: ['platform-administration', 'cloud-governance-suite']
+			}
 		]
 	},
 	{
