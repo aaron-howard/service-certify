@@ -1,0 +1,86 @@
+[
+	{
+		"trackCode": "CIS-EM",
+		"order": 30,
+		"prompt": "An operations team wants remediation work tracked automatically when critical alerts open. Which Event Management module supports that outcome?",
+		"choices": [
+			"Alert Management Rules, which can generate and link tasks to matching alerts",
+			"Discovery Schedules, which replace event connectors during maintenance windows",
+			"Hardware Model Normalization, which maps procurement records to CI classes",
+			"Change Approval Policies, which enforce standard change templates globally"
+		],
+		"correctIndex": 0,
+		"explanation": "Alert Management Rules automate alert responses, including generating and linking incidents, tasks, or knowledge articles when filter conditions match.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/create-alert-management-rule.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/alert-management-rule.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 31,
+		"prompt": "When configuring an alert management rule to open tasks, which execution option runs the linked subflow without operator intervention?",
+		"choices": [
+			"Automatic execution when the rule filter matches the alert",
+			"Manual execution only after the alert is closed by an operator",
+			"Deferred execution until all secondary alerts are deleted from CMDB",
+			"Disabled execution until Discovery completes a full subnet scan"
+		],
+		"correctIndex": 0,
+		"explanation": "Subflow execution can be set to Automatic so remediation or task-creation subflows run when the alert management rule matches.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/create-alert-management-rule.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 32,
+		"prompt": "A NOC lead needs correlated alerts handled as one operational unit on the dashboard. Which capability addresses that requirement?",
+		"choices": [
+			"Alert groups that organize related alerts for coordinated response",
+			"Stockroom transfer orders that move hardware between locations",
+			"Software reclamation rules that retire unused licenses automatically",
+			"Catalog fulfillment flows that assign laptops from regional stockrooms"
+		],
+		"correctIndex": 0,
+		"explanation": "Alert groups combine related alerts so responders can manage correlated issues as a single operational context.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/exploring-event-management.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/coordinating-alert-response-with-automated-alert-grouping.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 33,
+		"prompt": "Which factors contribute to the alert priority score used to rank open alerts? (Choose three.)",
+		"choices": [
+			"Number of impacted business services",
+			"Alert severity level",
+			"CI type weight mapping",
+			"Catalog item recurring price"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1, 2],
+		"questionType": "multi",
+		"explanation": "Alert priority combines accumulated categories such as impacted services and CI type with choice-list categories including severity, role, state, and secondary alert count.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/alert-priority.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 34,
+		"prompt": "To prevent duplicate incidents on secondary alerts after automated grouping, which property coordinates alert management with the grouping job?",
+		"choices": [
+			"evt_mgmt.avoid_int_enabled so alert management runs after grouping completes",
+			"glide.sc.checkout.twostep to enforce two-step catalog checkout globally",
+			"sn_hamp.disable_stock_rules to stop stockroom replenishment automation",
+			"csdm.lifecycle.migration.activated to synchronize asset lifecycle stages"
+		],
+		"correctIndex": 0,
+		"explanation": "Enabling evt_mgmt.avoid_int_enabled synchronizes alert response with automated alert grouping so actions such as incident creation avoid secondary alerts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/coordinating-alert-response-with-automated-alert-grouping.html"
+		]
+	}
+]

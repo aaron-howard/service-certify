@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 65,
+		"prompt": "What MID Server requirement most often blocks Discovery engagement readiness sign-off?",
+		"choices": [
+			"Validated MID Servers placed in each zone with connectivity to targets and the instance",
+			"A minimum of ten MID Servers installed even when only one subnet is in scope",
+			"MID Servers running on the same operating system version as every discovered host",
+			"Disabled ECC queue processing so probes execute synchronously on the instance"
+		],
+		"correctIndex": 0,
+		"explanation": "Engagement readiness requires validated MID Servers with network reachability to scoped targets and reliable instance communication.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/mid-server-for-discovery.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 66,
+		"prompt": "Which dashboard helps assess Discovery readiness and ongoing execution health?",
+		"choices": [
+			"Discovery dashboard showing schedule status, failures, and coverage trends",
+			"Change management calendar displaying approved infrastructure freeze windows only",
+			"Employee onboarding portal tracking new hire provisioning task completion rates",
+			"Software normalization workspace comparing publisher detection rule effectiveness"
+		],
+		"correctIndex": 0,
+		"explanation": "The Discovery dashboard surfaces schedule execution status, failures, and coverage metrics for readiness and operations reviews.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-dashboard.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 67,
+		"prompt": "When articulating Discovery business value to executives, which message resonates most?",
+		"choices": [
+			"Accurate CI inventory reduces incident resolution time and change risk across services",
+			"Discovery replaces the need for any CMDB governance or data stewardship roles",
+			"Discovery eliminates firewall reviews because MID Servers bypass network segmentation",
+			"Continuous scanning guarantees zero duplicate CIs without identification configuration"
+		],
+		"correctIndex": 0,
+		"explanation": "Executives care about operational outcomes: trustworthy CI data improves incident response, change planning, and service reliability.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-implementation-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 68,
+		"prompt": "Network teams request a pre-scan checklist before opening firewall ports for MID Servers. Which items belong on that list?",
+		"choices": [
+			"Source MID IPs, destination subnets, required protocols, and return path verification",
+			"Finalized reconciliation precedence for every attribute on imported legacy CIs",
+			"Approved hardware disposal workflows for assets not seen during exploration",
+			"Service catalog item prices for each class of infrastructure the schedule may find"
+		],
+		"correctIndex": 0,
+		"explanation": "Firewall change requests need MID source addresses, target subnets, protocol/port requirements, and verified bidirectional connectivity.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/mid-server-for-discovery.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 69,
+		"prompt": "Which artifacts demonstrate Discovery Engagement Readiness before go-live? (Choose two.)",
+		"choices": [
+			"Tested credentials and validated MID Server connectivity to scoped targets",
+			"Signed scope document with network, cloud, and operational ownership contacts",
+			"Production incident major incident process workflow diagrams for every team",
+			"Complete service mapping dependency graphs for all business capabilities globally"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"questionType": "multi",
+		"explanation": "Go-live readiness requires proven connectivity and credentials plus documented scope and ownership; unrelated process artifacts are not prerequisites.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/set-up-discovery.html"
+		]
+	}
+]

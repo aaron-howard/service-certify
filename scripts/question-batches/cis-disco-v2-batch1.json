@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 0,
+		"prompt": "During horizontal Discovery, a device matches a classification record but no discovery pattern is linked to that classification. What is the expected outcome?",
+		"choices": [
+			"Discovery fails for that device because the classification has no associated pattern",
+			"The device is automatically assigned to cmdb_ci_computer and skips all probe execution",
+			"An unknown CI is created and the schedule continues without any logged error message",
+			"Identification rules bypass the missing pattern and populate attributes from SNMP only"
+		],
+		"correctIndex": 0,
+		"explanation": "Each classification must reference a discovery pattern; without that link, horizontal discovery cannot execute the collection logic needed to classify the device.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-patterns-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 1,
+		"prompt": "A Discovery status log shows the error \"No credentials would authenticate\" during the Classification phase for several Linux hosts. What does this message indicate?",
+		"choices": [
+			"The MID Server lost ECC queue connectivity and stopped processing probe responses",
+			"No configured credential could successfully authenticate to the target during Classification",
+			"The classification record is missing a CI identifier mapping for the Linux server class",
+			"The schedule excluded the subnet ranges where those Linux hosts are deployed"
+		],
+		"correctIndex": 1,
+		"explanation": "This error means Discovery attempted available credentials during Classification and none succeeded, so further pattern steps cannot run on those targets.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 2,
+		"prompt": "While building a horizontal discovery pattern, an implementer enables debug mode in Pattern Designer. What capability does debug mode provide?",
+		"choices": [
+			"Automatic promotion of the pattern to every MID Server without a manual content update",
+			"Permanent disabling of pattern versioning so sandbox and production stay synchronized",
+			"Step-by-step execution traces showing variable values and parsing results during testing",
+			"Bypass of credential requirements so identification steps run in simulation-only mode"
+		],
+		"correctIndex": 2,
+		"explanation": "Debug mode exposes detailed execution output so implementers can validate step logic, variable assignments, and parse results before promoting the pattern.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 3,
+		"prompt": "What is the role of an Identification section in a horizontal discovery pattern?",
+		"choices": [
+			"Schedule recurring port scans against every subnet defined in the discovery behavior",
+			"Evaluate collected data to decide whether the pattern applies to the discovered CI",
+			"Replace CMDB identification rules so reconciliation is skipped for matched devices",
+			"Generate PDF topology reports for service owners reviewing dependency maps"
+		],
+		"correctIndex": 1,
+		"explanation": "Identification sections contain conditional logic that determines if a device matches the pattern before connection and extension steps execute.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-patterns-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 4,
+		"prompt": "An implementer adds a Match/Parse Variable operation after an SSH command step in Pattern Designer. What is the primary purpose of that operation?",
+		"choices": [
+			"Import software entitlement records from a publisher CSV into the asset application",
+			"Extract structured values from command output and store them in pattern variables for later steps",
+			"Convert event management alert rules into discovery schedule definitions automatically",
+			"Assign incident priority based on the severity field returned by the remote command"
+		],
+		"correctIndex": 1,
+		"explanation": "Match/Parse Variable steps parse command or probe output and populate pattern variables that downstream identification or connection steps can reference.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
+		]
+	}
+]

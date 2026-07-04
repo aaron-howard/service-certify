@@ -1,0 +1,83 @@
+[
+	{
+		"trackCode": "CIS-HAM",
+		"order": 20,
+		"prompt": "What does enabling glide.asset.create_ci_with_ire allow when creating CIs from assets?",
+		"choices": [
+			"Use of the CMDB Identification and Reconciliation engine for eligible CI classes",
+			"Automatic software entitlement imports from vendor spreadsheets without model mapping",
+			"Bypass of stockroom receiving checkpoints for all open transfer orders",
+			"Immediate retirement of assets without approval workflows or disposal evidence"
+		],
+		"correctIndex": 0,
+		"explanation": "When enabled, eligible CI classes with serial-number identification and no dependent relationships can be created from assets through IRE.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 21,
+		"prompt": "What does CMDB Success Advisor for Hardware Asset Management help administrators monitor?",
+		"choices": [
+			"Hardware asset data coverage, attribute completeness, and recommended integrations",
+			"Software license true-up exposure by publisher for subscription renewals only",
+			"Incident major incident declaration thresholds across assignment groups",
+			"Event Management connector template inheritance for third-party monitoring tools"
+		],
+		"correctIndex": 0,
+		"explanation": "CMDB Success Advisor for HAM surfaces data quality insights and integration recommendations for hardware model categories.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 22,
+		"prompt": "What is the primary goal of Hardware Model Normalization in HAM?",
+		"choices": [
+			"Standardize manufacturer, product, model, and device type on hardware models",
+			"Delete duplicate asset records tied to retired employees without workflow review",
+			"Generate discovery schedules for each stockroom subnet on a nightly cadence",
+			"Convert software installations into hardware asset classes for stockroom tracking"
+		],
+		"correctIndex": 0,
+		"explanation": "Hardware Model Normalization compares model data against the content service to populate normalized manufacturer, product, model, and device type fields.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/hardware-normalization.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 23,
+		"prompt": "Why would an organization opt in to the Hardware Asset Management Content Service?",
+		"choices": [
+			"Share anonymized unnormalized model data to improve recognition and receive content updates",
+			"Disable weekly manufacturer updates from the hardware content library permanently",
+			"Remove all hardware models from the product catalog automatically after opt-in",
+			"Replace stock rules with manual spreadsheet ordering for every stockroom location"
+		],
+		"correctIndex": 0,
+		"explanation": "Opting in allows ServiceNow to improve normalization rules using anonymized customer model data while delivering tailored content updates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/it-asset-management.html",
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/hardware-normalization.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 24,
+		"prompt": "What does the HAM - Hardware Normalization scheduled job update on existing models?",
+		"choices": [
+			"Normalization-related fields such as Normalized Manufacturer and Normalized Model only",
+			"Original Model Name and Manufacturer values on every scheduled run without exception",
+			"Stockroom quantities and pending transfer order statuses for all inventory locations",
+			"Assigned user and location on every in-use asset regardless of custody changes"
+		],
+		"correctIndex": 0,
+		"explanation": "The daily normalization job updates normalized fields only and does not add, remove, merge models, or alter original model name fields.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/hardware-normalization.html"
+		]
+	}
+]

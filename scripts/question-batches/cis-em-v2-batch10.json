@@ -1,0 +1,86 @@
+[
+	{
+		"trackCode": "CIS-EM",
+		"order": 45,
+		"prompt": "An administrator sets Event collection schedule (seconds) to 60 on a pull connector instance. What constraint blocks that value?",
+		"choices": [
+			"The schedule cannot be lower than the minimum schedule property defaulting to 120 seconds",
+			"The schedule must equal the 11-second alert management rule evaluation interval",
+			"The schedule is locked at 300 seconds whenever SNMP trap listeners are active",
+			"The schedule resets to 86400 seconds after metrics collection is enabled"
+		],
+		"correctIndex": 0,
+		"explanation": "Event collection schedule cannot fall below the minimum schedule property, which defaults to 120 seconds for pull connector polling.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/t_EMConfigureConnectorInstance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 46,
+		"prompt": "Before activating a new pull connector instance in production, which validation step confirms MID Server connectivity to the source?",
+		"choices": [
+			"Run Test connector and review last error message if the connection fails",
+			"Delete all existing event rules so only the new connector ingests data",
+			"Disable TLS on the listener endpoint to simplify initial troubleshooting",
+			"Bind every incoming event to a single fallback CI regardless of payload"
+		],
+		"correctIndex": 0,
+		"explanation": "Test connector verifies MID Server communication, host reachability, credentials, and connector instance values before the Active checkbox is enabled.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/t_EMConfigureConnectorInstance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 47,
+		"prompt": "Which characteristics describe pull event connectors? (Choose two.)",
+		"choices": [
+			"ServiceNow schedules MID Server retrieval from the external monitoring API",
+			"The external tool initiates delivery through a generic inbound_event REST endpoint",
+			"Event collection schedule in seconds controls polling frequency from the source",
+			"SNMP trap listeners on the instance replace all pull connector definitions"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 2],
+		"questionType": "multi",
+		"explanation": "Pull connectors use scheduled MID Server collection with a configurable Event collection schedule; push sources send events inbound instead of being polled.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/t_EMConfigureConnectorInstance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 48,
+		"prompt": "Generic JSON push sources often target which inbound API pattern documented for Event Management integrations?",
+		"choices": [
+			"/api/sn_em_connector/em/inbound_event with a configured source parameter",
+			"/api/now/table/sc_req_item for catalog fulfillment line updates",
+			"/api/now/table/alm_asset for hardware asset lifecycle transitions",
+			"/api/now/table/change_request for automatic normal change creation"
+		],
+		"correctIndex": 0,
+		"explanation": "Generic JSON push integrations post to the inbound_event endpoint, typically paired with an event rule that maps the payload into Event Management processing.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 49,
+		"prompt": "After cloning a connector template for a new monitoring tool, which settings most directly control alert noise from that source?",
+		"choices": [
+			"Event filtering, severity mapping, and deduplication configuration on the instance",
+			"Dashboard color themes on the Event Management homepage only",
+			"Stockroom minimum quantity thresholds for consumable replenishment",
+			"Change risk assessment defaults on the standard change model record"
+		],
+		"correctIndex": 0,
+		"explanation": "Source-specific filtering, severity mapping, and deduplication must be validated after template reuse to maintain signal quality and reduce noisy alerts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/create-event-rule.html"
+		]
+	}
+]

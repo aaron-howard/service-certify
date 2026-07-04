@@ -1,0 +1,85 @@
+[
+	{
+		"trackCode": "CIS-HAM",
+		"order": 5,
+		"prompt": "Executives want a centralized view of refresh priorities and normalization status. Which HAM feature supports this?",
+		"choices": [
+			"Hardware Asset Workspace",
+			"Discovery classification probe editor used to rotate SNMP credentials on every MID Server subnet",
+			"Event Management alert aggregation rules that correlate infrastructure traps without asset context",
+			"Change Management standard change templates scoped to emergency production fixes only"
+		],
+		"correctIndex": 0,
+		"explanation": "Hardware Asset Workspace provides a single-pane view of the hardware estate, Important Actions, normalization status, and lifecycle priorities.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/exploring-ham.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 6,
+		"questionType": "multi",
+		"prompt": "Which two roles commonly grant operational access to Hardware Asset Management tasks? (Choose two.)",
+		"choices": [
+			"The asset role for day-to-day hardware asset and stockroom operations",
+			"The ham_admin role for full Hardware Asset Management administration",
+			"The itil role for incident and change management without HAM module access",
+			"The evt_mgmt_admin role for Event Management connector administration only"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "The asset role supports routine HAM operations while ham_admin provides full administrative access to HAM features and workspace configuration.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/ham-landing-page.html",
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/create-hardware-consumable-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 7,
+		"prompt": "How does base ITSM Asset Management differ from the Hardware Asset Management application?",
+		"choices": [
+			"HAM adds advanced stockroom, fulfillment, and lifecycle automation for hardware",
+			"HAM removes procurement integration that is available in base Asset Management deployments",
+			"Base Asset Management tracks hardware while HAM tracks only consumable inventory quantities",
+			"HAM disables all asset-to-CI field synchronization globally across every hardware class"
+		],
+		"correctIndex": 0,
+		"explanation": "HAM builds on base asset tracking with prescriptive workflows, stockroom precision, catalog fulfillment, and hardware-specific automation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/ham-landing-page.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 8,
+		"prompt": "A new HAM implementation team wants a sequenced configuration path on the instance. What should they use first?",
+		"choices": [
+			"Hardware Asset Management Guided Setup from the App Navigator guided setup experience",
+			"Manual creation of discovery patterns before activating the Hardware Asset Management plugin",
+			"Deletion of existing stockrooms to force a clean import of legacy spreadsheet data",
+			"Disabling the Hardware Asset Workspace to remain on legacy Core UI navigation exclusively"
+		],
+		"correctIndex": 0,
+		"explanation": "HAM Guided Setup provides an ordered task sequence to configure plugins, roles, stockrooms, models, and fulfillment foundations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/exploring-ham.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 9,
+		"prompt": "Which plugin dependency is activated when the Hardware Asset Management application is enabled?",
+		"choices": [
+			"Hardware Model Normalization (com.sn_hwnorm)",
+			"Software Asset Management Publisher Pack for Adobe licensing reconciliation only",
+			"Service Mapping connection rules for application dependency topology mapping",
+			"Cloud Cost Management reserved instance optimization for public cloud subscriptions"
+		],
+		"correctIndex": 0,
+		"explanation": "The Hardware Model Normalization plugin activates with HAM to standardize manufacturer, product, model, and device type data on hardware models.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/hardware-normalization.html"
+		]
+	}
+]

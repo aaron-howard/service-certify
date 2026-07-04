@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-EM",
+		"order": 5,
+		"questionType": "multi",
+		"prompt": "On which operating system platforms can a MID Server run to support Event Management integrations? (Choose two.)",
+		"choices": [
+			"Microsoft Windows Server",
+			"Linux System",
+			"Apple iOS mobile devices",
+			"Android consumer tablets"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "MID Servers support Microsoft Windows Server and Linux System platforms for secure communication between external networks and the ServiceNow instance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 6,
+		"prompt": "What role does the MID Server play for certain Event Management connector and listener flows?",
+		"choices": [
+			"Stores retired hardware asset disposal certificates for audit compliance reporting",
+			"Provides a secure bridge between external networks and the ServiceNow instance",
+			"Replaces event rules with manual spreadsheet imports managed by the NOC team",
+			"Schedules service catalog fulfillment tasks for consumable inventory replenishment"
+		],
+		"correctIndex": 1,
+		"explanation": "The MID Server enables secure, controlled communication for integrations that cannot connect directly to the instance from external monitoring environments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 7,
+		"prompt": "How does Discovery data quality affect Event Management outcomes in most implementations?",
+		"choices": [
+			"Discovery status has no relationship to alert assignment routing or CI binding rules",
+			"Poor CI data only affects software license reclamation jobs scheduled overnight",
+			"Accurate CI records improve event-to-CI binding and service impact analysis",
+			"Discovery eliminates the need for event field mapping configurations on connectors"
+		],
+		"correctIndex": 2,
+		"explanation": "Reliable CMDB data from Discovery and other sources improves binding accuracy, which supports better triage, routing, and business impact assessment.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/exploring-event-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 8,
+		"prompt": "Which sequence best describes the core Event Management processing path after ingestion?",
+		"choices": [
+			"Ingestion, normalization, rule evaluation, correlation, and alert generation",
+			"Immediate incident creation, change approval, and closure for every inbound event",
+			"Hardware stockroom receiving, transfer orders, and serialized asset retirement",
+			"Publisher true-up imports followed by entitlement optimization dashboard refresh"
+		],
+		"correctIndex": 0,
+		"explanation": "The event pipeline standardizes incoming data, applies rules and correlation, and can generate alerts when conditions warrant operational action.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/exploring-event-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 9,
+		"prompt": "A global NOC requires resilient event ingestion during peak outage windows. Which architectural design is most appropriate?",
+		"choices": [
+			"Single non-production MID Server shared across all geographic regions without failover",
+			"Disabling TLS on every listener endpoint to reduce processing overhead during spikes",
+			"Routing all monitoring sources through one connector with no health monitoring configured",
+			"Redundant listener paths with capacity monitoring and health checks aligned to load"
+		],
+		"correctIndex": 3,
+		"explanation": "Redundant ingestion paths and proactive health monitoring reduce the risk of event loss or delayed alerting during high-volume outage periods.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
+		]
+	}
+]

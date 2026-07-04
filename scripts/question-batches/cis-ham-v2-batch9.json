@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-HAM",
+		"order": 40,
+		"prompt": "Normalization does not run for hardware models in a subsidiary domain. What configuration should be checked?",
+		"choices": [
+			"Domain Asset Process Settings with Run asset process set to true",
+			"Discovery schedule scope for the corporate headquarters subnet only during business hours",
+			"Incident auto-close interval for resolved tickets in the IT service desk queue",
+			"Change risk assessment threshold values on the standard change model record"
+		],
+		"correctIndex": 0,
+		"explanation": "Normalization runs only for domains where Domain Asset Process Settings has Run asset process enabled; default is TOP/Default domain only.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/hardware-normalization.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 41,
+		"prompt": "What is a common risk when model categories are misconfigured for hardware CIs?",
+		"choices": [
+			"Incorrect asset class creation leading to wrong workflows and financial treatment",
+			"Permanent deletion of all CMDB relationship rules for discovered infrastructure classes",
+			"Automatic disablement of the Hardware Model Normalization plugin across the instance",
+			"Mandatory conversion of all laptop assets to consumable models without review"
+		],
+		"correctIndex": 0,
+		"explanation": "Model category drives asset class selection and process behavior, so misclassification can cause operational and financial errors downstream.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/product-catalog/c_ModelCategories.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 42,
+		"prompt": "Why link Service Catalog hardware requests to HAM fulfillment workflows?",
+		"choices": [
+			"Ensure requested items are reserved, fulfilled, and tracked through lifecycle states",
+			"Bypass stockroom inventory checks for every catalog submission regardless of model",
+			"Retire previously assigned devices automatically on each new hardware request",
+			"Disable asset tagging until manual spreadsheet import completes at the stockroom"
+		],
+		"correctIndex": 0,
+		"explanation": "Catalog-linked fulfillment coordinates request, inventory, assignment, and lifecycle tracking in one controlled HAM process.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/service-catalog-var-form-fields.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 43,
+		"prompt": "An employee orders a corporate laptop through the Service Catalog. Which outcome reflects standard HAM integration?",
+		"choices": [
+			"Fulfillment creates or updates governed asset records tied to the requester and model",
+			"The request closes with no asset linkage unless discovery finds the device weeks later on the network",
+			"A consumable quantity increments without an individual asset tag or serial assignment",
+			"Procurement purchase orders are suppressed for all catalog hardware items globally"
+		],
+		"correctIndex": 0,
+		"explanation": "Catalog-driven hardware fulfillment integrates with HAM so fulfilled items become governed asset records linked to the requester.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/service-catalog-var-form-fields.html",
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/exploring-ham.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 44,
+		"prompt": "Why should fulfillment tasks record the specific serial number assigned to the requester?",
+		"choices": [
+			"Maintain auditable custody and support downstream lifecycle events such as returns",
+			"Auto-approve every future hardware request submitted by the same employee account",
+			"Bypass receiving validation at the stockroom dock for all serialized equipment",
+			"Prevent transfer orders between regional stockrooms for the assigned device model"
+		],
+		"correctIndex": 0,
+		"explanation": "Recording the assigned serial ensures traceability for support, audits, returns, RMA, and financial controls throughout the asset lifecycle.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/manage-hardware-assets.html",
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/exploring-ham.html"
+		]
+	}
+]

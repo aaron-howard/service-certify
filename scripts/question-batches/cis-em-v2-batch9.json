@@ -1,0 +1,83 @@
+[
+	{
+		"trackCode": "CIS-EM",
+		"order": 40,
+		"prompt": "Correlation rules and alert grouping together reduce operational noise most directly by doing what?",
+		"choices": [
+			"Combining related signals so responders address one parent alert instead of many duplicates",
+			"Deleting raw events from the em_event table after each connector poll cycle",
+			"Disabling impact calculation for every network path on the service map",
+			"Retiring CIs automatically when secondary alerts exceed a fixed count"
+		],
+		"correctIndex": 0,
+		"explanation": "Correlation and grouping consolidate related events and alerts, lowering duplicate workload while preserving actionable parent alert context.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/exploring-event-management.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/coordinating-alert-response-with-automated-alert-grouping.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 41,
+		"prompt": "When an alert severity changes from Warning to Major, what happens to the alert priority score?",
+		"choices": [
+			"The severity portion recalculates immediately and updates Priority Breakdown",
+			"The score resets to zero until the next hourly batch job completes",
+			"The score is frozen until all secondary alerts are manually ungrouped",
+			"The score copies from the parent change request risk assessment field"
+		],
+		"correctIndex": 0,
+		"explanation": "Unlike most priority triggers that queue for batch calculation, a severity change triggers an immediate update of the severity component in the alert priority score.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/alert-priority.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 42,
+		"prompt": "Application Cluster Member impact rules define influence percentages primarily to control what?",
+		"choices": [
+			"How many cluster member failures are required before parent severity escalates",
+			"How many catalog items can be ordered from a single service request",
+			"How many discovery credentials rotate during horizontal subnet scans",
+			"How many stockroom bins receive automatic replenishment triggers"
+		],
+		"correctIndex": 0,
+		"explanation": "Cluster member impact rules set influence thresholds so parent cluster severity reflects the configured number or percentage of failing members.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/c_EMImpactCalculation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 43,
+		"prompt": "Alert management rules are evaluated on a schedule. How frequently does the default scoped alert rules management job check rules?",
+		"choices": [
+			"Every 11 seconds by the Evaluate Scoped Alert Rules Management scheduled job",
+			"Every 120 seconds to align with default connector polling intervals",
+			"Every 24 hours during the nightly table rotation maintenance window",
+			"Only when an operator manually runs the alert correlation wizard"
+		],
+		"correctIndex": 0,
+		"explanation": "The Event Management - Evaluate Scoped Alert Rules Management scheduled job checks alert management rules every 11 seconds and executes matching actions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/alert-management-rule.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 44,
+		"prompt": "A monitoring platform can POST JSON alerts to ServiceNow but cannot be polled on a schedule. Which integration style fits that source?",
+		"choices": [
+			"A push connector or listener that receives inbound events through an instance or MID endpoint",
+			"A pull connector that schedules MID Server API collection every 120 seconds",
+			"A discovery pattern that classifies SNMP devices during horizontal scans",
+			"A hardware normalization job that maps manufacturer names to model categories"
+		],
+		"correctIndex": 0,
+		"explanation": "Push integrations receive events sent by external tools through listeners or push connectors, while pull connectors actively retrieve events on a schedule.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
+		]
+	}
+]

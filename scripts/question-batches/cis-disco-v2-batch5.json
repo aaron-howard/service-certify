@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 20,
+		"prompt": "Why should custom horizontal patterns be tested in a lower environment before broad production deployment?",
+		"choices": [
+			"Lower environments permanently disable production pattern rollback capabilities",
+			"Testing preloads all credential aliases for every network zone automatically",
+			"Sub-production tests remove the need for peer review documentation entirely",
+			"Pre-production validation confirms data quality and runtime behavior before CMDB impact"
+		],
+		"correctIndex": 3,
+		"explanation": "Testing confirms the pattern collects expected attributes and relationships without introducing noisy or incorrect CI updates in production.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 21,
+		"prompt": "Which governance action most improves long-term horizontal pattern quality in a Discovery program?",
+		"choices": [
+			"Permit emergency production edits without peer review or test evidence",
+			"Suppress execution logs globally to keep retention costs consistently low",
+			"Version pattern changes with documented ownership and test results attached",
+			"Delay all pattern maintenance until incidents force urgent correction"
+		],
+		"correctIndex": 2,
+		"explanation": "Versioned change control with test evidence supports safe evolution of discovery patterns and faster troubleshooting when issues arise.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/manage-discovery-pattern-versions.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 22,
+		"prompt": "During horizontal discovery, what is the relationship between a classification record and its linked pattern?",
+		"choices": [
+			"The classification defines the device type match criteria and references the pattern that collects its details",
+			"The classification replaces probes entirely and stores all CMDB attributes without MID Server execution",
+			"The classification schedules port scans independently of any discovery behavior configuration",
+			"The classification maps procurement purchase orders to hardware asset lifecycle states"
+		],
+		"correctIndex": 0,
+		"explanation": "Classifications match discovered devices to CI types and point to the pattern that executes the collection logic for that class.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-patterns-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 23,
+		"prompt": "How should an implementer troubleshoot inconsistent CI updates from a horizontal discovery pattern?",
+		"choices": [
+			"Delete all CIs in the affected class and wait for the next full schedule cycle",
+			"Disable identification and reconciliation globally until the pattern is rewritten",
+			"Review pattern debug output, classification results, and probe or sensor logs for the failing targets",
+			"Convert the schedule to manual ad hoc mode permanently for every subnet in scope"
+		],
+		"correctIndex": 2,
+		"explanation": "Pattern diagnostics combined with classification and probe logs reveal whether failures occur during matching, collection, parsing, or CMDB write steps.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-pattern-best-practices.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 24,
+		"questionType": "multi",
+		"prompt": "Which two validations are recommended before promoting a custom horizontal discovery pattern to production? (Choose two.)",
+		"choices": [
+			"Debug-mode testing confirms identification steps produce expected CIs on a known target host",
+			"A peer review verifies credential references and parsing logic for fragile command output",
+			"All discovery schedules are disabled globally for thirty days during promotion",
+			"Every business service record is converted to a manual CI relationship import"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Production promotion requires verified pattern output on representative targets and review of credentials and parsing logic to prevent CMDB quality regressions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-pattern-best-practices.html"
+		]
+	}
+]
