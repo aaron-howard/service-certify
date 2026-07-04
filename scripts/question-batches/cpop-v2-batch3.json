@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOP",
+		"order": 10,
+		"prompt": "Procurement submits a request to streamline supplier onboarding with approvals and document collection. What is the platform owner's first design step before recommending a product?",
+		"choices": [
+			"Facilitate discovery workshops to define actors, outcomes, and integration touchpoints",
+			"License an additional SKU immediately to satisfy the department timeline",
+			"Direct the team to rebuild the process in a spreadsheet outside the platform",
+			"Mandate a six-month freeze on all other initiatives until this request ships"
+		],
+		"correctIndex": 0,
+		"explanation": "Department requests require discovery of stakeholders, outcomes, and dependencies before product selection or licensing decisions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 11,
+		"prompt": "Before recommending a product line expansion, the platform owner must gather product line data. Which information set is most essential?",
+		"choices": [
+			"Licensed entitlements, planned use cases, integration dependencies, and upgrade compatibility",
+			"Every employee's personal device serial number regardless of CMDB relevance",
+			"Historical stock prices of unrelated technology vendors",
+			"Informal chat transcripts without linking them to business outcomes"
+		],
+		"correctIndex": 0,
+		"explanation": "Product line decisions require entitlement status, intended use, dependencies, and version compatibility—not unrelated device or financial data.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 12,
+		"questionType": "multi",
+		"prompt": "The release calendar includes a family store update during a critical business period. Which factors should guide the platform owner's update-versus-skip decision? (Choose two.)",
+		"choices": [
+			"Severity of fixes and features relative to open defects affecting production",
+			"Readiness of regression testing and rollback plans in non-production environments",
+			"Availability of a single developer preference without stakeholder review",
+			"Assumption that skipping all updates eliminates any future maintenance work"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Update decisions weigh defect impact and test/rollback readiness; individual preference or permanent deferral are not sound criteria.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 13,
+		"prompt": "Corporate policy sets an end-of-year change freeze starting November fifteenth. How should the platform owner incorporate this constraint into release planning?",
+		"choices": [
+			"Schedule high-risk changes before the freeze and reserve the window for emergency fixes only",
+			"Treat the freeze as optional guidance that delivery teams may ignore for convenience",
+			"Use the freeze period to deploy untested major upgrades without rollback plans",
+			"Cancel all platform maintenance indefinitely once the freeze date passes"
+		],
+		"correctIndex": 0,
+		"explanation": "End-of-year freezes require front-loading planned changes and limiting the period to controlled emergency work, not bypassing governance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 14,
+		"questionType": "match",
+		"prompt": "Match each release decision input to the question it helps the platform owner answer.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Known defect list",
+			"Regression test results",
+			"Business blackout dates",
+			"Rollback procedure"
+		],
+		"matchRightItems": [
+			"Does this version resolve issues blocking our users?",
+			"Have we verified critical workflows still pass?",
+			"Can we avoid deploying during peak operational demand?",
+			"Can we recover quickly if the update causes disruption?"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Release decisions combine defect awareness, test evidence, calendar constraints, and recovery planning.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	}
+]

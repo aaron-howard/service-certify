@@ -12,7 +12,7 @@ export const OFFICIAL_EXAM_QUESTION_COUNTS: Record<string, number> = {
 	'CIS-PA': 60,
 	'CIS-SP': 45,
 	CPOA: 70,
-	CPOP: 192,
+	CPOP: 70,
 	CPOE: 192,
 	'CIS-DISCO': 45,
 	'CIS-EM': 30,
@@ -53,7 +53,6 @@ export const EXAM_QUESTION_BANK_TARGETS: Record<string, number> = Object.fromEnt
 
 /** Official proctored exam time limits (minutes), from Credentialing Program Guide. */
 export const OFFICIAL_EXAM_DURATION_MINUTES: Record<string, number> = {
-	CPOP: 240,
 	CPOE: 240
 };
 

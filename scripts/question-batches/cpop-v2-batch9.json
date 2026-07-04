@@ -1,0 +1,99 @@
+[
+	{
+		"trackCode": "CPOP",
+		"order": 40,
+		"prompt": "A university wants to improve onboarding for new staff and faculty by automating account setup, access provisioning, and equipment readiness before day one. Which platform capability should the platform owner map to this business objective?",
+		"choices": [
+			"HR Service Delivery with Lifecycle Events orchestrating onboarding tasks across departments",
+			"Walk-up Experience queues so new hires can request equipment at an IT counter",
+			"A custom scoped application built on the incident table to track onboarding tickets",
+			"Predictive Intelligence clustering of historical HR cases to surface onboarding trends"
+		],
+		"correctIndex": 0,
+		"explanation": "Improving onboarding through automated account setup, access, and equipment readiness maps directly to HR Service Delivery with Lifecycle Events, which orchestrates cross-departmental onboarding activities.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 41,
+		"prompt": "The CIO has committed to cutting new-hire onboarding time from ten days to three. Which KPI gives the executive team the clearest view of progress against that objective?",
+		"choices": [
+			"Average elapsed days from offer acceptance to fully provisioned day-one readiness",
+			"Total number of incidents logged across the platform each month",
+			"Count of update sets migrated to production during the quarter",
+			"Percentage of licensed users who logged in at least once this year"
+		],
+		"correctIndex": 0,
+		"explanation": "KPIs must trace directly to the business objective. A time-based onboarding measure shows whether the ten-to-three-day commitment is being met; platform activity counts do not.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 42,
+		"questionType": "multi",
+		"prompt": "An enterprise service transformation program has secured the COO as executive sponsor. Which engagement methods keep that sponsor actively invested in the program? (Choose two.)",
+		"choices": [
+			"Recurring steering committee briefings that tie platform progress to business outcome metrics",
+			"Direct escalation requests when cross-departmental roadblocks stall the roadmap",
+			"Copying the sponsor on every incident notification the platform generates",
+			"Asking the sponsor to personally review each update set before promotion"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Sponsors stay engaged through outcome-focused governance forums and by being asked to clear obstacles only they can remove; flooding them with operational noise erodes engagement.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html",
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 43,
+		"questionType": "match",
+		"prompt": "Match each stakeholder group to the engagement practice that best sustains its support for the platform program.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Executive sponsor",
+			"Process owners",
+			"End users",
+			"Fulfiller teams"
+		],
+		"matchRightItems": [
+			"Outcome dashboards plus a fast path to escalate funding and roadblock decisions",
+			"Workshops that let them shape future-state workflows before build begins",
+			"Adoption campaigns, release communications, and feedback surveys",
+			"Role-based enablement on the new procedures they will execute daily"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Effective stakeholder management tailors the engagement mechanism to each group: sponsors need decision-ready insight, process owners need design influence, end users need adoption support, and fulfillers need enablement.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 44,
+		"prompt": "Demand for ServiceNow enhancements at a growing insurer now outstrips what one administrator can deliver. Which team structure scales implementation support most sustainably?",
+		"choices": [
+			"A dedicated platform team with defined owner, administrator, and developer roles operating under Center of Excellence governance",
+			"A single administrator handling all configuration, development, and support requests alone",
+			"Independent shadow development squads in each department with no shared standards",
+			"Full outsourcing to a partner with no internal role retaining platform accountability"
+		],
+		"correctIndex": 0,
+		"explanation": "Scalable support requires a structured platform team with clear roles governed by a Center of Excellence; heroics, shadow teams, and total outsourcing all fail as demand grows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
+		]
+	}
+]

@@ -1,0 +1,100 @@
+[
+	{
+		"trackCode": "CPOP",
+		"order": 45,
+		"prompt": "A regional bank's board objective is to reduce audit findings tied to inconsistent change practices. Which platform capability should the platform owner position to meet that objective?",
+		"choices": [
+			"Change Management with standardized models, approvals, and a complete audit trail",
+			"Virtual Agent conversations that deflect password reset calls from the service desk",
+			"Performance Analytics breakdowns of incident reassignment counts by group",
+			"Mobile Agent so field technicians can close work orders from their phones"
+		],
+		"correctIndex": 0,
+		"explanation": "Mapping business objectives to capabilities means matching the outcome sought. Audit findings about change practices point to Change Management with enforced models and traceable approvals.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html",
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 46,
+		"questionType": "match",
+		"prompt": "Match each stated business objective to the KPI an executive dashboard should feature for it.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Improve employee service satisfaction",
+			"Lower cost per service request",
+			"Accelerate incident restoration",
+			"Increase self-service adoption"
+		],
+		"matchRightItems": [
+			"Employee CSAT or experience score trend by quarter",
+			"Fulfillment cost per request compared against baseline",
+			"Mean time to resolve for priority incidents",
+			"Portal and catalog deflection rate versus assisted channels"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Each KPI must trace to its objective: satisfaction scores for experience goals, unit cost for efficiency goals, restoration time for availability goals, and deflection rate for self-service goals.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 47,
+		"prompt": "An employee-experience transformation spanning HR, IT, and Facilities needs an executive sponsor. Who is the most likely candidate, and why?",
+		"choices": [
+			"The COO or chief people officer, because the outcomes cross departments and require enterprise-level authority",
+			"The service desk manager, because that role hears the most complaints from employees",
+			"A senior ServiceNow developer, because that person knows the platform configuration best",
+			"An external implementation partner, because it is contractually accountable for delivery milestones"
+		],
+		"correctIndex": 0,
+		"explanation": "Sponsor identification looks for the leader whose authority spans every affected function and who owns the business outcome; operational managers, developers, and partners lack that mandate.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 48,
+		"questionType": "multi",
+		"prompt": "Six months into a platform program, process owners in two departments have quietly stopped attending governance meetings. Which stakeholder management practices should the platform owner apply? (Choose two.)",
+		"choices": [
+			"Meet each disengaged owner individually to surface concerns and reconnect the roadmap to their priorities",
+			"Refresh the stakeholder map and communication plan so cadence and content match each group's influence and interest",
+			"Remove both departments from the roadmap so meetings run faster with fewer voices",
+			"Report the absent owners to human resources for failing to attend scheduled meetings"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Disengagement is a stakeholder management signal: re-engage individually and recalibrate the stakeholder analysis and communication plan rather than excluding or punishing participants.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 49,
+		"prompt": "Following two acquisitions, a platform owner must grow ServiceNow support from three people to a structure serving twice the user base. What should anchor the staffing design?",
+		"choices": [
+			"Forecast demand by workstream, then define role coverage for administration, development, and business analysis with a growth path",
+			"Hire only senior developers, since administration work can be absorbed into development capacity",
+			"Keep the current three-person team and extend response-time expectations for all departments",
+			"Grant power-user rights broadly so business units resolve their own platform requests without a support model"
+		],
+		"correctIndex": 0,
+		"explanation": "A scalable support structure starts from demand forecasting and deliberate role coverage, giving the team a defined growth path instead of overloading current staff or fragmenting accountability.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html",
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	}
+]

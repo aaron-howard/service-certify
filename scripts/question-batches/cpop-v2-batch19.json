@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOP",
+		"order": 90,
+		"prompt": "Finance requests a licensing review after HR Service Delivery adoption doubled fulfillment roles in six months. What should the platform owner lead first?",
+		"choices": [
+			"Reconcile active users, role assignments, and subscribed product entitlements against contract terms",
+			"Purchase additional unrestricted user packs before validating current consumption patterns",
+			"Remove all contractor accounts immediately without reviewing assigned capabilities",
+			"Defer the review until the next true-up invoice arrives from the vendor"
+		],
+		"correctIndex": 0,
+		"explanation": "Licensing governance starts with reconciling actual role and product usage against entitlements so spend decisions reflect verified consumption, not assumptions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 91,
+		"prompt": "A custom scoped application team wants to bypass peer review to meet a regulatory deadline. Which coding governance standard should the platform owner uphold?",
+		"choices": [
+			"Require code review, static analysis, and promotion through defined sub-production environments",
+			"Allow direct production commits when the developer holds the admin role",
+			"Store all scripts in global scope so any developer can patch them quickly",
+			"Skip update sets entirely and paste changes into the script editor on production"
+		],
+		"correctIndex": 0,
+		"explanation": "Technical governance through review, analysis, and staged promotion protects production stability even under deadline pressure.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/application-development.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 92,
+		"prompt": "Audit findings show dormant accounts still carry fulfillment licenses six months after contractors departed. What licensing governance practice should the platform owner institutionalize?",
+		"choices": [
+			"Quarterly access and entitlement recertification tied to HR termination signals",
+			"Annual manual spreadsheet review by each team's project manager",
+			"Permanent assignment of the highest license tier to simplify provisioning",
+			"Disable login for all external users regardless of active project need"
+		],
+		"correctIndex": 0,
+		"explanation": "Recurring recertification linked to HR lifecycle events prevents license drift and reduces true-up exposure from orphaned entitlements.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 93,
+		"questionType": "multi",
+		"prompt": "Before the annual subscription true-up, which inputs should the platform owner validate with procurement and product owners? (Choose two.)",
+		"choices": [
+			"Production plugin activation against contracted SKU coverage",
+			"Growth trends in specialized roles such as approvers and fulfillment agents",
+			"Total number of UI themes deployed per business unit",
+			"Average incident ticket count unrelated to subscription metrics"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "True-up readiness depends on matching activated capabilities and role growth to contracted SKUs—not cosmetic or unrelated operational metrics.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 94,
+		"questionType": "match",
+		"prompt": "Match each licensing governance activity to its primary platform owner responsibility.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Entitlement baseline documentation",
+			"Role-to-license mapping standards",
+			"Usage anomaly monitoring",
+			"True-up readiness reporting"
+		],
+		"matchRightItems": [
+			"Records contracted products and limits that teams must operate within",
+			"Defines which user roles consume which subscription types during provisioning",
+			"Detects sudden spikes in licensed capabilities that may trigger compliance fees",
+			"Supplies finance with verified consumption evidence before vendor reconciliation"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Licensing governance spans documented entitlements, role mapping, anomaly detection, and finance-ready reporting—each owned at the platform level.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
+		]
+	}
+]

@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOP",
+		"order": 0,
+		"prompt": "A regional university wants to improve onboarding for new staff and faculty by automating account setup, access provisioning, and equipment readiness. Which ServiceNow capability best addresses this objective?",
+		"choices": [
+			"HR Service Delivery with Lifecycle Events",
+			"IT Service Management with major incident management",
+			"Customer Service Management with omnichannel routing",
+			"Security Operations with vulnerability response playbooks"
+		],
+		"correctIndex": 0,
+		"explanation": "Lifecycle Events in HR Service Delivery orchestrate onboarding journeys across HR, IT, and facilities tasks such as account creation, access, and equipment fulfillment.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/human-resources/hr-service-delivery.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 1,
+		"prompt": "As Center of Excellence and Innovation (CoEI) lead, the platform owner is asked to clarify core responsibilities for executive sponsors. Which statement best defines the CoEI mandate?",
+		"choices": [
+			"Drive platform strategy, standards, and innovation while aligning delivery to business outcomes",
+			"Own day-to-day incident queue assignment for every production support team",
+			"Replace business owners as the sole approver for all catalog item requests",
+			"Restrict platform access to administrators until every process is fully automated"
+		],
+		"correctIndex": 0,
+		"explanation": "The CoEI sets direction, governance, and innovation priorities that connect platform investment to measurable business value rather than operating transactional queues.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 2,
+		"prompt": "The finance department cites slow month-end close as a top objective. Which mapping from business objective to ServiceNow platform capability is most appropriate for the platform owner to recommend?",
+		"choices": [
+			"Workflow automation with integrated task orchestration and operational reporting on close activities",
+			"Deploying a standalone spreadsheet macro library unrelated to platform data",
+			"Disabling audit trails to reduce record volume during close periods",
+			"Routing all finance tickets exclusively through chatbot deflection without process redesign"
+		],
+		"correctIndex": 0,
+		"explanation": "Platform owners translate department objectives into capabilities such as orchestrated workflows and trusted reporting that accelerate close cycles with visibility.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 3,
+		"questionType": "match",
+		"prompt": "Match each recommended CoEI implementation phase to its primary outcome.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Establish vision and sponsorship",
+			"Define standards and governance",
+			"Enable delivery teams",
+			"Measure and optimize"
+		],
+		"matchRightItems": [
+			"Aligned executive commitment and shared platform direction",
+			"Consistent practices that reduce rework and risk",
+			"Teams equipped to build within guardrails",
+			"Evidence-based refinement of platform investments"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "ServiceNow recommends sequencing CoEI work from sponsorship and vision through governance, enablement, and continuous measurement.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 4,
+		"questionType": "multi",
+		"prompt": "A department sponsor asks how platform KPIs should tie to stated business objectives. Which practices should the platform owner endorse? (Choose two.)",
+		"choices": [
+			"Select metrics that directly reflect objective outcomes such as cycle time or adoption",
+			"Publish baseline and target values with accountable owners for each KPI",
+			"Track only technical uptime metrics without linking them to business results",
+			"Change KPI definitions each sprint to maximize favorable trend lines"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Effective KPIs map to business objectives with baselines, targets, and ownership; technical metrics alone or shifting definitions undermine strategic alignment.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	}
+]

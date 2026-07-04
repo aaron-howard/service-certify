@@ -1,0 +1,100 @@
+[
+	{
+		"trackCode": "CPOP",
+		"order": 95,
+		"prompt": "Security flagged several inbound integration scripts that concatenate user input into GlideRecord queries. Which technical governance response aligns with coding best practices?",
+		"choices": [
+			"Mandate parameterized queries, input validation, and security review before production promotion",
+			"Grant integration accounts elevated admin rights so they can bypass ACL checks",
+			"Disable all ACLs on targeted tables to simplify script troubleshooting",
+			"Allow the pattern when scripts run only during off-peak maintenance windows"
+		],
+		"correctIndex": 0,
+		"explanation": "Secure coding governance requires parameterized access patterns and validation—not privilege escalation or ACL removal—to mitigate injection risk.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html",
+			"https://www.servicenow.com/docs/r/application-development/application-development.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 96,
+		"prompt": "The CoEI reviews a proposal to centralize all custom business rules in the global scope for reuse. What coding governance guidance should the platform owner provide?",
+		"choices": [
+			"Package reusable logic in scoped applications with documented APIs and ownership boundaries",
+			"Encourage global scope edits because they deploy fastest across instances",
+			"Prohibit all business rules and replace them with manual operator procedures",
+			"Allow each developer to copy scripts via email without version control"
+		],
+		"correctIndex": 0,
+		"explanation": "Scoped applications with clear ownership preserve upgradeability and reuse better than unmanaged global customizations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/application-development.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 97,
+		"prompt": "Developers want to embed third-party API keys directly in client-side scripts for a new portal widget. How should the platform owner enforce technical governance?",
+		"choices": [
+			"Require secrets in credential records accessed server-side through scoped Script Includes",
+			"Approve client-side storage if the widget is visible only to internal employees",
+			"Share a single service account password across all integration teams for speed",
+			"Skip review because client scripts cannot access external networks"
+		],
+		"correctIndex": 0,
+		"explanation": "Coding best practices keep credentials out of client scripts and route access through governed server-side abstractions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 98,
+		"questionType": "multi",
+		"prompt": "Which controls should the platform owner require in the technical governance standard for custom application delivery? (Choose two.)",
+		"choices": [
+			"Automated linting and static code analysis in the CI pipeline before merge",
+			"Peer review checkpoints with documented approval for production-bound changes",
+			"Unlimited direct production editing for certified developers during incidents",
+			"Mandatory use of global scope for all new integrations regardless of ownership"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Sustainable technical governance combines automated quality gates with human review—not uncontrolled production access or global scope defaults.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/application-development.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 99,
+		"questionType": "match",
+		"prompt": "Match each technical governance control to the coding risk it mitigates.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Scoped application boundaries",
+			"Update set collision review",
+			"Performance testing thresholds",
+			"Secure coding checklist"
+		],
+		"matchRightItems": [
+			"Prevents unmanaged global changes from breaking during platform upgrades",
+			"Reduces deployment failures when multiple teams promote overlapping metadata",
+			"Surfaces script and query patterns that degrade instance responsiveness",
+			"Blocks common vulnerabilities such as injection and exposed credentials"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Platform owners map scoped packaging, collision review, performance gates, and secure coding checklists to distinct technical risks in custom delivery.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/application-development.html",
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		]
+	}
+]
