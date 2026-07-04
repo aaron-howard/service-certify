@@ -144,10 +144,6 @@ export const PHASE1_TRACK_DOC_SOURCES: TrackDocSource[] = [
 	}
 ];
 
-export function getTrackDocSource(trackCode: string): TrackDocSource | undefined {
-	return PHASE1_TRACK_DOC_SOURCES.find((t) => t.trackCode === trackCode);
-}
-
 /** Full mock-exam question bank targets: official count + {@link QUESTION_BANK_BUFFER}. */
 import {
 	EXAM_QUESTION_BANK_TARGETS,
@@ -793,3 +789,12 @@ export const PHASE8_TRACK_DOC_SOURCES: TrackDocSource[] = [
 		]
 	}
 ];
+
+export const ALL_TRACK_DOC_SOURCES: TrackDocSource[] = [
+	...PHASE1_TRACK_DOC_SOURCES,
+	...PHASE3_TRACK_DOC_SOURCES
+];
+
+export function getTrackDocSource(trackCode: string): TrackDocSource | undefined {
+	return ALL_TRACK_DOC_SOURCES.find((t) => t.trackCode === trackCode);
+}

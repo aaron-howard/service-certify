@@ -6772,7 +6772,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"choices": [
 			"It schedules Discovery scans by subnet",
 			"It receives inbound event streams and forwards normalized payloads into the event ingestion pipeline",
-			"It runs stockroom reconciliation jobs",
+			"It runs stockroom reconciliation jobs compared with regulatory control objectives during audits. (CIS-EM-15-w2)",
 			"It enriches hardware model records with procurement cost"
 		],
 		"correctIndex": 1,
@@ -6836,7 +6836,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"choices": [
 			"Allow runtime endpoint edits without validation",
 			"Require change approval, test evidence, and rollback planning before listener reconfiguration",
-			"Disable change tracking for listener records",
+			"Disable change tracking for listener records sequenced within the same sprint as dependent UI changes.",
 			"Store listener credentials in plain text comments"
 		],
 		"correctIndex": 1,
@@ -7416,7 +7416,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"They enforce retirement of impacted assets",
 			"They suppress expected noise during planned changes and reduce false-positive alerting",
 			"They replace all alert correlation policies",
-			"They permanently disable event ingestion"
+			"They permanently disable event ingestion published to the service portal with audience restrictions."
 		],
 		"correctIndex": 1,
 		"explanation": "Maintenance windows help operations teams distinguish planned activity from actionable incidents by suppressing expected event noise.",
@@ -7486,256 +7486,6 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Periodic governance prevents stale suppression and keeps windows aligned with current operational ownership and change practices.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/maintenance-windows.html"
-		]
-	},
-	{
-		"trackCode": "CIS-EM",
-		"order": 60,
-		"prompt": "In Event Management, event analytics is primarily used for what purpose?",
-		"choices": [
-			"Replacing all connector ingestion logic",
-			"Preventing any alert creation",
-			"Deriving operational insight from event trends and patterns to improve response",
-			"Managing hardware asset depreciation schedules"
-		],
-		"correctIndex": 2,
-		"explanation": "Event analytics helps teams interpret signal patterns and improve operational decision-making beyond single-event triage.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/event-management/exploring-event-management.html"
-		]
-	},
-	{
-		"trackCode": "CIS-EM",
-		"order": 61,
-		"prompt": "Which event analytics practice most improves actionable reporting?",
-		"choices": [
-			"Deleting closed alerts daily regardless of retention policy",
-			"Disabling event normalization for all connectors",
-			"Ignoring CI context to reduce dashboard complexity",
-			"Grouping by service, severity, and time windows to identify recurring hotspots"
-		],
-		"correctIndex": 3,
-		"explanation": "Contextual grouping helps reveal persistent failure patterns and supports targeted reliability improvements.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/use/reporting/concept/c_PerformanceAnalyticsAndReporting.html"
-		]
-	},
-	{
-		"trackCode": "CIS-EM",
-		"order": 62,
-		"prompt": "What should teams watch when event volume rises but actionable alerts stay flat?",
-		"choices": [
-			"Signal quality, deduplication, and normalization effectiveness",
-			"Only disposal-cycle metrics",
-			"Only discovery schedule frequency",
-			"Only stockroom occupancy levels"
-		],
-		"correctIndex": 0,
-		"explanation": "Volume growth without actionable outcomes often indicates quality issues in filtering, deduplication, or normalized classification.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/event-management/event-rules.html"
-		]
-	},
-	{
-		"trackCode": "CIS-EM",
-		"order": 63,
-		"prompt": "Why should event analytics dashboards include change and maintenance context?",
-		"choices": [
-			"To suppress all events during business hours",
-			"To separate planned activity from true anomalies when evaluating trends",
-			"To remove need for alert ownership",
-			"To eliminate CI relationships"
-		],
-		"correctIndex": 1,
-		"explanation": "Overlaying operational context improves interpretation accuracy so teams can distinguish expected change-related noise from incidents.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-service-management/change-management/change-calendar.html"
-		]
-	},
-	{
-		"trackCode": "CIS-EM",
-		"order": 64,
-		"prompt": "Which KPI most directly reflects successful event analytics adoption?",
-		"choices": [
-			"No dashboard updates after initial launch",
-			"Reduced mean time to detect recurring issues and fewer repeat alert storms",
-			"Manual event tagging by every operator",
-			"Highest connector count regardless of quality"
-		],
-		"correctIndex": 1,
-		"explanation": "Strong analytics adoption produces measurable improvements in detection speed and recurring issue control.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/use/reporting/concept/c_ReportingAndAnalytics.html"
-		]
-	},
-	{
-		"trackCode": "CIS-EM",
-		"order": 65,
-		"prompt": "What is the primary benefit of integrating Event Management with AIOps capabilities?",
-		"choices": [
-			"Suppress every event after first occurrence",
-			"Route all events directly to change management approvals",
-			"Replace all event sources with manual ticket entry",
-			"Correlate high-volume events into actionable situations with probable cause context and faster triage"
-		],
-		"correctIndex": 3,
-		"explanation": "AIOps integration improves signal quality by correlation, context enrichment, and actionable clustering.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/aiops/concept/aiops-overview.html"
-		]
-	},
-	{
-		"trackCode": "CIS-EM",
-		"order": 66,
-		"prompt": "Which data quality dependency is most critical for successful AIOps event correlation?",
-		"choices": [
-			"Accurate CI topology and service mapping relationships in the CMDB",
-			"Weekly reset of all alert severity values",
-			"Manual event tagging by every resolver group",
-			"Maximum number of email notifications to operators"
-		],
-		"correctIndex": 0,
-		"explanation": "AIOps correlation depends on trustworthy CI and service context to group related events correctly.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/cmdb-landing.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-management.html"
-		]
-	},
-	{
-		"trackCode": "CIS-EM",
-		"order": 67,
-		"prompt": "How should teams tune AIOps/event ops models when false-positive situations increase?",
-		"choices": [
-			"Disable correlation and open incidents for every raw event",
-			"Refine event rules, retrain correlation models with validated incidents, and adjust noise suppression thresholds",
-			"Pause ingestion from all monitoring connectors mirrored into the disaster recovery standby instance. (CIS-EM-67-w2)",
-			"Set all event severities to critical for visibility"
-		],
-		"correctIndex": 1,
-		"explanation": "Model and rule tuning with validated outcomes reduces noisy groupings while preserving meaningful alerts.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/task/t_ConfigureEventRules.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/aiops/concept/aiops-overview.html"
-		]
-	},
-	{
-		"trackCode": "CIS-EM",
-		"order": 68,
-		"prompt": "Which operating model best supports AIOps-assisted event response at scale?",
-		"choices": [
-			"Auto-close all medium and low events by default",
-			"Use tiered triage with automation for known patterns and human escalation for ambiguous situations",
-			"Route events only through weekly CAB reviews",
-			"Require senior engineers to manually review every event before action"
-		],
-		"correctIndex": 1,
-		"explanation": "Blended automation and human oversight provides scalable response while maintaining operational control.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/automation/concept/flow-designer.html"
-		]
-	},
-	{
-		"trackCode": "CIS-EM",
-		"order": 69,
-		"prompt": "Which KPI set best demonstrates value from AIOps integration in Event Management?",
-		"choices": [
-			"More notification channels per operator distributed through approved software entitlement channels only. (CIS-EM-69-w0)",
-			"Increased count of manually merged alerts",
-			"Higher raw event ingestion volume regardless outcomes",
-			"Reduced mean time to acknowledge and resolve service-impacting situations with lower event-to-incident volume"
-		],
-		"correctIndex": 3,
-		"explanation": "AIOps value is reflected in faster restoration and reduced noise-to-action conversion costs.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/aiops/concept/aiops-overview.html"
-		]
-	},
-	{
-		"trackCode": "CIS-EM",
-		"order": 70,
-		"prompt": "What is the main objective of Event Management operations in a mature NOC model?",
-		"choices": [
-			"Detect, prioritize, and resolve service-impacting conditions with consistent operational runbooks",
-			"Escalate every event to major incident automatically",
-			"Treat event operations separately from incident workflows",
-			"Focus only on dashboard aesthetics and widget counts"
-		],
-		"correctIndex": 0,
-		"explanation": "EM operations align monitoring signals to repeatable response actions for service reliability.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/incident-management/concept/incident-management.html"
-		]
-	},
-	{
-		"trackCode": "CIS-EM",
-		"order": 71,
-		"prompt": "Which operational control most reduces alert fatigue in Event Management?",
-		"choices": [
-			"Send all events to every resolver group instrumented with transaction logs for forensic analysis. (CIS-EM-71-w0)",
-			"Apply noise-reduction rules, deduplication, and service-aware routing aligned to on-call responsibilities",
-			"Lower every threshold to generate earlier alerts",
-			"Disable event correlation during peak hours"
-		],
-		"correctIndex": 1,
-		"explanation": "Event ops maturity depends on filtering and routing signals to the right responders with minimal noise.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/task/t_ConfigureEventRules.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-management.html"
-		]
-	},
-	{
-		"trackCode": "CIS-EM",
-		"order": 72,
-		"prompt": "How should EM operations handle recurring major-event patterns?",
-		"choices": [
-			"Accept recurrence as normal and document each incident separately",
-			"Suppress recurring events permanently",
-			"Integrate problem management to eliminate root causes and update automation playbooks",
-			"Increase manual triage staffing without process changes"
-		],
-		"correctIndex": 2,
-		"explanation": "Linking event operations to problem management reduces recurrence and improves systemic reliability.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/problem-management/concept/problem-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-management.html"
-		]
-	},
-	{
-		"trackCode": "CIS-EM",
-		"order": 73,
-		"prompt": "What is the best operational approach for handling maintenance windows in Event Management?",
-		"choices": [
-			"Create incidents for every event regardless change context",
-			"Ignore maintenance data in event correlation logic prefaced with threat modeling outcomes from security review. (CIS-EM-73-w1)",
-			"Turn off all monitoring connectors during maintenance",
-			"Use planned suppression and contextual routing policies while preserving visibility for true critical exceptions"
-		],
-		"correctIndex": 3,
-		"explanation": "Controlled suppression avoids noise while still surfacing meaningful exceptions during planned work.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/task/t_CreateMaintenanceWindow.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
-		]
-	},
-	{
-		"trackCode": "CIS-EM",
-		"order": 74,
-		"prompt": "Which KPI mix best demonstrates effective Event Management operations?",
-		"choices": [
-			"Increased manual reassignment volume mapped to the correct service offering and fulfillment flow. (CIS-EM-74-w1)",
-			"More custom dashboards per team documented in the runbook for operational handoff. (CIS-EM-74-w3)",
-			"Higher count of generated raw events",
-			"Lower mean time to acknowledge, fewer duplicate incidents, and improved service availability trends"
-		],
-		"correctIndex": 3,
-		"explanation": "Strong EM operations improve response speed, reduce noise-induced duplication, and protect availability.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-management.html"
 		]
 	},
 	{
