@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-SAM",
+		"order": 65,
+		"prompt": "A SAM team plans to update publisher-specific reconciliation rules in production. Which operational integration practice reduces compliance risk?",
+		"choices": [
+			"Submit a change request, test in sub-production, and document expected position impacts",
+			"Apply rule edits directly during peak business hours without notification",
+			"Disable change management because SAM updates are low risk by default",
+			"Copy rules from a spreadsheet maintained outside the platform"
+		],
+		"correctIndex": 0,
+		"explanation": "SAM rule changes can shift compliance results; change-controlled testing preserves trust in license position calculations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-normalization-rules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 66,
+		"prompt": "Service catalog fulfillment deploys licensed software to a user. Which SAM record should be created to maintain reconciliation accuracy?",
+		"choices": [
+			"A software allocation linking the entitlement to the entitled user or device",
+			"A hardware asset record with no software model reference",
+			"An incident record documenting the deployment technician name",
+			"A knowledge article describing installation steps without entitlement linkage"
+		],
+		"correctIndex": 0,
+		"explanation": "Fulfillment should create allocations so consumption is tracked against purchased rights during reconciliation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/manage-software-entitlements.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 67,
+		"prompt": "Which platform areas commonly integrate with SAM operational workflows? (Choose all that apply.)",
+		"choices": [
+			"Service catalog software request and fulfillment",
+			"Procurement purchase orders and contracts",
+			"Change management for SAM configuration updates",
+			"Discovery and normalization feeding install records"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1, 2, 3],
+		"questionType": "multi",
+		"explanation": "SAM operations integrate catalog provisioning, procurement entitlements, governed configuration changes, and discovery-driven install data.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 68,
+		"prompt": "A major software contract approaches renewal in sixty days. Which integrated workflow best prepares SAM and procurement?",
+		"choices": [
+			"Trigger compliance review with reconciled position and optimization recommendations before negotiation",
+			"Postpone all reconciliation until after the new contract is signed",
+			"Remove entitlements from SAM to simplify the renewal spreadsheet",
+			"Disable catalog requests for the publisher until renewal completes"
+		],
+		"correctIndex": 0,
+		"explanation": "Renewal preparation requires current compliance position and optimization insights so procurement can negotiate from verified data.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/entitlement-audit-preparation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 69,
+		"prompt": "Executives request a quarterly SAM compliance narrative for the governance board. Which reporting approach is most effective?",
+		"choices": [
+			"Trend dashboard showing compliance status, financial exposure, and remediation progress by publisher",
+			"Raw export of every install record sorted by device hostname",
+			"Single screenshot of one reconciliation result with no historical context",
+			"List of software models created this quarter without compliance totals"
+		],
+		"correctIndex": 0,
+		"explanation": "Governance reporting needs summarized trends, exposure, and remediation status rather than operational raw data.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/validate-reconciliation-results.html"
+		]
+	}
+]

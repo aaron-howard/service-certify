@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-SAM",
+		"order": 50,
+		"prompt": "A publisher licenses software by named user. Which allocation record best supports accurate reconciliation?",
+		"choices": [
+			"User allocation linking entitlement rights to an identified employee or contractor",
+			"Device allocation on a decommissioned CI with no active user",
+			"Stockroom allocation with no assigned consumer or install reference",
+			"Department allocation with no user or device consumption mapping"
+		],
+		"correctIndex": 0,
+		"explanation": "Named-user metrics require user-level allocations so consumption can be measured against purchased rights during reconciliation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/manage-software-entitlements.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 51,
+		"prompt": "Reconciliation results show more purchased rights than active consumption for a high-cost publisher. What does this over-licensed position suggest?",
+		"choices": [
+			"Reclaim or reallocate unused entitlements before approving additional purchases",
+			"Immediately purchase more licenses to maintain compliance buffer",
+			"Delete install records until counts match entitlement quantity",
+			"Disable reconciliation for that publisher until the next audit"
+		],
+		"correctIndex": 0,
+		"explanation": "An over-licensed position indicates surplus rights that can be reclaimed or reallocated to reduce spend and true-up exposure.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/validate-reconciliation-results.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 52,
+		"prompt": "When remediating reconciliation results in SAM, which remediation options are available? (Choose all that apply.)",
+		"choices": [
+			"Create Allocations",
+			"Remove Allocations",
+			"Purchase Rights",
+			"Remove Unlicensed Installs"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1, 2, 3],
+		"questionType": "multi",
+		"explanation": "SAM reconciliation remediation supports creating or removing allocations, purchasing additional rights, and removing unlicensed installations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 53,
+		"prompt": "Reconciliation shows under-licensed installs for a business-critical title. Which remediation path addresses the compliance gap?",
+		"choices": [
+			"Purchase rights or remove unlicensed installs after business approval",
+			"Change the license metric to device without updating the contract",
+			"Archive all entitlement records and rerun discovery only",
+			"Mark every install as exempt without documented exception governance"
+		],
+		"correctIndex": 0,
+		"explanation": "Under-licensed positions are remediated by acquiring additional rights or removing unauthorized installs through governed workflows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 54,
+		"prompt": "A SAM team finds unauthorized software installs during reconciliation. What is the recommended remediation action?",
+		"choices": [
+			"Remove unlicensed installs or create allocations backed by valid entitlements",
+			"Convert installs to hardware assets to exclude them from SAM scope",
+			"Disable discovery for the affected subnet indefinitely",
+			"Delete the software model so installs appear unmatched"
+		],
+		"correctIndex": 0,
+		"explanation": "Unauthorized installs should be removed or covered by legitimate entitlements and allocations to restore compliance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
+		]
+	}
+]

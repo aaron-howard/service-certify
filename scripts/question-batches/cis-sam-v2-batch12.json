@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-SAM",
+		"order": 55,
+		"prompt": "The License Workbench shows a positive true-up cost for one publisher. What should the SAM team validate before approving procurement?",
+		"choices": [
+			"Reconciliation position, metric alignment, and whether reclaim could offset the shortfall",
+			"Only the catalog item thumbnail and request category label",
+			"Whether discovery probes ran on weekends for that subnet",
+			"Whether the publisher logo appears on the contract PDF attachment"
+		],
+		"correctIndex": 0,
+		"explanation": "True-up costs should be validated against reconciled position and optimization options such as reclaim before purchasing additional rights.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/license-workbench.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 56,
+		"prompt": "An entitlement import completes with validation warnings on purchased quantity. What should happen before reconciliation is trusted?",
+		"choices": [
+			"Resolve import errors and confirm entitlement fields match contract terms",
+			"Run reconciliation immediately and ignore import warnings",
+			"Delete all entitlements and recreate them from discovery counts",
+			"Disable entitlement imports and track rights in email attachments"
+		],
+		"correctIndex": 0,
+		"explanation": "Entitlement data quality is foundational; import errors must be corrected so reconciliation reflects accurate purchased rights.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/manage-software-entitlements.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 57,
+		"prompt": "A software model reaches end of publisher support and should no longer be requestable. Which lifecycle action is appropriate?",
+		"choices": [
+			"Retire the software model and block new allocations while managing existing installs",
+			"Delete all discovery models mapped to the product without review",
+			"Convert the model to a hardware category to hide it from SAM reports",
+			"Disable all reconciliation jobs globally until the next fiscal year"
+		],
+		"correctIndex": 0,
+		"explanation": "Model retirement governs end-of-life products by preventing new demand while existing installs are managed through retirement workflows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/now-assist-for-software-asset-management-sam/calculated-lifecycles.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 58,
+		"prompt": "Which data elements are required inputs for SAM reconciliation to produce an accurate compliance position? (Choose all that apply.)",
+		"choices": [
+			"Normalized software entitlements with correct license metrics",
+			"Discovered installations mapped to software models",
+			"Active allocations linking rights to users or devices",
+			"Contract-backed purchased quantities aligned to publisher terms"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1, 2, 3],
+		"questionType": "multi",
+		"explanation": "Reconciliation compares entitlements, allocations, and normalized installs using metric rules derived from contractual terms.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 59,
+		"prompt": "A contract amendment increases license quantity mid-term. How should SAM maintain compliance integrity?",
+		"choices": [
+			"Update the entitlement record and document the contract change with effective dates",
+			"Create a duplicate software model for the additional quantity only",
+			"Adjust install counts manually without updating entitlements",
+			"Wait until renewal to reflect the amended quantity in SAM"
+		],
+		"correctIndex": 0,
+		"explanation": "Contract changes must be reflected in entitlement records with traceable effective dates so reconciliation stays aligned with current rights.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/software-entitlement-best-practices.html"
+		]
+	}
+]

@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-SAM",
+		"order": 70,
+		"prompt": "A publisher content pack update changes license metric definitions. How should SAM administrators integrate this with change management?",
+		"choices": [
+			"Open a change request, validate impacts in test, and schedule promotion with rollback planning",
+			"Deploy immediately in production to match vendor release timing without testing",
+			"Skip documentation because publisher packs are vendor-maintained content",
+			"Disable all SAM roles until the update is manually reversed"
+		],
+		"correctIndex": 0,
+		"explanation": "Publisher pack updates can alter compliance calculations and require governed testing before production promotion.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-model-normalization-governance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 71,
+		"prompt": "Procurement and SAM both create entitlement records from purchase data. Which control prevents duplicate rights?",
+		"choices": [
+			"Define integration rules so PO fulfillment creates entitlements once with unique contract references",
+			"Allow each team to import the same PO independently without deduplication",
+			"Disable entitlement creation from procurement entirely",
+			"Store purchased quantities only in catalog variable sets"
+		],
+		"correctIndex": 0,
+		"explanation": "Integrated procurement-to-SAM flows should deduplicate entitlement creation and preserve a single source of purchased rights.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/manage-software-entitlements.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 72,
+		"prompt": "Reconciliation jobs consume significant system resources during business hours. What maintenance approach balances operations and performance?",
+		"choices": [
+			"Schedule reconciliation during off-peak windows with monitoring and alerting on job failures",
+			"Disable scheduled reconciliation and run jobs only after audit notices arrive",
+			"Run full reconciliation on every form save in the SAM application",
+			"Remove reconciliation history after each successful job to save space"
+		],
+		"correctIndex": 0,
+		"explanation": "Scheduled off-peak reconciliation maintains current compliance data while reducing impact on interactive SAM operations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 73,
+		"prompt": "A new catalog item requests software governed by a retired lifecycle state. What should the integrated workflow enforce?",
+		"choices": [
+			"Block or redirect requests because the software model is retired from active lifecycle",
+			"Auto-approve fulfillment without checking lifecycle or entitlements",
+			"Create entitlements on the fly without contract backing",
+			"Map the request to a hardware model to bypass SAM controls"
+		],
+		"correctIndex": 0,
+		"explanation": "Catalog integration should respect software model lifecycle states to prevent provisioning of retired or unsupported products.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/now-assist-for-software-asset-management-sam/calculated-lifecycles.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 74,
+		"prompt": "A compliance governance board reviews remediation backlog monthly. Which report segmentation drives accountable action?",
+		"choices": [
+			"Exposure by publisher, business unit, remediation owner, and aging status",
+			"Total number of CMDB classes with software discovery enabled",
+			"Knowledge article views grouped by portal category",
+			"Mean time to resolve unrelated infrastructure incidents"
+		],
+		"correctIndex": 0,
+		"explanation": "Segmented remediation reporting with ownership and aging helps governance boards prioritize high-impact compliance actions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/validate-reconciliation-results.html"
+		]
+	}
+]

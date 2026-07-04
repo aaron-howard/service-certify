@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-SAM",
+		"order": 20,
+		"prompt": "In SAM, what is the purpose of discovery model mapping for software assets?",
+		"choices": [
+			"Link discovered software evidence to the correct normalized software model for reconciliation",
+			"Convert all discovered software titles into hardware configuration item records automatically",
+			"Assign every installation to the same license metric regardless of publisher requirements",
+			"Remove publisher names from discovered titles before storing them in the database"
+		],
+		"correctIndex": 0,
+		"explanation": "Discovery model mapping bridges raw discovery data to normalized software models, enabling accurate entitlement and compliance calculations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/discovery-model-mapping.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 21,
+		"prompt": "A newly discovered software title is repeatedly unmatched after normalization runs. What should a SAM administrator do first?",
+		"choices": [
+			"Create a mapping rule or model mapping entry so future discoveries normalize to the correct software model",
+			"Delete the discovered software records on a weekly schedule to reduce unmatched counts",
+			"Disable normalization jobs for that publisher until the next contract renewal cycle",
+			"Ignore unmatched titles unless they appear as related items on open incident records"
+		],
+		"correctIndex": 0,
+		"explanation": "Persistent unmatched titles indicate missing mapping logic; administrators should add mappings so installs roll up to the correct licensable product.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/manage-unmatched-discovered-software.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 22,
+		"prompt": "Why is validating publisher and version details important when creating a discovery model mapping?",
+		"choices": [
+			"It confirms the mapped software model represents the correct licensable product variant",
+			"It increases incident SLA accuracy by linking software installs to assignment groups",
+			"It bypasses reconciliation exceptions automatically for all mapped publishers",
+			"It prevents contract renewal records from being created in the procurement module"
+		],
+		"correctIndex": 0,
+		"explanation": "Accurate publisher and version alignment prevents mapping errors that distort entitlement consumption and compliance results.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/validate-software-model-mappings.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 23,
+		"prompt": "What is the main risk of creating overly broad discovery mapping rules in SAM?",
+		"choices": [
+			"Distinct products may be grouped under one software model, causing compliance inaccuracies",
+			"Catalog item approvals may slow down because mapping rules trigger additional workflows",
+			"CMDB relationship types may exceed platform limits when too many rules are active",
+			"Knowledge base categories may become misaligned with software publisher portfolios"
+		],
+		"correctIndex": 0,
+		"explanation": "Broad mapping rules can misclassify products and produce misleading reconciliation outcomes, especially for publishers with complex edition portfolios.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-normalization-rules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 24,
+		"prompt": "Which KPI best reflects improvement in discovery model mapping quality over time?",
+		"choices": [
+			"Decrease in unmatched discovered software and fewer remaps after reconciliation review",
+			"Increase in the number of dashboard widgets created on the SAM homepage",
+			"Total count of users assigned to the SAM administrator group in the instance",
+			"Number of ITSM incidents linked to software titles in the incident table"
+		],
+		"correctIndex": 0,
+		"explanation": "Lower unmatched volume and fewer correction cycles indicate healthier mapping logic and better normalization data quality.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-model-data-quality-kpis.html"
+		]
+	}
+]

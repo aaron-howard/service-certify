@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-SAM",
+		"order": 80,
+		"prompt": "An organization extends SAM by connecting software request workflows to entitlement data. What is the primary compliance benefit?",
+		"choices": [
+			"Provisioning decisions validate available rights before deployment, reducing unlicensed installs",
+			"All publisher audits are permanently eliminated after workflow integration",
+			"License reconciliation becomes optional once catalog integration is enabled",
+			"Every requester receives automatic admin access to entitlement records"
+		],
+		"correctIndex": 0,
+		"explanation": "Request-to-entitlement integration prevents over-deployment by checking rights at intake before software is provisioned.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/manage-software-entitlements.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 81,
+		"prompt": "A publisher audit requests proof of license ownership. Which SAM evidence set is most defensible?",
+		"choices": [
+			"Entitlement records with contract references and reconciliation history showing position calculations",
+			"Unnormalized discovery export sorted alphabetically by install name",
+			"Service catalog item description text without linked entitlements",
+			"List of hardware assets hosting software with no metric context"
+		],
+		"correctIndex": 0,
+		"explanation": "Audit defensibility requires traceable entitlement provenance and documented reconciliation logic for compliance positions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/entitlement-audit-preparation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 82,
+		"prompt": "Which anti-pattern most often inflates software spend when extending SAM optimization?",
+		"choices": [
+			"Inactive allocations remain assigned without reclamation or reuse workflows",
+			"Compliance reports are segmented by publisher and business unit",
+			"Entitlements are updated when contract amendments are signed",
+			"Reconciliation runs on a defined schedule before renewal events"
+		],
+		"correctIndex": 0,
+		"explanation": "Unreclaimed inactive allocations reduce license reuse and drive unnecessary purchases despite available rights.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/license-workbench.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 83,
+		"prompt": "Compliance positions fluctuate sharply after ad hoc edits to reconciliation logic. What is the most likely root cause?",
+		"choices": [
+			"Uncontrolled changes to reconciliation rules and model mappings without governed testing",
+			"Monthly executive review of exception aging with documented owners",
+			"Stable publisher pack versions promoted through change control",
+			"Segmented compliance dashboards reviewed by business unit leaders"
+		],
+		"correctIndex": 0,
+		"explanation": "Unmanaged rule and mapping changes create volatility that undermines trust in SAM compliance outputs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-normalization-rules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 84,
+		"prompt": "Which governance control most strengthens long-term SAM audit readiness when extending the program?",
+		"choices": [
+			"Retain entitlement provenance, approval history, and reconciliation change records over time",
+			"Purge historical reconciliation snapshots every month to reduce table size",
+			"Allow entitlement quantity edits without audit fields or approval tracking",
+			"Maintain compliance calculations exclusively in external spreadsheets"
+		],
+		"correctIndex": 0,
+		"explanation": "Long-term audit readiness depends on preserved evidence of rights, approvals, and how compliance positions were calculated.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/entitlement-audit-preparation.html"
+		]
+	}
+]

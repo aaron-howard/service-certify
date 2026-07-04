@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-SAM",
+		"order": 75,
+		"prompt": "Procurement enters renewal negotiations for a strategic publisher. Which SAM deliverable provides the strongest factual basis?",
+		"choices": [
+			"Reconciled Effective License Position with documented entitlement and install evidence",
+			"List of employee names who requested the software in the past year",
+			"Screenshot of the service catalog homepage without compliance metrics",
+			"Count of discovery errors on a single subnet from last week"
+		],
+		"correctIndex": 0,
+		"explanation": "Renewal leverage comes from a trusted license position built on reconciled entitlements, allocations, and normalized installs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/entitlement-audit-preparation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 76,
+		"prompt": "Month-over-month compliance reports show volatile results for one product family. Which data integrity issue is the most likely cause?",
+		"choices": [
+			"Duplicate software models and inconsistent discovery-to-model mappings for the same publisher title",
+			"Stable normalization content updated through governed change control",
+			"Regular entitlement imports validated against contract terms",
+			"Role-based access limiting entitlement edits to authorized stewards"
+		],
+		"correctIndex": 0,
+		"explanation": "Duplicate models and inconsistent mappings fragment install counts and produce unreliable reconciliation outcomes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-model-data-quality-kpis.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 77,
+		"prompt": "A SAM team receives a new publisher pack version with updated normalization rules. What is the safest extension practice?",
+		"choices": [
+			"Test the update in sub-production, compare reconciliation deltas, and promote through change control",
+			"Apply the pack in production during business hours without impact analysis",
+			"Disable normalization until the pack version matches the previous release",
+			"Delete existing software models before importing the new pack content"
+		],
+		"correctIndex": 0,
+		"explanation": "Publisher pack changes can shift normalization and compliance results and should be validated before governed promotion.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-model-normalization-governance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 78,
+		"prompt": "Which reclamation governance pattern best balances cost savings with business continuity when extending SAM optimization?",
+		"choices": [
+			"Policy-defined inactivity thresholds, owner review, and tracked exceptions for retained installs",
+			"Mass uninstall of all titles without stakeholder notification",
+			"One-time email campaign with no follow-up workflow or exception tracking",
+			"Permanent exemptions for every reclamation candidate without documentation"
+		],
+		"correctIndex": 0,
+		"explanation": "Sustainable reclamation uses defined thresholds, approvals, and exception governance to recover costs without disrupting critical work.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/subscription-entitlements.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 79,
+		"prompt": "Leadership reviews SAM program value each quarter. Which KPI combination best demonstrates extending SAM beyond basic inventory?",
+		"choices": [
+			"Compliance risk reduction, realized savings from optimization, and declining exception aging",
+			"Total count of software models regardless of normalization quality",
+			"Number of users with administrative access to SAM tables",
+			"Volume of discovery probes executed without reconciliation outcomes"
+		],
+		"correctIndex": 0,
+		"explanation": "Program value is shown through improved risk posture, financial outcomes, and disciplined exception management over time.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/license-workbench.html"
+		]
+	}
+]

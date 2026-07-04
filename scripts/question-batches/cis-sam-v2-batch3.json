@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-SAM",
+		"order": 10,
+		"prompt": "When different contract terms apply to the same software model, how should a SAM administrator structure entitlement records?",
+		"choices": [
+			"Create separate entitlement records by metric, term, or restriction so reconciliation applies the correct rules",
+			"Merge all rights into one entitlement and track term differences in the short description field only",
+			"Store contract terms exclusively on procurement requests and omit them from entitlement records",
+			"Convert named-user licenses into hardware asset records to simplify metric tracking"
+		],
+		"correctIndex": 0,
+		"explanation": "Different licensing terms and metrics require separate entitlement records to preserve accurate compliance logic and audit traceability.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/software-entitlement-best-practices.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 11,
+		"prompt": "Before a publisher true-up, a SAM manager must verify the legal measurement basis for license rights. Which entitlement attributes are most critical to confirm first?",
+		"choices": [
+			"License metric and purchased rights quantity aligned to contract terms",
+			"Number of attachments on unrelated software model records in the catalog",
+			"UI policy names configured on the entitlement form layout",
+			"Color theme settings applied to the entitlement list view"
+		],
+		"correctIndex": 0,
+		"explanation": "License metric and purchased rights define how consumption is counted against contractual entitlements, directly driving compliance calculations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/manage-software-entitlements.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 12,
+		"questionType": "multi",
+		"prompt": "Which two platform roles are commonly assigned to SAM team members who need more than read-only access? (Choose two.)",
+		"choices": [
+			"The sam role for day-to-day Software Asset Management operational tasks",
+			"The sam_admin role for full SAM configuration and entitlement administration",
+			"The sam_user role for read-only SAM dashboard and report consumption",
+			"The itil role for incident and change management without SAM module access"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "The sam role supports day-to-day SAM operations while sam_admin provides full administrative control; sam_user is read-only and itil covers ITSM modules.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-roles.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 13,
+		"prompt": "A SAM team is importing entitlements from a spreadsheet for the first time. What happens when an Entitlement Import Error record is corrected and saved?",
+		"choices": [
+			"The entitlement is created and the error status changes to Fixed with fields becoming read-only",
+			"The import file is automatically re-uploaded and all prior entitlements are deleted",
+			"The error record is permanently deleted without creating an entitlement record",
+			"The software model is removed from the catalog until the next content update runs"
+		],
+		"correctIndex": 0,
+		"explanation": "When an import error is resolved, the platform creates the entitlement and marks the error Fixed; related errors using the same publisher part number may also auto-resolve.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/import-software-entitlements.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 14,
+		"prompt": "During entitlement import, a row fails because the Publisher part number field does not match any existing record. What is the recommended remediation?",
+		"choices": [
+			"Create or map the publisher part number to the correct software model before reprocessing the import row",
+			"Delete the import error and ignore all rows referencing that publisher permanently",
+			"Change the license metric to Per Device so the part number validation is bypassed",
+			"Convert the entitlement to a hardware asset record to avoid software model requirements"
+		],
+		"correctIndex": 0,
+		"explanation": "Publisher part numbers link import rows to licensable products; missing part numbers must be created or mapped so entitlements associate with the correct software model.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/entitlement-import-error-fields.html"
+		]
+	}
+]
