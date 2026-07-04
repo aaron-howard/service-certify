@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-RC",
+		"order": 20,
+		"prompt": "An implementer must ensure that only production Windows servers in the CMDB become GRC entities. Which configuration achieves this?",
+		"choices": [
+			"An entity filter on the Windows server class table with conditions restricting results to production environment records",
+			"A scheduled script that copies every cmdb_ci record into the entity table each night without conditions",
+			"A UI policy on the entity form that hides non-production servers from list views for compliance users",
+			"An ACL that denies read access to development servers so they are skipped during entity generation"
+		],
+		"correctIndex": 0,
+		"explanation": "Entity filters combine a source table with filter conditions, so scoping the Windows server class to production records generates exactly the intended entities.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/entity-filters.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 21,
+		"prompt": "What role do entity owners play in the GRC entity framework?",
+		"choices": [
+			"They approve every platform upgrade before GRC plugins can be patched to a new family release",
+			"They are limited to viewing dashboards and cannot receive any assigned GRC work",
+			"They configure the instance-wide scoring methodology used for all risk calculations",
+			"They are accountable for the entity and typically receive attestation and issue work related to its controls and risks"
+		],
+		"correctIndex": 3,
+		"explanation": "The entity owner is the accountable person for an entity; assignment of attestations, issues, and reviews for that entity's controls and risks flows to them by default.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-entities.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 22,
+		"prompt": "A department record used as an entity is deactivated in its source table, and the entity filter no longer matches it. How does the entity framework handle the related entity?",
+		"choices": [
+			"The entity and all of its historical controls, risks, and issues are hard-deleted immediately from the instance",
+			"The entity is flagged as no longer matching so it can be retired while preserving its compliance history",
+			"The entity remains fully active forever because filters are evaluated only once at creation time",
+			"The source record is automatically reactivated by the filter to keep the entity association valid"
+		],
+		"correctIndex": 1,
+		"explanation": "When a source record stops matching, the framework marks the entity for retirement rather than deleting it, preserving the audit trail of past compliance activity.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/entity-filters.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 23,
+		"prompt": "Which statement about associating content with entity types is correct?",
+		"choices": [
+			"Policy statements can only be associated with individual entities one at a time, never at the type level",
+			"Associating a policy statement with an entity type generates controls for the entities in that type",
+			"Entity types accept risk statements but reject policy statements, which attach directly to authority documents",
+			"Content associations require deactivating the entity type and rebuilding it from an XML import"
+		],
+		"correctIndex": 1,
+		"explanation": "Associating policy statements or risk statements at the entity type level cascades to member entities, generating the corresponding controls and risks.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-entities.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 24,
+		"questionType": "multi",
+		"prompt": "Which two examples are commonly modeled as entities in a GRC implementation? (Choose two.)",
+		"choices": [
+			"A business service supporting a regulated process",
+			"A vendor providing outsourced data processing",
+			"A UI theme applied to the platform login page",
+			"A scheduled clone of production down to a sub-production instance"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Business services and vendors are typical entities because risk and compliance obligations attach to them; UI themes and clone schedules are platform administration items.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-entities.html"
+		]
+	}
+]

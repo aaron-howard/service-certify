@@ -1,0 +1,87 @@
+[
+	{
+		"trackCode": "CIS-SM",
+		"order": 85,
+		"prompt": "Procurement asks which ServiceNow licenses are required before expanding ML-powered Service Mapping to a new business unit. What should the engagement lead verify?",
+		"choices": [
+			"Appropriate ITOM Service Mapping entitlements and subscribed capacity for scoped CIs and services",
+			"Only ITSM incident licenses because maps are stored entirely outside CMDB",
+			"Hardware Asset Management licenses for every server CI regardless of mapping scope",
+			"Event Management licenses exclusively, with no Service Mapping subscription"
+		],
+		"correctIndex": 0,
+		"explanation": "Service Mapping engagements require valid ITOM Service Mapping licensing aligned to the CIs and services included in project scope.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-get-started.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 86,
+		"prompt": "Executives want proof that Service Mapping investment improves operations. Which use case most directly connects maps to incident outcomes?",
+		"choices": [
+			"Service map visibility on incidents helps analysts understand blast radius and reduce Mean Time to Resolve",
+			"Maps automatically close all P1 incidents without analyst involvement",
+			"Discovery schedules run hourly solely to increase CMDB record counts",
+			"Event rules suppress every warning so dashboards show zero open alerts"
+		],
+		"correctIndex": 0,
+		"explanation": "Integrating service maps with Incident Management gives responders dependency context that speeds diagnosis and lowers MTTR.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-kpis.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 87,
+		"prompt": "Which KPI pair best demonstrates Service Mapping engagement success for incident operations?",
+		"choices": [
+			"Reduced Mean Time to Resolve on mapped services and fewer repeat dependency-related incidents",
+			"Total number of ECC queue records processed per day across all MID Servers",
+			"Count of custom CI classes created without class manager review",
+			"Volume of rejected ML candidates without any owner feedback captured"
+		],
+		"correctIndex": 0,
+		"explanation": "Operational value appears when mapped services show faster resolution and fewer recurring incidents caused by unknown dependencies.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-kpis.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/validate-service-map-results.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 88,
+		"prompt": "A service desk manager asks how Service Mapping changes daily triage. Which operational use case is the strongest example?",
+		"choices": [
+			"Analysts open the service map from an incident to see upstream and downstream CIs affected by an outage",
+			"Agents manually rebuild CMDB relationships on every ticket before assignment",
+			"Discovery disables all identification rules whenever a P1 incident is opened",
+			"Event Management deletes alerts automatically when a map exists for the CI"
+		],
+		"correctIndex": 0,
+		"explanation": "Incident workflows benefit when responders can view dependency context directly from the service map linked to affected CIs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-kpis.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 89,
+		"prompt": "Before declaring a Service Mapping engagement ready for production cutover, which checklist item is most critical?",
+		"choices": [
+			"Validated maps for in-scope services with owner sign-off, CMDB health acceptance, and operational workflow integration",
+			"Every CI in the CMDB mapped regardless of business priority or ownership",
+			"All ML candidates accepted without architectural review to maximize coverage",
+			"Discovery schedules removed so maps never refresh after go-live"
+		],
+		"correctIndex": 0,
+		"explanation": "Engagement readiness requires validated in-scope maps, stakeholder approval, healthy CMDB data, and integration into operational processes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/validate-service-map-results.html"
+		]
+	}
+]

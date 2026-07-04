@@ -1,0 +1,89 @@
+[
+	{
+		"trackCode": "CIS-SIR",
+		"order": 65,
+		"prompt": "A SOC lead wants repeatable containment steps for common incident categories. Which SIR artifact orchestrates structured response activities?",
+		"choices": [
+			"Security incident playbooks that create and route response tasks automatically",
+			"Discovery schedules that refresh CMDB CI attributes on a timer",
+			"Service catalog bundles for hardware asset procurement requests",
+			"Event Management connector dashboards showing raw alert volume only"
+		],
+		"correctIndex": 0,
+		"explanation": "Playbooks define repeatable response steps and automate task creation so analysts follow consistent procedures under pressure.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-playbook.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/sir-workspace-playbooks.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 66,
+		"prompt": "An analyst opens a response task and needs step-by-step guidance from a published knowledge article. Which SIR feature provides that association?",
+		"choices": [
+			"A runbook linking the task to a knowledge base article that opens during execution",
+			"A discovery pattern designer section for horizontal application tracing",
+			"A CMDB health dashboard KPI for duplicate CI remediation",
+			"A service portal widget theme for employee self-service branding"
+		],
+		"correctIndex": 0,
+		"explanation": "Runbooks associate published knowledge articles with specific response tasks so analysts receive contextual guidance while working.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-runbook.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/setup-assistant-reference.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 67,
+		"questionType": "multi",
+		"prompt": "Which two capabilities differentiate playbooks from runbooks in Security Incident Response? (Choose two.)",
+		"choices": [
+			"Playbooks orchestrate automated task creation and workflow branching",
+			"Runbooks surface knowledge articles linked to specific response tasks",
+			"Playbooks replace the need for any security incident record fields",
+			"Runbooks execute only after incidents reach Closed Complete state"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Playbooks automate orchestrated response steps; runbooks provide task-level knowledge guidance without replacing workflow logic.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-playbook.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-runbook.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 68,
+		"prompt": "Integration teams need to launch third-party containment actions from a security incident. Which module provides orchestration workflow templates for those actions?",
+		"choices": [
+			"Security Incident Response orchestration workflows in SecOps integrations",
+			"CMDB Data Manager workspace for orphaned relationship cleanup",
+			"Service Mapping pattern designer for top-down entry point tracing",
+			"Employee Center onboarding flows for new hire provisioning"
+		],
+		"correctIndex": 0,
+		"explanation": "SecOps orchestration workflows connect Security Incident Response with external security tools for automated response actions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/sec-inc-resp-orchestration-workflows.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/sir-orch-workflow-templates.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 69,
+		"prompt": "Administrators plan to automate phishing triage using Flow Designer. Which documentation topic covers integrating flows with phishing response?",
+		"choices": [
+			"Flow Designer and phishing response integration for automated handling",
+			"Discovery MID Server clustering for subnet reachability planning",
+			"CMDB class hierarchy extensions for custom middleware CI types",
+			"Service catalog variable designer for hardware request approvals"
+		],
+		"correctIndex": 0,
+		"explanation": "Flow Designer integrates with phishing response to automate validation, enrichment, and playbook initiation for reported messages.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/flow-designer-and-phishing-response.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/create-process-automated-phishing.html"
+		]
+	}
+]

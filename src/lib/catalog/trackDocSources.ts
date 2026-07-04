@@ -306,32 +306,91 @@ export const PHASE6_TRACK_DOC_SOURCES: TrackDocSource[] = [
 		officialName: 'Certified Implementation Specialist - Risk and Compliance',
 		publications: ['governance-risk-compliance'],
 		domains: [
-			{ name: 'GRC and IRM fundamentals', weight: '25%', publications: ['governance-risk-compliance'] },
-			{ name: 'Policy and compliance', weight: '25%', publications: ['governance-risk-compliance'] },
-			{ name: 'Risk management', weight: '25%', publications: ['governance-risk-compliance'] },
-			{ name: 'Audit management', weight: '25%', publications: ['governance-risk-compliance'] }
+			{ name: 'GRC Overview', weight: '11.67%', publications: ['governance-risk-compliance'] },
+			{ name: 'Implementation Planning', weight: '5%', publications: ['governance-risk-compliance'] },
+			{ name: 'Entity Framework', weight: '20%', publications: ['governance-risk-compliance'] },
+			{ name: 'Policy and Compliance', weight: '25%', publications: ['governance-risk-compliance'] },
+			{ name: 'Risk and Advanced Risk', weight: '25%', publications: ['governance-risk-compliance'] },
+			{
+				name: 'Common Elements and Extended Capabilities',
+				weight: '8.33%',
+				publications: ['governance-risk-compliance']
+			},
+			{ name: 'Audit and Advanced Audit', weight: '5%', publications: ['governance-risk-compliance'] }
 		]
 	},
 	{
 		trackCode: 'CIS-SIR',
 		officialName: 'Certified Implementation Specialist - Security Incident Response',
-		publications: ['security-management'],
+		publications: ['security-management', 'security-incident-response'],
 		domains: [
-			{ name: 'Security incident lifecycle', weight: '28%', publications: ['security-management'] },
-			{ name: 'Playbooks and orchestration', weight: '24%', publications: ['security-management'] },
-			{ name: 'Major security incidents', weight: '24%', publications: ['security-management'] },
-			{ name: 'Threat intelligence and MITRE', weight: '24%', publications: ['security-management'] }
+			{
+				name: 'SIR Overview and Data Visualization',
+				weight: '15%',
+				publications: ['security-incident-response', 'security-management']
+			},
+			{
+				name: 'Security Incident Creation and Threat Intelligence',
+				weight: '14%',
+				publications: ['security-incident-response']
+			},
+			{
+				name: 'Security Incident and Threat Intelligence Integrations',
+				weight: '14%',
+				publications: ['security-incident-response']
+			},
+			{
+				name: 'Security Incident Response Management',
+				weight: '15%',
+				publications: ['security-incident-response']
+			},
+			{
+				name: 'Risk Calculations and Post Incident Response',
+				weight: '12%',
+				publications: ['security-incident-response']
+			},
+			{
+				name: 'Automation and Standard Processes',
+				weight: '30%',
+				publications: ['security-incident-response']
+			}
 		]
 	},
 	{
 		trackCode: 'CIS-SM',
 		officialName: 'Certified Implementation Specialist - Service Mapping',
-		publications: ['it-operations-management'],
+		publications: ['it-operations-management', 'service-mapping', 'discovery'],
 		domains: [
-			{ name: 'Application services', weight: '28%', publications: ['it-operations-management'] },
-			{ name: 'Mapping techniques', weight: '26%', publications: ['it-operations-management'] },
-			{ name: 'Patterns and discovery integration', weight: '26%', publications: ['it-operations-management'] },
-			{ name: 'Operations and maintenance', weight: '20%', publications: ['it-operations-management'] }
+			{
+				name: 'Service Mapping Pattern Design',
+				weight: '30%',
+				publications: ['service-mapping', 'it-operations-management']
+			},
+			{
+				name: 'Service Mapping Configuration',
+				weight: '20%',
+				publications: ['service-mapping']
+			},
+			{
+				name: 'Discovery Configuration',
+				weight: '15%',
+				publications: ['discovery', 'it-operations-management']
+			},
+			{
+				name: 'Machine Learning',
+				weight: '10%',
+				publications: ['service-mapping']
+			},
+			{
+				name: 'Configuration Management Database',
+				weight: '15%',
+				publications: ['cmdb', 'it-operations-management']
+			},
+			{
+				name: 'Service Mapping Engagement Readiness',
+				weight: '10%',
+				publications: ['service-mapping']
+			}
 		]
 	}
 ];

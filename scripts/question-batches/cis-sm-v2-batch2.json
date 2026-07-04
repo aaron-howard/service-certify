@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-SM",
+		"order": 5,
+		"prompt": "Within Pattern Designer, how do ordered steps inside a section support Service Mapping logic?",
+		"choices": [
+			"They sequence data collection, parsing, and connection actions in a controlled execution order",
+			"They assign incident priority based on the number of mapped CIs in the service group and business criticality tier",
+			"They replace CMDB identification rules with manual relationship imports from spreadsheets",
+			"They convert business service records into technical service endpoints automatically"
+		],
+		"correctIndex": 0,
+		"explanation": "Sections group related logic, and ordered steps within each section execute sequentially to collect, transform, and connect dependency data.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-patterns-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 6,
+		"prompt": "An implementer adds a temporary variable in Pattern Designer. What is the typical use of that variable?",
+		"choices": [
+			"Store parsed values or intermediate results for use in later steps within the same pattern run",
+			"Persist user session tokens across unrelated horizontal discovery schedules indefinitely",
+			"Override CMDB reconciliation rules for every CI class in the discovery scope",
+			"Replace Discovery credentials with encrypted values stored in a system property"
+		],
+		"correctIndex": 0,
+		"explanation": "Temporary variables hold intermediate data—such as parsed strings or matched groups—so subsequent steps can reference results from earlier operations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 7,
+		"prompt": "What capability does the Pattern Designer command line console provide during pattern development?",
+		"choices": [
+			"Bulk import of service map schedules from external monitoring tools",
+			"Direct execution and testing of pattern commands against a selected target CI",
+			"Automatic generation of business service ownership records from LDAP groups",
+			"One-click deployment of tag-based mapping rules to cloud provider accounts"
+		],
+		"correctIndex": 1,
+		"explanation": "The command line console lets implementers run individual pattern commands interactively to validate syntax and output before embedding them in steps.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 8,
+		"prompt": "A pattern step uses a Match operation. What does this operation accomplish?",
+		"choices": [
+			"Compares collected text against a defined pattern to determine whether conditions are satisfied",
+			"Creates a CMDB relationship between two CIs without running any probe on the MID Server",
+			"Schedules the next service map run based on the current map completion timestamp",
+			"Encrypts credential aliases before they are sent to the target host for authentication"
+		],
+		"correctIndex": 0,
+		"explanation": "Match operations evaluate input—often command output or file content—against a pattern expression to drive conditional pattern flow.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-patterns-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 9,
+		"prompt": "When should a Parse Variable operation be used in a Service Mapping pattern step?",
+		"choices": [
+			"When the step must extract structured values from text already stored in a pattern variable",
+			"When the step must delete stale CI relationships before the next horizontal discovery cycle across all subnets",
+			"When the step must assign a default business service owner from the assignment group table",
+			"When the step must disable SNMP traps on the target device during maintenance windows"
+		],
+		"correctIndex": 0,
+		"explanation": "Parse Variable operations pull specific substrings or tokenized values from an existing variable for use in identification or connection logic.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
+		]
+	}
+]

@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-RC",
+		"order": 35,
+		"prompt": "What is the default lifecycle of a policy record in Policy and Compliance Management?",
+		"choices": [
+			"New, In Review, Follow Up, Closed Complete, mirroring the assessment instance state model exactly",
+			"Draft, Review, Published, and Retired, with approvals moving the policy toward the published state",
+			"Open, Work in Progress, Pending Vendor, Resolved, matching the incident lifecycle it extends",
+			"Registered, Scored, Treated, Accepted, following the standard risk treatment progression"
+		],
+		"correctIndex": 1,
+		"explanation": "Policies move from draft through review into a published state, and are retired when no longer applicable; approvals gate the transition to published.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policies.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 36,
+		"prompt": "A control fails its attestation because the owner reports the safeguard is not operating. What does Policy and Compliance Management create to track remediation?",
+		"choices": [
+			"An issue record associated with the control, assigned for remediation or acceptance",
+			"A change request that freezes the entity until the compliance manager approves reopening",
+			"A knowledge article documenting the failure for future audit reference purposes",
+			"A new authority document capturing the internal deviation from the standard"
+		],
+		"correctIndex": 0,
+		"explanation": "Failed attestations and non-compliant results generate issues linked to the control, driving remediation, exception, or acceptance workflows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-issues.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 37,
+		"prompt": "Which supporting process allows a control owner to formally request temporary relief from complying with a policy statement?",
+		"choices": [
+			"The policy exception process, where a justified request is reviewed and approved for a defined period",
+			"The demand management process, which prioritizes the request against other project intake items",
+			"The problem management process, which documents the known error until a fix is deployed",
+			"The HR case process, which routes the request to employee relations for confidential handling"
+		],
+		"correctIndex": 0,
+		"explanation": "Policy exceptions capture justified, time-bound deviations from policy requirements and route them through review and approval before relief is granted.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-exceptions.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 38,
+		"prompt": "How does a control record reach the Monitor state in its lifecycle?",
+		"choices": [
+			"It is attested or activated after review, moving from draft through approval into active monitoring",
+			"It transitions automatically the moment its policy statement is created, with no intermediate states",
+			"It requires an external auditor to sign the record using a hardware security token",
+			"It moves to Monitor only after every sibling control in the entity type has been retired"
+		],
+		"correctIndex": 0,
+		"explanation": "Controls progress from draft through review and attestation or activation; once approved as operating, they sit in the Monitor state where results and indicators track their health.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 39,
+		"prompt": "A compliance team wants failed indicator results to automatically flag the related control as non-compliant. Which Policy and Compliance capability provides this behavior?",
+		"choices": [
+			"Indicators linked to controls, where failing results update control status and can raise issues",
+			"Interactive filters on the compliance dashboard that visually highlight failed widgets in red",
+			"Record watchers that push mobile notifications whenever a metric definition changes anywhere",
+			"An import set transform map that rewrites the control state during nightly data loads"
+		],
+		"correctIndex": 0,
+		"explanation": "Indicators attached to controls collect evidence on a schedule; failing results drive the control's compliance status and can generate issues for follow-up.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/indicators.html"
+		]
+	}
+]

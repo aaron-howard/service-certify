@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-RC",
+		"order": 0,
+		"questionType": "multi",
+		"prompt": "Which two applications are scoped applications delivered as part of the ServiceNow GRC suite? (Choose two.)",
+		"choices": [
+			"GRC: Profiles",
+			"GRC: Risk Management",
+			"GRC: Incident Management",
+			"GRC: Knowledge Management"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "GRC: Profiles and GRC: Risk Management are scoped applications within the GRC product suite; incident and knowledge management are core platform applications, not GRC scopes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 1,
+		"prompt": "An organization tracks regulatory obligations in spreadsheets and wants continuous visibility into its compliance posture. Which ServiceNow GRC capability most directly addresses this need?",
+		"choices": [
+			"Manual quarterly export of control evidence into shared network drives for later review by external auditors",
+			"Indicators that automatically collect evidence from platform data and update control status",
+			"A standalone reporting database that copies compliance records nightly to an external warehouse",
+			"Email reminders sent to process owners asking them to update the spreadsheets on time"
+		],
+		"correctIndex": 1,
+		"explanation": "Indicators run automated or manual checks against live platform data, giving ongoing visibility into control health instead of point-in-time spreadsheet snapshots.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/indicators.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 2,
+		"prompt": "In the GRC compliance architecture, how do citations relate to authority documents?",
+		"choices": [
+			"Citations are the individual requirements broken out from an authority document",
+			"Citations are approval records created each time an authority document is updated by the legal team",
+			"Citations replace authority documents once the related policy statements have been published",
+			"Citations are audit findings raised against an authority document during an engagement"
+		],
+		"correctIndex": 0,
+		"explanation": "An authority document such as a regulation or standard is decomposed into citations, each representing a discrete requirement that policy statements can address.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/authority-documents.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 3,
+		"prompt": "In GRC terminology, what does an entity represent?",
+		"choices": [
+			"A scheduled job that refreshes compliance dashboards for executives every morning",
+			"A single question presented to a control owner during an attestation",
+			"Anything an organization manages for risk and compliance, such as a department, business service, or vendor",
+			"A read-only snapshot of the entire CMDB taken automatically at the start of each audit period"
+		],
+		"correctIndex": 2,
+		"explanation": "Entities are the organizational objects that risk and compliance activities are performed against, including departments, services, processes, and vendors.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-entities.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 4,
+		"prompt": "Which application must be installed and active before Policy and Compliance Management or Risk Management can be used?",
+		"choices": [
+			"Performance Analytics Premium, which supplies the scoring engine for all GRC records",
+			"GRC: Profiles (sn_grc), which supplies the shared entity and common GRC infrastructure",
+			"Audit Management, which provisions the engagement tables that the other applications extend for findings",
+			"Vendor Risk Management, which owns the assessment framework used by compliance teams"
+		],
+		"correctIndex": 1,
+		"explanation": "GRC: Profiles is the foundational scoped application that provides entities and shared GRC components required by the other GRC applications.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-overview.html"
+		]
+	}
+]

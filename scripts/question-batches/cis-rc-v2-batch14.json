@@ -1,0 +1,87 @@
+[
+	{
+		"trackCode": "CIS-RC",
+		"order": 65,
+		"prompt": "The CRO wants early warning when key risk indicators drift outside tolerance. Which advanced risk capability supports that monitoring?",
+		"choices": [
+			"Configured key risk indicators with thresholds tied to risk statements",
+			"Manual quarterly spreadsheet reviews exported from the instance",
+			"Incident priority rules applied to every open risk record",
+			"Catalog approval workflows for standard change templates"
+		],
+		"correctIndex": 0,
+		"explanation": "Key risk indicators provide measurable signals linked to risks so teams detect trending exposure before assessments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-governance.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-register.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 66,
+		"prompt": "An implementation team enables advanced quantitative scoring for cyber risks. Which configuration change is most appropriate?",
+		"choices": [
+			"Calibrate likelihood and impact scales with documented scoring model versions",
+			"Remove all qualitative descriptors from risk statements permanently",
+			"Disable business entity linkage to simplify calculations",
+			"Convert audit tasks into risk statements automatically"
+		],
+		"correctIndex": 0,
+		"explanation": "Advanced scoring relies on calibrated, versioned models so quantitative results remain explainable and comparable.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-data-governance.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-governance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 67,
+		"prompt": "A failed access-control test exposes a gap on a critical risk. What is the best way to track remediation in the risk program?",
+		"choices": [
+			"Create a risk issue linked to the risk statement with owners and due dates",
+			"Delete the failed control test to reset compliance metrics",
+			"Close the risk record and reopen it during the next campaign",
+			"Archive the citation so the control no longer appears in scope"
+		],
+		"correctIndex": 0,
+		"explanation": "Risk issues provide workflow accountability for remediating control gaps that affect assessed exposure.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-response-and-treatment.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/remediate-control-failures.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 68,
+		"prompt": "The same operational failure creates similar risk records in finance and HR. Which register design preserves enterprise visibility?",
+		"choices": [
+			"Parent risk with related child records assigned to local owners",
+			"Separate unrelated risks with identical titles in each department",
+			"Single risk record with no ownership fields populated",
+			"Convert all departmental risks into audit observations"
+		],
+		"correctIndex": 0,
+		"explanation": "Parent-child risk structures roll up enterprise exposure while preserving local accountability for treatment.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/manage-risk-records.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-register.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 69,
+		"prompt": "Executives request a heat map of top residual risks by business service after an assessment cycle. Which workspace output satisfies that request?",
+		"choices": [
+			"Risk heat map and trend views highlighting residual scores and overdue treatments",
+			"Raw export of every risk field without filters or grouping",
+			"List of inactive assignment groups sorted alphabetically",
+			"Count of UI policies modified in the past week"
+		],
+		"correctIndex": 0,
+		"explanation": "Heat maps and trend dashboards translate assessment results into prioritized oversight views for leadership.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-impl-overview.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/compliance-dashboards.html"
+		]
+	}
+]

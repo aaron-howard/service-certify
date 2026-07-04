@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-SM",
+		"order": 30,
+		"prompt": "Which CI types are commonly configured as Service Mapping entry points?",
+		"choices": [
+			"Web servers, load balancers, application servers, and other CIs that front a service topology",
+			"Retired hardware assets and disposed consumable records in the asset management module",
+			"Knowledge article records and catalog item variables in the self-service portal",
+			"Change task templates and standard change models in the change application"
+		],
+		"correctIndex": 0,
+		"explanation": "Entry points are typically infrastructure or application CIs that represent accessible starting nodes for dependency discovery.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/entry-points-and-service-maps.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 31,
+		"prompt": "Where must Discovery credentials be assigned so Service Mapping can authenticate during a map run?",
+		"choices": [
+			"To the appropriate CI classes or credential aliases referenced by mapping and pattern probes",
+			"Only to the admin user record that last modified the service map schedule",
+			"Exclusively on the instance server with no MID Server credential store involvement",
+			"On business service records as encrypted fields visible to all itil users"
+		],
+		"correctIndex": 0,
+		"explanation": "Service Mapping uses Discovery credentials configured for CI classes or aliases so MID Server probes can authenticate to mapped hosts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/create-a-service-map.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 32,
+		"prompt": "A service map record in Service Mapping ties together which components?",
+		"choices": [
+			"An application service, its entry points, mapped CIs, and the discovery schedule that refreshes topology",
+			"A business service financial plan, procurement contract, and vendor performance scorecard",
+			"An incident template, on-call roster, and event management connector subscription",
+			"A change model, CAB agenda, and release train milestone calendar"
+		],
+		"correctIndex": 0,
+		"explanation": "Service map records associate application services with entry points, discovered dependencies, and the schedule governing map updates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 33,
+		"prompt": "Service map schedules control what behavior during ongoing operations?",
+		"choices": [
+			"When Service Mapping re-executes discovery to refresh CI relationships and dependency topology",
+			"When incident records auto-resolve after the caller confirms service restoration",
+			"When hardware assets transition from In Stock to In Use without a transfer order",
+			"When event rules suppress alerts during approved maintenance windows"
+		],
+		"correctIndex": 0,
+		"explanation": "Schedules define the cadence at which service maps rerun mapping logic to keep dependency views current as infrastructure changes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 34,
+		"questionType": "multi",
+		"prompt": "Which two elements are typically associated when defining a service group in Service Mapping? (Choose two.)",
+		"choices": [
+			"Related application services or technical services grouped for operational visibility",
+			"Shared mapping schedules or policies applied to the grouped services across all mapped entry points",
+			"Software publisher part numbers used during entitlement reconciliation",
+			"Incident problem task templates assigned to the service desk tier-one queue"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Service groups organize related services and can share mapping configuration such as schedules and governance policies for consistent operations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html"
+		]
+	}
+]

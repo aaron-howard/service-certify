@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-SIR",
+		"order": 40,
+		"prompt": "Incidents tagged as ransomware should route immediately to the Tier 2 SOC team. Which configuration enforces this?",
+		"choices": [
+			"Security incident assignment rules keyed on security tags and priority",
+			"Discovery schedules that probe ransomware-affected subnets every hour",
+			"Catalog approval workflows for employee mobile device enrollment requests",
+			"Project demand scoring thresholds for unrelated strategic portfolio themes"
+		],
+		"correctIndex": 0,
+		"explanation": "Assignment rules use attributes such as security tags and priority to route incidents to the appropriate response groups.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/assign-security-incident-roles.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 41,
+		"prompt": "A security architect needs consistent classification labels across incidents and playbooks. Which SIR artifact should be standardized?",
+		"choices": [
+			"Security tags with governed values used by rules, dashboards, and automation",
+			"Discovery identification sections for mapping printer hardware models",
+			"Catalog variable names on laptop provisioning request line items",
+			"Project milestone codes on unrelated portfolio investment work plans"
+		],
+		"correctIndex": 0,
+		"explanation": "Governed security tags provide consistent classification that drives assignment, reporting, and automated response logic.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-tags.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 42,
+		"prompt": "What is the default security incident process definition provided with Security Incident Response?",
+		"choices": [
+			"ITIL incident management workflow copied from the ITSM foundation application",
+			"NIST Stateful process definition aligned to detect-triage-respond phases",
+			"Standard change workflow for normal and emergency production changes",
+			"Problem management workflow focused on permanent root cause elimination"
+		],
+		"correctIndex": 1,
+		"explanation": "SIR ships with the NIST Stateful process definition as the default lifecycle model for security incidents.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-process-definitions.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 43,
+		"questionType": "multi",
+		"prompt": "Which two security incident task types support structured investigation and remediation work in SIR? (Choose two.)",
+		"choices": [
+			"Investigation tasks for evidence collection and analysis activities",
+			"Remediation tasks for containment and eradication actions on affected assets",
+			"Catalog fulfillment tasks for employee laptop shipping and imaging",
+			"Discovery error tasks for MID Server subnet probe failure logging"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "SIR uses investigation tasks for analytical work and remediation tasks for active response actions on affected systems.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-task-types.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 44,
+		"prompt": "A lead analyst reassigns a critical incident and adds containment tasks from the workspace. Which management capability is in use?",
+		"choices": [
+			"SIR Workspace incident management with task creation and assignment controls",
+			"Service Catalog manager publishing new employee onboarding request items",
+			"Discovery status board monitoring horizontal scan completion percentages",
+			"Project workspace demand conversion for portfolio investment approvals"
+		],
+		"correctIndex": 0,
+		"explanation": "Analysts manage incidents directly in the SIR Workspace by updating ownership and creating response tasks during active investigations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/respond-to-a-security-incident.html"
+		]
+	}
+]

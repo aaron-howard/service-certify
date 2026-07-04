@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-SM",
+		"order": 35,
+		"prompt": "In Service Mapping, a technical service record represents what concept?",
+		"choices": [
+			"A logical service layer—such as a database tier or messaging endpoint—supporting an application service map",
+			"A procurement contract line item tied to a software publisher renewal cycle",
+			"A service desk queue used exclusively for password reset requests",
+			"A discovery error record created when horizontal classification fails"
+		],
+		"correctIndex": 0,
+		"explanation": "Technical services model infrastructure or middleware layers that application services depend on within the mapped topology.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/application-services.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 36,
+		"prompt": "The Service Mapping implementation process flow typically begins with which activity?",
+		"choices": [
+			"Planning scope, validating CMDB readiness, and identifying candidate application services with owners",
+			"Disabling all horizontal discovery schedules until every map reaches one hundred percent completeness across the estate",
+			"Importing event management connector templates before any entry points are defined",
+			"Retiring all generic application CIs to force pattern reassignment globally"
+		],
+		"correctIndex": 0,
+		"explanation": "Successful Service Mapping engagements start with readiness assessment, scoped application service selection, and stakeholder alignment before configuration.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 37,
+		"questionType": "multi",
+		"prompt": "Which two configuration steps should be completed before running a full service map against production entry points? (Choose two.)",
+		"choices": [
+			"Assign valid Discovery credentials to the CI classes probed during mapping",
+			"Define and validate entry points with application owners for the target service",
+			"Disable CMDB identification and reconciliation rules across all CI classes",
+			"Convert all mapped CIs to manual records with no discovery updates permitted"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Production mapping requires working credentials and validated entry points so discovery can authenticate and start from accurate topology anchors.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/create-a-service-map.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 38,
+		"prompt": "Tag-based service mapping associates application services with infrastructure using what mechanism?",
+		"choices": [
+			"Cloud or CMDB tags that match defined rules linking tagged resources to application service records",
+			"SNMP trap OIDs configured on network devices to raise Event Management alerts",
+			"Manual CSV imports of CI relationships uploaded through the service catalog",
+			"Change task approvals that auto-create business services from CAB decisions"
+		],
+		"correctIndex": 0,
+		"explanation": "Tag-based mapping uses standardized tag keys and values on cloud or CMDB CIs to associate resources with application services automatically.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/tag-based-service-mapping.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 39,
+		"prompt": "Cloud tag governance for Service Mapping ensures what outcome?",
+		"choices": [
+			"Consistent tag naming and ownership so tag-based mapping rules resolve to the correct application services",
+			"Automatic retirement of every untagged cloud resource without owner review",
+			"Elimination of MID Server probes for all hybrid cloud workloads",
+			"Conversion of business services into hardware asset records for financial tracking"
+		],
+		"correctIndex": 0,
+		"explanation": "Tag governance establishes standards and accountability so mapping rules reliably associate cloud resources with intended application services.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/cloud-tag-governance.html"
+		]
+	}
+]

@@ -1,0 +1,89 @@
+[
+	{
+		"trackCode": "CIS-SM",
+		"order": 75,
+		"prompt": "A cloud import and Discovery both populate serial numbers on VM CIs. Which configuration ensures Discovery wins for the serial attribute?",
+		"choices": [
+			"Set higher datasource precedence for Discovery in the reconciliation rule",
+			"Disable the Identification phase so only Exploration updates attributes",
+			"Assign the import set to the only MID Server cluster in production",
+			"Create a new event rule that clears serial numbers on every alert"
+		],
+		"correctIndex": 0,
+		"explanation": "Reconciliation datasource precedence determines which source may update specific attributes after identification matches a CI.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_ReconciliationRules.html",
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/identification-and-reconciliation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 76,
+		"prompt": "Service Mapping needs a custom cmdb_ci_load_balancer class with unique identification keys. Which CMDB utility supports that design?",
+		"choices": [
+			"CI Class Manager to define the class, attributes, and identification entries",
+			"Discovery schedule editor to increase probe concurrency for VIP ranges",
+			"Alert management rule to bind monitoring events to load balancer CIs",
+			"Service Portal widget to display map thumbnails on incident forms"
+		],
+		"correctIndex": 0,
+		"explanation": "CI Class Manager is the supported interface for extending CMDB classes and aligning identification behavior with mapping requirements.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/vancouver/cmdb/concept/cmdb-class-hierarchy.html",
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-data-manager.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 77,
+		"prompt": "CMDB Health shows many stale relationships blocking accurate impact analysis. Which remediation path is most appropriate?",
+		"choices": [
+			"Use CMDB Health and Data Manager tasks to retire stale CIs and fix relationships",
+			"Delete all cmdb_rel_ci records globally and rebuild maps from scratch",
+			"Turn off Discovery until every business service has an assigned owner",
+			"Accept all ML candidates without owner review to overwrite stale links"
+		],
+		"correctIndex": 0,
+		"explanation": "CMDB Health and Data Manager provide governed remediation workflows for stale CIs and relationships that distort service maps.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-health-dashboard.html",
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-data-manager.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 78,
+		"questionType": "multi",
+		"prompt": "Which two IRE components work together to prevent duplicate CIs from multiple feeds? (Choose two.)",
+		"choices": [
+			"Identification rules that match incoming records to existing CIs",
+			"Reconciliation rules that apply datasource precedence after a match",
+			"Event rules that create alerts from monitoring tool payloads",
+			"Discovery clusters that assign MID Server failover groups"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Identification finds or creates the CI match while reconciliation governs attribute updates, together reducing duplicate and conflicting records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_IdentificationAndReconciliationEngine.html",
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/identification-and-reconciliation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 79,
+		"prompt": "Mapped services still show orphan middleware CIs with no upstream application dependency. Which CMDB tool helps locate and remediate those orphans?",
+		"choices": [
+			"CMDB Data Manager views and tasks focused on orphaned or stale CIs",
+			"ECC Queue filter showing probe input backlog by MID Server",
+			"Event Management maintenance window calendar for alert suppression",
+			"Discovery pattern version history for horizontal classification steps"
+		],
+		"correctIndex": 0,
+		"explanation": "CMDB Data Manager helps teams find orphaned CIs and execute cleanup so service maps reflect accurate dependency paths.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-data-manager.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
+		]
+	}
+]

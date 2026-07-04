@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-SM",
+		"order": 15,
+		"prompt": "During pattern execution, what does a Pattern Identification Section evaluate before connection logic runs?",
+		"choices": [
+			"Whether discovered attributes on the CI satisfy the pattern matching criteria for that application type",
+			"Whether the business service owner approved the latest change request for the application",
+			"Whether the CMDB health dashboard score exceeds the corporate compliance threshold",
+			"Whether the event management maintenance window is active for the mapped service group"
+		],
+		"correctIndex": 0,
+		"explanation": "Identification sections gate pattern execution by testing process names, ports, files, or other attributes against defined match conditions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/pattern-based-discovery.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 16,
+		"prompt": "Connection sections in a Service Mapping pattern define what behavior?",
+		"choices": [
+			"How the pattern discovers and maps relationships to upstream or downstream dependent CIs",
+			"How incident records auto-close after the configured glide.ui.autoclose.time interval",
+			"How software models are normalized during horizontal discovery classification",
+			"How hardware asset depreciation schedules sync from procurement invoice data"
+		],
+		"correctIndex": 0,
+		"explanation": "Connection sections contain steps that probe remote hosts, parse responses, and create CMDB relationships representing service dependencies.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/pattern-based-discovery.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 17,
+		"prompt": "A pattern matches identification criteria but produces no downstream CIs on the service map. What should be reviewed first?",
+		"choices": [
+			"The Connection Section steps, variables, and credentials used to reach dependent components",
+			"The business service financial rollup fields on the cmdb_ci_service record",
+			"The global incident assignment group default for the mapped application tier",
+			"The event rule correlation policy tied to the monitoring connector template"
+		],
+		"correctIndex": 0,
+		"explanation": "When identification succeeds but dependencies are missing, connection logic, parsing, or credential access to downstream targets is the most common root cause.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-pattern-best-practices.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 18,
+		"prompt": "How does Service Mapping associate a running process on a host with an application CI in the CMDB?",
+		"choices": [
+			"Pattern identification logic matches process attributes and creates or links the appropriate application CI",
+			"Every running process is manually classified by the service desk before mapping can begin",
+			"Business service records inherit process names directly from Windows event logs",
+			"Discovery schedules copy process lists into incident work notes without creating CIs"
+		],
+		"correctIndex": 0,
+		"explanation": "Service Mapping patterns identify processes through conditional logic and then create or relate application CIs as part of top-down mapping.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/pattern-based-discovery.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 19,
+		"prompt": "When extending an out-of-box Service Mapping pattern, which practice best preserves upgrade compatibility?",
+		"choices": [
+			"Copy the pattern to a custom version and limit changes to additive sections rather than editing base vendor steps",
+			"Delete all vendor identification sections and rebuild logic from scratch in the production instance",
+			"Disable pattern versioning so ServiceNow content updates overwrite local customizations silently",
+			"Store all pattern logic in a single monolithic step to reduce section count"
+		],
+		"correctIndex": 0,
+		"explanation": "Custom pattern copies with additive extensions allow vendor updates to merge while preserving customer-specific identification or connection logic.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/manage-discovery-pattern-versions.html"
+		]
+	}
+]

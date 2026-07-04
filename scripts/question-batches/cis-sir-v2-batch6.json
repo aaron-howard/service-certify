@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-SIR",
+		"order": 25,
+		"prompt": "An analyst must manually escalate a confirmed data breach to major incident status. Which action initiates MSIM workflows?",
+		"choices": [
+			"Promote the security incident to major status and launch major incident procedures",
+			"Close the security incident and recreate it as a standard IT incident record",
+			"Convert the record to a change request awaiting emergency CAB approval",
+			"Delete child tasks and reopen the incident under a new assignment group only"
+		],
+		"correctIndex": 0,
+		"explanation": "Promoting an incident to major status triggers Major Security Incident Management procedures and associated collaboration workflows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/manage-major-security-incidents.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 26,
+		"prompt": "Where are pre-built third-party integrations for Security Incident Response configured on the instance?",
+		"choices": [
+			"Integration Configurations module in Security Operations",
+			"MID Server cluster properties under System Definition",
+			"Service Catalog Designer under IT Service Management",
+			"CMDB Data Manager under Configuration Management"
+		],
+		"correctIndex": 0,
+		"explanation": "The Integration Configurations module lists and configures pre-built SIR integrations with external security tools.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integration-configurations.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 27,
+		"prompt": "When connecting a SIEM to Security Incident Response, what does a typical inbound integration action accomplish?",
+		"choices": [
+			"Creates or updates security incidents from normalized SIEM alert payloads",
+			"Replaces the CMDB with SIEM asset inventory as the sole source of truth",
+			"Disables all analyst ACLs so every user can edit security incidents",
+			"Converts vulnerability groups into catalog items for employee checkout"
+		],
+		"correctIndex": 0,
+		"explanation": "Inbound SIEM integration actions map alert data to security incident fields for automated creation and enrichment.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integrate-security-tools.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 28,
+		"questionType": "multi",
+		"prompt": "Which two integration categories are commonly configured in SIR Integration Configurations? (Choose two.)",
+		"choices": [
+			"SIEM and security analytics platforms that send correlated alerts",
+			"Endpoint detection and response tools that export detection events",
+			"Payroll systems that calculate employee overtime accrual balances",
+			"Facilities management tools that track HVAC maintenance schedules"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "SIR pre-built integrations focus on security tools such as SIEM and EDR platforms that feed incidents and observables into the platform.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integration-configurations.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 29,
+		"prompt": "A security team wants phishing reports submitted through email to create SIR records automatically. Which integration pattern applies?",
+		"choices": [
+			"Email integration with inbound actions that parse messages into security incidents",
+			"Discovery pattern extensions that probe mailbox servers for open ports",
+			"Catalog record producers that fulfill laptop requests from email templates",
+			"Change management inbound actions that open normal changes from messages"
+		],
+		"correctIndex": 0,
+		"explanation": "Email integrations use inbound actions to transform reported phishing messages into triage-ready security incidents.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integrate-security-tools.html"
+		]
+	}
+]
