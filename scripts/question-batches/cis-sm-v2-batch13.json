@@ -1,0 +1,89 @@
+[
+	{
+		"trackCode": "CIS-SM",
+		"order": 60,
+		"prompt": "Which workspace is designed for reviewing machine learning service candidates and managing map onboarding tasks in one place?",
+		"choices": [
+			"Service Mapping Workspace with candidate queues and validation actions",
+			"CMDB Data Manager workspace focused on orphaned relationship cleanup",
+			"Event Management alert workspace for connector troubleshooting only",
+			"Discovery Status dashboard limited to ECC queue throughput metrics"
+		],
+		"correctIndex": 0,
+		"explanation": "Service Mapping Workspace centralizes candidate review, map tasks, and onboarding progress for ML-assisted mapping workflows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-get-started.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 61,
+		"prompt": "A mapper sees a high-confidence service candidate that conflicts with the documented architecture diagram. What is the recommended next step?",
+		"choices": [
+			"Accept every candidate automatically to maximize map coverage quickly",
+			"Validate the candidate with the service owner before accepting or rejecting it",
+			"Delete the underlying CI records so the candidate cannot reappear",
+			"Disable machine learning mapping globally until the next major release"
+		],
+		"correctIndex": 1,
+		"explanation": "ML candidates accelerate onboarding but require architectural and ownership validation before they influence production service maps.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/validate-service-map-results.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 62,
+		"prompt": "When should a team choose ML-powered mapping over manual top-down entry point design for a new application?",
+		"choices": [
+			"When no discovery data exists and all CIs are created manually each week",
+			"When traffic and discovery signals exist but documented entry points are incomplete",
+			"When the goal is to disable CMDB identification rules for faster imports",
+			"When every dependency must be drawn without any automated suggestions"
+		],
+		"correctIndex": 1,
+		"explanation": "ML mapping is most valuable when technical signals are available but formal entry points or architecture documentation are incomplete.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/getting-started-service-mapping.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 63,
+		"questionType": "multi",
+		"prompt": "Which two inputs most improve machine learning service mapping accuracy? (Choose two.)",
+		"choices": [
+			"High-quality CMDB identifiers and stable CI relationships",
+			"Validated network traffic and discovery coverage for mapped subnets",
+			"Randomized hostname prefixes that change after every deployment",
+			"Disabling reconciliation so every scan creates new CI records"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "ML mapping depends on trustworthy CMDB identity plus reliable discovery and traffic evidence to propose meaningful service candidates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html",
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/identification-and-reconciliation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 64,
+		"prompt": "Which governance metric best tracks whether ML service candidate review is improving map quality?",
+		"choices": [
+			"Total ECC queue entries processed per hour regardless of outcomes",
+			"Ratio of accepted candidates that remain accurate after owner validation cycles",
+			"Count of custom CI classes created without class manager approval",
+			"Number of discovery schedules running concurrently across all MID Servers"
+		],
+		"correctIndex": 1,
+		"explanation": "Tracking accepted candidates that stay accurate after validation shows ML suggestions are contributing durable topology rather than noise.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-kpis.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html"
+		]
+	}
+]

@@ -1,0 +1,87 @@
+[
+	{
+		"trackCode": "CIS-RC",
+		"order": 70,
+		"prompt": "A risk lead configures IRM Workspace landing components for analysts. Which widget best surfaces daily workload priorities?",
+		"choices": [
+			"Assigned assessments, overdue treatment tasks, and approval bottlenecks on the workspace homepage",
+			"Global MID Server upgrade history for infrastructure teams",
+			"Software reclamation candidates from the asset workspace",
+			"Catalog item popularity metrics from the service portal"
+		],
+		"correctIndex": 0,
+		"explanation": "Workspace homepage components aggregate operational risk work so analysts focus on overdue and blocked items.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/workspace-homepage.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-impl-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 71,
+		"prompt": "Mitigation funding is delayed but exposure remains above appetite. What is the governed response in advanced risk management?",
+		"choices": [
+			"Document time-bound risk acceptance with compensating controls and oversight approval",
+			"Delete the treatment plan and close the risk as complete",
+			"Lower residual scores manually without reviewing evidence",
+			"Suppress the risk from reports until budget is restored"
+		],
+		"correctIndex": 0,
+		"explanation": "Delayed mitigations require formal acceptance, compensating safeguards, and escalation when exposure persists.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-response-and-treatment.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-governance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 72,
+		"prompt": "An advanced assessment uses both numeric scales and narrative rationale fields. Why include documented rationale with scores?",
+		"choices": [
+			"It supports defensible recalibration when stakeholders challenge ratings",
+			"It eliminates the need for residual risk calculations",
+			"It replaces control testing with qualitative interviews only",
+			"It allows analysts to skip approval workflows on high risks"
+		],
+		"correctIndex": 0,
+		"explanation": "Documented assumptions and rationale improve transparency when scores are reviewed or disputed.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-data-governance.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-review-process.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 73,
+		"prompt": "A treatment plan requires configuration changes to a payment application. How should the risk team connect work to enterprise change governance?",
+		"choices": [
+			"Link treatment tasks to approved change records and validate control effectiveness after deployment",
+			"Execute changes directly on production without change tickets",
+			"Convert the risk into a catalog request for end users",
+			"Track treatment only in email threads outside ServiceNow"
+		],
+		"correctIndex": 0,
+		"explanation": "Treatment tasks should align with change management so implementations are governed and post-change controls are verified.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-response-and-treatment.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-governance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 74,
+		"prompt": "Stale risk records accumulate after reorganizations. Which advanced risk practice keeps the register trustworthy?",
+		"choices": [
+			"Periodic review campaigns validating ownership, ratings, and treatment progress",
+			"Automatic closure of all risks older than thirty days",
+			"Restricting updates to a single administrator account",
+			"Removing change history from risk records each quarter"
+		],
+		"correctIndex": 0,
+		"explanation": "Scheduled review campaigns prevent outdated ownership and scores from distorting enterprise risk reporting.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-review-process.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-data-governance.html"
+		]
+	}
+]

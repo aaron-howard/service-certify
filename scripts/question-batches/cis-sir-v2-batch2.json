@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-SIR",
+		"order": 5,
+		"prompt": "A SOC manager wants executives to see open critical incidents and mean time to contain trends. Which SIR feature should be configured first?",
+		"choices": [
+			"Security Operations dashboards with role-appropriate widgets and filters",
+			"Discovery credentials assigned to every Linux server CI class globally",
+			"Service level agreements on catalog items for password reset requests",
+			"HR onboarding workflows that provision badges before start dates"
+		],
+		"correctIndex": 0,
+		"explanation": "Security Operations dashboards surface operational and executive KPIs such as open critical incidents and containment metrics for targeted audiences.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-reporting.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 6,
+		"prompt": "Which dashboard widget type best visualizes the count of security incidents grouped by priority over the last thirty days?",
+		"choices": [
+			"Bar or column chart driven by a filtered security incident report",
+			"Single score widget showing total active CMDB configuration items",
+			"Calendar heat map of employee vacation balances by department",
+			"Gauge displaying average catalog checkout fulfillment duration"
+		],
+		"correctIndex": 0,
+		"explanation": "Grouped bar or column charts on filtered incident reports are standard for showing priority distribution trends over time.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-reporting.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 7,
+		"questionType": "multi",
+		"prompt": "Which three groups are primary audiences for Security Incident Response reporting dashboards? (Choose three.)",
+		"choices": [
+			"Security Analysts who perform day-to-day triage and investigation",
+			"Security Managers who oversee SOC operations and staffing",
+			"CIOs and CISOs who need executive visibility into security posture",
+			"Facilities coordinators who manage building access badge provisioning"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1, 2],
+		"explanation": "SIR reporting targets security practitioners, SOC leadership, and executive security stakeholders rather than unrelated operational teams.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-reporting.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 8,
+		"prompt": "An analyst needs a trend line of newly opened security incidents per week for leadership review. What is the recommended data source?",
+		"choices": [
+			"A report on the Security Incident table filtered by opened date and grouped weekly",
+			"A hardware asset disposal report grouped by manufacturer part number",
+			"A project task report filtered by portfolio demand state transitions",
+			"A user group membership report sorted by last login timestamp"
+		],
+		"correctIndex": 0,
+		"explanation": "Incident volume trends are built from the Security Incident table with date filters and weekly grouping on the opened field.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-operations-metrics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 9,
+		"prompt": "Which metric pair best indicates improving SOC efficiency in Security Incident Response dashboards?",
+		"choices": [
+			"Decreasing mean time to triage and mean time to contain on validated incidents",
+			"Increasing count of manually created subtasks with no assignment group",
+			"Growing backlog of unassigned catalog requests awaiting fulfillment",
+			"Higher number of discovery errors on printer CI classes per subnet"
+		],
+		"correctIndex": 0,
+		"explanation": "Containment and triage duration metrics directly reflect how quickly the SOC validates and limits incident impact.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-operations-metrics.html"
+		]
+	}
+]

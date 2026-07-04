@@ -1,0 +1,87 @@
+[
+	{
+		"trackCode": "CIS-SM",
+		"order": 55,
+		"prompt": "Discovery runs are delayed even though schedules show Active status. ECC Queue shows a growing backlog on the discovery topic. What should be verified first?",
+		"choices": [
+			"Whether assigned MID Servers are Up, validated, and processing queued probe work",
+			"Whether all identification rules were deleted from the cmdb_ci_server class",
+			"Whether service candidates were rejected in the Service Mapping Workspace",
+			"Whether CMDB Health tasks were closed without remediation evidence"
+		],
+		"correctIndex": 0,
+		"explanation": "ECC backlog on discovery topics usually indicates MID Server availability or processing issues that must be resolved before schedules complete.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/mid-server/ecc-queue.html",
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/troubleshoot-discovery-with-ecc-queue.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 56,
+		"prompt": "An operations team configures Event Management to reduce noise before operators act. When an event rule matches defined conditions, what record type does it create?",
+		"choices": [
+			"Alert record that operators review and correlate in Event Management",
+			"Discovery schedule that rescans the affected subnet on the next interval",
+			"Identification entry that merges duplicate cmdb_ci_computer records",
+			"Service map entry point that launches top-down dependency tracing"
+		],
+		"correctIndex": 0,
+		"explanation": "Event rules evaluate incoming events and create alerts when configured conditions are met, enabling governed alert handling downstream.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/exploring-event-management.html",
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/task/configure-event-rules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 57,
+		"prompt": "Service Mapping administrators need to confirm which TCP ports a database host exposes for entry point design. Which Discovery result type provides that detail?",
+		"choices": [
+			"IP service records listing open ports and detected services on the host",
+			"Reconciliation rule entries defining attribute precedence by datasource",
+			"CMDB Health KPI widgets showing duplicate CI counts by class",
+			"Machine learning confidence scores on pending service candidates"
+		],
+		"correctIndex": 0,
+		"explanation": "IP service discovery captures port and service information that teams use to validate entry points and dependency paths during mapping.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 58,
+		"prompt": "Before enabling credential-based Discovery for a new datacenter, which credential practice best supports both security and mapping accuracy?",
+		"choices": [
+			"Share one domain administrator account across every schedule and environment",
+			"Store privileged passwords in schedule descriptions for faster troubleshooting",
+			"Use least-privilege credential aliases tested against representative targets first",
+			"Disable credential validation to shorten MID Server onboarding time"
+		],
+		"correctIndex": 2,
+		"explanation": "Least-privilege credentials validated on sample targets reduce security exposure while confirming access needed for classification and exploration.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/t_ConfigureDiscoveryCredentials.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 59,
+		"prompt": "A customer wants to accelerate service map creation using observed traffic patterns. Which Service Mapping capability proposes likely application services for review?",
+		"choices": [
+			"Machine learning service candidates surfaced for mapper validation",
+			"CMDB class manager hierarchy editor for cmdb_ci_appl extensions",
+			"Event binding rule that attaches alerts to cmdb_ci_service records",
+			"Discovery cluster failover setting on the MID Server record"
+		],
+		"correctIndex": 0,
+		"explanation": "ML-powered mapping analyzes discovery and traffic signals to propose service candidates that teams accept or reject before publishing maps.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-get-started.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
+		]
+	}
+]

@@ -1,0 +1,90 @@
+[
+	{
+		"trackCode": "CIS-SIR",
+		"order": 50,
+		"prompt": "Leadership asks how quickly raw alerts become triaged security incident records. Which metric best answers that question?",
+		"choices": [
+			"Mean time to detect from threat occurrence to actionable case creation",
+			"Total analyst comment count per closed incident record",
+			"Number of dashboard portlets on the CISO overview page",
+			"Average age of resolved HR onboarding cases last quarter"
+		],
+		"correctIndex": 0,
+		"explanation": "Mean time to detect measures how rapidly threats are recognized and converted into managed security incidents.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/reports-and-metrics.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-security-analyst-overview-dashboard.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 51,
+		"prompt": "A program manager reviews containment performance after several major incidents. Which metric tracks time from identification to successful containment?",
+		"choices": [
+			"Mean time to restore from backup completion timestamps",
+			"Mean time to contain from incident identification to containment",
+			"Change advisory board approval cycle duration averages",
+			"Vulnerability scan window length per discovery schedule"
+		],
+		"correctIndex": 1,
+		"explanation": "Mean time to contain reflects operational speed in limiting attacker impact once an incident is identified.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/reports-and-metrics.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-security-incident-manager-dashboard.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 52,
+		"questionType": "multi",
+		"prompt": "Who are key reporting audiences for Security Incident Response dashboards and metrics? (Choose three.)",
+		"choices": [
+			"Security Analysts reviewing operational triage and task backlogs",
+			"Security Managers tracking team performance and SLA adherence",
+			"CIOs and CISOs reviewing executive risk and trend summaries",
+			"Facilities and HR staff approving office supply requisitions"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1, 2],
+		"explanation": "Analyst, manager, and executive dashboards serve operational, supervisory, and leadership audiences; facilities and HR requisitions are unrelated to SIR reporting.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-security-analyst-overview-dashboard.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-security-incident-manager-dashboard.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-ciso-dashboard-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 53,
+		"prompt": "Reopen rates for closed security incidents climb steadily over several weeks. What is the most likely root cause?",
+		"choices": [
+			"Containment or eradication was incomplete and closure validation is too weak",
+			"Threat intelligence enrichment feeds were disabled during the period",
+			"Shift handover templates were recently updated for the SOC",
+			"Process definition selector was switched from Stateful to Open"
+		],
+		"correctIndex": 0,
+		"explanation": "Rising reopen rates usually indicate premature closure or unresolved root issues that fail post-closure validation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/reports-and-metrics.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-post-incident-review.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 54,
+		"prompt": "Executives request a quarterly view of security response effectiveness. Which reporting approach best supports that review?",
+		"choices": [
+			"Trend MTTD, MTTC, MTTR, severity distribution, and repeat rates with risk narrative",
+			"Raw monthly incident totals without severity or category segmentation",
+			"Analyst comment volume grouped by weekday across the quarter",
+			"One-time static screenshots of individual incident form headers"
+		],
+		"correctIndex": 0,
+		"explanation": "Executive reporting should combine response time trends, severity patterns, and repeat incident context to show program maturity.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-ciso-dashboard-overview.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/reports-and-metrics.html"
+		]
+	}
+]

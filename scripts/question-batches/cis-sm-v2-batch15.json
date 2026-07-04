@@ -1,0 +1,87 @@
+[
+	{
+		"trackCode": "CIS-SM",
+		"order": 70,
+		"prompt": "Incoming Discovery payloads for Linux servers sometimes create duplicate records. Which IRE artifact should be tuned first?",
+		"choices": [
+			"Identification rule entries that match serial number, name, and IP attributes",
+			"Event rule conditions that filter non-critical monitoring signals",
+			"Service Mapping entry point URLs used for top-down tracing",
+			"MID Server cluster failover order for the affected datacenter"
+		],
+		"correctIndex": 0,
+		"explanation": "Identification rules define how incoming data matches existing CIs, which is the first control for preventing duplicate server records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/task/t_CreateIdentificationRules.html",
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/identification-and-reconciliation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 71,
+		"prompt": "Discovery and an import set both update the operating system field on the same CI. Which IRE mechanism decides which value is kept?",
+		"choices": [
+			"Reconciliation rule precedence that ranks datasource authority per attribute",
+			"Probe phase timeout settings on the horizontal discovery schedule",
+			"Service candidate confidence threshold in the mapping workspace",
+			"Alert binding policy that links events to cmdb_ci_computer records"
+		],
+		"correctIndex": 0,
+		"explanation": "Reconciliation rules apply datasource precedence after identification so authoritative sources win attribute conflicts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_ReconciliationRules.html",
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/task/t_CreateReconciliationRules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 72,
+		"prompt": "An operator reclassifies a CI from cmdb_ci_server to cmdb_ci_win_server after Discovery confirms the OS. What type of CMDB change is this?",
+		"choices": [
+			"Class Upgrade moving the CI to a more specific subclass",
+			"Identification failure that forces creation of a duplicate record",
+			"Reconciliation rollback that restores the previous datasource values",
+			"Service map deletion that removes all dependency relationships"
+		],
+		"correctIndex": 0,
+		"explanation": "Reclassifying a server CI to a Windows-specific subclass is a Class Upgrade that preserves identity while applying specialized attributes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/identification-and-reconciliation.html",
+			"https://www.servicenow.com/docs/r/configuration-management/vancouver/cmdb/concept/cmdb-class-hierarchy.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 73,
+		"prompt": "CMDB analysts find multiple cmdb_ci_app_server records representing the same middleware instance. What remediation approach aligns with IRE best practice?",
+		"choices": [
+			"Merge duplicates after verifying identification keys and retire redundant records",
+			"Delete reconciliation rules so the newest import always wins every attribute",
+			"Disable Discovery schedules until all application owners submit spreadsheets",
+			"Convert every duplicate into a business service without dependency review"
+		],
+		"correctIndex": 0,
+		"explanation": "Duplicate remediation should confirm identification matches, merge authoritative data, and retire redundant CIs to restore map integrity.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-data-manager.html",
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_IdentificationAndReconciliationEngine.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 74,
+		"prompt": "Which CMDB Health indicator best signals readiness for the next Service Mapping wave?",
+		"choices": [
+			"Improving completeness and correctness scores with fewer open remediation tasks",
+			"Higher raw count of cmdb_ci_computer records regardless of duplicate status",
+			"Increased number of custom event rules firing on unrelated CIs",
+			"Shorter ECC queue depth on unrelated integration topics"
+		],
+		"correctIndex": 0,
+		"explanation": "Rising health scores and fewer remediation tasks show CMDB data is stable enough to support accurate dependency mapping.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-health-dashboard.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
+		]
+	}
+]

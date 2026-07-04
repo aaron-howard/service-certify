@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-RC",
+		"order": 5,
+		"prompt": "A compliance manager asks how policy statements fit between authority documents and controls. Which description is accurate?",
+		"choices": [
+			"Policy statements are internal requirement statements that map citations to the controls generated for each entity",
+			"Policy statements are the workflow stages a control passes through between draft and retired states",
+			"Policy statements are dashboard widgets summarizing citation coverage for each regulator",
+			"Policy statements are user criteria records restricting which auditors can read authority documents"
+		],
+		"correctIndex": 0,
+		"explanation": "Policy statements translate external citations into internal requirements; when associated with entities, they generate the controls that are monitored for compliance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-statements.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 6,
+		"prompt": "What is the relationship between a risk statement and a risk record in GRC Risk Management?",
+		"choices": [
+			"A risk record is archived automatically whenever its risk statement is modified by the risk manager",
+			"A risk statement is a reusable definition in the risk library, and a risk record is its instance applied to a specific entity",
+			"A risk statement is created only after a risk record breaches its residual score threshold",
+			"A risk record stores the qualitative wording while the risk statement stores only numeric scores"
+		],
+		"correctIndex": 1,
+		"explanation": "Risk statements live in the risk library as templates; associating a statement with an entity creates a risk record scoped to that entity.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/risk-management-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 7,
+		"prompt": "Which statement best describes how the ServiceNow GRC applications are positioned relative to the core platform?",
+		"choices": [
+			"They run on a separate dedicated instance that synchronizes records with production once per day",
+			"They are delivered as scoped applications from the ServiceNow Store that build on shared Now Platform capabilities",
+			"They are legacy global applications that cannot coexist with other scoped applications on the same instance",
+			"They require a third-party middleware layer to read task and CMDB data from the platform"
+		],
+		"correctIndex": 1,
+		"explanation": "GRC applications are Store-delivered scoped applications running natively on the Now Platform, sharing its data, workflow, and reporting capabilities.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 8,
+		"prompt": "A GRC implementer needs to explain the difference between a control and a control objective during a design workshop. Which explanation is correct?",
+		"choices": [
+			"A control objective defines the desired outcome, while a control is the entity-specific record that implements and monitors it",
+			"A control objective is the numeric weight assigned to each indicator result during compliance scoring calculations",
+			"A control is a category of authority documents, while a control objective is the regulator that issued them",
+			"A control objective exists only in Audit Management and has no connection to Policy and Compliance records"
+		],
+		"correctIndex": 0,
+		"explanation": "Control objectives (policy statements) state what must be achieved; controls are the per-entity instances used to monitor and attest achievement of that objective.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 9,
+		"prompt": "Which GRC capability lets compliance and risk teams send structured question sets to control and risk owners for periodic review?",
+		"choices": [
+			"Attestations built on the assessment engine, assigned to owners on a defined schedule",
+			"Service catalog record producers published to the employee center portal for all users",
+			"Scheduled data exports that mail CSV files of open controls to distribution lists",
+			"Virtual Agent topics that quiz owners in chat and log answers to the activity stream"
+		],
+		"correctIndex": 0,
+		"explanation": "Attestations use the assessment engine to gather structured responses from control and risk owners, supporting recurring certification of compliance and risk posture.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/attestations.html"
+		]
+	}
+]

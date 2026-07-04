@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-SIR",
+		"order": 20,
+		"prompt": "An organization wants incidents auto-tagged as ransomware when certain observables match threat feed entries. Which SIR feature supports this?",
+		"choices": [
+			"Security tags applied through threat intelligence and classification rules",
+			"Discovery identification rules that create printer CI records automatically",
+			"Service catalog client scripts that validate mobile phone number formats",
+			"Project workspace demand scoring thresholds for strategic portfolio themes"
+		],
+		"correctIndex": 0,
+		"explanation": "Security tags classify incidents based on intelligence matches and configured rules to drive routing and response playbooks.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-tags.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 21,
+		"prompt": "Before analysts can enrich incidents with external reputation data, what must be configured in Threat Intelligence?",
+		"choices": [
+			"Active threat feeds and lookup sources with valid credentials and schedules",
+			"Discovery schedules on every datacenter subnet with elevated SNMP strings",
+			"Catalog fulfillment workflows for password reset self-service items",
+			"HR case assignment rules for employee relocation request routing"
+		],
+		"correctIndex": 0,
+		"explanation": "Threat intelligence feeds and lookup configurations must be active so SIR can query external sources during incident enrichment.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/threat-intelligence-in-sir.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 22,
+		"prompt": "A SIEM correlation rule fires on lateral movement activity. How should SIR receive the event for structured response?",
+		"choices": [
+			"Through an inbound integration action that creates or updates a security incident",
+			"By emailing the alert to a personal inbox with no platform record created",
+			"By opening a facilities work order for badge access review only",
+			"By logging a project risk without linking to any security incident table"
+		],
+		"correctIndex": 0,
+		"explanation": "SIEM integrations use inbound actions to automatically create or update security incidents from correlated alerts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integrate-security-tools.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 23,
+		"prompt": "When child security incidents accumulate MITRE ATT&CK techniques during investigation, what does rollup to the parent provide?",
+		"choices": [
+			"A consolidated view of tactics and techniques for parent-level reporting and analysis",
+			"Automatic deletion of child records after the parent incident is assigned",
+			"Immediate closure of all related vulnerabilities without remediation tasks",
+			"Conversion of every child incident into a standard IT service request"
+		],
+		"correctIndex": 0,
+		"explanation": "Rolling up MITRE ATT&CK details from child incidents gives analysts a unified adversary behavior picture at the parent level.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/map-security-incidents-to-mitre-attack.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 24,
+		"prompt": "During Major Security Incident Management, which practice keeps business and technical stakeholders aligned in real time?",
+		"choices": [
+			"War-room operations with shared timeline, tasks, and communication in SIR",
+			"Disabling all integrations until the incident reaches closed state",
+			"Routing every update through annual compliance attestation workflows",
+			"Assigning all response tasks to a single catalog administrator only"
+		],
+		"correctIndex": 0,
+		"explanation": "MSIM war-room operations centralize coordination, tasks, and communications so cross-functional teams share a single response view.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-war-room-operations.html"
+		]
+	}
+]

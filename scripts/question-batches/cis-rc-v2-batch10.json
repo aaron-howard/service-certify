@@ -1,0 +1,88 @@
+[
+	{
+		"trackCode": "CIS-RC",
+		"order": 45,
+		"prompt": "A compliance lead maps HIPAA obligations into ServiceNow. Which record type represents a specific regulatory requirement extracted from an authority document?",
+		"choices": [
+			"Citation linked to the authority document and downstream controls",
+			"Policy statement describing internal standards without regulatory mapping",
+			"Audit observation documenting a fieldwork deficiency",
+			"Entity Filter defining which CMDB classes appear in scope"
+		],
+		"correctIndex": 0,
+		"explanation": "Citations break authority documents into testable requirements that drive control design and compliance testing.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/manage-authority-documents-and-citations.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 46,
+		"prompt": "During a multi-framework rollout, auditors ask which artifact stores the source regulation such as SOX or GDPR before citations are created.",
+		"choices": [
+			"Authority document representing the external obligation",
+			"Risk Framework grouping risk statements by category",
+			"Audit engagement scoping the control universe",
+			"Content pack MID Server configuration record"
+		],
+		"correctIndex": 0,
+		"explanation": "Authority documents are the top-level regulatory or standards sources that citations and controls trace back to.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/manage-authority-documents-and-citations.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/policy-lifecycle-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 47,
+		"prompt": "A municipal agency must show how internal policy statements satisfy external citations. Which relationship should the implementation team configure?",
+		"choices": [
+			"Map policy statements and controls to citations derived from authority documents",
+			"Link citations directly to discovery schedules on the CMDB",
+			"Replace policy statements with risk treatment tasks in the register",
+			"Store citations only in attachment fields without control mappings"
+		],
+		"correctIndex": 0,
+		"explanation": "Policy and compliance traceability flows from authority documents through citations to controls and internal policy statements.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/c_GRCControls.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/policy-compliance-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 48,
+		"prompt": "An implementation team imports Unified Compliance Framework (UCF) control documents. Which table receives the imported control objective content?",
+		"choices": [
+			"Control Objectives",
+			"Policy Statement",
+			"Audit Task",
+			"Entity Filter"
+		],
+		"correctIndex": 0,
+		"explanation": "UCF control document imports populate the Control Objectives table so teams can map obligations to operational controls.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/c_GRCControls.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/manage-common-controls.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 49,
+		"questionType": "multi",
+		"prompt": "When configuring Policy and Compliance scope tables for a scoped GRC application, which two tables must be included? (Choose two.)",
+		"choices": [
+			"Control table for compliance control definitions and testing evidence",
+			"Citation table for regulatory and policy obligation references",
+			"Entity table for CMDB configuration item inventory records",
+			"Audit Engagement table for external audit planning and fieldwork"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Policy and Compliance scoped applications require Control and Citation scope tables so compliance data is partitioned correctly.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/c_GRCControls.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
+		]
+	}
+]

@@ -1,0 +1,87 @@
+[
+	{
+		"trackCode": "CIS-SM",
+		"order": 80,
+		"prompt": "An engagement lead completes CMDB cleanup and wants a final gate before onboarding ten new application services. Which readiness check is most appropriate?",
+		"choices": [
+			"CMDB Health review confirming acceptable scores with closed critical remediation tasks",
+			"Immediate production rollout of every ML candidate without owner sign-off",
+			"Deletion of all reconciliation rules to speed Discovery imports",
+			"Disabling MID Server validation to reduce project timeline"
+		],
+		"correctIndex": 0,
+		"explanation": "A CMDB Health gate verifies data quality is sufficient before expanding Service Mapping scope to additional services.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-health-dashboard.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 81,
+		"prompt": "During engagement planning, stakeholders debate which applications belong in phase one. Which scoping principle best limits early risk?",
+		"choices": [
+			"Start with high-value services that have owners, credentials, and validated entry points",
+			"Map every subnet in the enterprise before validating a single service map",
+			"Exclude CMDB readiness checks so mapping can begin immediately",
+			"Defer all discovery until every ML candidate is accepted automatically"
+		],
+		"correctIndex": 0,
+		"explanation": "Phased scoping around critical services with known ownership and access reduces onboarding risk and builds trust in map accuracy.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/create-a-service-map.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 82,
+		"prompt": "A shared database supports three application services in scope for Service Mapping. How should licensing and scope be handled?",
+		"choices": [
+			"Model the shared component once and map dependent services to the shared CI relationships",
+			"License a separate Service Mapping subscription for each consumer application team",
+			"Exclude shared infrastructure entirely because maps cannot represent common tiers",
+			"Create duplicate database CIs so each service owns an isolated copy in CMDB"
+		],
+		"correctIndex": 0,
+		"explanation": "Shared services should be represented once in CMDB with accurate relationships so multiple application maps reference the same dependency.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/business-services-and-application-services.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 83,
+		"prompt": "Which MID Server requirement is essential before a multi-datacenter Service Mapping engagement goes live?",
+		"choices": [
+			"Validated MID Servers in each required zone with Discovery and mapping capabilities enabled",
+			"A single MID Server installed on the ServiceNow instance application server",
+			"MID Servers assigned only to the Service Desk group for approval routing",
+			"MID Server clusters disabled so schedules run directly from the instance node"
+		],
+		"correctIndex": 0,
+		"explanation": "Engagement readiness requires reachable, validated MID Servers with appropriate capabilities in every network zone that will be mapped.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/mid-server/mid-server.html",
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/mid-server-for-discovery.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 84,
+		"prompt": "Security reviewers ask how Service Mapping credentials will be governed during the project. Which answer best aligns with engagement readiness guidance?",
+		"choices": [
+			"Use least-privilege credential aliases, store secrets securely, and test access before production mapping",
+			"Share one privileged domain account across all environments to simplify troubleshooting",
+			"Embed passwords in schedule descriptions so operators can rotate them quickly",
+			"Disable credential rotation until all service maps reach one hundred percent coverage"
+		],
+		"correctIndex": 0,
+		"explanation": "Secure credential governance with least privilege and validated access paths is a core readiness requirement for Service Mapping engagements.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html",
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/t_ConfigureDiscoveryCredentials.html"
+		]
+	}
+]

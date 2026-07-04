@@ -1,0 +1,86 @@
+[
+	{
+		"trackCode": "CIS-SIR",
+		"order": 45,
+		"prompt": "An administrator leaves the Script include field empty on a custom process definition record. Which process definition does Security Incident Response use by default?",
+		"choices": [
+			"NIST Open with bidirectional transitions between any valid states",
+			"NIST Stateful with sequential forward-only progression through incident states",
+			"Standard ITIL incident state model from core Incident Management",
+			"Analyst-defined custom states without process validation rules"
+		],
+		"correctIndex": 1,
+		"explanation": "When no valid script include is configured, the base system defaults to the NIST Stateful process definition for security incidents.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/setup-assistant-reference.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/getting-started-with-processes.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 46,
+		"prompt": "Invalid security incident states appear on the Process Selection related list. Where does an administrator assign the correct process definition for incidents and response tasks?",
+		"choices": [
+			"Security Incident Response Administration Process Selection module",
+			"CMDB Identification and Reconciliation rule editor",
+			"Service Catalog item designer for security service offerings",
+			"MID Server cluster assignment configuration panel"
+		],
+		"correctIndex": 0,
+		"explanation": "Process Selection lets administrators choose the active process definition so incidents and tasks remain in valid lifecycle states.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/setup-assistant-reference.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 47,
+		"prompt": "A containment lead completes an isolation task on a priority-one security incident. Which record type tracks discrete analyst actions against the parent incident?",
+		"choices": [
+			"Security incident response tasks linked to the parent incident",
+			"Discovery schedules scanning affected subnets on a timer",
+			"Business service maps generated from machine learning candidates",
+			"Standard change request templates for catalog fulfillment"
+		],
+		"correctIndex": 0,
+		"explanation": "Response tasks represent individual containment, investigation, and recovery actions executed during security incident handling.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/what-is-sir.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/si-denial-of-service-template.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 48,
+		"prompt": "During an active ransomware event, cross-functional teams need shared timelines, conference bridges, and decision tracking. Which SIR capability supports that operating model?",
+		"choices": [
+			"Major Security Incident Management workspace with war room coordination",
+			"Software asset reclamation harvester for unused license recovery",
+			"Employee onboarding workflows in HR Service Delivery",
+			"Discovery horizontal pattern debugging console for MID Servers"
+		],
+		"correctIndex": 0,
+		"explanation": "Major Security Incident Management provides collaborative war room features for high-impact security events requiring coordinated response.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/major-security-incident-management.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/exploring-major-security-incident-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 49,
+		"prompt": "A SecOps program needs phishing, malware, and policy violations to follow different automated response paths. Which configuration drives those variations?",
+		"choices": [
+			"Security incident categories and subcategories mapped to playbooks",
+			"Universal request templates shared across all ITSM record types",
+			"Global UI16 theme settings controlling form color palettes",
+			"Reconciliation rules on cmdb_ci_computer hostname attributes"
+		],
+		"correctIndex": 0,
+		"explanation": "Category and subcategory management ties incident types to the playbooks and workflows that govern each response path.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/category-management-sir.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-playbook.html"
+		]
+	}
+]

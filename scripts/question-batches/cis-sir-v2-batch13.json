@@ -1,0 +1,87 @@
+[
+	{
+		"trackCode": "CIS-SIR",
+		"order": 60,
+		"prompt": "A post-incident review surfaces ten improvement ideas with limited staff capacity. How should the team prioritize remediation work?",
+		"choices": [
+			"Rank items by risk reduction impact, implementation effort, and control dependencies",
+			"Implement items alphabetically by task title for perceived fairness",
+			"Defer every action until the next annual external audit cycle",
+			"Assign all tasks to the incident commander without target due dates"
+		],
+		"correctIndex": 0,
+		"explanation": "Risk-based prioritization focuses limited capacity on improvements that most reduce recurrence and strengthen critical controls.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-post-incident-review.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/t_PerformPostIncidentReview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 61,
+		"prompt": "Which outcome pattern indicates a mature post-incident review process in Security Incident Response?",
+		"choices": [
+			"Lessons learned linked to corrective tasks with owners and due dates",
+			"Review notes stored only in private chat channels outside the record",
+			"Corrective tasks closed immediately without validation evidence",
+			"No distinction between confirmed root cause and working assumptions"
+		],
+		"correctIndex": 0,
+		"explanation": "Effective post-incident reviews produce traceable corrective work with accountable owners rather than informal notes alone.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-post-incident-review.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/t_PerformPostIncidentReview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 62,
+		"prompt": "Risk score weightings change after a control framework update. How can administrators refresh historical incident scores under the new rules?",
+		"choices": [
+			"Run the Recalculate Score action to update scores via background processing",
+			"Manually edit risk score on each closed incident during live containment",
+			"Disable all calculators permanently and rely on priority labels only",
+			"Clone the production instance and discard prior incident metrics"
+		],
+		"correctIndex": 0,
+		"explanation": "Recalculate Score applies updated Risk Score Calculator rules to existing incidents through a background job.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/define-risk-score-calculator-rules-sir.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/risk-score-calculator-related-tables.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 63,
+		"prompt": "A Flow Designer flow is linked to the security incident table for automated enrichment. When does that flow execute?",
+		"choices": [
+			"When the configured trigger condition for the flow is met on the target record",
+			"Only when an administrator manually runs the flow from Flow Designer weekly",
+			"After every incident reaches Closed Complete regardless of filter logic",
+			"Before any security incident record is inserted into the database unconditionally"
+		],
+		"correctIndex": 0,
+		"explanation": "Flows tied to Security Incident Response run when their defined trigger conditions evaluate true against the triggering record.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/define-trigger-conditions.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/cj-sir-about-flows.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 64,
+		"prompt": "Employees forward suspicious messages to a dedicated phishing mailbox. Which SIR capability validates those messages and can initiate response workflows?",
+		"choices": [
+			"User-reported phishing email parsing rules with automated phishing playbooks",
+			"CMDB identification rules for cmdb_ci_email_server class records",
+			"Discovery credentials scanning Microsoft Exchange subnets nightly",
+			"Service catalog checkout workflows for employee password resets"
+		],
+		"correctIndex": 0,
+		"explanation": "Report-phish email processing validates user submissions against organizational rules and can trigger phishing response automation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/report-phish-email.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/using-automated-phishing-playbook.html"
+		]
+	}
+]

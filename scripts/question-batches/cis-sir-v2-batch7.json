@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-SIR",
+		"order": 30,
+		"prompt": "An organization uses Splunk as its primary SIEM. Where should implementers start the SIR connection in ServiceNow?",
+		"choices": [
+			"Integration Configurations, selecting the Splunk pre-built integration template",
+			"Discovery schedules, adding Splunk servers as horizontal probe targets",
+			"Service Catalog, publishing a Splunk checkout item for analysts",
+			"Project Workspace, linking Splunk alerts to portfolio demand records"
+		],
+		"correctIndex": 0,
+		"explanation": "Pre-built Splunk integrations are configured through Integration Configurations with guided setup for alert ingestion.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integration-configurations.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 31,
+		"prompt": "After enabling a Microsoft Defender integration, alerts arrive but no incidents are created. What should be verified first?",
+		"choices": [
+			"Inbound action mapping, credentials, and active status on the integration instance",
+			"Discovery classification rules for Windows server CI identification only",
+			"Catalog client scripts validating mobile device enrollment form fields",
+			"Project financial plan baselines tied to unrelated portfolio investments"
+		],
+		"correctIndex": 0,
+		"explanation": "Failed incident creation usually traces to inactive integrations, invalid credentials, or inbound action field mapping gaps.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integrate-security-tools.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 32,
+		"prompt": "Which outbound integration use case lets SIR push containment status back to an EDR console?",
+		"choices": [
+			"Outbound actions that update external systems when incident state changes",
+			"Inbound-only listeners that discard all response updates from ServiceNow",
+			"Discovery probes that scan EDR agent versions on every subnet hourly",
+			"Catalog workflows that order replacement laptops for affected users"
+		],
+		"correctIndex": 0,
+		"explanation": "Outbound integration actions synchronize incident progress and containment decisions with connected security tools.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integrate-security-tools.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 33,
+		"prompt": "When multiple SIEM alerts reference the same host within minutes, which SIR capability reduces duplicate incident records?",
+		"choices": [
+			"Security incident correlation rules that merge or relate related alerts",
+			"Discovery identification that retires duplicate printer CI records",
+			"Catalog item bundling that groups employee onboarding requests",
+			"Project task linking that rolls up unrelated portfolio milestones"
+		],
+		"correctIndex": 0,
+		"explanation": "Correlation rules group related alerts so analysts work a single incident instead of redundant records for the same event.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-correlation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 34,
+		"prompt": "An implementer needs to store API keys for a custom threat feed integration securely. What is the recommended approach?",
+		"choices": [
+			"Use integration credentials or connection credentials referenced by the integration record",
+			"Paste keys into incident work notes so analysts can copy them during triage",
+			"Save keys in an unencrypted system property visible to all authenticated users",
+			"Email credentials to the SOC distribution list for shared spreadsheet storage"
+		],
+		"correctIndex": 0,
+		"explanation": "Integration and connection credentials protect API secrets while allowing authorized integration processes to authenticate.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integration-configurations.html"
+		]
+	}
+]

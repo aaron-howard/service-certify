@@ -1,0 +1,88 @@
+[
+	{
+		"trackCode": "CIS-RC",
+		"order": 55,
+		"questionType": "multi",
+		"prompt": "When scoping a Risk Management application, which two scope tables must be configured? (Choose two.)",
+		"choices": [
+			"Risk Framework",
+			"Risk Statement",
+			"Control Test",
+			"Authority Document"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Risk scoped applications partition data using Risk Framework and Risk Statement scope tables per GRC implementation guidance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-impl-overview.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-register.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 56,
+		"prompt": "Before scoring a newly identified vendor concentration risk, what must the risk owner document on the record?",
+		"choices": [
+			"A clear risk statement with scope, cause, and potential impact context",
+			"A completed audit engagement report with fieldwork sign-off",
+			"A discovery pattern mapping subnets to business services",
+			"A catalog fulfillment variable set for procurement requests"
+		],
+		"correctIndex": 0,
+		"explanation": "Well-defined risk statements establish shared understanding of exposure before inherent and residual scoring.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-register.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-identification-playbook.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 57,
+		"prompt": "An analyst moves a risk from identification through assessment to treatment in IRM Workspace. Which description matches that progression?",
+		"choices": [
+			"Risk lifecycle workflow progressing from intake to scored evaluation and response planning",
+			"Audit lifecycle moving from planning through fieldwork to reporting",
+			"Change lifecycle transitioning from assess through authorize to review",
+			"Incident lifecycle flowing from new through in progress to resolved"
+		],
+		"correctIndex": 0,
+		"explanation": "Risk records follow a governed lifecycle from identification and assessment to treatment and ongoing monitoring.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/manage-risk-records.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-response-and-treatment.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 58,
+		"prompt": "A CISO wants operational, strategic, and financial risks grouped consistently for reporting. Which artifact provides that structure?",
+		"choices": [
+			"Risk Framework organizing related risk statements under categories",
+			"Entity Filter limiting CMDB tables visible to compliance users",
+			"Authority document listing municipal procurement statutes",
+			"Audit universe defining scoped controls for an engagement"
+		],
+		"correctIndex": 0,
+		"explanation": "Risk frameworks categorize risk statements so leadership can analyze exposure by domain or portfolio.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-impl-overview.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-register.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 59,
+		"prompt": "Business units submit inconsistent risk intakes through email. Which GRC capability standardizes how new risks enter the register?",
+		"choices": [
+			"Risk identification playbook with guided steps in the risk management workspace",
+			"Hardware normalization rule on the software asset table",
+			"Major incident workflow template from IT Service Management",
+			"Service catalog order guide for laptop replacements"
+		],
+		"correctIndex": 0,
+		"explanation": "The risk identification playbook provides repeatable intake guidance so new risks capture required fields and ownership.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-identification-playbook.html"
+		]
+	}
+]
