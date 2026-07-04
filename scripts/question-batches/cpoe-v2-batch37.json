@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOE",
+		"order": 180,
+		"prompt": "Given a scenario where quarterly access reviews reveal persistent over-provisioned admin roles, what should the platform owner prioritize to strengthen regulatory alignment?",
+		"choices": [
+			"Implement least-privilege role design, automated certification workflows, and executive reporting on overdue attestations",
+			"Extend review cycles to annual intervals to reduce stakeholder burden",
+			"Remove certification requirements for roles tied to regulated data",
+			"Allow managers to bulk-approve all roles without individual review"
+		],
+		"correctIndex": 0,
+		"explanation": "Sustainable compliance requires least-privilege design, automated certification, and visible attestation metrics—not weakened review cadence or blanket approvals.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 181,
+		"prompt": "The CISO asks how the platform can demonstrate separation of duties for production changes without slowing critical incident response. What should the platform owner recommend?",
+		"choices": [
+			"Distinct roles for build, approve, and deploy with time-bound break-glass elevation audited for emergency use",
+			"Shared production credentials for all release engineers to eliminate handoffs",
+			"Eliminate change approval for any update labeled as a security fix",
+			"Allow developers to self-approve and deploy their own changes in production"
+		],
+		"correctIndex": 0,
+		"explanation": "Separation of duties preserves change integrity while just-in-time emergency elevation with audit trace balances control and response speed.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 182,
+		"questionType": "multi",
+		"prompt": "An external auditor evaluates platform logging and monitoring for a regulated workload. Which practices should the platform owner highlight as audit contributions? (Choose two.)",
+		"choices": [
+			"Immutable audit trails for privileged actions with retention aligned to policy",
+			"Security event monitoring integrated with enterprise SIEM correlation rules",
+			"Disabling login failure logging to reduce noise in support queues",
+			"Purging audit records after thirty days regardless of regulatory retention requirements"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Auditors expect durable privileged-action logs and integrated security monitoring—not truncated retention or suppressed failure evidence.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 183,
+		"prompt": "Business leaders want to onboard a partner integration that exchanges personally identifiable information. Given this case study, which security option best creates business advantage while meeting compliance expectations?",
+		"choices": [
+			"OAuth-scoped integration users, encrypted transport, contract testing, and documented data classification before production enablement",
+			"Shared integration credentials embedded in partner scripts for faster delivery",
+			"Unauthenticated REST endpoints restricted only by network firewall rules",
+			"Production data replication to the partner environment for debugging convenience"
+		],
+		"correctIndex": 0,
+		"explanation": "Governed integration identity, encryption, and conformance testing enable partner workflows safely—turning security design into a business enabler rather than a late-stage blocker.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 184,
+		"questionType": "match",
+		"prompt": "Match each platform security control to the compliance outcome it primarily supports.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Multi-factor authentication",
+			"Field-level encryption",
+			"Access control lists",
+			"Integration credential rotation"
+		],
+		"matchRightItems": [
+			"Reduces account takeover risk for privileged and self-service users",
+			"Protects sensitive attributes at rest according to data classification policy",
+			"Enforces least-privilege access to tables and records by role",
+			"Limits exposure window when third-party credentials are compromised"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Each security control maps to a distinct compliance outcome: identity assurance, data protection, authorization enforcement, and integration hygiene.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		]
+	}
+]

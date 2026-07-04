@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOE",
+		"order": 35,
+		"prompt": "Given a case study following a merger, two legacy organizations maintain conflicting service catalogs. How should the platform owner document the unified strategy?",
+		"choices": [
+			"Capture harmonization principles, phased catalog convergence, and accountable owners per business unit",
+			"Publish only technical import scripts without business rationale or transition plan",
+			"Defer all documentation until both catalogs are manually identical in every field",
+			"Document license entitlements alone as the complete post-merger strategy"
+		],
+		"correctIndex": 0,
+		"explanation": "Post-merger strategy documents principles, phased convergence, and ownership—not technical scripts alone or indefinite delay.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 36,
+		"prompt": "Enterprise analytics leaders request consistent operational metrics from ServiceNow for corporate dashboards. Which BI integration principle belongs in the platform strategy?",
+		"choices": [
+			"Define authoritative data products with lineage, refresh cadence, and stewardship contacts",
+			"Grant unrestricted database access to every analyst without governance or audit trail",
+			"Require all metrics to be recreated manually in spreadsheets each reporting cycle",
+			"Limit data sharing to quarterly batch files with no defined schema or ownership"
+		],
+		"correctIndex": 0,
+		"explanation": "Enterprise BI integration requires governed data products with clear lineage and stewardship—not ad hoc access or manual rework.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 37,
+		"questionType": "match",
+		"prompt": "Match each executive sponsorship role to its primary accountability during a platform program.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Executive sponsor",
+			"Business owner",
+			"Platform owner",
+			"Change lead"
+		],
+		"matchRightItems": [
+			"Champion funding, remove barriers, and communicate strategic importance",
+			"Define process outcomes and accept delivered capabilities",
+			"Align platform direction, roadmap, and cross-functional priorities",
+			"Orchestrate adoption, training, and stakeholder readiness activities"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Sponsorship spans executive advocacy, business outcome ownership, platform direction, and change orchestration—each with distinct accountabilities.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 38,
+		"questionType": "multi",
+		"prompt": "Before launching a major ServiceNow capability wave, which OCM readiness factors should the platform owner validate? (Choose three.)",
+		"choices": [
+			"Executive messaging aligned to the outcomes users should expect",
+			"Training and support paths tailored to affected roles and regions",
+			"Feedback channels to capture adoption issues during early rollout",
+			"Complete retirement of every legacy system before any pilot begins"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1, 2],
+		"explanation": "OCM readiness includes sponsor messaging, role-based enablement, and feedback loops—not mandatory full legacy retirement before pilots.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 39,
+		"prompt": "A shared services organization must sequence HR, procurement, and IT workflows on one instance. Which ROI sequencing approach best satisfies C-Suite expectations?",
+		"choices": [
+			"Establish shared data and request fulfillment core, then expand domain workflows with value checkpoints",
+			"Implement all three domains simultaneously without shared master data standards",
+			"Deliver procurement last because it generates the least executive visibility",
+			"Begin with cosmetic branding changes before any process or integration work"
+		],
+		"correctIndex": 0,
+		"explanation": "Shared services ROI depends on common data and fulfillment foundations before domain expansion, with checkpoints at each stage.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	}
+]

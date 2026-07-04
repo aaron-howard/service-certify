@@ -2,6 +2,7 @@
 	import { browser } from '$app/environment';
 	import { env } from '$env/dynamic/public';
 	import MaterialIcon from '$lib/components/MaterialIcon.svelte';
+	import MatchQuestion from '$lib/components/MatchQuestion.svelte';
 	import { getPracticeTimeSeconds } from '$lib/catalog/examQuestionPolicy';
 	import {
 		displayIndexToOriginal,
@@ -36,16 +37,20 @@
 		prompt: string;
 		choices: string[];
 		permutation: number[];
-		questionType: 'single' | 'multi';
+		questionType: 'single' | 'multi' | 'match';
+		matchLeftItems?: string[];
+		matchRightItems?: string[];
 	};
 
 	type GradeResult = {
 		order: number;
 		selectedIndex: number;
 		selectedIndexes: number[];
+		matchAnswers: { left: number; right: number }[];
 		correctIndex: number;
 		correctIndexes: number[];
-		questionType: 'single' | 'multi';
+		correctMatches: { left: number; right: number }[];
+		questionType: 'single' | 'multi' | 'match';
 		isCorrect: boolean;
 		explanation: string;
 	};
@@ -58,10 +63,24 @@
 			order: number;
 			prompt: string;
 			choices: string[];
-			questionType?: 'single' | 'multi';
+			questionType?: 'single' | 'multi' | 'match';
+			matchLeftItems?: string[];
+			matchRightItems?: string[];
 		}[]
 	): Q[] {
 		return rows.map((r) => {
+			const questionType = r.questionType ?? 'single';
+			if (questionType === 'match') {
+				return {
+					id: r.order,
+					prompt: r.prompt,
+					choices: [],
+					permutation: [],
+					questionType,
+					matchLeftItems: r.matchLeftItems ?? [],
+					matchRightItems: r.matchRightItems ?? []
+				};
+			}
 			const { choices, permutation } = shuffleChoicesForDisplay(
 				r.choices,
 				sessionSeed,
@@ -72,7 +91,7 @@
 				prompt: r.prompt,
 				choices,
 				permutation,
-				questionType: r.questionType ?? 'single'
+				questionType
 			};
 		});
 	}
@@ -95,6 +114,7 @@
 	let remaining = $state(90 * 60);
 	let selected = $state<Record<number, number>>({});
 	let selectedMulti = $state<Record<number, number[]>>({});
+	let selectedMatch = $state<Record<number, Record<number, number>>>({});
 	let submitted = $state(false);
 	let grading = $state(false);
 	let gradeError = $state<string | null>(null);
@@ -138,6 +158,11 @@
 	}
 
 	function isAnswered(q: Q): boolean {
+		if (q.questionType === 'match') {
+			const leftCount = q.matchLeftItems?.length ?? 0;
+			const paired = Object.keys(selectedMatch[q.id] ?? {}).length;
+			return leftCount > 0 && paired >= leftCount;
+		}
 		return q.questionType === 'multi'
 			? (selectedMulti[q.id]?.length ?? 0) > 0
 			: selected[q.id] !== undefined;
@@ -188,6 +213,17 @@
 				mode,
 				...(isFullMock ? { sessionSeed } : {}),
 				answers: questions.map((q) => {
+					if (q.questionType === 'match') {
+						const pairs = selectedMatch[q.id] ?? {};
+						return {
+							order: q.id,
+							selectedIndex: 0,
+							matchAnswers: Object.entries(pairs).map(([left, right]) => ({
+								left: Number(left),
+								right: Number(right)
+							}))
+						};
+					}
 					if (q.questionType === 'multi') {
 						const displaySel = selectedMulti[q.id] ?? [];
 						const originalSel = displaySel
@@ -323,6 +359,19 @@
 							Select all that apply
 						</p>
 					{/if}
+					{#if q.questionType === 'match' && q.matchLeftItems && q.matchRightItems}
+						<MatchQuestion
+							leftItems={q.matchLeftItems}
+							rightItems={q.matchRightItems}
+							selections={selectedMatch[q.id] ?? {}}
+							disabled={submitted || grading}
+							submitted={submitted}
+							correctMatches={graded?.correctMatches ?? []}
+							onchange={(next) => {
+								selectedMatch = { ...selectedMatch, [q.id]: next };
+							}}
+						/>
+					{:else}
 					<ul class="space-y-3">
 						{#each q.choices as choice, idx}
 							{@const showCorrect = submitted && graded && isChoiceCorrect(q, graded, idx)}
@@ -363,6 +412,7 @@
 							</li>
 						{/each}
 					</ul>
+					{/if}
 					{#if submitted && graded}
 						<div
 							class="mt-6 rounded-lg border border-secondary-container/40 bg-secondary-container/15 p-4 text-sm text-on-surface-variant"

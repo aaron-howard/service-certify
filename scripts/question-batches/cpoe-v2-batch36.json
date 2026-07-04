@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOE",
+		"order": 175,
+		"prompt": "Given a case study where a healthcare enterprise must demonstrate HIPAA-aligned controls on the Now Platform before go-live, how should the platform owner align regulatory requirements with platform capabilities?",
+		"choices": [
+			"Map required safeguards to native security features, documented roles, audit evidence, and governed data flows with legal and risk partners",
+			"Rely on vendor marketing materials without mapping controls to organizational policies",
+			"Defer all compliance mapping until after production launch to preserve schedule",
+			"Assign compliance solely to the audit team without platform governance involvement"
+		],
+		"correctIndex": 0,
+		"explanation": "Regulatory alignment requires translating policy obligations into concrete platform controls, roles, and evidence—not post-launch handoffs or vendor claims alone.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 176,
+		"prompt": "The internal audit team requests evidence that platform access controls meet enterprise policy. Which contribution best positions the platform owner as a partner in the audit?",
+		"choices": [
+			"Provide role certification reports, ACL review outcomes, and remediation plans tied to control objectives",
+			"Export every table record without filtering to sensitive fields or access context",
+			"Direct auditors to individual developers for ad hoc screen sharing without centralized evidence",
+			"Postpone audit support until the next major release completes"
+		],
+		"correctIndex": 0,
+		"explanation": "Audit contribution means supplying structured, control-aligned evidence and remediation tracking that auditors can reconcile to policy—not unstructured data dumps or deferred engagement.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 177,
+		"questionType": "multi",
+		"prompt": "Executive sponsors ask how security investments on the platform can create business advantage, not only reduce risk. Which options best support that narrative? (Choose two.)",
+		"choices": [
+			"Multi-factor authentication and risk-based sign-on that enable secure self-service for employees and partners",
+			"Encryption and data protection that unlock approved cross-border workflows previously blocked by legal review",
+			"Disabling audit logs to reduce storage costs and simplify troubleshooting",
+			"Granting broad admin access to accelerate citizen development without review"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Strong authentication and data protection can expand safe self-service and approved global workflows—turning security controls into enablers rather than blockers.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 178,
+		"prompt": "A multinational firm must keep EU employee data within approved regions while sharing ITSM processes globally. Given this scenario, which platform approach best satisfies regulatory alignment?",
+		"choices": [
+			"Design domain separation, data residency, and integration patterns validated with legal and privacy officers before rollout",
+			"Store all records in a single global domain to simplify reporting regardless of residency rules",
+			"Replicate production data to every subsidiary instance without classification review",
+			"Rely on end-user discretion to avoid entering restricted data in shared forms"
+		],
+		"correctIndex": 0,
+		"explanation": "Cross-border compliance requires deliberate domain, residency, and integration design validated with privacy stakeholders—not undifferentiated global data pools.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainSeparation.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 179,
+		"questionType": "match",
+		"prompt": "Match each compliance governance artifact to its primary value for executive and audit stakeholders.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Control mapping matrix",
+			"Role certification campaign",
+			"Security exception register",
+			"Audit-ready evidence package"
+		],
+		"matchRightItems": [
+			"Links regulatory obligations to implemented platform safeguards",
+			"Demonstrates ongoing attestation that access remains appropriate",
+			"Quantifies accepted risk debt and drives time-bound remediation",
+			"Accelerates external review with pre-organized control evidence"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Compliance artifacts serve distinct executive and audit purposes: mapping controls, certifying access, tracking exceptions, and packaging evidence for efficient review.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		]
+	}
+]

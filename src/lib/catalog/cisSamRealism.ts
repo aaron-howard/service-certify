@@ -1,6 +1,9 @@
 /** CIS-SAM (Certified Implementation Specialist - Software Asset Management) exam-realism rules. */
 
+import type { QuestionType } from './questionTypes';
+
 /** Bank distribution for 90 questions scaled 1.5x from the 60-question official exam. */
+
 export const CIS_SAM_DOMAIN_TARGETS = {
 	'Software Asset Core Overview and Fundamentals': 13,
 	'Data Integrity Attributes and Sources': 25,
@@ -46,7 +49,7 @@ export type CisSamQuestionRow = {
 	prompt: string;
 	choices: string[];
 	sourceUrls: string[];
-	questionType?: 'single' | 'multi';
+	questionType?: QuestionType;
 	correctIndexes?: number[];
 	correctIndex?: number;
 };

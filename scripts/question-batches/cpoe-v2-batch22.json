@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOE",
+		"order": 105,
+		"prompt": "During a troubled rollout, the CEO requests a concise status update before the board meeting. What should the platform owner include in executive communications?",
+		"choices": [
+			"Current impact, root-cause hypothesis, mitigation actions, revised timeline, and decisions needed from leadership",
+			"A detailed list of every open defect without prioritization or business context",
+			"Technical stack traces and database query plans without translation to business impact",
+			"Assurances that all issues will resolve without sharing evidence or recovery milestones"
+		],
+		"correctIndex": 0,
+		"explanation": "Executive communications during rollout issues must translate technical status into business impact, actions, timelines, and explicit leadership decisions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 106,
+		"prompt": "Given a scenario where inbound integration jobs fail silently after a ServiceNow release, what troubleshooting step should the platform owner champion first?",
+		"choices": [
+			"Review integration logs, compare pre- and post-release configurations, and validate credential and endpoint health",
+			"Rollback the entire instance to the prior major version without impact analysis",
+			"Disable all inbound integrations until the next maintenance window",
+			"Assign resolution only to the external source system team without platform coordination"
+		],
+		"correctIndex": 0,
+		"explanation": "Silent integration failures after release typically require coordinated log analysis and configuration comparison—not blind rollbacks or siloed troubleshooting.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 107,
+		"questionType": "multi",
+		"prompt": "A federated enterprise launches ServiceNow across IT, HR, and procurement with separate delivery teams. Which coordination mechanisms should the platform owner establish? (Choose two.)",
+		"choices": [
+			"A shared release calendar with dependency tracking across workstreams",
+			"Regular cross-team governance forums with defined decision rights",
+			"Independent production deployments without change coordination",
+			"Separate data models per team to avoid collaboration overhead"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Multi-team delivery requires shared release visibility and governance forums; uncoordinated deployments and fragmented data models increase conflict and rework.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 108,
+		"questionType": "match",
+		"prompt": "Match each testing layer to its primary purpose in an enterprise ServiceNow delivery program.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Automated regression suite",
+			"System integration testing",
+			"User acceptance testing",
+			"Production smoke testing"
+		],
+		"matchRightItems": [
+			"Detect regressions in configured workflows after each build",
+			"Validate data flows and API behavior across connected systems",
+			"Confirm business processes meet stakeholder acceptance criteria",
+			"Verify critical paths function immediately after deployment"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Each testing layer serves a distinct purpose: regression for change safety, SIT for integrations, UAT for business fit, and smoke tests for post-deploy confidence.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/automated-test-framework/atf-overview.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 109,
+		"prompt": "Cutover weekend approaches and data migration validation shows a 3% record discrepancy. Given this case study, what decision framework should the platform owner present to sponsors?",
+		"choices": [
+			"Assess discrepancy impact on critical processes, present go/no-go options with remediation plans and rollback triggers",
+			"Proceed without disclosure because the percentage is below five percent",
+			"Cancel the entire program and restart discovery from scratch",
+			"Delay indefinitely until zero discrepancies are achieved regardless of business deadlines"
+		],
+		"correctIndex": 0,
+		"explanation": "Cutover decisions require impact-based go/no-go analysis with remediation and rollback options—not arbitrary thresholds or indefinite delay.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/australia/install-and-upgrade/concept/c_UpgradeFallbackPlanning.html"
+		]
+	}
+]

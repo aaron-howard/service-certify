@@ -1,0 +1,26 @@
+import { describe, expect, it } from 'vitest';
+import { DEV_PRACTICE_QUESTIONS } from '../../convex/seed/devQuestionBank';
+import { CPOE_BANK_SIZE, validateCpoeTrack } from '$lib/catalog/cpoeRealism';
+
+const TRACK = 'CPOE';
+const V2_ORDERS = Array.from({ length: CPOE_BANK_SIZE }, (_, i) => i);
+
+describe('CPOE v2 realism', () => {
+	const rows = DEV_PRACTICE_QUESTIONS.filter((q) => q.trackCode === TRACK);
+
+	it('has 222 v2 questions at orders 0-221', () => {
+		expect(rows).toHaveLength(CPOE_BANK_SIZE);
+		expect(rows.map((q) => q.order).sort((a, b) => a - b)).toEqual(V2_ORDERS);
+	});
+
+	it('passes CPOE realism validation', () => {
+		expect(validateCpoeTrack(rows)).toEqual([]);
+	});
+
+	it('includes match, multi, and single item types', () => {
+		const types = rows.map((q) => q.questionType ?? 'single');
+		expect(types.filter((t) => t === 'match').length).toBeGreaterThanOrEqual(40);
+		expect(types.filter((t) => t === 'multi').length).toBeGreaterThanOrEqual(30);
+		expect(types.filter((t) => t === 'single').length).toBeGreaterThanOrEqual(130);
+	});
+});

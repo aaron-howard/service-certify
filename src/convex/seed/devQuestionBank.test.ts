@@ -34,9 +34,15 @@ describe('DEV_PRACTICE_QUESTIONS bank', () => {
 
 	it('validates row shape for every question', () => {
 		for (const q of DEV_PRACTICE_QUESTIONS) {
-			expect(q.choices).toHaveLength(4);
-			expect(q.correctIndex).toBeGreaterThanOrEqual(0);
-			expect(q.correctIndex).toBeLessThanOrEqual(3);
+			if (q.questionType === 'match') {
+				expect(q.matchLeftItems?.length ?? 0).toBeGreaterThanOrEqual(2);
+				expect(q.matchRightItems?.length ?? 0).toBeGreaterThanOrEqual(2);
+				expect(q.correctMatches?.length ?? 0).toBeGreaterThanOrEqual(2);
+			} else {
+				expect(q.choices).toHaveLength(4);
+				expect(q.correctIndex).toBeGreaterThanOrEqual(0);
+				expect(q.correctIndex).toBeLessThanOrEqual(3);
+			}
 			expect(q.prompt.trim().length).toBeGreaterThan(0);
 			expect(q.explanation.trim().length).toBeGreaterThan(0);
 			expect(q.sourceUrls.length).toBeGreaterThan(0);

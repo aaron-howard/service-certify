@@ -1,0 +1,96 @@
+[
+	{
+		"trackCode": "CPOE",
+		"order": 5,
+		"prompt": "During a platform strategy workshop, leaders debate faster time to market versus deeper process standardization. Which option best meets C-Suite needs when resources are constrained?",
+		"choices": [
+			"Deliver a thin vertical slice that proves value quickly, then expand standardization in later waves",
+			"Delay all releases until every business unit agrees on identical process models",
+			"Fund parallel full-scale builds for every department without shared governance",
+			"Reduce scope to configuration-only changes with no executive-facing outcomes"
+		],
+		"correctIndex": 0,
+		"explanation": "Constrained programs benefit from incremental value delivery that satisfies urgency while preserving a path toward enterprise standardization.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 6,
+		"prompt": "The board requests a three-year platform roadmap. Which components must the platform owner include to satisfy executive expectations?",
+		"choices": [
+			"Outcomes by horizon, capability dependencies, investment levels, and measurable milestones",
+			"A list of technical tables to configure without linking to business priorities",
+			"Vendor release notes copied verbatim without organizational context",
+			"Only sprint backlogs for the current development team"
+		],
+		"correctIndex": 0,
+		"explanation": "Executive roadmaps connect outcomes, sequencing, funding, and milestones so leaders can govern progress and ROI across multiple years.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 7,
+		"questionType": "match",
+		"prompt": "Match each step in seeking sponsorship engagement to its purpose when demonstrating business value.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Identify executive champions",
+			"Quantify baseline pain",
+			"Define success metrics",
+			"Socialize quick wins"
+		],
+		"matchRightItems": [
+			"Secure visible leadership advocacy for the program",
+			"Establish a measurable before-state for ROI comparisons",
+			"Align sponsors on how value will be validated",
+			"Build confidence through early, demonstrable outcomes"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Sponsorship engagement combines leadership advocacy, baseline metrics, agreed success measures, and early wins to sustain executive support.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 8,
+		"prompt": "Given a scenario where IT and business units disagree on platform priorities, what persuasion approach should the platform owner use with the C-Suite?",
+		"choices": [
+			"Frame options using shared enterprise outcomes, trade-offs, and evidence from comparable use cases",
+			"Present only technical architecture diagrams without business impact context",
+			"Defer all decisions to the loudest functional leader in the room",
+			"Recommend pausing the program until unanimous agreement is reached"
+		],
+		"correctIndex": 0,
+		"explanation": "Executive persuasion relies on outcome-based framing, explicit trade-offs, and credible examples rather than technical detail alone or indefinite delay.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 9,
+		"prompt": "A multinational firm must sequence HR, ITSM, and security capabilities with shared identity data. Given this case study, which implementation sequence best accounts for dependencies and ROI?",
+		"choices": [
+			"Establish foundational data and ITSM core, then layer HR and security workflows that consume trusted records",
+			"Launch all three domains in parallel without shared master data governance",
+			"Implement security tooling last after every business process is fully automated",
+			"Begin with cosmetic portal changes before any integration or data work"
+		],
+		"correctIndex": 0,
+		"explanation": "Sequencing should respect data and process dependencies—core platform and shared records first—so downstream capabilities deliver reliable ROI.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	}
+]

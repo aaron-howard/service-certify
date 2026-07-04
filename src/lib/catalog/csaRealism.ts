@@ -1,6 +1,9 @@
 /** CSA (Certified System Administrator) exam-realism rules (official blueprint aligned). */
 
+import type { QuestionType } from './questionTypes';
+
 /** Bank distribution for 90 questions scaled 1.5x from the 60-question official exam. */
+
 export const CSA_DOMAIN_TARGETS = {
 	'Platform Overview and Navigation': 6,
 	'Instance Configuration': 9,
@@ -47,7 +50,7 @@ export type CsaQuestionRow = {
 	prompt: string;
 	choices: string[];
 	sourceUrls: string[];
-	questionType?: 'single' | 'multi';
+	questionType?: QuestionType;
 	correctIndexes?: number[];
 	correctIndex?: number;
 };

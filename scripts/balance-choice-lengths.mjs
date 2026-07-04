@@ -288,18 +288,24 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = ${JSON.stringify
 }
 
 function isLongestCorrect(q) {
+	if (q.questionType === 'match' || q.choices.length === 0) return false;
 	const correctLen = q.choices[q.correctIndex].length;
 	const maxLen = Math.max(...q.choices.map((c) => c.length));
 	return correctLen === maxLen;
 }
 
+function isMcQuestion(q) {
+	return (q.questionType ?? 'single') !== 'match' && q.choices.length === 4;
+}
+
 function trackLongestRate(rows) {
-	if (rows.length === 0) return 0;
+	const mcRows = rows.filter(isMcQuestion);
+	if (mcRows.length === 0) return 0;
 	let longestCorrect = 0;
-	for (const q of rows) {
+	for (const q of mcRows) {
 		if (isLongestCorrect(q)) longestCorrect++;
 	}
-	return longestCorrect / rows.length;
+	return longestCorrect / mcRows.length;
 }
 
 function containsBoilerplate(text) {
@@ -352,7 +358,7 @@ function balanceTrack(rows) {
 
 	const candidates = updated
 		.map((q, idx) => ({ q, idx }))
-		.filter(({ q }) => isLongestCorrect(q))
+		.filter(({ q }) => isMcQuestion(q) && isLongestCorrect(q))
 		.sort((a, b) => {
 			const gapA =
 				a.q.choices[a.q.correctIndex].length -

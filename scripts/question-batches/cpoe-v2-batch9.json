@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOE",
+		"order": 40,
+		"prompt": "Board members request assurance that platform investments will not duplicate existing SaaS spend. Which C-Suite narrative should the platform owner prepare?",
+		"choices": [
+			"A rationalization map showing retired tools, avoided costs, and consolidated capabilities on ServiceNow",
+			"A list of every ServiceNow plugin installed without linkage to spend reduction goals",
+			"An argument that duplicate subscriptions are acceptable to preserve team autonomy",
+			"A promise to maintain all legacy tools indefinitely alongside the new platform"
+		],
+		"correctIndex": 0,
+		"explanation": "Board-level assurance requires explicit rationalization linking platform investment to retired spend and consolidated capabilities.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 41,
+		"prompt": "Given a case study where ESG reporting requires auditable workflow data, how should the platform owner extend the strategy vision?",
+		"choices": [
+			"Include governed data capture, retention policies, and traceability aligned to ESG disclosure requirements",
+			"Treat ESG as a future phase with no changes to current workflow or data design",
+			"Rely on manual attestations outside ServiceNow without platform audit evidence",
+			"Limit ESG scope to marketing content unrelated to operational workflow records"
+		],
+		"correctIndex": 0,
+		"explanation": "ESG-aligned vision embeds auditable workflow data and retention in platform strategy—not deferred manual workarounds.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 42,
+		"questionType": "multi",
+		"prompt": "When updating the platform strategy document for an annual review, which sections should the platform owner refresh? (Choose two.)",
+		"choices": [
+			"Progress against success measures and revised outcome targets",
+			"Capability roadmap adjustments reflecting new enterprise priorities",
+			"Daily stand-up notes from the development team for the prior week",
+			"Individual performance ratings for every contractor on the program"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Annual strategy updates reflect measured progress and reprioritized roadmaps—not operational meeting notes or HR records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 43,
+		"questionType": "match",
+		"prompt": "Match each enterprise BI integration pattern to the scenario where it best applies.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Scheduled data product feeds",
+			"Event-driven streaming updates",
+			"Semantic layer definitions",
+			"Self-service curated datasets"
+		],
+		"matchRightItems": [
+			"Monthly corporate scorecards requiring stable batch refreshes",
+			"Operations centers needing near-real-time status for critical workflows",
+			"Finance models requiring consistent metric logic across multiple sources",
+			"Analyst teams exploring trends with governed but flexible access"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "BI patterns match reporting cadence and consumption needs: batch scorecards, real-time ops, semantic consistency, and governed self-service.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 44,
+		"prompt": "The primary executive sponsor announces retirement mid-program. Which action should the platform owner take to preserve sponsorship momentum?",
+		"choices": [
+			"Identify a successor sponsor, transfer context, and reconfirm committed outcomes and funding",
+			"Pause all delivery until the organization completes a full reorganization",
+			"Continue without sponsor engagement assuming funding will renew automatically",
+			"Reduce scope silently to avoid briefing incoming leadership on program status"
+		],
+		"correctIndex": 0,
+		"explanation": "Sponsor transitions require deliberate succession, context transfer, and reaffirmed outcomes—not silent scope cuts or unmanaged drift.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	}
+]

@@ -158,16 +158,50 @@ function validateQuestion(q, { warnDuplicates = true } = {}) {
 	if (!q.trackCode || typeof q.order !== 'number') {
 		throw new Error('missing trackCode/order');
 	}
-	if (!Array.isArray(q.choices) || q.choices.length !== 4) {
-		throw new Error(`track ${q.trackCode} order ${q.order}: need 4 choices`);
-	}
-	if (q.correctIndex < 0 || q.correctIndex > 3) {
-		throw new Error(`track ${q.trackCode} order ${q.order}: bad correctIndex`);
-	}
 	const questionType = q.questionType ?? 'single';
-	if (questionType !== 'single' && questionType !== 'multi') {
+	if (questionType !== 'single' && questionType !== 'multi' && questionType !== 'match') {
 		throw new Error(`track ${q.trackCode} order ${q.order}: bad questionType`);
 	}
+
+	if (questionType === 'match') {
+		if (!Array.isArray(q.choices)) {
+			throw new Error(`track ${q.trackCode} order ${q.order}: match questions need choices array`);
+		}
+		const left = q.matchLeftItems ?? [];
+		const right = q.matchRightItems ?? [];
+		const pairs = q.correctMatches ?? [];
+		if (left.length < 2 || right.length < 2) {
+			throw new Error(
+				`track ${q.trackCode} order ${q.order}: match questions need matchLeftItems and matchRightItems`
+			);
+		}
+		if (pairs.length < left.length) {
+			throw new Error(
+				`track ${q.trackCode} order ${q.order}: correctMatches must cover each left item`
+			);
+		}
+	} else {
+		if (!Array.isArray(q.choices) || q.choices.length !== 4) {
+			throw new Error(`track ${q.trackCode} order ${q.order}: need 4 choices`);
+		}
+		if (q.correctIndex < 0 || q.correctIndex > 3) {
+			throw new Error(`track ${q.trackCode} order ${q.order}: bad correctIndex`);
+		}
+		const normalizedChoices = q.choices.map((c) => c.trim().toLowerCase());
+		if (new Set(normalizedChoices).size !== 4) {
+			throw new Error(`track ${q.trackCode} order ${q.order}: duplicate choices in same question`);
+		}
+		for (const choice of q.choices) {
+			for (const suffix of BOILERPLATE_SUFFIXES) {
+				if (choice.includes(suffix)) {
+					throw new Error(
+						`track ${q.trackCode} order ${q.order}: choice uses shared boilerplate suffix`
+					);
+				}
+			}
+		}
+	}
+
 	if (questionType === 'multi') {
 		if (!Array.isArray(q.correctIndexes) || q.correctIndexes.length < 2) {
 			throw new Error(
@@ -188,7 +222,7 @@ function validateQuestion(q, { warnDuplicates = true } = {}) {
 				`track ${q.trackCode} order ${q.order}: correctIndex must equal first (lowest) correctIndexes entry`
 			);
 		}
-	} else if (q.correctIndexes !== undefined) {
+	} else if (q.correctIndexes !== undefined && questionType !== 'match') {
 		throw new Error(
 			`track ${q.trackCode} order ${q.order}: correctIndexes only valid for multi questions`
 		);
@@ -201,19 +235,6 @@ function validateQuestion(q, { warnDuplicates = true } = {}) {
 	}
 	if (!Array.isArray(q.sourceUrls) || q.sourceUrls.length === 0) {
 		throw new Error(`track ${q.trackCode} order ${q.order}: need sourceUrls`);
-	}
-	const normalizedChoices = q.choices.map((c) => c.trim().toLowerCase());
-	if (new Set(normalizedChoices).size !== 4) {
-		throw new Error(`track ${q.trackCode} order ${q.order}: duplicate choices in same question`);
-	}
-	for (const choice of q.choices) {
-		for (const suffix of BOILERPLATE_SUFFIXES) {
-			if (choice.includes(suffix)) {
-				throw new Error(
-					`track ${q.trackCode} order ${q.order}: choice uses shared boilerplate suffix`
-				);
-			}
-		}
 	}
 	return warnDuplicates;
 }

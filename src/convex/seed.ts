@@ -41,6 +41,9 @@ export const devQuestions = internalMutation({
 				correctIndex: q.correctIndex,
 				...(q.questionType ? { questionType: q.questionType } : {}),
 				...(q.correctIndexes ? { correctIndexes: [...q.correctIndexes] } : {}),
+				...(q.matchLeftItems ? { matchLeftItems: [...q.matchLeftItems] } : {}),
+				...(q.matchRightItems ? { matchRightItems: [...q.matchRightItems] } : {}),
+				...(q.correctMatches ? { correctMatches: q.correctMatches.map((p) => ({ ...p })) } : {}),
 				explanation: q.explanation,
 				sourceUrls: q.sourceUrls,
 				difficulty: 'dev'

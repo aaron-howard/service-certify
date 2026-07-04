@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOE",
+		"order": 55,
+		"prompt": "During annual planning, program leads propose parallel Agile workstreams across Technology, Customer, Employee, and Creator solution areas. How should the platform owner align funding?",
+		"choices": [
+			"Map each workstream to shared platform outcomes, dependencies, and capacity limits before approving spend",
+			"Fund every workstream at full velocity without reconciling shared platform services",
+			"Pause Customer and Employee streams until Technology completes all custom applications",
+			"Consolidate all work into a single undifferentiated backlog with no solution-area ownership"
+		],
+		"correctIndex": 0,
+		"explanation": "Agile workstream funding must reflect cross-solution dependencies and shared platform capacity so executives see aligned investment across domains.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 56,
+		"prompt": "The CIO requests a eighteen-month resource forecast for platform delivery. Which method best satisfies executive expectations?",
+		"choices": [
+			"Combine bottom-up effort estimates from workstreams with top-down capacity ceilings from HR and partners",
+			"Extrapolate last quarter's burn rate without adjusting for new scope or release waves",
+			"Publish a single FTE number without role mix, skill gaps, or contractor assumptions",
+			"Defer forecasting until every user story is fully refined across all domains"
+		],
+		"correctIndex": 0,
+		"explanation": "Credible resource forecasts blend granular workstream estimates with enterprise capacity limits so leaders can fund realistic delivery.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 57,
+		"questionType": "multi",
+		"prompt": "Given a scenario where license true-up charges exceeded forecast, which inputs should the platform owner revisit with finance? (Choose two.)",
+		"choices": [
+			"User role mix and fulfillment-type growth against contracted entitlements",
+			"Product SKU coverage for capabilities actually in production use",
+			"Number of UI themes configured per business unit",
+			"Historical incident ticket volume unrelated to subscription metrics"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "License overruns usually trace to entitlement gaps between contracted SKUs and actual roles, products, and usage—not cosmetic or unrelated metrics.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 58,
+		"prompt": "Executive sponsors debate whether the implementation budget is complete. Which hidden cost category should the platform owner surface?",
+		"choices": [
+			"Environment refresh, regression testing, and organizational change management across release waves",
+			"Desktop wallpaper updates for every department using the portal",
+			"Annual awards ceremony for the project team regardless of adoption results",
+			"Printing physical process manuals that duplicate in-platform knowledge articles"
+		],
+		"correctIndex": 0,
+		"explanation": "Implementation TCO must include test environments, regression cycles, and OCM sustainment—costs often omitted from initial SOW estimates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 59,
+		"questionType": "match",
+		"prompt": "Match each ServiceNow solution area workstream to its primary cost and resource planning focus.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Technology",
+			"Customer",
+			"Employee",
+			"Creator"
+		],
+		"matchRightItems": [
+			"Platform engineering capacity, integration throughput, and technical debt remediation",
+			"External-facing service catalog investment and customer experience localization",
+			"HR and workplace service delivery staffing aligned to workforce adoption",
+			"Low-code governance, citizen developer enablement, and guardrail investment"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Each solution area carries distinct cost drivers; aligning workstream forecasts to those drivers prevents underfunded shared platform services.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
+		]
+	}
+]
