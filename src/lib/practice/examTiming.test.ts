@@ -23,8 +23,13 @@ describe('exam timing policy', () => {
 	});
 
 	it('scales sample time to question count with a minimum floor', () => {
+		// CIS-DISCO official count is 45; 3 questions scales above the 300s floor
 		expect(
 			getPracticeTimeSeconds({ trackCode: 'CIS-DISCO', questionCount: 3, mode: 'sample' })
+		).toBe(360);
+		// Fewer questions hit the 300-second minimum floor
+		expect(
+			getPracticeTimeSeconds({ trackCode: 'CIS-DISCO', questionCount: 2, mode: 'sample' })
 		).toBe(300);
 	});
 });
