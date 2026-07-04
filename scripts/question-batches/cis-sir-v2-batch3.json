@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-SIR",
+		"order": 10,
+		"prompt": "Which visualization helps analysts compare incident volume across assignment groups during a shift handoff?",
+		"choices": [
+			"Stacked bar chart of open incidents by assignment group on a SOC dashboard",
+			"Pie chart of software license compliance scores by publisher entitlement",
+			"Tree map of facilities work orders grouped by building floor number",
+			"Scatter plot of project cost variance against portfolio strategic theme"
+		],
+		"correctIndex": 0,
+		"explanation": "Assignment-group breakdowns on dashboards give shift leads visibility into workload distribution before reassigning incidents.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-reporting.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 11,
+		"prompt": "When building an executive SIR dashboard, why should widgets respect role-based access on underlying reports?",
+		"choices": [
+			"Sensitive incident details remain visible only to authorized security roles",
+			"All users automatically receive admin privileges on security tables",
+			"Dashboards bypass ACLs so executives see every field without restriction",
+			"Report ACLs are ignored when widgets are pinned to a homepage"
+		],
+		"correctIndex": 0,
+		"explanation": "Role-based report and dashboard access prevents unauthorized exposure of sensitive security incident data to non-security audiences.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-reporting.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 12,
+		"prompt": "A CISO requests a single-pane view of critical open incidents and overdue response tasks. Which dashboard design fits best?",
+		"choices": [
+			"Executive dashboard combining filtered incident lists with overdue task indicators",
+			"Discovery status board listing MID Server heartbeat intervals by region",
+			"Software reclamation dashboard showing unused license reclamation candidates",
+			"Onboarding catalog dashboard tracking laptop shipment tracking numbers"
+		],
+		"correctIndex": 0,
+		"explanation": "Executive SIR dashboards combine high-severity incident status with overdue task visibility for leadership oversight.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-reporting.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 13,
+		"prompt": "Which data element should a trend report include to distinguish reopened security incidents from net-new events?",
+		"choices": [
+			"Reopen count or state transition history on the security incident record",
+			"Discovery classification rule name applied during horizontal scans",
+			"Catalog variable value captured during employee mobile device requests",
+			"Project financial plan baseline compared to actual spend by fiscal quarter"
+		],
+		"correctIndex": 0,
+		"explanation": "Reopen indicators and state history let reporting distinguish recurring incidents from first-time detections.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-operations-metrics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 14,
+		"prompt": "An analyst receives a credible phishing alert with no matching integration event. What is the correct way to begin tracking it in SIR?",
+		"choices": [
+			"Create a new security incident record and capture initial indicators and scope",
+			"Open a standard IT incident and convert it automatically after closure",
+			"Log the event only in a personal spreadsheet until SIEM correlation fires",
+			"Submit a change request and wait for CAB approval before any record exists"
+		],
+		"correctIndex": 0,
+		"explanation": "Analysts create security incident records to initiate structured triage, assignment, and response even when alerts arrive outside integrations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/create-a-security-incident.html"
+		]
+	}
+]

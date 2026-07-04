@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-SM",
+		"order": 10,
+		"prompt": "A Parse File operation in Pattern Designer is most appropriate when the pattern must do what?",
+		"choices": [
+			"Read configuration or log file contents from a target host and extract dependency details",
+			"Generate PDF reports of service map topology for executive dashboard consumption",
+			"Import software entitlement records from a publisher CSV into the SAM application",
+			"Convert event management alert rules into service map entry point definitions"
+		],
+		"correctIndex": 0,
+		"explanation": "Parse File steps retrieve file content—such as application config files—and parse structured data needed for identification or connection mapping.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 11,
+		"prompt": "WMI-based scripting steps in Service Mapping patterns are commonly used to collect what information from Windows hosts?",
+		"choices": [
+			"Running processes, services, and configuration attributes queried through Windows Management Instrumentation",
+			"OAuth tokens from Azure Active Directory for cloud tag synchronization workflows",
+			"SNMP trap definitions exported from third-party network monitoring appliances",
+			"Change calendar entries linked to maintenance windows in the ITSM application"
+		],
+		"correctIndex": 0,
+		"explanation": "WMI steps query Windows hosts for process lists, service details, and other OS-level data used to identify applications and connections.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/c-UsingPatternsForHorizontalDiscovery.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 12,
+		"prompt": "SSH-based pattern steps require which prerequisite before they can execute successfully on a Linux host?",
+		"choices": [
+			"A valid SSH Discovery credential with permissions to run the configured commands on the target",
+			"An active Event Management connector subscribed to the host syslog stream",
+			"A business service record in the Operational Status of Retired state",
+			"A tag-based mapping rule published to the cloud provider resource group"
+		],
+		"correctIndex": 0,
+		"explanation": "SSH steps depend on Discovery credentials that authenticate to the host and authorize execution of the remote commands defined in the pattern.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 13,
+		"prompt": "Regular expression operations in Service Mapping patterns are typically used to do what?",
+		"choices": [
+			"Extract ports, paths, or connection strings from command output or configuration text",
+			"Calculate CMDB health scores based on duplicate CI counts per discovery schedule and reconciliation policy",
+			"Assign incident assignment groups based on mapped application service criticality",
+			"Generate machine learning training labels for tag-based service classification"
+		],
+		"correctIndex": 0,
+		"explanation": "Regex parsing isolates structured tokens—such as IP addresses, ports, or URLs—from unstructured command or file output for connection mapping.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 14,
+		"prompt": "SNMP-based steps in a Service Mapping pattern depend on what target-side configuration?",
+		"choices": [
+			"SNMP agent enabled on the device with a community string or credential matching Discovery settings",
+			"SSH key exchange configured on the MID Server for privileged command execution",
+			"WMI firewall rules allowing remote registry access from every subnet in scope",
+			"Azure resource tags formatted with the service-mapping namespace prefix"
+		],
+		"correctIndex": 0,
+		"explanation": "SNMP steps require an accessible SNMP agent and credentials or community strings configured consistently with Discovery credential records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html"
+		]
+	}
+]

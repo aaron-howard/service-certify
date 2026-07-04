@@ -1,0 +1,88 @@
+[
+	{
+		"trackCode": "CIS-RC",
+		"order": 85,
+		"prompt": "Internal audit begins a SOC 2 engagement in Audit Management. Which activity should occur first to reduce testing rework?",
+		"choices": [
+			"Define engagement scope, objectives, and the control universe with stakeholders",
+			"Collect ad hoc screenshots before scoping workshops finish",
+			"Mark all in-scope controls as passed to save fieldwork time",
+			"Close prior-year observations without validating corrective action"
+		],
+		"correctIndex": 0,
+		"explanation": "Clear scope and objectives at kickoff align testing with the correct control population and evidence needs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/audit-management/c_AuditTasks.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 86,
+		"prompt": "An audit director assigns managers, testers, and evidence coordinators to an engagement. Which concept describes that role model?",
+		"choices": [
+			"Audit personas defining responsibilities across the engagement lifecycle",
+			"Discovery credentials used by MID Servers during classification",
+			"Catalog fulfillment groups routing service requests",
+			"Change advisory board delegates approving production deployments"
+		],
+		"correctIndex": 0,
+		"explanation": "Audit personas separate planning, testing, and evidence duties so engagements execute with clear accountability.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/audit-management/c_AuditTasks.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 87,
+		"prompt": "Testers execute control procedures, gather evidence, and document exceptions during an engagement. Which record type tracks that work?",
+		"choices": [
+			"Audit tasks representing fieldwork activities on the engagement",
+			"Risk statements cataloged in the enterprise risk library",
+			"Citations extracted from authority documents only",
+			"Entity filters limiting scoped CMDB table visibility"
+		],
+		"correctIndex": 0,
+		"explanation": "Audit tasks are the work items auditors execute during fieldwork, including testing and evidence collection.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/audit-management/c_AuditTasks.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 88,
+		"questionType": "multi",
+		"prompt": "Which two engagement phases occur before the final audit report is issued? (Choose two.)",
+		"choices": [
+			"Planning",
+			"Fieldwork",
+			"Software reclamation",
+			"Discovery classification"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Audit engagements progress through planning and fieldwork before reporting consolidates results and observations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/audit-management/c_AuditTasks.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 89,
+		"prompt": "Auditors issue an observation requiring corrective action on a failed control test. What advanced audit practice supports defensible closure?",
+		"choices": [
+			"Link remediation tasks to the observation with evidence, owners, and retest validation",
+			"Close the observation when the control owner sends an email confirmation",
+			"Delete the failed test so the observation no longer appears on dashboards",
+			"Convert the observation into a catalog task without audit traceability"
+		],
+		"correctIndex": 0,
+		"explanation": "Observation-linked remediation with retest evidence preserves audit trail integrity through closure.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/audit-management/c_AuditTasks.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/remediate-control-failures.html"
+		]
+	}
+]

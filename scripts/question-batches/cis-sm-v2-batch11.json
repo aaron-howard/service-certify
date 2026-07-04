@@ -1,0 +1,89 @@
+[
+	{
+		"trackCode": "CIS-SM",
+		"order": 50,
+		"prompt": "Discovery must reach Windows servers in an isolated VLAN for Service Mapping onboarding. Which MID Server design decision has the greatest impact on success?",
+		"choices": [
+			"Assign the schedule to run only from the instance application node",
+			"Place a validated MID Server inside the VLAN with routing to target subnets",
+			"Disable MID capabilities so all probes execute from the ECC input topic",
+			"Use one global MID Server regardless of firewall boundaries between zones"
+		],
+		"correctIndex": 1,
+		"explanation": "Discovery requires network reachability from a MID Server to target IP ranges, so zone-aligned placement is essential for classification.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/mid-server-for-discovery.html",
+			"https://www.servicenow.com/docs/r/platform-administration/mid-server/mid-server.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 51,
+		"prompt": "In the Discovery PCIE model, what is the main outcome of the Probe phase?",
+		"choices": [
+			"Detailed application dependency maps are published to Service Mapping",
+			"Devices are matched to existing CIs using identification rule criteria",
+			"Network targets are scanned to detect responsive hosts and open ports",
+			"Duplicate CI records are merged through reconciliation precedence logic"
+		],
+		"correctIndex": 2,
+		"explanation": "The Probe phase discovers reachable IP addresses and open ports before subsequent classification and identification steps execute.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 52,
+		"questionType": "multi",
+		"prompt": "Which two Discovery phases directly follow successful probing in the PCIE sequence? (Choose two.)",
+		"choices": [
+			"Classification",
+			"Identification",
+			"Schedule definition",
+			"Alert correlation"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "After Probe completes, Discovery classifies devices into CI classes and then identifies whether each result matches an existing CI or requires creation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 53,
+		"prompt": "Multiple Discovery schedules populate the same hostname with overlapping CI records. What CMDB control most directly reduces duplicate creation?",
+		"choices": [
+			"Identification and reconciliation rules that match incoming payloads to existing CIs",
+			"Disabling the Exploration phase so fewer attributes are collected per device",
+			"Assigning every schedule to a separate MID Server cluster by default",
+			"Removing IP service records before each scheduled scan executes"
+		],
+		"correctIndex": 0,
+		"explanation": "IRE identification rules determine whether Discovery updates an existing CI or creates a new one, preventing duplicate records from overlapping sources.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/identification-and-reconciliation.html",
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/c_Discovery.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 54,
+		"prompt": "Several application teams request Discovery schedule changes that expand IP scope weekly. Which governance practice best protects Service Mapping data quality?",
+		"choices": [
+			"Approve scope increases only after CMDB ownership review and controlled test runs",
+			"Allow any schedule editor to add global /8 ranges without validation gates",
+			"Disable schedule change history so administrators cannot audit prior scope",
+			"Run all expanded schedules in production first and reconcile issues afterward"
+		],
+		"correctIndex": 0,
+		"explanation": "Controlled scope changes with ownership review prevent noisy or unauthorized discovery from degrading CMDB quality used by service maps.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/discovery-schedules.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
+		]
+	}
+]

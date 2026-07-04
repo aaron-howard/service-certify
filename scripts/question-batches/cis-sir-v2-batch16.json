@@ -1,0 +1,89 @@
+[
+	{
+		"trackCode": "CIS-SIR",
+		"order": 75,
+		"prompt": "An analyst working in Security Incident Response Workspace needs to launch the active response workflow for a record. Where do they access playbook execution?",
+		"choices": [
+			"The Playbooks area on the security incident record in SIR Workspace",
+			"The Discovery Status dashboard showing ECC queue throughput metrics",
+			"The CMDB class manager tree for cmdb_ci_appl attribute extensions",
+			"The Service Portal catalog builder for hardware request categories"
+		],
+		"correctIndex": 0,
+		"explanation": "SIR Workspace exposes playbooks on the incident record so analysts can review and run structured response workflows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/sir-workspace-playbooks.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/exploring-security-incident-response-workspace.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 76,
+		"prompt": "A confirmed phishing incident requires analysts to execute predefined remediation steps from the workspace. Which playbook action supports that workflow?",
+		"choices": [
+			"Action phishing playbook steps that create and track response tasks",
+			"Discovery horizontal pattern debugging for unmatched process CIs",
+			"CMDB health duplicate CI remediation from the Data Manager workspace",
+			"Service catalog checkout for standard employee laptop replacements"
+		],
+		"correctIndex": 0,
+		"explanation": "Action phishing playbooks guide analysts through structured remediation tasks for confirmed phishing incidents.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/action-phishing-playbook.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/run-phishing-playbook.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 77,
+		"prompt": "Complex phishing automation requires reusable flow segments shared across multiple parent workflows. Which Flow Designer construct supports that design?",
+		"choices": [
+			"Subflows invoked from the main phishing playbook flow for modular logic",
+			"Discovery identification rules merging hostname fields across sources",
+			"CMDB reconciliation rules setting datasource precedence for serial numbers",
+			"Service catalog record producers for password reset self-service"
+		],
+		"correctIndex": 0,
+		"explanation": "Subflows let teams modularize phishing response logic so shared steps can be reused across multiple automated playbooks.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/subflow-phishing-playbook.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/flow-designer-and-phishing-response.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 78,
+		"questionType": "multi",
+		"prompt": "Which two outcomes occur when an automated phishing playbook runs successfully? (Choose two.)",
+		"choices": [
+			"Response tasks are created for analysts to execute defined remediation steps",
+			"Reported message observables are enriched and linked to the incident record",
+			"All security incidents in the instance are closed automatically",
+			"Discovery schedules are disabled to prevent CMDB updates during triage"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Automated phishing playbooks generate response work and enrich incident context; they do not mass-close unrelated incidents or halt discovery.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/using-automated-phishing-playbook.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/run-phishing-playbook.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 79,
+		"prompt": "Before enabling automated malware handling in production, what should administrators configure alongside the playbook?",
+		"choices": [
+			"Automated malware process definition with category and ingestion trigger rules",
+			"Manual phishing process requiring analyst clicks for every reported email",
+			"Discovery schedule targeting printer hardware on office subnets only",
+			"Service catalog bundle for procurement of replacement employee laptops"
+		],
+		"correctIndex": 0,
+		"explanation": "Automated malware processes pair playbook logic with process definitions and triggers so qualifying alerts initiate response automatically.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/create-process-automated-malware.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/using-automated-malware-playbook.html"
+		]
+	}
+]

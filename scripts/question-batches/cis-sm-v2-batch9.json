@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-SM",
+		"order": 40,
+		"prompt": "After a service map run completes, what validation step best confirms dependency accuracy?",
+		"choices": [
+			"Review the map topology with application owners and compare it to known architecture diagrams",
+			"Delete all CIs not seen in the latest run to force rediscovery on the next schedule",
+			"Disable the service map schedule permanently once any CI appears on the map",
+			"Convert every mapped CI to a business service record regardless of function"
+		],
+		"correctIndex": 0,
+		"explanation": "Owner review against known architecture validates that discovered dependencies reflect real operational connections rather than transient noise.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/validate-service-map-results.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 41,
+		"questionType": "multi",
+		"prompt": "Which two indicators suggest a service map requires credential review? (Choose two.)",
+		"choices": [
+			"Multiple CIs display yellow triangle warning icons after the latest map run",
+			"Discovery logs show authentication failures for hosts referenced by entry points",
+			"Every CI on the map shows identical software model normalization labels",
+			"The service map schedule completed faster than the previous run with no topology changes"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Warning icons on mapped CIs and authentication errors in discovery logs are primary signals that credentials need correction.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/validate-service-map-results.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 42,
+		"prompt": "Managing service maps in production requires periodic review of what elements?",
+		"choices": [
+			"Entry point accuracy, schedule cadence, credential validity, and map completeness for critical services",
+			"Software entitlement true-up counts and publisher audit letter submission dates",
+			"Incident major problem task backlog and knowledge article publish frequency",
+			"Hardware lease renewal terms and stockroom bin location assignments"
+		],
+		"correctIndex": 0,
+		"explanation": "Ongoing governance reviews entry points, schedules, credentials, and coverage so maps stay accurate as applications and infrastructure evolve.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 43,
+		"prompt": "When multiple entry points exist for one application service, how should service maps be organized?",
+		"choices": [
+			"Use representative entry points per distinct service path and validate each path maps the expected topology",
+			"Combine every entry point into one cmdb_ci_computer record to simplify the map view",
+			"Disable all but the first entry point alphabetically and ignore alternate paths",
+			"Assign each entry point to a separate business service regardless of shared architecture"
+		],
+		"correctIndex": 0,
+		"explanation": "Multiple paths may require distinct entry points; each should be validated so the combined map reflects the full application dependency structure.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/entry-points-and-service-maps.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 44,
+		"prompt": "Application service ownership affects Service Mapping operations in what way?",
+		"choices": [
+			"Owners validate map accuracy, prioritize remediation of gaps, and approve changes to entry points or scope",
+			"Owners automatically receive admin credentials for every MID Server in the environment",
+			"Owners disable CMDB reconciliation globally when a map run exceeds the timeout threshold",
+			"Owners convert technical services to incident categories without review"
+		],
+		"correctIndex": 0,
+		"explanation": "Service owners provide business context for validating maps, governing scope changes, and driving remediation when dependencies are missing or incorrect.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/business-services-and-application-services.html"
+		]
+	}
+]

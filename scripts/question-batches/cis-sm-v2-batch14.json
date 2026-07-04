@@ -1,0 +1,87 @@
+[
+	{
+		"trackCode": "CIS-SM",
+		"order": 65,
+		"prompt": "After mappers reject several ML suggestions for the same application tier, what adjustment most directly improves future candidate quality?",
+		"choices": [
+			"Feed accepted versus rejected outcomes back into review standards and discovery scope tuning",
+			"Remove all identification rules so every CI import creates a new record",
+			"Disable Service Mapping Workspace access for application owners",
+			"Increase discovery schedule frequency without reviewing credential coverage"
+		],
+		"correctIndex": 0,
+		"explanation": "Iterative feedback on accepted and rejected candidates helps teams refine discovery inputs and governance so ML proposals align with architecture.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-kpis.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 66,
+		"prompt": "Where should a Service Mapping lead review pending ML candidates, assigned onboarding tasks, and map validation status together?",
+		"choices": [
+			"Service Mapping Workspace dashboards and candidate queues",
+			"ECC Queue related lists on the MID Server record form",
+			"CI Class Manager tree for cmdb_ci_appl attribute extensions",
+			"Discovery pattern designer debug console for horizontal probes"
+		],
+		"correctIndex": 0,
+		"explanation": "Service Mapping Workspace consolidates candidate review and onboarding workflow tasks for ML-assisted mapping programs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/getting-started-service-mapping.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 67,
+		"prompt": "A regulated application has well-maintained custom patterns and validated entry points. Which mapping approach is usually preferred over ML candidates?",
+		"choices": [
+			"Pattern-based top-down mapping with governed entry points and credentials",
+			"Blind acceptance of every ML suggestion to minimize manual review effort",
+			"Disabling discovery entirely and maintaining maps only in spreadsheets",
+			"Creating duplicate application services for each discovered port record"
+		],
+		"correctIndex": 0,
+		"explanation": "When patterns and entry points are mature, pattern-based mapping provides deterministic tracing that complements rather than replaces ML for that service.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/create-a-service-map.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-patterns-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 68,
+		"prompt": "Before expanding Service Mapping to additional business services, which CMDB tool summarizes completeness, correctness, and compliance gaps?",
+		"choices": [
+			"CMDB Health dashboard with KPI scores and remediation tasks",
+			"Discovery schedule editor showing next run timestamps only",
+			"Event Management connector dashboard for inbound event volume",
+			"Service Portal catalog builder for request item categories"
+		],
+		"correctIndex": 0,
+		"explanation": "CMDB Health exposes data quality metrics and actionable tasks that indicate whether the CMDB can support dependable service maps.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-health-dashboard.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 69,
+		"prompt": "An administrator must extend the CMDB schema with a new CI class for a custom middleware tier used in maps. Which tool should they use?",
+		"choices": [
+			"CI Class Manager to define classes, attributes, and identification behavior",
+			"Event rule designer to correlate monitoring alerts by severity",
+			"Discovery schedule wizard to assign MID Server clusters by region",
+			"Service candidate queue to accept ML proposals automatically"
+		],
+		"correctIndex": 0,
+		"explanation": "CI Class Manager governs CMDB class hierarchy and attributes so identification and mapping logic can target the correct CI types.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-data-manager.html",
+			"https://www.servicenow.com/docs/r/configuration-management/vancouver/cmdb/concept/cmdb-class-hierarchy.html"
+		]
+	}
+]

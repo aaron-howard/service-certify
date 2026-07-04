@@ -1,0 +1,87 @@
+[
+	{
+		"trackCode": "CIS-SIR",
+		"order": 80,
+		"prompt": "Administrators catalog reusable Flow Designer components for Security Incident Response automation. Which resource lists prebuilt flows for common SecOps scenarios?",
+		"choices": [
+			"The SIR Flow Library with packaged flows for standard response patterns",
+			"The Discovery pattern designer catalog for horizontal application probes",
+			"The CMDB Data Manager queue for orphaned relationship remediation",
+			"The Service Portal theme editor for employee self-service branding"
+		],
+		"correctIndex": 0,
+		"explanation": "The SIR Flow Library provides prebuilt Flow Designer content teams can adapt for common security response automation scenarios.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/cj-sir-about-flows.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/cj-sir-flow-library.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 81,
+		"prompt": "Integration engineers need starter templates when connecting EDR tools to Security Incident Response. Which artifact accelerates that implementation?",
+		"choices": [
+			"SIR orchestration workflow templates for common third-party response actions",
+			"Discovery schedules assigning MID Servers to office printer subnets",
+			"CMDB class manager extensions for custom cmdb_ci_appl attributes",
+			"Service catalog item templates for employee mobile device requests"
+		],
+		"correctIndex": 0,
+		"explanation": "Orchestration workflow templates provide starting points for integrating external security tools with incident response actions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/sir-orch-workflow-templates.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/sec-inc-resp-orchestration-workflows.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 82,
+		"prompt": "After configuring orchestration trigger filters, an administrator needs to confirm they match expected incidents. What is the recommended validation step?",
+		"choices": [
+			"Verify configured trigger conditions against sample security incident records",
+			"Disable all playbooks until the next major platform upgrade completes",
+			"Delete existing incidents so triggers only apply to future records",
+			"Remove affected CI references from every open incident manually"
+		],
+		"correctIndex": 0,
+		"explanation": "Verifying trigger conditions against representative incidents confirms automation fires only when intended criteria are satisfied.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/verify-the-configured-trigger-conditions.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/define-trigger-conditions.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 83,
+		"prompt": "A Denial of Service security incident should automatically launch a predefined response workflow. Which configuration ties category values to workflow execution?",
+		"choices": [
+			"Process and playbook mapping where category selection triggers the matching template",
+			"Discovery schedule frequency controlling MID Server probe intervals",
+			"CMDB reconciliation precedence for hostname attribute updates",
+			"Service catalog fulfillment groups for hardware procurement requests"
+		],
+		"correctIndex": 0,
+		"explanation": "Category-driven process definitions and workflow templates such as the Denial of Service template initiate response when qualifying field values are set.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/si-denial-of-service-template.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/category-management-sir.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 84,
+		"prompt": "SIEM alerts should become prioritized security incidents instead of standalone event records. Which SIR concept describes that operating model?",
+		"choices": [
+			"Using security alerts as inputs that create or enrich security incident records",
+			"Storing all SIEM events only in the ECC queue without incident linkage",
+			"Routing alerts exclusively to HR cases for employee policy violations",
+			"Suppressing every monitoring alert once a CMDB CI record exists"
+		],
+		"correctIndex": 0,
+		"explanation": "Security Incident Response integrates alert sources so monitoring events feed triage, prioritization, and managed incident workflows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/c_ScIncdUseAlrts.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/what-is-sir.html"
+		]
+	}
+]

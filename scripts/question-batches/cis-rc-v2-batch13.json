@@ -1,0 +1,89 @@
+[
+	{
+		"trackCode": "CIS-RC",
+		"order": 60,
+		"prompt": "During a risk assessment workshop, facilitators ask participants to rate likelihood and impact before controls are considered. Which score does that produce?",
+		"choices": [
+			"Inherent risk score based on pre-control exposure",
+			"Residual risk score after mitigation actions complete",
+			"Compliance attestation score for mapped policy statements",
+			"Audit observation severity for fieldwork deficiencies"
+		],
+		"correctIndex": 0,
+		"explanation": "Inherent scoring captures exposure assuming no compensating controls; residual scoring reflects control effectiveness.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-response-and-treatment.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-data-governance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 61,
+		"prompt": "After control tests confirm partial effectiveness, an analyst recalculates exposure on the risk record. Which value should decrease when controls work as intended?",
+		"choices": [
+			"Residual risk score relative to the prior inherent rating",
+			"Number of authority documents linked to the citation",
+			"Count of MID Server clusters assigned to discovery",
+			"Catalog item base price for service requests"
+		],
+		"correctIndex": 0,
+		"explanation": "Effective controls reduce residual risk compared with inherent exposure when scoring models are applied correctly.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-response-and-treatment.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-data-governance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 62,
+		"questionType": "multi",
+		"prompt": "Before launching an enterprise risk assessment campaign, which two elements must be defined? (Choose two.)",
+		"choices": [
+			"Assessment methodology and scoring criteria",
+			"In-scope business entities for the campaign",
+			"Final audit report distribution list",
+			"Discovery credentials for subnet scanning"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Assessment campaigns require a consistent methodology and clear entity scope so results are comparable across units.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-review-process.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/business-entities-and-risk.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 63,
+		"prompt": "A risk committee wants assessments limited to payment processing services in two departments. Which configuration enforces that boundary?",
+		"choices": [
+			"Scope the assessment to selected business entities and linked risk statements",
+			"Disable all risk frameworks except the default global framework",
+			"Remove residual scoring fields from the risk form layout",
+			"Assign every risk record to the enterprise GRC assignment group"
+		],
+		"correctIndex": 0,
+		"explanation": "Entity-scoped assessments focus evaluation on relevant services and departments without diluting results enterprise-wide.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/business-entities-and-risk.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/manage-risk-records.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 64,
+		"prompt": "Leadership publishes a risk appetite statement capping high residual scores in public-facing services. How should IRM Workspace enforce that guidance?",
+		"choices": [
+			"Configure scoring thresholds and escalation when residual ratings exceed appetite limits",
+			"Hide high risks from dashboards until the next quarterly review",
+			"Automatically accept all risks below the maximum impact scale value",
+			"Disable treatment planning tasks for risks rated moderate"
+		],
+		"correctIndex": 0,
+		"explanation": "Appetite thresholds drive escalation, treatment decisions, and visibility when exposure exceeds tolerated levels.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-governance.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-response-and-treatment.html"
+		]
+	}
+]
