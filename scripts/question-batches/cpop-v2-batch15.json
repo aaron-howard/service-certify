@@ -1,0 +1,103 @@
+[
+	{
+		"trackCode": "CPOP",
+		"order": 70,
+		"prompt": "A multinational bank must isolate subsidiary data while sharing common service catalog templates. Which implementation model is most suitable?",
+		"choices": [
+			"Domain separation on a single production instance with governed cross-domain access",
+			"Multiple unrelated production instances with no shared standards or synchronization",
+			"On-premises deployment solely to avoid any cloud shared-responsibility discussions",
+			"A single production instance without domain controls to minimize administrative roles"
+		],
+		"correctIndex": 0,
+		"explanation": "Domain separation on one production instance supports data isolation for subsidiaries while allowing centrally governed shared services when cross-domain access is controlled.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/domain-separation/concept/domain-separation.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/company-and-domain-separation/concept/c_DomainSeparation.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 71,
+		"prompt": "A mid-size agency with one IT operations team, moderate customization, and unified change approval wants the lowest operational overhead. Which model fits best?",
+		"choices": [
+			"Separate production instances per department with independent upgrade calendars",
+			"A single production instance with standard environment sequencing and shared maintenance windows",
+			"On-premises hosting requiring the agency to manage all infrastructure patching",
+			"Domain separation for every internal team regardless of data isolation requirements"
+		],
+		"correctIndex": 1,
+		"explanation": "Organizations with unified governance and limited isolation needs typically benefit from one production instance with disciplined promotion paths rather than duplicated infrastructure.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/concept/upgrade-governance.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 72,
+		"questionType": "match",
+		"prompt": "Match each implementation model to the enterprise scenario where it is most appropriate.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Single production instance",
+			"Domain separation",
+			"Multiple production instances",
+			"On-premises implementation"
+		],
+		"matchRightItems": [
+			"One centralized operations team with shared standards and moderate customization",
+			"Subsidiaries requiring data isolation on shared platform services with governed visibility",
+			"Regulatory mandates forbidding commingled production data across business units or regions",
+			"Contractual requirement for customer-managed infrastructure and local patching ownership"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Implementation model selection depends on isolation needs, regulatory constraints, operational ownership, and whether subsidiaries can share a governed single instance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/domain-separation/task/plan-domain-separation-implementation.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 73,
+		"prompt": "Two acquired divisions operate under different regulatory frameworks and cannot share production data. The platform owner must recommend an architecture. What is the best fit?",
+		"choices": [
+			"Enable domain separation on one instance and disable all ACL reviews to speed delivery",
+			"Use a single production instance because duplicate environments always increase licensing waste without benefit",
+			"Consolidate both divisions into one developer instance and promote directly to production",
+			"Deploy separate production instances with independent upgrade, patching, and data boundaries per division"
+		],
+		"correctIndex": 3,
+		"explanation": "When regulatory boundaries prohibit commingled production data, separate production instances provide hard isolation with independent maintenance lifecycles per division.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/company-and-domain-separation/concept/c_DomainSeparation.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/concept/upgrade-governance.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 74,
+		"questionType": "multi",
+		"prompt": "Leadership approved domain separation for a shared production instance. Which ongoing maintenance impacts should the platform owner budget for? (Choose two.)",
+		"choices": [
+			"Periodic cross-domain role and visibility recertification with audit evidence",
+			"Domain-aware regression suites whenever shared services or ACL rules change",
+			"Elimination of all sub-production environments because domains replace testing needs",
+			"Automatic retirement of upgrade planning because domains isolate patch risk entirely"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Domain separation adds maintenance for access recertification and domain-scoped regression whenever shared services or security rules change—it does not remove testing or upgrade governance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/domain-separation/concept/domain-separation.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/security/concept/c_Hardening.html"
+		]
+	}
+]

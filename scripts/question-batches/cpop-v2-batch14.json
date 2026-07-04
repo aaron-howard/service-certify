@@ -1,0 +1,103 @@
+[
+	{
+		"trackCode": "CPOP",
+		"order": 65,
+		"prompt": "During a Zurich family upgrade, the platform owner must sequence work across development, test, and production. What is the correct first production-adjacent step after development validation completes?",
+		"choices": [
+			"Schedule production cutover immediately to preserve the maintenance window",
+			"Disable all integrations in production before any sub-production upgrade begins",
+			"Skip sub-production because development results are sufficient for go/no-go",
+			"Execute and validate the upgrade in sub-production, resolve skipped updates, then promote the plan to production"
+		],
+		"correctIndex": 3,
+		"explanation": "Upgrade sequencing requires sub-production validation and skipped-update resolution before production cutover so rollback assumptions remain trustworthy.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/task/plan-instance-upgrade.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade/concept/skipped-updates.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 66,
+		"prompt": "A healthcare organization receives monthly vendor patches plus quarterly family releases. Which patch schedule practice best balances stability with regulatory uptime commitments?",
+		"choices": [
+			"Apply every patch to production on publication day without staged testing",
+			"Tier patches by severity, align windows to approved maintenance slots, and defer non-critical items to the next validated cycle",
+			"Suspend all patching until the next family upgrade regardless of security advisories",
+			"Let each application team choose independent production patch dates without a shared calendar"
+		],
+		"correctIndex": 1,
+		"explanation": "Patch scheduling should classify severity, respect approved maintenance windows, and batch lower-priority fixes so critical security items deploy without unnecessary production churn.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/concept/upgrade-governance.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 67,
+		"questionType": "match",
+		"prompt": "Match each platform maintenance implication to the implementation condition that drives it.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Expanded skipped-update triage",
+			"Coordinated clone and refresh windows",
+			"Cross-domain access certification cycles",
+			"Dedicated infrastructure patching ownership"
+		],
+		"matchRightItems": [
+			"High volume of global-scope customizations and legacy script overrides",
+			"Multiple sub-production instances refreshed from one production source",
+			"Domain separation enabled with shared service providers across tenants",
+			"On-premises deployment where the customer owns OS and middleware updates"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Maintenance requirements follow implementation realities: customization depth, clone cadence, domain isolation, and hosting model each create distinct ongoing work.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/domain-separation/concept/domain-separation.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/instance-administration/concept/clone-planning.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 68,
+		"prompt": "The platform council asks which artifacts prove the organization can absorb next month's patch wave. Which supporting information should the platform owner present?",
+		"choices": [
+			"A list of dashboard favorites used by the service desk last quarter",
+			"The number of catalog items published without version linkage",
+			"Patch release notes, affected components, open defect trends, and sub-production test outcomes from the prior cycle",
+			"Anecdotal feedback from one developer about recent script performance"
+		],
+		"correctIndex": 2,
+		"explanation": "Patch readiness reviews need release content, impacted scope, defect history, and validated test evidence—not unrelated usage metrics or informal opinions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/concept/upgrade-center.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 69,
+		"questionType": "multi",
+		"prompt": "An audit team asks how the platform owner verifies patch contents before production deployment. Which evidence types should be included in the standard review packet? (Choose two.)",
+		"choices": [
+			"Marketing slide decks describing unrelated product roadmaps",
+			"Vendor patch documentation listing fixed defects, security items, and affected modules",
+			"Regression test results showing critical business scenarios passed in sub-production",
+			"Screenshots of unrelated legacy systems retained for historical reference"
+		],
+		"correctIndex": 1,
+		"correctIndexes": [1, 2],
+		"explanation": "Patch content verification combines vendor release documentation with sub-production regression evidence demonstrating that critical scenarios still behave as expected.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/security/concept/c_Hardening.html"
+		]
+	}
+]

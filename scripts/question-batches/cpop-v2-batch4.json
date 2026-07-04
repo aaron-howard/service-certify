@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOP",
+		"order": 15,
+		"questionType": "match",
+		"prompt": "Match each missing CoEI component to the risk it creates for the platform program.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"No innovation intake",
+			"Weak standards enforcement",
+			"Absent enablement program",
+			"Undefined success metrics"
+		],
+		"matchRightItems": [
+			"Improvement ideas stall without prioritization or funding",
+			"Inconsistent builds increase upgrade and support costs",
+			"Teams lack skills to deliver within guardrails",
+			"Executives cannot validate return on platform investment"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "CoEI gaps in intake, standards, enablement, and metrics each produce distinct program risks that platform owners must remediate.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 16,
+		"prompt": "Production users report a defect blocking payroll approvals two days before pay run. What issue-resolution action should the platform owner prioritize?",
+		"choices": [
+			"Triage severity, mobilize the owning team, and coordinate a tested fix with change control",
+			"Wait for the next scheduled release train regardless of business impact",
+			"Disable payroll workflows entirely until the next major upgrade completes",
+			"Assign the defect to a citizen developer without oversight or rollback planning"
+		],
+		"correctIndex": 0,
+		"explanation": "Critical defects require rapid triage, accountable ownership, tested remediation, and governed deployment—not indefinite delay or uncontrolled changes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 17,
+		"prompt": "Business units submit overlapping enhancement ideas through email and hallway conversations. How should the platform owner capture requirements for project, operations, and platform teams?",
+		"choices": [
+			"Stand up a governed intake channel with categorization, prioritization, and feedback to submitters",
+			"Accept only verbal requests to minimize documentation overhead",
+			"Require every idea to include full technical design before initial triage",
+			"Route all submissions directly to production changes without review"
+		],
+		"correctIndex": 0,
+		"explanation": "Structured intake with triage and feedback ensures ideas reach the right teams with traceability; informal or overburdened paths create chaos.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 18,
+		"prompt": "A new platform feature introduces optional AI-assisted routing. What should the platform owner do to avoid future operational issues?",
+		"choices": [
+			"Pilot with defined guardrails, monitor outcomes, and document enablement before broad activation",
+			"Enable the feature globally in production on day one without communication",
+			"Assume defaults are optimal and skip impact review on existing workflows",
+			"Block all feature exploration until every legacy process is retired"
+		],
+		"correctIndex": 0,
+		"explanation": "New capabilities warrant controlled pilots, monitoring, and enablement so teams understand impact before enterprise-wide rollout.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 19,
+		"questionType": "multi",
+		"prompt": "The CoEI wants a single pipeline for ideas spanning projects, operations, and platform engineering. Which capture practices should the platform owner implement? (Choose three.)",
+		"choices": [
+			"Common submission form with business outcome and urgency fields",
+			"Regular triage forum with representatives from delivery and operations",
+			"Status visibility so submitters know disposition of their requests",
+			"Mandatory rejection of any idea not tied to a licensed product SKU"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1, 2],
+		"explanation": "Effective intake uses standardized forms, cross-functional triage, and transparent status; rejecting non-SKU ideas prematurely blocks legitimate improvements.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	}
+]
