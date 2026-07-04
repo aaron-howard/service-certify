@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 70,
+		"prompt": "What measurable outcome indicates a Discovery engagement met its readiness objectives?",
+		"choices": [
+			"Scheduled scans complete with expected CI coverage and acceptable failure rates",
+			"Every employee receives a CMDB training certificate within the first week",
+			"All horizontal patterns are cloned and customized before any out-of-box test",
+			"Discovery status records show zero ECC messages for every run indefinitely"
+		],
+		"correctIndex": 0,
+		"explanation": "Successful engagements deliver reliable schedule execution, expected coverage, and manageable failure rates against defined success criteria.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-dashboard.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 71,
+		"prompt": "How should change management integrate with Discovery rollout milestones?",
+		"choices": [
+			"Discovery configuration changes follow approved change records with rollback plans",
+			"Discovery bypasses change control because scans are read-only network operations",
+			"Only MID Server OS patches require changes; schedule edits are informal updates",
+			"Production discovery schedules may not be modified until two years post go-live"
+		],
+		"correctIndex": 0,
+		"explanation": "Discovery configuration affects production CMDB data and network access, so changes should follow governed change management with rollback planning.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-implementation-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 72,
+		"prompt": "What training should Discovery administrators receive before taking operational ownership?",
+		"choices": [
+			"Schedule management, credential testing, status troubleshooting, and IRE basics",
+			"Advanced service catalog designer scripting for hardware request fulfillment only",
+			"Vendor-specific ERP procurement workflows unrelated to configuration data",
+			"Event correlation pack authoring for third-party monitoring integrations exclusively"
+		],
+		"correctIndex": 0,
+		"explanation": "Discovery admins need hands-on skills for schedules, credentials, troubleshooting, and understanding how updates flow through IRE.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/set-up-discovery.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 73,
+		"prompt": "After go-live, what support model sustains Discovery engagement outcomes?",
+		"choices": [
+			"Defined escalation paths among discovery, network, credential, and CMDB teams",
+			"A single shared admin account used by all teams for emergency production edits",
+			"Suspension of all discovery schedules until monthly executive steering reviews conclude",
+			"Outsourcing every troubleshooting task to the platform vendor without internal runbooks"
+		],
+		"correctIndex": 0,
+		"explanation": "Sustained outcomes require clear escalation among teams that own discovery configuration, network access, credentials, and CMDB governance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-implementation-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 74,
+		"prompt": "Which continuous improvement practice keeps Discovery aligned with evolving infrastructure?",
+		"choices": [
+			"Periodic review of scope, credentials, IRE rules, and dashboard KPIs with stakeholders",
+			"Permanent freeze of discovery patterns to the versions active on day one",
+			"Annual deletion of all CIs followed by a single full rescan without validation",
+			"Removing MID Server health checks to reduce operational monitoring overhead"
+		],
+		"correctIndex": 0,
+		"explanation": "Regular reviews of scope, credentials, IRE configuration, and KPIs keep discovery current as infrastructure and ownership change.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-dashboard.html"
+		]
+	}
+]

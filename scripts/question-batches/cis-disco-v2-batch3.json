@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 10,
+		"prompt": "How do horizontal discovery patterns differ from relying solely on legacy probe customizations?",
+		"choices": [
+			"Patterns provide modular, maintainable logic that is easier to test and govern over time",
+			"Patterns bypass the Identification and Reconciliation Engine for all CI classes",
+			"Patterns write only to asset tables and never update configuration item records",
+			"Patterns disable credential testing so MID Servers execute scans faster"
+		],
+		"correctIndex": 0,
+		"explanation": "Horizontal patterns offer structured, reusable flows for interpreting discovery results compared with scattered probe script customizations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/c-UsingPatternsForHorizontalDiscovery.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 11,
+		"prompt": "Which pattern designer practice best supports reusable discovery logic across similar platforms?",
+		"choices": [
+			"Hardcode specific MID Server names in every step to keep routing deterministic",
+			"Remove conditional branches to increase execution speed under heavy load",
+			"Compose shared sub-patterns with conditional paths for vendor or OS variants",
+			"Embed environment-specific hostnames directly in reusable production pattern steps"
+		],
+		"correctIndex": 2,
+		"explanation": "Reusable sub-patterns and conditional flow reduce duplication and improve maintainability when the same logic applies across platform variants.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-pattern-best-practices.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 12,
+		"prompt": "Why is validating step output important when testing a pattern in Pattern Designer?",
+		"choices": [
+			"It guarantees every CI update bypasses identification collision detection",
+			"It confirms each step returns expected data before downstream CMDB writes occur",
+			"It disables relationship creation for low-confidence dependency mappings",
+			"It replaces credential validation with direct API impersonation on the target"
+		],
+		"correctIndex": 1,
+		"explanation": "Checking outputs at each step catches parsing or command issues before they propagate into incorrect CMDB attribute or relationship updates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 13,
+		"prompt": "A horizontal pattern completes identification but populates incorrect attribute values on Windows servers. What should be reviewed first?",
+		"choices": [
+			"Procurement reorder thresholds for spare parts in the hardware asset catalog",
+			"Pattern debug output, parse variable assignments, and WMI or command step results",
+			"Event connector deduplication rules that suppress monitoring alert ingestion",
+			"Change advisory board templates used for standard infrastructure deployments"
+		],
+		"correctIndex": 1,
+		"explanation": "Debug traces and step output reveal whether collection commands succeeded and whether parsing logic mapped values to the intended CI fields.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-pattern-best-practices.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 14,
+		"prompt": "After ServiceNow publishes updated horizontal pattern library content, what action may be required in a customer instance?",
+		"choices": [
+			"Delete all discovery schedules so patterns regenerate from event management rules",
+			"Disable MID Server clustering to force single-node pattern execution everywhere",
+			"Review and merge vendor pattern updates with custom copies while preserving local extensions",
+			"Convert every classification record to manual CI import without pattern references"
+		],
+		"correctIndex": 2,
+		"explanation": "Pattern library updates can overwrite or merge with instance patterns, so teams reconcile customizations and test behavior after content refresh.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/manage-discovery-pattern-versions.html"
+		]
+	}
+]

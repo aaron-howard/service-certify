@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-EM",
+		"order": 15,
+		"prompt": "What is the default polling interval for many Event Management connectors when polling external sources?",
+		"choices": [
+			"Every 120 seconds",
+			"Every 5 seconds regardless of source capacity or rate limits",
+			"Once per day at midnight in the instance time zone only",
+			"Only when an operator manually refreshes the connector record form"
+		],
+		"correctIndex": 0,
+		"explanation": "Many connectors use a default polling interval of every 120 seconds, which balances timely ingestion with source system load.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 16,
+		"prompt": "After go-live, an operations team notices events arriving but connector status shows failures intermittently. What should they check first?",
+		"choices": [
+			"Whether stockroom transfer orders are stuck in Awaiting Delivery state on fulfillment",
+			"Connector health, credentials, endpoint reachability, and polling schedule settings",
+			"If hardware model categories require consumable flag changes in the product catalog",
+			"Whether incident auto-close intervals block listener endpoint registration entirely"
+		],
+		"correctIndex": 1,
+		"explanation": "Intermittent connector failures are commonly caused by credential, endpoint, or schedule issues that prevent reliable event retrieval or delivery.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 17,
+		"prompt": "Which listener configuration issue most commonly prevents events from entering the processing pipeline?",
+		"choices": [
+			"Missing software entitlement import job scheduled for the vendor publisher account",
+			"Discovery classification probes disabled on Linux MID Server hosts in one region",
+			"Inactive endpoint, wrong protocol, or payload format mismatch with parser settings",
+			"Alert grouping rules referencing retired hardware depreciation schedule templates"
+		],
+		"correctIndex": 2,
+		"explanation": "If a listener is inactive, uses the wrong protocol, or cannot parse the expected payload format, events may never reach rule evaluation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 18,
+		"prompt": "Why should connector configuration changes follow formal change management in production?",
+		"choices": [
+			"Connectors automatically delete CMDB classes when credentials rotate on a weekly cadence",
+			"Listener records bypass the platform audit trail during standard business hours only",
+			"Event rules become read-only after any connector update without CAB approval attached",
+			"Mapping or credential errors can break ingestion and delay alert creation for operators"
+		],
+		"correctIndex": 3,
+		"explanation": "Connector changes affect ingestion quality and alert reliability, so controlled testing and approval reduce outage and compliance risk.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 19,
+		"prompt": "A monitoring source emits heartbeat events that should not generate alerts. How should this be handled in the pipeline?",
+		"choices": [
+			"Create an event rule to filter or de-prioritize heartbeat traffic before alert creation",
+			"Shut down the listener entirely during routine maintenance heartbeat transmissions",
+			"Assign every heartbeat to the critical severity level for maximum NOC visibility",
+			"Convert heartbeat payloads into discovery schedules for subnet scans across regions"
+		],
+		"correctIndex": 0,
+		"explanation": "Event rules can filter or lower the significance of heartbeat traffic so operational alerts focus on actionable failure conditions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/create-event-rule.html"
+		]
+	}
+]

@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-HAM",
+		"order": 85,
+		"prompt": "Finance requires consistent financial closure when high-value assets retire. Why enforce standardized retirement workflows?",
+		"choices": [
+			"Retirement workflows ensure compliant disposal, financial closure, and audit evidence",
+			"Retirement workflows keep retired assets in active assignment pools",
+			"Retirement workflows prevent warranty tracking on in-use assets",
+			"Retirement workflows bypass approvals for sensitive equipment"
+		],
+		"correctIndex": 0,
+		"explanation": "Standard retirement processes govern disposal steps and financial updates needed for compliance and audit readiness.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/dispose-hardware-assets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 86,
+		"prompt": "Sustainability leadership wants to measure internal hardware reuse. Which metric aligns with that goal?",
+		"choices": [
+			"Percentage of recoverable assets redeployed from stock instead of new purchase",
+			"Count of custom UI policies on unrelated platform forms",
+			"Number of open catalog items visible on the portal homepage",
+			"Average incident reopen rate for password reset tickets"
+		],
+		"correctIndex": 0,
+		"explanation": "Reuse optimization is measured by how effectively recoverable hardware returns to service rather than triggering new spend.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/manage-hardware-assets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 87,
+		"prompt": "Which cost elements contribute to asset Total Cost of Ownership in HAM? (Choose three.)",
+		"choices": [
+			"Initial purchase cost recorded as a capital expense line",
+			"Operational expense lines from maintenance and support tasks",
+			"Expense lines aggregated from child assets on complex bundles",
+			"MID Server licensing fees unrelated to the asset lifecycle"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1, 2],
+		"questionType": "multi",
+		"explanation": "Asset TCO sums capital and operational expense lines on the asset, including costs rolled up from child assets when applicable.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-mgmt-tco.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 88,
+		"prompt": "When a HAM workflow task closes, how do configured task rate cards affect financial tracking?",
+		"choices": [
+			"They generate expense lines on the asset based on defined task costs",
+			"They replace depreciation methods on the hardware model record",
+			"They delete prior capital expense lines from the purchase event",
+			"They convert operational spend into software entitlements automatically"
+		],
+		"correctIndex": 0,
+		"explanation": "Task rate cards standardize cost capture so closing workflow tasks create expense lines that roll into asset TCO.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/create-ham-task-rate-card.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 89,
+		"prompt": "A CFO asks to compare projected TCO for two laptop models against model benchmark costs. Which workspace capability supports this analysis?",
+		"choices": [
+			"TCO comparative reports in Asset analytics within Hardware Asset Workspace",
+			"Incident priority matrix reports in the ITSM dashboard",
+			"Discovery classification logs filtered by probe type",
+			"Knowledge article view counts grouped by category"
+		],
+		"correctIndex": 0,
+		"explanation": "Hardware Asset Workspace TCO reports compare asset or model costs against benchmarks for capital planning decisions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/create-ham-tco-report.html"
+		]
+	}
+]

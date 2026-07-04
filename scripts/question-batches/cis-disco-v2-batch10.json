@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 45,
+		"prompt": "Which schedule type should an admin choose to discover resources inside a cloud provider account using API credentials?",
+		"choices": [
+			"Cloud discovery schedule scoped to the provider account and regions",
+			"Network discovery schedule that scans RFC1918 ranges only from the instance",
+			"Service discovery schedule that maps entry points without cloud enumeration",
+			"Configuration-only schedule that reads CMDB exports without live API calls"
+		],
+		"correctIndex": 0,
+		"explanation": "Cloud discovery schedules use provider API credentials to enumerate resources in configured accounts and regions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/configure-cloud-discovery.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 46,
+		"prompt": "During a horizontal discovery run, in which phase does the platform attempt to authenticate and determine the device type?",
+		"choices": [
+			"Classification phase where probes identify the CI class and gather initial attributes",
+			"Identification phase where IRE matches the device to an existing CI record",
+			"Reconciliation phase where attribute updates are merged using source precedence",
+			"Exploration phase where only ICMP reachability is tested without credential use"
+		],
+		"correctIndex": 0,
+		"explanation": "Classification probes authenticate when required and determine the CI class before identification and reconciliation run.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-phases.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 47,
+		"prompt": "A schedule must run only through MID Servers in the DMZ network zone. Where is this enforced?",
+		"choices": [
+			"MID Server selection or capabilities assignment tied to the discovery schedule",
+			"Global system property that routes every probe through the default MID Server",
+			"CI Class Manager setting that maps classes to subnet ownership records",
+			"Reconciliation rule that blocks writes unless the MID heartbeat is current"
+		],
+		"correctIndex": 0,
+		"explanation": "Schedules are bound to specific MID Servers or capabilities so probes execute from the correct network zone.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/mid-server-for-discovery.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 48,
+		"prompt": "During Discovery implementation, what should customers always configure?",
+		"choices": [
+			"Event management correlation rules for every monitored infrastructure class",
+			"Hardware asset stockroom transfers for each discovered server serial number",
+			"Service mapping entry points before the first horizontal schedule executes",
+			"Credentials for target devices and systems being discovered"
+		],
+		"correctIndex": 3,
+		"explanation": "Discovery cannot classify or collect configuration data without credentials configured and tested for target systems.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-credentials.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 49,
+		"prompt": "Which records are core to Discovery Configuration before the first production scan? (Choose two.)",
+		"choices": [
+			"Discovery credentials tested for target protocols",
+			"Discovery schedules with scoped IP ranges or cloud accounts",
+			"Reconciliation rules that retire stale software license entitlements",
+			"Knowledge base article templates for end-user self-service"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"questionType": "multi",
+		"explanation": "Production discovery requires tested credentials and schedules with defined scope; license and knowledge artifacts are unrelated prerequisites.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/set-up-discovery.html"
+		]
+	}
+]

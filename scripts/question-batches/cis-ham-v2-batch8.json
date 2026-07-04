@@ -1,0 +1,89 @@
+[
+	{
+		"trackCode": "CIS-HAM",
+		"order": 35,
+		"prompt": "Which Discovery outcome most directly improves hardware asset record accuracy in HAM?",
+		"choices": [
+			"Current hardware attributes and serial numbers reconciled with modeled asset classes",
+			"Removal of all CMDB relationships for network gear discovered on corporate subnets",
+			"Automatic closure of open transfer orders at the time each discovery schedule completes",
+			"Conversion of every open incident into an asset task without stockroom validation"
+		],
+		"correctIndex": 0,
+		"explanation": "Discovery supplies current hardware attributes that HAM can reconcile with models, serials, and asset classes for trustworthy records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/it-asset-management.html",
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 36,
+		"prompt": "An asset record lacks manufacturer and model category despite an associated CI. What data integrity step should be prioritized?",
+		"choices": [
+			"Align model category and normalized hardware model references on the asset",
+			"Delete the CI to force rediscovery without preserving asset linkage or history",
+			"Disable the Hardware Asset Workspace for that stockroom until the next fiscal year",
+			"Convert the asset to a software entitlement record to bypass hardware model requirements"
+		],
+		"correctIndex": 0,
+		"explanation": "Correct model category and normalized model references restore attribute completeness and enable consistent lifecycle and reporting behavior.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/product-catalog/c_ModelCategories.html",
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/normalize-hardware-models.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 37,
+		"prompt": "How do weekly HAM content updates improve data integrity?",
+		"choices": [
+			"They supply manufacturer and device type normalization content for hardware models",
+			"They retire all assets exceeding five years of age automatically without approval",
+			"They replace stock rules with static reorder spreadsheets for every stockroom manager",
+			"They remove consumable inventory from stockroom audits and barcode scan workflows"
+		],
+		"correctIndex": 0,
+		"explanation": "Weekly content updates deliver manufacturer, device type, and lifecycle normalization data to keep hardware and consumable models accurate.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/it-asset-management.html",
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/hardware-normalization.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 38,
+		"prompt": "Which statement is true about normalizing consumable models compared to hardware models?",
+		"choices": [
+			"Both hardware and consumable models can be normalized against the HAM Content Service",
+			"Only hardware models participate in the Hardware Normalization scheduled job process",
+			"Consumables require individual serial numbers before normalization runs on the model",
+			"Normalization deletes consumable quantity fields after each daily scheduled job execution"
+		],
+		"correctIndex": 0,
+		"explanation": "Hardware Model Normalization applies to both hardware and consumable models, with separate overall status reports for each product type.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/hardware-normalization.html",
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/consumable-model-fields.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 39,
+		"questionType": "multi",
+		"prompt": "Which two are valid data sources for trustworthy hardware asset attributes? (Choose two.)",
+		"choices": [
+			"Discovery scans of deployed equipment",
+			"Event Management alert correlation policies for infrastructure monitoring",
+			"Procurement and receiving transactions linked to purchase orders",
+			"Virtual Agent conversation transcripts from employee self-service chats"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 2],
+		"explanation": "Discovery and procurement/receiving provide authoritative hardware attributes; event correlation and chat transcripts are not asset attribute sources.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html",
+			"https://www.servicenow.com/docs/r/it-asset-management/it-asset-management.html"
+		]
+	}
+]

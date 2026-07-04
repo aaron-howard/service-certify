@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-HAM",
+		"order": 75,
+		"prompt": "Why do HAM teams enforce consistent lifecycle states from procurement through retirement?",
+		"choices": [
+			"Lifecycle states provide governed transitions for accountability, financial tracking, and compliance",
+			"Lifecycle states eliminate the need for stockrooms in every deployment",
+			"Lifecycle states disable depreciation calculations on hardware assets",
+			"Lifecycle states prevent all incidents for assigned devices automatically"
+		],
+		"correctIndex": 0,
+		"explanation": "Standard lifecycle states coordinate operational, financial, and compliance controls across each hardware stage.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/ham-landing-page.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 76,
+		"prompt": "Which transfer order details best support inventory auditability? (Choose three.)",
+		"choices": [
+			"Documented source and destination stockrooms",
+			"Receiving confirmation with responsible user recorded",
+			"In-transit status updates during shipment",
+			"Deletion of historical transfer lines after closure"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1, 2],
+		"questionType": "multi",
+		"explanation": "Auditable transfers retain location context, custody handoffs, and status history. Removing historical lines destroys evidence.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/transfer-stockrooms.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 77,
+		"prompt": "A new HAM implementation imports thousands of vendor-specific model strings. Why prioritize normalization early?",
+		"choices": [
+			"Normalized models improve reporting accuracy and downstream lifecycle decisions",
+			"Normalization bypasses receiving and stocking processes entirely",
+			"Normalization increases duplicate model records for flexibility",
+			"Normalization removes manufacturer data from every asset"
+		],
+		"correctIndex": 0,
+		"explanation": "Early normalization consolidates variant names into governed models used by procurement, inventory, and analytics.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/normalize-hardware-models.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 78,
+		"prompt": "Procurement links new servers to maintenance contracts at receipt. What operational benefit does this provide?",
+		"choices": [
+			"Support teams can verify entitlement and plan renewals from the asset record",
+			"Assigned users can skip return workflows for loaner devices",
+			"Discovery stops creating CIs for the associated hardware class",
+			"Depreciation schedules are removed from the hardware model"
+		],
+		"correctIndex": 0,
+		"explanation": "Contract associations on assets document coverage context for support decisions and renewal governance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-record-fields.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 79,
+		"prompt": "Which KPI most directly signals hardware data hygiene risk during governance reviews?",
+		"choices": [
+			"Percentage of assets missing owner or location attributes",
+			"Total count of UI policies on the incident form",
+			"Average homepage load time in the service portal",
+			"Number of open knowledge article drafts"
+		],
+		"correctIndex": 0,
+		"explanation": "Missing owner and location attributes undermine accountability, reporting quality, and audit readiness.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/manage-hardware-assets.html"
+		]
+	}
+]

@@ -1,0 +1,85 @@
+[
+	{
+		"trackCode": "CIS-EM",
+		"order": 35,
+		"prompt": "Impact rules in the em_impact_rule table primarily determine which outcome for application services?",
+		"choices": [
+			"How CI member failures propagate severity to parent services on the impact tree",
+			"Which hardware assets receive automatic retirement during discovery scans",
+			"How catalog variables map to procurement purchase order line items",
+			"Which MID Server certificates expire during connector health checks"
+		],
+		"correctIndex": 0,
+		"explanation": "Impact rules estimate outage magnitude and define how child CI severity influences parent application service status on impact trees and service maps.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/c_EMImpactCalculation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 36,
+		"prompt": "During an approved change window, alerts on CIs marked In Maintenance should be handled how for impact calculation?",
+		"choices": [
+			"Excluded from impact calculation while maintenance status is active",
+			"Promoted to Critical severity on every related business service",
+			"Converted automatically into standard change requests for closure",
+			"Reassigned to the hardware asset disposal workflow queue"
+		],
+		"correctIndex": 0,
+		"explanation": "Alerts on CIs in maintenance are excluded from impact calculation, and corresponding alerts may be hidden from operational views during the window.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/c_EMImpactCalculation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 37,
+		"prompt": "An alert management rule should run only when severity changes to Critical. Which filter behavior best matches that design?",
+		"choices": [
+			"Alert changes to filter so the rule applies when content changes match conditions",
+			"Alert matches filter so the rule runs on every subsequent matching update",
+			"Alert closes automatically when any work note is added by an operator",
+			"Alert reopens whenever a discovery schedule completes on the bound CI"
+		],
+		"correctIndex": 0,
+		"explanation": "The Alert changes to filter option runs the rule when an update causes the alert to newly match the filter, such as a severity transition to Critical.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/create-alert-management-rule.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 38,
+		"prompt": "Which inputs does Probable Root Cause Analysis evaluate when ranking likely causes? (Choose three.)",
+		"choices": [
+			"Active alerts and alert groups on affected CIs",
+			"CI topology relationships from CMDB data",
+			"Change requests linked to topology or application services",
+			"Transfer order shipment status between stockrooms"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1, 2],
+		"questionType": "multi",
+		"explanation": "Probable RCA analyzes alerts, CMDB CI relationships, and relevant change requests to calculate root cause scores for troubleshooting.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/probable-rca.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 39,
+		"prompt": "Which alert management rule filter condition helps exclude grouped secondary alerts from automatic incident creation?",
+		"choices": [
+			"Role in Group is not Secondary",
+			"Priority equals the computed alert priority score value",
+			"Impacted Services contains the affected business service name",
+			"Tags includes the maintenance window identifier string"
+		],
+		"correctIndex": 0,
+		"explanation": "Filtering out alerts whose Role in Group is Secondary prevents automated responses from firing on correlated child alerts after grouping.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/coordinating-alert-response-with-automated-alert-grouping.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/alert-management-rule.html"
+		]
+	}
+]

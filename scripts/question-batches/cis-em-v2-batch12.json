@@ -1,0 +1,85 @@
+[
+	{
+		"trackCode": "CIS-EM",
+		"order": 55,
+		"prompt": "Metric Intelligence builds statistical models from historical metric data primarily to produce which outputs?",
+		"choices": [
+			"Expected values with upper and lower control bounds for outlier detection",
+			"Serialized asset tags for every discovered server in the CMDB",
+			"Standard change templates for recurring maintenance activities",
+			"Catalog item price books for hardware fulfillment requests"
+		],
+		"correctIndex": 0,
+		"explanation": "Statistical models project expected metric values and control bounds used to identify outliers and compute anomaly scores.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/t_EMConfigureConnectorInstance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 56,
+		"prompt": "Metric data points falling outside learned control bounds in Metric Intelligence are treated how?",
+		"choices": [
+			"As statistical outliers that contribute to anomaly scores on a 0–10 scale",
+			"As mandatory signals to retire the associated CI from the CMDB",
+			"As triggers to disable all pull connectors until the next business day",
+			"As requests to auto-approve every open change on the affected service"
+		],
+		"correctIndex": 0,
+		"explanation": "Outliers outside control bounds feed anomaly score calculation; higher scores indicate metrics that appear increasingly unlikely relative to historical behavior.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/t_EMConfigureConnectorInstance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 57,
+		"prompt": "An operations engineer needs static upper and lower limits instead of model-learned bounds for a critical metric series. Which approach applies?",
+		"choices": [
+			"Configure custom static bounds through metric class bound settings for that series",
+			"Delete all historical metric data so the model cannot compute projections",
+			"Disable Metric Intelligence and rely solely on email inbound actions",
+			"Set the connector Event collection schedule below 120 seconds globally"
+		],
+		"correctIndex": 0,
+		"explanation": "Metric classes can override learned bounds and widths with administrator-defined static thresholds when operational requirements demand fixed limits.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/t_EMConfigureConnectorInstance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 58,
+		"prompt": "Which stages describe the Metric Intelligence processing pipeline? (Choose three.)",
+		"choices": [
+			"Collect raw metric data from supported monitoring connectors",
+			"Map metrics to CIs using event rules and CMDB identification",
+			"Analyze series to detect anomalies against projected bounds",
+			"Retire hardware assets when stockroom quantity falls below minimum"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1, 2],
+		"questionType": "multi",
+		"explanation": "Metric Intelligence captures connector data, binds metrics to CIs through the identification engine, then analyzes time series for threshold and anomaly outcomes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/t_EMConfigureConnectorInstance.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
+		]
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 59,
+		"prompt": "When an anomaly score exceeds the configured threshold, how are resulting anomaly alerts handled compared with standard Event Management alerts?",
+		"choices": [
+			"Anomaly alerts are reported separately from regular IT operations alerts",
+			"Anomaly alerts automatically close every related incident within five minutes",
+			"Anomaly alerts bypass all impact rules and hide the service map entirely",
+			"Anomaly alerts convert CIs to consumable assets in the hardware catalog"
+		],
+		"correctIndex": 0,
+		"explanation": "Anomaly alerts generated from Metric Intelligence scoring are tracked separately so operators can review statistical outliers distinct from standard event-driven alerts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/t_EMConfigureConnectorInstance.html"
+		]
+	}
+]

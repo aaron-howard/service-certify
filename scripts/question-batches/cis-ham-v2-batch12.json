@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-HAM",
+		"order": 55,
+		"prompt": "A help desk issues temporary laptops to travelers for two-week assignments. Which HAM capability best supports this use case?",
+		"choices": [
+			"Loaner asset workflows with expected return tracking",
+			"Bulk consumable consumption without stockroom context",
+			"Software entitlement true-up reconciliation",
+			"Event management alert correlation rules"
+		],
+		"correctIndex": 0,
+		"explanation": "Loaner processes manage short-term hardware distribution while preserving assignee accountability and return dates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/manage-loaner-assets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 56,
+		"prompt": "During a quarterly stockroom audit, the team wants barcode scans to include toner cartridges stored with other supplies. Which setting enables this?",
+		"choices": [
+			"Include consumables set to Yes on a Stockroom audit",
+			"Include consumables set to No on a Location audit",
+			"Scan method set to Multi Scan with audit type Contract",
+			"Scheduled date left blank on a Vendor audit"
+		],
+		"correctIndex": 0,
+		"explanation": "Stockroom audits can include consumables when Include consumables is Yes, limiting scan method options accordingly.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-audit-record-fields.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 57,
+		"prompt": "Which receiving action confirms that transferred assets arrived at the destination stockroom?",
+		"choices": [
+			"Completing transfer order line receiving with quantity verification",
+			"Opening the hardware model form and changing manufacturer",
+			"Running discovery against the source stockroom subnet",
+			"Closing related incidents without updating asset location"
+		],
+		"correctIndex": 0,
+		"explanation": "Transfer receiving updates inventory at the destination and closes the movement loop started by the transfer order.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/create-transfer-order.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 58,
+		"prompt": "An asset reaches end of life and must be removed from active assignment pools. Which state change aligns with standard retirement practice?",
+		"choices": [
+			"Move the asset to a retired or disposed substate following approval",
+			"Leave the asset in In use while deleting the assigned user reference",
+			"Convert the asset record into a consumable model without review",
+			"Archive the stockroom instead of updating the asset record"
+		],
+		"correctIndex": 0,
+		"explanation": "Controlled retirement updates asset state and substate so financial, compliance, and inventory views reflect removal from service.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/dispose-hardware-assets.html"
+		]
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 59,
+		"prompt": "Finance asks which maintenance agreements expire within ninety days for data center hardware. Where should the asset team review this information?",
+		"choices": [
+			"Contract records and related asset contract fields in HAM",
+			"Discovery credentials configured on classification probes",
+			"Service portal homepage theme settings",
+			"Incident assignment group rotation schedules"
+		],
+		"correctIndex": 0,
+		"explanation": "Hardware assets associate with contracts and warranties so teams can monitor coverage dates and renewal obligations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-record-fields.html"
+		]
+	}
+]
