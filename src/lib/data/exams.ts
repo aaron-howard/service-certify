@@ -3,6 +3,7 @@ import {
 	getOfficialQuestionCount,
 	getQuestionBankTarget
 } from '$lib/catalog/examQuestionPolicy';
+import { getTrackDocSource } from '$lib/catalog/trackDocSources';
 
 export type ExamDomain = {
 	name: string;
@@ -44,86 +45,53 @@ export type Exam = {
 	homeDescription?: string;
 };
 
-const cisItsmDomains: ExamDomain[] = [
-	{
-		name: 'Incident Management',
-		weight: '25%',
-		questionCount: '160+ Questions',
-		description:
-			'Covers lifecycle management, state transitions, major incidents, and platform integrations.',
-		icon: 'account_tree'
-	},
-	{
-		name: 'CMDB & Asset',
-		weight: '18%',
-		questionCount: '115+ Questions',
-		description:
-			'Deep dive into CSDM, CI relationships, asset classes, and identification/reconciliation rules.',
-		icon: 'database'
-	},
-	{
-		name: 'Service Catalog',
-		weight: '20%',
-		questionCount: '130+ Questions',
-		description: 'Mastering request fulfillment, variable sets, flows, and dynamic catalog items.',
-		icon: 'list_alt'
-	},
-	{
-		name: 'Problem Management',
-		weight: '12%',
-		questionCount: '80+ Questions',
-		description: 'RCA workflows, known errors, and integration with change and incident.',
-		icon: 'warning'
-	},
-	{
-		name: 'Change Management',
-		weight: '15%',
-		questionCount: '100+ Questions',
-		description: 'Normal, Emergency, Standard types, CAB processing, and conflict detection.',
-		icon: 'published_with_changes'
-	},
-	{
-		name: 'Knowledge & Portal',
-		weight: '10%',
-		questionCount: '65+ Questions',
-		description: 'Knowledge lifecycle, user criteria, and self-service configuration.',
-		icon: 'auto_stories',
-		highlight: true
-	}
-];
+const DOMAIN_ICONS = [
+	'account_tree',
+	'database',
+	'list_alt',
+	'warning',
+	'published_with_changes',
+	'auto_stories',
+	'school',
+	'security',
+	'hub',
+	'fact_check',
+	'settings',
+	'analytics'
+] as const;
 
-function genericDomains(prefix: string): ExamDomain[] {
-	return [
-		{
-			name: `${prefix} fundamentals`,
-			weight: '28%',
-			questionCount: '120+ Questions',
-			description:
-				'Core platform concepts, navigation, and configuration aligned to the official blueprint.',
-			icon: 'school'
-		},
-		{
-			name: 'Configuration & security',
-			weight: '24%',
-			questionCount: '95+ Questions',
-			description: 'Access controls, data policies, and secure implementation patterns.',
-			icon: 'security'
-		},
-		{
-			name: 'Integration & automation',
-			weight: '22%',
-			questionCount: '88+ Questions',
-			description: 'Flows, integrations, and operational automation scenarios.',
-			icon: 'hub'
-		},
-		{
-			name: 'Scenario-based assessment',
-			weight: '26%',
-			questionCount: '110+ Questions',
-			description: 'End-to-end cases that mirror exam-style wording and constraints.',
-			icon: 'fact_check'
-		}
-	];
+function domainQuestionLabel(weight: string, bankSize: number): string {
+	const pct = Number.parseFloat(weight) / 100;
+	const count = Math.max(1, Math.round(pct * bankSize));
+	return `${count}+ Questions`;
+}
+
+function examDomainsFromBlueprint(trackCode: string, bankSize: number): ExamDomain[] {
+	const source = getTrackDocSource(trackCode);
+	if (!source?.domains.length) {
+		return [
+			{
+				name: 'Blueprint-aligned practice',
+				weight: '100%',
+				questionCount: `${bankSize}+ Questions`,
+				description:
+					'Scenario-based items aligned to the official exam specification and ServiceNow documentation.',
+				icon: 'fact_check'
+			}
+		];
+	}
+
+	const weights = source.domains.map((d) => Number.parseFloat(d.weight));
+	const highlightIndex = weights.indexOf(Math.max(...weights));
+
+	return source.domains.map((domain, index) => ({
+		name: domain.name,
+		weight: domain.weight,
+		questionCount: domainQuestionLabel(domain.weight, bankSize),
+		description: `Practice items covering ${domain.name} objectives from the official ${trackCode} exam blueprint.`,
+		icon: DOMAIN_ICONS[index % DOMAIN_ICONS.length]!,
+		...(index === highlightIndex ? { highlight: true as const } : {})
+	}));
 }
 
 export { certificationTracks };
@@ -161,15 +129,6 @@ function levelForCode(code: string): ExamLevel {
 	return 'Professional';
 }
 
-function domainPrefixFromOfficialName(official: string): string {
-	const cis = official.match(/^Certified Implementation Specialist - (.+)$/);
-	if (cis) return cis[1]!;
-	if (official === 'Certified System Administrator') return 'System administration';
-	if (official === 'Certified Application Developer') return 'Application development';
-	if (official.startsWith('Certified Platform Owner')) return 'Platform ownership';
-	return 'Certification';
-}
-
 function baseExamFromTrack(
 	t: { code: string; officialCertificationName: string },
 	index: number
@@ -191,11 +150,11 @@ function baseExamFromTrack(
 		questionBankLabel: String(bankSize),
 		mockExamCount: '8 Full-length',
 		releaseFocus: 'Washington DC',
-		updatedLabel: 'Mar 2025',
+		updatedLabel: 'Jul 2026',
 		passRate: '94%',
 		description: `Practice aligned to the ${t.code} blueprint: configuration, scenarios, and platform best practices.`,
 		image: ROTATION_IMAGES[index % ROTATION_IMAGES.length]!,
-		domains: genericDomains(domainPrefixFromOfficialName(official)),
+		domains: examDomainsFromBlueprint(t.code, bankSize),
 		author: ROTATION_AUTHORS[index % ROTATION_AUTHORS.length]!,
 		rating: 4.8,
 		studentsPrepared: 480,
@@ -210,14 +169,13 @@ const examDetailOverrides: Partial<Record<string, Partial<Exam>>> = {
 		officialCertificationName: 'Certified Implementation Specialist - IT Service Management',
 		trackLabel: 'CIS Practice Exam',
 		mockExamCount: '12 Full-length',
-		releaseFocus: 'Xanadu',
-		updatedLabel: 'Oct 2024',
+		releaseFocus: 'Washington DC',
+		updatedLabel: 'Jul 2026',
 		passRate: '98%',
 		description:
-			'Domains: Incident, Problem, Change, Release, and Request Management automation.',
+			'Domains: Incident, Problem, Change, Service Portfolio, Catalog & Request, and CMDB.',
 		image:
 			'https://lh3.googleusercontent.com/aida-public/AB6AXuB7h-Vq5xCyltt7wTwKFW7oQX9Gaqahw8WD60mTF8oYwmM5wiekChtgqv3UBmpoIbN8wiaoSll3qLbAGpgW1lxcF1eNOk1fzgsxl11yUml7U_7AYm_3R8Sd7n3La5AZU8nTJaWoUgqh1UQQ1JrIpI3uWFti0tWiH4Esuh5nC4pnZdZ65lO9glpaVyshB-CHVC18_fnc5OxMu_Nq2VCAQBrPPkYuthMHToHCx9YI9NSZ2TnBWCubozDBwsxxG5TuyyG5Xm3MJpybH4E',
-		domains: cisItsmDomains,
 		author: { initials: 'SM', name: 'Sarah Miller, CIS Expert', role: 'CIS Expert' },
 		rating: 4.9,
 		studentsPrepared: 1240,
@@ -232,14 +190,13 @@ const examDetailOverrides: Partial<Record<string, Partial<Exam>>> = {
 		officialCertificationName: 'Certified Application Developer',
 		trackLabel: 'Developer Track',
 		mockExamCount: '8 Full-length',
-		releaseFocus: 'Xanadu',
-		updatedLabel: 'Dec 2024',
+		releaseFocus: 'Washington DC',
+		updatedLabel: 'Jul 2026',
 		passRate: '97%',
 		description:
-			'Domains: Application Creation, Server/Client Side Scripting, Data Integration, and Security.',
+			'Domains: Application Creation, UI, Security, Automation, External Data, and Application Management.',
 		image:
 			'https://lh3.googleusercontent.com/aida-public/AB6AXuD5dnLGQkUSy8xEdy7NanSSL_XmydDFs4op3r2ZDRXAj1lCEl04bqj3zYQpUuB8nUd093Q3cU56I4rvtYmv335uh8F83SYLB4UcXT_WxZWdUwrRtfLRpOIXDzS61bKxIFps1NPhiR77NPR-TK6RHyVPsd_BidVUZcv-eOfK8VLo1F3tqbaaBJCKCVqbJP0TqjfMy7MpQGywNX3ow9C_DdObxYjZLGdnrpctBiK693hkTNMYBph-vZJgPIAYunH3Rb1IWNgJYNXqRIY',
-		domains: genericDomains('Application development'),
 		author: { initials: 'AL', name: 'Anna Lopez, Senior Dev', role: 'Senior Dev' },
 		rating: 4.7,
 		studentsPrepared: 543,
@@ -255,13 +212,12 @@ const examDetailOverrides: Partial<Record<string, Partial<Exam>>> = {
 		trackLabel: 'Portfolio Track',
 		mockExamCount: '9 Full-length',
 		releaseFocus: 'Washington DC',
-		updatedLabel: 'Nov 2024',
+		updatedLabel: 'Jul 2026',
 		passRate: '95%',
 		description:
-			'Domains: Strategic Alignment, Investment Funding, Resource Management, and PPM.',
+			'Domains: SPM Overview, Demand Management, Portfolio Planning, Resource Management, and Reporting.',
 		image:
 			'https://lh3.googleusercontent.com/aida-public/AB6AXuAhzWzI5oUtuRRqdtoIcmzUXsgfs9I_3mYO6kJjZy5AzQcS-SpGz9PyfK_ytY_ivTH8sc6x_u5MynKfKqUupL9CUnCdyWrK6CNFwWzwKtNTYwPofzo4ZW6Y5MQ4HPQq7py7yAMkSVvzmkdWAVJsGqOd-Tyb5ACCfItwv3lNCi2wdZVUwQyF0rA1fGUjt61Loatz1OJLmgaCH-Beg5U1HQsDszSBdiASSRKu17qH5jGxpiaR7s5DQ_0XJ2Cg3IRXKS4gW2AV1wBrMiw',
-		domains: genericDomains('SPM'),
 		author: { initials: 'RB', name: 'Robert Brown, SPM Lead', role: 'SPM Lead' },
 		rating: 5.0,
 		studentsPrepared: 312,
@@ -273,14 +229,13 @@ const examDetailOverrides: Partial<Record<string, Partial<Exam>>> = {
 		officialCertificationName: 'Certified System Administrator',
 		trackLabel: 'Core Administrator',
 		mockExamCount: '6 Full-length',
-		releaseFocus: 'Xanadu',
-		updatedLabel: 'Mar 2025',
+		releaseFocus: 'Washington DC',
+		updatedLabel: 'Jul 2026',
 		passRate: '94%',
 		description:
-			'Full-length mock exams covering User Interface, Database Schema, and Instance Management.',
+			'Full-length mock exams covering platform navigation, collaboration, automation, security, and integration.',
 		image:
 			'https://lh3.googleusercontent.com/aida-public/AB6AXuDPavk6ROk9-zFMkYNcLZLD4q6lG4_Re4Xt33R7wmgABdkmVXB2BWZwvLhO_93t-5xPGbe_AdgZA3_Lhgj-MG8-UvkX90vtW4ejAmC-r2Hd2LDV3vdXJzS5w2TgA35YraFSlVTsOYTDI8KGPcoOEKtxg-gM3Q9IyAo3UTMcOwnWrOufN0CVTAggUW1ZH01G7zyZ3ys-81JmGOrtrb9pLA9MW4MFhmzmJQeT_KbyLFXjubE5i3A15TXI49qxJM5i0aP-RueCpV1znQ0',
-		domains: genericDomains('System administration'),
 		author: { initials: 'JP', name: 'Jordan Patel, CSA Lead', role: 'CSA Lead' },
 		rating: 4.9,
 		studentsPrepared: 2100,
@@ -296,12 +251,12 @@ const examDetailOverrides: Partial<Record<string, Partial<Exam>>> = {
 		trackLabel: 'HRSD Track',
 		mockExamCount: '7 Full-length',
 		releaseFocus: 'Washington DC',
-		updatedLabel: 'Feb 2025',
+		updatedLabel: 'Jul 2026',
 		passRate: '93%',
-		description: 'Domains: HR cases, lifecycle events, document templates, and employee center flows.',
+		description:
+			'Domains: HR architecture, core applications, employee center, journeys, and platform security.',
 		image:
 			'https://lh3.googleusercontent.com/aida-public/AB6AXuAuohj8V9gpgO6ToVJAjMUvWoExT7MbINAmogkYQ6hHAszCOWJQHq7oVx1SNUk_tvrH8HeYbwcyeiGH245mdluvno1WeWCClCgV4SNnq9ahzVOsQyox_6bbkafIsd1n-2BoLKJfwQooTczaqtYbaepo5EzkUzqegbmR7AS7S4GZiEbkXFPSGP_Lce1hcysAtw_W9v7dzcLJ0u_egt7EnSbCR_TmDWeCmReLt4T9qsSffnIvsPdGpJG0XSkSjeoE5kzokq7PT7TKrms',
-		domains: genericDomains('HR service delivery'),
 		author: { initials: 'LW', name: 'Lee Wong, HRSD', role: 'HRSD' },
 		rating: 4.6,
 		studentsPrepared: 412,
