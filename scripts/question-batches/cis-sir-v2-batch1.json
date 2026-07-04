@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-SIR",
+		"order": 0,
+		"prompt": "Which role is required to install the Security Incident Response application on a ServiceNow instance?",
+		"choices": [
+			"admin",
+			"sn_sec_ciso",
+			"sn_si.admin",
+			"itil"
+		],
+		"correctIndex": 0,
+		"explanation": "The admin role has the elevated privileges needed to install Security Incident Response and related Security Operations store applications.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/install-security-incident-response.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 1,
+		"prompt": "After Security Incident Response is activated, which prerequisite most directly enables threat intelligence enrichment on new incidents?",
+		"choices": [
+			"Threat Intelligence plugin activation with configured feed and lookup sources",
+			"Hardware Asset Management normalization rules for software publisher mapping",
+			"Service Catalog item categories for employee onboarding request routing",
+			"Discovery schedules probing every subnet on a fixed hourly interval"
+		],
+		"correctIndex": 0,
+		"explanation": "Threat intelligence enrichment requires the Threat Intelligence application and configured sources that SIR can query during incident creation and triage.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 2,
+		"prompt": "How is Security Incident Response defined in ServiceNow documentation?",
+		"choices": [
+			"A discovery framework that maps application dependencies across the CMDB only",
+			"An action plan to mitigate security incidents and any imminent threats to the organization",
+			"A service catalog workflow for provisioning laptops to new employees",
+			"A change advisory board process for approving emergency production releases"
+		],
+		"correctIndex": 1,
+		"explanation": "Documentation defines SIR as an action plan that helps organizations mitigate active security incidents and imminent threats through structured response.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 3,
+		"questionType": "multi",
+		"prompt": "Which two core record types does Security Incident Response use to orchestrate analyst work during an investigation? (Choose two.)",
+		"choices": [
+			"Security incident records that track the overall response lifecycle",
+			"Security incident task records that assign discrete response actions to teams",
+			"Change request records that replace all security incident approvals",
+			"Problem records that store long-term root cause analysis only"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "SIR coordinates response through security incident records for lifecycle management and security incident tasks for assigned investigative and remediation work.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-task-types.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 4,
+		"prompt": "Which Security Operations capability gives analysts a unified workspace for triaging, investigating, and closing security incidents?",
+		"choices": [
+			"Security Incident Response Workspace with contextual panels and related lists",
+			"Service Catalog Manager used to publish employee-facing request items",
+			"Performance Analytics homepage widgets for HR case backlog trending",
+			"Flow Designer canvas for building catalog fulfillment workflows only"
+		],
+		"correctIndex": 0,
+		"explanation": "The SIR Workspace consolidates incident details, tasks, evidence, and response tools so analysts can work incidents without switching contexts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-workspace.html"
+		]
+	}
+]

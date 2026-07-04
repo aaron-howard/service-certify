@@ -1,0 +1,87 @@
+[
+	{
+		"trackCode": "CIS-SIR",
+		"order": 55,
+		"prompt": "A security incident record matches several calculator conditions after enrichment completes. What do Security Incident Calculators do in that situation?",
+		"choices": [
+			"Set specific field values on the incident according to matched calculator rules",
+			"Delete related observables to reduce table storage consumption",
+			"Disable every playbook tied to the incident category permanently",
+			"Convert the incident record automatically into a standard change request"
+		],
+		"correctIndex": 0,
+		"explanation": "Security incident calculators update record values such as severity or business impact when their pre-defined conditions match.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/setup-assistant-reference.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/calculate-si-severity.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 56,
+		"prompt": "Several calculators in a Business Impact calculator group could apply to the same incident. How does the platform choose which calculator runs?",
+		"choices": [
+			"The first matching calculator in the ordered group runs and remaining calculators are skipped",
+			"All calculators execute simultaneously and resulting values are averaged together",
+			"Calculators run only after manual analyst approval on each target field",
+			"Calculator groups are ignored unless the legacy risk score property is disabled"
+		],
+		"correctIndex": 0,
+		"explanation": "Calculator groups evaluate in order; the first calculator whose trigger logic matches is applied and subsequent calculators in the group are not run.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/setup-assistant-reference.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/calculate-si-severity.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 57,
+		"prompt": "An administrator must configure weighted criteria for dynamic security incident risk scoring. Which workspace navigation path opens Risk Score Calculator rules?",
+		"choices": [
+			"Security Incident Response Workspace Administration Rules Engine Risk Score Calculator Rule",
+			"Discovery schedule editor under MID Server configuration settings",
+			"Service Portal widget theme designer for employee self-service",
+			"CMDB class manager extension attributes panel for custom CI classes"
+		],
+		"correctIndex": 0,
+		"explanation": "Risk Score Calculator rules are managed from the SIR Workspace Administration Rules Engine with criteria builder or script options.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/define-risk-score-calculator-rules-sir.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/risk-score-calculator-related-tables.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 58,
+		"prompt": "After a high-severity breach is closed, leadership requires documented lessons learned and corrective actions. Which SIR practice fulfills that requirement?",
+		"choices": [
+			"Post-incident review capturing outcomes and tracked improvement tasks",
+			"Immediate deletion of child response tasks to reduce table growth",
+			"Skipping timeline validation to accelerate quarterly metric reporting",
+			"Archiving the incident record before root cause analysis begins"
+		],
+		"correctIndex": 0,
+		"explanation": "Post-incident review formalizes lessons learned and links corrective work so response programs improve after major events.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-post-incident-review.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/t_PerformPostIncidentReview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 59,
+		"prompt": "Facilitators prepare materials for a formal post-incident review session. Which artifact is most essential to the discussion?",
+		"choices": [
+			"A validated timeline covering detections, actions, decisions, and communications",
+			"A list of responder display names without timestamps or task references",
+			"An unrelated open vulnerability export from the prior month",
+			"A single post-closure screenshot of the incident form header only"
+		],
+		"correctIndex": 0,
+		"explanation": "A validated timeline supports accountable root-cause analysis and identifies process gaps during post-incident review.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-post-incident-review.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/exploring-security-incident-response-workspace.html"
+		]
+	}
+]

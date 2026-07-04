@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-RC",
+		"order": 15,
+		"prompt": "When creating an entity filter, which field is mandatory?",
+		"choices": [
+			"Source table",
+			"Description",
+			"Owned by",
+			"Parent entity type"
+		],
+		"correctIndex": 0,
+		"explanation": "An entity filter must specify the source table whose records will be evaluated by the filter conditions; other fields are optional metadata.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/entity-filters.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 16,
+		"prompt": "What is the purpose of an entity type in the GRC entity framework?",
+		"choices": [
+			"To store the numeric scoring thresholds used when calculating residual risk for the instance",
+			"To group related entities and drive which policy statements and risk statements apply to them",
+			"To define the update set that GRC configuration records are captured into during development",
+			"To restrict login access for external assessors connecting through the vendor portal"
+		],
+		"correctIndex": 1,
+		"explanation": "Entity types classify entities into logical groups; content such as policy statements and risk statements is associated at the entity type level to generate records for member entities.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-entities.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 17,
+		"prompt": "A GRC design workshop debates whether to scope entities by entity type or by class. What is the key difference between the two approaches?",
+		"choices": [
+			"The class approach ties entity generation to an entire table or CI class, while entity types use filters to define flexible, condition-based groupings",
+			"Entity types can reference only CMDB tables, while the class approach can reference any table in the instance including custom ones",
+			"The class approach requires a custom scripted REST API, while entity types require importing an XML template for each grouping",
+			"Entity types are read-only after creation, while class-based records can be modified freely at any time by any GRC user"
+		],
+		"correctIndex": 0,
+		"explanation": "Class-based scoping maps all records of a table or CI class to entities, whereas entity types with filters let implementers define precise, condition-driven membership.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-entities.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 18,
+		"prompt": "In the entity architecture, what happens when a record in the source table matches the conditions of an active entity filter?",
+		"choices": [
+			"The matching record is deleted from the source table and recreated in the sn_grc scope",
+			"The record is flagged for manual review and remains outside GRC until an admin approves it",
+			"An email digest is queued so risk managers can decide whether to build an entity by hand",
+			"An entity is created or associated for that record, making it available for controls and risks"
+		],
+		"correctIndex": 3,
+		"explanation": "Entity filters evaluate source-table records against their conditions; matches result in entities that inherit applicable content through their entity types.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/entity-filters.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 19,
+		"prompt": "Why is the entity framework considered the foundation shared by Policy and Compliance Management and Risk Management?",
+		"choices": [
+			"It stores the license entitlements that determine how many users can open GRC modules concurrently",
+			"It provides the common objects against which both controls and risks are generated and monitored",
+			"It replaces the platform workflow engine with a GRC-specific state machine for all task records",
+			"It encrypts compliance evidence attachments before they are written to the instance database"
+		],
+		"correctIndex": 1,
+		"explanation": "Both applications operate on entities: policy statements generate controls per entity and risk statements generate risks per entity, so the entity model underpins each.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-entities.html"
+		]
+	}
+]

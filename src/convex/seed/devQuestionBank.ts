@@ -14652,1486 +14652,1536 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 	{
 		"trackCode": "CIS-RC",
 		"order": 0,
-		"prompt": "In ServiceNow Governance, Risk, and Compliance (GRC) practice, which set of three practice areas is commonly described as the core pillars of GRC?",
+		"questionType": "multi",
+		"prompt": "Which two applications are scoped applications delivered as part of the ServiceNow GRC suite? (Choose two.)",
 		"choices": [
-			"Represents the approach that security, Service, and Support.",
-			"Matches the scenario in which oversight, Risk, and Compliance.",
-			"Describes the outcome where procurement, Projects, and Performance.",
-			"Reflects the condition that change, setup, and Capacity."
+			"GRC: Profiles",
+			"GRC: Risk Management",
+			"GRC: Incident Management",
+			"GRC: Knowledge Management"
 		],
-		"correctIndex": 1,
-		"explanation": "ServiceNow GRC documentation frames GRC as the combination of governance, risk, and compliance practices used to align strategy, manage uncertainty, and demonstrate adherence to obligations.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "GRC: Profiles and GRC: Risk Management are scoped applications within the GRC product suite; incident and knowledge management are core platform applications, not GRC scopes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-overview.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 1,
-		"prompt": "Which outcome best matches the intent of Integrated Risk Management (IRM) on the Now Platform?",
+		"prompt": "An organization tracks regulatory obligations in spreadsheets and wants continuous visibility into its compliance posture. Which ServiceNow GRC capability most directly addresses this need?",
 		"choices": [
-			"Matches the scenario in which eliminate the need for policies, controls, or audits.",
-			"Captures the choice stating replace the CMDB with a standalone risk spreadsheet system.",
-			"Reflects the condition that centralize visibility and prioritization across risk types instead of managing each risk domain in isolation.",
-			"Describes the outcome where limit risk reporting to IT incidents only. correlated with employee lifecycle events from HR systems. (CIS-RC-1-w3)"
+			"Manual quarterly export of control evidence into shared network drives for later review by external auditors",
+			"Indicators that automatically collect evidence from platform data and update control status",
+			"A standalone reporting database that copies compliance records nightly to an external warehouse",
+			"Email reminders sent to process owners asking them to update the spreadsheets on time"
 		],
-		"correctIndex": 2,
-		"explanation": "IRM is positioned as a unifying approach that helps organizations see and prioritize risk holistically across the enterprise rather than only within siloed programs.",
+		"correctIndex": 1,
+		"explanation": "Indicators run automated or manual checks against live platform data, giving ongoing visibility into control health instead of point-in-time spreadsheet snapshots.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-impl-overview.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/indicators.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 2,
-		"prompt": "In Policy and Compliance Management, what is the primary purpose of documenting and managing controls in the GRC suite?",
+		"prompt": "In the GRC compliance architecture, how do citations relate to authority documents?",
 		"choices": [
-			"Captures the choice stating provide evidence-ready linkage between obligations, control activities, and testing outcomes.",
-			"Corresponds to the option where automatically delete incidents older than 30 days.",
-			"Matches the scenario in which set up single sign-on for all vendors.",
-			"Reflects the condition that replace change management approvals."
+			"Citations are the individual requirements broken out from an authority document",
+			"Citations are approval records created each time an authority document is updated by the legal team",
+			"Citations replace authority documents once the related policy statements have been published",
+			"Citations are audit findings raised against an authority document during an engagement"
 		],
 		"correctIndex": 0,
-		"explanation": "GRC control documentation supports structured compliance management by connecting regulatory or policy requirements to control design and operational evidence.",
+		"explanation": "An authority document such as a regulation or standard is decomposed into citations, each representing a discrete requirement that policy statements can address.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/c_GRCControls.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/authority-documents.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 3,
-		"prompt": "A customer wants a guided, repeatable approach to identify and intake new risks into their risk register. Which GRC artifact is most aligned to that goal?",
+		"prompt": "In GRC terminology, what does an entity represent?",
 		"choices": [
-			"Represents the approach that a hardware discovery pattern.",
-			"Reflects the condition that a software reclamation workflow.",
-			"Captures the choice stating a cloud provisioning blueprint.",
-			"Corresponds to the option where a risk identification playbook used within the risk management workspace."
+			"A scheduled job that refreshes compliance dashboards for executives every morning",
+			"A single question presented to a control owner during an attestation",
+			"Anything an organization manages for risk and compliance, such as a department, business service, or vendor",
+			"A read-only snapshot of the entire CMDB taken automatically at the start of each audit period"
 		],
-		"correctIndex": 3,
-		"explanation": "ServiceNow provides risk identification playbook guidance as part of the GRC risk management workspace to standardize how new risks are captured and progressed.",
+		"correctIndex": 2,
+		"explanation": "Entities are the organizational objects that risk and compliance activities are performed against, including departments, services, processes, and vendors.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-identification-playbook.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-entities.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 4,
-		"prompt": "In Audit Management, audit tasks are most accurately described as the work items that auditors execute during which phase of an engagement?",
+		"prompt": "Which application must be installed and active before Policy and Compliance Management or Risk Management can be used?",
 		"choices": [
-			"Captures the choice stating only software license reclamation.",
-			"Corresponds to the option where fieldwork activities such as control testing, evidence collection, and follow-ups.",
-			"Represents the approach that only employee onboarding checklists.",
-			"Describes the outcome where only hardware procurement approvals."
+			"Performance Analytics Premium, which supplies the scoring engine for all GRC records",
+			"GRC: Profiles (sn_grc), which supplies the shared entity and common GRC infrastructure",
+			"Audit Management, which provisions the engagement tables that the other applications extend for findings",
+			"Vendor Risk Management, which owns the assessment framework used by compliance teams"
 		],
 		"correctIndex": 1,
-		"explanation": "Audit task documentation is oriented around executing and tracking the detailed audit procedures performed after scoping and planning.",
+		"explanation": "GRC: Profiles is the foundational scoped application that provides entities and shared GRC components required by the other GRC applications.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/audit-management/c_AuditTasks.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-overview.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 5,
-		"prompt": "In IRM Workspace, which capability most directly helps risk managers prioritize what to work first across many open risks?",
+		"prompt": "A compliance manager asks how policy statements fit between authority documents and controls. Which description is accurate?",
 		"choices": [
-			"Represents the approach that disabling inherent and residual scoring fields.",
-			"Describes the outcome where automatically converting all risks into audit tasks.",
-			"Matches the scenario in which routing all risk records to a single assignment group.",
-			"Corresponds to the option where risk score-driven list views and filters that surface highest exposure records first."
+			"Policy statements are internal requirement statements that map citations to the controls generated for each entity",
+			"Policy statements are the workflow stages a control passes through between draft and retired states",
+			"Policy statements are dashboard widgets summarizing citation coverage for each regulator",
+			"Policy statements are user criteria records restricting which auditors can read authority documents"
 		],
-		"correctIndex": 3,
-		"explanation": "IRM workspace is designed to centralize and prioritize risk activity, and score-based views help teams focus on highest-impact items.",
+		"correctIndex": 0,
+		"explanation": "Policy statements translate external citations into internal requirements; when associated with entities, they generate the controls that are monitored for compliance.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-impl-overview.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-statements.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 6,
-		"prompt": "A program owner wants one page in IRM Workspace showing due assessments, overdue tasks, and approval bottlenecks. What should be configured first?",
+		"prompt": "What is the relationship between a risk statement and a risk record in GRC Risk Management?",
 		"choices": [
-			"Represents the approach that major incident templates. retired when monitoring shows zero invocations over ninety days. (CIS-RC-6-w0)",
-			"Matches the scenario in which workspace landing page components that aggregate assigned risk work and state indicators.",
-			"Reflects the condition that new CMDB classes for risk dashboards.",
-			"Describes the outcome where discovery patterns for risk records."
+			"A risk record is archived automatically whenever its risk statement is modified by the risk manager",
+			"A risk statement is a reusable definition in the risk library, and a risk record is its instance applied to a specific entity",
+			"A risk statement is created only after a risk record breaches its residual score threshold",
+			"A risk record stores the qualitative wording while the risk statement stores only numeric scores"
 		],
 		"correctIndex": 1,
-		"explanation": "Workspace components provide role-focused operational visibility, allowing risk teams to monitor workload and bottlenecks in one place.",
+		"explanation": "Risk statements live in the risk library as templates; associating a statement with an entity creates a risk record scoped to that entity.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/workspace-homepage.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/risk-management-overview.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 7,
-		"prompt": "Which IRM Workspace practice best supports consistent triage when multiple analysts evaluate newly identified risks?",
+		"prompt": "Which statement best describes how the ServiceNow GRC applications are positioned relative to the core platform?",
 		"choices": [
-			"Matches the scenario in which skip residual risk calculations until audit season.",
-			"Describes the outcome where allow each analyst to define custom severity values ad hoc.",
-			"Captures the choice stating use unrelated incident priority rules for risk scoring.",
-			"Reflects the condition that standardize scoring criteria and decision guidance in workspace process steps."
+			"They run on a separate dedicated instance that synchronizes records with production once per day",
+			"They are delivered as scoped applications from the ServiceNow Store that build on shared Now Platform capabilities",
+			"They are legacy global applications that cannot coexist with other scoped applications on the same instance",
+			"They require a third-party middleware layer to read task and CMDB data from the platform"
 		],
-		"correctIndex": 3,
-		"explanation": "Standardized scoring and guided process steps reduce analyst variance and produce more defensible, repeatable triage outcomes.",
+		"correctIndex": 1,
+		"explanation": "GRC applications are Store-delivered scoped applications running natively on the Now Platform, sharing its data, workflow, and reporting capabilities.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-identification-playbook.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-overview.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 8,
-		"prompt": "In IRM Workspace, what is the main benefit of linking risks to business entities such as services or departments?",
+		"prompt": "A GRC implementer needs to explain the difference between a control and a control objective during a design workshop. Which explanation is correct?",
 		"choices": [
-			"Captures the choice stating it disables risk treatment plans.",
-			"Reflects the condition that it improves impact context and accountability for remediation decisions.",
-			"Matches the scenario in which it replaces policy statements automatically.",
-			"Corresponds to the option where it removes the need for ownership assignment."
+			"A control objective defines the desired outcome, while a control is the entity-specific record that implements and monitors it",
+			"A control objective is the numeric weight assigned to each indicator result during compliance scoring calculations",
+			"A control is a category of authority documents, while a control objective is the regulator that issued them",
+			"A control objective exists only in Audit Management and has no connection to Policy and Compliance records"
 		],
-		"correctIndex": 1,
-		"explanation": "Entity linkage gives operational context and clear ownership so treatment decisions reflect business impact and accountability.",
+		"correctIndex": 0,
+		"explanation": "Control objectives (policy statements) state what must be achieved; controls are the per-entity instances used to monitor and attest achievement of that objective.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/business-entities-and-risk.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 9,
-		"prompt": "A risk lead wants stronger governance in IRM Workspace. Which control is most appropriate?",
+		"prompt": "Which GRC capability lets compliance and risk teams send structured question sets to control and risk owners for periodic review?",
 		"choices": [
-			"Corresponds to the option where open write access for all itil users.",
-			"Represents the approach that disabling activity logs on risk records.",
-			"Captures the choice stating manual spreadsheet signoff outside the platform.",
-			"Reflects the condition that role-based access and workflow approvals for risk state transitions."
+			"Attestations built on the assessment engine, assigned to owners on a defined schedule",
+			"Service catalog record producers published to the employee center portal for all users",
+			"Scheduled data exports that mail CSV files of open controls to distribution lists",
+			"Virtual Agent topics that quiz owners in chat and log answers to the activity stream"
 		],
-		"correctIndex": 3,
-		"explanation": "Role-based controls and approval checkpoints enforce governance and improve auditability of risk lifecycle changes.",
+		"correctIndex": 0,
+		"explanation": "Attestations use the assessment engine to gather structured responses from control and risk owners, supporting recurring certification of compliance and risk posture.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-governance.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/attestations.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 10,
-		"prompt": "In IRM Risk Management, what is the primary purpose of a risk register?",
+		"prompt": "Which technical detail applies to the GRC scoped applications after installation from the ServiceNow Store?",
 		"choices": [
-			"Corresponds to the option where a tracker for software reclaim candidates only.",
-			"Captures the choice stating a centralized inventory of identified risks with ownership, scoring, and treatment status.",
-			"Describes the outcome where a report of closed major incidents.",
-			"Represents the approach that a list of CMDB classes excluded from discovery."
+			"All GRC tables are created in the global scope so any business rule can write to them directly",
+			"Application tables use scoped prefixes such as sn_grc and sn_compliance, and cross-scope access follows scoped application rules",
+			"The applications overwrite the core task table schema and remove fields not used by GRC processes",
+			"Each GRC application requires its own MID Server to communicate with the instance database"
 		],
 		"correctIndex": 1,
-		"explanation": "The risk register serves as the system of record for risk posture, accountability, and lifecycle progression.",
+		"explanation": "GRC applications are scoped; their tables carry prefixes like sn_grc and sn_compliance, and interactions from other scopes are governed by cross-scope access controls.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-register.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-overview.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 11,
-		"prompt": "A risk appears in multiple departments with the same root cause. Which register approach is best?",
+		"questionType": "multi",
+		"prompt": "Which two groups form the core implementation team for a GRC engagement? (Choose two.)",
 		"choices": [
-			"Describes the outcome where track only one department and ignore others.",
-			"Represents the approach that convert all risk records into audit issues.",
-			"Corresponds to the option where use a parent risk with related records to preserve enterprise visibility and local accountability.",
-			"Matches the scenario in which create unrelated duplicate risks for every department."
+			"Risk and compliance experts",
+			"ServiceNow developer team",
+			"External regulator liaisons",
+			"End-user hardware support technicians"
 		],
-		"correctIndex": 2,
-		"explanation": "Parent-child style risk structures can preserve roll-up visibility while still assigning local treatment responsibility.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "A GRC implementation pairs risk and compliance subject matter experts, who own requirements and methodology, with the ServiceNow developer team that configures the platform.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/manage-risk-records.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-overview.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 12,
-		"prompt": "Which risk register data quality control has the highest impact on reporting reliability?",
+		"prompt": "During implementation planning, which activity should be completed before loading authority documents and building policy statements?",
 		"choices": [
-			"Matches the scenario in which optional owner and due date fields.",
-			"Reflects the condition that free-text status values without oversight.",
-			"Describes the outcome where storing all risk notes outside ServiceNow.",
-			"Represents the approach that required owner, rating, treatment plan, and review cadence fields."
+			"Retiring every legacy compliance spreadsheet so no historical evidence remains available",
+			"Enabling all optional GRC plugins regardless of whether the customer licensed them",
+			"Granting the sn_grc.admin role to every member of the compliance department by default",
+			"Defining the entity scope and content structure with stakeholders so requirements map cleanly to the data model"
 		],
 		"correctIndex": 3,
-		"explanation": "Required core fields and review cadence enforce consistent lifecycle data and improve decision-grade reporting.",
+		"explanation": "Agreeing on entity scope and how compliance content will be structured up front prevents rework when authority documents, policies, and controls are created.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-data-governance.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 13,
-		"prompt": "How should residual risk be handled in the register after controls are implemented?",
+		"prompt": "Which persona is typically responsible for responding to control attestations and completing issue remediation tasks for their area?",
 		"choices": [
-			"Describes the outcome where reassess and document residual exposure to support accept/mitigate/transfer decisions.",
-			"Captures the choice stating set every residual score to low by policy.",
-			"Reflects the condition that freeze inherent score and stop reassessment.",
-			"Matches the scenario in which delete the risk once controls are documented."
+			"The control owner assigned to the entity where the control applies",
+			"The instance administrator who manages update sets and clone schedules",
+			"The external auditor who signs off the final engagement report each cycle",
+			"The platform capacity planner who monitors database growth trends"
 		],
 		"correctIndex": 0,
-		"explanation": "Residual risk must be reassessed to reflect control effectiveness and support informed treatment decisions.",
+		"explanation": "Control owners attest to the operation of controls on their entities and act on issues raised when controls fail or attestations identify gaps.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-response-and-treatment.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/attestations.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 14,
-		"prompt": "Which governance activity keeps the risk register trustworthy over time?",
+		"prompt": "A GRC implementation checklist includes assigning application roles. Which role grants a user the ability to administer Policy and Compliance Management content such as policies and policy statements?",
 		"choices": [
-			"Reflects the condition that restricting risk updates to one admin account.",
-			"Corresponds to the option where removing change history from risk records.",
-			"Matches the scenario in which periodic review campaigns to validate stale records, ownership, and treatment progress.",
-			"Captures the choice stating closing all risks older than 90 days automatically."
+			"sn_compliance.admin within the Policy and Compliance scoped application",
+			"itil, because compliance records extend the incident table structure",
+			"catalog_admin, since policies are published through the service catalog",
+			"pa_viewer, which unlocks editing of any record shown on a dashboard"
 		],
-		"correctIndex": 2,
-		"explanation": "Regular governance reviews prevent stale records and maintain accurate ownership and treatment status.",
+		"correctIndex": 0,
+		"explanation": "The sn_compliance.admin role provides administrative access to Policy and Compliance Management content; platform roles like itil or catalog_admin do not govern GRC records.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-review-process.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 15,
-		"prompt": "In Policy and Compliance Management, what is the primary role of a control record?",
+		"prompt": "When creating an entity filter, which field is mandatory?",
 		"choices": [
-			"Reflects the condition that store network discovery credentials.",
-			"Corresponds to the option where replace all risk records in the register.",
-			"Captures the choice stating create emergency change approvals. distributed via encrypted channels with key rotation policies.",
-			"Represents the approach that define the control objective, ownership, and testability linked to authoritative requirements."
+			"Source table",
+			"Description",
+			"Owned by",
+			"Parent entity type"
 		],
-		"correctIndex": 3,
-		"explanation": "Control records formalize how obligations are addressed operationally and provide the basis for testing and assurance.",
+		"correctIndex": 0,
+		"explanation": "An entity filter must specify the source table whose records will be evaluated by the filter conditions; other fields are optional metadata.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/c_GRCControls.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/entity-filters.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 16,
-		"prompt": "A compliance manager needs to reduce duplicate controls across frameworks. Which strategy is best?",
+		"prompt": "What is the purpose of an entity type in the GRC entity framework?",
 		"choices": [
-			"Represents the approach that create separate controls for every citation regardless of overlap.",
-			"Describes the outcome where use common controls mapped to multiple authority documents and citations.",
-			"Corresponds to the option where disable control ownership fields.",
-			"Captures the choice stating map controls only to incidents, not requirements."
+			"To store the numeric scoring thresholds used when calculating residual risk for the instance",
+			"To group related entities and drive which policy statements and risk statements apply to them",
+			"To define the update set that GRC configuration records are captured into during development",
+			"To restrict login access for external assessors connecting through the vendor portal"
 		],
 		"correctIndex": 1,
-		"explanation": "Common controls reduce duplication and support reuse across multiple frameworks and requirements.",
+		"explanation": "Entity types classify entities into logical groups; content such as policy statements and risk statements is associated at the entity type level to generate records for member entities.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/manage-common-controls.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-entities.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 17,
-		"prompt": "Which evidence practice most strengthens control testing defensibility?",
+		"prompt": "A GRC design workshop debates whether to scope entities by entity type or by class. What is the key difference between the two approaches?",
 		"choices": [
-			"Corresponds to the option where deleting failed test artifacts after remediation.",
-			"Matches the scenario in which maintaining traceable, time-bound evidence linked to test results and approvers.",
-			"Describes the outcome where attaching screenshots without timestamps.",
-			"Represents the approach that relying on verbal confirmation from process owners."
+			"The class approach ties entity generation to an entire table or CI class, while entity types use filters to define flexible, condition-based groupings",
+			"Entity types can reference only CMDB tables, while the class approach can reference any table in the instance including custom ones",
+			"The class approach requires a custom scripted REST API, while entity types require importing an XML template for each grouping",
+			"Entity types are read-only after creation, while class-based records can be modified freely at any time by any GRC user"
 		],
-		"correctIndex": 1,
-		"explanation": "Traceable evidence linked to test execution and approvals is key for defensible assurance and audits.",
+		"correctIndex": 0,
+		"explanation": "Class-based scoping maps all records of a table or CI class to entities, whereas entity types with filters let implementers define precise, condition-driven membership.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/control-testing-and-evidence.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-entities.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 18,
-		"prompt": "What is the most effective response when a key control repeatedly fails testing?",
+		"prompt": "In the entity architecture, what happens when a record in the source table matches the conditions of an active entity filter?",
 		"choices": [
-			"Describes the outcome where archive the requirement citation.",
-			"Reflects the condition that open and track remediation tasks with owners, due dates, and retest criteria.",
-			"Represents the approach that mark the control as passed to preserve KPIs.",
-			"Matches the scenario in which reclassify the control as optional."
+			"The matching record is deleted from the source table and recreated in the sn_grc scope",
+			"The record is flagged for manual review and remains outside GRC until an admin approves it",
+			"An email digest is queued so risk managers can decide whether to build an entity by hand",
+			"An entity is created or associated for that record, making it available for controls and risks"
 		],
-		"correctIndex": 1,
-		"explanation": "Documented remediation workflows with retesting provide governance and ensure corrective actions are completed.",
+		"correctIndex": 3,
+		"explanation": "Entity filters evaluate source-table records against their conditions; matches result in entities that inherit applicable content through their entity types.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/remediate-control-failures.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/entity-filters.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 19,
-		"prompt": "Which metric best indicates a maturing control environment in IRM?",
+		"prompt": "Why is the entity framework considered the foundation shared by Policy and Compliance Management and Risk Management?",
 		"choices": [
-			"Describes the outcome where total number of new control records regardless of quality.",
-			"Reflects the condition that count of manually overridden test outcomes.",
-			"Matches the scenario in which percentage of controls with no owner assigned.",
-			"Captures the choice stating increasing pass rate with reduced repeat failures across critical controls."
+			"It stores the license entitlements that determine how many users can open GRC modules concurrently",
+			"It provides the common objects against which both controls and risks are generated and monitored",
+			"It replaces the platform workflow engine with a GRC-specific state machine for all task records",
+			"It encrypts compliance evidence attachments before they are written to the instance database"
 		],
-		"correctIndex": 3,
-		"explanation": "Sustained effectiveness with fewer repeat failures signals stronger control design and operation.",
+		"correctIndex": 1,
+		"explanation": "Both applications operate on entities: policy statements generate controls per entity and risk statements generate risks per entity, so the entity model underpins each.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/compliance-metrics.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-entities.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 20,
-		"prompt": "In Policy and Compliance Management, what does a policy compliance score primarily indicate?",
+		"prompt": "An implementer must ensure that only production Windows servers in the CMDB become GRC entities. Which configuration achieves this?",
 		"choices": [
-			"Captures the choice stating the size of the incident backlog.",
-			"Corresponds to the option where the count of software license entitlements.",
-			"Matches the scenario in which the number of unresolved discovery errors.",
-			"Reflects the condition that the degree to which mapped controls and tests demonstrate adherence to policy requirements."
+			"An entity filter on the Windows server class table with conditions restricting results to production environment records",
+			"A scheduled script that copies every cmdb_ci record into the entity table each night without conditions",
+			"A UI policy on the entity form that hides non-production servers from list views for compliance users",
+			"An ACL that denies read access to development servers so they are skipped during entity generation"
 		],
-		"correctIndex": 3,
-		"explanation": "Compliance scoring reflects evidence-backed adherence against policy obligations and control outcomes.",
+		"correctIndex": 0,
+		"explanation": "Entity filters combine a source table with filter conditions, so scoping the Windows server class to production records generates exactly the intended entities.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/policy-compliance-overview.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/entity-filters.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 21,
-		"prompt": "A policy statement maps to several controls, and one control fails repeatedly. What is the best compliance response?",
+		"prompt": "What role do entity owners play in the GRC entity framework?",
 		"choices": [
-			"Represents the approach that mark all related controls as compensating automatically.",
-			"Reflects the condition that delete the mapped policy statement.",
-			"Captures the choice stating open tracked remediation and reassessment activities tied to the failing control and requirement.",
-			"Corresponds to the option where ignore the failing control if other controls pass."
+			"They approve every platform upgrade before GRC plugins can be patched to a new family release",
+			"They are limited to viewing dashboards and cannot receive any assigned GRC work",
+			"They configure the instance-wide scoring methodology used for all risk calculations",
+			"They are accountable for the entity and typically receive attestation and issue work related to its controls and risks"
 		],
-		"correctIndex": 2,
-		"explanation": "Control failure against a requirement should trigger managed remediation and retesting to restore compliant posture.",
+		"correctIndex": 3,
+		"explanation": "The entity owner is the accountable person for an entity; assignment of attestations, issues, and reviews for that entity's controls and risks flows to them by default.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/remediate-control-failures.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-entities.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 22,
-		"prompt": "Which reporting view best supports executives reviewing policy compliance risk?",
+		"prompt": "A department record used as an entity is deactivated in its source table, and the entity filter no longer matches it. How does the entity framework handle the related entity?",
 		"choices": [
-			"Captures the choice stating dashboards showing compliance by authority document, business entity, and control test trends.",
-			"Corresponds to the option where cMDB class hierarchy without control mappings.",
-			"Represents the approach that unfiltered activity stream comments.",
-			"Describes the outcome where a list of all closed incidents last quarter."
+			"The entity and all of its historical controls, risks, and issues are hard-deleted immediately from the instance",
+			"The entity is flagged as no longer matching so it can be retired while preserving its compliance history",
+			"The entity remains fully active forever because filters are evaluated only once at creation time",
+			"The source record is automatically reactivated by the filter to keep the entity association valid"
 		],
-		"correctIndex": 0,
-		"explanation": "Multi-dimensional compliance dashboards provide actionable visibility into obligations, entities, and control trends.",
+		"correctIndex": 1,
+		"explanation": "When a source record stops matching, the framework marks the entity for retirement rather than deleting it, preserving the audit trail of past compliance activity.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/compliance-dashboards.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/entity-filters.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 23,
-		"prompt": "What governance mechanism is most effective for keeping policy compliance current after regulatory updates?",
+		"prompt": "Which statement about associating content with entity types is correct?",
 		"choices": [
-			"Represents the approach that run controlled policy lifecycle updates with impact analysis across controls, tests, and owners.",
-			"Describes the outcome where disable control testing during transitions.",
-			"Matches the scenario in which update only the policy title and ignore citations.",
-			"Corresponds to the option where freeze all policy records until annual audit."
+			"Policy statements can only be associated with individual entities one at a time, never at the type level",
+			"Associating a policy statement with an entity type generates controls for the entities in that type",
+			"Entity types accept risk statements but reject policy statements, which attach directly to authority documents",
+			"Content associations require deactivating the entity type and rebuilding it from an XML import"
+		],
+		"correctIndex": 1,
+		"explanation": "Associating policy statements or risk statements at the entity type level cascades to member entities, generating the corresponding controls and risks.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-entities.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 24,
+		"questionType": "multi",
+		"prompt": "Which two examples are commonly modeled as entities in a GRC implementation? (Choose two.)",
+		"choices": [
+			"A business service supporting a regulated process",
+			"A vendor providing outsourced data processing",
+			"A UI theme applied to the platform login page",
+			"A scheduled clone of production down to a sub-production instance"
 		],
 		"correctIndex": 0,
-		"explanation": "Lifecycle governance with impact analysis prevents hidden gaps when regulations and internal policies change.",
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Business services and vendors are typical entities because risk and compliance obligations attach to them; UI themes and clone schedules are platform administration items.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-entities.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 25,
+		"prompt": "Where are the records evaluated by an entity filter physically stored while the filter is active?",
+		"choices": [
+			"They remain in their original source table; the entity framework references them rather than moving the data",
+			"They are copied into a staging import set table and transformed into the sn_grc scope every hour",
+			"They are exported to an external content service and streamed back through a MID Server",
+			"They are duplicated into a rotating archive table that purges non-matching rows each weekend"
+		],
+		"correctIndex": 0,
+		"explanation": "Entity filters point at existing tables and evaluate their records in place; entities reference the source records without relocating or duplicating the underlying data.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/entity-filters.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 26,
+		"prompt": "A customer wants every record of the cmdb_ci_service table to become an entity with no additional conditions. Which scoping approach fits this requirement with the least configuration?",
+		"choices": [
+			"Writing a scheduled script include that inserts entity records for each service every night",
+			"Creating one entity filter per service record so ownership can differ across departments",
+			"Using the class-based approach so the whole table maps to entities of a matching entity type",
+			"Building a Flow Designer flow triggered on service creation that calls a custom subflow"
+		],
+		"correctIndex": 2,
+		"explanation": "When an entire table or CI class should become entities, class-based scoping is the simplest option; filters add value only when conditional membership is needed.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-entities.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 27,
+		"prompt": "How does the entity framework support hierarchical relationships such as a business unit containing multiple departments?",
+		"choices": [
+			"Hierarchies are unsupported, so implementers must flatten all organizational structures before go-live",
+			"Entities support parent-child relationships so risk and compliance posture can roll up through the hierarchy",
+			"Each level of hierarchy requires installing a separate GRC scoped application from the Store",
+			"Hierarchies exist only for vendors and cannot be applied to internal organizational structures"
+		],
+		"correctIndex": 1,
+		"explanation": "Entities can be related in parent-child structures, enabling aggregation and rollup of compliance and risk information across organizational levels.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-entities.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 28,
+		"prompt": "During testing, an implementer notices that no entities were generated after activating a new entity filter. Which cause should be investigated first?",
+		"choices": [
+			"The filter conditions do not match any records in the selected source table",
+			"The instance is missing the Performance Analytics license required for entity generation",
+			"The CMDB identification engine rejected the entities due to duplicate serial numbers",
+			"The entity table reached its maximum row count and silently discarded the inserts"
+		],
+		"correctIndex": 0,
+		"explanation": "The most common cause of an empty result is filter conditions that exclude all source records, so validating the condition against the table is the first check.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/entity-filters.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 29,
+		"prompt": "Which outcome results from associating a risk statement with an entity type that contains twelve entities?",
+		"choices": [
+			"A single shared risk record is created and all twelve entities reference it jointly",
+			"Twelve risk records are generated, one scoped to each entity in the entity type",
+			"No records are created until each entity owner manually accepts the statement",
+			"The risk statement is converted into twelve policy statements for compliance tracking"
+		],
+		"correctIndex": 1,
+		"explanation": "Content association is per entity: each entity in the type receives its own risk record generated from the shared risk statement definition.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/risk-management-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 30,
+		"prompt": "An implementer wants entity generation to stay accurate as CMDB data changes over time. Which practice supports this goal?",
+		"choices": [
+			"Locking the source tables so no updates can occur after the initial entity generation run",
+			"Relying on entity filters to reevaluate source records so entity membership tracks data changes",
+			"Exporting entities to a spreadsheet monthly and reimporting corrected rows over the originals",
+			"Cloning production over development weekly so entity data resets to a known baseline"
+		],
+		"correctIndex": 1,
+		"explanation": "Because entity filters continue evaluating source records, entities are created and retired as data changes, keeping GRC scope aligned with reality without manual rework.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/entity-filters.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 31,
+		"questionType": "multi",
+		"prompt": "Which two design decisions belong to the entity scoping phase of a GRC implementation? (Choose two.)",
+		"choices": [
+			"Selecting which source tables and conditions define the organization's entities",
+			"Deciding whether content will be associated at the entity type level or to individual entities",
+			"Choosing the font family displayed on executive compliance dashboards",
+			"Setting the SMTP relay server used for outbound notification email"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Entity scoping covers which data becomes entities and how content associations will be structured; dashboard styling and mail infrastructure are unrelated platform settings.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-entities.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 32,
+		"prompt": "A GRC architect recommends against creating one entity per configuration item for a 40,000-CI estate. What is the strongest justification for this guidance?",
+		"choices": [
+			"Entities cannot reference CMDB tables, so configuration items are ineligible as source records",
+			"Each entity may only hold a single control, which would leave most policy statements without coverage",
+			"Generating controls and risks per CI would create unmanageable record volumes, so entities should target meaningful groupings such as services",
+			"The platform limits an instance to 500 entities regardless of licensing tier or storage capacity"
+		],
+		"correctIndex": 2,
+		"explanation": "Entity granularity drives record volume: content associated to tens of thousands of CI-level entities multiplies controls and risks beyond what teams can operate, so grouping at the service or process level is preferred.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-entities.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 33,
+		"questionType": "multi",
+		"prompt": "Which two tables are in the scope of the Policy and Compliance Management application? (Choose two.)",
+		"choices": [
+			"Control",
+			"Citation",
+			"Incident",
+			"Asset"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Control and Citation are Policy and Compliance Management scoped tables; Incident and Asset belong to core platform applications outside the GRC scope.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 34,
+		"prompt": "Which sequence reflects the typical Policy and Compliance content flow from external requirement to monitored record?",
+		"choices": [
+			"Control, then citation, then authority document, then policy statement in strict reverse dependency order",
+			"Authority document to citation, citation to policy statement, and policy statement to controls generated per entity",
+			"Policy statement to authority document, with citations created afterward only when audits raise findings",
+			"Citation directly to control, skipping policy statements because they are optional legacy records"
+		],
+		"correctIndex": 1,
+		"explanation": "External authority documents break down into citations, citations map to internal policy statements, and policy statements generate entity-level controls for monitoring.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/authority-documents.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 35,
+		"prompt": "What is the default lifecycle of a policy record in Policy and Compliance Management?",
+		"choices": [
+			"New, In Review, Follow Up, Closed Complete, mirroring the assessment instance state model exactly",
+			"Draft, Review, Published, and Retired, with approvals moving the policy toward the published state",
+			"Open, Work in Progress, Pending Vendor, Resolved, matching the incident lifecycle it extends",
+			"Registered, Scored, Treated, Accepted, following the standard risk treatment progression"
+		],
+		"correctIndex": 1,
+		"explanation": "Policies move from draft through review into a published state, and are retired when no longer applicable; approvals gate the transition to published.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policies.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 36,
+		"prompt": "A control fails its attestation because the owner reports the safeguard is not operating. What does Policy and Compliance Management create to track remediation?",
+		"choices": [
+			"An issue record associated with the control, assigned for remediation or acceptance",
+			"A change request that freezes the entity until the compliance manager approves reopening",
+			"A knowledge article documenting the failure for future audit reference purposes",
+			"A new authority document capturing the internal deviation from the standard"
+		],
+		"correctIndex": 0,
+		"explanation": "Failed attestations and non-compliant results generate issues linked to the control, driving remediation, exception, or acceptance workflows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-issues.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 37,
+		"prompt": "Which supporting process allows a control owner to formally request temporary relief from complying with a policy statement?",
+		"choices": [
+			"The policy exception process, where a justified request is reviewed and approved for a defined period",
+			"The demand management process, which prioritizes the request against other project intake items",
+			"The problem management process, which documents the known error until a fix is deployed",
+			"The HR case process, which routes the request to employee relations for confidential handling"
+		],
+		"correctIndex": 0,
+		"explanation": "Policy exceptions capture justified, time-bound deviations from policy requirements and route them through review and approval before relief is granted.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-exceptions.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 38,
+		"prompt": "How does a control record reach the Monitor state in its lifecycle?",
+		"choices": [
+			"It is attested or activated after review, moving from draft through approval into active monitoring",
+			"It transitions automatically the moment its policy statement is created, with no intermediate states",
+			"It requires an external auditor to sign the record using a hardware security token",
+			"It moves to Monitor only after every sibling control in the entity type has been retired"
+		],
+		"correctIndex": 0,
+		"explanation": "Controls progress from draft through review and attestation or activation; once approved as operating, they sit in the Monitor state where results and indicators track their health.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 39,
+		"prompt": "A compliance team wants failed indicator results to automatically flag the related control as non-compliant. Which Policy and Compliance capability provides this behavior?",
+		"choices": [
+			"Indicators linked to controls, where failing results update control status and can raise issues",
+			"Interactive filters on the compliance dashboard that visually highlight failed widgets in red",
+			"Record watchers that push mobile notifications whenever a metric definition changes anywhere",
+			"An import set transform map that rewrites the control state during nightly data loads"
+		],
+		"correctIndex": 0,
+		"explanation": "Indicators attached to controls collect evidence on a schedule; failing results drive the control's compliance status and can generate issues for follow-up.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/indicators.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 40,
+		"prompt": "Which configuration determines how often control owners are asked to re-attest that their controls are operating effectively?",
+		"choices": [
+			"The attestation schedule defined for the control, which generates assessments at the set frequency",
+			"The instance session timeout property, which forces re-certification at every login event",
+			"The data retention policy on the sys_audit table, which recycles attestations as rows age out",
+			"The SLA definition attached to the entity record, which reopens controls at breach time"
+		],
+		"correctIndex": 0,
+		"explanation": "Attestation frequency is configured on the control or its policy statement; the platform then generates attestation assessments to owners on that recurring schedule.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/attestations.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 41,
+		"prompt": "During configuration, an implementer maps one policy statement to citations from three different regulations. What advantage does this provide?",
+		"choices": [
+			"It disables the citations so only the internal statement remains subject to audit review",
+			"A single set of controls satisfies overlapping requirements, reducing duplicate testing effort across frameworks",
+			"It triples the number of generated controls so each regulator receives an isolated record set",
+			"The regulations merge into one combined authority document to simplify library maintenance"
+		],
+		"correctIndex": 1,
+		"explanation": "Many-to-many mapping between citations and policy statements lets one internal requirement, and its controls, provide evidence for multiple regulatory frameworks at once.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-statements.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 42,
+		"prompt": "An issue raised against a non-compliant control cannot be remediated this quarter due to budget limits. Which closure path documents management's decision to tolerate the gap?",
+		"choices": [
+			"Closing the issue as accepted with documented justification and approval from the accountable party",
+			"Deleting the issue so the compliance score returns to green before the next reporting cycle",
+			"Reassigning the issue to the platform team so it ages out of the compliance queue naturally",
+			"Converting the issue to a standard change that is preapproved and closes automatically"
+		],
+		"correctIndex": 0,
+		"explanation": "Issues support risk acceptance closure, capturing the rationale and approval trail when management chooses to tolerate a control gap rather than remediate immediately.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-issues.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 43,
+		"questionType": "multi",
+		"prompt": "Which two artifacts are part of the Policy and Compliance Management compliance library? (Choose two.)",
+		"choices": [
+			"Authority documents imported or created to represent external regulations and standards",
+			"Policy statements that express internal requirements derived from citations",
+			"Service level agreements measuring incident response times for the help desk",
+			"Update sets packaging developer configuration changes between instances"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "The compliance library holds authority documents and the policy statements mapped to their citations; SLAs and update sets are platform artifacts outside the library.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/authority-documents.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 44,
+		"prompt": "A compliance manager needs visibility into overall control health across all entities. Which Policy and Compliance feature is designed for this purpose?",
+		"choices": [
+			"Compliance dashboards and overviews summarizing control status, issues, and attestation progress",
+			"The system log viewer filtered to warning-level messages emitted by the sn_compliance scope",
+			"A background script run weekly to count control records grouped by their state values",
+			"The email client preview pane showing recent notifications sent to control owners"
+		],
+		"correctIndex": 0,
+		"explanation": "Policy and Compliance provides dashboards and overview modules that aggregate control compliance, open issues, and attestation completion for management visibility.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 45,
+		"prompt": "A compliance lead maps HIPAA obligations into ServiceNow. Which record type represents a specific regulatory requirement extracted from an authority document?",
+		"choices": [
+			"Citation linked to the authority document and downstream controls",
+			"Policy statement describing internal standards without regulatory mapping",
+			"Audit observation documenting a fieldwork deficiency",
+			"Entity Filter defining which CMDB classes appear in scope"
+		],
+		"correctIndex": 0,
+		"explanation": "Citations break authority documents into testable requirements that drive control design and compliance testing.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/manage-authority-documents-and-citations.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 46,
+		"prompt": "During a multi-framework rollout, auditors ask which artifact stores the source regulation such as SOX or GDPR before citations are created.",
+		"choices": [
+			"Authority document representing the external obligation",
+			"Risk Framework grouping risk statements by category",
+			"Audit engagement scoping the control universe",
+			"Content pack MID Server configuration record"
+		],
+		"correctIndex": 0,
+		"explanation": "Authority documents are the top-level regulatory or standards sources that citations and controls trace back to.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/manage-authority-documents-and-citations.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/policy-lifecycle-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 47,
+		"prompt": "A municipal agency must show how internal policy statements satisfy external citations. Which relationship should the implementation team configure?",
+		"choices": [
+			"Map policy statements and controls to citations derived from authority documents",
+			"Link citations directly to discovery schedules on the CMDB",
+			"Replace policy statements with risk treatment tasks in the register",
+			"Store citations only in attachment fields without control mappings"
+		],
+		"correctIndex": 0,
+		"explanation": "Policy and compliance traceability flows from authority documents through citations to controls and internal policy statements.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/c_GRCControls.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/policy-compliance-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 48,
+		"prompt": "An implementation team imports Unified Compliance Framework (UCF) control documents. Which table receives the imported control objective content?",
+		"choices": [
+			"Control Objectives",
+			"Policy Statement",
+			"Audit Task",
+			"Entity Filter"
+		],
+		"correctIndex": 0,
+		"explanation": "UCF control document imports populate the Control Objectives table so teams can map obligations to operational controls.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/c_GRCControls.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/manage-common-controls.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 49,
+		"questionType": "multi",
+		"prompt": "When configuring Policy and Compliance scope tables for a scoped GRC application, which two tables must be included? (Choose two.)",
+		"choices": [
+			"Control table for compliance control definitions and testing evidence",
+			"Citation table for regulatory and policy obligation references",
+			"Entity table for CMDB configuration item inventory records",
+			"Audit Engagement table for external audit planning and fieldwork"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Policy and Compliance scoped applications require Control and Citation scope tables so compliance data is partitioned correctly.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/c_GRCControls.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 50,
+		"prompt": "A policy owner publishes a revised acceptable-use standard. Which GRC artifact should be updated first to preserve compliance traceability?",
+		"choices": [
+			"Policy statement with versioned lifecycle and mapped control references",
+			"Discovery schedule targeting decommissioned subnets",
+			"Risk heat map widget on the IRM workspace homepage",
+			"Catalog item variable for employee onboarding requests"
+		],
+		"correctIndex": 0,
+		"explanation": "Policy statements anchor internal standards and must stay linked to controls and citations when content changes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/policy-lifecycle-management.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
-		"order": 24,
-		"prompt": "Which practice most improves confidence in policy compliance attestations?",
+		"order": 51,
+		"prompt": "A state privacy amendment takes effect mid-quarter. What is the best compliance response in Policy and Compliance Management?",
 		"choices": [
-			"Represents the approach that self-attestation without evidence.",
-			"Matches the scenario in which periodic attestation campaigns with clear owners, due dates, and evidence expectations.",
-			"Reflects the condition that allowing overdue attestations indefinitely.",
-			"Describes the outcome where removing historical attestation records."
+			"Run impact analysis on citations and controls, then update mappings and test plans under change oversight",
+			"Wait until the annual external audit before adjusting any authority documents",
+			"Delete existing citations so the team can recreate them next fiscal year",
+			"Disable control testing for all frameworks until legal review completes"
 		],
-		"correctIndex": 1,
-		"explanation": "Structured attestation campaigns strengthen accountability and provide auditable evidence of ongoing compliance.",
+		"correctIndex": 0,
+		"explanation": "Regulatory change management requires governed impact analysis so coverage gaps do not appear during ongoing testing cycles.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/policy-lifecycle-management.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/remediate-control-failures.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 52,
+		"prompt": "Executive leadership requires periodic attestation that policy controls remain effective. Which workflow best supports that requirement?",
+		"choices": [
+			"Scheduled attestation campaigns with assigned owners, due dates, and evidence expectations",
+			"Ad hoc email confirmations stored outside the GRC application",
+			"Automatic pass results whenever a control owner remains unchanged",
+			"Quarterly exports to spreadsheets without workflow tracking"
+		],
+		"correctIndex": 0,
+		"explanation": "Structured attestation campaigns provide accountable, auditable confirmation of ongoing policy compliance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/attest-policy-compliance.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
-		"order": 25,
-		"prompt": "During planning for a new audit engagement, which action should occur first to reduce control-testing rework?",
-		"choices": [
-			"Matches the scenario in which assign all testing to one control owner.",
-			"Describes the outcome where define audit scope, objectives, and control universe with stakeholders before evidence requests.",
-			"Captures the choice stating collect screenshots only after the audit report is finalized.",
-			"Reflects the condition that close prior findings without validating corrective action."
-		],
-		"correctIndex": 1,
-		"explanation": "Clear scope and objective alignment at kickoff prevents irrelevant testing and duplicate evidence collection later.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-audit/concept/audit-management.html"
-		]
-	},
-	{
-		"trackCode": "CIS-RC",
-		"order": 26,
-		"prompt": "What best indicates an audit engagement is configured correctly in ServiceNow?",
-		"choices": [
-			"Captures the choice stating engagement records include scoped controls, test plans, owners, and scheduled milestones.",
-			"Reflects the condition that evidence tasks are routed to incident assignment groups.",
-			"Matches the scenario in which all controls are marked pass before testing starts.",
-			"Corresponds to the option where only engagement name and due date are populated."
-		],
-		"correctIndex": 0,
-		"explanation": "A complete engagement includes mapped controls, planned tests, ownership, and timeline checkpoints for governance.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-audit/task/create-an-audit-engagement.html"
-		]
-	},
-	{
-		"trackCode": "CIS-RC",
-		"order": 27,
-		"prompt": "An internal audit requests quarterly evidence but control owners upload outdated artifacts. Which control design improvement is most appropriate?",
-		"choices": [
-			"Corresponds to the option where use time-bound evidence collection tasks with owner accountability and attestation requirements.",
-			"Represents the approach that allow any user to upload evidence without ownership rules.",
-			"Captures the choice stating replace control tests with a yearly email confirmation.",
-			"Reflects the condition that disable evidence due dates to reduce reminder volume."
-		],
-		"correctIndex": 0,
-		"explanation": "Scheduled evidence tasks with accountable owners and attestations improve freshness and audit reliability.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-policy-and-compliance/task/manage-control-tests.html"
-		]
-	},
-	{
-		"trackCode": "CIS-RC",
-		"order": 28,
-		"prompt": "Which engagement-level metric is most useful to audit leadership?",
-		"choices": [
-			"Captures the choice stating total records created in the past month.",
-			"Represents the approach that number of users with admin access in the instance.",
-			"Describes the outcome where count of unrelated incident tickets.",
-			"Corresponds to the option where testing completion rate, open observations, and overdue remediation by engagement."
-		],
-		"correctIndex": 3,
-		"explanation": "Leadership needs progress and risk indicators tied directly to audit execution and remediation outcomes.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-audit/concept/audit-management-workspace.html"
-		]
-	},
-	{
-		"trackCode": "CIS-RC",
-		"order": 29,
-		"prompt": "Why should issue remediation tasks be linked to audit observations instead of tracked separately?",
-		"choices": [
-			"Represents the approach that it eliminates the need for approvers. correlated with environmental sustainability reporting metrics. (CIS-RC-29-w0)",
-			"Corresponds to the option where it preserves traceability from finding to corrective action and supports defensible closure evidence.",
-			"Matches the scenario in which it replaces risk scoring in all compliance programs.",
-			"Describes the outcome where it allows observations to be deleted after assignment."
-		],
-		"correctIndex": 1,
-		"explanation": "Linking remediation directly to observations provides end-to-end audit trail integrity for closure decisions.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-audit/task/manage-audit-observations.html"
-		]
-	},
-	{
-		"trackCode": "CIS-RC",
-		"order": 30,
-		"prompt": "When launching a new risk assessment cycle, what should be completed first?",
-		"choices": [
-			"Matches the scenario in which define assessment methodology, scoring criteria, and in-scope entities.",
-			"Reflects the condition that mark inherited controls as effective by default.",
-			"Describes the outcome where assign all risks to one enterprise owner.",
-			"Represents the approach that skip stakeholder reviews to accelerate publishing."
-		],
-		"correctIndex": 0,
-		"explanation": "A defined methodology and scope create consistent, comparable risk assessments across business units.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-risk/concept/risk-management.html"
-		]
-	},
-	{
-		"trackCode": "CIS-RC",
-		"order": 31,
-		"prompt": "Which factor most improves reliability of inherent and residual risk scoring?",
-		"choices": [
-			"Describes the outcome where excluding control effectiveness from residual scoring.",
-			"Captures the choice stating restricting assessments to annual reviews only.",
-			"Reflects the condition that applying calibrated likelihood and impact scales with documented rationale.",
-			"Matches the scenario in which using only qualitative comments without scoring guidance."
-		],
-		"correctIndex": 2,
-		"explanation": "Calibrated scales and documented rationale reduce subjectivity and improve repeatability of risk ratings.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-risk/task/configure-risk-scoring.html"
-		]
-	},
-	{
-		"trackCode": "CIS-RC",
-		"order": 32,
-		"prompt": "A business unit disputes a high residual risk score. What is the best governance response?",
-		"choices": [
-			"Reflects the condition that close the risk record and reopen next quarter.",
-			"Corresponds to the option where move the risk to accepted with no approval.",
-			"Matches the scenario in which lower the score immediately to maintain stakeholder confidence.",
-			"Captures the choice stating review control evidence, assumptions, and scoring rationale with accountable owners before adjusting."
-		],
-		"correctIndex": 3,
-		"explanation": "Transparent review of evidence and assumptions supports fair recalibration while preserving governance rigor.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-risk/task/manage-risk-assessments.html"
-		]
-	},
-	{
-		"trackCode": "CIS-RC",
-		"order": 33,
-		"prompt": "Which reporting output is most useful after completing a risk assessment campaign?",
-		"choices": [
-			"Reflects the condition that count of users who edited risk forms. sequenced after master service agreement amendments are executed.",
-			"Corresponds to the option where heatmaps and trend views highlighting top residual risks, control gaps, and overdue treatments.",
-			"Captures the choice stating inventory of inactive assignment groups.",
-			"Represents the approach that raw list of all risk records with no grouping."
-		],
-		"correctIndex": 1,
-		"explanation": "Decision-makers need prioritized trend insights to direct mitigation resources effectively.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-risk/concept/risk-workspace.html"
-		]
-	},
-	{
-		"trackCode": "CIS-RC",
-		"order": 34,
-		"prompt": "Why should periodic risk reassessment be scheduled instead of only performed after incidents?",
-		"choices": [
-			"Corresponds to the option where incidents are not relevant to risk oversight.",
-			"Describes the outcome where scheduled reassessments automatically eliminate all high risks.",
-			"Represents the approach that scheduled reviews replace remediation planning.",
-			"Captures the choice stating risk posture changes with business, technology, and control drift even without a triggering incident."
-		],
-		"correctIndex": 3,
-		"explanation": "Regular reassessment catches evolving exposure before incidents occur and improves proactive governance.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-risk/concept/risk-management-best-practices.html"
-		]
-	},
-	{
-		"trackCode": "CIS-RC",
-		"order": 35,
-		"prompt": "When defining compliance scopes, what is the most important first step?",
-		"choices": [
-			"Describes the outcome where exclude third-party services from all scope discussions.",
-			"Matches the scenario in which create issues before evidence is collected.",
-			"Corresponds to the option where apply every available control to all departments.",
-			"Represents the approach that determine applicable regulations, in-scope entities, and control objectives before testing."
-		],
-		"correctIndex": 3,
-		"explanation": "Compliance scoping starts with regulatory applicability and clear boundaries for who and what is assessed.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-policy-and-compliance/concept/compliance-management.html"
-		]
-	},
-	{
-		"trackCode": "CIS-RC",
-		"order": 36,
-		"prompt": "Which approach best avoids over-scoping in a compliance initiative?",
-		"choices": [
-			"Reflects the condition that use only global scope without entity-level mapping.",
-			"Represents the approach that include all historical controls from decommissioned systems.",
-			"Describes the outcome where treat inherited controls as directly applicable everywhere.",
-			"Matches the scenario in which map controls to obligations and business context, then validate ownership and applicability."
-		],
-		"correctIndex": 2,
-		"explanation": "Control-to-obligation mapping with applicability checks keeps scope defensible and operationally realistic.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-policy-and-compliance/task/manage-authority-documents-and-citations.html"
-		]
-	},
-	{
-		"trackCode": "CIS-RC",
-		"order": 37,
-		"prompt": "A control owner says their control should be removed from scope due to system retirement. What should happen next?",
-		"choices": [
-			"Describes the outcome where validate retirement evidence and dependency impact, then perform governed scope update.",
-			"Matches the scenario in which move the control to a personal namespace.",
-			"Reflects the condition that mark the control pass and keep it active.",
-			"Captures the choice stating remove immediately with no approval."
-		],
-		"correctIndex": 0,
-		"explanation": "Scope changes require evidence-backed governance to avoid compliance blind spots and audit disputes.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-policy-and-compliance/task/manage-controls.html"
-		]
-	},
-	{
-		"trackCode": "CIS-RC",
-		"order": 38,
-		"prompt": "Which dashboard view is most useful for monitoring scope health?",
-		"choices": [
-			"Reflects the condition that list of inactive groups.",
-			"Captures the choice stating coverage gaps, duplicate controls, and overdue scope review attestations by framework.",
-			"Corresponds to the option where user login trend by department.",
-			"Matches the scenario in which count of form customizations per team."
-		],
-		"correctIndex": 1,
-		"explanation": "Scope health is best evaluated through coverage, duplication, and review timeliness indicators.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-policy-and-compliance/concept/compliance-workspace.html"
-		]
-	},
-	{
-		"trackCode": "CIS-RC",
-		"order": 39,
-		"prompt": "Why should compliance scope reviews be tied to organizational and technology changes?",
-		"choices": [
-			"Reflects the condition that scope reviews should occur only once per year regardless changes.",
-			"Corresponds to the option where technology changes never affect regulatory applicability.",
-			"Represents the approach that change records replace compliance scope entirely.",
-			"Captures the choice stating control applicability can shift when services, ownership, or architecture changes."
-		],
-		"correctIndex": 3,
-		"explanation": "Dynamic environments require scope updates to maintain ongoing compliance relevance and defensibility.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
-		]
-	},
-	{
-		"trackCode": "CIS-RC",
-		"order": 40,
-		"prompt": "In an audit-ready GRC program, what is the primary purpose of structured evidence collection?",
-		"choices": [
-			"Represents the approach that replace control ownership assignments.",
-			"Corresponds to the option where store only verbal confirmations from process owners.",
-			"Captures the choice stating close findings before testing completes.",
-			"Describes the outcome where demonstrate control operation with traceable, time-bound artifacts tied to specific tests."
-		],
-		"correctIndex": 3,
-		"explanation": "Structured evidence ensures test conclusions are defensible and verifiable during internal and external audits.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-policy-and-compliance/concept/control-testing.html"
-		]
-	},
-	{
-		"trackCode": "CIS-RC",
-		"order": 41,
-		"prompt": "Which evidence practice most reduces auditor challenge risk?",
-		"choices": [
-			"Represents the approach that allow duplicate evidence for unrelated controls.",
-			"Describes the outcome where collect evidence only at year-end.",
-			"Matches the scenario in which require evidence metadata, approver attestation, and linkage to control objectives.",
-			"Corresponds to the option where accept screenshots without source attribution."
-		],
-		"correctIndex": 2,
-		"explanation": "Metadata and attestation provide provenance and relevance, which auditors rely on for validation.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-policy-and-compliance/task/collect-control-evidence.html"
-		]
-	},
-	{
-		"trackCode": "CIS-RC",
-		"order": 42,
-		"prompt": "A control test fails because required evidence is missing from one quarter. What is the best response?",
-		"choices": [
-			"Represents the approach that delete the failed test and recreate next cycle.",
-			"Matches the scenario in which mark the test pass due to historical evidence availability.",
-			"Reflects the condition that record the gap, create remediation tasks, and enforce evidence collection checkpoints going forward.",
-			"Describes the outcome where suspend all related controls permanently."
-		],
-		"correctIndex": 2,
-		"explanation": "Documenting the gap and remediating collection controls strengthens future reliability and governance posture.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-policy-and-compliance/task/manage-control-failures.html"
-		]
-	},
-	{
-		"trackCode": "CIS-RC",
-		"order": 43,
-		"prompt": "Which workflow design most improves evidence quality across distributed teams?",
-		"choices": [
-			"Matches the scenario in which route all evidence tasks to one central coordinator.",
-			"Describes the outcome where allow ad hoc uploads with no deadlines.",
-			"Captures the choice stating use scheduled tasks, ownership rules, and review/approval gates before test closure.",
-			"Reflects the condition that collect evidence only when requested by external auditors."
-		],
-		"correctIndex": 2,
-		"explanation": "Defined workflow gates and ownership improve completeness, timeliness, and consistency of submitted evidence.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-policy-and-compliance/concept/compliance-workflows.html"
-		]
-	},
-	{
-		"trackCode": "CIS-RC",
-		"order": 44,
-		"prompt": "Why should evidence retention policy be aligned with regulatory and internal requirements?",
-		"choices": [
-			"Captures the choice stating it eliminates the need for access controls.",
-			"Reflects the condition that it replaces risk treatment plans.",
-			"Matches the scenario in which it allows immediate deletion of all closed control tests.",
-			"Corresponds to the option where it confirms artifacts remain available for audits, investigations, and defensible compliance reporting."
-		],
-		"correctIndex": 3,
-		"explanation": "Retention alignment prevents evidence gaps and supports long-horizon assurance obligations.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc-policy-and-compliance/concept/document-retention-for-compliance.html"
-		]
-	},
-	{
-		"trackCode": "CIS-RC",
-		"order": 45,
-		"prompt": "Which implementation decision best aligns an IRM program to multiple regulatory frameworks at once?",
-		"choices": [
-			"Corresponds to the option where use a common control framework and map each regulation to shared controls and statements.",
-			"Represents the approach that create separate duplicate controls for every regulation with no linkage.",
-			"Captures the choice stating disable control inheritance to keep frameworks isolated.",
-			"Reflects the condition that track regulations only in spreadsheets outside the platform."
-		],
-		"correctIndex": 0,
-		"explanation": "A common control model reduces duplication and supports traceable cross-framework compliance.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/concept/policy-and-compliance.html"
-		]
-	},
-	{
-		"trackCode": "CIS-RC",
-		"order": 46,
-		"prompt": "What is the primary purpose of authority documents in a regulatory framework implementation?",
-		"choices": [
-			"Captures the choice stating automatically close failed controls without review.",
-			"Describes the outcome where store vulnerability scan outputs for SOC triage only.",
-			"Represents the approach that replace all internal policy statements with ad hoc tasks.",
-			"Corresponds to the option where define external obligations that drive citations, controls, and compliance requirements."
-		],
-		"correctIndex": 3,
-		"explanation": "Authority documents represent source obligations used to structure compliant controls and testing.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/concept/policy-and-compliance.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html"
-		]
-	},
-	{
-		"trackCode": "CIS-RC",
-		"order": 47,
-		"prompt": "How should teams handle overlapping requirements across NIST, ISO, and local municipal regulations?",
-		"choices": [
-			"Represents the approach that implement each framework independently with duplicate owner assignments.",
-			"Matches the scenario in which track evidence once per year regardless control frequency.",
-			"Corresponds to the option where normalize overlapping citations to shared control objectives while preserving framework-specific evidence traceability.",
-			"Describes the outcome where prioritize only the strictest framework and ignore the others."
-		],
-		"correctIndex": 2,
-		"explanation": "Normalization supports efficiency while maintaining audit-ready traceability by framework.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/task/t_ManageControlObjectives.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/audit-management/concept/audit-management.html"
-		]
-	},
-	{
-		"trackCode": "CIS-RC",
-		"order": 48,
-		"prompt": "Which KPI best shows maturity in regulatory framework management?",
-		"choices": [
-			"Represents the approach that increase in number of manually maintained policy spreadsheets.",
-			"Matches the scenario in which more emergency exceptions opened than planned tests completed.",
-			"Describes the outcome where higher count of unresolved citation conflicts quarter over quarter.",
-			"Reflects the condition that decrease in duplicate controls with improved on-time evidence completion across mapped frameworks."
-		],
-		"correctIndex": 3,
-		"explanation": "Mature framework governance reduces duplication and improves execution consistency.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/task/t_UseDashboardsAndReports.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/concept/policy-and-compliance.html"
-		]
-	},
-	{
-		"trackCode": "CIS-RC",
-		"order": 49,
-		"prompt": "What is the best approach when a new regulation introduces additional control requirements mid-cycle?",
-		"choices": [
-			"Matches the scenario in which create temporary controls with no owners to accelerate rollout.",
-			"Captures the choice stating wait until the annual audit before updating any control mappings.",
-			"Reflects the condition that close existing control tests and restart the entire program. expressed as guardrail metrics on executive scorecards. (CIS-RC-49-w2)",
-			"Describes the outcome where run impact analysis against existing controls, then extend mappings and testing plans with approved change oversight."
-		],
-		"correctIndex": 3,
-		"explanation": "Impact analysis and controlled updates prevent disruption while preserving compliance coverage.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/task/t_AssessControls.html"
-		]
-	},
-	{
-		"trackCode": "CIS-RC",
-		"order": 50,
-		"prompt": "What does risk treatment represent in an IRM implementation lifecycle?",
-		"choices": [
-			"Corresponds to the option where deferring treatment until policy attestation is complete.",
-			"Matches the scenario in which converting every risk into an audit finding.",
-			"Reflects the condition that closing all risk records once they are assessed.",
-			"Captures the choice stating selecting and executing an approved response strategy such as mitigate, transfer, accept, or avoid."
-		],
-		"correctIndex": 3,
-		"explanation": "Risk treatment operationalizes risk decisions and links them to accountable actions.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/task/t_ManageRiskResponses.html"
-		]
-	},
-	{
-		"trackCode": "CIS-RC",
-		"order": 51,
-		"prompt": "Which factor should most influence whether a risk is mitigated versus accepted?",
-		"choices": [
-			"Reflects the condition that number of dashboards available for the risk domain.",
-			"Captures the choice stating preference of whichever analyst opened the record.",
-			"Corresponds to the option where whether the risk has a short description under 100 characters.",
-			"Represents the approach that residual risk compared with organization risk appetite and control implementation feasibility."
-		],
-		"correctIndex": 3,
-		"explanation": "Treatment choice is driven by residual exposure versus tolerance and practical control options.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-scoring.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-management.html"
-		]
-	},
-	{
-		"trackCode": "CIS-RC",
-		"order": 52,
-		"prompt": "How should risk treatment plans be connected to enterprise change governance?",
-		"choices": [
-			"Corresponds to the option where treat risk by creating informational incidents only.",
-			"Represents the approach that delay treatment updates until quarterly board reporting.",
-			"Describes the outcome where run treatment as undocumented emergency work outside change management.",
-			"Captures the choice stating link treatment tasks to approved implementation work and validate control effectiveness after deployment."
-		],
-		"correctIndex": 3,
-		"explanation": "Treatment requires governed implementation and post-change control validation.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/task/t_CreateRiskTreatmentTasks.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
-		]
-	},
-	{
-		"trackCode": "CIS-RC",
 		"order": 53,
-		"prompt": "Which status pattern indicates risk treatment execution is healthy?",
+		"prompt": "ISO and NIST frameworks share overlapping access-control requirements. How should the implementation team reduce duplicate maintenance?",
 		"choices": [
-			"Describes the outcome where many accepted risks without documented rationale.",
-			"Matches the scenario in which frequent reassignment of owners without due dates.",
-			"Corresponds to the option where high volume of overdue treatment tasks with unchanged risk ratings.",
-			"Represents the approach that on-time completion of treatment tasks with measurable reduction in residual risk scores."
+			"Define common controls mapped to multiple citations while preserving framework-specific traceability",
+			"Create independent control libraries with no cross-framework relationships",
+			"Map each citation to a unique control even when requirements are identical",
+			"Track overlapping obligations only in offline policy binders"
 		],
-		"correctIndex": 3,
-		"explanation": "Healthy treatment programs show execution discipline and reduced residual exposure.",
+		"correctIndex": 0,
+		"explanation": "Common controls let teams test once and demonstrate coverage across multiple regulatory frameworks.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/task/t_UseDashboardsAndReports.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/manage-common-controls.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 54,
-		"prompt": "What is the best handling strategy when a planned mitigation is delayed by budget constraints?",
+		"prompt": "A control owner asks how often evidence must be collected for a high-impact encryption control under continuous monitoring.",
 		"choices": [
-			"Reflects the condition that ignore the delay until external audit discovers it.",
-			"Represents the approach that delete the treatment plan and recreate later.",
-			"Describes the outcome where close the risk as complete because treatment was attempted.",
-			"Matches the scenario in which document a time-bound risk acceptance with compensating controls and escalation to risk oversight."
+			"Follow the defined test frequency on the control test with automated indicators where applicable",
+			"Collect evidence only when external auditors request samples",
+			"Run tests once at implementation and mark the control effective permanently",
+			"Defer all testing until the risk register review cycle completes"
 		],
-		"correctIndex": 3,
-		"explanation": "Delayed mitigations require governed acceptance and compensating safeguards until full treatment resumes.",
+		"correctIndex": 0,
+		"explanation": "Control tests specify evidence collection cadence; continuous monitoring extends that with indicator-driven exceptions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/task/t_ManageRiskAcceptances.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/audit-management/concept/audit-management.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/control-testing-and-evidence.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/compliance-metrics.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 55,
-		"prompt": "What does continuous monitoring enable in a mature RC program?",
+		"questionType": "multi",
+		"prompt": "When scoping a Risk Management application, which two scope tables must be configured? (Choose two.)",
 		"choices": [
-			"Describes the outcome where manual evidence collection from disconnected spreadsheets.",
-			"Matches the scenario in which closure of failed controls without exception records.",
-			"Reflects the condition that annual-only compliance checks with no interim updates.",
-			"Captures the choice stating near-real-time visibility of control health and compliance drift for faster risk response."
+			"Risk Framework",
+			"Risk Statement",
+			"Control Test",
+			"Authority Document"
 		],
-		"correctIndex": 3,
-		"explanation": "Continuous monitoring shortens detection-to-action cycles for control failures and emerging risk.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Risk scoped applications partition data using Risk Framework and Risk Statement scope tables per GRC implementation guidance.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/task/t_AssessControls.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-impl-overview.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-register.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 56,
-		"prompt": "Which design choice best supports continuous control monitoring?",
+		"prompt": "Before scoring a newly identified vendor concentration risk, what must the risk owner document on the record?",
 		"choices": [
-			"Reflects the condition that removing ownership fields from control statements.",
-			"Captures the choice stating email-only reporting without structured control records.",
-			"Corresponds to the option where static control tests that run once at implementation time.",
-			"Matches the scenario in which automated indicators tied to control objectives with threshold-based exception creation."
+			"A clear risk statement with scope, cause, and potential impact context",
+			"A completed audit engagement report with fieldwork sign-off",
+			"A discovery pattern mapping subnets to business services",
+			"A catalog fulfillment variable set for procurement requests"
 		],
-		"correctIndex": 3,
-		"explanation": "Automated indicators and exceptions provide scalable, repeatable control surveillance.",
+		"correctIndex": 0,
+		"explanation": "Well-defined risk statements establish shared understanding of exposure before inherent and residual scoring.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/concept/control-indicators.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/task/t_UseDashboardsAndReports.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-register.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-identification-playbook.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 57,
-		"prompt": "How should teams react when continuous monitoring repeatedly flags the same control failure?",
+		"prompt": "An analyst moves a risk from identification through assessment to treatment in IRM Workspace. Which description matches that progression?",
 		"choices": [
-			"Reflects the condition that suppress repeated alerts permanently to reduce workload.",
-			"Corresponds to the option where open root-cause remediation with accountable owners and validate sustained effectiveness after fixes.",
-			"Represents the approach that mark findings as accepted risk without oversight review.",
-			"Captures the choice stating restart all control libraries from default content."
+			"Risk lifecycle workflow progressing from intake to scored evaluation and response planning",
+			"Audit lifecycle moving from planning through fieldwork to reporting",
+			"Change lifecycle transitioning from assess through authorize to review",
+			"Incident lifecycle flowing from new through in progress to resolved"
 		],
-		"correctIndex": 1,
-		"explanation": "Recurring failures require remediation and validation, not suppression.",
+		"correctIndex": 0,
+		"explanation": "Risk records follow a governed lifecycle from identification and assessment to treatment and ongoing monitoring.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/task/t_CreateIssueFromRisk.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/audit-management/concept/audit-management.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/manage-risk-records.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-response-and-treatment.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 58,
-		"prompt": "Which integration most improves RC continuous monitoring value?",
+		"prompt": "A CISO wants operational, strategic, and financial risks grouped consistently for reporting. Which artifact provides that structure?",
 		"choices": [
-			"Corresponds to the option where import only static policy PDFs each quarter.",
-			"Captures the choice stating ingest run-time signals from security and IT systems to enrich control and risk context automatically.",
-			"Describes the outcome where track exceptions exclusively by meeting notes.",
-			"Represents the approach that disable data integrations to preserve manual review discipline."
+			"Risk Framework organizing related risk statements under categories",
+			"Entity Filter limiting CMDB tables visible to compliance users",
+			"Authority document listing municipal procurement statutes",
+			"Audit universe defining scoped controls for an engagement"
 		],
-		"correctIndex": 1,
-		"explanation": "Integrated operational telemetry makes monitoring timely and context-rich.",
+		"correctIndex": 0,
+		"explanation": "Risk frameworks categorize risk statements so leadership can analyze exposure by domain or portfolio.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-integrations.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-management.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-impl-overview.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-register.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 59,
-		"prompt": "Which KPI pattern suggests continuous monitoring is effective?",
+		"prompt": "Business units submit inconsistent risk intakes through email. Which GRC capability standardizes how new risks enter the register?",
 		"choices": [
-			"Describes the outcome where longer intervals between failed tests and notifications.",
-			"Represents the approach that more controls with no owners or monitoring frequency.",
-			"Corresponds to the option where higher percentage of exceptions left unassigned.",
-			"Matches the scenario in which faster exception detection, shorter remediation cycles, and lower repeat control failures."
+			"Risk identification playbook with guided steps in the risk management workspace",
+			"Hardware normalization rule on the software asset table",
+			"Major incident workflow template from IT Service Management",
+			"Service catalog order guide for laptop replacements"
 		],
-		"correctIndex": 3,
-		"explanation": "Effective monitoring improves speed and reduces recurrence of control breakdowns.",
+		"correctIndex": 0,
+		"explanation": "The risk identification playbook provides repeatable intake guidance so new risks capture required fields and ownership.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/concept/policy-and-compliance.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-identification-playbook.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 60,
-		"prompt": "What is the main objective of GRC reporting for executive stakeholders?",
+		"prompt": "During a risk assessment workshop, facilitators ask participants to rate likelihood and impact before controls are considered. Which score does that produce?",
 		"choices": [
-			"Represents the approach that replace risk reviews with dashboard color indicators.",
-			"Reflects the condition that display only policy document counts by department. sequenced after identity federation cutover is verified stable.",
-			"Matches the scenario in which list every open task without severity or ownership context.",
-			"Describes the outcome where present risk, compliance, and audit posture trends that support oversight decisions and resource prioritization."
+			"Inherent risk score based on pre-control exposure",
+			"Residual risk score after mitigation actions complete",
+			"Compliance attestation score for mapped policy statements",
+			"Audit observation severity for fieldwork deficiencies"
 		],
-		"correctIndex": 3,
-		"explanation": "Executive GRC reporting should translate operational data into decision-ready governance insight.",
+		"correctIndex": 0,
+		"explanation": "Inherent scoring captures exposure assuming no compensating controls; residual scoring reflects control effectiveness.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/task/t_UseDashboardsAndReports.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-response-and-treatment.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-data-governance.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 61,
-		"prompt": "Which report design best supports board-level RC discussions?",
+		"prompt": "After control tests confirm partial effectiveness, an analyst recalculates exposure on the risk record. Which value should decrease when controls work as intended?",
 		"choices": [
-			"Matches the scenario in which a single export of all risk records with raw notes. after confirming prerequisite tables and ACLs are in place. (CIS-RC-61-w0)",
-			"Captures the choice stating unfiltered policy attestation comments. reviewed against the platform architecture standards guide. (CIS-RC-61-w1)",
-			"Describes the outcome where trend-based dashboards showing inherent versus residual risk, control effectiveness, and high-risk exception aging.",
-			"Reflects the condition that daily analyst activity counts without risk segmentation."
+			"Residual risk score relative to the prior inherent rating",
+			"Number of authority documents linked to the citation",
+			"Count of MID Server clusters assigned to discovery",
+			"Catalog item base price for service requests"
 		],
-		"correctIndex": 2,
-		"explanation": "Board reporting should emphasize trend, impact, and accountability rather than raw record volume.",
+		"correctIndex": 0,
+		"explanation": "Effective controls reduce residual risk compared with inherent exposure when scoring models are applied correctly.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-scoring.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-response-and-treatment.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-data-governance.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 62,
-		"prompt": "How should GRC reporting handle inconsistent data quality across business units?",
+		"questionType": "multi",
+		"prompt": "Before launching an enterprise risk assessment campaign, which two elements must be defined? (Choose two.)",
 		"choices": [
-			"Matches the scenario in which exclude low-quality units from all dashboards permanently.",
-			"Captures the choice stating delay reporting until every field is perfectly complete. benchmarked during performance test cycles before rollout.",
-			"Reflects the condition that average all scores without transparency to improve appearance.",
-			"Corresponds to the option where include data-quality indicators, ownership gaps, and remediation plans alongside risk and compliance metrics."
+			"Assessment methodology and scoring criteria",
+			"In-scope business entities for the campaign",
+			"Final audit report distribution list",
+			"Discovery credentials for subnet scanning"
 		],
-		"correctIndex": 3,
-		"explanation": "Transparent data-quality dimensions preserve trust and drive remediation accountability.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Assessment campaigns require a consistent methodology and clear entity scope so results are comparable across units.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/data-quality-in-grc.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/audit-management/concept/audit-management.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-review-process.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/business-entities-and-risk.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 63,
-		"prompt": "Which cadence model is most effective for GRC reporting?",
+		"prompt": "A risk committee wants assessments limited to payment processing services in two departments. Which configuration enforces that boundary?",
 		"choices": [
-			"Captures the choice stating separate inconsistent report definitions per team.",
-			"Represents the approach that annual static reports for all audiences.",
-			"Corresponds to the option where run-time weekly dashboards with monthly oversight packs and quarterly executive summaries.",
-			"Reflects the condition that on-demand reporting only after major incidents."
+			"Scope the assessment to selected business entities and linked risk statements",
+			"Disable all risk frameworks except the default global framework",
+			"Remove residual scoring fields from the risk form layout",
+			"Assign every risk record to the enterprise GRC assignment group"
 		],
-		"correctIndex": 2,
-		"explanation": "Layered cadence supports tactical action and strategic governance with consistent definitions.",
+		"correctIndex": 0,
+		"explanation": "Entity-scoped assessments focus evaluation on relevant services and departments without diluting results enterprise-wide.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/task/t_ConfigureScorecards.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/business-entities-and-risk.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/manage-risk-records.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 64,
-		"prompt": "Which outcome indicates GRC reporting maturity?",
+		"prompt": "Leadership publishes a risk appetite statement capping high residual scores in public-facing services. How should IRM Workspace enforce that guidance?",
 		"choices": [
-			"Represents the approach that more report variants with conflicting risk numbers.",
-			"Describes the outcome where longer time spent reconciling spreadsheets before reviews.",
-			"Captures the choice stating higher percentage of unowned high-risk findings. retired when duplicate records are merged during data cleansing. (CIS-RC-64-w2)",
-			"Corresponds to the option where leaders consistently use reports to reduce exposure, close exceptions faster, and improve control performance."
+			"Configure scoring thresholds and escalation when residual ratings exceed appetite limits",
+			"Hide high risks from dashboards until the next quarterly review",
+			"Automatically accept all risks below the maximum impact scale value",
+			"Disable treatment planning tasks for risks rated moderate"
 		],
-		"correctIndex": 3,
-		"explanation": "Mature reporting drives measurable governance outcomes, not just dashboard production.",
+		"correctIndex": 0,
+		"explanation": "Appetite thresholds drive escalation, treatment decisions, and visibility when exposure exceeds tolerated levels.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/task/t_UseDashboardsAndReports.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-management.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-governance.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-response-and-treatment.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 65,
-		"prompt": "What is the primary objective of audit remediation in Risk and Compliance?",
+		"prompt": "The CRO wants early warning when key risk indicators drift outside tolerance. Which advanced risk capability supports that monitoring?",
 		"choices": [
-			"Represents the approach that archive findings without action once the audit report is published.",
-			"Matches the scenario in which delay remediation until the next annual audit cycle.",
-			"Corresponds to the option where close control gaps with documented corrective actions, owners, and due dates tied to findings.",
-			"Describes the outcome where convert all findings into low-priority risks automatically."
+			"Configured key risk indicators with thresholds tied to risk statements",
+			"Manual quarterly spreadsheet reviews exported from the instance",
+			"Incident priority rules applied to every open risk record",
+			"Catalog approval workflows for standard change templates"
 		],
-		"correctIndex": 2,
-		"explanation": "Audit remediation focuses on correcting identified deficiencies through accountable and traceable action plans.",
+		"correctIndex": 0,
+		"explanation": "Key risk indicators provide measurable signals linked to risks so teams detect trending exposure before assessments.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/concept/policy-and-compliance.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-governance.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-register.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 66,
-		"prompt": "Which remediation workflow design most improves audit finding closure rates?",
+		"prompt": "An implementation team enables advanced quantitative scoring for cyber risks. Which configuration change is most appropriate?",
 		"choices": [
-			"Represents the approach that assign all findings to one generic compliance group.",
-			"Matches the scenario in which track remediation in offline spreadsheets only.",
-			"Describes the outcome where allow remediation tasks to close without supporting evidence.",
-			"Reflects the condition that use tasks with clear ownership, evidence requirements, milestone tracking, and escalation rules."
+			"Calibrate likelihood and impact scales with documented scoring model versions",
+			"Remove all qualitative descriptors from risk statements permanently",
+			"Disable business entity linkage to simplify calculations",
+			"Convert audit tasks into risk statements automatically"
 		],
-		"correctIndex": 3,
-		"explanation": "Structured, accountable tasks with evidence and escalation drive consistent and timely remediation outcomes.",
+		"correctIndex": 0,
+		"explanation": "Advanced scoring relies on calibrated, versioned models so quantitative results remain explainable and comparable.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk/concept/risk-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/task-table/concept/task-management.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-data-governance.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-governance.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 67,
-		"prompt": "How should control owners prioritize audit remediation efforts?",
+		"prompt": "A failed access-control test exposes a gap on a critical risk. What is the best way to track remediation in the risk program?",
 		"choices": [
-			"Matches the scenario in which prioritize only by age of the finding.",
-			"Captures the choice stating prioritize by which findings are easiest to close first.",
-			"Reflects the condition that prioritize findings based on report page order.",
-			"Describes the outcome where prioritize by business impact, regulatory exposure, and likelihood of recurrence."
+			"Create a risk issue linked to the risk statement with owners and due dates",
+			"Delete the failed control test to reset compliance metrics",
+			"Close the risk record and reopen it during the next campaign",
+			"Archive the citation so the control no longer appears in scope"
 		],
-		"correctIndex": 3,
-		"explanation": "Risk-based prioritization ensures the most consequential control failures are remediated first.",
+		"correctIndex": 0,
+		"explanation": "Risk issues provide workflow accountability for remediating control gaps that affect assessed exposure.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk/concept/risk-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/concept/policy-and-compliance.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-response-and-treatment.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/remediate-control-failures.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 68,
-		"prompt": "Which evidence package best supports validation of completed audit remediation?",
+		"prompt": "The same operational failure creates similar risk records in finance and HR. Which register design preserves enterprise visibility?",
 		"choices": [
-			"Captures the choice stating an email saying remediation is complete without attachments.",
-			"Corresponds to the option where a screenshot of the finding list.",
-			"Matches the scenario in which a verbal confirmation from the control owner.",
-			"Reflects the condition that updated control records, test results, implementation proof, and approver sign-off."
+			"Parent risk with related child records assigned to local owners",
+			"Separate unrelated risks with identical titles in each department",
+			"Single risk record with no ownership fields populated",
+			"Convert all departmental risks into audit observations"
 		],
-		"correctIndex": 3,
-		"explanation": "Auditable closure requires traceable evidence that corrective changes were implemented and validated.",
+		"correctIndex": 0,
+		"explanation": "Parent-child risk structures roll up enterprise exposure while preserving local accountability for treatment.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/concept/policy-and-compliance.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/manage-risk-records.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-register.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 69,
-		"prompt": "Which KPI best indicates a mature audit remediation program?",
+		"prompt": "Executives request a heat map of top residual risks by business service after an assessment cycle. Which workspace output satisfies that request?",
 		"choices": [
-			"Represents the approach that fewer documented control tests.",
-			"Reflects the condition that more overdue remediation tasks. after validating data quality in the staging environment. (CIS-RC-69-w1)",
-			"Captures the choice stating higher number of open findings each quarter.",
-			"Corresponds to the option where lower repeat findings with faster closure of high-risk issues and verified control effectiveness."
+			"Risk heat map and trend views highlighting residual scores and overdue treatments",
+			"Raw export of every risk field without filters or grouping",
+			"List of inactive assignment groups sorted alphabetically",
+			"Count of UI policies modified in the past week"
 		],
-		"correctIndex": 3,
-		"explanation": "Maturity is reflected by reducing recurring issues and resolving material gaps quickly with validated controls.",
+		"correctIndex": 0,
+		"explanation": "Heat maps and trend dashboards translate assessment results into prioritized oversight views for leadership.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-impl-overview.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/compliance-dashboards.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 70,
-		"prompt": "What is the primary goal of RC administration in a production instance?",
+		"prompt": "A risk lead configures IRM Workspace landing components for analysts. Which widget best surfaces daily workload priorities?",
 		"choices": [
-			"Corresponds to the option where run policy and risk workflows without role controls.",
-			"Represents the approach that disable audit history to improve performance.",
-			"Describes the outcome where allow unrestricted customization by any itil user.",
-			"Captures the choice stating maintain stable setup, access oversight, and data quality for risk and compliance processes."
+			"Assigned assessments, overdue treatment tasks, and approval bottlenecks on the workspace homepage",
+			"Global MID Server upgrade history for infrastructure teams",
+			"Software reclamation candidates from the asset workspace",
+			"Catalog item popularity metrics from the service portal"
 		],
-		"correctIndex": 3,
-		"explanation": "RC administration ensures governance controls are reliable, secure, and operationally sustainable.",
+		"correctIndex": 0,
+		"explanation": "Workspace homepage components aggregate operational risk work so analysts focus on overdue and blocked items.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html",
-			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/workspace-homepage.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-impl-overview.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 71,
-		"prompt": "Which administrative control best protects RC data integrity?",
+		"prompt": "Mitigation funding is delayed but exposure remains above appetite. What is the governed response in advanced risk management?",
 		"choices": [
-			"Corresponds to the option where grant admin privileges to all auditors and control owners.",
-			"Describes the outcome where use role-based access with separation of duties for policy, risk, and control administration.",
-			"Matches the scenario in which store risk treatment decisions only in email threads.",
-			"Represents the approach that disable mandatory fields on high-impact risk records."
+			"Document time-bound risk acceptance with compensating controls and oversight approval",
+			"Delete the treatment plan and close the risk as complete",
+			"Lower residual scores manually without reviewing evidence",
+			"Suppress the risk from reports until budget is restored"
 		],
-		"correctIndex": 1,
-		"explanation": "Separation of duties and RBAC reduce unauthorized changes and preserve governance integrity.",
+		"correctIndex": 0,
+		"explanation": "Delayed mitigations require formal acceptance, compensating safeguards, and escalation when exposure persists.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk/concept/risk-management.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-response-and-treatment.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-governance.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 72,
-		"prompt": "How should RC administrators manage changes to assessment methodologies or scoring models?",
+		"prompt": "An advanced assessment uses both numeric scales and narrative rationale fields. Why include documented rationale with scores?",
 		"choices": [
-			"Describes the outcome where apply different scoring logic per analyst for flexibility.",
-			"Represents the approach that govern updates through change control, versioning, stakeholder approval, and impact communication.",
-			"Reflects the condition that reset all historical assessments after each methodology change.",
-			"Matches the scenario in which update scoring models directly in production without notice."
+			"It supports defensible recalibration when stakeholders challenge ratings",
+			"It eliminates the need for residual risk calculations",
+			"It replaces control testing with qualitative interviews only",
+			"It allows analysts to skip approval workflows on high risks"
 		],
-		"correctIndex": 1,
-		"explanation": "Controlled, versioned changes preserve comparability and trust in RC reporting outcomes.",
+		"correctIndex": 0,
+		"explanation": "Documented assumptions and rationale improve transparency when scores are reviewed or disputed.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk/concept/risk-management.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-data-governance.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-review-process.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 73,
-		"prompt": "Which administrative practice most improves RC platform maintainability?",
+		"prompt": "A treatment plan requires configuration changes to a payment application. How should the risk team connect work to enterprise change governance?",
 		"choices": [
-			"Reflects the condition that allow duplicate policy frameworks with overlapping controls.",
-			"Matches the scenario in which avoid oversight reviews to reduce administrative overhead.",
-			"Describes the outcome where rely on undocumented scripts for core logic.",
-			"Captures the choice stating standardize setup, document design decisions, and review customizations regularly."
+			"Link treatment tasks to approved change records and validate control effectiveness after deployment",
+			"Execute changes directly on production without change tickets",
+			"Convert the risk into a catalog request for end users",
+			"Track treatment only in email threads outside ServiceNow"
 		],
-		"correctIndex": 3,
-		"explanation": "Administrative consistency and documentation reduce technical debt and operational risk.",
+		"correctIndex": 0,
+		"explanation": "Treatment tasks should align with change management so implementations are governed and post-change controls are verified.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/configuration-management/concept/configuration-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-response-and-treatment.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-governance.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 74,
-		"prompt": "Which KPI mix best reflects effective RC administration?",
+		"prompt": "Stale risk records accumulate after reorganizations. Which advanced risk practice keeps the register trustworthy?",
 		"choices": [
-			"Captures the choice stating high workflow completion quality, low unauthorized changes, and timely closure of admin exceptions.",
-			"Corresponds to the option where higher number of emergency setup updates.",
-			"Reflects the condition that increased count of duplicate control records.",
-			"Matches the scenario in which more users with elevated oversight roles. prefaced with legal review for terms affecting external parties."
+			"Periodic review campaigns validating ownership, ratings, and treatment progress",
+			"Automatic closure of all risks older than thirty days",
+			"Restricting updates to a single administrator account",
+			"Removing change history from risk records each quarter"
 		],
 		"correctIndex": 0,
-		"explanation": "Healthy administration is visible in stable operations, strong control over change, and reduced exceptions.",
+		"explanation": "Scheduled review campaigns prevent outdated ownership and scores from distorting enterprise risk reporting.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-review-process.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-data-governance.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 75,
-		"prompt": "In Risk and Compliance, what is the most important first step before scoring a new risk?",
+		"prompt": "A mitigation project finishes and controls test effective. What must the risk owner do before closing treatment?",
 		"choices": [
-			"Reflects the condition that skip owner assignment until remediation starts.",
-			"Represents the approach that apply emergency change templates to all risk records.",
-			"Corresponds to the option where define clear risk statements with ownership and scope.",
-			"Captures the choice stating close the risk if no control test exists yet."
+			"Reassess residual risk and document updated exposure with supporting evidence",
+			"Delete inherent scores so only qualitative notes remain",
+			"Archive the risk framework containing the statement",
+			"Disable future assessments for the affected business entity"
 		],
-		"correctIndex": 2,
-		"explanation": "Accurate risk scoring depends on well-defined scope and accountable ownership from the beginning.",
+		"correctIndex": 0,
+		"explanation": "Post-treatment reassessment confirms residual exposure reflects implemented controls before closure.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk/concept/risk-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-response-and-treatment.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-review-process.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 76,
-		"prompt": "Why are control objectives linked to control tests in RC implementations?",
+		"prompt": "Reporting shows many high risks missing owners or treatment plans. Which data quality control has the highest impact?",
 		"choices": [
-			"Corresponds to the option where to replace policy statements with scripts.",
-			"Describes the outcome where to suppress issue creation during audits.",
-			"Captures the choice stating to let auditors bypass evidence collection.",
-			"Represents the approach that to measure whether controls operate effectively against stated requirements."
+			"Required owner, rating, treatment plan, and review cadence fields on risk records",
+			"Optional free-text status values without validation rules",
+			"Storing risk notes exclusively in external file shares",
+			"Allowing duplicate risk statements with identical titles"
 		],
-		"correctIndex": 3,
-		"explanation": "Control tests provide evidence that control objectives are functioning as intended in governance workflows.",
+		"correctIndex": 0,
+		"explanation": "Mandatory core fields and review cadence enforce consistent lifecycle data for reliable risk reporting.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-data-governance.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-register.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 77,
-		"prompt": "A business owner requests a policy exception. Which approach is most compliant?",
+		"prompt": "A new GRC instance needs baseline policies, controls, and risk libraries quickly. Which extended capability accelerates that setup?",
 		"choices": [
-			"Describes the outcome where route through documented approval, expiration, and compensating control review.",
-			"Represents the approach that disable related control tests until next quarter.",
-			"Corresponds to the option where allow exceptions only for technical teams.",
-			"Matches the scenario in which approve permanently by email with no record."
+			"Install and configure GRC content packs aligned to the target regulatory profile",
+			"Build every control manually without imported templates",
+			"Disable scoped applications so all tables remain global",
+			"Import employee records from HR as authority documents"
 		],
 		"correctIndex": 0,
-		"explanation": "Policy exceptions need governed approvals, defined duration, and compensating controls to maintain compliance posture.",
+		"explanation": "GRC content packs deliver starter policy, compliance, and risk artifacts that teams tailor to the organization.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/c_GRCControls.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 78,
-		"prompt": "What is the best indicator that RC issue remediation workflows are healthy?",
+		"prompt": "Legal notifies the team that a federal citation changed effective next month. Which common-elements workflow helps maintain compliance coverage?",
 		"choices": [
-			"Matches the scenario in which issues are reopened frequently after closure.",
-			"Reflects the condition that issue records contain no due dates.",
-			"Describes the outcome where issues close with evidence, owner accountability, and approved risk acceptance when needed.",
-			"Represents the approach that issue owners are left blank for flexibility."
+			"Regulatory change management with impact analysis on citations, controls, and tests",
+			"Immediate deletion of all mapped controls without stakeholder review",
+			"Suspending every attestation campaign until the following year",
+			"Ignoring citation updates until an external audit requests evidence"
 		],
-		"correctIndex": 2,
-		"explanation": "Strong remediation workflows require traceable ownership, evidence-backed closure, and explicit risk decisions.",
+		"correctIndex": 0,
+		"explanation": "Regulatory change management tracks obligation updates and drives governed adjustments to controls and testing.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk/concept/risk-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/policy-lifecycle-management.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 79,
-		"prompt": "Which RC reporting view helps leadership prioritize oversight effort?",
+		"prompt": "Compliance operations wants automated alerts when encryption control indicators breach thresholds. Which design supports continuous monitoring?",
 		"choices": [
-			"Describes the outcome where count of MID Server upgrades.",
-			"Captures the choice stating number of scripted REST APIs.",
-			"Reflects the condition that list of inactive UI policies.",
-			"Matches the scenario in which high-impact risks and overdue control issues by business service."
+			"Control indicators tied to objectives with threshold-based exception creation",
+			"Annual manual evidence uploads stored as unattached files",
+			"Email-only summaries with no structured control records",
+			"Static control tests executed once during initial implementation"
 		],
-		"correctIndex": 3,
-		"explanation": "Risk and issue concentration by business service provides decision-ready prioritization context for leadership.",
+		"correctIndex": 0,
+		"explanation": "Automated control indicators generate exceptions when telemetry shows drift from expected control operation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk/concept/risk-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/control-testing-and-evidence.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/compliance-metrics.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 80,
-		"prompt": "What should risk owners do when inherent risk remains high after control testing?",
+		"prompt": "Security operations feeds vulnerability findings into the GRC program. Which integration pattern adds the most monitoring value?",
 		"choices": [
-			"Matches the scenario in which document treatment plans and residual risk decisions.",
-			"Captures the choice stating reduce impact scores without approval.",
-			"Reflects the condition that delete failed control tests to avoid confusion.",
-			"Corresponds to the option where ignore the result if no incident has occurred."
+			"Ingest operational signals from IT and security systems to enrich control and risk context",
+			"Import static policy PDFs quarterly without structured fields",
+			"Disable integrations to force manual spreadsheet reviews",
+			"Route all vulnerability records to catalog fulfillment workflows"
 		],
 		"correctIndex": 0,
-		"explanation": "High residual exposure requires formal treatment planning or approved acceptance with governance traceability.",
+		"explanation": "Integrated telemetry makes continuous monitoring timely and connects operational events to control objectives.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk/concept/risk-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/control-testing-and-evidence.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 81,
-		"prompt": "Why does RC use issue records linked to failed controls?",
+		"prompt": "A content subscription delivers updated regulatory mappings mid-year. What should administrators do before activating the update?",
 		"choices": [
-			"Captures the choice stating to bypass assignment and due dates.",
-			"Represents the approach that to track remediation accountability and closure evidence.",
-			"Corresponds to the option where to hide failures from audit reports.",
-			"Reflects the condition that to replace policy management completely."
+			"Review release notes, assess impact on scoped citations and controls, then apply under change control",
+			"Overwrite production mappings immediately without testing",
+			"Reject all subscription updates to avoid rework",
+			"Delete existing authority documents prior to import"
 		],
-		"correctIndex": 1,
-		"explanation": "Linked issues provide operational workflow for remediation and audit-ready closure documentation.",
+		"correctIndex": 0,
+		"explanation": "Regulatory content updates require impact review so scoped compliance artifacts remain accurate and testable.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/policy-lifecycle-management.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 82,
-		"prompt": "Which design principle best supports repeatable compliance assessments?",
+		"prompt": "The CFO asks for a single view of compliance posture across departments. Which common-elements artifact should be configured?",
 		"choices": [
-			"Represents the approach that allow direct closure with no reviewer.",
-			"Describes the outcome where standardize assessment templates and scoring guidance.",
-			"Captures the choice stating run assessments without control mappings.",
-			"Corresponds to the option where use ad hoc questions per assessor."
+			"GRC scorecards aggregating control effectiveness and exception trends",
+			"Discovery status dashboard for subnet classification errors",
+			"Service catalog request volume by category",
+			"MID Server heartbeat report for integration nodes"
 		],
-		"correctIndex": 1,
-		"explanation": "Template-driven assessments reduce variance and improve comparability across entities and periods.",
+		"correctIndex": 0,
+		"explanation": "GRC scorecards consolidate compliance and control metrics for executive oversight across the program.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk/concept/risk-management.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/compliance-dashboards.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 83,
-		"prompt": "What is the best reason to enforce separation of duties in RC administration?",
+		"prompt": "Program managers need cross-module reporting spanning policy tests, risk treatments, and open issues. Which approach meets that need?",
 		"choices": [
-			"Matches the scenario in which to reduce conflict-of-interest risk in oversight actions.",
-			"Corresponds to the option where to avoid documenting role assignments.",
-			"Represents the approach that to let risk owners approve their own exceptions.",
-			"Describes the outcome where to increase number of emergency changes."
+			"Unified GRC dashboards and reports with consistent definitions across modules",
+			"Separate offline spreadsheets maintained by each module lead",
+			"Incident-only analytics excluding compliance and risk tables",
+			"Ad hoc list exports with different filters for every meeting"
 		],
 		"correctIndex": 0,
-		"explanation": "SoD controls prevent a single actor from initiating and approving sensitive governance decisions.",
+		"explanation": "Shared GRC reporting definitions provide consistent oversight across policy, risk, and remediation workflows.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/compliance-dashboards.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-impl-overview.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 84,
-		"prompt": "Which KPI helps measure RC process effectiveness over time?",
+		"questionType": "multi",
+		"prompt": "Which three roles does the sn_audit.user role inherit for cross-module GRC read access? (Choose three.)",
 		"choices": [
-			"Represents the approach that mID Server installation count.",
-			"Describes the outcome where average SLA on catalog tasks.",
-			"Matches the scenario in which number of active homepages.",
-			"Reflects the condition that reduction in overdue high-severity control issues."
+			"sn_grc.reader",
+			"sn_compliance.reader",
+			"sn_risk.reader",
+			"sn_incident.write"
 		],
-		"correctIndex": 3,
-		"explanation": "A decline in overdue critical issues indicates stronger governance execution and remediation discipline.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1,
+			2
+		],
+		"explanation": "The sn_audit.user role inherits sn_grc.reader, sn_compliance.reader, and sn_risk.reader so auditors can view GRC data across modules.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk/concept/risk-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/audit-management/c_AuditTasks.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 85,
-		"prompt": "What is the best reason to review risk scoring models on a defined cadence?",
+		"prompt": "Internal audit begins a SOC 2 engagement in Audit Management. Which activity should occur first to reduce testing rework?",
 		"choices": [
-			"Matches the scenario in which to reduce the number of control objectives.",
-			"Reflects the condition that to eliminate residual risk documentation.",
-			"Captures the choice stating to allow each assessor to use personal scoring scales.",
-			"Describes the outcome where to align scoring assumptions with current business and threat context."
+			"Define engagement scope, objectives, and the control universe with stakeholders",
+			"Collect ad hoc screenshots before scoping workshops finish",
+			"Mark all in-scope controls as passed to save fieldwork time",
+			"Close prior-year observations without validating corrective action"
 		],
-		"correctIndex": 3,
-		"explanation": "Scheduled model reviews keep risk calculations aligned with evolving organizational and threat realities.",
+		"correctIndex": 0,
+		"explanation": "Clear scope and objectives at kickoff align testing with the correct control population and evidence needs.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk/concept/risk-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/audit-management/c_AuditTasks.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 86,
-		"prompt": "Which behavior most weakens RC control assurance?",
+		"prompt": "An audit director assigns managers, testers, and evidence coordinators to an engagement. Which concept describes that role model?",
 		"choices": [
-			"Matches the scenario in which closing failed tests without remediation evidence.",
-			"Captures the choice stating linking evidence to control tests.",
-			"Corresponds to the option where assigning issue owners and due dates.",
-			"Reflects the condition that documenting compensating controls for exceptions."
+			"Audit personas defining responsibilities across the engagement lifecycle",
+			"Discovery credentials used by MID Servers during classification",
+			"Catalog fulfillment groups routing service requests",
+			"Change advisory board delegates approving production deployments"
 		],
 		"correctIndex": 0,
-		"explanation": "Closing failures without evidence undermines assurance and creates audit and compliance risk.",
+		"explanation": "Audit personas separate planning, testing, and evidence duties so engagements execute with clear accountability.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/audit-management/c_AuditTasks.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 87,
-		"prompt": "How should RC teams handle recurring policy violations across multiple departments?",
+		"prompt": "Testers execute control procedures, gather evidence, and document exceptions during an engagement. Which record type tracks that work?",
 		"choices": [
-			"Captures the choice stating raise policy text only without workflow changes.",
-			"Reflects the condition that use issue trend analysis to drive targeted remediation programs.",
-			"Represents the approach that archive old violations to improve dashboard appearance.",
-			"Corresponds to the option where treat each case as isolated without trend review."
+			"Audit tasks representing fieldwork activities on the engagement",
+			"Risk statements cataloged in the enterprise risk library",
+			"Citations extracted from authority documents only",
+			"Entity filters limiting scoped CMDB table visibility"
 		],
-		"correctIndex": 1,
-		"explanation": "Trend-driven remediation helps address systemic compliance gaps beyond individual incidents.",
+		"correctIndex": 0,
+		"explanation": "Audit tasks are the work items auditors execute during fieldwork, including testing and evidence collection.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/grc/concept/grc-overview.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/audit-management/c_AuditTasks.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 88,
-		"prompt": "What should be required before accepting residual risk for a critical service?",
+		"questionType": "multi",
+		"prompt": "Which two engagement phases occur before the final audit report is issued? (Choose two.)",
 		"choices": [
-			"Represents the approach that automatic approval after 30 days.",
-			"Corresponds to the option where documented business justification and authorized approval trail.",
-			"Captures the choice stating no record if compensating controls exist.",
-			"Describes the outcome where only verbal approval from service owner."
+			"Planning",
+			"Fieldwork",
+			"Software reclamation",
+			"Discovery classification"
 		],
-		"correctIndex": 1,
-		"explanation": "Residual risk acceptance for critical services must be explicit, justified, and formally approved.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Audit engagements progress through planning and fieldwork before reporting consolidates results and observations.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk/concept/risk-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/audit-management/c_AuditTasks.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
 		]
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 89,
-		"prompt": "Which KPI best indicates RC process maturity?",
+		"prompt": "Auditors issue an observation requiring corrective action on a failed control test. What advanced audit practice supports defensible closure?",
 		"choices": [
-			"Represents the approach that more manual spreadsheet attestations.",
-			"Describes the outcome where lower number of documented policies.",
-			"Matches the scenario in which higher count of emergency role grants.",
-			"Corresponds to the option where improved on-time closure of high-priority control issues."
+			"Link remediation tasks to the observation with evidence, owners, and retest validation",
+			"Close the observation when the control owner sends an email confirmation",
+			"Delete the failed test so the observation no longer appears on dashboards",
+			"Convert the observation into a catalog task without audit traceability"
 		],
-		"correctIndex": 3,
-		"explanation": "Timely closure of high-priority issues reflects effective ownership, workflow execution, and governance discipline.",
+		"correctIndex": 0,
+		"explanation": "Observation-linked remediation with retest evidence preserves audit trail integrity through closure.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk/concept/risk-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/audit-management/c_AuditTasks.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/remediate-control-failures.html"
 		]
 	},
 	{
@@ -17620,1836 +17670,1883 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 	{
 		"trackCode": "CIS-SIR",
 		"order": 0,
-		"prompt": "When a ransomware event requires coordinated war-room style response across security and business stakeholders, which Security Incident Response capability is most specifically designed for that scenario?",
+		"prompt": "Which role is required to install the Security Incident Response application on a ServiceNow instance?",
 		"choices": [
-			"Describes the outcome where service catalog checkout.",
-			"Reflects the condition that software normalization.",
-			"Matches the scenario in which hardware asset disposal.",
-			"Represents the approach that major Security Incident Management."
+			"admin",
+			"sn_sec_ciso",
+			"sn_si.admin",
+			"itil"
 		],
-		"correctIndex": 3,
-		"explanation": "Major Security Incident Management is documented as the collaborative response model for high-impact security incidents such as ransomware and large-scale breaches.",
+		"correctIndex": 0,
+		"explanation": "The admin role has the elevated privileges needed to install Security Incident Response and related Security Operations store applications.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/major-security-incident-management.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/install-security-incident-response.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 1,
-		"prompt": "What is the primary operational benefit of using security incident response playbooks in ServiceNow?",
+		"prompt": "After Security Incident Response is activated, which prerequisite most directly enables threat intelligence enrichment on new incidents?",
 		"choices": [
-			"Reflects the condition that standardize and automate repeatable response steps to reduce manual handoffs and response time.",
-			"Captures the choice stating replace vulnerability scanning tools.",
-			"Describes the outcome where remove the need for a CMDB.",
-			"Matches the scenario in which guarantee zero false positives from SIEM alerts."
+			"Threat Intelligence plugin activation with configured feed and lookup sources",
+			"Hardware Asset Management normalization rules for software publisher mapping",
+			"Service Catalog item categories for employee onboarding request routing",
+			"Discovery schedules probing every subnet on a fixed hourly interval"
 		],
 		"correctIndex": 0,
-		"explanation": "Playbook documentation focuses on consistent, repeatable response procedures that can be orchestrated as part of security operations workflows.",
+		"explanation": "Threat intelligence enrichment requires the Threat Intelligence application and configured sources that SIR can query during incident creation and triage.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-playbook.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 2,
-		"prompt": "Why do security teams associate MITRE ATT&CK tactics and techniques with a security incident record?",
+		"prompt": "How is Security Incident Response defined in ServiceNow documentation?",
 		"choices": [
-			"Corresponds to the option where automatically patch all endpoints. folded into the standard onboarding checklist for new teams. (CIS-SIR-2-w0)",
-			"Matches the scenario in which normalize software publishers for audits.",
-			"Reflects the condition that create new business applications in SPM.",
-			"Captures the choice stating add structured adversary behavior context that supports prioritization, investigation, and defensive planning."
+			"A discovery framework that maps application dependencies across the CMDB only",
+			"An action plan to mitigate security incidents and any imminent threats to the organization",
+			"A service catalog workflow for provisioning laptops to new employees",
+			"A change advisory board process for approving emergency production releases"
 		],
-		"correctIndex": 3,
-		"explanation": "MITRE ATT&CK alignment in Security Incident Response is documented to enrich incidents with standardized threat behavior context.",
+		"correctIndex": 1,
+		"explanation": "Documentation defines SIR as an action plan that helps organizations mitigate active security incidents and imminent threats through structured response.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/mitre-attack-defend-graph-sir.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 3,
-		"prompt": "Which statement best describes how Security Incident Response typically fits into ServiceNow Security Operations?",
+		"questionType": "multi",
+		"prompt": "Which two core record types does Security Incident Response use to orchestrate analyst work during an investigation? (Choose two.)",
 		"choices": [
-			"Reflects the condition that it orchestrates triage, assignment, and remediation coordination across security and IT teams.",
-			"Captures the choice stating it only tracks facilities access badges. distributed through approved software entitlement channels only.",
-			"Corresponds to the option where it is limited to HR case management.",
-			"Represents the approach that it replaces the setup Management Database."
+			"Security incident records that track the overall response lifecycle",
+			"Security incident task records that assign discrete response actions to teams",
+			"Change request records that replace all security incident approvals",
+			"Problem records that store long-term root cause analysis only"
 		],
 		"correctIndex": 0,
-		"explanation": "Security Incident Response is positioned as a Security Operations capability that streamlines cross-team coordination for security incidents.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/major-security-incident-management.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SIR",
-		"order": 4,
-		"prompt": "When parent and child security incidents exist, what does rolling up MITRE ATT&CK information commonly help analysts maintain?",
-		"choices": [
-			"Corresponds to the option where discovery of printer hardware.",
-			"Represents the approach that software model creation. sequenced after master service agreement amendments are executed. (CIS-SIR-4-w1)",
-			"Describes the outcome where automatic firewall rule deletion.",
-			"Captures the choice stating a consolidated view of tactics and techniques at the parent incident as child investigations progress."
+		"correctIndexes": [
+			0,
+			1
 		],
-		"correctIndex": 3,
-		"explanation": "Documentation describes rolling up MITRE ATT&CK details from child security incidents to support parent-level reporting and analysis.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/yokohama-security-management/page/product/threat-intelligence/task/rollup-mitre-att-ck-information-from-child-security-incidents.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SIR",
-		"order": 5,
-		"prompt": "In Security Incident Response, which lifecycle phase is focused on validating scope, assigning ownership, and determining initial severity?",
-		"choices": [
-			"Describes the outcome where eradication.",
-			"Matches the scenario in which post-incident review.",
-			"Corresponds to the option where triage.",
-			"Represents the approach that closure."
-		],
-		"correctIndex": 2,
-		"explanation": "Triage establishes ownership, impact, and urgency so teams can move incidents through investigation and response effectively.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-lifecycle.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SIR",
-		"order": 6,
-		"prompt": "What is the primary objective of the containment step in the SIR lifecycle?",
-		"choices": [
-			"Reflects the condition that auto-close duplicate incidents without analyst review.",
-			"Represents the approach that limit attacker impact and prevent further spread while investigation continues.",
-			"Describes the outcome where finalize all compliance attestations.",
-			"Matches the scenario in which create software model normalization rules."
-		],
-		"correctIndex": 1,
-		"explanation": "Containment actions are intended to reduce active harm and stop lateral movement while evidence and response efforts proceed.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/respond-to-a-security-incident.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SIR",
-		"order": 7,
-		"prompt": "Which outcome best indicates the eradication and recovery phases were successful?",
-		"choices": [
-			"Describes the outcome where no lessons learned are documented.",
-			"Matches the scenario in which malicious artifacts are removed and affected services are restored with monitored stability.",
-			"Reflects the condition that all incident tasks are reassigned to one team.",
-			"Captures the choice stating every alert source is disabled."
-		],
-		"correctIndex": 1,
-		"explanation": "Successful eradication and recovery remove adversary presence and return services to stable operation with verification.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-process.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SIR",
-		"order": 8,
-		"prompt": "Why is documenting timeline evidence throughout the SIR lifecycle considered essential?",
-		"choices": [
-			"Reflects the condition that it prevents integration with SIEM tools. compared with mean-time-to-restore targets after incidents.",
-			"Captures the choice stating it allows incidents to skip closure criteria.",
-			"Corresponds to the option where it replaces the need for assignment groups.",
-			"Matches the scenario in which it supports root-cause analysis, legal defensibility, and repeatable post-incident improvement."
-		],
-		"correctIndex": 3,
-		"explanation": "A complete timeline provides operational and audit value, improving accountability and quality of post-incident decisions.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/investigate-a-security-incident.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SIR",
-		"order": 9,
-		"prompt": "Which lifecycle governance practice most improves consistency across multiple SOC shifts?",
-		"choices": [
-			"Reflects the condition that allowing each shift to rename lifecycle states.",
-			"Corresponds to the option where using standardized state transitions, mandatory fields, and task templates per incident type.",
-			"Represents the approach that removing closure validation rules.",
-			"Captures the choice stating tracking only critical incidents in SIR."
-		],
-		"correctIndex": 0,
-		"explanation": "Standardized workflows and required data reduce handoff errors and improve consistency across analysts and shifts.",
+		"explanation": "SIR coordinates response through security incident records for lifecycle management and security incident tasks for assigned investigative and remediation work.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-task-types.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
-		"order": 10,
-		"prompt": "What is the main value of security incident playbooks in ServiceNow SIR?",
+		"order": 4,
+		"prompt": "Which Security Operations capability gives analysts a unified workspace for triaging, investigating, and closing security incidents?",
 		"choices": [
-			"Captures the choice stating disable integrations with external security tools.",
-			"Represents the approach that orchestrate repeatable response steps and reduce manual handoffs across teams.",
-			"Describes the outcome where replace analyst judgment entirely.",
-			"Corresponds to the option where convert all incidents to vulnerabilities."
+			"Security Incident Response Workspace with contextual panels and related lists",
+			"Service Catalog Manager used to publish employee-facing request items",
+			"Performance Analytics homepage widgets for HR case backlog trending",
+			"Flow Designer canvas for building catalog fulfillment workflows only"
 		],
-		"correctIndex": 1,
-		"explanation": "Playbooks provide structured, repeatable execution for common incident types and improve response consistency.",
+		"correctIndex": 0,
+		"explanation": "The SIR Workspace consolidates incident details, tasks, evidence, and response tools so analysts can work incidents without switching contexts.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-playbook.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-workspace.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 5,
+		"prompt": "A SOC manager wants executives to see open critical incidents and mean time to contain trends. Which SIR feature should be configured first?",
+		"choices": [
+			"Security Operations dashboards with role-appropriate widgets and filters",
+			"Discovery credentials assigned to every Linux server CI class globally",
+			"Service level agreements on catalog items for password reset requests",
+			"HR onboarding workflows that provision badges before start dates"
+		],
+		"correctIndex": 0,
+		"explanation": "Security Operations dashboards surface operational and executive KPIs such as open critical incidents and containment metrics for targeted audiences.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-reporting.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 6,
+		"prompt": "Which dashboard widget type best visualizes the count of security incidents grouped by priority over the last thirty days?",
+		"choices": [
+			"Bar or column chart driven by a filtered security incident report",
+			"Single score widget showing total active CMDB configuration items",
+			"Calendar heat map of employee vacation balances by department",
+			"Gauge displaying average catalog checkout fulfillment duration"
+		],
+		"correctIndex": 0,
+		"explanation": "Grouped bar or column charts on filtered incident reports are standard for showing priority distribution trends over time.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-reporting.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 7,
+		"questionType": "multi",
+		"prompt": "Which three groups are primary audiences for Security Incident Response reporting dashboards? (Choose three.)",
+		"choices": [
+			"Security Analysts who perform day-to-day triage and investigation",
+			"Security Managers who oversee SOC operations and staffing",
+			"CIOs and CISOs who need executive visibility into security posture",
+			"Facilities coordinators who manage building access badge provisioning"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1,
+			2
+		],
+		"explanation": "SIR reporting targets security practitioners, SOC leadership, and executive security stakeholders rather than unrelated operational teams.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-reporting.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 8,
+		"prompt": "An analyst needs a trend line of newly opened security incidents per week for leadership review. What is the recommended data source?",
+		"choices": [
+			"A report on the Security Incident table filtered by opened date and grouped weekly",
+			"A hardware asset disposal report grouped by manufacturer part number",
+			"A project task report filtered by portfolio demand state transitions",
+			"A user group membership report sorted by last login timestamp"
+		],
+		"correctIndex": 0,
+		"explanation": "Incident volume trends are built from the Security Incident table with date filters and weekly grouping on the opened field.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-operations-metrics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 9,
+		"prompt": "Which metric pair best indicates improving SOC efficiency in Security Incident Response dashboards?",
+		"choices": [
+			"Decreasing mean time to triage and mean time to contain on validated incidents",
+			"Increasing count of manually created subtasks with no assignment group",
+			"Growing backlog of unassigned catalog requests awaiting fulfillment",
+			"Higher number of discovery errors on printer CI classes per subnet"
+		],
+		"correctIndex": 0,
+		"explanation": "Containment and triage duration metrics directly reflect how quickly the SOC validates and limits incident impact.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-operations-metrics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 10,
+		"prompt": "Which visualization helps analysts compare incident volume across assignment groups during a shift handoff?",
+		"choices": [
+			"Stacked bar chart of open incidents by assignment group on a SOC dashboard",
+			"Pie chart of software license compliance scores by publisher entitlement",
+			"Tree map of facilities work orders grouped by building floor number",
+			"Scatter plot of project cost variance against portfolio strategic theme"
+		],
+		"correctIndex": 0,
+		"explanation": "Assignment-group breakdowns on dashboards give shift leads visibility into workload distribution before reassigning incidents.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-reporting.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 11,
-		"prompt": "A phishing incident playbook should trigger which action earliest?",
+		"prompt": "When building an executive SIR dashboard, why should widgets respect role-based access on underlying reports?",
 		"choices": [
-			"Represents the approach that initial triage tasks such as evidence capture, user validation, and scope determination.",
-			"Corresponds to the option where immediate closure after user notification.",
-			"Matches the scenario in which software model normalization.",
-			"Describes the outcome where full endpoint rebuild before analysis."
+			"Sensitive incident details remain visible only to authorized security roles",
+			"All users automatically receive admin privileges on security tables",
+			"Dashboards bypass ACLs so executives see every field without restriction",
+			"Report ACLs are ignored when widgets are pinned to a homepage"
 		],
 		"correctIndex": 0,
-		"explanation": "Early triage and evidence capture determine scope and support defensible next-step decisions in phishing response.",
+		"explanation": "Role-based report and dashboard access prevents unauthorized exposure of sensitive security incident data to non-security audiences.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/configure-security-incident-playbooks.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-reporting.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 12,
-		"prompt": "Which playbook design choice best supports SOC scalability?",
+		"prompt": "A CISO requests a single-pane view of critical open incidents and overdue response tasks. Which dashboard design fits best?",
 		"choices": [
-			"Matches the scenario in which modular playbooks with reusable tasks and conditional branches by incident characteristics.",
-			"Describes the outcome where one monolithic playbook for all incident types.",
-			"Represents the approach that no conditional logic to keep flows simple.",
-			"Reflects the condition that manual routing only with no task templates."
+			"Executive dashboard combining filtered incident lists with overdue task indicators",
+			"Discovery status board listing MID Server heartbeat intervals by region",
+			"Software reclamation dashboard showing unused license reclamation candidates",
+			"Onboarding catalog dashboard tracking laptop shipment tracking numbers"
 		],
 		"correctIndex": 0,
-		"explanation": "Modular and conditional playbooks are easier to maintain and scale across varied incident classes.",
+		"explanation": "Executive SIR dashboards combine high-severity incident status with overdue task visibility for leadership oversight.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-operations-playbooks.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-reporting.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 13,
-		"prompt": "Why should playbook changes follow formal change control in production?",
+		"prompt": "Which data element should a trend report include to distinguish reopened security incidents from net-new events?",
 		"choices": [
-			"Reflects the condition that unvetted automation changes can break response workflows and increase run-time risk.",
-			"Captures the choice stating only CMDB admins can edit SIR tasks.",
-			"Matches the scenario in which change control prevents all future SOC updates.",
-			"Describes the outcome where playbooks are not used during major incidents."
+			"Reopen count or state transition history on the security incident record",
+			"Discovery classification rule name applied during horizontal scans",
+			"Catalog variable value captured during employee mobile device requests",
+			"Project financial plan baseline compared to actual spend by fiscal quarter"
 		],
 		"correctIndex": 0,
-		"explanation": "Playbook changes affect critical incident handling, so controlled release and validation are essential.",
+		"explanation": "Reopen indicators and state history let reporting distinguish recurring incidents from first-time detections.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/playbook-governance.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-operations-metrics.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 14,
-		"prompt": "Which KPI best reflects playbook effectiveness in SIR?",
+		"prompt": "An analyst receives a credible phishing alert with no matching integration event. What is the correct way to begin tracking it in SIR?",
 		"choices": [
-			"Matches the scenario in which volume of reopened low-severity incidents.",
-			"Corresponds to the option where number of custom fields added per incident.",
-			"Captures the choice stating reduction in mean time to contain and consistent completion of required response tasks.",
-			"Reflects the condition that total count of manually created subtasks."
+			"Create a new security incident record and capture initial indicators and scope",
+			"Open a standard IT incident and convert it automatically after closure",
+			"Log the event only in a personal spreadsheet until SIEM correlation fires",
+			"Submit a change request and wait for CAB approval before any record exists"
 		],
-		"correctIndex": 2,
-		"explanation": "Containment speed and consistent execution of required tasks indicate playbooks are improving operational outcomes.",
+		"correctIndex": 0,
+		"explanation": "Analysts create security incident records to initiate structured triage, assignment, and response even when alerts arrive outside integrations.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-operations-metrics.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/create-a-security-incident.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 15,
-		"prompt": "Why does mapping SIR findings to MITRE ATT&CK improve operations beyond simple severity labels?",
+		"prompt": "When a ransomware event requires coordinated war-room response across security and business stakeholders, which SIR capability applies?",
 		"choices": [
-			"Captures the choice stating it eliminates the need for indicators of compromise.",
-			"Represents the approach that it automatically removes false positives from all tools.",
-			"Reflects the condition that it provides standardized adversary behavior context to prioritize investigations and defensive actions.",
-			"Corresponds to the option where it replaces incident assignment rules."
-		],
-		"correctIndex": 2,
-		"explanation": "ATT&CK context gives a common behavior framework that supports analyst decisions and communication.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/mitre-attack-defend-graph-sir.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SIR",
-		"order": 16,
-		"prompt": "A SOC lead wants to compare repeated intrusion techniques across incidents. Which ATT&CK-aligned data point is most useful?",
-		"choices": [
-			"Represents the approach that catalog task short description.",
-			"Corresponds to the option where user session timeout values.",
-			"Captures the choice stating mapped techniques and tactics captured on security incidents and related observables.",
-			"Describes the outcome where cMDB class icon color. challenged when KPIs show no measurable improvement post-change."
-		],
-		"correctIndex": 2,
-		"explanation": "Technique and tactic mappings enable trend analysis across incident sets and recurring adversary behavior.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/map-security-incidents-to-mitre-attack.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SIR",
-		"order": 17,
-		"prompt": "What is a practical use of ATT&CK rollup from child to parent incidents?",
-		"choices": [
-			"Describes the outcome where close parent records when one child is resolved.",
-			"Matches the scenario in which convert parent incidents to vulnerabilities automatically.",
-			"Represents the approach that maintain consolidated adversary-behavior visibility for coordinated response leadership.",
-			"Corresponds to the option where suppress all child records from analysts."
-		],
-		"correctIndex": 2,
-		"explanation": "ATT&CK rollups support parent-level situational awareness during multi-workstream incidents.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/yokohama-security-management/page/product/threat-intelligence/task/rollup-mitre-att-ck-information-from-child-security-incidents.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SIR",
-		"order": 18,
-		"prompt": "Which governance control improves ATT&CK data quality in SIR?",
-		"choices": [
-			"Represents the approach that mapping ATT&CK only during post-incident reviews.",
-			"Reflects the condition that allowing free-text tactics without reference values.",
-			"Matches the scenario in which removing mandatory incident categorization.",
-			"Describes the outcome where enforcing standardized ATT&CK taxonomy fields with analyst validation checkpoints."
-		],
-		"correctIndex": 3,
-		"explanation": "Standardized taxonomy and validation improve consistency and analytical value of ATT&CK mappings.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/mitre-attack-governance.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SIR",
-		"order": 19,
-		"prompt": "Which outcome best demonstrates ATT&CK integration is helping the SOC?",
-		"choices": [
-			"Matches the scenario in which no linkage between incidents and observables.",
-			"Captures the choice stating higher number of uncategorized incidents.",
-			"Describes the outcome where fewer incident assignments to owning teams.",
-			"Reflects the condition that faster detection engineering updates tied to frequently observed techniques."
-		],
-		"correctIndex": 3,
-		"explanation": "When ATT&CK data informs detection tuning and prioritization, SOC response effectiveness improves measurably.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-operations-metrics.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SIR",
-		"order": 20,
-		"prompt": "What defines a major security incident in ServiceNow SIR practice?",
-		"choices": [
-			"Reflects the condition that a high-impact incident requiring coordinated cross-functional response and executive visibility.",
-			"Corresponds to the option where any incident with more than ten tasks.",
-			"Captures the choice stating only incidents with malware indicators.",
-			"Matches the scenario in which any incident created from email. retired when superseded by the next-generation integration pattern."
+			"Major Security Incident Management with dedicated collaboration and escalation",
+			"Standard change management workflow for normal production deployments",
+			"Software asset reclamation rules for unused license optimization",
+			"Facilities badge deactivation scheduled through HR onboarding tasks"
 		],
 		"correctIndex": 0,
-		"explanation": "Major security incidents are distinguished by business impact and the need for coordinated enterprise response.",
+		"explanation": "Major Security Incident Management provides the collaborative response model for high-impact incidents such as ransomware and large-scale breaches.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/security-incident-response/major-security-incident-management.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
-		"order": 21,
-		"prompt": "During a major incident, what is the most important reason to maintain a single parent record with child workstreams?",
+		"order": 16,
+		"prompt": "Why do security teams associate MITRE ATT&CK tactics and techniques with a security incident record?",
 		"choices": [
-			"Corresponds to the option where to prevent integration with threat intelligence.",
-			"Represents the approach that to reduce the total number of analysts required.",
-			"Reflects the condition that to avoid documenting decisions. prefaced with legal review for terms affecting external parties. (CIS-SIR-21-w2)",
-			"Captures the choice stating to centralize command-and-control visibility while teams execute parallel containment and recovery tasks."
+			"To add structured adversary behavior context that supports prioritization and investigation",
+			"To automatically patch every endpoint without analyst review or validation",
+			"To replace vulnerability scanning tools across the entire security stack",
+			"To normalize software publisher names for annual license audit reporting"
 		],
-		"correctIndex": 3,
-		"explanation": "Parent-child structure enables centralized coordination and reporting while separate teams handle parallel work.",
+		"correctIndex": 0,
+		"explanation": "MITRE ATT&CK alignment enriches incidents with standardized threat behavior context for defensive planning and consistent analysis.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/mitre-attack-defend-graph-sir.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 17,
+		"prompt": "During triage, an analyst links a suspicious IP address to a security incident. Which capability enriched that indicator?",
+		"choices": [
+			"Threat intelligence lookup against configured feeds and observables",
+			"Discovery horizontal scan results from the previous subnet probe",
+			"Service catalog approval history for the affected user account",
+			"Project portfolio demand scoring for unrelated strategic initiatives"
+		],
+		"correctIndex": 0,
+		"explanation": "Threat intelligence integrations and lookups enrich observables such as IP addresses with reputation and context during incident triage.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/threat-intelligence-in-sir.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 18,
+		"prompt": "A parent security incident spans multiple affected hosts requiring separate investigation tracks. What record structure should the lead analyst use?",
+		"choices": [
+			"Child security incidents linked to the parent with rolled-up status and context",
+			"Duplicate parent incidents with identical numbers for each host separately",
+			"Change tasks on the change request table with no security incident linkage",
+			"Problem records only, closing the parent incident before child work begins"
+		],
+		"correctIndex": 0,
+		"explanation": "Parent and child security incidents let teams parallelize host-level investigations while maintaining consolidated oversight.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/security-incident-response/manage-major-security-incidents.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
-		"order": 22,
-		"prompt": "Which communication pattern is best during major incident operations?",
+		"order": 19,
+		"prompt": "Which field type on a security incident best stores file hashes and domains identified during initial analysis?",
 		"choices": [
-			"Describes the outcome where ad hoc chat updates without timestamps.",
-			"Captures the choice stating status updates only at final closure.",
-			"Corresponds to the option where separate timelines per analyst with no shared source.",
-			"Represents the approach that scheduled, role-based updates with a validated incident timeline and decision log."
+			"Indicators of compromise linked through threat intelligence observables",
+			"Discovery credentials used for MID Server authentication to Linux hosts",
+			"Catalog variables captured during employee laptop provisioning requests",
+			"Financial plan task codes tied to portfolio investment approvals"
 		],
-		"correctIndex": 3,
-		"explanation": "Cadenced communication and a validated timeline reduce confusion and improve decision quality during high-pressure response.",
+		"correctIndex": 0,
+		"explanation": "IOCs such as hashes and domains are captured as observables and linked to incidents for enrichment and downstream correlation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/threat-intelligence-in-sir.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 20,
+		"prompt": "An organization wants incidents auto-tagged as ransomware when certain observables match threat feed entries. Which SIR feature supports this?",
+		"choices": [
+			"Security tags applied through threat intelligence and classification rules",
+			"Discovery identification rules that create printer CI records automatically",
+			"Service catalog client scripts that validate mobile phone number formats",
+			"Project workspace demand scoring thresholds for strategic portfolio themes"
+		],
+		"correctIndex": 0,
+		"explanation": "Security tags classify incidents based on intelligence matches and configured rules to drive routing and response playbooks.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-tags.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 21,
+		"prompt": "Before analysts can enrich incidents with external reputation data, what must be configured in Threat Intelligence?",
+		"choices": [
+			"Active threat feeds and lookup sources with valid credentials and schedules",
+			"Discovery schedules on every datacenter subnet with elevated SNMP strings",
+			"Catalog fulfillment workflows for password reset self-service items",
+			"HR case assignment rules for employee relocation request routing"
+		],
+		"correctIndex": 0,
+		"explanation": "Threat intelligence feeds and lookup configurations must be active so SIR can query external sources during incident enrichment.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/threat-intelligence-in-sir.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 22,
+		"prompt": "A SIEM correlation rule fires on lateral movement activity. How should SIR receive the event for structured response?",
+		"choices": [
+			"Through an inbound integration action that creates or updates a security incident",
+			"By emailing the alert to a personal inbox with no platform record created",
+			"By opening a facilities work order for badge access review only",
+			"By logging a project risk without linking to any security incident table"
+		],
+		"correctIndex": 0,
+		"explanation": "SIEM integrations use inbound actions to automatically create or update security incidents from correlated alerts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integrate-security-tools.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 23,
+		"prompt": "When child security incidents accumulate MITRE ATT&CK techniques during investigation, what does rollup to the parent provide?",
+		"choices": [
+			"A consolidated view of tactics and techniques for parent-level reporting and analysis",
+			"Automatic deletion of child records after the parent incident is assigned",
+			"Immediate closure of all related vulnerabilities without remediation tasks",
+			"Conversion of every child incident into a standard IT service request"
+		],
+		"correctIndex": 0,
+		"explanation": "Rolling up MITRE ATT&CK details from child incidents gives analysts a unified adversary behavior picture at the parent level.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/map-security-incidents-to-mitre-attack.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 24,
+		"prompt": "During Major Security Incident Management, which practice keeps business and technical stakeholders aligned in real time?",
+		"choices": [
+			"War-room operations with shared timeline, tasks, and communication in SIR",
+			"Disabling all integrations until the incident reaches closed state",
+			"Routing every update through annual compliance attestation workflows",
+			"Assigning all response tasks to a single catalog administrator only"
+		],
+		"correctIndex": 0,
+		"explanation": "MSIM war-room operations centralize coordination, tasks, and communications so cross-functional teams share a single response view.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-war-room-operations.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
-		"order": 23,
-		"prompt": "What is the best indicator that major incident governance is working effectively?",
-		"choices": [
-			"Corresponds to the option where frequent reopening because closure criteria are unclear.",
-			"Represents the approach that clear role assignments, rapid containment, and complete post-incident actions tracked to closure.",
-			"Describes the outcome where higher count of unresolved child incidents.",
-			"Matches the scenario in which no formal handoff records between shifts."
-		],
-		"correctIndex": 1,
-		"explanation": "Strong governance is reflected in coordinated execution, measurable containment, and closed improvement actions.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-operations-metrics.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SIR",
-		"order": 24,
-		"prompt": "Which post-major-incident output delivers the most long-term operational value?",
-		"choices": [
-			"Describes the outcome where a lessons-learned review with prioritized improvements, control owners, and due dates.",
-			"Matches the scenario in which automatic closure of related vulnerabilities.",
-			"Reflects the condition that a list of all chat participants.",
-			"Represents the approach that a high-level summary with no action owners."
-		],
-		"correctIndex": 0,
-		"explanation": "Structured post-incident reviews with owned improvements drive measurable resilience gains.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/post-incident-review.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SIR",
 		"order": 25,
-		"prompt": "In Security Incident Response, what is the primary value of integrating threat intelligence feeds?",
+		"prompt": "An analyst must manually escalate a confirmed data breach to major incident status. Which action initiates MSIM workflows?",
 		"choices": [
-			"Describes the outcome where enrich indicators and prioritize incidents using reputation and context data.",
-			"Reflects the condition that disable correlation to reduce processing load.",
-			"Captures the choice stating automatically close every low-severity alert.",
-			"Matches the scenario in which replace CMDB service ownership records."
+			"Promote the security incident to major status and launch major incident procedures",
+			"Close the security incident and recreate it as a standard IT incident record",
+			"Convert the record to a change request awaiting emergency CAB approval",
+			"Delete child tasks and reopen the incident under a new assignment group only"
 		],
 		"correctIndex": 0,
-		"explanation": "Threat intelligence enriches observables so analysts can prioritize and respond based on risk context.",
+		"explanation": "Promoting an incident to major status triggers Major Security Incident Management procedures and associated collaboration workflows.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/threat-intelligence.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/manage-major-security-incidents.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 26,
-		"prompt": "A new IOC feed creates many false positives. What is the best first tuning step?",
+		"prompt": "Where are pre-built third-party integrations for Security Incident Response configured on the instance?",
 		"choices": [
-			"Reflects the condition that adjust indicator confidence thresholds and matching logic before auto-escalation.",
-			"Matches the scenario in which delete all past incidents.",
-			"Corresponds to the option where route all alerts to major incident.",
-			"Captures the choice stating disable all enrichment jobs permanently."
+			"Integration Configurations module in Security Operations",
+			"MID Server cluster properties under System Definition",
+			"Service Catalog Designer under IT Service Management",
+			"CMDB Data Manager under Configuration Management"
 		],
 		"correctIndex": 0,
-		"explanation": "Threshold and matching refinement reduces noise while keeping useful threat signals flowing to analysts.",
+		"explanation": "The Integration Configurations module lists and configures pre-built SIR integrations with external security tools.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/configure-threat-intelligence-sources.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integration-configurations.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 27,
-		"prompt": "Which process most improves analyst trust in threat-intel enrichment?",
+		"prompt": "When connecting a SIEM to Security Incident Response, what does a typical inbound integration action accomplish?",
 		"choices": [
-			"Corresponds to the option where track source, confidence, first-seen, and expiration details on each indicator.",
-			"Captures the choice stating hide source provider metadata from all incident records.",
-			"Reflects the condition that ingest indicators without timestamps.",
-			"Represents the approach that store indicators only in spreadsheet attachments."
+			"Creates or updates security incidents from normalized SIEM alert payloads",
+			"Replaces the CMDB with SIEM asset inventory as the sole source of truth",
+			"Disables all analyst ACLs so every user can edit security incidents",
+			"Converts vulnerability groups into catalog items for employee checkout"
 		],
 		"correctIndex": 0,
-		"explanation": "Transparent indicator lineage and validity windows help analysts decide whether enrichment is actionable.",
+		"explanation": "Inbound SIEM integration actions map alert data to security incident fields for automated creation and enrichment.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response-data-model.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integrate-security-tools.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 28,
-		"prompt": "What is the best reason to map threat intel to MITRE ATT&CK techniques in SIR reporting?",
+		"questionType": "multi",
+		"prompt": "Which two integration categories are commonly configured in SIR Integration Configurations? (Choose two.)",
 		"choices": [
-			"Corresponds to the option where it allows skipping triage for mapped incidents.",
-			"Represents the approach that it improves trend analysis for adversary behavior and helps prioritize defensive controls.",
-			"Describes the outcome where it replaces assignment rules with static groups.",
-			"Captures the choice stating it removes the need for indicator expiration."
+			"SIEM and security analytics platforms that send correlated alerts",
+			"Endpoint detection and response tools that export detection events",
+			"Payroll systems that calculate employee overtime accrual balances",
+			"Facilities management tools that track HVAC maintenance schedules"
 		],
-		"correctIndex": 1,
-		"explanation": "Technique mapping supports strategic prioritization by connecting incidents to known adversary tactics and gaps.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "SIR pre-built integrations focus on security tools such as SIEM and EDR platforms that feed incidents and observables into the platform.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response-reporting.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integration-configurations.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 29,
-		"prompt": "Which KPI best measures threat-intelligence quality in SIR?",
+		"prompt": "A security team wants phishing reports submitted through email to create SIR records automatically. Which integration pattern applies?",
 		"choices": [
-			"Corresponds to the option where total attachments per incident.",
-			"Describes the outcome where reduction in mean time to triage and higher true-positive rate after enrichment.",
-			"Matches the scenario in which number of feeds enabled regardless utility.",
-			"Represents the approach that count of unassigned security incidents."
+			"Email integration with inbound actions that parse messages into security incidents",
+			"Discovery pattern extensions that probe mailbox servers for open ports",
+			"Catalog record producers that fulfill laptop requests from email templates",
+			"Change management inbound actions that open normal changes from messages"
 		],
-		"correctIndex": 1,
-		"explanation": "High-quality intelligence should improve triage speed and incident precision, not just increase data volume.",
+		"correctIndex": 0,
+		"explanation": "Email integrations use inbound actions to transform reported phishing messages into triage-ready security incidents.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-operations-kpis.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integrate-security-tools.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 30,
-		"prompt": "In SIR workflow design, what is the main purpose of predefined incident tasks?",
+		"prompt": "An organization uses Splunk as its primary SIEM. Where should implementers start the SIR connection in ServiceNow?",
 		"choices": [
-			"Matches the scenario in which increase manual note-taking effort.",
-			"Describes the outcome where bypass severity determination.",
-			"Represents the approach that standardize response actions and accountability for repeatable incident handling.",
-			"Reflects the condition that replace playbooks with ad hoc analyst decisions."
+			"Integration Configurations, selecting the Splunk pre-built integration template",
+			"Discovery schedules, adding Splunk servers as horizontal probe targets",
+			"Service Catalog, publishing a Splunk checkout item for analysts",
+			"Project Workspace, linking Splunk alerts to portfolio demand records"
 		],
-		"correctIndex": 2,
-		"explanation": "Predefined tasks ensure consistent response execution and clearer ownership during investigations.",
+		"correctIndex": 0,
+		"explanation": "Pre-built Splunk integrations are configured through Integration Configurations with guided setup for alert ingestion.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response-workflow.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integration-configurations.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 31,
-		"prompt": "Which task type should be prioritized immediately for a suspected active compromise?",
+		"prompt": "After enabling a Microsoft Defender integration, alerts arrive but no incidents are created. What should be verified first?",
 		"choices": [
-			"Reflects the condition that dashboard layout update.",
-			"Captures the choice stating archive closed incident attachments.",
-			"Matches the scenario in which initial triage and containment validation tasks aligned to incident severity.",
-			"Describes the outcome where quarterly control attestation request."
+			"Inbound action mapping, credentials, and active status on the integration instance",
+			"Discovery classification rules for Windows server CI identification only",
+			"Catalog client scripts validating mobile device enrollment form fields",
+			"Project financial plan baselines tied to unrelated portfolio investments"
 		],
-		"correctIndex": 2,
-		"explanation": "Early triage and containment tasks reduce blast radius and establish response momentum for critical incidents.",
+		"correctIndex": 0,
+		"explanation": "Failed incident creation usually traces to inactive integrations, invalid credentials, or inbound action field mapping gaps.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/respond-to-security-incident.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integrate-security-tools.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 32,
-		"prompt": "A team misses SLA targets because tasks are manually reassigned. What should be implemented?",
+		"prompt": "Which outbound integration use case lets SIR push containment status back to an EDR console?",
 		"choices": [
-			"Matches the scenario in which create one universal assignment group for every task.",
-			"Corresponds to the option where remove due dates from all SIR tasks.",
-			"Captures the choice stating use random assignment to balance workload.",
-			"Reflects the condition that use rule-based task assignment and escalation tied to severity and ownership."
+			"Outbound actions that update external systems when incident state changes",
+			"Inbound-only listeners that discard all response updates from ServiceNow",
+			"Discovery probes that scan EDR agent versions on every subnet hourly",
+			"Catalog workflows that order replacement laptops for affected users"
 		],
-		"correctIndex": 3,
-		"explanation": "Automated assignment and escalation reduce delays and improve adherence to response objectives.",
+		"correctIndex": 0,
+		"explanation": "Outbound integration actions synchronize incident progress and containment decisions with connected security tools.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/configure-security-incident-response.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integrate-security-tools.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 33,
-		"prompt": "Why should closure tasks include post-incident documentation requirements?",
+		"prompt": "When multiple SIEM alerts reference the same host within minutes, which SIR capability reduces duplicate incident records?",
 		"choices": [
-			"Captures the choice stating they automatically reduce incident severity.",
-			"Represents the approach that they prevent the use of threat intelligence feeds.",
-			"Reflects the condition that they remove the need for parent incident records.",
-			"Corresponds to the option where they support lessons learned, audit readiness, and future playbook improvement."
+			"Security incident correlation rules that merge or relate related alerts",
+			"Discovery identification that retires duplicate printer CI records",
+			"Catalog item bundling that groups employee onboarding requests",
+			"Project task linking that rolls up unrelated portfolio milestones"
 		],
-		"correctIndex": 3,
-		"explanation": "Structured closure evidence improves organizational learning and strengthens defensible response records.",
+		"correctIndex": 0,
+		"explanation": "Correlation rules group related alerts so analysts work a single incident instead of redundant records for the same event.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response-reporting.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-correlation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 34,
-		"prompt": "Which KPI best reflects healthy SIR task orchestration?",
+		"prompt": "An implementer needs to store API keys for a custom threat feed integration securely. What is the recommended approach?",
 		"choices": [
-			"Captures the choice stating count of task comments only.",
-			"Represents the approach that lower mean time per critical task phase with clear completion evidence and fewer handoff delays.",
-			"Corresponds to the option where higher volume of reopened tasks each month.",
-			"Describes the outcome where more tasks created per incident regardless outcome."
+			"Use integration credentials or connection credentials referenced by the integration record",
+			"Paste keys into incident work notes so analysts can copy them during triage",
+			"Save keys in an unencrypted system property visible to all authenticated users",
+			"Email credentials to the SOC distribution list for shared spreadsheet storage"
 		],
-		"correctIndex": 1,
-		"explanation": "Good orchestration improves speed and quality of execution, not just task quantity.",
+		"correctIndex": 0,
+		"explanation": "Integration and connection credentials protect API secrets while allowing authorized integration processes to authenticate.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-operations-kpis.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integration-configurations.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 35,
-		"prompt": "What is the main goal of SecOps integration with Security Incident Response?",
+		"prompt": "A team needs a bespoke REST integration not available as a store template. Which starting point is appropriate?",
 		"choices": [
-			"Represents the approach that replace threat intelligence with manual spreadsheets.",
-			"Matches the scenario in which route all incidents to one resolver queue.",
-			"Describes the outcome where connect detection, case management, and response actions into one coordinated workflow.",
-			"Corresponds to the option where eliminate incident prioritization."
+			"Integration Hub spoke or custom inbound/outbound actions mapped to security incidents",
+			"Discovery pattern designer steps that SSH into arbitrary external API endpoints",
+			"Catalog record producers that create incidents from employee hardware requests",
+			"Project demand workflows that score strategic themes without security context"
 		],
-		"correctIndex": 2,
-		"explanation": "SecOps integration unifies tooling and process handoffs so response teams can act faster with shared context.",
+		"correctIndex": 0,
+		"explanation": "Custom integrations typically use Integration Hub spokes or scripted inbound and outbound actions tied to SIR tables.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/secops/concept/secops-overview.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integrate-security-tools.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 36,
-		"prompt": "Which integration pattern most improves triage quality between detections and SIR records?",
+		"prompt": "During integration testing, sample alerts create incidents with blank priority and category. What should be adjusted?",
 		"choices": [
-			"Matches the scenario in which map normalized detection fields to incident context, indicators, and affected assets.",
-			"Reflects the condition that store detections only as email attachments.",
-			"Represents the approach that open incidents without source artifact references.",
-			"Describes the outcome where suppress all low-severity detections before enrichment."
+			"Inbound action field maps and default values on the integration configuration",
+			"Discovery credentials assigned to unrelated Linux server CI classes",
+			"Catalog variable sets on password reset self-service catalog items",
+			"HR case assignment rules for employee relocation approval chains"
 		],
 		"correctIndex": 0,
-		"explanation": "Field normalization and context mapping preserve signal fidelity and improve analyst decision-making.",
+		"explanation": "Field mapping and default values on inbound actions ensure required incident attributes populate during automated creation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/integrate-security-tools.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integration-configurations.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 37,
-		"prompt": "A SecOps team reports duplicate records from two security tools for the same compromise. What should be adjusted?",
+		"prompt": "Which test validates that a CrowdStrike detection integration updates existing incidents instead of duplicating them?",
 		"choices": [
-			"Captures the choice stating assign both records to different teams.",
-			"Describes the outcome where delete older incidents at midnight.",
-			"Matches the scenario in which use correlation and deduplication rules based on shared observables and asset context.",
-			"Reflects the condition that disable one tool permanently. prefaced with legal review for terms affecting external parties."
+			"Send repeated detections for the same endpoint and confirm correlation updates one record",
+			"Run horizontal discovery against the CrowdStrike cloud API subnet range",
+			"Submit catalog requests for laptops and verify fulfillment task generation",
+			"Create portfolio demands and confirm financial plan task rollup behavior"
 		],
-		"correctIndex": 2,
-		"explanation": "Correlation and deduplication reduce duplicate handling while retaining a complete evidence timeline.",
+		"correctIndex": 0,
+		"explanation": "Repeated detection tests confirm correlation and update logic keeps a single incident current rather than creating duplicates.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-correlation.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-correlation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 38,
-		"prompt": "Why is bi-directional integration with ticketing and orchestration systems valuable in SecOps?",
+		"prompt": "Before promoting an integration to production, which governance step reduces run-time response risk?",
 		"choices": [
-			"Matches the scenario in which it guarantees all incidents are false positives.",
-			"Reflects the condition that it enables synchronized status, task execution, and response evidence across platforms.",
-			"Captures the choice stating it removes the need for RBAC.",
-			"Corresponds to the option where it prevents post-incident reviews."
+			"Validate mappings in a subproduction instance with representative alert samples",
+			"Disable all ACLs on security tables so testers can edit every field",
+			"Delete existing production incidents to simplify correlation testing",
+			"Skip change control because store integrations are always read-only"
 		],
-		"correctIndex": 1,
-		"explanation": "Bi-directional sync keeps teams aligned and reduces response delays caused by fragmented tooling.",
+		"correctIndex": 0,
+		"explanation": "Subproduction validation with realistic payloads catches mapping and correlation defects before production cutover.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/secops/concept/security-orchestration.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integration-configurations.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 39,
-		"prompt": "Which KPI best demonstrates successful SecOps integration?",
+		"prompt": "An analyst opens the Security Incident Response Workspace to work a critical phishing case. What does the workspace provide?",
 		"choices": [
-			"Captures the choice stating lower mean time to detect and respond with fewer duplicate cases and cleaner handoffs.",
-			"Corresponds to the option where higher number of standalone tool dashboards.",
-			"Represents the approach that increase in unassigned tasks.",
-			"Reflects the condition that more manually copied notes between systems."
+			"Contextual incident details, related tasks, evidence, and response tools in one view",
+			"A catalog checkout flow for ordering replacement hardware for affected users",
+			"A discovery dashboard listing MID Server heartbeat status by datacenter",
+			"A project financial plan editor for reallocating portfolio investment funds"
 		],
 		"correctIndex": 0,
-		"explanation": "Integration success is measured by faster, cleaner response execution and reduced operational friction.",
+		"explanation": "The SIR Workspace consolidates incident context, tasks, and response actions so analysts can investigate without leaving the screen.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/secops/concept/secops-kpis.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-workspace.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 40,
-		"prompt": "What is the primary objective of containment workflows in Security Incident Response?",
+		"prompt": "Incidents tagged as ransomware should route immediately to the Tier 2 SOC team. Which configuration enforces this?",
 		"choices": [
-			"Corresponds to the option where close all incidents within one hour regardless severity.",
-			"Captures the choice stating capture analyst satisfaction surveys.",
-			"Describes the outcome where limit attacker movement and business impact while preserving investigative integrity.",
-			"Represents the approach that disable threat intelligence integrations."
+			"Security incident assignment rules keyed on security tags and priority",
+			"Discovery schedules that probe ransomware-affected subnets every hour",
+			"Catalog approval workflows for employee mobile device enrollment requests",
+			"Project demand scoring thresholds for unrelated strategic portfolio themes"
 		],
-		"correctIndex": 2,
-		"explanation": "Containment workflows are designed to reduce ongoing risk while maintaining evidence needed for investigation.",
+		"correctIndex": 0,
+		"explanation": "Assignment rules use attributes such as security tags and priority to route incidents to the appropriate response groups.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/containment-eradication-recovery.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/assign-security-incident-roles.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 41,
-		"prompt": "Which containment action should generally happen earliest for a confirmed compromised endpoint?",
+		"prompt": "A security architect needs consistent classification labels across incidents and playbooks. Which SIR artifact should be standardized?",
 		"choices": [
-			"Corresponds to the option where archive all event logs.",
-			"Represents the approach that finalize post-incident report.",
-			"Describes the outcome where reassign ownership to a non-security group.",
-			"Matches the scenario in which isolate affected assets and trigger approved response tasks per severity playbook."
+			"Security tags with governed values used by rules, dashboards, and automation",
+			"Discovery identification sections for mapping printer hardware models",
+			"Catalog variable names on laptop provisioning request line items",
+			"Project milestone codes on unrelated portfolio investment work plans"
 		],
-		"correctIndex": 3,
-		"explanation": "Early isolation and guided response steps help stop spread while teams investigate root cause.",
+		"correctIndex": 0,
+		"explanation": "Governed security tags provide consistent classification that drives assignment, reporting, and automated response logic.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/contain-security-incident.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-tags.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 42,
-		"prompt": "A containment playbook creates excessive service disruption for medium incidents. What should be tuned first?",
+		"prompt": "What is the default security incident process definition provided with Security Incident Response?",
 		"choices": [
-			"Describes the outcome where apply identical actions for all severities.",
-			"Matches the scenario in which disable all containment workflows.",
-			"Reflects the condition that adjust conditional branching and approval logic by severity and asset criticality.",
-			"Represents the approach that skip approval requirements entirely."
+			"ITIL incident management workflow copied from the ITSM foundation application",
+			"NIST Stateful process definition aligned to detect-triage-respond phases",
+			"Standard change workflow for normal and emergency production changes",
+			"Problem management workflow focused on permanent root cause elimination"
 		],
-		"correctIndex": 2,
-		"explanation": "Risk-based branching and approvals balance response speed with business continuity needs.",
+		"correctIndex": 1,
+		"explanation": "SIR ships with the NIST Stateful process definition as the default lifecycle model for security incidents.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/configure-security-playbooks.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-process-definitions.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 43,
-		"prompt": "Why should containment workflows capture execution timestamps and approver decisions?",
+		"questionType": "multi",
+		"prompt": "Which two security incident task types support structured investigation and remediation work in SIR? (Choose two.)",
 		"choices": [
-			"Describes the outcome where they eliminate the need for root cause analysis.",
-			"Reflects the condition that they are only needed for low-priority incidents.",
-			"Captures the choice stating they provide forensic timeline clarity and auditable accountability for response actions.",
-			"Matches the scenario in which they replace task-level ownership."
+			"Investigation tasks for evidence collection and analysis activities",
+			"Remediation tasks for containment and eradication actions on affected assets",
+			"Catalog fulfillment tasks for employee laptop shipping and imaging",
+			"Discovery error tasks for MID Server subnet probe failure logging"
 		],
-		"correctIndex": 2,
-		"explanation": "Recorded decision and action timelines support investigations, audits, and post-incident lessons learned.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "SIR uses investigation tasks for analytical work and remediation tasks for active response actions on affected systems.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response-reporting.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-task-types.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 44,
-		"prompt": "Which KPI best indicates effective containment workflow performance?",
+		"prompt": "A lead analyst reassigns a critical incident and adds containment tasks from the workspace. Which management capability is in use?",
 		"choices": [
-			"Reflects the condition that increase in unresolved critical incidents.",
-			"Matches the scenario in which shorter time to containment with fewer repeat compromises on previously affected assets.",
-			"Corresponds to the option where higher number of manual approvals per incident.",
-			"Captures the choice stating more containment tasks created regardless closure quality."
+			"SIR Workspace incident management with task creation and assignment controls",
+			"Service Catalog manager publishing new employee onboarding request items",
+			"Discovery status board monitoring horizontal scan completion percentages",
+			"Project workspace demand conversion for portfolio investment approvals"
 		],
-		"correctIndex": 1,
-		"explanation": "Containment effectiveness is shown by speed and durable risk reduction, not task volume.",
+		"correctIndex": 0,
+		"explanation": "Analysts manage incidents directly in the SIR Workspace by updating ownership and creating response tasks during active investigations.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-operations-kpis.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/respond-to-a-security-incident.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 45,
-		"prompt": "What is the key objective of a post-incident review in Security Incident Response?",
+		"prompt": "An administrator leaves the Script include field empty on a custom process definition record. Which process definition does Security Incident Response use by default?",
 		"choices": [
-			"Corresponds to the option where capture lessons learned and assign corrective actions to reduce recurrence and improve response readiness.",
-			"Captures the choice stating reopen all previously resolved incidents for comparison.",
-			"Reflects the condition that close incidents faster by skipping evidence and timeline validation.",
-			"Represents the approach that focus only on team performance ratings without process analysis."
+			"NIST Open with bidirectional transitions between any valid states",
+			"NIST Stateful with sequential forward-only progression through incident states",
+			"Standard ITIL incident state model from core Incident Management",
+			"Analyst-defined custom states without process validation rules"
 		],
-		"correctIndex": 0,
-		"explanation": "Post-incident reviews drive measurable improvement through action-oriented lessons learned.",
+		"correctIndex": 1,
+		"explanation": "When no valid script include is configured, the base system defaults to the NIST Stateful process definition for security incidents.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_ReviewSecurityIncident.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/setup-assistant-reference.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/getting-started-with-processes.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 46,
-		"prompt": "Which artifact is most critical during a formal SIR post-incident review?",
+		"prompt": "Invalid security incident states appear on the Process Selection related list. Where does an administrator assign the correct process definition for incidents and response tasks?",
 		"choices": [
-			"Represents the approach that a list of responder names with no action timestamps.",
-			"Describes the outcome where a spreadsheet of unrelated open vulnerabilities. onboarded through the standard integration framework pattern.",
-			"Corresponds to the option where a screenshot of the incident form after closure.",
-			"Captures the choice stating a validated incident timeline including detections, containment actions, decisions, and communication points."
+			"Security Incident Response Administration Process Selection module",
+			"CMDB Identification and Reconciliation rule editor",
+			"Service Catalog item designer for security service offerings",
+			"MID Server cluster assignment configuration panel"
 		],
-		"correctIndex": 3,
-		"explanation": "A validated timeline supports root-cause analysis and accountability for process improvement.",
+		"correctIndex": 0,
+		"explanation": "Process Selection lets administrators choose the active process definition so incidents and tasks remain in valid lifecycle states.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response-workspace.html",
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_ManageSecurityIncidents.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/setup-assistant-reference.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 47,
-		"prompt": "How should a SIR team prioritize improvement actions after a high-severity incident?",
+		"prompt": "A containment lead completes an isolation task on a priority-one security incident. Which record type tracks discrete analyst actions against the parent incident?",
 		"choices": [
-			"Corresponds to the option where assign all actions to one analyst for speed.",
-			"Matches the scenario in which rank actions by risk reduction impact, implementation effort, and dependency on critical controls.",
-			"Describes the outcome where implement every suggestion in arbitrary order regardless risk.",
-			"Represents the approach that delay action planning until the next annual program review."
+			"Security incident response tasks linked to the parent incident",
+			"Discovery schedules scanning affected subnets on a timer",
+			"Business service maps generated from machine learning candidates",
+			"Standard change request templates for catalog fulfillment"
 		],
-		"correctIndex": 1,
-		"explanation": "Risk-based prioritization ensures limited capacity is focused on the most effective improvements.",
+		"correctIndex": 0,
+		"explanation": "Response tasks represent individual containment, investigation, and recovery actions executed during security incident handling.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_ManageSecurityIncidents.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/risk-management/concept/risk-management.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/what-is-sir.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/si-denial-of-service-template.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 48,
-		"prompt": "Which pattern indicates a healthy post-incident review process?",
+		"prompt": "During an active ransomware event, cross-functional teams need shared timelines, conference bridges, and decision tracking. Which SIR capability supports that operating model?",
 		"choices": [
-			"Describes the outcome where no distinction between confirmed root cause and assumptions.",
-			"Reflects the condition that review notes stored in private chat channels only.",
-			"Represents the approach that documented lessons learned linked to tracked corrective tasks with owner and due-date accountability.",
-			"Matches the scenario in which corrective tasks closed immediately without validation."
+			"Major Security Incident Management workspace with war room coordination",
+			"Software asset reclamation harvester for unused license recovery",
+			"Employee onboarding workflows in HR Service Delivery",
+			"Discovery horizontal pattern debugging console for MID Servers"
 		],
-		"correctIndex": 2,
-		"explanation": "Effective PIR processes produce traceable, accountable corrective outcomes.",
+		"correctIndex": 0,
+		"explanation": "Major Security Incident Management provides collaborative war room features for high-impact security events requiring coordinated response.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_CreateTasksForSecurityIncident.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/workflow-automation/concept/workflow-overview.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/major-security-incident-management.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/exploring-major-security-incident-management.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 49,
-		"prompt": "What should be updated first when post-incident findings reveal delayed containment decisions?",
+		"prompt": "A SecOps program needs phishing, malware, and policy violations to follow different automated response paths. Which configuration drives those variations?",
 		"choices": [
-			"Describes the outcome where dashboard color themes used in security workspace.",
-			"Reflects the condition that containment playbook decision points, escalation criteria, and role responsibilities.",
-			"Matches the scenario in which incident numbering format in system properties.",
-			"Captures the choice stating user profile photos for SOC analysts."
+			"Security incident categories and subcategories mapped to playbooks",
+			"Universal request templates shared across all ITSM record types",
+			"Global UI16 theme settings controlling form color palettes",
+			"Reconciliation rules on cmdb_ci_computer hostname attributes"
 		],
-		"correctIndex": 1,
-		"explanation": "Containment delays are addressed by clarifying operational decision logic and responsibilities.",
+		"correctIndex": 0,
+		"explanation": "Category and subcategory management ties incident types to the playbooks and workflows that govern each response path.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_UsePlaybooksInSecurityIncidentResponse.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/category-management-sir.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-playbook.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 50,
-		"prompt": "Which metric best reflects SIR detection effectiveness?",
+		"prompt": "Leadership asks how quickly raw alerts become triaged security incident records. Which metric best answers that question?",
 		"choices": [
-			"Captures the choice stating count of closed incidents without severity classification.",
-			"Corresponds to the option where mean time to detect from threat occurrence to case creation with quality triage context.",
-			"Matches the scenario in which total number of analyst comments per incident.",
-			"Reflects the condition that number of notification templates configured."
+			"Mean time to detect from threat occurrence to actionable case creation",
+			"Total analyst comment count per closed incident record",
+			"Number of dashboard portlets on the CISO overview page",
+			"Average age of resolved HR onboarding cases last quarter"
 		],
-		"correctIndex": 1,
-		"explanation": "Detection effectiveness is measured by how quickly and reliably threats become actionable incidents.",
+		"correctIndex": 0,
+		"explanation": "Mean time to detect measures how rapidly threats are recognized and converted into managed security incidents.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/reports-and-metrics.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-security-analyst-overview-dashboard.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 51,
-		"prompt": "How is mean time to contain (MTTC) used in SIR program management?",
+		"prompt": "A program manager reviews containment performance after several major incidents. Which metric tracks time from identification to successful containment?",
 		"choices": [
-			"Represents the approach that measure elapsed time from annual policy review to control attestation.",
-			"Reflects the condition that calculate number of open vulnerabilities grouped by assignment.",
-			"Captures the choice stating estimate how long it takes to archive completed incidents.",
-			"Corresponds to the option where track speed from incident identification to successful containment to evaluate response process efficiency."
+			"Mean time to restore from backup completion timestamps",
+			"Mean time to contain from incident identification to containment",
+			"Change advisory board approval cycle duration averages",
+			"Vulnerability scan window length per discovery schedule"
 		],
-		"correctIndex": 3,
-		"explanation": "MTTC indicates operational containment performance and process bottlenecks.",
+		"correctIndex": 1,
+		"explanation": "Mean time to contain reflects operational speed in limiting attacker impact once an incident is identified.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_ManageSecurityIncidents.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/reports-and-metrics.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-security-incident-manager-dashboard.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 52,
-		"prompt": "Which metric pairing is most useful for evaluating SIR triage quality?",
+		"questionType": "multi",
+		"prompt": "Who are key reporting audiences for Security Incident Response dashboards and metrics? (Choose three.)",
 		"choices": [
-			"Captures the choice stating volume of historical incidents older than two years.",
-			"Corresponds to the option where false-positive rate and percentage of incidents correctly prioritized at first assignment.",
-			"Represents the approach that number of dashboard widgets and report exports.",
-			"Describes the outcome where count of emails sent during major incidents."
+			"Security Analysts reviewing operational triage and task backlogs",
+			"Security Managers tracking team performance and SLA adherence",
+			"CIOs and CISOs reviewing executive risk and trend summaries",
+			"Facilities and HR staff approving office supply requisitions"
 		],
-		"correctIndex": 1,
-		"explanation": "Good triage should minimize false positives and improve first-pass prioritization accuracy.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1,
+			2
+		],
+		"explanation": "Analyst, manager, and executive dashboards serve operational, supervisory, and leadership audiences; facilities and HR requisitions are unrelated to SIR reporting.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response-workspace.html",
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_DefinePrioritiesForSecurityIncidents.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-security-analyst-overview-dashboard.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-security-incident-manager-dashboard.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-ciso-dashboard-overview.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 53,
-		"prompt": "What does repeated growth in incident reopen rates usually indicate?",
+		"prompt": "Reopen rates for closed security incidents climb steadily over several weeks. What is the most likely root cause?",
 		"choices": [
-			"Represents the approach that sOC staffing is oversized for current alert volume.",
-			"Matches the scenario in which case templates contain too many optional fields.",
-			"Describes the outcome where threat intelligence feeds are too comprehensive.",
-			"Corresponds to the option where containment or eradication actions are incomplete and closure criteria need stronger validation."
+			"Containment or eradication was incomplete and closure validation is too weak",
+			"Threat intelligence enrichment feeds were disabled during the period",
+			"Shift handover templates were recently updated for the SOC",
+			"Process definition selector was switched from Stateful to Open"
 		],
-		"correctIndex": 3,
-		"explanation": "High reopen rates often signal weak closure controls or unresolved root issues.",
+		"correctIndex": 0,
+		"explanation": "Rising reopen rates usually indicate premature closure or unresolved root issues that fail post-closure validation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_CloseSecurityIncident.html",
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_CreateTasksForSecurityIncident.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/reports-and-metrics.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-post-incident-review.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 54,
-		"prompt": "Which reporting approach best supports executive review of SIR metrics?",
+		"prompt": "Executives request a quarterly view of security response effectiveness. Which reporting approach best supports that review?",
 		"choices": [
-			"Matches the scenario in which use one-time screenshots instead of trend dashboards.",
-			"Reflects the condition that trend MTTD, MTTC, MTTR, severity distribution, and repeat-incident rates with narrative risk context.",
-			"Represents the approach that show only raw incident counts by month with no segmentation.",
-			"Describes the outcome where report solely on analyst workload by shift."
+			"Trend MTTD, MTTC, MTTR, severity distribution, and repeat rates with risk narrative",
+			"Raw monthly incident totals without severity or category segmentation",
+			"Analyst comment volume grouped by weekday across the quarter",
+			"One-time static screenshots of individual incident form headers"
 		],
-		"correctIndex": 1,
-		"explanation": "Executive metrics should show response performance trends and risk impact context.",
+		"correctIndex": 0,
+		"explanation": "Executive reporting should combine response time trends, severity patterns, and repeat incident context to show program maturity.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-ciso-dashboard-overview.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/reports-and-metrics.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 55,
-		"prompt": "Why integrate Vulnerability Response data into SIR workflows?",
+		"prompt": "A security incident record matches several calculator conditions after enrichment completes. What do Security Incident Calculators do in that situation?",
 		"choices": [
-			"Captures the choice stating replace all incident evidence with vulnerability scanner output.",
-			"Describes the outcome where provide exploitable-asset context and prioritization signals that improve incident triage and containment decisions.",
-			"Matches the scenario in which route vulnerabilities directly to change approvals only.",
-			"Reflects the condition that disable threat indicators to reduce case complexity. expressed as declarative configuration rather than custom code. (CIS-SIR-55-w3)"
+			"Set specific field values on the incident according to matched calculator rules",
+			"Delete related observables to reduce table storage consumption",
+			"Disable every playbook tied to the incident category permanently",
+			"Convert the incident record automatically into a standard change request"
 		],
-		"correctIndex": 1,
-		"explanation": "VR context strengthens SIR prioritization by connecting incidents to known exposure.",
+		"correctIndex": 0,
+		"explanation": "Security incident calculators update record values such as severity or business impact when their pre-defined conditions match.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/vulnerability-response.html",
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/setup-assistant-reference.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/calculate-si-severity.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 56,
-		"prompt": "Which scenario best demonstrates SIR and VR integration value?",
+		"prompt": "Several calculators in a Business Impact calculator group could apply to the same incident. How does the platform choose which calculator runs?",
 		"choices": [
-			"Matches the scenario in which incidents and vulnerabilities are managed in separate tools with no cross-reference.",
-			"Reflects the condition that a security incident automatically links to active critical vulnerabilities on affected CIs for response prioritization.",
-			"Captures the choice stating sOC analysts manually retype CVE details into incident notes.",
-			"Corresponds to the option where vulnerability records are closed whenever an incident opens."
+			"The first matching calculator in the ordered group runs and remaining calculators are skipped",
+			"All calculators execute simultaneously and resulting values are averaged together",
+			"Calculators run only after manual analyst approval on each target field",
+			"Calculator groups are ignored unless the legacy risk score property is disabled"
 		],
-		"correctIndex": 1,
-		"explanation": "Cross-linked incident and vulnerability data speeds risk-informed response.",
+		"correctIndex": 0,
+		"explanation": "Calculator groups evaluate in order; the first calculator whose trigger logic matches is applied and subsequent calculators in the group are not run.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/task/t_LinkSecurityIncidentsAndVulnerabilities.html",
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_ManageSecurityIncidents.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/setup-assistant-reference.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/calculate-si-severity.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 57,
-		"prompt": "How should SIR teams use VR severity and exploit intelligence during active investigations?",
+		"prompt": "An administrator must configure weighted criteria for dynamic security incident risk scoring. Which workspace navigation path opens Risk Score Calculator rules?",
 		"choices": [
-			"Captures the choice stating ignore VR context until after incident closure.",
-			"Corresponds to the option where adjust containment urgency and escalation based on exploitability, asset criticality, and exposure scope.",
-			"Represents the approach that escalate only incidents that include malware attachments.",
-			"Reflects the condition that treat all vulnerabilities as equal priority regardless exploit status."
+			"Security Incident Response Workspace Administration Rules Engine Risk Score Calculator Rule",
+			"Discovery schedule editor under MID Server configuration settings",
+			"Service Portal widget theme designer for employee self-service",
+			"CMDB class manager extension attributes panel for custom CI classes"
 		],
-		"correctIndex": 1,
-		"explanation": "Exploit intelligence and asset impact data improve precision in escalation and containment.",
+		"correctIndex": 0,
+		"explanation": "Risk Score Calculator rules are managed from the SIR Workspace Administration Rules Engine with criteria builder or script options.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/risk-based-prioritization.html",
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response-workspace.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/define-risk-score-calculator-rules-sir.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/risk-score-calculator-related-tables.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 58,
-		"prompt": "What governance control is essential when integrating SIR and VR data?",
+		"prompt": "After a high-severity breach is closed, leadership requires documented lessons learned and corrective actions. Which SIR practice fulfills that requirement?",
 		"choices": [
-			"Captures the choice stating store vulnerability data without assignment groups.",
-			"Represents the approach that allow duplicate CI records for each security tool source.",
-			"Describes the outcome where consistent CI identification and ownership to prevent mismatched exposure and incident linkage.",
-			"Corresponds to the option where disable CMDB reconciliation for security integrations."
+			"Post-incident review capturing outcomes and tracked improvement tasks",
+			"Immediate deletion of child response tasks to reduce table growth",
+			"Skipping timeline validation to accelerate quarterly metric reporting",
+			"Archiving the incident record before root cause analysis begins"
 		],
-		"correctIndex": 2,
-		"explanation": "Reliable CI identity and ownership are prerequisites for trustworthy SIR-VR correlation.",
+		"correctIndex": 0,
+		"explanation": "Post-incident review formalizes lessons learned and links corrective work so response programs improve after major events.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/cmdb-landing.html",
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/vulnerability-response.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-post-incident-review.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/t_PerformPostIncidentReview.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 59,
-		"prompt": "Which KPI confirms SIR and VR integration is improving outcomes?",
+		"prompt": "Facilitators prepare materials for a formal post-incident review session. Which artifact is most essential to the discussion?",
 		"choices": [
-			"Represents the approach that more manual copy-paste activity between teams.",
-			"Corresponds to the option where reduced time to prioritize and contain incidents with known exploitable vulnerabilities.",
-			"Matches the scenario in which higher count of unlinked vulnerabilities after incident closure.",
-			"Describes the outcome where longer delay between incident creation and enrichment."
+			"A validated timeline covering detections, actions, decisions, and communications",
+			"A list of responder display names without timestamps or task references",
+			"An unrelated open vulnerability export from the prior month",
+			"A single post-closure screenshot of the incident form header only"
 		],
-		"correctIndex": 1,
-		"explanation": "Integration success appears as faster, context-driven action on exploitable threats.",
+		"correctIndex": 0,
+		"explanation": "A validated timeline supports accountable root-cause analysis and identifies process gaps during post-incident review.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/vulnerability-response/concept/vulnerability-response.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-post-incident-review.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/exploring-security-incident-response-workspace.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 60,
-		"prompt": "Which role is primarily accountable for coordinating end-to-end response actions during an active security incident?",
+		"prompt": "A post-incident review surfaces ten improvement ideas with limited staff capacity. How should the team prioritize remediation work?",
 		"choices": [
-			"Matches the scenario in which security incident coordinator or incident commander.",
-			"Reflects the condition that procurement specialist.",
-			"Describes the outcome where cMDB data steward.",
-			"Represents the approach that change advisory board chair."
+			"Rank items by risk reduction impact, implementation effort, and control dependencies",
+			"Implement items alphabetically by task title for perceived fairness",
+			"Defer every action until the next annual external audit cycle",
+			"Assign all tasks to the incident commander without target due dates"
 		],
 		"correctIndex": 0,
-		"explanation": "The incident coordinator drives response orchestration, communication, and decision pacing.",
+		"explanation": "Risk-based prioritization focuses limited capacity on improvements that most reduce recurrence and strengthen critical controls.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_AssignSecurityIncidentRoles.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-post-incident-review.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/t_PerformPostIncidentReview.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 61,
-		"prompt": "What is the core responsibility of a Tier 1 SOC analyst in the SIR role model?",
+		"prompt": "Which outcome pattern indicates a mature post-incident review process in Security Incident Response?",
 		"choices": [
-			"Describes the outcome where own final incident closure sign-off for legal review.",
-			"Captures the choice stating perform initial triage, enrichment, and prioritization before escalation.",
-			"Reflects the condition that approve all risk acceptances for the organization.",
-			"Matches the scenario in which manage CMDB class hierarchy changes."
+			"Lessons learned linked to corrective tasks with owners and due dates",
+			"Review notes stored only in private chat channels outside the record",
+			"Corrective tasks closed immediately without validation evidence",
+			"No distinction between confirmed root cause and working assumptions"
 		],
-		"correctIndex": 1,
-		"explanation": "Tier 1 analysts focus on fast, accurate triage and routing to the right responders.",
+		"correctIndex": 0,
+		"explanation": "Effective post-incident reviews produce traceable corrective work with accountable owners rather than informal notes alone.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response-workspace.html",
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_DefinePrioritiesForSecurityIncidents.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-post-incident-review.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/t_PerformPostIncidentReview.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 62,
-		"prompt": "How should SIR implementations enforce role separation between responders and approvers?",
+		"prompt": "Risk score weightings change after a control framework update. How can administrators refresh historical incident scores under the new rules?",
 		"choices": [
-			"Reflects the condition that restrict approvals to manual email only.",
-			"Corresponds to the option where allow all responders full administrative permissions by default.",
-			"Matches the scenario in which use role-based access controls and workflow approvals to separate execution from oversight decisions.",
-			"Captures the choice stating assign one shared account to all SOC roles."
+			"Run the Recalculate Score action to update scores via background processing",
+			"Manually edit risk score on each closed incident during live containment",
+			"Disable all calculators permanently and rely on priority labels only",
+			"Clone the production instance and discard prior incident metrics"
 		],
-		"correctIndex": 2,
-		"explanation": "Role separation improves accountability and reduces governance risk in high-impact incidents.",
+		"correctIndex": 0,
+		"explanation": "Recalculate Score applies updated Risk Score Calculator rules to existing incidents through a background job.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html",
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_AssignSecurityIncidentRoles.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/define-risk-score-calculator-rules-sir.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/risk-score-calculator-related-tables.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 63,
-		"prompt": "Which role typically validates technical eradication before case closure?",
+		"prompt": "A Flow Designer flow is linked to the security incident table for automated enrichment. When does that flow execute?",
 		"choices": [
-			"Reflects the condition that service catalog manager.",
-			"Corresponds to the option where assigned resolver or containment owner with required reviewer sign-off.",
-			"Captures the choice stating knowledge base contributor.",
-			"Represents the approach that payroll systems administrator."
+			"When the configured trigger condition for the flow is met on the target record",
+			"Only when an administrator manually runs the flow from Flow Designer weekly",
+			"After every incident reaches Closed Complete regardless of filter logic",
+			"Before any security incident record is inserted into the database unconditionally"
 		],
-		"correctIndex": 1,
-		"explanation": "Technical owners verify eradication outcomes, while governance sign-off confirms closure readiness.",
+		"correctIndex": 0,
+		"explanation": "Flows tied to Security Incident Response run when their defined trigger conditions evaluate true against the triggering record.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_CreateTasksForSecurityIncident.html",
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/t_CloseSecurityIncident.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/define-trigger-conditions.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/cj-sir-about-flows.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 64,
-		"prompt": "Which KPI most directly indicates healthy SIR role clarity?",
+		"prompt": "Employees forward suspicious messages to a dedicated phishing mailbox. Which SIR capability validates those messages and can initiate response workflows?",
 		"choices": [
-			"Corresponds to the option where more incidents reopened due to unclear ownership.",
-			"Describes the outcome where longer approval wait times for routine decisions.",
-			"Represents the approach that higher number of incidents with no assignment group.",
-			"Captures the choice stating lower reassignment churn and faster handoff times between triage, containment, and recovery roles."
+			"User-reported phishing email parsing rules with automated phishing playbooks",
+			"CMDB identification rules for cmdb_ci_email_server class records",
+			"Discovery credentials scanning Microsoft Exchange subnets nightly",
+			"Service catalog checkout workflows for employee password resets"
 		],
-		"correctIndex": 3,
-		"explanation": "Clear roles reduce handoff friction and improve response continuity.",
+		"correctIndex": 0,
+		"explanation": "Report-phish email processing validates user submissions against organizational rules and can trigger phishing response automation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/report-phish-email.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/using-automated-phishing-playbook.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 65,
-		"prompt": "What is the primary purpose of war room operations during a high-severity security incident?",
+		"prompt": "A SOC lead wants repeatable containment steps for common incident categories. Which SIR artifact orchestrates structured response activities?",
 		"choices": [
-			"Corresponds to the option where limit communication to one analyst to reduce message volume.",
-			"Matches the scenario in which coordinate cross-functional responders in real time using a shared timeline, decisions, and action ownership.",
-			"Describes the outcome where pause all containment actions until a final root cause is known.",
-			"Represents the approach that track decisions outside the incident record to preserve flexibility."
+			"Security incident playbooks that create and route response tasks automatically",
+			"Discovery schedules that refresh CMDB CI attributes on a timer",
+			"Service catalog bundles for hardware asset procurement requests",
+			"Event Management connector dashboards showing raw alert volume only"
 		],
-		"correctIndex": 1,
-		"explanation": "War room operations align stakeholders and actions quickly to contain and recover from major security incidents.",
+		"correctIndex": 0,
+		"explanation": "Playbooks define repeatable response steps and automate task creation so analysts follow consistent procedures under pressure.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/major-incident-management/concept/major-incident-management.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-playbook.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/sir-workspace-playbooks.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 66,
-		"prompt": "Which role is most important to assign explicitly in SIR war room operations?",
+		"prompt": "An analyst opens a response task and needs step-by-step guidance from a published knowledge article. Which SIR feature provides that association?",
 		"choices": [
-			"Describes the outcome where a procurement approver for all containment actions.",
-			"Reflects the condition that a rotating note-taker with no authority.",
-			"Represents the approach that only technical analysts with identical responsibilities.",
-			"Matches the scenario in which an incident commander responsible for prioritization, decision cadence, and escalation."
+			"A runbook linking the task to a knowledge base article that opens during execution",
+			"A discovery pattern designer section for horizontal application tracing",
+			"A CMDB health dashboard KPI for duplicate CI remediation",
+			"A service portal widget theme for employee self-service branding"
 		],
-		"correctIndex": 3,
-		"explanation": "An incident commander provides clear authority and coordination across response teams.",
+		"correctIndex": 0,
+		"explanation": "Runbooks associate published knowledge articles with specific response tasks so analysts receive contextual guidance while working.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/major-incident-management/concept/major-incident-management.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-runbook.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/setup-assistant-reference.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 67,
-		"prompt": "What communication model best supports effective SIR war room execution?",
+		"questionType": "multi",
+		"prompt": "Which two capabilities differentiate playbooks from runbooks in Security Incident Response? (Choose two.)",
 		"choices": [
-			"Describes the outcome where silence until containment is fully complete.",
-			"Reflects the condition that continuous unstructured chat without decision summaries.",
-			"Matches the scenario in which time-boxed update intervals with structured status, blockers, and next actions.",
-			"Captures the choice stating email-only communication with end-of-day status notes."
+			"Playbooks orchestrate automated task creation and workflow branching",
+			"Runbooks surface knowledge articles linked to specific response tasks",
+			"Playbooks replace the need for any security incident record fields",
+			"Runbooks execute only after incidents reach Closed Complete state"
 		],
-		"correctIndex": 2,
-		"explanation": "Structured cadence prevents confusion and keeps responders aligned on immediate priorities.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Playbooks automate orchestrated response steps; runbooks provide task-level knowledge guidance without replacing workflow logic.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/collaboration/concept/collaboration-overview.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-playbook.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-runbook.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 68,
-		"prompt": "How should SIR teams handle conflicting containment recommendations in a war room?",
+		"prompt": "Integration teams need to launch third-party containment actions from a security incident. Which module provides orchestration workflow templates for those actions?",
 		"choices": [
-			"Reflects the condition that apply all recommendations simultaneously without validation.",
-			"Corresponds to the option where let the loudest stakeholder decide.",
-			"Captures the choice stating wait for unanimous agreement before any action.",
-			"Matches the scenario in which use impact-based decision criteria, document trade-offs, and record the approved action with owner."
+			"Security Incident Response orchestration workflows in SecOps integrations",
+			"CMDB Data Manager workspace for orphaned relationship cleanup",
+			"Service Mapping pattern designer for top-down entry point tracing",
+			"Employee Center onboarding flows for new hire provisioning"
 		],
-		"correctIndex": 3,
-		"explanation": "Decision traceability and impact-based criteria reduce risk while preserving accountability.",
+		"correctIndex": 0,
+		"explanation": "SecOps orchestration workflows connect Security Incident Response with external security tools for automated response actions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/respond-security-incident.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/task-table/concept/task-management.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/sec-inc-resp-orchestration-workflows.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/sir-orch-workflow-templates.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 69,
-		"prompt": "Which metric best reflects war room effectiveness for security incidents?",
+		"prompt": "Administrators plan to automate phishing triage using Flow Designer. Which documentation topic covers integrating flows with phishing response?",
 		"choices": [
-			"Corresponds to the option where increased volume of unassigned tasks.",
-			"Represents the approach that reduced time to containment and clear ownership completion rates for critical response tasks.",
-			"Reflects the condition that higher number of participants invited to calls.",
-			"Captures the choice stating longer discussion duration per meeting."
+			"Flow Designer and phishing response integration for automated handling",
+			"Discovery MID Server clustering for subnet reachability planning",
+			"CMDB class hierarchy extensions for custom middleware CI types",
+			"Service catalog variable designer for hardware request approvals"
 		],
-		"correctIndex": 1,
-		"explanation": "Effective war rooms shorten containment timelines and drive accountable execution of critical work.",
+		"correctIndex": 0,
+		"explanation": "Flow Designer integrates with phishing response to automate validation, enrichment, and playbook initiation for reported messages.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/flow-designer-and-phishing-response.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/create-process-automated-phishing.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 70,
-		"prompt": "What is the primary objective of SIR administration?",
+		"prompt": "A team is standing up fully automated phishing handling for reported email messages. Which process type should they create first?",
 		"choices": [
-			"Captures the choice stating allow each analyst to define ad hoc response states.",
-			"Corresponds to the option where confirm incident response setup, roles, and workflows are governed for consistent security operations.",
-			"Represents the approach that route all incidents to one resolver group by default.",
-			"Describes the outcome where disable severity models to speed ticket intake. constrained by privacy impact assessment recommendations. (CIS-SIR-70-w3)"
+			"Automated phishing process linked to parsing rules and playbook execution",
+			"Manual malware process requiring analyst initiation for every alert",
+			"Failed login manual process for brute-force events without automation",
+			"Discovery schedule process for nightly CMDB subnet scanning"
 		],
-		"correctIndex": 1,
-		"explanation": "SIR administration establishes a controlled operating model for repeatable and accountable incident response.",
+		"correctIndex": 0,
+		"explanation": "Automated phishing processes combine email parsing validation with playbook-driven response for user-reported messages.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
-			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/create-process-automated-phishing.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/using-automated-phishing-playbook.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 71,
-		"prompt": "Which administrative setup is most important for reliable SIR assignment and escalation?",
+		"prompt": "An orchestration action should run only when a specific configuration item appears on the security incident. Which configuration defines that scope?",
 		"choices": [
-			"Represents the approach that manual assignment by whichever analyst is available.",
-			"Describes the outcome where role-based group ownership, defined severity-to-priority mapping, and maintained escalation paths.",
-			"Matches the scenario in which escalations handled only through external chat tools.",
-			"Corresponds to the option where single priority level for all security incidents."
+			"Trigger conditions scoped to the affected configuration item on the incident",
+			"Discovery credentials assigned to the MID Server cluster for the subnet",
+			"Service catalog approval workflows for employee laptop requests",
+			"CMDB health KPI thresholds for duplicate CI remediation tasks"
 		],
-		"correctIndex": 1,
-		"explanation": "Consistent assignment and escalation require explicit ownership structures and severity governance.",
+		"correctIndex": 0,
+		"explanation": "Trigger conditions restrict when orchestration actions and flows execute based on incident fields such as affected CIs.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/configure-security-incident-response.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/incident-management/concept/incident-management.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/define-trigger-conditions.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/understand-trigger-conditions-work-with-configuration-item.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 72,
-		"prompt": "How should SIR administrators handle updates to playbooks and response tasks?",
+		"questionType": "multi",
+		"prompt": "Which two elements are configured when defining trigger conditions for SecOps orchestration actions? (Choose two.)",
 		"choices": [
-			"Represents the approach that edit playbooks live during active incidents.",
-			"Matches the scenario in which disable approval requirements for response workflow changes.",
-			"Reflects the condition that test changes in lower environments, validate with responders, and promote through change oversight.",
-			"Describes the outcome where permit local teams to fork uncontrolled playbook variants."
+			"Filter criteria that determine when the action may execute",
+			"Target table and fields evaluated against the security incident record",
+			"Discovery schedule frequency for MID Server subnet scanning",
+			"Service catalog item price and fulfillment group assignment"
 		],
-		"correctIndex": 2,
-		"explanation": "Controlled promotion and user validation prevent operational disruption during critical incidents.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Trigger conditions specify which records qualify and which field values must match before an orchestration action runs.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/automation/concept/flow-designer.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/define-trigger-conditions.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/verify-the-configured-trigger-conditions.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 73,
-		"prompt": "Which governance practice most improves SIR data quality and reporting trust?",
+		"prompt": "An EDR integration must quarantine endpoints directly from a security incident record. Which capability launches those external response actions?",
 		"choices": [
-			"Matches the scenario in which close incidents automatically when any task is completed.",
-			"Describes the outcome where enforce mandatory taxonomy fields, closure codes, and post-incident validation reviews.",
-			"Captures the choice stating allow free-text categorization with no required fields.",
-			"Reflects the condition that exclude low-severity incidents from all reporting."
+			"SecOps orchestration workflows invoked from Security Incident Response",
+			"CMDB identification rules merging duplicate computer CI records",
+			"Service Mapping ML candidate queues for application onboarding",
+			"Hardware asset disposal workflows in IT Asset Management"
 		],
-		"correctIndex": 1,
-		"explanation": "Consistent required data and review controls make SIR analytics more reliable and actionable.",
+		"correctIndex": 0,
+		"explanation": "Orchestration workflows integrate external security tools so responders execute containment actions without leaving the incident record.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/data-management.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/sec-inc-resp-orchestration-workflows.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/sir-orch-workflow-templates.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 74,
-		"prompt": "Which KPI set best indicates mature SIR administration?",
+		"prompt": "Malware alerts from a SIEM should spawn investigation tasks without manual analyst entry. Which playbook type supports that automation model?",
 		"choices": [
-			"Captures the choice stating longer incident queue times before triage.",
-			"Reflects the condition that consistent SLA adherence, lower reassignment churn, and high-quality closure data across incident tiers.",
-			"Matches the scenario in which higher count of unclassified incidents. documented in the service design package for new offerings. (CIS-SIR-74-w2)",
-			"Corresponds to the option where more emergency workflow edits in production."
+			"Automated malware playbook tied to ingestion and category rules",
+			"Manual phishing playbook requiring analyst initiation for every email",
+			"Failed login manual playbook for password spray events only",
+			"Discovery schedule playbook refreshing CMDB relationships nightly"
 		],
-		"correctIndex": 1,
-		"explanation": "Administrative maturity appears in operational consistency, governance discipline, and dependable reporting.",
+		"correctIndex": 0,
+		"explanation": "Automated malware playbooks create response tasks when qualifying alerts or incidents match configured criteria.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/using-automated-malware-playbook.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/create-process-automated-malware.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 75,
-		"prompt": "What is the primary purpose of severity models in Security Incident Response?",
+		"prompt": "An analyst working in Security Incident Response Workspace needs to launch the active response workflow for a record. Where do they access playbook execution?",
 		"choices": [
-			"Corresponds to the option where to align triage urgency and response actions to business impact.",
-			"Represents the approach that to classify only phishing incidents.",
-			"Captures the choice stating to prevent assignment to resolver groups.",
-			"Reflects the condition that to replace indicator thresholds in PA."
+			"The Playbooks area on the security incident record in SIR Workspace",
+			"The Discovery Status dashboard showing ECC queue throughput metrics",
+			"The CMDB class manager tree for cmdb_ci_appl attribute extensions",
+			"The Service Portal catalog builder for hardware request categories"
 		],
 		"correctIndex": 0,
-		"explanation": "Severity models standardize how response teams prioritize incidents based on impact and urgency.",
+		"explanation": "SIR Workspace exposes playbooks on the incident record so analysts can review and run structured response workflows.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/configure-security-incident-response.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/sir-workspace-playbooks.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/exploring-security-incident-response-workspace.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 76,
-		"prompt": "Which data practice most improves SIR analytics quality?",
+		"prompt": "A confirmed phishing incident requires analysts to execute predefined remediation steps from the workspace. Which playbook action supports that workflow?",
 		"choices": [
-			"Captures the choice stating auto-close incidents when one task completes.",
-			"Describes the outcome where allow free-text category values for flexibility.",
-			"Represents the approach that enforce required incident taxonomy and closure fields.",
-			"Corresponds to the option where hide low-severity incidents from reports."
+			"Action phishing playbook steps that create and track response tasks",
+			"Discovery horizontal pattern debugging for unmatched process CIs",
+			"CMDB health duplicate CI remediation from the Data Manager workspace",
+			"Service catalog checkout for standard employee laptop replacements"
 		],
-		"correctIndex": 2,
-		"explanation": "Standardized taxonomy and required closure data improve reporting consistency and trend analysis.",
+		"correctIndex": 0,
+		"explanation": "Action phishing playbooks guide analysts through structured remediation tasks for confirmed phishing incidents.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/c_DataManagement.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/action-phishing-playbook.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/run-phishing-playbook.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 77,
-		"prompt": "Why do SIR teams use playbooks with defined response tasks?",
+		"prompt": "Complex phishing automation requires reusable flow segments shared across multiple parent workflows. Which Flow Designer construct supports that design?",
 		"choices": [
-			"Represents the approach that to replace integration with threat intelligence feeds.",
-			"Corresponds to the option where to eliminate analyst decision making in every case.",
-			"Matches the scenario in which to bypass approval and escalation controls.",
-			"Describes the outcome where to execute repeatable containment and investigation workflows."
+			"Subflows invoked from the main phishing playbook flow for modular logic",
+			"Discovery identification rules merging hostname fields across sources",
+			"CMDB reconciliation rules setting datasource precedence for serial numbers",
+			"Service catalog record producers for password reset self-service"
 		],
-		"correctIndex": 3,
-		"explanation": "Playbooks help teams perform consistent, auditable actions during high-pressure security investigations.",
+		"correctIndex": 0,
+		"explanation": "Subflows let teams modularize phishing response logic so shared steps can be reused across multiple automated playbooks.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/configure-security-incident-response.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/automation/concept/flow-designer.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/subflow-phishing-playbook.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/flow-designer-and-phishing-response.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 78,
-		"prompt": "What should happen before a major update to SIR response workflows is promoted to production?",
+		"questionType": "multi",
+		"prompt": "Which two outcomes occur when an automated phishing playbook runs successfully? (Choose two.)",
 		"choices": [
-			"Matches the scenario in which change approval can be skipped for security apps.",
-			"Describes the outcome where the workflow should be tested in lower environments and validated by responders.",
-			"Represents the approach that the update should be made during an active incident.",
-			"Reflects the condition that existing incidents should be deleted first."
+			"Response tasks are created for analysts to execute defined remediation steps",
+			"Reported message observables are enriched and linked to the incident record",
+			"All security incidents in the instance are closed automatically",
+			"Discovery schedules are disabled to prevent CMDB updates during triage"
 		],
-		"correctIndex": 1,
-		"explanation": "Testing and responder validation reduce operational risk before workflow changes affect live investigations.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Automated phishing playbooks generate response work and enrich incident context; they do not mass-close unrelated incidents or halt discovery.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/using-automated-phishing-playbook.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/run-phishing-playbook.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 79,
-		"prompt": "Which KPI combination best reflects mature SIR operations?",
+		"prompt": "Before enabling automated malware handling in production, what should administrators configure alongside the playbook?",
 		"choices": [
-			"Reflects the condition that higher volume of emergency workflow edits.",
-			"Captures the choice stating longer analyst handoff chains.",
-			"Matches the scenario in which more incidents without assignment group.",
-			"Describes the outcome where lower mean time to contain and consistent high-quality closure evidence."
+			"Automated malware process definition with category and ingestion trigger rules",
+			"Manual phishing process requiring analyst clicks for every reported email",
+			"Discovery schedule targeting printer hardware on office subnets only",
+			"Service catalog bundle for procurement of replacement employee laptops"
 		],
-		"correctIndex": 3,
-		"explanation": "Mature response programs reduce containment time while maintaining reliable, auditable closure records.",
+		"correctIndex": 0,
+		"explanation": "Automated malware processes pair playbook logic with process definitions and triggers so qualifying alerts initiate response automatically.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/create-process-automated-malware.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/using-automated-malware-playbook.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 80,
-		"prompt": "What is the best way to improve consistency in initial SIR triage?",
+		"prompt": "Administrators catalog reusable Flow Designer components for Security Incident Response automation. Which resource lists prebuilt flows for common SecOps scenarios?",
 		"choices": [
-			"Reflects the condition that disable CI/context enrichment.",
-			"Corresponds to the option where use standardized severity criteria and assignment rules.",
-			"Matches the scenario in which let responders set severity after closure.",
-			"Captures the choice stating route all alerts to one analyst."
+			"The SIR Flow Library with packaged flows for standard response patterns",
+			"The Discovery pattern designer catalog for horizontal application probes",
+			"The CMDB Data Manager queue for orphaned relationship remediation",
+			"The Service Portal theme editor for employee self-service branding"
 		],
-		"correctIndex": 1,
-		"explanation": "Standard triage criteria and assignment logic reduce variance and speed up appropriate response routing.",
+		"correctIndex": 0,
+		"explanation": "The SIR Flow Library provides prebuilt Flow Designer content teams can adapt for common security response automation scenarios.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/configure-security-incident-response.html",
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/cj-sir-about-flows.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/cj-sir-flow-library.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 81,
-		"prompt": "Why should SIR teams track containment and eradication milestones separately?",
+		"prompt": "Integration engineers need starter templates when connecting EDR tools to Security Incident Response. Which artifact accelerates that implementation?",
 		"choices": [
-			"Reflects the condition that to avoid using playbooks.",
-			"Corresponds to the option where to distinguish immediate control actions from root-cause cleanup work.",
-			"Captures the choice stating to replace closure notes.",
-			"Represents the approach that to increase number of task states."
+			"SIR orchestration workflow templates for common third-party response actions",
+			"Discovery schedules assigning MID Servers to office printer subnets",
+			"CMDB class manager extensions for custom cmdb_ci_appl attributes",
+			"Service catalog item templates for employee mobile device requests"
 		],
-		"correctIndex": 1,
-		"explanation": "Separating milestones improves operational visibility and helps teams manage short-term and long-term response tasks.",
+		"correctIndex": 0,
+		"explanation": "Orchestration workflow templates provide starting points for integrating external security tools with incident response actions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/automation/concept/flow-designer.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/sir-orch-workflow-templates.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/sec-inc-resp-orchestration-workflows.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 82,
-		"prompt": "Which control most improves SIR escalation reliability?",
+		"prompt": "After configuring orchestration trigger filters, an administrator needs to confirm they match expected incidents. What is the recommended validation step?",
 		"choices": [
-			"Corresponds to the option where manual paging through personal email.",
-			"Describes the outcome where closing incidents before escalation.",
-			"Represents the approach that documented on-call groups with severity-based routing.",
-			"Captures the choice stating optional assignment groups for major incidents."
+			"Verify configured trigger conditions against sample security incident records",
+			"Disable all playbooks until the next major platform upgrade completes",
+			"Delete existing incidents so triggers only apply to future records",
+			"Remove affected CI references from every open incident manually"
 		],
-		"correctIndex": 2,
-		"explanation": "Defined on-call ownership and severity mapping ensures escalations happen predictably during high-impact events.",
+		"correctIndex": 0,
+		"explanation": "Verifying trigger conditions against representative incidents confirms automation fires only when intended criteria are satisfied.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/configure-security-incident-response.html",
-			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/verify-the-configured-trigger-conditions.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/define-trigger-conditions.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 83,
-		"prompt": "What should be required before closing a high-severity security incident?",
+		"prompt": "A Denial of Service security incident should automatically launch a predefined response workflow. Which configuration ties category values to workflow execution?",
 		"choices": [
-			"Describes the outcome where validated closure details and supporting investigation evidence.",
-			"Matches the scenario in which no related tasks were created.",
-			"Corresponds to the option where no analyst notes were captured.",
-			"Represents the approach that the incident was reassigned at least once."
+			"Process and playbook mapping where category selection triggers the matching template",
+			"Discovery schedule frequency controlling MID Server probe intervals",
+			"CMDB reconciliation precedence for hostname attribute updates",
+			"Service catalog fulfillment groups for hardware procurement requests"
 		],
 		"correctIndex": 0,
-		"explanation": "High-severity closures need complete evidence and documentation for auditability and lessons learned.",
+		"explanation": "Category-driven process definitions and workflow templates such as the Denial of Service template initiate response when qualifying field values are set.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/c_DataManagement.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/si-denial-of-service-template.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/category-management-sir.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 84,
-		"prompt": "Which metric best signals improvement in SIR response execution?",
+		"prompt": "SIEM alerts should become prioritized security incidents instead of standalone event records. Which SIR concept describes that operating model?",
 		"choices": [
-			"Reflects the condition that rising volume of emergency workflow edits.",
-			"Represents the approach that increasing number of unclassified incidents.",
-			"Describes the outcome where more unresolved incidents in pending state.",
-			"Matches the scenario in which decreasing mean time to contain for comparable incident types."
+			"Using security alerts as inputs that create or enrich security incident records",
+			"Storing all SIEM events only in the ECC queue without incident linkage",
+			"Routing alerts exclusively to HR cases for employee policy violations",
+			"Suppressing every monitoring alert once a CMDB CI record exists"
 		],
-		"correctIndex": 3,
-		"explanation": "Containment time is a core effectiveness measure when normalized across similar incident categories.",
+		"correctIndex": 0,
+		"explanation": "Security Incident Response integrates alert sources so monitoring events feed triage, prioritization, and managed incident workflows.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/c_ScIncdUseAlrts.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/what-is-sir.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 85,
-		"prompt": "What is the strongest reason to integrate threat observables into SIR records?",
+		"questionType": "multi",
+		"prompt": "Which two benefits does SecOps process automation deliver when flows execute on security incidents? (Choose two.)",
 		"choices": [
-			"Describes the outcome where to close low-priority incidents automatically.",
-			"Matches the scenario in which to avoid assignment to incident response groups.",
-			"Reflects the condition that to improve correlation, enrichment, and investigative context.",
-			"Captures the choice stating to replace severity definitions."
+			"Reduced manual handoffs through automated task and enrichment steps",
+			"Consistent execution of approved response procedures across analyst shifts",
+			"Permanent removal of analyst review from every incident category",
+			"Automatic closure of all incidents regardless of containment evidence"
 		],
-		"correctIndex": 2,
-		"explanation": "Observable context strengthens investigation quality and supports more accurate incident correlation.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Process automation speeds handoffs and standardizes response, but analysts still govern categories that require judgment and validated closure.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/configure-security-incident-response.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/cj-sir-about-flows.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/sec-inc-resp-orchestration-workflows.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 86,
-		"prompt": "Which control helps keep SIR playbooks operationally effective over time?",
+		"prompt": "An analyst confirms a phishing incident and must start the approved response workflow from the record. Which action should they take in SIR Workspace?",
 		"choices": [
-			"Reflects the condition that allow uncontrolled team-specific playbook forks.",
-			"Captures the choice stating review and test playbooks periodically with responder feedback.",
-			"Corresponds to the option where restrict all playbooks to manual tasks only.",
-			"Matches the scenario in which update playbooks only after major audits."
+			"Run the phishing playbook from the Playbooks area on the incident record",
+			"Rebuild CMDB relationships manually before any response task is created",
+			"Disable discovery schedules globally to prevent CI updates during triage",
+			"Convert the incident to a hardware catalog request for endpoint replacement"
 		],
-		"correctIndex": 1,
-		"explanation": "Periodic testing and feedback keep playbooks aligned with real incident handling needs.",
+		"correctIndex": 0,
+		"explanation": "Analysts launch playbooks directly from the incident record in SIR Workspace to execute structured phishing response tasks.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/task/configure-security-incident-response.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/automation/concept/flow-designer.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/run-phishing-playbook.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/sir-workspace-playbooks.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 87,
-		"prompt": "What is the best way to reduce reassignment churn in high-severity SIR cases?",
+		"prompt": "End users click Report Phish on suspicious email messages forwarded to the security team mailbox. What happens next in the automated pipeline?",
 		"choices": [
-			"Reflects the condition that route incidents randomly among available analysts.",
-			"Corresponds to the option where use clear ownership rules tied to severity and incident type.",
-			"Represents the approach that disable severity categories for all incidents.",
-			"Captures the choice stating assign every case to the same queue first."
+			"Parsing rules validate the message and can create or update a security incident",
+			"Discovery probes scan the sender subnet before any record is created",
+			"CMDB reconciliation merges duplicate email server CI records first",
+			"Service catalog checkout assigns a laptop replacement to the reporter"
 		],
-		"correctIndex": 1,
-		"explanation": "Defined ownership routing reduces handoffs and speeds response during high-impact incidents.",
+		"correctIndex": 0,
+		"explanation": "Report-phish email processing applies organizational parsing rules that validate submissions and initiate incident or playbook workflows.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
-			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/report-phish-email.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/getting-started-phishing-playbook.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 88,
-		"prompt": "Which outcome demonstrates effective SIR post-incident review practice?",
+		"prompt": "Leadership wants visibility into automation bottlenecks across phishing and malware response paths. Which analytics capability supports that review?",
 		"choices": [
-			"Corresponds to the option where removal of incident taxonomy fields for faster closure.",
-			"Captures the choice stating documented lessons learned that update controls or playbooks.",
-			"Describes the outcome where immediate closure of all linked tasks regardless evidence.",
-			"Represents the approach that suppressing review findings from leadership dashboards."
+			"SIR process mining dashboards showing workflow timing and variant analysis",
+			"Discovery ECC queue metrics measuring MID Server throughput only",
+			"CMDB health scores for duplicate CI classes without workflow context",
+			"Service catalog order volumes for employee mobile device requests"
 		],
-		"correctIndex": 1,
-		"explanation": "Post-incident reviews are valuable when lessons are captured and translated into measurable control improvements.",
+		"correctIndex": 0,
+		"explanation": "SIR process mining analyzes response workflow execution to reveal delays, rework, and automation opportunities across incident types.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/compliance/concept/compliance-management.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/sir-process-mining.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/reports-and-metrics.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 89,
-		"prompt": "Which KPI pairing gives leadership the clearest SIR maturity signal?",
+		"prompt": "A team prepares to promote updated phishing automation flows to production. Which governance practice reduces operational risk?",
 		"choices": [
-			"Corresponds to the option where lower mean time to contain with high closure data completeness.",
-			"Represents the approach that higher number of open severity-1 incidents.",
-			"Describes the outcome where longer average time before initial triage.",
-			"Matches the scenario in which more emergency changes during active incidents."
+			"Test flows in sub-production, validate with responders, and promote through change oversight",
+			"Edit live playbooks during active critical incidents to save time",
+			"Skip trigger verification so automation runs on every incident state",
+			"Allow each analyst to maintain uncontrolled personal playbook variants"
 		],
 		"correctIndex": 0,
-		"explanation": "Containment speed plus data completeness shows both operational responsiveness and governance quality.",
+		"explanation": "Controlled testing and change governance prevent automation changes from disrupting live incident response operations.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-security-management/page/product/security-incident-response/concept/security-incident-response.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/flow-designer-and-phishing-response.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/getting-started-with-processes.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 0,
-		"prompt": "In Service Mapping, what is an application service?",
+		"prompt": "During top-down Service Mapping, no Pattern Identification Section matches the discovered process on a host. What application CI type is created for that component?",
 		"choices": [
-			"Describes the outcome where a project task in Agile Development. scoped to the appropriate business application and module. (CIS-SM-0-w0)",
-			"Matches the scenario in which a logical grouping of connected applications and hosts that work together to deliver a business-facing service.",
-			"Reflects the condition that a single network interface card. consistent with the instance data separation strategy. (CIS-SM-0-w2)",
-			"Represents the approach that a vendor contract record. validated against baseline KPIs before go-live approval. (CIS-SM-0-w3)"
+			"A generic application CI representing the unmatched process until a pattern is assigned",
+			"A business service record linked directly to the cmdb_ci_computer record with full dependency rollup",
+			"A discovery error log entry that blocks all further mapping on the subnet and disables MID Server probes",
+			"A manual relationship stub with no CI created in the CMDB"
 		],
-		"correctIndex": 1,
-		"explanation": "Service mapping documentation defines an application service as connected applications and infrastructure components that jointly provide a service.",
+		"correctIndex": 0,
+		"explanation": "When identification sections do not match, Service Mapping creates a generic application so the topology can continue while the pattern gap is resolved.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-get-started.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/pattern-based-discovery.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 1,
-		"prompt": "Why is a healthy CMDB foundation commonly emphasized before expanding service mapping coverage?",
+		"prompt": "What is the role of Pattern Identification Sections in a Service Mapping pattern?",
 		"choices": [
-			"Describes the outcome where discovery must be disabled first. certified through the platform quality gate checklist. (CIS-SM-1-w0)",
-			"Reflects the condition that service maps depend on reliable setup items and relationships to build accurate dependency views.",
-			"Captures the choice stating cMDB health is unrelated to mapping accuracy.",
-			"Matches the scenario in which service mapping never reads CMDB data."
+			"They define how downstream connection probes authenticate to external SaaS APIs only across all cloud regions",
+			"They evaluate collected process and configuration data to decide whether the pattern applies to a CI",
+			"They schedule recurring horizontal discovery runs against every subnet in the range",
+			"They replace entry point records by auto-generating URLs from DNS zone transfers"
 		],
 		"correctIndex": 1,
-		"explanation": "Getting started guidance ties successful mapping to solid configuration data quality because maps are built from CMDB relationships and CI detail.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-get-started.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SM",
-		"order": 2,
-		"prompt": "Which outcome is a primary benefit of maintaining up-to-date service maps for IT operations?",
-		"choices": [
-			"Corresponds to the option where eliminating the need for incident records.",
-			"Matches the scenario in which removing change management oversight.",
-			"Reflects the condition that guaranteeing 100% patch compliance without scanning.",
-			"Captures the choice stating faster impact analysis and prioritization based on business service context."
-		],
-		"correctIndex": 3,
-		"explanation": "Service mapping is positioned to make operations service-aware so teams can understand what infrastructure supports a business service when issues occur.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-get-started.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SM",
-		"order": 3,
-		"prompt": "Service Mapping is part of which ServiceNow solution area?",
-		"choices": [
-			"Reflects the condition that accounts Payable Operations.",
-			"Captures the choice stating iT Operations Management.",
-			"Corresponds to the option where legal Service Management.",
-			"Represents the approach that human Resources Service Delivery."
-		],
-		"correctIndex": 1,
-		"explanation": "Service Mapping documentation is published under the IT Operations Management documentation set as an ITOM capability.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-get-started.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SM",
-		"order": 4,
-		"prompt": "Compared with only inventorying devices, what additional question does Service Mapping most directly help answer for a CIO dashboard?",
-		"choices": [
-			"Corresponds to the option where the exact salary for every employee.",
-			"Represents the approach that the corporate holiday schedule.",
-			"Describes the outcome where how many cafeterias the company operates.",
-			"Captures the choice stating which business services are supported by the discovered applications and infrastructure."
-		],
-		"correctIndex": 3,
-		"explanation": "Service mapping focuses on dependency and service context—connecting technical components to the services the business relies on.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-get-started.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SM",
-		"order": 5,
-		"prompt": "For CIS-Service Mapping, what defines an application service in CMDB terms?",
-		"choices": [
-			"Corresponds to the option where a service desk queue with an assignment group.",
-			"Describes the outcome where a logical service record with mapped upstream/downstream dependencies to supporting CIs.",
-			"Matches the scenario in which a single server discovered by credentialless scan.",
-			"Represents the approach that a software entitlement tied to a publisher."
-		],
-		"correctIndex": 1,
-		"explanation": "Application services represent business-relevant technical services and depend on accurate CI relationships.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/application-services.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SM",
-		"order": 6,
-		"prompt": "A team maps web and app tiers but misses a critical database dependency. What is the most likely impact?",
-		"choices": [
-			"Describes the outcome where service impact analysis will be incomplete during incidents and changes.",
-			"Represents the approach that event rules cannot process warning events.",
-			"Reflects the condition that discovery schedules stop running.",
-			"Matches the scenario in which change approvals are automatically bypassed."
-		],
-		"correctIndex": 0,
-		"explanation": "Missing dependencies reduce map fidelity, which can mislead impact analysis and outage triage decisions.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-get-started.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SM",
-		"order": 7,
-		"prompt": "Why do service owners care that application services are tied to business services?",
-		"choices": [
-			"Reflects the condition that it removes the need for relationship types in CMDB.",
-			"Matches the scenario in which it connects technical outages to business impact and stakeholder communication priorities.",
-			"Describes the outcome where it guarantees 100% event deduplication.",
-			"Captures the choice stating it auto-generates software contracts."
-		],
-		"correctIndex": 1,
-		"explanation": "Business service context helps operations translate technical failures into user-facing impact and response urgency.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/business-services-and-application-services.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SM",
-		"order": 8,
-		"prompt": "Which mapping strategy is best when onboarding a high-criticality application service for the first time?",
-		"choices": [
-			"Captures the choice stating map every subnet simultaneously without owner validation.",
-			"Corresponds to the option where use only manual CI relationships and avoid discovery inputs.",
-			"Reflects the condition that disable identification rules to speed map creation.",
-			"Matches the scenario in which start with one entry point and validate discovered dependencies with service owners before broadening scope."
-		],
-		"correctIndex": 0,
-		"explanation": "Controlled onboarding with validated entry points improves accuracy and reduces noisy or incorrect dependencies.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/create-a-service-map.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SM",
-		"order": 9,
-		"prompt": "What governance metric best reflects healthy application service mapping over time?",
-		"choices": [
-			"Reflects the condition that number of manually edited script includes.",
-			"Represents the approach that total count of CI classes in CMDB.",
-			"Corresponds to the option where coverage and freshness of critical service maps with validated dependency accuracy.",
-			"Captures the choice stating percentage of incidents closed in under five minutes."
-		],
-		"correctIndex": 2,
-		"explanation": "Map coverage plus ongoing accuracy and freshness are stronger indicators of Service Mapping quality than raw volume metrics.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-kpis.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SM",
-		"order": 10,
-		"prompt": "Before scaling Service Mapping, which CMDB prerequisite is most critical?",
-		"choices": [
-			"Represents the approach that disabling relationship types to reduce complexity.",
-			"Describes the outcome where using only manual CI creation from spreadsheets.",
-			"Captures the choice stating removing duplicate detection on discovery imports.",
-			"Corresponds to the option where accurate CI identification and reconciliation rules with stable class models."
-		],
-		"correctIndex": 3,
-		"explanation": "Reliable identification and reconciliation are foundational to preventing duplicates and ensuring map accuracy.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/identification-and-reconciliation.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SM",
-		"order": 11,
-		"prompt": "Why is CMDB health scoring relevant to CIS-Service Mapping readiness?",
-		"choices": [
-			"Represents the approach that it replaces the need for MID Servers.",
-			"Matches the scenario in which it only tracks incident closure SLA.",
-			"Corresponds to the option where it measures data completeness, correctness, and compliance that affect service map quality.",
-			"Describes the outcome where it automatically creates application services."
-		],
-		"correctIndex": 0,
-		"explanation": "CMDB Health metrics expose data quality gaps that directly impact dependency mapping outcomes.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-health-dashboard.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SM",
-		"order": 12,
-		"prompt": "A team has strong discovery coverage but poor map trust. Which prerequisite is likely missing?",
-		"choices": [
-			"Represents the approach that more assignment groups in Incident Management.",
-			"Matches the scenario in which monthly purge of all dependency relationships.",
-			"Describes the outcome where governed relationship types and cleanup of stale or orphaned CIs.",
-			"Reflects the condition that higher event volume from monitoring tools."
-		],
-		"correctIndex": 2,
-		"explanation": "Discovery volume alone is insufficient; relationship quality and stale CI governance are required for trustworthy maps.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-data-manager.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SM",
-		"order": 13,
-		"prompt": "What is the best prerequisite approach for credentials and access used by mapping discovery patterns?",
-		"choices": [
-			"Matches the scenario in which rotate credentials only after outages.",
-			"Captures the choice stating store credentials in plain text for troubleshooting.",
-			"Reflects the condition that implement least-privilege credentials and validate access paths before production mapping.",
-			"Describes the outcome where use shared domain admin credentials for all environments."
-		],
-		"correctIndex": 2,
-		"explanation": "Least-privilege and validated access reduce security risk while supporting reliable data collection for maps.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/discovery-credentials.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SM",
-		"order": 14,
-		"prompt": "Which governance routine is most useful before onboarding the next wave of services to Service Mapping?",
-		"choices": [
-			"Captures the choice stating allowing ad hoc CI class creation by any fulfiller.",
-			"Corresponds to the option where resetting class manager customizations monthly.",
-			"Matches the scenario in which disabling all reconciliation rules temporarily.",
-			"Reflects the condition that cMDB readiness review covering CI quality, ownership, relationship integrity, and discovery health."
-		],
-		"correctIndex": 3,
-		"explanation": "A structured readiness review prevents onboarding unstable data into map scope and improves long-term map quality.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SM",
-		"order": 15,
-		"prompt": "In tag-based service mapping, what is the key benefit of using cloud tags consistently?",
-		"choices": [
-			"Represents the approach that it prevents dependency discovery.",
-			"Reflects the condition that it replaces service entry points entirely.",
-			"Captures the choice stating it disables CMDB reconciliation logic.",
-			"Corresponds to the option where it enables automated grouping of related resources into application service context."
-		],
-		"correctIndex": 3,
-		"explanation": "Consistent tagging supports automated association and governance of cloud resources in map scope.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/tag-based-service-mapping.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SM",
-		"order": 16,
-		"prompt": "Which tagging standard most improves map reliability across multiple cloud accounts?",
-		"choices": [
-			"Captures the choice stating rotating tag formats every sprint.",
-			"Corresponds to the option where applying tags only to load balancers.",
-			"Represents the approach that defining required tag keys and values for service, environment, and ownership.",
-			"Describes the outcome where using owner-defined tags with no naming convention."
-		],
-		"correctIndex": 2,
-		"explanation": "Standardized keys and values are required for predictable grouping and accurate service association.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/cloud-tag-governance.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SM",
-		"order": 17,
-		"prompt": "A cloud migration introduces many untagged resources. What is the biggest mapping risk?",
-		"choices": [
-			"Represents the approach that automatic deletion of discovery schedules.",
-			"Describes the outcome where resources may be excluded or misgrouped, reducing service map completeness and trust.",
-			"Matches the scenario in which lower incident SLA targets.",
-			"Corresponds to the option where increased CI icon rendering time only."
-		],
-		"correctIndex": 1,
-		"explanation": "Untagged or inconsistently tagged resources undermine automated grouping and degrade map completeness.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/tag-based-discovery-prerequisites.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SM",
-		"order": 18,
-		"prompt": "What is the best operational pattern for tag-based mapping changes in production?",
-		"choices": [
-			"Represents the approach that disable reconciliation during tag updates.",
-			"Matches the scenario in which apply tag logic directly in prod without testing.",
-			"Reflects the condition that use one global tag for all services.",
-			"Describes the outcome where validate new tag rules in lower environments, then promote with controlled change."
-		],
-		"correctIndex": 3,
-		"explanation": "Controlled validation and promotion prevent large-scale misclassification in production maps.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/change-management-for-service-mapping.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SM",
-		"order": 19,
-		"prompt": "Which KPI best measures tag-based mapping effectiveness?",
-		"choices": [
-			"Matches the scenario in which count of discovery credentials stored.",
-			"Describes the outcome where percentage of mapped service CIs with compliant required tags and validated dependencies.",
-			"Captures the choice stating number of incident categories in ITSM.",
-			"Reflects the condition that total number of tag keys in the enterprise."
-		],
-		"correctIndex": 1,
-		"explanation": "Compliance of required tags plus dependency validation reflects whether tag-based mapping is accurate and governable.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-kpis.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SM",
-		"order": 20,
-		"prompt": "Pattern-based discovery in Service Mapping is primarily used to:",
-		"choices": [
-			"Captures the choice stating determine application components and dependencies using reusable logic per technology pattern.",
-			"Corresponds to the option where replace CMDB reconciliation policies.",
-			"Reflects the condition that classify software spend by department.",
-			"Matches the scenario in which create policy statements in IRM. maintained through automated health checks and monitoring. (CIS-SM-20-w3)"
-		],
-		"correctIndex": 0,
-		"explanation": "Patterns provide reusable discovery logic to identify components and build accurate dependency relationships.",
+		"explanation": "Identification sections contain conditional logic that determines if a discovered component matches the pattern before connection and extension steps execute.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-patterns-overview.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
-		"order": 21,
-		"prompt": "Which prerequisite most improves success when creating custom pattern-based service discovery logic?",
+		"order": 2,
+		"prompt": "On a service map, a CI node displays a yellow triangle warning icon. What does this indicator most commonly represent?",
 		"choices": [
-			"Reflects the condition that clear expected entry points, credentials, and CI identification strategy for target technology.",
-			"Represents the approach that removing relationship classes from CMDB.",
-			"Corresponds to the option where disabling all identification rules before testing.",
-			"Captures the choice stating limiting pattern testing to production only."
+			"The CI was retired from the CMDB and should be removed from the map manually by the service owner",
+			"A credential or authentication failure prevented Service Mapping from accessing the host",
+			"The application service reached end-of-life and mapping was permanently disabled",
+			"A pending change request blocked all discovery probes until approval completes"
+		],
+		"correctIndex": 1,
+		"explanation": "The yellow triangle on a mapped CI typically signals a credential error or access failure encountered while collecting dependency data.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/create-a-service-map.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 3,
+		"prompt": "A mapped host shows repeated credential failures during the latest service map run. What is the first corrective action?",
+		"choices": [
+			"Delete the service map and recreate it without any entry points configured",
+			"Disable all identification rules globally so mapping skips authentication entirely on every MID Server",
+			"Verify the Discovery credential assigned to the CI class is valid and permitted on the target host",
+			"Convert the entry point CI class to cmdb_ci_business_app to bypass credential checks"
+		],
+		"correctIndex": 2,
+		"explanation": "Credential errors are resolved by confirming the correct Discovery credential is assigned, active, and authorized on the target system.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/create-a-service-map.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 4,
+		"prompt": "In Pattern Designer, why would an implementer enable debug mode while building a new Service Mapping pattern?",
+		"choices": [
+			"To permanently disable pattern versioning so production and sandbox stay synchronized",
+			"To bypass MID Server execution and run all steps only on the instance server",
+			"To inspect step-by-step execution output and variable values during pattern testing",
+			"To auto-publish the pattern to all MID Servers without a manual content update"
+		],
+		"correctIndex": 2,
+		"explanation": "Debug mode exposes detailed execution traces so implementers can validate step logic, variable assignments, and parsing results before promotion.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 5,
+		"prompt": "Within Pattern Designer, how do ordered steps inside a section support Service Mapping logic?",
+		"choices": [
+			"They sequence data collection, parsing, and connection actions in a controlled execution order",
+			"They assign incident priority based on the number of mapped CIs in the service group and business criticality tier",
+			"They replace CMDB identification rules with manual relationship imports from spreadsheets",
+			"They convert business service records into technical service endpoints automatically"
 		],
 		"correctIndex": 0,
-		"explanation": "Custom patterns need known entry points, access, and identification alignment to produce dependable map data.",
+		"explanation": "Sections group related logic, and ordered steps within each section execute sequentially to collect, transform, and connect dependency data.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-patterns-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 6,
+		"prompt": "An implementer adds a temporary variable in Pattern Designer. What is the typical use of that variable?",
+		"choices": [
+			"Store parsed values or intermediate results for use in later steps within the same pattern run",
+			"Persist user session tokens across unrelated horizontal discovery schedules indefinitely",
+			"Override CMDB reconciliation rules for every CI class in the discovery scope",
+			"Replace Discovery credentials with encrypted values stored in a system property"
+		],
+		"correctIndex": 0,
+		"explanation": "Temporary variables hold intermediate data—such as parsed strings or matched groups—so subsequent steps can reference results from earlier operations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 7,
+		"prompt": "What capability does the Pattern Designer command line console provide during pattern development?",
+		"choices": [
+			"Bulk import of service map schedules from external monitoring tools",
+			"Direct execution and testing of pattern commands against a selected target CI",
+			"Automatic generation of business service ownership records from LDAP groups",
+			"One-click deployment of tag-based mapping rules to cloud provider accounts"
+		],
+		"correctIndex": 1,
+		"explanation": "The command line console lets implementers run individual pattern commands interactively to validate syntax and output before embedding them in steps.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 8,
+		"prompt": "A pattern step uses a Match operation. What does this operation accomplish?",
+		"choices": [
+			"Compares collected text against a defined pattern to determine whether conditions are satisfied",
+			"Creates a CMDB relationship between two CIs without running any probe on the MID Server",
+			"Schedules the next service map run based on the current map completion timestamp",
+			"Encrypts credential aliases before they are sent to the target host for authentication"
+		],
+		"correctIndex": 0,
+		"explanation": "Match operations evaluate input—often command output or file content—against a pattern expression to drive conditional pattern flow.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-patterns-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 9,
+		"prompt": "When should a Parse Variable operation be used in a Service Mapping pattern step?",
+		"choices": [
+			"When the step must extract structured values from text already stored in a pattern variable",
+			"When the step must delete stale CI relationships before the next horizontal discovery cycle across all subnets",
+			"When the step must assign a default business service owner from the assignment group table",
+			"When the step must disable SNMP traps on the target device during maintenance windows"
+		],
+		"correctIndex": 0,
+		"explanation": "Parse Variable operations pull specific substrings or tokenized values from an existing variable for use in identification or connection logic.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 10,
+		"prompt": "A Parse File operation in Pattern Designer is most appropriate when the pattern must do what?",
+		"choices": [
+			"Read configuration or log file contents from a target host and extract dependency details",
+			"Generate PDF reports of service map topology for executive dashboard consumption",
+			"Import software entitlement records from a publisher CSV into the SAM application",
+			"Convert event management alert rules into service map entry point definitions"
+		],
+		"correctIndex": 0,
+		"explanation": "Parse File steps retrieve file content—such as application config files—and parse structured data needed for identification or connection mapping.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 11,
+		"prompt": "WMI-based scripting steps in Service Mapping patterns are commonly used to collect what information from Windows hosts?",
+		"choices": [
+			"Running processes, services, and configuration attributes queried through Windows Management Instrumentation",
+			"OAuth tokens from Azure Active Directory for cloud tag synchronization workflows",
+			"SNMP trap definitions exported from third-party network monitoring appliances",
+			"Change calendar entries linked to maintenance windows in the ITSM application"
+		],
+		"correctIndex": 0,
+		"explanation": "WMI steps query Windows hosts for process lists, service details, and other OS-level data used to identify applications and connections.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/c-UsingPatternsForHorizontalDiscovery.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 12,
+		"prompt": "SSH-based pattern steps require which prerequisite before they can execute successfully on a Linux host?",
+		"choices": [
+			"A valid SSH Discovery credential with permissions to run the configured commands on the target",
+			"An active Event Management connector subscribed to the host syslog stream",
+			"A business service record in the Operational Status of Retired state",
+			"A tag-based mapping rule published to the cloud provider resource group"
+		],
+		"correctIndex": 0,
+		"explanation": "SSH steps depend on Discovery credentials that authenticate to the host and authorize execution of the remote commands defined in the pattern.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 13,
+		"prompt": "Regular expression operations in Service Mapping patterns are typically used to do what?",
+		"choices": [
+			"Extract ports, paths, or connection strings from command output or configuration text",
+			"Calculate CMDB health scores based on duplicate CI counts per discovery schedule and reconciliation policy",
+			"Assign incident assignment groups based on mapped application service criticality",
+			"Generate machine learning training labels for tag-based service classification"
+		],
+		"correctIndex": 0,
+		"explanation": "Regex parsing isolates structured tokens—such as IP addresses, ports, or URLs—from unstructured command or file output for connection mapping.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 14,
+		"prompt": "SNMP-based steps in a Service Mapping pattern depend on what target-side configuration?",
+		"choices": [
+			"SNMP agent enabled on the device with a community string or credential matching Discovery settings",
+			"SSH key exchange configured on the MID Server for privileged command execution",
+			"WMI firewall rules allowing remote registry access from every subnet in scope",
+			"Azure resource tags formatted with the service-mapping namespace prefix"
+		],
+		"correctIndex": 0,
+		"explanation": "SNMP steps require an accessible SNMP agent and credentials or community strings configured consistently with Discovery credential records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 15,
+		"prompt": "During pattern execution, what does a Pattern Identification Section evaluate before connection logic runs?",
+		"choices": [
+			"Whether discovered attributes on the CI satisfy the pattern matching criteria for that application type",
+			"Whether the business service owner approved the latest change request for the application",
+			"Whether the CMDB health dashboard score exceeds the corporate compliance threshold",
+			"Whether the event management maintenance window is active for the mapped service group"
+		],
+		"correctIndex": 0,
+		"explanation": "Identification sections gate pattern execution by testing process names, ports, files, or other attributes against defined match conditions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/pattern-based-discovery.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 16,
+		"prompt": "Connection sections in a Service Mapping pattern define what behavior?",
+		"choices": [
+			"How the pattern discovers and maps relationships to upstream or downstream dependent CIs",
+			"How incident records auto-close after the configured glide.ui.autoclose.time interval",
+			"How software models are normalized during horizontal discovery classification",
+			"How hardware asset depreciation schedules sync from procurement invoice data"
+		],
+		"correctIndex": 0,
+		"explanation": "Connection sections contain steps that probe remote hosts, parse responses, and create CMDB relationships representing service dependencies.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/pattern-based-discovery.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 17,
+		"prompt": "A pattern matches identification criteria but produces no downstream CIs on the service map. What should be reviewed first?",
+		"choices": [
+			"The Connection Section steps, variables, and credentials used to reach dependent components",
+			"The business service financial rollup fields on the cmdb_ci_service record",
+			"The global incident assignment group default for the mapped application tier",
+			"The event rule correlation policy tied to the monitoring connector template"
+		],
+		"correctIndex": 0,
+		"explanation": "When identification succeeds but dependencies are missing, connection logic, parsing, or credential access to downstream targets is the most common root cause.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-pattern-best-practices.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 18,
+		"prompt": "How does Service Mapping associate a running process on a host with an application CI in the CMDB?",
+		"choices": [
+			"Pattern identification logic matches process attributes and creates or links the appropriate application CI",
+			"Every running process is manually classified by the service desk before mapping can begin",
+			"Business service records inherit process names directly from Windows event logs",
+			"Discovery schedules copy process lists into incident work notes without creating CIs"
+		],
+		"correctIndex": 0,
+		"explanation": "Service Mapping patterns identify processes through conditional logic and then create or relate application CIs as part of top-down mapping.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/pattern-based-discovery.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 19,
+		"prompt": "When extending an out-of-box Service Mapping pattern, which practice best preserves upgrade compatibility?",
+		"choices": [
+			"Copy the pattern to a custom version and limit changes to additive sections rather than editing base vendor steps",
+			"Delete all vendor identification sections and rebuild logic from scratch in the production instance",
+			"Disable pattern versioning so ServiceNow content updates overwrite local customizations silently",
+			"Store all pattern logic in a single monolithic step to reduce section count"
+		],
+		"correctIndex": 0,
+		"explanation": "Custom pattern copies with additive extensions allow vendor updates to merge while preserving customer-specific identification or connection logic.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/manage-discovery-pattern-versions.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 20,
+		"prompt": "During Service Mapping pattern troubleshooting, MID Server logs are most useful for diagnosing which issue class?",
+		"choices": [
+			"Probe execution failures, connectivity timeouts, and credential errors during pattern runs",
+			"Software entitlement import errors from publisher part number mismatches",
+			"Change advisory board approval delays on standard change templates",
+			"Knowledge article versioning conflicts in the self-service portal"
+		],
+		"correctIndex": 0,
+		"explanation": "MID Server logs capture probe and pattern execution details, making them essential when diagnosing access, timeout, or parsing failures.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-pattern-best-practices.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 21,
+		"prompt": "Before broad deployment, why should a custom Service Mapping pattern be tested against a single known host?",
+		"choices": [
+			"To validate identification and connection output against expected topology before scaling scope",
+			"To permanently lock the pattern version so content updates cannot be applied",
+			"To bypass CMDB reconciliation for all CIs discovered during the test run",
+			"To auto-assign business service ownership from the host assignment group field"
+		],
+		"correctIndex": 0,
+		"explanation": "Controlled single-host testing confirms pattern logic produces accurate CIs and relationships before running against production entry points.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
 		]
@@ -19457,1134 +19554,1168 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 	{
 		"trackCode": "CIS-SM",
 		"order": 22,
-		"prompt": "Why should pattern execution results be validated against known architecture diagrams during onboarding?",
+		"prompt": "After ServiceNow publishes updated pattern library content, what action may be required in a customer instance?",
 		"choices": [
-			"Corresponds to the option where to confirm discovered components and dependencies match intended application topology.",
-			"Describes the outcome where to bypass service owner approval.",
-			"Captures the choice stating to reduce MID Server memory use only.",
-			"Represents the approach that to avoid creating service maps. isolated in a dedicated update set per feature increment. (CIS-SM-22-w3)"
+			"Review and merge vendor pattern updates with custom copies while preserving local extensions",
+			"Delete all service maps so Discovery recreates business services from event rules",
+			"Disable MID Server clustering to force single-node pattern execution",
+			"Convert all entry points to tag-based mapping rules regardless of architecture"
 		],
 		"correctIndex": 0,
-		"explanation": "Comparing output to known topology catches false relationships and missing dependencies early.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/validate-service-map-results.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SM",
-		"order": 23,
-		"prompt": "What is the most common risk of unmanaged custom pattern changes?",
-		"choices": [
-			"Describes the outcome where they force Discovery to use credentialless scanning only.",
-			"Represents the approach that they can introduce incorrect CI identification or relationships that degrade map trust.",
-			"Corresponds to the option where they eliminate duplicate CIs permanently.",
-			"Matches the scenario in which they automatically improve map accuracy in all cases."
-		],
-		"correctIndex": 1,
-		"explanation": "Uncontrolled pattern changes can create misidentification and bad relationships, reducing confidence in map data.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-pattern-best-practices.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SM",
-		"order": 24,
-		"prompt": "Which governance routine best sustains pattern-based discovery quality over time?",
-		"choices": [
-			"Matches the scenario in which version-controlled pattern updates with test evidence, peer review, and scheduled regression validation.",
-			"Reflects the condition that editing production patterns directly during incidents.",
-			"Describes the outcome where deleting old pattern execution logs immediately. coordinated with the platform center of excellence team. (CIS-SM-24-w2)",
-			"Represents the approach that skipping documentation for custom pattern steps."
-		],
-		"correctIndex": 0,
-		"explanation": "Version control, review, and regression testing maintain reliability as environments and technologies evolve.",
+		"explanation": "Pattern library updates can overwrite or merge with instance patterns, so teams review customizations and reconcile versions after content refresh.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/manage-discovery-pattern-versions.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
-		"order": 25,
-		"prompt": "A SecOps manager wants a service map dashboard for executives. What should be emphasized first?",
+		"order": 23,
+		"prompt": "How do horizontal Discovery patterns differ from Service Mapping patterns in purpose?",
 		"choices": [
-			"Describes the outcome where individual analyst preference widgets.",
-			"Captures the choice stating mID Server JVM metrics only.",
-			"Reflects the condition that service health indicators tied to business-critical maps and active risk conditions.",
-			"Matches the scenario in which raw event count by connector without service context."
+			"Horizontal patterns inventory and classify CIs broadly, while Service Mapping patterns build application dependency topologies",
+			"Horizontal patterns run only on cloud resources, while Service Mapping patterns run only on mainframes",
+			"Horizontal patterns replace CMDB relationships, while Service Mapping patterns disable identification rules",
+			"Horizontal patterns require machine learning, while Service Mapping patterns prohibit credential use"
 		],
-		"correctIndex": 2,
-		"explanation": "Executive dashboards should focus on business service impact, not tool-centric telemetry details.",
+		"correctIndex": 0,
+		"explanation": "Horizontal discovery populates CMDB inventory; Service Mapping patterns extend that foundation to map how applications connect across infrastructure.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/c-UsingPatternsForHorizontalDiscovery.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 24,
+		"questionType": "multi",
+		"prompt": "Which two validations are recommended before promoting a custom Service Mapping pattern to production? (Choose two.)",
+		"choices": [
+			"Debug-mode testing confirms identification and connection steps produce expected CIs on a known host",
+			"A peer review verifies credential references and parsing logic for fragile command output",
+			"All horizontal discovery schedules are disabled globally for thirty days",
+			"Every business service record is converted to a manual CI relationship import"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Production promotion requires verified pattern output on representative targets and review of credentials and parsing logic to prevent map quality regressions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-pattern-best-practices.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 25,
+		"prompt": "A Connection Section references a temporary variable that was never populated by an earlier step. What symptom appears during mapping?",
+		"choices": [
+			"Downstream connection steps fail or skip because required parsed values are empty or undefined",
+			"The service map schedule automatically doubles its run frequency until the variable resolves",
+			"All CIs on the map display a green check mark indicating successful credential validation",
+			"The pattern is promoted to production status without requiring further testing"
+		],
+		"correctIndex": 0,
+		"explanation": "Missing variable values break connection logic that depends on parsed data, resulting in incomplete dependency maps.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 26,
-		"prompt": "What dashboard element most helps identify vulnerable dependencies in mapped services?",
+		"prompt": "An Identification Section uses an overly broad regular expression. What mapping problem can result?",
 		"choices": [
-			"Reflects the condition that a weekly export of user records.",
-			"Corresponds to the option where a count of closed change requests only.",
-			"Matches the scenario in which a static list of CI names with no relationship data.",
-			"Captures the choice stating topology visualizations with relationship paths and status overlays from dependent CIs."
+			"Unrelated processes match the pattern, creating false application CIs and noisy dependencies",
+			"Discovery credentials expire immediately after the first successful pattern execution",
+			"Entry points are deleted automatically when the regex matches more than one hostname",
+			"Business services are retired from the CMDB whenever the regex matches a port number"
 		],
-		"correctIndex": 3,
-		"explanation": "Dependency-aware topology with health overlays exposes upstream and downstream risk concentration points.",
+		"correctIndex": 0,
+		"explanation": "Broad identification criteria cause incorrect pattern matches, leading to generic or duplicate application CIs and inaccurate topologies.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/view-service-map.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-pattern-best-practices.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 27,
-		"prompt": "Which access control is best practice for a service map dashboard used by multiple teams?",
+		"prompt": "Service Mapping setup on a MID Server commonly requires configuration of which file types?",
 		"choices": [
-			"Reflects the condition that allow anonymous editing for rapid collaboration.",
-			"Corresponds to the option where use role-based read/write permissions aligned to run-time responsibilities.",
-			"Captures the choice stating store dashboard setup in personal profiles only.",
-			"Represents the approach that grant admin to all dashboard viewers."
+			"Properties and configuration files that control probes, timeouts, and mapping behavior on the MID Server",
+			"Software entitlement CSV templates used by the SAM reconciliation engine exclusively",
+			"Incident workflow XML exports from the service desk application module",
+			"Change calendar ICS files imported from external project management tools"
 		],
-		"correctIndex": 1,
-		"explanation": "Role-based access protects dashboard integrity while allowing appropriate collaboration and review.",
+		"correctIndex": 0,
+		"explanation": "MID Server configuration files and properties tune probe execution, connectivity, and Service Mapping behavior in the customer environment.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 28,
-		"prompt": "Why should service map dashboards include drill-down links into related incidents and alerts?",
+		"prompt": "When tuning Service Mapping performance in a large environment, which settings are commonly adjusted?",
 		"choices": [
-			"Corresponds to the option where it prevents updates to business service records.",
-			"Describes the outcome where it replaces the need for CI relationships.",
-			"Represents the approach that it disables event correlation for mapped nodes.",
-			"Captures the choice stating it enables faster transition from service-level visibility to run-time action."
+			"Concurrent probe limits, timeouts, and schedule frequency to balance map freshness with MID Server load",
+			"Incident auto-close intervals and on-hold reason catalogs in the ITSM application",
+			"Hardware asset depreciation methods and stockroom transfer order approval rules",
+			"Event management connector polling intervals for SaaS monitoring integrations only"
 		],
-		"correctIndex": 3,
-		"explanation": "Drill-down navigation connects strategic service health views with tactical records needed for response.",
+		"correctIndex": 0,
+		"explanation": "Performance tuning focuses on probe concurrency, timeout values, and mapping schedule cadence to avoid overloading MID Servers while maintaining accuracy.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/dashboards/concept/dashboards.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 29,
-		"prompt": "Which KPI set best validates whether a service map dashboard is useful?",
+		"prompt": "In Service Mapping configuration, an entry point defines what starting condition?",
 		"choices": [
-			"Describes the outcome where total CMDB tables displayed. enriched with discovery patterns and classification probes. (CIS-SM-29-w0)",
-			"Matches the scenario in which number of dashboard clones by analysts. compared against peer benchmarks in the analytics workspace. (CIS-SM-29-w1)",
-			"Corresponds to the option where improved service-impact triage time, fewer dependency-blind escalations, and better ownership routing.",
-			"Represents the approach that widget color variety and custom theme usage."
+			"The CI or endpoint—such as a URL, hostname, or load balancer—where top-down mapping begins discovery",
+			"The software model normalization rule applied during horizontal discovery classification",
+			"The event rule threshold that creates alerts in the Event Management application",
+			"The change model used when service map updates require CAB approval"
 		],
-		"correctIndex": 2,
-		"explanation": "Useful dashboards improve operational decision quality and response efficiency for service-impacting issues.",
+		"correctIndex": 0,
+		"explanation": "Entry points anchor service map discovery by identifying where Service Mapping starts traversing application dependencies.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping-best-practices.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/entry-points-and-service-maps.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 30,
-		"prompt": "For Service Mapping, what is meant by defining entry points?",
+		"prompt": "Which CI types are commonly configured as Service Mapping entry points?",
 		"choices": [
-			"Represents the approach that assigning every CI to the same business service.",
-			"Describes the outcome where creating incident categories for mapping teams.",
-			"Matches the scenario in which identifying starting URLs, hostnames, load balancers, or connection endpoints used to discover service topology.",
-			"Reflects the condition that disabling all probes on shared subnets. challenged when KPIs show no measurable improvement post-change. (CIS-SM-30-w3)"
+			"Web servers, load balancers, application servers, and other CIs that front a service topology",
+			"Retired hardware assets and disposed consumable records in the asset management module",
+			"Knowledge article records and catalog item variables in the self-service portal",
+			"Change task templates and standard change models in the change application"
 		],
-		"correctIndex": 2,
-		"explanation": "Entry points guide mapping discovery to the right application components and dependency paths.",
+		"correctIndex": 0,
+		"explanation": "Entry points are typically infrastructure or application CIs that represent accessible starting nodes for dependency discovery.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/create-entry-point.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/entry-points-and-service-maps.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 31,
-		"prompt": "An application has multiple internet-facing domains behind one load balancer. How should entry points be configured?",
+		"prompt": "Where must Discovery credentials be assigned so Service Mapping can authenticate during a map run?",
 		"choices": [
-			"Matches the scenario in which skip entry points and rely on manual CI relationships.",
-			"Reflects the condition that set up representative entry points per unique service path and validate discovered dependencies.",
-			"Captures the choice stating map each domain as a separate business service regardless architecture.",
-			"Describes the outcome where use one generic DNS record only."
+			"To the appropriate CI classes or credential aliases referenced by mapping and pattern probes",
+			"Only to the admin user record that last modified the service map schedule",
+			"Exclusively on the instance server with no MID Server credential store involvement",
+			"On business service records as encrypted fields visible to all itil users"
 		],
-		"correctIndex": 1,
-		"explanation": "Representative entry points help Service Mapping discover accurate topologies for shared infrastructure patterns.",
+		"correctIndex": 0,
+		"explanation": "Service Mapping uses Discovery credentials configured for CI classes or aliases so MID Server probes can authenticate to mapped hosts.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping-patterns.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/create-a-service-map.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 32,
-		"prompt": "Which issue most commonly indicates poor entry point governance?",
+		"prompt": "A service map record in Service Mapping ties together which components?",
 		"choices": [
-			"Matches the scenario in which discovery logs include expected probe execution.",
-			"Captures the choice stating maps render faster during low traffic windows.",
-			"Corresponds to the option where business service owners are defined.",
-			"Reflects the condition that maps miss critical tiers because entry points are stale, duplicated, or undocumented."
+			"An application service, its entry points, mapped CIs, and the discovery schedule that refreshes topology",
+			"A business service financial plan, procurement contract, and vendor performance scorecard",
+			"An incident template, on-call roster, and event management connector subscription",
+			"A change model, CAB agenda, and release train milestone calendar"
 		],
-		"correctIndex": 3,
-		"explanation": "Outdated or duplicate entry points frequently cause incomplete maps and inaccurate service impact analysis.",
+		"correctIndex": 0,
+		"explanation": "Service map records associate application services with entry points, discovered dependencies, and the schedule governing map updates.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/troubleshoot-service-mapping.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 33,
-		"prompt": "Why should entry points be reviewed during major application changes?",
+		"prompt": "Service map schedules control what behavior during ongoing operations?",
 		"choices": [
-			"Captures the choice stating entry points are immutable once approved.",
-			"Reflects the condition that major changes do not affect discovered services.",
-			"Represents the approach that it prevents CMDB reconciliation from running.",
-			"Corresponds to the option where topology starting conditions may change, affecting map completeness and dependency accuracy."
+			"When Service Mapping re-executes discovery to refresh CI relationships and dependency topology",
+			"When incident records auto-resolve after the caller confirms service restoration",
+			"When hardware assets transition from In Stock to In Use without a transfer order",
+			"When event rules suppress alerts during approved maintenance windows"
 		],
-		"correctIndex": 3,
-		"explanation": "Application architecture changes can invalidate existing starting points and degrade mapping quality.",
+		"correctIndex": 0,
+		"explanation": "Schedules define the cadence at which service maps rerun mapping logic to keep dependency views current as infrastructure changes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 34,
-		"prompt": "What control best improves long-term entry point quality?",
+		"questionType": "multi",
+		"prompt": "Which two elements are typically associated when defining a service group in Service Mapping? (Choose two.)",
 		"choices": [
-			"Represents the approach that implement ownership, change review, and periodic validation for entry point records.",
-			"Corresponds to the option where remove metadata fields to simplify forms.",
-			"Captures the choice stating convert all entry points to one default template.",
-			"Describes the outcome where allow unrestricted edits by all itil users."
+			"Related application services or technical services grouped for operational visibility",
+			"Shared mapping schedules or policies applied to the grouped services across all mapped entry points",
+			"Software publisher part numbers used during entitlement reconciliation",
+			"Incident problem task templates assigned to the service desk tier-one queue"
 		],
 		"correctIndex": 0,
-		"explanation": "Governed ownership and recurring validation keep entry points accurate as services evolve.",
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Service groups organize related services and can share mapping configuration such as schedules and governance policies for consistent operations.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping-best-practices.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 35,
-		"prompt": "What is the primary objective of service map maintenance after initial onboarding?",
+		"prompt": "In Service Mapping, a technical service record represents what concept?",
 		"choices": [
-			"Represents the approach that replace ownership records with assignment groups.",
-			"Describes the outcome where disable mapping jobs to avoid CMDB updates.",
-			"Matches the scenario in which freeze all CI relationships permanently.",
-			"Corresponds to the option where preserve map accuracy as application architecture and dependencies change."
+			"A logical service layer—such as a database tier or messaging endpoint—supporting an application service map",
+			"A procurement contract line item tied to a software publisher renewal cycle",
+			"A service desk queue used exclusively for password reset requests",
+			"A discovery error record created when horizontal classification fails"
 		],
-		"correctIndex": 3,
-		"explanation": "Ongoing maintenance keeps service maps trustworthy for impact analysis, operations, and change planning.",
+		"correctIndex": 0,
+		"explanation": "Technical services model infrastructure or middleware layers that application services depend on within the mapped topology.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-map-lifecycle.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/application-services.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 36,
-		"prompt": "Which maintenance practice best prevents stale maps?",
+		"prompt": "The Service Mapping implementation process flow typically begins with which activity?",
 		"choices": [
-			"Represents the approach that update maps only after major incidents.",
-			"Matches the scenario in which run quarterly map validation with owners and review unresolved discovery warnings.",
-			"Reflects the condition that lock maps against all edits.",
-			"Describes the outcome where disable dependency discovery for shared components."
+			"Planning scope, validating CMDB readiness, and identifying candidate application services with owners",
+			"Disabling all horizontal discovery schedules until every map reaches one hundred percent completeness across the estate",
+			"Importing event management connector templates before any entry points are defined",
+			"Retiring all generic application CIs to force pattern reassignment globally"
 		],
-		"correctIndex": 1,
-		"explanation": "Scheduled validation with owner accountability keeps discovered relationships aligned with real architecture.",
+		"correctIndex": 0,
+		"explanation": "Successful Service Mapping engagements start with readiness assessment, scoped application service selection, and stakeholder alignment before configuration.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/maintain-service-maps.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 37,
-		"prompt": "A map consistently omits a middleware tier after deployments. What is the best corrective action?",
+		"questionType": "multi",
+		"prompt": "Which two configuration steps should be completed before running a full service map against production entry points? (Choose two.)",
 		"choices": [
-			"Matches the scenario in which mark the map as complete and suppress warnings.",
-			"Describes the outcome where remove the middleware CIs from CMDB.",
-			"Captures the choice stating assign maintenance to unrelated service owners.",
-			"Reflects the condition that review entry points, discovery credentials, and pattern behavior for that application path."
+			"Assign valid Discovery credentials to the CI classes probed during mapping",
+			"Define and validate entry points with application owners for the target service",
+			"Disable CMDB identification and reconciliation rules across all CI classes",
+			"Convert all mapped CIs to manual records with no discovery updates permitted"
 		],
-		"correctIndex": 3,
-		"explanation": "Missing tiers typically point to entry point, credential, or pattern configuration issues requiring targeted review.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Production mapping requires working credentials and validated entry points so discovery can authenticate and start from accurate topology anchors.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/troubleshoot-service-mapping.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/create-a-service-map.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 38,
-		"prompt": "Why should service map maintenance be linked to change management processes?",
+		"prompt": "Tag-based service mapping associates application services with infrastructure using what mechanism?",
 		"choices": [
-			"Captures the choice stating changes can alter dependencies, so maintenance checkpoints confirm map fidelity after implementation.",
-			"Reflects the condition that it reduces the need for service owners.",
-			"Matches the scenario in which it is not necessary if discovery schedules run nightly.",
-			"Corresponds to the option where change records are only needed for network scans."
+			"Cloud or CMDB tags that match defined rules linking tagged resources to application service records",
+			"SNMP trap OIDs configured on network devices to raise Event Management alerts",
+			"Manual CSV imports of CI relationships uploaded through the service catalog",
+			"Change task approvals that auto-create business services from CAB decisions"
 		],
 		"correctIndex": 0,
-		"explanation": "Post-change validation prevents drift between actual architecture and mapped topology.",
+		"explanation": "Tag-based mapping uses standardized tag keys and values on cloud or CMDB CIs to associate resources with application services automatically.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/tag-based-service-mapping.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 39,
-		"prompt": "Which KPI most clearly shows service map maintenance maturity?",
+		"prompt": "Cloud tag governance for Service Mapping ensures what outcome?",
 		"choices": [
-			"Corresponds to the option where total number of maps regardless quality.",
-			"Represents the approach that increase in unreviewed discovery errors.",
-			"Captures the choice stating higher map completeness, fewer stale dependencies, and quicker validation after changes.",
-			"Reflects the condition that number of custom icons used."
+			"Consistent tag naming and ownership so tag-based mapping rules resolve to the correct application services",
+			"Automatic retirement of every untagged cloud resource without owner review",
+			"Elimination of MID Server probes for all hybrid cloud workloads",
+			"Conversion of business services into hardware asset records for financial tracking"
 		],
-		"correctIndex": 2,
-		"explanation": "Maturity is reflected by map quality outcomes and timely upkeep, not just map volume.",
+		"correctIndex": 0,
+		"explanation": "Tag governance establishes standards and accountability so mapping rules reliably associate cloud resources with intended application services.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping-best-practices.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/cloud-tag-governance.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 40,
-		"prompt": "In Service Mapping, what is the purpose of modeling business services?",
+		"prompt": "After a service map run completes, what validation step best confirms dependency accuracy?",
 		"choices": [
-			"Corresponds to the option where replace CI classes with one generic table.",
-			"Describes the outcome where disable relationship discovery.",
-			"Captures the choice stating represent customer-facing service outcomes and their supporting technical dependencies.",
-			"Represents the approach that track only infrastructure patch schedules."
+			"Review the map topology with application owners and compare it to known architecture diagrams",
+			"Delete all CIs not seen in the latest run to force rediscovery on the next schedule",
+			"Disable the service map schedule permanently once any CI appears on the map",
+			"Convert every mapped CI to a business service record regardless of function"
 		],
-		"correctIndex": 2,
-		"explanation": "Business service models connect technical components to service outcomes used for impact and priority decisions.",
+		"correctIndex": 0,
+		"explanation": "Owner review against known architecture validates that discovered dependencies reflect real operational connections rather than transient noise.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/business-services-and-technical-services.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/validate-service-map-results.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 41,
-		"prompt": "Which design principle is most important when defining business services for maps?",
+		"questionType": "multi",
+		"prompt": "Which two indicators suggest a service map requires credential review? (Choose two.)",
 		"choices": [
-			"Corresponds to the option where create one business service per CI to simplify reporting.",
-			"Describes the outcome where model services only for infrastructure teams.",
-			"Represents the approach that avoid assigning service owners to reduce maintenance.",
-			"Matches the scenario in which use ownership, criticality, and clear boundaries aligned to real customer-facing capabilities."
+			"Multiple CIs display yellow triangle warning icons after the latest map run",
+			"Discovery logs show authentication failures for hosts referenced by entry points",
+			"Every CI on the map shows identical software model normalization labels",
+			"The service map schedule completed faster than the previous run with no topology changes"
 		],
-		"correctIndex": 3,
-		"explanation": "Well-bounded services with ownership and criticality provide actionable context during incidents and changes.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Warning icons on mapped CIs and authentication errors in discovery logs are primary signals that credentials need correction.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/service-portfolio-management/concept/c_BusinessServiceManagement.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/validate-service-map-results.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 42,
-		"prompt": "A map contains accurate infrastructure topology but no business context. What should be added?",
+		"prompt": "Managing service maps in production requires periodic review of what elements?",
 		"choices": [
-			"Describes the outcome where business service relationships, owners, and criticality attributes linked to the mapped topology.",
-			"Reflects the condition that extra MID Servers in every subnet. enforced through data policies and reference qualifiers. (CIS-SM-42-w1)",
-			"Matches the scenario in which only closed incident references.",
-			"Represents the approach that random service tags for visual grouping."
+			"Entry point accuracy, schedule cadence, credential validity, and map completeness for critical services",
+			"Software entitlement true-up counts and publisher audit letter submission dates",
+			"Incident major problem task backlog and knowledge article publish frequency",
+			"Hardware lease renewal terms and stockroom bin location assignments"
 		],
 		"correctIndex": 0,
-		"explanation": "Business context transforms topology into operationally meaningful service-impact intelligence.",
+		"explanation": "Ongoing governance reviews entry points, schedules, credentials, and coverage so maps stay accurate as applications and infrastructure evolve.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/create-business-service-maps.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 43,
-		"prompt": "Why are business services essential for event and incident prioritization?",
+		"prompt": "When multiple entry points exist for one application service, how should service maps be organized?",
 		"choices": [
-			"Reflects the condition that they provide service impact context that guides urgency, routing, and escalation decisions.",
-			"Captures the choice stating they guarantee every alert is critical.",
-			"Describes the outcome where they remove the need for assignment rules.",
-			"Matches the scenario in which they reduce the number of discovered CIs."
+			"Use representative entry points per distinct service path and validate each path maps the expected topology",
+			"Combine every entry point into one cmdb_ci_computer record to simplify the map view",
+			"Disable all but the first entry point alphabetically and ignore alternate paths",
+			"Assign each entry point to a separate business service regardless of shared architecture"
 		],
 		"correctIndex": 0,
-		"explanation": "Service context helps teams prioritize work according to business impact rather than raw alert volume.",
+		"explanation": "Multiple paths may require distinct entry points; each should be validated so the combined map reflects the full application dependency structure.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/business-service-impact.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/entry-points-and-service-maps.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 44,
-		"prompt": "Which outcome best indicates mature business service modeling in Service Mapping?",
+		"prompt": "Application service ownership affects Service Mapping operations in what way?",
 		"choices": [
-			"Corresponds to the option where more manual reconciliation outside CMDB.",
-			"Matches the scenario in which fewer documented service owners.",
-			"Reflects the condition that higher count of unmapped CIs.",
-			"Captures the choice stating consistent ownership, accurate dependencies, and improved service-impact response decisions."
+			"Owners validate map accuracy, prioritize remediation of gaps, and approve changes to entry points or scope",
+			"Owners automatically receive admin credentials for every MID Server in the environment",
+			"Owners disable CMDB reconciliation globally when a map run exceeds the timeout threshold",
+			"Owners convert technical services to incident categories without review"
 		],
-		"correctIndex": 3,
-		"explanation": "Maturity appears when maps reliably inform operational decisions through accurate and governed service models.",
+		"correctIndex": 0,
+		"explanation": "Service owners provide business context for validating maps, governing scope changes, and driving remediation when dependencies are missing or incorrect.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping-best-practices.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/business-services-and-application-services.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 45,
-		"prompt": "Why are dynamic CI groups useful in Service Mapping implementations?",
+		"prompt": "A Service Mapping team needs recurring infrastructure scans for map refresh. Which Discovery artifact defines target ranges, timing, and execution behavior?",
 		"choices": [
-			"Reflects the condition that they prevent any discovered CI from joining mapped services.",
-			"Captures the choice stating they eliminate the need for CMDB classes and identification.",
-			"Corresponds to the option where they replace service maps with static spreadsheet relationships.",
-			"Represents the approach that they maintain service context automatically as membership changes based on CI attributes and rules."
+			"Discovery schedule scoped to IP ranges, credentials, and run frequency",
+			"Event rule that converts raw monitoring signals into alert records",
+			"Identification rule entry that matches serial numbers across data sources",
+			"Service candidate record generated by machine learning analysis"
 		],
-		"correctIndex": 3,
-		"explanation": "Dynamic CI groups keep maps current by rule-driven inclusion as infrastructure changes.",
+		"correctIndex": 0,
+		"explanation": "Discovery schedules bind what to scan, where targets reside, and when execution should occur for repeatable CMDB updates.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/cmdb-landing.html"
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/discovery-schedules.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 46,
-		"prompt": "Which design approach is best for dynamic CI group criteria?",
+		"prompt": "Why do enterprise Service Mapping designs typically deploy multiple MID Servers rather than relying on a single node?",
 		"choices": [
-			"Corresponds to the option where add all CIs manually each week to preserve precision.",
-			"Represents the approach that limit groups to retired assets to reduce map churn.",
-			"Describes the outcome where use temporary hostname fragments that change each deployment.",
-			"Captures the choice stating use stable attributes such as environment, service ownership, and application tier tags."
+			"MID Servers are licensed per CI class and cannot share discovery workloads",
+			"Multiple nodes support network locality, scale, and failover across segmented datacenters",
+			"Discovery schedules cannot run unless every subnet has its own dedicated cluster",
+			"A single MID Server blocks all horizontal discovery pattern execution permanently"
 		],
-		"correctIndex": 3,
-		"explanation": "Stable, meaningful attributes reduce noise and keep group membership reliable.",
+		"correctIndex": 1,
+		"explanation": "Distributed MID Server placement improves reachability to target subnets and provides resilience when individual nodes are unavailable.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_CreateServiceMappingEntryPoint.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/c_ServiceMappingTags.html"
+			"https://www.servicenow.com/docs/r/platform-administration/mid-server/mid-server-clusters.html",
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/mid-server-for-discovery.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 47,
-		"prompt": "What is the main risk of poorly governed dynamic CI groups?",
+		"prompt": "During a Discovery run, authentication failures appear in status logs while devices are being classified. In which Discovery phase do credential authentication errors most commonly surface?",
 		"choices": [
-			"Corresponds to the option where all maps automatically become read-only.",
-			"Describes the outcome where cMDB reconciliation rules are permanently disabled.",
-			"Matches the scenario in which discovery schedules stop running across all MID Servers.",
-			"Represents the approach that incorrect CI membership can distort dependency maps and impact analysis accuracy."
+			"Probe phase while ports are being scanned without login attempts",
+			"Classification phase when credentials are used to determine device type",
+			"Exploration phase after CI records are already fully reconciled",
+			"Schedule creation phase before any MID Server picks up work"
 		],
-		"correctIndex": 3,
-		"explanation": "Bad group logic propagates incorrect topology and weakens operational decision quality.",
+		"correctIndex": 1,
+		"explanation": "Authentication is exercised during Classification when Discovery uses credentials to identify operating system and application details.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_TroubleshootServiceMapping.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html",
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/t_ConfigureDiscoveryCredentials.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 48,
-		"prompt": "How should teams validate dynamic CI groups before broad production use?",
+		"prompt": "A subnet stays in Scanning status but no probe results appear in Discovery Status. Which communication channel should be reviewed first?",
 		"choices": [
-			"Reflects the condition that exclude application owners from validation sessions.",
-			"Represents the approach that approve criteria based only on naming conventions. isolated in a dedicated update set per feature increment. (CIS-SM-48-w1)",
-			"Describes the outcome where deploy group rules directly to production without testing.",
-			"Matches the scenario in which test criteria in lower environments, compare expected versus actual members, and review with service owners."
+			"CMDB Health dashboard compliance score for the affected CI class",
+			"Service Mapping Workspace candidate queue for unreviewed suggestions",
+			"ECC Queue records carrying probe requests and MID Server responses",
+			"Identification rule order for the cmdb_ci_computer table"
 		],
-		"correctIndex": 3,
-		"explanation": "Controlled validation prevents mapping drift and ensures business alignment.",
+		"correctIndex": 2,
+		"explanation": "Probe and sensor activity flows through the ECC Queue between the instance and MID Servers, making it the first place to diagnose stalled runs.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_TestServiceMap.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+			"https://www.servicenow.com/docs/r/platform-administration/mid-server/ecc-queue.html",
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/troubleshoot-discovery-status.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 49,
-		"prompt": "Which KPI best indicates dynamic CI groups are improving Service Mapping quality?",
+		"prompt": "Which Discovery configuration element helps Service Mapping identify listening services on discovered hosts for dependency tracing?",
 		"choices": [
-			"Describes the outcome where more retired CIs linked to active services.",
-			"Matches the scenario in which longer map refresh times with unchanged dependency confidence.",
-			"Reflects the condition that higher number of ad hoc map overrides by administrators.",
-			"Captures the choice stating higher map coverage accuracy with fewer manual CI membership corrections per release cycle."
+			"Reconciliation rule that sets datasource precedence for hostname fields",
+			"IP service discovery that records open ports and running services on targets",
+			"CI class manager extension that creates custom cmdb_ci_appl table attributes",
+			"Event rule binding that links alerts to business service records"
 		],
-		"correctIndex": 3,
-		"explanation": "Quality improves when group logic reduces manual corrections and increases dependable coverage.",
+		"correctIndex": 1,
+		"explanation": "IP service discovery captures port and service details that support downstream mapping of application dependencies and entry points.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 50,
-		"prompt": "What is the purpose of map suggestions in Service Mapping?",
+		"prompt": "Discovery must reach Windows servers in an isolated VLAN for Service Mapping onboarding. Which MID Server design decision has the greatest impact on success?",
 		"choices": [
-			"Matches the scenario in which automatically close all map-related tasks without review.",
-			"Captures the choice stating recommend likely service dependencies from discovery signals to accelerate map creation and validation.",
-			"Corresponds to the option where replace CMDB identification rules with manual tags.",
-			"Reflects the condition that disable map health scoring for new services."
+			"Assign the schedule to run only from the instance application node",
+			"Place a validated MID Server inside the VLAN with routing to target subnets",
+			"Disable MID capabilities so all probes execute from the ECC input topic",
+			"Use one global MID Server regardless of firewall boundaries between zones"
 		],
 		"correctIndex": 1,
-		"explanation": "Map suggestions speed implementation by proposing dependencies that teams validate.",
+		"explanation": "Discovery requires network reachability from a MID Server to target IP ranges, so zone-aligned placement is essential for classification.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_CreateAndMaintainServiceMaps.html"
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/mid-server-for-discovery.html",
+			"https://www.servicenow.com/docs/r/platform-administration/mid-server/mid-server.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 51,
-		"prompt": "How should teams evaluate map suggestions before accepting them?",
+		"prompt": "In the Discovery PCIE model, what is the main outcome of the Probe phase?",
 		"choices": [
-			"Captures the choice stating reject all suggestions and rely only on manual drawing.",
-			"Reflects the condition that validate against known application architecture, traffic patterns, and service owner confirmation.",
-			"Represents the approach that approve suggestions based on CI name length.",
-			"Corresponds to the option where accept every suggestion to maximize map size quickly."
+			"Detailed application dependency maps are published to Service Mapping",
+			"Devices are matched to existing CIs using identification rule criteria",
+			"Network targets are scanned to detect responsive hosts and open ports",
+			"Duplicate CI records are merged through reconciliation precedence logic"
 		],
-		"correctIndex": 1,
-		"explanation": "Suggestions improve speed, but accuracy requires architectural and ownership validation.",
+		"correctIndex": 2,
+		"explanation": "The Probe phase discovers reachable IP addresses and open ports before subsequent classification and identification steps execute.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_ValidateServiceMap.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_TroubleshootServiceMapping.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 52,
-		"prompt": "Which condition most improves map suggestion quality over time?",
+		"questionType": "multi",
+		"prompt": "Which two Discovery phases directly follow successful probing in the PCIE sequence? (Choose two.)",
 		"choices": [
-			"Represents the approach that suppressing discovery during maintenance windows permanently.",
-			"Corresponds to the option where removing application owners from map oversight.",
-			"Captures the choice stating frequent deletion of service maps after each release.",
-			"Describes the outcome where high-quality CMDB data, stable identifiers, and continuous feedback on accepted versus rejected suggestions."
+			"Classification",
+			"Identification",
+			"Schedule definition",
+			"Alert correlation"
 		],
-		"correctIndex": 3,
-		"explanation": "Suggestion accuracy depends on trustworthy data and iterative validation feedback.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "After Probe completes, Discovery classifies devices into CI classes and then identifies whether each result matches an existing CI or requires creation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/cmdb-landing.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 53,
-		"prompt": "What is the biggest implementation risk when map suggestions are consumed without governance?",
+		"prompt": "Multiple Discovery schedules populate the same hostname with overlapping CI records. What CMDB control most directly reduces duplicate creation?",
 		"choices": [
-			"Describes the outcome where incorrect dependencies can propagate into incident impact, change risk, and outage communication decisions.",
-			"Matches the scenario in which all service maps become immutable and cannot be edited.",
-			"Represents the approach that event Management no longer creates alerts.",
-			"Corresponds to the option where mID Servers stop discovering network infrastructure."
+			"Identification and reconciliation rules that match incoming payloads to existing CIs",
+			"Disabling the Exploration phase so fewer attributes are collected per device",
+			"Assigning every schedule to a separate MID Server cluster by default",
+			"Removing IP service records before each scheduled scan executes"
 		],
 		"correctIndex": 0,
-		"explanation": "Unchecked suggestions can undermine downstream operational decisions that depend on map accuracy.",
+		"explanation": "IRE identification rules determine whether Discovery updates an existing CI or creates a new one, preventing duplicate records from overlapping sources.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_UseServiceMapsForImpactAnalysis.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SM",
-		"order": 54,
-		"prompt": "Which KPI best demonstrates effective use of map suggestions?",
-		"choices": [
-			"Represents the approach that longer delay between discovery runs and map updates.",
-			"Reflects the condition that more duplicate application services in CMDB.",
-			"Matches the scenario in which higher number of unreviewed suggestions accepted weekly.",
-			"Describes the outcome where reduced time to onboard new services with sustained map accuracy and fewer post-go-live corrections."
-		],
-		"correctIndex": 3,
-		"explanation": "Effective use balances faster onboarding with reliable topology quality.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_CreateAndMaintainServiceMaps.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SM",
-		"order": 55,
-		"prompt": "What defines a top-down Service Mapping approach?",
-		"choices": [
-			"Matches the scenario in which begin with unmanaged infrastructure and infer business context later.",
-			"Captures the choice stating map only database servers and ignore application tiers.",
-			"Describes the outcome where start from business service entry points and trace downstream dependencies to infrastructure components.",
-			"Reflects the condition that create maps from retired assets first to test scale."
-		],
-		"correctIndex": 2,
-		"explanation": "Top-down mapping anchors discovery in business-service context and follows runtime dependencies.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping-methods.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_DefineServiceEntryPoints.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SM",
-		"order": 56,
-		"prompt": "Why are accurate entry points critical for top-down mapping?",
-		"choices": [
-			"Matches the scenario in which they replace MID Servers for all service discovery tasks.",
-			"Captures the choice stating they automatically classify all unknown CIs as business services.",
-			"Reflects the condition that they eliminate the need for CMDB application services.",
-			"Corresponds to the option where they provide the starting transaction path needed to discover dependencies that support the service."
-		],
-		"correctIndex": 3,
-		"explanation": "Top-down tracing quality depends heavily on valid and reachable entry points.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_CreateServiceMappingEntryPoint.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SM",
-		"order": 57,
-		"prompt": "Which challenge is most common in top-down mapping for complex microservice estates?",
-		"choices": [
-			"Captures the choice stating lack of alert events from monitoring tools. constrained by privacy impact assessment recommendations. (CIS-SM-57-w0)",
-			"Represents the approach that too few CIs in CMDB to represent infrastructure.",
-			"Corresponds to the option where inability to assign service ownership records.",
-			"Reflects the condition that frequent routing and ephemeral component changes can break dependency tracing if identifiers are unstable."
-		],
-		"correctIndex": 3,
-		"explanation": "Dynamic architectures require robust identifiers and governance to keep top-down maps accurate.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_TroubleshootServiceMapping.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/cmdb-landing.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SM",
-		"order": 58,
-		"prompt": "How should teams improve top-down map reliability after repeated tracing gaps?",
-		"choices": [
-			"Represents the approach that disable service maps and switch to static architecture diagrams.",
-			"Describes the outcome where increase map refresh intervals to once per quarter.",
-			"Captures the choice stating accept incomplete maps for critical services.",
-			"Corresponds to the option where refine entry points, credentials, and traffic visibility, then rerun discovery with targeted validation."
-		],
-		"correctIndex": 3,
-		"explanation": "Reliability improves when tracing prerequisites are tuned and validated iteratively.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_ValidateServiceMap.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_TroubleshootServiceMapping.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SM",
-		"order": 59,
-		"prompt": "Which metric best measures top-down mapping effectiveness?",
-		"choices": [
-			"Matches the scenario in which count of service owners added without map validation.",
-			"Corresponds to the option where percentage of business services with validated end-to-end dependency maps and low unresolved gap counts.",
-			"Represents the approach that number of manual CI relationships created per week.",
-			"Describes the outcome where total map objects regardless confidence score. correlated to problem records when recurrence thresholds trigger."
-		],
-		"correctIndex": 1,
-		"explanation": "Effectiveness is shown by validated service coverage and fewer unresolved mapping gaps.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping-methods.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SM",
-		"order": 60,
-		"prompt": "What defines a bottom-up Service Mapping approach?",
-		"choices": [
-			"Describes the outcome where map by importing static architecture diagrams without CMDB records.",
-			"Matches the scenario in which limit mapping to network devices and ignore applications.",
-			"Reflects the condition that start only from executive service catalogs and skip technical dependency discovery.",
-			"Represents the approach that start from infrastructure and application component dependencies, then assemble validated service context upward."
-		],
-		"correctIndex": 3,
-		"explanation": "Bottom-up mapping builds service understanding from discovered technical relationships.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping-methods.html",
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/identification-and-reconciliation.html",
 			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/c_Discovery.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
-		"order": 61,
-		"prompt": "When is bottom-up mapping especially useful?",
+		"order": 54,
+		"prompt": "Several application teams request Discovery schedule changes that expand IP scope weekly. Which governance practice best protects Service Mapping data quality?",
 		"choices": [
-			"Reflects the condition that when no CMDB classes exist for application components.",
-			"Captures the choice stating when discovery is intentionally disabled across environments.",
-			"Describes the outcome where when all services already have perfectly maintained maps.",
-			"Matches the scenario in which when business service definitions are incomplete but technical dependency data is available."
+			"Approve scope increases only after CMDB ownership review and controlled test runs",
+			"Allow any schedule editor to add global /8 ranges without validation gates",
+			"Disable schedule change history so administrators cannot audit prior scope",
+			"Run all expanded schedules in production first and reconcile issues afterward"
 		],
-		"correctIndex": 3,
-		"explanation": "Bottom-up techniques help bootstrap service context from reliable technical evidence.",
+		"correctIndex": 0,
+		"explanation": "Controlled scope changes with ownership review prevent noisy or unauthorized discovery from degrading CMDB quality used by service maps.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/cmdb-landing.html"
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/discovery-schedules.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 55,
+		"prompt": "Discovery runs are delayed even though schedules show Active status. ECC Queue shows a growing backlog on the discovery topic. What should be verified first?",
+		"choices": [
+			"Whether assigned MID Servers are Up, validated, and processing queued probe work",
+			"Whether all identification rules were deleted from the cmdb_ci_server class",
+			"Whether service candidates were rejected in the Service Mapping Workspace",
+			"Whether CMDB Health tasks were closed without remediation evidence"
+		],
+		"correctIndex": 0,
+		"explanation": "ECC backlog on discovery topics usually indicates MID Server availability or processing issues that must be resolved before schedules complete.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/mid-server/ecc-queue.html",
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/troubleshoot-discovery-with-ecc-queue.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 56,
+		"prompt": "An operations team configures Event Management to reduce noise before operators act. When an event rule matches defined conditions, what record type does it create?",
+		"choices": [
+			"Alert record that operators review and correlate in Event Management",
+			"Discovery schedule that rescans the affected subnet on the next interval",
+			"Identification entry that merges duplicate cmdb_ci_computer records",
+			"Service map entry point that launches top-down dependency tracing"
+		],
+		"correctIndex": 0,
+		"explanation": "Event rules evaluate incoming events and create alerts when configured conditions are met, enabling governed alert handling downstream.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/exploring-event-management.html",
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/task/configure-event-rules.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 57,
+		"prompt": "Service Mapping administrators need to confirm which TCP ports a database host exposes for entry point design. Which Discovery result type provides that detail?",
+		"choices": [
+			"IP service records listing open ports and detected services on the host",
+			"Reconciliation rule entries defining attribute precedence by datasource",
+			"CMDB Health KPI widgets showing duplicate CI counts by class",
+			"Machine learning confidence scores on pending service candidates"
+		],
+		"correctIndex": 0,
+		"explanation": "IP service discovery captures port and service information that teams use to validate entry points and dependency paths during mapping.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 58,
+		"prompt": "Before enabling credential-based Discovery for a new datacenter, which credential practice best supports both security and mapping accuracy?",
+		"choices": [
+			"Share one domain administrator account across every schedule and environment",
+			"Store privileged passwords in schedule descriptions for faster troubleshooting",
+			"Use least-privilege credential aliases tested against representative targets first",
+			"Disable credential validation to shorten MID Server onboarding time"
+		],
+		"correctIndex": 2,
+		"explanation": "Least-privilege credentials validated on sample targets reduce security exposure while confirming access needed for classification and exploration.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/t_ConfigureDiscoveryCredentials.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 59,
+		"prompt": "A customer wants to accelerate service map creation using observed traffic patterns. Which Service Mapping capability proposes likely application services for review?",
+		"choices": [
+			"Machine learning service candidates surfaced for mapper validation",
+			"CMDB class manager hierarchy editor for cmdb_ci_appl extensions",
+			"Event binding rule that attaches alerts to cmdb_ci_service records",
+			"Discovery cluster failover setting on the MID Server record"
+		],
+		"correctIndex": 0,
+		"explanation": "ML-powered mapping analyzes discovery and traffic signals to propose service candidates that teams accept or reject before publishing maps.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-get-started.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 60,
+		"prompt": "Which workspace is designed for reviewing machine learning service candidates and managing map onboarding tasks in one place?",
+		"choices": [
+			"Service Mapping Workspace with candidate queues and validation actions",
+			"CMDB Data Manager workspace focused on orphaned relationship cleanup",
+			"Event Management alert workspace for connector troubleshooting only",
+			"Discovery Status dashboard limited to ECC queue throughput metrics"
+		],
+		"correctIndex": 0,
+		"explanation": "Service Mapping Workspace centralizes candidate review, map tasks, and onboarding progress for ML-assisted mapping workflows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-get-started.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 61,
+		"prompt": "A mapper sees a high-confidence service candidate that conflicts with the documented architecture diagram. What is the recommended next step?",
+		"choices": [
+			"Accept every candidate automatically to maximize map coverage quickly",
+			"Validate the candidate with the service owner before accepting or rejecting it",
+			"Delete the underlying CI records so the candidate cannot reappear",
+			"Disable machine learning mapping globally until the next major release"
+		],
+		"correctIndex": 1,
+		"explanation": "ML candidates accelerate onboarding but require architectural and ownership validation before they influence production service maps.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/validate-service-map-results.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 62,
-		"prompt": "Which prerequisite most improves bottom-up mapping accuracy?",
+		"prompt": "When should a team choose ML-powered mapping over manual top-down entry point design for a new application?",
 		"choices": [
-			"Corresponds to the option where removing ownership and support group fields from CIs.",
-			"Matches the scenario in which mapping only production databases regardless service boundaries.",
-			"Reflects the condition that weekly manual deletion of stale CI relationships.",
-			"Captures the choice stating consistent CI identification, reconciliation rules, and discovered relationship quality in CMDB."
+			"When no discovery data exists and all CIs are created manually each week",
+			"When traffic and discovery signals exist but documented entry points are incomplete",
+			"When the goal is to disable CMDB identification rules for faster imports",
+			"When every dependency must be drawn without any automated suggestions"
 		],
-		"correctIndex": 3,
-		"explanation": "Bottom-up mapping quality depends on strong CMDB identity and relationship integrity.",
+		"correctIndex": 1,
+		"explanation": "ML mapping is most valuable when technical signals are available but formal entry points or architecture documentation are incomplete.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/ire.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_TroubleshootServiceMapping.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/getting-started-service-mapping.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 63,
-		"prompt": "How should teams convert bottom-up technical maps into business-service-aligned views?",
+		"questionType": "multi",
+		"prompt": "Which two inputs most improve machine learning service mapping accuracy? (Choose two.)",
 		"choices": [
-			"Reflects the condition that remove non-critical dependencies to simplify every map.",
-			"Captures the choice stating create separate maps per admin without shared standards.",
-			"Corresponds to the option where publish technical maps directly to executives without context.",
-			"Represents the approach that layer application service definitions and ownership metadata over validated dependency clusters."
+			"High-quality CMDB identifiers and stable CI relationships",
+			"Validated network traffic and discovery coverage for mapped subnets",
+			"Randomized hostname prefixes that change after every deployment",
+			"Disabling reconciliation so every scan creates new CI records"
 		],
-		"correctIndex": 3,
-		"explanation": "Business relevance comes from overlaying ownership and service definitions onto technical topology.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "ML mapping depends on trustworthy CMDB identity plus reliable discovery and traffic evidence to propose meaningful service candidates.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_CreateAndMaintainServiceMaps.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_UseServiceMapsForImpactAnalysis.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html",
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/identification-and-reconciliation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 64,
-		"prompt": "Which KPI indicates bottom-up mapping is delivering operational value?",
+		"prompt": "Which governance metric best tracks whether ML service candidate review is improving map quality?",
 		"choices": [
-			"Corresponds to the option where longer mean time to restore with no map updates. distributed to edge locations through mid-server selection rules.",
-			"Represents the approach that higher count of unclassified CIs in mapped services.",
-			"Describes the outcome where more manual reassignment of application CI ownership.",
-			"Captures the choice stating improved incident impact accuracy and faster root-cause isolation due to dependable dependency topology."
+			"Total ECC queue entries processed per hour regardless of outcomes",
+			"Ratio of accepted candidates that remain accurate after owner validation cycles",
+			"Count of custom CI classes created without class manager approval",
+			"Number of discovery schedules running concurrently across all MID Servers"
 		],
-		"correctIndex": 3,
-		"explanation": "Operational value appears when topology quality improves impact and troubleshooting outcomes.",
+		"correctIndex": 1,
+		"explanation": "Tracking accepted candidates that stay accurate after validation shows ML suggestions are contributing durable topology rather than noise.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_UseServiceMapsForImpactAnalysis.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-kpis.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 65,
-		"prompt": "What is the main value of service health monitoring in Service Mapping operations?",
+		"prompt": "After mappers reject several ML suggestions for the same application tier, what adjustment most directly improves future candidate quality?",
 		"choices": [
-			"Corresponds to the option where track only server CPU metrics outside service context.",
-			"Describes the outcome where surface service-impacting CI degradation quickly using business service context and dependency relationships.",
-			"Matches the scenario in which replace event and incident processes entirely.",
-			"Represents the approach that focus exclusively on historical monthly reports."
+			"Feed accepted versus rejected outcomes back into review standards and discovery scope tuning",
+			"Remove all identification rules so every CI import creates a new record",
+			"Disable Service Mapping Workspace access for application owners",
+			"Increase discovery schedule frequency without reviewing credential coverage"
 		],
-		"correctIndex": 1,
-		"explanation": "Service health is most useful when technical signals are tied to business services and dependencies.",
+		"correctIndex": 0,
+		"explanation": "Iterative feedback on accepted and rejected candidates helps teams refine discovery inputs and governance so ML proposals align with architecture.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/concept/event-management.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-kpis.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 66,
-		"prompt": "Which prerequisite most improves confidence in service health views?",
+		"prompt": "Where should a Service Mapping lead review pending ML candidates, assigned onboarding tasks, and map validation status together?",
 		"choices": [
-			"Describes the outcome where manual weekly map redraws in presentation tools.",
-			"Represents the approach that accurate CI relationships and maintained service maps in the CMDB.",
-			"Reflects the condition that suppressing all warning-level events.",
-			"Matches the scenario in which a large number of custom dashboard colors."
+			"Service Mapping Workspace dashboards and candidate queues",
+			"ECC Queue related lists on the MID Server record form",
+			"CI Class Manager tree for cmdb_ci_appl attribute extensions",
+			"Discovery pattern designer debug console for horizontal probes"
 		],
-		"correctIndex": 1,
-		"explanation": "Reliable service health depends on trustworthy map topology and CI relationship accuracy.",
+		"correctIndex": 0,
+		"explanation": "Service Mapping Workspace consolidates candidate review and onboarding workflow tasks for ML-assisted mapping programs.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/cmdb-landing.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/getting-started-service-mapping.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 67,
-		"prompt": "How should teams handle noisy health indicators that trigger frequent false service degradation?",
+		"prompt": "A regulated application has well-maintained custom patterns and validated entry points. Which mapping approach is usually preferred over ML candidates?",
 		"choices": [
-			"Reflects the condition that escalate every warning to critical severity.",
-			"Matches the scenario in which ignore recurring alerts during business hours.",
-			"Describes the outcome where disable service health indicators for all services.",
-			"Captures the choice stating tune thresholds and event rules using historical incident validation and service impact criteria."
+			"Pattern-based top-down mapping with governed entry points and credentials",
+			"Blind acceptance of every ML suggestion to minimize manual review effort",
+			"Disabling discovery entirely and maintaining maps only in spreadsheets",
+			"Creating duplicate application services for each discovered port record"
 		],
-		"correctIndex": 3,
-		"explanation": "Threshold and rule tuning aligned to real impact improves health signal quality.",
+		"correctIndex": 0,
+		"explanation": "When patterns and entry points are mature, pattern-based mapping provides deterministic tracing that complements rather than replaces ML for that service.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/task/t_ConfigureEventRules.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/create-a-service-map.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-patterns-overview.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 68,
-		"prompt": "What operating practice best supports proactive service health management?",
+		"prompt": "Before expanding Service Mapping to additional business services, which CMDB tool summarizes completeness, correctness, and compliance gaps?",
 		"choices": [
-			"Captures the choice stating use daily health review with ownership assignments for recurring degradations and map quality issues.",
-			"Corresponds to the option where review service health only after outages occur.",
-			"Reflects the condition that measure health solely by event volume.",
-			"Matches the scenario in which assign all health tasks to one platform admin."
+			"CMDB Health dashboard with KPI scores and remediation tasks",
+			"Discovery schedule editor showing next run timestamps only",
+			"Event Management connector dashboard for inbound event volume",
+			"Service Portal catalog builder for request item categories"
 		],
 		"correctIndex": 0,
-		"explanation": "Regular review and clear ownership help teams prevent repeat degradations before outages occur.",
+		"explanation": "CMDB Health exposes data quality metrics and actionable tasks that indicate whether the CMDB can support dependable service maps.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_MonitorServiceHealth.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/task-table/concept/task-management.html"
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-health-dashboard.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 69,
-		"prompt": "Which KPI set best demonstrates improvement in service health operations?",
+		"prompt": "An administrator must extend the CMDB schema with a new CI class for a custom middleware tier used in maps. Which tool should they use?",
 		"choices": [
-			"Reflects the condition that greater number of services marked critical by default.",
-			"Represents the approach that more manually edited CI relationship records.",
-			"Corresponds to the option where higher count of health widgets per dashboard.",
-			"Captures the choice stating lower duration of degraded service states and fewer repeat dependency-driven incidents."
+			"CI Class Manager to define classes, attributes, and identification behavior",
+			"Event rule designer to correlate monitoring alerts by severity",
+			"Discovery schedule wizard to assign MID Server clusters by region",
+			"Service candidate queue to accept ML proposals automatically"
 		],
-		"correctIndex": 3,
-		"explanation": "Operational health gains are reflected by faster recovery and reduced recurrence of dependency-related impact.",
+		"correctIndex": 0,
+		"explanation": "CI Class Manager governs CMDB class hierarchy and attributes so identification and mapping logic can target the correct CI types.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-data-manager.html",
+			"https://www.servicenow.com/docs/r/configuration-management/vancouver/cmdb/concept/cmdb-class-hierarchy.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 70,
-		"prompt": "What is the primary purpose of Service Mapping administration?",
+		"prompt": "Incoming Discovery payloads for Linux servers sometimes create duplicate records. Which IRE artifact should be tuned first?",
 		"choices": [
-			"Captures the choice stating allow unrestricted map editing by any user with itil role.",
-			"Represents the approach that maintain maps only during outage investigations.",
-			"Corresponds to the option where disable dependency discovery to reduce processing.",
-			"Describes the outcome where govern map creation, ownership, credentials, and update policies to keep service topology accurate."
+			"Identification rule entries that match serial number, name, and IP attributes",
+			"Event rule conditions that filter non-critical monitoring signals",
+			"Service Mapping entry point URLs used for top-down tracing",
+			"MID Server cluster failover order for the affected datacenter"
 		],
-		"correctIndex": 3,
-		"explanation": "SM administration ensures service maps remain reliable, governed, and operationally useful.",
+		"correctIndex": 0,
+		"explanation": "Identification rules define how incoming data matches existing CIs, which is the first control for preventing duplicate server records.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
-			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/task/t_CreateIdentificationRules.html",
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/identification-and-reconciliation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 71,
-		"prompt": "Which administrative control best protects map quality over time?",
+		"prompt": "Discovery and an import set both update the operating system field on the same CI. Which IRE mechanism decides which value is kept?",
 		"choices": [
-			"Represents the approach that disable map validation checks for speed.",
-			"Matches the scenario in which permit direct production edits without review.",
-			"Describes the outcome where define ownership, review cadence, and approval gates for map changes and entry point updates.",
-			"Corresponds to the option where clone maps whenever a CI is renamed."
+			"Reconciliation rule precedence that ranks datasource authority per attribute",
+			"Probe phase timeout settings on the horizontal discovery schedule",
+			"Service candidate confidence threshold in the mapping workspace",
+			"Alert binding policy that links events to cmdb_ci_computer records"
 		],
-		"correctIndex": 2,
-		"explanation": "Governed change controls help prevent map drift and preserve service topology accuracy.",
+		"correctIndex": 0,
+		"explanation": "Reconciliation rules apply datasource precedence after identification so authoritative sources win attribute conflicts.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_MaintainServiceMap.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_ReconciliationRules.html",
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/task/t_CreateReconciliationRules.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 72,
-		"prompt": "How should administrators manage credentials and discovery patterns for Service Mapping?",
+		"prompt": "An operator reclassifies a CI from cmdb_ci_server to cmdb_ci_win_server after Discovery confirms the OS. What type of CMDB change is this?",
 		"choices": [
-			"Matches the scenario in which reuse one privileged credential for every service and domain.",
-			"Reflects the condition that disable credential validation to reduce onboarding time.",
-			"Represents the approach that modify discovery patterns during active outages.",
-			"Describes the outcome where maintain least-privilege credential oversight and test pattern updates before production rollout."
+			"Class Upgrade moving the CI to a more specific subclass",
+			"Identification failure that forces creation of a duplicate record",
+			"Reconciliation rollback that restores the previous datasource values",
+			"Service map deletion that removes all dependency relationships"
 		],
-		"correctIndex": 3,
-		"explanation": "Credential governance and controlled pattern promotion reduce risk and preserve mapping reliability.",
+		"correctIndex": 0,
+		"explanation": "Reclassifying a server CI to a Windows-specific subclass is a Class Upgrade that preserves identity while applying specialized attributes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/t_ConfigureDiscoveryCredentials.html"
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/identification-and-reconciliation.html",
+			"https://www.servicenow.com/docs/r/configuration-management/vancouver/cmdb/concept/cmdb-class-hierarchy.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 73,
-		"prompt": "Which administrative operating model best supports scalable Service Mapping?",
+		"prompt": "CMDB analysts find multiple cmdb_ci_app_server records representing the same middleware instance. What remediation approach aligns with IRE best practice?",
 		"choices": [
-			"Matches the scenario in which completely decentralized map ownership with no standards.",
-			"Captures the choice stating no ownership assignment until map failures occur.",
-			"Describes the outcome where central platform oversight with delegated service owners and standardized onboarding checklists.",
-			"Reflects the condition that one administrator managing all maps without service input."
+			"Merge duplicates after verifying identification keys and retire redundant records",
+			"Delete reconciliation rules so the newest import always wins every attribute",
+			"Disable Discovery schedules until all application owners submit spreadsheets",
+			"Convert every duplicate into a business service without dependency review"
 		],
-		"correctIndex": 2,
-		"explanation": "Balanced governance and delegated accountability support scale without sacrificing consistency.",
+		"correctIndex": 0,
+		"explanation": "Duplicate remediation should confirm identification matches, merge authoritative data, and retire redundant CIs to restore map integrity.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/configuration-management/concept/configuration-management.html"
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-data-manager.html",
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_IdentificationAndReconciliationEngine.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 74,
-		"prompt": "Which KPI set best demonstrates effective Service Mapping administration?",
+		"prompt": "Which CMDB Health indicator best signals readiness for the next Service Mapping wave?",
 		"choices": [
-			"Matches the scenario in which higher number of unmanaged entry points.",
-			"Captures the choice stating increased count of unmapped business services.",
-			"Reflects the condition that more emergency map edits in production.",
-			"Corresponds to the option where high map freshness, low orphan CI rates, and faster correction of topology discrepancies."
+			"Improving completeness and correctness scores with fewer open remediation tasks",
+			"Higher raw count of cmdb_ci_computer records regardless of duplicate status",
+			"Increased number of custom event rules firing on unrelated CIs",
+			"Shorter ECC queue depth on unrelated integration topics"
 		],
-		"correctIndex": 3,
-		"explanation": "Administrative effectiveness is reflected by map currency, topology integrity, and responsive governance.",
+		"correctIndex": 0,
+		"explanation": "Rising health scores and fewer remediation tasks show CMDB data is stable enough to support accurate dependency mapping.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-health-dashboard.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 75,
-		"prompt": "A service owner reports repeated false impact on unrelated incidents. What Service Mapping improvement should be prioritized first?",
+		"prompt": "A cloud import and Discovery both populate serial numbers on VM CIs. Which configuration ensures Discovery wins for the serial attribute?",
 		"choices": [
-			"Captures the choice stating move the service to a lower support group.",
-			"Represents the approach that review and correct missing or incorrect dependency relationships in the service map.",
-			"Corresponds to the option where hide upstream CIs from map views.",
-			"Reflects the condition that disable impact calculation for the business service."
+			"Set higher datasource precedence for Discovery in the reconciliation rule",
+			"Disable the Identification phase so only Exploration updates attributes",
+			"Assign the import set to the only MID Server cluster in production",
+			"Create a new event rule that clears serial numbers on every alert"
 		],
-		"correctIndex": 1,
-		"explanation": "Impact accuracy depends on correct CI relationships. Fixing topology quality reduces false blast-radius calculations.",
+		"correctIndex": 0,
+		"explanation": "Reconciliation datasource precedence determines which source may update specific attributes after identification matches a CI.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_MaintainServiceMap.html"
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_ReconciliationRules.html",
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/identification-and-reconciliation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 76,
-		"prompt": "What is the best reason to integrate Service Mapping updates with change management?",
+		"prompt": "Service Mapping needs a custom cmdb_ci_load_balancer class with unique identification keys. Which CMDB utility supports that design?",
 		"choices": [
-			"Represents the approach that to defer all map maintenance until quarter end.",
-			"Describes the outcome where to replace service owners with change managers.",
-			"Captures the choice stating to confirm topology changes are reviewed and maps stay aligned with production architecture.",
-			"Corresponds to the option where to eliminate the need for CI relationships in CMDB."
+			"CI Class Manager to define the class, attributes, and identification entries",
+			"Discovery schedule editor to increase probe concurrency for VIP ranges",
+			"Alert management rule to bind monitoring events to load balancer CIs",
+			"Service Portal widget to display map thumbnails on incident forms"
 		],
-		"correctIndex": 2,
-		"explanation": "Coordinating map updates with approved changes reduces drift between actual architecture and mapped dependencies.",
+		"correctIndex": 0,
+		"explanation": "CI Class Manager is the supported interface for extending CMDB classes and aligning identification behavior with mapping requirements.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_MaintainServiceMap.html"
+			"https://www.servicenow.com/docs/r/configuration-management/vancouver/cmdb/concept/cmdb-class-hierarchy.html",
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-data-manager.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 77,
-		"prompt": "Which KPI best indicates Service Mapping operational health at scale?",
+		"prompt": "CMDB Health shows many stale relationships blocking accurate impact analysis. Which remediation path is most appropriate?",
 		"choices": [
-			"Matches the scenario in which number of CI classes in CMDB.",
-			"Corresponds to the option where map freshness and reduction of orphan/unmapped critical dependencies.",
-			"Represents the approach that percent of map updates performed after incidents.",
-			"Describes the outcome where count of users with map admin role."
+			"Use CMDB Health and Data Manager tasks to retire stale CIs and fix relationships",
+			"Delete all cmdb_rel_ci records globally and rebuild maps from scratch",
+			"Turn off Discovery until every business service has an assigned owner",
+			"Accept all ML candidates without owner review to overwrite stale links"
 		],
-		"correctIndex": 1,
-		"explanation": "Fresh maps and fewer orphan dependencies directly reflect topology reliability for operations.",
+		"correctIndex": 0,
+		"explanation": "CMDB Health and Data Manager provide governed remediation workflows for stale CIs and relationships that distort service maps.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-health-dashboard.html",
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-data-manager.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 78,
-		"prompt": "A mapped service repeatedly misses a middleware tier after releases. What should be done first?",
+		"questionType": "multi",
+		"prompt": "Which two IRE components work together to prevent duplicate CIs from multiple feeds? (Choose two.)",
 		"choices": [
-			"Represents the approach that pause all Discovery schedules.",
-			"Describes the outcome where review entry points and related pattern logic for the changed architecture.",
-			"Matches the scenario in which rebuild the entire CMDB from scratch.",
-			"Reflects the condition that increase incident priority defaults for that service."
+			"Identification rules that match incoming records to existing CIs",
+			"Reconciliation rules that apply datasource precedence after a match",
+			"Event rules that create alerts from monitoring tool payloads",
+			"Discovery clusters that assign MID Server failover groups"
 		],
-		"correctIndex": 1,
-		"explanation": "Recurring tier gaps usually indicate entry point or pattern coverage misalignment after architecture change.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Identification finds or creates the CI match while reconciliation governs attribute updates, together reducing duplicate and conflicting records.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_MaintainServiceMap.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_IdentificationAndReconciliationEngine.html",
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/identification-and-reconciliation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 79,
-		"prompt": "Which operating model best sustains Service Mapping quality across many services?",
+		"prompt": "Mapped services still show orphan middleware CIs with no upstream application dependency. Which CMDB tool helps locate and remediate those orphans?",
 		"choices": [
-			"Matches the scenario in which maps updated only after major incidents.",
-			"Reflects the condition that each team customizes mapping rules with no oversight.",
-			"Captures the choice stating central team owns all maps with no business input.",
-			"Describes the outcome where map ownership by service teams under central standards, review cadence, and shared health metrics."
+			"CMDB Data Manager views and tasks focused on orphaned or stale CIs",
+			"ECC Queue filter showing probe input backlog by MID Server",
+			"Event Management maintenance window calendar for alert suppression",
+			"Discovery pattern version history for horizontal classification steps"
 		],
-		"correctIndex": 3,
-		"explanation": "Federated ownership with centralized governance scales mapping while preserving consistency.",
+		"correctIndex": 0,
+		"explanation": "CMDB Data Manager helps teams find orphaned CIs and execute cleanup so service maps reflect accurate dependency paths.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/configuration-management/concept/configuration-management.html"
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-data-manager.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 80,
-		"prompt": "During cloud expansion, what tagging practice most improves Service Mapping consistency?",
+		"prompt": "An engagement lead completes CMDB cleanup and wants a final gate before onboarding ten new application services. Which readiness check is most appropriate?",
 		"choices": [
-			"Reflects the condition that tag only production databases.",
-			"Matches the scenario in which use a standard application/service tag taxonomy enforced across accounts.",
-			"Corresponds to the option where store service names only in DNS comments.",
-			"Captures the choice stating let each team define ad hoc tag names."
+			"CMDB Health review confirming acceptable scores with closed critical remediation tasks",
+			"Immediate production rollout of every ML candidate without owner sign-off",
+			"Deletion of all reconciliation rules to speed Discovery imports",
+			"Disabling MID Server validation to reduce project timeline"
 		],
-		"correctIndex": 1,
-		"explanation": "Consistent tagging provides reliable identifiers that support map accuracy across distributed cloud estates.",
+		"correctIndex": 0,
+		"explanation": "A CMDB Health gate verifies data quality is sufficient before expanding Service Mapping scope to additional services.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/c_CMDB.html"
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-health-dashboard.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 81,
-		"prompt": "Why should Service Mapping teams monitor map health after each significant release?",
+		"prompt": "During engagement planning, stakeholders debate which applications belong in phase one. Which scoping principle best limits early risk?",
 		"choices": [
-			"Corresponds to the option where to reduce CMDB class count.",
-			"Captures the choice stating to eliminate service owner approvals.",
-			"Reflects the condition that to archive all old maps before incident reviews.",
-			"Represents the approach that to confirm topology still reflects current architecture and dependencies."
+			"Start with high-value services that have owners, credentials, and validated entry points",
+			"Map every subnet in the enterprise before validating a single service map",
+			"Exclude CMDB readiness checks so mapping can begin immediately",
+			"Defer all discovery until every ML candidate is accepted automatically"
 		],
-		"correctIndex": 3,
-		"explanation": "Post-release validation catches drift early and preserves confidence in impact and root-cause workflows.",
+		"correctIndex": 0,
+		"explanation": "Phased scoping around critical services with known ownership and access reduces onboarding risk and builds trust in map accuracy.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_MaintainServiceMap.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/create-a-service-map.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 82,
-		"prompt": "Which prerequisite most improves successful onboarding of a complex application into Service Mapping?",
+		"prompt": "A shared database supports three application services in scope for Service Mapping. How should licensing and scope be handled?",
 		"choices": [
-			"Represents the approach that accurate entry points, credential readiness, and identified service ownership.",
-			"Describes the outcome where a complete catalog of incident categories.",
-			"Corresponds to the option where a single generic discovery credential for all environments.",
-			"Captures the choice stating weekly license optimization reports."
+			"Model the shared component once and map dependent services to the shared CI relationships",
+			"License a separate Service Mapping subscription for each consumer application team",
+			"Exclude shared infrastructure entirely because maps cannot represent common tiers",
+			"Create duplicate database CIs so each service owns an isolated copy in CMDB"
 		],
 		"correctIndex": 0,
-		"explanation": "Onboarding quality depends on technical access and accountable ownership for validation and maintenance.",
+		"explanation": "Shared services should be represented once in CMDB with accurate relationships so multiple application maps reference the same dependency.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/t_ConfigureDiscoveryCredentials.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/business-services-and-application-services.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 83,
-		"prompt": "What is the strongest reason to track map suggestion acceptance outcomes?",
+		"prompt": "Which MID Server requirement is essential before a multi-datacenter Service Mapping engagement goes live?",
 		"choices": [
-			"Corresponds to the option where to reduce number of service owners.",
-			"Matches the scenario in which to replace impact calculation.",
-			"Describes the outcome where to monitor whether suggested topology changes improve accuracy versus introducing noise.",
-			"Represents the approach that to disable manual map validation."
+			"Validated MID Servers in each required zone with Discovery and mapping capabilities enabled",
+			"A single MID Server installed on the ServiceNow instance application server",
+			"MID Servers assigned only to the Service Desk group for approval routing",
+			"MID Server clusters disabled so schedules run directly from the instance node"
 		],
-		"correctIndex": 2,
-		"explanation": "Acceptance quality metrics help teams tune suggestion governance and avoid map degradation.",
+		"correctIndex": 0,
+		"explanation": "Engagement readiness requires reachable, validated MID Servers with appropriate capabilities in every network zone that will be mapped.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html"
+			"https://www.servicenow.com/docs/r/platform-administration/mid-server/mid-server.html",
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/mid-server-for-discovery.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 84,
-		"prompt": "A business service map is technically accurate but rarely used by operations teams. What should be improved?",
+		"prompt": "Security reviewers ask how Service Mapping credentials will be governed during the project. Which answer best aligns with engagement readiness guidance?",
 		"choices": [
-			"Describes the outcome where link map context to incident/event workflows and service health views.",
-			"Reflects the condition that restrict map access to administrators only.",
-			"Represents the approach that remove noncritical dependencies.",
-			"Matches the scenario in which increase CI class count in CMDB."
+			"Use least-privilege credential aliases, store secrets securely, and test access before production mapping",
+			"Share one privileged domain account across all environments to simplify troubleshooting",
+			"Embed passwords in schedule descriptions so operators can rotate them quickly",
+			"Disable credential rotation until all service maps reach one hundred percent coverage"
 		],
 		"correctIndex": 0,
-		"explanation": "Operational adoption increases when maps are integrated into daily triage and service health decisions.",
+		"explanation": "Secure credential governance with least privilege and validated access paths is a core readiness requirement for Service Mapping engagements.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_MaintainServiceMap.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html",
+			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/t_ConfigureDiscoveryCredentials.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 85,
-		"prompt": "Which validation activity most improves trust in a newly onboarded service map?",
+		"prompt": "Procurement asks which ServiceNow licenses are required before expanding ML-powered Service Mapping to a new business unit. What should the engagement lead verify?",
 		"choices": [
-			"Reflects the condition that waiting for the first outage to test map usefulness.",
-			"Matches the scenario in which publishing the map without service owner sign-off.",
-			"Describes the outcome where reviewing only CI class names.",
-			"Captures the choice stating comparing discovered dependencies with known architecture and owner feedback."
+			"Appropriate ITOM Service Mapping entitlements and subscribed capacity for scoped CIs and services",
+			"Only ITSM incident licenses because maps are stored entirely outside CMDB",
+			"Hardware Asset Management licenses for every server CI regardless of mapping scope",
+			"Event Management licenses exclusively, with no Service Mapping subscription"
 		],
-		"correctIndex": 3,
-		"explanation": "Cross-checking discovered topology with documented design and owner knowledge verifies practical accuracy.",
+		"correctIndex": 0,
+		"explanation": "Service Mapping engagements require valid ITOM Service Mapping licensing aligned to the CIs and services included in project scope.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_MaintainServiceMap.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-get-started.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 86,
-		"prompt": "Why is service ownership metadata important for Service Mapping operations?",
+		"prompt": "Executives want proof that Service Mapping investment improves operations. Which use case most directly connects maps to incident outcomes?",
 		"choices": [
-			"Captures the choice stating it determines CMDB table inheritance.",
-			"Corresponds to the option where it enables accountable map validation, change approvals, and remediation routing.",
-			"Reflects the condition that it removes the need for business services.",
-			"Matches the scenario in which it replaces discovery credentials."
+			"Service map visibility on incidents helps analysts understand blast radius and reduce Mean Time to Resolve",
+			"Maps automatically close all P1 incidents without analyst involvement",
+			"Discovery schedules run hourly solely to increase CMDB record counts",
+			"Event rules suppress every warning so dashboards show zero open alerts"
 		],
-		"correctIndex": 1,
-		"explanation": "Clear ownership supports governed decisions and faster correction when mapping issues are found.",
+		"correctIndex": 0,
+		"explanation": "Integrating service maps with Incident Management gives responders dependency context that speeds diagnosis and lowers MTTR.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/configuration-management/concept/c_CMDB.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-kpis.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 87,
-		"prompt": "Which governance signal suggests Service Mapping configuration drift?",
+		"prompt": "Which KPI pair best demonstrates Service Mapping engagement success for incident operations?",
 		"choices": [
-			"Reflects the condition that documented onboarding checklists for new services.",
-			"Represents the approach that regular owner reviews after major releases.",
-			"Corresponds to the option where growing number of emergency map edits and unresolved topology discrepancies.",
-			"Captures the choice stating stable map freshness and low dependency correction backlog."
+			"Reduced Mean Time to Resolve on mapped services and fewer repeat dependency-related incidents",
+			"Total number of ECC queue records processed per day across all MID Servers",
+			"Count of custom CI classes created without class manager review",
+			"Volume of rejected ML candidates without any owner feedback captured"
 		],
-		"correctIndex": 2,
-		"explanation": "Frequent emergency edits and unresolved gaps indicate weak change governance and accumulating drift.",
+		"correctIndex": 0,
+		"explanation": "Operational value appears when mapped services show faster resolution and fewer recurring incidents caused by unknown dependencies.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_MaintainServiceMap.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-kpis.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/validate-service-map-results.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 88,
-		"prompt": "Which metric is most meaningful for measuring Service Mapping maintenance discipline?",
+		"prompt": "A service desk manager asks how Service Mapping changes daily triage. Which operational use case is the strongest example?",
 		"choices": [
-			"Corresponds to the option where percentage of business-critical maps reviewed and updated within defined cadence.",
-			"Describes the outcome where average incident resolution time across all services.",
-			"Captures the choice stating number of maps created this quarter.",
-			"Represents the approach that count of CIs by operating system."
+			"Analysts open the service map from an incident to see upstream and downstream CIs affected by an outage",
+			"Agents manually rebuild CMDB relationships on every ticket before assignment",
+			"Discovery disables all identification rules whenever a P1 incident is opened",
+			"Event Management deletes alerts automatically when a map exists for the CI"
 		],
 		"correctIndex": 0,
-		"explanation": "Cadence-based review compliance directly measures whether map governance practices are being followed.",
+		"explanation": "Incident workflows benefit when responders can view dependency context directly from the service map linked to affected CIs.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_MaintainServiceMap.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-kpis.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 89,
-		"prompt": "A newly acquired system must be mapped quickly without degrading quality. What approach is best?",
+		"prompt": "Before declaring a Service Mapping engagement ready for production cutover, which checklist item is most critical?",
 		"choices": [
-			"Corresponds to the option where use phased onboarding with minimum oversight checks, owner validation, and post-go-live review.",
-			"Describes the outcome where map only infrastructure, not service dependencies.",
-			"Represents the approach that wait one year before creating a map.",
-			"Matches the scenario in which skip validation and accept first discovered topology."
+			"Validated maps for in-scope services with owner sign-off, CMDB health acceptance, and operational workflow integration",
+			"Every CI in the CMDB mapped regardless of business priority or ownership",
+			"All ML candidates accepted without architectural review to maximize coverage",
+			"Discovery schedules removed so maps never refresh after go-live"
 		],
 		"correctIndex": 0,
-		"explanation": "Phased onboarding enables timely coverage while preserving quality and accountability controls.",
+		"explanation": "Engagement readiness requires validated in-scope maps, stakeholder approval, healthy CMDB data, and integration into operational processes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/concept/service-mapping.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/service-mapping/task/t_MaintainServiceMap.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/validate-service-map-results.html"
 		]
 	},
 	{

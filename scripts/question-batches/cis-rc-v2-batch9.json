@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-RC",
+		"order": 40,
+		"prompt": "Which configuration determines how often control owners are asked to re-attest that their controls are operating effectively?",
+		"choices": [
+			"The attestation schedule defined for the control, which generates assessments at the set frequency",
+			"The instance session timeout property, which forces re-certification at every login event",
+			"The data retention policy on the sys_audit table, which recycles attestations as rows age out",
+			"The SLA definition attached to the entity record, which reopens controls at breach time"
+		],
+		"correctIndex": 0,
+		"explanation": "Attestation frequency is configured on the control or its policy statement; the platform then generates attestation assessments to owners on that recurring schedule.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/attestations.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 41,
+		"prompt": "During configuration, an implementer maps one policy statement to citations from three different regulations. What advantage does this provide?",
+		"choices": [
+			"It disables the citations so only the internal statement remains subject to audit review",
+			"A single set of controls satisfies overlapping requirements, reducing duplicate testing effort across frameworks",
+			"It triples the number of generated controls so each regulator receives an isolated record set",
+			"The regulations merge into one combined authority document to simplify library maintenance"
+		],
+		"correctIndex": 1,
+		"explanation": "Many-to-many mapping between citations and policy statements lets one internal requirement, and its controls, provide evidence for multiple regulatory frameworks at once.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-statements.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 42,
+		"prompt": "An issue raised against a non-compliant control cannot be remediated this quarter due to budget limits. Which closure path documents management's decision to tolerate the gap?",
+		"choices": [
+			"Closing the issue as accepted with documented justification and approval from the accountable party",
+			"Deleting the issue so the compliance score returns to green before the next reporting cycle",
+			"Reassigning the issue to the platform team so it ages out of the compliance queue naturally",
+			"Converting the issue to a standard change that is preapproved and closes automatically"
+		],
+		"correctIndex": 0,
+		"explanation": "Issues support risk acceptance closure, capturing the rationale and approval trail when management chooses to tolerate a control gap rather than remediate immediately.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-issues.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 43,
+		"questionType": "multi",
+		"prompt": "Which two artifacts are part of the Policy and Compliance Management compliance library? (Choose two.)",
+		"choices": [
+			"Authority documents imported or created to represent external regulations and standards",
+			"Policy statements that express internal requirements derived from citations",
+			"Service level agreements measuring incident response times for the help desk",
+			"Update sets packaging developer configuration changes between instances"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "The compliance library holds authority documents and the policy statements mapped to their citations; SLAs and update sets are platform artifacts outside the library.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/authority-documents.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 44,
+		"prompt": "A compliance manager needs visibility into overall control health across all entities. Which Policy and Compliance feature is designed for this purpose?",
+		"choices": [
+			"Compliance dashboards and overviews summarizing control status, issues, and attestation progress",
+			"The system log viewer filtered to warning-level messages emitted by the sn_compliance scope",
+			"A background script run weekly to count control records grouped by their state values",
+			"The email client preview pane showing recent notifications sent to control owners"
+		],
+		"correctIndex": 0,
+		"explanation": "Policy and Compliance provides dashboards and overview modules that aggregate control compliance, open issues, and attestation completion for management visibility.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management.html"
+		]
+	}
+]

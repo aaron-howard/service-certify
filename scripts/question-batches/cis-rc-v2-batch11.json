@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-RC",
+		"order": 50,
+		"prompt": "A policy owner publishes a revised acceptable-use standard. Which GRC artifact should be updated first to preserve compliance traceability?",
+		"choices": [
+			"Policy statement with versioned lifecycle and mapped control references",
+			"Discovery schedule targeting decommissioned subnets",
+			"Risk heat map widget on the IRM workspace homepage",
+			"Catalog item variable for employee onboarding requests"
+		],
+		"correctIndex": 0,
+		"explanation": "Policy statements anchor internal standards and must stay linked to controls and citations when content changes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/policy-lifecycle-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 51,
+		"prompt": "A state privacy amendment takes effect mid-quarter. What is the best compliance response in Policy and Compliance Management?",
+		"choices": [
+			"Run impact analysis on citations and controls, then update mappings and test plans under change oversight",
+			"Wait until the annual external audit before adjusting any authority documents",
+			"Delete existing citations so the team can recreate them next fiscal year",
+			"Disable control testing for all frameworks until legal review completes"
+		],
+		"correctIndex": 0,
+		"explanation": "Regulatory change management requires governed impact analysis so coverage gaps do not appear during ongoing testing cycles.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/policy-lifecycle-management.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/remediate-control-failures.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 52,
+		"prompt": "Executive leadership requires periodic attestation that policy controls remain effective. Which workflow best supports that requirement?",
+		"choices": [
+			"Scheduled attestation campaigns with assigned owners, due dates, and evidence expectations",
+			"Ad hoc email confirmations stored outside the GRC application",
+			"Automatic pass results whenever a control owner remains unchanged",
+			"Quarterly exports to spreadsheets without workflow tracking"
+		],
+		"correctIndex": 0,
+		"explanation": "Structured attestation campaigns provide accountable, auditable confirmation of ongoing policy compliance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/attest-policy-compliance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 53,
+		"prompt": "ISO and NIST frameworks share overlapping access-control requirements. How should the implementation team reduce duplicate maintenance?",
+		"choices": [
+			"Define common controls mapped to multiple citations while preserving framework-specific traceability",
+			"Create independent control libraries with no cross-framework relationships",
+			"Map each citation to a unique control even when requirements are identical",
+			"Track overlapping obligations only in offline policy binders"
+		],
+		"correctIndex": 0,
+		"explanation": "Common controls let teams test once and demonstrate coverage across multiple regulatory frameworks.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/manage-common-controls.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 54,
+		"prompt": "A control owner asks how often evidence must be collected for a high-impact encryption control under continuous monitoring.",
+		"choices": [
+			"Follow the defined test frequency on the control test with automated indicators where applicable",
+			"Collect evidence only when external auditors request samples",
+			"Run tests once at implementation and mark the control effective permanently",
+			"Defer all testing until the risk register review cycle completes"
+		],
+		"correctIndex": 0,
+		"explanation": "Control tests specify evidence collection cadence; continuous monitoring extends that with indicator-driven exceptions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/control-testing-and-evidence.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/compliance-metrics.html"
+		]
+	}
+]

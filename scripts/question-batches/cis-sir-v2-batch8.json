@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-SIR",
+		"order": 35,
+		"prompt": "A team needs a bespoke REST integration not available as a store template. Which starting point is appropriate?",
+		"choices": [
+			"Integration Hub spoke or custom inbound/outbound actions mapped to security incidents",
+			"Discovery pattern designer steps that SSH into arbitrary external API endpoints",
+			"Catalog record producers that create incidents from employee hardware requests",
+			"Project demand workflows that score strategic themes without security context"
+		],
+		"correctIndex": 0,
+		"explanation": "Custom integrations typically use Integration Hub spokes or scripted inbound and outbound actions tied to SIR tables.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integrate-security-tools.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 36,
+		"prompt": "During integration testing, sample alerts create incidents with blank priority and category. What should be adjusted?",
+		"choices": [
+			"Inbound action field maps and default values on the integration configuration",
+			"Discovery credentials assigned to unrelated Linux server CI classes",
+			"Catalog variable sets on password reset self-service catalog items",
+			"HR case assignment rules for employee relocation approval chains"
+		],
+		"correctIndex": 0,
+		"explanation": "Field mapping and default values on inbound actions ensure required incident attributes populate during automated creation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integration-configurations.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 37,
+		"prompt": "Which test validates that a CrowdStrike detection integration updates existing incidents instead of duplicating them?",
+		"choices": [
+			"Send repeated detections for the same endpoint and confirm correlation updates one record",
+			"Run horizontal discovery against the CrowdStrike cloud API subnet range",
+			"Submit catalog requests for laptops and verify fulfillment task generation",
+			"Create portfolio demands and confirm financial plan task rollup behavior"
+		],
+		"correctIndex": 0,
+		"explanation": "Repeated detection tests confirm correlation and update logic keeps a single incident current rather than creating duplicates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-correlation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 38,
+		"prompt": "Before promoting an integration to production, which governance step reduces run-time response risk?",
+		"choices": [
+			"Validate mappings in a subproduction instance with representative alert samples",
+			"Disable all ACLs on security tables so testers can edit every field",
+			"Delete existing production incidents to simplify correlation testing",
+			"Skip change control because store integrations are always read-only"
+		],
+		"correctIndex": 0,
+		"explanation": "Subproduction validation with realistic payloads catches mapping and correlation defects before production cutover.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integration-configurations.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 39,
+		"prompt": "An analyst opens the Security Incident Response Workspace to work a critical phishing case. What does the workspace provide?",
+		"choices": [
+			"Contextual incident details, related tasks, evidence, and response tools in one view",
+			"A catalog checkout flow for ordering replacement hardware for affected users",
+			"A discovery dashboard listing MID Server heartbeat status by datacenter",
+			"A project financial plan editor for reallocating portfolio investment funds"
+		],
+		"correctIndex": 0,
+		"explanation": "The SIR Workspace consolidates incident context, tasks, and response actions so analysts can investigate without leaving the screen.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-workspace.html"
+		]
+	}
+]

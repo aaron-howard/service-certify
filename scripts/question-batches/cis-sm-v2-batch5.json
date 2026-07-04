@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-SM",
+		"order": 20,
+		"prompt": "During Service Mapping pattern troubleshooting, MID Server logs are most useful for diagnosing which issue class?",
+		"choices": [
+			"Probe execution failures, connectivity timeouts, and credential errors during pattern runs",
+			"Software entitlement import errors from publisher part number mismatches",
+			"Change advisory board approval delays on standard change templates",
+			"Knowledge article versioning conflicts in the self-service portal"
+		],
+		"correctIndex": 0,
+		"explanation": "MID Server logs capture probe and pattern execution details, making them essential when diagnosing access, timeout, or parsing failures.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-pattern-best-practices.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 21,
+		"prompt": "Before broad deployment, why should a custom Service Mapping pattern be tested against a single known host?",
+		"choices": [
+			"To validate identification and connection output against expected topology before scaling scope",
+			"To permanently lock the pattern version so content updates cannot be applied",
+			"To bypass CMDB reconciliation for all CIs discovered during the test run",
+			"To auto-assign business service ownership from the host assignment group field"
+		],
+		"correctIndex": 0,
+		"explanation": "Controlled single-host testing confirms pattern logic produces accurate CIs and relationships before running against production entry points.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 22,
+		"prompt": "After ServiceNow publishes updated pattern library content, what action may be required in a customer instance?",
+		"choices": [
+			"Review and merge vendor pattern updates with custom copies while preserving local extensions",
+			"Delete all service maps so Discovery recreates business services from event rules",
+			"Disable MID Server clustering to force single-node pattern execution",
+			"Convert all entry points to tag-based mapping rules regardless of architecture"
+		],
+		"correctIndex": 0,
+		"explanation": "Pattern library updates can overwrite or merge with instance patterns, so teams review customizations and reconcile versions after content refresh.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/manage-discovery-pattern-versions.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 23,
+		"prompt": "How do horizontal Discovery patterns differ from Service Mapping patterns in purpose?",
+		"choices": [
+			"Horizontal patterns inventory and classify CIs broadly, while Service Mapping patterns build application dependency topologies",
+			"Horizontal patterns run only on cloud resources, while Service Mapping patterns run only on mainframes",
+			"Horizontal patterns replace CMDB relationships, while Service Mapping patterns disable identification rules",
+			"Horizontal patterns require machine learning, while Service Mapping patterns prohibit credential use"
+		],
+		"correctIndex": 0,
+		"explanation": "Horizontal discovery populates CMDB inventory; Service Mapping patterns extend that foundation to map how applications connect across infrastructure.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/c-UsingPatternsForHorizontalDiscovery.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 24,
+		"questionType": "multi",
+		"prompt": "Which two validations are recommended before promoting a custom Service Mapping pattern to production? (Choose two.)",
+		"choices": [
+			"Debug-mode testing confirms identification and connection steps produce expected CIs on a known host",
+			"A peer review verifies credential references and parsing logic for fragile command output",
+			"All horizontal discovery schedules are disabled globally for thirty days",
+			"Every business service record is converted to a manual CI relationship import"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Production promotion requires verified pattern output on representative targets and review of credentials and parsing logic to prevent map quality regressions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-pattern-best-practices.html"
+		]
+	}
+]

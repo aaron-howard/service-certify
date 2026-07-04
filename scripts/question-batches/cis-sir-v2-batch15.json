@@ -1,0 +1,89 @@
+[
+	{
+		"trackCode": "CIS-SIR",
+		"order": 70,
+		"prompt": "A team is standing up fully automated phishing handling for reported email messages. Which process type should they create first?",
+		"choices": [
+			"Automated phishing process linked to parsing rules and playbook execution",
+			"Manual malware process requiring analyst initiation for every alert",
+			"Failed login manual process for brute-force events without automation",
+			"Discovery schedule process for nightly CMDB subnet scanning"
+		],
+		"correctIndex": 0,
+		"explanation": "Automated phishing processes combine email parsing validation with playbook-driven response for user-reported messages.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/create-process-automated-phishing.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/using-automated-phishing-playbook.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 71,
+		"prompt": "An orchestration action should run only when a specific configuration item appears on the security incident. Which configuration defines that scope?",
+		"choices": [
+			"Trigger conditions scoped to the affected configuration item on the incident",
+			"Discovery credentials assigned to the MID Server cluster for the subnet",
+			"Service catalog approval workflows for employee laptop requests",
+			"CMDB health KPI thresholds for duplicate CI remediation tasks"
+		],
+		"correctIndex": 0,
+		"explanation": "Trigger conditions restrict when orchestration actions and flows execute based on incident fields such as affected CIs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/define-trigger-conditions.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/understand-trigger-conditions-work-with-configuration-item.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 72,
+		"questionType": "multi",
+		"prompt": "Which two elements are configured when defining trigger conditions for SecOps orchestration actions? (Choose two.)",
+		"choices": [
+			"Filter criteria that determine when the action may execute",
+			"Target table and fields evaluated against the security incident record",
+			"Discovery schedule frequency for MID Server subnet scanning",
+			"Service catalog item price and fulfillment group assignment"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Trigger conditions specify which records qualify and which field values must match before an orchestration action runs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/define-trigger-conditions.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/verify-the-configured-trigger-conditions.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 73,
+		"prompt": "An EDR integration must quarantine endpoints directly from a security incident record. Which capability launches those external response actions?",
+		"choices": [
+			"SecOps orchestration workflows invoked from Security Incident Response",
+			"CMDB identification rules merging duplicate computer CI records",
+			"Service Mapping ML candidate queues for application onboarding",
+			"Hardware asset disposal workflows in IT Asset Management"
+		],
+		"correctIndex": 0,
+		"explanation": "Orchestration workflows integrate external security tools so responders execute containment actions without leaving the incident record.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/sec-inc-resp-orchestration-workflows.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/sir-orch-workflow-templates.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 74,
+		"prompt": "Malware alerts from a SIEM should spawn investigation tasks without manual analyst entry. Which playbook type supports that automation model?",
+		"choices": [
+			"Automated malware playbook tied to ingestion and category rules",
+			"Manual phishing playbook requiring analyst initiation for every email",
+			"Failed login manual playbook for password spray events only",
+			"Discovery schedule playbook refreshing CMDB relationships nightly"
+		],
+		"correctIndex": 0,
+		"explanation": "Automated malware playbooks create response tasks when qualifying alerts or incidents match configured criteria.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/using-automated-malware-playbook.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/create-process-automated-malware.html"
+		]
+	}
+]

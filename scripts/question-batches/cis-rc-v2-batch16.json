@@ -1,0 +1,87 @@
+[
+	{
+		"trackCode": "CIS-RC",
+		"order": 75,
+		"prompt": "A mitigation project finishes and controls test effective. What must the risk owner do before closing treatment?",
+		"choices": [
+			"Reassess residual risk and document updated exposure with supporting evidence",
+			"Delete inherent scores so only qualitative notes remain",
+			"Archive the risk framework containing the statement",
+			"Disable future assessments for the affected business entity"
+		],
+		"correctIndex": 0,
+		"explanation": "Post-treatment reassessment confirms residual exposure reflects implemented controls before closure.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-response-and-treatment.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-review-process.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 76,
+		"prompt": "Reporting shows many high risks missing owners or treatment plans. Which data quality control has the highest impact?",
+		"choices": [
+			"Required owner, rating, treatment plan, and review cadence fields on risk records",
+			"Optional free-text status values without validation rules",
+			"Storing risk notes exclusively in external file shares",
+			"Allowing duplicate risk statements with identical titles"
+		],
+		"correctIndex": 0,
+		"explanation": "Mandatory core fields and review cadence enforce consistent lifecycle data for reliable risk reporting.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-data-governance.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-register.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 77,
+		"prompt": "A new GRC instance needs baseline policies, controls, and risk libraries quickly. Which extended capability accelerates that setup?",
+		"choices": [
+			"Install and configure GRC content packs aligned to the target regulatory profile",
+			"Build every control manually without imported templates",
+			"Disable scoped applications so all tables remain global",
+			"Import employee records from HR as authority documents"
+		],
+		"correctIndex": 0,
+		"explanation": "GRC content packs deliver starter policy, compliance, and risk artifacts that teams tailor to the organization.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/c_GRCControls.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 78,
+		"prompt": "Legal notifies the team that a federal citation changed effective next month. Which common-elements workflow helps maintain compliance coverage?",
+		"choices": [
+			"Regulatory change management with impact analysis on citations, controls, and tests",
+			"Immediate deletion of all mapped controls without stakeholder review",
+			"Suspending every attestation campaign until the following year",
+			"Ignoring citation updates until an external audit requests evidence"
+		],
+		"correctIndex": 0,
+		"explanation": "Regulatory change management tracks obligation updates and drives governed adjustments to controls and testing.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/policy-lifecycle-management.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 79,
+		"prompt": "Compliance operations wants automated alerts when encryption control indicators breach thresholds. Which design supports continuous monitoring?",
+		"choices": [
+			"Control indicators tied to objectives with threshold-based exception creation",
+			"Annual manual evidence uploads stored as unattached files",
+			"Email-only summaries with no structured control records",
+			"Static control tests executed once during initial implementation"
+		],
+		"correctIndex": 0,
+		"explanation": "Automated control indicators generate exceptions when telemetry shows drift from expected control operation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/control-testing-and-evidence.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/compliance-metrics.html"
+		]
+	}
+]

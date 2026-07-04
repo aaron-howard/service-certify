@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-SIR",
+		"order": 15,
+		"prompt": "When a ransomware event requires coordinated war-room response across security and business stakeholders, which SIR capability applies?",
+		"choices": [
+			"Major Security Incident Management with dedicated collaboration and escalation",
+			"Standard change management workflow for normal production deployments",
+			"Software asset reclamation rules for unused license optimization",
+			"Facilities badge deactivation scheduled through HR onboarding tasks"
+		],
+		"correctIndex": 0,
+		"explanation": "Major Security Incident Management provides the collaborative response model for high-impact incidents such as ransomware and large-scale breaches.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/major-security-incident-management.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 16,
+		"prompt": "Why do security teams associate MITRE ATT&CK tactics and techniques with a security incident record?",
+		"choices": [
+			"To add structured adversary behavior context that supports prioritization and investigation",
+			"To automatically patch every endpoint without analyst review or validation",
+			"To replace vulnerability scanning tools across the entire security stack",
+			"To normalize software publisher names for annual license audit reporting"
+		],
+		"correctIndex": 0,
+		"explanation": "MITRE ATT&CK alignment enriches incidents with standardized threat behavior context for defensive planning and consistent analysis.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/mitre-attack-defend-graph-sir.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 17,
+		"prompt": "During triage, an analyst links a suspicious IP address to a security incident. Which capability enriched that indicator?",
+		"choices": [
+			"Threat intelligence lookup against configured feeds and observables",
+			"Discovery horizontal scan results from the previous subnet probe",
+			"Service catalog approval history for the affected user account",
+			"Project portfolio demand scoring for unrelated strategic initiatives"
+		],
+		"correctIndex": 0,
+		"explanation": "Threat intelligence integrations and lookups enrich observables such as IP addresses with reputation and context during incident triage.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/threat-intelligence-in-sir.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 18,
+		"prompt": "A parent security incident spans multiple affected hosts requiring separate investigation tracks. What record structure should the lead analyst use?",
+		"choices": [
+			"Child security incidents linked to the parent with rolled-up status and context",
+			"Duplicate parent incidents with identical numbers for each host separately",
+			"Change tasks on the change request table with no security incident linkage",
+			"Problem records only, closing the parent incident before child work begins"
+		],
+		"correctIndex": 0,
+		"explanation": "Parent and child security incidents let teams parallelize host-level investigations while maintaining consolidated oversight.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/manage-major-security-incidents.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 19,
+		"prompt": "Which field type on a security incident best stores file hashes and domains identified during initial analysis?",
+		"choices": [
+			"Indicators of compromise linked through threat intelligence observables",
+			"Discovery credentials used for MID Server authentication to Linux hosts",
+			"Catalog variables captured during employee laptop provisioning requests",
+			"Financial plan task codes tied to portfolio investment approvals"
+		],
+		"correctIndex": 0,
+		"explanation": "IOCs such as hashes and domains are captured as observables and linked to incidents for enrichment and downstream correlation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/threat-intelligence-in-sir.html"
+		]
+	}
+]

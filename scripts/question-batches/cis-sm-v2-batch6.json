@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-SM",
+		"order": 25,
+		"prompt": "A Connection Section references a temporary variable that was never populated by an earlier step. What symptom appears during mapping?",
+		"choices": [
+			"Downstream connection steps fail or skip because required parsed values are empty or undefined",
+			"The service map schedule automatically doubles its run frequency until the variable resolves",
+			"All CIs on the map display a green check mark indicating successful credential validation",
+			"The pattern is promoted to production status without requiring further testing"
+		],
+		"correctIndex": 0,
+		"explanation": "Missing variable values break connection logic that depends on parsed data, resulting in incomplete dependency maps.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 26,
+		"prompt": "An Identification Section uses an overly broad regular expression. What mapping problem can result?",
+		"choices": [
+			"Unrelated processes match the pattern, creating false application CIs and noisy dependencies",
+			"Discovery credentials expire immediately after the first successful pattern execution",
+			"Entry points are deleted automatically when the regex matches more than one hostname",
+			"Business services are retired from the CMDB whenever the regex matches a port number"
+		],
+		"correctIndex": 0,
+		"explanation": "Broad identification criteria cause incorrect pattern matches, leading to generic or duplicate application CIs and inaccurate topologies.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-pattern-best-practices.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 27,
+		"prompt": "Service Mapping setup on a MID Server commonly requires configuration of which file types?",
+		"choices": [
+			"Properties and configuration files that control probes, timeouts, and mapping behavior on the MID Server",
+			"Software entitlement CSV templates used by the SAM reconciliation engine exclusively",
+			"Incident workflow XML exports from the service desk application module",
+			"Change calendar ICS files imported from external project management tools"
+		],
+		"correctIndex": 0,
+		"explanation": "MID Server configuration files and properties tune probe execution, connectivity, and Service Mapping behavior in the customer environment.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 28,
+		"prompt": "When tuning Service Mapping performance in a large environment, which settings are commonly adjusted?",
+		"choices": [
+			"Concurrent probe limits, timeouts, and schedule frequency to balance map freshness with MID Server load",
+			"Incident auto-close intervals and on-hold reason catalogs in the ITSM application",
+			"Hardware asset depreciation methods and stockroom transfer order approval rules",
+			"Event management connector polling intervals for SaaS monitoring integrations only"
+		],
+		"correctIndex": 0,
+		"explanation": "Performance tuning focuses on probe concurrency, timeout values, and mapping schedule cadence to avoid overloading MID Servers while maintaining accuracy.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 29,
+		"prompt": "In Service Mapping configuration, an entry point defines what starting condition?",
+		"choices": [
+			"The CI or endpoint—such as a URL, hostname, or load balancer—where top-down mapping begins discovery",
+			"The software model normalization rule applied during horizontal discovery classification",
+			"The event rule threshold that creates alerts in the Event Management application",
+			"The change model used when service map updates require CAB approval"
+		],
+		"correctIndex": 0,
+		"explanation": "Entry points anchor service map discovery by identifying where Service Mapping starts traversing application dependencies.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/entry-points-and-service-maps.html"
+		]
+	}
+]

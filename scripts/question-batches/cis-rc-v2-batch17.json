@@ -1,0 +1,89 @@
+[
+	{
+		"trackCode": "CIS-RC",
+		"order": 80,
+		"prompt": "Security operations feeds vulnerability findings into the GRC program. Which integration pattern adds the most monitoring value?",
+		"choices": [
+			"Ingest operational signals from IT and security systems to enrich control and risk context",
+			"Import static policy PDFs quarterly without structured fields",
+			"Disable integrations to force manual spreadsheet reviews",
+			"Route all vulnerability records to catalog fulfillment workflows"
+		],
+		"correctIndex": 0,
+		"explanation": "Integrated telemetry makes continuous monitoring timely and connects operational events to control objectives.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/control-testing-and-evidence.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 81,
+		"prompt": "A content subscription delivers updated regulatory mappings mid-year. What should administrators do before activating the update?",
+		"choices": [
+			"Review release notes, assess impact on scoped citations and controls, then apply under change control",
+			"Overwrite production mappings immediately without testing",
+			"Reject all subscription updates to avoid rework",
+			"Delete existing authority documents prior to import"
+		],
+		"correctIndex": 0,
+		"explanation": "Regulatory content updates require impact review so scoped compliance artifacts remain accurate and testable.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/policy-lifecycle-management.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 82,
+		"prompt": "The CFO asks for a single view of compliance posture across departments. Which common-elements artifact should be configured?",
+		"choices": [
+			"GRC scorecards aggregating control effectiveness and exception trends",
+			"Discovery status dashboard for subnet classification errors",
+			"Service catalog request volume by category",
+			"MID Server heartbeat report for integration nodes"
+		],
+		"correctIndex": 0,
+		"explanation": "GRC scorecards consolidate compliance and control metrics for executive oversight across the program.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/compliance-dashboards.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 83,
+		"prompt": "Program managers need cross-module reporting spanning policy tests, risk treatments, and open issues. Which approach meets that need?",
+		"choices": [
+			"Unified GRC dashboards and reports with consistent definitions across modules",
+			"Separate offline spreadsheets maintained by each module lead",
+			"Incident-only analytics excluding compliance and risk tables",
+			"Ad hoc list exports with different filters for every meeting"
+		],
+		"correctIndex": 0,
+		"explanation": "Shared GRC reporting definitions provide consistent oversight across policy, risk, and remediation workflows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/compliance-dashboards.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-impl-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 84,
+		"questionType": "multi",
+		"prompt": "Which three roles does the sn_audit.user role inherit for cross-module GRC read access? (Choose three.)",
+		"choices": [
+			"sn_grc.reader",
+			"sn_compliance.reader",
+			"sn_risk.reader",
+			"sn_incident.write"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1, 2],
+		"explanation": "The sn_audit.user role inherits sn_grc.reader, sn_compliance.reader, and sn_risk.reader so auditors can view GRC data across modules.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/audit-management/c_AuditTasks.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
+		]
+	}
+]
