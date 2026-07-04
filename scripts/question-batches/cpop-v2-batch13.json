@@ -1,0 +1,103 @@
+[
+	{
+		"trackCode": "CPOP",
+		"order": 60,
+		"prompt": "A global retailer plans a family upgrade while supporting twenty scoped applications and heavy global-scope customizations. Which maintenance requirement should the platform owner communicate to executive sponsors?",
+		"choices": [
+			"Upgrade windows can shrink because vendor baselines absorb all local changes automatically",
+			"Skipped-update remediation, regression testing, and hypercare staffing must scale with customization depth",
+			"Production cutover can proceed once development sign-off is recorded without lower-environment validation",
+			"Patch cycles can be suspended for twelve months after the family upgrade completes"
+		],
+		"correctIndex": 1,
+		"explanation": "Deep customization increases skipped-update work, test scope, and post-cutover support needs that sponsors must fund before scheduling major upgrades.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade/concept/skipped-updates.html",
+			"https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 61,
+		"prompt": "Given a scenario where three business units demand parallel feature delivery on one shared production instance, how will that implementation choice affect ongoing platform maintenance?",
+		"choices": [
+			"Maintenance effort drops because shared instances eliminate the need for environment parity checks",
+			"Vendor patches apply independently per business unit without coordinated regression windows",
+			"Change collisions, shared upgrade windows, and cross-team regression coordination will increase maintenance overhead",
+			"Each unit can schedule family upgrades on separate calendars without impacting shared configuration"
+		],
+		"correctIndex": 2,
+		"explanation": "A single shared production instance concentrates change risk, so maintenance requires coordinated testing, sequencing, and collision management across all consumers.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/concept/upgrade-governance.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 62,
+		"questionType": "match",
+		"prompt": "Match each upgrade sequence activity to the platform owner outcome it primarily supports.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Review Upgrade Center readiness insights",
+			"Execute upgrade in sub-production first",
+			"Resolve skipped updates in test",
+			"Schedule production cutover with rollback criteria"
+		],
+		"matchRightItems": [
+			"Identify family support timelines, blockers, and preparation tasks before committing resources",
+			"Validate baseline behavior and customization impact before touching production workloads",
+			"Merge or retire conflicting local changes so upgraded baselines deploy cleanly",
+			"Control business risk with defined go/no-go gates and documented recovery paths"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Upgrade sequencing moves from readiness review through staged validation, conflict resolution, and governed production cutover to reduce surprise and rollback frequency.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/task/plan-instance-upgrade.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/concept/upgrade-readiness-dashboard.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 63,
+		"questionType": "multi",
+		"prompt": "The operations team is building a patch governance calendar for the next quarter. Which elements should the platform owner require in the published schedule? (Choose two.)",
+		"choices": [
+			"Patch release windows aligned to maintenance blackout rules and dependency test completion",
+			"Defined intake cutoff dates so regression and security review finish before deployment",
+			"Verbal team agreements replacing documented rollback expectations for hotfixes",
+			"A policy allowing developers to self-schedule production patches without change records"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Patch schedules need published windows tied to blackout policy plus intake deadlines that leave time for regression and security validation before deployment.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/concept/upgrade-center.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 64,
+		"prompt": "Before approving a major upgrade budget, finance asks what evidence supports the proposed maintenance window. Which gathered information best answers that question?",
+		"choices": [
+			"Upgrade Center readiness data, customization inventory, test results, and resource estimates from prior cycles",
+			"A single screenshot of the current instance version displayed on the login page",
+			"The count of open enhancement stories in the product backlog without upgrade linkage",
+			"Informal developer estimates captured in chat without environment validation history"
+		],
+		"correctIndex": 0,
+		"explanation": "Budget justification for upgrade maintenance relies on readiness insights, customization scope, validated test outcomes, and historical effort—not anecdotal or unrelated metrics.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/concept/upgrade-readiness-dashboard.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
+		]
+	}
+]

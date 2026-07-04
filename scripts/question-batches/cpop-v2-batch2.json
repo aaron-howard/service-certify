@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOP",
+		"order": 5,
+		"prompt": "During quarterly planning, executives ask what value the ServiceNow Support Portal provides beyond internal documentation. Which response best reflects available portal services?",
+		"choices": [
+			"Access to product documentation, release information, known issues, and support case management",
+			"A marketplace for purchasing third-party hardware unrelated to the platform subscription",
+			"An unrestricted production database clone for every developer on demand",
+			"A replacement for internal change advisory board approval workflows"
+		],
+		"correctIndex": 0,
+		"explanation": "The Support Portal centralizes official documentation, release notes, defect information, and customer support interactions for licensed products.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 6,
+		"questionType": "match",
+		"prompt": "Match each Support Portal resource type to how a platform owner should use it during upgrade planning.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Release notes",
+			"Known error articles",
+			"Product documentation",
+			"Support cases"
+		],
+		"matchRightItems": [
+			"Identify new features and breaking changes before scheduling upgrades",
+			"Review documented defects that may affect targeted versions",
+			"Validate configuration guidance for capabilities being deployed",
+			"Escalate blockers with vendor engineering when internal remediation stalls"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Platform owners leverage portal resources proactively for release awareness, defect risk, implementation guidance, and vendor escalation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 7,
+		"prompt": "A prior platform wave delivered strong automation but weak adoption. When the CoEI reviews lessons learned, what response best turns that pitfall into future success?",
+		"choices": [
+			"Embed change enablement and feedback loops in the next wave before declaring completion",
+			"Repeat the same rollout pattern because automation metrics already exceeded targets",
+			"Remove executive sponsors from communications to avoid overselling results",
+			"Defer all user training until every legacy tool is decommissioned globally"
+		],
+		"correctIndex": 0,
+		"explanation": "CoEI retrospectives should address adoption gaps with enablement and feedback, not rely solely on automation metrics or delayed training.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 8,
+		"prompt": "An assessment reveals the CoEI has strong standards documentation but no measurable innovation pipeline. Which gap should the platform owner prioritize closing first?",
+		"choices": [
+			"Establish intake, prioritization, and funding criteria for platform improvement ideas",
+			"Eliminate all standards until every team submits at least ten ideas per quarter",
+			"Transfer CoEI accountability entirely to individual application developers",
+			"Pause governance meetings until innovation backlog items reach zero"
+		],
+		"correctIndex": 0,
+		"explanation": "A missing innovation pipeline requires structured intake and prioritization; abandoning standards or shifting accountability does not restore CoEI balance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 9,
+		"questionType": "multi",
+		"prompt": "Facilities leadership requests a solution for space reservations tied to move requests. Which design steps should the platform owner guide the team through? (Choose two.)",
+		"choices": [
+			"Confirm business outcomes, actors, and data needed before selecting products",
+			"Evaluate reuse of existing catalog, workflow, and CMDB patterns on the instance",
+			"Commit to custom global-scope code before stakeholder interviews conclude",
+			"Skip success criteria because the request appears straightforward"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Solution design starts with outcomes and reuse assessment; premature custom builds or absent success criteria increase delivery risk.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	}
+]

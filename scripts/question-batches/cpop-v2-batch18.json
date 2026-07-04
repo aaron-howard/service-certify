@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOP",
+		"order": 85,
+		"prompt": "During quarterly capacity planning, node CPU stays below target yet users report sluggish form loads on heavily customized tables. Which investigation path best balances requirement delivery with system performance?",
+		"choices": [
+			"Profile client scripts, business rules, and related list queries on affected tables before scaling nodes",
+			"Add three mid-tier nodes immediately without reviewing customization impact",
+			"Remove all UI policies enterprise-wide to reduce server round trips",
+			"Direct users to classic UI exclusively until the next family upgrade"
+		],
+		"correctIndex": 0,
+		"explanation": "Customization-heavy tables often degrade performance through script and query patterns; profiling those behaviors addresses root cause more reliably than blind capacity increases.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 86,
+		"prompt": "The platform owner's CMDB steering group finds relationship completeness below threshold on business-critical services. What governance action should come next?",
+		"choices": [
+			"Launch a targeted remediation plan with service owners, success criteria, and CMDB Health tracking",
+			"Hide incomplete services from all operational dashboards until the next fiscal year",
+			"Disable relationship editing for non-admin users permanently",
+			"Accept current completeness because Discovery runs nightly without errors"
+		],
+		"correctIndex": 0,
+		"explanation": "Governed remediation with owner accountability and measurable CMDB Health targets closes data gaps that Discovery schedules alone cannot guarantee.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 87,
+		"prompt": "A data retention policy requires seven years of closed change records, but the Change table now exceeds acceptable query thresholds. Which approach meets compliance while optimizing performance?",
+		"choices": [
+			"Implement table rotation with archived records accessible through governed retrieval paths",
+			"Delete closed changes older than one year regardless of regulatory obligations",
+			"Store all historical changes in a single unindexed custom table on the same node",
+			"Disable list views on the Change table and require direct sys_id navigation"
+		],
+		"correctIndex": 0,
+		"explanation": "Rotation with governed archival preserves compliance retention while keeping active table size within performance tolerances.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 88,
+		"questionType": "multi",
+		"prompt": "Multiple product teams propose new integrations that write CI attributes nightly. Which CMDB data governance practices should the platform owner mandate before approving the feeds? (Choose two.)",
+		"choices": [
+			"Documented authoritative source precedence in IRE for overlapping attributes",
+			"Named data stewards accountable for class-level quality on affected CI types",
+			"Unrestricted write access for every integration account to accelerate delivery",
+			"Defer reconciliation until after all feeds are live in production"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Integration feeds need IRE precedence rules and steward ownership so overlapping writes do not erode CMDB trust or performance through duplicate remediation work.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 89,
+		"questionType": "match",
+		"prompt": "Match each platform performance capability to the requirement it best addresses.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Node monitoring and capacity dashboards",
+			"Database indexing review",
+			"Scheduled job distribution",
+			"Table growth analytics"
+		],
+		"matchRightItems": [
+			"Detects when compute resources approach limits before user-visible degradation",
+			"Reduces full-table scan latency on high-volume transactional queries",
+			"Prevents background processing spikes from colliding during peak business hours",
+			"Forecasts storage and query impact from rising record counts"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Platform owners align monitoring, indexing, job scheduling, and growth analytics to distinct performance requirements rather than treating capacity as a single lever.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	}
+]

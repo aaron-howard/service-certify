@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOP",
+		"order": 30,
+		"questionType": "multi",
+		"prompt": "Business leaders want to expand citizen development for departmental apps. Which success factors should the platform owner establish? (Choose two.)",
+		"choices": [
+			"Clear scope boundaries defining what citizen developers may build and deploy",
+			"Enablement on guardrails, approved tools, and promotion paths for higher-risk changes",
+			"Unlimited production admin access for all interested staff members",
+			"Elimination of code review for any app built outside IT"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Citizen development succeeds with defined scope, training, and escalation paths—not unchecked admin rights or absent review.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/application-development.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 31,
+		"prompt": "Security architecture requires encryption of sensitive attributes at rest and in transit. What should the platform owner verify before approving a new HR integration?",
+		"choices": [
+			"Field-level protection, TLS for transport, and key management aligned to enterprise standards",
+			"Plain-text storage in custom tables to simplify third-party parsing",
+			"Disabling platform encryption plugins to improve batch job speed",
+			"Sharing decryption keys via unencrypted email for operational ease"
+		],
+		"correctIndex": 0,
+		"explanation": "Data and encryption practices require protected fields, secure transport, and governed keys—not plaintext storage or insecure key sharing.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 32,
+		"prompt": "A department proposes citizen-built catalog items for internal supply requests. What scope definition best balances agility with platform stability?",
+		"choices": [
+			"Allow low-risk catalog and flow changes within a managed scope with peer review before production",
+			"Permit unrestricted edits to core ITSM tables in the global application",
+			"Forbid any business-led configuration regardless of complexity or risk",
+			"Deploy citizen changes directly to production without test or approval steps"
+		],
+		"correctIndex": 0,
+		"explanation": "Citizen development scope should permit low-risk work in controlled scopes with review, not global edits or production bypass.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/application-development.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 33,
+		"prompt": "After completing CoEI foundation work, executives ask what outcomes they should expect in the first year. Which outcome best reflects a mature CoEI implementation?",
+		"choices": [
+			"Consistent delivery within standards, measurable platform KPIs, and a prioritized innovation backlog",
+			"Complete elimination of all customization regardless of business need",
+			"Centralized control where only one person may approve every change globally",
+			"Suspension of executive reporting until all products are fully deployed"
+		],
+		"correctIndex": 0,
+		"explanation": "CoEI outcomes include governed delivery, tracked KPIs, and structured innovation—not zero customization or reporting delays.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 34,
+		"questionType": "match",
+		"prompt": "Match each agile platform capability to the delivery need it supports.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Agile Development stories",
+			"DevOps change pipelines",
+			"Automated test frameworks",
+			"Collaboration workspaces"
+		],
+		"matchRightItems": [
+			"Break platform work into prioritized increments for sprints",
+			"Promote configuration through controlled environments",
+			"Validate builds before production release",
+			"Coordinate cross-team visibility on active work items"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Agile platform capabilities address backlog management, pipeline promotion, automated validation, and team collaboration for iterative delivery.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/application-development.html"
+		]
+	}
+]

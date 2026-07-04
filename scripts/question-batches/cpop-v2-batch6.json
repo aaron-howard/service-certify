@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOP",
+		"order": 25,
+		"prompt": "A cross-domain workflow spans HR cases, CMDB CIs, and procurement records. What testing oversight approach best validates end-to-end behavior before release?",
+		"choices": [
+			"Scenario-based test scripts covering data handoffs and role-based paths in sub-production",
+			"Unit testing of a single script while ignoring downstream table updates",
+			"Visual inspection of theme branding without executing workflow transitions",
+			"Deferring all validation until the first week of unmonitored production use"
+		],
+		"correctIndex": 0,
+		"explanation": "Cross-domain processes require scenario tests that exercise data dependencies and roles; isolated or cosmetic checks miss integration failures.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/application-development.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 26,
+		"questionType": "multi",
+		"prompt": "Operations reports that a fulfillment workflow fails when related CI records are stale. Which data dependency practices should the platform owner reinforce? (Choose two.)",
+		"choices": [
+			"Document upstream and downstream tables required for each critical process",
+			"Establish data quality checks before workflow stages that rely on CMDB accuracy",
+			"Assume integrations will self-heal without ownership or monitoring",
+			"Remove dependency mapping to simplify project documentation"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Process reliability depends on documented data dependencies and quality gates; ignoring dependencies or assuming self-healing leads to failures.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 27,
+		"prompt": "Legal mandates annual attestation that employee data handling meets sector regulations. Which security practice should the platform owner prioritize?",
+		"choices": [
+			"Align platform controls, audit evidence, and data handling policies to regulatory requirements",
+			"Disable all logging to reduce storage costs during audit periods",
+			"Grant broad export rights to contractors without data classification review",
+			"Store regulated data in unencrypted custom fields to simplify reporting"
+		],
+		"correctIndex": 0,
+		"explanation": "Regulatory compliance requires mapped controls, auditable evidence, and governed data handling—not weakened logging or uncontrolled exports.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 28,
+		"prompt": "A new integration will exchange personnel records with an external HR system. Which security implementation approach fits platform owner expectations?",
+		"choices": [
+			"Use authenticated integration patterns with least-privilege service accounts and encrypted transport",
+			"Embed shared passwords in client scripts for faster troubleshooting",
+			"Expose unauthenticated REST endpoints on production for partner convenience",
+			"Disable access controls on HR tables to eliminate authorization errors"
+		],
+		"correctIndex": 0,
+		"explanation": "Secure integrations use authenticated, least-privilege connections and encryption; embedded credentials or open endpoints violate security standards.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 29,
+		"questionType": "match",
+		"prompt": "Match each security practice area to the platform owner action that best supports it.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Regulatory compliance",
+			"Access control",
+			"Data protection",
+			"Secure development"
+		],
+		"matchRightItems": [
+			"Maintain control mappings and evidence for audit cycles",
+			"Enforce role-based access aligned to job functions",
+			"Apply encryption and classification for sensitive fields",
+			"Require code review and scanning before production promotion"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Platform owners orchestrate compliance evidence, RBAC, data protection, and secure development gates as complementary security practices.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		]
+	}
+]

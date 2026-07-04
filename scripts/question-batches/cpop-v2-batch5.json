@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOP",
+		"order": 20,
+		"prompt": "Delivery teams adopt Scrum for platform enhancements. Which ceremony is primarily intended to inspect progress toward the sprint goal and adapt the plan?",
+		"choices": [
+			"Daily standup with the development team",
+			"Annual budget review with external auditors only",
+			"Hardware procurement committee meeting",
+			"Unstructured email thread without a facilitator"
+		],
+		"correctIndex": 0,
+		"explanation": "Daily standups enable the team to synchronize on sprint progress and adjust work; they are a core Scrum event for short-cycle inspection.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/application-development.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 21,
+		"prompt": "An agile release train needs platform capabilities to support iterative delivery. Which ServiceNow capability best enables agile development practices on the instance?",
+		"choices": [
+			"Agile Development with stories, sprints, and backlog management integrated to work items",
+			"Static PDF exports of configuration tables without workflow linkage",
+			"Manual ticket numbering in spreadsheets external to the platform",
+			"Disabling version control to accelerate unreviewed production edits"
+		],
+		"correctIndex": 0,
+		"explanation": "Agile Development provides backlog, sprint, and story management tied to platform work, supporting iterative delivery rather than external tracking.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/application-development.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 22,
+		"prompt": "Employee Center receives complaints that users cannot find services quickly. Which UX characteristic most likely explains poor customer and employee experience?",
+		"choices": [
+			"Inconsistent navigation labels and buried catalog items without search optimization",
+			"Responsive layout that adapts to mobile and desktop viewports",
+			"Plain-language service descriptions aligned to user tasks",
+			"Prominent search with filtered results based on user profile"
+		],
+		"correctIndex": 0,
+		"explanation": "Poor findability from inconsistent navigation and weak search drives bad CX/EX; responsive design, clear language, and effective search improve experience.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 23,
+		"questionType": "multi",
+		"prompt": "Executives ask how the CoEI will oversee testing for a multi-team release. Which oversight methods should the platform owner describe? (Choose two.)",
+		"choices": [
+			"Defined test entry and exit criteria tied to release milestones",
+			"Traceability from requirements through test cases and defect resolution",
+			"Exclusive reliance on end-user discovery in production after go-live",
+			"Elimination of regression suites to shorten calendar timelines"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Testing oversight requires milestone criteria and traceability; production-only discovery or skipped regression increases release risk.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/application-development.html"
+		]
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 24,
+		"questionType": "match",
+		"prompt": "Match each Scrum event to its primary purpose for platform delivery teams.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Sprint planning",
+			"Sprint review",
+			"Sprint retrospective",
+			"Backlog refinement"
+		],
+		"matchRightItems": [
+			"Define sprint goal and select backlog items for the iteration",
+			"Demonstrate completed work and gather stakeholder feedback",
+			"Reflect on process and agree improvements for the next sprint",
+			"Clarify upcoming stories so the team can estimate and plan"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Scrum events each serve distinct planning, review, improvement, and refinement purposes that platform owners should reinforce in agile programs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/application-development.html"
+		]
+	}
+]
