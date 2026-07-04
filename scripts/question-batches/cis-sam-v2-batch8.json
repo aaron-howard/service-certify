@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-SAM",
+		"order": 35,
+		"prompt": "When an organization transitions to subscription licensing, what SAM data update is most important?",
+		"choices": [
+			"Map subscriptions to entitlement structures with correct terms so renewals and consumption are tracked",
+			"Treat all subscription installs as perpetual rights that never require renewal review",
+			"Exclude subscription-based installs from reconciliation calculations entirely",
+			"Disable publisher part number management for all subscription-based products"
+		],
+		"correctIndex": 0,
+		"explanation": "Subscription licensing introduces term-based rights, so entitlement structure and renewal tracking must reflect subscription conditions accurately.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/subscription-entitlements.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 36,
+		"prompt": "In SAM, what does an entitlement record primarily represent?",
+		"choices": [
+			"A right to use software, typically derived from purchases, agreements, or subscriptions",
+			"A discovered installation awaiting normalization to a software model record",
+			"A one-time approval ticket authorizing software install on a single device only",
+			"A workflow task record tracking license reclamation campaign progress exclusively"
+		],
+		"correctIndex": 0,
+		"explanation": "Entitlements represent use rights and form the licensed side of the comparison performed during reconciliation against installed software.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/software-entitlements-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 37,
+		"questionType": "multi",
+		"prompt": "Which two data elements are required to resolve a Publisher part number not found entitlement import error? (Choose two.)",
+		"choices": [
+			"A valid publisher part number mapped to the software model",
+			"A software model associated with the licensable product",
+			"An incident record linked to the import error for ITSM tracking",
+			"A hardware asset tag matching the discovery serial number"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Import errors for missing publisher part numbers are resolved by ensuring the part number exists and maps to the correct software model for the product.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/entitlement-import-error-fields.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 38,
+		"prompt": "A SAM team runs reconciliation for the first time on a newly onboarded publisher. What does the reconciliation process compare?",
+		"choices": [
+			"Purchased entitlement rights against discovered installations and allocations for each software model",
+			"Hardware asset depreciation schedules against procurement invoice line totals",
+			"Change request approval durations against incident mean time to resolve metrics",
+			"Knowledge article publish dates against catalog item retirement schedules"
+		],
+		"correctIndex": 0,
+		"explanation": "Reconciliation evaluates license position by comparing entitlement rights to normalized install and allocation data for each software model.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 39,
+		"prompt": "After reconciliation completes, a publisher shows more installations than purchased rights. Which compliance state best describes this finding?",
+		"choices": [
+			"Under-licensed or non-compliant for that software model",
+			"Over-licensed with unused entitlements available for reclamation",
+			"Fully compliant because discovery counts are estimates only",
+			"Neutral because reconciliation does not evaluate install counts"
+		],
+		"correctIndex": 0,
+		"explanation": "When active installations or allocations exceed purchased rights, the license position is under-licensed and requires remediation before audit defense.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/software-compliance-overview.html"
+		]
+	}
+]

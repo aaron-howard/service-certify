@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-SAM",
+		"order": 15,
+		"prompt": "Why is selecting the correct license metric critical when configuring SAM entitlements?",
+		"choices": [
+			"It determines how consumption is measured against purchased rights during reconciliation",
+			"It controls which users can authenticate into the ServiceNow instance at login",
+			"It eliminates the need to maintain contract records linked to entitlement records",
+			"It replaces software normalization rules applied during discovery model mapping"
+		],
+		"correctIndex": 0,
+		"explanation": "The license metric defines the counting logic for compliance; an incorrect metric can materially misstate license position during reconciliation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/license-metrics-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 16,
+		"prompt": "A publisher audits by named user, but the entitlement is configured with a per-device metric. What is the likely compliance outcome?",
+		"choices": [
+			"Potential over- or under-counting because the measurement basis does not match contract terms",
+			"More accurate reconciliation because device counts are simpler to collect than user counts",
+			"No impact because SAM automatically converts all license metrics during reconciliation",
+			"All installations become compliant by default when discovery data is normalized"
+		],
+		"correctIndex": 0,
+		"explanation": "Metric mismatch between contract rights and SAM configuration produces inaccurate compliance results and increases audit dispute risk.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/configure-license-metrics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 17,
+		"prompt": "A product portfolio includes multiple license metrics across different editions. Which SAM practice best supports accurate entitlement modeling?",
+		"choices": [
+			"Create separate entitlement structures aligned to each contractual metric and edition scope",
+			"Track all metric variations exclusively in free-text notes on a single entitlement record",
+			"Disable reconciliation for publishers that use more than one license metric type",
+			"Apply one entitlement with a single metric for every edition of the product family"
+		],
+		"correctIndex": 0,
+		"explanation": "Mixed-metric products require explicit entitlement modeling so each edition is measured using the proper contractual counting rules.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/license-metric-best-practices.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 18,
+		"prompt": "What does effective license metric governance in SAM primarily prevent?",
+		"choices": [
+			"Inconsistent counting logic that leads to unreliable compliance reporting and audit disputes",
+			"Unauthorized updates to knowledge articles linked from the service catalog portal",
+			"Changes to incident assignment groups triggered by reconciliation scheduled jobs",
+			"Automatic deletion of discovery records when normalization rules are updated"
+		],
+		"correctIndex": 0,
+		"explanation": "Metric governance keeps reconciliation logic consistent and auditable, reducing dispute risk with publishers during true-ups and audits.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/govern-license-metrics.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 19,
+		"prompt": "Before finalizing reconciliation for a new publisher, which validation step gives the strongest confidence that metric mappings behave correctly?",
+		"choices": [
+			"Confirm metric-to-contract alignment and test expected consumption on representative install data",
+			"Review the entitlement form layout theme and field label color configuration",
+			"Replace entitlement quantities with rounded estimates to simplify dashboard totals",
+			"Temporarily disable reconciliation error notifications until the first audit completes"
+		],
+		"correctIndex": 0,
+		"explanation": "Testing metric configuration against representative data confirms reconciliation produces expected compliance outcomes under real licensing scenarios.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/validate-reconciliation-results.html"
+		]
+	}
+]

@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-SAM",
+		"order": 0,
+		"prompt": "A SAM implementation team must customize business rules and write platform scripts for entitlement automation. Which role grants script writing capabilities?",
+		"choices": [
+			"sam_developer",
+			"sam_user",
+			"sam_admin",
+			"sam"
+		],
+		"correctIndex": 0,
+		"explanation": "The sam_developer role extends SAM access with script writing capabilities on the platform for custom automation and rule development.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-roles.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 1,
+		"prompt": "A CIO asks why the organization should implement Software Asset Management beyond hardware asset tracking. Which outcome best describes the SAM value proposition?",
+		"choices": [
+			"Align purchased entitlements with discovered installations and usage to reduce audit exposure and overspend",
+			"Replace the CMDB with a standalone inventory database isolated from IT service management workflows",
+			"Eliminate procurement contracts by auto-generating purchase orders from discovery scan results",
+			"Convert all subscription licenses into perpetual hardware asset records for stockroom tracking"
+		],
+		"correctIndex": 0,
+		"explanation": "SAM focuses on reconciling license rights against installed and consumed software so organizations can defend audit positions and optimize spend.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/software-asset-management-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 2,
+		"prompt": "In the standard SAM process architecture, which sequence reflects how discovered software data becomes compliance-ready?",
+		"choices": [
+			"Discovery collects install evidence, normalization maps titles to software models, reconciliation compares rights to consumption",
+			"Procurement creates entitlements first, discovery deletes unmatched installs, normalization executes only at fiscal year-end",
+			"Normalization executes before discovery runs, entitlements are optional once installs are mapped, reconciliation stays manual",
+			"Reconciliation assigns user allocations, discovery imports contract PDFs, normalization auto-creates publisher SKU records"
+		],
+		"correctIndex": 0,
+		"explanation": "SAM process architecture flows from discovery evidence through normalization into software models, then reconciliation evaluates entitlement position.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-process-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 3,
+		"prompt": "During a bulk entitlement import, an administrator reviews Entitlement Import Error records. Which message is NOT a valid import error reason?",
+		"choices": [
+			"Purchased rights should be less than 20",
+			"Purchased rights should be greater than 0",
+			"Publisher part number not found",
+			"Software model not found"
+		],
+		"correctIndex": 0,
+		"explanation": "Valid entitlement import errors include zero purchased rights, missing publisher part numbers, and missing software models. A minimum threshold of 20 is not a documented import validation rule.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/entitlement-import-error-fields.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 4,
+		"prompt": "A SAM analyst needs day-to-day access to manage entitlements, run reconciliation, and review compliance dashboards. Which role provides standard SAM application access?",
+		"choices": [
+			"The sam role for standard entitlement management, reconciliation runs, and compliance dashboard review",
+			"The sam_user role for stakeholders who view SAM reports without modifying entitlement records",
+			"The sam_admin role for administrators who configure SAM settings and manage all entitlement data",
+			"The sam_developer role for developers who write platform scripts and customize SAM business rules"
+		],
+		"correctIndex": 0,
+		"explanation": "The sam role is the base Software Asset Management application role used by analysts performing routine entitlement and compliance work.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-roles.html"
+		]
+	}
+]

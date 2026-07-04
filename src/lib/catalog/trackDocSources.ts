@@ -340,12 +340,33 @@ export const PHASE7_TRACK_DOC_SOURCES: TrackDocSource[] = [
 	{
 		trackCode: 'CIS-SAM',
 		officialName: 'Certified Implementation Specialist - Software Asset Management',
-		publications: ['it-asset-management'],
+		publications: ['it-asset-management', 'software-asset-management'],
 		domains: [
-			{ name: 'Software models and normalization', weight: '28%', publications: ['it-asset-management'] },
-			{ name: 'Entitlements and licensing', weight: '26%', publications: ['it-asset-management'] },
-			{ name: 'Discovery and reclamation', weight: '24%', publications: ['it-asset-management'] },
-			{ name: 'SaaS and optimization', weight: '22%', publications: ['it-asset-management'] }
+			{
+				name: 'Software Asset Core Overview and Fundamentals',
+				weight: '14%',
+				publications: ['it-asset-management', 'software-asset-management']
+			},
+			{
+				name: 'Data Integrity Attributes and Sources',
+				weight: '28%',
+				publications: ['software-asset-management']
+			},
+			{
+				name: 'Practical Management of Software Compliance',
+				weight: '30%',
+				publications: ['software-asset-management']
+			},
+			{
+				name: 'Operational Integration of Software Processes',
+				weight: '13%',
+				publications: ['software-asset-management']
+			},
+			{
+				name: 'Extending SAM',
+				weight: '15%',
+				publications: ['software-asset-management']
+			}
 		]
 	},
 	{

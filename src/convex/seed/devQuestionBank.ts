@@ -16137,191 +16137,191 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 	{
 		"trackCode": "CIS-SAM",
 		"order": 0,
-		"prompt": "In Software Asset Management, what do calculated lifecycles primarily help organizations represent?",
+		"prompt": "A SAM implementation team must customize business rules and write platform scripts for entitlement automation. Which role grants script writing capabilities?",
 		"choices": [
-			"Time-based or rules-driven lifecycle positions that support compliance and renewal decisions under governance oversight",
-			"Physical datacenter rack elevations exclusively for practical execution",
-			"Employee performance review cycles in enterprise contexts retired from scheduled jobs when batch windows are consolidated.",
-			"Firewall ACL timelines exclusively across operational workflows"
+			"sam_developer",
+			"sam_user",
+			"sam_admin",
+			"sam"
 		],
 		"correctIndex": 0,
-		"explanation": "SAM documentation describes calculated lifecycles as part of lifecycle analytics for software assets.",
+		"explanation": "The sam_developer role extends SAM access with script writing capabilities on the platform for custom automation and rule development.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-roles.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 1,
+		"prompt": "A CIO asks why the organization should implement Software Asset Management beyond hardware asset tracking. Which outcome best describes the SAM value proposition?",
+		"choices": [
+			"Align purchased entitlements with discovered installations and usage to reduce audit exposure and overspend",
+			"Replace the CMDB with a standalone inventory database isolated from IT service management workflows",
+			"Eliminate procurement contracts by auto-generating purchase orders from discovery scan results",
+			"Convert all subscription licenses into perpetual hardware asset records for stockroom tracking"
+		],
+		"correctIndex": 0,
+		"explanation": "SAM focuses on reconciling license rights against installed and consumed software so organizations can defend audit positions and optimize spend.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/software-asset-management-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 2,
+		"prompt": "In the standard SAM process architecture, which sequence reflects how discovered software data becomes compliance-ready?",
+		"choices": [
+			"Discovery collects install evidence, normalization maps titles to software models, reconciliation compares rights to consumption",
+			"Procurement creates entitlements first, discovery deletes unmatched installs, normalization executes only at fiscal year-end",
+			"Normalization executes before discovery runs, entitlements are optional once installs are mapped, reconciliation stays manual",
+			"Reconciliation assigns user allocations, discovery imports contract PDFs, normalization auto-creates publisher SKU records"
+		],
+		"correctIndex": 0,
+		"explanation": "SAM process architecture flows from discovery evidence through normalization into software models, then reconciliation evaluates entitlement position.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-process-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 3,
+		"prompt": "During a bulk entitlement import, an administrator reviews Entitlement Import Error records. Which message is NOT a valid import error reason?",
+		"choices": [
+			"Purchased rights should be less than 20",
+			"Purchased rights should be greater than 0",
+			"Publisher part number not found",
+			"Software model not found"
+		],
+		"correctIndex": 0,
+		"explanation": "Valid entitlement import errors include zero purchased rights, missing publisher part numbers, and missing software models. A minimum threshold of 20 is not a documented import validation rule.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/entitlement-import-error-fields.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 4,
+		"prompt": "A SAM analyst needs day-to-day access to manage entitlements, run reconciliation, and review compliance dashboards. Which role provides standard SAM application access?",
+		"choices": [
+			"The sam role for standard entitlement management, reconciliation runs, and compliance dashboard review",
+			"The sam_user role for stakeholders who view SAM reports without modifying entitlement records",
+			"The sam_admin role for administrators who configure SAM settings and manage all entitlement data",
+			"The sam_developer role for developers who write platform scripts and customize SAM business rules"
+		],
+		"correctIndex": 0,
+		"explanation": "The sam role is the base Software Asset Management application role used by analysts performing routine entitlement and compliance work.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-roles.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 5,
+		"prompt": "A SAM manager wants dashboard visibility into software nearing end-of-support or renewal windows. Which SAM capability supports this recommendation practice?",
+		"choices": [
+			"Calculated lifecycles that derive lifecycle positions from rules and dates for portfolio review",
+			"Incident auto-assignment rules that route software tickets to the service desk queue",
+			"Change approval workflows that block all software installs until CAB review completes",
+			"Knowledge article versioning that tracks document edits without license context"
+		],
+		"correctIndex": 0,
+		"explanation": "Calculated lifecycles help SAM teams identify software approaching renewal or end-of-life so they can plan upgrades and contract decisions proactively.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/now-assist-for-software-asset-management-sam/calculated-lifecycles.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
-		"order": 1,
-		"prompt": "What is the main purpose of the Software Asset Management lifecycle management dashboard?",
+		"order": 6,
+		"prompt": "An organization needs a user who can configure SAM settings, manage all entitlement records, and administer reconciliation jobs. Which role should be assigned?",
 		"choices": [
-			"Provide portfolio visibility into software lifecycle status for operational and compliance conversations in real implementations",
-			"Run major security incident war rooms in enterprise contexts prefaced with executive sponsor approval on the project charter. (CIS-SAM-1-w1)",
-			"Create strategic roadmaps for corporate goals for practical execution",
-			"Manage third-party inherent risk questionnaires for measurable outcomes"
+			"The sam_admin role with privileges to configure SAM settings and administer all entitlement records",
+			"The sam_user role with read-only visibility into SAM dashboards and compliance reports",
+			"The sam role with access to routine entitlement tasks but not full SAM administration",
+			"The sam_developer role with script writing access but not entitlement administration duties"
 		],
 		"correctIndex": 0,
-		"explanation": "The lifecycle management dashboard is documented as a SAM operational view for lifecycle posture across the software estate.",
+		"explanation": "The sam_admin role provides full administrative access to SAM configuration, entitlements, and operational controls beyond standard analyst tasks.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-roles.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 7,
+		"prompt": "A finance stakeholder needs read-only access to SAM compliance dashboards without editing entitlements or running reconciliation. Which role fits this requirement?",
+		"choices": [
+			"The sam_user role providing read-only access to SAM dashboards without edit privileges",
+			"The sam_admin role providing full configuration control over reconciliation and entitlement tables",
+			"The sam role providing standard analyst access including entitlement creation and reconciliation",
+			"The sam_developer role providing script development access for custom SAM automation logic"
+		],
+		"correctIndex": 0,
+		"explanation": "The sam_user role provides read-only access to SAM views and reports for stakeholders who need visibility without configuration or data modification rights.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-roles.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 8,
+		"prompt": "Which SAM workspace view gives operational teams a consolidated picture of lifecycle status across the software estate?",
+		"choices": [
+			"Lifecycle management dashboard summarizing software lifecycle posture for review meetings",
+			"Change calendar showing scheduled production deployments without license consumption data",
+			"Incident heat map grouping open tickets by assignment group without publisher context",
+			"Catalog analytics report listing requested items without entitlement reconciliation metrics"
+		],
+		"correctIndex": 0,
+		"explanation": "The lifecycle management dashboard provides SAM teams with portfolio-level visibility into software lifecycle status for operational and compliance conversations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/now-assist-for-software-asset-management-sam/lifecycle-management-dashboard.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
-		"order": 2,
-		"prompt": "Why are software models important in IT Asset Management product catalog practice?",
-		"choices": [
-			"They configure single sign-on providers for measurable outcomes configured through the appropriate guided setup experience. (CIS-SAM-2-w0)",
-			"They replace all CMDB classes for practical execution applied only after stakeholder sign-off on the design. (CIS-SAM-2-w1)",
-			"They normalize and standardize how discovered or purchased software is represented for reporting and management in enterprise contexts",
-			"They store ransomware playbooks in real implementations onboarded through the standard integration framework pattern. (CIS-SAM-2-w3)"
-		],
-		"correctIndex": 2,
-		"explanation": "Product catalog documentation explains creating and managing software models as the standardized representation of software products.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-it-asset-management/page/product/product-catalog/concept/c_CreatingSoftwareModels.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SAM",
-		"order": 3,
-		"prompt": "Which scenario best fits Software Asset Management rather than only IT hardware asset tracking?",
-		"choices": [
-			"Focus on scheduling physical security guard patrols",
-			"Focus on managing building maintenance work orders weighted by criticality when competing for the same resource pool.",
-			"Focus on reconciling purchased entitlements to installations and SaaS usage to reduce audit and overspend risk",
-			"Tracking exclusively monitor serial numbers with no license data"
-		],
-		"correctIndex": 2,
-		"explanation": "SAM documentation emphasizes entitlement, deployment, and usage alignment for software across deployment models.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/now-assist-for-software-asset-management-sam/calculated-lifecycles.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SAM",
-		"order": 4,
-		"prompt": "What is a primary governance outcome of maintaining accurate normalization from discovery models to software models?",
-		"choices": [
-			"More trustworthy compliance and optimization reports because titles roll up to a consistent catalog for measurable outcomes",
-			"Focus on eliminating the CMDB entirely in real implementations",
-			"Focus on disabling all discovery schedules in enterprise contexts",
-			"Focus on removing approvals from the service catalog prefaced with dependency checks against upstream providers. (CIS-SAM-4-w3)"
-		],
-		"correctIndex": 0,
-		"explanation": "Software model guidance supports consistent catalog representation, which underpins trustworthy SAM metrics and decisions.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/xanadu-it-asset-management/page/product/product-catalog/concept/c_CreatingSoftwareModels.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SAM",
-		"order": 5,
-		"prompt": "In Software Asset Management, what is the primary reason to normalize software installations into software models?",
-		"choices": [
-			"To make all publishers apply the same SKU naming pattern",
-			"To clearly automatically create procurement contracts for each installation",
-			"To clearly replace discovery data with manually entered install records",
-			"To clearly map discovered software to a consistent product definition used in compliance and entitlement logic"
-		],
-		"correctIndex": 3,
-		"explanation": "Software models provide the canonical product identity so entitlements, installations, and reconciliation rules can be evaluated consistently.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-models-overview.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SAM",
-		"order": 6,
-		"prompt": "A SAM manager wants different editions of a vendor product tracked separately for compliance. Which model design supports this goal best?",
-		"choices": [
-			"Create distinct software models that represent edition/version differences relevant to licensing under governance oversight",
-			"Apply one software model for all editions and track edition in comments",
-			"Store edition information exclusively on contracts for measurable outcomes",
-			"Disable software model normalization to avoid ambiguity for practical execution"
-		],
-		"correctIndex": 0,
-		"explanation": "When licensing rights differ by edition or version, separate software models are required for accurate reconciliation and reporting.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/create-a-software-model.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SAM",
-		"order": 7,
-		"prompt": "Which relationship is most important for using software models in effective compliance calculations?",
-		"choices": [
-			"Software model to product catalog image across operational workflows",
-			"Software model to incident category under governance oversight",
-			"Software model to stockroom location for practical execution",
-			"Software model to entitlement and discovered installation records for measurable outcomes"
-		],
-		"correctIndex": 3,
-		"explanation": "Compliance depends on comparing what is installed against what is licensed, and software models are the shared link across those records.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SAM",
-		"order": 8,
-		"prompt": "Why do SAM administrators review software model governance regularly?",
-		"choices": [
-			"To confirm every model has an attached incident response playbook",
-			"To clearly remove publisher information from the model records",
-			"To clearly convert all software models into hardware models each quarter",
-			"To clearly prevent duplicate or poorly classified models from reducing reconciliation accuracy"
-		],
-		"correctIndex": 3,
-		"explanation": "Model governance ensures data quality and prevents duplicate mappings that can distort compliance and optimization insights.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-model-normalization-governance.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SAM",
 		"order": 9,
-		"prompt": "A discovered software title is unmatched in SAM. What is the recommended next step?",
+		"prompt": "A SAM team is establishing recommendation practices for license optimization. Which starting activity best aligns with SAM fundamentals?",
 		"choices": [
-			"Ignore it until year-end true-up across operational workflows",
-			"Reclassify it as hardware to avoid compliance exceptions under governance oversight",
-			"Create or map it to the correct software model so future installs normalize correctly in real implementations",
-			"Delete the discovery record to keep the dashboard clean in enterprise contexts"
+			"Identify unused or low-usage installations eligible for reclamation before requesting new purchases",
+			"Disable all discovery schedules until the next publisher audit cycle completes",
+			"Delete unmatched discovery records weekly to keep compliance dashboards clean",
+			"Assign every discovered title to a single catch-all software model for faster reporting"
 		],
-		"correctIndex": 2,
-		"explanation": "Unmatched discoveries should be normalized by updating model mappings so usage and compliance rollups remain accurate.",
+		"correctIndex": 0,
+		"explanation": "SAM optimization recommendations begin with identifying reclaimable software so existing entitlements can be reused before additional license purchases.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/map-discovered-software.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/software-reclamation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 10,
-		"prompt": "In SAM, what does an entitlement record primarily represent?",
+		"prompt": "When different contract terms apply to the same software model, how should a SAM administrator structure entitlement records?",
 		"choices": [
-			"A well-defined discovered installation awaiting normalization across operational workflows",
-			"A well-defined one-time approval to install software on a single device",
-			"A workflow task for license reclamation exclusively",
-			"A right to apply software, typically derived from purchases, agreements, or subscriptions"
+			"Create separate entitlement records by metric, term, or restriction so reconciliation applies the correct rules",
+			"Merge all rights into one entitlement and track term differences in the short description field only",
+			"Store contract terms exclusively on procurement requests and omit them from entitlement records",
+			"Convert named-user licenses into hardware asset records to simplify metric tracking"
 		],
-		"correctIndex": 3,
-		"explanation": "Entitlements represent use rights and are the foundation for comparing license position against installed and consumed software.",
+		"correctIndex": 0,
+		"explanation": "Different licensing terms and metrics require separate entitlement records to preserve accurate compliance logic and audit traceability.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/software-entitlements-overview.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/software-entitlement-best-practices.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 11,
-		"prompt": "A true-up is approaching and the publisher questions available license rights. Which entitlement attribute is most critical to verify first?",
+		"prompt": "Before a publisher true-up, a SAM manager must verify the legal measurement basis for license rights. Which entitlement attributes are most critical to confirm first?",
 		"choices": [
-			"License metric and quantity aligned to contract terms in enterprise contexts",
-			"Number of attachments on unrelated software models in real implementations",
-			"UI policy names on the entitlement form under governance oversight",
-			"Short description color settings across operational workflows"
+			"License metric and purchased rights quantity aligned to contract terms",
+			"Number of attachments on unrelated software model records in the catalog",
+			"UI policy names configured on the entitlement form layout",
+			"Color theme settings applied to the entitlement list view"
 		],
 		"correctIndex": 0,
-		"explanation": "License metric and quantity define the legal measurement basis and total rights, which directly drive compliance calculations.",
+		"explanation": "License metric and purchased rights define how consumption is counted against contractual entitlements, directly driving compliance calculations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/manage-software-entitlements.html"
 		]
@@ -16329,49 +16329,54 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 	{
 		"trackCode": "CIS-SAM",
 		"order": 12,
-		"prompt": "What is a common reason to split rights into multiple entitlement records for the same software model?",
+		"questionType": "multi",
+		"prompt": "Which two platform roles are commonly assigned to SAM team members who need more than read-only access? (Choose two.)",
 		"choices": [
-			"To clearly increase discovery scan frequency for practical execution",
-			"To avoid with contracts in SAM under governance oversight",
-			"To clearly separate rights by metric, term, or restriction so reconciliation applies the correct rules",
-			"To clearly convert named user licenses into hardware assets"
+			"The sam role for day-to-day Software Asset Management operational tasks",
+			"The sam_admin role for full SAM configuration and entitlement administration",
+			"The sam_user role for read-only SAM dashboard and report consumption",
+			"The itil role for incident and change management without SAM module access"
 		],
-		"correctIndex": 2,
-		"explanation": "Different terms and metrics require separate entitlement records to preserve accurate compliance logic and audit traceability.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "The sam role supports day-to-day SAM operations while sam_admin provides full administrative control; sam_user is read-only and itil covers ITSM modules.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/software-entitlement-best-practices.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-roles.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 13,
-		"prompt": "Which action best improves confidence that entitlements are audit-ready?",
+		"prompt": "A SAM team is importing entitlements from a spreadsheet for the first time. What happens when an Entitlement Import Error record is corrected and saved?",
 		"choices": [
-			"Delete expired entitlements immediately without history under governance oversight",
-			"Disable reconciliation jobs during quarter close across operational workflows",
-			"Move entitlement quantities into custom text fields in enterprise contexts",
-			"Store purchase proof and contractual evidence linked to entitlement records in real implementations"
+			"The entitlement is created and the error status changes to Fixed with fields becoming read-only",
+			"The import file is automatically re-uploaded and all prior entitlements are deleted",
+			"The error record is permanently deleted without creating an entitlement record",
+			"The software model is removed from the catalog until the next content update runs"
 		],
-		"correctIndex": 3,
-		"explanation": "Attaching clear entitlement evidence supports defensible license positions and reduces audit response time.",
+		"correctIndex": 0,
+		"explanation": "When an import error is resolved, the platform creates the entitlement and marks the error Fixed; related errors using the same publisher part number may also auto-resolve.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/entitlement-audit-preparation.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/import-software-entitlements.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 14,
-		"prompt": "When an organization moves to subscription licensing, what SAM update is most important?",
+		"prompt": "During entitlement import, a row fails because the Publisher part number field does not match any existing record. What is the recommended remediation?",
 		"choices": [
-			"Treat all subscriptions as perpetual rights for practical execution",
-			"Exclude subscription installs from reconciliation for measurable outcomes",
-			"Disable publisher data management in real implementations documented in the configuration audit trail with before-and-after values. (CIS-SAM-14-w2)",
-			"Map subscriptions to the correct entitlement structures and terms so renewals and consumption are tracked accurately in enterprise contexts"
+			"Create or map the publisher part number to the correct software model before reprocessing the import row",
+			"Delete the import error and ignore all rows referencing that publisher permanently",
+			"Change the license metric to Per Device so the part number validation is bypassed",
+			"Convert the entitlement to a hardware asset record to avoid software model requirements"
 		],
-		"correctIndex": 3,
-		"explanation": "Subscription licensing introduces term-based rights, so entitlement structure and renewal tracking must reflect subscription conditions.",
+		"correctIndex": 0,
+		"explanation": "Publisher part numbers link import rows to licensable products; missing part numbers must be created or mapped so entitlements associate with the correct software model.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/subscription-entitlements.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/entitlement-import-error-fields.html"
 		]
 	},
 	{
@@ -16379,13 +16384,13 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 15,
 		"prompt": "Why is selecting the correct license metric critical when configuring SAM entitlements?",
 		"choices": [
-			"It controls which users can log into the instance under governance oversight",
-			"It eliminates the need for contract records across operational workflows",
-			"It determines how consumption is measured against rights during reconciliation for measurable outcomes",
-			"It replaces software normalization rules for practical execution"
+			"It determines how consumption is measured against purchased rights during reconciliation",
+			"It controls which users can authenticate into the ServiceNow instance at login",
+			"It eliminates the need to maintain contract records linked to entitlement records",
+			"It replaces software normalization rules applied during discovery model mapping"
 		],
-		"correctIndex": 2,
-		"explanation": "The license metric defines the counting logic for compliance, so an incorrect metric can materially misstate license position.",
+		"correctIndex": 0,
+		"explanation": "The license metric defines the counting logic for compliance; an incorrect metric can materially misstate license position during reconciliation.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/license-metrics-overview.html"
 		]
@@ -16393,15 +16398,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 	{
 		"trackCode": "CIS-SAM",
 		"order": 16,
-		"prompt": "A publisher audits by named user, but your entitlement is configured by device. What is the likely result?",
+		"prompt": "A publisher audits by named user, but the entitlement is configured with a per-device metric. What is the likely compliance outcome?",
 		"choices": [
-			"More accurate reconciliation because device counts are simpler for practical execution",
-			"No impact because SAM converts all metrics automatically for measurable outcomes",
-			"Potential over- or under-counting because measurement basis does not match contract terms across operational workflows",
-			"All installs become compliant by default under governance oversight"
+			"Potential over- or under-counting because the measurement basis does not match contract terms",
+			"More accurate reconciliation because device counts are simpler to collect than user counts",
+			"No impact because SAM automatically converts all license metrics during reconciliation",
+			"All installations become compliant by default when discovery data is normalized"
 		],
-		"correctIndex": 2,
-		"explanation": "Metric mismatch between contract rights and SAM logic can produce inaccurate compliance outcomes and audit risk.",
+		"correctIndex": 0,
+		"explanation": "Metric mismatch between contract rights and SAM configuration produces inaccurate compliance results and increases audit dispute risk.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/configure-license-metrics.html"
 		]
@@ -16409,15 +16414,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 	{
 		"trackCode": "CIS-SAM",
 		"order": 17,
-		"prompt": "Which SAM practice best supports managing products with multiple license metrics across editions?",
+		"prompt": "A product portfolio includes multiple license metrics across different editions. Which SAM practice best supports accurate entitlement modeling?",
 		"choices": [
-			"Create separate entitlement structures aligned to each contractual metric and edition scope for measurable outcomes",
-			"Track metrics exclusively in free-text notes for practical execution",
-			"Disable reconciliation for mixed-metric publishers under governance oversight",
-			"Apply one entitlement and one metric for all editions"
+			"Create separate entitlement structures aligned to each contractual metric and edition scope",
+			"Track all metric variations exclusively in free-text notes on a single entitlement record",
+			"Disable reconciliation for publishers that use more than one license metric type",
+			"Apply one entitlement with a single metric for every edition of the product family"
 		],
 		"correctIndex": 0,
-		"explanation": "Mixed-metric products require explicit modeling so each edition is measured using the proper contractual rules.",
+		"explanation": "Mixed-metric products require explicit entitlement modeling so each edition is measured using the proper contractual counting rules.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/license-metric-best-practices.html"
 		]
@@ -16425,15 +16430,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 	{
 		"trackCode": "CIS-SAM",
 		"order": 18,
-		"prompt": "What does effective metric governance in SAM primarily prevent?",
+		"prompt": "What does effective license metric governance in SAM primarily prevent?",
 		"choices": [
-			"Changes to assignment groups on incidents in real implementations",
-			"Apply of discovery data in software models",
-			"Unauthorized updates to knowledge articles across operational workflows",
-			"Inconsistent counting logic that leads to unreliable compliance reporting under governance oversight"
+			"Inconsistent counting logic that leads to unreliable compliance reporting and audit disputes",
+			"Unauthorized updates to knowledge articles linked from the service catalog portal",
+			"Changes to incident assignment groups triggered by reconciliation scheduled jobs",
+			"Automatic deletion of discovery records when normalization rules are updated"
 		],
-		"correctIndex": 3,
-		"explanation": "Metric governance keeps reconciliation logic consistent and auditable, reducing dispute risk with publishers.",
+		"correctIndex": 0,
+		"explanation": "Metric governance keeps reconciliation logic consistent and auditable, reducing dispute risk with publishers during true-ups and audits.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/govern-license-metrics.html"
 		]
@@ -16441,15 +16446,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 	{
 		"trackCode": "CIS-SAM",
 		"order": 19,
-		"prompt": "Before finalizing reconciliation, which validation gives the strongest confidence metric mappings are correct?",
+		"prompt": "Before finalizing reconciliation for a new publisher, which validation step gives the strongest confidence that metric mappings behave correctly?",
 		"choices": [
-			"Replace entitlement quantities with rounded estimates under governance oversight",
-			"Review the form layout and color theme across operational workflows",
-			"Confirm metric-to-contract alignment and test expected consumption outcomes on representative data for measurable outcomes",
-			"Temporarily disable reconciliation errors for practical execution"
+			"Confirm metric-to-contract alignment and test expected consumption on representative install data",
+			"Review the entitlement form layout theme and field label color configuration",
+			"Replace entitlement quantities with rounded estimates to simplify dashboard totals",
+			"Temporarily disable reconciliation error notifications until the first audit completes"
 		],
-		"correctIndex": 2,
-		"explanation": "Testing against representative data confirms that metric configuration behaves as intended under real licensing scenarios.",
+		"correctIndex": 0,
+		"explanation": "Testing metric configuration against representative data confirms reconciliation produces expected compliance outcomes under real licensing scenarios.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/validate-reconciliation-results.html"
 		]
@@ -16459,13 +16464,13 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 20,
 		"prompt": "In SAM, what is the purpose of discovery model mapping for software assets?",
 		"choices": [
-			"To clearly convert all software into hardware CIs",
-			"To clearly assign every installation to the same license metric",
-			"To clearly remove publisher names from discovered titles",
-			"To clearly link discovered software evidence to the correct normalized software model for reconciliation"
+			"Link discovered software evidence to the correct normalized software model for reconciliation",
+			"Convert all discovered software titles into hardware configuration item records automatically",
+			"Assign every installation to the same license metric regardless of publisher requirements",
+			"Remove publisher names from discovered titles before storing them in the database"
 		],
-		"correctIndex": 3,
-		"explanation": "Discovery model mapping bridges raw discovery data to normalized model records, enabling accurate entitlement and compliance logic.",
+		"correctIndex": 0,
+		"explanation": "Discovery model mapping bridges raw discovery data to normalized software models, enabling accurate entitlement and compliance calculations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/discovery-model-mapping.html"
 		]
@@ -16473,15 +16478,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 	{
 		"trackCode": "CIS-SAM",
 		"order": 21,
-		"prompt": "A newly discovered title is repeatedly unmatched. Which approach should a SAM administrator take?",
+		"prompt": "A newly discovered software title is repeatedly unmatched after normalization runs. What should a SAM administrator do first?",
 		"choices": [
-			"Create a mapping rule or model mapping entry so future discoveries normalize automatically across operational workflows",
-			"Delete the discovered software records weekly under governance oversight",
-			"Disable normalization jobs for that publisher for practical execution",
-			"Ignore unmatched titles unless they appear in incident records for measurable outcomes"
+			"Create a mapping rule or model mapping entry so future discoveries normalize to the correct software model",
+			"Delete the discovered software records on a weekly schedule to reduce unmatched counts",
+			"Disable normalization jobs for that publisher until the next contract renewal cycle",
+			"Ignore unmatched titles unless they appear as related items on open incident records"
 		],
 		"correctIndex": 0,
-		"explanation": "Persistent unmatched titles indicate missing mapping logic and should be addressed to improve normalization completeness.",
+		"explanation": "Persistent unmatched titles indicate missing mapping logic; administrators should add mappings so installs roll up to the correct licensable product.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/manage-unmatched-discovered-software.html"
 		]
@@ -16489,15 +16494,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 	{
 		"trackCode": "CIS-SAM",
 		"order": 22,
-		"prompt": "Why is validation with publisher and version details important when creating discovery model mappings?",
+		"prompt": "Why is validating publisher and version details important when creating a discovery model mapping?",
 		"choices": [
-			"It increases incident SLA accuracy for measurable outcomes",
-			"It confirms the mapped model represents the correct licensable product variant",
-			"It bypasses reconciliation exceptions automatically under governance oversight",
-			"It prevents contract renewals from being created across operational workflows"
+			"It confirms the mapped software model represents the correct licensable product variant",
+			"It increases incident SLA accuracy by linking software installs to assignment groups",
+			"It bypasses reconciliation exceptions automatically for all mapped publishers",
+			"It prevents contract renewal records from being created in the procurement module"
 		],
-		"correctIndex": 1,
-		"explanation": "Accurate publisher/version alignment prevents mapping errors that can distort entitlement consumption and compliance results.",
+		"correctIndex": 0,
+		"explanation": "Accurate publisher and version alignment prevents mapping errors that distort entitlement consumption and compliance results.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/validate-software-model-mappings.html"
 		]
@@ -16505,15 +16510,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 	{
 		"trackCode": "CIS-SAM",
 		"order": 23,
-		"prompt": "What is the main risk of overly broad discovery mapping rules?",
+		"prompt": "What is the main risk of creating overly broad discovery mapping rules in SAM?",
 		"choices": [
-			"Slower catalog item approvals for practical execution triaged using priority matrices tied to business impact. (CIS-SAM-23-w0)",
-			"Incorrectly grouping distinct products under one software model, causing compliance inaccuracies for measurable outcomes",
-			"Too many CMDB relationship types across operational workflows",
-			"Focus on missing knowledge base categories in enterprise contexts"
+			"Distinct products may be grouped under one software model, causing compliance inaccuracies",
+			"Catalog item approvals may slow down because mapping rules trigger additional workflows",
+			"CMDB relationship types may exceed platform limits when too many rules are active",
+			"Knowledge base categories may become misaligned with software publisher portfolios"
 		],
-		"correctIndex": 1,
-		"explanation": "Broad rules can misclassify products and produce misleading reconciliation outcomes, especially for publishers with complex portfolios.",
+		"correctIndex": 0,
+		"explanation": "Broad mapping rules can misclassify products and produce misleading reconciliation outcomes, especially for publishers with complex edition portfolios.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-normalization-rules.html"
 		]
@@ -16521,15 +16526,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 	{
 		"trackCode": "CIS-SAM",
 		"order": 24,
-		"prompt": "Which KPI best reflects improvement in discovery model quality over time?",
+		"prompt": "Which KPI best reflects improvement in discovery model mapping quality over time?",
 		"choices": [
-			"Number of dashboard widgets created in enterprise contexts",
-			"Total users in the SAM admin group in real implementations",
-			"Decrease in unmatched discovered software and fewer remaps after reconciliation review under governance oversight",
-			"Count of ITSM incidents linked to software across operational workflows"
+			"Decrease in unmatched discovered software and fewer remaps after reconciliation review",
+			"Increase in the number of dashboard widgets created on the SAM homepage",
+			"Total count of users assigned to the SAM administrator group in the instance",
+			"Number of ITSM incidents linked to software titles in the incident table"
 		],
-		"correctIndex": 2,
-		"explanation": "Lower unmatched volume and fewer correction cycles indicate healthier mapping logic and better normalization quality.",
+		"correctIndex": 0,
+		"explanation": "Lower unmatched volume and fewer correction cycles indicate healthier mapping logic and better normalization data quality.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-model-data-quality-kpis.html"
 		]
@@ -16537,1106 +16542,1079 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 	{
 		"trackCode": "CIS-SAM",
 		"order": 25,
-		"prompt": "What is the primary purpose of a software reclamation campaign in SAM?",
+		"prompt": "Which data source provides the install evidence that SAM uses as input for normalization and reconciliation?",
 		"choices": [
-			"Identify unused or low-usage software so entitlements can be recovered and reused in real implementations",
-			"Replace reconciliation with manual spreadsheet tracking in enterprise contexts",
-			"Delete historical software installation records to strengthen performance",
-			"Automatically renew all publisher agreements before renewal date under governance oversight"
+			"Software discovery results collected from agents, probes, or integration imports",
+			"Closed incident records tagged with software-related categories in ITSM",
+			"Approved change request records awaiting CAB review in the change module",
+			"Knowledge article view counts tracked in the knowledge management application"
 		],
 		"correctIndex": 0,
-		"explanation": "Reclamation improves license efficiency by recovering unused rights and reducing unnecessary spend.",
+		"explanation": "SAM relies on software discovery to identify installed titles and versions on managed devices, forming the consumption side of compliance calculations.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-reclamation.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_ReclaimUnusedSoftware.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/software-discovery.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 26,
-		"prompt": "Which data point is most important when prioritizing users for software reclamation?",
+		"prompt": "A SAM administrator reviews normalization status on discovered software records. Which status value indicates the title still requires mapping work?",
 		"choices": [
-			"Last usage activity compared to reclaim threshold policy in enterprise contexts",
-			"Number of catalog requests submitted this quarter in real implementations",
-			"Employee office location for measurable outcomes under governance oversight",
-			"Count of incidents assigned to the user's group for practical execution"
+			"Partially normalized status where discovery evidence has not fully mapped to a software model",
+			"Matched status where the discovery record is fully linked to a supported software model",
+			"Manually normalized status set by an administrator override of automatic mapping",
+			"Match not found status when no software model rule applies to the discovery evidence"
 		],
 		"correctIndex": 0,
-		"explanation": "Reclamation targeting should be based on measurable inactivity and policy-defined thresholds.",
+		"explanation": "Partially normalized indicates discovery evidence has not fully mapped to a software model and requires administrator review or additional mapping rules.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-reclamation.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-normalization-status.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 27,
-		"prompt": "Why should SAM teams define exception workflows for reclamation requests?",
+		"prompt": "How does the SAM Content Service benefit an implementation team maintaining publisher and product data?",
 		"choices": [
-			"To clearly document approved business justifications and maintain governance traceability",
-			"To clearly prevent all software from being reclaimed",
-			"To clearly let software remain installed indefinitely without review",
-			"To route reclamation exclusively through incident management"
+			"It delivers updated publisher part numbers, software models, and normalization content from ServiceNow",
+			"It replaces all local discovery probes with a single cloud-only inventory scan engine",
+			"It automatically purchases license renewals when entitlements approach expiration dates",
+			"It converts hardware asset records into software entitlement records during imports"
 		],
 		"correctIndex": 0,
-		"explanation": "Exception governance keeps reclamation fair and auditable while allowing valid business retention cases.",
+		"explanation": "SAM Content Service provides curated publisher catalogs, part numbers, and normalization data that keep software models current without manual research.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-reclamation.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/sam-content-service.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 28,
-		"prompt": "What financial outcome is most directly improved by successful reclamation execution?",
+		"prompt": "When importing entitlements, why must the Publisher part number field match an existing record?",
 		"choices": [
-			"Increased duplicate software model creation in enterprise contexts",
-			"Longer reconciliation cycle times in real implementations",
-			"Higher number of emergency software requests under governance oversight",
-			"Reduced need for new license purchases due to reharvested entitlements across operational workflows"
+			"It ties the imported row to a licensable product definition used for metric and model association",
+			"It determines the default assignment group for software-related incident routing rules",
+			"It sets the fiscal period for cost allocation in the financial management module",
+			"It controls whether discovery scans run on weekends for that publisher's products"
 		],
-		"correctIndex": 3,
-		"explanation": "Recovered entitlements lower purchase demand and improve realized SAM savings.",
+		"correctIndex": 0,
+		"explanation": "Publisher part numbers connect entitlement imports to software models and license metrics, ensuring imported rights associate with the correct product.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_ReclaimUnusedSoftware.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/publisher-part-numbers.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 29,
-		"prompt": "Which KPI best indicates that reclamation governance is working over time?",
+		"prompt": "Why are software models important when normalizing discovered installations in SAM?",
 		"choices": [
-			"Number of knowledge articles published in real implementations",
-			"Volume of unchanged software models in enterprise contexts",
-			"Count of closed incidents by priority across operational workflows",
-			"Ratio of reclaimed licenses to successfully reallocated licenses under governance oversight"
+			"They provide a consistent product definition used in entitlement logic and compliance reporting",
+			"They replace all CMDB configuration item classes with a single software table",
+			"They store ransomware response playbooks linked to each publisher portfolio",
+			"They configure single sign-on providers for SaaS applications in the catalog"
 		],
-		"correctIndex": 3,
-		"explanation": "A strong reclaim-to-reuse ratio shows reclaimed rights are being effectively converted into business value.",
+		"correctIndex": 0,
+		"explanation": "Software models standardize how discovered or purchased software is represented, enabling reliable reconciliation and publisher-level reporting.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-reclamation.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-models-overview.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 30,
-		"prompt": "What is the primary objective of SaaS management within SAM?",
+		"prompt": "A SAM manager wants different editions of a vendor product tracked separately for compliance. Which model design supports this goal?",
 		"choices": [
-			"Manage SaaS subscriptions, usage, and spend to reduce waste and compliance risk for practical execution",
-			"Convert SaaS licenses into hardware assets for measurable outcomes",
-			"Replace all software discovery with manual entry across operational workflows",
-			"Disable reclamation for cloud applications under governance oversight"
+			"Create distinct software models representing edition and version differences relevant to licensing",
+			"Apply one software model for all editions and track edition differences in comments only",
+			"Store edition information exclusively on procurement contracts without software models",
+			"Disable software model normalization to preserve raw discovery titles in reports"
 		],
 		"correctIndex": 0,
-		"explanation": "SaaS management focuses on visibility, control, and optimization of subscription-based software.",
+		"explanation": "When licensing rights differ by edition or version, separate software models are required for accurate reconciliation and publisher reporting.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-overview.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/create-a-software-model.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 31,
-		"prompt": "Which signal most strongly suggests a SaaS optimization opportunity?",
+		"prompt": "A discovered software title is unmatched in SAM. What is the recommended next step?",
 		"choices": [
-			"Many provisioned accounts with low or no recent activity in enterprise contexts",
-			"Focus on increasing number of CMDB classes",
-			"Growth in closed incident volume for measurable outcomes",
-			"High number of assignment groups for practical execution"
+			"Create or map it to the correct software model so future installs normalize correctly",
+			"Ignore it until the year-end true-up when all unmatched titles are reviewed together",
+			"Reclassify the discovery record as a hardware asset to exclude it from compliance",
+			"Delete the discovery record to keep the normalization dashboard counts low"
 		],
 		"correctIndex": 0,
-		"explanation": "Low-activity SaaS accounts are prime candidates for right-sizing or reclamation.",
+		"explanation": "Unmatched discoveries should be normalized by mapping to the correct software model so usage and compliance rollups remain accurate.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-reclamation.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/map-discovered-software.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 32,
-		"prompt": "Why should SaaS ownership be explicitly assigned for each major subscription?",
+		"prompt": "Why do SAM administrators review software model governance on a regular cadence?",
 		"choices": [
-			"To clearly establish accountability for entitlement, usage, and renewal governance",
-			"To clearly avoid maintaining software models under governance oversight",
-			"To clearly allow any user to add licenses without approval",
-			"To shift renewal responsibility to the service desk exclusively"
+			"To prevent duplicate or poorly classified models from reducing reconciliation accuracy",
+			"To confirm every software model has an attached incident response playbook document",
+			"To convert all software models into hardware models at the end of each quarter",
+			"To remove publisher information from model records after content service updates"
 		],
 		"correctIndex": 0,
-		"explanation": "Clear ownership is essential for controlling spend, renewals, and compliance decisions.",
+		"explanation": "Model governance ensures data quality and prevents duplicate mappings that distort compliance and optimization insights.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-overview.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-compliance.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-model-normalization-governance.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 33,
-		"prompt": "Which governance policy best supports controlled SaaS provisioning?",
+		"prompt": "Which relationship is most important for using software models in effective compliance calculations?",
 		"choices": [
-			"Remove all deprovisioning controls under governance oversight",
-			"Require approved entitlement checks and role-based provisioning workflows across operational workflows",
-			"Provision all requested SaaS seats automatically for measurable outcomes",
-			"Approve provisioning exclusively during annual true-up periods"
+			"Software model linked to entitlement records and discovered installation evidence",
+			"Software model linked to product catalog images used in the service portal",
+			"Software model linked to stockroom locations in the hardware asset module",
+			"Software model linked to incident category values in the ITSM application"
 		],
-		"correctIndex": 1,
-		"explanation": "Entitlement checks and governed workflows reduce over-provisioning and unauthorized access.",
+		"correctIndex": 0,
+		"explanation": "Compliance depends on comparing installed software against licensed rights, and software models are the shared link across those records.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-compliance.html",
-			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 34,
-		"prompt": "Which KPI combination best reflects mature SaaS management?",
+		"prompt": "Which action best improves confidence that entitlement records are audit-ready?",
 		"choices": [
-			"Lower inactive account rate, strengthened license utilization, and reduced renewal waste",
-			"Higher volume of unapproved software installs under governance oversight",
-			"More emergency access grants in real implementations",
-			"Longer entitlement reconciliation cycles in enterprise contexts"
+			"Store purchase proof and contractual evidence linked to entitlement records",
+			"Delete expired entitlements immediately without retaining historical audit context",
+			"Disable reconciliation jobs during quarter close to prevent position changes",
+			"Move entitlement quantities into custom text fields outside standard SAM tables"
 		],
 		"correctIndex": 0,
-		"explanation": "These metrics indicate control over spend and stronger governance of subscription usage.",
+		"explanation": "Attaching entitlement evidence supports defensible license positions and reduces response time during publisher audits and true-ups.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-overview.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/entitlement-audit-preparation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 35,
-		"prompt": "In SAM, what is the main benefit of publisher packs?",
+		"prompt": "When an organization transitions to subscription licensing, what SAM data update is most important?",
 		"choices": [
-			"Replace all software model normalization activities for measurable outcomes",
-			"Automatically approve all software requests for practical execution",
-			"Convert SaaS subscriptions into perpetual licenses under governance oversight",
-			"Provide publisher-specific license rules and content that strengthen effective position accuracy"
+			"Map subscriptions to entitlement structures with correct terms so renewals and consumption are tracked",
+			"Treat all subscription installs as perpetual rights that never require renewal review",
+			"Exclude subscription-based installs from reconciliation calculations entirely",
+			"Disable publisher part number management for all subscription-based products"
 		],
-		"correctIndex": 3,
-		"explanation": "Publisher packs improve compliance precision by applying vendor-specific licensing intelligence.",
+		"correctIndex": 0,
+		"explanation": "Subscription licensing introduces term-based rights, so entitlement structure and renewal tracking must reflect subscription conditions accurately.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/license-metrics.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-overview.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/subscription-entitlements.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 36,
-		"prompt": "Why should SAM administrators validate publisher pack scope before activating new content?",
+		"prompt": "In SAM, what does an entitlement record primarily represent?",
 		"choices": [
-			"To confirm metrics, products, and contract terms align with the organization's licensed footprint",
-			"To clearly disable reconciliation processing for measurable outcomes",
-			"To clearly migrate all installations into one software model",
-			"To clearly eliminate the need for entitlement records"
+			"A right to use software, typically derived from purchases, agreements, or subscriptions",
+			"A discovered installation awaiting normalization to a software model record",
+			"A one-time approval ticket authorizing software install on a single device only",
+			"A workflow task record tracking license reclamation campaign progress exclusively"
 		],
 		"correctIndex": 0,
-		"explanation": "Scope validation prevents misapplied rules and inaccurate compliance outcomes.",
+		"explanation": "Entitlements represent use rights and form the licensed side of the comparison performed during reconciliation against installed software.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/license-metrics.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_ReconcileSoftwareEntitlements.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/software-entitlements-overview.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 37,
-		"prompt": "What is the best way to reduce risk when introducing updated publisher pack rules?",
+		"questionType": "multi",
+		"prompt": "Which two data elements are required to resolve a Publisher part number not found entitlement import error? (Choose two.)",
 		"choices": [
-			"Pilot in lower environments, review compliance deltas, then promote through change governance for measurable outcomes",
-			"Apply changes directly in production during true-up week for practical execution",
-			"Remove historical reconciliation results in enterprise contexts",
-			"Suspend all reconciliations for one quarter in real implementations"
+			"A valid publisher part number mapped to the software model",
+			"A software model associated with the licensable product",
+			"An incident record linked to the import error for ITSM tracking",
+			"A hardware asset tag matching the discovery serial number"
 		],
 		"correctIndex": 0,
-		"explanation": "Controlled rollout limits disruption and supports defensible compliance transitions.",
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Import errors for missing publisher part numbers are resolved by ensuring the part number exists and maps to the correct software model for the product.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_CreateReconciliationResults.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/entitlement-import-error-fields.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 38,
-		"prompt": "Which KPI best shows whether publisher pack content is improving compliance quality?",
+		"prompt": "A SAM team runs reconciliation for the first time on a newly onboarded publisher. What does the reconciliation process compare?",
 		"choices": [
-			"Growth in unrelated service desk ticket volume across operational workflows",
-			"Higher percentage of reconciled records with reduced manual exception handling under governance oversight",
-			"Increase in unresolved unmatched software installs in real implementations",
-			"Decrease in CMDB relationship count in enterprise contexts"
+			"Purchased entitlement rights against discovered installations and allocations for each software model",
+			"Hardware asset depreciation schedules against procurement invoice line totals",
+			"Change request approval durations against incident mean time to resolve metrics",
+			"Knowledge article publish dates against catalog item retirement schedules"
 		],
-		"correctIndex": 1,
-		"explanation": "Better publisher content should increase automated reconciliation quality and reduce manual intervention.",
+		"correctIndex": 0,
+		"explanation": "Reconciliation evaluates license position by comparing entitlement rights to normalized install and allocation data for each software model.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_CreateReconciliationResults.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 39,
-		"prompt": "Which governance action is most important for long-term publisher pack reliability?",
+		"prompt": "After reconciliation completes, a publisher shows more installations than purchased rights. Which compliance state best describes this finding?",
 		"choices": [
-			"Allow analysts to create ad hoc license rules without approval under governance oversight",
-			"Skip contract updates after renewal events across operational workflows",
-			"Disable audit trails on reconciliation jobs in enterprise contexts",
-			"Assign ownership for periodic review of publisher content, exceptions, and contract changes in real implementations"
+			"Under-licensed or non-compliant for that software model",
+			"Over-licensed with unused entitlements available for reclamation",
+			"Fully compliant because discovery counts are estimates only",
+			"Neutral because reconciliation does not evaluate install counts"
 		],
-		"correctIndex": 3,
-		"explanation": "Named ownership and periodic review keep publisher rule logic aligned to changing licensing terms.",
+		"correctIndex": 0,
+		"explanation": "When active installations or allocations exceed purchased rights, the license position is under-licensed and requires remediation before audit defense.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-compliance.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/software-compliance-overview.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 40,
-		"prompt": "In SAM, what is the primary goal of software optimization activities?",
+		"prompt": "A SAM manager must prioritize remediation before a vendor true-up. Which report best supports this effort?",
 		"choices": [
-			"Increase software deployment volume regardless of demand for measurable outcomes",
-			"Disable all reclamation notifications for practical execution",
-			"Reduce cost and compliance risk by aligning entitlements to real usage under governance oversight",
-			"Replace reconciliation with yearly manual audits across operational workflows"
+			"Entitlement versus install position report filtered to high-cost publishers",
+			"CMDB duplicate configuration item report with no publisher grouping applied",
+			"Daily change request calendar listing scheduled deployments without license context",
+			"Open incident list assigned to software teams without entitlement metrics"
 		],
-		"correctIndex": 2,
-		"explanation": "Optimization ensures software spend and risk posture reflect actual business consumption.",
+		"correctIndex": 0,
+		"explanation": "True-up preparation starts with a publisher-focused compliance position report that highlights financial exposure from under-licensed products.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-overview.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/software-compliance-overview.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 41,
-		"prompt": "Which optimization tactic usually delivers the fastest measurable SAM savings?",
+		"questionType": "multi",
+		"prompt": "Reconciliation results show non-compliance for a software model. Which two remediation actions can address the gap? (Choose two.)",
 		"choices": [
-			"Ignore renewal dates until the procurement deadline across operational workflows",
-			"Reclaim low-usage licenses and reallocate them before purchasing new rights under governance oversight",
-			"Disable software model governance in real implementations",
-			"Move all software contracts to one shared vendor account in enterprise contexts"
+			"Purchase additional rights to cover discovered consumption",
+			"Remove unlicensed installs that exceed available entitlements",
+			"Disable all discovery schedules until the next fiscal quarter begins",
+			"Delete the software model record to reset normalization status"
 		],
-		"correctIndex": 1,
-		"explanation": "Reclaim-and-reuse workflows produce direct avoidable-cost savings quickly.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Non-compliance is remediated by either acquiring additional license rights or removing installs that exceed entitlements, aligning consumption with purchased rights.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-reclamation.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_ReclaimUnusedSoftware.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconciliation-remediation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 42,
-		"prompt": "Why should optimization opportunities be segmented by publisher and business unit?",
+		"prompt": "Reconciliation shows a publisher is over-licensed with unused entitlements. What is the most appropriate SAM response?",
 		"choices": [
-			"To clearly target highest-impact savings and remediation where exposure is concentrated",
-			"To clearly eliminate the need for entitlement data",
-			"To clearly route all actions through service desk incidents",
-			"To clearly avoid stakeholder accountability across operational workflows"
+			"Evaluate reclamation opportunities and adjust future purchase quantities during renewal planning",
+			"Immediately delete all entitlement records to reset the compliance dashboard to zero",
+			"Disable reconciliation for that publisher to preserve the current license position",
+			"Convert unused entitlements into hardware asset records for stockroom inventory"
 		],
 		"correctIndex": 0,
-		"explanation": "Segmentation focuses optimization on areas with the largest financial or compliance leverage.",
+		"explanation": "Over-licensed positions indicate reclaimable or reducible spend; SAM teams should plan reclamation and right-size renewals rather than ignore surplus rights.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-compliance.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/software-reclamation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 43,
-		"prompt": "Which anti-pattern most undermines continuous SAM optimization?",
+		"prompt": "A compliance analyst needs to allocate available entitlements to users who require the software. Which SAM action assigns rights to individual users?",
 		"choices": [
-			"Focus on operating with recurring KPI reviews and action tracking",
-			"Focus on treating optimization as a one-time project instead of an ongoing process",
-			"Focus on monitoring renewal risk against effective position trends",
-			"With quarterly reclaim campaigns with defined owners"
+			"Create allocations on the entitlement record for authorized users or devices",
+			"Run a hardware asset transfer order to move licenses between stockroom locations",
+			"Submit a catalog request to auto-provision entitlements without SAM review",
+			"Update the software model normalization status to Manually normalized"
 		],
-		"correctIndex": 1,
-		"explanation": "Optimization requires sustained governance cadence, not a single cleanup event.",
+		"correctIndex": 0,
+		"explanation": "Allocations link purchased entitlement rights to specific users or devices, tracking consumption against available license pools.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-overview.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/manage-software-entitlements.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 44,
-		"prompt": "Which KPI set best demonstrates successful software optimization governance?",
+		"prompt": "After remediation, a SAM administrator reruns reconciliation. What outcome confirms the compliance gap was resolved?",
 		"choices": [
-			"Higher number of unresolved software requests for measurable outcomes",
-			"Longer remediation cycle times for practical execution",
-			"Lower true-up exposure, reduced unused entitlements, and measurable realized savings under governance oversight",
-			"Increase in unmatched discovery records across operational workflows"
+			"The software model shows a compliant or balanced license position matching contract terms",
+			"The discovery schedule status changes to inactive for all related publishers",
+			"The entitlement import error list contains only Ignored status records",
+			"The software model normalization status changes to Match not found"
 		],
-		"correctIndex": 2,
-		"explanation": "These metrics link optimization efforts to both financial and compliance outcomes.",
+		"correctIndex": 0,
+		"explanation": "Successful remediation is verified when reconciliation shows the entitlement position aligns with installed and allocated consumption for the software model.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-compliance.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/validate-reconciliation-results.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 45,
-		"prompt": "During a software publisher true-up, which data set is most important to validate before negotiating any shortfall?",
+		"prompt": "A SAM analyst reviews a per-device license metric where entitlements exceed active installations. Which allocation practice best reflects available rights?",
 		"choices": [
-			"Reconciled software installations mapped to normalized models and license metrics in real implementations",
-			"Procurement approval records without entitlements in enterprise contexts",
-			"Exclusively open incident counts by assignment group",
-			"CAB meeting notes from the previous quarter for measurable outcomes"
+			"Assign entitlement quantities to devices with verified installs before opening new purchases",
+			"Delete entitlement records until install counts exceed purchased rights",
+			"Convert all device metrics to named-user metrics without contract review",
+			"Skip allocation and rely on spreadsheet totals during publisher audits"
 		],
 		"correctIndex": 0,
-		"explanation": "True-up negotiations depend on defensible consumption evidence, which requires normalized installs and metric-aligned reconciliation.",
+		"explanation": "Allocations tie purchased rights to consumption records so reconciliation reflects defensible license position before procurement actions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-overview.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_ReconcileSoftwareEntitlements.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/manage-software-entitlements.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 46,
-		"prompt": "What is the primary SAM benefit of running regular internal audits before a vendor-initiated audit notice arrives?",
+		"prompt": "When importing entitlements from a software contract, which field linkage is most critical for audit-ready compliance?",
 		"choices": [
-			"Focus on detecting compliance gaps early so remediation can happen on your timeline",
-			"Focus on preventing all contract renewals across operational workflows",
-			"Focus on replacing discovery and normalization processes",
-			"Focus on eliminating the need for license entitlements"
+			"Contract record tied to publisher, metric, quantity, and effective dates on the entitlement",
+			"Incident category mapped to the software model display name",
+			"Change request number stored only in entitlement short description",
+			"Hardware asset tag referenced as the primary license key"
 		],
 		"correctIndex": 0,
-		"explanation": "Proactive internal audits identify exposure in advance, enabling cost-effective remediation before external pressure and penalties increase.",
+		"explanation": "Contract-backed entitlements preserve traceable rights evidence that supports reconciliation and publisher audit responses.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-compliance.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_SoftwareComplianceReporting.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/software-entitlement-best-practices.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 47,
-		"prompt": "Which SAM operating practice best improves audit defensibility for complex publisher metrics such as cores or users?",
+		"prompt": "Which value is NOT a valid normalization status for a discovery model in Software Asset Management?",
 		"choices": [
-			"Focus on maintaining metric-specific reconciliation rules and traceable evidence history",
-			"Focus on estimating usage from change request volumes",
-			"Tracking exclusively device names and skipping contract evidence",
-			"Focus on relying on spreadsheets outside the platform"
+			"Matched",
+			"Partially normalized",
+			"Fully normalized",
+			"Publisher normalized"
 		],
-		"correctIndex": 0,
-		"explanation": "Metric-specific rules and preserved evidence trails are critical to explain how effective position results were calculated.",
+		"correctIndex": 2,
+		"explanation": "Fully normalized is not a valid SAM normalization status; supported statuses include matched, partially normalized, and publisher normalized.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/license-metrics.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_CreateReconciliationResults.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-normalization-rules.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 48,
-		"prompt": "A SAM manager defines a goal to reduce annual over-licensing spend. Which initiative aligns best with that goal?",
+		"prompt": "In the License Workbench publisher view, which calculations are provided? (Choose all that apply.)",
 		"choices": [
-			"Launch reclaim and reharvest campaigns targeting low-usage installations in enterprise contexts",
-			"Disable reclamation workflows in real implementations across operational workflows",
-			"Increase emergency software requests without approvals for measurable outcomes",
-			"Move all entitlements to unrestricted stockrooms for practical execution"
+			"Total Spend",
+			"True-up Cost",
+			"Potential Savings",
+			"Over-licensed amount"
 		],
 		"correctIndex": 0,
-		"explanation": "Reclamation initiatives directly support over-licensing reduction by removing unused software and reusing owned rights.",
+		"correctIndexes": [
+			0,
+			1,
+			2,
+			3
+		],
+		"questionType": "multi",
+		"explanation": "The License Workbench publisher calculations include Total Spend, True-up Cost, Potential Savings, and Over-licensed amount for financial compliance analysis.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-reclamation.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_ReclaimUnusedSoftware.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/license-workbench.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 49,
-		"prompt": "When defining SAM goals and initiatives, which KPI combination is most meaningful for leadership reporting?",
+		"prompt": "After reconciliation completes, which outcome represents a defensible Effective License Position for renewal planning?",
 		"choices": [
-			"Compliance risk trend, realized savings, and remediation cycle time for practical execution",
-			"Number of CMDB classes created this month for measurable outcomes",
-			"Count of knowledge articles in the portal across operational workflows",
-			"Mean time to close unrelated HR cases under governance oversight"
+			"Entitlement totals reconciled to normalized installs using the contractual license metric",
+			"Raw discovery titles counted without software model mapping",
+			"Procurement PO line items summed without entitlement linkage",
+			"Catalog request volume used as a proxy for license consumption"
 		],
 		"correctIndex": 0,
-		"explanation": "These KPIs connect governance exposure and financial outcomes while showing delivery speed of corrective actions.",
+		"explanation": "Effective License Position depends on reconciling contract-backed entitlements to normalized consumption using the correct metric.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 50,
-		"prompt": "In SAM, what is the main purpose of defining software model lifecycles?",
+		"prompt": "A publisher licenses software by named user. Which allocation record best supports accurate reconciliation?",
 		"choices": [
-			"Control how titles progress from requestable to retired states for compliant governance in real implementations",
-			"Force every entitlement into one license metric in enterprise contexts",
-			"Disable product normalization jobs across operational workflows",
-			"Replace all procurement approvals under governance oversight"
+			"User allocation linking entitlement rights to an identified employee or contractor",
+			"Device allocation on a decommissioned CI with no active user",
+			"Stockroom allocation with no assigned consumer or install reference",
+			"Department allocation with no user or device consumption mapping"
 		],
 		"correctIndex": 0,
-		"explanation": "Lifecycle governance standardizes how software moves through planning, use, and retirement while preserving compliance controls.",
+		"explanation": "Named-user metrics require user-level allocations so consumption can be measured against purchased rights during reconciliation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-model-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-overview.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/manage-software-entitlements.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 51,
-		"prompt": "Which action best supports CAL optimization in SAM after identifying underused subscriptions?",
+		"prompt": "Reconciliation results show more purchased rights than active consumption for a high-cost publisher. What does this over-licensed position suggest?",
 		"choices": [
-			"Reclaim inactive assignments and redeploy existing rights before new spend for measurable outcomes",
-			"Increase blanket purchases immediately for practical execution",
-			"Convert subscription software to hardware assets in enterprise contexts",
-			"Disable usage collection to avoid noise in real implementations"
+			"Reclaim or reallocate unused entitlements before approving additional purchases",
+			"Immediately purchase more licenses to maintain compliance buffer",
+			"Delete install records until counts match entitlement quantity",
+			"Disable reconciliation for that publisher until the next audit"
 		],
 		"correctIndex": 0,
-		"explanation": "CAL optimization is achieved by reclaiming and reusing entitlements before purchasing additional licenses.",
+		"explanation": "An over-licensed position indicates surplus rights that can be reclaimed or reallocated to reduce spend and true-up exposure.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-reclamation.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_ManageUserSubscriptions.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/validate-reconciliation-results.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 52,
-		"prompt": "A SAM team tracks request, deploy, optimize, and retire stages. What is the biggest lifecycle risk if retire is unmanaged?",
+		"prompt": "When remediating reconciliation results in SAM, which remediation options are available? (Choose all that apply.)",
 		"choices": [
-			"Unused rights remain consumed, inflating compliance and cost exposure across operational workflows",
-			"License metrics stop calculating permanently under governance oversight",
-			"Fewer catalog requests are submitted in real implementations",
-			"Normalization rules are deleted automatically in enterprise contexts"
+			"Create Allocations",
+			"Remove Allocations",
+			"Purchase Rights",
+			"Remove Unlicensed Installs"
 		],
 		"correctIndex": 0,
-		"explanation": "Unmanaged retirement leaves stale allocations and installations, which distorts effective license position and cost posture.",
+		"correctIndexes": [
+			0,
+			1,
+			2,
+			3
+		],
+		"questionType": "multi",
+		"explanation": "SAM reconciliation remediation supports creating or removing allocations, purchasing additional rights, and removing unlicensed installations.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-lifecycle.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_RetireSoftwareAssets.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 53,
-		"prompt": "Which dashboard view is most useful for SAM lifecycle governance reviews?",
+		"prompt": "Reconciliation shows under-licensed installs for a business-critical title. Which remediation path addresses the compliance gap?",
 		"choices": [
-			"List of closed incidents older than 18 months in enterprise contexts",
-			"Catalog item thumbnails grouped by color in real implementations",
-			"Stage-based metrics showing demand, active usage, reclaim candidates, and retirement backlog for measurable outcomes",
-			"Exclusively discovery error logs from one subnet staged behind feature flags for controlled enablement. (CIS-SAM-53-w3)"
+			"Purchase rights or remove unlicensed installs after business approval",
+			"Change the license metric to device without updating the contract",
+			"Archive all entitlement records and rerun discovery only",
+			"Mark every install as exempt without documented exception governance"
 		],
-		"correctIndex": 2,
-		"explanation": "Stage-based metrics reveal bottlenecks and waste points across the full software lifecycle.",
+		"correctIndex": 0,
+		"explanation": "Under-licensed positions are remediated by acquiring additional rights or removing unauthorized installs through governed workflows.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 54,
-		"prompt": "What is the best governance control when introducing a new CAL-intensive software publisher?",
+		"prompt": "A SAM team finds unauthorized software installs during reconciliation. What is the recommended remediation action?",
 		"choices": [
-			"Define lifecycle policy, ownership, and entitlement evidence requirements before broad rollout across operational workflows",
-			"Skip model normalization until true-up under governance oversight",
-			"Apply one generic contract for all publishers orchestrated through flow designer with subflow reuse patterns. (CIS-SAM-54-w2)",
-			"Allow any requester to install without approval for measurable outcomes"
+			"Remove unlicensed installs or create allocations backed by valid entitlements",
+			"Convert installs to hardware assets to exclude them from SAM scope",
+			"Disable discovery for the affected subnet indefinitely",
+			"Delete the software model so installs appear unmatched"
 		],
 		"correctIndex": 0,
-		"explanation": "Up-front lifecycle and evidence controls prevent uncontrolled growth and improve audit readiness for complex publishers.",
+		"explanation": "Unauthorized installs should be removed or covered by legitimate entitlements and allocations to restore compliance.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-model-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-compliance.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 55,
-		"prompt": "In SAM, what is the main purpose of usage analytics for subscription-heavy software?",
+		"prompt": "The License Workbench shows a positive true-up cost for one publisher. What should the SAM team validate before approving procurement?",
 		"choices": [
-			"Replace all contract metadata under governance oversight",
-			"Identify inactive or low-value assignments for reclaim and cost optimization across operational workflows",
-			"Automatically close publisher audit requests for measurable outcomes",
-			"Disable software normalization jobs for practical execution"
+			"Reconciliation position, metric alignment, and whether reclaim could offset the shortfall",
+			"Only the catalog item thumbnail and request category label",
+			"Whether discovery probes ran on weekends for that subnet",
+			"Whether the publisher logo appears on the contract PDF attachment"
 		],
-		"correctIndex": 1,
-		"explanation": "Usage analytics exposes underutilized subscriptions so organizations can reclaim rights and reduce unnecessary spend.",
+		"correctIndex": 0,
+		"explanation": "True-up costs should be validated against reconciled position and optimization options such as reclaim before purchasing additional rights.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-usage.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-reclamation.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/license-workbench.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 56,
-		"prompt": "Which SAM scenario planning question is most valuable before a major contract renewal?",
+		"prompt": "An entitlement import completes with validation warnings on purchased quantity. What should happen before reconciliation is trusted?",
 		"choices": [
-			"Can discovery probes be disabled for weekends? across operational workflows",
-			"What are projected costs under current usage, optimized reclaim, and growth cases? under governance oversight",
-			"How many incidents can be reassigned next month? in real implementations",
-			"Should all software models share one lifecycle state? in enterprise contexts"
+			"Resolve import errors and confirm entitlement fields match contract terms",
+			"Run reconciliation immediately and ignore import warnings",
+			"Delete all entitlements and recreate them from discovery counts",
+			"Disable entitlement imports and track rights in email attachments"
 		],
-		"correctIndex": 1,
-		"explanation": "Scenario comparisons help negotiate renewals using evidence-based cost and demand projections.",
+		"correctIndex": 0,
+		"explanation": "Entitlement data quality is foundational; import errors must be corrected so reconciliation reflects accurate purchased rights.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-compliance.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/manage-software-entitlements.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 57,
-		"prompt": "A SAM analyst sees high install counts but low active usage. What should happen first?",
+		"prompt": "A software model reaches end of publisher support and should no longer be requestable. Which lifecycle action is appropriate?",
 		"choices": [
-			"Run reclaim candidate validation and business-owner review before entitlement changes in enterprise contexts",
-			"Delete all inactive user records from HR systems in real implementations",
-			"Ignore usage data until year-end true-up for measurable outcomes",
-			"Purchase additional licenses immediately for practical execution"
+			"Retire the software model and block new allocations while managing existing installs",
+			"Delete all discovery models mapped to the product without review",
+			"Convert the model to a hardware category to hide it from SAM reports",
+			"Disable all reconciliation jobs globally until the next fiscal year"
 		],
 		"correctIndex": 0,
-		"explanation": "Validation with business owners ensures reclaim actions are safe and aligned with actual operational needs.",
+		"explanation": "Model retirement governs end-of-life products by preventing new demand while existing installs are managed through retirement workflows.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_ReclaimUnusedSoftware.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_SoftwareComplianceReporting.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/now-assist-for-software-asset-management-sam/calculated-lifecycles.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 58,
-		"prompt": "Which governance risk appears when SAM usage analytics are collected but never tied to action workflows?",
+		"prompt": "Which data elements are required inputs for SAM reconciliation to produce an accurate compliance position? (Choose all that apply.)",
 		"choices": [
-			"Discovery schedules will stop permanently across operational workflows",
-			"Optimization opportunities are identified but not realized, reducing program credibility under governance oversight",
-			"Contracts are auto-renewed at no cost for practical execution",
-			"Entitlement records become read-exclusively under governance oversight"
+			"Normalized software entitlements with correct license metrics",
+			"Discovered installations mapped to software models",
+			"Active allocations linking rights to users or devices",
+			"Contract-backed purchased quantities aligned to publisher terms"
 		],
-		"correctIndex": 1,
-		"explanation": "Analytics without operational follow-through creates reporting noise and weakens trust in SAM outcomes.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1,
+			2,
+			3
+		],
+		"questionType": "multi",
+		"explanation": "Reconciliation compares entitlements, allocations, and normalized installs using metric rules derived from contractual terms.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-usage.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-overview.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 59,
-		"prompt": "Which KPI pairing best demonstrates effective SAM usage analytics and planning maturity?",
+		"prompt": "A contract amendment increases license quantity mid-term. How should SAM maintain compliance integrity?",
 		"choices": [
-			"Count of catalog categories and KB articles under governance oversight",
-			"Age of historical task comments across operational workflows",
-			"Reclaim realization rate and renewal forecast accuracy for measurable outcomes",
-			"Number of UI policies on software forms for practical execution"
+			"Update the entitlement record and document the contract change with effective dates",
+			"Create a duplicate software model for the additional quantity only",
+			"Adjust install counts manually without updating entitlements",
+			"Wait until renewal to reflect the amended quantity in SAM"
 		],
-		"correctIndex": 2,
-		"explanation": "These KPIs show whether analytics are converting into action and whether planning assumptions match actual outcomes.",
+		"correctIndex": 0,
+		"explanation": "Contract changes must be reflected in entitlement records with traceable effective dates so reconciliation stays aligned with current rights.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-dashboards.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/software-entitlement-best-practices.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 60,
-		"prompt": "Which role in a mature SAM operating model is primarily accountable for software compliance governance?",
+		"prompt": "An employee submits a service catalog request for licensed design software. Which SAM check should occur before fulfillment?",
 		"choices": [
-			"Any requester with catalog access in enterprise contexts",
-			"Database administrators for all software publishers in real implementations",
-			"Exclusively service desk agents on night shift",
-			"SAM manager or SAM owner with defined policy authority and reporting accountability across operational workflows"
+			"Verify available entitlements and allocation capacity for the requested software model",
+			"Approve the request based on manager preference without license validation",
+			"Fulfill from stockroom hardware inventory regardless of software rights",
+			"Create a change request instead of checking entitlement position"
 		],
-		"correctIndex": 3,
-		"explanation": "A clearly accountable SAM leadership role is required to govern policy, controls, and compliance outcomes.",
+		"correctIndex": 0,
+		"explanation": "Catalog fulfillment should validate entitlement availability so provisioning does not create unlicensed deployments.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-roles.html",
-			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 61,
-		"prompt": "What is the best way to separate duties between SAM and procurement teams?",
+		"prompt": "Procurement completes a software purchase order. What is the correct SAM follow-up to maintain compliance?",
 		"choices": [
-			"Allow procurement to edit reconciliation rules ad hoc across operational workflows",
-			"Move all SAM decisions to email approvals exclusively",
-			"Give both teams full admin rights in SAM for practical execution",
-			"Define role-based responsibilities where procurement manages buys and SAM validates compliance position for measurable outcomes"
+			"Create or update entitlements from the PO and link them to the contract record",
+			"Wait for discovery to infer purchased quantity from new installs",
+			"Store the PO PDF in a personal drive without creating entitlement records",
+			"Increase catalog item price without updating license rights in SAM"
 		],
-		"correctIndex": 3,
-		"explanation": "Separation of duties improves control quality by distinguishing purchasing execution from compliance validation.",
+		"correctIndex": 0,
+		"explanation": "Procurement integration creates traceable entitlement records so purchased rights are available for allocation and reconciliation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-roles.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/procurement/concept/procurement-overview.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/manage-software-entitlements.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 62,
-		"prompt": "Which SAM role activity most improves data quality for license reconciliation?",
+		"prompt": "Installation optimization analysis shows the same user with duplicate installs of one product on multiple devices. What is the best first response?",
 		"choices": [
-			"Focus on allowing end users to edit license metric definitions",
-			"Focus on skipping software model normalization until quarter end",
-			"Focus on disabling entitlement imports from contracts",
-			"Focus on assigning model manager responsibilities for normalization, metric mapping, and publisher hygiene"
+			"Review usage and license metric rules to determine if duplicate installs are compliant",
+			"Delete all but one install record without business validation",
+			"Purchase additional licenses equal to the duplicate install count immediately",
+			"Disable software normalization until the next quarterly audit"
 		],
-		"correctIndex": 3,
-		"explanation": "A dedicated model-management role keeps core normalization and licensing metadata accurate for reliable compliance results.",
+		"correctIndex": 0,
+		"explanation": "Duplicate installs may or may not violate license terms depending on metric and contract; validation against rules precedes remediation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-model-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/task/t_NormalizeSoftwareData.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/validate-software-model-mappings.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 63,
-		"prompt": "What is the strongest reason to integrate SAM with PPM/SPM demand planning?",
+		"prompt": "A SAM administrator schedules recurring reconciliation and compliance reporting jobs. What operational outcome does this maintenance support?",
 		"choices": [
-			"To clearly replace all project financial tracking",
-			"To clearly avoid capturing software costs in investment records",
-			"To clearly remove governance approvals for new software",
-			"To clearly forecast licensing impact of planned initiatives before commitments are finalized"
+			"Timely visibility into compliance drift before renewals and vendor audits",
+			"Permanent elimination of all software model normalization exceptions",
+			"Automatic retirement of every software title after ninety days",
+			"Removal of procurement approvals from the request workflow"
 		],
-		"correctIndex": 3,
-		"explanation": "Linking SAM and portfolio planning enables earlier visibility into licensing cost and compliance impacts of planned work.",
+		"correctIndex": 0,
+		"explanation": "Scheduled reconciliation and reporting maintain current compliance posture and reduce surprise exposure at renewal or audit time.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/sam-overview.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/portfolio-management/concept/portfolio-planning.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/validate-reconciliation-results.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 64,
-		"prompt": "Which integration outcome best indicates SAM and PPM are working effectively together?",
+		"prompt": "Leadership asks for a publisher spend and compliance summary before budget planning. Which report view best supports that decision?",
 		"choices": [
-			"License compliance is reviewed exclusively after project closure validated against baseline KPIs before go-live approval. (CIS-SAM-64-w0)",
-			"Portfolio records exclude software dependencies for practical execution",
-			"All software requests bypass demand governance in enterprise contexts",
-			"Project estimates include validated software cost and entitlement assumptions with fewer renewal surprises in real implementations"
+			"License Workbench or compliance dashboard segmented by publisher with spend and position trends",
+			"Alphabetical list of all discovery models without entitlement totals",
+			"Count of open incidents assigned to the SAM team this month",
+			"Hardware warranty expiration report filtered by stockroom location"
 		],
-		"correctIndex": 3,
-		"explanation": "Effective integration surfaces software cost and compliance assumptions early, reducing late-cycle budget and audit risk.",
+		"correctIndex": 0,
+		"explanation": "Publisher-segmented spend and compliance views connect financial exposure to license position for informed budget decisions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management2/concept/software-compliance.html",
-			"https://www.servicenow.com/docs/bundle/zurich-strategic-portfolio-management/page/product/spm-workspace/concept/spm-workspace.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/license-workbench.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 65,
-		"prompt": "Which report best helps a SAM manager prioritize remediation before a vendor true-up?",
+		"prompt": "A SAM team plans to update publisher-specific reconciliation rules in production. Which operational integration practice reduces compliance risk?",
 		"choices": [
-			"A well-defined CMDB duplicate CI report with no publisher grouping",
-			"A well-defined daily change request calendar without license context",
-			"An well-defined entitlement vs. install position report filtered to high-cost publishers",
-			"A well-defined list of all open incidents assigned to software teams"
+			"Submit a change request, test in sub-production, and document expected position impacts",
+			"Apply rule edits directly during peak business hours without notification",
+			"Disable change management because SAM updates are low risk by default",
+			"Copy rules from a spreadsheet maintained outside the platform"
 		],
-		"correctIndex": 2,
-		"explanation": "Effective true-up preparation starts with a publisher-focused compliance position that highlights financial exposure.",
+		"correctIndex": 0,
+		"explanation": "SAM rule changes can shift compliance results; change-controlled testing preserves trust in license position calculations.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/software-asset-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-compliance.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-normalization-rules.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 66,
-		"prompt": "A compliance report shows sudden over-deployment for one publisher. What should be validated first?",
+		"prompt": "Service catalog fulfillment deploys licensed software to a user. Which SAM record should be created to maintain reconciliation accuracy?",
 		"choices": [
-			"CMDB ownership of network devices in enterprise contexts",
-			"Discovery and reconciliation data quality for installations and entitlements in real implementations",
-			"Service catalog branding and logo placement for measurable outcomes",
-			"Incident major outage communications for practical execution"
+			"A software allocation linking the entitlement to the entitled user or device",
+			"A hardware asset record with no software model reference",
+			"An incident record documenting the deployment technician name",
+			"A knowledge article describing installation steps without entitlement linkage"
 		],
-		"correctIndex": 1,
-		"explanation": "Before remediation decisions, SAM teams should confirm that the compliance signal is based on reliable normalized data.",
+		"correctIndex": 0,
+		"explanation": "Fulfillment should create allocations so consumption is tracked against purchased rights during reconciliation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-data-foundation.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/software-normalization.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/manage-software-entitlements.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 67,
-		"prompt": "Which reporting approach gives executives the clearest SAM compliance story?",
+		"prompt": "Which platform areas commonly integrate with SAM operational workflows? (Choose all that apply.)",
 		"choices": [
-			"Trend and exposure dashboard combining compliance status, risk, and estimated cost impact for practical execution",
-			"Raw installation list sorted alphabetically by device name for measurable outcomes",
-			"Weekly list of all software models without totals across operational workflows",
-			"A well-defined one-time screenshot of a reconciliation table"
+			"Service catalog software request and fulfillment",
+			"Procurement purchase orders and contracts",
+			"Change management for SAM configuration updates",
+			"Discovery and normalization feeding install records"
 		],
 		"correctIndex": 0,
-		"explanation": "Executives need summarized exposure and trend insights rather than operational raw data.",
+		"correctIndexes": [
+			0,
+			1,
+			2,
+			3
+		],
+		"questionType": "multi",
+		"explanation": "SAM operations integrate catalog provisioning, procurement entitlements, governed configuration changes, and discovery-driven install data.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-compliance.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 68,
-		"prompt": "What should a SAM compliance exception report include for audit readiness?",
+		"prompt": "A major software contract approaches renewal in sixty days. Which integrated workflow best prepares SAM and procurement?",
 		"choices": [
-			"Exclusively the software publisher name under governance oversight",
-			"A well-defined list of affected users without context",
-			"Screenshots of workstation desktops in enterprise contexts",
-			"Exception owner, rationale, approval date, and expiration or review cycle in real implementations"
+			"Trigger compliance review with reconciled position and optimization recommendations before negotiation",
+			"Postpone all reconciliation until after the new contract is signed",
+			"Remove entitlements from SAM to simplify the renewal spreadsheet",
+			"Disable catalog requests for the publisher until renewal completes"
 		],
-		"correctIndex": 3,
-		"explanation": "Audit-ready exceptions require accountable ownership, documented approval, and time-bound governance.",
+		"correctIndex": 0,
+		"explanation": "Renewal preparation requires current compliance position and optimization insights so procurement can negotiate from verified data.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/audit-management/concept/audit-management.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/entitlement-audit-preparation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 69,
-		"prompt": "Which report segmentation is most useful for SAM compliance governance boards?",
+		"prompt": "Executives request a quarterly SAM compliance narrative for the governance board. Which reporting approach is most effective?",
 		"choices": [
-			"Exposure by publisher, business unit, and remediation status with aging for practical execution",
-			"Incident reopen counts by assignment group for measurable outcomes",
-			"Knowledge article views by category in real implementations",
-			"Hardware warranty expiration by model in enterprise contexts"
+			"Trend dashboard showing compliance status, financial exposure, and remediation progress by publisher",
+			"Raw export of every install record sorted by device hostname",
+			"Single screenshot of one reconciliation result with no historical context",
+			"List of software models created this quarter without compliance totals"
 		],
 		"correctIndex": 0,
-		"explanation": "Governance boards need segmented exposure and remediation progress to drive accountable decisions.",
+		"explanation": "Governance reporting needs summarized trends, exposure, and remediation status rather than operational raw data.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-compliance.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/validate-reconciliation-results.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 70,
-		"prompt": "Which administrative control is most important for stable SAM operations?",
+		"prompt": "A publisher content pack update changes license metric definitions. How should SAM administrators integrate this with change management?",
 		"choices": [
-			"No approval process for publisher-specific rule changes across operational workflows",
-			"Global admin access for all asset coordinators under governance oversight",
-			"Role-based access with clear separation between data stewards, analysts, and approvers in real implementations",
-			"Direct production edits by any itil user in enterprise contexts"
+			"Open a change request, validate impacts in test, and schedule promotion with rollback planning",
+			"Deploy immediately in production to match vendor release timing without testing",
+			"Skip documentation because publisher packs are vendor-maintained content",
+			"Disable all SAM roles until the update is manually reversed"
 		],
-		"correctIndex": 2,
-		"explanation": "SAM administration depends on governed access to protect data integrity and accountability.",
+		"correctIndex": 0,
+		"explanation": "Publisher pack updates can alter compliance calculations and require governed testing before production promotion.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-platform-security/page/administer/security/concept/c_Roles.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-model-normalization-governance.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 71,
-		"prompt": "How should SAM administrators manage normalization and reconciliation rule changes?",
+		"prompt": "Procurement and SAM both create entitlement records from purchase data. Which control prevents duplicate rights?",
 		"choices": [
-			"Let each analyst maintain separate private rule sets under governance oversight",
-			"Disable historical data comparisons after updates across operational workflows",
-			"Apply changes directly in production during business hours in enterprise contexts",
-			"Test in lower environments, document impacts, and promote through change control in real implementations"
+			"Define integration rules so PO fulfillment creates entitlements once with unique contract references",
+			"Allow each team to import the same PO independently without deduplication",
+			"Disable entitlement creation from procurement entirely",
+			"Store purchased quantities only in catalog variable sets"
 		],
-		"correctIndex": 3,
-		"explanation": "Controlled promotion preserves trust in license positions and avoids unintended compliance shifts.",
+		"correctIndex": 0,
+		"explanation": "Integrated procurement-to-SAM flows should deduplicate entitlement creation and preserve a single source of purchased rights.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/software-normalization.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/manage-software-entitlements.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 72,
-		"prompt": "Which KPI set best indicates mature SAM administration?",
+		"prompt": "Reconciliation jobs consume significant system resources during business hours. What maintenance approach balances operations and performance?",
 		"choices": [
-			"Lower unresolved compliance risk, on-time reconciliations, and reduced exception aging",
-			"Increased manual spreadsheet reconciliations in enterprise contexts",
-			"More duplicate software model records across operational workflows",
-			"Higher count of emergency access grants under governance oversight"
+			"Schedule reconciliation during off-peak windows with monitoring and alerting on job failures",
+			"Disable scheduled reconciliation and run jobs only after audit notices arrive",
+			"Run full reconciliation on every form save in the SAM application",
+			"Remove reconciliation history after each successful job to save space"
 		],
 		"correctIndex": 0,
-		"explanation": "Operational maturity appears in controlled risk, repeatable processing, and exception discipline.",
+		"explanation": "Scheduled off-peak reconciliation maintains current compliance data while reducing impact on interactive SAM operations.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 73,
-		"prompt": "What is the best administrative approach for managing SAM exceptions?",
+		"prompt": "A new catalog item requests software governed by a retired lifecycle state. What should the integrated workflow enforce?",
 		"choices": [
-			"Allow permanent exceptions with no expiry review in enterprise contexts",
-			"Approve all exceptions automatically by workflow in real implementations",
-			"Require documented business justification, owner assignment, and scheduled revalidation under governance oversight",
-			"Store exception decisions exclusively in email in real implementations"
+			"Block or redirect requests because the software model is retired from active lifecycle",
+			"Auto-approve fulfillment without checking lifecycle or entitlements",
+			"Create entitlements on the fly without contract backing",
+			"Map the request to a hardware model to bypass SAM controls"
 		],
-		"correctIndex": 2,
-		"explanation": "Exception governance needs traceability, ownership, and periodic challenge to prevent control drift.",
+		"correctIndex": 0,
+		"explanation": "Catalog integration should respect software model lifecycle states to prevent provisioning of retired or unsupported products.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/concept/policy-and-compliance.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/now-assist-for-software-asset-management-sam/calculated-lifecycles.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 74,
-		"prompt": "Which SAM administration activity most improves audit readiness?",
+		"prompt": "A compliance governance board reviews remediation backlog monthly. Which report segmentation drives accountable action?",
 		"choices": [
-			"Maintain evidence trails for entitlement sources, reconciliation logic, and approval history in real implementations",
-			"Allow manual entitlement edits without logging in enterprise contexts",
-			"Purge historical compliance records every month for practical execution",
-			"Restrict reporting access to prevent reviewer questions for measurable outcomes"
+			"Exposure by publisher, business unit, remediation owner, and aging status",
+			"Total number of CMDB classes with software discovery enabled",
+			"Knowledge article views grouped by portal category",
+			"Mean time to resolve unrelated infrastructure incidents"
 		],
 		"correctIndex": 0,
-		"explanation": "Auditable SAM operations require traceable evidence for how compliance positions were produced and approved.",
+		"explanation": "Segmented remediation reporting with ownership and aging helps governance boards prioritize high-impact compliance actions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/audit-management/concept/audit-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/software-asset-management.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/validate-reconciliation-results.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 75,
-		"prompt": "Before a major software renewal, which SAM action provides the strongest negotiation position?",
+		"prompt": "Procurement enters renewal negotiations for a strategic publisher. Which SAM deliverable provides the strongest factual basis?",
 		"choices": [
-			"Increase discovery schedule frequency without reviewing data quality in enterprise contexts",
-			"Export install counts exclusively from one business unit",
-			"Pause normalization updates until after contract signature for measurable outcomes",
-			"Reconcile entitlements and installations to establish a defensible Effective License Position for practical execution"
+			"Reconciled Effective License Position with documented entitlement and install evidence",
+			"List of employee names who requested the software in the past year",
+			"Screenshot of the service catalog homepage without compliance metrics",
+			"Count of discovery errors on a single subnet from last week"
 		],
-		"correctIndex": 3,
-		"explanation": "A trusted license position grounded in reconciled data gives procurement factual leverage for renewal negotiations.",
+		"correctIndex": 0,
+		"explanation": "Renewal leverage comes from a trusted license position built on reconciled entitlements, allocations, and normalized installs.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/software-asset-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/entitlement-audit-preparation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 76,
-		"prompt": "Which data quality issue most directly weakens SAM compliance calculations?",
+		"prompt": "Month-over-month compliance reports show volatile results for one product family. Which data integrity issue is the most likely cause?",
 		"choices": [
-			"Monthly compliance reporting cadence across operational workflows",
-			"Role-based access controls on SAM records under governance oversight",
-			"Duplicate software models and unmatched discoveries for the same product family for practical execution",
-			"Too many dashboard widgets in one homepage for measurable outcomes"
+			"Duplicate software models and inconsistent discovery-to-model mappings for the same publisher title",
+			"Stable normalization content updated through governed change control",
+			"Regular entitlement imports validated against contract terms",
+			"Role-based access limiting entitlement edits to authorized stewards"
 		],
-		"correctIndex": 2,
-		"explanation": "Normalization and matching quality are foundational for reliable entitlement-to-install reconciliation.",
+		"correctIndex": 0,
+		"explanation": "Duplicate models and inconsistent mappings fragment install counts and produce unreliable reconciliation outcomes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/software-normalization.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/software-asset-management.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-model-data-quality-kpis.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 77,
-		"prompt": "When introducing a new publisher pack update, what is the safest SAM practice?",
+		"prompt": "A SAM team receives a new publisher pack version with updated normalization rules. What is the safest extension practice?",
 		"choices": [
-			"Disable reconciliation until next quarter for measurable outcomes",
-			"Validate update scope and test impact before governed promotion for practical execution",
-			"Apply directly in production to accelerate compliance in enterprise contexts",
-			"Force all models to one metric temporarily in real implementations"
+			"Test the update in sub-production, compare reconciliation deltas, and promote through change control",
+			"Apply the pack in production during business hours without impact analysis",
+			"Disable normalization until the pack version matches the previous release",
+			"Delete existing software models before importing the new pack content"
 		],
-		"correctIndex": 1,
-		"explanation": "Publisher-content changes can shift compliance results, so controlled testing and promotion are essential.",
+		"correctIndex": 0,
+		"explanation": "Publisher pack changes can shift normalization and compliance results and should be validated before governed promotion.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-model-normalization-governance.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 78,
-		"prompt": "Which governance pattern best supports sustainable software reclamation outcomes?",
+		"prompt": "Which reclamation governance pattern best balances cost savings with business continuity when extending SAM optimization?",
 		"choices": [
-			"Defined inactivity thresholds, owner approvals, and tracked reinstate exceptions in real implementations",
-			"Manual email requests without policy in enterprise contexts",
-			"One-time uninstall campaigns with no follow-up for practical execution",
-			"Reclaim all titles regardless of business criticality for measurable outcomes"
+			"Policy-defined inactivity thresholds, owner review, and tracked exceptions for retained installs",
+			"Mass uninstall of all titles without stakeholder notification",
+			"One-time email campaign with no follow-up workflow or exception tracking",
+			"Permanent exemptions for every reclamation candidate without documentation"
 		],
 		"correctIndex": 0,
-		"explanation": "Policy-based reclamation with approvals and exception tracking balances savings with service continuity.",
+		"explanation": "Sustainable reclamation uses defined thresholds, approvals, and exception governance to recover costs without disrupting critical work.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/software-asset-management.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/subscription-entitlements.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 79,
-		"prompt": "Which KPI combination best demonstrates SAM value to leadership?",
+		"prompt": "Leadership reviews SAM program value each quarter. Which KPI combination best demonstrates extending SAM beyond basic inventory?",
 		"choices": [
-			"Compliance risk reduction, avoided spend from optimization, and exception aging trend under governance oversight",
-			"Number of custom reports created each quarter across operational workflows",
-			"Count of users with sam_admin role in enterprise contexts",
-			"Number of discovered devices and software catalog size in real implementations"
+			"Compliance risk reduction, realized savings from optimization, and declining exception aging",
+			"Total count of software models regardless of normalization quality",
+			"Number of users with administrative access to SAM tables",
+			"Volume of discovery probes executed without reconciliation outcomes"
 		],
 		"correctIndex": 0,
-		"explanation": "Leadership value is shown by risk posture, financial outcomes, and governance discipline over time.",
+		"explanation": "Program value is shown through improved risk posture, financial outcomes, and disciplined exception management over time.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/license-workbench.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 80,
-		"prompt": "What is the main SAM benefit of integrating software request workflows with entitlements?",
+		"prompt": "An organization extends SAM by connecting software request workflows to entitlement data. What is the primary compliance benefit?",
 		"choices": [
-			"It guarantees zero audit findings in enterprise contexts",
-			"It removes the need for license reconciliation in real implementations",
-			"It aligns provisioning decisions with available rights before deployment for measurable outcomes",
-			"It eliminates role-based approvals for practical execution"
+			"Provisioning decisions validate available rights before deployment, reducing unlicensed installs",
+			"All publisher audits are permanently eliminated after workflow integration",
+			"License reconciliation becomes optional once catalog integration is enabled",
+			"Every requester receives automatic admin access to entitlement records"
 		],
-		"correctIndex": 2,
-		"explanation": "Request-to-entitlement alignment helps prevent over-deployment and improves compliance control at intake.",
+		"correctIndex": 0,
+		"explanation": "Request-to-entitlement integration prevents over-deployment by checking rights at intake before software is provisioned.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/software-asset-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/manage-software-entitlements.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 81,
-		"prompt": "A publisher audit requests proof of license rights. Which SAM evidence is most critical?",
+		"prompt": "A publisher audit requests proof of license ownership. Which SAM evidence set is most defensible?",
 		"choices": [
-			"A well-defined list of hardware models hosting software installs",
-			"Documented entitlement records and reconciliation history showing how compliance positions were derived for measurable outcomes",
-			"A well-defined screenshot of the SAM dashboard homepage",
-			"Export of all discovered software titles regardless of normalization under governance oversight"
+			"Entitlement records with contract references and reconciliation history showing position calculations",
+			"Unnormalized discovery export sorted alphabetically by install name",
+			"Service catalog item description text without linked entitlements",
+			"List of hardware assets hosting software with no metric context"
 		],
-		"correctIndex": 1,
-		"explanation": "Audit defensibility depends on traceable rights evidence and the logic used to calculate compliance.",
+		"correctIndex": 0,
+		"explanation": "Audit defensibility requires traceable entitlement provenance and documented reconciliation logic for compliance positions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/software-asset-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/audit-management/concept/audit-management.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/entitlement-audit-preparation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 82,
-		"prompt": "Which SAM anti-pattern most often causes inflated software spend?",
+		"prompt": "Which anti-pattern most often inflates software spend when extending SAM optimization?",
 		"choices": [
-			"Focus on allowing inactive allocations to remain assigned without reclamation controls",
-			"With role-based access for approvals across operational workflows",
-			"Focus on segmenting compliance reports by publisher",
-			"Scheduled normalization reviews for practical execution across operational workflows"
+			"Inactive allocations remain assigned without reclamation or reuse workflows",
+			"Compliance reports are segmented by publisher and business unit",
+			"Entitlements are updated when contract amendments are signed",
+			"Reconciliation runs on a defined schedule before renewal events"
 		],
 		"correctIndex": 0,
-		"explanation": "Unreclaimed inactive allocations reduce license reuse and drive unnecessary purchases.",
+		"explanation": "Unreclaimed inactive allocations reduce license reuse and drive unnecessary purchases despite available rights.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/software-asset-management.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/license-workbench.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 83,
-		"prompt": "A SAM team reports inconsistent compliance positions month to month. Which root cause is most likely?",
+		"prompt": "Compliance positions fluctuate sharply after ad hoc edits to reconciliation logic. What is the most likely root cause?",
 		"choices": [
-			"Stable normalization content with controlled change management across operational workflows",
-			"Executive review of exception aging under governance oversight",
-			"Tiered reporting by publisher for practical execution",
-			"Uncontrolled updates to reconciliation logic and model mappings for measurable outcomes"
+			"Uncontrolled changes to reconciliation rules and model mappings without governed testing",
+			"Monthly executive review of exception aging with documented owners",
+			"Stable publisher pack versions promoted through change control",
+			"Segmented compliance dashboards reviewed by business unit leaders"
 		],
-		"correctIndex": 3,
-		"explanation": "Unmanaged rule and mapping changes create volatility that undermines trust in SAM outputs.",
+		"correctIndex": 0,
+		"explanation": "Unmanaged rule and mapping changes create volatility that undermines trust in SAM compliance outputs.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/software-normalization.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-service-management/page/product/change-management/concept/change-management.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-normalization-rules.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 84,
-		"prompt": "Which SAM governance control most improves audit readiness over time?",
+		"prompt": "Which governance control most strengthens long-term SAM audit readiness when extending the program?",
 		"choices": [
-			"Purge historical reconciliation snapshots quarterly in enterprise contexts",
-			"Retain evidence of entitlement provenance, approvals, and reconciliation changes in real implementations",
-			"Apply external spreadsheets as system of record",
-			"Allow manual entitlement edits without logs for practical execution"
+			"Retain entitlement provenance, approval history, and reconciliation change records over time",
+			"Purge historical reconciliation snapshots every month to reduce table size",
+			"Allow entitlement quantity edits without audit fields or approval tracking",
+			"Maintain compliance calculations exclusively in external spreadsheets"
 		],
-		"correctIndex": 1,
-		"explanation": "Traceability of rights and calculation changes is critical for defensible audit responses.",
+		"correctIndex": 0,
+		"explanation": "Long-term audit readiness depends on preserved evidence of rights, approvals, and how compliance positions were calculated.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/audit-management/concept/audit-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/entitlement-audit-preparation.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 85,
-		"prompt": "What is the best way to reduce surprise true-up costs in SAM?",
+		"prompt": "Finance leadership wants to avoid surprise true-up invoices. Which extending SAM practice is most effective?",
 		"choices": [
-			"Exclude cloud subscriptions from SAM scope in real implementations",
-			"Reconcile exclusively when vendor audit notices arrive",
-			"Run periodic reconciliations and remediate shortfalls before renewal events for practical execution",
-			"Treat exceptions as permanent by default for measurable outcomes"
+			"Run periodic reconciliations and remediate shortfalls before renewal events",
+			"Exclude SaaS subscriptions from SAM scope until audit notices arrive",
+			"Treat compliance exceptions as permanent without revalidation dates",
+			"Defer all entitlement updates until the vendor initiates an audit"
 		],
-		"correctIndex": 2,
-		"explanation": "Frequent reconciliation and proactive remediation reduce financial shock at audit or renewal time.",
+		"correctIndex": 0,
+		"explanation": "Proactive reconciliation and remediation reduce financial shock at renewal or audit by addressing gaps early.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/software-asset-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 86,
-		"prompt": "Which SAM reporting perspective is most useful for remediation planning?",
+		"prompt": "A SAM team plans remediation for multiple under-licensed publishers. Which reporting view best prioritizes effort?",
 		"choices": [
-			"List of all non-SAM requests in service catalog for measurable outcomes",
-			"Count of CMDB classes with installed software for practical execution",
-			"Total number of software models created this month for measurable outcomes",
-			"Compliance position segmented by publisher, business unit, and risk severity in real implementations"
+			"Compliance position segmented by publisher, business unit, and risk severity with cost exposure",
+			"Complete list of every software model in the catalog without compliance status",
+			"Count of non-SAM catalog items submitted this quarter",
+			"Discovery schedule frequency by MID Server without install context"
 		],
-		"correctIndex": 3,
-		"explanation": "Segmentation by publisher and business ownership helps target the highest-impact compliance remediation actions.",
+		"correctIndex": 0,
+		"explanation": "Segmentation by publisher, ownership, and severity helps target remediation on the highest-impact compliance gaps.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_ReportingAndAnalytics.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/validate-reconciliation-results.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 87,
-		"prompt": "Why should SAM exception records have expiration and revalidation requirements?",
+		"prompt": "Why should SAM compliance exceptions include expiration dates and scheduled revalidation?",
 		"choices": [
-			"To clearly increase short-term compliance dashboards in real implementations",
-			"To clearly avoid annual internal audits under governance oversight",
-			"To clearly reduce the need for entitlement records",
-			"To confirm temporary risk acceptance does not become permanent control bypass"
+			"Temporary risk acceptance must be reviewed so exceptions do not become permanent control bypasses",
+			"Expiration dates eliminate the need to maintain entitlement records",
+			"Revalidation replaces reconciliation for publishers under exception",
+			"Exceptions with expiry dates automatically purchase missing licenses"
 		],
-		"correctIndex": 3,
-		"explanation": "Time-bound exceptions force periodic review and prevent long-term governance erosion.",
+		"correctIndex": 0,
+		"explanation": "Time-bound exceptions force periodic review and prevent long-term erosion of compliance governance.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html",
-			"https://www.servicenow.com/docs/bundle/zurich-governance-risk-compliance/page/product/policy-and-compliance/concept/policy-and-compliance.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/software-entitlement-best-practices.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 88,
-		"prompt": "Which action best supports SaaS optimization in SAM?",
+		"prompt": "A SaaS portfolio shows high subscription counts but low active usage. Which extending SAM action best reduces spend?",
 		"choices": [
-			"Increase all SaaS subscriptions to enterprise tier in enterprise contexts",
-			"Track SaaS exclusively in procurement spreadsheets in real implementations",
-			"Review usage patterns and reclaim or down-tier underutilized subscriptions through approved workflows for measurable outcomes",
-			"Ignore role-based ownership for SaaS products for practical execution cataloged with accurate category, model, and support tier metadata."
+			"Review usage patterns and reclaim or down-tier underutilized subscriptions through approved workflows",
+			"Upgrade every subscription to enterprise tier for uniform licensing",
+			"Track SaaS entitlements exclusively in procurement email threads",
+			"Ignore subscription usage because SaaS is outside SAM scope"
 		],
-		"correctIndex": 2,
-		"explanation": "Usage-driven optimization with governance controls reduces spend while preserving service outcomes.",
+		"correctIndex": 0,
+		"explanation": "Usage-driven SaaS optimization with governed workflows recovers spend while preserving necessary service access.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/software-asset-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/subscription-entitlements.html"
 		]
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 89,
-		"prompt": "Which scenario most strongly indicates SAM process maturity?",
+		"prompt": "Which scenario best indicates mature SAM process extension across the organization?",
 		"choices": [
-			"Frequent emergency admin overrides in production in real implementations",
-			"Compliance reports generated exclusively when requested by auditors prefaced with legal review for terms affecting external parties. (CIS-SAM-89-w1)",
-			"Reconciliations complete on schedule, exceptions revalidated, and renewal decisions based on usage/compliance data for practical execution",
-			"Persistent unmatched discovery titles with no owner for measurable outcomes"
+			"Reconciliations complete on schedule, exceptions are revalidated, and renewals use verified compliance data",
+			"Compliance reports are generated only when external auditors request them",
+			"Unmatched discovery titles accumulate without assigned normalization owners",
+			"Emergency admin overrides are required for routine entitlement updates"
 		],
-		"correctIndex": 2,
-		"explanation": "Maturity is reflected by predictable operations, governed exceptions, and data-driven financial decisions.",
+		"correctIndex": 0,
+		"explanation": "Maturity appears in predictable operations, governed exceptions, and data-driven renewal and optimization decisions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-asset-management/page/product/software-asset-management/concept/sam-governance.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/analytics/concept/c_PerformanceAnalytics.html"
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
 		]
 	},
 	{
