@@ -1,0 +1,87 @@
+[
+	{
+		"trackCode": "CIS-PA",
+		"order": 60,
+		"prompt": "An admin runs historic data collection for a new indicator. What outcome should they expect after the job completes successfully?",
+		"choices": [
+			"Prior-period scores are populated so trend analysis is available before ongoing schedules accumulate history",
+			"All breakdown mappings are removed and must be recreated manually",
+			"Future scheduled collections are disabled until the backfill is deleted",
+			"Dashboard widgets switch to real-time transactional queries instead of stored scores"
+		],
+		"correctIndex": 0,
+		"explanation": "Historic collection backfills past intervals so stakeholders can analyze trends immediately rather than waiting for recurring jobs to build history.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/task/t_RunHistoricalDataCollection.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 61,
+		"prompt": "Which collection configuration property specifies the user context under which a data collector job executes its queries?",
+		"choices": [
+			"Run as",
+			"Benchmark group",
+			"Breakdown relation",
+			"Target type"
+		],
+		"correctIndex": 0,
+		"explanation": "The Run as user on a collector job determines ACL and domain visibility applied when indicator sources are evaluated during collection.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 62,
+		"prompt": "Scores for one indicator on a shared collector job are consistently lower than a matching list report. What should be compared first?",
+		"choices": [
+			"Indicator source conditions and the Run as user on the collector job versus the report viewer",
+			"Dashboard widget color palette and legend position settings",
+			"Whether the indicator uses a relative target instead of a fixed target",
+			"Whether the breakdown source uses a scripted element generator"
+		],
+		"correctIndex": 0,
+		"explanation": "Collection results reflect source filters and the Run as user's access; mismatches with list reports often trace to different conditions or security context.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_IndicatorSources.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 63,
+		"prompt": "A stakeholder needs to compare open incident volume across assignment groups for the current period. Which Platform Analytics visualization fits best?",
+		"choices": [
+			"A breakdown column or bar chart showing segmented counts by assignment group",
+			"A single-value widget with no breakdown applied",
+			"A pivot list sorted by sys_created_on without indicator scores",
+			"A static image widget pinned to the dashboard header"
+		],
+		"correctIndex": 0,
+		"explanation": "Breakdown column and bar charts display comparative segmented counts, making them suitable for comparing volumes across groups.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DashboardsAndWidgets.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/data-visualizations.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 64,
+		"questionType": "multi",
+		"prompt": "Which statements describe unified filters in the Platform Analytics experience? (Choose two.)",
+		"choices": [
+			"They can apply consistently across multiple data visualizations on a dashboard",
+			"They let consumers refine views by shared dimensions such as date range or assignment group",
+			"They replace the need for indicator sources and data collection jobs",
+			"They are available only on Core UI dashboards outside Next Experience"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Unified filters provide shared filtering across Platform Analytics visualizations so dashboard consumers slice multiple widgets with the same criteria.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/unified-filters.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/par-workspace.html"
+		]
+	}
+]

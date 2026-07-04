@@ -1,0 +1,101 @@
+[
+	{
+		"trackCode": "CPOA",
+		"order": 5,
+		"prompt": "A delivery team proposes storing API keys in a client-side UI script for faster testing. Which technical governance response aligns with platform coding best practices?",
+		"choices": [
+			"Direct the team to use server-side scripting and secured credential stores instead of exposing secrets in the browser",
+			"Approve the approach because sub-production testing always justifies embedded secrets",
+			"Disable all client scripts platform-wide to avoid any future risk",
+			"Allow each developer to choose their own secret storage method without standards"
+		],
+		"correctIndex": 0,
+		"explanation": "Platform owners enforce secure coding practices such as keeping credentials out of client scripts and using approved server-side patterns.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/application-development.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 6,
+		"prompt": "Business units want to build their own low-code apps without waiting for central IT. What is the associate platform owner's first citizen development step under senior guidance?",
+		"choices": [
+			"Define guardrails, approved scopes, and an intake path before broad self-service building begins",
+			"Grant every business user the admin role so delivery is never delayed",
+			"Prohibit all citizen development until every legacy process is retired",
+			"Skip documentation because low-code tools eliminate the need for standards"
+		],
+		"correctIndex": 0,
+		"explanation": "Citizen development succeeds when guardrails, scope boundaries, and intake are established before teams create unsupportable applications.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 7,
+		"prompt": "Leadership asks why the organization should follow a defined SDLC on the Now Platform. Which benefit should the associate platform owner highlight?",
+		"choices": [
+			"Structured phases reduce production defects and improve traceability from requirement to release",
+			"An SDLC eliminates the need for any sub-production testing environments",
+			"Following an SDLC guarantees zero skipped updates after upgrades",
+			"SDLC adoption removes the need for change advisory review on all work"
+		],
+		"correctIndex": 0,
+		"explanation": "A defined SDLC improves quality and auditability by connecting requirements, build, test, and promotion steps rather than ad hoc production edits.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/application-development.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 8,
+		"questionType": "multi",
+		"prompt": "The security office asks which platform security methods the associate platform owner should include in the annual plan. (Choose two.)",
+		"choices": [
+			"Role-based access reviews with least-privilege design for admin and developer personas",
+			"Regular health scan and hardening assessments on production and sub-production instances",
+			"Sharing production credentials in team chat to speed integration troubleshooting",
+			"Disabling audit logs on security-sensitive tables to improve list performance"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Sound security planning combines access governance and proactive instance assessment; credential sharing and disabled auditing increase exposure.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 9,
+		"questionType": "match",
+		"prompt": "Match each recommended implementation phase to its primary outcome on the Now Platform.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Foundation",
+			"Run",
+			"Walk",
+			"Crawl",
+			"Fly"
+		],
+		"matchRightItems": [
+			"Expand advanced features and broader service coverage",
+			"Reach full maturity with AI/ML governance and predictive capabilities",
+			"Deliver quick wins using foundational data and core services",
+			"Scale additional modules, automations, and integrations",
+			"Establish core setup, ownership, and baseline governance"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 4 },
+			{ "left": 1, "right": 3 },
+			{ "left": 2, "right": 0 },
+			{ "left": 3, "right": 2 },
+			{ "left": 4, "right": 1 }
+		],
+		"explanation": "ServiceNow recommends sequencing from Foundation setup through Crawl quick wins, Walk expansion, Run scaling, and Fly maturity including advanced analytics and AI governance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/common-service-data-model/csdm.html"
+		]
+	}
+]

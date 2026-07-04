@@ -1,0 +1,85 @@
+[
+	{
+		"trackCode": "CIS-SP",
+		"order": 45,
+		"prompt": "A new architect asks how process separation differs from data separation on a shared service provider instance. Which distinction is correct?",
+		"choices": [
+			"Process separation governs how domain-specific logic runs; data separation governs which records users can see",
+			"Process separation replaces ACLs; data separation replaces business rules",
+			"Process separation applies only to CMDB tables; data separation applies only to task tables",
+			"Process separation and data separation are interchangeable terms for domain visibility"
+		],
+		"correctIndex": 0,
+		"explanation": "Data separation controls record visibility while process separation lets domains maintain their own business logic, notifications, and UI behavior through overrides.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/domain-separation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 46,
+		"prompt": "A service provider plans domain-separated catalog items for multiple operating companies. What must be in place before catalog process separation can work?",
+		"choices": [
+			"A defined domain hierarchy with domain separation enabled and governed roles assigned",
+			"Deletion of all global catalog items so domains start with empty tables",
+			"Disabling update sets for catalog tables to prevent cross-domain capture",
+			"Converting every catalog item into a scoped application manually"
+		],
+		"correctIndex": 0,
+		"explanation": "Domain-separated catalog management requires an established domain hierarchy, separation enabled, and roles that restrict catalog administration to the appropriate domain.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/task/plan-domain-separation-implementation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 47,
+		"prompt": "A reporting lead needs domain-specific operational dashboards without overwriting global reports. Which process separation field supports this pattern?",
+		"choices": [
+			"The Overrides field on report records, similar to other process tables",
+			"The sys_class_name field on the Report Statistics table",
+			"The glide_duration field on scheduled report jobs",
+			"The assignment_group field on the Report Designer module"
+		],
+		"correctIndex": 0,
+		"explanation": "Reports are process-separated and include an Overrides field so domain teams can tailor analytics while global definitions remain available through expand scope.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 48,
+		"prompt": "Two operating companies need different Flow Designer automations for the same catalog item. How should the implementation specialist configure process separation?",
+		"choices": [
+			"Author domain-specific flow overrides while retaining the global flow as the parent reference",
+			"Disable Flow Designer globally and move logic into background scripts only",
+			"Store both flows in the global domain and filter with unrelated UI policies",
+			"Copy the catalog item table into Excel for each domain and reimport weekly"
+		],
+		"correctIndex": 0,
+		"explanation": "Flows are process-separated; domain-specific automations should override parent flows through the standard sys_overrides pattern rather than replacing global logic in place.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 49,
+		"questionType": "multi",
+		"prompt": "A service provider is promoting update sets between domain-separated sub-production and production instances. Which practices reduce deployment risk? (Choose two.)",
+		"choices": [
+			"Verify captured records retain the intended domain before committing the update set",
+			"Test process overrides in the target domain with expand scope audits after promotion",
+			"Force all captured records into the global domain to simplify comparison",
+			"Skip regression of business rules because domains isolate logic automatically"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Domain-aware promotion requires validating captured domain context and regression-testing overrides in the target environment; forcing global scope or skipping tests increases risk.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/update-sets/concept/update-sets.html",
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
+		]
+	}
+]

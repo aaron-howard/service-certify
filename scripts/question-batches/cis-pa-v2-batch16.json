@@ -1,0 +1,89 @@
+[
+	{
+		"trackCode": "CIS-PA",
+		"order": 75,
+		"prompt": "A service desk director's dashboard must default to their assignment group while allowing peers to compare other teams. Which dashboard filter design best supports both needs?",
+		"choices": [
+			"Remove all filters so every user sees identical global aggregates only",
+			"Create a separate copy of each indicator for every assignment group permanently",
+			"Configure a breakdown filter mapped to assignment group with role-aware default values",
+			"Hard-code the director's group into every widget query with no override option"
+		],
+		"correctIndex": 2,
+		"explanation": "Breakdown filters on shared indicators let audiences compare segments while role-aware defaults scope the initial view to each leader's team.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Breakdowns.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 76,
+		"prompt": "An analyst clicks a KPI score on a dashboard and expects record-level context behind the metric. Which PA capability provides that drill-down experience?",
+		"choices": [
+			"A UI policy that hides score fields until the user refreshes the browser session",
+			"KPI Details linking the widget to underlying records contributing to the indicator score",
+			"A MID Server probe that rescans the network before each dashboard load",
+			"A transform map that exports indicator tables nightly to an external spreadsheet"
+		],
+		"correctIndex": 1,
+		"explanation": "KPI Details connects dashboard scores to the transactional records that drove the collection, supporting credible root-cause review.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_KPIDetails.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 77,
+		"prompt": "A PA dashboard with twelve breakdown-heavy widgets loads slowly during morning peak usage. What should the implementer evaluate first?",
+		"choices": [
+			"Converting every widget to a static image updated manually each quarter",
+			"Deleting historical indicator snapshots to shrink database size without reviewing queries",
+			"Disabling ACLs on indicator tables so widgets skip security checks entirely",
+			"Widget breakdown cardinality, query complexity, and whether collection completed before peak access"
+		],
+		"correctIndex": 3,
+		"explanation": "Dashboard performance usually traces to heavy breakdown dimensions, expensive queries, or stale snapshots when collection has not finished before users arrive.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 78,
+		"prompt": "Leadership wants Platform Analytics dashboards reachable from the Next Experience shell without separate bookmarks. Which approach aligns with unified navigation?",
+		"choices": [
+			"Publish dashboards to audiences accessible through Next Experience navigation and role-based modules",
+			"Require users to paste direct sys_id URLs into browser favorites for each widget",
+			"Disable Next Experience entirely and restrict analytics to classic UI themes only",
+			"Embed dashboard iframes inside personal knowledge articles without access controls"
+		],
+		"correctIndex": 0,
+		"explanation": "Governed dashboard publishing with audience and role access lets executives open PA content from the Next Experience navigation they already use daily.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html",
+			"https://www.servicenow.com/docs/bundle/zurich-platform-user-interface/page/administer/navigation/concept/c_NextExperienceUnifiedNavigation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 79,
+		"questionType": "multi",
+		"prompt": "When rolling out interactive dashboard filters to multiple PA audiences, which practices reduce misinterpretation risk? (Choose two.)",
+		"choices": [
+			"Test filter defaults and visibility with representative user roles before production cutover",
+			"Map each filter to governed breakdown dimensions tied to the same indicator context",
+			"Allow every viewer to edit indicator source conditions directly from the filter panel",
+			"Hide threshold coloring on all widgets so filtered segments always appear green"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Filter rollouts should validate role-specific behavior and align filters to governed breakdowns so segmented views remain accurate and authorized.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Breakdowns.html"
+		]
+	}
+]

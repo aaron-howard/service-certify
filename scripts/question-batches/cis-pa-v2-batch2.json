@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-PA",
+		"order": 5,
+		"prompt": "The program team completed KPI Composer workshops mapping business goals to measurements. How does that design phase relate to technical indicator implementation?",
+		"choices": [
+			"KPI Composer drives top-down KPI design while indicator build follows a bottom-up workflow from tables to jobs",
+			"KPI Composer replaces the need to create indicator sources on the instance",
+			"Technical implementers must finish all dashboards before KPI Composer artifacts are reviewed",
+			"KPI Composer only documents manual indicators and excludes automated KPIs"
+		],
+		"correctIndex": 0,
+		"explanation": "KPI Composer aligns stakeholders on goals and measurements top-down; implementers then build indicator sources, indicators, and jobs bottom-up from platform tables.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/designing-pa-solution.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 6,
+		"prompt": "Before creating Incidents.Open and Incidents.Resolved sources, what should the PA team do to avoid redundant configuration?",
+		"choices": [
+			"Search existing indicator sources and indicators for matching filters and KPI definitions",
+			"Delete all OOTB PA content so custom naming conventions apply cleanly",
+			"Run a full platform upgrade to regenerate indicator libraries",
+			"Copy indicator sources from production without reviewing condition overlap"
+		],
+		"correctIndex": 0,
+		"explanation": "The standard workflow requires verifying that no suitable indicator source or indicator already exists before creating duplicates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/workflow-automated-indicators.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 7,
+		"prompt": "Executive sponsors approved a PA program but want assurance that technical work maps to agreed outcomes before build starts. Which KPI Composer capability supports that alignment?",
+		"choices": [
+			"Visual KPI trees linking business goals, critical success factors, and required measurements",
+			"Automated MID Server provisioning for each dashboard consumer",
+			"Default incident SLAs that replace indicator target definitions",
+			"Global system properties that hide unpublished widgets from all roles"
+		],
+		"correctIndex": 0,
+		"explanation": "KPI Composer KPI trees visualize how business goals, success factors, and measurements connect so sponsors and implementers share the same scope.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/designing-pa-solution.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 8,
+		"questionType": "multi",
+		"prompt": "Which tasks complete deployment of a new automated indicator with ongoing collection? (Choose two.)",
+		"choices": [
+			"Run an unscheduled job to backfill historical scores when source data exists",
+			"Activate a scheduled job aligned to indicator frequency for ongoing collection",
+			"Delete all pa_scores_l1 rows before running the first source preview",
+			"Convert the indicator to manual entry after the first successful collection"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "New indicators typically get a one-time historical backfill job plus an active scheduled job for recurring collection at the indicator frequency.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/workflow-automated-indicators.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 9,
+		"prompt": "Leadership asks for a KPI showing open incidents reassigned at least once this week. Which PA artifact defines the measurable metric and aggregation on filtered incident records?",
+		"choices": [
+			"An automated indicator on an indicator source that filters open incidents",
+			"A breakdown source that replaces the facts table for the Incident module",
+			"A database view that stores pre-rendered chart images for executives",
+			"A business rule that writes scores directly to the sys_properties table"
+		],
+		"correctIndex": 0,
+		"explanation": "Automated indicators define the KPI measurement and aggregation logic on records returned by a shared indicator source.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_IndicatorSources.html"
+		]
+	}
+]

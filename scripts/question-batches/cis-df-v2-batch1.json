@@ -1,0 +1,99 @@
+[
+	{
+		"trackCode": "CIS-DF",
+		"order": 0,
+		"prompt": "A CMDB program needs a governed workspace to extend the Linux Server class with two custom attributes before Discovery goes live. Which capability should the implementer use?",
+		"choices": [
+			"CI Class Manager to extend the parent class and define dictionary attributes",
+			"Import Set table designer to replace cmdb_ci_linux_server table inheritance",
+			"Service Mapping manual entry to bypass identification rules for new fields",
+			"Update Set capture from production to clone unrelated catalog variables"
+		],
+		"correctIndex": 0,
+		"explanation": "CI Class Manager is the governance workspace for extending CI classes, managing attributes, and configuring identification settings per class.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-class-manager.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 1,
+		"prompt": "During data modeling workshops, stakeholders ask why Windows and Linux servers share fields such as serial number and install status. What CMDB design principle explains that reuse?",
+		"choices": [
+			"Each CI class must remain a standalone table with no shared columns",
+			"Class hierarchy inheritance lets child classes reuse attributes defined on parent classes",
+			"Discovery patterns copy parent attributes only after a full subnet scan completes",
+			"Import sets require every CI to load directly into cmdb_ci without subclassing"
+		],
+		"correctIndex": 1,
+		"explanation": "CMDB classes form a hierarchy where specialized classes extend parent classes and inherit shared dictionary attributes and behavior.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-class-hierarchy.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 2,
+		"prompt": "SCCM and ServiceNow Discovery both update the same server CI, but hostname values conflict after each run. Which IRE component should the implementer tune first?",
+		"choices": [
+			"Identification rules to match incoming payloads to the correct CI record",
+			"Reconciliation rules to define which discovery source may update specific attributes",
+			"CMDB Health completeness KPIs to archive stale hostname values automatically",
+			"Service catalog item variables to normalize hostname text before checkout"
+		],
+		"correctIndex": 1,
+		"explanation": "After identification matches a CI, reconciliation rules govern attribute-level write authority so trusted sources win conflicts on fields such as hostname.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 3,
+		"questionType": "match",
+		"prompt": "Match each CMDB configuration artifact to the implementer outcome it primarily supports.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"CI Class Manager class extension",
+			"Identification rule identifier entry",
+			"Static reconciliation rule",
+			"CMDB 360 multisource data store"
+		],
+		"matchRightItems": [
+			"Governed schema and attributes for a specialized CI type",
+			"Stable keys that match incoming data to one existing CI",
+			"Source precedence that controls which writer updates a field",
+			"Audit trail of proposed and accepted attribute values per source"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Configuration work spans class modeling, identification keys, reconciliation precedence, and multisource provenance captured in CMDB 360.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/multisource-cmdb.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 4,
+		"questionType": "multi",
+		"prompt": "Which table attributes on a CI record are commonly used for operational reporting and multisource governance? (Choose three.)",
+		"choices": [
+			"discovery_source indicating which data source last influenced the CI",
+			"last_discovered timestamp showing when discovery last updated the CI",
+			"install_status reflecting the CI lifecycle stage in the CMDB",
+			"short_description from the caller's most recent incident only",
+			"sys_updated_by on the import set row staging table exclusively"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1, 2],
+		"explanation": "Discovery source, last discovered, and install status are core CMDB attributes for source traceability, freshness, and lifecycle reporting; incident short descriptions and staging metadata are not CI governance fields.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/c_ITILConfigurationManagement.html"
+		]
+	}
+]

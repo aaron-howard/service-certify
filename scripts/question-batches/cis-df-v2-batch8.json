@@ -1,0 +1,100 @@
+[
+	{
+		"trackCode": "CIS-DF",
+		"order": 35,
+		"prompt": "A SaaS inventory API delivers daily JSON payloads that must land in cmdb_ci_cloud_resource records. Which ingestion path applies Service Graph mapping before IRE processing?",
+		"choices": [
+			"Service Graph Connect inbound integration with class and attribute maps",
+			"Direct update of cmdb_ci from a UI action without staging or identification",
+			"Exporting CMDB snapshots to CSV and re-importing through sys_user",
+			"Creating manual CI records and disabling all reconciliation rules"
+		],
+		"correctIndex": 0,
+		"explanation": "Service Graph Connect inbound integrations map external payloads into CMDB classes so Identification and Reconciliation can govern the resulting updates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/integrate-applications/australia/service-graph-connect/concept/c_ServiceGraphConnect.html",
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBDataIngestionBestPractices.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 36,
+		"prompt": "Leadership wants a scorecard of duplicate CIs, stale relationships, and required fields missing on server classes. Which capability provides those KPIs out of the box?",
+		"choices": [
+			"CMDB Health dashboard with configurable health metrics and trends",
+			"Import set run history filtered by transform script name only",
+			"Service Portal theme editor showing widget color compliance",
+			"ECC queue listing MID Server heartbeat messages"
+		],
+		"correctIndex": 0,
+		"explanation": "CMDB Health aggregates KPIs such as duplicate CIs, stale relationships, and attribute completeness to monitor data quality over time.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBHealthDashboard.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 37,
+		"prompt": "An administrator must bulk-retire orphaned middleware CIs identified during a health review. Which workspace supports governed remediation tasks?",
+		"choices": [
+			"CMDB Data Manager with views and tasks for orphaned or stale CIs",
+			"Discovery schedule editor used to increase probe thread counts",
+			"Event Management maintenance calendar for alert suppression only",
+			"Update set preview comparing widget themes across instances"
+		],
+		"correctIndex": 0,
+		"explanation": "CMDB Data Manager provides workspace views and remediation tasks to find and clean up orphaned or stale configuration items.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBDataManager.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 38,
+		"questionType": "multi",
+		"prompt": "Which two roles are typically involved in CMDB data governance accountability? (Choose two.)",
+		"choices": [
+			"CMDB administrator who owns platform configuration and health policies",
+			"Data steward who resolves quality issues for assigned CI domains",
+			"evt_mgmt_operator who triages monitoring alerts without CMDB access",
+			"catalog_admin who maintains service catalog item variables only"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "CMDB administrators configure governance controls while data stewards remediate quality issues within their assigned configuration domains.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBGovernanceAndHealth.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 39,
+		"questionType": "match",
+		"prompt": "Match each CMDB governance capability to the quality problem it primarily addresses.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"CMDB Health KPI",
+			"CMDB Data Manager task",
+			"Identification rule",
+			"Reconciliation rule"
+		],
+		"matchRightItems": [
+			"Surfaces duplicate or incomplete records through scored metrics",
+			"Executes bulk remediation on orphaned or stale CIs",
+			"Matches incoming data to an existing CI or creates a new one",
+			"Controls which source may update a specific attribute after match"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Health metrics expose issues, Data Manager remediates them, and IRE rules prevent duplicates and unauthorized attribute overwrites during ingestion.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBHealthDashboard.html",
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_IdentificationAndReconciliationEngine.html"
+		]
+	}
+]

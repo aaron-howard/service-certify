@@ -1,0 +1,101 @@
+[
+	{
+		"trackCode": "CPOA",
+		"order": 65,
+		"prompt": "Which statement best describes a technical characteristic of the ServiceNow Platform Core service?",
+		"choices": [
+			"It provides the shared data model, workflow engine, and runtime foundation for all applications",
+			"It exclusively manages third-party hardware asset serial numbers",
+			"It replaces the need for any user access controls or audit logging",
+			"It hosts only email notification templates without supporting business logic"
+		],
+		"correctIndex": 0,
+		"explanation": "Platform Core delivers the foundational runtime, tables, and workflow capabilities that every ServiceNow application builds upon.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 66,
+		"prompt": "Which capability best reflects the Now Intelligence service area on the platform?",
+		"choices": [
+			"Analytics, machine learning, and performance insights that support data-driven decisions",
+			"Physical data center rack provisioning for on-premises customers",
+			"Manual spreadsheet imports as the only reporting option",
+			"Disabling all dashboards to reduce storage consumption"
+		],
+		"correctIndex": 0,
+		"explanation": "Now Intelligence encompasses analytics, AI, and performance capabilities that help organizations measure and improve platform outcomes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-analytics-and-reporting/performance-analytics/performance-analytics-overview.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 67,
+		"questionType": "match",
+		"prompt": "Match each platform service area to an associate-level characteristic a platform owner should recognize.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Admin and Configuration",
+			"Integration Services",
+			"Security and Compliance",
+			"Now Intelligence"
+		],
+		"matchRightItems": [
+			"User administration, system properties, and instance configuration tools",
+			"REST APIs, IntegrationHub spokes, and orchestrated external connectivity",
+			"Access controls, hardening guidance, and audit evidence for regulatory needs",
+			"Reporting, Performance Analytics, and AI-assisted insights on platform data"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Associate platform owners distinguish administration, integration, security, and intelligence capabilities when guiding teams and sponsors.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html",
+			"https://www.servicenow.com/docs/r/platform-security/security-center/sec-center-v2.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 68,
+		"prompt": "An auditor asks where to find ServiceNow cloud compliance attestations and security documentation. Which resource should the platform owner reference?",
+		"choices": [
+			"The ServiceNow TRUST Center and compliance documentation portal",
+			"A developer's personal wiki page without vendor attestation",
+			"Unverified third-party exam preparation forums",
+			"The instance login banner text alone"
+		],
+		"correctIndex": 0,
+		"explanation": "The TRUST Center publishes compliance certifications, security white papers, and shared-responsibility guidance for customer audit needs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/company/trust/compliance.html",
+			"https://www.servicenow.com/company/trust/security.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 69,
+		"questionType": "multi",
+		"prompt": "Which compliance-related resources does ServiceNow provide for platform owners evaluating vendor security posture? (Choose two.)",
+		"choices": [
+			"Third-party audit reports and certification summaries in the TRUST Center",
+			"Shared responsibility model documentation describing customer and provider duties",
+			"Unrestricted production credential sharing guides for all integrations",
+			"Instructions to disable all audit logs to simplify compliance reviews"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "TRUST Center materials include audit attestations and shared-responsibility guidance that help customers understand compliance boundaries.",
+		"sourceUrls": [
+			"https://www.servicenow.com/company/trust/compliance.html",
+			"https://www.servicenow.com/standard/resource-center/white-paper/wp-shared-responsibility-model.html"
+		]
+	}
+]

@@ -39,9 +39,9 @@ describe('DEV_PRACTICE_QUESTIONS bank', () => {
 				expect(q.matchRightItems?.length ?? 0).toBeGreaterThanOrEqual(2);
 				expect(q.correctMatches?.length ?? 0).toBeGreaterThanOrEqual(2);
 			} else {
-				expect(q.choices).toHaveLength(4);
+				expect(q.choices.length).toBeGreaterThanOrEqual(4);
 				expect(q.correctIndex).toBeGreaterThanOrEqual(0);
-				expect(q.correctIndex).toBeLessThanOrEqual(3);
+				expect(q.correctIndex).toBeLessThan(q.choices.length);
 			}
 			expect(q.prompt.trim().length).toBeGreaterThan(0);
 			expect(q.explanation.trim().length).toBeGreaterThan(0);

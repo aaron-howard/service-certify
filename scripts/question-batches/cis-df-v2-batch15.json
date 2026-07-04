@@ -1,0 +1,103 @@
+[
+	{
+		"trackCode": "CIS-DF",
+		"order": 70,
+		"prompt": "As CMDB govern matures, what practice keeps executive KPIs actionable beyond the initial remediation wave?",
+		"choices": [
+			"Integrate health score and KPI reviews into recurring operating governance meetings",
+			"Publish dashboards once and rely on ad hoc interpretation by individual admins",
+			"Restrict CMDB Health access to a single administrator account permanently",
+			"Track KPIs only during annual platform upgrade windows"
+		],
+		"correctIndex": 0,
+		"explanation": "Operationalizing CMDB KPIs requires embedding metric review, decisions, and follow-up actions into routine governance cadences.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-governance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 71,
+		"questionType": "multi",
+		"prompt": "Which two artifacts connect business critical success factors to measurable CMDB govern outcomes? (Choose two.)",
+		"choices": [
+			"KPI trees linking program goals to health metrics and remediation owners",
+			"Health scorecards with threshold alerts reviewed by data stewards",
+			"One-time spreadsheet exports stored outside the platform without owners",
+			"Disabled CMDB Get Well jobs to reduce visible non-compliance counts"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "CSFs become govern outcomes when mapped to KPI trees and steward-reviewed scorecards—not offline exports or suppressed metric jobs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-governance.html",
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 72,
+		"questionType": "match",
+		"prompt": "Match each CMDB govern capability to its primary purpose.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"CMDB Health dashboard",
+			"CMDB Data Foundations dashboard",
+			"CMDB Data Manager",
+			"Duplicate CI Remediator wizard"
+		],
+		"matchRightItems": [
+			"Class-level quality scores and remediation task visibility",
+			"Foundational metric compliance with PA trend widgets",
+			"Policy-driven bulk lifecycle and relationship operations",
+			"Guided merge for individual de-duplication tasks"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Govern teams use Health for operational quality, Data Foundations for program metrics, Data Manager for bulk policy work, and the wizard for targeted duplicate merges.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-health-dashboard-overview.html",
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html",
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-data-manager.html",
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/deduplicate-cis.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 73,
+		"prompt": "Completeness scores improved on server CIs, but service impact analysis still misses upstream dependencies. Which Insight area should be investigated next?",
+		"choices": [
+			"Relationship quality and dependency completeness across mapped services",
+			"Catalog item base price currency conversion settings",
+			"Knowledge article vote totals for self-service deflection",
+			"Flow Designer subflow execution order for onboarding tasks"
+		],
+		"correctIndex": 0,
+		"explanation": "Strong attribute completeness alone does not guarantee impact visibility; relationship and dependency quality drive accurate service insight.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-relationship-management.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-health-dashboard-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 74,
+		"prompt": "From the CMDB Data Foundations dashboard Analytics Hub, how can an analyst list CIs causing a metric failure in near real time?",
+		"choices": [
+			"Select Real-time, drill into the PA widget, and use Show Records for non-compliant CIs",
+			"Export the sys_properties table and filter rows manually in a spreadsheet",
+			"Disable the CMDB Get Well Metric Collection job until scores reset",
+			"Run a transform map that deletes every CI below the compliance threshold"
+		],
+		"correctIndex": 0,
+		"explanation": "The Analytics Hub Real-time option with Show Records exposes the current non-compliant CI population behind a failing metric.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html"
+		]
+	}
+]

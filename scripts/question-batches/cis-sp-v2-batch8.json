@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-SP",
+		"order": 35,
+		"prompt": "A service provider consolidates shared automations into dedicated process domains for easier maintenance. What is the recommended handling of those domains?",
+		"choices": [
+			"Use process domains to group related overrides and keep inheritance predictable",
+			"Store all process records only in the global domain to avoid hierarchy complexity",
+			"Disable process domains and rely on personal developer scopes for each team",
+			"Merge process domains with data domains so ACL and process rules share one table"
+		],
+		"correctIndex": 0,
+		"explanation": "Process domains consolidate related process updates so delegated teams can maintain overrides without scattering logic across unrelated domains.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 36,
+		"prompt": "A domain administrator sets a process override to inactive expecting it to stop firing in that domain. What actually happens?",
+		"choices": [
+			"The platform ignores the inactive override and the parent process may still run",
+			"The override runs in every child domain below the administrator's scope",
+			"The parent record is automatically deleted from the global domain",
+			"All business rules in the domain are disabled until the override is reactivated"
+		],
+		"correctIndex": 0,
+		"explanation": "Inactive override records are ignored by the platform; to suppress behavior, set a condition that never evaluates rather than relying on the active flag alone.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/australia-platform-security/page/administer/company-and-domain-separation/concept/c_DomainSeparation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 37,
+		"prompt": "What mechanism assigns records to the default domain?",
+		"choices": [
+			"UI policies evaluated on form load",
+			"Inbound email actions parsing message headers",
+			"Business Rules",
+			"Discovery schedules tagging CIs by subnet"
+		],
+		"correctIndex": 2,
+		"explanation": "Business rules commonly set the domain field on insert or update so new records land in the correct default domain for the operating company.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/domain-separation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 38,
+		"prompt": "A subsidiary wants a different incident form layout without affecting other operating companies. Which UI configuration approach fits process separation?",
+		"choices": [
+			"Create a domain-specific form view or override UI policies for that domain",
+			"Modify the global form and hide sections with client-side display:none scripts",
+			"Disable the form for all domains and require list-only editing",
+			"Copy the incident table into a scoped application with a new name"
+		],
+		"correctIndex": 0,
+		"explanation": "Form views and UI policies are process-separated, allowing domain-specific presentation while global defaults remain available to other domains.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 39,
+		"questionType": "multi",
+		"prompt": "Which automation types are process-separated and can be overridden per domain? (Choose two.)",
+		"choices": [
+			"Flows authored for domain-specific fulfillment steps",
+			"Client scripts that control on-load form behavior",
+			"Task records stored on operational tables",
+			"System dictionary entries that define the physical schema"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Flows and client scripts are process artifacts that support domain overrides; task rows are data records and dictionary definitions are global platform structure.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
+		]
+	}
+]

@@ -1,0 +1,99 @@
+[
+	{
+		"trackCode": "CIS-DF",
+		"order": 10,
+		"prompt": "After enabling CMDB 360, auditors ask which table stores every discovery source's proposed CI attribute values, including rejected updates. Which table should the implementer reference?",
+		"choices": [
+			"cmdb_multisource_data",
+			"ecc_queue",
+			"sys_audit_delete",
+			"alm_asset"
+		],
+		"correctIndex": 0,
+		"explanation": "CMDB 360 persists per-source attribute proposals and outcomes in cmdb_multisource_data for reporting, audit, and recomputation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/multisource-cmdb.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 11,
+		"prompt": "A new cmdb_ci_cloud_database class must inherit common cloud account fields while adding database-specific identifiers. Which modeling approach aligns to CMDB standards?",
+		"choices": [
+			"Extend an appropriate parent cloud or database class rather than creating an unrelated table",
+			"Load all cloud databases into cmdb_ci and avoid subclassing to simplify imports",
+			"Store cloud databases only in alm_asset without any cmdb_ci record",
+			"Duplicate the entire cmdb_ci dictionary for each new cloud vendor manually"
+		],
+		"correctIndex": 0,
+		"explanation": "Extending the correct parent class preserves hierarchy inheritance so shared attributes remain consistent while specialized identifiers are added on the child class.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-class-hierarchy.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 12,
+		"prompt": "Before changing identification keys on the Application Server class, the CMDB lead requires peer review and version control. Which tool is purpose-built for that governance workflow?",
+		"choices": [
+			"CI Class Manager with sn_cmdb_admin stewardship of class and IRE settings",
+			"Catalog Builder for record producer variable design only",
+			"Flow Designer for HR onboarding case routing",
+			"Performance Analytics data collector job scheduler"
+		],
+		"correctIndex": 0,
+		"explanation": "CI Class Manager centralizes class schema, attribute, and identification configuration changes under CMDB administrator governance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-class-manager.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 13,
+		"questionType": "match",
+		"prompt": "Match each level of the CMDB class hierarchy to an example CI type.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"cmdb_ci",
+			"cmdb_ci_hardware",
+			"cmdb_ci_server",
+			"cmdb_ci_linux_server"
+		],
+		"matchRightItems": [
+			"Base class for all configuration items",
+			"Parent class for physical infrastructure components",
+			"Parent class for server operating system instances",
+			"Specialized class for Linux server CIs"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "The CMDB hierarchy progresses from the base cmdb_ci class through hardware and server parents to specialized operating system classes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-class-hierarchy.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 14,
+		"questionType": "multi",
+		"prompt": "Which attributes are strong candidates for identification rule identifier entries on hardware server classes? (Choose three.)",
+		"choices": [
+			"Serial number when reliably reported by authoritative sources",
+			"Class name combined with other stable identifiers such as UUID or asset tag",
+			"Manufacturer and model when used as part of a defined identifier entry",
+			"Short description free-text entered by callers on related incidents",
+			"Widget drilldown color preferences on CMDB dashboards"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1, 2],
+		"explanation": "Identifier entries should combine stable, source-reported attributes like serial number, class, UUID, asset tag, manufacturer, and model; incident text and UI preferences are not identification keys.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
+		]
+	}
+]

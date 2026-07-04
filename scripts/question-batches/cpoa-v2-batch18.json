@@ -1,0 +1,100 @@
+[
+	{
+		"trackCode": "CPOA",
+		"order": 85,
+		"prompt": "A platform owner is selecting KPIs for a quarterly business review on request fulfillment. Which metric best reflects a value-driven outcome rather than raw activity volume?",
+		"choices": [
+			"Total number of catalog items published regardless of usage or fulfillment quality",
+			"Average time from request submission to fulfilled delivery against a defined target",
+			"Count of update sets created by developers during the reporting period",
+			"Number of active UI policies configured on the Request Item table"
+		],
+		"correctIndex": 1,
+		"explanation": "Value-driven metrics tie to outcomes such as fulfillment cycle time against targets—not catalog volume or development artifact counts unrelated to service delivery.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-impact/page/impact/strategic-planning-workspace/concept/strategic-planning-workspace.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 86,
+		"questionType": "multi",
+		"prompt": "A service desk manager needs both a weekly trend of mean time to resolve and a same-day list of breached incidents for escalation. Which capability pairing should the platform owner recommend? (Choose two.)",
+		"choices": [
+			"Performance Analytics indicator tracking resolution time with weekly aggregation",
+			"Operational report filtered to breached incidents exported for the current day",
+			"Strategic Planning Workspace initiative record replacing all operational dashboards",
+			"IntegrationHub flow that deletes resolved incidents to improve trend appearance"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Trend monitoring belongs in Performance Analytics while point-in-time breach lists are operational reports—each serves a distinct associate-level analytics need.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/reporting/concept/reporting-overview.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 87,
+		"prompt": "A new platform governance council must decide who approves enterprise standards versus who reviews individual application designs. Which governance level owns the enterprise standards decision?",
+		"choices": [
+			"Technical governance focused on code review for a single scoped application team",
+			"Portfolio governance that prioritizes funding for one business unit's backlog only",
+			"Strategic governance setting enterprise direction, investment themes, and guardrails",
+			"Local team governance where each developer group defines its own naming conventions"
+		],
+		"correctIndex": 2,
+		"explanation": "Strategic governance establishes enterprise direction and guardrails; portfolio governance prioritizes investments; technical governance executes standards within those boundaries.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-administration/concept/platform-governance.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-impact/page/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 88,
+		"questionType": "match",
+		"prompt": "Match each ServiceNow governance level to its primary platform owner focus.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Strategic governance",
+			"Portfolio governance",
+			"Technical governance"
+		],
+		"matchRightItems": [
+			"Enterprise vision, investment themes, and cross-domain standards",
+			"Prioritization of demand, capacity, and value across programs",
+			"Solution design reviews, coding standards, and release quality controls"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 }
+		],
+		"explanation": "Three governance levels divide responsibilities: strategy sets direction, portfolio allocates investment, and technical execution ensures quality within guardrails.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-administration/concept/platform-governance.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-impact/page/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 89,
+		"prompt": "Finance asks the platform owner to explain which document records the products and quantities the organization is entitled to use. Which artifact should be referenced?",
+		"choices": [
+			"Subscription entitlement baseline aligned to contracted SKUs and product modules",
+			"Clone schedule calendar showing last production-to-test refresh dates",
+			"Update set batch label naming convention used by the development team",
+			"HealthScan report listing skipped security hardening recommendations"
+		],
+		"correctIndex": 0,
+		"explanation": "Subscription and entitlement baselines document contracted products and limits that platform teams must operate within during provisioning and true-up cycles.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/cloud-governance-suite/concept/cloud-governance-suite.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/subscription-management/concept/subscription-management.html"
+		]
+	}
+]

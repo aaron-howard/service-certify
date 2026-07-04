@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-SP",
+		"order": 25,
+		"prompt": "A domain administrator edits a business rule that was authored in the global domain. What does the platform do automatically to support process separation?",
+		"choices": [
+			"Sets the sys_overrides field to reference the parent record being replaced",
+			"Copies the rule into every child domain without administrator action",
+			"Moves the original global rule into the administrator's personal scope",
+			"Deletes the global rule so only the domain copy remains active"
+		],
+		"correctIndex": 0,
+		"explanation": "When a domain admin modifies process logic owned by a higher domain, the system creates an override and populates sys_overrides to link the domain record to the parent it replaces.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 26,
+		"prompt": "Process separation in a domain-separated service provider instance is also referred to as:",
+		"choices": [
+			"Delegated administration",
+			"Instance cloning",
+			"Scoped application packaging",
+			"Update set promotion"
+		],
+		"correctIndex": 0,
+		"explanation": "Process separation enables delegated administration so domain teams can maintain domain-specific process logic under instance-owner governance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/domain-separation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 27,
+		"prompt": "A subsidiary needs a domain-specific email notification without altering the global template. What is the recommended override workflow?",
+		"choices": [
+			"Deactivate the global notification and create a new record with no reference",
+			"Duplicate the notification in the target domain and set sys_overrides to the global record",
+			"Edit the global notification in place and restrict it with a domain condition",
+			"Export the notification to an update set and import it into the subsidiary MID Server"
+		],
+		"correctIndex": 1,
+		"explanation": "Process overrides preserve the parent record while the domain copy references it through sys_overrides, keeping global logic intact for other domains.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 28,
+		"prompt": "A service provider must present different assignment group choices on incident forms per operating company. Which configuration supports domain-specific pick lists?",
+		"choices": [
+			"Choice lists scoped to the domain with optional overrides of global lists",
+			"System properties that store comma-separated group names for all domains",
+			"Client scripts that hard-code group sys_ids in each domain",
+			"Import sets that overwrite sys_choice records nightly from a spreadsheet"
+		],
+		"correctIndex": 0,
+		"explanation": "Choice lists are process-separated and can be overridden per domain so each operating company sees governed values without sharing one global list.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 29,
+		"questionType": "multi",
+		"prompt": "Which process artifacts can domain administrators create or override within their domain? (Choose two.)",
+		"choices": [
+			"UI policies that govern form behavior for domain users",
+			"Email notifications tailored to domain-specific workflows",
+			"System properties that apply instance-wide to every domain",
+			"CMDB class models that redefine the global data schema"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Domain teams can maintain process-separated artifacts such as UI policies and email notifications; system properties and core data models remain global concerns.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
+		]
+	}
+]

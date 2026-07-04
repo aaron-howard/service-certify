@@ -1,0 +1,99 @@
+[
+	{
+		"trackCode": "CIS-DF",
+		"order": 60,
+		"prompt": "On the CMDB Data Foundations dashboard, which scheduled job supplies Performance Analytics widgets with trending non-compliant CI counts?",
+		"choices": [
+			"CMDB Data Foundations PA Metric Collection",
+			"CMDB Get Well CIs Processed Via IRE Metric Batch Collection only",
+			"Discovery status ECC queue processing job",
+			"Import set transform onBefore script scheduler"
+		],
+		"correctIndex": 0,
+		"explanation": "The CMDB Data Foundations PA Metric Collection job populates PA widgets with counts and trends for non-compliant CIs per metric.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 61,
+		"prompt": "A steward reviewing CMDB Health metric results needs context to start remediation. Which dashboard field provides guided next steps?",
+		"choices": [
+			"Remediation playbook URLs linked from the metric list view",
+			"The sys_ui_theme record applied to the CMDB workspace",
+			"The MID Server version installed in each datacenter",
+			"The catalog item short description for hardware requests"
+		],
+		"correctIndex": 0,
+		"explanation": "Health metrics include remediation playbook links to Now Support knowledge articles with issue context and correction guidance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-health-dashboard-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 62,
+		"prompt": "Before executing a bulk de-duplication template, what govern checkpoint reduces the risk of merging unrelated CIs?",
+		"choices": [
+			"Confirm identification entries and matching keys cover the duplicate CI class",
+			"Disable all business rules on cmdb_ci until the template completes",
+			"Assign every duplicate to the System Administrator user permanently",
+			"Remove reconciliation rules so imports overwrite all attributes"
+		],
+		"correctIndex": 0,
+		"explanation": "Verification of identification rule coverage ensures duplicates share the same authoritative keys before automated merge logic runs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/deduplicate-cis.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 63,
+		"questionType": "multi",
+		"prompt": "Which two CMDB Data Foundations dashboard tabs focus on CSDM alignment and third-party import integrity? (Choose two.)",
+		"choices": [
+			"Best Practices metrics for services, relationships, and intended table usage",
+			"Data Management Practices metrics for properly configured imported data",
+			"ITSM Processes metrics for incident assignment group coverage only",
+			"Customizations metrics for excessive UI theme changes on forms"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Best Practices checks CSDM-related standards while Data Management Practices validates import configuration that preserves CMDB integrity.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html"
+		]
+	},
+	{
+		"trackCode": "CIS-DF",
+		"order": 64,
+		"questionType": "match",
+		"prompt": "Match each CMDB Data Foundations dashboard tab to its primary govern focus.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Best Practices",
+			"Customizations",
+			"Data Management Practices",
+			"ITSM Processes"
+		],
+		"matchRightItems": [
+			"CSDM service and relationship standards in the CMDB",
+			"Controlled and justified CMDB class and attribute extensions",
+			"Integrity of third-party data imported into CMDB tables",
+			"Whether ITSM processes consume CMDB data effectively"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "The four dashboard tabs group metrics for standards adherence, customization discipline, import integrity, and process leverage.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html"
+		]
+	}
+]

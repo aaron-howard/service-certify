@@ -1,0 +1,99 @@
+[
+	{
+		"trackCode": "CPOA",
+		"order": 35,
+		"prompt": "A business unit wants to engage a ServiceNow partner for a phased rollout. What should the platform owner expect the partner to bring to the engagement?",
+		"choices": [
+			"Unlimited production admin credentials shared across all partner staff",
+			"A structured Now Create delivery approach with phased planning, build, test, and deploy activities",
+			"Exclusive authority to override internal change governance without documentation",
+			"A guarantee that no organizational change management will be required"
+		],
+		"correctIndex": 1,
+		"explanation": "Qualified partners follow ServiceNow's structured delivery methodology across phases; they do not bypass governance or eliminate OCM needs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 36,
+		"prompt": "The primary executive sponsor transfers to another division before the second release wave. Which sponsorship issue should the platform owner address immediately?",
+		"choices": [
+			"Continue without sponsor replacement because technical work is already underway",
+			"Cancel the program until every business unit signs identical process templates",
+			"Identify a successor sponsor and refresh outcome messaging before the next wave launches",
+			"Shift all accountability to Community Champions so executives are no longer involved"
+		],
+		"correctIndex": 2,
+		"explanation": "Sponsor transitions require successor identification and refreshed messaging so adoption and funding support do not stall between waves.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 37,
+		"prompt": "A team is starting its first Now Create deployment for a scoped application. Which stage should occur before configuration work begins in sub-production?",
+		"choices": [
+			"Production cutover with rollback plans finalized",
+			"Hypercare support with end-user surveys only",
+			"Discovery and planning that confirms scope, outcomes, and readiness criteria",
+			"Immediate bulk import of update sets into the production instance"
+		],
+		"correctIndex": 2,
+		"explanation": "Now Create deployments begin with discovery and planning to align scope and success criteria before build and test activities start.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/application-development.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 38,
+		"questionType": "multi",
+		"prompt": "Developers propose making urgent fixes directly in the production instance. Which development location practices should the platform owner enforce instead? (Choose two.)",
+		"choices": [
+			"Build and capture changes in a dedicated development instance before promotion",
+			"Validate promoted packages in a test instance with regression coverage",
+			"Treat production as the default workspace for all configuration experiments",
+			"Skip test validation whenever the change appears small or low risk"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Governed delivery requires development in non-production instances and validation in test before production commit; production-first edits bypass controls.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/system-update-sets.html",
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 39,
+		"questionType": "match",
+		"prompt": "Match each Now Create deployment stage to the primary activity performed there.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Discover and plan",
+			"Configure and build",
+			"Test",
+			"Deploy"
+		],
+		"matchRightItems": [
+			"Confirm scope, stakeholders, and readiness criteria for the release",
+			"Develop and capture changes in controlled sub-production environments",
+			"Execute UAT and regression validation against promoted packages",
+			"Commit approved changes through governed release procedures"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Now Create sequences discovery, build, test, and deploy so each phase produces evidence before the next stage begins.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/application-development.html"
+		]
+	}
+]

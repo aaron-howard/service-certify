@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOA",
+		"order": 0,
+		"prompt": "The executive sponsor asks for next year's platform roadmap. Which input set should the associate platform owner gather first?",
+		"choices": [
+			"Stated business objectives, current adoption metrics, and open risk or compliance gaps",
+			"Every open incident record sorted by oldest create date",
+			"A complete export of all sys_script records regardless of scope",
+			"Informal developer preferences without linking them to business outcomes"
+		],
+		"correctIndex": 0,
+		"explanation": "Roadmap planning starts with business objectives, measured adoption, and known risks so investments align to outcomes the sponsor cares about.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 1,
+		"prompt": "While drafting a platform security implementation plan, the team lists penetration testing as an external dependency. Which group should the platform owner engage to coordinate penetration testing?",
+		"choices": [
+			"Internal security team",
+			"End-user community champions only",
+			"Individual application developers without security oversight",
+			"External marketing vendors"
+		],
+		"correctIndex": 0,
+		"explanation": "Penetration testing requires coordination with the internal security team that owns security assessment processes, scope, and remediation follow-up.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 2,
+		"prompt": "Self-service adoption is low because employees abandon the portal after two clicks. Which UX consideration should the platform owner prioritize with the design team?",
+		"choices": [
+			"Simplify navigation paths and reduce steps to complete common requests",
+			"Hide catalog categories until users complete mandatory training videos",
+			"Remove mobile access to force desktop-only interactions",
+			"Display every available module on the homepage regardless of audience"
+		],
+		"correctIndex": 0,
+		"explanation": "Associate platform owners advocate for streamlined self-service journeys so users can complete frequent tasks with minimal friction.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/platform-user-interface.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 3,
+		"questionType": "multi",
+		"prompt": "The PMO is scheduling the next portfolio planning cycle and wants platform demand included. Which practices should the associate platform owner recommend? (Choose two.)",
+		"choices": [
+			"Submit platform initiatives with business value, dependencies, and capacity estimates",
+			"Align proposed work to enterprise priorities documented in the portfolio intake process",
+			"Bypass the PMO intake form to accelerate individual team requests",
+			"Exclude upgrade and maintenance work because only new features belong in portfolio planning"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "PMO engagement requires structured demand with value and dependencies tied to enterprise priorities; bypassing intake or omitting maintenance creates planning blind spots.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 4,
+		"questionType": "match",
+		"prompt": "Match each platform roadmap input to the planning question it helps answer.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Business objective statement",
+			"Current adoption metrics",
+			"Open compliance findings",
+			"Delivery capacity forecast"
+		],
+		"matchRightItems": [
+			"What outcome must the platform investment support?",
+			"Are users actually consuming the capabilities we already delivered?",
+			"Which risks must the roadmap address before new scope is approved?",
+			"How much change can teams absorb in the next planning window?"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Roadmap inputs connect business intent, measured usage, risk posture, and capacity so sequencing decisions are evidence-based.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	}
+]

@@ -1,0 +1,85 @@
+[
+	{
+		"trackCode": "CIS-PA",
+		"order": 20,
+		"prompt": "A KPI requires logic that cannot be expressed with conditions and standard aggregation alone on Incident records. Which indicator type should the implementer evaluate?",
+		"choices": [
+			"Scripted indicator",
+			"Manual indicator updated by executives each quarter",
+			"External indicator with no ServiceNow table reference",
+			"Breakdown relation used as a standalone score"
+		],
+		"correctIndex": 0,
+		"explanation": "Scripted indicators support custom score logic when table conditions and standard aggregation types are insufficient for the KPI.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/workflow-automated-indicators.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 21,
+		"prompt": "Satisfaction survey scores arrive from a third-party tool and are not stored in a ServiceNow facts table. How should the KPI be modeled?",
+		"choices": [
+			"Manual indicator with periodic score entry by designated contributors",
+			"Automated indicator on the Incident table with a blank indicator source",
+			"Formula indicator that divides two empty automated indicators",
+			"Data collection job that queries sys_audit every minute"
+		],
+		"correctIndex": 0,
+		"explanation": "Manual indicators capture metrics that cannot be derived from ServiceNow transactional data, with contributors entering scores on a defined cadence.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/workflow-automated-indicators.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 22,
+		"prompt": "A broad incident source approaches the default row limit during nightly collection. Which indicator source setting overrides the global maximum records collected?",
+		"choices": [
+			"Override record collection with Maximum number of records collected",
+			"Disable the indicator library for that facts table",
+			"Change the widget visualization to a single-score type",
+			"Assign pa_viewer to all dashboard consumers"
+		],
+		"correctIndex": 0,
+		"explanation": "Override record collection on the indicator source sets a source-specific maximum, overriding the com.snc.pa.dc.max_row_count_indicator_source property.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_IndicatorSources.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 23,
+		"prompt": "Operations wants near real-time incident backlog visibility on a dashboard widget. Where can an implementer set qualifying filters so scores reflect current open records?",
+		"choices": [
+			"Conditions on the indicator or its indicator source",
+			"Only on the breakdown mapping related list",
+			"Exclusively in the dashboard filter bar with no indicator changes",
+			"On the MID Server heartbeat interval property"
+		],
+		"correctIndex": 0,
+		"explanation": "Real-time or current-state scores require qualifying conditions on the indicator or indicator source so collections reflect the intended record subset.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_IndicatorSources.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 24,
+		"questionType": "multi",
+		"prompt": "Which Performance Analytics roles match typical deployment responsibilities? (Choose three.)",
+		"choices": [
+			"pa_data_collector manages indicator sources and data collection jobs",
+			"pa_power_user creates indicators, breakdowns, and PA widgets",
+			"pa_admin provides full administrative access including dependency assessment",
+			"pa_viewer creates indicator sources and schedules collection jobs",
+			"pa_spotlight_viewer CRUD all indicator sources and collection scripts"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1, 2],
+		"explanation": "pa_data_collector owns sources and jobs, pa_power_user builds indicators and visualizations, and pa_admin has full PA administration; pa_viewer and pa_spotlight_viewer do not create sources.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/r_PARoles.html"
+		]
+	}
+]

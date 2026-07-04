@@ -175,45 +175,116 @@ export const FEATURED_EXAM_QUESTION_TARGETS = {
 export const PHASE3_TRACK_DOC_SOURCES: TrackDocSource[] = [
 	{
 		trackCode: 'CIS-DF',
-		officialName: 'Certified Implementation Specialist - Data Foundations',
+		officialName: 'Certified Implementation Specialist - Data Foundations (CMDB and CSDM)',
 		publications: [
-			'integrate-applications',
 			'it-operations-management',
-			'servicenow-platform',
-			'now-platform'
+			'configuration-management-database',
+			'common-service-data-model',
+			'integrate-applications',
+			'discovery'
 		],
 		domains: [
-			{ name: 'Import sets and transforms', weight: '28%', publications: ['integrate-applications'] },
-			{ name: 'CMDB and CSDM', weight: '28%', publications: ['it-operations-management'] },
-			{ name: 'Data quality and reconciliation', weight: '22%', publications: ['it-operations-management'] },
-			{ name: 'Foundation data', weight: '22%', publications: ['servicenow-platform', 'now-platform'] }
+			{
+				name: 'Configuration',
+				weight: '15%',
+				publications: ['configuration-management-database', 'it-operations-management']
+			},
+			{
+				name: 'Ingest',
+				weight: '19%',
+				publications: ['integrate-applications', 'discovery', 'it-operations-management']
+			},
+			{
+				name: 'Govern',
+				weight: '35%',
+				publications: ['configuration-management-database', 'it-operations-management']
+			},
+			{
+				name: 'Insight',
+				weight: '20%',
+				publications: ['configuration-management-database', 'it-operations-management']
+			},
+			{
+				name: 'CSDM Fundamentals',
+				weight: '11%',
+				publications: ['common-service-data-model', 'servicenow-platform']
+			}
 		]
 	},
 	{
 		trackCode: 'CIS-PA',
 		officialName: 'Certified Implementation Specialist - Platform Analytics',
-		publications: ['now-intelligence'],
+		publications: ['now-intelligence', 'platform-administration'],
 		domains: [
-			{ name: 'Indicators and breakdowns', weight: '30%', publications: ['now-intelligence'] },
-			{ name: 'Data collection', weight: '25%', publications: ['now-intelligence'] },
-			{ name: 'Dashboards and widgets', weight: '25%', publications: ['now-intelligence'] },
-			{ name: 'Targets and analytics administration', weight: '20%', publications: ['now-intelligence'] }
+			{
+				name: 'Architecture and Deployment',
+				weight: '10%',
+				publications: ['now-intelligence', 'platform-administration']
+			},
+			{
+				name: 'Configure Indicators and Indicator Sources',
+				weight: '25%',
+				publications: ['now-intelligence']
+			},
+			{
+				name: 'Configure Breakdowns and Breakdown Sources',
+				weight: '25%',
+				publications: ['now-intelligence']
+			},
+			{ name: 'Data Collection', weight: '10%', publications: ['now-intelligence'] },
+			{
+				name: 'Data Visualization and Dashboards',
+				weight: '25%',
+				publications: ['now-intelligence']
+			},
+			{
+				name: 'Administration and Advanced Implementation Solutions',
+				weight: '5%',
+				publications: ['now-intelligence', 'platform-administration']
+			}
 		]
 	},
 	{
 		trackCode: 'CIS-SP',
 		officialName: 'Certified Implementation Specialist - Service Provider',
 		publications: [
-			'telecom-service-ops',
-			'telecom-network-inventory',
+			'platform-administration',
 			'integrate-applications',
-			'proactive-service-exp-workflows'
+			'it-service-management',
+			'knowledge-management',
+			'service-portal'
 		],
 		domains: [
-			{ name: 'Telecom service operations', weight: '28%', publications: ['telecom-service-ops'] },
-			{ name: 'IntegrationHub and integrations', weight: '24%', publications: ['integrate-applications'] },
-			{ name: 'Delegated development and upgrades', weight: '24%', publications: ['application-development'] },
-			{ name: 'CMDB for provider scale', weight: '24%', publications: ['it-operations-management'] }
+			{
+				name: 'Initial Domain Setup and Service Provider Architecture',
+				weight: '9%',
+				publications: ['platform-administration', 'integrate-applications']
+			},
+			{
+				name: 'Data Separation/Visibility',
+				weight: '24%',
+				publications: ['platform-administration']
+			},
+			{
+				name: 'Process Separation',
+				weight: '36%',
+				publications: ['platform-administration']
+			},
+			{
+				name: 'Foundational Data Management',
+				weight: '20%',
+				publications: ['platform-administration', 'integrate-applications']
+			},
+			{
+				name: 'Domain Support in Applications',
+				weight: '11%',
+				publications: [
+					'it-service-management',
+					'knowledge-management',
+					'service-portal',
+					'platform-administration'
+				]
+			}
 		]
 	}
 ];
@@ -222,12 +293,28 @@ export const PHASE4_TRACK_DOC_SOURCES: TrackDocSource[] = [
 	{
 		trackCode: 'CPOA',
 		officialName: 'Certified Platform Owner Associate',
-		publications: ['platform-administration', 'now-platform', 'integrate-applications', 'impact'],
+		publications: [
+			'platform-administration',
+			'now-platform',
+			'impact',
+			'application-development',
+			'platform-security',
+			'integrate-applications',
+			'cloud-governance-suite',
+			'servicenow-platform',
+			'it-operations-management'
+		],
 		domains: [
-			{ name: 'Instance and environment strategy', weight: '25%', publications: ['platform-administration'] },
-			{ name: 'Upgrades and release management', weight: '25%', publications: ['platform-administration'] },
-			{ name: 'Integrations overview', weight: '20%', publications: ['integrate-applications'] },
-			{ name: 'Platform adoption and health', weight: '30%', publications: ['impact', 'platform-administration'] }
+			{ name: 'Strategy', weight: '21.4%', publications: ['impact', 'platform-administration'] },
+			{ name: 'People', weight: '15.7%', publications: ['impact', 'servicenow-platform'] },
+			{ name: 'Process', weight: '15.7%', publications: ['application-development', 'platform-administration'] },
+			{ name: 'Technology', weight: '22.9%', publications: ['platform-administration', 'platform-security'] },
+			{ name: 'Data', weight: '11.4%', publications: ['platform-administration', 'cloud-governance-suite'] },
+			{
+				name: 'ServiceNow Governance',
+				weight: '12.9%',
+				publications: ['platform-administration', 'cloud-governance-suite']
+			}
 		]
 	},
 	{

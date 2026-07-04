@@ -1,0 +1,86 @@
+[
+	{
+		"trackCode": "CIS-PA",
+		"order": 25,
+		"prompt": "An automated indicator must count only incident records that meet specific filter criteria on the source table. Which indicator source element defines that filter?",
+		"choices": [
+			"Conditions on the indicator source",
+			"Breakdown matrix exclusion rows",
+			"Dashboard widget visualization type",
+			"Target warning and critical states"
+		],
+		"correctIndex": 0,
+		"explanation": "Indicator source conditions limit which records are included when PA collects scores for an automated indicator.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_IndicatorSources.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 26,
+		"prompt": "A service owner needs an indicator that reports the daily average resolution time rather than a total count. Which indicator setting should be changed?",
+		"choices": [
+			"Aggregate function on the indicator source field",
+			"Breakdown relation drill path",
+			"Spotlight walkthrough assignment",
+			"Import set transform map script"
+		],
+		"correctIndex": 0,
+		"explanation": "The aggregate function on the indicator source field controls whether PA stores counts, sums, averages, or other aggregations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_IndicatorSources.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 27,
+		"prompt": "When configuring an automated indicator, what does the frequency setting control?",
+		"choices": [
+			"How often PA collects and stores new scores for the indicator",
+			"Which roles may edit breakdown mappings on the indicator",
+			"Whether scorecards display target comparison lines",
+			"The retention period for closed incident records"
+		],
+		"correctIndex": 0,
+		"explanation": "Indicator frequency defines the collection cadence that determines when score snapshots are gathered and persisted.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Indicators.html",
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_DataCollection.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 28,
+		"prompt": "An admin needs an indicator value from a GlideAggregate query that table conditions alone cannot express. What should they configure?",
+		"choices": [
+			"A scripted indicator source",
+			"A manual indicator updated by team leads each quarter",
+			"A breakdown bucket group without an indicator source",
+			"A report chart exported to a flat file weekly"
+		],
+		"correctIndex": 0,
+		"explanation": "Scripted indicator sources let administrators define custom server-side logic when standard table and condition filters are insufficient.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_IndicatorSources.html"
+		]
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 29,
+		"questionType": "multi",
+		"prompt": "Which elements are typically configured when creating an automated indicator backed by platform data? (Choose three.)",
+		"choices": [
+			"Indicator source table and conditions",
+			"Aggregate field and function",
+			"Indicator frequency setting on the collector job",
+			"SMTP relay server for dashboard email"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1, 2],
+		"explanation": "Automated indicators require a source definition, aggregation settings, and a collection frequency; mail relay is unrelated to indicator configuration.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Indicators.html",
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_IndicatorSources.html"
+		]
+	}
+]
