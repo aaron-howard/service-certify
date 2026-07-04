@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOE",
+		"order": 205,
+		"prompt": "A manufacturing enterprise relies on innovation champions embedded in plants worldwide. What role scope best positions champions as durable agents of platform adoption?",
+		"choices": [
+			"Act as local translators who validate use cases, mentor citizen builders, and surface compliance risks to the CoEI",
+			"Serve as part-time marketers who distribute newsletters without participating in delivery governance",
+			"Function as shadow developers with silent admin credentials for expediting unreviewed changes",
+			"Operate as one-time event facilitators with no accountability for post-pilot production handoffs"
+		],
+		"correctIndex": 0,
+		"explanation": "Champions sustain adoption by validating demand, mentoring builders, and escalating compliance risks—not through marketing-only roles or unchecked admin access.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 206,
+		"prompt": "Given a scenario where the platform owner must justify automation investment to the CFO, benchmarking data from peer instances is available. How should benchmarking inform the implementation strategy?",
+		"choices": [
+			"Compare key health and process metrics against similar industries, rank gaps by ROI potential, and tie funding requests to quantified improvement targets",
+			"Publish benchmark charts in a quarterly newsletter without linking findings to funded work items",
+			"Ignore external benchmarks because every organization is uniquely incomparable",
+			"Use benchmarks solely to penalize teams whose metrics fall below median without offering remediation paths"
+		],
+		"correctIndex": 0,
+		"explanation": "Benchmarking drives implementation strategy when gaps are ranked by ROI and linked to funded targets—not when used for reporting alone or punitive comparisons.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 207,
+		"prompt": "The platform program identified dozens of manual fulfillment steps suitable for automation. Delivery capacity is limited. Which prioritization approach aligns with innovation implementation strategy?",
+		"choices": [
+			"Score candidates by volume, error rate, regulatory sensitivity, and reuse potential before sequencing automation waves",
+			"Automate alphabetically by process name to avoid debates among stakeholders",
+			"Delay all automation until every custom application is rebuilt on the latest store release",
+			"Automate only the processes requested by the loudest business sponsor regardless of enterprise impact"
+		],
+		"correctIndex": 0,
+		"explanation": "Automation scaling requires scored prioritization by volume, quality, compliance, and reuse—not arbitrary ordering, release delays, or sponsor noise alone.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 208,
+		"questionType": "multi",
+		"prompt": "Executive leadership asks the platform owner to align citizen development with enterprise architecture standards. Which practices should be institutionalized? (Choose two.)",
+		"choices": [
+			"Mandatory architecture pattern reviews for citizen apps that integrate with shared data domains or external systems",
+			"A curated library of approved connectors, data models, and workflow templates for citizen builders to reuse",
+			"Waiving design standards for citizen apps to maximize the count of new applications launched each quarter",
+			"Prohibiting citizen developers from accessing any shared integration endpoints"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Citizen development aligns with enterprise architecture through pattern reviews and reusable approved assets—not through waived standards or blocked integrations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 209,
+		"questionType": "match",
+		"prompt": "Match each innovation governance forum to its primary input and output.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Enterprise architecture board",
+			"Citizen developer guild",
+			"CoEI intake council",
+			"Champion roundtable"
+		],
+		"matchRightItems": [
+			"Evaluates funded innovation proposals and releases standardized playbooks to regional cells",
+			"Validates cross-application patterns and publishes reference designs for downstream builders",
+			"Aggregates regional demand themes and forwards scored opportunities to central funding review",
+			"Collects grassroots automation ideas and returns prioritized epics with guardrail assignments"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 1 },
+			{ "left": 1, "right": 3 },
+			{ "left": 2, "right": 0 },
+			{ "left": 3, "right": 2 }
+		],
+		"explanation": "Each forum converts distinct inputs to outputs: architecture validates patterns, the guild prioritizes grassroots ideas, CoEI releases playbooks, and champions aggregate regional demand.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
+		]
+	}
+]

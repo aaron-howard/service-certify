@@ -1,6 +1,9 @@
 /** CIS-VR (Certified Implementation Specialist - Vulnerability Response) exam-realism rules. */
 
+import type { QuestionType } from './questionTypes';
+
 /** Bank distribution for 75 questions (45 official + 30 buffer). */
+
 export const CIS_VR_DOMAIN_TARGETS = {
 	'VR Applications and Modules': 19,
 	'Getting Data into Vulnerability Response': 19,
@@ -46,7 +49,7 @@ export type CisVrQuestionRow = {
 	prompt: string;
 	choices: string[];
 	sourceUrls: string[];
-	questionType?: 'single' | 'multi';
+	questionType?: QuestionType;
 	correctIndexes?: number[];
 	correctIndex?: number;
 };

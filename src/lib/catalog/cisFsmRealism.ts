@@ -1,6 +1,9 @@
 /** CIS-FSM (Certified Implementation Specialist - Field Service Management) exam-realism rules. */
 
+import type { QuestionType } from './questionTypes';
+
 /** Bank distribution for 90 questions scaled 1.5x from the 60-question official exam. */
+
 export const CIS_FSM_DOMAIN_TARGETS = {
 	'Field Service Management Fundamentals': 37,
 	'Implementation Planning': 3,
@@ -45,7 +48,7 @@ export type CisFsmQuestionRow = {
 	prompt: string;
 	choices: string[];
 	sourceUrls: string[];
-	questionType?: 'single' | 'multi';
+	questionType?: QuestionType;
 	correctIndexes?: number[];
 	correctIndex?: number;
 };

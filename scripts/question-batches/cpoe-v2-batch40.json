@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOE",
+		"order": 195,
+		"prompt": "Given a case study where business units demand faster workflow delivery, the platform owner must scale citizen development safely. Which approach best balances innovation with governance?",
+		"choices": [
+			"Provide approved templates, scoped roles, guardrail training, and a governed intake path for citizen-built applications",
+			"Grant all business users admin access to eliminate delivery bottlenecks",
+			"Ban citizen development until a multi-year custom development backlog clears",
+			"Allow unscoped global applications without review to maximize speed"
+		],
+		"correctIndex": 0,
+		"explanation": "Citizen development scales through templates, scoped access, training, and governed intake—not unrestricted admin rights or outright prohibition.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 196,
+		"prompt": "The Center of Excellence for Innovation (CoEI) must expand from a single team to multiple regions. What should the platform owner prioritize to scale the CoEI model?",
+		"choices": [
+			"Standardize playbooks, federated delivery teams, shared guardrails, and regional champions with central quality oversight",
+			"Centralize all innovation work in headquarters without local empowerment",
+			"Eliminate guardrails in regional teams to accelerate local experiments",
+			"Replace the CoEI with ad hoc vendor projects in each region"
+		],
+		"correctIndex": 0,
+		"explanation": "CoEI scaling requires consistent playbooks and guardrails with federated execution and regional champions—not centralized bottlenecks or ungoverned local experiments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 197,
+		"questionType": "multi",
+		"prompt": "Executive sponsors want measurable innovation outcomes across the platform program. Which practices should the platform owner institutionalize? (Choose two.)",
+		"choices": [
+			"Instance and process benchmarks compared against peer cohorts to identify improvement opportunities",
+			"Automation of repeatable platform operations with guardrails for sensitive actions",
+			"Eliminating pilot programs to deploy all ideas directly to production",
+			"Tracking only the number of new applications without adoption or outcome metrics"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Innovation maturity combines objective benchmarking and governed automation—not unmeasured app counts or skipping validation through pilots.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 198,
+		"prompt": "A platform owner launches an innovation champions network across business units. Given this scenario, which champion role definition best sustains enterprise-wide adoption?",
+		"choices": [
+			"Champions facilitate demand intake, share reusable patterns, coach peers, and escalate governance questions to the CoEI",
+			"Champions receive admin credentials to bypass all review processes for their departments",
+			"Champions focus solely on marketing events without connecting to delivery pipelines",
+			"Champions are volunteers with no connection to platform governance forums"
+		],
+		"correctIndex": 0,
+		"explanation": "Effective champions bridge business demand and platform governance through coaching, pattern reuse, and structured escalation—not unchecked admin access or disconnected advocacy.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 199,
+		"questionType": "match",
+		"prompt": "Match each innovation practice to the platform outcome it primarily enables.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Enterprise architect engagement",
+			"Citizen developer program",
+			"CoEI playbook scaling",
+			"Benchmark-driven automation"
+		],
+		"matchRightItems": [
+			"Aligns cross-domain designs with enterprise standards before delivery commitments",
+			"Expands safe low-code delivery beyond central IT teams",
+			"Replicates proven innovation methods across regions with consistent guardrails",
+			"Targets high-volume manual work using objective performance comparisons"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Innovation practices deliver distinct outcomes: architectural alignment, democratized delivery, scalable CoEI methods, and data-driven automation priorities.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
+		]
+	}
+]

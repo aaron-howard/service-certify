@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOE",
+		"order": 85,
+		"prompt": "A multinational firm plans three delivery waves across regions with shared integrations. Given this scenario, which wave-planning approach best balances speed and stability?",
+		"choices": [
+			"Pilot in a representative region, capture lessons, then scale with standardized playbooks and gates",
+			"Launch all regions simultaneously to avoid perceived favoritism",
+			"Delay every region until identical customizations exist in each business unit",
+			"Sequence waves alphabetically by country name without dependency analysis"
+		],
+		"correctIndex": 0,
+		"explanation": "Wave planning uses pilot learning and repeatable gates to scale safely; big-bang or arbitrary sequencing ignores dependencies and operational readiness.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 86,
+		"prompt": "Given a case study where a critical catalog release moves to production Friday evening, what post-deployment activity should the platform owner mandate during hypercare?",
+		"choices": [
+			"Monitor key transactions, validate integrations, and staff escalation paths for the first business days",
+			"Close the change record immediately and disband the support bridge",
+			"Disable alerting to reduce noise until users report problems manually",
+			"Begin the next major release before confirming production stability"
+		],
+		"correctIndex": 0,
+		"explanation": "Hypercare focuses on monitored validation and staffed escalation immediately after release—not premature closure or starting the next deployment.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 87,
+		"questionType": "multi",
+		"prompt": "Given a scenario preparing for a cross-domain ServiceNow release, which implementation readiness factors should the platform owner validate? (Choose two.)",
+		"choices": [
+			"Business sign-off on acceptance criteria for in-scope workflows",
+			"Rollback and communication plans aligned to the release calendar",
+			"Approval to skip regression testing when the change set is small",
+			"Deferral of training until six months after go-live"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Release readiness requires accepted scope and rehearsed rollback and communications; skipping tests or delaying training undermines delivery quality.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 88,
+		"questionType": "match",
+		"prompt": "Match each low-adoption intervention to when the platform owner should apply it after a troubled rollout.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Executive reinforcement message",
+			"Role-based office hours",
+			"Workflow co-design session",
+			"Champion network activation"
+		],
+		"matchRightItems": [
+			"When sponsors must visibly restate why the change matters to the business",
+			"When users need live guidance on new tasks in their daily work",
+			"When process friction—not training alone—blocks correct platform use",
+			"When peer advocates can model success within each business unit"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Adoption recovery combines sponsor messaging, hands-on enablement, process redesign, and local champions depending on the root barrier.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 89,
+		"prompt": "During implementation, a dependency slip threatens the quarterly value milestone. How should the platform owner communicate this risk to the C-Suite?",
+		"choices": [
+			"Present impact on outcomes, mitigation options, trade-offs, and a recommended decision path",
+			"Withhold the delay until the slip becomes a production outage",
+			"Blame a single vendor without proposing recovery alternatives",
+			"Reset all executive expectations without explaining root cause or options"
+		],
+		"correctIndex": 0,
+		"explanation": "Executive risk communication includes outcome impact, mitigation choices, and a clear recommendation—not concealment or blame without options.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	}
+]

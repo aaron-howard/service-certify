@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOE",
+		"order": 185,
+		"prompt": "During a major incident, responders request elevated platform access to restore service. Given this scenario, which approach best balances compliance obligations with operational urgency?",
+		"choices": [
+			"Grant just-in-time privileged access with automatic expiry, full audit capture, and post-incident access review",
+			"Issue permanent admin roles to all responders before incidents occur",
+			"Disable audit logging during incidents to accelerate troubleshooting",
+			"Share break-glass credentials in team chat channels for immediate availability"
+		],
+		"correctIndex": 0,
+		"explanation": "Time-bound elevated access with complete audit trails satisfies emergency response needs while preserving evidence for compliance review afterward.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 186,
+		"prompt": "The CEO asks the platform owner to explain how security posture supports a proposed customer-facing digital service launch. Which message best frames security as a business advantage?",
+		"choices": [
+			"Demonstrate how governed identity, encryption, and monitoring accelerate approved market expansion while reducing breach and regulatory penalty exposure",
+			"Argue that compliance controls should be minimized until the service reaches revenue targets",
+			"Focus exclusively on technical ACL configuration without linking to business outcomes",
+			"Promise that security reviews will occur only after the first customer complaint"
+		],
+		"correctIndex": 0,
+		"explanation": "Executive audiences need security framed as an enabler for trusted market expansion and risk reduction—not as a deferred cost center or purely technical detail.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 187,
+		"questionType": "multi",
+		"prompt": "A regulated enterprise prepares for an annual compliance assessment of the Now Platform. Which platform owner actions most strengthen audit readiness? (Choose two.)",
+		"choices": [
+			"Maintain a current control matrix mapping policies to platform configurations and evidence owners",
+			"Run pre-audit dry runs that validate log retention, role certifications, and exception remediation status",
+			"Disable security plugins temporarily to improve instance performance during the audit window",
+			"Restrict auditor access until all findings from prior years are fully remediated"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Audit readiness depends on maintained control mappings and proactive dry runs—not performance shortcuts or withholding auditor engagement.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 188,
+		"prompt": "Given a case study where subsidiaries operate on a shared instance with different regulatory obligations, how should the platform owner achieve regulatory alignment?",
+		"choices": [
+			"Implement domain separation with scoped data policies, validated access models, and legal sign-off on cross-domain flows",
+			"Use a single undifferentiated domain and rely on user training to prevent data leakage",
+			"Grant all subsidiaries admin access so each can self-configure isolation",
+			"Postpone domain design until after all business units share identical compliance requirements"
+		],
+		"correctIndex": 0,
+		"explanation": "Multi-regulatory environments require deliberate domain and access design with legal validation—not undifferentiated sharing or deferred isolation planning.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainSeparation.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 189,
+		"questionType": "match",
+		"prompt": "Match each audit or compliance activity to the stakeholder benefit it primarily delivers.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Control self-assessment",
+			"Penetration test remediation",
+			"Policy exception tracking",
+			"Regulatory change impact review"
+		],
+		"matchRightItems": [
+			"Surfaces gaps before external auditors arrive",
+			"Converts identified vulnerabilities into prioritized remediation with owners",
+			"Documents accepted risk with expiry and executive visibility",
+			"Aligns platform changes with evolving legal and industry requirements"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Compliance activities serve different stakeholders: proactive gap identification, vulnerability remediation, risk transparency, and regulatory change alignment.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		]
+	}
+]

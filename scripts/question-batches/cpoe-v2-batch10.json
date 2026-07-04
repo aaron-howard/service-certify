@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOE",
+		"order": 45,
+		"prompt": "Given a case study preparing the final strategy review before cost planning, which deliverable best closes the Strategy domain for executive sign-off?",
+		"choices": [
+			"A consolidated strategy pack with outcomes, roadmap, investment themes, and success measures",
+			"A technical runbook listing every integration endpoint without strategic context",
+			"A spreadsheet of open defects from the development environment only",
+			"An unsigned draft memo with no accountable owners or funding assumptions"
+		],
+		"correctIndex": 0,
+		"explanation": "Strategy sign-off requires an integrated pack linking outcomes, roadmap, investments, and measures—not technical or operational artifacts alone.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 46,
+		"prompt": "Before transitioning to cost planning, federated business units dispute platform governance boundaries. How should the platform owner document stakeholder alignment in the strategy?",
+		"choices": [
+			"A RACI matrix defining decision rights, escalation paths, and shared versus local capabilities",
+			"A single paragraph stating IT owns all decisions without business unit input",
+			"An org chart copied from HR with no platform-specific role definitions",
+			"A blank template deferred until cost planning completes the following fiscal year"
+		],
+		"correctIndex": 0,
+		"explanation": "Federated alignment requires explicit decision rights and capability boundaries—not IT-only ownership or undefined deferral.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 47,
+		"questionType": "multi",
+		"prompt": "The CFO asks how licensing choices affect implementation cost before approving the next fiscal budget. Which factors should the platform owner include in the analysis? (Choose two.)",
+		"choices": [
+			"Product entitlements mapped to planned capabilities and required user populations",
+			"Professional services and internal labor estimates tied to each delivery wave",
+			"Historical color preferences for portal themes across business units",
+			"Informal chat opinions about vendor popularity without cost data"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Licensing cost analysis connects entitlements and populations to capability plans plus implementation labor—not cosmetic or anecdotal factors.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 48,
+		"prompt": "Agile release trains for HR and ITSM share architects and testers. Which workstream alignment practice best supports accurate resource forecasting?",
+		"choices": [
+			"Capacity planning sessions that map team availability to prioritized epics across shared trains",
+			"Independent backlogs maintained without cross-train visibility or dependency tracking",
+			"Fixed headcount assumptions that ignore leave, support load, and shared skill constraints",
+			"Forecasting based solely on story points from a single train without enterprise view"
+		],
+		"correctIndex": 0,
+		"explanation": "Cross-train resource forecasting requires visible capacity, shared priorities, and realistic constraints—not isolated or oversimplified estimates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 49,
+		"questionType": "match",
+		"prompt": "Match each cost and resource planning term to what it primarily helps executives evaluate.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Total cost of ownership model",
+			"Capacity heat map",
+			"Scenario-based budget cases",
+			"Benefits-funded roadmap"
+		],
+		"matchRightItems": [
+			"License, services, and operational spend over the program lifecycle",
+			"Skill gaps and overload risk across teams and time horizons",
+			"Funding implications when scope, speed, or staffing assumptions change",
+			"Alignment of investments to expected financial and operational returns"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Cost planning artifacts help executives assess lifecycle spend, capacity risk, budget scenarios, and benefits alignment.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	}
+]

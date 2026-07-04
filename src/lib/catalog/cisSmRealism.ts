@@ -1,6 +1,9 @@
 /** CIS-SM (Certified Implementation Specialist - Service Mapping) exam-realism rules. */
 
+import type { QuestionType } from './questionTypes';
+
 /** Bank distribution for 90 questions scaled 1.5x from the 60-question official exam. */
+
 export const CIS_SM_DOMAIN_TARGETS = {
 	'Service Mapping Pattern Design': 27,
 	'Service Mapping Configuration': 18,
@@ -52,7 +55,7 @@ export type CisSmQuestionRow = {
 	prompt: string;
 	choices: string[];
 	sourceUrls: string[];
-	questionType?: 'single' | 'multi';
+	questionType?: QuestionType;
 	correctIndexes?: number[];
 	correctIndex?: number;
 };

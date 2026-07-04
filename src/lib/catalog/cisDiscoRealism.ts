@@ -1,6 +1,9 @@
 /** CIS-DISCO (Certified Implementation Specialist - Discovery) exam-realism rules. */
 
+import type { QuestionType } from './questionTypes';
+
 /** Bank distribution for 75 questions scaled from the 45-question official exam (+30 buffer). */
+
 export const CIS_DISCO_DOMAIN_TARGETS = {
 	'Discovery Pattern Design': 26,
 	'Discovery Configuration': 26,
@@ -51,7 +54,7 @@ export type CisDiscoQuestionRow = {
 	prompt: string;
 	choices: string[];
 	sourceUrls: string[];
-	questionType?: 'single' | 'multi';
+	questionType?: QuestionType;
 	correctIndexes?: number[];
 	correctIndex?: number;
 };

@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOE",
+		"order": 15,
+		"prompt": "A healthcare organization cites clinician resistance after a failed portal rollout. Given this case study, which OCM orchestration should the platform owner lead before the next wave?",
+		"choices": [
+			"Co-design sessions with affected roles to align workflows, training, and success measures",
+			"Re-launch identical workflows with a new logo and color scheme only",
+			"Mandate usage through policy enforcement without enablement support",
+			"Postpone user involvement until development completes all custom modules"
+		],
+		"correctIndex": 0,
+		"explanation": "Recovery from adoption failure requires collaborative redesign and enablement so users see how the platform improves their work.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 16,
+		"prompt": "The CFO requires proof of value before approving year-two funding. Which sponsorship tactic best demonstrates business value?",
+		"choices": [
+			"Present outcome dashboards tied to baseline metrics agreed with sponsors at program start",
+			"Share internal sprint velocity charts without linking to financial impact",
+			"Highlight the number of stories closed regardless of business adoption",
+			"Wait until all domains are live before reporting any results"
+		],
+		"correctIndex": 0,
+		"explanation": "Sponsors validate continued investment through outcome metrics anchored to agreed baselines—not activity counts or delayed reporting.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 17,
+		"questionType": "match",
+		"prompt": "Match each strategic persuasion technique to when a platform owner should apply it with executive stakeholders.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Outcome storytelling",
+			"Scenario comparison",
+			"Risk transparency",
+			"Peer benchmarking"
+		],
+		"matchRightItems": [
+			"When sponsors need emotional connection to user and customer impact",
+			"When choosing between options with different cost and speed profiles",
+			"When building trust about dependencies and mitigation plans",
+			"When leaders ask how similar organizations achieved platform value"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 0 },
+			{ "left": 1, "right": 1 },
+			{ "left": 2, "right": 2 },
+			{ "left": 3, "right": 3 }
+		],
+		"explanation": "Different executive concerns call for outcome narratives, explicit option analysis, honest risk discussion, or external benchmarks.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 18,
+		"prompt": "Multiple product lines compete for the same implementation budget. Which sequencing approach best demonstrates ROI across technical dependencies?",
+		"choices": [
+			"Prioritize foundational capabilities that unlock downstream products, reporting value at each gate",
+			"Fund every product line equally regardless of technical prerequisites",
+			"Sequence solely by loudest stakeholder pressure without dependency analysis",
+			"Complete all integrations before delivering any user-facing capability"
+		],
+		"correctIndex": 0,
+		"explanation": "ROI-driven sequencing invests in capabilities that enable others, with value checkpoints rather than big-bang or politically driven ordering.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 19,
+		"questionType": "multi",
+		"prompt": "Given a scenario planning a platform vision for a federated enterprise, which outcomes should appear in the strategy document? (Choose two.)",
+		"choices": [
+			"Consistent employee and customer experiences across business units",
+			"Shared data definitions that reduce reconciliation effort",
+			"Maximum number of isolated custom applications per department",
+			"Elimination of all governance boards to speed decisions"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Federated enterprises benefit from unified experiences and shared data standards; fragmentation and absent governance undermine platform strategy.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	}
+]

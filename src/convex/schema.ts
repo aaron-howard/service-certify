@@ -37,15 +37,30 @@ export default defineSchema({
 		order: v.number(),
 		// Question text — expected 10-2000 chars
 		prompt: v.string(),
-		// Multiple choice options — expected 2-6 choices, 5-500 chars each
+		// Multiple choice options — expected 2-6 choices for single/multi; empty for match.
 		choices: v.array(v.string()),
 		// Correct answer index — must be valid for choices array (0-5).
 		// For multi-select questions this holds the first correct index (back-compat).
+		// For match questions this is 0 (sentinel).
 		correctIndex: v.number(),
-		// Question format: 'single' (default when absent) or 'multi' (select all that apply)
-		questionType: v.optional(v.union(v.literal('single'), v.literal('multi'))),
+		// Question format: 'single' (default), 'multi' (select all), or 'match' (drag/drop pairs)
+		questionType: v.optional(
+			v.union(v.literal('single'), v.literal('multi'), v.literal('match'))
+		),
 		// For multi-select: full set of correct choice indexes (sorted). Absent for single.
 		correctIndexes: v.optional(v.array(v.number())),
+		// For match: left (draggable) and right (target) item labels.
+		matchLeftItems: v.optional(v.array(v.string())),
+		matchRightItems: v.optional(v.array(v.string())),
+		// For match: correct pairings by left/right index (each left maps to one right).
+		correctMatches: v.optional(
+			v.array(
+				v.object({
+					left: v.number(),
+					right: v.number()
+				})
+			)
+		),
 		// Explanation — expected 20-3000 chars
 		explanation: v.string(),
 		// Reference URLs for learning — expected 0-10 URLs, 10-500 chars each

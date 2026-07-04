@@ -1,5 +1,7 @@
 /** CAD (Certified Application Developer) exam-realism rules (official blueprint aligned). */
 
+import type { QuestionType } from './questionTypes';
+
 /**
  * Bank distribution for the 90-question CAD dev bank, scaled 1.5x from the
  * 60-question official exam using the published domain weightings.
@@ -54,7 +56,7 @@ export type CadQuestionRow = {
 	prompt: string;
 	choices: string[];
 	sourceUrls: string[];
-	questionType?: 'single' | 'multi';
+	questionType?: QuestionType;
 	correctIndexes?: number[];
 	correctIndex?: number;
 };

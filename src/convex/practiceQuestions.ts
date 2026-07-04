@@ -7,12 +7,19 @@ import { getOfficialQuestionCount } from './catalog/examQuestionPolicy';
 
 const practiceModeValidator = v.union(v.literal('sample'), v.literal('full'));
 
+const matchPairValidator = v.object({
+	left: v.number(),
+	right: v.number()
+});
+
 const answerValidator = v.object({
 	order: v.number(),
 	// Single-answer selection (also used as first selection for multi).
 	selectedIndex: v.number(),
 	// Multi-select: full set of selected indexes. Absent for single-answer.
-	selectedIndexes: v.optional(v.array(v.number()))
+	selectedIndexes: v.optional(v.array(v.number())),
+	// Match: user pairings (left index → right index).
+	matchAnswers: v.optional(v.array(matchPairValidator))
 });
 
 /** True when two index lists contain exactly the same values (order-independent). */
@@ -20,6 +27,16 @@ function sameIndexSet(a: number[], b: number[]): boolean {
 	if (a.length !== b.length) return false;
 	const setB = new Set(b);
 	return a.every((n) => setB.has(n));
+}
+
+type MatchPair = { left: number; right: number };
+
+/** True when match pair sets are identical (order-independent). */
+function sameMatchPairs(a: MatchPair[], b: MatchPair[]): boolean {
+	if (a.length !== b.length) return false;
+	const key = (p: MatchPair) => `${p.left}:${p.right}`;
+	const setB = new Set(b.map(key));
+	return a.every((p) => setB.has(key(p)));
 }
 
 async function loadQuestionsForTrack(ctx: QueryCtx, trackCode: string) {
@@ -42,14 +59,14 @@ function limitQuestionsForSession(
 	});
 }
 
-function mapQuestionRows(
-	rows: Awaited<ReturnType<typeof loadQuestionsForTrack>>
-) {
+function mapQuestionRows(rows: Awaited<ReturnType<typeof loadQuestionsForTrack>>) {
 	return rows.map((row) => ({
 		order: row.order,
 		prompt: row.prompt,
 		choices: row.choices,
 		questionType: row.questionType ?? 'single',
+		matchLeftItems: row.matchLeftItems,
+		matchRightItems: row.matchRightItems,
 		explanation: row.explanation
 	}));
 }
@@ -113,6 +130,18 @@ export const gradeAnswers = mutation({
 					}
 				}
 			}
+			if (answer.matchAnswers !== undefined) {
+				if (answer.matchAnswers.length < 1 || answer.matchAnswers.length > 12) {
+					throw new Error(
+						`Invalid matchAnswers for order ${answer.order}: must have 1-12 pairs`
+					);
+				}
+				for (const pair of answer.matchAnswers) {
+					if (pair.left < 0 || pair.left > 11 || pair.right < 0 || pair.right > 11) {
+						throw new Error(`Invalid matchAnswers indexes for order ${answer.order}`);
+					}
+				}
+			}
 		}
 
 		if (mode === 'full') {
@@ -137,9 +166,11 @@ export const gradeAnswers = mutation({
 			order: number;
 			selectedIndex: number;
 			selectedIndexes: number[];
+			matchAnswers: MatchPair[];
 			correctIndex: number;
 			correctIndexes: number[];
-			questionType: 'single' | 'multi';
+			correctMatches: MatchPair[];
+			questionType: 'single' | 'multi' | 'match';
 			isCorrect: boolean;
 			explanation: string;
 		}[] = [];
@@ -151,24 +182,28 @@ export const gradeAnswers = mutation({
 				throw new Error(`No question with order ${answer.order} for track ${trackCode}`);
 			}
 			const questionType = question.questionType ?? 'single';
-			const correctIndexes =
-				question.correctIndexes ?? [question.correctIndex];
-			const selectedIndexes =
-				answer.selectedIndexes ?? [answer.selectedIndex];
+			const correctIndexes = question.correctIndexes ?? [question.correctIndex];
+			const selectedIndexes = answer.selectedIndexes ?? [answer.selectedIndex];
+			const correctMatches = question.correctMatches ?? [];
+			const matchAnswers = answer.matchAnswers ?? [];
 
-			// Multi-select requires an exact match of all correct indexes (no partial credit).
+			// Multi-select: exact index set. Match: all pairs correct. Single: one index.
 			const isCorrect =
-				questionType === 'multi'
-					? sameIndexSet(selectedIndexes, correctIndexes)
-					: answer.selectedIndex === question.correctIndex;
+				questionType === 'match'
+					? sameMatchPairs(matchAnswers, correctMatches)
+					: questionType === 'multi'
+						? sameIndexSet(selectedIndexes, correctIndexes)
+						: answer.selectedIndex === question.correctIndex;
 
 			if (isCorrect) correct++;
 			results.push({
 				order: answer.order,
 				selectedIndex: answer.selectedIndex,
 				selectedIndexes,
+				matchAnswers,
 				correctIndex: question.correctIndex,
 				correctIndexes,
+				correctMatches,
 				questionType,
 				isCorrect,
 				explanation: question.explanation

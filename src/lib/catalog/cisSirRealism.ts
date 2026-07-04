@@ -1,6 +1,9 @@
 /** CIS-SIR (Certified Implementation Specialist - Security Incident Response) exam-realism rules. */
 
+import type { QuestionType } from './questionTypes';
+
 /** Bank distribution for 90 questions scaled 1.5x from the 60-question official exam. */
+
 export const CIS_SIR_DOMAIN_TARGETS = {
 	'SIR Overview and Data Visualization': 14,
 	'Security Incident Creation and Threat Intelligence': 12,
@@ -53,7 +56,7 @@ export type CisSirQuestionRow = {
 	prompt: string;
 	choices: string[];
 	sourceUrls: string[];
-	questionType?: 'single' | 'multi';
+	questionType?: QuestionType;
 	correctIndexes?: number[];
 	correctIndex?: number;
 };

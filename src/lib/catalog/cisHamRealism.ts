@@ -1,6 +1,9 @@
 /** CIS-HAM (Certified Implementation Specialist - Hardware Asset Management) exam-realism rules. */
 
+import type { QuestionType } from './questionTypes';
+
 /** Bank distribution for 90 questions scaled 1.5x from the 60-question official exam. */
+
 export const CIS_HAM_DOMAIN_TARGETS = {
 	'IT Asset Management Overview and Fundamentals': 18,
 	'Data Integrity Attributes and Data Sources': 24,
@@ -53,7 +56,7 @@ export type CisHamQuestionRow = {
 	prompt: string;
 	choices: string[];
 	sourceUrls: string[];
-	questionType?: 'single' | 'multi';
+	questionType?: QuestionType;
 	correctIndexes?: number[];
 	correctIndex?: number;
 };

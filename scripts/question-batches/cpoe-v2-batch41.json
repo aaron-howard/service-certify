@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CPOE",
+		"order": 200,
+		"prompt": "A global insurer is consolidating workflows onto one Now Platform instance. Enterprise architects report they learn about major design decisions too late. How should the platform owner engage architecture in the innovation pipeline?",
+		"choices": [
+			"Establish a joint steering rhythm where architects co-own capability maps, review epics before funding, and gate cross-domain integrations",
+			"Route all architecture feedback through vendor project managers after sprints complete",
+			"Reserve architect time only for infrastructure sizing without application design input",
+			"Defer architecture participation until post-go-live optimization phases begin"
+		],
+		"correctIndex": 0,
+		"explanation": "Enterprise architecture adds innovation value when embedded early in capability mapping, epic review, and cross-domain gating—not relegated to post-delivery or infrastructure-only roles.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 201,
+		"prompt": "Given a scenario where the CIO mandates citizen development as a pillar of digital strategy, regional leaders fear uncontrolled sprawl. Which organizational approach best embeds citizen development responsibly?",
+		"choices": [
+			"Define tiered citizen roles, a center-led enablement program, and business-unit sponsorship tied to audited use-case catalogs",
+			"Publish an open invitation for any employee to build production applications without enrollment criteria",
+			"Restrict all app creation to centralized IT and eliminate the citizen development mandate",
+			"Outsource citizen enablement entirely to a staffing vendor without internal governance forums"
+		],
+		"correctIndex": 0,
+		"explanation": "Citizen development belongs in organizational strategy through tiered roles, center-led enablement, and audited catalogs—not open production access or outsourcing without governance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 202,
+		"prompt": "The platform owner's Center of Excellence for Innovation piloted successfully in one division. Executive leadership wants enterprise expansion within two fiscal quarters. What scaling model should the platform owner adopt?",
+		"choices": [
+			"Deploy trained regional CoEI cells that follow shared intake templates, reuse central assets, and report unified innovation metrics",
+			"Clone the original team verbatim in every region without adapting guardrails to local compliance needs",
+			"Pause expansion until every legacy process is manually documented in a wiki",
+			"Shift CoEI responsibilities to individual app owners without central coordination or shared playbooks"
+		],
+		"correctIndex": 0,
+		"explanation": "CoEI scaling requires federated regional cells with shared templates, assets, and metrics—not unadapted clones, documentation delays, or uncoordinated app-owner silos.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 203,
+		"questionType": "multi",
+		"prompt": "Given a case study where innovation champions operate in twelve countries, the platform owner must standardize their operating model. Which elements should every champion chapter implement? (Choose two.)",
+		"choices": [
+			"A recurring forum cadence that converts business ideas into scored backlog items for the CoEI intake process",
+			"Documented playbooks for reusing approved integrations, flows, and data models across similar use cases",
+			"Permanent delegation of unrestricted admin rights so champions can bypass security review queues",
+			"Exclusive focus on internal hackathons without follow-through into production readiness gates"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Champion chapters sustain innovation through structured cadence, backlog conversion, and reusable playbooks—not unchecked admin access or disconnected hackathon activity.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
+		]
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 204,
+		"questionType": "match",
+		"prompt": "Match each implementation strategy activity to the innovation outcome it primarily drives.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Peer cohort benchmarking",
+			"Automation backlog prioritization",
+			"CoEI guardrail scaling",
+			"Champion feedback loops"
+		],
+		"matchRightItems": [
+			"Propagates approved builder standards as innovation expands into new business units",
+			"Surfaces process bottlenecks using objective external comparisons before funding automation sprints",
+			"Channels frontline demand signals into prioritized CoEI backlog refinement sessions",
+			"Concentrates engineering capacity on repetitive platform tasks with measurable cycle-time reduction"
+		],
+		"correctMatches": [
+			{ "left": 0, "right": 1 },
+			{ "left": 1, "right": 3 },
+			{ "left": 2, "right": 0 },
+			{ "left": 3, "right": 2 }
+		],
+		"explanation": "Benchmarking reveals gaps, automation prioritization targets repetitive work, CoEI guardrails scale standards, and champion loops feed demand into central backlog refinement.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		]
+	}
+]

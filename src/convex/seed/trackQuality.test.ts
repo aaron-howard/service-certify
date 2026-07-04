@@ -32,6 +32,7 @@ describe('track question choice quality', () => {
 
 			it('has four unique choices per question', () => {
 				for (const q of rows) {
+					if (q.questionType === 'match') continue;
 					const normalized = q.choices.map((c) => c.trim().toLowerCase());
 					expect(new Set(normalized).size).toBe(4);
 				}
@@ -40,6 +41,7 @@ describe('track question choice quality', () => {
 			it('does not repeat identical choice text within the track', () => {
 				const seen = new Map<string, number>();
 				for (const q of rows) {
+					if (q.questionType === 'match') continue;
 					for (const choice of q.choices) {
 						const key = choice.trim().toLowerCase();
 						seen.set(key, (seen.get(key) ?? 0) + 1);
@@ -51,12 +53,14 @@ describe('track question choice quality', () => {
 
 			it('avoids universal longest-correct bias', () => {
 				if (rows.length === 0) return;
+				const mcRows = rows.filter((q) => q.questionType !== 'match');
+				if (mcRows.length === 0) return;
 				let longestCorrect = 0;
-				for (const q of rows) {
+				for (const q of mcRows) {
 					const maxLen = Math.max(...q.choices.map((c) => c.length));
 					if (q.choices[q.correctIndex].length === maxLen) longestCorrect++;
 				}
-				expect(longestCorrect).toBeLessThan(rows.length * 0.85);
+				expect(longestCorrect).toBeLessThan(mcRows.length * 0.85);
 			});
 		});
 	}
