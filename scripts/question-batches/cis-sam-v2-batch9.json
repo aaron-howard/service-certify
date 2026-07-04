@@ -1,0 +1,84 @@
+[
+	{
+		"trackCode": "CIS-SAM",
+		"order": 40,
+		"prompt": "A SAM manager must prioritize remediation before a vendor true-up. Which report best supports this effort?",
+		"choices": [
+			"Entitlement versus install position report filtered to high-cost publishers",
+			"CMDB duplicate configuration item report with no publisher grouping applied",
+			"Daily change request calendar listing scheduled deployments without license context",
+			"Open incident list assigned to software teams without entitlement metrics"
+		],
+		"correctIndex": 0,
+		"explanation": "True-up preparation starts with a publisher-focused compliance position report that highlights financial exposure from under-licensed products.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/software-compliance-overview.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 41,
+		"questionType": "multi",
+		"prompt": "Reconciliation results show non-compliance for a software model. Which two remediation actions can address the gap? (Choose two.)",
+		"choices": [
+			"Purchase additional rights to cover discovered consumption",
+			"Remove unlicensed installs that exceed available entitlements",
+			"Disable all discovery schedules until the next fiscal quarter begins",
+			"Delete the software model record to reset normalization status"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Non-compliance is remediated by either acquiring additional license rights or removing installs that exceed entitlements, aligning consumption with purchased rights.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconciliation-remediation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 42,
+		"prompt": "Reconciliation shows a publisher is over-licensed with unused entitlements. What is the most appropriate SAM response?",
+		"choices": [
+			"Evaluate reclamation opportunities and adjust future purchase quantities during renewal planning",
+			"Immediately delete all entitlement records to reset the compliance dashboard to zero",
+			"Disable reconciliation for that publisher to preserve the current license position",
+			"Convert unused entitlements into hardware asset records for stockroom inventory"
+		],
+		"correctIndex": 0,
+		"explanation": "Over-licensed positions indicate reclaimable or reducible spend; SAM teams should plan reclamation and right-size renewals rather than ignore surplus rights.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/software-reclamation.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 43,
+		"prompt": "A compliance analyst needs to allocate available entitlements to users who require the software. Which SAM action assigns rights to individual users?",
+		"choices": [
+			"Create allocations on the entitlement record for authorized users or devices",
+			"Run a hardware asset transfer order to move licenses between stockroom locations",
+			"Submit a catalog request to auto-provision entitlements without SAM review",
+			"Update the software model normalization status to Manually normalized"
+		],
+		"correctIndex": 0,
+		"explanation": "Allocations link purchased entitlement rights to specific users or devices, tracking consumption against available license pools.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/manage-software-entitlements.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 44,
+		"prompt": "After remediation, a SAM administrator reruns reconciliation. What outcome confirms the compliance gap was resolved?",
+		"choices": [
+			"The software model shows a compliant or balanced license position matching contract terms",
+			"The discovery schedule status changes to inactive for all related publishers",
+			"The entitlement import error list contains only Ignored status records",
+			"The software model normalization status changes to Match not found"
+		],
+		"correctIndex": 0,
+		"explanation": "Successful remediation is verified when reconciliation shows the entitlement position aligns with installed and allocated consumption for the software model.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/validate-reconciliation-results.html"
+		]
+	}
+]

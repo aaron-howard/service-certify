@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-SAM",
+		"order": 5,
+		"prompt": "A SAM manager wants dashboard visibility into software nearing end-of-support or renewal windows. Which SAM capability supports this recommendation practice?",
+		"choices": [
+			"Calculated lifecycles that derive lifecycle positions from rules and dates for portfolio review",
+			"Incident auto-assignment rules that route software tickets to the service desk queue",
+			"Change approval workflows that block all software installs until CAB review completes",
+			"Knowledge article versioning that tracks document edits without license context"
+		],
+		"correctIndex": 0,
+		"explanation": "Calculated lifecycles help SAM teams identify software approaching renewal or end-of-life so they can plan upgrades and contract decisions proactively.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/now-assist-for-software-asset-management-sam/calculated-lifecycles.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 6,
+		"prompt": "An organization needs a user who can configure SAM settings, manage all entitlement records, and administer reconciliation jobs. Which role should be assigned?",
+		"choices": [
+			"The sam_admin role with privileges to configure SAM settings and administer all entitlement records",
+			"The sam_user role with read-only visibility into SAM dashboards and compliance reports",
+			"The sam role with access to routine entitlement tasks but not full SAM administration",
+			"The sam_developer role with script writing access but not entitlement administration duties"
+		],
+		"correctIndex": 0,
+		"explanation": "The sam_admin role provides full administrative access to SAM configuration, entitlements, and operational controls beyond standard analyst tasks.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-roles.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 7,
+		"prompt": "A finance stakeholder needs read-only access to SAM compliance dashboards without editing entitlements or running reconciliation. Which role fits this requirement?",
+		"choices": [
+			"The sam_user role providing read-only access to SAM dashboards without edit privileges",
+			"The sam_admin role providing full configuration control over reconciliation and entitlement tables",
+			"The sam role providing standard analyst access including entitlement creation and reconciliation",
+			"The sam_developer role providing script development access for custom SAM automation logic"
+		],
+		"correctIndex": 0,
+		"explanation": "The sam_user role provides read-only access to SAM views and reports for stakeholders who need visibility without configuration or data modification rights.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-roles.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 8,
+		"prompt": "Which SAM workspace view gives operational teams a consolidated picture of lifecycle status across the software estate?",
+		"choices": [
+			"Lifecycle management dashboard summarizing software lifecycle posture for review meetings",
+			"Change calendar showing scheduled production deployments without license consumption data",
+			"Incident heat map grouping open tickets by assignment group without publisher context",
+			"Catalog analytics report listing requested items without entitlement reconciliation metrics"
+		],
+		"correctIndex": 0,
+		"explanation": "The lifecycle management dashboard provides SAM teams with portfolio-level visibility into software lifecycle status for operational and compliance conversations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/now-assist-for-software-asset-management-sam/lifecycle-management-dashboard.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 9,
+		"prompt": "A SAM team is establishing recommendation practices for license optimization. Which starting activity best aligns with SAM fundamentals?",
+		"choices": [
+			"Identify unused or low-usage installations eligible for reclamation before requesting new purchases",
+			"Disable all discovery schedules until the next publisher audit cycle completes",
+			"Delete unmatched discovery records weekly to keep compliance dashboards clean",
+			"Assign every discovered title to a single catch-all software model for faster reporting"
+		],
+		"correctIndex": 0,
+		"explanation": "SAM optimization recommendations begin with identifying reclaimable software so existing entitlements can be reused before additional license purchases.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/software-reclamation.html"
+		]
+	}
+]

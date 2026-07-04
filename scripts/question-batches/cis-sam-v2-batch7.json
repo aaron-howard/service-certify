@@ -1,0 +1,82 @@
+[
+	{
+		"trackCode": "CIS-SAM",
+		"order": 30,
+		"prompt": "A SAM manager wants different editions of a vendor product tracked separately for compliance. Which model design supports this goal?",
+		"choices": [
+			"Create distinct software models representing edition and version differences relevant to licensing",
+			"Apply one software model for all editions and track edition differences in comments only",
+			"Store edition information exclusively on procurement contracts without software models",
+			"Disable software model normalization to preserve raw discovery titles in reports"
+		],
+		"correctIndex": 0,
+		"explanation": "When licensing rights differ by edition or version, separate software models are required for accurate reconciliation and publisher reporting.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/create-a-software-model.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 31,
+		"prompt": "A discovered software title is unmatched in SAM. What is the recommended next step?",
+		"choices": [
+			"Create or map it to the correct software model so future installs normalize correctly",
+			"Ignore it until the year-end true-up when all unmatched titles are reviewed together",
+			"Reclassify the discovery record as a hardware asset to exclude it from compliance",
+			"Delete the discovery record to keep the normalization dashboard counts low"
+		],
+		"correctIndex": 0,
+		"explanation": "Unmatched discoveries should be normalized by mapping to the correct software model so usage and compliance rollups remain accurate.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/map-discovered-software.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 32,
+		"prompt": "Why do SAM administrators review software model governance on a regular cadence?",
+		"choices": [
+			"To prevent duplicate or poorly classified models from reducing reconciliation accuracy",
+			"To confirm every software model has an attached incident response playbook document",
+			"To convert all software models into hardware models at the end of each quarter",
+			"To remove publisher information from model records after content service updates"
+		],
+		"correctIndex": 0,
+		"explanation": "Model governance ensures data quality and prevents duplicate mappings that distort compliance and optimization insights.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-model-normalization-governance.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 33,
+		"prompt": "Which relationship is most important for using software models in effective compliance calculations?",
+		"choices": [
+			"Software model linked to entitlement records and discovered installation evidence",
+			"Software model linked to product catalog images used in the service portal",
+			"Software model linked to stockroom locations in the hardware asset module",
+			"Software model linked to incident category values in the ITSM application"
+		],
+		"correctIndex": 0,
+		"explanation": "Compliance depends on comparing installed software against licensed rights, and software models are the shared link across those records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
+		]
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 34,
+		"prompt": "Which action best improves confidence that entitlement records are audit-ready?",
+		"choices": [
+			"Store purchase proof and contractual evidence linked to entitlement records",
+			"Delete expired entitlements immediately without retaining historical audit context",
+			"Disable reconciliation jobs during quarter close to prevent position changes",
+			"Move entitlement quantities into custom text fields outside standard SAM tables"
+		],
+		"correctIndex": 0,
+		"explanation": "Attaching entitlement evidence supports defensible license positions and reduces response time during publisher audits and true-ups.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/entitlement-audit-preparation.html"
+		]
+	}
+]
