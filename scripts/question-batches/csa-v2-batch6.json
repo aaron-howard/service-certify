@@ -2,81 +2,82 @@
 	{
 		"trackCode": "CSA",
 		"order": 25,
-		"prompt": "Which list feature lets a user export the currently displayed rows to a spreadsheet format?",
+		"prompt": "A new hire must start receiving work assigned to the Database assignment group. What is the administrative action that makes this happen?",
 		"choices": [
-			"Export to Excel or CSV from the list context menu",
-			"Commit a migration update set",
-			"Enable a licensed plugin module",
-			"Run an import field map"
+			"Add the user as a member of the group so they appear in its member list and can be assigned its tasks",
+			"Rename the group to include the new hire's name",
+			"Create a duplicate group containing only the new hire",
+			"Grant the user the admin role so they can see all tasks"
 		],
 		"correctIndex": 0,
-		"explanation": "Lists support exporting filtered results to Excel or CSV for offline analysis.",
+		"explanation": "Group membership (stored in the group member table) is what ties a user to an assignment group's work queue and any roles the group carries; no elevated role is needed.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-user-interface/lists.html"
+			"https://www.servicenow.com/docs/r/platform-administration/groups.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 26,
-		"prompt": "What does the Activity stream on a form display?",
+		"prompt": "An employee left the company last week but their account still shows in assignment lists. What is the recommended way to handle the departed user's record?",
 		"choices": [
-			"Journal entries, work notes, and field changes for the record",
-			"Only CMDB relationships",
-			"Import set row errors",
-			"Plugin dependency trees"
+			"Deactivate the user record so history is preserved while the account can no longer be used or assigned",
+			"Delete the user record and every task record that references it",
+			"Change the user's name to a blank value",
+			"Move the user into a group named Departed with the admin role"
 		],
 		"correctIndex": 0,
-		"explanation": "The activity stream shows comments, work notes, and audit-style updates related to the record.",
+		"explanation": "Setting a user to inactive keeps referential history intact (past incidents, approvals) while preventing login and new assignments; deleting users breaks references.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-user-interface/activity-stream.html"
+			"https://www.servicenow.com/docs/r/platform-administration/user-administration.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 27,
-		"prompt": "Which configuration controls mandatory fields on a form without scripting?",
+		"prompt": "A team wants to manage their incident backlog by dragging cards between columns such as New, In Progress, and Resolved, with the record updating automatically. Which feature fits?",
 		"choices": [
-			"Dictionary attribute Mandatory or UI Policy",
-			"Import field map script",
-			"Coalesce field matcher",
-			"MID Server credential"
+			"A data-driven Visual Task Board whose lanes are bound to a field like State",
+			"A printed whiteboard photographed at the end of each day",
+			"An access control rule for each state value",
+			"A dictionary override on the state field"
 		],
 		"correctIndex": 0,
-		"explanation": "Fields can be required via the dictionary Mandatory attribute or a UI Policy that sets mandatory true.",
+		"explanation": "Data-driven Visual Task Boards generate lanes from a field's values; dragging a card to another lane updates that field on the underlying record.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-user-interface/ui-policies.html"
+			"https://www.servicenow.com/docs/r/platform-user-interface/visual-task-boards.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 28,
-		"prompt": "What information does the Timeline related list on task records show?",
+		"prompt": "IT leadership asks for a visual showing open incidents broken down by assignment group, available at a glance on one screen alongside other metrics. What should an administrator build?",
 		"choices": [
-			"Shows SLA stages, approvals, and state changes over time",
-			"Stores import set staging rows",
-			"Lists plugin dependencies",
-			"Replaces the CMDB"
+			"A bar chart report grouped by assignment group, added as a widget on a shared dashboard",
+			"A weekly conference call where each group reads out its numbers",
+			"A client script that counts incidents when a form loads",
+			"An event registry entry that fires for every new incident"
 		],
 		"correctIndex": 0,
-		"explanation": "The timeline visualizes task history including SLAs, approvals, and workflow states chronologically.",
+		"explanation": "Reports can aggregate incidents grouped by a field such as Assignment group, and dashboards host report widgets so leadership sees several visualizations together in one place.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-user-interface/timeline.html"
+			"https://www.servicenow.com/docs/r/reporting-analytics/create-reports.html",
+			"https://www.servicenow.com/docs/r/reporting-analytics/dashboards.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 29,
-		"prompt": "Which modules help users track work assigned directly to them?",
+		"prompt": "A report author finished a chart of reopened incidents and now wants service desk managers, and only them, to view it. How is this access controlled?",
 		"choices": [
-			"My Work and My Tasks modules",
-			"Import field mapping module",
-			"Configuration update packages",
-			"Plugin Management"
+			"Share the report with the managers' group or role instead of making it visible to everyone",
+			"Print copies of the chart and distribute them by hand",
+			"Set the report's table to be invisible to all other users",
+			"Store the chart as an attachment on a random incident"
 		],
 		"correctIndex": 0,
-		"explanation": "My Work and related modules show tasks and items assigned to the logged-in user.",
+		"explanation": "Report visibility options allow sharing with specific users, groups, or roles; sharing with the managers' group scopes access without affecting table security.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-user-interface/my-work-modules.html"
+			"https://www.servicenow.com/docs/r/reporting-analytics/report-sharing.html"
 		]
 	}
 ]

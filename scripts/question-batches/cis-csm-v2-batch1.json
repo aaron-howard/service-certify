@@ -13,7 +13,8 @@
 		"explanation": "CSM supports B2B with accounts and contacts for business customers, and B2C with consumers for individuals purchasing products or services directly.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
-		]
+		],
+		"domain": "CSM Foundational Data Model"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -29,22 +30,22 @@
 		"explanation": "Contact relationships associate a contact from one account with another account so authorized contacts can view data and perform actions such as creating or updating cases on behalf of that account.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/c_ContactRelationships.html"
-		]
+		],
+		"domain": "CSM Foundational Data Model"
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 2,
-		"questionType": "multi",
-		"prompt": "Which two external roles are assigned to users who access Customer and Consumer Service Portals for self-service? (Choose two.)",
+		"domain": "CSM Foundational Data Model",
+		"prompt": "A retailer enables self-service for corporate buyers and direct-to-consumer shoppers. Business buyers sign in as contacts tied to their employer account, while online shoppers sign in as individuals. Which portal and access pairing should the implementer configure?",
 		"choices": [
-			"sn_customerservice.customer",
-			"sn_customerservice.consumer",
-			"sn_customerservice.agent",
-			"sn_customerservice.manager"
+			"Customer Service Portal with customer role for B2B contacts and Consumer Service Portal with consumer role for B2C shoppers",
+			"Consumer Service Portal for both audiences using the agent role for every external login",
+			"Internal agent workspace for contacts and the admin interface for consumers purchasing online",
+			"Customer Service Portal for consumers only while contacts are blocked from any self-service access"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
-		"explanation": "External portal users receive customer or consumer roles depending on whether they represent a business contact or an individual consumer; agent and manager are internal fulfillment roles.",
+		"explanation": "B2B contacts authenticate to the Customer Service Portal with the customer role and see account-scoped data; B2C shoppers use the Consumer Service Portal with the consumer role for individual purchases.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
 		]
@@ -63,7 +64,8 @@
 		"explanation": "In B2B service models, accounts represent customer organizations; contacts are employees of those accounts and cases are managed in an account-aware context.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
-		]
+		],
+		"domain": "CSM Foundational Data Model"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -79,6 +81,7 @@
 		"explanation": "B2C deployments use consumers as individual customers who manage cases for products they purchased, whereas B2B contacts represent people employed by customer accounts.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
-		]
+		],
+		"domain": "CSM Foundational Data Model"
 	}
 ]

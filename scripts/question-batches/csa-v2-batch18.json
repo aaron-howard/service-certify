@@ -2,49 +2,49 @@
 	{
 		"trackCode": "CSA",
 		"order": 85,
-		"prompt": "In a client script, which object manipulates form fields?",
+		"prompt": "Your dev update set contains a form layout change, an incident business rule, and a UI policy. What is the correct path to validate them on test?",
 		"choices": [
-			"g_form",
-			"current on the server",
-			"GlideRecord in the browser",
-			"gs on the client"
+			"Complete the update set in dev, export or retrieve it, then preview and commit on test",
+			"Email the XML to end users for manual entry",
+			"Reload the same CSV import set on test without a transform",
+			"Grant every user the admin role on test"
 		],
 		"correctIndex": 0,
-		"explanation": "g_form provides client-side methods such as getValue, setValue, and setMandatory on the form.",
+		"explanation": "Update sets move grouped configuration through complete, export/retrieve, preview, and commit steps across instances.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/update-sets.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 86,
+		"prompt": "On the incident form, priority must become mandatory when category changes to Software. You add an onChange client script. Which API call enforces mandatory?",
+		"choices": [
+			"g_form.setMandatory('priority', true)",
+			"current.priority.setMandatory(true)",
+			"gs.setMandatory on the server",
+			"GlideRecord.setMandatory in the browser"
+		],
+		"correctIndex": 0,
+		"explanation": "The g_form client API controls mandatory, visible, and read-only state on the form in client scripts.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/client-scripts.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
-		"order": 86,
-		"prompt": "What does gs.info() do in a server script?",
-		"choices": [
-			"Writes an informational message to the system log",
-			"Displays a browser alert",
-			"Submits the form",
-			"Activates a plugin"
-		],
-		"correctIndex": 0,
-		"explanation": "GlideSystem logging methods such as gs.info() record messages in the system log for debugging.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/glidesystem.html"
-		]
-	},
-	{
-		"trackCode": "CSA",
 		"order": 87,
-		"prompt": "Which artifacts are commonly moved between instances using Update Sets? (Choose two.)",
+		"questionType": "multi",
+		"prompt": "An update set retrieved on test contains customization artifacts. Which record types are commonly included? (Choose two.)",
 		"choices": [
 			"Business Rules",
 			"UI Policies",
-			"User password hashes",
-			"All incident transactional data by default"
+			"End-user password values",
+			"Every historical incident row"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [0, 1],
-		"questionType": "multi",
-		"explanation": "Update sets capture configuration like business rules and UI policies; passwords and bulk transactional data are not typical update set content.",
+		"explanation": "Update sets package configuration such as business rules and UI policies, not passwords or bulk transactional data.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/update-sets.html"
 		]
@@ -52,33 +52,36 @@
 	{
 		"trackCode": "CSA",
 		"order": 88,
-		"prompt": "What is the recommended approach before committing an retrieved update set on production?",
+		"questionType": "multi",
+		"prompt": "You are preparing a data migration weekend. Which preparatory actions should the administrator complete? (Choose three.)",
 		"choices": [
-			"Preview and test the update set in a sub-production instance first",
-			"Skip preview to save time",
-			"Delete all ACLs",
-			"Disable all business rules globally"
+			"Validate transform maps and coalesce keys on a sub-production instance",
+			"Preview retrieved update sets before production commit",
+			"Verify import set tables and data sources load expected row counts",
+			"Delete all ACLs to speed up transforms"
 		],
 		"correctIndex": 0,
-		"explanation": "Update sets should be previewed and validated in sub-production before committing to production to avoid conflicts.",
+		"correctIndexes": [0, 1, 2],
+		"explanation": "Migration readiness includes testing transforms, previewing update sets, and confirming staging loads; removing ACLs is unsafe.",
 		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/integrate-applications/import-sets.html",
 			"https://www.servicenow.com/docs/r/platform-administration/update-sets.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 89,
-		"prompt": "Which client script type runs when a user changes a field value on a form?",
+		"prompt": "Before committing a retrieved update set on production, leadership requires validation in a lower environment. What reduces deployment risk?",
 		"choices": [
-			"onChange",
-			"onLoad only",
-			"Scheduled Job",
-			"Import field mapping step"
+			"Preview the update set on sub-production and resolve conflicts first",
+			"Skip preview because production is the source of truth",
+			"Commit during peak hours without communication",
+			"Disable every business rule globally on production"
 		],
 		"correctIndex": 0,
-		"explanation": "onChange client scripts fire when a field value changes, enabling dynamic form behavior.",
+		"explanation": "Previewing update sets in sub-production surfaces conflicts before changes reach production.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/client-scripts.html"
+			"https://www.servicenow.com/docs/r/platform-administration/update-sets.html"
 		]
 	}
 ]

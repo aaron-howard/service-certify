@@ -2,18 +2,19 @@
 	{
 		"trackCode": "CIS-EM",
 		"order": 20,
-		"prompt": "During event processing, what does CI binding enable for an operator reviewing a new alert?",
+		"prompt": "An operator opens a new alert but cannot see which database server is affected because CI binding failed. What does successful CI binding provide in this situation?",
 		"choices": [
-			"Linking the alert to affected configuration items for impact and ownership context",
-			"Bypassing normalization so raw JSON payloads display on the alert without parsing",
-			"Replacing connector credentials with manual spreadsheet uploads from the NOC team",
-			"Disabling correlation logic for all warning-level monitoring signals by default"
+			"Links the alert to affected configuration items for impact and ownership context",
+			"Bypasses normalization so raw JSON payloads display on the alert without parsing",
+			"Replaces connector credentials with manual spreadsheet uploads from the NOC team",
+			"Disables correlation logic for all warning-level monitoring signals by default"
 		],
 		"correctIndex": 0,
 		"explanation": "CI binding associates events and alerts with configuration items so responders can assess service impact and route work to the correct owners.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/create-event-rule.html"
-		]
+		],
+		"domain": "Event Configuration and Use"
 	},
 	{
 		"trackCode": "CIS-EM",
@@ -30,7 +31,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/create-event-rule.html",
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/event-rules.html"
-		]
+		],
+		"domain": "Event Configuration and Use"
 	},
 	{
 		"trackCode": "CIS-EM",
@@ -46,7 +48,8 @@
 		"explanation": "Placeholder CI binding hides the true affected asset, which degrades triage quality and can delay response to the correct service owners.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/create-event-rule.html"
-		]
+		],
+		"domain": "Event Configuration and Use"
 	},
 	{
 		"trackCode": "CIS-EM",
@@ -62,7 +65,8 @@
 		"explanation": "Testing with realistic payloads verifies that suppression and classification logic keeps critical signals visible while reducing alert noise.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/event-rules.html"
-		]
+		],
+		"domain": "Event Configuration and Use"
 	},
 	{
 		"trackCode": "CIS-EM",
@@ -78,6 +82,7 @@
 		"explanation": "Sustainable rule governance requires clear ownership, controlled changes, and periodic review against operational KPIs as sources change.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/event-rules.html"
-		]
+		],
+		"domain": "Event Configuration and Use"
 	}
 ]

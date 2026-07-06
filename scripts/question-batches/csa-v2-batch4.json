@@ -2,81 +2,81 @@
 	{
 		"trackCode": "CSA",
 		"order": 15,
-		"prompt": "How can a user save a frequently used filter on a list for quick reuse?",
+		"prompt": "A service desk lead needs to move twelve open incidents to a different assignment group without opening each record. Which approach accomplishes this from the incident list?",
 		"choices": [
-			"Save the filter and optionally share it with other users or groups",
-			"Export the list to CSV only",
-			"Remove the table from the dictionary entirely",
-			"Convert the list to a homepage gauge"
+			"Select the rows with checkboxes, then use list editing or a list action to update the assignment group in bulk",
+			"Delete the incidents and recreate them under the new group",
+			"Ask each caller to resubmit their incident to the other group",
+			"Export the list, edit it offline, and import it as brand-new records"
 		],
 		"correctIndex": 0,
-		"explanation": "List filters can be saved and shared so users can quickly reapply common query conditions.",
+		"explanation": "Lists support multi-row selection with list editing and context actions, letting a user update a field such as Assignment group across many records at once.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-user-interface/list-filters.html"
+			"https://www.servicenow.com/docs/r/platform-user-interface/list-editing.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 16,
-		"prompt": "Why do users apply tags to records in ServiceNow?",
+		"prompt": "The Network group wants a reusable list filter showing all active incidents assigned to their group. How should an administrator meet this request?",
 		"choices": [
-			"To label records for grouping, searching, and informal classification",
-			"To replace access control rules",
-			"To encrypt field values",
-			"To launch network Discovery scans"
+			"Build the condition on the incident list, save the filter, and set its visibility to the Network group",
+			"Create a scheduled job that emails the group a record count each hour",
+			"Add a new true/false field on incident named Network Active",
+			"Instruct each member to rebuild the condition manually every morning"
 		],
 		"correctIndex": 0,
-		"explanation": "Tags provide lightweight labels users can apply to records for organization and search.",
+		"explanation": "Filters built in the condition builder can be saved and shared with visibility options (just the user, a group, or everyone), so the whole Network group can reuse the same saved filter.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-user-interface/tags.html"
+			"https://www.servicenow.com/docs/r/platform-user-interface/saved-filters.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 17,
-		"prompt": "Which module displays tasks assigned to the user's group but not yet assigned to an individual?",
+		"prompt": "A fulfiller wants a list of incidents that are either priority 1, or priority 2 with the category Network. Which condition builder feature makes this possible?",
 		"choices": [
-			"My Groups Work",
-			"My Teams Work",
-			"My Groups Tasks",
-			"My Teams Tasks"
+			"Combining AND conditions with an OR clause to create separate condition branches",
+			"Typing a raw SQL statement into the list search box",
+			"Applying two saved filters to the list at the same time",
+			"Sorting the list by priority and reading only the top rows"
 		],
 		"correctIndex": 0,
-		"explanation": "The My Groups Work module lists open tasks for the user's groups that have no individual assignee yet.",
+		"explanation": "The condition builder supports AND/OR logic; an OR clause starts a new branch so complex combinations like 'P1 OR (P2 AND Network)' can be expressed without code.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-user-interface/my-work-modules.html"
+			"https://www.servicenow.com/docs/r/platform-user-interface/condition-builder.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 18,
-		"prompt": "Which related list on a form shows child tasks linked to the current record?",
+		"prompt": "A manager wants every service desk agent to see the same default columns on the incident list, while one senior agent keeps a personal layout. How do these two needs coexist?",
 		"choices": [
-			"Related Lists configured on the form layout",
-			"Order Guides for catalog",
-			"Field mapping transforms",
-			"Migration update packages"
+			"An admin configures the table's default list layout, and individual personalizations override it only for the user who made them",
+			"Default layouts and personal layouts cannot exist on the same table",
+			"The senior agent must be moved to a separate incident table",
+			"Personal layouts automatically become the default for the entire company"
 		],
 		"correctIndex": 0,
-		"explanation": "Related lists on a form display associated records such as child tasks, approvals, or attachments.",
+		"explanation": "The admin-defined list layout is the default everyone inherits; a user's personalized column set is stored per user and affects only that user's view.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-user-interface/related-lists.html"
+			"https://www.servicenow.com/docs/r/platform-user-interface/list-personalization.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 19,
-		"prompt": "What does Configure > Form Layout allow an administrator to do?",
+		"prompt": "Support agents need a compact Incident form, while administrators need extra fields for configuration troubleshooting on the same table. How should this be configured?",
 		"choices": [
-			"Add, remove, and arrange fields and related lists on a form",
-			"Run an import set load job",
-			"Enable a licensed plugin",
-			"Commit a pending update set"
+			"Create separate form views for each audience and control which view loads with view rules or user selection",
+			"Add all fields to a single form and tell agents to ignore the extras",
+			"Build a second incident table that only administrators use",
+			"Hide fields from agents by removing them from the database entirely"
 		],
 		"correctIndex": 0,
-		"explanation": "Form Layout lets admins control which fields and related lists appear on a table's form and their order.",
+		"explanation": "Form views present different layouts of the same table; view rules (or manual view switching) determine which view a given audience sees, so agents and admins can each get an appropriate form.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-user-interface/form-layout.html"
+			"https://www.servicenow.com/docs/r/platform-user-interface/form-views.html"
 		]
 	}
 ]

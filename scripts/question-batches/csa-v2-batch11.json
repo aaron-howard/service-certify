@@ -2,15 +2,15 @@
 	{
 		"trackCode": "CSA",
 		"order": 50,
-		"prompt": "Which portal do most end users access for self-service catalog and knowledge?",
+		"prompt": "Contractors should browse catalog and knowledge in a branded workspace while IT staff keep the classic navigator. Which experience do you enable for them?",
 		"choices": [
-			"Service Portal or Employee Center",
-			"The CMDB Manager workspace only",
-			"The MID Server health dashboard",
-			"The update set comparison screen"
+			"Employee Center or Service Portal with appropriate roles",
+			"The CMDB workspace exclusively",
+			"The update set retrieval console",
+			"The MID Server installation wizard"
 		],
 		"correctIndex": 0,
-		"explanation": "Service Portal and Employee Center provide self-service access to catalog, knowledge, and cases for end users.",
+		"explanation": "Employee Center and Service Portal deliver self-service catalog and knowledge to end users outside the admin UI.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-user-interface/service-portal.html"
 		]
@@ -18,64 +18,70 @@
 	{
 		"trackCode": "CSA",
 		"order": 51,
-		"prompt": "In the ServiceNow data schema, what does a table represent?",
+		"prompt": "You create u_project_task as a table extension of Task. Which fields are available on new records without redefining them?",
 		"choices": [
-			"A collection of records stored as rows with a defined set of fields",
-			"A homepage widget only",
-			"A MID Server credential",
-			"A plugin license file"
+			"Number, Opened by, Assignment group, and State from the parent Task table",
+			"Only the sys_id and nothing else from Task",
+			"Fields from cmdb_ci only",
+			"Fields from sys_import_set_row only"
 		],
 		"correctIndex": 0,
-		"explanation": "Tables are the fundamental data containers; each row is a record with columns defined in the dictionary.",
+		"explanation": "Extended tables inherit columns defined on the parent table such as Task numbering, assignment, and state.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/data-schema.html"
+			"https://www.servicenow.com/docs/r/platform-administration/table-extension.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 52,
-		"prompt": "What is defined in the Dictionary for a field?",
+		"questionType": "multi",
+		"prompt": "You are onboarding security auditors who need read-only CMDB access. Which statements about groups and roles are correct? (Choose two.)",
 		"choices": [
-			"Field name, type, max length, and attributes such as mandatory or read-only",
-			"Only the homepage layout",
-			"Only MID Server routing",
-			"Only plugin activation order"
+			"Roles assigned to a group apply to every member of that group",
+			"A user may hold multiple roles simultaneously",
+			"Groups automatically delete ACL rules they reference",
+			"Roles can only be granted by importing update sets"
 		],
 		"correctIndex": 0,
-		"explanation": "Dictionary entries define each column's type, constraints, and behavior on a table.",
+		"correctIndexes": [0, 1],
+		"explanation": "Users accumulate roles directly and through group membership; groups distribute roles but do not manage ACL lifecycle.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/dictionary.html"
+			"https://www.servicenow.com/docs/r/platform-security/roles.html",
+			"https://www.servicenow.com/docs/r/platform-administration/groups.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 53,
-		"prompt": "Which mechanism controls who can read or write records and fields?",
+		"prompt": "After extending Task for u_change_task, agents complain the State field is missing on the form although it exists on Incident. What most likely explains the behavior?",
 		"choices": [
-			"Access Control (ACL) rules",
-			"Homepage gauges",
-			"Visual Task Board lanes",
-			"Service catalog categories"
+			"The form layout for the extended table was never customized to include inherited fields",
+			"Task extensions cannot inherit any parent fields",
+			"State is stripped by every import set load",
+			"Coalesce always removes choice fields"
 		],
 		"correctIndex": 0,
-		"explanation": "ACLs evaluate roles, conditions, and scripts to grant or deny operations on tables and fields.",
+		"explanation": "Inherited fields exist in the schema but must be placed on the extended table form like any other column.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/access-control-rules.html"
+			"https://www.servicenow.com/docs/r/platform-administration/table-extension.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 54,
-		"prompt": "When no ACL grants an operation, what is the default platform behavior?",
+		"questionType": "multi",
+		"prompt": "A new analytics team needs workspace access next week. Which administrator actions should you complete? (Choose three.)",
 		"choices": [
-			"Access is denied",
-			"Access is granted to all users",
-			"The table is deleted",
-			"The user becomes admin"
+			"Create or verify user records and assign appropriate roles",
+			"Share or publish reports and dashboards they require",
+			"Grant table and field access through ACLs or scoped application access",
+			"Delete all business rules globally before go-live"
 		],
 		"correctIndex": 0,
-		"explanation": "ServiceNow uses deny-by-default security; an explicit ACL must grant the operation.",
+		"correctIndexes": [0, 1, 2],
+		"explanation": "Onboarding combines user/role setup, report access, and data security via ACLs; disabling business rules is not a standard onboarding step.",
 		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/user-administration.html",
 			"https://www.servicenow.com/docs/r/platform-security/access-control-rules.html"
 		]
 	}

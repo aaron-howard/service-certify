@@ -13,7 +13,9 @@
 		"explanation": "Sustained CMDB governance depends on routine reviews of health KPIs, assigned owners, and tracked remediation—not one-time or ad hoc efforts.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-governance.html"
-		]
+		],
+		"domain": "Govern",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -30,7 +32,9 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-governance.html",
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-health-dashboard-overview.html"
-		]
+		],
+		"domain": "Govern",
+		"contentDifficulty": "Advanced"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -47,25 +51,28 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-lifecycle-management.html",
 			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-data-manager.html"
-		]
+		],
+		"domain": "Govern",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
 		"order": 68,
-		"questionType": "multi",
-		"prompt": "Which two CMDB Data Manager policy controls reduce inconsistent bulk updates? (Choose two.)",
+		"domain": "Govern",
+		"prompt": "A transform map coalesce field uses hostname alone, but imports keep creating duplicate Application Server CIs because hostnames differ by case and domain suffix. What is the most appropriate fix?",
 		"choices": [
-			"Approval workflows required before mass attribute changes execute",
-			"Data policy validation applied to targeted CI populations",
-			"Permanent deactivation of all identification and reconciliation rules",
-			"Mandatory deletion of custom CI classes after every import run"
+			"Adjust coalesce and identification to use stable keys such as serial number or a normalized identifier entry defined for the class",
+			"Remove coalesce entirely so every staging row inserts a new CI record",
+			"Disable the transform map and edit cmdb_ci records manually each week",
+			"Delete the Application Server class and reload all CIs into cmdb_ci"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
-		"explanation": "Governed bulk operations combine approval gates and data policies; disabling IRE or deleting classes undermines CMDB integrity.",
+		"explanation": "Weak coalesce keys cause duplicate inserts; aligning coalesce and identification with authoritative stable identifiers resolves recurring duplicate creation at the source.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-data-manager.html"
-		]
+			"https://www.servicenow.com/docs/r/washingtondc/integrate-applications/system-import-sets/c_CreatingNewTransformMaps.html",
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_IdentificationAndReconciliationEngine.html"
+		],
+		"contentDifficulty": "Advanced"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -87,14 +94,28 @@
 			"Identifies the accountable support group for the CI"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Lifecycle attributes communicate deployment, operational, retirement, and ownership context for governed CMDB records.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-lifecycle-management.html"
-		]
+		],
+		"domain": "Govern",
+		"contentDifficulty": "Foundation"
 	}
 ]

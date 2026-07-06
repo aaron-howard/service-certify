@@ -13,7 +13,8 @@
 		"explanation": "CSM supports B2B models where cases relate to accounts and contacts, and B2C models where cases relate to consumers, so case type configuration must reflect the supported engagement model.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/customer-service-management-data-model.html"
-		]
+		],
+		"domain": "CSM Configuration"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -29,7 +30,8 @@
 		"explanation": "CTI/OpenFrame integrations connect the phone channel to CSM so inbound calls surface caller identity and can generate or link cases with context during the interaction.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/openframe-for-csm.html"
-		]
+		],
+		"domain": "CSM Configuration"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -45,7 +47,8 @@
 		"explanation": "Targeted communications let CSM teams define recipient audiences and send proactive, campaign-style outbound messages such as maintenance or outage notices to affected customers.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/targeted-communications-for-csm.html"
-		]
+		],
+		"domain": "CSM Configuration"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -59,11 +62,15 @@
 			"A discovery schedule that scans customer devices before any communication is released"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Targeted communications need a defined audience (recipients) and message content or template; they do not require CAB approval or discovery schedules.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/targeted-communications-for-csm.html"
-		]
+		],
+		"domain": "CSM Configuration"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -79,6 +86,7 @@
 		"explanation": "SLA definitions with conditions and schedules measure elapsed time against commitments, driving timers, breaches, and escalations for qualifying customer cases.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/service-level-agreements-for-csm.html"
-		]
+		],
+		"domain": "CSM Configuration"
 	}
 ]

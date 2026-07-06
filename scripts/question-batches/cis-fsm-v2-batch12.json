@@ -13,7 +13,8 @@
 		"explanation": "Territory management and routing depend on accurate geographic location data; poor geocoding leads to incorrect territory assignment.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/c_TerritoryManagement.html"
-		]
+		],
+		"domain": "Implementing Field Service Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -29,7 +30,8 @@
 		"explanation": "Stockrooms organize inventory items such as parts and assets in physical or virtual storage locations used during field operations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/asset-management-for-field-service/configuring-stockrooms.html"
-		]
+		],
+		"domain": "Implementing Field Service Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -45,23 +47,25 @@
 		"explanation": "Preferred stockrooms for work groups let agents search parts from designated stockrooms using the Now Mobile Agent application.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/asset-management-for-field-service/setup-preferred-stockrooms.html"
-		]
+		],
+		"domain": "Implementing Field Service Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 58,
-		"prompt": "Work orders are linked to customer accounts during implementation. What operational benefit does this relationship provide?",
+		"prompt": "Technicians frequently return unused serial-tracked parts from jobs to the central warehouse. Which inventory process should be configured?",
 		"choices": [
-			"Service history and customer context are preserved across repeat visits to the account",
-			"All open incidents automatically close when the related work order is created",
-			"Contractor invoices bypass approval when the account record is populated",
-			"SLA timers are removed for work tied to accounts marked as inactive"
+			"Return part transactions that restock the warehouse and update quantities consumed versus returned on the task",
+			"Delete the work order task so parts vanish from inventory without an audit trail",
+			"Convert returned parts into consumable catalog items ordered through the service portal",
+			"Disable stockroom records so returns are tracked only in external spreadsheets"
 		],
 		"correctIndex": 0,
-		"explanation": "Account relationships on work orders preserve customer context and service history for planning, communication, and repeat visits.",
+		"explanation": "Return and consumption transactions keep warehouse and van inventory accurate and provide traceability for billing and forecasting.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/Work-order-fsm.html"
-		]
+		],
+		"domain": "Implementing Field Service Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -77,6 +81,7 @@
 		"explanation": "Work orders store associated configuration items and assets; asset records provide install base context and prior service history.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/Work-order-fsm.html"
-		]
+		],
+		"domain": "Implementing Field Service Processes"
 	}
 ]

@@ -2,81 +2,83 @@
 	{
 		"trackCode": "CSA",
 		"order": 40,
-		"prompt": "What is Workflow Studio used for?",
+		"prompt": "An administrator loaded a spreadsheet of new hires into an import set and now needs each staging row to create a record on the User table with the right field values. What must be configured?",
 		"choices": [
-			"Designing and managing flows that automate processes across the platform",
-			"Editing CMDB class icons only",
-			"Running Discovery schedules",
-			"Managing payroll deductions"
+			"A transform map linking the import set staging columns to the corresponding target table fields",
+			"A UI action that copies rows when an admin clicks it",
+			"A notification that emails the spreadsheet to the platform team",
+			"A dashboard widget summarizing the staged rows"
 		],
 		"correctIndex": 0,
-		"explanation": "Workflow Studio provides a design environment for building and maintaining automated workflows and flows.",
+		"explanation": "Transform maps define how import set staging fields translate to fields on the target table; running the transform moves the staged data into User records according to those mappings.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/now-platform/workflow-studio.html"
+			"https://www.servicenow.com/docs/r/integrate-applications/transform-maps.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 41,
-		"prompt": "How does Virtual Agent support self-service?",
+		"prompt": "The knowledge manager requires that draft articles be reviewed and approved before customers can find them in search. Which knowledge management capability enforces this?",
 		"choices": [
-			"Conversational chat that can answer questions and initiate catalog or case flows",
-			"By replacing all ACLs",
-			"By deleting incident records automatically",
-			"By disabling the Service Catalog"
+			"A publish workflow on the knowledge base that routes articles through review before they reach the Published state",
+			"A rule deleting all draft articles after seven days",
+			"A list layout hiding the article body from readers",
+			"A reminder email asking authors to be careful"
 		],
 		"correctIndex": 0,
-		"explanation": "Virtual Agent provides chat-based self-service that can deflect to knowledge, catalog, or live agents.",
+		"explanation": "Each knowledge base specifies publish and retire workflows; a review-based publish workflow keeps articles in draft/review states until approvers move them to Published, when they become searchable by the audience.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/now-platform/virtual-agent.html"
+			"https://www.servicenow.com/docs/r/knowledge-management/knowledge-workflows.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 42,
-		"prompt": "What is a record producer in the Service Catalog?",
+		"prompt": "During a data load, an administrator wants to confirm what the platform did with a CSV file before any records reach the target table. Where does imported data sit at this stage?",
 		"choices": [
-			"A catalog item that creates a task record instead of a requested item",
-			"A scheduled Discovery probe",
-			"An update set container",
-			"A MID Server probe"
+			"In a staging table generated for the import set, where rows wait until a transform runs",
+			"Directly inside the target table with a hidden flag",
+			"In the email outbox as unsent messages",
+			"In the browser cache of the administrator's session"
 		],
 		"correctIndex": 0,
-		"explanation": "Record producers use catalog-style forms to create records directly on target tables such as incidents.",
+		"explanation": "Loading data creates an import set whose rows live in a staging table; nothing touches the target table until a transform map is executed, which is what makes review and re-runs safe.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-service-management/record-producers.html"
+			"https://www.servicenow.com/docs/r/integrate-applications/import-sets.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 43,
-		"prompt": "Which knowledge feature lets users rate whether an article was helpful?",
+		"prompt": "A process owner is learning Flow Designer to automate task routing. Which statements describe the building blocks of a flow? (Choose two.)",
 		"choices": [
-			"Article feedback and voting",
-			"Transform map coalesce",
-			"Import set coalesce preview",
-			"Plugin activation log"
+			"A trigger starts the flow, such as a record being created or updated, or a schedule",
+			"Actions and flow logic define the steps executed after the trigger fires",
+			"Every flow must be written entirely in server-side script with no visual editor",
+			"Flows can only run against the incident table"
 		],
 		"correctIndex": 0,
-		"explanation": "Knowledge articles support feedback mechanisms so authors and owners can measure usefulness.",
+		"correctIndexes": [0, 1],
+		"questionType": "multi",
+		"explanation": "Flows consist of a trigger (record-based or scheduled) plus a sequence of actions and logic in a natural-language visual editor; they work across tables and require no hand-written script for common automation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/knowledge-management/knowledge-feedback.html"
+			"https://www.servicenow.com/docs/r/build-workflows/flow-designer.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 44,
-		"prompt": "What does a catalog fulfillment flow typically automate?",
+		"prompt": "Whenever an incident is created with Priority 1, the major incident manager must get an alert and a follow-up task must be generated automatically. How should an administrator implement this in Flow Designer?",
 		"choices": [
-			"Approval, provisioning tasks, and notifications after a catalog order",
-			"CMDB identification only",
-			"MID Server installation",
-			"Payroll processing"
+			"Build a flow triggered on incident creation with a priority condition, then add actions to send the notification and create the task",
+			"Watch the incident list all day and react manually to red rows",
+			"Add a mandatory checkbox asking callers to notify the manager themselves",
+			"Lower the priority of new incidents so the situation never occurs"
 		],
 		"correctIndex": 0,
-		"explanation": "Catalog fulfillment flows route approvals and create tasks to deliver the ordered service.",
+		"explanation": "A record-triggered flow filtered to Priority 1 incidents can chain actions such as Send Email (or notification) and Create Record for the follow-up task, automating the whole response without code.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-service-management/catalog-fulfillment.html"
+			"https://www.servicenow.com/docs/r/build-workflows/flow-designer.html"
 		]
 	}
 ]

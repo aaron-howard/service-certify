@@ -13,10 +13,12 @@ Base URL: `https://raw.githubusercontent.com/ServiceNow/ServiceNowDocs/australia
 
 | # | Domain | % | Bank | Orders |
 |---|--------|---|------|--------|
-| 1 | Discovery Pattern Design | 35% | 26 | 0–25 |
-| 2 | Discovery Configuration | 35% | 26 | 26–51 |
-| 3 | Configuration Management Database | 15% | 11 | 52–62 |
-| 4 | Discovery Engagement Readiness | 15% | 12 | 63–74 |
+| 1 | Discovery Pattern Design | ~31% | 23 | 0–22 |
+| 2 | Discovery Configuration | ~29% | 22 | 23–44 |
+| 3 | Configuration Management Database | ~20% | 15 | 45–59 |
+| 4 | Discovery Engagement Readiness | ~20% | 15 | 60–74 |
+
+See `CIS-DISCO-Question-Rewrites.md` for standalone realism rework details.
 
 ---
 
@@ -38,14 +40,14 @@ Multi-select allowed with `questionType: "multi"` and `correctIndexes`.
 | 3 | 10–14 | Discovery Pattern Design | DONE |
 | 4 | 15–19 | Discovery Pattern Design | DONE |
 | 5 | 20–24 | Discovery Pattern Design | DONE |
-| 6 | 25–29 | Pattern Design (25) + Discovery Configuration (26–29) | DONE |
+| 6 | 25–29 | Discovery Configuration (25–29) | DONE |
 | 7 | 30–34 | Discovery Configuration | DONE |
 | 8 | 35–39 | Discovery Configuration | DONE |
 | 9 | 40–44 | Discovery Configuration | DONE |
-| 10 | 45–49 | Discovery Configuration | DONE |
-| 11 | 50–54 | Discovery Config (50–51) + CMDB (52–54) | DONE |
+| 10 | 45–49 | Configuration Management Database | DONE |
+| 11 | 50–54 | Configuration Management Database | DONE |
 | 12 | 55–59 | Configuration Management Database | DONE |
-| 13 | 60–64 | CMDB (60–62) + Engagement Readiness (63–64) | DONE |
+| 13 | 60–64 | Discovery Engagement Readiness | DONE |
 | 14 | 65–69 | Discovery Engagement Readiness | DONE |
 | 15 | 70–74 | Discovery Engagement Readiness | DONE |
 
@@ -63,6 +65,7 @@ Multi-select allowed with `questionType: "multi"` and `correctIndexes`.
 ## Merge and validate
 
 ```bash
+node scripts/tag-cis-disco-domains.mjs
 node scripts/extract-questions-from-transcripts.mjs --merge-batches scripts/question-batches/cis-disco-v2-batch*.json
 node scripts/lint-cis-disco-realism.mjs --orders=0-74
 npm test -- --run src/convex/seed/cis-disco-realism.test.ts src/convex/seed/cis-disco.test.ts src/convex/seed/trackQuality.test.ts

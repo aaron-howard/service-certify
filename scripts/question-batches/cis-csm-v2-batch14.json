@@ -13,7 +13,8 @@
 		"explanation": "Case digests generate periodic summaries of case activity so stakeholders receive a consolidated view of volumes, status, and trends without opening individual cases.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/case-digest-for-csm.html"
-		]
+		],
+		"domain": "Case Management"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -29,7 +30,8 @@
 		"explanation": "Service definitions and entitlements describe the services and support levels a customer is eligible for, driving what cases and offerings apply to that account or contract.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/entitlements-for-csm.html"
-		]
+		],
+		"domain": "Case Management"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -37,15 +39,16 @@
 		"prompt": "How do entitlements influence what happens when a contact submits a new case in CSM?",
 		"choices": [
 			"They determine the support the contact is eligible for and which SLAs apply to the case",
-			"They set the background color theme of the agent workspace list view columns only",
-			"They control the order in which knowledge article categories appear in search results",
-			"They decide the physical data center region where the ServiceNow instance is hosted"
+			"They drive assignment rule routing by product category without validating coverage",
+			"They control which knowledge article categories appear first in portal search results",
+			"They define default case type selection based on the contact's portal login history"
 		],
 		"correctIndex": 0,
 		"explanation": "Entitlements define the level and type of support a customer is eligible for, which drives applicable SLAs and validates that the case falls within the customer's coverage.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/entitlements-for-csm.html"
-		]
+		],
+		"domain": "Case Management"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -61,7 +64,8 @@
 		"explanation": "Attaching a knowledge article to a case links the proven solution to the case and enables the agent to share it with the customer, promoting consistent, faster resolution.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/knowledge-management-for-csm.html"
-		]
+		],
+		"domain": "Case Management"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -77,6 +81,7 @@
 		"explanation": "The CSM Configurable Workspace gives agents a unified, modern interface with contextual panels, guided actions, and tools to work cases and interactions efficiently.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/csm-configurable-workspace.html"
-		]
+		],
+		"domain": "Case Management"
 	}
 ]

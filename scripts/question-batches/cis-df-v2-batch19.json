@@ -14,24 +14,28 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-workspace-unified-map.html",
 			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBOverview.html"
-		]
+		],
+		"domain": "Insight",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
 		"order": 91,
-		"prompt": "An incident manager traces upstream failures for a database CI and needs a hierarchical relationship walk. Which legacy CMDB visualization capability still informs the modern workspace map experience?",
+		"domain": "Insight",
+		"prompt": "An operations team migrated from legacy Dependency Views to Unified Map, but analysts report missing middleware hops that Service Mapping previously exposed on the same application CI. What should they verify first?",
 		"choices": [
-			"Dependency Views, which show upstream and downstream CI relationships for impact analysis",
-			"Import set staging tables used during CSV loads",
-			"Catalog client scripts that validate variable input",
-			"Update set preview diffs for application scope"
+			"That Service Mapping patterns and dependency relationships still exist on the home CI and are included in the Unified Map context",
+			"That import set staging tables were truncated before opening the map",
+			"That all users switched to the classic UI theme for list personalization",
+			"That update sets were committed in production before reviewing map layout CSS"
 		],
 		"correctIndex": 0,
-		"explanation": "Dependency Views established hierarchical relationship walks for impact analysis; Unified Map builds on that dependency context within CMDB Workspace.",
+		"explanation": "Unified Map integrates dependency and service mapping context; missing hops often mean Service Mapping relationships were not populated or the home CI lacks the expected mapped dependencies.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-workspace-unified-map.html",
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_DependencyViews.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/concept/c_ServiceMapping.html"
+		],
+		"contentDifficulty": "Advanced"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -47,7 +51,9 @@
 		"explanation": "Each Data Foundations metric can link to a remediation playbook article in Now Support with structured analysis and fix guidance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html"
-		]
+		],
+		"domain": "Insight",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -61,12 +67,17 @@
 			"Remove ownership fields to simplify certification workflows"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Sustained improvement relies on ongoing metric monitoring plus repeatable queries and playbooks—not turning off collection or stripping ownership accountability.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html",
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/querying-cmdb.html"
-		]
+		],
+		"domain": "Insight",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -83,6 +94,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_GovernanceInCSDM.html",
 			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/csdm-foundation-planning.html"
-		]
+		],
+		"domain": "CSDM Fundamentals",
+		"contentDifficulty": "Intermediate"
 	}
 ]

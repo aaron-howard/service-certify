@@ -13,20 +13,22 @@
 		"explanation": "Contracts capture commercial support agreements for accounts; entitlements derived from contracts define eligibility and service levels applied during case handling.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/set-up-post-sales-support.html"
-		]
+		],
+		"domain": "CSM Foundational Data Model"
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 11,
-		"prompt": "What is the role of an entitlement in CSM post-sales support?",
+		"domain": "CSM Foundational Data Model",
+		"prompt": "A global customer invoices support usage across three regional subsidiaries that roll up to one parent organization. Which CSM structure lets agents view cases and assets across the corporate family?",
 		"choices": [
-			"It defines the support level a customer receives for covered products or services",
-			"It replaces case assignment rules so every case routes to the CSM admin role",
-			"It stores chat transcripts from WhatsApp conversations with consumers",
-			"It generates product models automatically from inbound support emails"
+			"Parent and child accounts linked in an account hierarchy",
+			"Contact relationships that merge all subsidiaries into one shared contact record",
+			"Sold products that automatically inherit the parent assignment group on every case",
+			"Account relationships with a reseller type linking subsidiaries without consolidated hierarchy visibility"
 		],
 		"correctIndex": 0,
-		"explanation": "Entitlements specify support coverage such as response commitments and eligible services, often linked to contracts and install base or sold product records.",
+		"explanation": "Account hierarchies model parent and child customer organizations so consolidated visibility and support context span related business entities.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/configure-csm-entitlements.html"
 		]
@@ -45,20 +47,22 @@
 		"explanation": "Entitlements tied to customer agreements and product coverage allow agents to confirm whether the reported issue qualifies for contracted support.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/configure-csm-entitlements.html"
-		]
+		],
+		"domain": "CSM Foundational Data Model"
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 13,
-		"prompt": "An entitlement manager needs to change support hours on an active entitlement without creating a duplicate record. What is the recommended approach?",
+		"domain": "CSM Foundational Data Model",
+		"prompt": "A support manager must decide whether to associate a returned laptop with the customer's deployed fleet versus a one-time online purchase record. Which guidance distinguishes the correct product instance record?",
 		"choices": [
-			"Modify the existing entitlement record to update the coverage terms",
-			"Delete all install base items and recreate them under a new account",
-			"Disable the Customer Service Base Entities plugin and reload demo data",
-			"Convert the entitlement into a case type configuration admin record"
+			"Use an install base item when tracking a deployed asset at a customer location and a sold product when referencing a purchased instance from a transaction",
+			"Use a product model for both scenarios because catalog definitions replace instance tracking entirely",
+			"Use a case type configuration record whenever serial numbers appear on inbound email cases",
+			"Use an assignment rule record to store warranty dates instead of any product instance table"
 		],
 		"correctIndex": 0,
-		"explanation": "Entitlements can be modified in place to adjust coverage details such as support hours, keeping the relationship to contracts and covered products intact.",
+		"explanation": "Install base items track deployed assets at customer sites; sold products track purchased instances—choosing the correct record keeps entitlement and case context accurate.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/cce-modify-entitlement.html"
 		]
@@ -77,6 +81,7 @@
 		"explanation": "Entitlement applicability depends on configured coverage relationships to accounts, contracts, and product instances rather than arbitrary list ordering or agent preferences.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/configure-csm-entitlements.html"
-		]
+		],
+		"domain": "CSM Foundational Data Model"
 	}
 ]

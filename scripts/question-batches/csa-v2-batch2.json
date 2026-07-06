@@ -2,81 +2,81 @@
 	{
 		"trackCode": "CSA",
 		"order": 5,
-		"prompt": "Where can an administrator search across tables, knowledge, and catalog items from a single entry point?",
+		"prompt": "An agent complains that the incident list shows columns they never use. The agent wants a personal column layout without changing what coworkers see. What should the agent do?",
 		"choices": [
-			"Global search in the platform header",
-			"The MID Server log viewer",
-			"The update set preview only",
-			"The dictionary export tool"
+			"Use the list personalization gear icon to add and remove columns for their own view only",
+			"Ask an administrator to change the default list layout for the whole table",
+			"Delete the unused fields from the incident table dictionary",
+			"Create a UI policy that hides the columns for everyone"
 		],
 		"correctIndex": 0,
-		"explanation": "Global search in the header queries multiple sources (records, knowledge, catalog) from one search box.",
+		"explanation": "The personalize list (gear) icon changes column selection and order only for that user; admin-configured list layouts change the default for everyone.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-user-interface/global-search.html"
+			"https://www.servicenow.com/docs/r/platform-user-interface/list-personalization.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 6,
-		"prompt": "How does an administrator install a new application or plugin on the instance?",
+		"prompt": "Your company wants its logo and brand colors shown to all users after login. Where should an administrator make this change?",
 		"choices": [
-			"Activate the plugin or install the application from the application repository",
-			"Copy rows into sys_user manually",
-			"Disable all ACLs first",
-			"Edit the MID Server configuration"
+			"In the branding or theme configuration for the instance user interface",
+			"By editing the HTML of every form individually",
+			"By uploading the logo as an attachment on each user record",
+			"In the email server connection settings"
 		],
 		"correctIndex": 0,
-		"explanation": "Plugins and store applications are activated or installed through the application repository and plugin management.",
+		"explanation": "Instance branding (logo, colors, browser tab title) is configured centrally through UI branding/theming, not per form or per user.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/plugin-management.html"
+			"https://www.servicenow.com/docs/r/platform-user-interface/next-experience-branding.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 7,
-		"prompt": "Which setting lets a user personalize list columns and form layout without changing global configuration?",
+		"prompt": "A change freeze notice must appear in the banner across the top of the platform for all users. Which mechanism does an administrator use to control settings like this banner text?",
 		"choices": [
-			"Personalize List / Personalize Form (user-level layout)",
-			"Delete all dictionary entries for the table",
-			"Convert the table to global scope",
-			"Disable the application navigator"
+			"A system property that stores the banner message value for the instance",
+			"A client script that injects text on every form load",
+			"A record template applied to all task records",
+			"An inbound email action triggered daily"
 		],
 		"correctIndex": 0,
-		"explanation": "Users can personalize lists and forms for their own view; changes do not alter the global layout for others.",
+		"explanation": "Instance-wide behaviors such as banner text are driven by system properties, which administrators can update without code changes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-user-interface/personalize-list-form.html"
+			"https://www.servicenow.com/docs/r/platform-administration/system-properties.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 8,
-		"prompt": "Which interface is used to view and edit a single record's fields?",
+		"prompt": "A user reports they can see the Incident application menu but the Create New module is missing for them, while a coworker sees it. What should the administrator check first?",
 		"choices": [
-			"Form layout designer",
-			"Import set staging list",
-			"Transform history log",
-			"Update set comparison preview"
+			"Whether the module requires a role that the user has not been granted",
+			"Whether the incident table was accidentally deleted from the instance",
+			"Whether the user's browser needs a plugin reinstalled",
+			"Whether the coworker has a newer laptop model"
 		],
 		"correctIndex": 0,
-		"explanation": "A form displays one record's fields for viewing and editing; lists show many records in tabular format.",
+		"explanation": "Modules can specify required roles; when a user lacks the role, the module is hidden even though the rest of the application menu is visible. Comparing the module's role requirement against the user's roles is the first diagnostic step.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-user-interface/forms.html"
+			"https://www.servicenow.com/docs/r/platform-administration/application-menus-modules.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 9,
-		"prompt": "Which interface displays multiple records from a table in rows and columns?",
+		"prompt": "The service desk manager asks for a capability that is delivered as an inactive application in the platform. How does an administrator turn it on?",
 		"choices": [
-			"List view",
-			"Record form view",
-			"Homepage gauge widget",
-			"Field mapping transform"
+			"Activate the corresponding plugin or store application from the administration tools",
+			"Write a business rule that simulates the missing functionality",
+			"Reinstall the entire instance from a backup that includes it",
+			"Request every user to enable it in their personal preferences"
 		],
 		"correctIndex": 0,
-		"explanation": "List views present multiple records in a table layout with sortable columns and filters.",
+		"explanation": "Optional capabilities ship as plugins or Store applications; an administrator activates or installs them centrally, after which the feature becomes available per its own access rules.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-user-interface/lists.html"
+			"https://www.servicenow.com/docs/r/platform-administration/plugins-activation.html"
 		]
 	}
 ]

@@ -39,8 +39,24 @@ export const BANNED_STEM_PREFIXES = [
 export const BANNED_STEM_PATTERNS = [
 	/^what is the primary purpose of/i,
 	/^what is the primary objective of/i,
-	/^what is the main purpose of/i
+	/^what is the main purpose of/i,
+	/^what is the purpose of/i,
+	/^which feature is used to import data into servicenow/i,
+	/^which module stores/i,
+	/^what does the system settings/i
 ] as const;
+
+/** Minimum share of prompts that read as admin scenario/application items. */
+export const CSA_SCENARIO_MIN_RATIO = 0.65;
+
+export function isScenarioStylePrompt(prompt: string): boolean {
+	const trimmed = prompt.trim();
+	if (trimmed.length >= 90) return true;
+	if (/^(A |An |The |Your |During |When |After |Before |If a|Given |While |Upon |A service|A manager|A user|An administrator|An import|A department|A knowledge|A notification|A report|A saved|Which actions|Which statements|Which items|Which configuration|Which combination|Which tool|Which two|Which three|Choose two|Choose three|Select all)/i.test(trimmed)) {
+		return true;
+	}
+	return false;
+}
 
 export const STEM_OPENER_CAP = 4;
 
@@ -118,12 +134,27 @@ export function validateCsaQuestion(q: CsaQuestionRow): string[] {
 	return issues;
 }
 
+export function validateCsaScenarioRatio(rows: CsaQuestionRow[]): string[] {
+	const csa = rows.filter((q) => q.trackCode === 'CSA');
+	if (csa.length === 0) return [];
+	const scenarioCount = csa.filter((q) => isScenarioStylePrompt(q.prompt)).length;
+	const ratio = scenarioCount / csa.length;
+	if (ratio < CSA_SCENARIO_MIN_RATIO) {
+		return [
+			`scenario-style prompts ${scenarioCount}/${csa.length} (${Math.round(ratio * 100)}%) below minimum ${Math.round(CSA_SCENARIO_MIN_RATIO * 100)}%`
+		];
+	}
+	return [];
+}
+
 export function validateCsaTrack(rows: CsaQuestionRow[]): string[] {
 	const issues: string[] = [];
 
 	for (const q of rows) {
 		issues.push(...validateCsaQuestion(q));
 	}
+
+	issues.push(...validateCsaScenarioRatio(rows));
 
 	const openerCounts = new Map<string, number>();
 	for (const q of rows) {

@@ -13,7 +13,8 @@
 		"explanation": "Intra-day optimization reorganizes schedules in real time when tasks are canceled, delayed, or new high-priority work arrives during the day.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/schedule-optimization.html"
-		]
+		],
+		"domain": "Implementing Field Service Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -29,23 +30,25 @@
 		"explanation": "Dynamic scheduling automatically reassigns tasks when agents become unavailable, using ordering rules and constraints to maintain SLA compliance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/dynamic-scheduling.html"
-		]
+		],
+		"domain": "Implementing Field Service Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 47,
-		"prompt": "Operations leadership wants fewer windshield miles without missing priority commitments. What outcome should the automated scheduling engine target?",
+		"prompt": "Dynamic Scheduling returns no qualified agents for an urgent same-day gas leak task requiring a rare certification. What should the dispatcher do next?",
 		"choices": [
-			"Assign every task to the nearest technician regardless of skills or capacity limits",
-			"Maximize completed jobs within working hours while honoring priority and SLA constraints",
-			"Eliminate all manual dispatcher actions from daily scheduling operations entirely",
-			"Schedule all work at end of day to simplify route planning for each technician"
+			"Use Assignment assistance or manual assignment to identify the nearest qualified agent or escalate capacity with a manager",
+			"Close the work order task and wait for the nightly batch scheduling job to retry matching",
+			"Remove skill requirements from the task so any agent may be auto-assigned immediately",
+			"Convert the task into a catalog request processed by the internal service desk queue"
 		],
-		"correctIndex": 1,
-		"explanation": "The scheduling engine balances task assignment, travel reduction, and priority or SLA commitments to improve daily completion capacity.",
+		"correctIndex": 0,
+		"explanation": "When automated matching finds no agents, dispatchers use assignment assistance or manual overrides—and may escalate for capacity or contractor support.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/schedule-optimization.html"
-		]
+		],
+		"domain": "Implementing Field Service Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -58,12 +61,16 @@
 			"Remove territory membership checks from every scheduling run by default"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"questionType": "multi",
 		"explanation": "The scheduling engine auto-assigns tasks and supports intra-day reorganization; it augments rather than replaces dispatcher tools and still respects territory constraints.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/schedule-optimization.html"
-		]
+		],
+		"domain": "Implementing Field Service Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -79,6 +86,7 @@
 		"explanation": "Dynamic scheduling integrates with Workforce Optimization to display agent schedules and events on the Dispatcher Workspace calendar for informed assignments.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/dynamic-scheduling.html"
-		]
+		],
+		"domain": "Implementing Field Service Processes"
 	}
 ]

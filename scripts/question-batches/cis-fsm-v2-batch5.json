@@ -2,7 +2,7 @@
 	{
 		"trackCode": "CIS-FSM",
 		"order": 20,
-		"prompt": "Which capability gives field technicians job details, navigation support, and status updates while onsite?",
+		"prompt": "Technicians need job details, navigation, and status updates while onsite at customer locations. Which experience should the program deploy?",
 		"choices": [
 			"The Field Service Management mobile experience through Now Mobile or Agent apps",
 			"Exclusive use of the Service Desk interaction portal for phone-based ticket updates only",
@@ -13,7 +13,8 @@
 		"explanation": "FSM mobile applications provide technicians with contextual job information, navigation, and task updates directly at the customer site.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/mobile-experience-fsm.html"
-		]
+		],
+		"domain": "Field Service Management Fundamentals"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -29,7 +30,8 @@
 		"explanation": "Offline mobile support lets technicians continue working and capture data in low-connectivity areas, syncing updates when the device reconnects.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/mobile-experience-fsm.html"
-		]
+		],
+		"domain": "Field Service Management Fundamentals"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -45,7 +47,8 @@
 		"explanation": "Rich mobile completion data—including parts, photos, signatures, and notes—supports billing, audit trails, and future service context.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/mobile-experience-fsm.html"
-		]
+		],
+		"domain": "Field Service Management Fundamentals"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -61,7 +64,8 @@
 		"explanation": "Tailored mobile forms reduce friction by showing only the fields each role and job type requires during field execution.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/configuring-work-configs.html"
-		]
+		],
+		"domain": "Field Service Management Fundamentals"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -77,6 +81,7 @@
 		"explanation": "A high rate of mobile updates at the point of work indicates real adoption and fresher operational visibility for dispatch and managers.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/mobile-experience-fsm.html"
-		]
+		],
+		"domain": "Field Service Management Fundamentals"
 	}
 ]

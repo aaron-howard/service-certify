@@ -14,7 +14,9 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html",
 			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBOverview.html"
-		]
+		],
+		"domain": "Insight",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -30,7 +32,9 @@
 		"explanation": "Data Foundations metrics include remediation playbook URLs that connect non-compliant indicators to documented analysis and fix guidance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html"
-		]
+		],
+		"domain": "Insight",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -46,25 +50,27 @@
 		"explanation": "Intelligent Search for CMDB accepts natural language query input, resolves table and relationship references, and constructs the query on the Query Builder canvas.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/querying-cmdb.html"
-		]
+		],
+		"domain": "Insight",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
 		"order": 78,
-		"questionType": "multi",
-		"prompt": "Which two outcomes explain why teams save and reuse CMDB Query Builder queries during data foundation engagements? (Choose two.)",
+		"domain": "Insight",
+		"prompt": "SCCM proposed a hostname change that reconciliation rejected, but auditors still need to review the rejected value alongside the accepted Discovery data. What should the CMDB engineer open in CMDB Workspace?",
 		"choices": [
-			"Saved queries provide repeatable investigation patterns for governance reviews and remediation campaigns",
-			"Shared queries reduce rework when multiple analysts investigate the same class or relationship pattern",
-			"Saved queries permanently disable Intelligent Search so only manual canvas edits are allowed",
-			"Query saves automatically merge duplicate CIs without running identification rules"
+			"The CMDB 360 view for the CI showing multisource attribute proposals and accepted outcomes per source",
+			"The import set staging table filtered by coalesce errors from the last spreadsheet load",
+			"A catalog item variable history list attached to hardware request records",
+			"The system properties module sorted alphabetically by property name"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
-		"explanation": "Saved CMDB queries standardize repeatable analysis across teams; they do not replace I&R matching or disable NLQ capabilities.",
+		"explanation": "CMDB 360 exposes per-source attribute proposals, including rejected updates, so teams can audit reconciliation decisions without querying underlying storage tables directly.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/querying-cmdb.html"
-		]
+		],
+		"contentDifficulty": "Advanced"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -86,16 +92,30 @@
 			"Visualize hierarchical CI dependencies centered on a selected home node"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Insight tooling spans health dashboards, NLQ-assisted query building, reusable saved queries, and Unified Map visualization for dependency context.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html",
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/querying-cmdb.html",
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-workspace-unified-map.html"
-		]
+		],
+		"domain": "Insight",
+		"contentDifficulty": "Foundation"
 	}
 ]

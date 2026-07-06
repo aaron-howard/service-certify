@@ -2,18 +2,20 @@
 	{
 		"trackCode": "CIS-DF",
 		"order": 10,
-		"prompt": "After enabling CMDB 360, auditors ask which table stores every discovery source's proposed CI attribute values, including rejected updates. Which table should the implementer reference?",
+		"domain": "Configuration",
+		"prompt": "A vendor proposes a custom REST endpoint that inserts rows directly into cmdb_ci and bypasses matching logic. The CMDB architect rejects the design. Why should integrations route through the Identification and Reconciliation Engine instead?",
 		"choices": [
-			"cmdb_multisource_data",
-			"ecc_queue",
-			"sys_audit_delete",
-			"alm_asset"
+			"IRE matches incoming payloads to existing CIs and applies reconciliation so source authority governs attribute updates",
+			"Direct table inserts automatically populate cmdb_rel_ci relationships for every new record",
+			"Bypassing IRE disables all ACL checks so integrations run faster without security review",
+			"IRE is required only for alm_asset records and never applies to cmdb_ci classes"
 		],
 		"correctIndex": 0,
-		"explanation": "CMDB 360 persists per-source attribute proposals and outcomes in cmdb_multisource_data for reporting, audit, and recomputation.",
+		"explanation": "Routing integrations through IRE prevents duplicate CIs and enforces identification and reconciliation rules instead of uncontrolled inserts.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/multisource-cmdb.html"
-		]
+		],
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -29,7 +31,9 @@
 		"explanation": "Extending the correct parent class preserves hierarchy inheritance so shared attributes remain consistent while specialized identifiers are added on the child class.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-class-hierarchy.html"
-		]
+		],
+		"domain": "Configuration",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -45,7 +49,9 @@
 		"explanation": "CI Class Manager centralizes class schema, attribute, and identification configuration changes under CMDB administrator governance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-class-manager.html"
-		]
+		],
+		"domain": "Configuration",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -67,15 +73,29 @@
 			"Specialized class for Linux server CIs"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "The CMDB hierarchy progresses from the base cmdb_ci class through hardware and server parents to specialized operating system classes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-class-hierarchy.html"
-		]
+		],
+		"domain": "Configuration",
+		"contentDifficulty": "Foundation"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -90,10 +110,16 @@
 			"Widget drilldown color preferences on CMDB dashboards"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1, 2],
+		"correctIndexes": [
+			0,
+			1,
+			2
+		],
 		"explanation": "Identifier entries should combine stable, source-reported attributes like serial number, class, UUID, asset tag, manufacturer, and model; incident text and UI preferences are not identification keys.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
-		]
+		],
+		"domain": "Configuration",
+		"contentDifficulty": "Intermediate"
 	}
 ]

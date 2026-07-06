@@ -2,39 +2,41 @@
 	{
 		"trackCode": "CIS-FSM",
 		"order": 35,
-		"prompt": "A field operations program prioritizes reducing friction for technicians completing jobs onsite. Which improvement target aligns to this goal?",
+		"prompt": "Technicians resist new mobile workflows and dispatchers continue using spreadsheets. Which organizational change activity best supports adoption?",
 		"choices": [
-			"Mobile guidance, contextual task data, and streamlined workflows that speed onsite completion",
-			"Requiring paper forms for every checklist item before agents may update task states digitally",
-			"Removing offline support so technicians verify connectivity before opening any work order",
-			"Mandatory dispatcher approval for each individual line on multi-step work order checklists"
+			"Role-based training, super-user champions, and phased enforcement of mobile completion requirements with feedback loops",
+			"Mandate desktop-only task closure until all agents pass a written certification exam",
+			"Remove offline support so technicians cannot update tasks without live connectivity",
+			"Disable Dispatcher Workspace features until adoption metrics reach 100 percent globally"
 		],
 		"correctIndex": 0,
-		"explanation": "Improving the field agent experience focuses on reducing friction through mobile guidance, relevant context, and efficient task workflows.",
+		"explanation": "FSM adoption requires targeted training, field champions, and iterative feedback—not only technical configuration changes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/field-service-management/mobile-experience-fsm.html"
-		]
+			"https://www.servicenow.com/docs/r/field-service-management/planning-implementation-fsm.html"
+		],
+		"domain": "Implementation Planning"
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 36,
-		"prompt": "During a storm response, technicians lose cellular signal across a wide region. Which mobile capability remains most critical?",
+		"prompt": "The program team selects one metro area for a four-week pilot before national rollout. What should the pilot prove before expanding?",
 		"choices": [
-			"Offline task execution and data capture that synchronizes automatically when reconnected",
-			"Forced hourly VPN reconnections before any work order task can display customer details",
-			"Live video streaming requirements for every appointment regardless of bandwidth constraints",
-			"Animated dashboard widgets on mobile home screens replacing task completion forms entirely"
+			"End-to-end work order creation, qualification, dispatch, mobile execution, and closure with representative job types and parts usage",
+			"Every enterprise integration including ERP, payroll, and CMDB reconciliation for all asset classes",
+			"Complete elimination of manual dispatcher decisions across all scheduling scenarios",
+			"Full contractor onboarding for every third-party vendor in the supplier catalog"
 		],
 		"correctIndex": 0,
-		"explanation": "Offline-first mobile workflows let technicians keep executing and recording work during connectivity outages and sync when service returns.",
+		"explanation": "Pilot phases should validate the core FSM lifecycle for representative work types before scaling configuration and training nationally.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/field-service-management/mobile-experience-fsm.html"
-		]
+			"https://www.servicenow.com/docs/r/field-service-management/planning-implementation-fsm.html"
+		],
+		"domain": "Implementation Planning"
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 37,
-		"prompt": "Before configuring territories and groups, an implementation lead wants packaging, licensing, and training guidance. Which resource should they start with?",
+		"prompt": "Procurement asks which FSM capabilities require additional licensing before the project charter is approved. Which planning resource should the architect review first?",
 		"choices": [
 			"Plan implementation documentation covering packaging, licensing, and recommended training paths",
 			"Production problem close notes from unrelated ITSM teams without any field service context",
@@ -45,12 +47,13 @@
 		"explanation": "Plan implementation documentation helps teams understand FSM packaging, licensing, and training before foundation configuration begins.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/planning-implementation-fsm.html"
-		]
+		],
+		"domain": "Implementation Planning"
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 38,
-		"prompt": "A new Field Service deployment team needs a sequenced checklist to import foundation data such as users, locations, and territories. What should they use?",
+		"prompt": "A greenfield FSM team must import users, locations, territories, and groups in the correct sequence. What should they use?",
 		"choices": [
 			"Field Service Management Guided Setup to import and configure foundation data in order",
 			"A manual script bundle that bypasses all Field Service tables and ACL validation rules",
@@ -61,7 +64,8 @@
 		"explanation": "Field Service Management Guided Setup provides a sequenced task list to import and configure foundation data such as users, locations, and territories.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/configuring-fsm-with-guided-setup.html"
-		]
+		],
+		"domain": "Implementation Planning"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -77,6 +81,7 @@
 		"explanation": "Implementation planning should align personas to user groups with inherited roles and location coverage so qualification and dispatch paths are clear.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/setting-up-field-service-user-groups.html"
-		]
+		],
+		"domain": "Implementation Planning"
 	}
 ]

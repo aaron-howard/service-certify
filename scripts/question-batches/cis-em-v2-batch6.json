@@ -2,67 +2,72 @@
 	{
 		"trackCode": "CIS-EM",
 		"order": 25,
-		"prompt": "Which Event Management module is used to configure suppression or transformation logic applied before alerts are created?",
+		"prompt": "Heartbeat events from a monitoring platform should not create operational alerts during normal polling. Where should an implementer configure that suppression logic?",
 		"choices": [
-			"Event rules",
-			"Hardware asset bundles",
-			"Software reclamation schedules",
-			"Service catalog fulfillment flows"
+			"Event rules that filter or de-prioritize heartbeat traffic before alert creation",
+			"Alert Management Rules that assign every heartbeat to the database admin group",
+			"Discovery schedules that scan the source subnet whenever heartbeats arrive",
+			"Hardware asset workflows that convert heartbeats into transfer order lines"
 		],
 		"correctIndex": 0,
 		"explanation": "Event rules define how incoming events are filtered, transformed, and classified before they drive alert creation or updates.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/event-rules.html"
-		]
+		],
+		"domain": "Event Configuration and Use"
 	},
 	{
 		"trackCode": "CIS-EM",
 		"order": 26,
-		"prompt": "Which Event Management module is used to create rules that automatically generate tasks when alert conditions are met?",
+		"prompt": "Datadog reports severity as P1–P4 while SolarWinds uses 1–5 and both feed the same instance. Which event configuration step resolves conflicting scales before correlation?",
 		"choices": [
-			"MID Server capability definitions",
-			"Alert Management Rules",
-			"Discovery schedules by IP range",
-			"Transfer order line processing flows"
+			"Event rules that map each source's severity values to the ServiceNow severity model during normalization",
+			"Alert assignment rules that route P1 and level-1 events to different groups without translation",
+			"Discovery patterns that classify monitoring servers by vendor name only",
+			"Metric Intelligence bounds that replace severity mapping for every connector feed"
 		],
-		"correctIndex": 1,
-		"explanation": "Alert Management Rules automate responses such as task creation, notifications, or other actions when configured alert conditions occur.",
+		"correctIndex": 0,
+		"explanation": "Event rules translate source-specific severity and field values so heterogeneous monitoring tools produce consistent normalized events before alert creation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/event-management/create-alert-management-rule.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/create-event-rule.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/event-rules.html"
+		],
+		"domain": "Event Configuration and Use"
 	},
 	{
 		"trackCode": "CIS-EM",
 		"order": 27,
-		"prompt": "Which configuration most directly determines the initial assignment group for a newly created alert?",
+		"prompt": "A change team schedules weekly maintenance on database CIs and wants alerts suppressed from impact calculation during the window. How should this be configured?",
 		"choices": [
-			"Event retention settings that archive raw payloads after seven days in the instance",
-			"Connector polling interval stored on the listener endpoint configuration record",
-			"Alert assignment rules based on severity, CI, source, or custom conditions",
-			"Discovery classification probes for Linux MID Server subnets in remote offices"
+			"Mark affected CIs In Maintenance so alerts on those CIs are excluded from impact calculation while the window is active",
+			"Delete all event rules globally until maintenance completes and operators re-enable them manually",
+			"Set every maintenance alert to Critical severity so responders prioritize them on the dashboard",
+			"Disable all pull connectors for the entire estate during every approved change record"
 		],
-		"correctIndex": 2,
-		"explanation": "Alert assignment rules route new alerts to the appropriate support group using severity, CI context, source, or other configured criteria.",
+		"correctIndex": 0,
+		"explanation": "Alerts on CIs in maintenance are excluded from impact calculation, and corresponding alerts may be hidden from operational views during the window.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/event-management/create-alert-management-rule.html",
-			"https://www.servicenow.com/docs/r/it-operations-management/event-management/alert-management-rule.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/c_EMImpactCalculation.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/create-event-rule.html"
+		],
+		"domain": "Event Configuration and Use"
 	},
 	{
 		"trackCode": "CIS-EM",
 		"order": 28,
-		"prompt": "Why define explicit alert lifecycle states such as Open, Acknowledged, and Closed?",
+		"prompt": "Repeated SNMP link-down traps from the same interface flood the event table but represent one underlying condition. Which event processing feature reduces that duplication?",
 		"choices": [
-			"They disable incident creation from every critical severity alert in the pipeline",
-			"They force duplicate alerts for each related configuration item event received",
-			"They remove the need for event correlation during ingestion from all connectors",
-			"They provide auditable handoffs and measurable responder progression"
+			"Message key configuration that identifies and deduplicates related events from the same source condition",
+			"Alert Management Rules that create a new incident for every duplicate trap received",
+			"Connector polling intervals below 120 seconds to flush traps before deduplication runs",
+			"Discovery schedules that retire the interface CI after the first trap arrives"
 		],
-		"correctIndex": 3,
-		"explanation": "Defined lifecycle states give operators clear progression from detection through acknowledgment and closure with auditable handoffs.",
+		"correctIndex": 0,
+		"explanation": "The message key helps the platform recognize related events so deduplication and correlation can reduce redundant alerts for the same underlying condition.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/event-management/alert-management-rule.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/create-event-rule.html"
+		],
+		"domain": "Event Configuration and Use"
 	},
 	{
 		"trackCode": "CIS-EM",
@@ -78,6 +83,7 @@
 		"explanation": "Reduced acknowledgment and closure times for valid alerts demonstrate stronger triage discipline and operational readiness.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/alert-management-rule.html"
-		]
+		],
+		"domain": "Alerts and Tasks"
 	}
 ]

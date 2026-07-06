@@ -13,7 +13,9 @@
 		"explanation": "CI Class Manager can synchronize Managed by Group across all CIs in a class when no Technology management offering overrides group assignment.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/common-service-data-model-csdm/csdm-data-synchronize-enable.html"
-		]
+		],
+		"domain": "Configuration",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -29,23 +31,27 @@
 		"explanation": "Depends on::Used by models operational dependencies so impact analysis can traverse from services to supporting infrastructure CIs.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping-relationships.html"
-		]
+		],
+		"domain": "Ingest",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
 		"order": 17,
-		"prompt": "A vendor sends weekly CSV extracts of network gear that must upsert into cmdb_ci_netgear through governed CMDB rules. Which ingestion pattern fits best?",
+		"domain": "Ingest",
+		"prompt": "Service Mapping completed a top-down map for a payment application, but the map entry point CI is missing and downstream tiers appear disconnected. What should the mapping engineer verify first?",
 		"choices": [
-			"Import set with transform map, coalesce keys, and IRE-controlled target updates",
-			"Direct JDBC insert into cmdb_ci_netgear bypassing staging and transform history",
-			"Manual list edits on the CI table without transform maps or coalesce fields",
-			"Update set promotion from a developer personal instance each week"
+			"That the correct entry point CI or connection section is defined and the discovery pattern completed successfully",
+			"That all cmdb_ci records were deleted so the map could rebuild from scratch",
+			"That reconciliation rules were disabled so Discovery could overwrite every attribute",
+			"That import set coalesce fields were removed from the transform map"
 		],
 		"correctIndex": 0,
-		"explanation": "Import sets with transform maps and coalesce matching provide repeatable staging, mapping, and IRE-integrated upserts for external file feeds.",
+		"explanation": "Service Mapping depends on a valid entry point and successful pattern execution; missing entry points or incomplete patterns leave maps fragmented and unusable for impact analysis.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/washingtondc/integrate-applications/system-import-sets/c_CreatingNewTransformMaps.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/concept/c_ServiceMapping.html"
+		],
+		"contentDifficulty": "Advanced"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -60,11 +66,17 @@
 			"Knowledge article publishing that replaces cmdb_ci records"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1, 2],
+		"correctIndexes": [
+			0,
+			1,
+			2
+		],
 		"explanation": "Discovery, import sets, and IntegrationHub ETL can feed IRE-governed CMDB updates; bypassing IRE or using knowledge articles are not valid CMDB ingestion paths.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
-		]
+		],
+		"domain": "Ingest",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -86,14 +98,28 @@
 			"Network connectivity between two infrastructure CIs"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Typed CMDB relationships express hosting, execution, consumption, and connectivity patterns used in dependency and impact models.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_RelationshipTypes.html"
-		]
+		],
+		"domain": "Ingest",
+		"contentDifficulty": "Foundation"
 	}
 ]

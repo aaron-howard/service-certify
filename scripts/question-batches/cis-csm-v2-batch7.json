@@ -13,7 +13,8 @@
 		"explanation": "Inbound email flows use Flow Designer to create cases from new emails and update cases when customers reply, with flows taking precedence over legacy inbound actions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/define-process-incoming-emails.html"
-		]
+		],
+		"domain": "CSM Configuration"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -29,7 +30,8 @@
 		"explanation": "MFA for Customer and Consumer Service Portals applies to external customer and consumer roles configured in multi-factor authentication role criteria.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/customer-self-service-and-omnichannel-engagement/configure-csm-multifactor-auth.html"
-		]
+		],
+		"domain": "CSM Configuration"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -45,7 +47,8 @@
 		"explanation": "The Conversational Integration with WhatsApp application lets contacts and consumers chat with virtual or live agents and allows agents to accept conversations through the WhatsApp service channel.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/messg-integrate-whatsapp-csm.html"
-		]
+		],
+		"domain": "CSM Configuration"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -61,20 +64,22 @@
 		"explanation": "CSM interaction page templates include a voice interaction record template that helps agents manage phone calls and view contextual customer information during the interaction.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/csm-config-workspace-page-templates.html"
-		]
+		],
+		"domain": "CSM Configuration"
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 34,
-		"prompt": "When an inbound email flow executes for a message sent to the support mailbox, how does it interact with legacy inbound actions?",
+		"domain": "CSM Configuration",
+		"prompt": "Inbound emails from unknown senders keep creating cases without account or contact linkage, causing agents to manually reconcile customer identity. What should the implementer adjust in the inbound email flow first?",
 		"choices": [
-			"The email flow runs first and prevents inbound actions from executing",
-			"Inbound actions always override the email flow regardless of activation order",
-			"Both the flow and inbound actions run independently on every message",
-			"Neither runs until an agent manually selects a channel on the case form"
+			"Contact matching and identification conditions so recognized senders map to existing customer records",
+			"Assignment rule weights so unlinked cases route to the newest hire by default",
+			"Portal theme colors so external users can identify the support mailbox faster",
+			"Product model categories so every email domain becomes its own catalog item"
 		],
 		"correctIndex": 0,
-		"explanation": "Inbound email flows take higher precedence than inbound actions; when a flow executes, it prevents the corresponding inbound actions from running.",
+		"explanation": "Inbound email flows should identify or match senders to contacts, consumers, or accounts; misconfigured matching produces orphan cases that require manual cleanup.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/define-process-incoming-emails.html"
 		]

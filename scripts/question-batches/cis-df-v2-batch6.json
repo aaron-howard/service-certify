@@ -13,7 +13,9 @@
 		"explanation": "Service Graph Connect provides a governed connector framework for recurring third-party ingestion with mapping into CMDB structures.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/integrate-applications/australia/service-graph-connect/concept/c_ServiceGraphConnect.html"
-		]
+		],
+		"domain": "Ingest",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -29,7 +31,9 @@
 		"explanation": "Import sets combine data sources, staging tables, and transform maps to land, validate, and promote bulk data into target tables.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/integrate-applications/australia/system-import-sets/concept/c_ImportDataUsingImportSets.html"
-		]
+		],
+		"domain": "Ingest",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -45,13 +49,16 @@
 		"explanation": "Row-level ignore logic lets transforms skip invalid staging rows while continuing to process the rest of the import set run.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/integrate-applications/australia/system-import-sets/concept/c_TransformEventScripts.html"
-		]
+		],
+		"domain": "Ingest",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
 		"order": 28,
+		"domain": "Ingest",
 		"questionType": "multi",
-		"prompt": "When an asset state is updated, which fields sync to the related CI? (Choose two.)",
+		"prompt": "Finance marks a laptop asset Retired in HAM and expects the linked configuration item to reflect the same lifecycle change on key status fields. Which two CI fields synchronize from the asset update? (Choose two.)",
 		"choices": [
 			"Operational status",
 			"Install Status",
@@ -59,11 +66,15 @@
 			"Asset tag"
 		],
 		"correctIndex": 1,
-		"correctIndexes": [1, 2],
+		"correctIndexes": [
+			1,
+			2
+		],
 		"explanation": "Asset-to-CI synchronization updates Install Status and Hardware Status on the related configuration item when asset state changes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/australia/asset-management/concept/c_AssetAndCIFieldSynchronization.html"
-		]
+		],
+		"contentDifficulty": "Foundation"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -85,15 +96,29 @@
 			"Match existing target records for update instead of insert"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Import-set pipelines separate retrieval, staging, transformation, and matching concerns so teams can govern each step independently.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/integrate-applications/australia/system-import-sets/concept/c_ImportDataUsingImportSets.html",
 			"https://www.servicenow.com/docs/r/integrate-applications/australia/system-import-sets/concept/c_CreatingNewTransformMaps.html"
-		]
+		],
+		"domain": "Ingest",
+		"contentDifficulty": "Foundation"
 	}
 ]

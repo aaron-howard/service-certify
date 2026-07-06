@@ -2,18 +2,19 @@
 	{
 		"trackCode": "CIS-FSM",
 		"order": 25,
-		"prompt": "Why is parts management integration important when configuring Field Service work order tasks?",
+		"prompt": "A regional warehouse must replenish technician van stock based on upcoming scheduled jobs. Which parts workflow supports that planning?",
 		"choices": [
-			"Required parts data helps dispatch assign agents who can complete work on the first visit",
-			"Parts records replace all asset configuration items so CMDB discovery can be deactivated",
-			"Parts management disables qualification states on work orders created from incidents only",
-			"Inventory tracking prevents technicians from recording time worked on completed tasks"
+			"Define required parts on tasks and track stockroom-to-agent transfers so inventory reflects van and warehouse levels",
+			"Disable parts requirements so agents source components outside ServiceNow without consumption records",
+			"Convert every parts request into a hardware asset retirement workflow automatically",
+			"Remove stockroom records so all parts appear available on every assignment assistance query"
 		],
 		"correctIndex": 0,
-		"explanation": "Defining required parts on tasks lets dispatch and assignment assistance favor agents who carry the components needed for first-time fix.",
+		"explanation": "Defining required parts on tasks lets dispatch favor stocked agents and supports warehouse replenishment based on planned field work.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/inventory-management-fsm.html"
-		]
+		],
+		"domain": "Field Service Management Fundamentals"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -29,7 +30,8 @@
 		"explanation": "Recording part consumption on the task keeps stock levels accurate and provides traceability for billing and future service planning.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/inventory-management-fsm.html"
-		]
+		],
+		"domain": "Field Service Management Fundamentals"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -45,7 +47,8 @@
 		"explanation": "Time worked captures labor spent on tasks, supporting cost allocation, performance reporting, and SLA compliance analysis.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_WorkOrderTasks.html"
-		]
+		],
+		"domain": "Field Service Management Fundamentals"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -61,7 +64,8 @@
 		"explanation": "Incidentals track reimbursable non-part costs associated with field work, such as parking fees or tolls incurred during the appointment.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_WorkOrderTasks.html"
-		]
+		],
+		"domain": "Field Service Management Fundamentals"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -77,6 +81,7 @@
 		"explanation": "When required parts are defined, assignment assistance and dynamic scheduling can prioritize agents stocked with the components for the job.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/field-service-scheduling/assignment-assistance.html"
-		]
+		],
+		"domain": "Field Service Management Fundamentals"
 	}
 ]

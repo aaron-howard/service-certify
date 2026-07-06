@@ -13,7 +13,8 @@
 		"explanation": "Assignment workbench configurations are stored in matching rules using the Selection criteria type, such as the default Recommendation for Case Assignment rule.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/case-assignment-matching-rules.html"
-		]
+		],
+		"domain": "CSM Configuration"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -29,20 +30,22 @@
 		"explanation": "Assignment rules route tasks to users or groups when matching rule conditions are met, but only if the case is not already assigned.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/c_CaseRouting.html"
-		]
+		],
+		"domain": "CSM Configuration"
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 37,
-		"prompt": "The default Recommendation for Case Assignment matching rule uses three of four default criteria. Which criterion is NOT included in that default rule?",
+		"domain": "CSM Configuration",
+		"prompt": "The assignment workbench keeps recommending the same two agents even though others are available and under their channel capacity limits. Which matching criterion should the administrator increase to spread work more evenly?",
 		"choices": [
-			"Case Priority Score",
-			"Availability Today",
-			"Matching Skills",
-			"Assigned Cases"
+			"Assigned Cases so agents with fewer open assignments score higher in recommendations",
+			"Case Priority Score because it replaces availability and skill checks entirely",
+			"Contract renewal date matched against agent calendar entries for every case",
+			"Portal login count for external contacts submitting cases after business hours"
 		],
 		"correctIndex": 0,
-		"explanation": "The default recommendation matching rule uses Availability Today, Matching Skills, and Assigned Cases; Case Priority Score is not one of the default matching criteria.",
+		"explanation": "The Assigned Cases criterion influences recommendations based on current workload; tuning it helps prevent the same agents from being selected when others have capacity.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/case-assignment-matching-rules.html"
 		]
@@ -61,20 +64,22 @@
 		"explanation": "When mandatory skills are required on cases, the Matching Skills - Mandatory Skills Support criterion ensures recommended agents possess those mandatory skills.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/case-assignment-matching-rules.html"
-		]
+		],
+		"domain": "CSM Configuration"
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 39,
-		"prompt": "An administrator changes the Applies to table on a matching rule after creating its assignment rule. What happens to the assignment rule?",
+		"domain": "CSM Configuration",
+		"prompt": "An agent is eligible for chat, phone, and case channels but should not exceed concurrent work limits on any channel. Which Advanced Work Assignment control governs acceptance across these omnichannel sources?",
 		"choices": [
-			"The assignment rule is not updated because the records are independent",
-			"The assignment rule table changes automatically to match the matching rule",
-			"Both records are deleted and must be recreated by Guided Setup",
-			"The matching rule is deleted and only the assignment rule remains active"
+			"Per-channel agent capacity limits on the configured service channels",
+			"A single global case number sequence that pauses assignment during peak hours",
+			"Portal widget visibility settings that hide chat from external consumers only",
+			"Knowledge article ownership groups that restrict who can publish FAQ content"
 		],
 		"correctIndex": 0,
-		"explanation": "Matching rules and assignment rules are independent records with no synchronization; changes to one are not reflected in the other.",
+		"explanation": "Service channel capacity limits define how many concurrent interactions an agent can handle per channel, balancing omnichannel workload without overloading individual agents.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/c_CaseRouting.html"
 		]

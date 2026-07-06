@@ -2,81 +2,85 @@
 	{
 		"trackCode": "CSA",
 		"order": 10,
-		"prompt": "What does the System Settings > System Properties module store?",
+		"prompt": "Employees in three countries see timestamps that do not match their local business hours. Which administration approach fixes the default experience while still letting individuals adjust?",
 		"choices": [
-			"To view and edit instance-wide configuration name-value pairs",
-			"To design catalog client scripts only",
-			"To run Discovery schedules",
-			"To manage CMDB reconciliation rules only"
+			"Set instance-wide time zone and date format defaults, and let users override them in their profile preferences",
+			"Hard-code a single time zone into every form with client scripts",
+			"Create a separate instance for each country office",
+			"Store all dates as free-text strings so users can type what they want"
 		],
 		"correctIndex": 0,
-		"explanation": "System properties store instance configuration values referenced by the platform and applications.",
+		"explanation": "System defaults for time zone and date/display formats are set with properties, while each user record and user preferences can override them individually.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/system-properties.html"
+			"https://www.servicenow.com/docs/r/platform-administration/system-properties.html",
+			"https://www.servicenow.com/docs/r/platform-administration/user-administration.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 11,
-		"prompt": "An administrator wants to change the instance name displayed in the browser title. Where is this configured?",
+		"prompt": "Before closing a ticket about missing menu options, an administrator wants to verify exactly what the affected user sees when logged in. Which feature supports this without asking for the user's password?",
 		"choices": [
-			"System Properties such as glide.product.name",
-			"The CMDB class manager",
-			"A transform map coalesce field",
-			"The Visual Task Board lane"
+			"Impersonation, which lets the admin experience the platform with that user's roles and preferences",
+			"Resetting the user's password and logging in as them from another machine",
+			"Exporting the user's browser history for review",
+			"Enabling debug mode on the user's workstation"
 		],
 		"correctIndex": 0,
-		"explanation": "Instance branding and display name are controlled through system properties like glide.product.name.",
+		"explanation": "Impersonation lets administrators temporarily assume another user's session view to verify roles, menus, and record visibility, and the activity is logged.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/system-properties.html"
+			"https://www.servicenow.com/docs/r/platform-administration/impersonation.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 12,
-		"prompt": "Which tool provides a timeline of configuration changes made on the instance for troubleshooting?",
+		"prompt": "The facilities team wants a navigator link that opens the facilities request list pre-filtered to open records. How does an administrator provide this?",
 		"choices": [
-			"System Logs and audit records",
-			"The catalog variable editor only",
-			"A homepage theme gauge",
-			"The MID Server status dashboard"
+			"Create a module under the application menu with a list view target and a filter condition",
+			"Email the team a spreadsheet of open requests each week",
+			"Add a new field to the request table that stores the link",
+			"Grant the team the admin role so they can find records themselves"
 		],
 		"correctIndex": 0,
-		"explanation": "System logs and audit tables record configuration and data changes for administrators to review.",
+		"explanation": "Modules define navigator entry points; a module can target a table's list view with a saved condition so users land on the filtered list directly.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/system-logs.html"
+			"https://www.servicenow.com/docs/r/platform-administration/application-menus-modules.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 13,
-		"prompt": "What does activating a plugin typically do on an instance?",
+		"prompt": "After building a new form layout and two UI policies in a sub-production instance, an administrator must move those changes to test. What is the standard mechanism for carrying the configuration over?",
 		"choices": [
-			"Installs application files and enables related modules and functionality",
-			"Deletes all existing incident records",
-			"Converts every table to global scope",
-			"Disables the Application Navigator"
+			"Capture the changes in an update set and retrieve it on the target instance",
+			"Retype every change by hand on the target instance from memory",
+			"Copy the underlying database files between the two servers",
+			"Attach screenshots of the changes to an incident for the platform team"
 		],
 		"correctIndex": 0,
-		"explanation": "Plugin activation loads application components and exposes the associated modules and features.",
+		"explanation": "Update sets record customizations such as form layouts and UI policies so they can be previewed and committed on another instance in a controlled way.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/plugin-management.html"
+			"https://www.servicenow.com/docs/r/platform-administration/update-sets.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 14,
-		"prompt": "Which user interface lets administrators configure the look of the login and banner branding?",
+		"prompt": "A new analyst joins the Service Desk group, which has the itil role assigned to it. Which statements about role assignment through groups are correct? (Choose two.)",
 		"choices": [
-			"System UI > UI Pages and branding properties",
-			"Import Set Transform Maps",
-			"Visual Task Board settings",
-			"CMDB Health dashboard"
+			"Roles granted to a group are inherited by every member of that group",
+			"Adding the analyst to the group gives them itil without touching their user record's role list directly",
+			"Group membership removes any roles the user was granted individually",
+			"Roles can only ever be assigned one user at a time"
 		],
 		"correctIndex": 0,
-		"explanation": "Branding and login appearance are customized through UI configuration and related system properties.",
+		"correctIndexes": [0, 1],
+		"questionType": "multi",
+		"explanation": "Assigning roles to groups is the recommended practice: members inherit the group's roles automatically, and membership changes manage access without editing individual role assignments. Inherited roles supplement, not replace, directly granted ones.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-user-interface/branding.html"
+			"https://www.servicenow.com/docs/r/platform-administration/groups.html",
+			"https://www.servicenow.com/docs/r/platform-security/roles.html"
 		]
 	}
 ]
