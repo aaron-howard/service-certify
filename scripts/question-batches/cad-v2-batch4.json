@@ -2,81 +2,81 @@
 	{
 		"trackCode": "CAD",
 		"order": 15,
-		"prompt": "Which statement best describes when an application is a good fit to build natively on ServiceNow?",
+		"prompt": "Users open a Company form and expect to see related Active Contracts in a subordinate list filtered to that company. Which configuration exposes the related records on the form?",
 		"choices": [
-			"When it manages structured records, tasks, approvals, and reporting on the platform data model",
-			"When it requires a proprietary desktop-only kernel driver",
-			"When it must avoid all use of tables and forms",
-			"When it exclusively renders 3D game graphics"
+			"A related list on the Company form showing Contract records where company matches",
+			"A UI Policy that copies contract numbers into a string field on Company",
+			"A business rule on Contract that deletes records not linked to the open Company",
+			"A homepage module that opens all contracts without filtering by company"
 		],
 		"correctIndex": 0,
-		"explanation": "Applications centered on structured data, tasks, approvals, and reporting align with the platform's tables, workflow, and UI capabilities.",
+		"explanation": "Related lists display associated records on a form based on reference or other configured relationships between tables.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/app-eng-studio-overview.html"
+			"https://www.servicenow.com/docs/r/application-development/related-lists.html"
 		]
 	},
 	{
 		"trackCode": "CAD",
 		"order": 16,
-		"prompt": "What is the purpose of an Application File in a scoped application?",
+		"prompt": "A scoped application table must be readable at runtime by an integration in another scope during record queries. Which setting controls runtime access to scoped tables?",
 		"choices": [
-			"It is any configuration record (table, script, form, etc.) that belongs to and is tracked by the application",
-			"It is a binary attachment stored on the sys_user table",
-			"It is a temporary cache cleared on logout",
-			"It is a MID Server credential"
+			"Runtime Access to Application Tables configured on the application record",
+			"The Column label on each field, which grants read access to external scopes",
+			"The module order in the Application Navigator, which sets query privileges",
+			"The auto-number prefix, which determines whether other scopes can query rows"
 		],
 		"correctIndex": 0,
-		"explanation": "Application files are the configuration records (tables, business rules, forms, and more) associated with and packaged by an application.",
+		"explanation": "Runtime Access to Application Tables defines whether other scopes can read scoped application tables at runtime.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/application-files.html"
+			"https://www.servicenow.com/docs/r/application-development/c_RuntimeAccessToAppTables.html"
 		]
 	},
 	{
 		"trackCode": "CAD",
 		"order": 17,
-		"prompt": "You want a module in your application to open a filtered list of records by default. What do you configure on the module?",
+		"prompt": "A developer finished building a scoped app in App Engine Studio and needs to move it to a test instance for user acceptance. What is the recommended packaging path?",
 		"choices": [
-			"Set the module link type to List and define the table and default filter conditions",
-			"Delete the application menu",
-			"Change the table to global scope",
-			"Convert the module into an access control"
+			"Publish or export the scoped application and install it on the target instance",
+			"Copy individual User records from production to carry the application logic",
+			"Manually retype every dictionary entry on the test instance without a package",
+			"Disable application scope on production so tables become global automatically"
 		],
 		"correctIndex": 0,
-		"explanation": "A module of link type List targets a table and can apply default filter conditions to show a pre-filtered list.",
+		"explanation": "Scoped applications are published or exported as application packages and installed on target instances rather than copied record by record.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/application-menus-modules.html"
+			"https://www.servicenow.com/docs/r/application-development/publish-application-to-store.html"
 		]
 	},
 	{
 		"trackCode": "CAD",
 		"order": 18,
-		"prompt": "Which UI element lets you group related fields into collapsible sections on a form?",
+		"prompt": "Agents need a form button that runs client-side logic and then calls the server to update a related record without leaving the form. Which artifact combination fits this behavior?",
 		"choices": [
-			"Form sections (and form layout) configured with the Form Designer",
-			"Access control rules on the table",
-			"Scheduled jobs that run nightly",
-			"Transform maps for imports"
+			"A UI Action with a client script handler that may call GlideAjax for server work",
+			"A data policy that blocks all updates until the user refreshes the browser",
+			"A scheduled job that polls the form every minute for button clicks",
+			"A related list export that downloads CSV data when the button is pressed"
 		],
 		"correctIndex": 0,
-		"explanation": "Form sections, arranged with the Form Designer or Form Layout, group fields into organized, collapsible areas on a form.",
+		"explanation": "UI Actions can expose form buttons whose client scripts perform client logic and invoke GlideAjax to execute server-side code.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/form-design.html"
+			"https://www.servicenow.com/docs/r/application-development/ui-actions.html"
 		]
 	},
 	{
 		"trackCode": "CAD",
 		"order": 19,
-		"prompt": "To add or remove fields shown on a form for a table, which tool do you use?",
+		"prompt": "Stakeholders want the Request form split into sections—Details, Approval, Closure—with fields grouped for readability. Where should the developer arrange section layout?",
 		"choices": [
-			"Form Designer (Configure > Form Design/Form Layout)",
-			"The REST API Explorer",
-			"The Import Set loader",
-			"The Flow Designer trigger panel"
+			"The form layout and form sections configured for the table's form view",
+			"The list layout, which controls section headers on the record form only",
+			"The business rule insert condition, which renders sections based on state",
+			"The ACL read rule, which determines which sections each role can see"
 		],
 		"correctIndex": 0,
-		"explanation": "Form Designer / Form Layout lets developers add, remove, and arrange fields displayed on a form.",
+		"explanation": "Form sections and layout on the table's form view control how fields are grouped and displayed on the record form.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/form-design.html"
+			"https://www.servicenow.com/docs/r/application-development/form-views.html"
 		]
 	}
 ]

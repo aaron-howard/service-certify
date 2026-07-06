@@ -2,15 +2,15 @@
 	{
 		"trackCode": "CAD",
 		"order": 60,
-		"prompt": "Which method queues an event named 'x_app.record.created' for the current record in a business rule?",
+		"prompt": "In a before business rule, which call queues the registered event x_app.task.closed for the current record?",
 		"choices": [
-			"gs.eventQueue('x_app.record.created', current, parm1, parm2)",
-			"g_form.eventQueue('x_app.record.created')",
-			"current.eventQueue('x_app.record.created')",
-			"gs.getProperty('x_app.record.created')"
+			"gs.eventQueue('x_app.task.closed', current, parm1, parm2)",
+			"g_form.eventQueue('x_app.task.closed')",
+			"current.eventQueue('x_app.task.closed')",
+			"gs.getProperty('x_app.task.closed')"
 		],
 		"correctIndex": 0,
-		"explanation": "gs.eventQueue(name, GlideRecord, parm1, parm2) fires a registered event tied to a record so subscribers can react.",
+		"explanation": "gs.eventQueue(name, GlideRecord, parm1, parm2) fires a registered event tied to a record so subscribers can react asynchronously.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/events.html"
 		]
@@ -18,15 +18,15 @@
 	{
 		"trackCode": "CAD",
 		"order": 61,
-		"prompt": "To send an email when a record reaches a certain state, which artifact defines the recipients, subject, and body?",
+		"prompt": "When a facilities request moves to Approved, stakeholders need email with record details. Which artifact defines recipients, subject, and body?",
 		"choices": [
-			"A Notification record (triggered by a condition or event)",
-			"A dictionary entry",
-			"An access control rule",
-			"A transform map"
+			"A Notification record triggered by a condition or event on the table",
+			"A dictionary attribute on the state field",
+			"An ACL script on the facilities table",
+			"A transform map field map"
 		],
 		"correctIndex": 0,
-		"explanation": "Notification records define when to send email (condition or event), the recipients, and the message content.",
+		"explanation": "Notification records define when to send email (condition or event), who receives it, and the message content including mail scripts.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/email-notifications.html"
 		]
@@ -34,49 +34,54 @@
 	{
 		"trackCode": "CAD",
 		"order": 62,
-		"prompt": "What is a Scheduled Script Execution (Scheduled Job) used for?",
+		"prompt": "Where should reusable server-side helper functions for a scoped application live so business rules and flows can call them?",
 		"choices": [
-			"Running server-side script logic automatically on a defined schedule",
-			"Rendering a client-side form control",
-			"Storing user preferences in the browser",
-			"Defining an ACL condition"
+			"A Script Include class in the application scope",
+			"An onChange client script on every form",
+			"A UI Policy action on each table",
+			"The notification email footer template"
 		],
 		"correctIndex": 0,
-		"explanation": "A Scheduled Job runs server-side script or job logic automatically at configured intervals or times.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/scheduled-jobs.html"
-		]
-	},
-	{
-		"trackCode": "CAD",
-		"order": 63,
-		"prompt": "Where should you place a Utils-style set of reusable helper functions for a scoped application?",
-		"choices": [
-			"In a Script Include class instantiated by other server scripts",
-			"In an onChange client script",
-			"In a UI Policy action",
-			"In a notification body"
-		],
-		"correctIndex": 0,
-		"explanation": "A Utils Script Include holds reusable server-side helper functions that business rules, flows, and other scripts can call.",
+		"explanation": "Script Includes encapsulate reusable server-side logic that other server scripts, business rules, and flows can instantiate and call.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/script-includes.html"
 		]
 	},
 	{
 		"trackCode": "CAD",
-		"order": 64,
-		"prompt": "Which inbound email component processes messages that arrive in the instance to create or update records?",
+		"order": 63,
+		"prompt": "Email sent to the instance must create task records from parsed message content. Which component processes inbound messages?",
 		"choices": [
 			"Inbound Email Action",
-			"Outbound Notification",
+			"Outbound REST Message",
 			"UI Policy",
-			"Access Control rule"
+			"Transform Map script"
 		],
 		"correctIndex": 0,
-		"explanation": "Inbound Email Actions parse received email and run scripts to create or update records based on the message.",
+		"explanation": "Inbound Email Actions parse received email and execute scripts to create or update records based on message content.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/inbound-email-actions.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 64,
+		"prompt": "Which Business Rule configurations run logic after the database transaction commits? (Choose two.)",
+		"choices": [
+			"After insert with After checked",
+			"Async with Advanced checked",
+			"Before update with Before checked",
+			"Display with Display checked"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"questionType": "multi",
+		"explanation": "After business rules run following commit; async business rules also execute after commit in a separate transaction. Before rules run prior to commit.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/business-rules.html"
 		]
 	}
 ]

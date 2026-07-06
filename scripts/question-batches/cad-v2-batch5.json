@@ -2,15 +2,15 @@
 	{
 		"trackCode": "CAD",
 		"order": 20,
-		"prompt": "Which client script type runs when a form is first loaded, before the user interacts with it?",
+		"prompt": "When a user opens a new Hire record, the Start Date field should default to today's date before any edits occur. Which client script type and timing apply?",
 		"choices": [
-			"onLoad client script",
-			"onCellEdit client script",
-			"onSubmit client script",
-			"Scheduled script execution"
+			"An onLoad client script that sets the field value when the form first renders",
+			"An onSubmit client script that runs after the record is saved to the database",
+			"A before Business Rule that executes only when the list view first loads",
+			"A UI Policy with no condition that runs exclusively during list filtering"
 		],
 		"correctIndex": 0,
-		"explanation": "An onLoad client script runs when the form loads, allowing initial field manipulation before user interaction.",
+		"explanation": "onLoad client scripts run when the form loads, making them appropriate for initializing field values before user interaction.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/client-scripts.html"
 		]
@@ -18,47 +18,47 @@
 	{
 		"trackCode": "CAD",
 		"order": 21,
-		"prompt": "Within a client script, which object is used to get and set field values and control form behavior?",
+		"prompt": "Before a Safety Inspection form can be submitted, the developer must block save when Required PPE is empty and show an error message to the user. Which approach handles this pre-submit validation on the client?",
 		"choices": [
-			"g_form",
-			"g_user (current user client object)",
-			"gs (GlideSystem)",
-			"GlideRecord server query API"
+			"An onSubmit client script that checks the field and returns false to cancel submit",
+			"A UI Policy set to read-only on Required PPE, which prevents empty values on save",
+			"A before Business Rule that displays a client alert before the form loads",
+			"An onChange script on an unrelated field that hides the Submit button permanently"
 		],
 		"correctIndex": 0,
-		"explanation": "The g_form object provides client-side methods such as getValue, setValue, setMandatory, and setVisible to manipulate the form.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/g-form.html"
-		]
-	},
-	{
-		"trackCode": "CAD",
-		"order": 22,
-		"prompt": "Which onChange client script parameter contains the field value before the user's change?",
-		"choices": [
-			"oldValue",
-			"newValue",
-			"isLoading",
-			"control"
-		],
-		"correctIndex": 0,
-		"explanation": "The onChange handler receives control, oldValue, newValue, and isLoading; oldValue holds the prior field value.",
+		"explanation": "onSubmit client scripts validate immediately before submission; returning false cancels the save and allows displaying a message to the user.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/client-scripts.html"
 		]
 	},
 	{
 		"trackCode": "CAD",
-		"order": 23,
-		"prompt": "When should you use a UI Policy instead of a client script to make a field mandatory or read-only?",
+		"order": 22,
+		"prompt": "A client script must hide the Contract Value field when Type is Internal and show it when Type is External during user edits. Which client API object controls visibility and mandatory state on the form?",
 		"choices": [
-			"When the condition can be expressed declaratively without scripting",
-			"When you must run a server-side database query",
-			"When you need to send an email notification",
-			"When you want to schedule a nightly job"
+			"g_form methods such as setVisible and setMandatory on the target fields",
+			"gs.getProperty to read instance properties and rewrite the form HTML tree",
+			"GlideRecord on the client to update sys_ui_form records during onChange",
+			"GlideSystem hasRole to replace field widgets with static text labels"
 		],
 		"correctIndex": 0,
-		"explanation": "UI Policies declaratively set fields mandatory, read-only, or visible based on conditions, and are preferred over scripting for simple form logic.",
+		"explanation": "The g_form object provides client-side methods to show, hide, and set mandatory state on form fields during script execution.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/g-form.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 23,
+		"prompt": "On the Incident form, when Category is set to Safety, the Work Notes field must become mandatory without writing script. Which configuration enforces that declaratively?",
+		"choices": [
+			"A UI Policy with condition Category is Safety that sets Work Notes to mandatory",
+			"A client script onLoad that deletes Work Notes when Category equals Safety",
+			"A before Business Rule that rejects inserts unless Work Notes is populated",
+			"A data policy on the User table that mirrors Category values to Work Notes"
+		],
+		"correctIndex": 0,
+		"explanation": "UI Policies declaratively set fields mandatory, read-only, or visible based on conditions without requiring client scripting.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/ui-policies.html"
 		]
@@ -66,15 +66,15 @@
 	{
 		"trackCode": "CAD",
 		"order": 24,
-		"prompt": "Which client-side technique lets a client script call server-side logic and return data without reloading the form?",
+		"prompt": "A client script needs the server to calculate a risk score from several fields and return the result without reloading the page. Which client-side pattern should the developer use?",
 		"choices": [
-			"GlideAjax calling a script include with client-callable enabled",
-			"A before Business Rule invoked with current.update()",
-			"A scheduled job triggered on form load",
-			"An access-control evaluation on submit"
+			"GlideAjax calling a client-callable Script Include that computes and returns the score",
+			"A synchronous GlideRecord query executed directly in the browser onSubmit handler",
+			"A UI Policy action script that posts the entire form to an external REST endpoint",
+			"A scheduled script that emails the score to the user after the form is closed"
 		],
 		"correctIndex": 0,
-		"explanation": "GlideAjax invokes a client-callable Script Include on the server and returns results asynchronously to the client script.",
+		"explanation": "GlideAjax invokes a client-callable Script Include on the server and returns data asynchronously to the client script.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/glideajax.html"
 		]

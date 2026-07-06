@@ -2,15 +2,15 @@
 	{
 		"trackCode": "CAD",
 		"order": 45,
-		"prompt": "You want to test an ACL you just created. Which approach lets you verify access as a non-admin user?",
+		"prompt": "A user with the app_user role opens a custom module in the Application Navigator but receives Access Denied when the list loads. Module roles are configured correctly. What should you investigate first?",
 		"choices": [
-			"Impersonate a user with the relevant role and attempt the operation",
-			"Delete all other ACLs on the table first",
-			"Disable the login page",
-			"Convert the table to global scope"
+			"Whether a table ACL denies read on the underlying table for that role",
+			"Whether the module label color is set to default",
+			"Whether the homepage gauge cache needs clearing",
+			"Whether the record producer variable order is alphabetical"
 		],
 		"correctIndex": 0,
-		"explanation": "Impersonating a representative user lets you confirm that the ACL grants or denies access as intended without using admin privileges.",
+		"explanation": "Module roles control navigator visibility; table ACLs control record access. A user can see a module yet fail read ACL checks on the target table.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/access-control-rules.html"
 		]
@@ -18,15 +18,15 @@
 	{
 		"trackCode": "CAD",
 		"order": 46,
-		"prompt": "Which statement about the admin role and ACLs is correct?",
+		"prompt": "While troubleshooting field-level access, you enable Security debugging and impersonate the affected user. The debug log shows the table ACL passed but the field ACL failed. What does this indicate?",
 		"choices": [
-			"The admin role satisfies role requirements in most ACLs, effectively bypassing role checks",
-			"The admin role is always denied by ACLs",
-			"ACLs ignore the admin role entirely",
-			"Only guests can pass ACL role checks"
+			"The user can access the record but the specific field is restricted",
+			"ACL evaluation skipped the table entirely",
+			"The admin role was denied at the table level",
+			"Client scripts blocked the form before ACLs ran"
 		],
 		"correctIndex": 0,
-		"explanation": "Users with the admin role generally satisfy ACL role requirements, so admins can perform most operations regardless of specific roles.",
+		"explanation": "ACLs evaluate from general to specific; passing the table ACL but failing the field ACL means the record is readable but that field is protected.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/access-control-rules.html"
 		]
@@ -34,15 +34,15 @@
 	{
 		"trackCode": "CAD",
 		"order": 47,
-		"prompt": "To debug why a user cannot see a field, which tool shows how ACLs were evaluated for that user?",
+		"prompt": "A developer creates a new ACL and needs to confirm it grants read access to app_user but not to guest. Which verification approach is most reliable?",
 		"choices": [
-			"Enable Debug Security (Access Control debugging) and impersonate the user",
-			"Run a scheduled job report",
-			"Open the transform map history",
-			"Check the MID Server log"
+			"Impersonate app_user, attempt the read, then impersonate guest and confirm denial",
+			"Delete all other ACLs on the table to isolate the new rule",
+			"Convert the table to global scope and retest",
+			"Disable the login page so only admins can authenticate"
 		],
 		"correctIndex": 0,
-		"explanation": "Access Control (Security) debugging displays which ACLs were checked and their pass/fail results while impersonating the user.",
+		"explanation": "Impersonating representative users and attempting the operation confirms ACL behavior without relying on admin bypass.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/access-control-rules.html"
 		]
@@ -50,33 +50,33 @@
 	{
 		"trackCode": "CAD",
 		"order": 48,
-		"prompt": "Why should new custom tables be created in a scoped application rather than global?",
+		"prompt": "An ACL requires the itil role and includes a condition that current.state == 1. A user with itil opens a record where state is 2. Will the ACL grant access?",
 		"choices": [
-			"Scope isolates the table's data and logic, reducing the risk of unintended cross-application changes",
-			"Global scope encrypts all fields automatically",
-			"Scoped tables cannot be reported on",
-			"Global tables are deleted on every upgrade"
+			"No, because both the role and the condition must be satisfied",
+			"Yes, because holding the role alone is sufficient",
+			"Yes, because conditions are ignored when a role is specified",
+			"No, because ACL conditions only apply to delete operations"
 		],
 		"correctIndex": 0,
-		"explanation": "Scoping protects the application's data and artifacts and limits cross-application interference, which global scope does not enforce.",
+		"explanation": "An ACL grants access only when required roles, conditions, and scripts (if present) all evaluate successfully.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/c_ApplicationScope.html"
+			"https://www.servicenow.com/docs/r/application-development/access-control-rules.html"
 		]
 	},
 	{
 		"trackCode": "CAD",
 		"order": 49,
-		"prompt": "In an ACL script, which expression grants access only when the current user holds the 'itil' role?",
+		"prompt": "You must limit who can install and configure a scoped application without granting full admin. Which artifact enforces application-level access?",
 		"choices": [
-			"answer = gs.hasRole('itil')",
-			"answer = gs.eventQueue('itil')",
-			"answer = gs.addInfoMessage('itil')",
-			"answer = gs.getProperty('itil')"
+			"Roles assigned on the application record and its modules",
+			"A transform map coalesce field on sys_app",
+			"A Flow Designer schedule trigger",
+			"A dictionary override on sys_scope"
 		],
 		"correctIndex": 0,
-		"explanation": "gs.hasRole('itil') returns true when the current user has that role, so assigning it to answer grants access in the ACL script.",
+		"explanation": "Application and module role requirements restrict who can access application configuration and navigation without full admin rights.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/glidesystem.html"
+			"https://www.servicenow.com/docs/r/application-development/application-menus-modules.html"
 		]
 	}
 ]

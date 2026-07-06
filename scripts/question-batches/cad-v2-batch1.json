@@ -2,15 +2,15 @@
 	{
 		"trackCode": "CAD",
 		"order": 0,
-		"prompt": "A team wants to build a custom application to track conference room bookings with related records and reporting. Why is ServiceNow a good fit for this application?",
+		"prompt": "A citizen services team needs a guided, low-code path to define tables, forms, and roles for a new permit-tracking application without writing boilerplate configuration by hand. Which tool should they start with?",
 		"choices": [
-			"The requirement is task- and data-driven, mapping naturally to tables, forms, and workflow on the platform",
-			"The application requires a dedicated GPU rendering pipeline unavailable on the platform",
-			"The data is unstructured binary media with no relational structure",
-			"The solution must run entirely offline with no server component"
+			"App Engine Studio to create the scoped application with guided data and UI design",
+			"A standalone IDE project deployed outside the instance with no platform integration",
+			"Direct edits to global system tables without an application scope boundary",
+			"A spreadsheet import that bypasses dictionary and form generation entirely"
 		],
 		"correctIndex": 0,
-		"explanation": "ServiceNow fits applications built on structured, task- and data-driven records that leverage tables, forms, lists, and workflow rather than binary media or offline-only needs.",
+		"explanation": "App Engine Studio provides a guided low-code workspace to design scoped applications, including tables, forms, roles, and related artifacts in one flow.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/app-eng-studio-overview.html"
 		]
@@ -18,15 +18,15 @@
 	{
 		"trackCode": "CAD",
 		"order": 1,
-		"prompt": "By default, what does creating a custom application in its own application scope provide?",
+		"prompt": "Facilities management wants a Facilities Request application whose tables and scripts stay isolated from HR and IT apps, with access granted only when another team explicitly allows it. What should they create?",
 		"choices": [
-			"A private namespace that restricts other applications from accessing its tables and business logic unless granted permission",
-			"Unrestricted global write access to every table in the instance",
-			"Automatic deletion of the application after each upgrade",
-			"A requirement that all scripts run only on the client"
+			"A scoped application in its own application scope with a private namespace for its artifacts",
+			"A set of global tables prefixed with u_ that any administrator can modify freely",
+			"A UI page only, with no backing table or application file structure",
+			"A report dashboard that reads HR tables without an application boundary"
 		],
 		"correctIndex": 0,
-		"explanation": "A scoped application gets a private namespace that protects its files and data; other applications cannot access its tables or logic without explicit permission.",
+		"explanation": "A scoped application provides namespace isolation so other applications cannot access its tables and logic unless cross-scope privileges are granted.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/c_ApplicationScope.html"
 		]
@@ -34,15 +34,15 @@
 	{
 		"trackCode": "CAD",
 		"order": 2,
-		"prompt": "You need a new table that reuses the fields and behavior of an existing table while adding its own fields. Which data-model approach should you use?",
+		"prompt": "You are modeling work orders that share assignment, priority, and state fields with the Task table but also need custom asset-specific columns. Which data-model approach reuses Task behavior while adding fields?",
 		"choices": [
-			"Extend the existing table so the new table inherits its fields and adds custom fields",
-			"Copy every field manually into an unrelated standalone table",
-			"Store the new data as JSON inside a single string field",
-			"Create the table only in the sys_user table's dictionary"
+			"Extend the Task table so the new table inherits standard task fields and adds its own",
+			"Duplicate every Task column manually on a standalone table with no parent link",
+			"Store work-order details in a single HTML field on the User table",
+			"Create a Journal field on Task and paste JSON payloads for each work order"
 		],
 		"correctIndex": 0,
-		"explanation": "Table extension creates a child table that inherits the parent's fields and can add its own, supporting reuse and polymorphic behavior in the data model.",
+		"explanation": "Table extension creates a child table that inherits the parent table's fields and behavior while allowing additional custom fields.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/table-extension.html"
 		]
@@ -50,15 +50,15 @@
 	{
 		"trackCode": "CAD",
 		"order": 3,
-		"prompt": "What is the role of an application menu and its modules in a custom application?",
+		"prompt": "After building a custom inventory application, users cannot find its lists and forms in the Application Navigator. Which artifact should you configure to expose navigation entries?",
 		"choices": [
-			"They provide navigation entries in the Application Navigator that open lists, forms, or other content",
-			"They define the database indexes used by the table",
-			"They replace access controls for the application's tables",
-			"They compile the client scripts into server code"
+			"An application menu with modules that link to lists, forms, or other content",
+			"A business rule that runs on insert to create navigator entries automatically",
+			"A transform map that copies module records from the Incident application",
+			"A UI macro attached to the homepage that replaces the Application Navigator"
 		],
 		"correctIndex": 0,
-		"explanation": "An application menu groups modules that appear in the Application Navigator; modules link users to lists, new records, or other content for the application.",
+		"explanation": "Application menus group modules that appear in the Application Navigator and route users to the application's lists, forms, and other content.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/application-menus-modules.html"
 		]
@@ -66,15 +66,15 @@
 	{
 		"trackCode": "CAD",
 		"order": 4,
-		"prompt": "To model that one company record can be associated with many asset records, which field type establishes the relationship on the asset table?",
+		"prompt": "An Inspection record must point to exactly one Building record so inspectors can open the building form from the inspection. Which field type should you add on the Inspection table?",
 		"choices": [
-			"A Reference field on the asset table pointing to the company table",
-			"A String field on the company table listing asset names",
-			"A Duration field on both tables",
-			"A Journal field storing comments only"
+			"A Reference field on Inspection that points to the Building table",
+			"A String field on Building that stores comma-separated inspection numbers",
+			"A Duration field on Inspection that stores the inspection elapsed time only",
+			"A Password2 field on Inspection that encrypts the building identifier text"
 		],
 		"correctIndex": 0,
-		"explanation": "A reference field creates a one-to-many relationship by storing a pointer from the many-side records (assets) to the one-side record (company).",
+		"explanation": "A reference field stores a pointer to a single record on another table, enabling one-to-many relationships and form navigation via the reference.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/reference-field.html"
 		]

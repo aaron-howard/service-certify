@@ -2,15 +2,15 @@
 	{
 		"trackCode": "CAD",
 		"order": 85,
-		"prompt": "Which packaging mechanism captures customizations so they can be moved between instances during development?",
+		"prompt": "A developer finishes configuration changes on a sub-production instance and needs to bundle them for movement to test. Which mechanism captures the changes?",
 		"choices": [
-			"Update Sets",
-			"Import Sets for data",
-			"Access Control rules for security",
-			"Homepage gauges for reporting"
+			"An Update Set that records modified application files",
+			"An Import Set that stages CSV rows only",
+			"An ACL that grants write on sys_update_set",
+			"A homepage gauge showing pending changes"
 		],
 		"correctIndex": 0,
-		"explanation": "Update Sets group configuration changes so they can be exported from one instance and committed to another.",
+		"explanation": "Update Sets group configuration changes so they can be completed, exported, retrieved, previewed, and committed on another instance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/update-sets.html"
 		]
@@ -18,49 +18,52 @@
 	{
 		"trackCode": "CAD",
 		"order": 86,
-		"prompt": "How are changes to a scoped application typically moved to another instance without a shared update source?",
+		"prompt": "A team completes an update set in development, retrieves it in test, previews the changes, and commits it in test. Which sequence reflects correct update set promotion?",
 		"choices": [
-			"By publishing the application to an update source/repository and installing it, or committing via source control",
-			"By retyping every record manually",
-			"By emailing screenshots to the admin",
-			"By deleting the target instance's tables"
+			"Complete in dev, retrieve in test, preview in test, commit in test",
+			"Commit in dev, delete in test, retrieve in prod, preview in dev",
+			"Preview in dev, retrieve in dev, complete in test, commit in prod only",
+			"Retrieve in dev, complete in test, commit without preview in prod"
 		],
 		"correctIndex": 0,
-		"explanation": "Scoped apps are distributed by publishing to a repository/Store for installation, or by using source control to apply changes on another instance.",
+		"explanation": "Update sets are completed on the source instance, retrieved on the target, previewed to review impact, then committed on the target.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/update-sets.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 87,
+		"prompt": "How should a scoped application be moved to another instance when instances do not share an update source?",
+		"choices": [
+			"Publish to an application repository or Store and install on the target instance",
+			"Retype every table and script manually on the target",
+			"Email configuration screenshots to the target admin",
+			"Delete target instance tables before import"
+		],
+		"correctIndex": 0,
+		"explanation": "Scoped apps are distributed by publishing to a repository or Store for installation, or via source control apply-remote on the target.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/publish-application-to-store.html"
 		]
 	},
 	{
 		"trackCode": "CAD",
-		"order": 87,
-		"prompt": "During delegated development, how does code review help maintain quality?",
-		"choices": [
-			"Designated reviewers approve developers' changes before they are applied",
-			"It disables all ACLs automatically",
-			"It converts client scripts to server scripts",
-			"It removes the need for testing"
-		],
-		"correctIndex": 0,
-		"explanation": "Delegated Development can require code review, where reviewers approve changes before they take effect, improving quality and governance.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/delegated-development-and-deployment/c_DelegatedDevelopment.html"
-		]
-	},
-	{
-		"trackCode": "CAD",
 		"order": 88,
-		"prompt": "Which source control actions are available for a scoped application linked to Git? (Choose two.)",
+		"prompt": "Which source control operations are available for a scoped app linked to Git in Studio? (Choose two.)",
 		"choices": [
-			"Commit changes to a branch",
-			"Apply remote changes into the instance",
+			"Commit local changes to a branch",
+			"Apply remote repository changes into the instance",
 			"Rename the sys_user table globally",
-			"Disable the instance login page"
+			"Disable the instance authentication realm"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"questionType": "multi",
-		"explanation": "The Git integration supports committing local changes to a branch and applying remote changes back into the instance, among other source-control operations.",
+		"explanation": "Git integration supports committing instance changes to a branch and applying remote changes back into the application on the instance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/link-app-to-source-control.html"
 		]
@@ -68,15 +71,15 @@
 	{
 		"trackCode": "CAD",
 		"order": 89,
-		"prompt": "Before installing a downloaded application into production, what is a recommended practice?",
+		"prompt": "Before deploying a downloaded Store application into production, what practice reduces risk?",
 		"choices": [
-			"Install and test it in a non-production (sub-production) instance first",
-			"Delete all existing applications",
-			"Disable every access control rule",
-			"Convert the application to global scope"
+			"Install and validate the application in a sub-production instance first",
+			"Disable every ACL on production before install",
+			"Convert the application to global scope on production",
+			"Delete all existing scoped apps on production"
 		],
 		"correctIndex": 0,
-		"explanation": "Applications should be installed and validated in a sub-production instance before promotion to production to avoid disrupting live services.",
+		"explanation": "Applications should be installed and tested in sub-production before production promotion to avoid disrupting live services.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/download-and-install-applications.html"
 		]

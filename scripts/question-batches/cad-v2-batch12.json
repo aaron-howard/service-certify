@@ -2,63 +2,63 @@
 	{
 		"trackCode": "CAD",
 		"order": 55,
-		"prompt": "How do you configure a Scheduled Job to execute on the last day of every month?",
+		"prompt": "Before saving an incident, a developer needs to recalculate u_sla_due from priority and category without waiting for the transaction to finish. Which configuration meets the requirement?",
 		"choices": [
-			"Set the Run field to Monthly and the Day field to Last Day",
-			"Set the Run field to Periodically and the Repeat Interval to 31",
-			"Set the Run field to Daily and the Time to 23:59",
-			"Set the Run field to Weekly and the Day to Sunday"
+			"A before business rule on insert and update that sets u_sla_due on current",
+			"An after business rule that runs only on display",
+			"An onLoad client script that writes directly to the database",
+			"A UI Policy that queues an async event after save"
 		],
 		"correctIndex": 0,
-		"explanation": "A Scheduled Job with Run = Monthly and Day = Last Day executes on the final day of each month regardless of month length.",
+		"explanation": "Before business rules execute during the save transaction before commit, making them the right place to set field values prior to persistence.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/business-rules.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 56,
+		"prompt": "After a change request is inserted, a business rule must notify an external monitoring system without delaying the user's save response. Which approach fits best?",
+		"choices": [
+			"An async after business rule that calls a Script Include to send the notification",
+			"A before business rule that performs a synchronous REST call",
+			"A display business rule that blocks the form until the call completes",
+			"An onSubmit client script that calls RESTMessageV2 directly"
+		],
+		"correctIndex": 0,
+		"explanation": "Async after business rules run in a separate transaction after commit, avoiding delays to the user while performing follow-up work.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/business-rules.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 57,
+		"prompt": "A nightly job must purge closed task records older than 90 days. Which artifact should the developer configure?",
+		"choices": [
+			"A Scheduled Job with a daily or periodic run executing a server script",
+			"An onChange client script on the task table",
+			"A UI Policy that hides old records from lists",
+			"A Flow Designer record trigger set to onLoad"
+		],
+		"correctIndex": 0,
+		"explanation": "Scheduled Jobs run server-side logic on defined schedules, suitable for recurring maintenance such as record cleanup.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/scheduled-jobs.html"
 		]
 	},
 	{
 		"trackCode": "CAD",
-		"order": 56,
-		"prompt": "What is the purpose of an Application Property (System Property scoped to an app)?",
-		"choices": [
-			"To store a configurable value that scripts read at runtime without hard-coding it",
-			"To define the table's primary key",
-			"To grant the admin role to all users",
-			"To render the login page"
-		],
-		"correctIndex": 0,
-		"explanation": "Application properties store configurable values (read via gs.getProperty) so behavior can change without editing code.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/application-properties.html"
-		]
-	},
-	{
-		"trackCode": "CAD",
-		"order": 57,
-		"prompt": "Which server-side method reads the value of a system property in a script?",
-		"choices": [
-			"gs.getProperty('property.name')",
-			"g_form.getValue('property.name')",
-			"current.getProperty('property.name')",
-			"gs.eventQueue('property.name')"
-		],
-		"correctIndex": 0,
-		"explanation": "gs.getProperty() retrieves the string value of a system (application) property at runtime.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/application-properties.html"
-		]
-	},
-	{
-		"trackCode": "CAD",
 		"order": 58,
-		"prompt": "How do you register a custom event so business logic and notifications can respond to it?",
+		"prompt": "How should a developer register a custom event x_app.record.approved so notifications and script actions can subscribe to it?",
 		"choices": [
-			"Create an entry in the Event Registry and fire it with gs.eventQueue()",
-			"Add the event name to a UI Policy",
-			"Store the event in an attachment field",
-			"Define the event as a dictionary column"
+			"Create an Event Registry entry and fire it with gs.eventQueue() from server code",
+			"Add the event name as a dictionary column on the table",
+			"Define the event in a UI Policy action script",
+			"Store the event payload in g_scratchpad on the client"
 		],
 		"correctIndex": 0,
-		"explanation": "Custom events are declared in the Event Registry and triggered with gs.eventQueue(); script actions and notifications can subscribe to them.",
+		"explanation": "Custom events are declared in the Event Registry and triggered with gs.eventQueue(); subscribers include notifications and script actions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/events.html"
 		]
@@ -66,17 +66,15 @@
 	{
 		"trackCode": "CAD",
 		"order": 59,
-		"prompt": "Which components make up a Flow Designer flow? (Choose two.)",
+		"prompt": "Which low-code tool lets a developer build multi-step automation with record triggers, approvals, and subflows without writing full workflow code?",
 		"choices": [
-			"A trigger that starts the flow",
-			"Actions that perform steps",
-			"An import set transform map",
-			"A dictionary override"
+			"Flow Designer",
+			"Form Designer",
+			"Dictionary Entry editor",
+			"Access Control rule builder"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
-		"questionType": "multi",
-		"explanation": "A flow is composed of a trigger (record, schedule, etc.) and one or more actions/steps that execute the automation logic.",
+		"explanation": "Flow Designer provides a visual, low-code interface for building flows with triggers, actions, approvals, and reusable subflows.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/hyperautomation-low-code/flow-designer.html"
 		]
