@@ -2,81 +2,81 @@
 	{
 		"trackCode": "CAD",
 		"order": 10,
-		"prompt": "A field must store one value chosen from a fixed set of options presented as a dropdown. Which field type is appropriate?",
+		"prompt": "After several teams publish scoped apps from App Engine Studio, operations needs a central place to review versions, dependencies, and installation status across instances. Which console should they use?",
 		"choices": [
-			"Choice field with defined choice list values",
-			"Journal Input field",
-			"Duration field",
-			"Attachment field"
+			"App Engine Management Center to monitor and manage scoped applications centrally",
+			"Workflow Studio to redesign approval flows for each published application",
+			"The system scheduler to batch-delete unused application records nightly",
+			"A custom UI page that queries the User table for application ownership only"
 		],
 		"correctIndex": 0,
-		"explanation": "A Choice field presents a dropdown of predefined values, ideal for selecting one option from a fixed set.",
+		"explanation": "App Engine Management Center provides centralized visibility into scoped applications, versions, and deployment status across the environment.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/app-engine-management-center.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 11,
+		"prompt": "A change request table must appear in Incident-related reports while keeping its own unique fields. The team already extended Task for assignment fields. What is the effect of extending Change Request from Task?",
+		"choices": [
+			"Change Request inherits Task fields and behaviors while supporting additional custom columns",
+			"Change Request replaces the Task table and deletes existing task records on save",
+			"Change Request stores data only in Task and cannot have its own dictionary entries",
+			"Change Request disables polymorphic queries so records never appear in Task lists"
+		],
+		"correctIndex": 0,
+		"explanation": "An extended table inherits parent fields and can add its own; records remain queryable through the parent where configured.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/table-extension.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 12,
+		"prompt": "A status field should offer a fixed set of values—Draft, Review, Approved—without linking to another table. Which field type is appropriate?",
+		"choices": [
+			"A Choice field with defined options stored on the dictionary entry",
+			"A Reference field pointing to the User table for each status value",
+			"A Glide Duration field measured in days since the record was created",
+			"A Password field that stores hashed status tokens for each selection"
+		],
+		"correctIndex": 0,
+		"explanation": "Choice fields provide a fixed list of values on the same table without requiring a related table or reference relationship.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/field-types.html"
 		]
 	},
 	{
 		"trackCode": "CAD",
-		"order": 11,
-		"prompt": "What is the effect of the Auto-number configuration on a table?",
-		"choices": [
-			"Each new record receives a sequential, prefixed identifier automatically",
-			"Records are deleted automatically after numbering",
-			"The table becomes read-only for all users",
-			"Fields are renamed to numeric labels"
-		],
-		"correctIndex": 0,
-		"explanation": "Auto-number assigns each new record a sequential number with a configured prefix and starting value.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/number-maintenance.html"
-		]
-	},
-	{
-		"trackCode": "CAD",
-		"order": 12,
-		"prompt": "When designing the data model, why might you choose a Many-to-Many relationship table rather than a single reference field?",
-		"choices": [
-			"Because each record on both tables can relate to multiple records on the other table",
-			"Because reference fields cannot store any value",
-			"Because it prevents users from opening the form",
-			"Because it converts the table to global scope"
-		],
-		"correctIndex": 0,
-		"explanation": "A Many-to-Many relationship uses an intermediary table so records on each side can associate with many records on the other side.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/many-to-many-relationships.html"
-		]
-	},
-	{
-		"trackCode": "CAD",
 		"order": 13,
-		"prompt": "What does setting a field as Mandatory in the dictionary enforce?",
+		"prompt": "Which naming convention applies to tables created inside a scoped application with vendor prefix acme?",
 		"choices": [
-			"The record cannot be saved until the field contains a value",
-			"The field is hidden on every form",
-			"The field value is encrypted at rest",
-			"The field is copied to all related tables"
+			"Tables use the scope prefix such as x_acme_ followed by the table name",
+			"Tables must use the global u_ prefix regardless of application scope",
+			"Tables inherit the literal name task with no scope identifier in the table name",
+			"Tables are stored only in memory and never receive a persistent table name"
 		],
 		"correctIndex": 0,
-		"explanation": "A mandatory dictionary attribute requires a value before the record can be inserted or updated.",
+		"explanation": "Scoped application tables include the application scope prefix in the table name, such as x_vendor_app_table.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/dictionary-entries.html"
+			"https://www.servicenow.com/docs/r/application-development/c_ApplicationScope.html"
 		]
 	},
 	{
 		"trackCode": "CAD",
 		"order": 14,
-		"prompt": "Which tool provides a guided environment for building scoped applications, including tables, forms, and business logic in one place?",
+		"prompt": "A facilities approval process needs drag-and-drop flow design with activities, conditions, and notifications tied to scoped application records. Which tool should the team use?",
 		"choices": [
-			"App Engine Studio / Studio IDE",
-			"The email client",
-			"The Discovery schedule editor",
-			"The MID Server dashboard"
+			"Workflow Studio to model the approval flow with activities and conditions visually",
+			"A client script onSubmit handler that sends email without any flow definition",
+			"A related list on the User table that lists pending approvals alphabetically",
+			"A transform map that copies approval states from Incident on every insert"
 		],
 		"correctIndex": 0,
-		"explanation": "Studio (and App Engine Studio) is the integrated development environment for building and organizing all files of a scoped application.",
+		"explanation": "Workflow Studio provides visual flow design for approvals and automation activities integrated with platform records.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/app-eng-studio-overview.html"
+			"https://www.servicenow.com/docs/r/build-workflows/workflow-studio.html"
 		]
 	}
 ]

@@ -2,15 +2,15 @@
 	{
 		"trackCode": "CAD",
 		"order": 5,
-		"prompt": "When you create a new scoped application, what identifier does the platform assign to protect its artifacts from naming conflicts?",
+		"prompt": "A vendor-delivered scoped app must protect its Script Includes from direct use by unrelated applications on the same instance. What does application scope enforce by default?",
 		"choices": [
-			"A unique namespace prefix applied to the application's tables and scripts",
-			"A shared global prefix reused by all custom applications",
-			"A random password required to open each form",
-			"A MID Server name bound to the application"
+			"Other scopes cannot access the application's tables and server scripts unless granted permission",
+			"Every user in the instance receives implicit write access to all scoped tables",
+			"Scoped tables are automatically copied into the global namespace on every upgrade",
+			"Client scripts in one scope can call any Script Include in another scope without restriction"
 		],
 		"correctIndex": 0,
-		"explanation": "Scoped applications receive a unique namespace identifier that prefixes their artifacts, preventing naming collisions with other applications.",
+		"explanation": "Scoped applications isolate their artifacts; cross-scope access requires explicit privileges rather than open global access.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/c_ApplicationScope.html"
 		]
@@ -18,65 +18,63 @@
 	{
 		"trackCode": "CAD",
 		"order": 6,
-		"prompt": "Which statements about extending a table are correct? (Choose two.)",
+		"prompt": "Your team debates building a small departmental tool inside the global scope versus a dedicated scoped application. When is a scoped application the better design choice?",
 		"choices": [
-			"The child table inherits all fields defined on the parent table",
-			"Records in the child table also appear when querying the parent table",
-			"Extending a table deletes the parent table's existing records",
-			"A child table cannot add any of its own fields"
+			"When the solution ships as a reusable package with its own tables, ACLs, and lifecycle",
+			"When you only need a one-off UI page with no persistent data model",
+			"When the change must modify core platform tables without any namespace boundary",
+			"When developers want every script to run with unrestricted global table access"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
-		"questionType": "multi",
-		"explanation": "A child table inherits parent fields and its records are included in queries against the parent (polymorphism); it can still add its own fields, and extending never deletes parent data.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/table-extension.html"
-		]
-	},
-	{
-		"trackCode": "CAD",
-		"order": 7,
-		"prompt": "You are deciding whether new development should be global or scoped. Which guidance does ServiceNow give for creating new tables?",
-		"choices": [
-			"Create new tables in a scoped application to isolate data and enable Delegated Development",
-			"Always place new tables in the global scope to maximize cross-application writes",
-			"Store all new tables inside the sys_properties table",
-			"Avoid tables entirely and use only UI pages"
-		],
-		"correctIndex": 0,
-		"explanation": "ServiceNow recommends scoped applications for new tables because global apps can alter unintended data; scoping isolates artifacts and supports Delegated Development.",
+		"explanation": "Scoped applications suit packaged solutions with isolated artifacts, controlled access, and independent versioning compared to ad hoc global changes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/c_ApplicationScope.html"
 		]
 	},
 	{
 		"trackCode": "CAD",
-		"order": 8,
-		"prompt": "What does the Application Access section of a table record control?",
+		"order": 7,
+		"prompt": "A procurement team needs human-readable request numbers such as PRQ0001001 generated automatically on insert. Which field configuration meets this requirement?",
 		"choices": [
-			"Whether other application scopes can read, create, update, or delete that table's data",
-			"The color theme of the form for that table",
-			"How many rows the table can store",
-			"The order of fields on the list view"
+			"A string field with Number maintenance enabled and a prefix defined for the table",
+			"A floating-point field with no auto-numbering or prefix configuration applied",
+			"A URL field that stores an external numbering service link for each record",
+			"A choice field whose values are manually typed by agents for every new request"
 		],
 		"correctIndex": 0,
-		"explanation": "Application Access on the table record defines cross-scope permissions (can read/create/update/delete and accessible from other scopes) that protect the table.",
+		"explanation": "Number maintenance on a string field auto-generates sequential values with an optional prefix when records are created.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/c_RuntimeAccessToAppTables.html"
+			"https://www.servicenow.com/docs/r/application-development/number-maintenance.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 8,
+		"prompt": "An asset record must relate to multiple configuration items, and each configuration item may relate to many assets. Which relationship pattern fits this many-to-many need?",
+		"choices": [
+			"A many-to-many relationship using an intermediate M2M table between the two tables",
+			"A single Reference field on Asset that stores only one configuration item at a time",
+			"A Journal field on Asset where technicians paste comma-separated CI names",
+			"A Document ID field on Asset that uploads a PDF list of related configuration items"
+		],
+		"correctIndex": 0,
+		"explanation": "Many-to-many relationships use an intermediate table so each side can associate with multiple records on the other table.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/many-to-many-relationships.html"
 		]
 	},
 	{
 		"trackCode": "CAD",
 		"order": 9,
-		"prompt": "Which artifact defines the columns, types, and attributes that make up a table's structure?",
+		"prompt": "Business users report that the label on a custom field does not match their process terminology on forms and lists. Where should a developer update the displayed field label?",
 		"choices": [
-			"The table's dictionary (Dictionary Entries)",
-			"The homepage gauge configuration",
-			"The email notification record",
-			"The update set preview log"
+			"The dictionary entry for the field on the table, updating the Column label property",
+			"The client script onLoad handler, hard-coding a new label string on every visit",
+			"The related list layout, which overrides dictionary labels for form fields only",
+			"The system property com.snc.label.override, which replaces all field labels globally"
 		],
 		"correctIndex": 0,
-		"explanation": "Dictionary entries define each column's name, type, and attributes, forming the table's data structure.",
+		"explanation": "Field labels are defined on dictionary entries; updating the Column label changes how the field appears on forms and lists.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/dictionary-entries.html"
 		]

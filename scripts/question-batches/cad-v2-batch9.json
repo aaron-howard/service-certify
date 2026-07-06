@@ -2,83 +2,84 @@
 	{
 		"trackCode": "CAD",
 		"order": 40,
-		"prompt": "In what order are ACLs of different types evaluated for a field on a record?",
+		"questionType": "multi",
+		"prompt": "Scope B must call a Script Include in Scope A from GlideAjax and read rows from a Scope A table at runtime. Select the two platform settings that typically must be in place.",
 		"choices": [
-			"The table-level ACL is checked, then the more specific field-level ACL",
-			"Only the field ACL is ever checked",
-			"ACLs are evaluated alphabetically by sys_id",
-			"Client scripts are checked before any ACL"
-		],
-		"correctIndex": 0,
-		"explanation": "ServiceNow evaluates matching ACLs from most general to most specific; a user must pass the table ACL and then the field ACL to access a field.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/access-control-rules.html"
-		]
-	},
-	{
-		"trackCode": "CAD",
-		"order": 41,
-		"prompt": "You need to restrict who can open an application's modules in the navigator. What controls module visibility by role?",
-		"choices": [
-			"The roles specified on the application menu and its modules",
-			"The color of the module label",
-			"A scheduled job that hides modules nightly",
-			"The record producer variable set"
-		],
-		"correctIndex": 0,
-		"explanation": "Application menus and modules can require roles, so only users with those roles see and open them in the Application Navigator.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/application-menus-modules.html"
-		]
-	},
-	{
-		"trackCode": "CAD",
-		"order": 42,
-		"prompt": "Which operations can an Access Control rule secure? (Choose two.)",
-		"choices": [
-			"read",
-			"write",
-			"upgrade",
-			"clone"
+			"Cross-scope privilege allowing Scope B to access Scope A Script Includes marked client callable",
+			"Runtime access or table ACL design permitting Scope B to read the Scope A table as required",
+			"A UI Policy in Scope A that makes every field visible to anonymous users globally",
+			"Disabling application scope on Scope A so all artifacts move into the global namespace"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [0, 1],
-		"questionType": "multi",
-		"explanation": "ACLs secure record operations such as read, write (create/update), and delete; upgrade and clone are instance-level activities, not ACL operations.",
+		"explanation": "Cross-scope Script Include access requires explicit cross-scope privileges; reading scoped tables from another scope requires runtime access configuration and appropriate ACLs.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/access-control-rules.html"
-		]
-	},
-	{
-		"trackCode": "CAD",
-		"order": 43,
-		"prompt": "How does application scope protect an application's artifacts from other scoped applications?",
-		"choices": [
-			"Cross-scope access must be explicitly granted; otherwise runtime access is restricted",
-			"All scopes share unrestricted write access automatically",
-			"Scope removes the need for ACLs entirely",
-			"Scope encrypts every attachment"
-		],
-		"correctIndex": 0,
-		"explanation": "Scope enforces runtime access restrictions between applications; a scoped app cannot access another scope's artifacts unless cross-scope access is explicitly authorized.",
-		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/script-includes.html",
 			"https://www.servicenow.com/docs/r/application-development/c_RuntimeAccessToAppTables.html"
 		]
 	},
 	{
 		"trackCode": "CAD",
-		"order": 44,
-		"prompt": "Which GlideSystem method returns the sys_id of the currently logged-in user in a server script?",
+		"order": 41,
+		"prompt": "A user can open a form but receives Access denied when submitting an update even though a read ACL passes. Which evaluation order concept explains this behavior?",
 		"choices": [
-			"gs.getUserID()",
-			"g_form.getUniqueValue()",
-			"current.getUserID()",
-			"gs.getRoles()"
+			"ACLs are evaluated per operation, so write ACLs can deny updates even when read ACLs allow viewing",
+			"Read ACLs automatically grant write access whenever the user can open the form",
+			"UI Policies run after all ACL checks and can override denied write operations",
+			"Business rules execute before ACLs and therefore bypass write denial on submit"
 		],
 		"correctIndex": 0,
-		"explanation": "gs.getUserID() returns the current user's sys_id, useful for scripting security and ownership checks.",
+		"explanation": "Each ACL operation—read, write, create, delete—is evaluated independently; passing read does not imply write permission.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/glidesystem.html"
+			"https://www.servicenow.com/docs/r/application-development/access-control-rules.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 42,
+		"prompt": "A developer needs to install, upgrade, and configure application files within one scoped application without full admin rights on the entire instance. Which role model supports delegated app ownership?",
+		"choices": [
+			"The scoped application's admin or delegated developer role defined for that application scope",
+			"The global admin role only, because scoped applications cannot define their own roles",
+			"The itil role, which automatically grants write access to every scoped table",
+			"The report_user role, which includes application installation privileges"
+		],
+		"correctIndex": 0,
+		"explanation": "Scoped applications define roles such as admin for delegated management of that application's artifacts within the scope boundary.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/delegated-development-and-deployment/c_DelegatedDevelopment.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 43,
+		"prompt": "Analysts may edit open Project records but must not delete them. Which ACL operations should you configure separately on the Project table?",
+		"choices": [
+			"Grant write ACL for updates while using a delete ACL that does not grant delete permission",
+			"Grant a single ACL labeled admin that covers read, write, create, and delete together",
+			"Rely on a client script that hides Delete and assume server delete checks are unnecessary",
+			"Disable the Project table ACLs entirely and enforce rules with UI Policies only"
+		],
+		"correctIndex": 0,
+		"explanation": "Write and delete are distinct ACL operations; allowing updates does not require allowing record deletion.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/access-control-rules.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 44,
+		"prompt": "Scope B needs to invoke a protected Script Include in Scope A from a client script via GlideAjax. An administrator must grant access without moving the include to global scope. What should they configure?",
+		"choices": [
+			"Cross-scope privilege on Scope A allowing Scope B to access the client-callable Script Include",
+			"A UI Action in Scope B that copies the Script Include source into a global business rule",
+			"Runtime access to tables only, which automatically exposes all Script Includes cross-scope",
+			"A data policy on Scope A that marks the Script Include as a dictionary attribute"
+		],
+		"correctIndex": 0,
+		"explanation": "Cross-scope privileges explicitly allow another application scope to access designated Script Includes while keeping them in the owning scope.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/script-includes.html"
 		]
 	}
 ]
