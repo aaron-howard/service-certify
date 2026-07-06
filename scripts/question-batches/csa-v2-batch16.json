@@ -2,81 +2,81 @@
 	{
 		"trackCode": "CSA",
 		"order": 75,
-		"prompt": "What does the admin role provide on an instance?",
+		"prompt": "A developer in the HR scoped application cannot edit records owned by the Global scope. What must the administrator process?",
 		"choices": [
-			"Broad configuration access including most tables, ACL bypass for roles, and system settings",
-			"Read-only access to Self Service only",
-			"No access to user records",
-			"Automatic deletion of all incidents"
+			"Cross-scope access request or move artifacts into the correct scope",
+			"Deletion of every global ACL",
+			"Retrieval of an empty update set",
+			"Installation of a second MID Server cluster"
 		],
 		"correctIndex": 0,
-		"explanation": "The admin role grants extensive configuration privileges and satisfies most ACL role requirements.",
+		"explanation": "Application scopes isolate artifacts; cross-scope privileges require explicit access grants.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/roles.html"
+			"https://www.servicenow.com/docs/r/platform-administration/application-scopes.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 76,
-		"prompt": "Which field type stores a choice from a predefined list on a form?",
+		"prompt": "Self-service users need create access on incident but must not edit closed incidents. Which ACL pattern fits?",
 		"choices": [
-			"Choice (dropdown)",
-			"Journal Input",
-			"HTML",
-			"Password (hashed) only"
+			"A create ACL for the role plus a write ACL with a condition that state is not closed",
+			"A single ACL granting admin to all users",
+			"A field map that coalesces on number",
+			"A UI macro that hides the navigator"
 		],
 		"correctIndex": 0,
-		"explanation": "Choice fields present a dropdown of predefined values defined in the dictionary or choice list.",
+		"explanation": "Conditional write ACLs combine role checks with record conditions such as state values.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/field-types.html"
+			"https://www.servicenow.com/docs/r/platform-security/access-control-rules.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 77,
-		"prompt": "How does ServiceNow encrypt sensitive field values such as passwords?",
+		"prompt": "Only the assigned technician should change assigned_to on active incidents. How do you restrict that column?",
 		"choices": [
-			"Using platform encryption on designated field types",
-			"By storing them in plain text in the activity stream",
-			"By emailing them to administrators",
-			"By disabling ACLs"
+			"A field-level write ACL conditioned on the current user matching assignment rules",
+			"A catalog client script on the portal homepage",
+			"A transform map source script",
+			"A discovery status change schedule"
 		],
 		"correctIndex": 0,
-		"explanation": "Password and other sensitive field types use platform encryption and masking rather than clear-text storage.",
+		"explanation": "Field write ACLs with conditions limit who can modify specific columns on matching records.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/encryption.html"
+			"https://www.servicenow.com/docs/r/platform-security/access-control-rules.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 78,
-		"prompt": "What is the purpose of a UI Policy?",
+		"prompt": "You loaded a CSV into an import set and staging rows appear, but no user records were created. What should you inspect first?",
 		"choices": [
-			"Declaratively control field visibility, mandatory, and read-only state on forms",
-			"Import CSV data into staging tables",
-			"Replace all business rules",
-			"Activate plugins automatically"
+			"The transform map field mappings and transform errors",
+			"The Virtual Agent topic order",
+			"The service catalog category tree",
+			"The homepage drag-and-drop layout"
 		],
 		"correctIndex": 0,
-		"explanation": "UI Policies apply form behavior changes based on conditions without requiring client scripts.",
+		"explanation": "Staging without target inserts usually indicates missing or incorrect transform map mappings or script errors.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/ui-policies.html"
+			"https://www.servicenow.com/docs/r/integrate-applications/transform-maps.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 79,
-		"prompt": "When does a Business Rule with 'before' timing execute?",
+		"prompt": "An import set shows Loaded state with thousands of rows, yet sys_user counts are unchanged. The scheduled data source is healthy. What is the next step?",
 		"choices": [
-			"Before the record is written to the database",
-			"Only after the user closes the browser",
-			"Only on homepage load",
-			"Only during plugin activation"
+			"Run or verify the transform map against the import set",
+			"Mark every update set Complete",
+			"Disable all data policies instance-wide",
+			"Remove coalesce from unrelated tables"
 		],
 		"correctIndex": 0,
-		"explanation": "Before business rules run prior to insert, update, or delete so they can modify or abort the transaction.",
+		"explanation": "Data remains in staging until a transform map processes import set rows onto the target table.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/business-rules.html"
+			"https://www.servicenow.com/docs/r/integrate-applications/import-sets.html"
 		]
 	}
 ]

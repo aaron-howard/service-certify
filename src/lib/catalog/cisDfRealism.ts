@@ -28,8 +28,39 @@ export const BANNED_CHOICE_PREFIXES = [
 
 export const BANNED_STEM_PATTERNS = [
 	/^what is the primary purpose of/i,
-	/^what is the main purpose of/i
+	/^what is the main purpose of/i,
+	/^which scheduled job supplies performance analytics widgets with trending non-compliant ci counts/i
 ] as const;
+
+export const CIS_DF_SCENARIO_MIN_RATIO = 0.65;
+
+export const CIS_DF_CONTENT_DIFFICULTIES = ['Foundation', 'Intermediate', 'Advanced'] as const;
+export type CisDfContentDifficulty = (typeof CIS_DF_CONTENT_DIFFICULTIES)[number];
+
+/** Minimum share of bank tagged Advanced (troubleshooting / multisource depth). */
+export const CIS_DF_ADVANCED_MIN_RATIO = 0.15;
+
+/** ServiceNow docs URL must use the public docs host. */
+export const CIS_DF_SOURCE_URL_PATTERN = /^https:\/\/www\.servicenow\.com\/docs\/r\//;
+
+export function isScenarioStylePrompt(prompt: string): boolean {
+	const trimmed = prompt.trim();
+	if (trimmed.length >= 90) return true;
+	if (/^(A |An |The |Your |During |When |After |Before |If |Given |While |Upon |Operations |Discovery |SCCM |Finance |Leadership |Auditors |Stewards |Analyst|A CMDB|A data|A vendor|A SaaS|A cloud|A compliance|A change|A program|A field|Two integration|Lab hardware|From the|Completeness scores|SCCM and|Which two|Which three|Choose two|Choose three|Match each)/i.test(trimmed)) {
+		return true;
+	}
+	return false;
+}
+
+export type CisDfDomain = keyof typeof CIS_DF_DOMAIN_TARGETS;
+
+export function domainForOrder(order: number): CisDfDomain {
+	if (order <= 15) return 'Configuration';
+	if (order <= 35) return 'Ingest';
+	if (order <= 72) return 'Govern';
+	if (order <= 93) return 'Insight';
+	return 'CSDM Fundamentals';
+}
 
 export const STEM_OPENER_CAP = 4;
 
@@ -39,6 +70,8 @@ export type CisDfQuestionRow = {
 	prompt: string;
 	choices: string[];
 	sourceUrls: string[];
+	domain?: CisDfDomain;
+	contentDifficulty?: CisDfContentDifficulty;
 	questionType?: QuestionType;
 	correctIndexes?: number[];
 	correctIndex?: number;
@@ -93,6 +126,13 @@ export function validateCisDfQuestion(q: CisDfQuestionRow): string[] {
 
 	if (!Array.isArray(q.sourceUrls) || q.sourceUrls.length === 0) {
 		issues.push(`order ${q.order}: missing sourceUrls`);
+	} else {
+		for (const url of q.sourceUrls) {
+			if (!CIS_DF_SOURCE_URL_PATTERN.test(url)) {
+				issues.push(`order ${q.order}: sourceUrl must use https://www.servicenow.com/docs/r/ (${url})`);
+				break;
+			}
+		}
 	}
 
 	if (questionType === 'multi') {
@@ -110,11 +150,67 @@ export function validateCisDfQuestion(q: CisDfQuestionRow): string[] {
 	return issues;
 }
 
+export function validateCisDfContentDifficulty(rows: CisDfQuestionRow[]): string[] {
+	const issues: string[] = [];
+	let advanced = 0;
+	let tagged = 0;
+	for (const q of rows) {
+		if (q.trackCode !== 'CIS-DF') continue;
+		if (!q.contentDifficulty) {
+			issues.push(`order ${q.order}: missing contentDifficulty tag`);
+			continue;
+		}
+		if (!CIS_DF_CONTENT_DIFFICULTIES.includes(q.contentDifficulty)) {
+			issues.push(`order ${q.order}: invalid contentDifficulty ${q.contentDifficulty}`);
+		}
+		tagged++;
+		if (q.contentDifficulty === 'Advanced') advanced++;
+	}
+	if (tagged > 0 && advanced / tagged < CIS_DF_ADVANCED_MIN_RATIO) {
+		issues.push(
+			`Advanced contentDifficulty ${advanced}/${tagged} (${Math.round((advanced / tagged) * 100)}%) below minimum ${Math.round(CIS_DF_ADVANCED_MIN_RATIO * 100)}%`
+		);
+	}
+	return issues;
+}
+
+export function validateCisDfScenarioRatio(rows: CisDfQuestionRow[]): string[] {
+	const df = rows.filter((q) => q.trackCode === 'CIS-DF');
+	if (df.length === 0) return [];
+	const scenarioCount = df.filter((q) => isScenarioStylePrompt(q.prompt)).length;
+	const ratio = scenarioCount / df.length;
+	if (ratio < CIS_DF_SCENARIO_MIN_RATIO) {
+		return [
+			`scenario-style prompts ${scenarioCount}/${df.length} (${Math.round(ratio * 100)}%) below minimum ${Math.round(CIS_DF_SCENARIO_MIN_RATIO * 100)}%`
+		];
+	}
+	return [];
+}
+
+export function validateCisDfDomainTags(rows: CisDfQuestionRow[]): string[] {
+	const issues: string[] = [];
+	for (const q of rows) {
+		if (q.trackCode !== 'CIS-DF') continue;
+		if (!q.domain) {
+			issues.push(`order ${q.order}: missing domain tag`);
+			continue;
+		}
+		if (q.domain !== domainForOrder(q.order)) {
+			issues.push(`order ${q.order}: domain ${q.domain} does not match order quota ${domainForOrder(q.order)}`);
+		}
+	}
+	return issues;
+}
+
 export function validateCisDfTrack(rows: CisDfQuestionRow[]): string[] {
 	const issues: string[] = [];
 	for (const q of rows) {
 		issues.push(...validateCisDfQuestion(q));
 	}
+
+	issues.push(...validateCisDfScenarioRatio(rows));
+	issues.push(...validateCisDfDomainTags(rows));
+	issues.push(...validateCisDfContentDifficulty(rows));
 
 	const openerCounts = new Map<string, number>();
 	for (const q of rows) {

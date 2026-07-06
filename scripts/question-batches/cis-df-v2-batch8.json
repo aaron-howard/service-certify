@@ -14,7 +14,9 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/integrate-applications/australia/service-graph-connect/concept/c_ServiceGraphConnect.html",
 			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBDataIngestionBestPractices.html"
-		]
+		],
+		"domain": "Ingest",
+		"contentDifficulty": "Advanced"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -30,7 +32,9 @@
 		"explanation": "CMDB Health aggregates KPIs such as duplicate CIs, stale relationships, and attribute completeness to monitor data quality over time.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBHealthDashboard.html"
-		]
+		],
+		"domain": "Govern",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -46,7 +50,9 @@
 		"explanation": "CMDB Data Manager provides workspace views and remediation tasks to find and clean up orphaned or stale configuration items.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBDataManager.html"
-		]
+		],
+		"domain": "Govern",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -60,11 +66,16 @@
 			"catalog_admin who maintains service catalog item variables only"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "CMDB administrators configure governance controls while data stewards remediate quality issues within their assigned configuration domains.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBGovernanceAndHealth.html"
-		]
+		],
+		"domain": "Govern",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -86,15 +97,29 @@
 			"Controls which source may update a specific attribute after match"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Health metrics expose issues, Data Manager remediates them, and IRE rules prevent duplicates and unauthorized attribute overwrites during ingestion.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBHealthDashboard.html",
 			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_IdentificationAndReconciliationEngine.html"
-		]
+		],
+		"domain": "Govern",
+		"contentDifficulty": "Foundation"
 	}
 ]

@@ -13,7 +13,8 @@
 		"explanation": "Horizontal patterns offer structured, reusable flows for interpreting discovery results compared with scattered probe script customizations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/c-UsingPatternsForHorizontalDiscovery.html"
-		]
+		],
+		"domain": "Discovery Pattern Design"
 	},
 	{
 		"trackCode": "CIS-DISCO",
@@ -29,7 +30,8 @@
 		"explanation": "Reusable sub-patterns and conditional flow reduce duplication and improve maintainability when the same logic applies across platform variants.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-pattern-best-practices.html"
-		]
+		],
+		"domain": "Discovery Pattern Design"
 	},
 	{
 		"trackCode": "CIS-DISCO",
@@ -45,7 +47,8 @@
 		"explanation": "Checking outputs at each step catches parsing or command issues before they propagate into incorrect CMDB attribute or relationship updates.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
-		]
+		],
+		"domain": "Discovery Pattern Design"
 	},
 	{
 		"trackCode": "CIS-DISCO",
@@ -61,7 +64,8 @@
 		"explanation": "Debug traces and step output reveal whether collection commands succeeded and whether parsing logic mapped values to the intended CI fields.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-pattern-best-practices.html"
-		]
+		],
+		"domain": "Discovery Pattern Design"
 	},
 	{
 		"trackCode": "CIS-DISCO",
@@ -77,6 +81,7 @@
 		"explanation": "Pattern library updates can overwrite or merge with instance patterns, so teams reconcile customizations and test behavior after content refresh.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/manage-discovery-pattern-versions.html"
-		]
+		],
+		"domain": "Discovery Pattern Design"
 	}
 ]

@@ -3,7 +3,7 @@
 		"trackCode": "CIS-FSM",
 		"order": 0,
 		"questionType": "multi",
-		"prompt": "Which two group types are Field Service Management-specific user groups configured under Field Service > Group Management? (Choose two.)",
+		"prompt": "A multi-region FSM rollout must separate qualification reviewers from dispatch schedulers while sharing territory coverage. Which group types should the architect configure under Field Service > Group Management? (Choose two.)",
 		"choices": [
 			"Qualifier Groups",
 			"Dispatch Groups",
@@ -11,11 +11,15 @@
 			"Problem Management Coordinator Groups"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Field Service Management uses Qualifier Groups and Dispatch Groups under Group Management, along with Work Groups for agents, to align skills and resources to field tasks.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/setting-up-field-service-user-groups.html"
-		]
+		],
+		"domain": "Field Service Management Fundamentals"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -31,23 +35,25 @@
 		"explanation": "Moving a work order to Awaiting Qualification automatically creates a work order task populated from the parent work order so qualifiers can define executable field activities.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_WorkOrderTasks.html"
-		]
+		],
+		"domain": "Field Service Management Fundamentals"
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 2,
-		"prompt": "In Field Service Management, how does a work order relate to work order tasks during execution?",
+		"prompt": "An initiator submits one work order for HVAC repair at two customer sites requiring different technician skills. How should the qualifier structure execution?",
 		"choices": [
-			"The work order is the parent record that contains one or more executable work order tasks",
-			"Work order tasks permanently replace the parent work order once dispatch assigns an agent",
-			"Each work order task must reference a separate incident record before qualification can begin",
-			"Work orders and work order tasks cannot share location, asset, or customer context data"
+			"Create separate work order tasks on the parent work order so each activity routes to qualified agents by skill and location",
+			"Close the parent work order and open two unrelated incidents for each customer site visit",
+			"Assign one task to a single agent and disable skill matching for the second location",
+			"Convert the request into a catalog order guide without any work order task records"
 		],
 		"correctIndex": 0,
 		"explanation": "A work order organizes the overall field job while work order tasks represent discrete activities that agents execute, assign, and schedule independently.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_WorkOrderTasks.html"
-		]
+		],
+		"domain": "Field Service Management Fundamentals"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -63,7 +69,8 @@
 		"explanation": "Qualifiers split work into tasks so dispatch can route each activity to qualified agents in the right territory and time window.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_WorkOrderTasks.html"
-		]
+		],
+		"domain": "Field Service Management Fundamentals"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -79,6 +86,7 @@
 		"explanation": "The configure Field Service Management topic describes the implementation sequence across workforce, work orders, scheduling, and workspace setup.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/configure-fsm.html"
-		]
+		],
+		"domain": "Field Service Management Fundamentals"
 	}
 ]

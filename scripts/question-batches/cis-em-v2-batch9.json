@@ -14,7 +14,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/exploring-event-management.html",
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/coordinating-alert-response-with-automated-alert-grouping.html"
-		]
+		],
+		"domain": "Alerts and Tasks"
 	},
 	{
 		"trackCode": "CIS-EM",
@@ -30,7 +31,8 @@
 		"explanation": "Unlike most priority triggers that queue for batch calculation, a severity change triggers an immediate update of the severity component in the alert priority score.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/alert-priority.html"
-		]
+		],
+		"domain": "Alerts and Tasks"
 	},
 	{
 		"trackCode": "CIS-EM",
@@ -46,7 +48,8 @@
 		"explanation": "Cluster member impact rules set influence thresholds so parent cluster severity reflects the configured number or percentage of failing members.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/c_EMImpactCalculation.html"
-		]
+		],
+		"domain": "Alerts and Tasks"
 	},
 	{
 		"trackCode": "CIS-EM",
@@ -62,7 +65,8 @@
 		"explanation": "The Event Management - Evaluate Scoped Alert Rules Management scheduled job checks alert management rules every 11 seconds and executes matching actions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/alert-management-rule.html"
-		]
+		],
+		"domain": "Alerts and Tasks"
 	},
 	{
 		"trackCode": "CIS-EM",
@@ -78,6 +82,7 @@
 		"explanation": "Push integrations receive events sent by external tools through listeners or push connectors, while pull connectors actively retrieve events on a schedule.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
-		]
+		],
+		"domain": "Event Sources"
 	}
 ]

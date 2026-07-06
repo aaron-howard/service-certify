@@ -2,81 +2,81 @@
 	{
 		"trackCode": "CSA",
 		"order": 80,
-		"prompt": "What is captured in an Update Set?",
+		"prompt": "After transform, every row logs Field map script error and nothing inserts. Where do you read the failure details?",
 		"choices": [
-			"Configuration changes such as business rules, fields, and UI changes for migration between instances",
-			"End-user password values in plain text",
-			"All transactional incident rows permanently",
-			"MID Server binaries"
+			"Transform history and import set row error fields",
+			"Knowledge article feedback votes",
+			"Service catalog checkout receipts",
+			"Visual Task Board WIP limits"
 		],
 		"correctIndex": 0,
-		"explanation": "Update sets bundle customizations and configuration for export and import across instances.",
+		"explanation": "Transform history and row-level error columns document mapping and script failures during import.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/update-sets.html"
+			"https://www.servicenow.com/docs/r/integrate-applications/transform-maps.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 81,
-		"prompt": "Which update set state indicates it is ready to export to another instance?",
+		"prompt": "HR provides a spreadsheet with columns employee_id, email, and department_name to load into sys_user. What maps those columns to target fields?",
 		"choices": [
-			"Complete",
-			"In Progress state only",
-			"In Progress forever",
-			"Retired automatically"
+			"Field maps on a transform map from the import set table to sys_user",
+			"A UI policy on the incident form",
+			"A client script calling g_form on load",
+			"A business rule with after timing only"
 		],
 		"correctIndex": 0,
-		"explanation": "An update set must be marked Complete before it can be exported or retrieved on a target instance.",
+		"explanation": "Transform map field maps define how each staging column populates fields on the target table.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/update-sets.html"
+			"https://www.servicenow.com/docs/r/integrate-applications/transform-maps.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 82,
-		"prompt": "What language is used for scripting in ServiceNow?",
+		"prompt": "Staging column mail and target field email should link automatically because the names differ slightly. What tool assists the initial mapping?",
 		"choices": [
-			"JavaScript",
-			"Java",
-			"Python",
-			"COBOL"
+			"Manual field maps on the transform map after reviewing staging columns",
+			"Auto Map Matching Fields when names are identical only",
+			"Deleting the import set table",
+			"Publishing a Virtual Agent topic"
 		],
 		"correctIndex": 0,
-		"explanation": "Client scripts, business rules, and most platform scripts use JavaScript (Rhino engine on the server).",
+		"explanation": "When column names differ, administrators create explicit field maps; auto map applies only to identical names.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/scripting-in-servicenow.html"
+			"https://www.servicenow.com/docs/r/integrate-applications/transform-maps.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 83,
-		"prompt": "In a server-side Business Rule script, which object represents the current record?",
+		"prompt": "Weekly user feeds should update existing accounts matched on employee_number instead of creating duplicates. Which transform setting do you enable?",
 		"choices": [
-			"current",
-			"g_form client object",
-			"window",
-			"document"
+			"Coalesce on employee_number in the transform map",
+			"Mandatory on the catalog item picture",
+			"Read only on the homepage gauge",
+			"Complete on the default update set"
 		],
 		"correctIndex": 0,
-		"explanation": "The current GlideRecord in a business rule exposes field values and methods for the record being processed.",
+		"explanation": "Coalesce fields match incoming rows to existing records for update rather than insert.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/business-rules.html"
+			"https://www.servicenow.com/docs/r/integrate-applications/transform-maps.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 84,
-		"prompt": "Which server-side API is used to query records in most Business Rules?",
+		"prompt": "You customized a form layout, business rule, and UI policy in dev and need them in test. What container captures those changes?",
 		"choices": [
-			"GlideRecord",
-			"the GlideSystem API",
-			"GlideAjax",
-			"spModal"
+			"An update set marked In Progress while you develop",
+			"A one-time CSV import set load",
+			"A Discovery schedule",
+			"A knowledge subscription"
 		],
 		"correctIndex": 0,
-		"explanation": "GlideRecord is the standard server API for database queries and updates in business rules and scripts.",
+		"explanation": "Update sets record configuration changes such as forms, business rules, and UI policies for migration.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/gliderecord.html"
+			"https://www.servicenow.com/docs/r/platform-administration/update-sets.html"
 		]
 	}
 ]

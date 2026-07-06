@@ -13,7 +13,8 @@
 		"explanation": "Transfer orders move required parts between company stockrooms or to a location where an agent can receive them.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_TransferOrders.html"
-		]
+		],
+		"domain": "Implementing Field Service Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -29,7 +30,8 @@
 		"explanation": "The source-parts workflow reserves parts and can assign the task to agents who already have required inventory or will receive it.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_SourceParts.html"
-		]
+		],
+		"domain": "Implementing Field Service Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -45,7 +47,8 @@
 		"explanation": "Route optimization strategically reorders assigned tasks to reduce travel time and improve daily completion capacity.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/field-service-scheduling/configuring-route-optimization.html"
-		]
+		],
+		"domain": "Implementing Field Service Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -61,7 +64,8 @@
 		"explanation": "Agents view a consolidated list grouped by stockroom of assets waiting to be picked up before heading to job sites.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/t_PickUpAnAsset.html"
-		]
+		],
+		"domain": "Implementing Field Service Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -77,6 +81,7 @@
 		"explanation": "Drop-off lists let agents return items held in a personal stockroom to a designated company stockroom after field work.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_UseDropOffLists.html"
-		]
+		],
+		"domain": "Implementing Field Service Processes"
 	}
 ]

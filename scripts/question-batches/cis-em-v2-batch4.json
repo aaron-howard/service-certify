@@ -2,18 +2,19 @@
 	{
 		"trackCode": "CIS-EM",
 		"order": 15,
-		"prompt": "What is the default polling interval for many Event Management connectors when polling external sources?",
+		"prompt": "An administrator sets Event collection schedule (seconds) to 45 on a pull connector to improve freshness. The value reverts on save. What explains that behavior?",
 		"choices": [
-			"Every 120 seconds",
-			"Every 5 seconds regardless of source capacity or rate limits",
-			"Once per day at midnight in the instance time zone only",
-			"Only when an operator manually refreshes the connector record form"
+			"The schedule cannot be lower than the minimum schedule property, which defaults to 120 seconds",
+			"The schedule must equal the 11-second alert management rule evaluation interval exactly",
+			"The platform requires manual connector refresh before any sub-120-second value can be saved",
+			"The instance blocks schedule edits until Metric Intelligence baseline learning completes"
 		],
 		"correctIndex": 0,
-		"explanation": "Many connectors use a default polling interval of every 120 seconds, which balances timely ingestion with source system load.",
+		"explanation": "Many connectors use a default polling interval of every 120 seconds, and Event collection schedule cannot fall below the minimum schedule property.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
-		]
+		],
+		"domain": "Event Configuration and Use"
 	},
 	{
 		"trackCode": "CIS-EM",
@@ -29,7 +30,8 @@
 		"explanation": "Intermittent connector failures are commonly caused by credential, endpoint, or schedule issues that prevent reliable event retrieval or delivery.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
-		]
+		],
+		"domain": "Event Configuration and Use"
 	},
 	{
 		"trackCode": "CIS-EM",
@@ -45,7 +47,8 @@
 		"explanation": "If a listener is inactive, uses the wrong protocol, or cannot parse the expected payload format, events may never reach rule evaluation.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
-		]
+		],
+		"domain": "Event Configuration and Use"
 	},
 	{
 		"trackCode": "CIS-EM",
@@ -61,7 +64,8 @@
 		"explanation": "Connector changes affect ingestion quality and alert reliability, so controlled testing and approval reduce outage and compliance risk.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
-		]
+		],
+		"domain": "Event Configuration and Use"
 	},
 	{
 		"trackCode": "CIS-EM",
@@ -77,6 +81,7 @@
 		"explanation": "Event rules can filter or lower the significance of heartbeat traffic so operational alerts focus on actionable failure conditions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/create-event-rule.html"
-		]
+		],
+		"domain": "Event Configuration and Use"
 	}
 ]

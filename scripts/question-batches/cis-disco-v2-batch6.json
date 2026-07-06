@@ -13,7 +13,8 @@
 		"explanation": "Scoped IP range definitions limit where Discovery scans, improving performance and reducing network and credential noise.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
-		]
+		],
+		"domain": "Discovery Configuration"
 	},
 	{
 		"trackCode": "CIS-DISCO",
@@ -29,7 +30,8 @@
 		"explanation": "Range-level behavior assignment allows scan strategy, frequency, and port choices to match each environment's requirements.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
-		]
+		],
+		"domain": "Discovery Configuration"
 	},
 	{
 		"trackCode": "CIS-DISCO",
@@ -45,7 +47,8 @@
 		"explanation": "Include and exclude range controls let teams target only approved address space and avoid scanning prohibited segments.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
-		]
+		],
+		"domain": "Discovery Configuration"
 	},
 	{
 		"trackCode": "CIS-DISCO",
@@ -61,7 +64,8 @@
 		"explanation": "MID Server clusters improve availability and throughput by distributing probe work and supporting failover when a node is unavailable.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
-		]
+		],
+		"domain": "Discovery Configuration"
 	},
 	{
 		"trackCode": "CIS-DISCO",
@@ -77,6 +81,7 @@
 		"explanation": "ECC Queue is the communication channel between the instance and MID Servers, carrying commands and returned payloads.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html"
-		]
+		],
+		"domain": "Discovery Configuration"
 	}
 ]

@@ -3,10 +3,12 @@ import { DEV_PRACTICE_QUESTIONS } from '../../convex/seed/devQuestionBank';
 import {
 	BANNED_CHOICE_PREFIXES,
 	BANNED_STEM_PREFIXES,
+	CSA_SCENARIO_MIN_RATIO,
 	STEM_OPENER_CAP,
 	containsBannedChoicePrefix,
 	containsBannedStemPrefix,
 	fourWordOpener,
+	isScenarioStylePrompt,
 	validateCsaTrack
 } from '$lib/catalog/csaRealism';
 
@@ -61,6 +63,11 @@ describe('CSA v2 realism (full track)', () => {
 			expect(q.sourceUrls.length).toBeGreaterThan(0);
 			expect(q.sourceUrls.every((url) => url.startsWith('https://'))).toBe(true);
 		}
+	});
+
+	it('uses mostly scenario-style admin application prompts', () => {
+		const scenarioCount = proofBatch.filter((q) => isScenarioStylePrompt(q.prompt)).length;
+		expect(scenarioCount / proofBatch.length).toBeGreaterThanOrEqual(CSA_SCENARIO_MIN_RATIO);
 	});
 
 	it('documents banned legacy patterns for future full-track rewrite', () => {

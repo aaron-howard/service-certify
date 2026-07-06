@@ -5,28 +5,30 @@
 		"prompt": "Some enterprise customers require agents to follow account-specific handling rules, such as never contacting the customer by phone after hours. Which CSM feature surfaces these instructions to agents on the case?",
 		"choices": [
 			"Special handling notes that display account or contact-specific guidance to agents",
-			"A random tip-of-the-day banner rotated globally across every agent's home dashboard",
-			"The default incident resolution notes copied automatically from a prior unrelated case",
-			"A read-only audit history entry that records every field change on the case record"
+			"On-screen alerts on the account record displayed whenever any case is opened",
+			"Account team member descriptions stored in the account profile without conditional display rules",
+			"UI policy banner on the case form when priority equals critical for every account"
 		],
 		"correctIndex": 0,
 		"explanation": "Special handling notes present account-, contact-, product-, or asset-specific instructions to agents at the right moment so they follow required customer handling rules.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/special-handling-notes-for-csm.html"
-		]
+		],
+		"domain": "CSM Configuration"
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 56,
-		"prompt": "When configuring a special handling note, which setting determines the conditions under which the note appears to an agent working a case?",
+		"domain": "CSM Configuration",
+		"prompt": "Compliance requires a special handling note with contractual penalty language to be visible only to senior agents on the regulated account team, not every fulfiller. What should the administrator configure?",
 		"choices": [
-			"The applies-to record and matching conditions that scope when the note is shown",
-			"The instance-wide session timeout value that logs idle agents out of the platform",
-			"The outbound email server profile used to deliver customer acknowledgement messages",
-			"The report source table selected when building a performance analytics dashboard widget"
+			"Note visibility and access restrictions so only authorized roles or groups can read the note",
+			"Default note visibility left open so every fulfiller role can read the guidance without restriction",
+			"Penalty terms stored in case work notes that any agent can edit during case handling",
+			"Customer-facing knowledge article publishing the guidance without role-based access controls"
 		],
 		"correctIndex": 0,
-		"explanation": "A special handling note is scoped by what it applies to (account, contact, product, or asset) and the conditions that control when it surfaces to agents.",
+		"explanation": "Special handling notes support visibility and access controls so sensitive account guidance is restricted to authorized agents rather than all fulfillers.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/special-handling-notes-for-csm.html"
 		]
@@ -37,15 +39,16 @@
 		"prompt": "An implementer must ensure only certain agents can view sensitive special handling notes for a regulated account. What should govern this visibility?",
 		"choices": [
 			"Access controls and note visibility settings that restrict which users can read the note",
-			"A public knowledge base flag that publishes the note to the external customer portal",
-			"An assignment rule that reassigns the entire account to a different regional group",
-			"A survey definition scheduled to gather feedback from the account's primary contact"
+			"Default visibility that exposes the note to all fulfiller roles without role restrictions",
+			"Encrypting the note body while still displaying it to every agent in the workspace",
+			"Adding the note text to targeted communications sent to all account contacts"
 		],
 		"correctIndex": 0,
 		"explanation": "Visibility of special handling notes is controlled through access settings so only authorized agents see sensitive account guidance, keeping regulated information restricted.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/special-handling-notes-for-csm.html"
-		]
+		],
+		"domain": "CSM Configuration"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -61,7 +64,8 @@
 		"explanation": "The CSM case lifecycle generally begins in the New state when a case is logged, then progresses through open, in-progress, resolved, and closed states as work advances.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/case-management-process.html"
-		]
+		],
+		"domain": "Case Management"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -69,14 +73,15 @@
 		"prompt": "A customer replies with the requested information after an agent moved a case to Awaiting Info. What is the appropriate lifecycle transition for the agent to make?",
 		"choices": [
 			"Return the case to an active in-progress state so work resumes on the response",
-			"Immediately close the case as complete without reviewing the customer's reply",
-			"Delete the case record entirely to remove it from the agent's assigned queue",
-			"Convert the case into a knowledge article before reading the submitted information"
+			"Move the case directly to Resolved without reviewing the customer's submitted information",
+			"Leave the case in Awaiting Info and open a new case record for the customer reply",
+			"Escalate the case to management instead of returning it to active in-progress work"
 		],
 		"correctIndex": 0,
 		"explanation": "When a customer supplies the needed information, the agent moves the case out of the awaiting-info hold back into an active working state to continue resolution.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/case-management-process.html"
-		]
+		],
+		"domain": "Case Management"
 	}
 ]

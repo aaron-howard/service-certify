@@ -13,12 +13,15 @@
 		"explanation": "CIs automatically created from assets without a technical discovery update typically carry Discovery source SNAssetManagement, indicating asset-origin rather than scan-based population.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/create-ci-manual-cmdb-workspace.html"
-		]
+		],
+		"domain": "Ingest",
+		"contentDifficulty": "Foundation"
 	},
 	{
 		"trackCode": "CIS-DF",
 		"order": 21,
-		"prompt": "A data steward creates a missing production server through the CMDB Workspace Create CI experience. What Discovery source value is set on the new CI?",
+		"domain": "Ingest",
+		"prompt": "During a data center audit, a steward discovers a missing production Linux server and creates it through Create CI in CMDB Workspace. Reporting must distinguish steward-created records from Discovery-fed CIs. Which Discovery source value will the new record carry?",
 		"choices": [
 			"Manual via IRE",
 			"SNAssetManagement",
@@ -26,10 +29,11 @@
 			"Import Set"
 		],
 		"correctIndex": 0,
-		"explanation": "Manual CI creation in CMDB Workspace applies IRE rules and sets Discovery source to Manual via IRE to distinguish steward-entered records from automated feeds.",
+		"explanation": "Manual CI creation in CMDB Workspace applies IRE rules and sets Discovery source to Manual via IRE so steward-entered records are identifiable in reports and filters.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/create-ci-manual-cmdb-workspace.html"
-		]
+		],
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -45,7 +49,9 @@
 		"explanation": "When glide.asset.create_ci_with_ire is true, eligible asset records create CIs through the IRE API with governed identification and reconciliation behavior.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
-		]
+		],
+		"domain": "Ingest",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -59,11 +65,16 @@
 			"Store compliance identifiers only in incident work notes without CMDB fields"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Clean asset identifiers and IRE-based creation reduce mismatches between alm_asset and cmdb_ci; disabling reconciliation or hiding compliance data in incidents undermines alignment.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/c_ITILConfigurationManagement.html"
-		]
+		],
+		"domain": "Ingest",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -85,14 +96,28 @@
 			"Asset lifecycle event creating a CI with Discovery source SNAssetManagement"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Discovery, imports, manual creation, and asset-driven CI creation each feed IRE with distinct discovery source values and ingestion mechanics.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
-		]
+		],
+		"domain": "Ingest",
+		"contentDifficulty": "Foundation"
 	}
 ]

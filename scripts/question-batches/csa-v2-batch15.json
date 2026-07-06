@@ -2,15 +2,15 @@
 	{
 		"trackCode": "CSA",
 		"order": 70,
-		"prompt": "How are groups used in ServiceNow security?",
+		"prompt": "The Network Operations group should receive assignment tasks and inherit the itil role for queue work. What single record ties both needs together?",
 		"choices": [
-			"Groups bundle users and can carry roles assigned to all members",
-			"Groups replace all tables",
-			"Groups encrypt the CMDB",
-			"Groups disable notifications"
+			"A group with roles and assignment group references on tasks",
+			"A transform map on sys_user_group",
+			"A retired update set export",
+			"A plugin activation audit log"
 		],
 		"correctIndex": 0,
-		"explanation": "Groups organize users; roles assigned to a group apply to its members for access and assignment.",
+		"explanation": "Groups carry roles for access and are referenced as assignment groups on task records.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/groups.html"
 		]
@@ -18,67 +18,65 @@
 	{
 		"trackCode": "CSA",
 		"order": 71,
-		"prompt": "What does the Customer role typically allow?",
+		"prompt": "While troubleshooting ACL behavior you impersonate the affected user with security debugging enabled. What does the debugger show?",
 		"choices": [
-			"Basic self-service access such as submitting incidents and viewing own requests",
-			"Full admin configuration of ACLs",
-			"MID Server administration",
-			"Unrestricted CMDB delete"
+			"Which ACL rules passed or failed for each attempted operation",
+			"The encrypted password hash in clear text",
+			"Every plugin license expiration date",
+			"All import set attachments on disk"
 		],
 		"correctIndex": 0,
-		"explanation": "The snc_internal or customer/end-user roles enable self-service without administrative privileges.",
+		"explanation": "Security debugging during impersonation lists ACL evaluation results for the simulated session.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/roles.html"
+			"https://www.servicenow.com/docs/r/platform-security/access-control-rules.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 72,
-		"prompt": "Which import formats can be loaded into an Import Set? (Choose two.)",
+		"prompt": "A table ACL must allow employees to create incidents but prevent them from deleting any incident record. How do you model that?",
 		"choices": [
-			"CSV",
-			"Excel (XLS/XLSX)",
-			"Compiled Java bytecode",
-			"Raw disk images"
+			"Separate ACL rules for create (grant) and delete (no grant or explicit deny)",
+			"One ACL that grants admin to everyone",
+			"Remove the incident table from the dictionary",
+			"Load incidents only through Discovery"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
-		"questionType": "multi",
-		"explanation": "Import sets accept structured files such as CSV and Excel for staging before transform.",
+		"explanation": "Each operation (read, write, create, delete) is evaluated independently through operation-specific ACLs.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/integrate-applications/import-sets.html"
+			"https://www.servicenow.com/docs/r/platform-security/access-control-rules.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 73,
-		"prompt": "What is the purpose of a CMDB relationship?",
+		"prompt": "Integration credentials are stored in a password field on u_integration_profile. How does the platform protect the value at rest?",
 		"choices": [
-			"Document dependency or connectivity between configuration items",
-			"Store user passwords",
-			"Replace transform maps",
-			"Schedule payroll jobs"
+			"Platform encryption for password field types",
+			"Plain text in the activity formatter",
+			"Attachment to every notification email",
+			"Replication to the MID Server log file"
 		],
 		"correctIndex": 0,
-		"explanation": "CI relationships model dependencies such as runs on or depends on for impact and change analysis.",
+		"explanation": "Password fields use platform encryption and masking rather than storing clear-text secrets.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-relationships.html"
+			"https://www.servicenow.com/docs/r/platform-security/encryption.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 74,
-		"prompt": "Which responsibility belongs to the customer in the Shared Responsibility Model?",
+		"prompt": "Security Center flags excessive admin accounts during a quarterly review. What is the recommended remediation?",
 		"choices": [
-			"Configuring users, roles, ACLs, and data on their instance",
-			"Physical data center power and cooling",
-			"Hypervisor patch management for all tenants",
-			"Global DNS root zone maintenance"
+			"Reduce admin assignments and apply least-privilege roles",
+			"Disable every ACL on production",
+			"Delete all groups before reimporting users",
+			"Commit every in-progress update set immediately"
 		],
 		"correctIndex": 0,
-		"explanation": "Customers secure and configure their instance content, access, and integrations; ServiceNow secures the platform stack.",
+		"explanation": "Security Center guidance promotes least privilege by limiting broad roles such as admin.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/shared-responsibility-model.html"
+			"https://www.servicenow.com/docs/r/platform-security/security-center.html"
 		]
 	}
 ]

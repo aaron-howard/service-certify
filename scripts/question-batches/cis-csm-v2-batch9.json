@@ -5,15 +5,16 @@
 		"prompt": "Agents working product support cases need guided activities for triage, research, and resolution. Where do they access the product support playbook?",
 		"choices": [
 			"On the Playbook tab of the case record in CSM workspace",
-			"In the entitlement related list after modifying contract coverage terms",
-			"From the matching rule form used by the assignment workbench only",
-			"On the MFA properties page under Multi-factor Authentication settings"
+			"Guided decisions on the workspace case form for context-aware recommendations",
+			"Case tasks on the related list configured as manual triage steps for product support",
+			"A Flow Designer subflow launched from a UI action without the playbook experience"
 		],
 		"correctIndex": 0,
 		"explanation": "Case playbooks such as product support appear on the Playbook tab in CSM workspaces, guiding agents through structured activities on the case record.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/csm-playbook-product-support.html"
-		]
+		],
+		"domain": "CSM Configuration"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -29,7 +30,8 @@
 		"explanation": "The customer case manager role is not included by default in sn_customerservice.contact_role_assignment; administrators add it under Customer Service > Administration > Properties.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
-		]
+		],
+		"domain": "CSM Configuration"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -37,15 +39,16 @@
 		"prompt": "A UI action must appear as a button on case records in CSM Configurable Workspace. What must exist for each UI action?",
 		"choices": [
 			"A corresponding form action linked to the UI action",
-			"A separate incident record synchronized through the CSM-ITSM plugin",
-			"A household member relationship for every external portal user",
-			"A WhatsApp service channel queue with assignment eligibility rules"
+			"A UI policy that exposes the button on classic case forms without workspace integration",
+			"A workspace declarative action defined without the required linked form action",
+			"A display business rule that runs client logic without a workspace form action mapping"
 		],
 		"correctIndex": 0,
 		"explanation": "CSM Configurable Workspace requires a form action for each UI action so the action can render and execute in the UI Builder-based workspace experience.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/config-csm-config-ws-form-action.html"
-		]
+		],
+		"domain": "CSM Configuration"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -59,11 +62,15 @@
 			"Deletion of the related account record from the CMDB"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Work notes sync from the incident to the case when incident state changes and when the incident is resolved or closed with resolution notes; additional comments also sync but product models and account deletion are unrelated.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/csm-integration-sm-incident.html"
-		]
+		],
+		"domain": "CSM Configuration"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -79,6 +86,7 @@
 		"explanation": "CSM integration with Request Management requires the com.sn_cs_sm_request plugin so agents can create or associate requests from cases and synchronize fulfiller comments to case work notes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/csm-integration-sm-request.html"
-		]
+		],
+		"domain": "CSM Configuration"
 	}
 ]

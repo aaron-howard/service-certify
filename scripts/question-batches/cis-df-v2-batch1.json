@@ -13,23 +13,27 @@
 		"explanation": "CI Class Manager is the governance workspace for extending CI classes, managing attributes, and configuring identification settings per class.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-class-manager.html"
-		]
+		],
+		"domain": "Configuration",
+		"contentDifficulty": "Foundation"
 	},
 	{
 		"trackCode": "CIS-DF",
 		"order": 1,
-		"prompt": "During data modeling workshops, stakeholders ask why Windows and Linux servers share fields such as serial number and install status. What CMDB design principle explains that reuse?",
+		"domain": "Configuration",
+		"prompt": "The CMDB team introduces cmdb_ci_linux_server and must expose serial number, install status, and manufacturer on forms without redefining those fields on the child table. What modeling approach should the lead recommend?",
 		"choices": [
-			"Each CI class must remain a standalone table with no shared columns",
-			"Class hierarchy inheritance lets child classes reuse attributes defined on parent classes",
-			"Discovery patterns copy parent attributes only after a full subnet scan completes",
-			"Import sets require every CI to load directly into cmdb_ci without subclassing"
+			"Extend cmdb_ci_server so the Linux class inherits shared attributes from the parent hierarchy",
+			"Create a standalone table with no parent link and duplicate every shared column manually",
+			"Store inherited values in incident work notes and copy them into CI fields nightly",
+			"Load Linux servers only into alm_asset and skip cmdb_ci subclassing entirely"
 		],
-		"correctIndex": 1,
-		"explanation": "CMDB classes form a hierarchy where specialized classes extend parent classes and inherit shared dictionary attributes and behavior.",
+		"correctIndex": 0,
+		"explanation": "Extending the correct parent class lets specialized CIs inherit shared dictionary attributes and lifecycle behavior instead of redefining common fields on each child table.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-class-hierarchy.html"
-		]
+		],
+		"contentDifficulty": "Foundation"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -45,7 +49,9 @@
 		"explanation": "After identification matches a CI, reconciliation rules govern attribute-level write authority so trusted sources win conflicts on fields such as hostname.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
-		]
+		],
+		"domain": "Configuration",
+		"contentDifficulty": "Foundation"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -67,15 +73,29 @@
 			"Audit trail of proposed and accepted attribute values per source"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Configuration work spans class modeling, identification keys, reconciliation precedence, and multisource provenance captured in CMDB 360.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/multisource-cmdb.html"
-		]
+		],
+		"domain": "Configuration",
+		"contentDifficulty": "Foundation"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -90,10 +110,16 @@
 			"sys_updated_by on the import set row staging table exclusively"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1, 2],
+		"correctIndexes": [
+			0,
+			1,
+			2
+		],
 		"explanation": "Discovery source, last discovered, and install status are core CMDB attributes for source traceability, freshness, and lifecycle reporting; incident short descriptions and staging metadata are not CI governance fields.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/c_ITILConfigurationManagement.html"
-		]
+		],
+		"domain": "Configuration",
+		"contentDifficulty": "Foundation"
 	}
 ]

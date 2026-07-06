@@ -2,51 +2,55 @@
 	{
 		"trackCode": "CIS-EM",
 		"order": 10,
-		"prompt": "What does an Event Management connector primarily do for external monitoring tools?",
+		"prompt": "An implementer must onboard Datadog, SolarWinds, and a custom SNMP source that each label severity differently. Which connector design normalizes those feeds into one Event Management pipeline?",
 		"choices": [
-			"Polls or receives source events and maps them into the ServiceNow event format",
-			"Retires unused hardware models from the product catalog during nightly batch jobs",
-			"Creates change requests for every warning-level SNMP trap without rule evaluation",
-			"Replaces alert assignment groups with procurement workflows for stockroom managers"
+			"Configure source-specific connectors with field mapping and severity translation event rules before correlation",
+			"Send all events to critical severity so the NOC sees every signal at the highest level",
+			"Disable event rules until every source uses identical JSON field names and values",
+			"Route each tool to a separate instance without CMDB binding or shared alert grouping"
 		],
 		"correctIndex": 0,
-		"explanation": "Connectors provide source-specific ingestion and mapping so external monitoring telemetry can enter the Event Management processing pipeline.",
+		"explanation": "Connectors provide source-specific ingestion and mapping; event rules normalize severity and attributes so heterogeneous monitoring tools feed a unified pipeline.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/create-event-rule.html"
+		],
+		"domain": "Architecture and Discovery"
 	},
 	{
 		"trackCode": "CIS-EM",
 		"order": 11,
-		"prompt": "A new connector sends host names that do not match CMDB records. Which configuration step should be prioritized first?",
+		"prompt": "During a traffic spike, the primary MID Server handling SNMP listeners stops responding but a secondary MID in the cluster remains healthy. Which architecture capability preserves event ingestion?",
 		"choices": [
-			"Disable all event rules until discovery completes every subnet in the estate globally",
-			"Define event field mapping so source attributes resolve to known configuration items",
-			"Set every unmatched event to critical severity for maximum operational visibility",
-			"Remove the connector and rely on manual alert logging maintained in spreadsheets"
+			"MID Server clustering with redundant listener paths and health monitoring aligned to load",
+			"Disabling TLS on listener endpoints so traps bypass MID Server validation checks",
+			"Routing all sources through one connector with no failover or capacity monitoring configured",
+			"Converting pull connectors to manual spreadsheet uploads until the spike subsides"
 		],
-		"correctIndex": 1,
-		"explanation": "Event field mapping translates connector payload attributes into ServiceNow event fields and supports CI binding for meaningful correlation.",
+		"correctIndex": 0,
+		"explanation": "Redundant MID Server paths and proactive health monitoring reduce the risk of event loss or delayed alerting when a node fails during high-volume periods.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html",
-			"https://www.servicenow.com/docs/r/it-operations-management/event-management/create-event-rule.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
+		],
+		"domain": "Architecture and Discovery"
 	},
 	{
 		"trackCode": "CIS-EM",
 		"order": 12,
-		"prompt": "What is the message key used for during event processing in Event Management?",
+		"prompt": "A NOC receives 50,000 SNMP traps per hour during peak windows. Which architectural tuning reduces listener backlog without losing actionable alerts?",
 		"choices": [
-			"Encrypting listener credentials stored on the MID Server host file system",
-			"Assigning hardware asset tags during stockroom receiving and audit operations",
-			"Identifying and deduplicating related events from the same source condition",
-			"Scheduling discovery credentials for nightly subnet scans across data centers"
+			"Distribute listeners across MID Server clusters, tune parser throughput, and filter noise with event rules before alert creation",
+			"Disable correlation entirely so every trap creates a separate critical alert for visibility",
+			"Increase connector polling below the 120-second minimum to drain the listener queue faster",
+			"Archive all traps without normalization until off-peak hours when operators are available"
 		],
-		"correctIndex": 2,
-		"explanation": "The message key helps the platform recognize related events so deduplication and correlation can reduce redundant alerts for the same underlying condition.",
+		"correctIndex": 0,
+		"explanation": "High-volume ingestion requires distributed listener capacity, efficient parsing, and upstream filtering so the pipeline stays responsive during spikes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/event-management/create-event-rule.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/event-rules.html"
+		],
+		"domain": "Architecture and Discovery"
 	},
 	{
 		"trackCode": "CIS-EM",
@@ -62,7 +66,8 @@
 		"explanation": "When several rules match, Event Management executes all of them in ascending order of execution so each rule can apply its configured processing logic.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/event-rules.html"
-		]
+		],
+		"domain": "Event Configuration and Use"
 	},
 	{
 		"trackCode": "CIS-EM",
@@ -78,6 +83,7 @@
 		"explanation": "Phased onboarding with validated mapping and correlation reduces noise and misconfiguration risk before broad production rollout.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
-		]
+		],
+		"domain": "Event Configuration and Use"
 	}
 ]

@@ -2,81 +2,81 @@
 	{
 		"trackCode": "CSA",
 		"order": 55,
-		"prompt": "What bundles permissions that can be assigned to users and groups?",
+		"prompt": "Payroll analysts must edit the u_salary field on u_employee, but all other staff should not see the value on the form. What control do you implement?",
 		"choices": [
-			"A role",
-			"A dashboard homepage gauge widget",
-			"A field mapping import job",
-			"A Visual Task Board lane"
+			"A field-level ACL granting read and write only to the payroll role",
+			"A homepage theme that hides the column",
+			"A catalog category restriction",
+			"A Discovery credential alias"
 		],
 		"correctIndex": 0,
-		"explanation": "Roles group access permissions; users and groups receive roles to gain authorized capabilities.",
+		"explanation": "Field ACLs restrict read and write on individual columns beyond table-level security.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/roles.html"
+			"https://www.servicenow.com/docs/r/platform-security/access-control-rules.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 56,
-		"prompt": "How are roles typically assigned to a user?",
+		"prompt": "A developer with no roles opens cmdb_ci_server and receives an empty list despite records existing. What is the most likely cause?",
 		"choices": [
-			"Directly on the user record or inherited from groups",
-			"Only by editing sys_properties",
-			"Only through Discovery",
-			"Only via import sets"
+			"No table ACL grants read access for that user",
+			"The dictionary export deleted the rows",
+			"The import set staging table is full",
+			"The update set is still In Progress"
 		],
 		"correctIndex": 0,
-		"explanation": "Users receive roles directly or inherit them from group membership.",
+		"explanation": "Without a granting table ACL, the platform denies read access and lists appear empty to the user.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/roles.html"
+			"https://www.servicenow.com/docs/r/platform-security/access-control-rules.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 57,
-		"prompt": "What is the definition of a transform map in ServiceNow?",
+		"prompt": "You add the itil role to the Database Operations group. How do members receive the new permissions?",
 		"choices": [
-			"A map that defines relationships between import set fields and fields on a target table",
-			"A map that stores incident history only",
-			"A map used to encrypt all attachments",
-			"A map that replaces ACL evaluation"
+			"They inherit the role automatically through group membership",
+			"Each member must run a transform map manually",
+			"Roles apply only after the next instance clone",
+			"Group roles require a MID Server restart"
 		],
 		"correctIndex": 0,
-		"explanation": "Transform maps field mappings from staging import set tables onto existing target tables during data load.",
+		"explanation": "Roles assigned to a group flow to all current and future members of that group.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/integrate-applications/transform-maps.html"
+			"https://www.servicenow.com/docs/r/platform-administration/groups.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 58,
-		"prompt": "Where does imported data land before a transform map loads it onto the target table?",
+		"prompt": "Finance users report the cost_center field is blank on vendor records while admins see values. What should you verify?",
 		"choices": [
-			"An Import Set table (staging)",
-			"The sys_user table directly",
-			"The CMDB only",
-			"A homepage gauge"
+			"Whether a field ACL denies read access for their roles",
+			"Whether the coalesce field matches employee number",
+			"Whether the catalog item has variables",
+			"Whether Virtual Agent topics are published"
 		],
 		"correctIndex": 0,
-		"explanation": "Import sets stage incoming rows; transform maps then move validated data to the target table.",
+		"explanation": "When read is denied at the field level, non-authorized users see empty values even though data exists.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/integrate-applications/import-sets.html"
+			"https://www.servicenow.com/docs/r/platform-security/access-control-rules.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 59,
-		"prompt": "Which utility automatically maps import set columns to target fields with the same name?",
+		"prompt": "Compliance requires social security numbers to be masked on every form regardless of role. Which declarative control enforces consistent field protection?",
 		"choices": [
-			"Auto Map Matching Fields",
-			"CI Relationship Builder",
-			"Business Service Management Map",
-			"Plugin Activation Wizard"
+			"A data policy on the sensitive field",
+			"A Visual Task Board lane color",
+			"A service catalog thumbnail image",
+			"A homepage gauge refresh interval"
 		],
 		"correctIndex": 0,
-		"explanation": "Auto Map Matching Fields links import set and target fields that share identical names.",
+		"explanation": "Data policies apply masking and other protections to fields across the platform independent of form layout.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/integrate-applications/transform-maps.html"
+			"https://www.servicenow.com/docs/r/platform-security/data-policies.html"
 		]
 	}
 ]

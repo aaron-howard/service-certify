@@ -13,7 +13,9 @@
 		"explanation": "The de-duplication wizard guides operators through selecting a primary CI, merging attributes and relationships, and retiring or deleting duplicates.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/deduplicate-cis.html"
-		]
+		],
+		"domain": "Govern",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -29,7 +31,9 @@
 		"explanation": "Lifecycle attributes such as install and operational status support governed retirement without losing audit history.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-lifecycle-management.html"
-		]
+		],
+		"domain": "Govern",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -45,25 +49,28 @@
 		"explanation": "CMDB Data Manager policies enforce validation and standardization during bulk lifecycle and attribute operations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-data-manager.html"
-		]
+		],
+		"domain": "Govern",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
 		"order": 58,
-		"questionType": "multi",
-		"prompt": "Which two remediation activities are commonly executed through CMDB Data Manager? (Choose two.)",
+		"domain": "Govern",
+		"prompt": "CMDB Health lists hundreds of duplicate database CIs, but the Duplicate CI Remediator wizard completes without merging any pairs. What should the steward verify first?",
 		"choices": [
-			"Bulk lifecycle status updates across selected CI populations",
-			"Orphaned relationship cleanup tasks for stale dependency links",
-			"Horizontal discovery schedule creation for new network ranges",
-			"Event Management connector template deployment for monitoring tools"
+			"That duplicate groups share matching identification keys and the remediator selection criteria include the reported CI class",
+			"That all users cleared browser cookies before opening the health dashboard",
+			"That Discovery schedules were paused globally for thirty days",
+			"That import set tables were truncated before launching the wizard"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
-		"explanation": "Data Manager focuses on governed bulk lifecycle operations and relationship hygiene—not discovery scheduling or event connector setup.",
+		"explanation": "Remediator merges require eligible duplicate groups with aligned keys and class scope; mismatched identifiers or filters often leave health-detected duplicates untouched.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-data-manager.html"
-		]
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/deduplicate-cis.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-health-dashboard-overview.html"
+		],
+		"contentDifficulty": "Advanced"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -85,15 +92,29 @@
 			"Existing duplicate groups must be surfaced as remediation tasks"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Govern teams combine detection rules, identification tuning, wizard merges, and templates depending on duplicate volume and recurrence patterns.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/deduplicate-cis.html",
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-health-dashboard-overview.html"
-		]
+		],
+		"domain": "Govern",
+		"contentDifficulty": "Foundation"
 	}
 ]

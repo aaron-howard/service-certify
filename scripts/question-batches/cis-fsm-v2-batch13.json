@@ -13,7 +13,8 @@
 		"explanation": "Smart Assessment questionnaires capture structured safety, inspection, and compliance data and can be mandatory before a task closes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/smart-assessment-questionnaire.html"
-		]
+		],
+		"domain": "Implementing Field Service Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -29,7 +30,8 @@
 		"explanation": "Survey-based questionnaires become available on the task form when the configured trigger conditions for that work order task are satisfied.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/survey-based-questionnaires.html"
-		]
+		],
+		"domain": "Implementing Field Service Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -45,7 +47,8 @@
 		"explanation": "Workforce Optimization for Field Service centralizes routing, skills, schedules, and workforce performance management.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-fsm.html"
-		]
+		],
+		"domain": "Implementing Field Service Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -61,7 +64,8 @@
 		"explanation": "Workforce setup involves configuring users, locations, territories, and other foundational data required for scheduling and dispatch.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/setting-up-workforce.html"
-		]
+		],
+		"domain": "Implementing Field Service Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -77,6 +81,7 @@
 		"explanation": "Capacity and Reservations Management assigns work within defined capacity limits using reservation rules for priority, work type, and other task attributes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/capacity-management.html"
-		]
+		],
+		"domain": "Implementing Field Service Processes"
 	}
 ]

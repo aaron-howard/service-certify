@@ -13,7 +13,8 @@
 		"explanation": "WMI steps query Windows hosts for process lists, service details, and other OS-level data used to identify applications and populate CI attributes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/c-UsingPatternsForHorizontalDiscovery.html"
-		]
+		],
+		"domain": "Discovery Pattern Design"
 	},
 	{
 		"trackCode": "CIS-DISCO",
@@ -29,7 +30,8 @@
 		"explanation": "SSH steps depend on Discovery credentials that authenticate to the host and authorize execution of the remote commands defined in the pattern.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html"
-		]
+		],
+		"domain": "Discovery Pattern Design"
 	},
 	{
 		"trackCode": "CIS-DISCO",
@@ -45,7 +47,8 @@
 		"explanation": "SNMP steps require an accessible SNMP agent and community strings or credentials configured consistently with Discovery credential records.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html"
-		]
+		],
+		"domain": "Discovery Pattern Design"
 	},
 	{
 		"trackCode": "CIS-DISCO",
@@ -61,7 +64,8 @@
 		"explanation": "Conditional and defensive pattern logic handles environment variation and reduces brittle discovery outcomes when command output differs across targets.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-pattern-best-practices.html"
-		]
+		],
+		"domain": "Discovery Pattern Design"
 	},
 	{
 		"trackCode": "CIS-DISCO",
@@ -77,6 +81,7 @@
 		"explanation": "Highly fragile parsing logic can break when command output formats or dependencies change across environments and releases.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-pattern-best-practices.html"
-		]
+		],
+		"domain": "Discovery Pattern Design"
 	}
 ]

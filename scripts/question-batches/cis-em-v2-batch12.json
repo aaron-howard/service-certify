@@ -2,26 +2,27 @@
 	{
 		"trackCode": "CIS-EM",
 		"order": 55,
-		"prompt": "Metric Intelligence builds statistical models from historical metric data primarily to produce which outputs?",
+		"prompt": "Metric Intelligence must monitor 3,000 CPU utilization series across a global estate. Which scaling consideration is most important during design?",
 		"choices": [
-			"Expected values with upper and lower control bounds for outlier detection",
-			"Serialized asset tags for every discovered server in the CMDB",
-			"Standard change templates for recurring maintenance activities",
-			"Catalog item price books for hardware fulfillment requests"
+			"Ensure connector metrics collection, CI mapping, and model training windows are sized for series volume and retention needs",
+			"Disable event rules globally so Metric Intelligence becomes the only ingestion path",
+			"Set every metric class to static bounds of zero so outlier detection never runs",
+			"Collect metrics only from CIs without discovery records to reduce mapping overhead"
 		],
 		"correctIndex": 0,
-		"explanation": "Statistical models project expected metric values and control bounds used to identify outliers and compute anomaly scores.",
+		"explanation": "Statistical models project expected metric values and control bounds used to identify outliers; large series counts require appropriate collection scope and retention planning.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/t_EMConfigureConnectorInstance.html"
-		]
+		],
+		"domain": "Metric Intelligence"
 	},
 	{
 		"trackCode": "CIS-EM",
 		"order": 56,
-		"prompt": "Metric data points falling outside learned control bounds in Metric Intelligence are treated how?",
+		"prompt": "After two weeks of baseline learning, CPU metrics on a critical database CI suddenly exceed learned control bounds. How does Metric Intelligence treat those points?",
 		"choices": [
-			"As statistical outliers that contribute to anomaly scores on a 0–10 scale",
-			"As mandatory signals to retire the associated CI from the CMDB",
+			"As statistical outliers that increase anomaly scores on the 0–10 scale for review",
+			"As mandatory signals to retire the associated CI from the CMDB immediately",
 			"As triggers to disable all pull connectors until the next business day",
 			"As requests to auto-approve every open change on the affected service"
 		],
@@ -29,7 +30,8 @@
 		"explanation": "Outliers outside control bounds feed anomaly score calculation; higher scores indicate metrics that appear increasingly unlikely relative to historical behavior.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/t_EMConfigureConnectorInstance.html"
-		]
+		],
+		"domain": "Metric Intelligence"
 	},
 	{
 		"trackCode": "CIS-EM",
@@ -45,7 +47,8 @@
 		"explanation": "Metric classes can override learned bounds and widths with administrator-defined static thresholds when operational requirements demand fixed limits.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/t_EMConfigureConnectorInstance.html"
-		]
+		],
+		"domain": "Metric Intelligence"
 	},
 	{
 		"trackCode": "CIS-EM",
@@ -58,13 +61,18 @@
 			"Retire hardware assets when stockroom quantity falls below minimum"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1, 2],
+		"correctIndexes": [
+			0,
+			1,
+			2
+		],
 		"questionType": "multi",
 		"explanation": "Metric Intelligence captures connector data, binds metrics to CIs through the identification engine, then analyzes time series for threshold and anomaly outcomes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/t_EMConfigureConnectorInstance.html",
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
-		]
+		],
+		"domain": "Metric Intelligence"
 	},
 	{
 		"trackCode": "CIS-EM",
@@ -80,6 +88,7 @@
 		"explanation": "Anomaly alerts generated from Metric Intelligence scoring are tracked separately so operators can review statistical outliers distinct from standard event-driven alerts.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/t_EMConfigureConnectorInstance.html"
-		]
+		],
+		"domain": "Metric Intelligence"
 	}
 ]

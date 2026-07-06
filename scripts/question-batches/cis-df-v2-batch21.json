@@ -2,18 +2,20 @@
 	{
 		"trackCode": "CIS-DF",
 		"order": 100,
-		"prompt": "A program manager drafting a CSDM roadmap asks which sequencing principle ServiceNow recommends for data foundation maturity. What should the implementer advise?",
+		"domain": "CSDM Fundamentals",
+		"prompt": "The Class Manager team extended the Application CI class for custom attributes, and a portfolio workshop next week requires Business Application records in Design and Planning. What sequencing aligns with CSDM foundation planning?",
 		"choices": [
-			"Align foundation master data and governance first, then connect business and technical services with measured expansion",
-			"Begin with unrestricted custom tables and migrate to CSDM only after production go-live",
-			"Implement Sell domain offerings before any location or company records exist",
-			"Skip stakeholder engagement until every CMDB metric reaches full compliance"
+			"Confirm foundation company and location standards, then model Design and Planning business applications before expanding Build technical relationships",
+			"Deploy Sell domain offerings before any company or location records exist in the instance",
+			"Load all custom tables first and defer CSDM foundation workshops until after production go-live",
+			"Skip stakeholder mapping because class extensions automatically populate service ownership"
 		],
 		"correctIndex": 0,
-		"explanation": "CSDM approach prioritizes governed foundation data and ownership before scaling service relationships and portfolio constructs.",
+		"explanation": "CSDM roadmap sequencing governs foundation reference data and Design and Planning constructs before scaling Build technical relationships and portfolio offerings.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/csdm-foundation-planning.html"
-		]
+		],
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -30,7 +32,9 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_GovernanceInCSDM.html",
 			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/csdm-foundation-domain.html"
-		]
+		],
+		"domain": "CSDM Fundamentals",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -47,7 +51,9 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_CSDMServices.html",
 			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_CSDMAndOperationalProcesses.html"
-		]
+		],
+		"domain": "CSDM Fundamentals",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -61,12 +67,17 @@
 			"Allow each integration to invent local service definitions without central review"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "CSDM and CMDB foundations converge on governed shared entities and explicit service-to-CI relationships rather than unconstrained local definitions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_ServiceModelingGuidelines.html",
 			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/csdm-foundation-domain.html"
-		]
+		],
+		"domain": "CSDM Fundamentals",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -88,15 +99,29 @@
 			"Business capabilities and offerings connected to measurable platform investments"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "CSDM programs sequence stakeholder accountability, foundation certification, service linkage, and portfolio alignment to deliver governed end-to-end service data.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_GovernanceInCSDM.html",
 			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/csdm-foundation-planning.html"
-		]
+		],
+		"domain": "CSDM Fundamentals",
+		"contentDifficulty": "Foundation"
 	}
 ]

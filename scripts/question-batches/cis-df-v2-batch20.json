@@ -2,50 +2,56 @@
 	{
 		"trackCode": "CIS-DF",
 		"order": 95,
-		"prompt": "A new CSDM lead must explain how the model is organized to architecture reviewers. Which description accurately reflects CSDM domain structure?",
+		"domain": "CSDM Fundamentals",
+		"prompt": "During application onboarding, finance maps cost allocation to generic cmdb_ci records instead of cmdb_ci_business_app entries in the Build domain. Service portfolio reporting now shows missing application ownership. What should the CSDM lead configure first?",
 		"choices": [
-			"Domains such as Foundation, Design and Planning, Build, and Sell group related service and portfolio constructs",
-			"CSDM replaces CMDB classes with a single flat table for all infrastructure",
-			"Domains exist only for HR payroll integrations and exclude operational services",
-			"Each domain maps one-to-one with Discovery patterns and MID Server clusters"
+			"Business Application records in the Build domain with accountable owners linked to supporting technical CIs",
+			"Delete all cmdb_ci records so cost reports stop referencing infrastructure",
+			"Disable identification rules until finance selects a new spreadsheet template",
+			"Convert every server CI class into a custom non-CMDB table"
 		],
 		"correctIndex": 0,
-		"explanation": "CSDM organizes records into domains—Foundation, Design and Planning, Build, Sell, and related areas—that align business and technical service modeling.",
+		"explanation": "CSDM Build domain Business Application records connect financial and portfolio views to governed technical CIs; generic cmdb_ci rows lack the service ownership model portfolio processes expect.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_CSDMOverview.html"
-		]
+		],
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
 		"order": 96,
-		"prompt": "Executive sponsors ask why the organization should adopt CSDM instead of maintaining ad hoc CMDB spreadsheets. Which benefit should the implementer emphasize?",
+		"domain": "CSDM Fundamentals",
+		"prompt": "A P1 incident references a database CI, but the service desk cannot identify the affected business service in CMDB Workspace because no consumer-facing service record exists. Which CSDM modeling step was most likely skipped?",
 		"choices": [
-			"A shared service vocabulary improves cross-product reporting, ownership clarity, and upgrade compatibility",
-			"CSDM eliminates the need for any CMDB relationships or identification rules",
-			"Adoption guarantees every integration can skip data validation permanently",
-			"The model restricts all services to a single generic CI class"
+			"Linking the technical CI to a Business Service or Application Service record with defined ownership in the service hierarchy",
+			"Installing an additional MID Server cluster in the database subnet",
+			"Switching the instance UI theme to classic mode for list views",
+			"Publishing a new catalog item for database password resets"
 		],
 		"correctIndex": 0,
-		"explanation": "CSDM delivers a common data language that connects business and technical views, improving governance and platform consistency across applications.",
+		"explanation": "CSDM connects technical CIs to business and application services so impact analysis and incident routing can traverse from infrastructure to accountable service owners.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_CSDMAndOperationalProcesses.html"
-		]
+		],
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
 		"order": 97,
-		"prompt": "Which CSDM implementation approach best reduces rework during a multi-phase data foundation rollout?",
+		"domain": "CSDM Fundamentals",
+		"prompt": "Before loading application services from a discovery feed, the data foundation team must align company and location reference data imported from HR. Which phased CSDM approach best reduces rework?",
 		"choices": [
-			"Establish foundation and ownership first, then expand Build and service relationships in prioritized increments",
-			"Load all custom tables and retire CSDM foundation records after go-live",
-			"Customize every core domain table before documenting any stakeholders",
-			"Defer service modeling until every CI in the enterprise reaches one hundred percent completeness"
+			"Establish Foundation domain company and location records with owners first, then onboard Build domain application services",
+			"Load application services immediately and backfill foundation records only after CMDB Health reaches one hundred percent",
+			"Skip foundation data because identification rules can infer company names from hostnames",
+			"Customize every CSDM table before importing any reference data"
 		],
 		"correctIndex": 0,
-		"explanation": "Phased CSDM adoption starts with foundation data and governance, then iteratively expands service and relationship modeling aligned to business priorities.",
+		"explanation": "CSDM phased adoption starts with governed foundation reference data so downstream Build and service records inherit consistent organizational context.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/csdm-foundation-planning.html"
-		]
+		],
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -59,11 +65,16 @@
 			"External auditors who will never interact with service records"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Effective CSDM stakeholder mapping names business and technical ownership; broad admin access or passive audit contacts do not substitute for service accountability.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_GovernanceInCSDM.html"
-		]
+		],
+		"domain": "CSDM Fundamentals",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -85,15 +96,29 @@
 			"Market-facing offerings and commercial service definitions"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "CSDM domains separate foundation master data, planning artifacts, operational build constructs, and sell-side offering definitions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_CSDMOverview.html",
 			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_CSDMServices.html"
-		]
+		],
+		"domain": "CSDM Fundamentals",
+		"contentDifficulty": "Foundation"
 	}
 ]

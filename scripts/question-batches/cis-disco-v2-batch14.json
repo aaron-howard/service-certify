@@ -13,7 +13,8 @@
 		"explanation": "Engagement readiness requires validated MID Servers with network reachability to scoped targets and reliable instance communication.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/mid-server-for-discovery.html"
-		]
+		],
+		"domain": "Discovery Engagement Readiness"
 	},
 	{
 		"trackCode": "CIS-DISCO",
@@ -29,7 +30,8 @@
 		"explanation": "The Discovery dashboard surfaces schedule execution status, failures, and coverage metrics for readiness and operations reviews.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-dashboard.html"
-		]
+		],
+		"domain": "Discovery Engagement Readiness"
 	},
 	{
 		"trackCode": "CIS-DISCO",
@@ -45,7 +47,8 @@
 		"explanation": "Executives care about operational outcomes: trustworthy CI data improves incident response, change planning, and service reliability.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-implementation-overview.html"
-		]
+		],
+		"domain": "Discovery Engagement Readiness"
 	},
 	{
 		"trackCode": "CIS-DISCO",
@@ -61,7 +64,8 @@
 		"explanation": "Firewall change requests need MID source addresses, target subnets, protocol/port requirements, and verified bidirectional connectivity.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/mid-server-for-discovery.html"
-		]
+		],
+		"domain": "Discovery Engagement Readiness"
 	},
 	{
 		"trackCode": "CIS-DISCO",
@@ -74,11 +78,15 @@
 			"Complete service mapping dependency graphs for all business capabilities globally"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"questionType": "multi",
 		"explanation": "Go-live readiness requires proven connectivity and credentials plus documented scope and ownership; unrelated process artifacts are not prerequisites.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/set-up-discovery.html"
-		]
+		],
+		"domain": "Discovery Engagement Readiness"
 	}
 ]

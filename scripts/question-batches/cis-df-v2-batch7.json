@@ -13,40 +13,47 @@
 		"explanation": "Identification finds or creates the CI match while reconciliation governs attribute updates, reducing duplicates from overlapping ingestion sources.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_IdentificationAndReconciliationEngine.html"
-		]
+		],
+		"domain": "Ingest",
+		"contentDifficulty": "Advanced"
 	},
 	{
 		"trackCode": "CIS-DF",
 		"order": 31,
-		"prompt": "A network monitoring tool pushes topology through a discovery feed instead of classic probes. What must be validated before production onboarding?",
+		"domain": "Ingest",
+		"prompt": "Discovery and SCCM both update the same Windows Server CI, but operators notice the hostname reverts to the Discovery value after each SCCM import even though SCCM is the authoritative source for that field. What should the CMDB engineer review first?",
 		"choices": [
-			"Feed mappings align to CI classes, identification keys, and reconciliation outcomes in sub-production",
-			"All existing CMDB relationships are deleted to simplify feed matching",
-			"Reconciliation is disabled so feed payloads write every attribute immediately",
-			"Discovery schedules are paused globally until the feed runs for one year"
+			"Reconciliation rules that define which discovery source may update the hostname attribute",
+			"The Service Portal theme applied to the CMDB workspace list layout",
+			"Whether the MID Server cluster name matches the SCCM site code",
+			"The catalog item variable order on hardware request forms"
 		],
 		"correctIndex": 0,
-		"explanation": "Controlled feed onboarding validates class mapping, identification behavior, and reconciliation results before production CMDB updates.",
+		"explanation": "Reconciliation rules govern attribute-level write authority after identification; when the wrong source wins, precedence for that attribute must be corrected.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/australia/discovery/concept/c_DiscoveryDataSourcesAndFeeds.html",
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBDataIngestionBestPractices.html"
-		]
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_ReconciliationRules.html",
+			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_IdentificationAndReconciliationEngine.html"
+		],
+		"contentDifficulty": "Advanced"
 	},
 	{
 		"trackCode": "CIS-DF",
 		"order": 32,
-		"prompt": "Repeated one-off transform scripts and undocumented field maps slow every new ingestion project. Which practice best addresses that technical debt?",
+		"domain": "Ingest",
+		"prompt": "An asset spreadsheet import shows thousands of rows in the staging table, but the target cmdb_ci_computer table received no new or updated records after the transform run completed. What should the administrator check next?",
 		"choices": [
-			"Document standard mapping patterns, reusable scripts, and governed transform templates",
-			"Copy each transform map without coalesce fields to maximize insert volume",
-			"Run all imports in production first and fix errors after stakeholders complain",
-			"Disable import set run history to reduce database growth"
+			"Whether the transform map ran successfully and coalesce fields match existing identification keys on the target class",
+			"Whether the user's browser cache was cleared before opening the import set list",
+			"Whether the CMDB workspace theme was switched to dark mode during the load",
+			"Whether every incident assigned to the Network group was closed first"
 		],
 		"correctIndex": 0,
-		"explanation": "Standardized, documented ingestion patterns reduce rework and make pipelines easier to maintain as new sources are onboarded.",
+		"explanation": "Staging without target updates usually indicates the transform map did not run, failed silently, or coalesce/mapping logic did not match records to the target table.",
 		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/washingtondc/integrate-applications/system-import-sets/c_CreatingNewTransformMaps.html",
 			"https://www.servicenow.com/docs/r/integrate-applications/australia/system-import-sets/concept/c_ImportDataUsingImportSets.html"
-		]
+		],
+		"contentDifficulty": "Advanced"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -60,12 +67,17 @@
 			"Load assets and CIs into unrelated tables without reference fields"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Consistent class alignment and configured synchronization maps keep asset lifecycle changes reflected on related CIs without duplicate records.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/australia/asset-management/concept/c_AssetAndCIFieldSynchronization.html",
 			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_IdentificationAndReconciliationEngine.html"
-		]
+		],
+		"domain": "Ingest",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -87,16 +99,30 @@
 			"Staging rows promoted to target tables with field maps and scripts"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Discovery patterns, Service Graph Connect, discovery feeds, and import set transforms each address different ingestion paths into the CMDB.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/australia/discovery/concept/c_Discovery.html",
 			"https://www.servicenow.com/docs/r/integrate-applications/australia/service-graph-connect/concept/c_ServiceGraphConnect.html",
 			"https://www.servicenow.com/docs/r/it-operations-management/australia/discovery/concept/c_DiscoveryDataSourcesAndFeeds.html"
-		]
+		],
+		"domain": "Ingest",
+		"contentDifficulty": "Foundation"
 	}
 ]
