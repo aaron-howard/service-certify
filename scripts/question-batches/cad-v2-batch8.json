@@ -2,31 +2,31 @@
 	{
 		"trackCode": "CAD",
 		"order": 35,
-		"prompt": "How can a Record Producer serve as an application's user interface?",
+		"prompt": "A form requirement can be met either by a UI Policy or a client script, but the team prefers maintainability and upgrade safety for simple show-or-hide logic. Which approach should they choose?",
 		"choices": [
-			"It presents a catalog-style form whose variables create a record on a target table when submitted",
-			"It compiles server scripts into client code",
-			"It replaces the instance login page",
-			"It stores binary attachments only"
+			"A UI Policy because declarative conditions avoid custom script maintenance for simple field behavior",
+			"A client script because UI Policies cannot target individual fields on a form",
+			"A business rule because show-or-hide logic must always execute on the server insert",
+			"A data policy because it is the only artifact that runs before the form renders"
 		],
 		"correctIndex": 0,
-		"explanation": "A record producer provides a simplified, catalog-style intake form; its variables populate and create a record on the specified target table.",
+		"explanation": "UI Policies handle straightforward field visibility and mandatory rules declaratively, reducing script maintenance for simple form behavior.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/record-producers.html"
+			"https://www.servicenow.com/docs/r/application-development/ui-policies.html"
 		]
 	},
 	{
 		"trackCode": "CAD",
 		"order": 36,
-		"prompt": "What is the primary mechanism ServiceNow uses to control row- and field-level access to data?",
+		"prompt": "Contractors should read Contract records but never create or delete them. Which ACL type and operation combination should you define on the Contract table?",
 		"choices": [
-			"Access Control (ACL) rules",
-			"UI Policies",
-			"Client Scripts",
-			"Scheduled Jobs"
+			"A read ACL granting access and separate create/delete ACLs that deny those operations",
+			"A single write ACL that implicitly grants read, create, update, and delete together",
+			"A UI Policy on Contract that hides the New button and therefore removes delete rights",
+			"A client script that sets g_form.setReadOnly true, which replaces table ACL evaluation"
 		],
 		"correctIndex": 0,
-		"explanation": "Access Control rules (ACLs) evaluate roles, conditions, and scripts to permit or deny operations at the record and field level.",
+		"explanation": "ACLs are evaluated per operation; read access is controlled separately from create, write, and delete permissions on a table.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/access-control-rules.html"
 		]
@@ -34,15 +34,15 @@
 	{
 		"trackCode": "CAD",
 		"order": 37,
-		"prompt": "An ACL grants access only when the user passes which combination of checks?",
+		"prompt": "Only users with the catalog_admin role should configure catalog items in a scoped application. Which security artifact ties catalog item records to that role?",
 		"choices": [
-			"Required roles, the condition, and the script all evaluate to true",
-			"Any one of role, condition, or script is enough on its own",
-			"Only the client script returns false",
-			"The user is signed out"
+			"Roles referenced on ACLs or embedded in role conditions that guard catalog tables and related records",
+			"Module order numbers that automatically grant admin rights to the first module viewer",
+			"Client scripts that check role names and skip ACL evaluation when a match is found",
+			"Dictionary read-only flags that substitute for role-based access control entirely"
 		],
 		"correctIndex": 0,
-		"explanation": "An ACL grants access only if the user has the required role(s) AND the condition is met AND the script (if any) returns true.",
+		"explanation": "Roles are assigned to users and referenced in ACL conditions to restrict operations on tables and related resources.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/access-control-rules.html"
 		]
@@ -50,33 +50,33 @@
 	{
 		"trackCode": "CAD",
 		"order": 38,
-		"prompt": "Which GlideSystem method checks whether the current user has a specific role in an ACL script?",
+		"prompt": "Salary Amount on the Employee table must be visible only to HR payroll staff, while other Employee fields remain readable more broadly. Which ACL granularity applies?",
 		"choices": [
-			"gs.hasRole('role_name')",
-			"g_form.hasRole('role_name')",
-			"current.hasRole('role_name')",
-			"gs.getReference('role_name')"
+			"A field-level ACL on the Salary Amount column with a role or scripted condition",
+			"A table ACL on Employee that grants full access to every column for all users",
+			"A UI Policy that hides Salary Amount, which replaces the need for field ACLs",
+			"A business rule that clears Salary Amount before non-HR users open the form"
 		],
 		"correctIndex": 0,
-		"explanation": "gs.hasRole() returns true if the current user has the specified role (or admin), commonly used to script security in ACLs.",
+		"explanation": "Field-level ACLs restrict access to specific columns independently of table-level read permissions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/glidesystem.html"
+			"https://www.servicenow.com/docs/r/application-development/access-control-rules.html"
 		]
 	},
 	{
 		"trackCode": "CAD",
 		"order": 39,
-		"prompt": "When no ACL exists for a specific operation on a table, what is the default platform behavior?",
+		"prompt": "An integration in Scope B queries a table owned by Scope A and receives an security constraint error despite valid credentials. What is the most likely cause?",
 		"choices": [
-			"Access is denied because the operation is not explicitly granted",
-			"Access is granted to every user by default",
-			"The table is deleted",
-			"The user gains the admin role"
+			"Scope B lacks cross-scope privilege to access Scope A tables or Script Includes at runtime",
+			"The integration user lacks a UI Policy that enables GlideAjax on the target table",
+			"The table dictionary label is missing, which blocks all cross-scope GlideRecord queries",
+			"Application menus from Scope A are unpublished, which denies every database read"
 		],
 		"correctIndex": 0,
-		"explanation": "ServiceNow uses a deny-by-default model; without a matching ACL granting the operation, access is denied.",
+		"explanation": "Cross-scope access requires explicit privileges; scoped applications isolate data and server artifacts from other scopes by default.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/access-control-rules.html"
+			"https://www.servicenow.com/docs/r/application-development/c_ApplicationScope.html"
 		]
 	}
 ]

@@ -45,8 +45,21 @@ export const BANNED_STEM_PREFIXES = [
 export const BANNED_STEM_PATTERNS = [
 	/^what is the primary purpose of/i,
 	/^what is the primary objective of/i,
-	/^what is the main purpose of/i
+	/^what is the main purpose of/i,
+	/^what is the purpose of an? /i
 ] as const;
+
+/** Minimum share of prompts that read as scenario/application items (not bare recall). */
+export const CAD_SCENARIO_MIN_RATIO = 0.65;
+
+export function isScenarioStylePrompt(prompt: string): boolean {
+	const trimmed = prompt.trim();
+	if (trimmed.length >= 95) return true;
+	if (/^(A |An |The team|A developer|A custom|A field|A user|A business|A scoped|During|When |After |Before |If a|Given |While |Upon |Your |During deployment|After completing|Before saving|A department|A facilities|A script|A record|A flow|A transform|A MID|A new |A table|A company|A facilities|A change|A request|A process|A security|A configuration|A ServiceNow|A low-code|A nightly|A scheduled|A nightly|A catalog|A reference|A UI |A client|A server-side|A before|An after|An async|An onLoad|An onChange|An onSubmit|Which tool|Which configuration|Which design|Which approach|Which sequence|Which packaging|Which mechanism|Which field type|Which Business Rule|Which client script|Which server-side|Which two|Which three|Select all)/i.test(trimmed)) {
+		return true;
+	}
+	return false;
+}
 
 export const STEM_OPENER_CAP = 4;
 
@@ -126,12 +139,27 @@ export function validateCadQuestion(q: CadQuestionRow): string[] {
 	return issues;
 }
 
+export function validateCadScenarioRatio(rows: CadQuestionRow[]): string[] {
+	const cad = rows.filter((q) => q.trackCode === 'CAD');
+	if (cad.length === 0) return [];
+	const scenarioCount = cad.filter((q) => isScenarioStylePrompt(q.prompt)).length;
+	const ratio = scenarioCount / cad.length;
+	if (ratio < CAD_SCENARIO_MIN_RATIO) {
+		return [
+			`scenario-style prompts ${scenarioCount}/${cad.length} (${Math.round(ratio * 100)}%) below minimum ${Math.round(CAD_SCENARIO_MIN_RATIO * 100)}%`
+		];
+	}
+	return [];
+}
+
 export function validateCadTrack(rows: CadQuestionRow[]): string[] {
 	const issues: string[] = [];
 
 	for (const q of rows) {
 		issues.push(...validateCadQuestion(q));
 	}
+
+	issues.push(...validateCadScenarioRatio(rows));
 
 	const openerCounts = new Map<string, number>();
 	for (const q of rows) {
