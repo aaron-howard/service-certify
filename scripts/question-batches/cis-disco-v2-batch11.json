@@ -2,81 +2,86 @@
 	{
 		"trackCode": "CIS-DISCO",
 		"order": 50,
-		"prompt": "What is the purpose of discovery behavior settings on a schedule?",
+		"prompt": "A horizontal pattern sensor returns probe data, but no cmdb_ci_linux_server record appears after the run. Which IRE troubleshooting path applies first?",
 		"choices": [
-			"Control scan aggressiveness, port usage, and timing characteristics for the run",
-			"Assign CMDB ownership groups for every CI class created during exploration",
-			"Override identification rules with manual insert permissions for operators",
-			"Disable sensor execution so probe payloads remain unprocessed in ECC Queue"
+			"Review identification rule matches, sensor payload fields, and class-level identifier coverage for the target CI class",
+			"Increase ICMP timeout values globally so port scanning completes before sensor execution",
+			"Disable reconciliation so every sensor payload inserts a new CI regardless of existing records",
+			"Remove credential aliases so classification skips authentication and writes directly to the CMDB"
 		],
 		"correctIndex": 0,
-		"explanation": "Behavior settings tune how aggressively discovery scans targets, including ports, timeouts, and related execution parameters.",
+		"explanation": "Missing CIs after successful probes usually indicate identification rule gaps, incomplete payload fields, or class identifier misconfiguration in IRE.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-behavior.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
+		],
+		"domain": "Configuration Management Database"
 	},
 	{
 		"trackCode": "CIS-DISCO",
 		"order": 51,
-		"prompt": "An admin configures Quick Discovery on a schedule. What is the expected outcome?",
+		"prompt": "Before broad production schedules, the CMDB team validates foundation classes for servers, databases, and network gear. Why is this prerequisite important?",
 		"choices": [
-			"Faster identification of active devices using lightweight probes before deeper scanning",
-			"Immediate retirement of CIs not seen during the previous full discovery window",
-			"Automatic promotion of all unknown devices to the cmdb_ci_server class",
-			"Bypass of all credential requirements for endpoints responding to ICMP echo"
+			"Discovery updates assume stable class hierarchy and attribute definitions exist before IRE writes begin",
+			"Foundation validation removes the requirement for credentials on Linux and Windows targets",
+			"Class validation automatically deploys MID Servers into every network segment in scope",
+			"CMDB foundation checks disable reconciliation for the first thirty discovery runs"
 		],
 		"correctIndex": 0,
-		"explanation": "Quick Discovery uses lightweight probes to find active devices quickly before deeper classification and identification runs.",
+		"explanation": "Discovery writes depend on well-defined CI classes and attributes; foundation validation prevents misclassified or incomplete updates.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/quick-discovery.html"
-		]
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/cmdb-foundation-data.html"
+		],
+		"domain": "Configuration Management Database"
 	},
 	{
 		"trackCode": "CIS-DISCO",
 		"order": 52,
-		"prompt": "What is the primary role of CI Class Manager in a Discovery implementation?",
+		"prompt": "An implementer must extend identification keys for a custom application class before promoting a new horizontal pattern. Which workspace should govern that change?",
 		"choices": [
-			"Govern CI class definitions, attributes, and identification settings per class",
-			"Execute probe payloads on MID Servers during horizontal pattern runs",
-			"Store encrypted credential aliases mapped to discovery schedule scopes",
-			"Route incident assignment groups based on discovered device ownership tags"
+			"CI Class Manager with CMDB governance approval so class attributes and identifiers remain consistent",
+			"Discovery Status form edits that override IRE rules for one schedule without class review",
+			"ECC queue topic configuration that embeds identifier keys inside probe payloads",
+			"Incident assignment rules that map discovered hosts to resolver groups by subnet"
 		],
 		"correctIndex": 0,
 		"explanation": "CI Class Manager is the governance workspace for class schema, attributes, and identification configuration that Discovery relies on.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-class-manager.html"
-		]
+		],
+		"domain": "Configuration Management Database"
 	},
 	{
 		"trackCode": "CIS-DISCO",
 		"order": 53,
-		"prompt": "What do identification rules in IRE determine during a Discovery update?",
+		"prompt": "Discovery sends a payload for a Windows server that shares a serial number with an existing CI created by an import feed. How does IRE handle the update?",
 		"choices": [
-			"Whether incoming data matches an existing CI or should create a new record",
-			"Which MID Server executes the next probe in a horizontal pattern sequence",
-			"How discovery schedules inherit IP ranges from parent network records",
-			"Which dashboard widgets appear on the Discovery home page for operators"
+			"Identification rules match the payload to the existing CI using configured identifiers instead of inserting a duplicate",
+			"Reconciliation creates a second CI so each data source maintains its own serial number record",
+			"Discovery bypasses identification whenever an import feed updated the same class within seven days",
+			"ECC queue processing converts the payload into an incident when a serial number collision is detected"
 		],
 		"correctIndex": 0,
 		"explanation": "Identification rules define the keys and logic used to locate an existing CI or insert a new one from discovery data.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
-		]
+		],
+		"domain": "Configuration Management Database"
 	},
 	{
 		"trackCode": "CIS-DISCO",
 		"order": 54,
-		"prompt": "Reconciliation rules primarily control what aspect of CMDB updates from Discovery?",
+		"prompt": "Discovery and a nightly import both update the hostname field on the same database CI. Which configuration ensures consistent attribute stewardship?",
 		"choices": [
-			"How attribute values from competing sources are merged on matched CIs",
-			"Which subnets are excluded when a schedule performs ICMP exploration",
-			"Whether classification probes run before or after sensor parsing completes",
-			"The order MID Servers are selected when multiple nodes serve one zone"
+			"Reconciliation rules with defined source precedence for the hostname attribute on the database class",
+			"Disabling exploration probes so only the import feed may write hostname values after discovery",
+			"Deleting the CI after each conflict and forcing discovery to insert a replacement record",
+			"Assigning every import row to cmdb_ci regardless of the inferred device type"
 		],
 		"correctIndex": 0,
 		"explanation": "Reconciliation rules govern attribute-level merge behavior when multiple data sources update the same CI.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/reconciliation-rules.html"
-		]
+		],
+		"domain": "Configuration Management Database"
 	}
 ]

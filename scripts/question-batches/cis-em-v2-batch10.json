@@ -13,7 +13,8 @@
 		"explanation": "Event collection schedule cannot fall below the minimum schedule property, which defaults to 120 seconds for pull connector polling.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/t_EMConfigureConnectorInstance.html"
-		]
+		],
+		"domain": "Event Sources"
 	},
 	{
 		"trackCode": "CIS-EM",
@@ -29,7 +30,8 @@
 		"explanation": "Test connector verifies MID Server communication, host reachability, credentials, and connector instance values before the Active checkbox is enabled.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/t_EMConfigureConnectorInstance.html"
-		]
+		],
+		"domain": "Event Sources"
 	},
 	{
 		"trackCode": "CIS-EM",
@@ -42,29 +44,34 @@
 			"SNMP trap listeners on the instance replace all pull connector definitions"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 2],
+		"correctIndexes": [
+			0,
+			2
+		],
 		"questionType": "multi",
 		"explanation": "Pull connectors use scheduled MID Server collection with a configurable Event collection schedule; push sources send events inbound instead of being polled.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html",
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/t_EMConfigureConnectorInstance.html"
-		]
+		],
+		"domain": "Event Sources"
 	},
 	{
 		"trackCode": "CIS-EM",
 		"order": 48,
-		"prompt": "Generic JSON push sources often target which inbound API pattern documented for Event Management integrations?",
+		"prompt": "A SaaS monitoring tool can POST JSON alerts to ServiceNow but cannot be polled on a schedule. Which integration architecture should the implementer choose?",
 		"choices": [
-			"/api/sn_em_connector/em/inbound_event with a configured source parameter",
-			"/api/now/table/sc_req_item for catalog fulfillment line updates",
-			"/api/now/table/alm_asset for hardware asset lifecycle transitions",
-			"/api/now/table/change_request for automatic normal change creation"
+			"A push connector or listener posting to the inbound_event API with an event rule that maps the payload",
+			"A pull connector scheduling MID Server API collection every 120 seconds from the vendor",
+			"A discovery pattern that classifies SNMP devices during horizontal subnet scans",
+			"An event rule that converts JSON payloads directly into hardware asset transfer orders"
 		],
 		"correctIndex": 0,
-		"explanation": "Generic JSON push integrations post to the inbound_event endpoint, typically paired with an event rule that maps the payload into Event Management processing.",
+		"explanation": "Push integrations receive events through listeners or push connectors using the inbound_event endpoint, typically paired with event rules that map payloads into Event Management processing.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
-		]
+		],
+		"domain": "Event Sources"
 	},
 	{
 		"trackCode": "CIS-EM",
@@ -81,6 +88,7 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html",
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/create-event-rule.html"
-		]
+		],
+		"domain": "Event Sources"
 	}
 ]

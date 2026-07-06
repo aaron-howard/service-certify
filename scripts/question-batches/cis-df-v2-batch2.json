@@ -13,7 +13,9 @@
 		"explanation": "Identification rules and their identifier entries define the attribute combinations IRE uses to match incoming SCCM data to an existing CI instead of inserting duplicates.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
-		]
+		],
+		"domain": "Configuration",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -29,7 +31,9 @@
 		"explanation": "CMDB 360 retains proposed and accepted attribute values from each discovery source in cmdb_multisource_data and exposes them in the CMDB 360 workspace view.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/multisource-cmdb.html"
-		]
+		],
+		"domain": "Configuration",
+		"contentDifficulty": "Advanced"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -45,25 +49,27 @@
 		"explanation": "Attributes added through CI Class Manager extend the class dictionary so existing CIs in that hierarchy can store values once data stewards populate them.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-class-manager.html"
-		]
+		],
+		"domain": "Configuration",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
 		"order": 8,
-		"questionType": "multi",
-		"prompt": "Which steps are required before CMDB 360 can capture multisource attribute history for CMDB classes? (Choose two.)",
+		"domain": "Configuration",
+		"prompt": "Discovery keeps creating duplicate Application Server CIs because load-balancer names vary by feed. The CMDB lead wants to exclude a noisy identifier from matching without disabling identification entirely. Which CI Class Manager control should they configure?",
 		"choices": [
-			"Activate the ITOM Discovery License plugin on the instance",
-			"Set glide.identification_engine.multisource_enabled to true",
-			"Disable all static reconciliation rules for every CI class",
-			"Convert cmdb_ci tables to non-CMDB application tables"
+			"Identification exclusion conditions on the class identification definition",
+			"A UI policy that hides the load balancer field on every incident form",
+			"A transform map coalesce field that writes directly to cmdb_ci without IRE",
+			"An event rule that suppresses alerts until duplicate CIs age out naturally"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
-		"explanation": "CMDB 360 requires the ITOM Discovery License and the multisource_enabled property; disabling reconciliation or converting CMDB tables is not part of enablement.",
+		"explanation": "Identification exclusions let teams omit unstable or irrelevant attributes from matching logic while keeping governed identification active for the class.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/multisource-cmdb.html"
-		]
+		],
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -85,14 +91,28 @@
 			"Selects attribute values using multisource reported data rather than static priority alone"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "IRE separates matching logic, attribute authority, dependent class relationships, and CMDB 360-driven dynamic reconciliation behaviors.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/r_ReconciliationRulesPrinciples.html"
-		]
+		],
+		"domain": "Configuration",
+		"contentDifficulty": "Foundation"
 	}
 ]

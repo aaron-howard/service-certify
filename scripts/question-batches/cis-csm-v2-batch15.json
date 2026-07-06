@@ -5,15 +5,16 @@
 		"prompt": "An agent working in the CSM Configurable Workspace needs recommended next steps that adapt to the current case context. Which workspace capability presents these context-aware recommendations?",
 		"choices": [
 			"Guided decisions or agent assist that surface recommended actions based on case context",
-			"A static printed runbook stored outside the platform that agents consult manually",
-			"The instance clone scheduler that copies production data into a sub-production instance",
-			"A UI theme picker that only changes the workspace accent color for the signed-in user"
+			"Case playbooks opened manually from a static document library outside the workspace",
+			"Special handling notes emailed nightly instead of surfacing contextually during case work",
+			"On-screen alerts configured globally without evaluating the current case context"
 		],
 		"correctIndex": 0,
 		"explanation": "Guided decisions and agent assistance tools in the workspace surface context-aware recommended actions, helping agents follow consistent, efficient resolution paths.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/guided-decisions-for-csm.html"
-		]
+		],
+		"domain": "Case Management"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -21,15 +22,16 @@
 		"prompt": "A supervisor needs real-time visibility into agent workload, queue backlogs, and case volumes across the team. Which workspace feature best provides this operational view?",
 		"choices": [
 			"Workspace dashboards and lists that display live case, queue, and agent metrics",
-			"A one-time export of last year's cases to a spreadsheet for offline manual review",
-			"The account contact form section listing individual contacts for a single account",
-			"A knowledge article template that standardizes the layout of published documents"
+			"Performance Analytics dashboard showing historical backlog trends updated on a schedule",
+			"AWA supervisor view of queue depth and agent capacity by service channel",
+			"Shared interactive filter list of open cases refreshed on demand without dashboard widgets"
 		],
 		"correctIndex": 0,
 		"explanation": "Configurable workspace dashboards and lists give supervisors real-time operational visibility into queues, workloads, and case metrics for proactive management.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/csm-configurable-workspace.html"
-		]
+		],
+		"domain": "Case Management"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -39,15 +41,19 @@
 		"choices": [
 			"Configurable list and form layouts tailored to agent roles and case types",
 			"Contextual side panels and declarative actions defined for the workspace experience",
-			"Mandatory rewrites of the underlying case table schema for every configuration change",
-			"A separate physical server that must be provisioned for each individual agent account"
+			"Hard-coded client scripts on classic case forms instead of workspace declarative actions",
+			"Separate scoped applications per agent role duplicating the same workspace configuration"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "The workspace is adapted through configurable layouts, contextual panels, and declarative actions rather than schema rewrites or per-agent servers, keeping customization low-code.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/csm-configurable-workspace.html"
-		]
+		],
+		"domain": "Case Management"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -55,15 +61,16 @@
 		"prompt": "An organization wants customers to open cases, track status, and search knowledge from a branded self-service site. Which CSM front-end should the implementer configure?",
 		"choices": [
 			"The Customer Service Portal that provides self-service case and knowledge access",
-			"The internal core UI application navigator restricted to fulfiller and admin users",
-			"The Advanced Work Assignment queue configuration screen used only by administrators",
-			"The performance analytics data collector job scheduler for nightly score snapshots"
+			"The CSM Configurable Workspace inbox used by fulfillers rather than external customers",
+			"The Employee Service Center portal intended for internal HR employee requests",
+			"The Now Support mobile admin console for managing field technician work orders"
 		],
 		"correctIndex": 0,
 		"explanation": "The Customer Service Portal is the branded self-service experience where customers submit and track cases, browse the catalog, and search knowledge.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/customer-service-portal.html"
-		]
+		],
+		"domain": "CSM Workspace Portals Analytics and Reporting"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -79,6 +86,7 @@
 		"explanation": "A service catalog surfaced on the Customer Service Portal lets customers request standardized offerings, generating the appropriate case or request records for fulfillment.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/service-catalog-for-csm.html"
-		]
+		],
+		"domain": "CSM Workspace Portals Analytics and Reporting"
 	}
 ]

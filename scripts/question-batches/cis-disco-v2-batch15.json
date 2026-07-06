@@ -13,7 +13,8 @@
 		"explanation": "Successful engagements deliver reliable schedule execution, expected coverage, and manageable failure rates against defined success criteria.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-dashboard.html"
-		]
+		],
+		"domain": "Discovery Engagement Readiness"
 	},
 	{
 		"trackCode": "CIS-DISCO",
@@ -29,7 +30,8 @@
 		"explanation": "Discovery configuration affects production CMDB data and network access, so changes should follow governed change management with rollback planning.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-implementation-overview.html"
-		]
+		],
+		"domain": "Discovery Engagement Readiness"
 	},
 	{
 		"trackCode": "CIS-DISCO",
@@ -45,7 +47,8 @@
 		"explanation": "Discovery admins need hands-on skills for schedules, credentials, troubleshooting, and understanding how updates flow through IRE.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/set-up-discovery.html"
-		]
+		],
+		"domain": "Discovery Engagement Readiness"
 	},
 	{
 		"trackCode": "CIS-DISCO",
@@ -61,7 +64,8 @@
 		"explanation": "Sustained outcomes require clear escalation among teams that own discovery configuration, network access, credentials, and CMDB governance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-implementation-overview.html"
-		]
+		],
+		"domain": "Discovery Engagement Readiness"
 	},
 	{
 		"trackCode": "CIS-DISCO",
@@ -77,6 +81,7 @@
 		"explanation": "Regular reviews of scope, credentials, IRE configuration, and KPIs keep discovery current as infrastructure and ownership change.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-dashboard.html"
-		]
+		],
+		"domain": "Discovery Engagement Readiness"
 	}
 ]

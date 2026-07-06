@@ -13,7 +13,9 @@
 		"explanation": "Unified Map delivers a cohesive hierarchical map centered on a home node CI, integrating capabilities from Dependency Views and Service Mapping.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-workspace-unified-map.html"
-		]
+		],
+		"domain": "Insight",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -29,7 +31,9 @@
 		"explanation": "Unified Map modernizes dependency visualization within CMDB Workspace while retaining hierarchical relationship context teams relied on in Dependency Views.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-workspace-unified-map.html"
-		]
+		],
+		"domain": "Insight",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -45,7 +49,9 @@
 		"explanation": "Critical Data Foundations metrics include playbook links that document problem context, analysis steps, and remediation guidance for the measured issue.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html"
-		]
+		],
+		"domain": "Insight",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -59,41 +65,60 @@
 			"Business value requires disabling reconciliation so every source can freely overwrite attributes"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "CMDB business value stems from trustworthy relationships and service linkage that inform impact and portfolio decisions—not unchecked record volume or ungoverned updates.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBOverview.html",
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html"
-		]
+		],
+		"domain": "Insight",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
 		"order": 84,
+		"domain": "Insight",
 		"questionType": "match",
 		"prompt": "A CMDB administrator explaining Data Foundations remediation playbooks to a CIO must describe the sequential structure of each playbook. Match each playbook section to its purpose.",
 		"choices": [],
 		"correctIndex": 0,
 		"matchLeftItems": [
-			"First",
-			"Second",
-			"Third",
-			"Fourth"
-		],
-		"matchRightItems": [
 			"Summary of indicator",
 			"Overview of problem",
 			"Importance of addressing issue",
 			"Fix or Improve"
 		],
+		"matchRightItems": [
+			"Describes the measured health indicator and what it evaluates",
+			"Documents the underlying data or process problem driving non-compliance",
+			"Explains why resolving the metric matters to the business",
+			"Provides corrective steps to remediate or improve the metric"
+		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Official CIS-DF sample guidance sequences playbook sections from indicator summary through problem overview, business importance, and fix-or-improve remediation steps.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html"
-		]
+		],
+		"contentDifficulty": "Advanced"
 	}
 ]

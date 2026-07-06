@@ -13,7 +13,8 @@
 		"explanation": "Knowledge-Centered Service encourages creating articles in the flow of work so proven solutions are captured from cases and reused, reducing repeat investigation.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/knowledge-management/knowledge-centered-service.html"
-		]
+		],
+		"domain": "CSM Best Practices and Knowledge Management"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -29,7 +30,8 @@
 		"explanation": "Knowledge workflows route articles through review and approval before publishing, ensuring customer-facing content meets quality and governance standards.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/knowledge-management/knowledge-management-workflows.html"
-		]
+		],
+		"domain": "CSM Best Practices and Knowledge Management"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -37,15 +39,16 @@
 		"prompt": "A CSM team wants generative AI to help agents summarize long case activity and draft customer replies within the workspace. Which ServiceNow capability delivers this?",
 		"choices": [
 			"Now Assist for Customer Service Management, which provides generative AI agent assistance",
-			"A basic keyword macro that only pastes a fixed canned response into every reply",
-			"The scheduled data collection job that snapshots Performance Analytics indicator scores",
-			"A discovery probe that inventories network devices unrelated to customer case handling"
+			"Classic email templates with fixed merge fields for every customer reply",
+			"Virtual Agent topic intents that route cases without generative summarization",
+			"Playbook script activities that insert canned text without AI-assisted drafting"
 		],
 		"correctIndex": 0,
 		"explanation": "Now Assist for CSM brings generative AI into the workspace to summarize cases, draft replies, and accelerate resolution while keeping the agent in control.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/now-assist-for-csm.html"
-		]
+		],
+		"domain": "CSM Best Practices and Knowledge Management"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -61,7 +64,8 @@
 		"explanation": "Prioritizing configuration and low-code capabilities over heavy customization keeps CSM implementations maintainable, testable, and easier to upgrade.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/customer-service-management-implementation.html"
-		]
+		],
+		"domain": "CSM Best Practices and Knowledge Management"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -77,6 +81,7 @@
 		"explanation": "Continual improvement uses analytics, customer surveys, and article quality signals to identify and prioritize iterative enhancements after go-live.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/performance-analytics-for-csm.html"
-		]
+		],
+		"domain": "CSM Best Practices and Knowledge Management"
 	}
 ]

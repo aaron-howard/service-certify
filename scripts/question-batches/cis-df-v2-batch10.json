@@ -13,7 +13,9 @@
 		"explanation": "Data Manager tasks should be reviewed and remediated through governed retire or re-link actions rather than uncontrolled bulk deletes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBDataManager.html"
-		]
+		],
+		"domain": "Govern",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -30,7 +32,9 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBHealthDashboard.html",
 			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_ReconciliationRules.html"
-		]
+		],
+		"domain": "Govern",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -47,7 +51,9 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CIClassModels.html",
 			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/task/t_CreateIdentificationRules.html"
-		]
+		],
+		"domain": "Govern",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -61,11 +67,16 @@
 			"Loading all sources directly into cmdb_ci without IRE"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Identification prevents duplicate CI creation while reconciliation governs which source updates each attribute after a match is found.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_IdentificationAndReconciliationEngine.html"
-		]
+		],
+		"domain": "Govern",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -87,15 +98,29 @@
 			"Removes stale records through a governed lifecycle workflow"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "CMDB workspace and Data Manager features connect health monitoring, orphan remediation, class compliance, and governed retirement workflows.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBWorkspace.html",
 			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBDataManager.html"
-		]
+		],
+		"domain": "Govern",
+		"contentDifficulty": "Foundation"
 	}
 ]

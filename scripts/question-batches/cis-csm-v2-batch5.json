@@ -13,7 +13,8 @@
 		"explanation": "The customer data viewer role grants read-only access to customer data entities including accounts, contacts, install base items, contracts, entitlements, and sold products.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
-		]
+		],
+		"domain": "CSM Foundational Data Model"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -29,20 +30,22 @@
 		"explanation": "Account consumer records associate individual consumers with a business account so they can access account-scoped data such as install base and sold product information.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
-		]
+		],
+		"domain": "CSM Foundational Data Model"
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 22,
-		"prompt": "Legal and billing stakeholders must appear on cases without being account team members or case assignees. Which configuration defines these parties?",
+		"domain": "CSM Foundational Data Model",
+		"prompt": "An account renews premium support with a four-hour response commitment for database products only. Which configuration defines that selective SLA coverage for agents during case handling?",
 		"choices": [
-			"Related party configuration for designated stakeholder roles on cases",
-			"Inbound email flow that forwards case updates to all instance users",
-			"Entitlement modification that adds stakeholders as entitlement admins",
-			"Case type table extension that removes the account field from the form"
+			"An entitlement linked to the contract specifying covered product lines and response commitments",
+			"A matching rule that ranks agents alphabetically regardless of product expertise",
+			"A portal theme that changes banner colors when database cases are opened",
+			"A household relationship that merges every contact into one consumer record"
 		],
 		"correctIndex": 0,
-		"explanation": "Related party configuration lets organizations define additional stakeholders who receive visibility or notifications on cases beyond standard account team membership.",
+		"explanation": "Entitlements derived from contracts define support levels, eligible products, and response commitments that agents rely on when working cases.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
 		]
@@ -50,12 +53,13 @@
 	{
 		"trackCode": "CIS-CSM",
 		"order": 23,
+		"domain": "CSM Foundational Data Model",
 		"prompt": "Agents must see a warning when opening cases for a VIP account with non-standard handling instructions. Which application surfaces notes from related account records on the case?",
 		"choices": [
 			"Special handling notes configured to display from related account records",
 			"Request parent mapping that synchronizes SC requests to case work notes",
-			"WhatsApp integration that posts account alerts into the chat transcript",
-			"MFA clock skew property that delays portal login for VIP contacts"
+			"On-screen alerts on the account entity displayed whenever any case is opened",
+			"VIP account priority on the assignment rule without special handling note conditions"
 		],
 		"correctIndex": 0,
 		"explanation": "Special handling notes can be configured on entity tables and set to display alerts from related records such as the account or product associated with a case.",
@@ -77,6 +81,7 @@
 		"explanation": "Foundational CSM setup begins with customer entities and product catalog data so cases, entitlements, and channels can reference accounts, contacts or consumers, and products.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/set-up-post-sales-support.html"
-		]
+		],
+		"domain": "CSM Configuration"
 	}
 ]

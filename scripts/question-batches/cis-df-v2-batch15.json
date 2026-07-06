@@ -13,7 +13,9 @@
 		"explanation": "Operationalizing CMDB KPIs requires embedding metric review, decisions, and follow-up actions into routine governance cadences.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-governance.html"
-		]
+		],
+		"domain": "Govern",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -27,12 +29,17 @@
 			"Disabled CMDB Get Well jobs to reduce visible non-compliance counts"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "CSFs become govern outcomes when mapped to KPI trees and steward-reviewed scorecards—not offline exports or suppressed metric jobs.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-governance.html",
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html"
-		]
+		],
+		"domain": "Govern",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -54,10 +61,22 @@
 			"Guided merge for individual de-duplication tasks"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Govern teams use Health for operational quality, Data Foundations for program metrics, Data Manager for bulk policy work, and the wizard for targeted duplicate merges.",
 		"sourceUrls": [
@@ -65,24 +84,28 @@
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html",
 			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-data-manager.html",
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/deduplicate-cis.html"
-		]
+		],
+		"domain": "Govern",
+		"contentDifficulty": "Foundation"
 	},
 	{
 		"trackCode": "CIS-DF",
 		"order": 73,
-		"prompt": "Completeness scores improved on server CIs, but service impact analysis still misses upstream dependencies. Which Insight area should be investigated next?",
+		"domain": "Insight",
+		"prompt": "Completeness scores are high for server CIs, but a Service Mapping dependency map still shows the database tier as orphaned and change impact misses the datastore. What should the engineer investigate first?",
 		"choices": [
-			"Relationship quality and dependency completeness across mapped services",
-			"Catalog item base price currency conversion settings",
-			"Knowledge article vote totals for self-service deflection",
-			"Flow Designer subflow execution order for onboarding tasks"
+			"Missing or incorrect Depends on::Used by relationships between the application service and supporting database CIs",
+			"Whether the catalog item base price currency field is populated on related requests",
+			"Whether knowledge article vote totals exceed self-service deflection targets",
+			"Whether Flow Designer onboarding subflows execute before HR cases close"
 		],
 		"correctIndex": 0,
-		"explanation": "Strong attribute completeness alone does not guarantee impact visibility; relationship and dependency quality drive accurate service insight.",
+		"explanation": "Service Mapping and impact analysis depend on governed dependency relationships; orphaned tiers usually indicate missing or incorrect relationship types between services and infrastructure CIs.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-relationship-management.html",
-			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-health-dashboard-overview.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/concept/c_ServiceMapping.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-relationship-management.html"
+		],
+		"contentDifficulty": "Advanced"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -98,6 +121,8 @@
 		"explanation": "The Analytics Hub Real-time option with Show Records exposes the current non-compliant CI population behind a failing metric.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html"
-		]
+		],
+		"domain": "Insight",
+		"contentDifficulty": "Intermediate"
 	}
 ]

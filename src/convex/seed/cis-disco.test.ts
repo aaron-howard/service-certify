@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { DEV_PRACTICE_QUESTIONS } from '../../convex/seed/devQuestionBank';
-import { validateCisDiscoTrack } from '$lib/catalog/cisDiscoRealism';
+import { type CisDiscoQuestionRow, validateCisDiscoTrack } from '$lib/catalog/cisDiscoRealism';
 
 const TRACK = 'CIS-DISCO';
 const V2_ORDERS = Array.from({ length: 75 }, (_, i) => i);
@@ -14,6 +14,6 @@ describe('CIS-DISCO question quality', () => {
 	});
 
 	it('passes CIS-DISCO realism validation', () => {
-		expect(validateCisDiscoTrack(rows)).toEqual([]);
+		expect(validateCisDiscoTrack(rows as CisDiscoQuestionRow[])).toEqual([]);
 	});
 });

@@ -20,12 +20,33 @@ Base URL: `https://raw.githubusercontent.com/ServiceNow/ServiceNowDocs/australia
 
 ---
 
-## Question style
+## Question style (required — admin scenario-first, Jul 2026 refresh)
 
-Match official CSA samples — module names, platform facts, variable types, transform maps.
-Banned: template wrappers (`Typically,`, `From an implementation standpoint,`, etc.).
+**Target mix:** ~70% scenario/application, ~30% direct recall. Each question should feel like: *You are the admin. Given this situation, which feature or configuration is the best fit?*
 
-Multi-select allowed with `questionType: "multi"` and `correctIndexes`.
+**Scenario categories**
+
+| Category | Topics |
+|----------|--------|
+| Lists & navigation | Saved filters, list personalization, Application Navigator, modules |
+| Forms & UI | Views, form layouts, UI policies, related lists |
+| Users, groups, roles | Module visibility, role inheritance, group membership |
+| Tables & dictionary | Extensions, field types, mandatory fields, coalesce |
+| Security | Table/field ACLs, roles, troubleshooting access |
+| Self-service | Service Catalog, Knowledge, Employee Center / portals |
+| Automation | Flow Designer, notifications, business rules basics |
+| Data & migration | Import sets, transform maps, update sets |
+| Reporting | Reports, dashboards, filters |
+
+**Preferred pattern:** Short admin scenario → four plausible choices → one best answer (or stated count for multi-select).
+
+**Banned:** `What is X?`, `Which module does Y?`, obvious joke distractors, template wrappers (`Typically,`, `In this scenario,`, etc.).
+
+**Australia family:** Ground release-specific UI names in ServiceNowDocs `australia` branch; avoid unverified tiny UI wording from older dumps.
+
+**Multi-select:** Include 8–10 across the bank (`questionType: "multi"`, `correctIndexes`, `correctIndex` = lowest).
+
+**Each question requires `sourceUrls`** pointing to ServiceNow documentation.
 
 ---
 
@@ -33,24 +54,24 @@ Multi-select allowed with `questionType: "multi"` and `correctIndexes`.
 
 | Batch | Orders | Domain | Status |
 |-------|--------|--------|--------|
-| 1 | 0–4 | Platform Overview | **DONE** |
-| 2 | 5–9 | Platform (5) + Instance (4) | **DONE** |
-| 3 | 10–14 | Instance Configuration | **DONE** |
-| 4 | 15–19 | Collaboration | **DONE** |
-| 5 | 20–24 | Collaboration | **DONE** |
-| 6 | 25–29 | Collaboration | **DONE** |
-| 7 | 30–34 | Collaboration + Self Service (33–34) | **DONE** |
-| 8 | 35–39 | Self Service and Automation | **DONE** |
-| 9 | 40–44 | Self Service and Automation | **DONE** |
-| 10 | 45–49 | Self Service (45–50) + Database (51) | **DONE** |
-| 11 | 50–54 | Database and Security | **DONE** |
-| 12 | 55–59 | Database and Security | **DONE** |
-| 13 | 60–64 | Database and Security | **DONE** |
-| 14 | 65–69 | Database and Security | **DONE** |
-| 15 | 70–74 | Database and Security | **DONE** |
-| 16 | 75–77 | Database and Security | **DONE** |
-| 17 | 78–84 | Data Migration and Integration | **DONE** |
-| 18 | 85–89 | Data Migration and Integration | **DONE** |
+| 1 | 0–4 | Platform Overview | **DONE (Jul 2026 scenario refresh)** |
+| 2 | 5–9 | Platform (5) + Instance (4) | **DONE (Jul 2026 scenario refresh)** |
+| 3 | 10–14 | Instance Configuration | **DONE (Jul 2026 scenario refresh)** |
+| 4 | 15–19 | Collaboration | **DONE (Jul 2026 scenario refresh)** |
+| 5 | 20–24 | Collaboration | **DONE (Jul 2026 scenario refresh)** |
+| 6 | 25–29 | Collaboration | **DONE (Jul 2026 scenario refresh)** |
+| 7 | 30–34 | Collaboration + Self Service (33–34) | **DONE (Jul 2026 scenario refresh)** |
+| 8 | 35–39 | Self Service and Automation | **DONE (Jul 2026 scenario refresh)** |
+| 9 | 40–44 | Self Service and Automation | **DONE (Jul 2026 scenario refresh)** |
+| 10 | 45–49 | Self Service (45–50) + Database (51) | **DONE (Jul 2026 scenario refresh)** |
+| 11 | 50–54 | Database and Security | **DONE (Jul 2026 scenario refresh)** |
+| 12 | 55–59 | Database and Security | **DONE (Jul 2026 scenario refresh)** |
+| 13 | 60–64 | Database and Security | **DONE (Jul 2026 scenario refresh)** |
+| 14 | 65–69 | Database and Security | **DONE (Jul 2026 scenario refresh)** |
+| 15 | 70–74 | Database and Security | **DONE (Jul 2026 scenario refresh)** |
+| 16 | 75–77 | Database and Security | **DONE (Jul 2026 scenario refresh)** |
+| 17 | 78–84 | Data Migration and Integration | **DONE (Jul 2026 scenario refresh)** |
+| 18 | 85–89 | Data Migration and Integration | **DONE (Jul 2026 scenario refresh)** |
 
 ---
 

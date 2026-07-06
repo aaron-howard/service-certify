@@ -13,7 +13,9 @@
 		"explanation": "Identification rules define how incoming records match existing CIs; weak or missing criteria are the primary cause of duplicate server records.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/task/t_CreateIdentificationRules.html"
-		]
+		],
+		"domain": "Govern",
+		"contentDifficulty": "Advanced"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -30,7 +32,9 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBWorkspace.html",
 			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBDataManager.html"
-		]
+		],
+		"domain": "Govern",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -46,7 +50,9 @@
 		"explanation": "Extending the right principal class ensures specialized CIs inherit appropriate fields, lifecycle behavior, and identification patterns.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CIClassModels.html"
-		]
+		],
+		"domain": "Govern",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -60,11 +66,16 @@
 			"SMTP failure counts on scheduled report subscriptions"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Duplicate CI and orphan relationship metrics highlight records that break identification integrity and dependency accuracy.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBHealthDashboard.html"
-		]
+		],
+		"domain": "Govern",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -86,14 +97,28 @@
 			"Validates that service dependencies reflect operational reality"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Effective CMDB governance distributes platform configuration, domain remediation, feed quality, and service validation across defined roles.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBGovernanceAndHealth.html"
-		]
+		],
+		"domain": "Govern",
+		"contentDifficulty": "Foundation"
 	}
 ]

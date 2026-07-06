@@ -51,6 +51,10 @@ Multi-select allowed with `questionType: "multi"` and `correctIndexes`.
 | 17 | 80–84 | Best Practices and Knowledge Management | **DONE** |
 | 18 | 85–89 | Best Practices and Knowledge Management | **DONE** |
 
+**Domain tags:** `"domain"` per blueprint quota — `node scripts/tag-cis-csm-domains.mjs`
+
+See `CIS-CSM-Question-Rewrites.md` for P1–P3 rewrite reference.
+
 ---
 
 ## Merge and validate

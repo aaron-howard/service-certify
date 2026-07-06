@@ -13,7 +13,8 @@
 		"explanation": "Testing confirms the pattern collects expected attributes and relationships without introducing noisy or incorrect CI updates in production.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
-		]
+		],
+		"domain": "Discovery Pattern Design"
 	},
 	{
 		"trackCode": "CIS-DISCO",
@@ -29,7 +30,8 @@
 		"explanation": "Versioned change control with test evidence supports safe evolution of discovery patterns and faster troubleshooting when issues arise.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/manage-discovery-pattern-versions.html"
-		]
+		],
+		"domain": "Discovery Pattern Design"
 	},
 	{
 		"trackCode": "CIS-DISCO",
@@ -45,7 +47,8 @@
 		"explanation": "Classifications match discovered devices to CI types and point to the pattern that executes the collection logic for that class.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-patterns-overview.html"
-		]
+		],
+		"domain": "Discovery Pattern Design"
 	},
 	{
 		"trackCode": "CIS-DISCO",
@@ -61,7 +64,8 @@
 		"explanation": "Pattern diagnostics combined with classification and probe logs reveal whether failures occur during matching, collection, parsing, or CMDB write steps.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-pattern-best-practices.html"
-		]
+		],
+		"domain": "Discovery Configuration"
 	},
 	{
 		"trackCode": "CIS-DISCO",
@@ -75,10 +79,14 @@
 			"Every business service record is converted to a manual CI relationship import"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Production promotion requires verified pattern output on representative targets and review of credentials and parsing logic to prevent CMDB quality regressions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-pattern-best-practices.html"
-		]
+		],
+		"domain": "Discovery Configuration"
 	}
 ]

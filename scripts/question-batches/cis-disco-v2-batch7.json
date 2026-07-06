@@ -2,50 +2,53 @@
 	{
 		"trackCode": "CIS-DISCO",
 		"order": 30,
-		"prompt": "What does a Discovery schedule primarily define for an IT operations team?",
+		"prompt": "A datacenter team needs nightly scans of three subnets but must avoid peak business hours on one production VLAN. How should the Discovery schedule be configured?",
 		"choices": [
-			"How to retire discovered hardware at end of lifecycle across managed locations",
-			"How to route incidents to assignment groups after monitoring event ingestion",
-			"How to reconcile duplicate CIs created by independent import pipelines",
-			"What to scan, where targets reside, and when discovery execution should occur"
+			"Define scoped IP ranges, attach the correct behavior, and set run windows that match each segment's operational constraints",
+			"Run one global schedule at the highest frequency and rely on reconciliation to suppress off-hours CI updates",
+			"Disable identification during business hours so probes execute without writing CMDB records",
+			"Route all schedules through a single MID Server cluster without separate timing or scope controls"
 		],
-		"correctIndex": 3,
-		"explanation": "Schedules bind scope, targets or ranges, timing, and discovery behavior into an executable plan.",
+		"correctIndex": 0,
+		"explanation": "Schedules bind scope, targets or ranges, timing, and discovery behavior into an executable plan tailored to each network segment.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
-		]
+		],
+		"domain": "Discovery Configuration"
 	},
 	{
 		"trackCode": "CIS-DISCO",
 		"order": 31,
-		"prompt": "Discovery IP Services records are used to do what during the classification process?",
+		"prompt": "Port 8080/tcp is open on several Linux hosts, but classification is inconsistent across subnets. Which IP Services strategy best improves Tomcat application detection?",
 		"choices": [
-			"Match open ports and service signatures on targets to help identify device or application types",
-			"Assign financial depreciation schedules to hardware assets after procurement receiving",
-			"Convert event management alerts into incident records with priority mapping rules",
-			"Generate software license reclamation reports from installed application inventories"
+			"Define IP Service records that map port 8080 and related signatures to the expected application classification criteria",
+			"Remove all IP Service records so classification relies solely on SNMP sysObjectID values from routers",
+			"Assign every open port to cmdb_ci_computer and skip application-level pattern execution",
+			"Disable port scanning and classify hosts using only ICMP reachability from the MID Server"
 		],
 		"correctIndex": 0,
-		"explanation": "IP Services define port and protocol signatures that Discovery uses alongside probes to classify devices during the scan.",
+		"explanation": "IP Services define port and protocol signatures that Discovery uses alongside probes to classify devices and applications during the scan.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html"
-		]
+		],
+		"domain": "Discovery Configuration"
 	},
 	{
 		"trackCode": "CIS-DISCO",
 		"order": 32,
-		"prompt": "Which sequence reflects the major Discovery phases executed during a typical network scan?",
+		"prompt": "Classification succeeds on a Windows server, but no application CIs appear after the run completes. Status shows Identification ran but Exploration was skipped. Why are all Discovery phases required?",
 		"choices": [
-			"Port Scanning, Classification, Identification, and Exploration",
-			"Reconciliation, Retirement, Procurement, and Asset Disposal",
-			"Event Ingestion, Alert Correlation, Incident Creation, and Closure",
-			"Catalog Submission, Approval, Fulfillment, and Knowledge Publishing"
+			"Each phase builds on the prior step—port scan finds targets, classification determines type, identification matches or creates CIs, and exploration collects deeper attributes",
+			"Only Port Scanning and Classification are required; Identification and Exploration are optional optimizations for large subnets",
+			"Exploration can run before Classification when credentials are unavailable, so earlier phases are interchangeable",
+			"Identification replaces Exploration whenever horizontal patterns are linked to classifications"
 		],
 		"correctIndex": 0,
 		"explanation": "Discovery progresses through port scanning to find devices, classification to determine type, identification to create or match CIs, and exploration to gather deeper details.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
-		]
+		],
+		"domain": "Discovery Configuration"
 	},
 	{
 		"trackCode": "CIS-DISCO",
@@ -61,7 +64,8 @@
 		"explanation": "Discovery credentials store authentication details needed for protocol access so probes and patterns can retrieve configuration from targets.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
-		]
+		],
+		"domain": "Discovery Configuration"
 	},
 	{
 		"trackCode": "CIS-DISCO",
@@ -77,6 +81,7 @@
 		"explanation": "Different infrastructure domains often require different scan cadence and windows to balance CMDB freshness and production impact.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
-		]
+		],
+		"domain": "Discovery Configuration"
 	}
 ]

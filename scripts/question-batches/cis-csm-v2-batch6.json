@@ -13,7 +13,8 @@
 		"explanation": "Case types extend the Case table to provide specialized fields, states, and experiences such as product support, onboarding, or billing workflows.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/configure-csm-case-types.html"
-		]
+		],
+		"domain": "CSM Configuration"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -29,7 +30,8 @@
 		"explanation": "CSM case types are implemented as tables that extend sn_customerservice_case so they inherit core case behavior while adding type-specific configuration.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/configure-csm-case-types.html"
-		]
+		],
+		"domain": "CSM Configuration"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -45,7 +47,8 @@
 		"explanation": "The document template admin role allows creating, updating, and deleting records in document template tables used by CSM case type configurations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
-		]
+		],
+		"domain": "CSM Configuration"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -61,7 +64,8 @@
 		"explanation": "The Case Playbook for Onboarding appears on the Playbook tab when agents work onboarding cases in CSM Configurable Workspace or CSM Agent Workspace.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/csm-case-type-onboarding.html"
-		]
+		],
+		"domain": "CSM Configuration"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -77,6 +81,7 @@
 		"explanation": "The onboarding playbook's first activity gathers customer context including channel, account, contact or consumer, product, and service to start the onboarding process.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/csm-case-type-onboarding.html"
-		]
+		],
+		"domain": "CSM Configuration"
 	}
 ]

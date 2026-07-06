@@ -2,81 +2,83 @@
 	{
 		"trackCode": "CSA",
 		"order": 20,
-		"prompt": "Which form feature lets users pick from predefined templates when creating certain records?",
+		"prompt": "An administrator must add the Business service field to the Incident form and group related fields into a new section. Which tool provides a drag-and-drop way to do this?",
 		"choices": [
-			"Form templates",
-			"Data import field maps",
-			"Migration update set bundles",
-			"Staging import tables"
+			"Form Design, which lets admins arrange fields and sections visually on a form view",
+			"The system log viewer with debugging enabled",
+			"The email client configuration page",
+			"A background script run from the scripts module"
 		],
 		"correctIndex": 0,
-		"explanation": "Form templates provide predefined field values and layouts when creating new records of supported types.",
+		"explanation": "Form Design (and the form layout editor) let administrators add fields, create sections, and rearrange the form visually for a specific view, with changes tracked for migration.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-user-interface/form-templates.html"
+			"https://www.servicenow.com/docs/r/platform-user-interface/form-design.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 21,
-		"prompt": "When editing a form, what does the Insert and Stay button do?",
+		"prompt": "While viewing a problem record, agents want to see all incidents linked to it at the bottom of the form. What should an administrator configure?",
 		"choices": [
-			"Saves the record and opens a new empty form for the same table",
-			"Deletes the current record",
-			"Submits an update set",
-			"Runs Discovery on the record"
+			"Add the related list of incidents that reference this problem to the form view",
+			"Copy each incident number into the problem description manually",
+			"Create a duplicate problem record for every linked incident",
+			"Enable an integration hub spoke for problem management"
 		],
 		"correctIndex": 0,
-		"explanation": "Insert and Stay saves the new record and immediately presents another blank form for rapid data entry.",
+		"explanation": "Related lists surface records from other tables that reference the current record; adding the Incidents related list to the problem form shows all linked incidents in place.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-user-interface/form-actions.html"
+			"https://www.servicenow.com/docs/r/platform-user-interface/related-lists.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 22,
-		"prompt": "What is a Visual Task Board (VTB) used for?",
+		"prompt": "When the Category field on an incident is set to Hardware, the Configuration item field must become mandatory on the form. Which no-code option should the administrator try first?",
 		"choices": [
-			"Kanban-style visualization and management of tasks on lanes",
-			"Database schema design",
-			"Import set staging",
-			"Plugin activation"
+			"A UI policy with a condition on Category that sets the field mandatory when it matches",
+			"A scheduled script that scans incidents overnight for missing values",
+			"An access control rule denying read on the field",
+			"A transform map that rejects rows without a configuration item"
 		],
 		"correctIndex": 0,
-		"explanation": "Visual Task Boards display tasks on swimlanes for drag-and-drop workflow management.",
+		"explanation": "UI policies declaratively change field behavior (mandatory, visible, read-only) based on conditions and are preferred over client scripts when no scripting is needed.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-user-interface/visual-task-boards.html"
+			"https://www.servicenow.com/docs/r/platform-administration/ui-policies.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 23,
-		"prompt": "Which artifact combines multiple widgets to show KPIs and reports on one screen?",
+		"prompt": "A caller mentions they can read some incident updates from the service desk but not others. What explains the difference between the two journal fields agents write to?",
 		"choices": [
-			"A dashboard",
-			"A field mapping transform",
-			"A migration update package",
-			"A dictionary entry"
+			"Additional comments are visible to the customer, while work notes are restricted to fulfillment staff",
+			"Work notes are deleted every night by a cleanup job",
+			"Additional comments only accept attachments, not text",
+			"The two fields are identical and visibility is random"
 		],
 		"correctIndex": 0,
-		"explanation": "Dashboards group widgets and reports to visualize metrics and operational data.",
+		"explanation": "On task-based forms, Additional comments are customer-facing journal entries, whereas Work notes are intended for internal fulfiller collaboration and are hidden from the requester.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-user-interface/dashboards.html"
+			"https://www.servicenow.com/docs/r/platform-user-interface/activity-stream.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 24,
-		"prompt": "How are email notifications typically triggered when a record meets a condition?",
+		"prompt": "The service desk logs many printer incidents with nearly identical field values. Which statements about record templates are true? (Choose two.)",
 		"choices": [
-			"A notification record with a When to send condition or event",
-			"A homepage gauge refresh",
-			"A MID Server poll",
-			"A Discovery schedule probe"
+			"A template can prefill multiple field values on a new record with one selection",
+			"Templates can be made visible to specific users or groups that need them",
+			"Templates permanently lock the fields they populate against later edits",
+			"Templates only work on records created through inbound email"
 		],
 		"correctIndex": 0,
-		"explanation": "Notification records define recipients and content, firing when their condition or registered event is met.",
+		"correctIndexes": [0, 1],
+		"questionType": "multi",
+		"explanation": "Templates populate predefined field values to speed up repetitive record creation and can be shared with individuals or groups. The values remain editable, and templates apply to forms generally, not just email-created records.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/notifications.html"
+			"https://www.servicenow.com/docs/r/platform-administration/record-templates.html"
 		]
 	}
 ]

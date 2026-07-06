@@ -13,7 +13,8 @@
 		"explanation": "Ordered credential execution improves efficiency and lowers failed authentication attempts during discovery runs.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
-		]
+		],
+		"domain": "Discovery Configuration"
 	},
 	{
 		"trackCode": "CIS-DISCO",
@@ -29,7 +30,8 @@
 		"explanation": "Credential success alone is not enough; matching logic, range targeting, and pattern prerequisites must align with the discovery target profile.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html"
-		]
+		],
+		"domain": "Discovery Configuration"
 	},
 	{
 		"trackCode": "CIS-DISCO",
@@ -45,38 +47,41 @@
 		"explanation": "Probe activity is exchanged through ECC Queue, making it the quickest way to identify execution or communication failures during a run.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html"
-		]
+		],
+		"domain": "Discovery Configuration"
 	},
 	{
 		"trackCode": "CIS-DISCO",
 		"order": 38,
-		"prompt": "Which credential governance approach is most appropriate for enterprise Discovery deployments?",
+		"prompt": "A platform team runs containerized workloads on managed Kubernetes clusters in AWS. Which Discovery approach best supports hybrid inventory of nodes and workloads?",
 		"choices": [
-			"Segment credentials by environment or domain with least privilege and controlled rotation",
-			"Use one shared root account across protocols to simplify credential administration",
-			"Disable credential tests entirely so MID Servers spend less time during scheduling",
-			"Store discovery secrets in update-set XML payloads for easier transport between instances"
+			"Combine cloud discovery schedules for the cluster API with horizontal patterns that classify container workloads on discovered nodes",
+			"Scan only RFC1918 address space from a single on-premises MID Server without cloud API credentials",
+			"Disable horizontal patterns and rely on manual CI imports for every pod namespace",
+			"Run network port scans against pod IP ranges without cloud or credential integration"
 		],
 		"correctIndex": 0,
-		"explanation": "Segmentation and least privilege improve security and reduce blast radius while supporting compliant discovery operations.",
+		"explanation": "Hybrid environments typically combine cloud API enumeration with pattern-based collection on discovered infrastructure to populate container-related CIs.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
-		]
+		],
+		"domain": "Discovery Configuration"
 	},
 	{
 		"trackCode": "CIS-DISCO",
 		"order": 39,
-		"prompt": "What should be reviewed first when a Discovery schedule repeatedly finishes with partial results?",
+		"prompt": "A large subnet schedule consistently times out before completing exploration on all hosts. Which performance tuning action should be tried first?",
 		"choices": [
-			"Connector deduplication policies to confirm event suppression thresholds remain unchanged",
-			"Lifecycle retirement tasks to verify disposal approvals for decommissioned hardware",
-			"Warehouse assignment logic to ensure spare inventory locations are still mapped",
-			"Schedule logs, credential outcomes, and MID reachability for ranges that failed"
+			"Reduce scan scope with smaller IP ranges, tune behavior timeouts, and verify MID Server capacity for the workload",
+			"Disable identification so probes skip CMDB writes and finish faster regardless of data quality",
+			"Remove all credential records so classification completes without authentication delays",
+			"Increase probe parallelism globally without adjusting schedule scope or MID cluster sizing"
 		],
-		"correctIndex": 3,
-		"explanation": "Partial completion is commonly caused by targeting, credential, or connectivity issues visible in schedule execution logs.",
+		"correctIndex": 0,
+		"explanation": "Performance issues are often resolved by scoping scans appropriately, tuning behavior settings, and ensuring adequate MID Server resources.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
-		]
+		],
+		"domain": "Discovery Configuration"
 	}
 ]

@@ -11,27 +11,33 @@
 			"Deprecating configuration items the organization does not own"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1, 2],
+		"correctIndexes": [
+			0,
+			1,
+			2
+		],
 		"explanation": "Event Management addresses visibility gaps, remediation automation, and tool consolidation. Deprecating CIs the organization does not own is not a documented customer challenge for the product.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/exploring-event-management.html"
-		]
+		],
+		"domain": "Event Management Overview"
 	},
 	{
 		"trackCode": "CIS-EM",
 		"order": 1,
-		"prompt": "How does ServiceNow Event Management transform external monitoring data for IT operations teams?",
+		"prompt": "A customer runs three monitoring tools with different severity scales and wants one operational view in ServiceNow. Which Event Management design best consolidates those sources?",
 		"choices": [
-			"By ingesting events and correlating them into alerts on configuration items and services",
-			"By replacing CMDB discovery schedules with manual spreadsheet imports from operators",
-			"By converting all incidents into passive SNMP trap subscriptions without normalization",
-			"By archiving hardware procurement records from stockroom transfer order fulfillment"
+			"Ingest events through connectors, normalize severity and fields, then correlate into alerts on CIs and services",
+			"Store each tool's raw logs in separate tables without mapping, rules, or alert correlation",
+			"Replace CMDB discovery with spreadsheet imports so alerts skip CI binding entirely",
+			"Convert every warning event into a hardware asset transfer order for audit tracking"
 		],
 		"correctIndex": 0,
-		"explanation": "Event Management ingests monitoring signals, applies processing logic, and produces actionable alerts tied to the environment being monitored.",
+		"explanation": "Event Management ingests monitoring signals from multiple sources, applies normalization and rules, and produces actionable alerts tied to the environment being monitored.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/exploring-event-management.html"
-		]
+		],
+		"domain": "Event Management Overview"
 	},
 	{
 		"trackCode": "CIS-EM",
@@ -47,7 +53,8 @@
 		"explanation": "Normalized events flow through rule evaluation and correlation, which can materialize or update alert records for operators to act on.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/exploring-event-management.html"
-		]
+		],
+		"domain": "Event Management Overview"
 	},
 	{
 		"trackCode": "CIS-EM",
@@ -63,7 +70,8 @@
 		"explanation": "Event Management adds correlation, alerting, and response workflows grounded in CI and service context rather than passive log retention alone.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/exploring-event-management.html"
-		]
+		],
+		"domain": "Event Management Overview"
 	},
 	{
 		"trackCode": "CIS-EM",
@@ -80,6 +88,7 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/exploring-event-management.html",
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
-		]
+		],
+		"domain": "Architecture and Discovery"
 	}
 ]

@@ -13,7 +13,8 @@
 		"explanation": "Defining project scope during planning aligns stakeholders on included processes, integrations, and models, preventing scope creep and guiding the implementation.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/customer-service-management-implementation.html"
-		]
+		],
+		"domain": "CSM Best Practices and Knowledge Management"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -29,7 +30,8 @@
 		"explanation": "ServiceNow's engagement methodology (Now Create) provides a structured, phased delivery approach spanning planning, configuration, testing, and deployment for consistent implementations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/customer-service-management-implementation.html"
-		]
+		],
+		"domain": "CSM Best Practices and Knowledge Management"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -45,7 +47,8 @@
 		"explanation": "A sound knowledge strategy uses distinct knowledge bases and access controls so internal-only guidance stays private while curated articles are shared with customers.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/knowledge-management-for-csm.html"
-		]
+		],
+		"domain": "CSM Best Practices and Knowledge Management"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -53,15 +56,16 @@
 		"prompt": "A knowledge manager wants an objective measure of article health based on factors like feedback, age, and usage to prioritize maintenance. Which capability provides this score?",
 		"choices": [
 			"The Article Quality Index that scores knowledge articles to guide improvement efforts",
-			"A raw count of total cases opened this quarter regardless of any knowledge usage",
-			"The agent's individual login streak measured across consecutive working days only",
-			"The portal theme contrast ratio calculated for accessibility of the banner image"
+			"Knowledge feedback ratings counted without a composite quality score",
+			"Article view totals without weighting freshness or usefulness dimensions",
+			"Case deflection percentage from surveys without article-level health scoring"
 		],
 		"correctIndex": 0,
 		"explanation": "The Article Quality Index (AQI) scores articles on quality dimensions such as feedback, freshness, and usage so knowledge managers can target articles needing improvement.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/knowledge-management/article-quality-index.html"
-		]
+		],
+		"domain": "CSM Best Practices and Knowledge Management"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -75,10 +79,14 @@
 			"Disabling case creation on the portal so customers cannot log issues themselves"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Effective self-service deflection relies on findable, high-quality knowledge and guided catalog offerings; hiding knowledge or blocking case creation undermines the strategy.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/self-service-for-csm.html"
-		]
+		],
+		"domain": "CSM Best Practices and Knowledge Management"
 	}
 ]

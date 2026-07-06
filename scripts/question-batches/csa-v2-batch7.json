@@ -2,81 +2,81 @@
 	{
 		"trackCode": "CSA",
 		"order": 30,
-		"prompt": "How can an administrator add a field to a form that is not stored in the database?",
+		"prompt": "Different teams want their own tab of visualizations on a shared executive dashboard, each showing that team's reports. Which dashboard capability supports this layout?",
 		"choices": [
-			"Add a Variable or a non-database field type such as a break or label",
-			"Create a import field map coalesce",
-			"Delete the table ACL",
-			"Disable the activity stream"
+			"Multiple tabs on one dashboard, each holding its own arrangement of report widgets",
+			"One report per instance, rotated weekly between teams",
+			"Separate login accounts for each visualization",
+			"A form section on the incident table for each team"
 		],
 		"correctIndex": 0,
-		"explanation": "Form layout supports decorative and variable elements; some field types display data without persisting to a column.",
+		"explanation": "Dashboards support multiple tabs, and each tab can be laid out independently with widgets, letting teams organize their content within a single shared dashboard.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-user-interface/form-layout.html"
+			"https://www.servicenow.com/docs/r/reporting-analytics/dashboards.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 31,
-		"prompt": "Which Performance Analytics component displays a single metric trend on a dashboard?",
+		"prompt": "A fulfiller says they stopped getting emails when incidents are assigned to them, yet teammates still receive theirs. Which cause should the administrator investigate first?",
 		"choices": [
-			"A widget bound to an indicator",
-			"A scheduled data import job",
-			"An outbound SOAP message queue",
-			"A plugin record"
+			"The user's notification preferences or subscription settings for that notification",
+			"The instance's database indexes on the incident table",
+			"A recent change to the company firewall's ping settings",
+			"The version of the word processor on the user's laptop"
 		],
 		"correctIndex": 0,
-		"explanation": "Dashboard widgets can bind to Performance Analytics indicators to visualize KPI trends.",
+		"explanation": "When one user misses emails that others receive, per-user notification preferences, subscriptions, device settings, or an invalid email address on the user record are the most likely causes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/now-intelligence/dashboards-and-widgets.html"
+			"https://www.servicenow.com/docs/r/notifications/notification-preferences.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 32,
-		"prompt": "What does subscribing to a notification allow a user to do?",
+		"prompt": "An assignment group manager wants a task to appear in each member's personal queue only after someone accepts it from the group's shared queue. Which fields drive this pattern?",
 		"choices": [
-			"Receive email or other channels when the notification condition is met",
-			"Gain the admin role automatically",
-			"Edit dictionary entries globally",
-			"Skip all ACL checks"
+			"Assignment group holds the shared queue and Assigned to identifies the individual who takes the task",
+			"Short description and Priority together define ownership",
+			"Watch list and Impact decide who works the record",
+			"Number and Created by control the routing of work"
 		],
 		"correctIndex": 0,
-		"explanation": "Users can subscribe to notifications to receive messages when configured conditions trigger them.",
+		"explanation": "Task routing convention: Assignment group scopes the record to a team's queue; setting Assigned to designates the individual owner, typically a member of that group.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/notifications.html"
+			"https://www.servicenow.com/docs/r/platform-administration/task-table.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 33,
-		"prompt": "How does Knowledge Management support IT service delivery on the platform?",
+		"prompt": "An employee orders an item from the service catalog. Which set of records does the platform generate to track fulfillment of that order?",
 		"choices": [
-			"Capture, publish, and reuse articles to deflect incidents and support self-service",
-			"Replace the CMDB entirely",
-			"Schedule Discovery probes",
-			"Manage payroll records"
+			"A request, a requested item for the ordered good, and catalog tasks for the fulfillment steps",
+			"A single incident with the item name in its description",
+			"A change request with an attached spreadsheet of items",
+			"A knowledge article documenting the order"
 		],
 		"correctIndex": 0,
-		"explanation": "Knowledge Management stores articles that help users solve issues and reduces repeat incident volume.",
+		"explanation": "Catalog ordering creates a request (REQ) containing requested items (RITM), and each requested item can spawn catalog tasks (SCTASK) for the teams performing fulfillment work.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/knowledge-management/knowledge-management-overview.html"
+			"https://www.servicenow.com/docs/r/it-service-management/catalog-fulfillment.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 34,
-		"prompt": "Which knowledge article state indicates the article is visible to end users?",
+		"prompt": "Leadership wants employees to reach the catalog, knowledge articles, and their open tickets from a single branded web experience without using the platform back end. What should be offered?",
 		"choices": [
-			"Published",
-			"Draft article state only",
-			"Retired without replacement",
-			"Pending plugin activation"
+			"An employee-facing portal experience such as Employee Center configured with those self-service features",
+			"Direct database access for every employee",
+			"A shared login to an administrator account",
+			"A monthly PDF newsletter summarizing ticket statuses"
 		],
 		"correctIndex": 0,
-		"explanation": "Published knowledge articles are available to users per category and access rules; drafts are not generally visible.",
+		"explanation": "Employee Center (or a Service Portal) delivers a consumer-style front end for catalog ordering, knowledge, and ticket tracking, keeping end users out of the platform UI.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/knowledge-management/knowledge-article-lifecycle.html"
+			"https://www.servicenow.com/docs/r/platform-user-interface/employee-center.html"
 		]
 	}
 ]

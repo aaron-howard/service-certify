@@ -2,31 +2,32 @@
 	{
 		"trackCode": "CSA",
 		"order": 35,
-		"prompt": "What does the Service Catalog provide to end users?",
+		"prompt": "The hardware team asks for a catalog offering where employees pick a laptop model, choose memory options, and justify the purchase before submitting. How should an administrator build this?",
 		"choices": [
-			"A structured way to browse and order services and products",
-			"A CMDB reconciliation engine",
-			"A MID Server configuration tool",
-			"A plugin activation wizard only"
+			"Create a catalog item with variables for model, memory, and justification, attached to a fulfillment flow",
+			"Tell employees to email the hardware team with their laptop preferences",
+			"Add laptop fields directly to the incident form for everyone",
+			"Publish a knowledge article listing laptops with no ordering path"
 		],
 		"correctIndex": 0,
-		"explanation": "The Service Catalog presents orderable items with variables and fulfillment workflows for standardized service delivery.",
+		"explanation": "Catalog items collect user input through variables (choice lists, reference fields, text) and drive fulfillment through an associated flow or workflow, which is exactly this laptop-request use case.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-service-management/service-catalog-overview.html"
+			"https://www.servicenow.com/docs/r/it-service-management/service-catalog-management.html",
+			"https://www.servicenow.com/docs/r/it-service-management/service-catalog-variables.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 36,
-		"prompt": "Multiple Choice, Single Line Text, and Select Box are examples of what in ServiceNow?",
+		"prompt": "Ten different catalog items all need the same block of questions about cost center and manager approval contact. How can the catalog administrator avoid rebuilding those questions on each item?",
 		"choices": [
-			"Catalog variable types",
-			"Order guide stages",
-			"Related list types",
-			"CMDB relationship types"
+			"Define the questions once in a variable set and attach the set to each catalog item",
+			"Copy and paste the questions into each item and update all ten whenever one changes",
+			"Ask requesters to type cost center details into the description of the request",
+			"Create ten separate tables to store the answers per item"
 		],
 		"correctIndex": 0,
-		"explanation": "These are catalog variable types used on catalog items and record producers to collect user input.",
+		"explanation": "Variable sets group reusable variables so a single definition can be shared across many catalog items, keeping maintenance in one place.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/service-catalog-variables.html"
 		]
@@ -34,51 +35,51 @@
 	{
 		"trackCode": "CSA",
 		"order": 37,
-		"prompt": "Which catalog artifact lets a user order several related items in one request?",
+		"prompt": "The support team wants portal users to describe an outage in a guided form that creates an incident directly, instead of a requested item. Which catalog component does this?",
 		"choices": [
-			"Order Guide",
-			"Field mapping Transform Map",
-			"Migration Update Set",
-			"Visual Task Board"
+			"A record producer that maps portal answers onto fields of a new incident record",
+			"An order guide bundling several hardware items",
+			"A wish list entry saved in the user's cart",
+			"A standard change template from the change catalog"
 		],
 		"correctIndex": 0,
-		"explanation": "An order guide groups multiple catalog items so one request creates several requested items.",
+		"explanation": "Record producers present a catalog-style form but create a record on any specified table (such as Incident), mapping the user's answers to that table's fields.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-service-management/order-guides.html"
+			"https://www.servicenow.com/docs/r/it-service-management/record-producers.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 38,
-		"prompt": "What record is created when a user submits a catalog item?",
+		"prompt": "An administrator is building an email notification for reopened incidents. Which configuration areas on the notification record determine when it fires and who gets it? (Choose two.)",
 		"choices": [
-			"A Request with one or more Requested Items (RITMs)",
-			"A CMDB CI only",
-			"An import set header record",
-			"A plugin dependency"
+			"The triggering definition, such as record conditions or an event, on the notification's When to send settings",
+			"The recipient configuration, which can target specific users, groups, or people referenced in fields on the record",
+			"The instance's cloning schedule for sub-production environments",
+			"The number of columns shown on the incident list layout"
 		],
 		"correctIndex": 0,
-		"explanation": "Catalog checkout creates a Request header and Requested Item records that drive fulfillment tasks.",
+		"correctIndexes": [0, 1],
+		"questionType": "multi",
+		"explanation": "A notification is governed by its send criteria (table, conditions, inserts/updates, or events) and its recipients (users, groups, or dynamic values from record fields). List layouts and clone schedules are unrelated.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-service-management/request-and-requested-item.html"
+			"https://www.servicenow.com/docs/r/notifications/email-notifications.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 39,
-		"prompt": "Which variable types are commonly used on catalog items? (Choose two.)",
+		"prompt": "HR articles in a knowledge base must be readable by all employees, while security runbooks in another knowledge base stay limited to the security team. Which mechanism enforces this per knowledge base?",
 		"choices": [
-			"Single Line Text",
-			"Multiple Choice",
-			"CMDB Relationship",
-			"Plugin Dependency"
+			"User criteria applied to each knowledge base's Can Read and Cannot Read settings",
+			"A different font color for restricted articles",
+			"Renaming sensitive articles so employees cannot search for them",
+			"Disabling the knowledge application for everyone outside HR"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
-		"questionType": "multi",
-		"explanation": "Catalog items use variable types such as Single Line Text and Multiple Choice; CMDB relationships and plugin dependencies are not catalog variable types.",
+		"explanation": "Knowledge bases use user criteria records for Can Read/Cannot Read (and contribution) access, so each knowledge base can serve a different audience.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-service-management/service-catalog-variables.html"
+			"https://www.servicenow.com/docs/r/knowledge-management/knowledge-user-criteria.html"
 		]
 	}
 ]

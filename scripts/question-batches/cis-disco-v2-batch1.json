@@ -13,7 +13,8 @@
 		"explanation": "Each classification must reference a discovery pattern; without that link, horizontal discovery cannot execute the collection logic needed to classify the device.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-patterns-overview.html"
-		]
+		],
+		"domain": "Discovery Pattern Design"
 	},
 	{
 		"trackCode": "CIS-DISCO",
@@ -29,7 +30,8 @@
 		"explanation": "This error means Discovery attempted available credentials during Classification and none succeeded, so further pattern steps cannot run on those targets.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html"
-		]
+		],
+		"domain": "Discovery Pattern Design"
 	},
 	{
 		"trackCode": "CIS-DISCO",
@@ -45,23 +47,25 @@
 		"explanation": "Debug mode exposes detailed execution output so implementers can validate step logic, variable assignments, and parse results before promoting the pattern.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
-		]
+		],
+		"domain": "Discovery Pattern Design"
 	},
 	{
 		"trackCode": "CIS-DISCO",
 		"order": 3,
-		"prompt": "What is the role of an Identification section in a horizontal discovery pattern?",
+		"prompt": "A Tomcat process is detected on a Linux host during horizontal Discovery. The implementer must decide whether to create an application CI or only update the OS CI. Which pattern component makes that decision?",
 		"choices": [
-			"Schedule recurring port scans against every subnet defined in the discovery behavior",
-			"Evaluate collected data to decide whether the pattern applies to the discovered CI",
-			"Replace CMDB identification rules so reconciliation is skipped for matched devices",
-			"Generate PDF topology reports for service owners reviewing dependency maps"
+			"The Identification section evaluates collected signals to determine whether the pattern applies before deeper steps run",
+			"The schedule behavior setting assigns every open port to cmdb_ci_appl_tomcat without conditional checks",
+			"The ECC queue topic routes probe payloads directly into reconciliation without classification",
+			"The credential alias order determines which CI class is inserted regardless of process data"
 		],
-		"correctIndex": 1,
-		"explanation": "Identification sections contain conditional logic that determines if a device matches the pattern before connection and extension steps execute.",
+		"correctIndex": 0,
+		"explanation": "Identification sections contain conditional logic that determines if a device or workload matches the pattern before connection and extension steps execute.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-patterns-overview.html"
-		]
+		],
+		"domain": "Discovery Pattern Design"
 	},
 	{
 		"trackCode": "CIS-DISCO",
@@ -77,6 +81,7 @@
 		"explanation": "Match/Parse Variable steps parse command or probe output and populate pattern variables that downstream identification or connection steps can reference.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
-		]
+		],
+		"domain": "Discovery Pattern Design"
 	}
 ]

@@ -2,18 +2,20 @@
 	{
 		"trackCode": "CIS-DF",
 		"order": 60,
-		"prompt": "On the CMDB Data Foundations dashboard, which scheduled job supplies Performance Analytics widgets with trending non-compliant CI counts?",
+		"domain": "Govern",
+		"prompt": "A compliance lead opens Performance Analytics from a CMDB Data Foundations metric tile and needs trending counts of non-compliant CIs over time, but yesterday's widgets were empty. What capability populates those PA widgets with historical non-compliance trends?",
 		"choices": [
-			"CMDB Data Foundations PA Metric Collection",
-			"CMDB Get Well CIs Processed Via IRE Metric Batch Collection only",
-			"Discovery status ECC queue processing job",
-			"Import set transform onBefore script scheduler"
+			"The scheduled Data Foundations metric collection job that feeds PA indicators with compliance counts and trends",
+			"Manual weekly CSV exports of cmdb_ci rows uploaded into personal dashboards",
+			"Disabling CMDB Health tests so scores no longer appear on the dashboard",
+			"Running import set transforms that delete every non-compliant CI automatically"
 		],
 		"correctIndex": 0,
-		"explanation": "The CMDB Data Foundations PA Metric Collection job populates PA widgets with counts and trends for non-compliant CIs per metric.",
+		"explanation": "Data Foundations integrates with Performance Analytics through a scheduled metric collection job that aggregates non-compliant CI counts and trending data for dashboard widgets.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html"
-		]
+		],
+		"contentDifficulty": "Advanced"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -29,7 +31,9 @@
 		"explanation": "Health metrics include remediation playbook links to Now Support knowledge articles with issue context and correction guidance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-health-dashboard-overview.html"
-		]
+		],
+		"domain": "Govern",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -46,7 +50,9 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/deduplicate-cis.html",
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
-		]
+		],
+		"domain": "Govern",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -60,11 +66,16 @@
 			"Customizations metrics for excessive UI theme changes on forms"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Best Practices checks CSDM-related standards while Data Management Practices validates import configuration that preserves CMDB integrity.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html"
-		]
+		],
+		"domain": "Govern",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -86,14 +97,28 @@
 			"Whether ITSM processes consume CMDB data effectively"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "The four dashboard tabs group metrics for standards adherence, customization discipline, import integrity, and process leverage.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html"
-		]
+		],
+		"domain": "Govern",
+		"contentDifficulty": "Foundation"
 	}
 ]

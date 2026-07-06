@@ -13,7 +13,8 @@
 		"explanation": "Dispatcher Workspace lets dispatchers manage field teams, scheduling operations, and customer experience outcomes in real time.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/dispatcher-activities.html"
-		]
+		],
+		"domain": "Implementing Field Service Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -29,7 +30,8 @@
 		"explanation": "The Dispatcher dashboard provides real-time visibility into work orders, schedules, agent locations, and task statuses.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/dispatcher-activities.html"
-		]
+		],
+		"domain": "Implementing Field Service Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -45,7 +47,8 @@
 		"explanation": "Appointment booking lets organizations configure available slots so customers or agents can schedule service visits.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/appointment-booking.html"
-		]
+		],
+		"domain": "Implementing Field Service Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -61,7 +64,8 @@
 		"explanation": "Intelligent Task Recommendation suggests tasks to fill schedule gaps; agents can view and self-assign recommended tasks in the Now Agent mobile app.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/fsm-task-recommendation.html"
-		]
+		],
+		"domain": "Implementing Field Service Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -77,6 +81,7 @@
 		"explanation": "The Capacity Console provides real-time insights into resource utilization to optimize capacity usage by territory.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/capacity-console.html"
-		]
+		],
+		"domain": "Implementing Field Service Processes"
 	}
 ]
