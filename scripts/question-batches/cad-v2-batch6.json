@@ -2,81 +2,84 @@
 	{
 		"trackCode": "CAD",
 		"order": 25,
-		"prompt": "A Business Rule configured to run 'before' a database insert can do which of the following?",
+		"prompt": "When Priority changes on an open Task, the client script must compare the previous value to the new value and warn if the user downgrades from Critical. Which onChange parameter supplies the prior field value?",
 		"choices": [
-			"Modify field values on the current record before it is written to the database",
-			"Render HTML directly in the user's browser",
-			"Guarantee execution after all asynchronous jobs finish",
-			"Replace the need for access controls"
+			"The oldValue parameter passed to the onChange client script handler",
+			"The newValue parameter, which always contains the value from the prior save",
+			"The isLoading flag, which stores the last saved database row as text",
+			"The control object, which returns the previous choice label as a number"
 		],
 		"correctIndex": 0,
-		"explanation": "A before business rule executes prior to the database write, so it can adjust current record values or abort the operation.",
+		"explanation": "onChange client scripts receive oldValue and newValue parameters; oldValue holds the field value before the user's change.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/business-rules.html"
+			"https://www.servicenow.com/docs/r/application-development/client-scripts.html"
 		]
 	},
 	{
 		"trackCode": "CAD",
 		"order": 26,
-		"prompt": "In a server-side script, which API queries and updates records in a table?",
+		"questionType": "multi",
+		"prompt": "A developer must pick server-side enforcement for validating a field value on insert and client-side hiding of a field when a checkbox is cleared. Select the two mechanisms that match each need.",
 		"choices": [
-			"GlideRecord",
-			"g_form (client form object)",
-			"g_scratchpad (server-to-client data)",
-			"spModal (Service Portal dialog)"
+			"A before Business Rule to validate the field value during database insert",
+			"A UI Policy to hide the dependent field when the checkbox condition is false",
+			"A UI Policy to execute a GlideRecord query against an external database",
+			"A client script onSubmit to permanently delete related records on the server"
 		],
 		"correctIndex": 0,
-		"explanation": "GlideRecord is the server-side API for querying, inserting, updating, and deleting records.",
+		"correctIndexes": [0, 1],
+		"explanation": "Business Rules run server-side on database events for validation; UI Policies declaratively control field visibility on the client based on conditions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/gliderecord.html"
+			"https://www.servicenow.com/docs/r/application-development/business-rules.html",
+			"https://www.servicenow.com/docs/r/application-development/ui-policies.html"
 		]
 	},
 	{
 		"trackCode": "CAD",
 		"order": 27,
-		"prompt": "Where should reusable server-side functions and classes be defined so other server scripts can call them?",
+		"prompt": "An onChange client script should skip custom logic while the form is still loading initial values from the server. Which parameter indicates the form load state?",
 		"choices": [
-			"In a Script Include",
-			"In an onLoad client script event",
-			"In a UI Policy action row",
-			"In a report definition record"
+			"The isLoading parameter, which is true while the form is loading record data",
+			"The oldValue parameter, which equals true only during the first paint event",
+			"The g_form.isNewRecord method, which returns loading status for every field",
+			"The GlideAjax response status code returned before onChange fires"
 		],
 		"correctIndex": 0,
-		"explanation": "Script Includes encapsulate reusable server-side logic (functions/classes) callable from business rules, other script includes, and GlideAjax.",
+		"explanation": "The isLoading parameter in onChange scripts is true during initial form load, allowing scripts to avoid running logic prematurely.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/script-includes.html"
+			"https://www.servicenow.com/docs/r/application-development/client-scripts.html"
 		]
 	},
 	{
 		"trackCode": "CAD",
 		"order": 28,
-		"prompt": "Which GlideRecord method must you call after setting field values to persist a brand-new record?",
+		"prompt": "A catalog item uses a variable set; when Variable A is Yes, Variable B must become read-only on the item form. Which client-side artifact supports catalog variable behavior?",
 		"choices": [
-			"insert()",
-			"query()",
-			"next()",
-			"getRowCount()"
+			"A catalog client script with onChange logic against the catalog item variables",
+			"A table-level UI Policy on sys_user, which controls catalog variable widgets",
+			"A transform map on sc_cat_item that sets variables read-only after order submit",
+			"A MID Server script that polls variable values and locks fields remotely"
 		],
 		"correctIndex": 0,
-		"explanation": "After initializing a new GlideRecord and setting fields, insert() writes the record and returns its sys_id.",
+		"explanation": "Catalog client scripts run against catalog item variables and can set visibility or read-only state based on variable changes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/gliderecord.html"
+			"https://www.servicenow.com/docs/r/application-development/catalog-client-scripts.html"
 		]
 	},
 	{
 		"trackCode": "CAD",
 		"order": 29,
-		"prompt": "To debug a server-side script by writing messages to the system log, which method do you use?",
+		"prompt": "Managers want a Resolve button on the Case form visible only when State is Active and the user holds the case_manager role. Which form artifact supports conditional button display?",
 		"choices": [
-			"gs.info() (or gs.log)",
-			"g_form.addInfoMessage() on the client",
-			"alert() in the browser",
-			"console.table() output"
+			"A UI Action with a condition involving State and role checks before display",
+			"A UI Policy that converts the Submit button into a Resolve button globally",
+			"A related list script that injects HTML buttons into the form footer",
+			"A business rule on update that renames the form title to Resolve"
 		],
 		"correctIndex": 0,
-		"explanation": "GlideSystem logging methods such as gs.info() write to the system log for server-side debugging.",
+		"explanation": "UI Actions support conditions on form context and roles to control when custom buttons appear and execute.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/glidesystem.html"
+			"https://www.servicenow.com/docs/r/application-development/ui-actions.html"
 		]
 	}
 ]

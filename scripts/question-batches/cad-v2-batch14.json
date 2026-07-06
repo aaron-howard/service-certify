@@ -2,15 +2,15 @@
 	{
 		"trackCode": "CAD",
 		"order": 65,
-		"prompt": "How can a flow reuse logic across multiple flows without duplicating steps?",
+		"prompt": "Three flows share identical approval routing steps. How can the developer avoid duplicating those steps in each flow?",
 		"choices": [
-			"By calling a Subflow with defined inputs and outputs",
-			"By copying the same actions into every flow",
-			"By storing steps in a client script",
-			"By adding the steps to an ACL"
+			"Build a Subflow with defined inputs and outputs and call it from each flow",
+			"Copy the same action blocks manually into every flow version",
+			"Store the steps in an onLoad client script",
+			"Add the steps as conditions on table ACLs"
 		],
 		"correctIndex": 0,
-		"explanation": "A Subflow packages reusable steps with inputs and outputs so multiple flows can call the same logic.",
+		"explanation": "Subflows package reusable steps with inputs and outputs so multiple parent flows can invoke the same logic.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/hyperautomation-low-code/flow-designer.html"
 		]
@@ -18,15 +18,15 @@
 	{
 		"trackCode": "CAD",
 		"order": 66,
-		"prompt": "Which trigger type starts a flow when a record is created or updated matching a condition?",
+		"prompt": "A flow must start whenever a u_request record is created with state Requested. Which trigger type should the developer select?",
 		"choices": [
-			"Record trigger (Created / Updated)",
-			"Inbound email trigger only",
-			"Scheduled Job Day field",
-			"UI Policy condition"
+			"Record Created trigger on u_request with a matching condition",
+			"Inbound email trigger on the instance mailbox",
+			"UI Policy trigger on the request form",
+			"Scheduled Job Day-of-month field"
 		],
 		"correctIndex": 0,
-		"explanation": "A record-based trigger fires a flow when records are created, updated, or both, based on the specified table and condition.",
+		"explanation": "Record Created triggers fire flows when new records are inserted on the specified table, optionally filtered by condition.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/hyperautomation-low-code/flow-designer.html"
 		]
@@ -34,15 +34,15 @@
 	{
 		"trackCode": "CAD",
 		"order": 67,
-		"prompt": "To reuse a custom operation as a step in Flow Designer, what do you build?",
+		"prompt": "A team wants a reusable Flow Designer step that calls a Script Include and returns a status code to downstream actions. What should they create?",
 		"choices": [
 			"A custom Action with defined inputs, steps, and outputs",
-			"A new sign-in page",
-			"A dictionary override entry",
+			"A new Application Menu module",
+			"A dictionary override on sys_flow",
 			"An import set staging table"
 		],
 		"correctIndex": 0,
-		"explanation": "A custom Action defines inputs, steps (including scripts), and outputs, becoming a reusable building block in flows.",
+		"explanation": "Custom Actions define inputs, internal steps, and outputs, becoming reusable building blocks within Flow Designer.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/hyperautomation-low-code/flow-designer.html"
 		]
@@ -50,35 +50,38 @@
 	{
 		"trackCode": "CAD",
 		"order": 68,
-		"prompt": "Which statements about application properties are correct? (Choose two.)",
+		"prompt": "Which elements are required to compose a functioning Flow Designer flow? (Choose two.)",
 		"choices": [
-			"They let administrators change behavior without modifying code",
-			"They can be read at runtime with gs.getProperty()",
-			"They are stored as browser cookies only",
-			"They replace the need for business rules"
+			"A trigger that starts execution",
+			"One or more actions that perform steps",
+			"A transform map coalesce field",
+			"A client-side g_form API call"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"questionType": "multi",
-		"explanation": "Application properties externalize configurable values read via gs.getProperty(), letting admins adjust behavior without code changes.",
+		"explanation": "Every flow needs a trigger (record, schedule, etc.) and actions that execute the automation steps.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/application-properties.html"
+			"https://www.servicenow.com/docs/r/hyperautomation-low-code/flow-designer.html"
 		]
 	},
 	{
 		"trackCode": "CAD",
 		"order": 69,
-		"prompt": "What is the recommended way to run periodic maintenance logic, such as cleaning old records nightly?",
+		"prompt": "A developer needs a flow to run every Monday at 06:00 to summarize open tasks. Which trigger configuration applies?",
 		"choices": [
-			"A Scheduled Job that runs a script or job on a nightly schedule",
-			"An onLoad client script",
-			"A UI Policy",
-			"A dictionary attribute"
+			"A schedule trigger with weekly recurrence on Monday at 06:00",
+			"A record updated trigger on the task table only",
+			"An onSubmit client script on the task list",
+			"A before business rule with Display checked"
 		],
 		"correctIndex": 0,
-		"explanation": "Scheduled Jobs execute maintenance scripts automatically on defined schedules, such as nightly cleanup routines.",
+		"explanation": "Schedule triggers let flows run on defined recurring intervals independent of record activity.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/scheduled-jobs.html"
+			"https://www.servicenow.com/docs/r/hyperautomation-low-code/flow-designer.html"
 		]
 	}
 ]

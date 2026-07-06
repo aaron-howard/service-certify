@@ -2,15 +2,15 @@
 	{
 		"trackCode": "CAD",
 		"order": 75,
-		"prompt": "Which coalesce configuration on a Transform Map prevents duplicate records during repeated imports?",
+		"prompt": "What does a Transform Map define during an import from staging to a target table?",
 		"choices": [
-			"Mark the matching field(s) as coalesce so existing records are updated instead of inserted",
-			"Disable the transform map",
-			"Set every field to read-only",
-			"Delete the import set table after each run"
+			"Field mappings, optional scripts, and coalesce keys between staging and target",
+			"The color scheme of the import data source form",
+			"Which roles appear in the Application Navigator",
+			"The schedule for Flow Designer approval steps"
 		],
 		"correctIndex": 0,
-		"explanation": "Setting a coalesce field makes the transform match existing target records on that value and update them rather than creating duplicates.",
+		"explanation": "Transform Maps specify how staging columns map to target fields, including coalesce logic and transform scripts.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/integrate-applications/c_ImportSetTransformMaps.html"
 		]
@@ -18,15 +18,15 @@
 	{
 		"trackCode": "CAD",
 		"order": 76,
-		"prompt": "To integrate with an external system over REST from ServiceNow, which server-side API sends outbound requests?",
+		"prompt": "A Script Include must POST JSON to an external HR API from server code. Which API should the developer use?",
 		"choices": [
-			"RESTMessageV2 (sn_ws.RESTMessageV2)",
-			"GlideForm client API",
-			"GlideAjax client bridge",
-			"g_scratchpad object"
+			"sn_ws.RESTMessageV2 to build and execute the outbound request",
+			"GlideForm client API from a business rule",
+			"GlideAjax from an onChange client script",
+			"g_scratchpad to store the HTTP response"
 		],
 		"correctIndex": 0,
-		"explanation": "RESTMessageV2 constructs and sends outbound REST requests to external endpoints and returns the response for processing.",
+		"explanation": "RESTMessageV2 constructs and sends outbound REST requests from server-side scripts and returns the response for processing.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/integrate-applications/c_RESTMessage.html"
 		]
@@ -34,15 +34,15 @@
 	{
 		"trackCode": "CAD",
 		"order": 77,
-		"prompt": "Which tool lets you build and test outbound REST calls interactively before scripting them?",
+		"prompt": "Before embedding REST calls in production scripts, a developer wants to test endpoint URLs, headers, and payloads interactively. Which tool helps?",
 		"choices": [
-			"REST API Explorer / REST Message with a Test button",
-			"Form Designer layout tool",
-			"Access Control rule debugger",
-			"Scheduled Job scheduler screen"
+			"REST API Explorer or the REST Message Test action",
+			"Form Designer layout preview",
+			"Access Control security debugging",
+			"Scheduled Job run history"
 		],
 		"correctIndex": 0,
-		"explanation": "The REST API Explorer and the REST Message Test action let developers configure and test outbound requests before embedding them in scripts.",
+		"explanation": "REST API Explorer and REST Message testing let developers configure and validate outbound requests before scripting them.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/integrate-applications/c_RESTMessage.html"
 		]
@@ -50,7 +50,7 @@
 	{
 		"trackCode": "CAD",
 		"order": 78,
-		"prompt": "After sending a RESTMessageV2 request, which response methods retrieve results? (Choose two.)",
+		"prompt": "After executing RESTMessageV2.execute(), which methods retrieve the HTTP results? (Choose two.)",
 		"choices": [
 			"getBody()",
 			"getStatusCode()",
@@ -58,9 +58,12 @@
 			"addInfoMessage()"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"questionType": "multi",
-		"explanation": "The REST response object exposes getBody() for payload and getStatusCode() for the HTTP status; the other methods belong to unrelated client APIs.",
+		"explanation": "The REST response object exposes getBody() for the payload and getStatusCode() for the HTTP status; the others are unrelated client APIs.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/integrate-applications/c_RESTMessage.html"
 		]
@@ -68,17 +71,17 @@
 	{
 		"trackCode": "CAD",
 		"order": 79,
-		"prompt": "When debugging a failing outbound REST integration, which response detail most directly indicates the failure cause?",
+		"prompt": "A team needs no-code connectors to call third-party SaaS APIs from flows with reusable spokes and actions. Which platform capability fits?",
 		"choices": [
-			"The HTTP status code and response body returned by the endpoint",
-			"The color theme of the instance",
-			"The number of modules in the app menu",
-			"The record producer variable order"
+			"IntegrationHub spokes and actions",
+			"Inbound Email Actions only",
+			"Dictionary overrides on sys_ws_operation",
+			"Homepage gauges for integration metrics"
 		],
 		"correctIndex": 0,
-		"explanation": "The HTTP status code and response body reveal authentication, payload, or endpoint errors, guiding integration debugging.",
+		"explanation": "IntegrationHub provides spokes and actions that encapsulate third-party API connectivity for use in flows and integrations.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/integrate-applications/c_RESTMessage.html"
+			"https://www.servicenow.com/docs/r/integrate-applications/integration-hub.html"
 		]
 	}
 ]

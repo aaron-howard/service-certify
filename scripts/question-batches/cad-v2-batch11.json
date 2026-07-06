@@ -2,31 +2,31 @@
 	{
 		"trackCode": "CAD",
 		"order": 50,
-		"prompt": "An ACL has a condition and a script. How are they combined to grant access?",
+		"prompt": "A business rule in scope x_acme_app calls new x_other_app.Utils().calculate() and fails with a cross-scope access error. What must an administrator configure?",
 		"choices": [
-			"Both the condition and the script must evaluate to true (in addition to any required role)",
-			"Only one of them needs to be true",
-			"The script is ignored if a condition exists",
-			"They are averaged into a numeric score"
+			"A cross-scope access privilege authorizing x_acme_app to access the x_other_app Script Include",
+			"A new inbound email action in x_other_app",
+			"A UI Policy on the Utils Script Include form",
+			"An import set staging table shared between scopes"
 		],
 		"correctIndex": 0,
-		"explanation": "An ACL grants access only when the role, condition, and script requirements are all satisfied.",
+		"explanation": "Scoped applications cannot access another scope's artifacts at runtime unless cross-scope access privileges explicitly authorize the access.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/access-control-rules.html"
+			"https://www.servicenow.com/docs/r/application-development/c_RuntimeAccessToAppTables.html"
 		]
 	},
 	{
 		"trackCode": "CAD",
 		"order": 51,
-		"prompt": "How does Application Scope help protect artifacts during collaborative development with Delegated Development?",
+		"prompt": "During delegated development, an admin wants vendor developers to edit business rules and client scripts but not ACLs in a scoped app. Which capability supports this?",
 		"choices": [
-			"Admins can grant specific developers rights to edit only certain file types within a scoped application",
-			"It disables all editing for everyone",
-			"It merges all applications into global scope",
-			"It removes the need for source control"
+			"Delegated Development file-type permissions scoped to the application",
+			"Converting the application to global scope",
+			"Removing all roles from the application menu",
+			"Disabling source control for the instance"
 		],
 		"correctIndex": 0,
-		"explanation": "Delegated Development, used with scoped apps, lets admins grant developers permission to work on specific application file types while protecting the rest.",
+		"explanation": "Delegated Development lets admins grant developers rights to specific application file types while protecting other artifacts.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/delegated-development-and-deployment/c_DelegatedDevelopment.html"
 		]
@@ -34,51 +34,54 @@
 	{
 		"trackCode": "CAD",
 		"order": 52,
-		"prompt": "Which security artifacts can restrict access to an entire application module? (Choose two.)",
+		"prompt": "Which record operations can an Access Control rule restrict on a table? (Choose two.)",
 		"choices": [
-			"Roles required on the module",
-			"Roles required on the application menu",
-			"A transform map on the module",
-			"An import set row for the module"
+			"create",
+			"delete",
+			"execute",
+			"report"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"questionType": "multi",
-		"explanation": "Both the application menu and its modules can require roles; users without those roles cannot see or open the module.",
+		"explanation": "ACLs secure CRUD-style operations such as create, read, write, and delete. Execute and report are not ACL operation types.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/application-menus-modules.html"
+			"https://www.servicenow.com/docs/r/application-development/access-control-rules.html"
 		]
 	},
 	{
 		"trackCode": "CAD",
 		"order": 53,
-		"prompt": "When a scoped application needs to call an API in another scope, what must be configured?",
+		"prompt": "A field-level ACL on u_priority exists alongside a table ACL on the same table. A user passes the table read ACL but fails on the field. Which evaluation order explains this?",
 		"choices": [
-			"Cross-scope access privileges authorizing the specific runtime access",
-			"Nothing; all scopes can call each other freely",
-			"A new instance login page",
-			"A homepage gauge widget"
+			"Table ACL is evaluated first, then the more specific field ACL",
+			"Only the field ACL is evaluated for list views",
+			"Field ACLs are skipped when a table ACL exists",
+			"ACLs are evaluated in alphabetical order by name"
 		],
 		"correctIndex": 0,
-		"explanation": "Cross-scope access records must authorize a scoped app to access resources in another scope, enforcing the scope protection model.",
+		"explanation": "ServiceNow evaluates ACLs from most general to most specific; users must pass both table and field ACLs to read a protected field.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/c_RuntimeAccessToAppTables.html"
+			"https://www.servicenow.com/docs/r/application-development/access-control-rules.html"
 		]
 	},
 	{
 		"trackCode": "CAD",
 		"order": 54,
-		"prompt": "Which automation tool provides a low-code, visual way to build multi-step process logic triggered by records or schedules?",
+		"prompt": "A developer must stamp u_requested_by with the current user before a new record is written to the database. Which Business Rule timing is appropriate?",
 		"choices": [
-			"Flow Designer",
-			"Form Designer for layouts",
-			"Access Control rules for records",
-			"Dictionary Entries for columns"
+			"before insert, with Before checked",
+			"after insert, with After checked",
+			"async, with Advanced checked only",
+			"display, with Before and After both checked"
 		],
 		"correctIndex": 0,
-		"explanation": "Flow Designer offers a low-code interface to build flows with triggers, actions, and subflows for process automation.",
+		"explanation": "Before insert/update business rules run prior to the database commit, allowing field values to be set before the record is saved.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/hyperautomation-low-code/flow-designer.html"
+			"https://www.servicenow.com/docs/r/application-development/business-rules.html"
 		]
 	}
 ]

@@ -29,29 +29,42 @@ Publications: `application-development`, `hyperautomation-low-code`, `build-work
 
 ---
 
-## Question style (required)
+## Question style (required — scenario-first, Jul 2026 refresh)
 
-Match the official CAD sample items — direct platform facts, method names,
-config field values, scope rules. Not quiz templates.
+**Target mix:** ~70% scenario/application (Levels 2–5), ~30% direct recall (Level 1).
+
+Each question should test **application of a concept**, not vocabulary alone. Prefer stems that describe a developer, team, or runtime situation and ask for the **best platform choice**, **runtime behavior**, **security design**, **lifecycle step**, or **troubleshooting action**.
+
+**Scenario categories (rotate across the bank)**
+
+| Category | Test focus | Example artifacts |
+|----------|------------|-------------------|
+| Best platform choice | Pick the right tool | UI Policy, Client Script, Business Rule, Flow Designer, ACL, Script Include, Transform Map, IntegrationHub |
+| Runtime behavior | Timing and execution context | before/after/async/display, client vs server, scoped vs global, cross-scope access |
+| Security design | Access and isolation | ACLs, roles, application access, table/field ACLs, cross-scope privileges |
+| Application lifecycle | Move and govern apps | update sets, source control, App Engine Management Center, preview/commit/retrieve |
+| Australia-family | Modern platform tooling | App Engine Studio, Workflow Studio, Workspace Builder, governed low-code delivery |
+
+**Preferred stem pattern**
+
+Instead of: *What is an Application Scope?*
+
+Use: *A developer is building a custom Facilities Request app that needs its own tables, scripts, and security rules while avoiding accidental changes to global files. What design choice best supports this requirement?*
 
 **Banned in prompts and choices**
 
-- Wrapper prefixes: `Typically,`, `Operationally,`, `In practice,`,
-  `From an implementation standpoint,`, `From a governance perspective,`,
-  `In platform terms,`, `In this scenario,`, `Practically speaking,`
-- `What is the primary purpose of…` (definition-only stems)
+- Wrapper prefixes: `Typically,`, `Operationally,`, `In practice,`, `From an implementation standpoint,`, `In this scenario,`, etc.
+- `What is the primary purpose of…` and other pure definition-only stems without a scenario
 - Duplicate choice text within the track; padded/boilerplate suffixes
 
 **Choices**
 
-- Four unique strings per question; similar length
-- Standalone answers: API/method names, table names, scope rules, config values
+- Four unique strings per question; similar length; standalone answers (tool names, timings, sequences)
+- Distractors should be plausible platform alternatives, not joke answers
 
-**Multi-select** — allowed where the blueprint calls for "select all that apply".
-Set `questionType: "multi"`, `correctIndexes: [..]` (2+ entries, sorted),
-and `correctIndex` = the lowest correct index (back-compat).
+**Multi-select** — use for "choose two/three" scenario items (`questionType: "multi"`, `correctIndexes`, `correctIndex` = lowest).
 
-**Each question requires `sourceUrls`** pointing to ServiceNow docs.
+**Each question requires `sourceUrls`** pointing to ServiceNow docs (Australia branch topics).
 
 ---
 

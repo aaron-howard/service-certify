@@ -2,17 +2,15 @@
 	{
 		"trackCode": "CAD",
 		"order": 80,
-		"prompt": "Which import formats can ServiceNow load directly into an Import Set? (Choose two.)",
+		"prompt": "A data team receives a spreadsheet of vendor contacts to load through an Import Set. Which format does ServiceNow accept for direct Import Set loading?",
 		"choices": [
-			"CSV",
-			"Excel (XLS/XLSX)",
+			"Excel (XLS/XLSX) or CSV",
 			"Compiled Java bytecode",
-			"Raw disk images"
+			"Raw disk images",
+			"Encrypted password vault exports only"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
-		"questionType": "multi",
-		"explanation": "Import Sets accept structured data files such as CSV and Excel, staging rows for transformation onto target tables.",
+		"explanation": "Import Sets accept structured data files such as CSV and Excel, staging rows before transform to target tables.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/integrate-applications/c_ImportSetsKeyConcepts.html"
 		]
@@ -20,63 +18,63 @@
 	{
 		"trackCode": "CAD",
 		"order": 81,
-		"prompt": "How do you obtain a certified or shared application published to the ServiceNow Store or an update source?",
+		"prompt": "An enterprise program needs centralized governance over scoped application ownership, health, and deployment pipelines across dev, test, and prod. Which tool provides this?",
 		"choices": [
-			"Download and install it from the application repository / Store",
-			"Copy its records into sys_properties",
-			"Recreate every artifact manually by hand",
-			"Email the application to each user"
+			"App Engine Management Center (AEMC)",
+			"Inbound email configuration",
+			"Transform map history",
+			"Homepage gauge editor"
 		],
 		"correctIndex": 0,
-		"explanation": "Applications are downloaded and installed from the ServiceNow Store or an application repository into the instance.",
+		"explanation": "App Engine Management Center offers centralized visibility and governance for scoped applications, pipelines, and instance promotion.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/download-and-install-applications.html"
+			"https://www.servicenow.com/docs/r/application-development/app-engine-management-center.html"
 		]
 	},
 	{
 		"trackCode": "CAD",
 		"order": 82,
-		"prompt": "What does Delegated Development allow an administrator to do?",
+		"prompt": "A scoped application team wants to commit Studio changes to a corporate Git repository and apply remote updates back to the instance. Which capability enables this?",
 		"choices": [
-			"Grant non-admin developers rights to develop specified application file types and perform code review",
-			"Delete all applications automatically",
-			"Convert scoped apps to global on upgrade",
-			"Disable source control for the instance"
+			"ServiceNow source control (Git) integration in Studio",
+			"Inbound email client configuration",
+			"Import set auto-mapping",
+			"Application Navigator module ordering"
 		],
 		"correctIndex": 0,
-		"explanation": "Delegated Development lets admins assign developers permission to work on specific application files and participate in code review without full admin rights.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/delegated-development-and-deployment/c_DelegatedDevelopment.html"
-		]
-	},
-	{
-		"trackCode": "CAD",
-		"order": 83,
-		"prompt": "Which capability lets you manage a scoped application's source code in an external Git repository?",
-		"choices": [
-			"The ServiceNow source control (Git) integration in Studio",
-			"The inbound email client",
-			"The transform map history log",
-			"The homepage gauge editor panel"
-		],
-		"correctIndex": 0,
-		"explanation": "Studio's source control integration links a scoped app to a Git repository for committing, branching, and applying changes.",
+		"explanation": "Studio's Git integration links a scoped app to an external repository for commit, branch, and apply-remote workflows.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/link-app-to-source-control.html"
 		]
 	},
 	{
 		"trackCode": "CAD",
-		"order": 84,
-		"prompt": "When managing global application files, which action is allowed?",
+		"order": 83,
+		"prompt": "An admin must let contractor developers edit Script Includes and business rules in one scoped app without granting admin. What should they configure?",
 		"choices": [
-			"Adding files from global scope to a global application",
-			"Moving application files into or out of a scoped application",
-			"Changing the scope of a global application",
-			"Removing an application's scope"
+			"Delegated Development permissions for specific file types in that application",
+			"Convert the scoped app to global scope",
+			"Disable all ACLs on the application tables",
+			"Remove source control from the instance"
 		],
 		"correctIndex": 0,
-		"explanation": "For global applications, you can add global-scope files to the global app; you cannot move files across scopes, change a global app's scope, or remove an application's scope.",
+		"explanation": "Delegated Development assigns developers rights to specified application file types and optional code review without full admin access.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/delegated-development-and-deployment/c_DelegatedDevelopment.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 84,
+		"prompt": "When managing files in a global application, which action is permitted?",
+		"choices": [
+			"Adding global-scope files to the global application",
+			"Moving scoped application files into global scope",
+			"Changing a global application to a scoped application",
+			"Removing scope from an installed scoped application"
+		],
+		"correctIndex": 0,
+		"explanation": "Global applications can include global-scope files; you cannot move files across scopes, change global app scope, or remove an app's scope.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/application-files.html"
 		]

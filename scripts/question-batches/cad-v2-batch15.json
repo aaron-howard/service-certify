@@ -2,15 +2,15 @@
 	{
 		"trackCode": "CAD",
 		"order": 70,
-		"prompt": "Which object references the record that triggered a Notification when building its message body with mail scripts?",
+		"prompt": "In a notification mail script, which object references the record that caused the notification to fire?",
 		"choices": [
 			"current",
-			"g_form on the notification form",
-			"g_scratchpad in the mail script",
-			"spModal from the portal"
+			"g_form on the email template form",
+			"g_scratchpad in the browser",
+			"spModal in the portal"
 		],
 		"correctIndex": 0,
-		"explanation": "In notification mail scripts, current refers to the triggering record, allowing field values to be inserted into the email.",
+		"explanation": "In notification mail scripts, current is the triggering GlideRecord, allowing field values to be inserted into the email body.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/email-notifications.html"
 		]
@@ -18,15 +18,15 @@
 	{
 		"trackCode": "CAD",
 		"order": 71,
-		"prompt": "A flow needs to wait for a manager approval before continuing. Which capability supports this?",
+		"prompt": "A purchase request flow must pause until the department manager approves, then continue to fulfillment tasks. Which Flow Designer feature should the developer use?",
 		"choices": [
-			"An approval action that pauses the flow until the approval is complete",
-			"An onSubmit client script",
-			"A dictionary default value",
-			"An import set transform"
+			"An approval action that suspends the flow until approval completes",
+			"An onSubmit client script on the request form",
+			"A dictionary default value on the approver field",
+			"A transform map script on the staging table"
 		],
 		"correctIndex": 0,
-		"explanation": "Flow Designer approval actions pause execution until the requested approvals are granted or rejected, then resume the flow.",
+		"explanation": "Flow Designer approval actions pause execution until requested approvals are granted or rejected, then resume downstream steps.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/hyperautomation-low-code/flow-designer.html"
 		]
@@ -34,15 +34,15 @@
 	{
 		"trackCode": "CAD",
 		"order": 72,
-		"prompt": "Which utility determines whether field names in an Import Set match the field names on the target table during import?",
+		"prompt": "A CSV file of asset records must be loaded into cmdb_ci_hardware. Where do imported rows land before transformation?",
 		"choices": [
-			"Auto Map Matching Fields",
-			"Transform Maps only",
-			"CI Relationship Builder",
-			"Business Service Management Map"
+			"A staging Import Set table linked to a transform map",
+			"Directly into cmdb_ci_hardware without staging",
+			"Into the browser sessionStorage cache",
+			"Into an ACL record on the CI table"
 		],
 		"correctIndex": 0,
-		"explanation": "Auto Map Matching Fields automatically maps import set columns to target fields that share the same name.",
+		"explanation": "Import Sets stage data in a dedicated table; a Transform Map then maps and loads rows onto the target table.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/integrate-applications/c_ImportSetsKeyConcepts.html"
 		]
@@ -50,31 +50,31 @@
 	{
 		"trackCode": "CAD",
 		"order": 73,
-		"prompt": "When importing data from a CSV or Excel file, where does the data land before it is transformed onto the target table?",
+		"prompt": "Column names in a spreadsheet match target field names on u_vendor. What utility maps them automatically in the transform map?",
 		"choices": [
-			"A staging Import Set table",
-			"Directly into the sys_user table",
-			"Into the browser cache",
-			"Into an ACL record"
+			"Auto Map Matching Fields",
+			"Coalesce Fields Only",
+			"CI Relationship Builder",
+			"Business Service Management Map"
 		],
 		"correctIndex": 0,
-		"explanation": "Imported rows first populate a staging Import Set table, then a Transform Map moves them to the target table.",
+		"explanation": "Auto Map Matching Fields creates field maps when import set column names match target field names.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/integrate-applications/c_ImportSetsKeyConcepts.html"
+			"https://www.servicenow.com/docs/r/integrate-applications/c_ImportSetTransformMaps.html"
 		]
 	},
 	{
 		"trackCode": "CAD",
 		"order": 74,
-		"prompt": "What does a Transform Map define during a data import?",
+		"prompt": "A transform map must update existing vendor records when u_vendor_id matches instead of inserting duplicates. Which setting enables this?",
 		"choices": [
-			"How import set fields map to target table fields, including coalesce and scripts",
-			"The color of the import button",
-			"The role required to view a form",
-			"The schedule for a nightly job"
+			"Mark u_vendor_id as a coalesce field on the transform map",
+			"Disable the transform map after the first run",
+			"Set every mapped field to read-only on the form",
+			"Delete the import set table between loads"
 		],
 		"correctIndex": 0,
-		"explanation": "A Transform Map specifies field-to-field mapping, coalesce (matching) fields, and optional transform scripts to load data onto the target table.",
+		"explanation": "Coalesce fields tell the transform to match existing target records on that value and update them rather than inserting duplicates.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/integrate-applications/c_ImportSetTransformMaps.html"
 		]
