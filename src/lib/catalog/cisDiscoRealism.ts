@@ -4,12 +4,38 @@ import type { QuestionType } from './questionTypes';
 
 /** Bank distribution for 75 questions scaled from the 45-question official exam (+30 buffer). */
 
+export const CIS_DISCO_BANK_SIZE = 75;
+
 export const CIS_DISCO_DOMAIN_TARGETS = {
-	'Discovery Pattern Design': 26,
-	'Discovery Configuration': 26,
-	'Configuration Management Database': 11,
-	'Discovery Engagement Readiness': 12
+	'Discovery Pattern Design': 23,
+	'Discovery Configuration': 22,
+	'Configuration Management Database': 15,
+	'Discovery Engagement Readiness': 15
 } as const;
+
+export type CisDiscoDomain = keyof typeof CIS_DISCO_DOMAIN_TARGETS;
+
+export function domainForOrder(order: number): CisDiscoDomain {
+	if (order <= 22) return 'Discovery Pattern Design';
+	if (order <= 44) return 'Discovery Configuration';
+	if (order <= 59) return 'Configuration Management Database';
+	return 'Discovery Engagement Readiness';
+}
+
+export const CIS_DISCO_SCENARIO_MIN_RATIO = 0.65;
+
+export function isScenarioStylePrompt(prompt: string): boolean {
+	const trimmed = prompt.trim();
+	if (trimmed.length >= 90) return true;
+	if (
+		/^(A |An |The |Your |During |When |After |Before |If |Given |While |Upon |Network |Discovery |Classification |An admin|An implementer|An operator|A team|A customer|A schedule|A credential|Which two|Choose two|How should|Why should|What should)/i.test(
+			trimmed
+		)
+	) {
+		return true;
+	}
+	return false;
+}
 
 export const BANNED_CHOICE_PREFIXES = [
 	'Typically,',
@@ -43,7 +69,15 @@ export const BANNED_STEM_PREFIXES = [
 export const BANNED_STEM_PATTERNS = [
 	/^what is the primary purpose of/i,
 	/^what is the primary objective of/i,
-	/^what is the main purpose of/i
+	/^what is the main purpose of/i,
+	/^what is the role of an identification section/i,
+	/^what do identification rules in ire determine/i,
+	/^reconciliation rules primarily control what/i,
+	/^what is the primary role of ci class manager/i,
+	/^how many ci identifiers should be configured/i,
+	/^what does a discovery schedule primarily define/i,
+	/^discovery ip services records are used to do what/i,
+	/^which sequence reflects the major discovery phases/i
 ] as const;
 
 export const STEM_OPENER_CAP = 4;
@@ -54,6 +88,7 @@ export type CisDiscoQuestionRow = {
 	prompt: string;
 	choices: string[];
 	sourceUrls: string[];
+	domain?: CisDiscoDomain;
 	questionType?: QuestionType;
 	correctIndexes?: number[];
 	correctIndex?: number;
@@ -122,12 +157,43 @@ export function validateCisDiscoQuestion(q: CisDiscoQuestionRow): string[] {
 	return issues;
 }
 
+export function validateCisDiscoScenarioRatio(rows: CisDiscoQuestionRow[]): string[] {
+	const disco = rows.filter((q) => q.trackCode === 'CIS-DISCO');
+	if (disco.length === 0) return [];
+	const scenarioCount = disco.filter((q) => isScenarioStylePrompt(q.prompt)).length;
+	const ratio = scenarioCount / disco.length;
+	if (ratio < CIS_DISCO_SCENARIO_MIN_RATIO) {
+		return [
+			`scenario-style prompts ${scenarioCount}/${disco.length} (${Math.round(ratio * 100)}%) below minimum ${Math.round(CIS_DISCO_SCENARIO_MIN_RATIO * 100)}%`
+		];
+	}
+	return [];
+}
+
+export function validateCisDiscoDomainTags(rows: CisDiscoQuestionRow[]): string[] {
+	const issues: string[] = [];
+	for (const q of rows) {
+		if (q.trackCode !== 'CIS-DISCO') continue;
+		if (!q.domain) {
+			issues.push(`order ${q.order}: missing domain tag`);
+			continue;
+		}
+		if (q.domain !== domainForOrder(q.order)) {
+			issues.push(`order ${q.order}: domain ${q.domain} does not match order quota ${domainForOrder(q.order)}`);
+		}
+	}
+	return issues;
+}
+
 export function validateCisDiscoTrack(rows: CisDiscoQuestionRow[]): string[] {
 	const issues: string[] = [];
 
 	for (const q of rows) {
 		issues.push(...validateCisDiscoQuestion(q));
 	}
+
+	issues.push(...validateCisDiscoScenarioRatio(rows));
+	issues.push(...validateCisDiscoDomainTags(rows));
 
 	const openerCounts = new Map<string, number>();
 	for (const q of rows) {

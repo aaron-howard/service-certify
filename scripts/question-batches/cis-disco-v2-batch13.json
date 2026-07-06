@@ -2,50 +2,53 @@
 	{
 		"trackCode": "CIS-DISCO",
 		"order": 60,
-		"prompt": "Which CMDB Health dashboard signal best indicates Discovery data quality is degrading?",
+		"prompt": "Network operations requests a pre-launch impact assessment before the first full production discovery window. Which analysis belongs in that assessment?",
 		"choices": [
-			"Rising duplicate CI counts and declining completeness scores for discovered classes",
-			"Increasing MID Server memory usage during off-peak maintenance windows",
-			"Higher volume of service catalog requests submitted by discovery operators",
-			"Expanding count of navigation modules visible to the discovery_admin role"
+			"Expected probe volume, credential authentication attempts, firewall paths, and change windows for in-scope subnets",
+			"Finalized reconciliation precedence for every attribute on legacy imported CIs enterprise-wide",
+			"Complete service mapping dependency graphs for all business capabilities before any pilot scan",
+			"Annual hardware disposal workflows for assets not seen during exploration probes"
 		],
 		"correctIndex": 0,
-		"explanation": "CMDB Health tracks duplicate rates and completeness, which directly reflect discovery identification and update quality.",
+		"explanation": "Pre-launch impact assessments quantify scan load, authentication activity, network paths, and operational timing before broad production execution.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-health-dashboard-overview.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-implementation-overview.html"
+		],
+		"domain": "Discovery Engagement Readiness"
 	},
 	{
 		"trackCode": "CIS-DISCO",
 		"order": 61,
-		"prompt": "An operator finds two server CIs with the same serial number from different schedules. What is the correct remediation path?",
+		"prompt": "The program sponsor asks for measurable KPIs before go-live. Which Discovery engagement metrics best track readiness and ongoing quality?",
 		"choices": [
-			"Use deduplication tools to merge records after verifying identification rule coverage",
-			"Delete both records and disable identification until the next quarterly audit",
-			"Convert both CIs to consumable models in the hardware asset workspace",
-			"Assign both servers to the same discovery schedule without changing IRE rules"
+			"Discovery completeness by class, CI accuracy or duplicate rates, and schedule failure percentages against agreed targets",
+			"Total navigation modules visible to the discovery_admin role after each content upgrade",
+			"Count of horizontal patterns cloned in sub-production regardless of test evidence",
+			"Number of ECC messages processed when all schedules are disabled indefinitely"
 		],
 		"correctIndex": 0,
-		"explanation": "Deduplication merges duplicate CIs once identification rules are confirmed to prevent recurrence.",
+		"explanation": "Engagement KPIs focus on coverage completeness, CMDB accuracy, and reliable schedule execution against defined success criteria.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/deduplicate-cis.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-dashboard.html"
+		],
+		"domain": "Discovery Engagement Readiness"
 	},
 	{
 		"trackCode": "CIS-DISCO",
 		"order": 62,
-		"prompt": "Who should own CI class changes that affect Discovery identification keys?",
+		"prompt": "Before enabling full enterprise scope, the team runs a limited pilot schedule. Which cutover validation step confirms readiness to expand?",
 		"choices": [
-			"CMDB governance owners coordinating through CI Class Manager change controls",
-			"Any operator with the itil role editing cmdb_ci records ad hoc in production",
-			"External monitoring vendors updating class schemas through email requests",
-			"Discovery schedule owners without consultation from configuration management"
+			"Review pilot CMDB results, credential success rates, MID reachability, and stakeholder sign-off against documented success criteria",
+			"Retire all existing CIs so the expanded schedule starts from empty foundation tables",
+			"Disable identification globally until every business service map is finalized",
+			"Promote every custom pattern to production without sub-production debug testing"
 		],
 		"correctIndex": 0,
-		"explanation": "Identification keys are class-level CMDB governance decisions managed through CI Class Manager with appropriate stewardship.",
+		"explanation": "Cutover validation compares pilot outcomes—data quality, connectivity, and credential results—to agreed criteria before expanding scope.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-class-manager.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-implementation-overview.html"
+		],
+		"domain": "Discovery Engagement Readiness"
 	},
 	{
 		"trackCode": "CIS-DISCO",
@@ -61,7 +64,8 @@
 		"explanation": "Stakeholder workshops establish agreed scope, ownership, and success criteria before configuration and scanning begin.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-implementation-overview.html"
-		]
+		],
+		"domain": "Discovery Engagement Readiness"
 	},
 	{
 		"trackCode": "CIS-DISCO",
@@ -77,6 +81,7 @@
 		"explanation": "Readiness assessments capture connectivity, security, credential, and MID prerequisites needed for successful first scans.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/set-up-discovery.html"
-		]
+		],
+		"domain": "Discovery Engagement Readiness"
 	}
 ]

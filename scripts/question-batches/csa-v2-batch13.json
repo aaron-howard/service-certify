@@ -2,81 +2,81 @@
 	{
 		"trackCode": "CSA",
 		"order": 60,
-		"prompt": "What does setting a coalesce field on a transform map accomplish?",
+		"prompt": "Your custom u_vendor table must always capture contract_end before save. Where do you set that requirement at the schema level?",
 		"choices": [
-			"Updates existing target records that match the coalesce value instead of inserting duplicates",
-			"Encrypts all imported rows",
-			"Disables ACL checks permanently",
-			"Deletes the import set table"
+			"Mark the field Mandatory in the dictionary entry for u_vendor.contract_end",
+			"Add a gauge to the executive homepage",
+			"Disable write ACLs on the table",
+			"Load the field through an import set only"
 		],
 		"correctIndex": 0,
-		"explanation": "Coalesce fields match incoming rows to existing records for update rather than duplicate insert.",
+		"explanation": "The dictionary Mandatory attribute enforces required values at the database layer for the field.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/integrate-applications/transform-maps.html"
+			"https://www.servicenow.com/docs/r/platform-administration/dictionary.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 61,
-		"prompt": "What does the CMDB store?",
+		"prompt": "Support tickets show truncated descriptions after agents paste long notes. Which dictionary setting should you increase?",
 		"choices": [
-			"Configuration items and their relationships representing IT infrastructure and services",
-			"Only user passwords",
-			"Only email templates",
-			"Only plugin licenses"
+			"Max length on the description field",
+			"Coalesce priority on the transform map",
+			"Update set state to Complete",
+			"MID Server thread count"
 		],
 		"correctIndex": 0,
-		"explanation": "The CMDB holds CIs and relationships used for impact analysis, change, and service mapping.",
+		"explanation": "Dictionary max length controls how many characters a string field accepts before truncation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-overview.html"
+			"https://www.servicenow.com/docs/r/platform-administration/dictionary.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 62,
-		"prompt": "What is CSDM (Common Service Data Model) intended to standardize?",
+		"prompt": "You need a dropdown of approved priority values on u_project without hard-coding them in a client script. Where are the options maintained?",
 		"choices": [
-			"How services, applications, and infrastructure CIs relate in the CMDB",
-			"Payroll deduction codes",
-			"Email server hostnames only",
-			"Plugin activation sequences"
+			"Choice list entries linked from the dictionary Choice type field",
+			"Attachment encryption keys",
+			"Discovery status probes",
+			"Plugin store checkout receipts"
 		],
 		"correctIndex": 0,
-		"explanation": "CSDM provides a standard data model for mapping business services, applications, and technical CIs.",
+		"explanation": "Choice fields draw their dropdown values from choice lists configured in the dictionary.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/csdm-overview.html"
+			"https://www.servicenow.com/docs/r/platform-administration/field-types.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 63,
-		"prompt": "Which tool helps administrators review security posture and recommended hardening on the instance?",
+		"prompt": "A contractor needs to manage ACL records but should not receive full admin rights. Which role is the better fit?",
 		"choices": [
-			"Security Center",
-			"Visual Task Boards",
-			"Catalog browse categories",
-			"Homepage themes"
+			"security_admin",
+			"admin with no conditions",
+			"guest",
+			"mid_server"
 		],
 		"correctIndex": 0,
-		"explanation": "Security Center aggregates security metrics and guidance for instance hardening and compliance.",
+		"explanation": "security_admin focuses on security configuration such as ACLs without the full breadth of admin privileges.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/security-center.html"
+			"https://www.servicenow.com/docs/r/platform-security/roles.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 64,
-		"prompt": "In the Shared Responsibility Model, who is responsible for securing the underlying cloud infrastructure?",
+		"prompt": "Idle sessions must log out after fifteen minutes per corporate policy. Which record type holds that timeout value?",
 		"choices": [
-			"ServiceNow as the platform provider",
-			"The end user on every laptop",
-			"The catalog requester only",
-			"The MID Server exclusively"
+			"A system property such as glide.ui.session_timeout",
+			"A transform map script include",
+			"A CMDB relationship type",
+			"A catalog fulfillment flow variable"
 		],
 		"correctIndex": 0,
-		"explanation": "ServiceNow secures the platform infrastructure; customers configure and secure their instance data, users, and integrations.",
+		"explanation": "Application properties like glide.ui.session_timeout control platform-wide session behavior.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/shared-responsibility-model.html"
+			"https://www.servicenow.com/docs/r/platform-administration/system-properties.html"
 		]
 	}
 ]

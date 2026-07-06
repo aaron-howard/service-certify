@@ -13,7 +13,9 @@
 		"explanation": "The glide.cmdb.query.nlq.activated property enables or disables Intelligent Search for CMDB within Query Builder; it is true by default.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/querying-cmdb.html"
-		]
+		],
+		"domain": "Insight",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -29,7 +31,9 @@
 		"explanation": "Saved CMDB queries capture reusable filter and relationship logic so teams execute consistent investigations on a recurring basis.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/querying-cmdb.html"
-		]
+		],
+		"domain": "Insight",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -45,7 +49,9 @@
 		"explanation": "Unified Map dependency view centers on a home CI and visualizes related upstream and downstream CMDB relationships for impact analysis during change and incident work.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-workspace-unified-map.html"
-		]
+		],
+		"domain": "Insight",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -59,11 +65,16 @@
 			"Direct replacement of all identification rules with map layout preferences"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Unified Map combines relationship visualization with contextual modules for related records and changes; it does not alter I&R logic or retire CIs automatically.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-workspace-unified-map.html"
-		]
+		],
+		"domain": "Insight",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -85,14 +96,28 @@
 			"Whether ITSM processes leverage CMDB data effectively"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Data Foundations groups metrics into Best Practices, Customizations, Data Management Practices, and ITSM Processes tabs with distinct compliance focus areas.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html"
-		]
+		],
+		"domain": "Insight",
+		"contentDifficulty": "Foundation"
 	}
 ]

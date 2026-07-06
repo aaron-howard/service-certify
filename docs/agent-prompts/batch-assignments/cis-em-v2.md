@@ -13,12 +13,14 @@ Base URL: `https://raw.githubusercontent.com/ServiceNow/ServiceNowDocs/australia
 
 | # | Domain | % | Bank | Orders |
 |---|--------|---|------|--------|
-| 1 | Event Management Overview | 7% | 4 | 0–3 |
-| 2 | Architecture and Discovery | 10% | 6 | 4–9 |
-| 3 | Event Configuration and Use | 27% | 16 | 10–25 |
-| 4 | Alerts and Tasks | 30% | 18 | 26–43 |
-| 5 | Event Sources | 16% | 10 | 44–53 |
-| 6 | Metric Intelligence | 10% | 6 | 54–59 |
+| 1 | Event Management Overview | ~7% | 4 | 0–3 |
+| 2 | Architecture and Discovery | ~15% | 9 | 4–12 |
+| 3 | Event Configuration and Use | ~27% | 16 | 13–28 |
+| 4 | Alerts and Tasks | ~25% | 15 | 29–43 |
+| 5 | Event Sources | ~17% | 10 | 44–53 |
+| 6 | Metric Intelligence | ~10% | 6 | 54–59 |
+
+See `CIS-EM-Question-Rewrites.md` for standalone realism rework details.
 
 ---
 
@@ -37,10 +39,10 @@ Multi-select allowed with `questionType: "multi"` and `correctIndexes`.
 |-------|--------|--------|--------|
 | 1 | 0–4 | Overview (0–3) + Architecture (4) | **DONE** |
 | 2 | 5–9 | Architecture and Discovery | **DONE** |
-| 3 | 10–14 | Event Configuration and Use | **DONE** |
+| 3 | 10–14 | Architecture (10–12) + Event Configuration (13–14) | **DONE** |
 | 4 | 15–19 | Event Configuration and Use | **DONE** |
 | 5 | 20–24 | Event Configuration and Use | **DONE** |
-| 6 | 25–29 | Event Config (25) + Alerts and Tasks (26–29) | **DONE** |
+| 6 | 25–29 | Event Configuration (25–28) + Alerts (29) | **DONE** |
 | 7 | 30–34 | Alerts and Tasks | **DONE** |
 | 8 | 35–39 | Alerts and Tasks | **DONE** |
 | 9 | 40–44 | Alerts (40–43) + Event Sources (44) | **DONE** |
@@ -63,6 +65,7 @@ Multi-select allowed with `questionType: "multi"` and `correctIndexes`.
 ## Merge and validate
 
 ```bash
+node scripts/tag-cis-em-domains.mjs
 node scripts/extract-questions-from-transcripts.mjs --merge-batches scripts/question-batches/cis-em-v2-batch*.json
 node scripts/lint-cis-em-realism.mjs --orders=0-59
 npm test -- --run src/convex/seed/cis-em-realism.test.ts src/convex/seed/trackQuality.test.ts src/convex/seed/devQuestionBank.test.ts

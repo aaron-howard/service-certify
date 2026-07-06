@@ -2,18 +2,19 @@
 	{
 		"trackCode": "CIS-DISCO",
 		"order": 40,
-		"prompt": "What information does the Discovery Status form provide during an active schedule run?",
+		"prompt": "An admin must discover EC2 instances and Azure VMs using provider API credentials rather than subnet scanning alone. Which schedule type should be configured?",
 		"choices": [
-			"Real-time progress, probe outcomes, and errors for the current discovery execution",
-			"Annual hardware depreciation schedules for assets in scanned subnets",
-			"Service catalog fulfillment queues tied to discovered endpoint requests",
-			"Change advisory board votes for pending infrastructure modifications"
+			"Cloud discovery schedule scoped to each provider account and selected regions",
+			"Network discovery schedule limited to RFC1918 ranges behind the corporate firewall",
+			"Service discovery schedule that maps catalog entry points without cloud enumeration",
+			"Configuration-only schedule that imports CMDB exports without live provider API calls"
 		],
 		"correctIndex": 0,
-		"explanation": "Discovery Status shows execution progress, probe results, and errors so administrators can monitor and troubleshoot active runs.",
+		"explanation": "Cloud discovery schedules use provider API credentials to enumerate resources in configured accounts and regions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-status.html"
-		]
+		],
+		"domain": "Discovery Configuration"
 	},
 	{
 		"trackCode": "CIS-DISCO",
@@ -29,7 +30,8 @@
 		"explanation": "Credential aliases let one tested credential record serve multiple schedules without duplicating secret material.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-credentials.html"
-		]
+		],
+		"domain": "Discovery Configuration"
 	},
 	{
 		"trackCode": "CIS-DISCO",
@@ -45,23 +47,25 @@
 		"explanation": "Schedules support included IP ranges plus excluded ranges so discovery can scan a subnet while skipping sensitive segments.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-schedule.html"
-		]
+		],
+		"domain": "Discovery Configuration"
 	},
 	{
 		"trackCode": "CIS-DISCO",
 		"order": 43,
-		"prompt": "How many CI Identifiers should be configured per CI Class for Discovery identification?",
+		"prompt": "After a pilot run, duplicate Linux server CIs appear because a second CI Identifier was added to cmdb_ci_linux_server during testing. What is the correct identification configuration per class?",
 		"choices": [
-			"One CI Identifier configured per CI Class",
-			"Two identifiers minimum so reconciliation can compare competing values",
-			"One identifier per discovered attribute returned by the classification probe",
-			"No identifiers are required when horizontal patterns populate serial numbers"
+			"Maintain one CI Identifier per CI Class so IRE matches discovery payloads to a single authoritative key set",
+			"Configure two identifiers minimum so reconciliation can compare competing serial numbers on every insert",
+			"Add one identifier per attribute returned by the classification probe to maximize match attempts",
+			"Remove all identifiers when horizontal patterns populate serial numbers automatically"
 		],
 		"correctIndex": 0,
 		"explanation": "ServiceNow Discovery identification expects one CI Identifier per CI Class to match incoming data to existing records reliably.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
-		]
+		],
+		"domain": "Discovery Configuration"
 	},
 	{
 		"trackCode": "CIS-DISCO",
@@ -77,6 +81,7 @@
 		"explanation": "This error indicates discovery could not authenticate with any configured credential during classification probing.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/troubleshoot-discovery-errors.html"
-		]
+		],
+		"domain": "Discovery Configuration"
 	}
 ]

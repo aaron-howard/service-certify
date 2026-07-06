@@ -3,15 +3,19 @@ import { DEV_PRACTICE_QUESTIONS } from '../../convex/seed/devQuestionBank';
 import {
 	BANNED_CHOICE_PREFIXES,
 	BANNED_STEM_PREFIXES,
+	CIS_CSM_BANK_SIZE,
+	CIS_CSM_SCENARIO_MIN_RATIO,
 	STEM_OPENER_CAP,
 	containsBannedChoicePrefix,
 	containsBannedStemPrefix,
 	fourWordOpener,
-	validateCisCsmTrack
+	isScenarioStylePrompt,
+	validateCisCsmTrack,
+	type CisCsmQuestionRow
 } from '$lib/catalog/cisCsmRealism';
 
 const TRACK = 'CIS-CSM';
-const V2_ORDERS = Array.from({ length: 90 }, (_, i) => i);
+const V2_ORDERS = Array.from({ length: CIS_CSM_BANK_SIZE }, (_, i) => i);
 
 function rowsFor(orders?: number[]) {
 	const all = DEV_PRACTICE_QUESTIONS.filter((q) => q.trackCode === TRACK);
@@ -28,7 +32,7 @@ describe('CIS-CSM v2 realism (full track)', () => {
 	});
 
 	it('passes shared realism validation', () => {
-		expect(validateCisCsmTrack(proofBatch)).toEqual([]);
+		expect(validateCisCsmTrack(proofBatch as CisCsmQuestionRow[])).toEqual([]);
 	});
 
 	it('does not use banned choice wrapper prefixes', () => {
@@ -61,6 +65,15 @@ describe('CIS-CSM v2 realism (full track)', () => {
 			expect(q.sourceUrls.length).toBeGreaterThan(0);
 			expect(q.sourceUrls.every((url) => url.startsWith('https://'))).toBe(true);
 		}
+	});
+
+	it('uses mostly scenario-style application prompts', () => {
+		const scenarioCount = proofBatch.filter((q) => isScenarioStylePrompt(q.prompt)).length;
+		expect(scenarioCount / proofBatch.length).toBeGreaterThanOrEqual(CIS_CSM_SCENARIO_MIN_RATIO);
+	});
+
+	it('tags each question with a blueprint domain', () => {
+		expect(proofBatch.every((q) => typeof q.domain === 'string' && q.domain.length > 0)).toBe(true);
 	});
 
 	it('documents banned legacy patterns for future full-track rewrite', () => {

@@ -13,7 +13,8 @@
 		"explanation": "Field normalization rules provide no-code data cleansing by transforming field values based on conditions and patterns defined by administrators.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/c_FieldNormalization.html"
-		]
+		],
+		"domain": "Field Service Management Fundamentals"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -29,7 +30,8 @@
 		"explanation": "Skills Management lets managers create skills and assign them to agents so scheduling and dispatch can match work to qualified technicians.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/field-service-manager-agent-skills.html"
-		]
+		],
+		"domain": "Field Service Management Fundamentals"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -43,11 +45,15 @@
 			"The Location history map report scheduled to run once per week only"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Agent tracking on dispatch maps requires Geolocation and the share agent details property, which updates the map with the agent's latest location.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/customer-experience-components.html"
-		]
+		],
+		"domain": "Field Service Management Fundamentals"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -63,7 +69,8 @@
 		"explanation": "Dispatcher Workspace is the primary scheduling console where dispatchers manage teams, tasks, and assignments with configurable layouts and filters.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/dispatcher-activities.html"
-		]
+		],
+		"domain": "Field Service Management Fundamentals"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -79,6 +86,7 @@
 		"explanation": "Dynamic Scheduling intelligently assigns tasks by evaluating agent skills, availability, travel time, and other matching criteria configured by administrators.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/dynamic-scheduling.html"
-		]
+		],
+		"domain": "Field Service Management Fundamentals"
 	}
 ]

@@ -2,83 +2,83 @@
 	{
 		"trackCode": "CSA",
 		"order": 65,
-		"prompt": "Which ACL type would you create to restrict access to a specific column on a table?",
+		"prompt": "Auditors require short_description on u_audit_finding to be required for every insert. You prefer schema enforcement over a UI Policy. What do you configure?",
 		"choices": [
-			"Field-level ACL",
-			"Homepage ACL",
-			"MID Server ACL",
-			"Plugin license ACL"
+			"Set Mandatory on the dictionary entry for u_audit_finding.short_description",
+			"Hide the field with a client script only",
+			"Grant write ACL to every user",
+			"Load findings exclusively through email inbound actions"
 		],
 		"correctIndex": 0,
-		"explanation": "Field ACLs control read and write access to individual columns in addition to table ACLs.",
+		"explanation": "Dictionary Mandatory enforces required values at the table level regardless of form behavior.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/access-control-rules.html"
+			"https://www.servicenow.com/docs/r/platform-administration/dictionary.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 66,
-		"prompt": "How can an administrator test why a user cannot access a record?",
+		"prompt": "The u_asset_tag field should display but never be edited on the form after creation. Which dictionary attribute helps?",
 		"choices": [
-			"Enable security debugging and impersonate the user",
-			"Delete all ACLs on the table",
-			"Disable the Service Catalog",
-			"Remove all roles from admin"
+			"Read only on the dictionary entry",
+			"Coalesce on an import map",
+			"Complete on the update set",
+			"Published on the knowledge article"
 		],
 		"correctIndex": 0,
-		"explanation": "Access control debugging while impersonating shows which ACLs passed or failed for the user.",
+		"explanation": "Dictionary read-only prevents users from changing the field value while still displaying it.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/access-control-rules.html"
+			"https://www.servicenow.com/docs/r/platform-administration/dictionary.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 67,
-		"prompt": "Which operations can table ACLs secure? (Choose two.)",
+		"questionType": "multi",
+		"prompt": "You are hardening data quality on a custom table. Which dictionary attributes directly constrain user input? (Choose two.)",
 		"choices": [
-			"read",
-			"write",
-			"clone instance",
-			"upgrade kernel"
+			"Mandatory",
+			"Max length",
+			"Homepage theme",
+			"Catalog picture icon"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [0, 1],
-		"questionType": "multi",
-		"explanation": "Table ACLs govern record operations such as read, write, create, and delete; instance clone and kernel upgrade are not ACL operations.",
+		"explanation": "Mandatory and max length are dictionary attributes that enforce required values and string size limits.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/access-control-rules.html"
+			"https://www.servicenow.com/docs/r/platform-administration/dictionary.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 68,
-		"prompt": "What is a reference field used for in the data schema?",
+		"prompt": "u_incident_child extends incident and needs a tighter max length on work_notes than the parent. How do you override the parent dictionary?",
 		"choices": [
-			"To link a record to another record in a related table",
-			"To store binary attachments only",
-			"To replace roles",
-			"To run Discovery credential tests"
+			"Edit the dictionary entry on the child table field",
+			"Delete the parent incident table",
+			"Create a transform map without field maps",
+			"Retire the default update set"
 		],
 		"correctIndex": 0,
-		"explanation": "Reference fields store a pointer (sys_id) to a record in another table, forming relationships.",
+		"explanation": "Extended tables can override parent dictionary attributes by editing the field entry on the child table.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/reference-fields.html"
+			"https://www.servicenow.com/docs/r/platform-administration/table-extension.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
 		"order": 69,
-		"prompt": "Which table stores user accounts and their login IDs?",
+		"prompt": "A manager wants a report listing incidents with the assignee department name. The incident stores assignment_group as a reference. How do you expose the department?",
 		"choices": [
-			"User [sys_user]",
-			"Import Set [sys_import_set]",
-			"Update Set [sys_update_set]",
-			"Transform Map [sys_transform_map]"
+			"Dot-walk through assignment_group.department in the report builder",
+			"Export the CMDB to CSV and merge manually",
+			"Add a MID Server probe for departments",
+			"Disable ACL debugging permanently"
 		],
 		"correctIndex": 0,
-		"explanation": "The sys_user table holds user records including user ID, name, and contact information.",
+		"explanation": "Reference fields support dot-walking to display related fields from referenced tables in reports.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/user-administration.html"
+			"https://www.servicenow.com/docs/r/platform-administration/reference-fields.html"
 		]
 	}
 ]

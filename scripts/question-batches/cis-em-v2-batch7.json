@@ -14,7 +14,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/create-alert-management-rule.html",
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/alert-management-rule.html"
-		]
+		],
+		"domain": "Alerts and Tasks"
 	},
 	{
 		"trackCode": "CIS-EM",
@@ -30,24 +31,26 @@
 		"explanation": "Subflow execution can be set to Automatic so remediation or task-creation subflows run when the alert management rule matches.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/create-alert-management-rule.html"
-		]
+		],
+		"domain": "Alerts and Tasks"
 	},
 	{
 		"trackCode": "CIS-EM",
 		"order": 32,
-		"prompt": "A NOC lead needs correlated alerts handled as one operational unit on the dashboard. Which capability addresses that requirement?",
+		"prompt": "Automated alert grouping is creating false parent alerts that bundle unrelated network incidents. Which tuning step reduces incorrect parent grouping?",
 		"choices": [
-			"Alert groups that organize related alerts for coordinated response",
-			"Stockroom transfer orders that move hardware between locations",
-			"Software reclamation rules that retire unused licenses automatically",
-			"Catalog fulfillment flows that assign laptops from regional stockrooms"
+			"Review correlation and grouping criteria, time windows, and CI binding so only related signals share a parent alert",
+			"Disable evt_mgmt.avoid_int_enabled so every secondary alert triggers its own incident immediately",
+			"Set all grouping rules to match on source name only regardless of affected CI or service",
+			"Delete parent alerts manually each hour without adjusting correlation configuration"
 		],
 		"correctIndex": 0,
-		"explanation": "Alert groups combine related alerts so responders can manage correlated issues as a single operational context.",
+		"explanation": "Alert groups combine related alerts so responders can manage correlated issues as a single operational context; mis-tuned criteria create false parent relationships.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/exploring-event-management.html",
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/coordinating-alert-response-with-automated-alert-grouping.html"
-		]
+		],
+		"domain": "Alerts and Tasks"
 	},
 	{
 		"trackCode": "CIS-EM",
@@ -60,12 +63,17 @@
 			"Catalog item recurring price"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1, 2],
+		"correctIndexes": [
+			0,
+			1,
+			2
+		],
 		"questionType": "multi",
 		"explanation": "Alert priority combines accumulated categories such as impacted services and CI type with choice-list categories including severity, role, state, and secondary alert count.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/alert-priority.html"
-		]
+		],
+		"domain": "Alerts and Tasks"
 	},
 	{
 		"trackCode": "CIS-EM",
@@ -81,6 +89,7 @@
 		"explanation": "Enabling evt_mgmt.avoid_int_enabled synchronizes alert response with automated alert grouping so actions such as incident creation avoid secondary alerts.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/coordinating-alert-response-with-automated-alert-grouping.html"
-		]
+		],
+		"domain": "Alerts and Tasks"
 	}
 ]

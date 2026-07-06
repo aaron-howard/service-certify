@@ -13,7 +13,8 @@
 		"explanation": "Maintenance plans automate periodic field work creation, supporting recurring preventive service on a defined schedule.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/planned-work-management.html"
-		]
+		],
+		"domain": "Implementing Related Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -29,7 +30,8 @@
 		"explanation": "First-time fix rate measures whether field issues are resolved during the initial visit without requiring a repeat trip.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/monitoring-analytics-fsm.html"
-		]
+		],
+		"domain": "Implementing Related Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -45,7 +47,8 @@
 		"explanation": "Customer Experience sends automated email or text updates during service and provides a survey link after work completes to gather agent feedback.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/customer-experience.html"
-		]
+		],
+		"domain": "Implementing Related Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -61,7 +64,8 @@
 		"explanation": "Virtual Agent for Field Service lets agents get quick answers to work-related queries through the Now Agent mobile application.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/virtual-agent-fsm.html"
-		]
+		],
+		"domain": "Implementing Related Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -77,6 +81,7 @@
 		"explanation": "Scheduled offline caching configures background download of required data so agents can continue working when connectivity is limited.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/mobile-experience-for-field-service-management-glide-family/configure-scheduled-offline-caching.html"
-		]
+		],
+		"domain": "Implementing Related Processes"
 	}
 ]

@@ -2,7 +2,7 @@
 	{
 		"trackCode": "CIS-FSM",
 		"order": 15,
-		"prompt": "Service territories in Field Service Management define what operational boundary for dispatch?",
+		"prompt": "A national provider divides dispatch by state and city so technicians are not routed across country borders. Which configuration defines those operational boundaries?",
 		"choices": [
 			"Geographic or logical coverage areas used to route work to appropriate teams and agents",
 			"Financial cost centers used exclusively for annual budget forecasting reports and accruals",
@@ -13,7 +13,8 @@
 		"explanation": "Service territories define coverage boundaries that help dispatch route work to the right teams and reduce inefficient travel.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/c_TerritoryManagement.html"
-		]
+		],
+		"domain": "Field Service Management Fundamentals"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -29,12 +30,13 @@
 		"explanation": "When territories overlap, explicit assignment criteria and priority rules prevent ambiguous routing and inconsistent dispatch decisions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/c_TerritoryManagement.html"
-		]
+		],
+		"domain": "Field Service Management Fundamentals"
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 17,
-		"prompt": "On a field agent user group, the Locations Covered related list determines what dispatch constraint?",
+		"prompt": "Dispatchers report tasks assigned to agents outside their service area. Which work group configuration limits geographic coverage?",
 		"choices": [
 			"Which geographic areas the group can receive and execute work order tasks within",
 			"Which customer survey templates are emailed after every work order reaches Closed state",
@@ -45,7 +47,8 @@
 		"explanation": "Locations Covered limits which geographic areas a user group handles so dispatch assigns work only within the group's service coverage.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/setting-up-field-service-user-groups.html"
-		]
+		],
+		"domain": "Field Service Management Fundamentals"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -61,7 +64,8 @@
 		"explanation": "Assignment assistance includes a Distance sort option that ranks agents based on how far each agent is from the work order task location.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/field-service-scheduling/assignment-assistance.html"
-		]
+		],
+		"domain": "Field Service Management Fundamentals"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -77,6 +81,7 @@
 		"explanation": "Estimated travel duration calculations rely on Field Service Geolocation and a supported maps provider to compute driving time from agent coordinates.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/customer-experience-components.html"
-		]
+		],
+		"domain": "Field Service Management Fundamentals"
 	}
 ]

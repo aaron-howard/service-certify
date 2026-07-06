@@ -2,18 +2,19 @@
 	{
 		"trackCode": "CIS-EM",
 		"order": 35,
-		"prompt": "Impact rules in the em_impact_rule table primarily determine which outcome for application services?",
+		"prompt": "A database CI failure should degrade its parent payment application service on the impact tree, but the service status stays green. What should be reviewed first?",
 		"choices": [
-			"How CI member failures propagate severity to parent services on the impact tree",
-			"Which hardware assets receive automatic retirement during discovery scans",
-			"How catalog variables map to procurement purchase order line items",
-			"Which MID Server certificates expire during connector health checks"
+			"Impact rules in em_impact_rule that define how child CI severity propagates to parent services",
+			"Hardware asset retirement workflows tied to stockroom disposal approvals",
+			"Catalog variable mappings for procurement purchase order line items",
+			"MID Server certificate expiration schedules on listener endpoints"
 		],
 		"correctIndex": 0,
 		"explanation": "Impact rules estimate outage magnitude and define how child CI severity influences parent application service status on impact trees and service maps.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/c_EMImpactCalculation.html"
-		]
+		],
+		"domain": "Alerts and Tasks"
 	},
 	{
 		"trackCode": "CIS-EM",
@@ -29,7 +30,8 @@
 		"explanation": "Alerts on CIs in maintenance are excluded from impact calculation, and corresponding alerts may be hidden from operational views during the window.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/c_EMImpactCalculation.html"
-		]
+		],
+		"domain": "Alerts and Tasks"
 	},
 	{
 		"trackCode": "CIS-EM",
@@ -45,7 +47,8 @@
 		"explanation": "The Alert changes to filter option runs the rule when an update causes the alert to newly match the filter, such as a severity transition to Critical.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/create-alert-management-rule.html"
-		]
+		],
+		"domain": "Alerts and Tasks"
 	},
 	{
 		"trackCode": "CIS-EM",
@@ -58,12 +61,17 @@
 			"Transfer order shipment status between stockrooms"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1, 2],
+		"correctIndexes": [
+			0,
+			1,
+			2
+		],
 		"questionType": "multi",
 		"explanation": "Probable RCA analyzes alerts, CMDB CI relationships, and relevant change requests to calculate root cause scores for troubleshooting.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/probable-rca.html"
-		]
+		],
+		"domain": "Alerts and Tasks"
 	},
 	{
 		"trackCode": "CIS-EM",
@@ -80,6 +88,7 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/coordinating-alert-response-with-automated-alert-grouping.html",
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/alert-management-rule.html"
-		]
+		],
+		"domain": "Alerts and Tasks"
 	}
 ]

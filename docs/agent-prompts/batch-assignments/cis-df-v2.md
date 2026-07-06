@@ -55,6 +55,16 @@ Target mix: ~60% single, ~20% multi, ~20% match.
 
 ---
 
+## Tags and URL verification (P3)
+
+- **Domain:** `"domain"` per blueprint quota — `node scripts/tag-cis-df-domains.mjs`
+- **Difficulty:** `"contentDifficulty": "Foundation" | "Intermediate" | "Advanced"` — `node scripts/tag-cis-df-difficulty.mjs`
+- **URLs:** `node scripts/spot-check-cis-df-urls.mjs` (10 stratified) or `--all`
+
+See `CIS-DF-Question-Rewrites.md` for P1–P3 rewrite reference.
+
+---
+
 ## Merge and validate
 
 ```bash

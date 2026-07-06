@@ -2,34 +2,44 @@
 	{
 		"trackCode": "CIS-DF",
 		"order": 50,
-		"prompt": "On the CMDB Health dashboard, which metric category evaluates whether CI attribute values align with trusted source data?",
+		"domain": "Govern",
+		"questionType": "multi",
+		"prompt": "A CMDB program is enabling multisource governance before SCCM and Discovery feeds run in parallel on server classes. Which prerequisites must be in place before CMDB 360 can capture per-source attribute history? (Choose two.)",
 		"choices": [
-			"Correctness scores that compare field values against authoritative systems",
-			"Completeness scores that count populated required attributes only",
-			"Compliance scores that measure SLA breach duration on incidents",
-			"Catalog utilization scores that track service request volume"
+			"Activate the ITOM Discovery License plugin on the instance",
+			"Set glide.identification_engine.multisource_enabled to true",
+			"Disable all static reconciliation rules for every CI class",
+			"Convert cmdb_ci tables to non-CMDB application tables"
 		],
 		"correctIndex": 0,
-		"explanation": "Correctness measures whether CI values reflect trusted source reality, while completeness focuses on required field population.",
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "CMDB 360 requires the ITOM Discovery License and the multisource_enabled property; disabling reconciliation or converting CMDB tables is not part of enablement.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-health-dashboard-overview.html"
-		]
+		],
+		"contentDifficulty": "Advanced"
 	},
 	{
 		"trackCode": "CIS-DF",
 		"order": 51,
-		"prompt": "During a data foundation workshop, sponsors define critical success factors for CMDB trust. What should the implementer deliver next to operationalize those CSFs?",
+		"domain": "Govern",
+		"prompt": "After a weekly SCCM import, CMDB Health reports a spike in duplicate Linux Server CIs sharing the same serial number. The team already ran one merge last month. What is the best next troubleshooting step?",
 		"choices": [
-			"KPI definitions mapped to health metrics, accountable owners, and remediation thresholds",
-			"A one-time export of all cmdb_ci records without quality targets",
-			"Discovery schedules for every subnet before any governance model is agreed",
-			"Custom tables that bypass identification and reconciliation entirely"
+			"Review identification rule identifier entries for the class and confirm incoming SCCM rows match before creating new CIs",
+			"Delete every Linux Server CI and reload the entire class from the oldest import set",
+			"Disable CMDB Health duplicate detection so the dashboard stops reporting the issue",
+			"Convert duplicate CIs into knowledge articles without updating the CMDB"
 		],
 		"correctIndex": 0,
-		"explanation": "CSFs become actionable when translated into measurable KPIs tied to CMDB health indicators, ownership, and threshold-based remediation.",
+		"explanation": "Recurring duplicates after imports usually mean identification keys or feed mapping do not match existing CIs; tuning identification prevents new duplicates rather than repeatedly merging symptoms.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-governance.html"
-		]
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/deduplicate-cis.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
+		],
+		"contentDifficulty": "Advanced"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -46,7 +56,9 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/deduplicate-cis.html",
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
-		]
+		],
+		"domain": "Govern",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -60,12 +72,17 @@
 			"Increased number of catalog items published to the service portal"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Duplicate issues surface through health test failures, declining correctness, and de-duplication tasks—not infrastructure or catalog volume metrics.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-health-dashboard-overview.html",
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/deduplicate-cis.html"
-		]
+		],
+		"domain": "Govern",
+		"contentDifficulty": "Intermediate"
 	},
 	{
 		"trackCode": "CIS-DF",
@@ -87,14 +104,28 @@
 			"Weighted rollup of class-level quality indicators"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "CMDB Health separates completeness, correctness, compliance, and an overall health score so teams can target specific quality gaps.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-health-dashboard-overview.html"
-		]
+		],
+		"domain": "Govern",
+		"contentDifficulty": "Foundation"
 	}
 ]

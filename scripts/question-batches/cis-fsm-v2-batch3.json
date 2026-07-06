@@ -2,7 +2,7 @@
 	{
 		"trackCode": "CIS-FSM",
 		"order": 10,
-		"prompt": "Where do you enable the qualification requirement so new work orders move through Awaiting Qualification before dispatch?",
+		"prompt": "Leadership requires every new customer repair request to pass qualification before dispatch assigns technicians. Where should an administrator enable that requirement?",
 		"choices": [
 			"Field Service > Administration > Configuration, turning on Qualification is required for new requests",
 			"System Definition > Dictionary, editing the wm_order state choice list without saving configuration",
@@ -13,7 +13,8 @@
 		"explanation": "Work order qualification is enabled on the Field Service Configuration page by turning on Qualification is required for new requests.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/configure-qualify-fsm.html"
-		]
+		],
+		"domain": "Field Service Management Fundamentals"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -29,12 +30,13 @@
 		"explanation": "Dispatch groups must be added to a dispatcher's user record so they can see the assignment groups covered by those dispatch groups in Dispatcher Workspace.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/configure-dispatcher-user.html"
-		]
+		],
+		"domain": "Field Service Management Fundamentals"
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 12,
-		"prompt": "Agent user groups configured under Field Service > Group Management > Work Groups receive dispatched tasks for which purpose?",
+		"prompt": "Dispatchers assign repair tasks to technicians who carry van stock and hold required certifications for covered locations. Which user group type represents those field executors?",
 		"choices": [
 			"Executing field work at covered locations with required parts and skills for assigned tasks",
 			"Approving change requests that require Change Advisory Board review before production deployment",
@@ -45,38 +47,41 @@
 		"explanation": "Work Groups represent field agents who execute dispatched tasks at covered locations with the parts and skills needed for assigned work.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/setting-up-field-service-user-groups.html"
-		]
+		],
+		"domain": "Field Service Management Fundamentals"
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 13,
-		"prompt": "Which Field Service role is assigned to technicians who perform dispatched work order tasks in the field?",
+		"prompt": "A new hire will perform onsite repairs from the Now Agent mobile app but should not access Dispatcher Workspace. Which role and group setup applies?",
 		"choices": [
-			"wm_agent — field technician who executes dispatched work order tasks onsite",
-			"wm_dispatcher — scheduler who assigns tasks from Dispatcher Workspace consoles",
-			"wm_qualifier — reviewer who qualifies draft work orders before dispatch routing",
-			"wm_manager — supervisor who manages skills and monitors field team performance"
+			"Assign wm_agent with membership in a Work Group covering the technician's service locations",
+			"Assign wm_dispatcher with Dispatch Group membership for every territory in the instance",
+			"Assign wm_qualifier so the technician can edit tasks before self-assigning work",
+			"Assign admin role so mobile forms bypass all field service ACL restrictions globally"
 		],
 		"correctIndex": 0,
 		"explanation": "The wm_agent role is assigned to field technicians who receive and complete dispatched work order tasks.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/r_UserRoleInstallWFieldSrvMgmnt.html"
-		]
+		],
+		"domain": "Field Service Management Fundamentals"
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 14,
-		"prompt": "Which Field Service role enables a user to assign and schedule work order tasks to field agents from Dispatcher Workspace?",
+		"prompt": "A scheduler must drag tasks onto agent calendars and manage Dispatch Groups for three regional crews. Which role and configuration are required?",
 		"choices": [
-			"wm_dispatcher with membership in a Dispatch Group covering agent assignment groups",
-			"wm_initiator who creates draft work orders but does not schedule field appointments",
-			"wm_agent who executes tasks onsite without Dispatcher Workspace assignment permissions",
-			"hr_case_writer who processes HR service delivery cases unrelated to field dispatch"
+			"wm_dispatcher with Dispatch Groups on the user record covering the agent assignment groups managed",
+			"wm_initiator with permission to create work orders but no Dispatcher Workspace access",
+			"wm_agent executing tasks onsite without dispatch group relationships on the user record",
+			"wm_manager managing skills only without membership in any dispatch group records"
 		],
 		"correctIndex": 0,
 		"explanation": "Dispatchers use the wm_dispatcher role to manage schedules and assign qualified work order tasks to field agents.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/r_UserRoleInstallWFieldSrvMgmnt.html"
-		]
+		],
+		"domain": "Field Service Management Fundamentals"
 	}
 ]

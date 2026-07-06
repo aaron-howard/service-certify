@@ -2,81 +2,90 @@
 	{
 		"trackCode": "CIS-FSM",
 		"order": 80,
-		"prompt": "Field agents should not manually re-enter hours worked on each task at end of day. What should the administrator activate?",
+		"prompt": "Major incidents require onsite technician response but ITSM agents create incidents first. How should FSM integrate with Incident Management for escalation?",
 		"choices": [
-			"Time Recording for Field Service so entries generate time cards and timesheets",
-			"Event Management so alerts automatically create incidents for network outages",
-			"Software Asset Management so reclamation rules harvest unused SaaS licenses",
-			"Governance, Risk, and Compliance so control tests run on a quarterly cadence"
+			"Generate work orders from qualifying incidents so field tasks inherit context, assets, and customer location data",
+			"Close incidents automatically when any draft work order is saved in Awaiting Qualification state",
+			"Disable work order creation from incidents so dispatch uses only ad hoc spreadsheet uploads",
+			"Convert every incident to a catalog request item without linking field tasks or assets"
 		],
 		"correctIndex": 0,
-		"explanation": "Time Recording lets agents record time on tasks and activities; entries automatically generate time cards and timesheets for approval.",
+		"explanation": "Creating work orders from incidents connects ITSM response to field execution while preserving customer, asset, and location context.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/Configuring-time-recording.html"
-		]
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/create-work-orders.html"
+		],
+		"domain": "Implementing Related Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 81,
-		"prompt": "Finance needs different billing rates for travel time versus on-site repair labor. What should be configured?",
+		"prompt": "Installed equipment under warranty must trigger preventive maintenance when asset lifecycle stages change. Which integration supports that outcome?",
 		"choices": [
-			"Rate types and labor rate cards defining cost rates for recorded activities",
-			"Incident priority lookup rules mapping urgency and impact to response targets",
-			"Change risk assessment questions weighting standard versus normal changes",
-			"Catalog client scripts validating variable inputs on multi-step order guides"
+			"Link work orders to asset records and maintenance plans driven by asset lifecycle and install base data",
+			"Retire assets automatically whenever a work order task reaches Work in Progress state",
+			"Disable asset fields on work orders so technicians enter serial numbers manually on paper forms",
+			"Route lifecycle updates only through hardware procurement catalogs without field tasks"
 		],
 		"correctIndex": 0,
-		"explanation": "Rate types and labor rate cards define different cost rates applied to activities recorded by field service agents.",
+		"explanation": "Asset and equipment records provide install base context; maintenance plans automate recurring field work tied to asset lifecycle.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/using-rate-types-labor-rate-cards.html"
-		]
+			"https://www.servicenow.com/docs/r/field-service-management/planned-work-management.html",
+			"https://www.servicenow.com/docs/r/field-service-management/Work-order-fsm.html"
+		],
+		"domain": "Implementing Related Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 82,
-		"prompt": "Captured labor hours must distinguish driving, diagnostic, and repair work for reporting. What should be configured?",
+		"prompt": "Third-party HVAC contractors must perform work only when their safety certifications are current. How should FSM govern contractor access?",
 		"choices": [
-			"Time recording categories aligned to the types of work field agents perform",
-			"Discovery schedules that classify network gear by manufacturer and model",
-			"Knowledge article templates requiring legal review before publication",
-			"Problem task workflows that auto-generate known error articles on closure"
+			"Onboard contractor users with required skills, expiration tracking, and work group membership scoped to approved territories",
+			"Grant every contractor the admin role so scheduling bypasses skill and certification checks",
+			"Store contractor certificates in email attachments without linking skills to assignment rules",
+			"Assign contractors to dispatch groups without work groups so they cannot receive tasks"
 		],
 		"correctIndex": 0,
-		"explanation": "Time recording categories align captured labor with the work agents perform, supporting accurate reporting and billing.",
+		"explanation": "Contractor onboarding should align user records, skills, certifications, and group membership so dispatch assigns only qualified external resources.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/configure-time-categories.html"
-		]
+			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/field-service-manager-agent-skills.html",
+			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/setting-up-field-service-user-groups.html"
+		],
+		"domain": "Implementing Related Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 83,
-		"prompt": "After agents submit daily time cards, managers must approve labor before costs finalize. What workflow does Time Recording use?",
+		"prompt": "Union rules require honoring technician PTO and shift calendars before auto-assignment runs. Which Workforce Optimization capability feeds scheduling constraints?",
 		"choices": [
-			"Time recorded entries roll into timesheets that managers review and approve",
-			"Time entries bypass approval and post directly to the general ledger nightly",
-			"Only dispatchers may edit time cards after agents mark tasks complete",
-			"Timesheets are archived automatically without manager review after submission"
+			"Agent schedules, calendar events, and availability windows integrated with Dynamic Scheduling",
+			"Global incident assignment rules that ignore agent calendars during peak demand weeks",
+			"Discovery status jobs refreshing serial numbers on configuration items each night",
+			"Catalog checkout workflows enforcing two-step approval on employee laptop orders"
 		],
 		"correctIndex": 0,
-		"explanation": "Time recorded on tasks generates time cards and timesheets that managers approve before labor costs are finalized.",
+		"explanation": "Dynamic scheduling integrates agent schedules and calendar events so assignments respect availability, PTO, and shift boundaries.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/Recording-time-spent-on-work-order-tasks.html"
-		]
+			"https://www.servicenow.com/docs/r/field-service-management/dynamic-scheduling.html",
+			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/setting-up-workforce.html"
+		],
+		"domain": "Implementing Related Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 84,
-		"prompt": "An agent notices a missing lunch break on yesterday's submitted hours. What can they do in the mobile experience?",
+		"prompt": "Finance needs non-billable parts tracked separately from customer-chargeable consumption on the same task. What should be configured?",
 		"choices": [
-			"Review time recorded for work order tasks and correct entries before approval",
-			"Delete the parent work order and recreate all tasks from a blank template",
-			"Open a change request to modify timesheet approval policies globally",
-			"Escalate to the CMDB team to update asset ownership on the related CI"
+			"Parts consumption settings and rate types that distinguish billable versus non-billable usage on work order tasks",
+			"Disable all part requirements so consumption is never recorded in inventory tables",
+			"Convert every consumed part into a standard change request for finance approval",
+			"Remove stockroom records so billable and non-billable parts share one untracked pool"
 		],
 		"correctIndex": 0,
-		"explanation": "Agents can review time recorded for work order tasks and verify accuracy before managers approve the timesheet.",
+		"explanation": "Parts and rate configuration lets organizations track billable and non-billable consumption separately for accurate customer billing and internal costing.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/field-service-agent-review-time.html"
-		]
+			"https://www.servicenow.com/docs/r/field-service-management/inventory-management-fsm.html",
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/using-rate-types-labor-rate-cards.html"
+		],
+		"domain": "Implementing Related Processes"
 	}
 ]

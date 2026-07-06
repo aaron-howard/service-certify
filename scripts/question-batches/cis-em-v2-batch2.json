@@ -11,27 +11,32 @@
 			"Android consumer tablets"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "MID Servers support Microsoft Windows Server and Linux System platforms for secure communication between external networks and the ServiceNow instance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
-		]
+		],
+		"domain": "Architecture and Discovery"
 	},
 	{
 		"trackCode": "CIS-EM",
 		"order": 6,
-		"prompt": "What role does the MID Server play for certain Event Management connector and listener flows?",
+		"prompt": "A monitoring platform sits on a private network and cannot reach the ServiceNow instance directly. Which MID Server role supports Event Management connector and listener flows?",
 		"choices": [
+			"Provides a secure bridge between external networks and the ServiceNow instance for ingestion traffic",
 			"Stores retired hardware asset disposal certificates for audit compliance reporting",
-			"Provides a secure bridge between external networks and the ServiceNow instance",
 			"Replaces event rules with manual spreadsheet imports managed by the NOC team",
 			"Schedules service catalog fulfillment tasks for consumable inventory replenishment"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "The MID Server enables secure, controlled communication for integrations that cannot connect directly to the instance from external monitoring environments.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
-		]
+		],
+		"domain": "Architecture and Discovery"
 	},
 	{
 		"trackCode": "CIS-EM",
@@ -47,23 +52,25 @@
 		"explanation": "Reliable CMDB data from Discovery and other sources improves binding accuracy, which supports better triage, routing, and business impact assessment.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/exploring-event-management.html"
-		]
+		],
+		"domain": "Architecture and Discovery"
 	},
 	{
 		"trackCode": "CIS-EM",
 		"order": 8,
-		"prompt": "Which sequence best describes the core Event Management processing path after ingestion?",
+		"prompt": "During a major outage, events flood in from SNMP traps, a pull connector, and email notifications. Which processing path should operators expect Event Management to follow?",
 		"choices": [
-			"Ingestion, normalization, rule evaluation, correlation, and alert generation",
-			"Immediate incident creation, change approval, and closure for every inbound event",
-			"Hardware stockroom receiving, transfer orders, and serialized asset retirement",
-			"Publisher true-up imports followed by entitlement optimization dashboard refresh"
+			"Ingestion, normalization, rule evaluation, correlation, and alert generation on affected CIs",
+			"Immediate incident creation, change approval, and closure for every inbound event without filtering",
+			"Hardware stockroom receiving, transfer orders, and serialized asset retirement for each signal",
+			"Publisher true-up imports followed by entitlement optimization dashboard refresh only"
 		],
 		"correctIndex": 0,
 		"explanation": "The event pipeline standardizes incoming data, applies rules and correlation, and can generate alerts when conditions warrant operational action.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/exploring-event-management.html"
-		]
+		],
+		"domain": "Architecture and Discovery"
 	},
 	{
 		"trackCode": "CIS-EM",
@@ -79,6 +86,7 @@
 		"explanation": "Redundant ingestion paths and proactive health monitoring reduce the risk of event loss or delayed alerting during high-volume outage periods.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
-		]
+		],
+		"domain": "Architecture and Discovery"
 	}
 ]

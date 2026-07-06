@@ -2,81 +2,89 @@
 	{
 		"trackCode": "CIS-FSM",
 		"order": 30,
-		"prompt": "Which Field Service persona reviews draft work orders and creates or edits tasks before dispatch?",
+		"prompt": "A global utility will deploy Field Service to 500 technicians across five regions over nine months. Which rollout strategy reduces cutover risk?",
 		"choices": [
-			"Qualifier with the wm_qualifier role",
-			"Field agent with the wm_agent role executing tasks without task design duties",
-			"Initiator with the wm_initiator role when qualification is disabled globally on the instance",
-			"Contract auditor role used exclusively for hardware asset disposal approval workflows"
+			"Phase by region with pilot validation, foundation data import, and go-live checkpoints before expanding scope",
+			"Enable every module for all regions on day one without sub-production testing or training",
+			"Defer territory and group configuration until all regions are live in production",
+			"Import work history only after disabling qualification and dispatch for the first quarter"
 		],
 		"correctIndex": 0,
-		"explanation": "Qualifiers review work orders, create and edit tasks, and move records through the qualification states before dispatch.",
+		"explanation": "Phased regional rollouts with pilot validation and sequenced foundation setup reduce risk compared with big-bang deployments.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/configure-qualify-fsm.html"
-		]
+			"https://www.servicenow.com/docs/r/field-service-management/planning-implementation-fsm.html"
+		],
+		"domain": "Implementation Planning"
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 31,
-		"prompt": "Which Field Service persona typically creates a new work order or generates one from an incident, problem, or change record?",
+		"prompt": "Steering committee members ask what must be validated before FSM cutover. Which readiness milestone set should the implementation lead present?",
 		"choices": [
-			"Initiator with the wm_initiator role",
-			"Dispatcher with the wm_dispatcher role before any qualification step occurs automatically",
-			"External customer survey recipient with no Field Service roles on the user record",
-			"CMDB manager responsible for identification and reconciliation rule maintenance only"
+			"Foundation data loaded, groups and territories configured, pilot work orders executed, and training completed for each persona",
+			"Every CMDB CI class reconciled globally before any work order may be created in draft state",
+			"All custom mobile UI pages published before locations or territories are imported into the instance",
+			"Discovery schedules scanning every subnet before dispatchers may open Dispatcher Workspace"
 		],
 		"correctIndex": 0,
-		"explanation": "Initiators create work orders directly or from related records such as incidents, problems, changes, or project tasks.",
+		"explanation": "Cutover readiness requires validated foundation data, workforce configuration, successful pilot execution, and trained initiators, qualifiers, dispatchers, and agents.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/setting-up-field-service-user-groups.html"
-		]
+			"https://www.servicenow.com/docs/r/field-service-management/planning-implementation-fsm.html",
+			"https://www.servicenow.com/docs/r/field-service-management/configuring-fsm-with-guided-setup.html"
+		],
+		"domain": "Implementation Planning"
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 32,
-		"prompt": "A regional operations lead assigns skills to technician groups and monitors team performance. Which role aligns to this manager persona?",
+		"prompt": "Legacy spreadsheets contain inconsistent customer, location, and asset identifiers. What migration approach best supports FSM go-live quality?",
 		"choices": [
-			"wm_manager with access to Manage Skills and field team performance views",
-			"wm_agent executing tasks without permissions to manage skills on Manage Skills",
-			"wm_qualifier focused on task creation without workforce performance dashboards",
-			"wm_dispatcher limited to drag-and-drop assignment without manager workspace access"
+			"Use Guided Setup and import tools with field normalization rules, then validate geocoding and relationships before dispatch",
+			"Let technicians free-text customer addresses on mobile and normalize data after the first production month",
+			"Skip asset linkage so dispatch assigns tasks without configuration item or install base context",
+			"Load all records into production without test cycles to meet an accelerated launch date"
 		],
 		"correctIndex": 0,
-		"explanation": "Field Service managers use the wm_manager role to manage agent skills, assignment groups, and team performance through manager workspaces.",
+		"explanation": "Data migration for FSM should standardize locations, customers, and assets with validation before scheduling and dispatch depend on that foundation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/field-service-manager-agent-skills.html"
-		]
+			"https://www.servicenow.com/docs/r/field-service-management/configuring-fsm-with-guided-setup.html",
+			"https://www.servicenow.com/docs/r/platform-administration/c_FieldNormalization.html"
+		],
+		"domain": "Implementation Planning"
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 33,
-		"prompt": "Work order lifecycle, task templates, and qualification states are core capabilities of which Field Service module area?",
+		"prompt": "Cutover weekend risks include incomplete territory coverage and untested mobile offline sync. Which mitigation plan addresses those risks?",
 		"choices": [
-			"Work Order Management within Field Service Management",
-			"Security Operations vulnerability response scanning for external IP address ranges only",
-			"HR Service Delivery employee onboarding case management for corporate staff only",
-			"Enterprise Asset Management depreciation schedules without work order integration"
+			"Run pilot tasks in each territory, verify offline caching on representative devices, and maintain rollback scripts for configuration changes",
+			"Disable Dispatcher Workspace until all technicians submit timesheets for two weeks post go-live",
+			"Remove qualification requirements permanently so dispatch can assign any open task immediately",
+			"Postpone all training until after production launch to maximize configuration time"
 		],
 		"correctIndex": 0,
-		"explanation": "Work Order Management covers creating work orders and tasks, qualification, templates, and execution through closure.",
+		"explanation": "Cutover planning should include pilot validation, device testing for critical mobile scenarios, and controlled rollback options for configuration changes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/setting-up-work-orders-and-tasks.html"
-		]
+			"https://www.servicenow.com/docs/r/field-service-management/planning-implementation-fsm.html"
+		],
+		"domain": "Implementation Planning"
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 34,
-		"prompt": "Technician shift calendars and availability windows feed which scheduling outcome during implementation?",
+		"prompt": "After go-live, executives want measurable proof that FSM improved field operations. Which KPI set should the program office track first?",
 		"choices": [
-			"Realistic assignment slots that respect working hours when dispatching work order tasks",
-			"Automatic deletion of overdue tasks without notifying agents or updating task states",
-			"Removal of territory boundaries so every agent appears available twenty-four hours daily",
-			"Conversion of all work orders to catalog tasks processed by the service desk queue only"
+			"First-time fix rate, schedule adherence, mean time to assign, and mobile adoption at point of work",
+			"Count of inactive catalog categories on the employee service portal homepage",
+			"Number of CMDB discovery schedules executing against cloud subnets nightly",
+			"Total problem tasks closed without known error articles attached"
 		],
 		"correctIndex": 0,
-		"explanation": "Agent schedules and availability data constrain dispatch and dynamic scheduling so assignments fit within working calendars and shift rules.",
+		"explanation": "Post-go-live KPIs for FSM focus on first-time fix, scheduling performance, assignment speed, and technician mobile adoption.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/field-service-management/dynamic-scheduling.html"
-		]
+			"https://www.servicenow.com/docs/r/field-service-management/monitoring-analytics-fsm.html",
+			"https://www.servicenow.com/docs/r/field-service-management/planning-implementation-fsm.html"
+		],
+		"domain": "Implementation Planning"
 	}
 ]

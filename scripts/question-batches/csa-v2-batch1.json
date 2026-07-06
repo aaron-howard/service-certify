@@ -2,83 +2,81 @@
 	{
 		"trackCode": "CSA",
 		"order": 0,
-		"prompt": "Which application is available to all users by default for browsing services and submitting requests?",
+		"prompt": "A new administrator wants to open the Users list without browsing through every application menu. What is the fastest way to reach it from the Application Navigator?",
 		"choices": [
-			"Self Service",
-			"Change Management",
-			"Incident Management",
-			"Facilities Management"
+			"Type part of the module name into the navigator filter to jump directly to matching modules",
+			"Build a custom UI page that links to every list in the instance",
+			"Export the application menu structure and search it in a spreadsheet",
+			"Open each application menu one at a time until the module appears"
 		],
 		"correctIndex": 0,
-		"explanation": "Self Service is the default end-user application for catalog browsing and request submission; ITSM apps like Change and Incident are role-restricted.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-user-interface/self-service-application.html"
-		]
-	},
-	{
-		"trackCode": "CSA",
-		"order": 1,
-		"prompt": "What does the Application Navigator provide on a ServiceNow instance?",
-		"choices": [
-			"A hierarchical menu of applications and modules for navigating the platform",
-			"A database backup scheduler",
-			"A MID Server configuration panel",
-			"A CMDB reconciliation dashboard only"
-		],
-		"correctIndex": 0,
-		"explanation": "The Application Navigator lists applications and their modules, giving users entry points to lists, forms, and other content.",
+		"explanation": "The navigator filter matches typed text against application and module names, so typing 'users' surfaces the Users module immediately without manual browsing.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-user-interface/application-navigator.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
-		"order": 2,
-		"prompt": "In Next Experience Unified Navigation, how do users switch between applications?",
+		"order": 1,
+		"prompt": "An agent works with the same three lists every day and wants one-click access to them in Next Experience. Which capability should the agent use?",
 		"choices": [
-			"Through the unified header and application picker without leaving the workspace shell",
-			"By logging out and back in for each application",
-			"Only through direct URL bookmarks",
-			"By editing sys_properties manually"
+			"Mark each module as a favorite so it appears in the Favorites tab of the navigator",
+			"Ask an administrator to create a dedicated application menu for that one agent",
+			"Bookmark the instance login page in the browser and navigate manually each time",
+			"Schedule an email report that links to each list every morning"
 		],
 		"correctIndex": 0,
-		"explanation": "Next Experience provides unified navigation with an application picker in the header so users move between apps within one shell.",
+		"explanation": "Users can favorite modules, lists, and records; favorites appear in a dedicated navigator tab for one-click access and require no admin involvement.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-user-interface/next-experience-unified-navigation.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
-		"order": 3,
-		"prompt": "Which statement best describes a ServiceNow instance?",
+		"order": 2,
+		"prompt": "During a platform demo, a stakeholder asks how one company's data is kept separate from other ServiceNow customers. Which explanation is accurate?",
 		"choices": [
-			"A dedicated environment with its own database, applications, and configuration",
-			"A single shared table across all customers with no isolation",
-			"A desktop client installed on each user's laptop",
-			"A read-only documentation portal"
+			"Each customer runs on its own instance with a dedicated database, applications, and configuration",
+			"All customers share one database and rows are hidden from each other with list filters",
+			"Data separation is handled by desktop client software installed at each company",
+			"Customer records are stored together and separated only when reports run"
 		],
 		"correctIndex": 0,
-		"explanation": "An instance is an isolated ServiceNow environment containing its own data, apps, and settings.",
+		"explanation": "ServiceNow uses a single-tenant instance model: each customer instance has its own database, applications, and configuration rather than sharing tables with other customers.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-platform/service-now-instances.html"
 		]
 	},
 	{
 		"trackCode": "CSA",
-		"order": 4,
-		"prompt": "Which platform capabilities are core services provided on every instance? (Choose two.)",
+		"order": 3,
+		"prompt": "A user needs to find an incident but only remembers a phrase from its short description. Which platform feature searches across multiple tables at once?",
 		"choices": [
-			"Workflow and automation",
-			"Reporting and dashboards",
-			"GPU ray tracing",
-			"Offline-only file storage"
+			"Global search from the banner, which queries the search groups configured for the user",
+			"The dictionary override editor filtered by the phrase",
+			"The system diagnostics page listing active transactions",
+			"A nightly data export reviewed manually in a text editor"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
-		"questionType": "multi",
-		"explanation": "ServiceNow instances include workflow, automation, reporting, and dashboards as platform services; GPU rendering and offline-only storage are not platform capabilities.",
+		"explanation": "Global search in the banner frame runs the query across the tables in the user's enabled search groups, returning matching records from multiple applications.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/now-platform/platform-overview.html"
+			"https://www.servicenow.com/docs/r/platform-user-interface/global-search.html"
+		]
+	},
+	{
+		"trackCode": "CSA",
+		"order": 4,
+		"prompt": "A department head asks what employees can do in the platform before any roles are granted to them. Which capability is available to authenticated users with no roles?",
+		"choices": [
+			"Submitting requests and viewing their own open records through self-service",
+			"Editing access control rules on the tables they use",
+			"Changing group memberships for other users in their department",
+			"Modifying dictionary entries on the Task table"
+		],
+		"correctIndex": 0,
+		"explanation": "Users without roles still get self-service capabilities such as browsing the catalog, submitting requests, and viewing records they opened; configuration activities require roles.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/self-service-application.html"
 		]
 	}
 ]

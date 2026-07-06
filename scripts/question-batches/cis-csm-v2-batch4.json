@@ -13,20 +13,22 @@
 		"explanation": "CSM supports simultaneous B2B and B2C business models, using accounts and contacts for business customers and consumers for individual end customers.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
-		]
+		],
+		"domain": "CSM Foundational Data Model"
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 16,
-		"prompt": "A global customer has regional subsidiaries that roll up to a parent organization. Which CSM structure models this corporate hierarchy?",
+		"domain": "CSM Foundational Data Model",
+		"prompt": "Legal counsel must receive case notifications for a regulated account without becoming account team members or assignees. Which configuration adds these stakeholders?",
 		"choices": [
-			"Parent and child accounts linked in an account hierarchy",
-			"Contact relationships that merge all subsidiaries into one contact record",
-			"Sold products that automatically inherit the parent case assignment group",
-			"Install base items that replace account records for each subsidiary site"
+			"Related party configuration for designated stakeholder roles on cases",
+			"Inbound email flow that forwards every case update to all instance users",
+			"Entitlement modification that adds counsel as entitlement administrators",
+			"Household member relationship linking counsel to the consumer portal login"
 		],
 		"correctIndex": 0,
-		"explanation": "Account hierarchies represent parent and child customer organizations, enabling consolidated visibility and case management across related business entities.",
+		"explanation": "Related party configuration defines additional stakeholders who receive visibility or notifications on cases beyond standard account team membership.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
 		]
@@ -45,7 +47,8 @@
 		"explanation": "Account relationships and account relationship types model non-hierarchical links between accounts such as reseller, partner, or other defined business relationships.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
-		]
+		],
+		"domain": "CSM Foundational Data Model"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -61,7 +64,8 @@
 		"explanation": "Account teams associate internal or partner users with an account so agents and customers have defined stakeholders for support and escalation.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
-		]
+		],
+		"domain": "CSM Foundational Data Model"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -77,6 +81,7 @@
 		"explanation": "Household member relationships group individual consumers in B2C scenarios so shared services and cases can reflect the household context.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
-		]
+		],
+		"domain": "CSM Foundational Data Model"
 	}
 ]

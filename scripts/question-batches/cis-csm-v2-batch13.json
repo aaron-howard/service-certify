@@ -13,7 +13,8 @@
 		"explanation": "Major issue management (MIM) lets agents create a major case and associate the affected customer cases as children, coordinating communication and resolution across all of them.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/major-issue-management-for-csm.html"
-		]
+		],
+		"domain": "Case Management"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -29,7 +30,8 @@
 		"explanation": "Major issue management propagates the major case resolution to its associated child cases, letting agents update all affected customers consistently once the underlying issue is fixed.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/major-issue-management-for-csm.html"
-		]
+		],
+		"domain": "Case Management"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -37,15 +39,16 @@
 		"prompt": "A high-value customer's case has stalled and exceeded the response commitment. Which CSM feature lets the customer or agent formally raise the case's urgency for management attention?",
 		"choices": [
 			"Case escalation, which records an escalation request and raises visibility for the case",
-			"A knowledge feedback rating submitted anonymously against a published support article",
-			"A targeted communication broadcast to every contact in the customer account directory",
-			"A skill determination rule that recalculates the required competencies for assignment"
+			"Increasing the case priority field without recording a formal escalation request",
+			"Creating a major issue parent case for a single-customer response delay",
+			"Reassigning the case through AWA matching rules without an escalation workflow"
 		],
 		"correctIndex": 0,
 		"explanation": "Case escalations let customers or agents formally flag a case for heightened attention, capturing the reason and surfacing it to management for faster action.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/case-escalation-for-csm.html"
-		]
+		],
+		"domain": "Case Management"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -53,15 +56,16 @@
 		"prompt": "An agent needs to delegate part of a complex case to a fulfillment team without changing case ownership. Which CSM construct supports assigning discrete units of work off the case?",
 		"choices": [
 			"Case tasks that break the work into assignable items linked to the parent case",
-			"A separate unrelated incident opened in a different application with no case link",
-			"A knowledge article draft that must be published before any work can continue",
-			"A read-only activity log entry that only records who last viewed the case record"
+			"Reassigning full case ownership to the fulfillment group without retaining the case owner",
+			"Adding a work note requesting help without creating a structured case task record",
+			"Creating a child case owned by the fulfillment team while the parent remains unassigned"
 		],
 		"correctIndex": 0,
 		"explanation": "Case tasks let an agent split work into discrete, assignable items connected to the parent case so other teams contribute while the case owner retains overall ownership.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/case-tasks-for-csm.html"
-		]
+		],
+		"domain": "Case Management"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -69,14 +73,15 @@
 		"prompt": "An agent needs to move a stalled case forward using a standard case action rather than an administrative operation. Which option is a valid case action?",
 		"choices": [
 			"Create a case task and assign it to a supporting fulfillment group for the work",
-			"Rebuild the instance search index for the entire knowledge platform globally",
-			"Change the global default language for every user across the whole deployment",
-			"Purge the audit history of unrelated cases to reduce the total database size"
+			"Escalate the case through formal case escalation for management visibility",
+			"Reassign the case owner to a senior agent in the same queue without delegating work",
+			"Update case state to In Progress without assigning a supporting case task"
 		],
 		"correctIndex": 0,
 		"explanation": "Creating and assigning a case task is a standard case action that moves work forward, whereas reindexing, changing global language, or purging audits are administrative operations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/case-management-process.html"
-		]
+		],
+		"domain": "Case Management"
 	}
 ]

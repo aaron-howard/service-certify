@@ -2,18 +2,19 @@
 	{
 		"trackCode": "CIS-FSM",
 		"order": 50,
-		"prompt": "A utilities team performs the same meter-replacement steps on every job. What do work order templates create when applied?",
+		"prompt": "A utilities company performs more than 1,000 identical meter-replacement jobs monthly. How should templates standardize that volume?",
 		"choices": [
-			"Predefined tasks and part requirements for recurring field activities",
-			"A new incident record linked to the service catalog approval workflow",
-			"An automatic change request for every customer location visit",
-			"A contractor purchase order without associated work order tasks"
+			"Deploy work order templates with predefined tasks, part requirements, and dependencies for the recurring activity",
+			"Require qualifiers to manually recreate tasks and parts lists for every individual meter visit",
+			"Use incident templates instead of work orders so dispatch bypasses Field Service states",
+			"Disable template management and rely on ad hoc task creation for each customer location"
 		],
 		"correctIndex": 0,
 		"explanation": "Work order templates automatically populate work orders with predefined tasks and part requirements for common field activities.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_WorkOrderTemplates.html"
-		]
+		],
+		"domain": "Implementing Field Service Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -29,7 +30,8 @@
 		"explanation": "Standalone task templates can be linked to different work order templates with filtering conditions, avoiding duplicate task authoring.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_WorkOrderTemplates.html"
-		]
+		],
+		"domain": "Implementing Field Service Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -45,7 +47,8 @@
 		"explanation": "Task dependencies in templates prevent downstream tasks from proceeding until prerequisite tasks are completed.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/t_CrtWOTskDpdWOTmplt.html"
-		]
+		],
+		"domain": "Implementing Field Service Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -58,12 +61,16 @@
 			"Global LDAP synchronization rules for external contractor user accounts"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"questionType": "multi",
 		"explanation": "Template Management adds dynamic source table mapping and standalone task templates with conditions; it does not configure CMDB reconciliation or LDAP sync.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_WorkOrderTemplates.html"
-		]
+		],
+		"domain": "Implementing Field Service Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -79,6 +86,7 @@
 		"explanation": "Work order templates can define advanced task dependencies that go beyond dependencies inherited from the parent work order alone.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/t_CrtWOTskDpdWOTmplt.html"
-		]
+		],
+		"domain": "Implementing Field Service Processes"
 	}
 ]

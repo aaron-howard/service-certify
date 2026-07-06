@@ -2,83 +2,91 @@
 	{
 		"trackCode": "CIS-DISCO",
 		"order": 45,
-		"prompt": "Which schedule type should an admin choose to discover resources inside a cloud provider account using API credentials?",
+		"prompt": "After the first production discovery wave, 180 new Linux server CIs appear but 60 match existing SCCM import records by serial number. Which CMDB process prevents duplicate records?",
 		"choices": [
-			"Cloud discovery schedule scoped to the provider account and regions",
-			"Network discovery schedule that scans RFC1918 ranges only from the instance",
-			"Service discovery schedule that maps entry points without cloud enumeration",
-			"Configuration-only schedule that reads CMDB exports without live API calls"
+			"Identification rules in IRE match discovery payloads to existing CIs using authoritative identifiers before inserting new records",
+			"Discovery behavior settings automatically merge duplicate rows without referencing identification keys",
+			"ECC queue processing deduplicates payloads before sensors write to the CMDB foundation tables",
+			"Schedule exclusion ranges suppress CI creation whenever an import feed updated the same subnet"
 		],
 		"correctIndex": 0,
-		"explanation": "Cloud discovery schedules use provider API credentials to enumerate resources in configured accounts and regions.",
+		"explanation": "IRE identification rules locate existing CIs using configured identifiers so discovery updates matched records instead of creating duplicates.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/configure-cloud-discovery.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
+		],
+		"domain": "Configuration Management Database"
 	},
 	{
 		"trackCode": "CIS-DISCO",
 		"order": 46,
-		"prompt": "During a horizontal discovery run, in which phase does the platform attempt to authenticate and determine the device type?",
+		"prompt": "CMDB Health shows completeness for cmdb_ci_server dropped 15% after enabling a new discovery schedule. What should the implementer review first?",
 		"choices": [
-			"Classification phase where probes identify the CI class and gather initial attributes",
-			"Identification phase where IRE matches the device to an existing CI record",
-			"Reconciliation phase where attribute updates are merged using source precedence",
-			"Exploration phase where only ICMP reachability is tested without credential use"
+			"Identification and reconciliation coverage for the classes the schedule populates, including required attributes and source precedence",
+			"MID Server OS patch levels across every cluster before reviewing any CMDB metrics",
+			"Service catalog item pricing for hardware requests triggered by the discovery run",
+			"Navigation module visibility for the discovery_admin role on the instance"
 		],
 		"correctIndex": 0,
-		"explanation": "Classification probes authenticate when required and determine the CI class before identification and reconciliation run.",
+		"explanation": "Completeness declines often trace to identification gaps, missing attributes, or reconciliation conflicts on classes updated by the new schedule.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-phases.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-health-dashboard-overview.html"
+		],
+		"domain": "Configuration Management Database"
 	},
 	{
 		"trackCode": "CIS-DISCO",
 		"order": 47,
-		"prompt": "A schedule must run only through MID Servers in the DMZ network zone. Where is this enforced?",
+		"prompt": "Discovery updates the OS version field on Linux servers, but a weekly import feed is authoritative for that attribute. How should the conflict be resolved?",
 		"choices": [
-			"MID Server selection or capabilities assignment tied to the discovery schedule",
-			"Global system property that routes every probe through the default MID Server",
-			"CI Class Manager setting that maps classes to subnet ownership records",
-			"Reconciliation rule that blocks writes unless the MID heartbeat is current"
+			"Configure reconciliation rules with source precedence so the import feed wins the OS version attribute on matched CIs",
+			"Disable exploration probes so discovery never writes attributes that imports also supply",
+			"Delete discovery-created CIs after each run and rely solely on the import feed for server inventory",
+			"Remove identification rules so both sources insert separate records for the same serial number"
 		],
 		"correctIndex": 0,
-		"explanation": "Schedules are bound to specific MID Servers or capabilities so probes execute from the correct network zone.",
+		"explanation": "Reconciliation rules with source precedence control which feed owns each attribute when discovery and imports update the same CI.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/mid-server-for-discovery.html"
-		]
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/reconciliation-rules.html"
+		],
+		"domain": "Configuration Management Database"
 	},
 	{
 		"trackCode": "CIS-DISCO",
 		"order": 48,
-		"prompt": "During Discovery implementation, what should customers always configure?",
+		"prompt": "Discovery matched an existing server CI but also created a duplicate with a slightly different hostname after overlapping schedules scanned the same subnet. What is the first remediation step?",
 		"choices": [
-			"Event management correlation rules for every monitored infrastructure class",
-			"Hardware asset stockroom transfers for each discovered server serial number",
-			"Service mapping entry points before the first horizontal schedule executes",
-			"Credentials for target devices and systems being discovered"
+			"Verify identification rule keys cover hostname variants, then merge duplicates using deduplication tools",
+			"Delete both CIs and disable all discovery schedules until the next quarterly audit cycle",
+			"Convert both records to consumable asset models without reviewing identification configuration",
+			"Assign both servers to one schedule and remove reconciliation rules to simplify matching"
 		],
-		"correctIndex": 3,
-		"explanation": "Discovery cannot classify or collect configuration data without credentials configured and tested for target systems.",
+		"correctIndex": 0,
+		"explanation": "Duplicate remediation starts with identification coverage review, then deduplication merges records once authoritative keys are confirmed.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-credentials.html"
-		]
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/deduplicate-cis.html"
+		],
+		"domain": "Configuration Management Database"
 	},
 	{
 		"trackCode": "CIS-DISCO",
 		"order": 49,
-		"prompt": "Which records are core to Discovery Configuration before the first production scan? (Choose two.)",
+		"questionType": "multi",
+		"prompt": "Stakeholders require sign-off after the first production discovery wave. Which CMDB Health metrics best validate data quality? (Choose two.)",
 		"choices": [
-			"Discovery credentials tested for target protocols",
-			"Discovery schedules with scoped IP ranges or cloud accounts",
-			"Reconciliation rules that retire stale software license entitlements",
-			"Knowledge base article templates for end-user self-service"
+			"Completeness scores for in-scope CI classes populated by discovery",
+			"Duplicate CI counts trending down after identification tuning",
+			"MID Server memory utilization during off-peak maintenance windows",
+			"Count of service catalog requests submitted by discovery operators"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
-		"questionType": "multi",
-		"explanation": "Production discovery requires tested credentials and schedules with defined scope; license and knowledge artifacts are unrelated prerequisites.",
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Completeness and duplicate metrics directly reflect whether discovery identification and updates are producing trustworthy CMDB data.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/set-up-discovery.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-health-dashboard-overview.html"
+		],
+		"domain": "Configuration Management Database"
 	}
 ]

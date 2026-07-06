@@ -13,7 +13,8 @@
 		"explanation": "Administrators enable work order qualification on the Field Service Configuration page under Field Service > Administration > Configuration.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/configure-qualify-fsm.html"
-		]
+		],
+		"domain": "Implementing Field Service Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -29,7 +30,8 @@
 		"explanation": "The create work orders task documentation describes how planners and qualifiers establish work orders that dispatch and agents rely on.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/create-work-orders.html"
-		]
+		],
+		"domain": "Implementing Field Service Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -45,7 +47,8 @@
 		"explanation": "Dispatcher Workspace supports drag-and-drop assignment so dispatchers can place tasks on agent schedules using proximity, availability, and skill context.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/dispatcher-activities.html"
-		]
+		],
+		"domain": "Implementing Field Service Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -61,22 +64,25 @@
 		"explanation": "Work Order Management task documentation covers completing and closing work order tasks with the required execution and completion details.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_WorkOrderTasks.html"
-		]
+		],
+		"domain": "Implementing Field Service Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
 		"order": 44,
-		"prompt": "Operations enables automatic assignment after qualification using skills, travel time, and availability criteria. Which configuration area defines these matching rules?",
+		"prompt": "Monday morning dispatch must build the week's initial agent schedules from qualified tasks, then adjust routes when urgent jobs arrive same day. Which scheduling capabilities apply to each phase?",
 		"choices": [
-			"Dynamic Scheduling configuration under Field Service scheduling setup",
-			"UI policy conditions on the incident table for priority color highlighting only",
-			"Email notification templates for legal hold archival compliance review reminders",
-			"Software asset reconciliation rules for removing unused subscriptions quarterly"
+			"Dynamic Scheduling and the automated engine create initial assignments; intra-day optimization reorganizes the current day when disruptions occur",
+			"Manual CSV uploads replace all automated scheduling for both weekly planning and same-day changes",
+			"Appointment booking replaces Dynamic Scheduling for every repair task regardless of priority",
+			"Maintenance plans auto-assign agents before qualification creates any work order tasks"
 		],
 		"correctIndex": 0,
-		"explanation": "Dynamic Scheduling configuration defines matching criteria—such as skills, travel time, and availability—used to auto-assign qualified work order tasks.",
+		"explanation": "Initial schedule creation uses dynamic scheduling criteria; intra-day optimization handles real-time changes when tasks are canceled, delayed, or added during the day.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/field-service-management/field-service-scheduling/create-dynamic-scheduling-config.html"
-		]
+			"https://www.servicenow.com/docs/r/field-service-management/field-service-scheduling/create-dynamic-scheduling-config.html",
+			"https://www.servicenow.com/docs/r/field-service-management/schedule-optimization.html"
+		],
+		"domain": "Implementing Field Service Processes"
 	}
 ]

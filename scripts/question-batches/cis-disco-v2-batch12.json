@@ -13,7 +13,8 @@
 		"explanation": "Source precedence ensures authoritative feeds control attribute values when discovery and other sources update the same CI.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/reconciliation-rules.html"
-		]
+		],
+		"domain": "Configuration Management Database"
 	},
 	{
 		"trackCode": "CIS-DISCO",
@@ -29,7 +30,8 @@
 		"explanation": "Strong identification keys prevent duplicates, and deduplication tools merge records when overlapping scans create matches on the same device.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
-		]
+		],
+		"domain": "Configuration Management Database"
 	},
 	{
 		"trackCode": "CIS-DISCO",
@@ -42,43 +44,49 @@
 			"ECC queue topics that transport probe payloads to MID Servers"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"questionType": "multi",
 		"explanation": "IRE uses identification rules to match or create CIs and reconciliation rules to merge attribute updates from discovery and other sources.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
-		]
+		],
+		"domain": "Configuration Management Database"
 	},
 	{
 		"trackCode": "CIS-DISCO",
 		"order": 58,
-		"prompt": "Before enabling broad discovery schedules, why validate CMDB foundation data classes?",
+		"prompt": "CMDB Health shows rising duplicate counts and declining completeness for server classes after overlapping schedules run. Which dashboard signal best indicates Discovery data quality is degrading?",
 		"choices": [
-			"Discovery updates assume stable class hierarchy and attribute definitions exist",
-			"Foundation validation removes the requirement for credentials on Linux targets",
-			"Class validation automatically deploys MID Servers into every network segment",
-			"CMDB foundation checks disable reconciliation for the first thirty discovery runs"
+			"Duplicate CI counts increasing alongside falling completeness scores for in-scope discovered classes",
+			"MID Server JVM heap usage spikes during scheduled maintenance windows only",
+			"Higher volume of service catalog requests from operators reviewing discovery status",
+			"Expanding navigation module count for roles with discovery administration access"
 		],
 		"correctIndex": 0,
-		"explanation": "Discovery writes depend on well-defined CI classes and attributes; foundation validation prevents misclassified or incomplete updates.",
+		"explanation": "CMDB Health tracks duplicate rates and completeness, which directly reflect discovery identification and update quality.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/cmdb-foundation-data.html"
-		]
+		],
+		"domain": "Configuration Management Database"
 	},
 	{
 		"trackCode": "CIS-DISCO",
 		"order": 59,
-		"prompt": "When Discovery creates a CI that later receives updates from an import feed, what ensures consistent attribute stewardship?",
+		"prompt": "A discovery program needs to add a new identifier attribute to cmdb_ci_db_instance before the next release. Who should own that class change?",
 		"choices": [
-			"Reconciliation with defined source precedence for each attribute on the class",
-			"Re-running exploration probes without classification on every schedule cycle",
-			"Deleting the CI and forcing discovery to insert a replacement after each conflict",
-			"Assigning every import row to the cmdb_ci table regardless of device type"
+			"CMDB governance owners coordinating updates through CI Class Manager with appropriate change controls",
+			"Any operator with the itil role editing cmdb_ci records ad hoc in production without review",
+			"External monitoring vendors updating class schemas through email requests to the help desk",
+			"Discovery schedule owners acting independently without configuration management consultation"
 		],
 		"correctIndex": 0,
-		"explanation": "Reconciliation rules with source precedence control which feed owns each attribute when discovery and imports update the same CI.",
+		"explanation": "Identification keys are class-level CMDB governance decisions managed through CI Class Manager with appropriate stewardship.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/reconciliation-rules.html"
-		]
+		],
+		"domain": "Configuration Management Database"
 	}
 ]

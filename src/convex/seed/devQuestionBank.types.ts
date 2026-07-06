@@ -27,4 +27,8 @@ export type DevPracticeQuestionRow = {
 	correctMatches?: MatchPair[];
 	explanation: string;
 	sourceUrls: string[];
+	/** CIS-DF blueprint domain tag (batch authoring traceability). */
+	domain?: string;
+	/** CIS-DF self-assessment difficulty: Foundation | Intermediate | Advanced. */
+	contentDifficulty?: 'Foundation' | 'Intermediate' | 'Advanced';
 };

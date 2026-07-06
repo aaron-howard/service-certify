@@ -13,7 +13,8 @@
 		"explanation": "Planned Work Management creates and manages planned work activities with recurring schedules such as maintenance and inspections.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/planned-work-management.html"
-		]
+		],
+		"domain": "Implementing Field Service Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -29,7 +30,8 @@
 		"explanation": "Preventive maintenance plans can generate recurring work orders based on usage thresholds such as flight hours on an asset.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/preventive-maintenance-use-case.html"
-		]
+		],
+		"domain": "Implementing Field Service Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -45,7 +47,8 @@
 		"explanation": "FSM inventory management tracks parts and supplies through transfers, consumption, adjustments, and related stockroom operations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/inventory-management-fsm.html"
-		]
+		],
+		"domain": "Implementing Field Service Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -61,7 +64,8 @@
 		"explanation": "Sourcing reserves and obtains a part described in a part requirement by transferring it from one stockroom to another or to the agent.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_SourceParts.html"
-		]
+		],
+		"domain": "Implementing Field Service Processes"
 	},
 	{
 		"trackCode": "CIS-FSM",
@@ -74,11 +78,15 @@
 			"Publishing change advisory board minutes to external vendor portals"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"questionType": "multi",
 		"explanation": "FSM inventory management covers consumption tracking and part transfers between stockrooms; password notifications and CAB minutes are unrelated.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/inventory-management-fsm.html"
-		]
+		],
+		"domain": "Implementing Field Service Processes"
 	}
 ]
