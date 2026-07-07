@@ -13,7 +13,8 @@
 		"explanation": "Upgrade planning emphasizes integrations, application scope, connectivity, and security posture because failures in these areas disrupt core platform operations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/upgrade-center.html"
-		]
+		],
+		"domain": "Technology"
 	},
 	{
 		"trackCode": "CPOA",
@@ -27,12 +28,16 @@
 			"Update set batch preview"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Security Center provides hardening settings with compliance scoring and built-in security metrics dashboards for monitoring instance posture.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/security-center/sec-center-v2.html",
 			"https://www.servicenow.com/docs/r/platform-security/instance-security-hardening-settings/security-hardening-settings.html"
-		]
+		],
+		"domain": "Technology"
 	},
 	{
 		"trackCode": "CPOA",
@@ -48,7 +53,8 @@
 		"explanation": "Production clones without post-clone sanitization can expose sensitive data and trigger unintended external actions from lower environments.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/instance-clone.html"
-		]
+		],
+		"domain": "Technology"
 	},
 	{
 		"trackCode": "CPOA",
@@ -70,15 +76,28 @@
 			"Hardening, access controls, and audit capabilities for regulatory alignment"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Platform service areas divide core runtime, administration, integration, and security responsibilities that platform owners must understand at associate level.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html"
-		]
+		],
+		"domain": "Technology"
 	},
 	{
 		"trackCode": "CPOA",
@@ -94,6 +113,7 @@
 		"explanation": "Clone exclusions omit designated tables from the copy operation to reduce exposure, duration, or overwrite of preserved lower-environment data.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/clone-data-preservation.html"
-		]
+		],
+		"domain": "Technology"
 	}
 ]

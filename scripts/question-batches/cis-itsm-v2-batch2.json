@@ -13,7 +13,8 @@
 		"explanation": "Incident Management uses SLAs to monitor progress against agreed targets and the inactivity monitor to generate events when records go without updates.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/incident-management/work-on-incidents.html"
-		]
+		],
+		"domain": "Incident Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -30,7 +31,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/incident-management/copy-incident-or-create-child-incident.html",
 			"https://www.servicenow.com/docs/r/it-service-management/incident-management/incident-management-properties.html"
-		]
+		],
+		"domain": "Incident Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -46,7 +48,8 @@
 		"explanation": "Default copied fields include category, subcategory, business service, configuration item, impact, urgency, assignment group, and related lists such as affected CIs.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/incident-management/copy-incident-or-create-child-incident.html"
-		]
+		],
+		"domain": "Incident Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -62,7 +65,8 @@
 		"explanation": "Major incidents are high business-impact events that require a response beyond routine incident management, such as critical service outages or widespread user impact.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/incident-management/major-incident-management.html"
-		]
+		],
+		"domain": "Incident Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -78,6 +82,7 @@
 		"explanation": "Agents can propose an incident as a major incident candidate using the Propose Major Incident context menu action before a major incident manager promotes it.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/incident-management/major-incident-management.html"
-		]
+		],
+		"domain": "Incident Management"
 	}
 ]

@@ -13,7 +13,8 @@
 		"explanation": "After due diligence initiation, the assess stage sends questionnaires and evaluates vendor responses to determine control effectiveness and residual risk.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-assessing-tpr.html"
-		]
+		],
+		"domain": "TPRM Fundamentals and Review"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -29,7 +30,8 @@
 		"explanation": "TPRM monitoring ingests external risk intelligence and internal signals to detect posture changes and trigger reassessment or remediation between periodic assessments.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-monitoring-tpr.html"
-		]
+		],
+		"domain": "TPRM Fundamentals and Review"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -43,11 +45,15 @@
 			"Catalog administrator who publishes employee-facing service catalog items for internal requests"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Due diligence approval workflows involve TPR managers and configured approvers who review questionnaire results and process outcomes before granting or denying engagement approval.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-approving.html"
-		]
+		],
+		"domain": "TPRM Fundamentals and Review"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -63,7 +69,8 @@
 		"explanation": "The contract risk process stage enables third-party risk contract negotiators to embed control requirements and remediation terms into vendor agreements.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-ws-contract-risk-process.html"
-		]
+		],
+		"domain": "TPRM Fundamentals and Review"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -79,6 +86,7 @@
 		"explanation": "Third-party organizations are stored on the Company table; engagements, contacts, assessments, and issues reference these company records.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
-		]
+		],
+		"domain": "TPRM Fundamentals and Review"
 	}
 ]

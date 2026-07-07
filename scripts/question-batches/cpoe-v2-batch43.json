@@ -2,7 +2,7 @@
 	{
 		"trackCode": "CPOE",
 		"order": 210,
-		"prompt": "Given a case study where HR and Finance both sponsor citizen development cohorts, the platform owner sees duplicated training and conflicting guardrails. What organizational adjustment best supports enterprise strategy?",
+		"prompt": "When business units need speed, hR and Finance both sponsor citizen development cohorts, the platform owner sees duplicated training and conflicting guardrails. What organizational adjustment best supports enterprise strategy?",
 		"choices": [
 			"Unify cohort curriculum, shared success metrics, and a single CoEI-sponsored certification path across sponsoring functions",
 			"Allow each function to maintain separate untracked builder programs without central coordination",
@@ -13,7 +13,8 @@
 		"explanation": "Citizen development in organizational strategy requires unified curriculum, metrics, and certification across functions—not siloed programs or arbitrary enrollment restrictions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Innovation"
 	},
 	{
 		"trackCode": "CPOE",
@@ -29,7 +30,8 @@
 		"explanation": "CoEI integration after acquisition succeeds through federated onboarding with shared assets and joint intake—not forced decommission, permanent isolation, or outsourced exclusion.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
-		]
+		],
+		"domain": "Innovation"
 	},
 	{
 		"trackCode": "CPOE",
@@ -45,7 +47,8 @@
 		"explanation": "Enterprise architects accelerate innovation through triage advisory, time-boxed clinics, and pattern libraries—not blanket documentation mandates or exclusion from design decisions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Innovation"
 	},
 	{
 		"trackCode": "CPOE",
@@ -59,11 +62,15 @@
 			"Measure success exclusively by counting CoEI slide decks delivered to executives"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Innovation investment is justified through automation outcome tracking and peer benchmarking—not license counts alone or presentation volume without delivery evidence.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
-		]
+		],
+		"domain": "Innovation"
 	},
 	{
 		"trackCode": "CPOE",
@@ -85,14 +92,27 @@
 			"Identifies underperforming processes relative to industry peers to focus automation funding"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 1 },
-			{ "left": 1, "right": 2 },
-			{ "left": 2, "right": 0 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 1
+			},
+			{
+				"left": 1,
+				"right": 2
+			},
+			{
+				"left": 2,
+				"right": 0
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Runbooks standardize automation deployment, champion chapters extend grassroots reach, pattern libraries accelerate citizen delivery, and scorecards focus funding on benchmark gaps.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Innovation"
 	}
 ]

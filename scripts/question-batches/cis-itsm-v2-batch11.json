@@ -13,7 +13,8 @@
 		"explanation": "A service portfolio is a top-level container for organizing current, future, and retired services so portfolio owners can evaluate business impact and spending.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/service-portfolio-management/SPM2-service-portfolios.html"
-		]
+		],
+		"domain": "Service Portfolio Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -29,12 +30,13 @@
 		"explanation": "Each service offering extends a parent service for a specific business need and is uniquely defined by its service commitments.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/service-portfolio-management/define-SPM2-service-commitments.html"
-		]
+		],
+		"domain": "Service Portfolio Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
 		"order": 52,
-		"prompt": "Before defining taxonomy nodes, an administrator must create a service portfolio. Which role can create that portfolio record?",
+		"prompt": "A new digital portfolio must be modeled before teams define taxonomy and service offerings. Which governance model should control who creates portfolio records?",
 		"choices": [
 			"portfolio_admin",
 			"service_viewer without portfolio create permissions",
@@ -45,7 +47,8 @@
 		"explanation": "Creating a service portfolio requires the portfolio_admin role at Service Portfolio Management > Service Portfolios.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/service-portfolio-management/create-or-modify-SPM2-portfolios.html"
-		]
+		],
+		"domain": "Service Portfolio Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -61,12 +64,13 @@
 		"explanation": "The improved standard structure replaces fixed taxonomy layers with node-to-node relationships; legacy portfolios still use layer definitions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/service-portfolio-management/SPM2-taxonomy.html"
-		]
+		],
+		"domain": "Service Portfolio Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
 		"order": 54,
-		"prompt": "Which Service Portfolio Management role allows a user to view portfolios, taxonomy nodes, services, and service offerings?",
+		"prompt": "Business relationship managers need read-only visibility into portfolios without edit rights. Which access design should SPM implement for them?",
 		"choices": [
 			"portfolio_viewer",
 			"service_viewer without access to portfolio or taxonomy records",
@@ -77,6 +81,7 @@
 		"explanation": "The portfolio_viewer role includes service_viewer and grants read access to portfolios, taxonomy nodes, services, and service offerings.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/service-portfolio-management/r_InstalledWSPM2.html"
-		]
+		],
+		"domain": "Service Portfolio Management"
 	}
 ]

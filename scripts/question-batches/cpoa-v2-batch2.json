@@ -13,7 +13,8 @@
 		"explanation": "Platform owners enforce secure coding practices such as keeping credentials out of client scripts and using approved server-side patterns.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/application-development.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOA",
@@ -29,7 +30,8 @@
 		"explanation": "Citizen development succeeds when guardrails, scope boundaries, and intake are established before teams create unsupportable applications.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOA",
@@ -45,7 +47,8 @@
 		"explanation": "A defined SDLC improves quality and auditability by connecting requirements, build, test, and promotion steps rather than ad hoc production edits.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/application-development.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOA",
@@ -59,11 +62,15 @@
 			"Disabling audit logs on security-sensitive tables to improve list performance"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Sound security planning combines access governance and proactive instance assessment; credential sharing and disabled auditing increase exposure.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOA",
@@ -87,15 +94,31 @@
 			"Establish core setup, ownership, and baseline governance"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 4 },
-			{ "left": 1, "right": 3 },
-			{ "left": 2, "right": 0 },
-			{ "left": 3, "right": 2 },
-			{ "left": 4, "right": 1 }
+			{
+				"left": 0,
+				"right": 4
+			},
+			{
+				"left": 1,
+				"right": 3
+			},
+			{
+				"left": 2,
+				"right": 0
+			},
+			{
+				"left": 3,
+				"right": 2
+			},
+			{
+				"left": 4,
+				"right": 1
+			}
 		],
 		"explanation": "ServiceNow recommends sequencing from Foundation setup through Crawl quick wins, Walk expansion, Run scaling, and Fly maturity including advanced analytics and AI governance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/common-service-data-model/csdm.html"
-		]
+		],
+		"domain": "Strategy"
 	}
 ]

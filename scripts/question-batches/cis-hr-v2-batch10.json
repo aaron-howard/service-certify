@@ -13,7 +13,8 @@
 		"explanation": "Published HR knowledge deflects repetitive inquiries by answering policy and how-to questions upfront.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-knowledge-management.html"
-		]
+		],
+		"domain": "Core HR Applications and Employee Center"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -29,7 +30,8 @@
 		"explanation": "Service-level HR criteria restricts catalog visibility to employees who meet defined conditions such as hire status.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-criteria.html"
-		]
+		],
+		"domain": "Core HR Applications and Employee Center"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -45,7 +47,8 @@
 		"explanation": "HR criteria and related read rules prevent unauthorized employees from viewing or requesting restricted services.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-criteria.html"
-		]
+		],
+		"domain": "Core HR Applications and Employee Center"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -61,7 +64,8 @@
 		"explanation": "User criteria controls general content visibility while HR criteria targets HR-specific service eligibility.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-knowledge-management.html"
-		]
+		],
+		"domain": "Core HR Applications and Employee Center"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -77,6 +81,7 @@
 		"explanation": "HR fulfillment flows trigger notifications so employees and agents receive updates as work progresses.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-management.html"
-		]
+		],
+		"domain": "Core HR Applications and Employee Center"
 	}
 ]

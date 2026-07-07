@@ -2,86 +2,89 @@
 	{
 		"trackCode": "CIS-SIR",
 		"order": 60,
-		"prompt": "A post-incident review surfaces ten improvement ideas with limited staff capacity. How should the team prioritize remediation work?",
+		"prompt": "An administrator leaves the Script include field empty on a custom process definition record. Which process definition does Security Incident Response use by default?",
 		"choices": [
-			"Rank items by risk reduction impact, implementation effort, and control dependencies",
-			"Implement items alphabetically by task title for perceived fairness",
-			"Defer every action until the next annual external audit cycle",
-			"Assign all tasks to the incident commander without target due dates"
+			"NIST Open with bidirectional transitions between any valid states",
+			"NIST Stateful with sequential forward-only progression through incident states",
+			"Standard ITIL incident state model from core Incident Management",
+			"Analyst-defined custom states without process validation rules"
 		],
-		"correctIndex": 0,
-		"explanation": "Risk-based prioritization focuses limited capacity on improvements that most reduce recurrence and strengthen critical controls.",
+		"correctIndex": 1,
+		"explanation": "When no valid script include is configured, the base system defaults to the NIST Stateful process definition for security incidents.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-post-incident-review.html",
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/t_PerformPostIncidentReview.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/setup-assistant-reference.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/getting-started-with-processes.html"
+		],
+		"domain": "Security Incident Response Management"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 61,
-		"prompt": "Which outcome pattern indicates a mature post-incident review process in Security Incident Response?",
+		"prompt": "Invalid security incident states appear on the Process Selection related list. Where does an administrator assign the correct process definition for incidents and response tasks?",
 		"choices": [
-			"Lessons learned linked to corrective tasks with owners and due dates",
-			"Review notes stored only in private chat channels outside the record",
-			"Corrective tasks closed immediately without validation evidence",
-			"No distinction between confirmed root cause and working assumptions"
+			"Security Incident Response Administration Process Selection module",
+			"CMDB Identification and Reconciliation rule editor",
+			"Service Catalog item designer for security service offerings",
+			"MID Server cluster assignment configuration panel"
 		],
 		"correctIndex": 0,
-		"explanation": "Effective post-incident reviews produce traceable corrective work with accountable owners rather than informal notes alone.",
+		"explanation": "Process Selection lets administrators choose the active process definition so incidents and tasks remain in valid lifecycle states.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-post-incident-review.html",
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/t_PerformPostIncidentReview.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/setup-assistant-reference.html"
+		],
+		"domain": "Security Incident Response Management"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 62,
-		"prompt": "Risk score weightings change after a control framework update. How can administrators refresh historical incident scores under the new rules?",
+		"prompt": "A containment lead completes an isolation task on a priority-one security incident. Which record type tracks discrete analyst actions against the parent incident?",
 		"choices": [
-			"Run the Recalculate Score action to update scores via background processing",
-			"Manually edit risk score on each closed incident during live containment",
-			"Disable all calculators permanently and rely on priority labels only",
-			"Clone the production instance and discard prior incident metrics"
+			"Security incident response tasks linked to the parent incident",
+			"Discovery schedules scanning affected subnets on a timer",
+			"Business service maps generated from machine learning candidates",
+			"Standard change request templates for catalog fulfillment"
 		],
 		"correctIndex": 0,
-		"explanation": "Recalculate Score applies updated Risk Score Calculator rules to existing incidents through a background job.",
+		"explanation": "Response tasks represent individual containment, investigation, and recovery actions executed during security incident handling.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/define-risk-score-calculator-rules-sir.html",
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/risk-score-calculator-related-tables.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/what-is-sir.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/si-denial-of-service-template.html"
+		],
+		"domain": "Security Incident Response Management"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 63,
-		"prompt": "A Flow Designer flow is linked to the security incident table for automated enrichment. When does that flow execute?",
+		"prompt": "An analyst must manually escalate a confirmed data breach to major incident status. Which action initiates MSIM workflows?",
 		"choices": [
-			"When the configured trigger condition for the flow is met on the target record",
-			"Only when an administrator manually runs the flow from Flow Designer weekly",
-			"After every incident reaches Closed Complete regardless of filter logic",
-			"Before any security incident record is inserted into the database unconditionally"
+			"Promote the security incident to major status and launch major incident procedures",
+			"Close the security incident and recreate it as a standard IT incident record",
+			"Convert the record to a change request awaiting emergency CAB approval",
+			"Delete child tasks and reopen the incident under a new assignment group only"
 		],
 		"correctIndex": 0,
-		"explanation": "Flows tied to Security Incident Response run when their defined trigger conditions evaluate true against the triggering record.",
+		"explanation": "Promoting an incident to major status triggers Major Security Incident Management procedures and associated collaboration workflows.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/define-trigger-conditions.html",
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/cj-sir-about-flows.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/manage-major-security-incidents.html"
+		],
+		"domain": "Security Incident Response Management"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 64,
-		"prompt": "Employees forward suspicious messages to a dedicated phishing mailbox. Which SIR capability validates those messages and can initiate response workflows?",
+		"prompt": "A SecOps program needs phishing, malware, and policy violations to follow different automated response paths. Which configuration drives those variations?",
 		"choices": [
-			"User-reported phishing email parsing rules with automated phishing playbooks",
-			"CMDB identification rules for cmdb_ci_email_server class records",
-			"Discovery credentials scanning Microsoft Exchange subnets nightly",
-			"Service catalog checkout workflows for employee password resets"
+			"Security incident categories and subcategories mapped to playbooks",
+			"Universal request templates shared across all ITSM record types",
+			"Global UI16 theme settings controlling form color palettes",
+			"Reconciliation rules on cmdb_ci_computer hostname attributes"
 		],
 		"correctIndex": 0,
-		"explanation": "Report-phish email processing validates user submissions against organizational rules and can trigger phishing response automation.",
+		"explanation": "Category and subcategory management ties incident types to the playbooks and workflows that govern each response path.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/report-phish-email.html",
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/using-automated-phishing-playbook.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/category-management-sir.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-playbook.html"
+		],
+		"domain": "Security Incident Response Management"
 	}
 ]

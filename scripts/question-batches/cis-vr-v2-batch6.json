@@ -13,7 +13,8 @@
 		"explanation": "When CI lookup rules cannot match scanner asset data, VR creates an unmatched CI with the vulnerable item so analysts can reconcile later when CMDB data is updated.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/mstvm-integration.html"
-		]
+		],
+		"domain": "Getting Data into Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -29,7 +30,8 @@
 		"explanation": "Vulnerability Response enriches ingested data with exploit, threat intelligence, risk, and business context to support risk-based prioritization beyond raw scanner severity.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
-		]
+		],
+		"domain": "Getting Data into Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -45,7 +47,8 @@
 		"explanation": "The sn_vul.populate_scanner_solutions property controls parsing of solution guidance supplied by supported third-party scanner integrations into VR records.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
-		]
+		],
+		"domain": "Getting Data into Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -61,7 +64,8 @@
 		"explanation": "When Solution Management is installed, Setup Assistant exposes Solution Integrations to configure providers such as Red Hat and Microsoft Security Response Center.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
-		]
+		],
+		"domain": "Getting Data into Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -77,6 +81,7 @@
 		"explanation": "NVD integration documentation specifies VR.System as the default run-as user for integration records and advises administrators not to change that value.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/nvd-vuln-integration.html"
-		]
+		],
+		"domain": "Getting Data into Vulnerability Response"
 	}
 ]

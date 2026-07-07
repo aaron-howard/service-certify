@@ -13,7 +13,8 @@
 		"explanation": "The MS TVM delta machines vulnerabilities integration retrieves changes since the full import, including new, remediated, and updated detections across the estate.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/mstvm-integration.html"
-		]
+		],
+		"domain": "Getting Data into Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -29,7 +30,8 @@
 		"explanation": "Tenable integrations populate CPE associations on third-party vulnerability entries, supporting software identification and enrichment for prioritization.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/tenableIntegration.html"
-		]
+		],
+		"domain": "Getting Data into Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -45,7 +47,8 @@
 		"explanation": "Administrators verify successful NVD data import by reviewing integration run status before importing third-party scanner detections that reference NVD libraries.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/nvd-vuln-integration.html"
-		]
+		],
+		"domain": "Getting Data into Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -61,7 +64,8 @@
 		"explanation": "VR creates vulnerable items even when CI lookup fails, associating them with unmatched CIs until reconciliation or CMDB updates provide a definitive configuration item.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/mstvm-integration.html"
-		]
+		],
+		"domain": "Tools to Manage Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -77,6 +81,7 @@
 		"explanation": "NVD library entries describe the vulnerability itself, while vulnerable items represent a specific detection of that flaw on a configuration item in the environment.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/nvd-vuln-integration.html"
-		]
+		],
+		"domain": "Tools to Manage Vulnerability Response"
 	}
 ]

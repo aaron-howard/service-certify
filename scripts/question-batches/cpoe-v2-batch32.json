@@ -13,7 +13,8 @@
 		"explanation": "Debt funding cases connect remediation to measurable risk, upgrade readiness, and incident cost—not vague requests or crisis-only timing.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	},
 	{
 		"trackCode": "CPOE",
@@ -35,15 +36,28 @@
 			"Confirm decommission criteria are met and remove obsolete components safely"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Legacy deprecation progresses through discovery, impact analysis, governed migration, and verified retirement—not skipped phases.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	},
 	{
 		"trackCode": "CPOE",
@@ -59,7 +73,8 @@
 		"explanation": "Reconciliation governance combines rules, ownership, and measurable health reviews; disabling rules or uncontrolled creation worsens data quality.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-governance.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	},
 	{
 		"trackCode": "CPOE",
@@ -75,13 +90,14 @@
 		"explanation": "Governance conflicts are resolved through joint alignment on standards and value—not unilateral overrides, cancellation without options, or retroactive approval.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/demand-governance.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	},
 	{
 		"trackCode": "CPOE",
 		"order": 159,
 		"questionType": "multi",
-		"prompt": "Given a case study launching CSDM-aligned service mapping, which governance investments should the platform owner secure? (Choose two.)",
+		"prompt": "When CMDB proposals lack mapping, cSDM-aligned service mapping, which governance investments should the platform owner secure? (Choose two.)",
 		"choices": [
 			"Named data stewards for foundation classes with escalation paths for quality defects",
 			"Service mapping workshops that tie technical CIs to business services and owners",
@@ -89,10 +105,14 @@
 			"Exemption from executive reporting until CMDB completeness reaches one hundred percent"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "CSDM success requires stewards, escalation, and business-aligned mapping—not premature connector removal or absent executive visibility.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-governance.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	}
 ]

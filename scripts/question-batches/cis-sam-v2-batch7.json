@@ -13,7 +13,8 @@
 		"explanation": "When licensing rights differ by edition or version, separate software models are required for accurate reconciliation and publisher reporting.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/create-a-software-model.html"
-		]
+		],
+		"domain": "Data Integrity Attributes and Sources"
 	},
 	{
 		"trackCode": "CIS-SAM",
@@ -29,7 +30,8 @@
 		"explanation": "Unmatched discoveries should be normalized by mapping to the correct software model so usage and compliance rollups remain accurate.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/map-discovered-software.html"
-		]
+		],
+		"domain": "Data Integrity Attributes and Sources"
 	},
 	{
 		"trackCode": "CIS-SAM",
@@ -45,7 +47,8 @@
 		"explanation": "Model governance ensures data quality and prevents duplicate mappings that distort compliance and optimization insights.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-model-normalization-governance.html"
-		]
+		],
+		"domain": "Data Integrity Attributes and Sources"
 	},
 	{
 		"trackCode": "CIS-SAM",
@@ -61,7 +64,8 @@
 		"explanation": "Compliance depends on comparing installed software against licensed rights, and software models are the shared link across those records.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
-		]
+		],
+		"domain": "Data Integrity Attributes and Sources"
 	},
 	{
 		"trackCode": "CIS-SAM",
@@ -77,6 +81,7 @@
 		"explanation": "Attaching entitlement evidence supports defensible license positions and reduces response time during publisher audits and true-ups.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/entitlement-audit-preparation.html"
-		]
+		],
+		"domain": "Data Integrity Attributes and Sources"
 	}
 ]

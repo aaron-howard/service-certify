@@ -13,7 +13,8 @@
 		"explanation": "Third-party portal users typically navigate to the instance URL followed by /svdp to reach the vendor collaboration interface.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-add-document-portal.html"
-		]
+		],
+		"domain": "Third-party Portal"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -26,12 +27,16 @@
 			"Edit scoring rules on sn_vdr_risk_asmt_vendor_risk_scoring_rule"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"questionType": "multi",
 		"explanation": "Portal contacts complete assigned assessments and maintain their contact roster; approval and scoring configuration remain internal functions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-reference.html"
-		]
+		],
+		"domain": "Third-party Portal"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -47,7 +52,8 @@
 		"explanation": "The portal supports uploading and managing documents such as policies and compliance evidence tied to assessments and engagements.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-add-document-portal.html"
-		]
+		],
+		"domain": "Third-party Portal"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -63,7 +69,8 @@
 		"explanation": "Third parties can download spreadsheet templates from the portal, fill them offline, and import completed responses back into the assessment.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-reference.html"
-		]
+		],
+		"domain": "Third-party Portal"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -79,6 +86,7 @@
 		"explanation": "Document permissions in the portal let the primary contact manage which contacts can read or update shared files.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-add-document-portal.html"
-		]
+		],
+		"domain": "Third-party Portal"
 	}
 ]

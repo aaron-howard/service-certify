@@ -9,15 +9,17 @@ Base URL: `https://raw.githubusercontent.com/ServiceNow/ServiceNowDocs/australia
 
 ---
 
-## Exam domain quotas (90 questions = 60 official × 1.5)
+## Exam domain quotas (90 questions)
 
-| # | Domain | % | Bank | Orders |
-|---|--------|---|------|--------|
-| 1 | Software Asset Core Overview and Fundamentals | 14% | 13 | 0–12 |
-| 2 | Data Integrity – Attributes and Sources | 28% | 25 | 13–37 |
-| 3 | Practical Management of Software Compliance | 30% | 27 | 38–64 |
-| 4 | Operational Integration of Software Processes | 13% | 12 | 65–76 |
-| 5 | Extending SAM | 15% | 13 | 77–89 |
+| # | Domain | Bank | Orders |
+|---|--------|------|--------|
+| 1 | SAM Overview and Fundamentals | 10 | 0–9 |
+| 2 | SAM Strategy and Optimization | 11 | 10–20 |
+| 3 | Implementation Planning | 9 | 21–29 |
+| 4 | Data Integrity – Attributes and Sources | 18 | 30–47 |
+| 5 | Practical Management of Software Compliance | 22 | 48–69 |
+| 6 | Operational Integration of Software Processes | 13 | 70–82 |
+| 7 | Cloud and SaaS Management | 7 | 83–89 |
 
 ---
 
@@ -34,24 +36,24 @@ Multi-select allowed with `questionType: "multi"` and `correctIndexes`.
 
 | Batch | Orders | Domain | Status |
 |-------|--------|--------|--------|
-| 1 | 0–4 | Core Overview and Fundamentals | **DONE** |
-| 2 | 5–9 | Core Overview and Fundamentals | **DONE** |
-| 3 | 10–14 | Core Overview (10–12) + Data Integrity (13–14) | **DONE** |
-| 4 | 15–19 | Data Integrity | **DONE** |
-| 5 | 20–24 | Data Integrity | **DONE** |
-| 6 | 25–29 | Data Integrity | **DONE** |
+| 1 | 0–4 | SAM Overview | **DONE** |
+| 2 | 5–9 | SAM Overview | **DONE** |
+| 3 | 10–14 | SAM Strategy | **DONE** |
+| 4 | 15–19 | SAM Strategy | **DONE** |
+| 5 | 20–24 | Strategy + Implementation | **DONE** |
+| 6 | 25–29 | Implementation Planning | **DONE** |
 | 7 | 30–34 | Data Integrity | **DONE** |
-| 8 | 35–39 | Data Integrity (35–37) + Software Compliance (38–39) | **DONE** |
-| 9 | 40–44 | Software Compliance | **DONE** |
-| 10 | 45–49 | Software Compliance | **DONE** |
+| 8 | 35–39 | Data Integrity | **DONE** |
+| 9 | 40–44 | Data Integrity | **DONE** |
+| 10 | 45–49 | Data Integrity + Compliance | **DONE** |
 | 11 | 50–54 | Software Compliance | **DONE** |
 | 12 | 55–59 | Software Compliance | **DONE** |
 | 13 | 60–64 | Software Compliance | **DONE** |
-| 14 | 65–69 | Operational Integration | **DONE** |
+| 14 | 65–69 | Software Compliance | **DONE** |
 | 15 | 70–74 | Operational Integration | **DONE** |
-| 16 | 75–79 | Operational Integration (75–76) + Extending SAM (77–79) | **DONE** |
-| 17 | 80–84 | Extending SAM | **DONE** |
-| 18 | 85–89 | Extending SAM | **DONE** |
+| 16 | 75–79 | Operational Integration | **DONE** |
+| 17 | 80–84 | Operational + Cloud/SaaS | **DONE** |
+| 18 | 85–89 | Cloud and SaaS Management | **DONE** |
 
 ---
 
@@ -68,8 +70,10 @@ Multi-select allowed with `questionType: "multi"` and `correctIndexes`.
 ## Merge and validate
 
 ```bash
+node scripts/tag-cis-sam-domains.mjs
 node scripts/extract-questions-from-transcripts.mjs --merge-batches scripts/question-batches/cis-sam-v2-batch*.json
+node scripts/balance-choice-lengths.mjs
+node scripts/rebalance-question-choices.mjs
 node scripts/lint-cis-sam-realism.mjs --orders=0-89
-npm test -- --run src/convex/seed/cis-sam-realism.test.ts src/convex/seed/trackQuality.test.ts src/convex/seed/devQuestionBank.test.ts
-# After merge: npm run seed:dev:questions
+npm test -- --run src/convex/seed/cis-sam-realism.test.ts src/convex/seed/trackQuality.test.ts
 ```

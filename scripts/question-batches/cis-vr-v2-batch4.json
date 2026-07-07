@@ -13,7 +13,8 @@
 		"explanation": "Vulnerability Response automates the end-to-end flow from data ingestion and enrichment through remediation task assignment and post-fix verification.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
-		]
+		],
+		"domain": "VR Applications and Modules"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -29,7 +30,8 @@
 		"explanation": "Vulnerability Response applies grouping and correlation rules to consolidate related vulnerable items and reduce redundant remediation effort.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
-		]
+		],
+		"domain": "VR Applications and Modules"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -45,7 +47,8 @@
 		"explanation": "Vulnerability Response supports change and exception management when remediation requires approved maintenance windows or formal risk acceptance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
-		]
+		],
+		"domain": "VR Applications and Modules"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -61,7 +64,8 @@
 		"explanation": "VR verifies remediation by processing updated detections from integrated scanner products and reflecting fixed findings on vulnerable item records.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
-		]
+		],
+		"domain": "VR Applications and Modules"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -77,6 +81,7 @@
 		"explanation": "Scanner libraries store vulnerability definitions (such as QIDs referencing CVEs), while vulnerable items represent a specific flaw detected on a particular configuration item.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/nvd-vuln-integration.html"
-		]
+		],
+		"domain": "Getting Data into Vulnerability Response"
 	}
 ]

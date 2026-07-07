@@ -14,7 +14,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html",
 			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/common-service-data-model/concept/csdm-overview.html"
-		]
+		],
+		"domain": "Data"
 	},
 	{
 		"trackCode": "CPOA",
@@ -31,7 +32,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/cloud-governance-suite/concept/cloud-governance-suite.html",
 			"https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/security/concept/c_Hardening.html"
-		]
+		],
+		"domain": "Data"
 	},
 	{
 		"trackCode": "CPOA",
@@ -47,7 +49,8 @@
 		"explanation": "Strategic Planning Workspace supports prioritizing initiatives against objectives and expected value with clear sponsorship—not ad hoc production access or environment shortcuts.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/washingtondc-impact/page/impact/strategic-planning-workspace/concept/strategic-planning-workspace.html"
-		]
+		],
+		"domain": "Data"
 	},
 	{
 		"trackCode": "CPOA",
@@ -69,16 +72,29 @@
 			"Verifies elevated roles remain justified and reduces unauthorized entitlement risk"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Compliance scenarios span master data certification, retention controls, analytics integrity, and access governance—each addressing a distinct risk platform owners must manage.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/common-service-data-model/concept/csdm-foundation-data.html",
 			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/table-administration/concept/c_TableRotationAndArchival.html"
-		]
+		],
+		"domain": "Data"
 	},
 	{
 		"trackCode": "CPOA",
@@ -92,11 +108,15 @@
 			"Allow each team to create private category values without a shared reference list"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Audit findings on skewed dashboards require governed categorization ownership and validated PA sources—not hidden breakdowns or unconstrained local values.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html",
 			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/cloud-governance-suite/concept/cloud-governance-suite.html"
-		]
+		],
+		"domain": "Data"
 	}
 ]

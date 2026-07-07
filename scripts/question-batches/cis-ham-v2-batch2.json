@@ -13,13 +13,14 @@
 		"explanation": "Hardware Asset Workspace provides a single-pane view of the hardware estate, Important Actions, normalization status, and lifecycle priorities.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/exploring-ham.html"
-		]
+		],
+		"domain": "IT Asset Management Overview and Fundamentals"
 	},
 	{
 		"trackCode": "CIS-HAM",
 		"order": 6,
 		"questionType": "multi",
-		"prompt": "Which two roles commonly grant operational access to Hardware Asset Management tasks? (Choose two.)",
+		"prompt": "A new HAM program must separate day-to-day stockroom operators from workspace administrators. Which roles should be assigned? (Choose two.)",
 		"choices": [
 			"The asset role for day-to-day hardware asset and stockroom operations",
 			"The ham_admin role for full Hardware Asset Management administration",
@@ -27,17 +28,21 @@
 			"The evt_mgmt_admin role for Event Management connector administration only"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "The asset role supports routine HAM operations while ham_admin provides full administrative access to HAM features and workspace configuration.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/ham-landing-page.html",
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/create-hardware-consumable-model.html"
-		]
+		],
+		"domain": "IT Asset Management Overview and Fundamentals"
 	},
 	{
 		"trackCode": "CIS-HAM",
 		"order": 7,
-		"prompt": "How does base ITSM Asset Management differ from the Hardware Asset Management application?",
+		"prompt": "Procurement wants automated receiving and catalog fulfillment but finance still needs capital tracking on the same devices. Why implement HAM instead of base Asset Management alone?",
 		"choices": [
 			"HAM adds advanced stockroom, fulfillment, and lifecycle automation for hardware",
 			"HAM removes procurement integration that is available in base Asset Management deployments",
@@ -48,7 +53,8 @@
 		"explanation": "HAM builds on base asset tracking with prescriptive workflows, stockroom precision, catalog fulfillment, and hardware-specific automation.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/ham-landing-page.html"
-		]
+		],
+		"domain": "IT Asset Management Overview and Fundamentals"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -64,12 +70,13 @@
 		"explanation": "HAM Guided Setup provides an ordered task sequence to configure plugins, roles, stockrooms, models, and fulfillment foundations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/exploring-ham.html"
-		]
+		],
+		"domain": "IT Asset Management Overview and Fundamentals"
 	},
 	{
 		"trackCode": "CIS-HAM",
 		"order": 9,
-		"prompt": "Which plugin dependency is activated when the Hardware Asset Management application is enabled?",
+		"prompt": "During plugin activation, the implementation team needs automatic manufacturer and model standardization for imported hardware records. Which dependency activates with HAM?",
 		"choices": [
 			"Hardware Model Normalization (com.sn_hwnorm)",
 			"Software Asset Management Publisher Pack for Adobe licensing reconciliation only",
@@ -80,6 +87,7 @@
 		"explanation": "The Hardware Model Normalization plugin activates with HAM to standardize manufacturer, product, model, and device type data on hardware models.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/hardware-normalization.html"
-		]
+		],
+		"domain": "IT Asset Management Overview and Fundamentals"
 	}
 ]

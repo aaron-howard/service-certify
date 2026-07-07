@@ -2,7 +2,7 @@
 	{
 		"trackCode": "CIS-HR",
 		"order": 70,
-		"prompt": "How can HR teams monitor lifecycle event progress for a cohort of new hires?",
+		"prompt": "HR operations must report onboarding completion rates and stalled activities for each hiring cohort. Which capability supports that journey measurement?",
 		"choices": [
 			"Lifecycle dashboards and HR task lists showing activity completion status",
 			"CMDB dependency views only",
@@ -13,7 +13,8 @@
 		"explanation": "Operational views track open lifecycle tasks and highlight stalled activities across onboarding cohorts.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-reporting-and-analytics.html"
-		]
+		],
+		"domain": "HR Journeys"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -29,7 +30,8 @@
 		"explanation": "Governed promotion of scoped lifecycle changes reduces regression risk for employee-critical processes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
-		]
+		],
+		"domain": "HR Journeys"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -45,12 +47,13 @@
 		"explanation": "Table and field ACLs enforce record access in conjunction with HR-specific roles assigned to users and groups.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
-		]
+		],
+		"domain": "Platform, Role, and Contextual Security"
 	},
 	{
 		"trackCode": "CIS-HR",
 		"order": 73,
-		"prompt": "What is contextual security in HR Service Delivery?",
+		"prompt": "Managers should view cases for direct reports but not unrelated employee investigations. Which security model enforces that contextual access?",
 		"choices": [
 			"HR criteria and case access rules based on employee relationship to the record",
 			"Global admin access to all cases",
@@ -61,7 +64,8 @@
 		"explanation": "Contextual security limits case visibility using HR criteria such as opened_for, subject person, and COE membership.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
-		]
+		],
+		"domain": "Platform, Role, and Contextual Security"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -77,6 +81,7 @@
 		"explanation": "Users receive HR roles for authorized capabilities; ACLs evaluate each database operation against those roles and conditions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
-		]
+		],
+		"domain": "Platform, Role, and Contextual Security"
 	}
 ]

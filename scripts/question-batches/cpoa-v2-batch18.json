@@ -14,7 +14,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html",
 			"https://www.servicenow.com/docs/bundle/washingtondc-impact/page/impact/strategic-planning-workspace/concept/strategic-planning-workspace.html"
-		]
+		],
+		"domain": "Data"
 	},
 	{
 		"trackCode": "CPOA",
@@ -28,12 +29,16 @@
 			"IntegrationHub flow that deletes resolved incidents to improve trend appearance"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Trend monitoring belongs in Performance Analytics while point-in-time breach lists are operational reports—each serves a distinct associate-level analytics need.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html",
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/reporting/concept/reporting-overview.html"
-		]
+		],
+		"domain": "Data"
 	},
 	{
 		"trackCode": "CPOA",
@@ -50,7 +55,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-administration/concept/platform-governance.html",
 			"https://www.servicenow.com/docs/bundle/washingtondc-impact/page/impact/impact.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	},
 	{
 		"trackCode": "CPOA",
@@ -70,15 +76,25 @@
 			"Solution design reviews, coding standards, and release quality controls"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			}
 		],
 		"explanation": "Three governance levels divide responsibilities: strategy sets direction, portfolio allocates investment, and technical execution ensures quality within guardrails.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-administration/concept/platform-governance.html",
 			"https://www.servicenow.com/docs/bundle/washingtondc-impact/page/impact/impact.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	},
 	{
 		"trackCode": "CPOA",
@@ -95,6 +111,7 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/cloud-governance-suite/concept/cloud-governance-suite.html",
 			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/subscription-management/concept/subscription-management.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	}
 ]

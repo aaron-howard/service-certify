@@ -2,6 +2,47 @@
 	{
 		"trackCode": "CIS-SP",
 		"order": 55,
+		"prompt": "During a tenant bulk user load, a transform map maps a source company code to a sys_user.company reference. What reduces cross-domain reference errors?",
+		"choices": [
+			"Qualify company lookups to the target tenant domain and validate matches before insert",
+			"Disable reference fields on sys_user during import to improve transform throughput",
+			"Coalesce exclusively on email while ignoring company reference resolution",
+			"Import users into global and reassign domains with a UI action after the load completes"
+		],
+		"correctIndex": 0,
+		"explanation": "Reference resolution must respect domain visibility so imported users link to company records in the same tenant scope.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/task/t_CreateATransformMap.html",
+			"https://www.servicenow.com/docs/r/platform-security/bp-dom-sep-definition.html"
+		],
+		"domain": "Foundational Data Management"
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 56,
+		"questionType": "multi",
+		"prompt": "A recurring tenant location import must update existing rows instead of creating duplicates. Which transform map settings should the implementation team configure? (Choose two.)",
+		"choices": [
+			"Mark stable natural keys as coalesce fields on the transform map",
+			"Map the domain column so updates stay within the correct tenant scope",
+			"Disable transform scripts to prevent any field mapping from executing",
+			"Set Run business rules to false on every production import run"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Coalesce fields enable upsert behavior while explicit domain mapping keeps updates scoped to the intended tenant.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_Coalescing.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/task/t_CreateATransformMap.html"
+		],
+		"domain": "Foundational Data Management"
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 57,
 		"prompt": "In domain-separated foundational data loads, why is staging data in an import set table before transform execution recommended?",
 		"choices": [
 			"It isolates raw source payloads for validation and transformation before updating tenant production tables",
@@ -13,39 +54,8 @@
 		"explanation": "Import set staging provides a controlled landing zone to validate and transform inbound data before promoting records into tenant tables.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_ImportSets.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SP",
-		"order": 56,
-		"prompt": "What behavior do coalesce fields enable when the same tenant reference file is imported weekly?",
-		"choices": [
-			"Matching existing target rows for update instead of inserting duplicate records",
-			"Skipping transform map execution whenever any source column value changes",
-			"Routing all rows to the global domain during the first import run only",
-			"Encrypting source values before they reach the staging table"
 		],
-		"correctIndex": 0,
-		"explanation": "Coalesce fields define match keys between source and target, supporting repeatable upsert behavior across scheduled loads.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_Coalescing.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SP",
-		"order": 57,
-		"prompt": "A data engineer maps straightforward source columns in a tenant location import. When is a declarative field map preferred over an onBefore script?",
-		"choices": [
-			"When source-to-target assignments are direct and do not require complex conditional logic",
-			"When every imported row must be forced into the TOP process domain",
-			"When coalesce must be disabled to guarantee inserts on every run",
-			"When reference fields should be removed from the target table schema"
-		],
-		"correctIndex": 0,
-		"explanation": "Declarative field maps keep simple mappings readable and maintainable, reserving scripts for exceptional transformation logic.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/task/t_CreateATransformMap.html"
-		]
+		"domain": "Foundational Data Management"
 	},
 	{
 		"trackCode": "CIS-SP",
@@ -62,7 +72,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/task/t_CreateATransformMap.html",
 			"https://www.servicenow.com/docs/r/platform-security/bp-dom-sep-definition.html"
-		]
+		],
+		"domain": "Foundational Data Management"
 	},
 	{
 		"trackCode": "CIS-SP",
@@ -76,11 +87,15 @@
 			"Business rules are globally deactivated during every scheduled load window"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Production tenant loads require correct domain stamping and stable coalesce keys to prevent cross-tenant defects and duplicate records.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_ImportSets.html",
 			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_Coalescing.html"
-		]
+		],
+		"domain": "Foundational Data Management"
 	}
 ]

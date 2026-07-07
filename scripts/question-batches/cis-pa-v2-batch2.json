@@ -13,7 +13,8 @@
 		"explanation": "KPI Composer aligns stakeholders on goals and measurements top-down; implementers then build indicator sources, indicators, and jobs bottom-up from platform tables.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/designing-pa-solution.html"
-		]
+		],
+		"domain": "Architecture and Deployment"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -29,7 +30,8 @@
 		"explanation": "The standard workflow requires verifying that no suitable indicator source or indicator already exists before creating duplicates.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/workflow-automated-indicators.html"
-		]
+		],
+		"domain": "Architecture and Deployment"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -45,7 +47,8 @@
 		"explanation": "KPI Composer KPI trees visualize how business goals, success factors, and measurements connect so sponsors and implementers share the same scope.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/designing-pa-solution.html"
-		]
+		],
+		"domain": "Architecture and Deployment"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -59,11 +62,15 @@
 			"Convert the indicator to manual entry after the first successful collection"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "New indicators typically get a one-time historical backfill job plus an active scheduled job for recurring collection at the indicator frequency.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/workflow-automated-indicators.html"
-		]
+		],
+		"domain": "Architecture and Deployment"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -79,6 +86,7 @@
 		"explanation": "Automated indicators define the KPI measurement and aggregation logic on records returned by a shared indicator source.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_IndicatorSources.html"
-		]
+		],
+		"domain": "KPI Design and Strategy"
 	}
 ]

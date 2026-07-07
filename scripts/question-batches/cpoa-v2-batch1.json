@@ -13,7 +13,8 @@
 		"explanation": "Roadmap planning starts with business objectives, measured adoption, and known risks so investments align to outcomes the sponsor cares about.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOA",
@@ -29,7 +30,8 @@
 		"explanation": "Penetration testing requires coordination with the internal security team that owns security assessment processes, scope, and remediation follow-up.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOA",
@@ -45,7 +47,8 @@
 		"explanation": "Associate platform owners advocate for streamlined self-service journeys so users can complete frequent tasks with minimal friction.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-user-interface/platform-user-interface.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOA",
@@ -59,11 +62,15 @@
 			"Exclude upgrade and maintenance work because only new features belong in portfolio planning"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "PMO engagement requires structured demand with value and dependencies tied to enterprise priorities; bypassing intake or omitting maintenance creates planning blind spots.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOA",
@@ -85,14 +92,27 @@
 			"How much change can teams absorb in the next planning window?"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Roadmap inputs connect business intent, measured usage, risk posture, and capacity so sequencing decisions are evidence-based.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	}
 ]

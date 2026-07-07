@@ -14,7 +14,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html",
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Breakdowns.html"
-		]
+		],
+		"domain": "Data Visualization and Dashboards"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -31,7 +32,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_KPIDetails.html",
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
-		]
+		],
+		"domain": "Data Visualization and Dashboards"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -48,7 +50,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html",
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html"
-		]
+		],
+		"domain": "Data Visualization and Dashboards"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -65,7 +68,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html",
 			"https://www.servicenow.com/docs/bundle/zurich-platform-user-interface/page/administer/navigation/concept/c_NextExperienceUnifiedNavigation.html"
-		]
+		],
+		"domain": "Data Visualization and Dashboards"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -79,11 +83,15 @@
 			"Hide threshold coloring on all widgets so filtered segments always appear green"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Filter rollouts should validate role-specific behavior and align filters to governed breakdowns so segmented views remain accurate and authorized.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html",
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Breakdowns.html"
-		]
+		],
+		"domain": "Data Visualization and Dashboards"
 	}
 ]

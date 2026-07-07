@@ -13,7 +13,8 @@
 		"explanation": "A mature innovation roadmap integrates benchmarked automation, federated CoEI scaling, and governed citizen development—not ungoverned builders, centralized bottlenecks, or vendor-only delivery.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Innovation"
 	},
 	{
 		"trackCode": "CPOE",
@@ -35,14 +36,27 @@
 			"Directs investment toward high-ROI manual processes identified through peer performance gaps"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Each innovation element delivers a distinct executive outcome: architectural alignment, governed capacity expansion, scalable methods, and benchmark-informed investment.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
-		]
+		],
+		"domain": "Innovation"
 	}
 ]

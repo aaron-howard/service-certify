@@ -13,7 +13,8 @@
 		"explanation": "Upgrade process guidance requires validating critical workflows in sub-production before production cutover so customization impact is understood early.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/upgrade-center.html"
-		]
+		],
+		"domain": "Process"
 	},
 	{
 		"trackCode": "CPOA",
@@ -29,7 +30,8 @@
 		"explanation": "Controlled promotion flows move tracked changes through preview, test validation, and approved production commit rather than bypassing environments.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/system-update-sets.html"
-		]
+		],
+		"domain": "Process"
 	},
 	{
 		"trackCode": "CPOA",
@@ -51,15 +53,28 @@
 			"Execute the upgrade with documented rollback criteria and stakeholder communication"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "The upgrade lifecycle sequences preparation, staged validation, conflict resolution, and governed production execution to reduce surprise and rollback frequency.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/upgrade-center.html"
-		]
+		],
+		"domain": "Process"
 	},
 	{
 		"trackCode": "CPOA",
@@ -75,7 +90,8 @@
 		"explanation": "Full instance clones provide representative data and configuration for troubleshooting when paired with cleanup scripts and integration safeguards.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/instance-clone.html"
-		]
+		],
+		"domain": "Technology"
 	},
 	{
 		"trackCode": "CPOA",
@@ -89,10 +105,14 @@
 			"Automatic rollback of all plugins after each clone completes"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Data preservers protect designated datasets during clones while exclusions prevent unwanted tables from overwriting preserved reference data.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/clone-data-preservation.html"
-		]
+		],
+		"domain": "Technology"
 	}
 ]

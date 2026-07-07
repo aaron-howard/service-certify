@@ -15,6 +15,17 @@ export const CPOE_DOMAIN_TARGETS = {
 
 export const CPOE_BANK_SIZE = 222;
 
+export type CpoeDomain = keyof typeof CPOE_DOMAIN_TARGETS;
+
+export function domainForOrder(order: number): CpoeDomain {
+	if (order <= 46) return 'Strategy';
+	if (order <= 78) return 'Cost/Resource Planning';
+	if (order <= 121) return 'Implementation and Delivery';
+	if (order <= 160) return 'ServiceNow Governance';
+	if (order <= 193) return 'Compliance and Security';
+	return 'Innovation';
+}
+
 export const BANNED_CHOICE_PREFIXES = [
 	'Typically,',
 	'Operationally,',
@@ -41,6 +52,7 @@ export type CpoeQuestionRow = {
 	prompt: string;
 	choices: string[];
 	sourceUrls: string[];
+	domain?: string;
 	questionType?: QuestionType;
 	correctIndexes?: number[];
 	correctIndex?: number;
@@ -112,11 +124,41 @@ export function validateCpoeQuestion(q: CpoeQuestionRow): string[] {
 	return issues;
 }
 
+export function validateCpoeDomainTags(rows: CpoeQuestionRow[]): string[] {
+	const issues: string[] = [];
+	const domainCounts = Object.fromEntries(
+		Object.keys(CPOE_DOMAIN_TARGETS).map((d) => [d, 0])
+	) as Record<string, number>;
+
+	for (const q of rows) {
+		if (q.trackCode !== 'CPOE') return issues;
+		if (!q.domain) {
+			issues.push(`order ${q.order}: missing domain tag`);
+			continue;
+		}
+		const expected = domainForOrder(q.order);
+		if (q.domain !== expected) {
+			issues.push(`order ${q.order}: domain ${q.domain} does not match order quota ${expected}`);
+		}
+		domainCounts[q.domain]++;
+	}
+
+	for (const [domain, target] of Object.entries(CPOE_DOMAIN_TARGETS)) {
+		if (domainCounts[domain] !== target) {
+			issues.push(`domain ${domain}: expected ${target}, got ${domainCounts[domain] ?? 0}`);
+		}
+	}
+
+	return issues;
+}
+
 export function validateCpoeTrack(rows: CpoeQuestionRow[]): string[] {
 	const issues: string[] = [];
 	for (const q of rows) {
 		issues.push(...validateCpoeQuestion(q));
 	}
+
+	issues.push(...validateCpoeDomainTags(rows));
 
 	const openerCounts = new Map<string, number>();
 	for (const q of rows) {

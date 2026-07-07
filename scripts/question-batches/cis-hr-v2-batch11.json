@@ -2,7 +2,7 @@
 	{
 		"trackCode": "CIS-HR",
 		"order": 50,
-		"prompt": "Which table links employees to HR cases they opened or are affected by?",
+		"prompt": "An employee relations investigation must track both the requester and the subject employee on the same case. Which case design preserves that relationship?",
 		"choices": [
 			"hr_case with opened_for and subject person references",
 			"cmdb_ci_computer only",
@@ -13,7 +13,8 @@
 		"explanation": "HR cases reference the employee and subject person fields to identify who requested and who is impacted.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-management.html"
-		]
+		],
+		"domain": "Core HR Applications and Employee Center"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -29,7 +30,8 @@
 		"explanation": "One COE per service prevents conflicting ownership and simplifies operational metrics by functional area.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-centers-of-excellence.html"
-		]
+		],
+		"domain": "Core HR Applications and Employee Center"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -45,7 +47,8 @@
 		"explanation": "Templates prepopulate case data and instructions so agents handle similar requests consistently.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-templates.html"
-		]
+		],
+		"domain": "Core HR Applications and Employee Center"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -61,12 +64,13 @@
 		"explanation": "Branded Employee Center experiences reinforce familiarity and encourage employees to use official HR channels.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/employee-center/employee-center-overview.html"
-		]
+		],
+		"domain": "Core HR Applications and Employee Center"
 	},
 	{
 		"trackCode": "CIS-HR",
 		"order": 54,
-		"prompt": "What is a Lifecycle Event in HR Service Delivery?",
+		"prompt": "A hiring surge requires milestone-driven onboarding with sequenced IT, facilities, and orientation tasks. What should HR implement?",
 		"choices": [
 			"A defined employee milestone such as onboarding with orchestrated activities",
 			"A CMDB reconciliation job",
@@ -77,6 +81,7 @@
 		"explanation": "Lifecycle events coordinate cross-functional activities when employees join, change roles, or leave the organization.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
-		]
+		],
+		"domain": "HR Journeys"
 	}
 ]

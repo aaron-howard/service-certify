@@ -13,7 +13,8 @@
 		"explanation": "Improving onboarding through automated account setup, access, and equipment readiness maps directly to HR Service Delivery with Lifecycle Events, which orchestrates cross-departmental onboarding activities.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "People"
 	},
 	{
 		"trackCode": "CPOP",
@@ -29,7 +30,8 @@
 		"explanation": "KPIs must trace directly to the business objective. A time-based onboarding measure shows whether the ten-to-three-day commitment is being met; platform activity counts do not.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "People"
 	},
 	{
 		"trackCode": "CPOP",
@@ -43,12 +45,16 @@
 			"Asking the sponsor to personally review each update set before promotion"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Sponsors stay engaged through outcome-focused governance forums and by being asked to clear obstacles only they can remove; flooding them with operational noise erodes engagement.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html",
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
-		]
+		],
+		"domain": "People"
 	},
 	{
 		"trackCode": "CPOP",
@@ -70,15 +76,28 @@
 			"Role-based enablement on the new procedures they will execute daily"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Effective stakeholder management tailors the engagement mechanism to each group: sponsors need decision-ready insight, process owners need design influence, end users need adoption support, and fulfillers need enablement.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "People"
 	},
 	{
 		"trackCode": "CPOP",
@@ -94,6 +113,7 @@
 		"explanation": "Scalable support requires a structured platform team with clear roles governed by a Center of Excellence; heroics, shadow teams, and total outsourcing all fail as demand grows.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
-		]
+		],
+		"domain": "People"
 	}
 ]

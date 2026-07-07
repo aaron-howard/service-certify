@@ -13,7 +13,8 @@
 		"explanation": "TPRM remediation tasks on sn_vdr_risk_asmt_task carry assigned owners, due dates, and linkage back to the parent issue.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-workflow-in-workspace.html"
-		]
+		],
+		"domain": "Third-party Supporting Processes"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -29,7 +30,8 @@
 		"explanation": "Issue management can automatically close the parent issue when all associated remediation tasks are finished.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-workflow-in-workspace.html"
-		]
+		],
+		"domain": "Third-party Supporting Processes"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -45,7 +47,8 @@
 		"explanation": "Flow Designer can automate task creation when assessment results or issue conditions meet defined criteria.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-workflow-in-workspace.html"
-		]
+		],
+		"domain": "Third-party Supporting Processes"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -61,7 +64,8 @@
 		"explanation": "Submitted to Vendor makes the issue visible to the third-party contact for collaboration during remediation.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-workflow-in-workspace.html"
-		]
+		],
+		"domain": "Third-party Supporting Processes"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -77,6 +81,7 @@
 		"explanation": "Review state enables TPRM reviewers to validate remediation before the issue is closed complete or incomplete.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-roles.html"
-		]
+		],
+		"domain": "Third-party Supporting Processes"
 	}
 ]

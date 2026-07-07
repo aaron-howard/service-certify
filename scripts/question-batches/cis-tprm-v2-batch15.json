@@ -13,7 +13,8 @@
 		"explanation": "Portal users see assessments, tasks, issues, and evidence requests scoped to their third-party relationship.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-reference.html"
-		]
+		],
+		"domain": "Third-party Portal"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -29,7 +30,8 @@
 		"explanation": "Portal document management maintains version history so teams can review and add new revisions over time.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-add-document-portal.html"
-		]
+		],
+		"domain": "Third-party Portal"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -45,7 +47,8 @@
 		"explanation": "Document references connect uploaded files to assessments, engagements, issues, and tasks for traceable evidence linkage.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-add-document-portal.html"
-		]
+		],
+		"domain": "Third-party Portal"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -61,7 +64,8 @@
 		"explanation": "TPRM portal enhancements support Smart Assessment Engine delivery so external contacts can complete section-based questionnaires.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-sae-using.html"
-		]
+		],
+		"domain": "Third-party Portal"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -77,6 +81,7 @@
 		"explanation": "After assessments close, the due diligence request moves to Ready for TPRM approval and then Awaiting approval when sign-off is requested.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-approving.html"
-		]
+		],
+		"domain": "Third-party Supporting Processes"
 	}
 ]

@@ -2,7 +2,7 @@
 	{
 		"trackCode": "CPOE",
 		"order": 75,
-		"prompt": "Given a case study where finance requests a three-year total cost of ownership view before approving platform expansion, which cost planning artifact should the platform owner present first?",
+		"prompt": "After a merger discovery, finance requests a three-year total cost of ownership view before approving platform expansion, which cost planning artifact should the platform owner present first?",
 		"choices": [
 			"A TCO model covering licenses, implementation, operations, and change capacity by horizon",
 			"A spreadsheet listing only current subscription line items without labor estimates",
@@ -13,7 +13,8 @@
 		"explanation": "Executive cost planning requires a horizon-based TCO view that includes licenses, delivery, and ongoing operations—not isolated license rows or unrelated operational metrics.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Cost/Resource Planning"
 	},
 	{
 		"trackCode": "CPOE",
@@ -29,13 +30,14 @@
 		"explanation": "Capacity planning ties infrastructure sizing, operational staffing, and release cadence to forecasted demand so commitments remain achievable.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Cost/Resource Planning"
 	},
 	{
 		"trackCode": "CPOE",
 		"order": 77,
 		"questionType": "multi",
-		"prompt": "Given a scenario where three product lines compete for the same implementation budget, which resource allocation principles should the platform owner apply? (Choose two.)",
+		"prompt": "For ESG workflow reporting, three product lines compete for the same implementation budget, which resource allocation principles should the platform owner apply? (Choose two.)",
 		"choices": [
 			"Prioritize work that unlocks shared platform capabilities used by multiple teams",
 			"Fund initiatives with documented ROI and dependency alignment to the roadmap",
@@ -43,11 +45,15 @@
 			"Reserve all capacity for cosmetic portal changes until backlog is cleared"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Shared-capability investments and scored ROI alignment maximize enterprise value; political allocation and cosmetic-only funding undermine portfolio discipline.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Cost/Resource Planning"
 	},
 	{
 		"trackCode": "CPOE",
@@ -69,15 +75,28 @@
 			"Compare realized outcomes to approved investment baselines"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Cost planning artifacts serve distinct executive needs: forecasting capacity, structuring partner investment, governing run-rate spend, and validating benefits realization.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Cost/Resource Planning"
 	},
 	{
 		"trackCode": "CPOE",
@@ -93,6 +112,7 @@
 		"explanation": "Executive delivery updates emphasize outcomes, progress, risks, and sponsor decisions— not low-level technical detail or indefinite delay.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Implementation and Delivery"
 	}
 ]

@@ -13,7 +13,8 @@
 		"explanation": "Policy statements anchor internal standards and must stay linked to controls and citations when content changes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/policy-lifecycle-management.html"
-		]
+		],
+		"domain": "Policy and Compliance"
 	},
 	{
 		"trackCode": "CIS-RC",
@@ -30,7 +31,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/policy-lifecycle-management.html",
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/remediate-control-failures.html"
-		]
+		],
+		"domain": "Policy and Compliance"
 	},
 	{
 		"trackCode": "CIS-RC",
@@ -46,7 +48,8 @@
 		"explanation": "Structured attestation campaigns provide accountable, auditable confirmation of ongoing policy compliance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/attest-policy-compliance.html"
-		]
+		],
+		"domain": "Policy and Compliance"
 	},
 	{
 		"trackCode": "CIS-RC",
@@ -62,7 +65,8 @@
 		"explanation": "Common controls let teams test once and demonstrate coverage across multiple regulatory frameworks.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/manage-common-controls.html"
-		]
+		],
+		"domain": "Policy and Compliance"
 	},
 	{
 		"trackCode": "CIS-RC",
@@ -79,6 +83,7 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/control-testing-and-evidence.html",
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/compliance-metrics.html"
-		]
+		],
+		"domain": "Policy and Compliance"
 	}
 ]

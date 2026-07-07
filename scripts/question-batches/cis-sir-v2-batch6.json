@@ -2,83 +2,91 @@
 	{
 		"trackCode": "CIS-SIR",
 		"order": 25,
-		"prompt": "An analyst must manually escalate a confirmed data breach to major incident status. Which action initiates MSIM workflows?",
+		"prompt": "Before enabling production integrations, what readiness check should confirm staffing, runbooks, and escalation paths?",
 		"choices": [
-			"Promote the security incident to major status and launch major incident procedures",
-			"Close the security incident and recreate it as a standard IT incident record",
-			"Convert the record to a change request awaiting emergency CAB approval",
-			"Delete child tasks and reopen the incident under a new assignment group only"
+			"Organizational readiness review covering roles, on-call coverage, and documented response procedures",
+			"Deletion of all existing security incidents to simplify correlation testing in production",
+			"Disabling ACLs on security tables so every user can edit incidents during go-live",
+			"Skipping escalation design because store integrations require no analyst involvement"
 		],
 		"correctIndex": 0,
-		"explanation": "Promoting an incident to major status triggers Major Security Incident Management procedures and associated collaboration workflows.",
+		"explanation": "Go-live readiness validates that people, procedures, and escalation paths can support integrated alert ingestion and structured response.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/manage-major-security-incidents.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/setup-assistant-reference.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/assign-security-incident-roles.html"
+		],
+		"domain": "Implementation Planning"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 26,
-		"prompt": "Where are pre-built third-party integrations for Security Incident Response configured on the instance?",
+		"prompt": "Playbooks proliferate across teams with conflicting containment steps for the same incident category. What governance model keeps response procedures consistent?",
 		"choices": [
-			"Integration Configurations module in Security Operations",
-			"MID Server cluster properties under System Definition",
-			"Service Catalog Designer under IT Service Management",
-			"CMDB Data Manager under Configuration Management"
+			"Central playbook review, version control, and change approval before production promotion",
+			"Allow each analyst to maintain personal playbook variants without documentation",
+			"Disable all playbooks during active critical incidents to reduce automation risk",
+			"Route every response task through catalog fulfillment for hardware procurement"
 		],
 		"correctIndex": 0,
-		"explanation": "The Integration Configurations module lists and configures pre-built SIR integrations with external security tools.",
+		"explanation": "Playbook governance ensures approved, versioned response procedures are tested and promoted through controlled change processes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integration-configurations.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-playbook.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/getting-started-with-processes.html"
+		],
+		"domain": "Implementation Planning"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 27,
-		"prompt": "When connecting a SIEM to Security Incident Response, what does a typical inbound integration action accomplish?",
+		"prompt": "Legal, IT operations, and the SOC disagree on communication timing during major incidents. What implementation practice aligns stakeholders?",
 		"choices": [
-			"Creates or updates security incidents from normalized SIEM alert payloads",
-			"Replaces the CMDB with SIEM asset inventory as the sole source of truth",
-			"Disables all analyst ACLs so every user can edit security incidents",
-			"Converts vulnerability groups into catalog items for employee checkout"
+			"Defined RACI, war-room operating procedures, and pre-approved communication templates",
+			"Ad hoc email threads without incident record linkage or decision tracking",
+			"Routing every update through annual compliance attestation workflows only",
+			"Assigning all response tasks to a single catalog administrator without escalation paths"
 		],
 		"correctIndex": 0,
-		"explanation": "Inbound SIEM integration actions map alert data to security incident fields for automated creation and enrichment.",
+		"explanation": "Stakeholder alignment uses clear roles, war-room procedures, and approved communication paths so technical and business teams coordinate effectively.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integrate-security-tools.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-war-room-operations.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/major-security-incident-management.html"
+		],
+		"domain": "Implementation Planning"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 28,
-		"questionType": "multi",
-		"prompt": "Which two integration categories are commonly configured in SIR Integration Configurations? (Choose two.)",
+		"prompt": "A team validates SIR in sub-production before cutover. What testing scope should cover integrations and playbooks?",
 		"choices": [
-			"SIEM and security analytics platforms that send correlated alerts",
-			"Endpoint detection and response tools that export detection events",
-			"Payroll systems that calculate employee overtime accrual balances",
-			"Facilities management tools that track HVAC maintenance schedules"
+			"Representative alert samples, playbook execution, field mapping, and correlation behavior",
+			"Only UI theme changes on the analyst homepage without integration payloads",
+			"Discovery horizontal scans of unrelated printer subnets without security context",
+			"Catalog checkout flows for employee laptop requests without incident record creation"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
-		"explanation": "SIR pre-built integrations focus on security tools such as SIEM and EDR platforms that feed incidents and observables into the platform.",
+		"explanation": "Sub-production validation exercises realistic alert flows, playbook triggers, and field mapping before production promotion reduces response risk.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integration-configurations.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integration-configurations.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/verify-the-configured-trigger-conditions.html"
+		],
+		"domain": "Implementation Planning"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 29,
-		"prompt": "A security team wants phishing reports submitted through email to create SIR records automatically. Which integration pattern applies?",
+		"prompt": "Threat feed credentials work in dev but enrichment fails silently in staging. What integration test confirms threat intelligence end to end?",
 		"choices": [
-			"Email integration with inbound actions that parse messages into security incidents",
-			"Discovery pattern extensions that probe mailbox servers for open ports",
-			"Catalog record producers that fulfill laptop requests from email templates",
-			"Change management inbound actions that open normal changes from messages"
+			"Submit known observables and verify lookup results populate incident enrichment fields",
+			"Disable all calculators permanently and rely on manual priority labels only",
+			"Run discovery schedules against threat feed vendor subnets without API authentication",
+			"Validate only catalog variable formats on unrelated employee onboarding items"
 		],
 		"correctIndex": 0,
-		"explanation": "Email integrations use inbound actions to transform reported phishing messages into triage-ready security incidents.",
+		"explanation": "End-to-end TI testing uses known indicators to confirm feeds, credentials, and enrichment mappings return expected context on incidents.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integrate-security-tools.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/threat-intelligence-in-sir.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integration-configurations.html"
+		],
+		"domain": "Implementation Planning"
 	}
 ]

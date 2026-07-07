@@ -2,7 +2,7 @@
 	{
 		"trackCode": "CIS-HAM",
 		"order": 45,
-		"prompt": "Which of the following are examples of consumable assets in Hardware Asset Management? (Choose three.)",
+		"prompt": "A global rollout must track keyboards, mice, and cables by quantity while laptops remain serialized assets. Which model strategy supports 500+ consumable SKUs? (Choose three.)",
 		"choices": [
 			"CD",
 			"Keyboard",
@@ -10,12 +10,17 @@
 			"Laptop"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1, 2],
+		"correctIndexes": [
+			0,
+			1,
+			2
+		],
 		"questionType": "multi",
 		"explanation": "Consumables such as CDs, keyboards, and mice are tracked by quantity rather than as individually serialized hardware assets. Laptops are serialized hardware assets, not consumables.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/consumable-model-fields.html"
-		]
+		],
+		"domain": "Practical Management of IT Assets"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -31,7 +36,8 @@
 		"explanation": "Transfer orders formalize inventory movement between stockrooms while preserving shipment, receiving, and status history.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/create-transfer-order.html"
-		]
+		],
+		"domain": "Practical Management of IT Assets"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -47,7 +53,8 @@
 		"explanation": "Reconciliation compares system inventory to expected balances so teams can identify and correct the root cause of stock discrepancies.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/reconcile-hardware-inventory.html"
-		]
+		],
+		"domain": "Practical Management of IT Assets"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -63,12 +70,13 @@
 		"explanation": "Consumables can be included only on stockroom audits by setting Include consumables to Yes, which also drives the scan method behavior.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-audit-record-fields.html"
-		]
+		],
+		"domain": "Practical Management of IT Assets"
 	},
 	{
 		"trackCode": "CIS-HAM",
 		"order": 49,
-		"prompt": "When multiple assets ship under one transfer order, which flow handles processing of each line item?",
+		"prompt": "A transfer order ships twelve monitors with independent receiving tasks per line. Which process should process each shipment line?",
 		"choices": [
 			"The Transfer Order Line flow",
 			"The Discovery Status flow",
@@ -79,6 +87,7 @@
 		"explanation": "The Transfer Order flow tracks overall movement while the Transfer Order Line flow processes individual line items within the order.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/asset-management/transfer-order-flows.html"
-		]
+		],
+		"domain": "Practical Management of IT Assets"
 	}
 ]

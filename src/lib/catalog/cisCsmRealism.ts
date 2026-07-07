@@ -80,7 +80,7 @@ export type CisCsmQuestionRow = {
 	prompt: string;
 	choices: string[];
 	sourceUrls: string[];
-	domain?: CisCsmDomain;
+	domain?: string;
 	questionType?: QuestionType;
 	correctIndexes?: number[];
 	correctIndex?: number;

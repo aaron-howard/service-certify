@@ -13,7 +13,8 @@
 		"explanation": "Third-party Risk Management is delivered as part of the GRC suite alongside risk, compliance, and policy capabilities.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-reference.html"
-		]
+		],
+		"domain": "Other Application Relationships"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -29,7 +30,8 @@
 		"explanation": "The TPRM data model relates engagements to Risk records so third-party exposure rolls into enterprise risk management.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
-		]
+		],
+		"domain": "Other Application Relationships"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -42,12 +44,16 @@
 			"Project portfolio cost plan lines for capital expenditure forecasting"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"questionType": "multi",
 		"explanation": "Engagements connect to Risk and Control components so teams monitor residual risk and control compliance alongside assessments.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
-		]
+		],
+		"domain": "Other Application Relationships"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -63,7 +69,8 @@
 		"explanation": "Engagements relate to Control records from Policy and Compliance Management for control testing and attestation alignment.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
-		]
+		],
+		"domain": "Other Application Relationships"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -79,6 +86,7 @@
 		"explanation": "Monitoring signals should feed GRC risk and issue processes with governed reassessment and compliance follow-up.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-reference.html"
-		]
+		],
+		"domain": "Other Application Relationships"
 	}
 ]

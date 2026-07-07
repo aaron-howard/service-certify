@@ -2,7 +2,7 @@
 	{
 		"trackCode": "CPOE",
 		"order": 135,
-		"prompt": "Given a case study where executives define reliability and auditability as core organizational values, how should the platform owner align CMDB governance?",
+		"prompt": "For phased retail deployment, executives define reliability and auditability as core organizational values, how should the platform owner align CMDB governance?",
 		"choices": [
 			"Define CI classes, ownership, and quality thresholds that map directly to those values with executive-approved KPIs",
 			"Populate the CMDB opportunistically during incidents without ownership or quality targets",
@@ -13,7 +13,8 @@
 		"explanation": "CMDB governance aligned to organizational values translates executive priorities into CI scope, ownership, quality thresholds, and measurable KPIs.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/configuration-management.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	},
 	{
 		"trackCode": "CPOE",
@@ -29,7 +30,8 @@
 		"explanation": "Effective CMDB governance assigns stewards, reconciliation rules, and escalation paths before scale makes duplicate and conflicting data unmanageable.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/deduplicate-cis.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	},
 	{
 		"trackCode": "CPOE",
@@ -43,16 +45,20 @@
 			"Defer all discovery integration until CMDB completeness reaches one hundred percent"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Value-aligned CMDB governance connects services to supporting CIs for impact visibility and uses scorecards with accountable remediation—not incomplete or perfection-gated models.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	},
 	{
 		"trackCode": "CPOE",
 		"order": 138,
-		"prompt": "Given a scenario where audit findings cite incomplete CI ownership, how should the platform owner respond to the executive platform board?",
+		"prompt": "Before operations handoff, audit findings cite incomplete CI ownership, how should the platform owner respond to the executive platform board?",
 		"choices": [
 			"Present an ownership model, phased remediation plan, quality KPIs, and funding tied to risk reduction milestones",
 			"Commit to full CMDB accuracy within one week without resource or process changes",
@@ -63,7 +69,8 @@
 		"explanation": "Executive response to CMDB audit gaps requires an ownership model, phased plan, KPIs, and resourced milestones—not unrealistic timelines or accountability shifts.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	},
 	{
 		"trackCode": "CPOE",
@@ -85,14 +92,27 @@
 			"Transparent progress toward reliability and audit readiness goals"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "CMDB governance pillars translate into accountability, data trust, customer impact visibility, and measurable progress toward enterprise values.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/configuration-management.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	}
 ]

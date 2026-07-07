@@ -2,7 +2,7 @@
 	{
 		"trackCode": "CPOE",
 		"order": 120,
-		"prompt": "Given a case study where a ServiceNow program nears completion, which handoff deliverable best prepares operations teams for steady-state support?",
+		"prompt": "When upgrade and release collide, a ServiceNow program nears completion, which handoff deliverable best prepares operations teams for steady-state support?",
 		"choices": [
 			"Documented runbooks, support tier definitions, known-issue register, and training materials aligned to live workflows",
 			"A slide deck summarizing project budget without operational procedures",
@@ -13,7 +13,8 @@
 		"explanation": "Operations handoff requires actionable runbooks, support models, and training tied to live workflows—not budget summaries or informal credential sharing.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Implementation and Delivery"
 	},
 	{
 		"trackCode": "CPOE",
@@ -29,7 +30,8 @@
 		"explanation": "Production promotion requires verified test results, governed change approval, rollback readiness, and documented stakeholder consent.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/australia/install-and-upgrade/concept/c_UpgradeBestPractices.html"
-		]
+		],
+		"domain": "Implementation and Delivery"
 	},
 	{
 		"trackCode": "CPOE",
@@ -45,7 +47,8 @@
 		"explanation": "Release cadence governance uses a shared calendar, intake rules, and board oversight to balance speed with platform stability.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	},
 	{
 		"trackCode": "CPOE",
@@ -59,11 +62,15 @@
 			"Grant all developers admin access to accelerate ungoverned fixes"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Sustainable governance tracks technical debt transparently and assigns CMDB ownership with measurable health reviews—not reactive crisis management or ungoverned access.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-governance.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	},
 	{
 		"trackCode": "CPOE",
@@ -85,14 +92,27 @@
 			"Define CI ownership, data quality targets, and reconciliation policies"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Governance boards operate at different scopes: enterprise direction, demand prioritization, technical standards, and CMDB data stewardship.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/demand-governance.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	}
 ]

@@ -13,7 +13,8 @@
 		"explanation": "Match First execution stops at the first satisfied rule, giving administrators explicit control over which target date logic wins.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-target-rules.html"
-		]
+		],
+		"domain": "Tools to Manage Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -29,7 +30,8 @@
 		"explanation": "The Vulnerability Manager Workspace targets vulnerability program owners with strategic monitoring and prioritization capabilities.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/vulnerability-response/vulnerability-manager-workspace.html"
-		]
+		],
+		"domain": "Tools to Manage Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -45,7 +47,8 @@
 		"explanation": "The sn_vul.remediation_owner persona role grants users access to remediation tasks and vulnerable items assigned to them or their groups in the IT Remediation Workspace.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/vulnerability-response/vr-persona-overview.html"
-		]
+		],
+		"domain": "Tools to Manage Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -61,7 +64,8 @@
 		"explanation": "Calculators weight technical and business context so prioritization reflects both exploit potential and operational impact.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/vulnerability-response/vulnerability-calculators.html"
-		]
+		],
+		"domain": "Tools to Manage Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -74,12 +78,16 @@
 			"LDAP synchronization scheduled jobs"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"questionType": "multi",
 		"explanation": "Classification rules categorize intake data and assignment rules route vulnerable items to remediation groups; password and LDAP jobs are unrelated platform functions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/vulnerability-response/classification-rules.html",
 			"https://www.servicenow.com/docs/r/vulnerability-response/assignment-rules.html"
-		]
+		],
+		"domain": "Tools to Manage Vulnerability Response"
 	}
 ]

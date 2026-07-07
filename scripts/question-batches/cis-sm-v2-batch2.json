@@ -2,81 +2,91 @@
 	{
 		"trackCode": "CIS-SM",
 		"order": 5,
-		"prompt": "Within Pattern Designer, how do ordered steps inside a section support Service Mapping logic?",
+		"prompt": "Operations leadership asks how Service Mapping differs from a raw CMDB export for incident impact analysis. What design distinction should the architect explain?",
 		"choices": [
-			"They sequence data collection, parsing, and connection actions in a controlled execution order",
-			"They assign incident priority based on the number of mapped CIs in the service group and business criticality tier",
-			"They replace CMDB identification rules with manual relationship imports from spreadsheets",
-			"They convert business service records into technical service endpoints automatically"
+			"Service maps show runtime dependency paths between application components, not inventory lists alone",
+			"CMDB exports always include live traffic flows while maps store static hostname tables only",
+			"Service maps replace CMDB identification rules and eliminate the need for Discovery entirely",
+			"Inventory reports and service maps are identical because both list CIs alphabetically"
 		],
 		"correctIndex": 0,
-		"explanation": "Sections group related logic, and ordered steps within each section execute sequentially to collect, transform, and connect dependency data.",
+		"explanation": "Service topology design emphasizes dependency relationships and entry-driven tracing rather than flat configuration inventory.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-patterns-overview.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-get-started.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/business-services-and-application-services.html"
+		],
+		"domain": "Service Design Strategy"
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 6,
-		"prompt": "An implementer adds a temporary variable in Pattern Designer. What is the typical use of that variable?",
+		"prompt": "Before promoting maps to production, application owners require evidence that cross-tier dependencies are accurate. What validation approach should the team use?",
 		"choices": [
-			"Store parsed values or intermediate results for use in later steps within the same pattern run",
-			"Persist user session tokens across unrelated horizontal discovery schedules indefinitely",
-			"Override CMDB reconciliation rules for every CI class in the discovery scope",
-			"Replace Discovery credentials with encrypted values stored in a system property"
+			"Walkthroughs comparing map paths to architecture diagrams with owner sign-off on critical dependencies",
+			"Automatic acceptance of every suggested CI without reviewing connection direction or depth",
+			"Deletion of all generic application CIs so maps appear complete by hiding gaps",
+			"Disabling map refresh schedules permanently after the first successful run"
 		],
 		"correctIndex": 0,
-		"explanation": "Temporary variables hold intermediate data—such as parsed strings or matched groups—so subsequent steps can reference results from earlier operations.",
+		"explanation": "Design validation compares traced dependencies to known architecture and captures owner approval before operational reliance on maps.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/validate-service-map-results.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html"
+		],
+		"domain": "Service Design Strategy"
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 7,
-		"prompt": "What capability does the Pattern Designer command line console provide during pattern development?",
+		"prompt": "A service map for a claims system must show impact across web, API, and database tiers during outages. What design artifact supports that analysis?",
 		"choices": [
-			"Bulk import of service map schedules from external monitoring tools",
-			"Direct execution and testing of pattern commands against a selected target CI",
-			"Automatic generation of business service ownership records from LDAP groups",
-			"One-click deployment of tag-based mapping rules to cloud provider accounts"
+			"A layered application service map with upstream and downstream CI relationships from the entry point",
+			"A flat hardware asset report sorted by serial number without application context",
+			"An event management connector dashboard showing raw alert volume only",
+			"A catalog item list for employee laptop requests grouped by fulfillment group"
 		],
-		"correctIndex": 1,
-		"explanation": "The command line console lets implementers run individual pattern commands interactively to validate syntax and output before embedding them in steps.",
+		"correctIndex": 0,
+		"explanation": "Layered service maps expose cross-tier dependencies so teams can assess blast radius during incidents and planned changes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/create-a-service-map.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-kpis.html"
+		],
+		"domain": "Service Design Strategy"
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 8,
-		"prompt": "A pattern step uses a Match operation. What does this operation accomplish?",
+		"prompt": "Executives want simplified topology views while engineers need detailed CI paths. How should the mapping program address both audiences?",
 		"choices": [
-			"Compares collected text against a defined pattern to determine whether conditions are satisfied",
-			"Creates a CMDB relationship between two CIs without running any probe on the MID Server",
-			"Schedules the next service map run based on the current map completion timestamp",
-			"Encrypts credential aliases before they are sent to the target host for authentication"
+			"Define business and application service layers with drill-down maps for operational detail",
+			"Hide all middleware CIs from every view so executives and engineers see identical flat lists",
+			"Maintain separate unlinked spreadsheets for leadership because maps cannot support multiple views",
+			"Remove application services and map only cmdb_ci_computer records for all stakeholders"
 		],
 		"correctIndex": 0,
-		"explanation": "Match operations evaluate input—often command output or file content—against a pattern expression to drive conditional pattern flow.",
+		"explanation": "Service design should align business-facing summaries with detailed application maps that engineers use for troubleshooting and change analysis.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-patterns-overview.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/business-services-and-application-services.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html"
+		],
+		"domain": "Service Design Strategy"
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 9,
-		"prompt": "When should a Parse Variable operation be used in a Service Mapping pattern step?",
+		"prompt": "Two application teams disagree about ownership of a shared message broker appearing on both service maps. What design governance step should resolve the conflict?",
 		"choices": [
-			"When the step must extract structured values from text already stored in a pattern variable",
-			"When the step must delete stale CI relationships before the next horizontal discovery cycle across all subnets",
-			"When the step must assign a default business service owner from the assignment group table",
-			"When the step must disable SNMP traps on the target device during maintenance windows"
+			"Assign authoritative service ownership and represent the broker once with relationships to both consumers",
+			"Create duplicate broker CIs with different names so each team owns an isolated copy",
+			"Remove the broker from both maps and accept incomplete dependency tracing",
+			"Disable identification rules globally so duplicate records cannot be reconciled"
 		],
 		"correctIndex": 0,
-		"explanation": "Parse Variable operations pull specific substrings or tokenized values from an existing variable for use in identification or connection logic.",
+		"explanation": "Shared dependency governance assigns ownership and models components once so multiple services reference accurate common topology.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html",
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/identification-and-reconciliation.html"
+		],
+		"domain": "Service Design Strategy"
 	}
 ]

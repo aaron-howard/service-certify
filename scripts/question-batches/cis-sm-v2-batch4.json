@@ -4,79 +4,84 @@
 		"order": 15,
 		"prompt": "During pattern execution, what does a Pattern Identification Section evaluate before connection logic runs?",
 		"choices": [
-			"Whether discovered attributes on the CI satisfy the pattern matching criteria for that application type",
-			"Whether the business service owner approved the latest change request for the application",
-			"Whether the CMDB health dashboard score exceeds the corporate compliance threshold",
-			"Whether the event management maintenance window is active for the mapped service group"
+			"Collected process and configuration data to determine whether the pattern applies to the CI",
+			"Whether the MID Server cluster has available ECC queue capacity for the subnet",
+			"Catalog approval workflows for employee onboarding hardware requests",
+			"Event rule severity thresholds configured in Event Management connectors"
 		],
 		"correctIndex": 0,
-		"explanation": "Identification sections gate pattern execution by testing process names, ports, files, or other attributes against defined match conditions.",
+		"explanation": "Identification sections contain conditional logic that decides if a discovered component matches the pattern before connection steps execute.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/pattern-based-discovery.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-patterns-overview.html"
+		],
+		"domain": "Service Mapping Pattern Design"
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 16,
 		"prompt": "Connection sections in a Service Mapping pattern define what behavior?",
 		"choices": [
-			"How the pattern discovers and maps relationships to upstream or downstream dependent CIs",
-			"How incident records auto-close after the configured glide.ui.autoclose.time interval",
-			"How software models are normalized during horizontal discovery classification",
-			"How hardware asset depreciation schedules sync from procurement invoice data"
+			"How the pattern traces dependencies from the identified CI to related components",
+			"How discovery schedules assign IP ranges to MID Server clusters by region",
+			"How catalog variables validate mobile phone formats on self-service items",
+			"How HR cases route employee relocation requests to fulfillment groups"
 		],
 		"correctIndex": 0,
-		"explanation": "Connection sections contain steps that probe remote hosts, parse responses, and create CMDB relationships representing service dependencies.",
+		"explanation": "Connection sections specify probes and logic that extend the map from an identified application CI to downstream dependencies.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/pattern-based-discovery.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-patterns-overview.html"
+		],
+		"domain": "Service Mapping Pattern Design"
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 17,
 		"prompt": "A pattern matches identification criteria but produces no downstream CIs on the service map. What should be reviewed first?",
 		"choices": [
-			"The Connection Section steps, variables, and credentials used to reach dependent components",
-			"The business service financial rollup fields on the cmdb_ci_service record",
-			"The global incident assignment group default for the mapped application tier",
-			"The event rule correlation policy tied to the monitoring connector template"
+			"Connection section steps, variables, and credentials used to reach related components",
+			"Service catalog item prices for unrelated hardware procurement requests",
+			"Event Management connector dashboards showing inbound alert volume only",
+			"Project portfolio demand scoring thresholds for strategic investment themes"
 		],
 		"correctIndex": 0,
-		"explanation": "When identification succeeds but dependencies are missing, connection logic, parsing, or credential access to downstream targets is the most common root cause.",
+		"explanation": "When identification succeeds but no dependencies appear, connection logic, populated variables, and access paths are the first troubleshooting focus.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-pattern-best-practices.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
+		],
+		"domain": "Service Mapping Pattern Design"
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 18,
 		"prompt": "How does Service Mapping associate a running process on a host with an application CI in the CMDB?",
 		"choices": [
-			"Pattern identification logic matches process attributes and creates or links the appropriate application CI",
-			"Every running process is manually classified by the service desk before mapping can begin",
-			"Business service records inherit process names directly from Windows event logs",
-			"Discovery schedules copy process lists into incident work notes without creating CIs"
+			"Pattern identification logic matches process attributes and creates or links the application CI",
+			"Discovery schedules automatically convert every process into a business service record",
+			"Catalog record producers map running executables to employee onboarding requests",
+			"Event rules create alerts that permanently replace application CIs on the map"
 		],
 		"correctIndex": 0,
-		"explanation": "Service Mapping patterns identify processes through conditional logic and then create or relate application CIs as part of top-down mapping.",
+		"explanation": "Identification sections evaluate process data and bind matching components to the appropriate application CI types in CMDB.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/pattern-based-discovery.html"
-		]
+		],
+		"domain": "Service Mapping Pattern Design"
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 19,
 		"prompt": "When extending an out-of-box Service Mapping pattern, which practice best preserves upgrade compatibility?",
 		"choices": [
-			"Copy the pattern to a custom version and limit changes to additive sections rather than editing base vendor steps",
-			"Delete all vendor identification sections and rebuild logic from scratch in the production instance",
-			"Disable pattern versioning so ServiceNow content updates overwrite local customizations silently",
-			"Store all pattern logic in a single monolithic step to reduce section count"
+			"Copy and extend the pattern rather than editing the base pattern directly in production",
+			"Delete vendor identification sections so custom logic replaces all default matching",
+			"Disable pattern library updates globally to prevent overwrites of local edits",
+			"Merge custom steps into the base pattern on the production instance without versioning"
 		],
 		"correctIndex": 0,
-		"explanation": "Custom pattern copies with additive extensions allow vendor updates to merge while preserving customer-specific identification or connection logic.",
+		"explanation": "Extending copied patterns protects customizations from being overwritten when ServiceNow publishes updated library content.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/manage-discovery-pattern-versions.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
+		],
+		"domain": "Service Mapping Pattern Design"
 	}
 ]

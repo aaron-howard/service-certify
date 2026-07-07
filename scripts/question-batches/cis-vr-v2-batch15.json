@@ -13,7 +13,8 @@
 		"explanation": "VR overview dashboards surface severity distribution and aging so managers can spot backlog concentration and SLA risk.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/vulnerability-response/vr-dashboards.html"
-		]
+		],
+		"domain": "VR Dashboards and Reports"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -29,7 +30,8 @@
 		"explanation": "Performance Analytics provides time-series visibility into remediation velocity and policy adherence for program tuning.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/vulnerability-response/vr-performance-analytics.html"
-		]
+		],
+		"domain": "VR Dashboards and Reports"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -45,7 +47,8 @@
 		"explanation": "Service-level vulnerability reporting shows where risk concentrates and which owner groups need escalation support.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/vulnerability-response/vr-reporting.html"
-		]
+		],
+		"domain": "VR Dashboards and Reports"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -58,12 +61,16 @@
 			"Raw scanner export files attached as the primary visualization on the landing page"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"questionType": "multi",
 		"explanation": "Executive consumers need concise overview tiles and a small set of decisive health indicators rather than operational record-level detail.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/vulnerability-response/ciso-dashboards.html"
-		]
+		],
+		"domain": "VR Dashboards and Reports"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -79,6 +86,7 @@
 		"explanation": "Time-based severity trends combined with closure velocity show whether remediation capacity is outpacing newly discovered critical risk.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/vulnerability-response/vr-dashboards.html"
-		]
+		],
+		"domain": "VR Dashboards and Reports"
 	}
 ]

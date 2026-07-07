@@ -1,0 +1,577 @@
+[
+	{
+		"trackCode": "CPOE",
+		"order": 6,
+		"prompt": "An executive committee asks whether the next platform wave should prioritize HR, ITSM, or Customer Service workflows. Which strategy artifact should the expert platform owner present first?",
+		"choices": [
+			"A value-based roadmap comparing business outcomes, dependency readiness, risk reduction, and measurable benefits by wave",
+			"A list of available plugins sorted alphabetically by product family",
+			"A technical backlog exported without sponsor outcomes or investment assumptions",
+			"A recommendation to launch every product at once so no department feels delayed"
+		],
+		"correctIndex": 0,
+		"explanation": "Expert platform strategy frames portfolio sequencing around outcomes, dependencies, risk, and benefit measures rather than product availability or political pressure.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "Strategy"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 18,
+		"questionType": "multi",
+		"prompt": "A board sponsor challenges the ServiceNow strategy because prior programs delivered features without measurable adoption. Which strategy controls should the platform owner introduce? (Choose two.)",
+		"choices": [
+			"Outcome baselines and target KPIs approved before funding each roadmap increment",
+			"Executive review cadence that compares adoption, value realization, and unresolved risks",
+			"Delivery status reports that count completed stories without linking to business value",
+			"Program closure criteria based only on whether configuration reached production"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Strategy governance needs agreed baselines, value targets, and recurring executive review so delivery is measured by adoption and outcomes, not only completed scope.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "Strategy"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 31,
+		"prompt": "A global enterprise wants one ServiceNow strategy while preserving regional operating differences. Which strategic design should the platform owner recommend?",
+		"choices": [
+			"Define global platform principles with regional variation criteria, decision rights, and value measures for approved exceptions",
+			"Allow every region to create independent standards without cross-region executive review",
+			"Force identical workflows globally without assessing legal, language, or operating constraints",
+			"Move regional differences into untracked customizations so the strategy document remains simple"
+		],
+		"correctIndex": 0,
+		"explanation": "Expert strategy balances global consistency with governed regional variation through principles, decision rights, and measurable exception criteria.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "Strategy"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 46,
+		"questionType": "match",
+		"prompt": "Match each executive strategy decision to the platform evidence the owner should provide.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Approve investment theme",
+			"Defer a roadmap wave",
+			"Authorize regional variation",
+			"Retire a legacy workflow"
+		],
+		"matchRightItems": [
+			"Benefit hypothesis, cost range, and capability dependencies",
+			"Capacity conflict, dependency gap, or risk that makes timing unrealistic",
+			"Legal, operating, or language need with defined governance boundaries",
+			"Adoption, migration, and support readiness evidence for replacement scope"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Expert platform owners equip executives with evidence for funding, deferral, variation, and retirement decisions rather than forcing unsupported approvals.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "Strategy"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 84,
+		"prompt": "A multi-wave ServiceNow implementation is slipping because data migration, OCM, and integration workstreams use separate critical paths. Which implementation control should the platform owner establish?",
+		"choices": [
+			"Integrated release plan with dependency gates, readiness owners, and escalation thresholds across all workstreams",
+			"Independent workstream plans that converge only during the production cutover meeting",
+			"A decision to defer OCM until after technical go-live so project status stays green",
+			"Separate go-live criteria for each team with no enterprise readiness view"
+		],
+		"correctIndex": 0,
+		"explanation": "Expert delivery governance integrates workstream dependencies and readiness gates so slippage in data, change, or integrations is visible before cutover.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		],
+		"domain": "Implementation and Delivery"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 97,
+		"questionType": "multi",
+		"prompt": "A sponsor wants to accelerate go-live by reducing test scope on a regulated implementation. Which delivery safeguards should the platform owner defend? (Choose two.)",
+		"choices": [
+			"Risk-based regression coverage for critical workflows, integrations, and security controls",
+			"Business acceptance evidence tied to launch criteria and rollback decisions",
+			"Elimination of audit evidence because testing was already performed by developers",
+			"Production deployment before defect triage so teams can learn from live users"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Implementation leadership protects risk-based testing and acceptance evidence, especially for regulated launches where speed cannot replace launch readiness.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/australia/install-and-upgrade/concept/c_UpgradeBestPractices.html"
+		],
+		"domain": "Implementation and Delivery"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 109,
+		"prompt": "An implementation partner reports green status, but adoption champions say business teams are not ready for process changes. What should the platform owner do before go-live?",
+		"choices": [
+			"Reassess launch readiness using adoption, training, support, and business sign-off criteria alongside technical milestones",
+			"Proceed because partner status overrides business readiness concerns",
+			"Remove champions from the readiness process to avoid subjective feedback",
+			"Convert all readiness concerns into post-launch enhancement stories"
+		],
+		"correctIndex": 0,
+		"explanation": "Expert delivery readiness combines technical, business, adoption, and support evidence before go-live rather than relying on partner status alone.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "Implementation and Delivery"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 121,
+		"questionType": "match",
+		"prompt": "Match each implementation readiness gate to the evidence an expert platform owner should require.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Data migration readiness",
+			"Integration readiness",
+			"Business adoption readiness",
+			"Operational support readiness"
+		],
+		"matchRightItems": [
+			"Reconciled conversion results and exception handling for critical records",
+			"Validated endpoint, credential, monitoring, and failure-recovery evidence",
+			"Training completion, champion feedback, and signed acceptance of process changes",
+			"Runbooks, support tiers, known issues, and hypercare staffing commitments"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Readiness gates must demand concrete evidence for data, integrations, adoption, and operations so launch decisions are defensible.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html",
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "Implementation and Delivery"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 122,
+		"prompt": "The enterprise platform board lacks a charter and product teams escalate every design dispute to executives. Which governance action should the expert platform owner take first?",
+		"choices": [
+			"Create a governance charter defining board scope, decision rights, escalation paths, and delegated authority by decision type",
+			"Let each product team decide standards locally until executives object",
+			"Move all design decisions to the CFO because funding authority covers every platform choice",
+			"Cancel governance forums until the backlog volume decreases"
+		],
+		"correctIndex": 0,
+		"explanation": "ServiceNow governance requires a chartered operating model with explicit decision rights and escalation paths so decisions occur at the right level.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
+		],
+		"domain": "ServiceNow Governance"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 128,
+		"questionType": "multi",
+		"prompt": "An enterprise runs separate ITSM, CSM, and HRSD roadmaps that compete for shared platform capacity. Which ServiceNow governance practices should the platform owner institutionalize? (Choose two.)",
+		"choices": [
+			"Portfolio governance that scores demand across product families using enterprise value and capacity constraints",
+			"Architecture governance that enforces shared data, integration, and experience standards across domains",
+			"Independent product roadmaps that consume shared capacity without cross-domain prioritization",
+			"First-come production scheduling for any team with a funded business sponsor"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Cross-product ServiceNow governance coordinates portfolio demand and architecture standards across ITSM, CSM, HRSD, and other platform domains.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html",
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "ServiceNow Governance"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 136,
+		"prompt": "A governance review finds that CMDB ownership, CSDM alignment, and service mapping decisions are made by different teams with no common standard. What should the platform owner mandate?",
+		"choices": [
+			"A data and service governance model with accountable stewards, CSDM standards, reconciliation policy, and board-reviewed quality KPIs",
+			"Separate local standards for each team because CMDB data quality is primarily an operations issue",
+			"Annual manual cleanup without service owners or reconciliation rules",
+			"Removal of service relationships to reduce disagreement over ownership"
+		],
+		"correctIndex": 0,
+		"explanation": "Governance over CMDB and CSDM requires accountable stewardship, standards, policy, and measurable quality reviewed through the operating model.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/configuration-management.html",
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
+		],
+		"domain": "ServiceNow Governance"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 142,
+		"questionType": "match",
+		"prompt": "Match each ServiceNow governance forum to the decision evidence it should require.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Executive platform board",
+			"Portfolio demand board",
+			"Architecture review board",
+			"Data governance council"
+		],
+		"matchRightItems": [
+			"Enterprise value, funding impact, risk posture, and unresolved trade-offs",
+			"Demand score, capacity forecast, dependency map, and sponsor accountability",
+			"Design standard fit, integration pattern, upgrade impact, and supportability",
+			"Ownership, quality thresholds, CSDM alignment, and remediation cadence"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Governance forums require evidence appropriate to their scope: enterprise direction, demand, architecture, and data stewardship.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/demand-governance.html",
+			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
+		],
+		"domain": "ServiceNow Governance"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 148,
+		"prompt": "A legacy application is ready for retirement, but its records support audit retention and downstream reporting. Which governance decision should the platform owner drive?",
+		"choices": [
+			"Approve a retirement plan covering archival, retention, access, CSDM relationship updates, and evidence of downstream impact review",
+			"Delete legacy records immediately after cutover to reduce storage cost",
+			"Leave retired services active in the CMDB until a future audit requests cleanup",
+			"Transfer all retirement decisions to the implementation partner without board oversight"
+		],
+		"correctIndex": 0,
+		"explanation": "ServiceNow governance over deprecation includes archival, retention, access, CSDM cleanup, and evidence that dependent reporting and services were reviewed.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html",
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
+		],
+		"domain": "ServiceNow Governance"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 153,
+		"questionType": "multi",
+		"prompt": "The platform owner is asked to prove that governance boards are not slowing delivery unnecessarily. Which measures best demonstrate governance effectiveness? (Choose two.)",
+		"choices": [
+			"Demand cycle time segmented by risk tier with board decisions and rework rates",
+			"Release adherence, exception volume, and defect escape trends after governance decisions",
+			"Total number of governance meetings held regardless of decision quality",
+			"Count of slide decks created for executives without outcome measures"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Governance effectiveness is measured through throughput, decision quality, release adherence, exceptions, and escaped defects—not meeting volume.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
+		],
+		"domain": "ServiceNow Governance"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 158,
+		"prompt": "Citizen development is expanding faster than the central platform team can review every app. Which governance model should the expert platform owner implement?",
+		"choices": [
+			"Risk-tiered guardrails with approved templates, builder certification, delegated reviews, and escalation paths for high-risk apps",
+			"Unlimited maker access with no review because low-code work is always low risk",
+			"Central review of every field label change by the executive platform board",
+			"Permanent suspension of citizen development until central IT doubles headcount"
+		],
+		"correctIndex": 0,
+		"explanation": "Scalable ServiceNow governance supports low-code growth through risk-tiered guardrails, enablement, delegated review, and escalation for higher-risk work.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html",
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
+		],
+		"domain": "ServiceNow Governance"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 160,
+		"prompt": "The executive platform board asks which metric most directly shows whether governance is reducing delivery risk over time. Which measure should the platform owner highlight?",
+		"choices": [
+			"Technical debt burn-down tied to business risk, release exceptions, and defect escape trends",
+			"Total count of governance meetings held regardless of decisions or outcomes",
+			"Number of dashboard widgets created for executives during the quarter",
+			"Volume of developer commits without connection to release quality or risk"
+		],
+		"correctIndex": 0,
+		"explanation": "Governance metrics should show whether risk is actually declining through debt reduction, fewer exceptions, and better release quality—not meeting or artifact volume.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
+		],
+		"domain": "ServiceNow Governance"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 161,
+		"prompt": "A SOX audit flags weak evidence linking ServiceNow production changes to approval and testing. Which compliance response should the expert platform owner lead?",
+		"choices": [
+			"Map change controls to SOX objectives, retain approval and test evidence, and report remediation status to the risk committee",
+			"Ask teams to verbally confirm that changes were approved during sprint reviews",
+			"Remove low-risk changes from audit scope without control owner approval",
+			"Grant auditors admin access so they can reconstruct evidence themselves"
+		],
+		"correctIndex": 0,
+		"explanation": "SOX-aligned platform ownership requires control mapping, retained evidence, and accountable remediation reporting for production change governance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		],
+		"domain": "Compliance and Security"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 166,
+		"questionType": "multi",
+		"prompt": "A SOC 2 readiness review asks how ServiceNow control evidence will be sustained across the audit period. Which practices should the platform owner establish? (Choose two.)",
+		"choices": [
+			"Control evidence calendar with owners, sample criteria, and retention expectations",
+			"Continuous monitoring dashboards for access, change, incident, and vulnerability controls",
+			"Ad hoc evidence collection only after auditors select samples",
+			"Deletion of exceptions after closure so reports show no historical issues"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "SOC 2 readiness depends on sustained evidence ownership and monitoring throughout the period, not scramble-based collection or hidden exception history.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		],
+		"domain": "Compliance and Security"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 171,
+		"questionType": "match",
+		"prompt": "Match each compliance requirement to the ServiceNow evidence package the platform owner should maintain.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Production change authorization",
+			"Privileged access appropriateness",
+			"Sensitive data protection",
+			"Security incident handling"
+		],
+		"matchRightItems": [
+			"Approved change records with testing, implementation, and rollback evidence",
+			"Certification campaign results with revocations and manager attestations",
+			"Data classification, encryption scope, ACL review, and masking decisions",
+			"Incident records, response timeline, containment actions, and lessons learned"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Compliance evidence should be organized around control questions: change authorization, access appropriateness, sensitive data protection, and incident handling.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		],
+		"domain": "Compliance and Security"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 176,
+		"prompt": "The privacy office requires proof that employee data in ServiceNow follows GDPR retention and minimization commitments. What should the platform owner coordinate?",
+		"choices": [
+			"Data inventory, lawful-basis documentation, retention schedules, deletion workflow evidence, and privacy officer sign-off",
+			"Broad collection of optional fields so future analytics teams have more data",
+			"Export of employee records to spreadsheets for easier manual review",
+			"Deletion of audit history whenever a user requests a profile update"
+		],
+		"correctIndex": 0,
+		"explanation": "GDPR-aligned ownership coordinates data inventory, lawful basis, minimization, retention, deletion evidence, and privacy approval.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		],
+		"domain": "Compliance and Security"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 181,
+		"prompt": "A production incident required emergency admin access during a regulatory blackout window. Which compliance control should the platform owner verify afterward?",
+		"choices": [
+			"Time-bound break-glass approval, activity logging, post-incident review, and revocation evidence",
+			"Permanent elevation for the responders because they may need access again",
+			"Removal of the incident from audit reporting because it was urgent",
+			"Password sharing among responders to simplify future emergency access"
+		],
+		"correctIndex": 0,
+		"explanation": "Emergency access can be compliant when it is approved, time-bound, logged, reviewed, and revoked with evidence retained for auditors.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		],
+		"domain": "Compliance and Security"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 186,
+		"questionType": "multi",
+		"prompt": "Legal approves a cross-border ServiceNow rollout only if data residency and integration controls are demonstrable. Which controls should the platform owner include? (Choose two.)",
+		"choices": [
+			"Data classification mapped to residency rules, domain boundaries, and approved replication paths",
+			"Integration patterns with encryption, least-privilege credentials, logging, and contractual processing terms",
+			"One global unrestricted data pool so reporting is easier for executives",
+			"Unlogged exports to regional spreadsheets for local teams during hypercare"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Cross-border compliance combines classification, residency design, domain controls, governed integrations, and processing terms.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainSeparation.html",
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		],
+		"domain": "Compliance and Security"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 190,
+		"prompt": "An audit committee asks whether repeated access exceptions represent accepted risk or governance failure. Which response should the platform owner provide?",
+		"choices": [
+			"Exception register showing control owner approval, compensating controls, expiration dates, and remediation progress by risk level",
+			"Assurance that exceptions are normal and do not require executive review",
+			"Deletion of expired exception records once access is removed",
+			"Permanent admin access for compliance staff so they can monitor exceptions manually"
+		],
+		"correctIndex": 0,
+		"explanation": "Compliance exception governance distinguishes accepted residual risk from failure through approvals, compensating controls, expiration, and remediation tracking.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		],
+		"domain": "Compliance and Security"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 193,
+		"questionType": "match",
+		"prompt": "Match each security governance artifact to the compliance outcome it supports.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Security architecture decision record",
+			"Control test result",
+			"Risk acceptance memo",
+			"Remediation plan"
+		],
+		"matchRightItems": [
+			"Explains why a protection pattern was selected for regulated workloads",
+			"Shows whether a required safeguard operated effectively during review",
+			"Documents accountable approval of residual risk with scope and expiration",
+			"Defines owners, milestones, and evidence needed to return to target state"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Security governance artifacts support compliance by documenting architecture rationale, control operation, accepted risk, and remediation commitments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		],
+		"domain": "Compliance and Security"
+	}
+]

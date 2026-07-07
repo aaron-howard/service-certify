@@ -9,17 +9,18 @@ Base URL: `https://raw.githubusercontent.com/ServiceNow/ServiceNowDocs/australia
 
 ---
 
-## Exam domain quotas (90 questions = 60 official × 1.5)
+## Exam domain quotas (90 questions)
 
-| # | Domain | % | Bank | Orders |
-|---|--------|---|------|--------|
-| 1 | GRC Overview | 11.67% | 11 | 0–10 |
-| 2 | Implementation Planning | 5% | 4 | 11–14 |
-| 3 | Entity Framework | 20% | 18 | 15–32 |
-| 4 | Policy and Compliance | 25% | 22 | 33–54 |
-| 5 | Risk and Advanced Risk | 25% | 22 | 55–76 |
-| 6 | Common Elements and Extended Capabilities | 8.33% | 7 | 77–83 |
-| 7 | Audit and Advanced Audit | 5% | 6 | 84–89 |
+| # | Domain | Bank | Orders |
+|---|--------|------|--------|
+| 1 | GRC Overview | 8 | 0–7 |
+| 2 | Governance Strategy | 9 | 8–16 |
+| 3 | Implementation Planning | 7 | 17–23 |
+| 4 | Entity Framework | 12 | 24–35 |
+| 5 | Policy and Compliance | 20 | 36–55 |
+| 6 | Risk and Advanced Risk | 16 | 56–71 |
+| 7 | Common Elements and Extended Capabilities | 6 | 72–77 |
+| 8 | Audit and Advanced Audit | 12 | 78–89 |
 
 ---
 
@@ -37,22 +38,22 @@ Multi-select allowed with `questionType: "multi"` and `correctIndexes`.
 | Batch | Orders | Domain | Status |
 |-------|--------|--------|--------|
 | 1 | 0–4 | GRC Overview | **DONE** |
-| 2 | 5–9 | GRC Overview | **DONE** |
-| 3 | 10–14 | Overview (10) + Implementation Planning (11–14) | **DONE** |
-| 4 | 15–19 | Entity Framework | **DONE** |
-| 5 | 20–24 | Entity Framework | **DONE** |
+| 2 | 5–9 | GRC Overview + Governance | **DONE** |
+| 3 | 10–14 | Governance Strategy | **DONE** |
+| 4 | 15–19 | Governance + Implementation | **DONE** |
+| 5 | 20–24 | Implementation + Entity | **DONE** |
 | 6 | 25–29 | Entity Framework | **DONE** |
-| 7 | 30–34 | Entity Framework (30–32) + Policy and Compliance (33–34) | **DONE** |
-| 8 | 35–39 | Policy and Compliance | **DONE** |
+| 7 | 30–34 | Entity Framework | **DONE** |
+| 8 | 35–39 | Entity + Policy | **DONE** |
 | 9 | 40–44 | Policy and Compliance | **DONE** |
 | 10 | 45–49 | Policy and Compliance | **DONE** |
 | 11 | 50–54 | Policy and Compliance | **DONE** |
-| 12 | 55–59 | Risk and Advanced Risk | **DONE** |
+| 12 | 55–59 | Policy + Risk | **DONE** |
 | 13 | 60–64 | Risk and Advanced Risk | **DONE** |
 | 14 | 65–69 | Risk and Advanced Risk | **DONE** |
-| 15 | 70–74 | Risk and Advanced Risk | **DONE** |
-| 16 | 75–79 | Risk (75–76) + Common Elements (77–79) | **DONE** |
-| 17 | 80–84 | Common Elements (80–83) + Audit (84) | **DONE** |
+| 15 | 70–74 | Risk + Common Elements | **DONE** |
+| 16 | 75–79 | Common + Audit | **DONE** |
+| 17 | 80–84 | Audit and Advanced Audit | **DONE** |
 | 18 | 85–89 | Audit and Advanced Audit | **DONE** |
 
 ---
@@ -72,8 +73,10 @@ Multi-select allowed with `questionType: "multi"` and `correctIndexes`.
 ## Merge and validate
 
 ```bash
+node scripts/tag-cis-rc-domains.mjs
 node scripts/extract-questions-from-transcripts.mjs --merge-batches scripts/question-batches/cis-rc-v2-batch*.json
+node scripts/balance-choice-lengths.mjs
+node scripts/rebalance-question-choices.mjs
 node scripts/lint-cis-rc-realism.mjs --orders=0-89
-npm test -- --run src/convex/seed/cis-rc-realism.test.ts src/convex/seed/trackQuality.test.ts src/convex/seed/devQuestionBank.test.ts
-# After merge: npm run seed:dev:questions
+npm test -- --run src/convex/seed/cis-rc-realism.test.ts src/convex/seed/trackQuality.test.ts
 ```

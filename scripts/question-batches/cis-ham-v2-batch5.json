@@ -2,7 +2,7 @@
 	{
 		"trackCode": "CIS-HAM",
 		"order": 20,
-		"prompt": "What does enabling glide.asset.create_ci_with_ire allow when creating CIs from assets?",
+		"prompt": "CMDB integration requires governed CI creation when assets are received with serial numbers. Which property enables IRE-based CI creation from assets?",
 		"choices": [
 			"Use of the CMDB Identification and Reconciliation engine for eligible CI classes",
 			"Automatic software entitlement imports from vendor spreadsheets without model mapping",
@@ -13,12 +13,13 @@
 		"explanation": "When enabled, eligible CI classes with serial-number identification and no dependent relationships can be created from assets through IRE.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
-		]
+		],
+		"domain": "Data Integrity Attributes and Data Sources"
 	},
 	{
 		"trackCode": "CIS-HAM",
 		"order": 21,
-		"prompt": "What does CMDB Success Advisor for Hardware Asset Management help administrators monitor?",
+		"prompt": "HAM administrators see incomplete model category coverage in operational dashboards. Which advisor should they review for hardware data quality recommendations?",
 		"choices": [
 			"Hardware asset data coverage, attribute completeness, and recommended integrations",
 			"Software license true-up exposure by publisher for subscription renewals only",
@@ -29,12 +30,13 @@
 		"explanation": "CMDB Success Advisor for HAM surfaces data quality insights and integration recommendations for hardware model categories.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
-		]
+		],
+		"domain": "Data Integrity Attributes and Data Sources"
 	},
 	{
 		"trackCode": "CIS-HAM",
 		"order": 22,
-		"prompt": "What is the primary goal of Hardware Model Normalization in HAM?",
+		"prompt": "Imported vendor models show inconsistent manufacturer names across three stockrooms. What normalization outcome should the program target?",
 		"choices": [
 			"Standardize manufacturer, product, model, and device type on hardware models",
 			"Delete duplicate asset records tied to retired employees without workflow review",
@@ -45,7 +47,8 @@
 		"explanation": "Hardware Model Normalization compares model data against the content service to populate normalized manufacturer, product, model, and device type fields.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/hardware-normalization.html"
-		]
+		],
+		"domain": "Data Integrity Attributes and Data Sources"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -62,12 +65,13 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/it-asset-management.html",
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/hardware-normalization.html"
-		]
+		],
+		"domain": "Data Integrity Attributes and Data Sources"
 	},
 	{
 		"trackCode": "CIS-HAM",
 		"order": 24,
-		"prompt": "What does the HAM - Hardware Normalization scheduled job update on existing models?",
+		"prompt": "After enabling nightly normalization, procurement expects original vendor model names to remain unchanged on records. What does the scheduled job update?",
 		"choices": [
 			"Normalization-related fields such as Normalized Manufacturer and Normalized Model only",
 			"Original Model Name and Manufacturer values on every scheduled run without exception",
@@ -78,6 +82,7 @@
 		"explanation": "The daily normalization job updates normalized fields only and does not add, remove, merge models, or alter original model name fields.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/hardware-normalization.html"
-		]
+		],
+		"domain": "Data Integrity Attributes and Data Sources"
 	}
 ]

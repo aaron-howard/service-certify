@@ -2,7 +2,7 @@
 	{
 		"trackCode": "CPOE",
 		"order": 90,
-		"prompt": "Given a case study where incident volume spikes during the first week after a major HR rollout, what stabilization step should the platform owner lead?",
+		"prompt": "For EMEA localization planning, incident volume spikes during the first week after a major HR rollout, what stabilization step should the platform owner lead?",
 		"choices": [
 			"Triage defects by user impact, assign owners, and report daily recovery metrics to sponsors",
 			"Pause all defect fixes until the next scheduled release train",
@@ -13,7 +13,8 @@
 		"explanation": "Stabilization prioritizes high-impact defects with accountable owners and transparent sponsor reporting—not deferred fixes or hidden metrics.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Implementation and Delivery"
 	},
 	{
 		"trackCode": "CPOE",
@@ -29,13 +30,14 @@
 		"explanation": "Cross-team delivery requires visible dependencies and joint checkpoints; uncoordinated releases or unclear ownership create integration failures.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Implementation and Delivery"
 	},
 	{
 		"trackCode": "CPOE",
 		"order": 92,
 		"questionType": "multi",
-		"prompt": "Given a scenario where a platform upgrade and custom application release occur in the same window, which testing scope items should the platform owner require? (Choose two.)",
+		"prompt": "When forecasts miss repeatedly, a platform upgrade and custom application release occur in the same window, which testing scope items should the platform owner require? (Choose two.)",
 		"choices": [
 			"Automated regression of critical business flows across affected domains",
 			"Smoke validation of integrations and scheduled jobs after deployment",
@@ -43,11 +45,15 @@
 			"Testing limited to the developer who authored the largest change set"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Combined releases need broad regression and post-deploy integration checks; skipping UAT or solo testing leaves enterprise risk unvalidated.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Implementation and Delivery"
 	},
 	{
 		"trackCode": "CPOE",
@@ -69,15 +75,28 @@
 			"Keep sponsors and product leads aligned on priorities and trade-offs"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Multi-team delivery demands standards, coordinated releases, outcome measurement, and continuous stakeholder alignment from the platform owner.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Implementation and Delivery"
 	},
 	{
 		"trackCode": "CPOE",
@@ -93,6 +112,7 @@
 		"explanation": "Adoption recovery starts with understanding workflow friction and co-designing improvements—not punitive mandates or removing necessary controls.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Implementation and Delivery"
 	}
 ]

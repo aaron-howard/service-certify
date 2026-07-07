@@ -9,12 +9,16 @@ Base URL: `https://raw.githubusercontent.com/ServiceNow/ServiceNowDocs/australia
 
 ## Exam domain quotas (90 questions = 60 official × 1.5)
 
-| # | Domain | % | Bank | Orders |
-|---|--------|---|------|--------|
-| 1 | HR System Architecture | 30% | 27 | 0–26 |
-| 2 | Core HR Applications and Employee Center | 30% | 27 | 27–53 |
-| 3 | HR Journeys | 20% | 18 | 54–71 |
-| 4 | Platform, Role, and Contextual Security | 20% | 18 | 72–89 |
+| # | Domain | Bank | Orders |
+|---|--------|------|--------|
+| 1 | HR System Architecture | 22 | 0–21 |
+| 2 | Core HR Applications and Employee Center | 32 | 22–53 |
+| 3 | HR Journeys | 18 | 54–71 |
+| 4 | Platform, Role, and Contextual Security | 5 | 72–76 |
+| 5 | Integration Strategy | 9 | 77–85 |
+| 6 | Implementation and Change Management | 4 | 86–89 |
+
+See also [CIS-HR-Question-Rewrites.md](./CIS-HR-Question-Rewrites.md) for analysis-driven priority changes.
 
 ---
 
@@ -55,8 +59,10 @@ Multi-select allowed with `questionType: "multi"` and `correctIndexes`.
 ## Merge and validate
 
 ```bash
+node scripts/tag-cis-hr-domains.mjs
 node scripts/extract-questions-from-transcripts.mjs --merge-batches scripts/question-batches/cis-hr-v2-batch*.json
+node scripts/balance-choice-lengths.mjs
+node scripts/rebalance-question-choices.mjs
 node scripts/lint-cis-hr-realism.mjs --orders=0-89
 npm test -- --run src/convex/seed/cis-hr-realism.test.ts src/convex/seed/trackQuality.test.ts
-# After merge: npm run seed:dev:questions
 ```

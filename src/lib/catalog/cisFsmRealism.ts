@@ -87,7 +87,7 @@ export type CisFsmQuestionRow = {
 	prompt: string;
 	choices: string[];
 	sourceUrls: string[];
-	domain?: CisFsmDomain;
+	domain?: string;
 	questionType?: QuestionType;
 	correctIndexes?: number[];
 	correctIndex?: number;

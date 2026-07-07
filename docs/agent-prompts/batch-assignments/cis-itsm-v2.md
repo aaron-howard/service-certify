@@ -15,14 +15,17 @@ Base URL: `https://raw.githubusercontent.com/ServiceNow/ServiceNowDocs/australia
 
 ## Exam domain quotas (90 questions)
 
-| Domain | % | Count |
-|--------|---|-------|
-| Incident Management | 25% | 23 |
-| Problem Management | 15% | 14 |
-| Change Management | 25% | 23 |
-| Service Portfolio Management | 5% | 5 |
-| Service Catalog and Request Management | 25% | 23 |
-| Configuration Management Database | 5% | 5 |
+| Domain | Count | Orders |
+|--------|-------|--------|
+| Incident Management | 20 | 0–19 |
+| Problem Management | 14 | 20–33 |
+| Change Management | 16 | 34–49 |
+| Service Portfolio Management | 9 | 50–58 |
+| Service Catalog and Request Management | 16 | 59–74 |
+| Configuration Management Database | 11 | 75–85 |
+| Implementation and Strategy | 4 | 86–89 |
+
+See also [CIS-ITSM-Question-Rewrites.md](./CIS-ITSM-Question-Rewrites.md) for analysis-driven priority changes.
 
 Each domain uses three lenses where applicable: **Architecture**, **Scoping & requirements**, **Configuration**.
 
@@ -247,17 +250,12 @@ Save batches as `scripts/question-batches/cis-itsm-v2-batch{N}.json` (5 question
 ## Merge and validate
 
 ```bash
-# Merge one batch (overwrites matching trackCode+order)
-node scripts/extract-questions-from-transcripts.mjs --merge-batches scripts/question-batches/cis-itsm-v2-batch1.json
-
-# Lint rewritten orders
-node scripts/lint-cis-itsm-realism.mjs --orders=0-4
-
-# Tests
-npm run test -- --run src/convex/seed/cis-itsm-realism.test.ts src/convex/seed/trackQuality.test.ts
-
-# After full rewrite
-npm run seed:dev:questions
+node scripts/tag-cis-itsm-domains.mjs
+node scripts/extract-questions-from-transcripts.mjs --merge-batches scripts/question-batches/cis-itsm-v2-batch*.json
+node scripts/balance-choice-lengths.mjs
+node scripts/rebalance-question-choices.mjs
+node scripts/lint-cis-itsm-realism.mjs --orders=0-89
+npm test -- --run src/convex/seed/cis-itsm-realism.test.ts src/convex/seed/trackQuality.test.ts
 ```
 
 ---

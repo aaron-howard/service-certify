@@ -14,7 +14,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_Coalescing.html",
 			"https://www.servicenow.com/docs/r/platform-security/bp-dom-sep-definition.html"
-		]
+		],
+		"domain": "Foundational Data Management"
 	},
 	{
 		"trackCode": "CIS-SP",
@@ -30,27 +31,12 @@
 		"explanation": "Import set run history and transform error logs provide row-level failure detail needed to diagnose mapping and script issues.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_ImportSets.html"
-		]
+		],
+		"domain": "Foundational Data Management"
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 62,
-		"prompt": "Which record type provides row-level processing status during an import set run in a domain-separated instance?",
-		"choices": [
-			"Import set run and transform history entries for the executed data source",
-			"Skipped update records from the most recent platform upgrade",
-			"MID Server ECC queue entries unrelated to the data load job",
-			"Domain path records for the Default domain only"
-		],
-		"correctIndex": 0,
-		"explanation": "Import set run and transform history capture per-run processing outcomes, including errors encountered during transformation.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/reference/r_ImportSetTables.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SP",
-		"order": 63,
 		"prompt": "When a transform map inserts a new company record for a tenant, how should the domain field typically be set?",
 		"choices": [
 			"Assign sys_domain to the tenant domain the company belongs to before related records are created",
@@ -63,11 +49,12 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/domain-separation/concept/domain-separation.html",
 			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/task/t_CreateATransformMap.html"
-		]
+		],
+		"domain": "Foundational Data Management"
 	},
 	{
 		"trackCode": "CIS-SP",
-		"order": 64,
+		"order": 63,
 		"questionType": "multi",
 		"prompt": "Which practices improve repeatable foundational data migrations across tenant domains? (Choose two.)",
 		"choices": [
@@ -77,11 +64,33 @@
 			"Remove coalesce fields after the first successful dry run to speed imports"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Repeatable tenant migrations depend on versioned transform logic and measurable quality gates rather than ad hoc production edits.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_TransformEventScripts.html",
 			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/c_DataManagement.html"
-		]
+		],
+		"domain": "Foundational Data Management"
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 64,
+		"prompt": "A multi-domain import links users to departments through reference fields. What validation prevents silent data defects?",
+		"choices": [
+			"Confirm referenced department records exist in the same domain as the user being loaded",
+			"Require all reference fields to point to records in the global domain only",
+			"Skip reference checks when the source file has fewer than one thousand rows",
+			"Clear sys_domain on departments so references resolve by display name alone"
+		],
+		"correctIndex": 0,
+		"explanation": "Cross-domain reference defects are avoided by validating that lookup targets exist within the tenant domain of the record being imported.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_Coalescing.html",
+			"https://www.servicenow.com/docs/r/platform-security/bp-dom-sep-definition.html"
+		],
+		"domain": "Foundational Data Management"
 	}
 ]

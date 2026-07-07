@@ -2,7 +2,7 @@
 	{
 		"trackCode": "CPOE",
 		"order": 45,
-		"prompt": "Given a case study preparing the final strategy review before cost planning, which deliverable best closes the Strategy domain for executive sign-off?",
+		"prompt": "During priority conflict resolution, the final strategy review before cost planning, which deliverable best closes the Strategy domain for executive sign-off?",
 		"choices": [
 			"A consolidated strategy pack with outcomes, roadmap, investment themes, and success measures",
 			"A technical runbook listing every integration endpoint without strategic context",
@@ -13,7 +13,8 @@
 		"explanation": "Strategy sign-off requires an integrated pack linking outcomes, roadmap, investments, and measures—not technical or operational artifacts alone.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOE",
@@ -29,7 +30,8 @@
 		"explanation": "Federated alignment requires explicit decision rights and capability boundaries—not IT-only ownership or undefined deferral.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOE",
@@ -43,11 +45,15 @@
 			"Informal chat opinions about vendor popularity without cost data"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Licensing cost analysis connects entitlements and populations to capability plans plus implementation labor—not cosmetic or anecdotal factors.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Cost/Resource Planning"
 	},
 	{
 		"trackCode": "CPOE",
@@ -63,7 +69,8 @@
 		"explanation": "Cross-train resource forecasting requires visible capacity, shared priorities, and realistic constraints—not isolated or oversimplified estimates.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Cost/Resource Planning"
 	},
 	{
 		"trackCode": "CPOE",
@@ -85,14 +92,27 @@
 			"Alignment of investments to expected financial and operational returns"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Cost planning artifacts help executives assess lifecycle spend, capacity risk, budget scenarios, and benefits alignment.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Cost/Resource Planning"
 	}
 ]

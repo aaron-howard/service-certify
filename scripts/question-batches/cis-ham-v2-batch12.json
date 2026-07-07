@@ -13,7 +13,8 @@
 		"explanation": "Loaner processes manage short-term hardware distribution while preserving assignee accountability and return dates.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/manage-loaner-assets.html"
-		]
+		],
+		"domain": "Practical Management of IT Assets"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -29,7 +30,8 @@
 		"explanation": "Stockroom audits can include consumables when Include consumables is Yes, limiting scan method options accordingly.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-audit-record-fields.html"
-		]
+		],
+		"domain": "Practical Management of IT Assets"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -45,7 +47,8 @@
 		"explanation": "Transfer receiving updates inventory at the destination and closes the movement loop started by the transfer order.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/create-transfer-order.html"
-		]
+		],
+		"domain": "Operational Integration of IT Asset Management Processes"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -61,7 +64,8 @@
 		"explanation": "Controlled retirement updates asset state and substate so financial, compliance, and inventory views reflect removal from service.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/dispose-hardware-assets.html"
-		]
+		],
+		"domain": "Operational Integration of IT Asset Management Processes"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -77,6 +81,7 @@
 		"explanation": "Hardware assets associate with contracts and warranties so teams can monitor coverage dates and renewal obligations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-record-fields.html"
-		]
+		],
+		"domain": "Operational Integration of IT Asset Management Processes"
 	}
 ]

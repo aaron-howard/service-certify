@@ -13,12 +13,13 @@
 		"explanation": "Enterprise architecture adds innovation value when embedded early in capability mapping, epic review, and cross-domain gating—not relegated to post-delivery or infrastructure-only roles.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Innovation"
 	},
 	{
 		"trackCode": "CPOE",
 		"order": 201,
-		"prompt": "Given a scenario where the CIO mandates citizen development as a pillar of digital strategy, regional leaders fear uncontrolled sprawl. Which organizational approach best embeds citizen development responsibly?",
+		"prompt": "When subsidiary regulations differ, the CIO mandates citizen development as a pillar of digital strategy, regional leaders fear uncontrolled sprawl. Which organizational approach best embeds citizen development responsibly?",
 		"choices": [
 			"Define tiered citizen roles, a center-led enablement program, and business-unit sponsorship tied to audited use-case catalogs",
 			"Publish an open invitation for any employee to build production applications without enrollment criteria",
@@ -29,7 +30,8 @@
 		"explanation": "Citizen development belongs in organizational strategy through tiered roles, center-led enablement, and audited catalogs—not open production access or outsourcing without governance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
-		]
+		],
+		"domain": "Innovation"
 	},
 	{
 		"trackCode": "CPOE",
@@ -45,13 +47,14 @@
 		"explanation": "CoEI scaling requires federated regional cells with shared templates, assets, and metrics—not unadapted clones, documentation delays, or uncoordinated app-owner silos.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Innovation"
 	},
 	{
 		"trackCode": "CPOE",
 		"order": 203,
 		"questionType": "multi",
-		"prompt": "Given a case study where innovation champions operate in twelve countries, the platform owner must standardize their operating model. Which elements should every champion chapter implement? (Choose two.)",
+		"prompt": "After privileged access findings, innovation champions operate in twelve countries, the platform owner must standardize their operating model. Which elements should every champion chapter implement? (Choose two.)",
 		"choices": [
 			"A recurring forum cadence that converts business ideas into scored backlog items for the CoEI intake process",
 			"Documented playbooks for reusing approved integrations, flows, and data models across similar use cases",
@@ -59,11 +62,15 @@
 			"Exclusive focus on internal hackathons without follow-through into production readiness gates"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Champion chapters sustain innovation through structured cadence, backlog conversion, and reusable playbooks—not unchecked admin access or disconnected hackathon activity.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
-		]
+		],
+		"domain": "Innovation"
 	},
 	{
 		"trackCode": "CPOE",
@@ -85,14 +92,27 @@
 			"Concentrates engineering capacity on repetitive platform tasks with measurable cycle-time reduction"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 1 },
-			{ "left": 1, "right": 3 },
-			{ "left": 2, "right": 0 },
-			{ "left": 3, "right": 2 }
+			{
+				"left": 0,
+				"right": 1
+			},
+			{
+				"left": 1,
+				"right": 3
+			},
+			{
+				"left": 2,
+				"right": 0
+			},
+			{
+				"left": 3,
+				"right": 2
+			}
 		],
 		"explanation": "Benchmarking reveals gaps, automation prioritization targets repetitive work, CoEI guardrails scale standards, and champion loops feed demand into central backlog refinement.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Innovation"
 	}
 ]

@@ -2,81 +2,92 @@
 	{
 		"trackCode": "CIS-SAM",
 		"order": 15,
-		"prompt": "Why is selecting the correct license metric critical when configuring SAM entitlements?",
+		"prompt": "A publisher audit notice arrives with thirty-day evidence deadlines. Which response strategy minimizes compliance exposure?",
 		"choices": [
-			"It determines how consumption is measured against purchased rights during reconciliation",
-			"It controls which users can authenticate into the ServiceNow instance at login",
-			"It eliminates the need to maintain contract records linked to entitlement records",
-			"It replaces software normalization rules applied during discovery model mapping"
+			"Activate audit preparation workflows with entitlement provenance, reconciliation exports, and assigned remediation owners",
+			"Wait until fieldwork begins before gathering contract or allocation evidence",
+			"Delete under-licensed install records to improve dashboard compliance percentages",
+			"Convert all findings into catalog requests without audit traceability"
 		],
 		"correctIndex": 0,
-		"explanation": "The license metric defines the counting logic for compliance; an incorrect metric can materially misstate license position during reconciliation.",
+		"explanation": "Audit response strategies use pre-built entitlement evidence and governed remediation to defend license position under time pressure.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/license-metrics-overview.html"
-		]
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/entitlement-audit-preparation.html"
+		],
+		"domain": "SAM Strategy and Optimization"
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 16,
-		"prompt": "A publisher audits by named user, but the entitlement is configured with a per-device metric. What is the likely compliance outcome?",
+		"prompt": "Two business units negotiate independently with the same publisher and create conflicting entitlement records. Which vendor management practice prevents duplicate spend?",
 		"choices": [
-			"Potential over- or under-counting because the measurement basis does not match contract terms",
-			"More accurate reconciliation because device counts are simpler to collect than user counts",
-			"No impact because SAM automatically converts all license metrics during reconciliation",
-			"All installations become compliant by default when discovery data is normalized"
+			"Centralize publisher relationship ownership with governed entitlement creation and contract references",
+			"Allow each unit to import identical PO lines without deduplication controls",
+			"Disable reconciliation for shared publishers until contracts expire",
+			"Track negotiated terms exclusively in email threads outside ServiceNow"
 		],
 		"correctIndex": 0,
-		"explanation": "Metric mismatch between contract rights and SAM configuration produces inaccurate compliance results and increases audit dispute risk.",
+		"explanation": "Centralized vendor management ensures one source of purchased rights and consistent negotiation data across the enterprise.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/configure-license-metrics.html"
-		]
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/manage-software-entitlements.html"
+		],
+		"domain": "SAM Strategy and Optimization"
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 17,
-		"prompt": "A product portfolio includes multiple license metrics across different editions. Which SAM practice best supports accurate entitlement modeling?",
+		"prompt": "License Workbench shows high true-up cost for one product family despite recent reclamation efforts. What should the SAM manager investigate first?",
 		"choices": [
-			"Create separate entitlement structures aligned to each contractual metric and edition scope",
-			"Track all metric variations exclusively in free-text notes on a single entitlement record",
-			"Disable reconciliation for publishers that use more than one license metric type",
-			"Apply one entitlement with a single metric for every edition of the product family"
+			"Whether metric mappings, allocations, and normalization still reflect current contract terms after remediation",
+			"Whether catalog item descriptions mention the publisher name correctly",
+			"Whether MID Server heartbeat intervals match discovery schedules",
+			"Whether incident assignment groups include SAM analysts"
 		],
 		"correctIndex": 0,
-		"explanation": "Mixed-metric products require explicit entitlement modeling so each edition is measured using the proper contractual counting rules.",
+		"explanation": "Persistent true-up exposure after reclamation often indicates data integrity or metric misalignment rather than insufficient optimization effort.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/license-metric-best-practices.html"
-		]
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/license-workbench.html",
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/configure-license-metrics.html"
+		],
+		"domain": "SAM Strategy and Optimization"
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 18,
-		"prompt": "What does effective license metric governance in SAM primarily prevent?",
+		"prompt": "Leadership sets a target to reduce publisher spend ten percent without increasing audit risk. Which optimization portfolio is most aligned?",
 		"choices": [
-			"Inconsistent counting logic that leads to unreliable compliance reporting and audit disputes",
-			"Unauthorized updates to knowledge articles linked from the service catalog portal",
-			"Changes to incident assignment groups triggered by reconciliation scheduled jobs",
-			"Automatic deletion of discovery records when normalization rules are updated"
+			"Reclamation of inactive installs, right-sizing renewals, and retiring unused entitlements before true-ups",
+			"Eliminating all reconciliation jobs until savings targets are met",
+			"Purchasing enterprise agreements for every title regardless of consumption",
+			"Suppressing compliance exceptions without documented acceptance"
 		],
 		"correctIndex": 0,
-		"explanation": "Metric governance keeps reconciliation logic consistent and auditable, reducing dispute risk with publishers during true-ups and audits.",
+		"explanation": "Spend reduction strategies combine reclamation, renewal right-sizing, and governed exception management to protect compliance posture.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/govern-license-metrics.html"
-		]
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/software-reclamation.html"
+		],
+		"domain": "SAM Strategy and Optimization"
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 19,
-		"prompt": "Before finalizing reconciliation for a new publisher, which validation step gives the strongest confidence that metric mappings behave correctly?",
+		"questionType": "multi",
+		"prompt": "Before renewing a volume agreement, which two analyses give finance the strongest negotiation data? (Choose two.)",
 		"choices": [
-			"Confirm metric-to-contract alignment and test expected consumption on representative install data",
-			"Review the entitlement form layout theme and field label color configuration",
-			"Replace entitlement quantities with rounded estimates to simplify dashboard totals",
-			"Temporarily disable reconciliation error notifications until the first audit completes"
+			"Reconciled over-licensed positions showing surplus entitlements available for reduction",
+			"Effective License Position comparing normalized consumption to purchased rights",
+			"Mean time to resolve unrelated infrastructure incidents",
+			"Discovery probe frequency by subnet without entitlement context"
 		],
 		"correctIndex": 0,
-		"explanation": "Testing metric configuration against representative data confirms reconciliation produces expected compliance outcomes under real licensing scenarios.",
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Renewal negotiations use reconciled position and over-licensed analysis to right-size commitments while maintaining audit defensibility.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/validate-reconciliation-results.html"
-		]
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
+		],
+		"domain": "SAM Strategy and Optimization"
 	}
 ]

@@ -13,7 +13,8 @@
 		"explanation": "Engagements represent scoped business relationships with third parties; assessments, tiering, and risk scores roll up at both the company and engagement levels.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
-		]
+		],
+		"domain": "TPRM Fundamentals and Review"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -29,7 +30,8 @@
 		"explanation": "The vendor_contact role is scoped exclusively for external third-party contacts and grants access only to the Third-party Portal.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-tp-contact-config.html"
-		]
+		],
+		"domain": "TPRM Fundamentals and Review"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -45,7 +47,8 @@
 		"explanation": "The vendor_assessor role manages third parties, third-party contacts, risk assessments, and issues as part of core TPRM operational duties.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
-		]
+		],
+		"domain": "TPRM Fundamentals and Review"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -59,11 +62,15 @@
 			"Vulnerability assessment (sn_vul_vulnerability) importing CVE findings from external scanner feeds"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "TPRM supports external assessments distributed to vendor contacts and internal assessments completed by organizational respondents before or alongside vendor questionnaires.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
-		]
+		],
+		"domain": "TPRM Fundamentals and Review"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -79,6 +86,7 @@
 		"explanation": "Assessment ratings aggregate to the third party and engagement according to the configured rollup method, dynamically updating risk posture and scores.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/rm-assessment-integration.html"
-		]
+		],
+		"domain": "TPRM Fundamentals and Review"
 	}
 ]

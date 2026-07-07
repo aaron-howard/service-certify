@@ -13,7 +13,8 @@
 		"explanation": "IRE-based CI creation from assets applies to CI classes that identify on serial number and have no dependent CI class relationships.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
-		]
+		],
+		"domain": "Data Integrity Attributes and Data Sources"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -29,7 +30,8 @@
 		"explanation": "The Asset Creation Queue shows assets pending creation and errors from the delayed sync job; errors can be reprocessed by setting state to Ready.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
-		]
+		],
+		"domain": "Data Integrity Attributes and Data Sources"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -45,7 +47,8 @@
 		"explanation": "When enabled, CSDM Life Cycle Stage and Status synchronize directly between assets and CIs instead of legacy State and Substate only.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
-		]
+		],
+		"domain": "Data Integrity Attributes and Data Sources"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -61,7 +64,8 @@
 		"explanation": "The sn_itam_common.mac_address_sync property in the Asset Property table enables MAC-address-based synchronization between assets and CIs when set to true.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
-		]
+		],
+		"domain": "Data Integrity Attributes and Data Sources"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -77,6 +81,7 @@
 		"explanation": "Caching mapping tables reduces lookup overhead when assets and CIs update frequently in high-volume environments.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
-		]
+		],
+		"domain": "Practical Management of IT Assets"
 	}
 ]

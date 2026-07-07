@@ -13,12 +13,13 @@
 		"explanation": "Board-level assurance requires explicit rationalization linking platform investment to retired spend and consolidated capabilities.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOE",
 		"order": 41,
-		"prompt": "Given a case study where ESG reporting requires auditable workflow data, how should the platform owner extend the strategy vision?",
+		"prompt": "When champion forums stall, eSG reporting requires auditable workflow data, how should the platform owner extend the strategy vision?",
 		"choices": [
 			"Include governed data capture, retention policies, and traceability aligned to ESG disclosure requirements",
 			"Treat ESG as a future phase with no changes to current workflow or data design",
@@ -29,7 +30,8 @@
 		"explanation": "ESG-aligned vision embeds auditable workflow data and retention in platform strategy—not deferred manual workarounds.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOE",
@@ -43,11 +45,15 @@
 			"Individual performance ratings for every contractor on the program"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Annual strategy updates reflect measured progress and reprioritized roadmaps—not operational meeting notes or HR records.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOE",
@@ -69,15 +75,28 @@
 			"Analyst teams exploring trends with governed but flexible access"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "BI patterns match reporting cadence and consumption needs: batch scorecards, real-time ops, semantic consistency, and governed self-service.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOE",
@@ -93,6 +112,7 @@
 		"explanation": "Sponsor transitions require deliberate succession, context transfer, and reaffirmed outcomes—not silent scope cuts or unmanaged drift.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	}
 ]

@@ -13,7 +13,8 @@
 		"explanation": "Record producer scripts use producer.VARIABLE_NAME to read user-entered variable values and current.FIELD_NAME to set fields on the record being created.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/service-catalog/c_PopulatingRecordData.html"
-		]
+		],
+		"domain": "Service Catalog and Request Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -29,7 +30,8 @@
 		"explanation": "current.FIELD_NAME references fields on the record being created, and producer.VARIABLE_NAME references the value entered by the user.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/service-catalog/c_PopulatingRecordData.html"
-		]
+		],
+		"domain": "Service Catalog and Request Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -45,7 +47,8 @@
 		"explanation": "producer.portal_redirect controls redirect behavior in Service Portal, while producer.redirect handles the platform UI.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/service-catalog/c_PopulatingRecordData.html"
-		]
+		],
+		"domain": "Service Catalog and Request Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -61,7 +64,8 @@
 		"explanation": "A record producer variable with the same name as a target field populates that field directly when the record is created, provided the variable type matches the field type.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/service-catalog/c_PopulatingRecordData.html"
-		]
+		],
+		"domain": "Service Catalog and Request Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -77,6 +81,7 @@
 		"explanation": "In catalog client scripts the g_form priority order places Mandatory highest, so a mandatory variable without a value cannot be hidden or made read-only until it is populated.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/service-catalog/t_CreateACatalogClientScript.html"
-		]
+		],
+		"domain": "Service Catalog and Request Management"
 	}
 ]

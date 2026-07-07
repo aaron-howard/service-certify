@@ -2,86 +2,101 @@
 	{
 		"trackCode": "CIS-SIR",
 		"order": 80,
-		"prompt": "Administrators catalog reusable Flow Designer components for Security Incident Response automation. Which resource lists prebuilt flows for common SecOps scenarios?",
+		"questionType": "multi",
+		"prompt": "Which two capabilities differentiate playbooks from runbooks in Security Incident Response? (Choose two.)",
 		"choices": [
-			"The SIR Flow Library with packaged flows for standard response patterns",
-			"The Discovery pattern designer catalog for horizontal application probes",
-			"The CMDB Data Manager queue for orphaned relationship remediation",
-			"The Service Portal theme editor for employee self-service branding"
+			"Playbooks orchestrate automated task creation and workflow routing",
+			"Runbooks link tasks to knowledge articles for guided manual execution",
+			"Playbooks replace all analyst judgment for every incident category",
+			"Runbooks automatically close incidents without validation evidence"
 		],
 		"correctIndex": 0,
-		"explanation": "The SIR Flow Library provides prebuilt Flow Designer content teams can adapt for common security response automation scenarios.",
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Playbooks automate structured response workflows while runbooks provide knowledge-guided steps analysts execute during tasks.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/cj-sir-about-flows.html",
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/cj-sir-flow-library.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-playbook.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/sir-workspace-playbooks.html"
+		],
+		"domain": "Automation and Standard Processes"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 81,
-		"prompt": "Integration engineers need starter templates when connecting EDR tools to Security Incident Response. Which artifact accelerates that implementation?",
+		"prompt": "A team is standing up fully automated phishing handling for reported email messages. Which process type should they create first?",
 		"choices": [
-			"SIR orchestration workflow templates for common third-party response actions",
-			"Discovery schedules assigning MID Servers to office printer subnets",
-			"CMDB class manager extensions for custom cmdb_ci_appl attributes",
-			"Service catalog item templates for employee mobile device requests"
+			"Automated phishing process linked to parsing rules and playbook execution",
+			"Manual malware process requiring analyst initiation for every alert",
+			"Failed login manual process for brute-force events without automation",
+			"Discovery schedule process for nightly CMDB subnet scanning"
 		],
 		"correctIndex": 0,
-		"explanation": "Orchestration workflow templates provide starting points for integrating external security tools with incident response actions.",
+		"explanation": "Automated phishing processes combine email parsing validation with playbook-driven response for user-reported messages.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/sir-orch-workflow-templates.html",
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/sec-inc-resp-orchestration-workflows.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/create-process-automated-phishing.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/using-automated-phishing-playbook.html"
+		],
+		"domain": "Automation and Standard Processes"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 82,
-		"prompt": "After configuring orchestration trigger filters, an administrator needs to confirm they match expected incidents. What is the recommended validation step?",
+		"prompt": "An orchestration action should run only when a specific configuration item appears on the security incident. Which configuration defines that scope?",
 		"choices": [
-			"Verify configured trigger conditions against sample security incident records",
-			"Disable all playbooks until the next major platform upgrade completes",
-			"Delete existing incidents so triggers only apply to future records",
-			"Remove affected CI references from every open incident manually"
+			"Trigger conditions scoped to the affected configuration item on the incident",
+			"Discovery credentials assigned to the MID Server cluster for the subnet",
+			"Service catalog approval workflows for employee laptop requests",
+			"CMDB health KPI thresholds for duplicate CI remediation tasks"
 		],
 		"correctIndex": 0,
-		"explanation": "Verifying trigger conditions against representative incidents confirms automation fires only when intended criteria are satisfied.",
+		"explanation": "Trigger conditions restrict when orchestration actions and flows execute based on incident fields such as affected CIs.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/verify-the-configured-trigger-conditions.html",
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/define-trigger-conditions.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/define-trigger-conditions.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/understand-trigger-conditions-work-with-configuration-item.html"
+		],
+		"domain": "Automation and Standard Processes"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 83,
-		"prompt": "A Denial of Service security incident should automatically launch a predefined response workflow. Which configuration ties category values to workflow execution?",
+		"questionType": "multi",
+		"prompt": "Which two elements are configured when defining trigger conditions for SecOps orchestration actions? (Choose two.)",
 		"choices": [
-			"Process and playbook mapping where category selection triggers the matching template",
-			"Discovery schedule frequency controlling MID Server probe intervals",
-			"CMDB reconciliation precedence for hostname attribute updates",
-			"Service catalog fulfillment groups for hardware procurement requests"
+			"Filter criteria that determine when the action may execute",
+			"Target table and fields evaluated against the security incident record",
+			"Discovery schedule frequency for MID Server subnet scanning",
+			"Service catalog item price and fulfillment group assignment"
 		],
 		"correctIndex": 0,
-		"explanation": "Category-driven process definitions and workflow templates such as the Denial of Service template initiate response when qualifying field values are set.",
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Trigger conditions specify which records qualify and which field values must match before an orchestration action runs.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/si-denial-of-service-template.html",
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/category-management-sir.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/define-trigger-conditions.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/verify-the-configured-trigger-conditions.html"
+		],
+		"domain": "Automation and Standard Processes"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 84,
-		"prompt": "SIEM alerts should become prioritized security incidents instead of standalone event records. Which SIR concept describes that operating model?",
+		"prompt": "An EDR integration must quarantine endpoints directly from a security incident record. Which capability launches those external response actions?",
 		"choices": [
-			"Using security alerts as inputs that create or enrich security incident records",
-			"Storing all SIEM events only in the ECC queue without incident linkage",
-			"Routing alerts exclusively to HR cases for employee policy violations",
-			"Suppressing every monitoring alert once a CMDB CI record exists"
+			"SecOps orchestration workflows invoked from Security Incident Response",
+			"CMDB identification rules merging duplicate computer CI records",
+			"Service Mapping ML candidate queues for application onboarding",
+			"Hardware asset disposal workflows in IT Asset Management"
 		],
 		"correctIndex": 0,
-		"explanation": "Security Incident Response integrates alert sources so monitoring events feed triage, prioritization, and managed incident workflows.",
+		"explanation": "Orchestration workflows integrate external security tools so responders execute containment actions without leaving the incident record.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/c_ScIncdUseAlrts.html",
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/what-is-sir.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/sec-inc-resp-orchestration-workflows.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/sir-orch-workflow-templates.html"
+		],
+		"domain": "Automation and Standard Processes"
 	}
 ]

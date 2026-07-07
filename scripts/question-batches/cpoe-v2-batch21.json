@@ -2,7 +2,7 @@
 	{
 		"trackCode": "CPOE",
 		"order": 100,
-		"prompt": "Given a case study where a global ServiceNow rollout reports slow catalog response times immediately after go-live, what should the platform owner prioritize first?",
+		"prompt": "With shared delivery teams, a global ServiceNow rollout reports slow catalog response times immediately after go-live, what should the platform owner prioritize first?",
 		"choices": [
 			"Establish a war room with cross-functional leads to triage symptoms, isolate root cause, and communicate status to executives",
 			"Schedule a full platform upgrade before analyzing performance data",
@@ -13,7 +13,8 @@
 		"explanation": "Post-go-live performance issues require coordinated triage across teams with transparent executive communication—not isolated vendor work or disruptive shutdowns.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Implementation and Delivery"
 	},
 	{
 		"trackCode": "CPOE",
@@ -29,7 +30,8 @@
 		"explanation": "Enterprise rollouts need layered testing—automated regression plus structured acceptance—so each wave ships with validated critical workflows.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/automated-test-framework/atf-best-practices.html"
-		]
+		],
+		"domain": "Implementation and Delivery"
 	},
 	{
 		"trackCode": "CPOE",
@@ -43,11 +45,15 @@
 			"Deploying directly to production without a rollback plan"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Release readiness depends on automated regression plus business acceptance; skipping tests or omitting rollback plans increases production risk.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/automated-test-framework/atf-overview.html"
-		]
+		],
+		"domain": "Implementation and Delivery"
 	},
 	{
 		"trackCode": "CPOE",
@@ -69,15 +75,28 @@
 			"Hand off to operational governance with documented runbooks"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Rollout phases shift focus from readiness validation through cutover coordination, hypercare stabilization, and operational handoff.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Implementation and Delivery"
 	},
 	{
 		"trackCode": "CPOE",
@@ -93,6 +112,7 @@
 		"explanation": "Cross-team sequencing conflicts require structured dependency analysis tied to business priorities and clear escalation paths—not indefinite delay or ungoverned fragmentation.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Implementation and Delivery"
 	}
 ]

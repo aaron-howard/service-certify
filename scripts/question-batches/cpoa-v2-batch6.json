@@ -13,7 +13,8 @@
 		"explanation": "Community Champions extend sponsorship through trusted peers by gathering feedback and driving adoption; they do not own funding, architecture, or executive authority.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "People"
 	},
 	{
 		"trackCode": "CPOA",
@@ -29,7 +30,8 @@
 		"explanation": "Tool conflicts are resolved by mapping overlap, quantifying pain, and securing sponsor alignment on consolidation—not abrupt shutdowns or indefinite delay.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "People"
 	},
 	{
 		"trackCode": "CPOA",
@@ -45,7 +47,8 @@
 		"explanation": "OCM begins with impact and readiness assessment so enablement targets the right audiences and addresses likely resistance before go-live.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "People"
 	},
 	{
 		"trackCode": "CPOA",
@@ -67,15 +70,28 @@
 			"Track usage and outcomes against agreed success measures"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "OCM orchestration sequences impact analysis, champions, structured communication, and adoption metrics to sustain transformation momentum.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "People"
 	},
 	{
 		"trackCode": "CPOA",
@@ -89,10 +105,14 @@
 			"Pause all enablement until a new steering committee is formed from scratch"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Re-engaging sponsors requires refreshed outcome alignment and concise evidence of value; excluding sponsors or halting enablement undermines adoption.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "People"
 	}
 ]

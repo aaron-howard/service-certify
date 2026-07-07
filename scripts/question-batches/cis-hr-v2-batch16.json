@@ -2,7 +2,7 @@
 	{
 		"trackCode": "CIS-HR",
 		"order": 75,
-		"prompt": "What is the Delegated Developer role used for in HR scoped applications?",
+		"prompt": "A partner firm needs to customize HR case forms without full admin access. Which scoped role pattern should governance allow?",
 		"choices": [
 			"Allowing controlled customization within an HR scope without full admin rights",
 			"Granting unrestricted Global scope development",
@@ -13,7 +13,8 @@
 		"explanation": "Delegated developers can build within assigned scoped applications while governance limits cross-scope or platform-wide changes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
-		]
+		],
+		"domain": "Platform, Role, and Contextual Security"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -29,54 +30,58 @@
 		"explanation": "PII and confidential HR data use field ACLs so only authorized roles can read or update sensitive columns.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
-		]
+		],
+		"domain": "Platform, Role, and Contextual Security"
 	},
 	{
 		"trackCode": "CIS-HR",
 		"order": 77,
-		"prompt": "How should HR work notes be secured compared to public comments?",
+		"prompt": "Payroll must receive new hire and termination events from ServiceNow within four hours. Which integration design supports reliable payroll synchronization?",
 		"choices": [
-			"Work notes remain internal to authorized HR roles while comments may be employee-visible",
-			"Work notes are visible to all employees by default",
-			"Comments are always encrypted with no access control",
-			"Work notes bypass all journaling"
+			"Scheduled or event-driven integrations in the HR Integrations scope with secured credentials and error handling",
+			"Manual CSV exports emailed weekly without import set reconciliation",
+			"Discovery probes that scan employee laptops for payroll deductions",
+			"CMDB identification rules that create payroll journal entries automatically"
 		],
 		"correctIndex": 0,
-		"explanation": "Separating work notes from customer-visible comments protects confidential HR handling details.",
+		"explanation": "Payroll integrations use governed connectors and jobs in the Integrations scope with monitoring for failed employee updates.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
-		]
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+		],
+		"domain": "Integration Strategy"
 	},
 	{
 		"trackCode": "CIS-HR",
 		"order": 78,
-		"prompt": "Which techniques help verify an HR agent can access a specific case?",
+		"prompt": "A benefits vendor requires enrollment status updates when employees change eligibility. How should HRSD exchange data with the external benefits system?",
 		"choices": [
-			"Security debugging and impersonation while reviewing ACL results",
-			"Deleting all ACLs on hr_case",
-			"Assigning every user the admin role",
-			"Disabling HR criteria globally"
+			"Integration flows mapping HR profile and case outcomes to benefits enrollment records with reconciliation checks",
+			"Public case comments posted to the vendor portal without authentication",
+			"Retiring all HR profiles after each open enrollment period",
+			"Disabling HR criteria so every employee sees every benefits service"
 		],
 		"correctIndex": 0,
-		"explanation": "Access debugging shows which ACLs and contextual rules pass or fail for the impersonated user on the case.",
+		"explanation": "Benefits integrations translate HR profile and fulfillment outcomes into authoritative enrollment updates with validation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
-		]
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+		],
+		"domain": "Integration Strategy"
 	},
 	{
 		"trackCode": "CIS-HR",
 		"order": 79,
-		"prompt": "Why apply need-to-know assignment patterns on sensitive HR cases?",
+		"prompt": "A legacy HRIS remains the system of record for employee demographics during phase one. What synchronization strategy should the implementation team use?",
 		"choices": [
-			"To limit exposure of confidential employee matters to authorized handlers only",
-			"To publish case details on public dashboards",
-			"To allow any manager worldwide to edit cases",
-			"To skip approval requirements"
+			"Define authoritative source per attribute, reconcile conflicts, and phase bidirectional sync after data quality validation",
+			"Allow employees to edit any HR profile field without approval or audit",
+			"Import production HR cases with full PII into every sub-production instance daily",
+			"Disable all ACLs during integration testing to speed troubleshooting"
 		],
 		"correctIndex": 0,
-		"explanation": "Restricting assignment and visibility reduces privacy risk for investigations, medical, or disciplinary cases.",
+		"explanation": "HRIS synchronization plans identify source-of-truth fields, reconciliation rules, and staged cutover milestones before go-live.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
-		]
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+		],
+		"domain": "Integration Strategy"
 	}
 ]

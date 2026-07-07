@@ -13,7 +13,8 @@
 		"explanation": "The Third-party Portal is the designated collaboration channel where external contacts respond to assessments, supply evidence, and communicate with risk assessors instead of using email or spreadsheets.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/vendor-portal.html"
-		]
+		],
+		"domain": "TPRM Fundamentals and Review"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -29,7 +30,8 @@
 		"explanation": "Third-party Risk Management is a GRC application that manages the full third-party risk lifecycle from portfolio onboarding through assessment, monitoring, and remediation.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/third-party-risk-mgt-landing-page.html"
-		]
+		],
+		"domain": "TPRM Fundamentals and Review"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -45,7 +47,8 @@
 		"explanation": "Due diligence requests establish the risk level of a third-party engagement and drive subsequent assessment, tiering, and approval workflows.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-requesting-tpr-due-diligence.html"
-		]
+		],
+		"domain": "TPRM Fundamentals and Review"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -59,11 +62,15 @@
 			"Time Zone field defining the preferred regional offset for scheduled assessment reminders"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Every third party must have a primary contact designated, and the email field triggers the automated notification containing portal login credentials.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-tp-contact-config.html"
-		]
+		],
+		"domain": "TPRM Fundamentals and Review"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -80,6 +87,7 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-add-risks-tp.html",
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/rm-assessment-integration.html"
-		]
+		],
+		"domain": "TPRM Fundamentals and Review"
 	}
 ]

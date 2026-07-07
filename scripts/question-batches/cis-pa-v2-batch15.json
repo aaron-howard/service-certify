@@ -14,7 +14,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/data-visualizations.html",
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_TargetsAndThresholds.html"
-		]
+		],
+		"domain": "Data Visualization and Dashboards"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -31,7 +32,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/unified-filters.html",
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
-		]
+		],
+		"domain": "Data Visualization and Dashboards"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -48,7 +50,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/performance-analytics-performance.html",
 			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html"
-		]
+		],
+		"domain": "Data Visualization and Dashboards"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -62,12 +65,16 @@
 			"Run historic data collection jobs directly from the widget header"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "KPI Details focuses on interpreting the KPI through trends, breakdown context, and target status rather than on administrative collection tasks.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/kpi-details.html",
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html"
-		]
+		],
+		"domain": "Data Visualization and Dashboards"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -84,6 +91,7 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/par-workspace.html",
 			"https://www.servicenow.com/docs/r/now-intelligence/analytics-center.html"
-		]
+		],
+		"domain": "Data Visualization and Dashboards"
 	}
 ]

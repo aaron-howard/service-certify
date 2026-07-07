@@ -13,7 +13,8 @@
 		"explanation": "Breakdown matrix exclusions remove specific dimensional values from collection for a given indicator without deleting the breakdown source.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html"
-		]
+		],
+		"domain": "Configure Breakdowns and Breakdown Sources"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -29,7 +30,8 @@
 		"explanation": "Breakdown relations define hierarchical or associated paths so users can navigate from one segment dimension to another in PA analytics.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html"
-		]
+		],
+		"domain": "Configure Breakdowns and Breakdown Sources"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -45,7 +47,8 @@
 		"explanation": "Incorrect segments often trace to a mismatch between the indicator source field values and the breakdown source value set being mapped.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_BreakdownMappings.html"
-		]
+		],
+		"domain": "Configure Breakdowns and Breakdown Sources"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -61,7 +64,8 @@
 		"explanation": "Bucket groups convert continuous duration or numeric values into discrete bands that are easier to interpret in scorecards and widgets.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html"
-		]
+		],
+		"domain": "Configure Breakdowns and Breakdown Sources"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -75,11 +79,15 @@
 			"Remove all conditions from the indicator source"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Matrix exclusions and filtered breakdown sources keep collection focused; wiping scores or removing source conditions undermines accurate analytics.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html",
 			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_ConfigureBreakdownSources.html"
-		]
+		],
+		"domain": "Configure Breakdowns and Breakdown Sources"
 	}
 ]

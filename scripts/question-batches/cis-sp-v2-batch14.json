@@ -2,23 +2,6 @@
 	{
 		"trackCode": "CIS-SP",
 		"order": 65,
-		"prompt": "A multi-domain import links users to departments through reference fields. What validation prevents silent data defects?",
-		"choices": [
-			"Confirm referenced department records exist in the same domain as the user being loaded",
-			"Require all reference fields to point to records in the global domain only",
-			"Skip reference checks when the source file has fewer than one thousand rows",
-			"Clear sys_domain on departments so references resolve by display name alone"
-		],
-		"correctIndex": 0,
-		"explanation": "Cross-domain reference defects are avoided by validating that lookup targets exist within the tenant domain of the record being imported.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_Coalescing.html",
-			"https://www.servicenow.com/docs/r/platform-security/bp-dom-sep-definition.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SP",
-		"order": 66,
 		"prompt": "According to domain separation support levels, which description matches the Basic category?",
 		"choices": [
 			"Business logic ensures records are created and queried within the proper tenant domain for SP use cases",
@@ -30,11 +13,12 @@
 		"explanation": "Basic support requires application logic to route data to the correct tenant domain at run time across UI, reporting, and aggregations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/bp-domain-levels.html"
-		]
+		],
+		"domain": "Domain Support in Applications"
 	},
 	{
 		"trackCode": "CIS-SP",
-		"order": 67,
+		"order": 66,
 		"prompt": "Service Catalog is rated Standard for domain separation support. Which outcome can a service provider achieve at that level?",
 		"choices": [
 			"Configure tenant-specific catalog behavior and process parameters while preserving shared platform governance",
@@ -47,11 +31,12 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/domain-separated-apps.html",
 			"https://www.servicenow.com/docs/r/platform-security/bp-domain-levels.html"
-		]
+		],
+		"domain": "Domain Support in Applications"
 	},
 	{
 		"trackCode": "CIS-SP",
-		"order": 68,
+		"order": 67,
 		"prompt": "Knowledge Management supports Standard domain separation. What does that enable in a multi-tenant service provider instance?",
 		"choices": [
 			"Domain-aware knowledge content and provider-managed process differences per tenant customer",
@@ -64,11 +49,12 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/domain-separated-apps.html",
 			"https://www.servicenow.com/docs/r/servicenow-platform/domain-separation-knowledge.html"
-		]
+		],
+		"domain": "Domain Support in Applications"
 	},
 	{
 		"trackCode": "CIS-SP",
-		"order": 69,
+		"order": 68,
 		"questionType": "multi",
 		"prompt": "Which statements correctly describe Standard domain separation support in supported applications? (Choose two.)",
 		"choices": [
@@ -78,11 +64,32 @@
 			"Indicates the application has no sys_domain column on its primary data tables"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Standard support builds on Basic data routing and adds provider-managed per-tenant process configuration without tenant source-code changes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/bp-domain-levels.html",
 			"https://www.servicenow.com/docs/r/platform-security/domain-separated-apps.html"
-		]
+		],
+		"domain": "Domain Support in Applications"
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 69,
+		"prompt": "Mobile is supported at Basic domain separation level. What must the instance owner ensure for mobile clients in an MSP environment?",
+		"choices": [
+			"Mobile experiences respect tenant domain context after platform web domain separation is configured",
+			"Each mobile device stores all tenant data locally without domain filtering",
+			"Mobile removes sys_domain from forms so field workers can edit any tenant record",
+			"Domain separation on mobile requires disabling the domain separation plugin on web"
+		],
+		"correctIndex": 0,
+		"explanation": "Mobile domain separation extends platform web configuration so native clients honor tenant domain context at run time.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/mobile/mobile-domain-separation.html"
+		],
+		"domain": "Domain Support in Applications"
 	}
 ]

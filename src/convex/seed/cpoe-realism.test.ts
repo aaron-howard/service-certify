@@ -1,6 +1,11 @@
 import { describe, expect, it } from 'vitest';
 import { DEV_PRACTICE_QUESTIONS } from '../../convex/seed/devQuestionBank';
-import { CPOE_BANK_SIZE, validateCpoeTrack } from '$lib/catalog/cpoeRealism';
+import {
+	CPOE_BANK_SIZE,
+	CPOE_DOMAIN_TARGETS,
+	domainForOrder,
+	validateCpoeTrack
+} from '$lib/catalog/cpoeRealism';
 
 const TRACK = 'CPOE';
 const V2_ORDERS = Array.from({ length: CPOE_BANK_SIZE }, (_, i) => i);
@@ -15,6 +20,21 @@ describe('CPOE v2 realism', () => {
 
 	it('passes CPOE realism validation', () => {
 		expect(validateCpoeTrack(rows)).toEqual([]);
+	});
+
+	it('tags every question with the domain quota for its order slot', () => {
+		const counts = Object.fromEntries(
+			Object.keys(CPOE_DOMAIN_TARGETS).map((d) => [d, 0])
+		) as Record<string, number>;
+
+		for (const q of rows) {
+			expect(q.domain).toBe(domainForOrder(q.order));
+			counts[q.domain!]++;
+		}
+
+		for (const [domain, target] of Object.entries(CPOE_DOMAIN_TARGETS)) {
+			expect(counts[domain]).toBe(target);
+		}
 	});
 
 	it('includes match, multi, and single item types', () => {

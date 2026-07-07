@@ -13,7 +13,8 @@
 		"explanation": "HR services reference catalog items or record producers so Employee Center submissions create the correct HR case or request.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-services-overview.html"
-		]
+		],
+		"domain": "HR System Architecture"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -29,7 +30,8 @@
 		"explanation": "Topic categories organize HR services so employees find the right offering and operations can analyze demand by subject area.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-services-overview.html"
-		]
+		],
+		"domain": "HR System Architecture"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -45,7 +47,8 @@
 		"explanation": "HR service records reference a COE so cases route to the correct functional team and appear in COE dashboards.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-centers-of-excellence.html"
-		]
+		],
+		"domain": "Core HR Applications and Employee Center"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -61,7 +64,8 @@
 		"explanation": "HR integrations keep profiles, positions, and org structures aligned with authoritative HCM sources.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
-		]
+		],
+		"domain": "Core HR Applications and Employee Center"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -77,6 +81,7 @@
 		"explanation": "A consistent core model with scoped extensions allows COEs to specialize while preserving upgradeability and reporting consistency.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
-		]
+		],
+		"domain": "Core HR Applications and Employee Center"
 	}
 ]

@@ -4,14 +4,43 @@ import type { QuestionType } from './questionTypes';
 
 /** Bank distribution for 75 questions: 45 official + 30 buffer. */
 export const CIS_SP_DOMAIN_TARGETS = {
-	'Initial Domain Setup and Service Provider Architecture': 7,
-	'Data Separation/Visibility': 18,
-	'Process Separation': 27,
-	'Foundational Data Management': 15,
-	'Domain Support in Applications': 8
+	'Initial Domain Setup and Service Provider Architecture': 5,
+	'MSP Operations Strategy': 8,
+	'Customer Onboarding and Tenant Lifecycle': 7,
+	'Data Separation/Visibility': 15,
+	'Process Separation': 19,
+	'Foundational Data Management': 11,
+	'Domain Support in Applications': 10
 } as const;
 
 export const CIS_SP_BANK_SIZE = 75;
+
+export type CisSpDomain = keyof typeof CIS_SP_DOMAIN_TARGETS;
+
+export function domainForOrder(order: number): CisSpDomain {
+	if (order <= 4) return 'Initial Domain Setup and Service Provider Architecture';
+	if (order <= 12) return 'MSP Operations Strategy';
+	if (order <= 19) return 'Customer Onboarding and Tenant Lifecycle';
+	if (order <= 34) return 'Data Separation/Visibility';
+	if (order <= 53) return 'Process Separation';
+	if (order <= 64) return 'Foundational Data Management';
+	return 'Domain Support in Applications';
+}
+
+export const CIS_SP_SCENARIO_MIN_RATIO = 0.7;
+
+export function isScenarioStylePrompt(prompt: string): boolean {
+	const trimmed = prompt.trim();
+	if (trimmed.length >= 90) return true;
+	if (
+		/^(A |An |The |Your |During |When |After |Before |If |Given |While |Upon |How can|How do|How does|How is|How are|How should|Why should|Why would|Which practice|Which approach|Which configuration|Which design|Which two|Choose two|What happens|What should|A CIO|A CISO|An MSP|A municipal|A stakeholder|A business|An organization|An implementer|An administrator|Leadership |Operations |Several |Two )/i.test(
+			trimmed
+		)
+	) {
+		return true;
+	}
+	return false;
+}
 
 export const BANNED_CHOICE_PREFIXES = [
 	'Typically,',
@@ -39,6 +68,7 @@ export type CisSpQuestionRow = {
 	prompt: string;
 	choices: string[];
 	sourceUrls: string[];
+	domain?: string;
 	questionType?: QuestionType;
 	correctIndexes?: number[];
 	correctIndex?: number;
@@ -99,11 +129,55 @@ export function validateCisSpQuestion(q: CisSpQuestionRow): string[] {
 	return issues;
 }
 
+export function validateCisSpScenarioRatio(rows: CisSpQuestionRow[]): string[] {
+	const sp = rows.filter((q) => q.trackCode === 'CIS-SP');
+	if (sp.length === 0) return [];
+	const scenarioCount = sp.filter((q) => isScenarioStylePrompt(q.prompt)).length;
+	const ratio = scenarioCount / sp.length;
+	if (ratio < CIS_SP_SCENARIO_MIN_RATIO) {
+		return [
+			`scenario-style prompts ${scenarioCount}/${sp.length} (${Math.round(ratio * 100)}%) below minimum ${Math.round(CIS_SP_SCENARIO_MIN_RATIO * 100)}%`
+		];
+	}
+	return [];
+}
+
+export function validateCisSpDomainTags(rows: CisSpQuestionRow[]): string[] {
+	const issues: string[] = [];
+	const domainCounts = Object.fromEntries(
+		Object.keys(CIS_SP_DOMAIN_TARGETS).map((d) => [d, 0])
+	) as Record<string, number>;
+
+	for (const q of rows) {
+		if (q.trackCode !== 'CIS-SP') continue;
+		if (!q.domain) {
+			issues.push(`order ${q.order}: missing domain tag`);
+			continue;
+		}
+		const expected = domainForOrder(q.order);
+		if (q.domain !== expected) {
+			issues.push(`order ${q.order}: domain ${q.domain} does not match order quota ${expected}`);
+		}
+		domainCounts[q.domain]++;
+	}
+
+	for (const [domain, target] of Object.entries(CIS_SP_DOMAIN_TARGETS)) {
+		if (domainCounts[domain] !== target) {
+			issues.push(`domain ${domain}: expected ${target}, got ${domainCounts[domain] ?? 0}`);
+		}
+	}
+
+	return issues;
+}
+
 export function validateCisSpTrack(rows: CisSpQuestionRow[]): string[] {
 	const issues: string[] = [];
 	for (const q of rows) {
 		issues.push(...validateCisSpQuestion(q));
 	}
+
+	issues.push(...validateCisSpScenarioRatio(rows));
+	issues.push(...validateCisSpDomainTags(rows));
 
 	const openerCounts = new Map<string, number>();
 	for (const q of rows) {

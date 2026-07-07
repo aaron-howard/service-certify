@@ -54,6 +54,15 @@ Multi-select allowed with `questionType: "multi"` and `correctIndexes`.
 | 17 | 80–84 | Third-party Supporting Processes | **DONE** |
 | 18 | 85–89 | Other Application Relationships | **DONE** |
 
+## Jul 2026 rebalance (domain content alignment)
+
+Orders **74–84** were rewritten from assessment-approval/issue content to **Third-party Supporting Processes**
+(contract lifecycle, monitoring, managed activity, compliance integration, dashboards). Fundamentals (**9–14**),
+core configuration (**20–21**, **27–29**), assessment deduplication (**47**, **57–58**, **61**), portal multi-select
+fix (**66**), and application relationships (**87–89**) were strengthened in `cis-tprm-rebalance-batch1.json`.
+
+Domain tags enforced via `domainForOrder()` in `cisTprmRealism.ts` and `scripts/tag-cis-tprm-domains.mjs`.
+
 ---
 
 ## Official samples to embed

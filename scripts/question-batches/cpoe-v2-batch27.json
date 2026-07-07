@@ -2,7 +2,7 @@
 	{
 		"trackCode": "CPOE",
 		"order": 130,
-		"prompt": "Given a case study where undocumented customizations block upgrade readiness, how should the platform owner initiate technical debt lifecycle governance?",
+		"prompt": "When inbound integrations fail, undocumented customizations block upgrade readiness, how should the platform owner initiate technical debt lifecycle governance?",
 		"choices": [
 			"Stand up a debt register with business owners, severity scoring, remediation targets, and quarterly board review cadence",
 			"Wait until the next major upgrade fails before cataloging customization issues",
@@ -13,7 +13,8 @@
 		"explanation": "Technical debt lifecycle governance starts with a visible register, accountable owners, scored priorities, and recurring board review—not reactive crisis cleanup or ungoverned access.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	},
 	{
 		"trackCode": "CPOE",
@@ -29,7 +30,8 @@
 		"explanation": "Executive justification connects debt remediation to incident reduction, delivery speed, and upgrade risk—with explicit cost of deferral.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	},
 	{
 		"trackCode": "CPOE",
@@ -43,11 +45,15 @@
 			"Hide debt items from executives to avoid slowing approval cycles"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Debt lifecycle governance couples intake controls with transparent tracking—new scope should address related debt, and registers must remain visible to leadership.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	},
 	{
 		"trackCode": "CPOE",
@@ -63,7 +69,8 @@
 		"explanation": "Architecture board prioritization uses consistent scoring across business risk, upgrade impact, compliance, and delay cost—not arbitrary or reactive ordering.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	},
 	{
 		"trackCode": "CPOE",
@@ -85,14 +92,27 @@
 			"Confirm debt closure through testing evidence and updated architecture records"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Debt lifecycle governance progresses from discovery through scored triage, planned remediation, and verified retirement—not ad hoc fixes without closure evidence.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/configuration-management.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	}
 ]

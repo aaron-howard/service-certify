@@ -13,7 +13,8 @@
 		"explanation": "The com.snc.incident.autoclose.basedon.resolved_at property controls whether the Autoclose Incidents job uses resolution date versus updated date when closing Resolved incidents.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/incident-management/configure-incident-auto-close.html"
-		]
+		],
+		"domain": "Incident Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -29,7 +30,8 @@
 		"explanation": "The Autoclose Incidents scheduled job accepts fcRunAs in Job context so auto-closed incidents show the specified user in Updated by instead of the administrator logged in when the job runs.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/incident-management/change-default-user.html"
-		]
+		],
+		"domain": "Incident Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -45,7 +47,8 @@
 		"explanation": "Incident Assignment is a classification solution that predicts Assignment group from Short description; Incident Categorization predicts Category from the same field.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/predictive-intelligence-for-incident.html"
-		]
+		],
+		"domain": "Incident Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -62,7 +65,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/predictive-intelligence-for-incident.html",
 			"https://www.servicenow.com/docs/r/it-service-management/request-pred-intelli-inc-mgmt.html"
-		]
+		],
+		"domain": "Incident Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -79,6 +83,7 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/service-catalog/service-catalog-variable-editor.html",
 			"https://www.servicenow.com/docs/r/it-service-management/incident-management/incident-templates-record-producers.html"
-		]
+		],
+		"domain": "Incident Management"
 	}
 ]

@@ -13,7 +13,8 @@
 		"explanation": "Executive governance reporting tracks measurable trends across releases, CMDB health, debt, and demand—not unrelated activity counts or unsupported assurances.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	},
 	{
 		"trackCode": "CPOE",
@@ -27,11 +28,15 @@
 			"Disable audit logs in subproduction to reduce storage consumption"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "SOX alignment requires mapped controls and retained change evidence—not standing admin access or disabled auditing.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
-		]
+		],
+		"domain": "Compliance and Security"
 	},
 	{
 		"trackCode": "CPOE",
@@ -47,7 +52,8 @@
 		"explanation": "Platform owners articulate security as a business enabler—supporting trust, partner confidence, and operational resilience—not only as regulatory overhead.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
-		]
+		],
+		"domain": "Compliance and Security"
 	},
 	{
 		"trackCode": "CPOE",
@@ -63,7 +69,8 @@
 		"explanation": "Audit evidence for integrations combines system audit trails, transaction logs, and access reviews—not unsupported narratives or unrelated artifacts.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
-		]
+		],
+		"domain": "Compliance and Security"
 	},
 	{
 		"trackCode": "CPOE",
@@ -85,14 +92,27 @@
 			"Field-level encryption and data masking policies for sensitive attributes"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Compliance controls map to platform capabilities: SoD through roles, access reviews through certification, change evidence through audited records, and data protection through encryption and masking.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
-		]
+		],
+		"domain": "Compliance and Security"
 	}
 ]
