@@ -2,7 +2,7 @@
 	{
 		"trackCode": "CPOE",
 		"order": 150,
-		"prompt": "Given a case study where CMDB accuracy blocks service mapping for a digital transformation initiative, which CSDM foundation approach should the platform owner sponsor first?",
+		"prompt": "After CI ownership findings, cMDB accuracy blocks service mapping for a digital transformation initiative, which CSDM foundation approach should the platform owner sponsor first?",
 		"choices": [
 			"Establish business application and service ownership with foundation data classes before expanding discovery scope",
 			"Populate every possible CI class immediately without assigning data stewards",
@@ -13,7 +13,8 @@
 		"explanation": "CSDM foundation data with clear ownership creates a trustworthy base for service mapping; ungoverned population or external spreadsheets undermine enterprise visibility.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-governance.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	},
 	{
 		"trackCode": "CPOE",
@@ -29,12 +30,13 @@
 		"explanation": "Family release cadence must integrate with enterprise change governance through shared calendars, risk tiers, and blackout rules—not ad hoc or vendor-only timing.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/australia/install-and-upgrade/concept/c_UpgradeBestPractices.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	},
 	{
 		"trackCode": "CPOE",
 		"order": 152,
-		"prompt": "Given a scenario where ServiceNow announces deprecation of legacy client scripts across critical workflows, how should the platform owner lead remediation?",
+		"prompt": "When demand volume rises, serviceNow announces deprecation of legacy client scripts across critical workflows, how should the platform owner lead remediation?",
 		"choices": [
 			"Inventory affected assets, assign owners, sequence migration to supported patterns, and track progress on a governance dashboard",
 			"Request a permanent vendor exemption without documenting business impact",
@@ -45,7 +47,8 @@
 		"explanation": "Legacy deprecation requires governed inventory, ownership, sequenced migration, and visible tracking—not exemptions, ignored notices, or partial remediation.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	},
 	{
 		"trackCode": "CPOE",
@@ -59,11 +62,15 @@
 			"Preference for debt items raised most recently in informal chat channels"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Executive debt prioritization weighs business risk and feasible remediation capacity—not arbitrary ordering or informal popularity.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	},
 	{
 		"trackCode": "CPOE",
@@ -85,14 +92,27 @@
 			"Restore service quickly when a deployment causes unacceptable defects"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Release governance artifacts each serve a distinct control: scheduling visibility, intake discipline, proportional approval, and recovery readiness.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	}
 ]

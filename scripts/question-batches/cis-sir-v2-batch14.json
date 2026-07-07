@@ -2,88 +2,98 @@
 	{
 		"trackCode": "CIS-SIR",
 		"order": 65,
-		"prompt": "A SOC lead wants repeatable containment steps for common incident categories. Which SIR artifact orchestrates structured response activities?",
+		"prompt": "Leadership asks how quickly raw alerts become triaged security incident records. Which metric best answers that question?",
 		"choices": [
-			"Security incident playbooks that create and route response tasks automatically",
-			"Discovery schedules that refresh CMDB CI attributes on a timer",
-			"Service catalog bundles for hardware asset procurement requests",
-			"Event Management connector dashboards showing raw alert volume only"
+			"Mean time to detect from threat occurrence to actionable case creation",
+			"Total analyst comment count per closed incident record",
+			"Number of dashboard portlets on the CISO overview page",
+			"Average age of resolved HR onboarding cases last quarter"
 		],
 		"correctIndex": 0,
-		"explanation": "Playbooks define repeatable response steps and automate task creation so analysts follow consistent procedures under pressure.",
+		"explanation": "Mean time to detect measures how rapidly threats are recognized and converted into managed security incidents.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-playbook.html",
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/sir-workspace-playbooks.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/reports-and-metrics.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-security-analyst-overview-dashboard.html"
+		],
+		"domain": "Security Incident Response Management"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 66,
-		"prompt": "An analyst opens a response task and needs step-by-step guidance from a published knowledge article. Which SIR feature provides that association?",
+		"prompt": "A program manager reviews containment performance after several major incidents. Which metric tracks time from identification to successful containment?",
 		"choices": [
-			"A runbook linking the task to a knowledge base article that opens during execution",
-			"A discovery pattern designer section for horizontal application tracing",
-			"A CMDB health dashboard KPI for duplicate CI remediation",
-			"A service portal widget theme for employee self-service branding"
+			"Mean time to restore from backup completion timestamps",
+			"Mean time to contain from incident identification to containment",
+			"Change advisory board approval cycle duration averages",
+			"Vulnerability scan window length per discovery schedule"
 		],
-		"correctIndex": 0,
-		"explanation": "Runbooks associate published knowledge articles with specific response tasks so analysts receive contextual guidance while working.",
+		"correctIndex": 1,
+		"explanation": "Mean time to contain reflects operational speed in limiting attacker impact once an incident is identified.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-runbook.html",
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/setup-assistant-reference.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/reports-and-metrics.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-security-incident-manager-dashboard.html"
+		],
+		"domain": "Security Incident Response Management"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 67,
 		"questionType": "multi",
-		"prompt": "Which two capabilities differentiate playbooks from runbooks in Security Incident Response? (Choose two.)",
+		"prompt": "Who are key reporting audiences for Security Incident Response dashboards and metrics? (Choose three.)",
 		"choices": [
-			"Playbooks orchestrate automated task creation and workflow branching",
-			"Runbooks surface knowledge articles linked to specific response tasks",
-			"Playbooks replace the need for any security incident record fields",
-			"Runbooks execute only after incidents reach Closed Complete state"
+			"Security Analysts reviewing operational triage and task backlogs",
+			"Security Managers tracking team performance and SLA adherence",
+			"CIOs and CISOs reviewing executive risk and trend summaries",
+			"Facilities and HR staff approving office supply requisitions"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
-		"explanation": "Playbooks automate orchestrated response steps; runbooks provide task-level knowledge guidance without replacing workflow logic.",
+		"correctIndexes": [
+			0,
+			1,
+			2
+		],
+		"explanation": "Analyst, manager, and executive dashboards serve operational, supervisory, and leadership audiences; facilities and HR requisitions are unrelated to SIR reporting.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-playbook.html",
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-runbook.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-security-analyst-overview-dashboard.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-security-incident-manager-dashboard.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-ciso-dashboard-overview.html"
+		],
+		"domain": "Risk Calculations and Post Incident Response"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 68,
-		"prompt": "Integration teams need to launch third-party containment actions from a security incident. Which module provides orchestration workflow templates for those actions?",
+		"prompt": "Reopen rates for closed security incidents climb steadily over several weeks. What is the most likely root cause?",
 		"choices": [
-			"Security Incident Response orchestration workflows in SecOps integrations",
-			"CMDB Data Manager workspace for orphaned relationship cleanup",
-			"Service Mapping pattern designer for top-down entry point tracing",
-			"Employee Center onboarding flows for new hire provisioning"
+			"Containment or eradication was incomplete and closure validation is too weak",
+			"Threat intelligence enrichment feeds were disabled during the period",
+			"Shift handover templates were recently updated for the SOC",
+			"Process definition selector was switched from Stateful to Open"
 		],
 		"correctIndex": 0,
-		"explanation": "SecOps orchestration workflows connect Security Incident Response with external security tools for automated response actions.",
+		"explanation": "Rising reopen rates usually indicate premature closure or unresolved root issues that fail post-closure validation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/sec-inc-resp-orchestration-workflows.html",
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/sir-orch-workflow-templates.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/reports-and-metrics.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-post-incident-review.html"
+		],
+		"domain": "Risk Calculations and Post Incident Response"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 69,
-		"prompt": "Administrators plan to automate phishing triage using Flow Designer. Which documentation topic covers integrating flows with phishing response?",
+		"prompt": "Executives request a quarterly view of security response effectiveness. Which reporting approach best supports that review?",
 		"choices": [
-			"Flow Designer and phishing response integration for automated handling",
-			"Discovery MID Server clustering for subnet reachability planning",
-			"CMDB class hierarchy extensions for custom middleware CI types",
-			"Service catalog variable designer for hardware request approvals"
+			"Trend MTTD, MTTC, MTTR, severity distribution, and repeat rates with risk narrative",
+			"Raw monthly incident totals without severity or category segmentation",
+			"Analyst comment volume grouped by weekday across the quarter",
+			"One-time static screenshots of individual incident form headers"
 		],
 		"correctIndex": 0,
-		"explanation": "Flow Designer integrates with phishing response to automate validation, enrichment, and playbook initiation for reported messages.",
+		"explanation": "Executive reporting should combine response time trends, severity patterns, and repeat incident context to show program maturity.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/flow-designer-and-phishing-response.html",
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/create-process-automated-phishing.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-ciso-dashboard-overview.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/reports-and-metrics.html"
+		],
+		"domain": "Risk Calculations and Post Incident Response"
 	}
 ]

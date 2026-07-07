@@ -2,85 +2,86 @@
 	{
 		"trackCode": "CIS-RC",
 		"order": 30,
-		"prompt": "An implementer wants entity generation to stay accurate as CMDB data changes over time. Which practice supports this goal?",
+		"prompt": "A department record used as an entity is deactivated in its source table, and the entity filter no longer matches it. How does the entity framework handle the related entity?",
 		"choices": [
-			"Locking the source tables so no updates can occur after the initial entity generation run",
-			"Relying on entity filters to reevaluate source records so entity membership tracks data changes",
-			"Exporting entities to a spreadsheet monthly and reimporting corrected rows over the originals",
-			"Cloning production over development weekly so entity data resets to a known baseline"
+			"The entity and all of its historical controls, risks, and issues are hard-deleted immediately from the instance",
+			"The entity is flagged as no longer matching so it can be retired while preserving its compliance history",
+			"The entity remains fully active forever because filters are evaluated only once at creation time",
+			"The source record is automatically reactivated by the filter to keep the entity association valid"
 		],
 		"correctIndex": 1,
-		"explanation": "Because entity filters continue evaluating source records, entities are created and retired as data changes, keeping GRC scope aligned with reality without manual rework.",
+		"explanation": "When a source record stops matching, the framework marks the entity for retirement rather than deleting it, preserving the audit trail of past compliance activity.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/entity-filters.html"
-		]
+		],
+		"domain": "Entity Framework"
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 31,
-		"questionType": "multi",
-		"prompt": "Which two design decisions belong to the entity scoping phase of a GRC implementation? (Choose two.)",
+		"prompt": "A compliance architect associates a new encryption policy statement with an entity type containing eight member entities. What happens next?",
 		"choices": [
-			"Selecting which source tables and conditions define the organization's entities",
-			"Deciding whether content will be associated at the entity type level or to individual entities",
-			"Choosing the font family displayed on executive compliance dashboards",
-			"Setting the SMTP relay server used for outbound notification email"
+			"Controls are generated for each entity in the type based on the associated policy statement",
+			"Policy statements can only attach to individual entities one at a time, never at the type level",
+			"Entity types accept risk statements but reject policy statements, which attach directly to authority documents",
+			"Content associations require deactivating the entity type and rebuilding it from an XML import"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
-		"explanation": "Entity scoping covers which data becomes entities and how content associations will be structured; dashboard styling and mail infrastructure are unrelated platform settings.",
+		"explanation": "Associating policy statements at the entity type level cascades to member entities, generating the corresponding controls for each entity.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-entities.html"
-		]
+		],
+		"domain": "Entity Framework"
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 32,
-		"prompt": "A GRC architect recommends against creating one entity per configuration item for a 40,000-CI estate. What is the strongest justification for this guidance?",
+		"prompt": "A customer wants every record of the cmdb_ci_service table to become an entity with no additional conditions. Which scoping approach fits this requirement with the least configuration?",
 		"choices": [
-			"Entities cannot reference CMDB tables, so configuration items are ineligible as source records",
-			"Each entity may only hold a single control, which would leave most policy statements without coverage",
-			"Generating controls and risks per CI would create unmanageable record volumes, so entities should target meaningful groupings such as services",
-			"The platform limits an instance to 500 entities regardless of licensing tier or storage capacity"
+			"Writing a scheduled script include that inserts entity records for each service every night",
+			"Creating one entity filter per service record so ownership can differ across departments",
+			"Using the class-based approach so the whole table maps to entities of a matching entity type",
+			"Building a Flow Designer flow triggered on service creation that calls a custom subflow"
 		],
 		"correctIndex": 2,
-		"explanation": "Entity granularity drives record volume: content associated to tens of thousands of CI-level entities multiplies controls and risks beyond what teams can operate, so grouping at the service or process level is preferred.",
+		"explanation": "When an entire table or CI class should become entities, class-based scoping is the simplest option; filters add value only when conditional membership is needed.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-entities.html"
-		]
+		],
+		"domain": "Entity Framework"
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 33,
-		"questionType": "multi",
-		"prompt": "Which two tables are in the scope of the Policy and Compliance Management application? (Choose two.)",
+		"prompt": "How does the entity framework support hierarchical relationships such as a business unit containing multiple departments?",
 		"choices": [
-			"Control",
-			"Citation",
-			"Incident",
-			"Asset"
+			"Hierarchies are unsupported, so implementers must flatten all organizational structures before go-live",
+			"Entities support parent-child relationships so risk and compliance posture can roll up through the hierarchy",
+			"Each level of hierarchy requires installing a separate GRC scoped application from the Store",
+			"Hierarchies exist only for vendors and cannot be applied to internal organizational structures"
 		],
-		"correctIndex": 0,
-		"correctIndexes": [0, 1],
-		"explanation": "Control and Citation are Policy and Compliance Management scoped tables; Incident and Asset belong to core platform applications outside the GRC scope.",
+		"correctIndex": 1,
+		"explanation": "Entities can be related in parent-child structures, enabling aggregation and rollup of compliance and risk information across organizational levels.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management.html"
-		]
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-entities.html"
+		],
+		"domain": "Entity Framework"
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 34,
-		"prompt": "Which sequence reflects the typical Policy and Compliance content flow from external requirement to monitored record?",
+		"prompt": "During testing, an implementer notices that no entities were generated after activating a new entity filter. Which cause should be investigated first?",
 		"choices": [
-			"Control, then citation, then authority document, then policy statement in strict reverse dependency order",
-			"Authority document to citation, citation to policy statement, and policy statement to controls generated per entity",
-			"Policy statement to authority document, with citations created afterward only when audits raise findings",
-			"Citation directly to control, skipping policy statements because they are optional legacy records"
+			"The filter conditions do not match any records in the selected source table",
+			"The instance is missing the Performance Analytics license required for entity generation",
+			"The CMDB identification engine rejected the entities due to duplicate serial numbers",
+			"The entity table reached its maximum row count and silently discarded the inserts"
 		],
-		"correctIndex": 1,
-		"explanation": "External authority documents break down into citations, citations map to internal policy statements, and policy statements generate entity-level controls for monitoring.",
+		"correctIndex": 0,
+		"explanation": "The most common cause of an empty result is filter conditions that exclude all source records, so validating the condition against the table is the first check.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/authority-documents.html"
-		]
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/entity-filters.html"
+		],
+		"domain": "Entity Framework"
 	}
 ]

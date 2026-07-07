@@ -13,7 +13,8 @@
 		"explanation": "Breakdown relations let multiple indicators reuse the same breakdown source so dimensional values stay consistent across related KPIs.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_BreakdownRelations.html"
-		]
+		],
+		"domain": "Data Collection"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -29,7 +30,8 @@
 		"explanation": "Breakdown mappings define how source field values map to breakdown elements; missing or incorrect mappings produce empty or unassigned segments.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_BreakdownMappings.html"
-		]
+		],
+		"domain": "Data Collection"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -46,7 +48,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Breakdowns.html",
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/reference/r_WidgetFilters.html"
-		]
+		],
+		"domain": "Data Collection"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -60,11 +63,15 @@
 			"Run the script only when a user opens a dashboard widget on demand"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Scripted breakdown sources must produce consistent, meaningful element values and be validated for volume and correctness before production use.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/task/t_CreateScriptedBreakdowns.html"
-		]
+		],
+		"domain": "Data Collection"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -81,6 +88,7 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectionJobs.html",
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Breakdowns.html"
-		]
+		],
+		"domain": "Data Collection"
 	}
 ]

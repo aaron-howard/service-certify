@@ -13,7 +13,8 @@
 		"explanation": "Publisher pack updates can alter compliance calculations and require governed testing before production promotion.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-model-normalization-governance.html"
-		]
+		],
+		"domain": "Operational Integration of Software Processes"
 	},
 	{
 		"trackCode": "CIS-SAM",
@@ -29,7 +30,8 @@
 		"explanation": "Integrated procurement-to-SAM flows should deduplicate entitlement creation and preserve a single source of purchased rights.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/manage-software-entitlements.html"
-		]
+		],
+		"domain": "Operational Integration of Software Processes"
 	},
 	{
 		"trackCode": "CIS-SAM",
@@ -45,7 +47,8 @@
 		"explanation": "Scheduled off-peak reconciliation maintains current compliance data while reducing impact on interactive SAM operations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
-		]
+		],
+		"domain": "Operational Integration of Software Processes"
 	},
 	{
 		"trackCode": "CIS-SAM",
@@ -61,7 +64,8 @@
 		"explanation": "Catalog integration should respect software model lifecycle states to prevent provisioning of retired or unsupported products.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/now-assist-for-software-asset-management-sam/calculated-lifecycles.html"
-		]
+		],
+		"domain": "Operational Integration of Software Processes"
 	},
 	{
 		"trackCode": "CIS-SAM",
@@ -71,12 +75,13 @@
 			"Exposure by publisher, business unit, remediation owner, and aging status",
 			"Total number of CMDB classes with software discovery enabled",
 			"Knowledge article views grouped by portal category",
-			"Mean time to resolve unrelated infrastructure incidents"
+			"Average duration of unrelated change advisory board meetings"
 		],
 		"correctIndex": 0,
 		"explanation": "Segmented remediation reporting with ownership and aging helps governance boards prioritize high-impact compliance actions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/validate-reconciliation-results.html"
-		]
+		],
+		"domain": "Operational Integration of Software Processes"
 	}
 ]

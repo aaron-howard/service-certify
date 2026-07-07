@@ -2,81 +2,86 @@
 	{
 		"trackCode": "CIS-SAM",
 		"order": 25,
-		"prompt": "Which data source provides the install evidence that SAM uses as input for normalization and reconciliation?",
+		"prompt": "Procurement, IT, and SAM disagree on who creates entitlements from purchase orders. Which stakeholder alignment approach should the program lead facilitate?",
 		"choices": [
-			"Software discovery results collected from agents, probes, or integration imports",
-			"Closed incident records tagged with software-related categories in ITSM",
-			"Approved change request records awaiting CAB review in the change module",
-			"Knowledge article view counts tracked in the knowledge management application"
+			"Document RACI responsibilities for entitlement creation, contract linkage, and reconciliation validation in a operating model workshop",
+			"Allow each team to maintain separate entitlement spreadsheets without integration",
+			"Restrict entitlement edits to a single admin account with no business ownership",
+			"Defer alignment until the first true-up invoice arrives"
 		],
 		"correctIndex": 0,
-		"explanation": "SAM relies on software discovery to identify installed titles and versions on managed devices, forming the consumption side of compliance calculations.",
+		"explanation": "Implementation success depends on clear ownership for entitlement stewardship across procurement, IT, and SAM functions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/software-discovery.html"
-		]
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/manage-software-entitlements.html"
+		],
+		"domain": "Implementation Planning"
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 26,
-		"prompt": "A SAM administrator reviews normalization status on discovered software records. Which status value indicates the title still requires mapping work?",
+		"prompt": "Go-live is six weeks away for the first publisher pack and reconciliation schedule. Which readiness checkpoint validates operational readiness?",
 		"choices": [
-			"Partially normalized status where discovery evidence has not fully mapped to a software model",
-			"Matched status where the discovery record is fully linked to a supported software model",
-			"Manually normalized status set by an administrator override of automatic mapping",
-			"Match not found status when no software model rule applies to the discovery evidence"
+			"End-to-end test of discovery normalization, entitlement import, reconciliation, and remediation on a pilot software model set",
+			"Confirm only that SAM plugins appear active in the application navigator",
+			"Skip reconciliation testing because publisher packs include default rules",
+			"Delay readiness validation until after production cutover"
 		],
 		"correctIndex": 0,
-		"explanation": "Partially normalized indicates discovery evidence has not fully mapped to a software model and requires administrator review or additional mapping rules.",
+		"explanation": "Readiness assessments exercise the full SAM pipeline with representative data before enterprise scheduling and reporting go live.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-normalization-status.html"
-		]
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
+		],
+		"domain": "Implementation Planning"
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 27,
-		"prompt": "How does the SAM Content Service benefit an implementation team maintaining publisher and product data?",
+		"prompt": "A SAM implementation must integrate service catalog requests in release two while release one focuses on data foundations. How should the roadmap prioritize work?",
 		"choices": [
-			"It delivers updated publisher part numbers, software models, and normalization content from ServiceNow",
-			"It replaces all local discovery probes with a single cloud-only inventory scan engine",
-			"It automatically purchases license renewals when entitlements approach expiration dates",
-			"It converts hardware asset records into software entitlement records during imports"
+			"Complete discovery, normalization, and entitlement accuracy in release one before enabling fulfillment checks in release two",
+			"Launch catalog integration first because it delivers the most visible user experience",
+			"Postpone all entitlement work until catalog items are published",
+			"Run reconciliation only after every catalog item has been requested at least once"
 		],
 		"correctIndex": 0,
-		"explanation": "SAM Content Service provides curated publisher catalogs, part numbers, and normalization data that keep software models current without manual research.",
+		"explanation": "Implementation roadmaps sequence trustworthy install and entitlement data before provisioning integrations that depend on accurate license position.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/sam-content-service.html"
-		]
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/software-asset-management-overview.html"
+		],
+		"domain": "Implementation Planning"
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 28,
-		"prompt": "When importing entitlements, why must the Publisher part number field match an existing record?",
+		"prompt": "The SAM team must onboard five new publishers during the same quarter as discovery expansion. Which planning practice prevents compliance gaps?",
 		"choices": [
-			"It ties the imported row to a licensable product definition used for metric and model association",
-			"It determines the default assignment group for software-related incident routing rules",
-			"It sets the fiscal period for cost allocation in the financial management module",
-			"It controls whether discovery scans run on weekends for that publisher's products"
+			"Sequence publisher onboarding with validated software models, contract imports, and test reconciliations per publisher",
+			"Import all contracts simultaneously without software model mappings",
+			"Enable reconciliation globally before any publisher-specific rules are tested",
+			"Exclude new publishers from reporting until the following fiscal year"
 		],
 		"correctIndex": 0,
-		"explanation": "Publisher part numbers connect entitlement imports to software models and license metrics, ensuring imported rights associate with the correct product.",
+		"explanation": "Publisher onboarding plans tie model setup, entitlement loading, and reconciliation validation together to avoid partial compliance coverage.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/publisher-part-numbers.html"
-		]
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/create-a-software-model.html"
+		],
+		"domain": "Implementation Planning"
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 29,
-		"prompt": "Why are software models important when normalizing discovered installations in SAM?",
+		"prompt": "Executive sponsors ask how SAM success will be measured in the first ninety days post go-live. Which early outcome metric is most appropriate?",
 		"choices": [
-			"They provide a consistent product definition used in entitlement logic and compliance reporting",
-			"They replace all CMDB configuration item classes with a single software table",
-			"They store ransomware response playbooks linked to each publisher portfolio",
-			"They configure single sign-on providers for SaaS applications in the catalog"
+			"Percentage of prioritized publishers with reconciled position and resolved import or normalization errors",
+			"Total number of software models created regardless of mapping quality",
+			"Count of users granted sam_admin access",
+			"Discovery probe volume without reference to normalized install coverage"
 		],
 		"correctIndex": 0,
-		"explanation": "Software models standardize how discovered or purchased software is represented, enabling reliable reconciliation and publisher-level reporting.",
+		"explanation": "Early implementation metrics focus on trustworthy compliance data for priority publishers before broad optimization campaigns.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-models-overview.html"
-		]
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-model-data-quality-kpis.html"
+		],
+		"domain": "Implementation Planning"
 	}
 ]

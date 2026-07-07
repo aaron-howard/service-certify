@@ -1,6 +1,11 @@
 import { describe, expect, it } from 'vitest';
 import { DEV_PRACTICE_QUESTIONS } from '../../convex/seed/devQuestionBank';
-import { CPOP_BANK_SIZE, validateCpopTrack } from '$lib/catalog/cpopRealism';
+import {
+	CPOP_BANK_SIZE,
+	CPOP_DOMAIN_TARGETS,
+	domainForOrder,
+	validateCpopTrack
+} from '$lib/catalog/cpopRealism';
 
 const TRACK = 'CPOP';
 const V2_ORDERS = Array.from({ length: CPOP_BANK_SIZE }, (_, i) => i);
@@ -15,6 +20,21 @@ describe('CPOP v2 realism', () => {
 
 	it('passes CPOP realism validation', () => {
 		expect(validateCpopTrack(rows)).toEqual([]);
+	});
+
+	it('tags every question with the domain quota for its order slot', () => {
+		const counts = Object.fromEntries(
+			Object.keys(CPOP_DOMAIN_TARGETS).map((d) => [d, 0])
+		) as Record<string, number>;
+
+		for (const q of rows) {
+			expect(q.domain).toBe(domainForOrder(q.order));
+			counts[q.domain!]++;
+		}
+
+		for (const [domain, target] of Object.entries(CPOP_DOMAIN_TARGETS)) {
+			expect(counts[domain]).toBe(target);
+		}
 	});
 
 	it('includes match, multi, and single item types', () => {

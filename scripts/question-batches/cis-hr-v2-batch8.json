@@ -13,7 +13,8 @@
 		"explanation": "HR catalog checkout creates or updates HR case work tracked through configured fulfillment flows and tasks.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-services-overview.html"
-		]
+		],
+		"domain": "Core HR Applications and Employee Center"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -29,7 +30,8 @@
 		"explanation": "Employee Center exposes categorized HR services and search so employees can self-initiate supported requests.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/employee-center/employee-center-overview.html"
-		]
+		],
+		"domain": "Core HR Applications and Employee Center"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -45,7 +47,8 @@
 		"explanation": "HR groups represent teams within COEs that receive assigned cases, tasks, and approvals.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-routing.html"
-		]
+		],
+		"domain": "Core HR Applications and Employee Center"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -61,12 +64,13 @@
 		"explanation": "Catalog variables on HR items capture structured answers that map to case fields and fulfillment logic.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-services-overview.html"
-		]
+		],
+		"domain": "Core HR Applications and Employee Center"
 	},
 	{
 		"trackCode": "CIS-HR",
 		"order": 39,
-		"prompt": "What is the HR manager dashboard designed to show?",
+		"prompt": "People managers need visibility into team HR workload and open requests without HR agent privileges. Which Employee Center capability supports that?",
 		"choices": [
 			"Team HR workload, cases, and operational metrics for people managers",
 			"Enterprise CMDB completeness scores",
@@ -77,6 +81,7 @@
 		"explanation": "The HR manager dashboard gives managers visibility into team HR requests and related operational indicators.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-reporting-and-analytics.html"
-		]
+		],
+		"domain": "Core HR Applications and Employee Center"
 	}
 ]

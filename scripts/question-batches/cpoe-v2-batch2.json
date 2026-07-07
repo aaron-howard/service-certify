@@ -13,7 +13,8 @@
 		"explanation": "Constrained programs benefit from incremental value delivery that satisfies urgency while preserving a path toward enterprise standardization.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOE",
@@ -29,7 +30,8 @@
 		"explanation": "Executive roadmaps connect outcomes, sequencing, funding, and milestones so leaders can govern progress and ROI across multiple years.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOE",
@@ -51,20 +53,33 @@
 			"Build confidence through early, demonstrable outcomes"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Sponsorship engagement combines leadership advocacy, baseline metrics, agreed success measures, and early wins to sustain executive support.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOE",
 		"order": 8,
-		"prompt": "Given a scenario where IT and business units disagree on platform priorities, what persuasion approach should the platform owner use with the C-Suite?",
+		"prompt": "During TCO approval review, iT and business units disagree on platform priorities, what persuasion approach should the platform owner use with the C-Suite?",
 		"choices": [
 			"Frame options using shared enterprise outcomes, trade-offs, and evidence from comparable use cases",
 			"Present only technical architecture diagrams without business impact context",
@@ -75,7 +90,8 @@
 		"explanation": "Executive persuasion relies on outcome-based framing, explicit trade-offs, and credible examples rather than technical detail alone or indefinite delay.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOE",
@@ -91,6 +107,7 @@
 		"explanation": "Sequencing should respect data and process dependencies—core platform and shared records first—so downstream capabilities deliver reliable ROI.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Strategy"
 	}
 ]

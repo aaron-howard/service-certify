@@ -2,22 +2,6 @@
 	{
 		"trackCode": "CIS-SP",
 		"order": 70,
-		"prompt": "Mobile is supported at Basic domain separation level. What must the instance owner ensure for mobile clients in an MSP environment?",
-		"choices": [
-			"Mobile experiences respect tenant domain context after platform web domain separation is configured",
-			"Each mobile device stores all tenant data locally without domain filtering",
-			"Mobile removes sys_domain from forms so field workers can edit any tenant record",
-			"Domain separation on mobile requires disabling the domain separation plugin on web"
-		],
-		"correctIndex": 0,
-		"explanation": "Mobile domain separation extends platform web configuration so native clients honor tenant domain context at run time.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/mobile/mobile-domain-separation.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SP",
-		"order": 71,
 		"prompt": "Service Portal is listed as No support for domain separation in the application matrix. What is a typical provider mitigation?",
 		"choices": [
 			"Use domain-aware user criteria and separate portal experiences to scope content per tenant",
@@ -30,7 +14,26 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/domain-separated-apps.html",
 			"https://www.servicenow.com/docs/r/platform-user-interface/domain-separation-service-portal.html"
-		]
+		],
+		"domain": "Domain Support in Applications"
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 71,
+		"prompt": "A development team builds a custom scoped application that tenants will use on the shared MSP instance. Which design consideration makes the app domain-aware?",
+		"choices": [
+			"Add sys_domain to the application's data tables and honor domain context in queries and business logic",
+			"Store all application data in global because scoped apps cannot participate in domain separation",
+			"Duplicate the entire application once per tenant with hard-coded customer names",
+			"Rely on the application scope alone since scope isolation replaces domain separation"
+		],
+		"correctIndex": 0,
+		"explanation": "Custom applications must include the domain field on their tables and apply domain-aware logic; application scope controls code boundaries, not tenant data separation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainAssignment.html",
+			"https://www.servicenow.com/docs/r/platform-security/bp-domain-levels.html"
+		],
+		"domain": "Domain Support in Applications"
 	},
 	{
 		"trackCode": "CIS-SP",
@@ -46,7 +49,8 @@
 		"explanation": "CSM domain separation aligns each customer account to a tenant domain, often using automatic domain generation for newly created accounts.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/domain-separation-customer-service.html"
-		]
+		],
+		"domain": "Domain Support in Applications"
 	},
 	{
 		"trackCode": "CIS-SP",
@@ -63,7 +67,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/domain-separated-apps.html",
 			"https://www.servicenow.com/docs/r/it-operations-management/c_DiscoveryDomainSeparation.html"
-		]
+		],
+		"domain": "Domain Support in Applications"
 	},
 	{
 		"trackCode": "CIS-SP",
@@ -77,11 +82,15 @@
 			"Disable process overrides globally to simplify initial catalog and knowledge deployments"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "MSP rollouts should align expectations to documented support levels and validate cross-application behavior in a limited pilot before broad deployment.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/domain-separated-apps.html",
 			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/domain-separation/task/plan-domain-separation-implementation.html"
-		]
+		],
+		"domain": "Domain Support in Applications"
 	}
 ]

@@ -13,7 +13,8 @@
 		"explanation": "Time-bound elevated access with complete audit trails satisfies emergency response needs while preserving evidence for compliance review afterward.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
-		]
+		],
+		"domain": "Compliance and Security"
 	},
 	{
 		"trackCode": "CPOE",
@@ -29,7 +30,8 @@
 		"explanation": "Executive audiences need security framed as an enabler for trusted market expansion and risk reduction—not as a deferred cost center or purely technical detail.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
-		]
+		],
+		"domain": "Compliance and Security"
 	},
 	{
 		"trackCode": "CPOE",
@@ -43,16 +45,20 @@
 			"Restrict auditor access until all findings from prior years are fully remediated"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Audit readiness depends on maintained control mappings and proactive dry runs—not performance shortcuts or withholding auditor engagement.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
-		]
+		],
+		"domain": "Compliance and Security"
 	},
 	{
 		"trackCode": "CPOE",
 		"order": 188,
-		"prompt": "Given a case study where subsidiaries operate on a shared instance with different regulatory obligations, how should the platform owner achieve regulatory alignment?",
+		"prompt": "For CSDM service mapping, subsidiaries operate on a shared instance with different regulatory obligations, how should the platform owner achieve regulatory alignment?",
 		"choices": [
 			"Implement domain separation with scoped data policies, validated access models, and legal sign-off on cross-domain flows",
 			"Use a single undifferentiated domain and rely on user training to prevent data leakage",
@@ -63,7 +69,8 @@
 		"explanation": "Multi-regulatory environments require deliberate domain and access design with legal validation—not undifferentiated sharing or deferred isolation planning.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/c_DomainSeparation.html"
-		]
+		],
+		"domain": "Compliance and Security"
 	},
 	{
 		"trackCode": "CPOE",
@@ -85,14 +92,27 @@
 			"Aligns platform changes with evolving legal and industry requirements"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Compliance activities serve different stakeholders: proactive gap identification, vulnerability remediation, risk transparency, and regulatory change alignment.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
-		]
+		],
+		"domain": "Compliance and Security"
 	}
 ]

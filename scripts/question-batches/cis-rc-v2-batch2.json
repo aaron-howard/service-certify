@@ -13,7 +13,8 @@
 		"explanation": "Policy statements translate external citations into internal requirements; when associated with entities, they generate the controls that are monitored for compliance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-statements.html"
-		]
+		],
+		"domain": "GRC Overview"
 	},
 	{
 		"trackCode": "CIS-RC",
@@ -29,7 +30,8 @@
 		"explanation": "Risk statements live in the risk library as templates; associating a statement with an entity creates a risk record scoped to that entity.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/risk-management-overview.html"
-		]
+		],
+		"domain": "GRC Overview"
 	},
 	{
 		"trackCode": "CIS-RC",
@@ -45,38 +47,42 @@
 		"explanation": "GRC applications are Store-delivered scoped applications running natively on the Now Platform, sharing its data, workflow, and reporting capabilities.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-overview.html"
-		]
+		],
+		"domain": "GRC Overview"
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 8,
-		"prompt": "A GRC implementer needs to explain the difference between a control and a control objective during a design workshop. Which explanation is correct?",
+		"prompt": "A municipal GRC program must define how policy, risk, and audit decisions are made before applications are configured. Which deliverable should the program lead produce first?",
 		"choices": [
-			"A control objective defines the desired outcome, while a control is the entity-specific record that implements and monitors it",
-			"A control objective is the numeric weight assigned to each indicator result during compliance scoring calculations",
-			"A control is a category of authority documents, while a control objective is the regulator that issued them",
-			"A control objective exists only in Audit Management and has no connection to Policy and Compliance records"
+			"A governance framework documenting decision rights, escalation paths, and committee charters",
+			"A complete list of every dashboard widget available in the compliance workspace",
+			"Production clone schedules for each scoped application table",
+			"MID Server credentials for importing authority documents overnight"
 		],
 		"correctIndex": 0,
-		"explanation": "Control objectives (policy statements) state what must be achieved; controls are the per-entity instances used to monitor and attest achievement of that objective.",
+		"explanation": "GRC implementations succeed when governance structure and decision rights are agreed before technical configuration begins.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management.html"
-		]
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-overview.html"
+		],
+		"domain": "Governance Strategy"
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 9,
-		"prompt": "Which GRC capability lets compliance and risk teams send structured question sets to control and risk owners for periodic review?",
+		"prompt": "Compliance, risk, and internal audit teams overlap on control testing responsibilities. Which governance practice clarifies accountability?",
 		"choices": [
-			"Attestations built on the assessment engine, assigned to owners on a defined schedule",
-			"Service catalog record producers published to the employee center portal for all users",
-			"Scheduled data exports that mail CSV files of open controls to distribution lists",
-			"Virtual Agent topics that quiz owners in chat and log answers to the activity stream"
+			"Publish a RACI matrix defining owner, approver, and contributor roles across GRC processes",
+			"Assign every GRC record to the instance administrator by default",
+			"Disable role separation so any user can close audit observations",
+			"Route all attestations to a shared mailbox without named owners"
 		],
 		"correctIndex": 0,
-		"explanation": "Attestations use the assessment engine to gather structured responses from control and risk owners, supporting recurring certification of compliance and risk posture.",
+		"explanation": "Documented roles and responsibilities prevent gaps and duplicate effort across compliance, risk, and audit workflows.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/attestations.html"
-		]
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
+		],
+		"domain": "Governance Strategy"
 	}
 ]

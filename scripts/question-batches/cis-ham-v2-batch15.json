@@ -2,83 +2,91 @@
 	{
 		"trackCode": "CIS-HAM",
 		"order": 70,
-		"prompt": "Leadership asks for visibility into lifecycle cost exposure and compliance exceptions across the hardware estate. What should HAM reporting emphasize?",
+		"prompt": "Leadership wants SAM entitlements, HAM inventory, and Finance depreciation aligned on one laptop record. Which integration strategy should the architect recommend?",
 		"choices": [
-			"Decision-ready KPIs on lifecycle, financial exposure, compliance, and operational risk",
-			"A raw export of every asset field without filters or aggregation",
-			"Only counts of newly purchased devices from the current quarter",
-			"Dashboard color themes without underlying metric definitions"
+			"Synchronize asset, CI, and financial attributes with shared model categories, IRE rules, and governed lifecycle workflows across ITAM applications",
+			"Maintain separate spreadsheets for each team without CMDB or asset synchronization",
+			"Disable asset-to-CI creation so SAM and HAM never share identifiers",
+			"Import finance data only after all hardware assets are retired from the instance"
 		],
 		"correctIndex": 0,
-		"explanation": "HAM reporting translates asset data into governance insight on lifecycle, cost, compliance, and control effectiveness.",
+		"explanation": "Mature ITAM programs integrate SAM, HAM, and financial records through shared models, CMDB governance, and lifecycle workflows.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/it-asset-management.html"
-		]
+			"https://www.servicenow.com/docs/r/it-asset-management/it-asset-management.html",
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
+		],
+		"domain": "Operational Integration of IT Asset Management Processes"
 	},
 	{
 		"trackCode": "CIS-HAM",
 		"order": 71,
-		"prompt": "Which of the following are considered operational expenses for hardware assets? (Choose three.)",
+		"prompt": "A legacy asset database must migrate into ServiceNow before HAM go-live. Which approach reduces cutover risk?",
 		"choices": [
-			"Maintenance agreement costs",
-			"Replacement parts",
-			"Resource costs for support",
-			"Delivery costs for initial purchase shipment"
+			"Phased import with field normalization, pilot validation in sub-production, and reconciliation against Discovery before production cutover",
+			"Bulk load all records into production without validation to meet the deadline",
+			"Skip serial numbers during migration and rely on users to update assets after go-live",
+			"Retire every existing asset in ServiceNow so migration starts from empty tables"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1, 2],
-		"questionType": "multi",
-		"explanation": "Operational expenses include ongoing maintenance, parts, and support labor. Initial delivery of purchased hardware is typically capital-related rather than operational expense in TCO context.",
+		"explanation": "Data migration should use governed imports, normalization, and reconciliation pilots before trusting legacy data in production HAM processes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-mgmt-tco.html"
-		]
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html",
+			"https://www.servicenow.com/docs/r/platform-administration/c_FieldNormalization.html"
+		],
+		"domain": "Operational Integration of IT Asset Management Processes"
 	},
 	{
 		"trackCode": "CIS-HAM",
 		"order": 72,
-		"prompt": "An executive steering committee reviews quarterly hardware health. Which report design is most appropriate?",
+		"prompt": "CMDB CIs and HAM assets frequently drift out of sync after Discovery runs. What reconciliation design should the team implement?",
 		"choices": [
-			"Trend dashboards combining stock levels, assignment accuracy, contract coverage, and exception aging",
-			"A single unfiltered table of all asset columns exported to CSV",
-			"Weekly random screenshots of individual asset forms",
-			"Disposal counts only with no assignment or contract context"
+			"Use model categories, IRE identification rules, and asset-CI sync properties with regular CMDB Success Advisor monitoring",
+			"Disable Discovery for all hardware classes to prevent CI updates",
+			"Delete CIs whenever asset assignment changes without updating related records",
+			"Create assets manually for every CI without synchronization or identification keys"
 		],
 		"correctIndex": 0,
-		"explanation": "Executive views should present trend-based KPIs spanning inventory, custody, contracts, and open control exceptions.",
+		"explanation": "Asset-CI alignment depends on model category governance, IRE rules, sync configuration, and ongoing data quality monitoring.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-operations-view.html"
-		]
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html",
+			"https://www.servicenow.com/docs/r/it-asset-management/product-catalog/c_ModelCategories.html"
+		],
+		"domain": "Operational Integration of IT Asset Management Processes"
 	},
 	{
 		"trackCode": "CIS-HAM",
 		"order": 73,
-		"prompt": "Reporting shows many assets with stale owner or location values. How should dashboards treat this data quality issue?",
+		"prompt": "Discovery will scan 40,000 endpoints across datacenters and branch offices during HAM rollout. How should scope and phasing be planned?",
 		"choices": [
-			"Surface data-quality indicators and remediation backlog alongside lifecycle KPIs",
-			"Hide low-confidence records from every report permanently",
-			"Report only assets that currently have open incidents",
-			"Reset stale records to In stock through bulk automation without review"
+			"Pilot high-value locations first, validate reconciliation results, then expand schedules by region with change-controlled credential and scope updates",
+			"Enable full RFC1918 scanning globally on day one without credential testing",
+			"Limit Discovery to stockrooms only and skip in-use deployed devices",
+			"Run Discovery only after every asset is manually assigned to avoid duplicates"
 		],
 		"correctIndex": 0,
-		"explanation": "Transparent quality metrics prevent false confidence and drive remediation of incomplete ownership and location data.",
+		"explanation": "Discovery rollout should phase by location, validate reconciliation outcomes, and expand scope with governed change control.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
-		]
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-implementation-overview.html"
+		],
+		"domain": "Operational Integration of IT Asset Management Processes"
 	},
 	{
 		"trackCode": "CIS-HAM",
 		"order": 74,
-		"prompt": "Operations wants daily exception visibility while executives need monthly governance summaries. Which reporting model fits both audiences?",
+		"prompt": "Before HAM go-live, which readiness checklist items should the program office validate with stakeholders?",
 		"choices": [
-			"Layered cadence with daily operational dashboards and monthly leadership packs using shared definitions",
-			"Separate ad hoc reports per stockroom manager with conflicting metric names",
-			"One static annual PDF for all stakeholders regardless of role",
-			"Reports generated only after external audit findings arrive"
+			"Stockrooms configured, models normalized, roles assigned, pilot fulfillment completed, and training delivered for asset, stockroom, and requester personas",
+			"Every business service map finalized enterprise-wide before any hardware model is created",
+			"All software entitlements reconciled globally before receiving the first laptop",
+			"Discovery schedules disabled until two years of operational data is collected"
 		],
 		"correctIndex": 0,
-		"explanation": "Different cadences and consistent metric definitions keep tactical and strategic reporting aligned to the same data standards.",
+		"explanation": "Go-live readiness requires validated foundation data, process pilots, role-based training, and stakeholder sign-off on core HAM workflows.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/it-asset-management.html"
-		]
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/exploring-ham.html",
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/ham-landing-page.html"
+		],
+		"domain": "Operational Integration of IT Asset Management Processes"
 	}
 ]

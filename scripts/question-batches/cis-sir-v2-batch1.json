@@ -13,7 +13,8 @@
 		"explanation": "The admin role has the elevated privileges needed to install Security Incident Response and related Security Operations store applications.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/security-incident-response/install-security-incident-response.html"
-		]
+		],
+		"domain": "SIR Overview and Data Visualization"
 	},
 	{
 		"trackCode": "CIS-SIR",
@@ -29,7 +30,8 @@
 		"explanation": "Threat intelligence enrichment requires the Threat Intelligence application and configured sources that SIR can query during incident creation and triage.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response.html"
-		]
+		],
+		"domain": "SIR Overview and Data Visualization"
 	},
 	{
 		"trackCode": "CIS-SIR",
@@ -45,7 +47,8 @@
 		"explanation": "Documentation defines SIR as an action plan that helps organizations mitigate active security incidents and imminent threats through structured response.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response.html"
-		]
+		],
+		"domain": "SIR Overview and Data Visualization"
 	},
 	{
 		"trackCode": "CIS-SIR",
@@ -59,11 +62,15 @@
 			"Problem records that store long-term root cause analysis only"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "SIR coordinates response through security incident records for lifecycle management and security incident tasks for assigned investigative and remediation work.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-task-types.html"
-		]
+		],
+		"domain": "SIR Overview and Data Visualization"
 	},
 	{
 		"trackCode": "CIS-SIR",
@@ -79,6 +86,7 @@
 		"explanation": "The SIR Workspace consolidates incident details, tasks, evidence, and response tools so analysts can work incidents without switching contexts.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-workspace.html"
-		]
+		],
+		"domain": "SIR Overview and Data Visualization"
 	}
 ]

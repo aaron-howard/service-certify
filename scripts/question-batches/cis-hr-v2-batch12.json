@@ -2,50 +2,53 @@
 	{
 		"trackCode": "CIS-HR",
 		"order": 55,
-		"prompt": "What is an Activity Set within a lifecycle event?",
+		"prompt": "Onboarding must group equipment provisioning, account creation, and orientation into phased milestones. How should Journey Designer organize those steps?",
 		"choices": [
-			"A grouped collection of related activities executed as part of the journey",
-			"A CMDB relationship bundle",
-			"A software license bundle",
-			"A firewall rule collection"
+			"Activity sets grouping related activities executed as logical journey phases",
+			"CMDB relationship bundles linking laptop CIs only",
+			"Software license bundles for publisher part numbers",
+			"Firewall rule collections for network access requests"
 		],
 		"correctIndex": 0,
 		"explanation": "Activity sets organize journey steps—such as equipment provisioning tasks—into logical phases.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
-		]
+		],
+		"domain": "HR Journeys"
 	},
 	{
 		"trackCode": "CIS-HR",
 		"order": 56,
-		"prompt": "Which Journey Designer element defines when a lifecycle event should start?",
+		"prompt": "HR wants new hires enrolled automatically when employment status changes to Active. Which Journey Designer element should launch the onboarding journey?",
 		"choices": [
 			"Trigger conditions based on employee or HR profile changes",
-			"CMDB identification schedules",
-			"Import set coalesce keys",
-			"SNMP community definitions"
+			"CMDB identification schedules for infrastructure classes",
+			"Import set coalesce keys for spreadsheet loads only",
+			"SNMP community definitions for network monitoring probes"
 		],
 		"correctIndex": 0,
 		"explanation": "Trigger conditions evaluate HR profile or employment changes to launch the appropriate lifecycle event.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
-		]
+		],
+		"domain": "HR Journeys"
 	},
 	{
 		"trackCode": "CIS-HR",
 		"order": 57,
-		"prompt": "What does an individual Activity represent in a journey?",
+		"prompt": "A promotion journey must create manager approval, compensation review, and notification steps. What should each executable step be modeled as?",
 		"choices": [
-			"A unit of work such as a task, approval, or notification in the lifecycle flow",
-			"A CMDB CI class definition",
-			"A payroll deduction code",
-			"A SNMP trap definition"
+			"An activity representing a task, approval, or notification in the lifecycle flow",
+			"A CMDB CI class definition for hardware assets",
+			"A payroll deduction code stored outside HR tables",
+			"An SNMP trap definition for infrastructure alerts"
 		],
 		"correctIndex": 0,
 		"explanation": "Activities are executable steps assigned to people or systems to complete lifecycle milestones.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
-		]
+		],
+		"domain": "HR Journeys"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -61,22 +64,24 @@
 		"explanation": "Audience settings route each activity to the correct stakeholders such as hiring managers or IT fulfillers.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
-		]
+		],
+		"domain": "HR Journeys"
 	},
 	{
 		"trackCode": "CIS-HR",
 		"order": 59,
-		"prompt": "What is the purpose of activity field mappings in Journey Designer?",
+		"prompt": "Fulfillers need hire date, location, and manager on every onboarding task without re-keying data. How should Journey Designer pass context into activities?",
 		"choices": [
-			"To pass employee and case data into activity records and tasks automatically",
-			"To map CMDB CI relationships",
-			"To configure SNMP community strings",
-			"To define software reclamation rules"
+			"Activity field mappings that populate activity and task fields from lifecycle context",
+			"CMDB relationship maps between server and application CIs",
+			"SNMP community strings shared across monitoring probes",
+			"Software reclamation rules tied to unused installations"
 		],
 		"correctIndex": 0,
 		"explanation": "Field mappings populate activity and task fields from lifecycle context so fulfillers have required information.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
-		]
+		],
+		"domain": "HR Journeys"
 	}
 ]

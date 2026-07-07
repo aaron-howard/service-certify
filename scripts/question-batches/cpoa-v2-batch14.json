@@ -13,7 +13,8 @@
 		"explanation": "Platform Core delivers the foundational runtime, tables, and workflow capabilities that every ServiceNow application builds upon.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html"
-		]
+		],
+		"domain": "Technology"
 	},
 	{
 		"trackCode": "CPOA",
@@ -29,7 +30,8 @@
 		"explanation": "Now Intelligence encompasses analytics, AI, and performance capabilities that help organizations measure and improve platform outcomes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-analytics-and-reporting/performance-analytics/performance-analytics-overview.html"
-		]
+		],
+		"domain": "Technology"
 	},
 	{
 		"trackCode": "CPOA",
@@ -51,16 +53,29 @@
 			"Reporting, Performance Analytics, and AI-assisted insights on platform data"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Associate platform owners distinguish administration, integration, security, and intelligence capabilities when guiding teams and sponsors.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html",
 			"https://www.servicenow.com/docs/r/platform-security/security-center/sec-center-v2.html"
-		]
+		],
+		"domain": "Technology"
 	},
 	{
 		"trackCode": "CPOA",
@@ -77,7 +92,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/company/trust/compliance.html",
 			"https://www.servicenow.com/company/trust/security.html"
-		]
+		],
+		"domain": "Technology"
 	},
 	{
 		"trackCode": "CPOA",
@@ -91,11 +107,15 @@
 			"Instructions to disable all audit logs to simplify compliance reviews"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "TRUST Center materials include audit attestations and shared-responsibility guidance that help customers understand compliance boundaries.",
 		"sourceUrls": [
 			"https://www.servicenow.com/company/trust/compliance.html",
 			"https://www.servicenow.com/standard/resource-center/white-paper/wp-shared-responsibility-model.html"
-		]
+		],
+		"domain": "Technology"
 	}
 ]

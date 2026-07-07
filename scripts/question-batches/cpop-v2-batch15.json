@@ -14,7 +14,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/domain-separation/concept/domain-separation.html",
 			"https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/company-and-domain-separation/concept/c_DomainSeparation.html"
-		]
+		],
+		"domain": "Technology"
 	},
 	{
 		"trackCode": "CPOP",
@@ -31,7 +32,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html",
 			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/concept/upgrade-governance.html"
-		]
+		],
+		"domain": "Technology"
 	},
 	{
 		"trackCode": "CPOP",
@@ -53,16 +55,29 @@
 			"Contractual requirement for customer-managed infrastructure and local patching ownership"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Implementation model selection depends on isolation needs, regulatory constraints, operational ownership, and whether subsidiaries can share a governed single instance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/domain-separation/task/plan-domain-separation-implementation.html",
 			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html"
-		]
+		],
+		"domain": "Technology"
 	},
 	{
 		"trackCode": "CPOP",
@@ -79,7 +94,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/company-and-domain-separation/concept/c_DomainSeparation.html",
 			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/concept/upgrade-governance.html"
-		]
+		],
+		"domain": "Technology"
 	},
 	{
 		"trackCode": "CPOP",
@@ -93,11 +109,15 @@
 			"Automatic retirement of upgrade planning because domains isolate patch risk entirely"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Domain separation adds maintenance for access recertification and domain-scoped regression whenever shared services or security rules change—it does not remove testing or upgrade governance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/domain-separation/concept/domain-separation.html",
 			"https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/security/concept/c_Hardening.html"
-		]
+		],
+		"domain": "Technology"
 	}
 ]

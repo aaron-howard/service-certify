@@ -13,7 +13,8 @@
 		"explanation": "Indicator source conditions limit which records are included when PA collects scores for an automated indicator.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_IndicatorSources.html"
-		]
+		],
+		"domain": "Configure Indicators and Indicator Sources"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -29,24 +30,25 @@
 		"explanation": "The aggregate function on the indicator source field controls whether PA stores counts, sums, averages, or other aggregations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_IndicatorSources.html"
-		]
+		],
+		"domain": "Configure Indicators and Indicator Sources"
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 27,
-		"prompt": "When configuring an automated indicator, what does the frequency setting control?",
+		"prompt": "An incident KPI must count records resolved in the prior calendar month using the Resolved at field. Which field type supports period-based filters in indicator source conditions for that KPI?",
 		"choices": [
-			"How often PA collects and stores new scores for the indicator",
-			"Which roles may edit breakdown mappings on the indicator",
-			"Whether scorecards display target comparison lines",
-			"The retention period for closed incident records"
+			"Date/Time",
+			"Journal Input",
+			"HTML",
+			"Reference to cmdb_ci"
 		],
 		"correctIndex": 0,
-		"explanation": "Indicator frequency defines the collection cadence that determines when score snapshots are gathered and persisted.",
+		"explanation": "Date/Time fields such as Resolved at are commonly used in indicator source conditions to filter records by opened, resolved, or closed periods.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Indicators.html",
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_DataCollection.html"
-		]
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_IndicatorSources.html"
+		],
+		"domain": "Configure Indicators and Indicator Sources"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -62,7 +64,8 @@
 		"explanation": "Scripted indicator sources let administrators define custom server-side logic when standard table and condition filters are insufficient.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_IndicatorSources.html"
-		]
+		],
+		"domain": "Configure Indicators and Indicator Sources"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -76,11 +79,16 @@
 			"SMTP relay server for dashboard email"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1, 2],
+		"correctIndexes": [
+			0,
+			1,
+			2
+		],
 		"explanation": "Automated indicators require a source definition, aggregation settings, and a collection frequency; mail relay is unrelated to indicator configuration.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Indicators.html",
 			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_IndicatorSources.html"
-		]
+		],
+		"domain": "Configure Indicators and Indicator Sources"
 	}
 ]

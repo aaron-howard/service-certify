@@ -90,3 +90,30 @@ npm run check
 ```
 
 After merge: `npm run seed:dev:questions` to push to Convex.
+
+---
+
+## Domain rebalance (Jul 2026 realism review)
+
+Standalone analysis flagged Strategy under-weighted and Technology over-weighted by **content topic**
+(misplaced tech/data stems in Strategy orders 0–20). Governance and Data slots (76–99) existed but lacked
+NOW Learning, product portfolio, and ITSM/CSM ecosystem coverage.
+
+**Remediation:** `cpoa-rebalance-batch1.json` (17 rewrites) + domain tags on all batches.
+
+| Orders | Change |
+|--------|--------|
+| 1, 5, 8, 10, 12, 14, 16, 18, 19 | Strategy slot: business case, roadmap sequencing, value realization (removed API keys, ATF, data stewardship, SDLC, technical security) |
+| 59 | Moved ATF regression testing from Strategy order 10 to Technology |
+| 67, 72 | Technology: product portfolio match + MID Server (replaced duplicate service-area match and upgrade testing match) |
+| 76 | Data: strengthened data governance framing |
+| 88, 95–97 | Governance: Cloud Governance Suite, NOW Learning, ITSM/CSM ecosystem, application portfolio |
+
+```bash
+node scripts/tag-cpoa-domains.mjs
+node scripts/extract-questions-from-transcripts.mjs --merge-batches scripts/question-batches/cpoa-v2-batch*.json scripts/question-batches/cpoa-rebalance-batch1.json
+node scripts/balance-choice-lengths.mjs
+node scripts/rebalance-question-choices.mjs
+node scripts/lint-cpoa-realism.mjs --orders=0-99
+npm test -- --run src/convex/seed/cpoa-realism.test.ts
+```

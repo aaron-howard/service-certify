@@ -13,7 +13,8 @@
 		"explanation": "GDPR alignment requires documented lawful basis, minimization, retention, and access procedures—not excessive collection or informal controls.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
-		]
+		],
+		"domain": "Compliance and Security"
 	},
 	{
 		"trackCode": "CPOE",
@@ -29,7 +30,8 @@
 		"explanation": "SOC 2 readiness pre-stages mapped control evidence across changes, access, and monitoring—not ad hoc assembly or non-representative demos.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
-		]
+		],
+		"domain": "Compliance and Security"
 	},
 	{
 		"trackCode": "CPOE",
@@ -43,11 +45,15 @@
 			"Share a single break-glass admin password across the operations team"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Pre-assessment hardening strengthens MFA and integration boundaries—not ACL removal or shared break-glass credentials.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
-		]
+		],
+		"domain": "Compliance and Security"
 	},
 	{
 		"trackCode": "CPOE",
@@ -63,7 +69,8 @@
 		"explanation": "Security maturity shortens enterprise sales cycles by satisfying due diligence efficiently; treating certifications as irrelevant or hiding posture undermines competitive positioning.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
-		]
+		],
+		"domain": "Compliance and Security"
 	},
 	{
 		"trackCode": "CPOE",
@@ -85,14 +92,27 @@
 			"Accelerates vendor onboarding with verified security posture"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Security capabilities translate into business advantages: operational continuity, regulatory enablement, incident resilience, and trusted partner ecosystems.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
-		]
+		],
+		"domain": "Compliance and Security"
 	}
 ]

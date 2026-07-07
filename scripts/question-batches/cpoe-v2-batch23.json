@@ -13,7 +13,8 @@
 		"explanation": "Multi-vendor delivery succeeds with shared standards, centralized release coordination, and clear domain ownership—not ungoverned parallel changes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Implementation and Delivery"
 	},
 	{
 		"trackCode": "CPOE",
@@ -29,7 +30,8 @@
 		"explanation": "Frequent releases require automated regression in pipelines supplemented by targeted manual testing for high-risk changes—not production-only validation.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/automated-test-framework/atf-test-suites.html"
-		]
+		],
+		"domain": "Implementation and Delivery"
 	},
 	{
 		"trackCode": "CPOE",
@@ -43,11 +45,15 @@
 			"Blame the identity provider publicly without internal verification"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Critical rollout failures demand prompt sponsor notification and coordinated messaging; silence or premature blame undermines trust and recovery.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Implementation and Delivery"
 	},
 	{
 		"trackCode": "CPOE",
@@ -69,20 +75,33 @@
 			"Before communicating recovery timelines to executives and users"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Troubleshooting follows a logical sequence: audit review, baseline comparison, integration validation, and impact assessment before executive communication.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Implementation and Delivery"
 	},
 	{
 		"trackCode": "CPOE",
 		"order": 114,
-		"prompt": "Given a case study where a retailer must deploy ServiceNow to 40 stores over six months, which phased rollout approach best manages risk?",
+		"prompt": "During rollout stabilization, a retailer must deploy ServiceNow to 40 stores over six months, which phased rollout approach best manages risk?",
 		"choices": [
 			"Pilot in a representative region, refine based on feedback, then scale in waves with shared lessons learned",
 			"Deploy to all stores simultaneously on a single weekend",
@@ -93,6 +112,7 @@
 		"explanation": "Large-scale rollouts benefit from representative pilots, feedback-driven refinement, and sequenced waves—not big-bang or arbitrary ordering.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Implementation and Delivery"
 	}
 ]

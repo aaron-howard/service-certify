@@ -2,83 +2,88 @@
 	{
 		"trackCode": "CIS-RC",
 		"order": 10,
-		"prompt": "Which technical detail applies to the GRC scoped applications after installation from the ServiceNow Store?",
+		"prompt": "Executive sponsors ask how GRC oversight will be sustained after go-live. Which structure should the program establish?",
 		"choices": [
-			"All GRC tables are created in the global scope so any business rule can write to them directly",
-			"Application tables use scoped prefixes such as sn_grc and sn_compliance, and cross-scope access follows scoped application rules",
-			"The applications overwrite the core task table schema and remove fields not used by GRC processes",
-			"Each GRC application requires its own MID Server to communicate with the instance database"
+			"A cross-functional GRC steering committee with defined meeting cadence and escalation thresholds",
+			"A single developer queue for all policy updates without business review",
+			"An ad hoc email thread whenever regulators publish new guidance",
+			"A quarterly spreadsheet circulated only to external auditors"
 		],
-		"correctIndex": 1,
-		"explanation": "GRC applications are scoped; their tables carry prefixes like sn_grc and sn_compliance, and interactions from other scopes are governed by cross-scope access controls.",
+		"correctIndex": 0,
+		"explanation": "Governance committees provide ongoing oversight, prioritization, and escalation for policy, risk, and compliance decisions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-overview.html"
-		]
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
+		],
+		"domain": "Governance Strategy"
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 11,
-		"questionType": "multi",
-		"prompt": "Which two groups form the core implementation team for a GRC engagement? (Choose two.)",
+		"prompt": "Legal requires formal approval before internal policies publish to employees. Which workflow design supports governed policy lifecycle management?",
 		"choices": [
-			"Risk and compliance experts",
-			"ServiceNow developer team",
-			"External regulator liaisons",
-			"End-user hardware support technicians"
+			"Draft, review, and publish states with approvers recorded before policies become effective",
+			"Immediate publish on save with no approval history retained",
+			"Manual PDF uploads stored outside ServiceNow without version control",
+			"Automatic retirement of every policy after thirty days regardless of status"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
-		"explanation": "A GRC implementation pairs risk and compliance subject matter experts, who own requirements and methodology, with the ServiceNow developer team that configures the platform.",
+		"explanation": "Policy approval workflows enforce review and publication gates so only authorized versions become effective.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-overview.html"
-		]
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/policy-lifecycle-management.html"
+		],
+		"domain": "Governance Strategy"
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 12,
-		"prompt": "During implementation planning, which activity should be completed before loading authority documents and building policy statements?",
+		"prompt": "Business units interpret risk appetite differently for public-facing services versus back-office systems. How should enterprise risk governance align those views?",
 		"choices": [
-			"Retiring every legacy compliance spreadsheet so no historical evidence remains available",
-			"Enabling all optional GRC plugins regardless of whether the customer licensed them",
-			"Granting the sn_grc.admin role to every member of the compliance department by default",
-			"Defining the entity scope and content structure with stakeholders so requirements map cleanly to the data model"
+			"Publish enterprise risk appetite statements and map business-unit thresholds to governed scoring models",
+			"Allow each unit to define incompatible scales without central review",
+			"Hide appetite settings from risk owners to reduce debate",
+			"Disable residual scoring until every unit agrees informally"
 		],
-		"correctIndex": 3,
-		"explanation": "Agreeing on entity scope and how compliance content will be structured up front prevents rework when authority documents, policies, and controls are created.",
+		"correctIndex": 0,
+		"explanation": "Risk governance aligns business units to enterprise appetite through documented thresholds and consistent scoring methodology.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management.html"
-		]
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-governance.html"
+		],
+		"domain": "Governance Strategy"
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 13,
-		"prompt": "Which persona is typically responsible for responding to control attestations and completing issue remediation tasks for their area?",
+		"prompt": "A city department wants compliance metrics visible to finance, HR, and IT without conflicting definitions. Which governance approach reduces silos?",
 		"choices": [
-			"The control owner assigned to the entity where the control applies",
-			"The instance administrator who manages update sets and clone schedules",
-			"The external auditor who signs off the final engagement report each cycle",
-			"The platform capacity planner who monitors database growth trends"
+			"Align business units to shared control and risk definitions in a governed metric catalog",
+			"Let each department maintain separate spreadsheets with different field names",
+			"Restrict compliance visibility to a single administrator account",
+			"Export raw tables weekly without documented definitions"
 		],
 		"correctIndex": 0,
-		"explanation": "Control owners attest to the operation of controls on their entities and act on issues raised when controls fail or attestations identify gaps.",
+		"explanation": "Organizational alignment depends on shared definitions, ownership, and reporting standards across GRC modules.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/attestations.html"
-		]
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/compliance-dashboards.html"
+		],
+		"domain": "Governance Strategy"
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 14,
-		"prompt": "A GRC implementation checklist includes assigning application roles. Which role grants a user the ability to administer Policy and Compliance Management content such as policies and policy statements?",
+		"prompt": "Leadership asks who may accept a control failure when remediation exceeds the current budget cycle. Which operating model element answers that question?",
 		"choices": [
-			"sn_compliance.admin within the Policy and Compliance scoped application",
-			"itil, because compliance records extend the incident table structure",
-			"catalog_admin, since policies are published through the service catalog",
-			"pa_viewer, which unlocks editing of any record shown on a dashboard"
+			"Documented decision rights specifying who can approve exceptions, acceptance, and escalation",
+			"Default closure of every issue when the due date passes",
+			"Unlimited delegation to any catalog consumer without audit trail",
+			"Automatic deletion of failed control tests at month end"
 		],
 		"correctIndex": 0,
-		"explanation": "The sn_compliance.admin role provides administrative access to Policy and Compliance Management content; platform roles like itil or catalog_admin do not govern GRC records.",
+		"explanation": "GRC operating models define who can accept risk, approve exceptions, and escalate unresolved control gaps.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management.html"
-		]
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-issues.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-exceptions.html"
+		],
+		"domain": "Governance Strategy"
 	}
 ]

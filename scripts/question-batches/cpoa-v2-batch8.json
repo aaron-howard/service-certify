@@ -13,7 +13,8 @@
 		"explanation": "Qualified partners follow ServiceNow's structured delivery methodology across phases; they do not bypass governance or eliminate OCM needs.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "People"
 	},
 	{
 		"trackCode": "CPOA",
@@ -29,7 +30,8 @@
 		"explanation": "Sponsor transitions require successor identification and refreshed messaging so adoption and funding support do not stall between waves.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "People"
 	},
 	{
 		"trackCode": "CPOA",
@@ -45,7 +47,8 @@
 		"explanation": "Now Create deployments begin with discovery and planning to align scope and success criteria before build and test activities start.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/application-development.html"
-		]
+		],
+		"domain": "Process"
 	},
 	{
 		"trackCode": "CPOA",
@@ -59,12 +62,16 @@
 			"Skip test validation whenever the change appears small or low risk"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Governed delivery requires development in non-production instances and validation in test before production commit; production-first edits bypass controls.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/system-update-sets.html",
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
-		]
+		],
+		"domain": "Process"
 	},
 	{
 		"trackCode": "CPOA",
@@ -86,14 +93,27 @@
 			"Commit approved changes through governed release procedures"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Now Create sequences discovery, build, test, and deploy so each phase produces evidence before the next stage begins.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/application-development.html"
-		]
+		],
+		"domain": "Process"
 	}
 ]

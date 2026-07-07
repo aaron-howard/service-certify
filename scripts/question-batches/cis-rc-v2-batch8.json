@@ -2,22 +2,62 @@
 	{
 		"trackCode": "CIS-RC",
 		"order": 35,
-		"prompt": "What is the default lifecycle of a policy record in Policy and Compliance Management?",
+		"prompt": "A GRC architect recommends against creating one entity per configuration item for a 40,000-CI estate. What is the strongest justification for this guidance?",
 		"choices": [
-			"New, In Review, Follow Up, Closed Complete, mirroring the assessment instance state model exactly",
-			"Draft, Review, Published, and Retired, with approvals moving the policy toward the published state",
-			"Open, Work in Progress, Pending Vendor, Resolved, matching the incident lifecycle it extends",
-			"Registered, Scored, Treated, Accepted, following the standard risk treatment progression"
+			"Entities cannot reference CMDB tables, so configuration items are ineligible as source records",
+			"Each entity may only hold a single control, which would leave most policy statements without coverage",
+			"Generating controls and risks per CI would create unmanageable record volumes, so entities should target meaningful groupings such as services",
+			"The platform limits an instance to 500 entities regardless of licensing tier or storage capacity"
 		],
-		"correctIndex": 1,
-		"explanation": "Policies move from draft through review into a published state, and are retired when no longer applicable; approvals gate the transition to published.",
+		"correctIndex": 2,
+		"explanation": "Entity granularity drives record volume: content associated to tens of thousands of CI-level entities multiplies controls and risks beyond what teams can operate, so grouping at the service or process level is preferred.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/policies.html"
-		]
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-entities.html"
+		],
+		"domain": "Entity Framework"
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 36,
+		"questionType": "multi",
+		"prompt": "Which two tables are in the scope of the Policy and Compliance Management application? (Choose two.)",
+		"choices": [
+			"Control",
+			"Citation",
+			"Incident",
+			"Asset"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Control and Citation are Policy and Compliance Management scoped tables; Incident and Asset belong to core platform applications outside the GRC scope.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management.html"
+		],
+		"domain": "Policy and Compliance"
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 37,
+		"prompt": "Which sequence reflects the typical Policy and Compliance content flow from external requirement to monitored record?",
+		"choices": [
+			"Control, then citation, then authority document, then policy statement in strict reverse dependency order",
+			"Authority document to citation, citation to policy statement, and policy statement to controls generated per entity",
+			"Policy statement to authority document, with citations created afterward only when audits raise findings",
+			"Citation directly to control, skipping policy statements because they are optional legacy records"
+		],
+		"correctIndex": 1,
+		"explanation": "External authority documents break down into citations, citations map to internal policy statements, and policy statements generate entity-level controls for monitoring.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/authority-documents.html"
+		],
+		"domain": "Policy and Compliance"
+	},
+	{
+		"trackCode": "CIS-RC",
+		"order": 38,
 		"prompt": "A control fails its attestation because the owner reports the safeguard is not operating. What does Policy and Compliance Management create to track remediation?",
 		"choices": [
 			"An issue record associated with the control, assigned for remediation or acceptance",
@@ -29,11 +69,12 @@
 		"explanation": "Failed attestations and non-compliant results generate issues linked to the control, driving remediation, exception, or acceptance workflows.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-issues.html"
-		]
+		],
+		"domain": "Policy and Compliance"
 	},
 	{
 		"trackCode": "CIS-RC",
-		"order": 37,
+		"order": 39,
 		"prompt": "Which supporting process allows a control owner to formally request temporary relief from complying with a policy statement?",
 		"choices": [
 			"The policy exception process, where a justified request is reviewed and approved for a defined period",
@@ -45,38 +86,7 @@
 		"explanation": "Policy exceptions capture justified, time-bound deviations from policy requirements and route them through review and approval before relief is granted.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-exceptions.html"
-		]
-	},
-	{
-		"trackCode": "CIS-RC",
-		"order": 38,
-		"prompt": "How does a control record reach the Monitor state in its lifecycle?",
-		"choices": [
-			"It is attested or activated after review, moving from draft through approval into active monitoring",
-			"It transitions automatically the moment its policy statement is created, with no intermediate states",
-			"It requires an external auditor to sign the record using a hardware security token",
-			"It moves to Monitor only after every sibling control in the entity type has been retired"
 		],
-		"correctIndex": 0,
-		"explanation": "Controls progress from draft through review and attestation or activation; once approved as operating, they sit in the Monitor state where results and indicators track their health.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management.html"
-		]
-	},
-	{
-		"trackCode": "CIS-RC",
-		"order": 39,
-		"prompt": "A compliance team wants failed indicator results to automatically flag the related control as non-compliant. Which Policy and Compliance capability provides this behavior?",
-		"choices": [
-			"Indicators linked to controls, where failing results update control status and can raise issues",
-			"Interactive filters on the compliance dashboard that visually highlight failed widgets in red",
-			"Record watchers that push mobile notifications whenever a metric definition changes anywhere",
-			"An import set transform map that rewrites the control state during nightly data loads"
-		],
-		"correctIndex": 0,
-		"explanation": "Indicators attached to controls collect evidence on a schedule; failing results drive the control's compliance status and can generate issues for follow-up.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/indicators.html"
-		]
+		"domain": "Policy and Compliance"
 	}
 ]

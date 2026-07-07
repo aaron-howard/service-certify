@@ -2,81 +2,86 @@
 	{
 		"trackCode": "CIS-SIR",
 		"order": 30,
-		"prompt": "An organization uses Splunk as its primary SIEM. Where should implementers start the SIR connection in ServiceNow?",
+		"prompt": "An analyst receives a credible phishing alert with no matching integration event. What is the correct way to begin tracking it in SIR?",
 		"choices": [
-			"Integration Configurations, selecting the Splunk pre-built integration template",
-			"Discovery schedules, adding Splunk servers as horizontal probe targets",
-			"Service Catalog, publishing a Splunk checkout item for analysts",
-			"Project Workspace, linking Splunk alerts to portfolio demand records"
+			"Create a new security incident record and capture initial indicators and scope",
+			"Open a standard IT incident and convert it automatically after closure",
+			"Log the event only in a personal spreadsheet until SIEM correlation fires",
+			"Submit a change request and wait for CAB approval before any record exists"
 		],
 		"correctIndex": 0,
-		"explanation": "Pre-built Splunk integrations are configured through Integration Configurations with guided setup for alert ingestion.",
+		"explanation": "Analysts create security incident records to initiate structured triage, assignment, and response even when alerts arrive outside integrations.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integration-configurations.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/create-a-security-incident.html"
+		],
+		"domain": "Security Incident Creation and Threat Intelligence"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 31,
-		"prompt": "After enabling a Microsoft Defender integration, alerts arrive but no incidents are created. What should be verified first?",
+		"prompt": "An organization wants incidents auto-tagged as ransomware when certain observables match threat feed entries. Which SIR feature supports this?",
 		"choices": [
-			"Inbound action mapping, credentials, and active status on the integration instance",
-			"Discovery classification rules for Windows server CI identification only",
-			"Catalog client scripts validating mobile device enrollment form fields",
-			"Project financial plan baselines tied to unrelated portfolio investments"
+			"Security tags applied through threat intelligence and classification rules",
+			"Discovery identification rules that create printer CI records automatically",
+			"Service catalog client scripts that validate mobile phone number formats",
+			"Project workspace demand scoring thresholds for strategic portfolio themes"
 		],
 		"correctIndex": 0,
-		"explanation": "Failed incident creation usually traces to inactive integrations, invalid credentials, or inbound action field mapping gaps.",
+		"explanation": "Security tags classify incidents based on intelligence matches and configured rules to drive routing and response playbooks.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integrate-security-tools.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-tags.html"
+		],
+		"domain": "Security Incident Creation and Threat Intelligence"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 32,
-		"prompt": "Which outbound integration use case lets SIR push containment status back to an EDR console?",
+		"prompt": "Before analysts can enrich incidents with external reputation data, what must be configured in Threat Intelligence?",
 		"choices": [
-			"Outbound actions that update external systems when incident state changes",
-			"Inbound-only listeners that discard all response updates from ServiceNow",
-			"Discovery probes that scan EDR agent versions on every subnet hourly",
-			"Catalog workflows that order replacement laptops for affected users"
+			"Active threat feeds and lookup sources with valid credentials and schedules",
+			"Discovery schedules on every datacenter subnet with elevated SNMP strings",
+			"Catalog fulfillment workflows for password reset self-service items",
+			"HR case assignment rules for employee relocation request routing"
 		],
 		"correctIndex": 0,
-		"explanation": "Outbound integration actions synchronize incident progress and containment decisions with connected security tools.",
+		"explanation": "Threat intelligence feeds and lookup configurations must be active so SIR can query external sources during incident enrichment.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integrate-security-tools.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/threat-intelligence-in-sir.html"
+		],
+		"domain": "Security Incident Creation and Threat Intelligence"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 33,
-		"prompt": "When multiple SIEM alerts reference the same host within minutes, which SIR capability reduces duplicate incident records?",
+		"prompt": "A SIEM correlation rule fires on lateral movement activity. How should SIR receive the event for structured response?",
 		"choices": [
-			"Security incident correlation rules that merge or relate related alerts",
-			"Discovery identification that retires duplicate printer CI records",
-			"Catalog item bundling that groups employee onboarding requests",
-			"Project task linking that rolls up unrelated portfolio milestones"
+			"Through an inbound integration action that creates or updates a security incident",
+			"By emailing the alert to a personal inbox with no platform record created",
+			"By opening a facilities work order for badge access review only",
+			"By logging a project risk without linking to any security incident table"
 		],
 		"correctIndex": 0,
-		"explanation": "Correlation rules group related alerts so analysts work a single incident instead of redundant records for the same event.",
+		"explanation": "SIEM integrations use inbound actions to automatically create or update security incidents from correlated alerts.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-correlation.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integrate-security-tools.html"
+		],
+		"domain": "Security Incident Creation and Threat Intelligence"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 34,
-		"prompt": "An implementer needs to store API keys for a custom threat feed integration securely. What is the recommended approach?",
+		"prompt": "During triage, an analyst links a suspicious IP address to a security incident. Which capability enriched that indicator?",
 		"choices": [
-			"Use integration credentials or connection credentials referenced by the integration record",
-			"Paste keys into incident work notes so analysts can copy them during triage",
-			"Save keys in an unencrypted system property visible to all authenticated users",
-			"Email credentials to the SOC distribution list for shared spreadsheet storage"
+			"Threat intelligence lookup against configured feeds and observables",
+			"Discovery horizontal scan results from the previous subnet probe",
+			"Service catalog approval history for the affected user account",
+			"Project portfolio demand scoring for unrelated strategic initiatives"
 		],
 		"correctIndex": 0,
-		"explanation": "Integration and connection credentials protect API secrets while allowing authorized integration processes to authenticate.",
+		"explanation": "Threat intelligence integrations and lookups enrich observables such as IP addresses with reputation and context during incident triage.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integration-configurations.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/threat-intelligence-in-sir.html"
+		],
+		"domain": "Security Incident Creation and Threat Intelligence"
 	}
 ]

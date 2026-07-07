@@ -13,7 +13,8 @@
 		"explanation": "Optimum performance starts with data and query diagnostics—table size, indexes, and access patterns—before scaling infrastructure that may not address root cause.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Data"
 	},
 	{
 		"trackCode": "CPOP",
@@ -29,7 +30,8 @@
 		"explanation": "CSDM foundation data provides the organizational context CMDB services depend on; expanding CI volume without that baseline produces unreliable topology.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
-		]
+		],
+		"domain": "Data"
 	},
 	{
 		"trackCode": "CPOP",
@@ -43,11 +45,15 @@
 			"Exporting every table nightly to flat files stored on application nodes"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Governed rotation and archival control data volume while PA trend monitoring surfaces growth before it degrades query performance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Data"
 	},
 	{
 		"trackCode": "CPOP",
@@ -63,7 +69,8 @@
 		"explanation": "IRE with defined authoritative sources and ownership prevents duplicate CIs while preserving trusted data feeds from Discovery and integrations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
-		]
+		],
+		"domain": "Data"
 	},
 	{
 		"trackCode": "CPOP",
@@ -85,14 +92,27 @@
 			"Drives business validation that recorded services reflect operational reality"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "CSDM foundation stewardship, CMDB Health monitoring, ownership models, and certification each address distinct data governance outcomes platform owners must orchestrate.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
-		]
+		],
+		"domain": "Data"
 	}
 ]

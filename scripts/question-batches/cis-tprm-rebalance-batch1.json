@@ -1,0 +1,566 @@
+[
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 0,
+		"prompt": "Leadership wants a single platform to manage vendor onboarding, periodic reassessment, contract renewals, and offboarding under governance oversight. Which ServiceNow application delivers that end-to-end third-party risk program?",
+		"choices": [
+			"Third-party Risk Management within the Governance, Risk, and Compliance suite",
+			"Hardware Asset Management for tracking laptop procurement and retirement events",
+			"Field Service Management for dispatching technicians to vendor facility sites",
+			"Employee Center for internal staff benefit requests and payroll case routing"
+		],
+		"correctIndex": 0,
+		"explanation": "TPRM centralizes onboarding, reassessment, renewal, monitoring, and offboarding workflows for third-party relationships within the GRC suite.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-exploring.html"
+		],
+		"domain": "TPRM Fundamentals and Review"
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 3,
+		"questionType": "multi",
+		"prompt": "Which two fields on the Third-party Contact form are required to designate the main liaison and deliver automated portal credentials? (Choose two.)",
+		"choices": [
+			"Primary contact checkbox flag identifying the main liaison for the third-party organization",
+			"Email address used to send portal login credentials and notification links to the external user",
+			"Department field listing the organizational unit name at the vendor company headquarters",
+			"Time Zone field defining the preferred regional offset for scheduled assessment reminders"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Every third party must have a primary contact designated, and the email field triggers the automated notification containing portal login credentials.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-tp-contact-config.html"
+		],
+		"domain": "TPRM Fundamentals and Review"
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 9,
+		"prompt": "Which TPRM program capabilities help teams manage vendor relationships across the full lifecycle beyond a single assessment event?",
+		"choices": [
+			"Onboarding, offboarding, renewal, and additional due diligence workflows with continuous monitoring",
+			"Exclusive focus on annual password rotation for vendor technical contacts",
+			"Replacement of all procurement contracts with internal employee travel requests",
+			"Automatic conversion of every vendor record into a CMDB server configuration item"
+		],
+		"correctIndex": 0,
+		"explanation": "TPRM supports onboarding, offboarding, renewals, additional due diligence, assessment management, and continuous risk monitoring as core program capabilities.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-exploring.html"
+		],
+		"domain": "TPRM Fundamentals and Review"
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 10,
+		"prompt": "An employee submits a due diligence request to prepare for an upcoming vendor contract renewal. Which request type should they select on the due diligence form?",
+		"choices": [
+			"Reassess an existing engagement to prepare for a contract renewal",
+			"Offboard an engagement with no due diligence required",
+			"Open a standard change request for infrastructure deployment approval",
+			"Create a hardware asset record for end-user laptop procurement tracking"
+		],
+		"correctIndex": 0,
+		"explanation": "Due diligence requests support renewal reassessment so teams re-evaluate vendor risk before extending an existing engagement contract.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-workflow-in-workspace.html"
+		],
+		"domain": "TPRM Fundamentals and Review"
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 12,
+		"prompt": "A new TPRM administrator must configure roles, permissions, and system settings to align the application with organizational policy. Which persona owns that responsibility?",
+		"choices": [
+			"TPRM administrator who manages user roles, permissions, and application configuration",
+			"Third-party contact who responds to questionnaires exclusively through the external portal",
+			"Field service dispatcher who assigns mobile technicians to on-site hardware repairs",
+			"Catalog fulfiller who processes employee-facing service catalog item requests"
+		],
+		"correctIndex": 0,
+		"explanation": "TPRM administrators configure roles, permissions, and system settings so the application meets organizational risk management and compliance requirements.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-exploring.html"
+		],
+		"domain": "TPRM Fundamentals and Review"
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 13,
+		"questionType": "multi",
+		"prompt": "Which two outcomes represent strategic benefits of consolidating third-party risk management in ServiceNow TPRM? (Choose two.)",
+		"choices": [
+			"Reduced manual assessment burden through automated workflows and standardized questionnaires",
+			"Centralized portfolio visibility across third parties, engagements, scores, and remediation status",
+			"Elimination of all regulatory obligations for vendor relationships",
+			"Automatic removal of procurement teams from contract negotiation activities"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "TPRM automates assessment workflows and centralizes third-party portfolio data so teams gain consistent visibility and lower manual program costs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-exploring.html"
+		],
+		"domain": "TPRM Fundamentals and Review"
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 14,
+		"prompt": "Before sending full control questionnaires, a risk team runs an inherent risk evaluation to assign vendor tiers. Which assessment type supports that classification step?",
+		"choices": [
+			"Tiering assessment that scores inherent risk indicators and assigns vendor risk tiers",
+			"Discovery assessment that scans vendor subnets and populates CMDB configuration items",
+			"Vulnerability assessment that imports CVE findings from external security scanner feeds",
+			"Employee satisfaction survey that collects internal staff feedback on workplace amenities"
+		],
+		"correctIndex": 0,
+		"explanation": "Tiering assessments evaluate inherent risk and assign tiers that determine assessment depth, cadence, and monitoring intensity for each vendor relationship.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		],
+		"domain": "TPRM Fundamentals and Review"
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 20,
+		"prompt": "Which table stores the primary third-party organization records managed in the TPRM data model?",
+		"choices": [
+			"Company table (core_company) representing third-party organizations in the vendor portfolio",
+			"Incident table (incident) capturing IT service disruption tickets raised by internal employees",
+			"Change Request table (change_request) tracking infrastructure deployment approval workflows",
+			"Task table (task) storing generic work items unrelated to vendor risk assessment activities"
+		],
+		"correctIndex": 0,
+		"explanation": "Third-party organizations are stored on the Company table; engagements, contacts, assessments, and issues reference these organization records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		],
+		"domain": "Core Configuration"
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 21,
+		"prompt": "Which TPRM table represents a specific business relationship or scoped service between your organization and a third party?",
+		"choices": [
+			"Third-party engagement (sn_vdr_risk_asmt_vendor_engagement) linking a vendor to a scoped business interaction",
+			"Hardware asset (alm_hardware) tracking physical device procurement and retirement lifecycle events",
+			"Problem record (problem) documenting root-cause analysis for recurring IT infrastructure failures",
+			"Knowledge article (kb_knowledge) storing internal employee self-service documentation content"
+		],
+		"correctIndex": 0,
+		"explanation": "Engagements represent scoped business relationships with third parties; assessments, tiering, and risk scores roll up at both the company and engagement levels.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		],
+		"domain": "Core Configuration"
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 27,
+		"prompt": "An IRQ answer indicates the vendor handles regulated personal data. The team wants matching external questionnaires attached automatically. Which configuration approach implements that behavior?",
+		"choices": [
+			"Configure internal questionnaire responses to auto-attach external questionnaires based on IRQ answers",
+			"Disable all external assessments until procurement manually emails questionnaire PDFs",
+			"Convert the vendor company record into a hardware asset with depreciation categories",
+			"Route the engagement through employee onboarding workflows for badge provisioning"
+		],
+		"correctIndex": 0,
+		"explanation": "TPRM can map IRQ responses to external questionnaire templates so the correct control domains are auto-attached when inherent risk answers meet configured conditions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-setup-eq-irq.html"
+		],
+		"domain": "Core Configuration"
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 28,
+		"prompt": "A TPRM team wants due diligence requests created automatically when new engagements meet portfolio criteria. Which configuration object should they define?",
+		"choices": [
+			"Event-driven management rule (sn_tprm_dd_generation_rule) with conditions that trigger due diligence requests",
+			"Business rule on change_request that auto-closes infrastructure deployment tickets after CAB approval",
+			"Catalog client script (catalog_script_client) validating employee service catalog form inputs",
+			"UI policy on incident that hides the priority field from IT service desk agents"
+		],
+		"correctIndex": 0,
+		"explanation": "Event-driven management generation rules define conditions that automatically create due diligence requests when engagement or portfolio criteria are met.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-event-drvn-mgt-rule-create.html"
+		],
+		"domain": "Core Configuration"
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 29,
+		"prompt": "Starting with TPRM 19.1.x, tiering questionnaire and external assessment reminder workflows migrate to which platform tool for customization?",
+		"choices": [
+			"Workflow Studio for customizing tiering and assessment reminder automation flows",
+			"Discovery patterns for classifying unknown TCP ports on infrastructure servers",
+			"Performance Analytics breakdown sources for segmenting incident assignment groups",
+			"HR Journey Designer for employee lifecycle onboarding activity sequences"
+		],
+		"correctIndex": 0,
+		"explanation": "TPRM migrates tiering questionnaire and external assessment reminder workflows to Workflow Studio, replacing deprecated legacy workflow definitions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-workflow-in-workspace.html"
+		],
+		"domain": "Core Configuration"
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 47,
+		"prompt": "An assessor wants deficient control responses on a Smart Assessment Engine template to spawn tracked remediation work. Which configuration should they enable?",
+		"choices": [
+			"Issue-generation rule on the questionnaire template that creates issues or tasks when results meet conditions",
+			"UI action on the incident table that closes all related problem records without review",
+			"Scheduled report export that emails CSV files without creating platform records",
+			"Data policy that masks vendor names on unrelated company records in the CMDB"
+		],
+		"correctIndex": 0,
+		"explanation": "Issue-generation rules on SAE questionnaire templates can create issues or workflow tasks when assessment results meet defined deficiency conditions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-sae-using.html"
+		],
+		"domain": "Assessment Configuration"
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 52,
+		"questionType": "multi",
+		"prompt": "Which two records are core to storing an external third-party assessment and its answered questionnaire instance? (Choose two.)",
+		"choices": [
+			"sn_vdr_risk_asmt_assessment external assessment header record",
+			"alm_hardware asset record used for warranty tracking on procured devices",
+			"sn_publications_publication catalog for knowledge article publishing workflows",
+			"asmt_assessment_instance questionnaire response instance linked to the assessment"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			3
+		],
+		"explanation": "External assessments live on sn_vdr_risk_asmt_assessment while asmt_assessment_instance stores the completed questionnaire responses.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		],
+		"domain": "Assessment Configuration"
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 57,
+		"prompt": "A facilities vendor engagement requires collection of physical site and product element data before external due diligence. Which optional TPRM process should the TPR manager start?",
+		"choices": [
+			"Third-party element collection process with questionnaires sent to the engagement contact",
+			"Discovery schedule that scans vendor subnets and creates CMDB server configuration items",
+			"Employee onboarding workflow that provisions badges and desk assignments for internal staff",
+			"Change advisory board review that approves infrastructure deployment requests"
+		],
+		"correctIndex": 0,
+		"explanation": "The optional third-party element collection process gathers structured element data through questionnaires before the due diligence assessment phase begins.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-workflow-in-workspace.html"
+		],
+		"domain": "Assessment Configuration"
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 58,
+		"prompt": "Before external questionnaires are sent, the TPR manager must validate auto-selected questionnaire sets for the third party and engagement contacts. Where does that review occur in the due diligence workflow?",
+		"choices": [
+			"Vendor Management Workspace during the due diligence process before questionnaires are distributed",
+			"Third-party portal homepage where external contacts configure internal scoring rule criteria",
+			"Discovery workspace where operators classify unknown TCP ports on vendor infrastructure",
+			"Employee Center profile page where requesters update personal payroll direct deposit settings"
+		],
+		"correctIndex": 0,
+		"explanation": "During due diligence, the TPR manager reviews and approves auto-selected external questionnaire sets in Vendor Management Workspace before they are sent to vendor contacts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-workflow-in-workspace.html"
+		],
+		"domain": "Assessment Configuration"
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 61,
+		"prompt": "After upgrading to Smart Assessment Engine questionnaires, where must assessors view smart assessments in the user interface?",
+		"choices": [
+			"Vendor Management Workspace because smart assessments must be viewed in the GRC workspace",
+			"Classic Third-party Risk Management navigator lists exclusively without workspace access",
+			"Employee Center catalog portal used for internal HR benefit and payroll requests",
+			"Discovery workspace used for network scan status and CMDB classification review"
+		],
+		"correctIndex": 0,
+		"explanation": "Smart assessments must be viewed in the Vendor Management Workspace rather than legacy navigator views designed for classic assessments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-create-assessment.html"
+		],
+		"domain": "Assessment Configuration"
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 66,
+		"questionType": "multi",
+		"prompt": "Which two actions can a third-party contact perform from the third-party portal? (Choose two.)",
+		"choices": [
+			"Edit scoring rules on sn_vdr_risk_asmt_vendor_risk_scoring_rule configuration records",
+			"Respond to a Third-party Risk Assessment assigned to their organization",
+			"Manage Third-party Contacts for their company engagement",
+			"Approve internal due diligence requests as TPR manager"
+		],
+		"correctIndex": 1,
+		"correctIndexes": [
+			1,
+			2
+		],
+		"explanation": "Portal contacts complete assigned assessments and maintain their contact roster; approval and scoring configuration remain internal functions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-reference.html"
+		],
+		"domain": "Third-party Portal"
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 74,
+		"prompt": "A contract negotiator finishes executing a vendor agreement and must activate the engagement with contract dates recorded. Which action should they select on the due diligence request?",
+		"choices": [
+			"Contract executed to attach the agreement and set contract start and expiration dates on the engagement",
+			"Skip contract to remove contract fields without entering a justification explanation",
+			"Draft assessment state that deletes all questionnaire responses from the vendor portal",
+			"Closed complete incident state on unrelated security tickets in the ITSM module"
+		],
+		"correctIndex": 0,
+		"explanation": "Selecting Contract executed attaches the signed agreement and sets contract start and expiration dates, moving the request to Engagement contract executed.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-ws-contract-risk-process.html"
+		],
+		"domain": "Third-party Supporting Processes"
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 75,
+		"prompt": "An engagement no longer requires a formal contract but still needs an active vendor relationship. How should the contract negotiator proceed in the contract risk process?",
+		"choices": [
+			"Select Skip contract, provide required justification, and update engagement start and expiration dates",
+			"Delete the vendor from core_company and purge all historical assessment records",
+			"Convert the engagement into a hardware asset with an assigned depreciation schedule",
+			"Route the vendor through employee onboarding workflows for internal badge provisioning"
+		],
+		"correctIndex": 0,
+		"explanation": "Skip contract records justification, renames date fields to engagement start and expiration, and advances the request when no contract is required.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-ws-contract-risk-process.html"
+		],
+		"domain": "Third-party Supporting Processes"
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 76,
+		"prompt": "Procurement needs the contract negotiator to review all due diligence evidence before a renewal agreement is drafted. Where does the negotiator access pending contract risk work items?",
+		"choices": [
+			"Vendor Management Workspace Task page under Due diligence requests for Negotiator",
+			"Employee Center catalog portal under internal hardware fulfillment requests",
+			"Discovery status dashboard listing subnet scan completion percentages",
+			"CMDB workspace dependency map showing unrelated infrastructure configuration items"
+		],
+		"correctIndex": 0,
+		"explanation": "Contract negotiators open the Vendor Management Workspace Task page and select Due diligence requests for Negotiator to review pending contract risk process work.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-ws-contract-risk-process.html"
+		],
+		"domain": "Third-party Supporting Processes"
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 77,
+		"prompt": "During offboarding, a contract negotiator confirms the vendor agreement is terminated. Which due diligence outcome records that termination?",
+		"choices": [
+			"Contract terminated updates the termination date and moves the request to Contract terminated state",
+			"Contract executed reactivates the engagement with new start and expiration date values",
+			"Skip contract removes all justification requirements from the due diligence request",
+			"Ready for TPRM approval reopens questionnaire collection before negotiator review"
+		],
+		"correctIndex": 0,
+		"explanation": "Contract terminated updates the termination date with the current date and changes the due diligence request state to Contract terminated during offboarding.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-ws-contract-risk-process.html"
+		],
+		"domain": "Third-party Supporting Processes"
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 78,
+		"prompt": "A TPR manager wants ongoing visibility into whether vendors adhere to agreed service terms between assessment cycles. Which TPRM capability supports that operational review?",
+		"choices": [
+			"Vendor Management Workspace monitoring to review third-party performance and adherence to agreed terms",
+			"Virtual Agent topics that reset employee passwords without vendor risk context",
+			"Performance Analytics widgets showing IT service desk mean handle time trends only",
+			"Project portfolio cost plans that forecast capital expenditure for internal initiatives"
+		],
+		"correctIndex": 0,
+		"explanation": "TPRM monitoring in Vendor Management Workspace helps teams regularly assess vendor performance and adherence to agreed-upon engagement terms.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-monitoring-tpr.html"
+		],
+		"domain": "Third-party Supporting Processes"
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 79,
+		"prompt": "Program leadership needs to track, prioritize, and manage due diligence responsibilities across the vendor portfolio. Which workspace feature provides that operational oversight?",
+		"choices": [
+			"TPRM due diligence management reports accessible from Vendor Management Workspace",
+			"Incident matching rules that merge duplicate vendor tickets into a single problem record",
+			"Catalog fulfillment workflows that process employee-facing hardware request submissions",
+			"Discovery credential store for MID Server authentication secrets on target subnets"
+		],
+		"correctIndex": 0,
+		"explanation": "Due diligence management reports help TPRM users track, prioritize, and manage responsibilities across the third-party portfolio from the workspace.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-ws-dd-management-reports.html"
+		],
+		"domain": "Third-party Supporting Processes"
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 80,
+		"prompt": "Finance asks which TPRM activities consume managed-activity licenses when engagements are initiated. Which table records those usage events for verification?",
+		"choices": [
+			"Usage analytics activities (sn_vdr_risk_asmt_ua_activity) logging each managed activity occurrence",
+			"Incident (incident) capturing IT service disruption tickets from internal employee submissions",
+			"Change Request (change_request) tracking infrastructure deployment approval workflow progress",
+			"OAuth entity registry (oauth_entity) storing REST API consumer credentials for integrations"
+		],
+		"correctIndex": 0,
+		"explanation": "The read-only Usage analytics activities table stores a record whenever a managed activity is initiated for license verification purposes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-managed-activity.html"
+		],
+		"domain": "Third-party Supporting Processes"
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 81,
+		"prompt": "A compliance manager wants vendor questionnaire responses to update control compliance status for mapped Policy and Compliance records. Which integration delivers that outcome?",
+		"choices": [
+			"GRC Policy and Compliance Management integration that updates control status from third-party questionnaire responses",
+			"Discovery integration that classifies unknown TCP ports on vendor infrastructure servers",
+			"HR case management integration that routes employee payroll inquiries through Employee Center",
+			"Field service integration that dispatches technicians for on-site hardware repair visits"
+		],
+		"correctIndex": 0,
+		"explanation": "The Policy and Compliance integration updates control and control objective compliance status based on questionnaire responses from third parties and engagements.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/pc-assessment-integration.html"
+		],
+		"domain": "Third-party Supporting Processes"
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 82,
+		"prompt": "After contract execution, legal must store the signed agreement so it appears in engagement document lists for audit. Which document management approach should the negotiator use?",
+		"choices": [
+			"Add the contract through Document Management with New or Link Documents on the engagement Documents page",
+			"Email the contract to individual assessors and store copies only in personal inboxes",
+			"Attach the file exclusively to an unrelated incident record in the ITSM module",
+			"Export vendor data to a local spreadsheet without linking files to the engagement record"
+		],
+		"correctIndex": 0,
+		"explanation": "Contract negotiators attach executed agreements through Document Management so contracts appear in Documents related lists on the engagement record.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-dms.html"
+		],
+		"domain": "Third-party Supporting Processes"
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 83,
+		"prompt": "A renewal review concludes the vendor contract cannot be extended. Which contract risk process outcome rejects the engagement and notifies stakeholders?",
+		"choices": [
+			"Contract not renewed captures justification and rejects the engagement after the owner closes the request",
+			"Contract executed sets new start and expiration dates and activates the engagement immediately",
+			"Skip contract deletes all vendor contacts and purges historical assessment evidence",
+			"Ready for TPRM approval sends questionnaires before negotiator review begins"
+		],
+		"correctIndex": 0,
+		"explanation": "Contract not renewed requires justification, updates the request state, and rejects the engagement with stakeholder notification when renewal is denied.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-ws-contract-risk-process.html"
+		],
+		"domain": "Third-party Supporting Processes"
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 84,
+		"prompt": "TPR managers need tailored KPI views of assessment volume, open issues, and program trends. Which workspace feature supports that performance tracking?",
+		"choices": [
+			"TPRM personalized dashboards on the Vendor Management Workspace dashboard page",
+			"Discovery status records tracking subnet scan completion across infrastructure segments",
+			"Employee performance review cycles managed through the HR service delivery application",
+			"Catalog reporting widgets showing internal hardware request fulfillment turnaround times"
+		],
+		"correctIndex": 0,
+		"explanation": "TPRM personalized dashboards let TPR managers and assessors monitor assessment data and key program metrics from the workspace dashboard page.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-monitor-dashboards.html"
+		],
+		"domain": "Third-party Supporting Processes"
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 87,
+		"prompt": "An employee without TPRM workspace access needs to initiate vendor due diligence for a new engagement. Where should they submit the request?",
+		"choices": [
+			"Employee Center due diligence request form specifying the third party and engagement details",
+			"Third-party portal /svdp path used by external vendor contacts for questionnaire completion",
+			"Discovery schedule configuration used by MID Servers for network infrastructure scanning",
+			"CMDB workspace used by configuration managers for dependency mapping and CI reconciliation"
+		],
+		"correctIndex": 0,
+		"explanation": "Employees initiate due diligence from Employee Center by submitting the due diligence request form with third-party and engagement information.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-workflow-in-workspace.html"
+		],
+		"domain": "Other Application Relationships"
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 88,
+		"prompt": "Procurement uses Source-to-Pay operations and wants supplier risk assessments coordinated with TPRM workflows. Which integration pattern aligns with ServiceNow guidance?",
+		"choices": [
+			"Streamline supplier risk assessment workflows between Source-to-Pay and Third-party Risk Management",
+			"Replace all TPRM assessments with manual spreadsheet reviews stored on local file shares",
+			"Disable vendor portal access until procurement completes unrelated invoice approvals",
+			"Route supplier records exclusively through hardware asset depreciation schedule tables"
+		],
+		"correctIndex": 0,
+		"explanation": "ServiceNow documents Source-to-Pay integration patterns that streamline supplier risk assessment workflows with TPRM due diligence processes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/integrating-with-tprm.html"
+		],
+		"domain": "Other Application Relationships"
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 89,
+		"prompt": "Sustainability leadership wants EcoVadis CSR ratings available during vendor due diligence. How does ServiceNow support that application relationship?",
+		"choices": [
+			"EcoVadis integration that imports sustainability ratings to enrich third-party risk assessments",
+			"Discovery integration that maps vendor network topology into CMDB dependency records",
+			"HR integration that converts vendor contacts into internal employee user accounts",
+			"ITSM integration that routes all vendor findings to P1 incident records automatically"
+		],
+		"correctIndex": 0,
+		"explanation": "EcoVadis integration brings sustainability and CSR ratings into TPRM so teams can assess environmental and social vendor practices alongside risk data.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-integrating-ecovadis.html"
+		],
+		"domain": "Other Application Relationships"
+	}
+]

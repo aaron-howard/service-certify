@@ -13,7 +13,8 @@
 		"explanation": "Platform owners orchestrate adoption strategy and sponsor alignment enterprise-wide; champions provide localized peer support within that framework.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "People"
 	},
 	{
 		"trackCode": "CPOA",
@@ -29,7 +30,8 @@
 		"explanation": "Sustainable knowledge management relies on governed article lifecycle, ownership, and quality so users can find trusted solutions after rollout.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/knowledge-management/knowledge-management.html"
-		]
+		],
+		"domain": "People"
 	},
 	{
 		"trackCode": "CPOA",
@@ -45,7 +47,8 @@
 		"explanation": "Implementation partners apply ServiceNow delivery methodology and certified skills under governed SOWs; staffing brokers or unrelated vendors do not fulfill that role.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "People"
 	},
 	{
 		"trackCode": "CPOA",
@@ -59,11 +62,15 @@
 			"Technical table schemas without linking messages to business outcomes"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Communication plans define who receives what, through which channels, on what schedule, and who owns each stream—not one-off generic notices.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "People"
 	},
 	{
 		"trackCode": "CPOA",
@@ -85,14 +92,27 @@
 			"Reinforce new ways of working among peers in affected teams"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Sponsors advocate, platform owners orchestrate, partners deliver scoped work, and champions drive peer adoption—each role has distinct accountability.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "People"
 	}
 ]

@@ -14,7 +14,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/workspace-homepage.html",
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-impl-overview.html"
-		]
+		],
+		"domain": "Risk and Advanced Risk"
 	},
 	{
 		"trackCode": "CIS-RC",
@@ -31,57 +32,61 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-response-and-treatment.html",
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-governance.html"
-		]
+		],
+		"domain": "Risk and Advanced Risk"
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 72,
-		"prompt": "An advanced assessment uses both numeric scales and narrative rationale fields. Why include documented rationale with scores?",
+		"prompt": "A new GRC instance needs baseline policies, controls, and risk libraries quickly. Which extended capability accelerates that setup?",
 		"choices": [
-			"It supports defensible recalibration when stakeholders challenge ratings",
-			"It eliminates the need for residual risk calculations",
-			"It replaces control testing with qualitative interviews only",
-			"It allows analysts to skip approval workflows on high risks"
+			"Install and configure GRC content packs aligned to the target regulatory profile",
+			"Build every control manually without imported templates",
+			"Disable scoped applications so all tables remain global",
+			"Import employee records from HR as authority documents"
 		],
 		"correctIndex": 0,
-		"explanation": "Documented assumptions and rationale improve transparency when scores are reviewed or disputed.",
+		"explanation": "GRC content packs deliver starter policy, compliance, and risk artifacts that teams tailor to the organization.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-data-governance.html",
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-review-process.html"
-		]
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/c_GRCControls.html"
+		],
+		"domain": "Common Elements and Extended Capabilities"
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 73,
-		"prompt": "A treatment plan requires configuration changes to a payment application. How should the risk team connect work to enterprise change governance?",
+		"prompt": "Legal notifies the team that a federal citation changed effective next month. Which common-elements workflow helps maintain compliance coverage?",
 		"choices": [
-			"Link treatment tasks to approved change records and validate control effectiveness after deployment",
-			"Execute changes directly on production without change tickets",
-			"Convert the risk into a catalog request for end users",
-			"Track treatment only in email threads outside ServiceNow"
+			"Regulatory change management with impact analysis on citations, controls, and tests",
+			"Immediate deletion of all mapped controls without stakeholder review",
+			"Suspending every attestation campaign until the following year",
+			"Ignoring citation updates until an external audit requests evidence"
 		],
 		"correctIndex": 0,
-		"explanation": "Treatment tasks should align with change management so implementations are governed and post-change controls are verified.",
+		"explanation": "Regulatory change management tracks obligation updates and drives governed adjustments to controls and testing.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-response-and-treatment.html",
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-governance.html"
-		]
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/policy-lifecycle-management.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
+		],
+		"domain": "Common Elements and Extended Capabilities"
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 74,
-		"prompt": "Stale risk records accumulate after reorganizations. Which advanced risk practice keeps the register trustworthy?",
+		"prompt": "Compliance operations wants automated alerts when encryption control indicators breach thresholds. Which design supports continuous monitoring?",
 		"choices": [
-			"Periodic review campaigns validating ownership, ratings, and treatment progress",
-			"Automatic closure of all risks older than thirty days",
-			"Restricting updates to a single administrator account",
-			"Removing change history from risk records each quarter"
+			"Control indicators tied to objectives with threshold-based exception creation",
+			"Annual manual evidence uploads stored as unattached files",
+			"Email-only summaries with no structured control records",
+			"Static control tests executed once during initial implementation"
 		],
 		"correctIndex": 0,
-		"explanation": "Scheduled review campaigns prevent outdated ownership and scores from distorting enterprise risk reporting.",
+		"explanation": "Automated control indicators generate exceptions when telemetry shows drift from expected control operation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-review-process.html",
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-data-governance.html"
-		]
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/control-testing-and-evidence.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/compliance-metrics.html"
+		],
+		"domain": "Common Elements and Extended Capabilities"
 	}
 ]

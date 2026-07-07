@@ -13,7 +13,8 @@
 		"explanation": "Backlog prioritization belongs to the product owner, who represents business value; the scrum master facilitates process and the team owns how work gets done, not what comes first.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Process"
 	},
 	{
 		"trackCode": "CPOP",
@@ -35,15 +36,28 @@
 			"Provide requirements input and feedback at sprint reviews"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Agile role clarity keeps delivery healthy: the product owner owns value, the scrum master owns process facilitation, the team owns execution, and stakeholders contribute input and review feedback.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Process"
 	},
 	{
 		"trackCode": "CPOP",
@@ -59,7 +73,8 @@
 		"explanation": "Removing impediments and protecting the team's sprint capacity is the scrum master's core responsibility; the product owner manages scope and value, not interference from outside teams.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Process"
 	},
 	{
 		"trackCode": "CPOP",
@@ -76,7 +91,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/system-update-sets.html",
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
-		]
+		],
+		"domain": "Process"
 	},
 	{
 		"trackCode": "CPOP",
@@ -90,10 +106,14 @@
 			"Committing changes directly on production during business hours for faster feedback"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Safe promotion requires validated, conflict-free change packages and documented test sign-off before production commit; bypassing test or changing production directly defeats the control model.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/system-update-sets.html"
-		]
+		],
+		"domain": "Process"
 	}
 ]

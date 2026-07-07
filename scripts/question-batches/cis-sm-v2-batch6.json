@@ -2,81 +2,86 @@
 	{
 		"trackCode": "CIS-SM",
 		"order": 25,
-		"prompt": "A Connection Section references a temporary variable that was never populated by an earlier step. What symptom appears during mapping?",
+		"prompt": "An Identification Section uses an overly broad regular expression. What mapping problem can result?",
 		"choices": [
-			"Downstream connection steps fail or skip because required parsed values are empty or undefined",
-			"The service map schedule automatically doubles its run frequency until the variable resolves",
-			"All CIs on the map display a green check mark indicating successful credential validation",
-			"The pattern is promoted to production status without requiring further testing"
+			"False-positive matches that attach unrelated processes to the wrong application pattern",
+			"Automatic retirement of every cmdb_ci_computer record in the scoped subnet",
+			"Permanent disablement of all discovery schedules tied to the MID Server cluster",
+			"Conversion of every matched process into a business service without dependencies"
 		],
 		"correctIndex": 0,
-		"explanation": "Missing variable values break connection logic that depends on parsed data, resulting in incomplete dependency maps.",
+		"explanation": "Overly broad identification criteria can misclassify processes and produce inaccurate dependency paths on the service map.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
-		]
+		],
+		"domain": "Service Mapping Pattern Design"
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 26,
-		"prompt": "An Identification Section uses an overly broad regular expression. What mapping problem can result?",
+		"prompt": "SSH-based pattern steps require which prerequisite before they can execute successfully on a Linux host?",
 		"choices": [
-			"Unrelated processes match the pattern, creating false application CIs and noisy dependencies",
-			"Discovery credentials expire immediately after the first successful pattern execution",
-			"Entry points are deleted automatically when the regex matches more than one hostname",
-			"Business services are retired from the CMDB whenever the regex matches a port number"
+			"Valid Discovery credentials with SSH access assigned to the target CI class",
+			"Catalog approval workflows for employee mobile device enrollment requests",
+			"Event rule filters that suppress all warning alerts on the subnet",
+			"Manual creation of business service records for every discovered port"
 		],
 		"correctIndex": 0,
-		"explanation": "Broad identification criteria cause incorrect pattern matches, leading to generic or duplicate application CIs and inaccurate topologies.",
+		"explanation": "SSH pattern steps depend on Discovery credentials authorized for the host so probes can collect process and configuration data.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-pattern-best-practices.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
+		],
+		"domain": "Service Mapping Pattern Design"
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 27,
-		"prompt": "Service Mapping setup on a MID Server commonly requires configuration of which file types?",
+		"prompt": "A pattern step uses a Match operation. What does this operation accomplish?",
 		"choices": [
-			"Properties and configuration files that control probes, timeouts, and mapping behavior on the MID Server",
-			"Software entitlement CSV templates used by the SAM reconciliation engine exclusively",
-			"Incident workflow XML exports from the service desk application module",
-			"Change calendar ICS files imported from external project management tools"
+			"Evaluates collected text or variables against criteria to decide subsequent step execution",
+			"Schedules recurring horizontal discovery runs against every subnet in the IP range",
+			"Creates catalog fulfillment tasks for employee laptop shipping and imaging",
+			"Replaces entry point records by auto-generating URLs from DNS zone transfers"
 		],
 		"correctIndex": 0,
-		"explanation": "MID Server configuration files and properties tune probe execution, connectivity, and Service Mapping behavior in the customer environment.",
+		"explanation": "Match operations compare probe output or variables against defined criteria to control conditional pattern flow.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
+		],
+		"domain": "Service Mapping Pattern Design"
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 28,
-		"prompt": "When tuning Service Mapping performance in a large environment, which settings are commonly adjusted?",
+		"prompt": "When should a Parse Variable operation be used in a Service Mapping pattern step?",
 		"choices": [
-			"Concurrent probe limits, timeouts, and schedule frequency to balance map freshness with MID Server load",
-			"Incident auto-close intervals and on-hold reason catalogs in the ITSM application",
-			"Hardware asset depreciation methods and stockroom transfer order approval rules",
-			"Event management connector polling intervals for SaaS monitoring integrations only"
+			"When probe output must be extracted into a variable for later identification or connection logic",
+			"When discovery schedules need IP ranges assigned to MID Server clusters by region",
+			"When catalog variables must validate employee phone numbers on self-service items",
+			"When event rules should create alerts from monitoring connector payloads only"
 		],
 		"correctIndex": 0,
-		"explanation": "Performance tuning focuses on probe concurrency, timeout values, and mapping schedule cadence to avoid overloading MID Servers while maintaining accuracy.",
+		"explanation": "Parse Variable steps extract structured values from command or script output so downstream pattern logic can reference them.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
+		],
+		"domain": "Service Mapping Pattern Design"
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 29,
 		"prompt": "In Service Mapping configuration, an entry point defines what starting condition?",
 		"choices": [
-			"The CI or endpoint—such as a URL, hostname, or load balancer—where top-down mapping begins discovery",
-			"The software model normalization rule applied during horizontal discovery classification",
-			"The event rule threshold that creates alerts in the Event Management application",
-			"The change model used when service map updates require CAB approval"
+			"The CI from which top-down dependency tracing begins for an application service map",
+			"The catalog item employees use to request replacement laptops during outages",
+			"The event rule that suppresses monitoring alerts for mapped CIs permanently",
+			"The HR case template for employee relocation approval workflows"
 		],
 		"correctIndex": 0,
-		"explanation": "Entry points anchor service map discovery by identifying where Service Mapping starts traversing application dependencies.",
+		"explanation": "Entry points specify the starting CI that Service Mapping uses to initiate pattern-based dependency discovery for a service.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/entry-points-and-service-maps.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/create-a-service-map.html"
+		],
+		"domain": "Service Mapping Configuration"
 	}
 ]

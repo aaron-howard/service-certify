@@ -13,7 +13,8 @@
 		"explanation": "External assessments can target a third-party engagement so scoring and evidence reflect the specific service relationship.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
-		]
+		],
+		"domain": "Assessment Configuration"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -29,7 +30,8 @@
 		"explanation": "Assessment templates bundle questionnaire templates and reuse consistent control domains across recurring vendor assessments.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
-		]
+		],
+		"domain": "Assessment Configuration"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -45,7 +47,8 @@
 		"explanation": "Questionnaire templates use asmt_metric_type with related categories and metrics to structure assessable control content.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
-		]
+		],
+		"domain": "Assessment Configuration"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -61,7 +64,8 @@
 		"explanation": "TPRM supports on-demand and recurring assessments so teams can automate periodic due diligence cadences.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-create-assessment.html"
-		]
+		],
+		"domain": "Assessment Configuration"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -77,6 +81,7 @@
 		"explanation": "The Include previous responses option carries forward prior answers so vendors update only changed controls.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-create-assessment.html"
-		]
+		],
+		"domain": "Assessment Configuration"
 	}
 ]

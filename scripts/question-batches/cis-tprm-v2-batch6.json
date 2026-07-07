@@ -13,7 +13,8 @@
 		"explanation": "The allow_assessor_edit property determines whether TPR assessors can enter or modify questionnaire responses on behalf of external contacts.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-properties-configure.html"
-		]
+		],
+		"domain": "Core Configuration"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -29,7 +30,8 @@
 		"explanation": "The max_age_for_questionnaire_reuse property sets how far back TPRM searches for closed assessment responses to pre-populate new questionnaires.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-properties-configure.html"
-		]
+		],
+		"domain": "Core Configuration"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -45,7 +47,8 @@
 		"explanation": "Risk intelligence scores feed event-driven rules that can launch reassessments, generate issues, and notify stakeholders when ratings shift.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-riskintelprvdr-overview.html"
-		]
+		],
+		"domain": "Core Configuration"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -61,7 +64,8 @@
 		"explanation": "Event-driven management history records each rule execution triggered by monitoring signals or risk intelligence rating changes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
-		]
+		],
+		"domain": "Core Configuration"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -77,6 +81,7 @@
 		"explanation": "Engagement risk scoring rules define how assessment ratings and other inputs combine to produce engagement-level risk scores.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
-		]
+		],
+		"domain": "Core Configuration"
 	}
 ]

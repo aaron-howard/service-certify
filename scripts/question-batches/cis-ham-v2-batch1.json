@@ -2,83 +2,88 @@
 	{
 		"trackCode": "CIS-HAM",
 		"order": 0,
-		"prompt": "According to ServiceNow IT Asset Management documentation, which statement best defines IT Asset Management (ITAM)?",
+		"prompt": "A CIO asks the implementation team to draft a three-year IT Asset Management program roadmap. Which scope best aligns with ServiceNow ITAM guidance?",
 		"choices": [
-			"Management of IT assets throughout procurement, deployment, maintenance, and retirement",
-			"Exclusive CMDB class modeling without financial or inventory context for hardware estates",
-			"Software publisher audit defense without tracking installed titles or usage evidence",
-			"Network topology mapping limited to cloud provider APIs without asset lifecycle tracking"
+			"Manage hardware, software, and cloud spend across procurement, deployment, maintenance, and retirement with governed data and financial controls",
+			"Track CMDB classes only without inventory, procurement, or lifecycle financial context for hardware estates",
+			"Defend software publisher audits exclusively without hardware stockroom or fulfillment automation",
+			"Map network topology from cloud APIs without linking assets to ownership, cost, or disposal workflows"
 		],
 		"correctIndex": 0,
 		"explanation": "ITAM is the management of IT assets across their lifecycle, covering ownership, location, usage, cost, and value delivery.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/it-asset-management.html"
-		]
+		],
+		"domain": "IT Asset Management Overview and Fundamentals"
 	},
 	{
 		"trackCode": "CIS-HAM",
 		"order": 1,
-		"prompt": "Which product areas are included in the ServiceNow IT Asset Management suite?",
+		"prompt": "An enterprise wants unified visibility across on-premises laptops, SaaS subscriptions, and AWS EC2 instances. Which ServiceNow ITAM design supports that outcome?",
 		"choices": [
-			"Software Asset Management, Hardware Asset Management, and Cloud Cost Management",
-			"Incident Management, Problem Management, and Change Management only",
-			"Discovery, Service Mapping, and Event Management exclusively",
-			"Performance Analytics, Virtual Agent, and Now Assist only"
+			"Integrate Hardware Asset Management, Software Asset Management, and Cloud Cost Management under a shared ITAM governance model",
+			"Deploy Incident Management, Problem Management, and Change Management modules without any asset applications",
+			"Rely on Discovery and Service Mapping alone without SAM, HAM, or cloud cost applications",
+			"Use Performance Analytics dashboards only without normalized asset or entitlement records"
 		],
 		"correctIndex": 0,
 		"explanation": "The ITAM suite comprises SAM, HAM, and Cloud Cost Management applications for software, hardware, and cloud spend visibility.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/it-asset-management.html"
-		]
+		],
+		"domain": "IT Asset Management Overview and Fundamentals"
 	},
 	{
 		"trackCode": "CIS-HAM",
 		"order": 2,
-		"prompt": "How does Discovery help ensure trustworthy IT asset data in a Hardware Asset Management program?",
+		"prompt": "Imported spreadsheet data shows 2,000 laptops missing serial numbers while Discovery finds active devices on the network. How should the HAM team improve record trustworthiness?",
 		"choices": [
-			"It automatically discovers deployed hardware and feeds data that can reconcile with asset and CI records",
-			"It replaces stockroom receiving with SNMP trap correlation only across all inventory locations",
-			"It eliminates the need for hardware model categories in the product catalog permanently",
-			"It converts consumable quantities into perpetual software entitlements without model references"
+			"Reconcile Discovery evidence with asset records and remediate gaps through governed intake and normalization workflows",
+			"Disable Discovery feeds until every spreadsheet row is manually keyed into stockrooms",
+			"Delete all asset records that lack a purchase order reference regardless of network presence",
+			"Convert every discovered device into a consumable model tracked by quantity only"
 		],
 		"correctIndex": 0,
 		"explanation": "Discovery provides current hardware evidence that HAM can reconcile with asset records, improving data accuracy and reducing manual entry gaps.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/it-asset-management.html",
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
-		]
+		],
+		"domain": "IT Asset Management Overview and Fundamentals"
 	},
 	{
 		"trackCode": "CIS-HAM",
 		"order": 3,
-		"prompt": "What capability does the Hardware Asset Management application add beyond base Asset Management?",
+		"prompt": "Operations already tracks basic asset records in ITSM but needs stockroom fulfillment, mobile receiving, and lifecycle automation. Which application should they implement?",
 		"choices": [
-			"Prescriptive lifecycle workflows, stockroom operations, and hardware fulfillment automation",
-			"Replacement of the CMDB with a standalone procurement database isolated from ITSM",
-			"Removal of asset-to-CI synchronization for all hardware classes across every domain",
-			"Exclusive focus on software license reclamation without inventory or stockroom tracking"
+			"Hardware Asset Management with prescriptive lifecycle workflows, stockroom operations, and catalog fulfillment",
+			"Event Management with alert correlation rules replacing all procurement integrations",
+			"Software Asset Management reclamation jobs without hardware inventory or transfer orders",
+			"Knowledge Management article publishing without asset or stockroom record updates"
 		],
 		"correctIndex": 0,
 		"explanation": "HAM extends base asset tracking with automated lifecycle tasks, stockroom management, and fulfillment workflows for hardware estates.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/ham-landing-page.html"
-		]
+		],
+		"domain": "IT Asset Management Overview and Fundamentals"
 	},
 	{
 		"trackCode": "CIS-HAM",
 		"order": 4,
-		"prompt": "Which stages does ServiceNow documentation include in the hardware asset lifecycle managed by HAM?",
+		"prompt": "Finance asks for a five-year laptop refresh strategy tied to procurement, deployment, support, and secure disposal. Which lifecycle design should HAM implement?",
 		"choices": [
-			"Procurement, receiving, deployment, maintenance, and retirement or disposal",
-			"Discovery credential rotation, alert correlation, and event suppression only",
-			"Publisher true-up, entitlement import, and license optimization exclusively",
-			"Service catalog branding, portal themes, and knowledge article publishing"
+			"Governed stages from procurement and receiving through in-use maintenance to retirement with financial and compliance checkpoints",
+			"A single In stock state for all devices until manual spreadsheet retirement at end of life",
+			"Discovery-only classification without receiving, assignment, or disposal workflows",
+			"Publisher true-up imports replacing hardware lifecycle tracking for every device class"
 		],
 		"correctIndex": 0,
 		"explanation": "HAM automates the hardware lifecycle from procurement through disposal, tracking financial, contractual, and inventory details at each stage.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/it-asset-management.html",
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/exploring-ham.html"
-		]
+		],
+		"domain": "IT Asset Management Overview and Fundamentals"
 	}
 ]

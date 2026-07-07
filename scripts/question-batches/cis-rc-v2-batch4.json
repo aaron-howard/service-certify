@@ -2,81 +2,93 @@
 	{
 		"trackCode": "CIS-RC",
 		"order": 15,
-		"prompt": "When creating an entity filter, which field is mandatory?",
+		"prompt": "A new GRC steering committee charter must define how often leadership reviews compliance posture and open issues. Which element belongs in that charter?",
 		"choices": [
-			"Source table",
-			"Description",
-			"Owned by",
-			"Parent entity type"
+			"Meeting cadence, membership, decision scope, and escalation triggers for material gaps",
+			"Detailed widget color palettes for every compliance dashboard",
+			"MID Server patch schedules for discovery integrations",
+			"Clone frequency between production and sub-production instances"
 		],
 		"correctIndex": 0,
-		"explanation": "An entity filter must specify the source table whose records will be evaluated by the filter conditions; other fields are optional metadata.",
+		"explanation": "Steering committee charters document who meets, how often, and what decisions the committee owns for GRC oversight.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/entity-filters.html"
-		]
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
+		],
+		"domain": "Governance Strategy"
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 16,
-		"prompt": "What is the purpose of an entity type in the GRC entity framework?",
+		"prompt": "Internal audit and compliance both test access controls but use different evidence standards. Which governance action harmonizes their work?",
 		"choices": [
-			"To store the numeric scoring thresholds used when calculating residual risk for the instance",
-			"To group related entities and drive which policy statements and risk statements apply to them",
-			"To define the update set that GRC configuration records are captured into during development",
-			"To restrict login access for external assessors connecting through the vendor portal"
+			"Define shared control objectives, evidence expectations, and handoff rules between functions",
+			"Prohibit audit from viewing compliance records in the instance",
+			"Duplicate identical controls under separate names for each team",
+			"Disable attestation campaigns whenever audit fieldwork is active"
 		],
-		"correctIndex": 1,
-		"explanation": "Entity types classify entities into logical groups; content such as policy statements and risk statements is associated at the entity type level to generate records for member entities.",
+		"correctIndex": 0,
+		"explanation": "Cross-functional governance aligns testing standards so compliance monitoring and audit fieldwork reinforce rather than duplicate effort.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-entities.html"
-		]
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/audit-management/c_AuditTasks.html"
+		],
+		"domain": "Governance Strategy"
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 17,
-		"prompt": "A GRC design workshop debates whether to scope entities by entity type or by class. What is the key difference between the two approaches?",
+		"questionType": "multi",
+		"prompt": "Which two groups form the core implementation team for a GRC engagement? (Choose two.)",
 		"choices": [
-			"The class approach ties entity generation to an entire table or CI class, while entity types use filters to define flexible, condition-based groupings",
-			"Entity types can reference only CMDB tables, while the class approach can reference any table in the instance including custom ones",
-			"The class approach requires a custom scripted REST API, while entity types require importing an XML template for each grouping",
-			"Entity types are read-only after creation, while class-based records can be modified freely at any time by any GRC user"
+			"Risk and compliance experts",
+			"ServiceNow developer team",
+			"External regulator liaisons",
+			"End-user hardware support technicians"
 		],
 		"correctIndex": 0,
-		"explanation": "Class-based scoping maps all records of a table or CI class to entities, whereas entity types with filters let implementers define precise, condition-driven membership.",
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "A GRC implementation pairs risk and compliance subject matter experts, who own requirements and methodology, with the ServiceNow developer team that configures the platform.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-entities.html"
-		]
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-overview.html"
+		],
+		"domain": "Implementation Planning"
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 18,
-		"prompt": "In the entity architecture, what happens when a record in the source table matches the conditions of an active entity filter?",
+		"prompt": "During implementation planning, which activity should be completed before loading authority documents and building policy statements?",
 		"choices": [
-			"The matching record is deleted from the source table and recreated in the sn_grc scope",
-			"The record is flagged for manual review and remains outside GRC until an admin approves it",
-			"An email digest is queued so risk managers can decide whether to build an entity by hand",
-			"An entity is created or associated for that record, making it available for controls and risks"
+			"Defining the entity scope and content structure with stakeholders so requirements map cleanly to the data model",
+			"Retiring every legacy compliance spreadsheet so no historical evidence remains available",
+			"Enabling all optional GRC plugins regardless of whether the customer licensed them",
+			"Granting the sn_grc.admin role to every member of the compliance department by default"
 		],
-		"correctIndex": 3,
-		"explanation": "Entity filters evaluate source-table records against their conditions; matches result in entities that inherit applicable content through their entity types.",
+		"correctIndex": 0,
+		"explanation": "Agreeing on entity scope and how compliance content will be structured up front prevents rework when authority documents, policies, and controls are created.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/entity-filters.html"
-		]
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management.html"
+		],
+		"domain": "Implementation Planning"
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 19,
-		"prompt": "Why is the entity framework considered the foundation shared by Policy and Compliance Management and Risk Management?",
+		"prompt": "A GRC program must deliver value in two releases rather than a single big-bang deployment. Which rollout strategy is most appropriate?",
 		"choices": [
-			"It stores the license entitlements that determine how many users can open GRC modules concurrently",
-			"It provides the common objects against which both controls and risks are generated and monitored",
-			"It replaces the platform workflow engine with a GRC-specific state machine for all task records",
-			"It encrypts compliance evidence attachments before they are written to the instance database"
+			"Phase by regulated domain or business unit with validated entity scope and content packs per release",
+			"Enable every module simultaneously before stakeholders define requirements",
+			"Delay entity design until all authority documents are imported from every framework",
+			"Configure audit engagements before compliance controls exist in the instance"
 		],
-		"correctIndex": 1,
-		"explanation": "Both applications operate on entities: policy statements generate controls per entity and risk statements generate risks per entity, so the entity model underpins each.",
+		"correctIndex": 0,
+		"explanation": "Phased GRC rollouts sequence scope, content, and stakeholder readiness so each release delivers measurable compliance value.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-entities.html"
-		]
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-overview.html"
+		],
+		"domain": "Implementation Planning"
 	}
 ]

@@ -13,7 +13,8 @@
 		"explanation": "Assessment ratings are calculated from metric-level scores on questionnaire responses, aggregated according to configured scoring and rollup rules.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/rm-assessment-integration.html"
-		]
+		],
+		"domain": "Assessment Configuration"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -29,7 +30,8 @@
 		"explanation": "The risk rating field maps numeric assessment scores to qualitative tiers: Critical, High, Moderate, Low, and Minor.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/create-int-assess-form.html"
-		]
+		],
+		"domain": "Assessment Configuration"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -45,7 +47,8 @@
 		"explanation": "Internal assessments evaluate inherent risk and can affect which questionnaires are later distributed to the third party or engagement.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-create-int-assessment.html"
-		]
+		],
+		"domain": "Assessment Configuration"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -61,7 +64,8 @@
 		"explanation": "The sn_vdr_risk_asmt_assessment table is the primary source for third-party risk assessment reporting including states, scores, and dates.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
-		]
+		],
+		"domain": "Assessment Configuration"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -77,6 +81,7 @@
 		"explanation": "Event-driven management generation rules define conditions that automatically create due diligence requests when engagement or portfolio criteria are met.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
-		]
+		],
+		"domain": "Assessment Configuration"
 	}
 ]

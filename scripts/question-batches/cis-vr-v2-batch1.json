@@ -11,11 +11,15 @@
 			"Automatically closes every imported finding without analyst review or remediation task creation"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Vulnerability Response pulls vulnerability knowledge from the NVD and from third-party scanner integrations, then reconciles detections with CMDB assets for prioritized remediation.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
-		]
+		],
+		"domain": "VR Applications and Modules"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -31,7 +35,8 @@
 		"explanation": "Vulnerability Response is part of the Security Operations suite and automates the flow from scanner and NVD intake through investigation to IT remediation execution.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
-		]
+		],
+		"domain": "VR Applications and Modules"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -45,11 +50,15 @@
 			"NVD feeds exclude CPE data entirely and cannot be used with Vulnerability Response enrichment"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 2],
+		"correctIndexes": [
+			0,
+			2
+		],
 		"explanation": "NVD year feeds group CVE data by the four-digit year prefix in the identifier, and the modified feed tracks recently published or changed entries within an eight-day window.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/nvd-vuln-integration.html"
-		]
+		],
+		"domain": "VR Applications and Modules"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -65,7 +74,8 @@
 		"explanation": "The Security Champion persona in Application Vulnerability Response uses the Security Champion Overview dashboard to track scanned applications and drive remediation with development teams.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/application-vulnerability-response/avr-landing.html"
-		]
+		],
+		"domain": "VR Applications and Modules"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -82,6 +92,7 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/application-vulnerability-response/avr-landing.html",
 			"https://www.servicenow.com/docs/r/security-management/container-vulnerability-response/cvr-landing.html"
-		]
+		],
+		"domain": "VR Applications and Modules"
 	}
 ]

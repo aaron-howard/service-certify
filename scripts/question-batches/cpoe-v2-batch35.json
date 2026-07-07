@@ -13,7 +13,8 @@
 		"explanation": "Encryption at rest requires enabled platform options, validated key management, and documented scope—not TLS alone or deferred implementation.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
-		]
+		],
+		"domain": "Compliance and Security"
 	},
 	{
 		"trackCode": "CPOE",
@@ -35,20 +36,33 @@
 			"How the organization responded when a security event affected the platform"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Audit artifacts answer distinct compliance questions about authorization, access justification, interface activity, and incident response.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
-		]
+		],
+		"domain": "Compliance and Security"
 	},
 	{
 		"trackCode": "CPOE",
 		"order": 172,
-		"prompt": "Given a case study where dormant admin accounts are discovered before a regulatory examination, what remediation should the platform owner sponsor?",
+		"prompt": "For deprecation audit evidence, dormant admin accounts are discovered before a regulatory examination, what remediation should the platform owner sponsor?",
 		"choices": [
 			"Launch an access certification campaign, revoke unjustified privileges, and institute recurring review cadence",
 			"Reset passwords but leave all roles unchanged to avoid project delays",
@@ -59,7 +73,8 @@
 		"explanation": "Dormant privileged accounts require certification, revocation, and recurring review—not password-only resets or shared credentials.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
-		]
+		],
+		"domain": "Compliance and Security"
 	},
 	{
 		"trackCode": "CPOE",
@@ -75,7 +90,8 @@
 		"explanation": "Third-party integrations require risk assessment, least-privilege scope, and data-processing agreements—not vendor marketing or transport-only assumptions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
-		]
+		],
+		"domain": "Compliance and Security"
 	},
 	{
 		"trackCode": "CPOE",
@@ -89,10 +105,14 @@
 			"Exclusive reliance on user self-attestation without system evidence"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Ongoing compliance monitoring combines periodic control reviews and automated violation alerting—not audit destruction or self-attestation alone.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
-		]
+		],
+		"domain": "Compliance and Security"
 	}
 ]

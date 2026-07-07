@@ -141,3 +141,31 @@ npm run seed:dev:questions
 ```
 
 After full merge: remove legacy CPOE orders that exceed 221 if surplus exists.
+
+---
+
+## Domain rebalance (Jul 2026 standalone realism review)
+
+Standalone analysis flagged **Governance** and **Compliance/Security** as missing or nearly
+missing by content classification, with **Strategy** and **Implementation** under-recognized.
+The v2 plan already reserved orders `122–160` for Governance and `161–193` for
+Compliance/Security, but domain tags were not enforced and several questions did not use
+explicit expert-level governance/compliance language.
+
+**Remediation:** `cpoe-rebalance-batch1.json` (24 rewrites) + domain tags on all batches.
+
+| Orders | Change |
+|--------|--------|
+| 6, 18, 31, 46 | Strategy: value-based roadmap, outcome controls, global/regional strategy, executive evidence matching |
+| 84, 97, 109, 121 | Implementation: integrated readiness, regulated test safeguards, adoption readiness, launch gate evidence |
+| 122, 128, 136, 142, 148, 153, 158, 160 | Governance: board charter, cross-product portfolio governance, CSDM/CMDB governance, board evidence, deprecation, metrics, citizen development |
+| 161, 166, 171, 176, 181, 186, 190, 193 | Compliance/Security: SOX, SOC 2, evidence packages, GDPR, break-glass, data residency, exception governance, control artifacts |
+
+```bash
+node scripts/tag-cpoe-domains.mjs
+node scripts/extract-questions-from-transcripts.mjs --merge-batches scripts/question-batches/cpoe-v2-batch*.json scripts/question-batches/cpoe-rebalance-batch1.json
+node scripts/balance-choice-lengths.mjs
+node scripts/rebalance-question-choices.mjs
+node scripts/lint-cpoe-realism.mjs --orders=0-221
+npm test -- --run src/convex/seed/cpoe-realism.test.ts src/convex/seed/devQuestionBank.test.ts
+```

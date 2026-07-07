@@ -13,7 +13,8 @@
 		"explanation": "The vulnerability analyst persona monitors vulnerability exposure and initiates remediation from the Vulnerability Manager Workspace rather than executing remediation tasks directly.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
-		]
+		],
+		"domain": "VR Applications and Modules"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -29,7 +30,8 @@
 		"explanation": "Remediation owners execute fix work from the IT Remediation Workspace, while vulnerability analysts monitor and initiate work from the Vulnerability Manager Workspace.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
-		]
+		],
+		"domain": "VR Applications and Modules"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -45,7 +47,8 @@
 		"explanation": "Persona and granular role assignment is a first configuration step in Vulnerability Response Setup Assistant and defines what users can see and do across VR and its integrations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vr-persona-overview.html"
-		]
+		],
+		"domain": "VR Applications and Modules"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -61,7 +64,8 @@
 		"explanation": "Remediation owners typically have read_assigned and write_assigned access, while vulnerability analysts add read_all and write_all to view and edit all VR task records.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vr-persona-overview.html"
-		]
+		],
+		"domain": "VR Applications and Modules"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -77,6 +81,7 @@
 		"explanation": "Executive stakeholders such as a CISO consume VR dashboards and analytics for risk posture visibility, while operational personas execute or manage remediation work in workspaces.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
-		]
+		],
+		"domain": "VR Applications and Modules"
 	}
 ]

@@ -13,12 +13,13 @@
 		"explanation": "Renewal planning compares contracted entitlements to actual regional usage so executives fund products delivering value and avoid shelfware.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
-		]
+		],
+		"domain": "Cost/Resource Planning"
 	},
 	{
 		"trackCode": "CPOE",
 		"order": 61,
-		"prompt": "Given a case study where EMEA leaders require localized employee workflows, how should the platform owner budget translation work?",
+		"prompt": "When KPI ownership diverges, eMEA leaders require localized employee workflows, how should the platform owner budget translation work?",
 		"choices": [
 			"Estimate string volume, review cycles, and in-country validation tied to each release wave",
 			"Apply a flat percentage of license cost without scoping affected applications",
@@ -29,7 +30,8 @@
 		"explanation": "Translation budgets should reflect scoped content volume, quality review, and regional validation—not arbitrary percentages or ungoverned automation.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
-		]
+		],
+		"domain": "Cost/Resource Planning"
 	},
 	{
 		"trackCode": "CPOE",
@@ -51,15 +53,28 @@
 			"Comparing optimistic, expected, and constrained funding paths for executives"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Resource forecasting combines granular estimates, enterprise ceilings, trend data, and scenarios so sponsors can govern capacity with confidence.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
-		]
+		],
+		"domain": "Cost/Resource Planning"
 	},
 	{
 		"trackCode": "CPOE",
@@ -73,11 +88,15 @@
 			"Legacy desktop software licenses that will not integrate with ServiceNow"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Implementation cost models capture discovery, build, test, migration, and hypercare—the labor categories executives expect in phased funding requests.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Cost/Resource Planning"
 	},
 	{
 		"trackCode": "CPOE",
@@ -93,6 +112,7 @@
 		"explanation": "Integration run costs include sustained middleware operations, security upkeep, and support staffing—not cosmetic or social expenses.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
-		]
+		],
+		"domain": "Cost/Resource Planning"
 	}
 ]

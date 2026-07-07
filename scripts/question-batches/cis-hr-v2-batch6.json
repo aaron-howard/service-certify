@@ -13,7 +13,8 @@
 		"explanation": "HR reporting and dashboards visualize throughput, backlog, and service performance segmented by COE and service.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-reporting-and-analytics.html"
-		]
+		],
+		"domain": "Core HR Applications and Employee Center"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -29,7 +30,8 @@
 		"explanation": "Separating lifecycle configuration protects core HR case operations while allowing journey teams to iterate safely.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
-		]
+		],
+		"domain": "Core HR Applications and Employee Center"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -45,7 +47,8 @@
 		"explanation": "Each HR service links to exactly one Center of Excellence for routing, ownership, and operational reporting.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-centers-of-excellence.html"
-		]
+		],
+		"domain": "Core HR Applications and Employee Center"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -61,7 +64,8 @@
 		"explanation": "HR criteria evaluates employee attributes to control eligibility and visibility for HR services on Employee Center.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-criteria.html"
-		]
+		],
+		"domain": "Core HR Applications and Employee Center"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -77,6 +81,7 @@
 		"explanation": "Assignment rules automate dispatch to the correct HR team using case and employee attributes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-routing.html"
-		]
+		],
+		"domain": "Core HR Applications and Employee Center"
 	}
 ]

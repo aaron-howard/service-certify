@@ -13,7 +13,8 @@
 		"explanation": "Field-based breakdown sources read dimension values from a specified table and field, such as assignment group or category on incident.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_ConfigureBreakdownSources.html"
-		]
+		],
+		"domain": "Configure Breakdowns and Breakdown Sources"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -29,7 +30,8 @@
 		"explanation": "Breakdown matrices link indicators to breakdown sources and let administrators include or exclude specific dimensional values from collection.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html"
-		]
+		],
+		"domain": "Configure Breakdowns and Breakdown Sources"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -44,12 +46,17 @@
 			"Assignment Group"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 3, 4],
+		"correctIndexes": [
+			0,
+			3,
+			4
+		],
 		"explanation": "Reference and choice fields such as State, Category, and Assignment Group provide stable dimensional values; free-text and timestamp fields like Short Description and Last updated are poor breakdown sources.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html",
 			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_ConfigureBreakdownSources.html"
-		]
+		],
+		"domain": "Configure Breakdowns and Breakdown Sources"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -65,7 +72,8 @@
 		"explanation": "Scripted breakdown mappings use server-side scripts to derive segment values when standard field mappings are insufficient.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_CreateScriptedBreakdowns.html"
-		]
+		],
+		"domain": "Configure Breakdowns and Breakdown Sources"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -81,6 +89,7 @@
 		"explanation": "Bucket groups let administrators combine numeric or duration values into meaningful bands, such as age ranges, for clearer segmented reporting.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html"
-		]
+		],
+		"domain": "Configure Breakdowns and Breakdown Sources"
 	}
 ]

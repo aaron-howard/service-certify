@@ -13,7 +13,8 @@
 		"explanation": "Journey Designer provides a design surface for lifecycle events, activity sets, and orchestration logic.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
-		]
+		],
+		"domain": "HR Journeys"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -29,7 +30,8 @@
 		"explanation": "Onboarding lifecycle events coordinate HR, IT, and facilities tasks from offer acceptance through day one readiness.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
-		]
+		],
+		"domain": "HR Journeys"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -45,7 +47,8 @@
 		"explanation": "Dependencies ensure activities such as account creation finish before equipment shipping tasks begin.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
-		]
+		],
+		"domain": "HR Journeys"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -61,7 +64,8 @@
 		"explanation": "Activities create trackable HR task work items so teams can complete and audit lifecycle steps.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
-		]
+		],
+		"domain": "HR Journeys"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -77,6 +81,7 @@
 		"explanation": "Conditional branches tailor journeys—for example, skipping relocation tasks when the hire is remote.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
-		]
+		],
+		"domain": "HR Journeys"
 	}
 ]

@@ -13,7 +13,8 @@
 		"explanation": "Entry points are typically infrastructure or application CIs that represent accessible starting nodes for dependency discovery.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/entry-points-and-service-maps.html"
-		]
+		],
+		"domain": "Service Mapping Configuration"
 	},
 	{
 		"trackCode": "CIS-SM",
@@ -29,7 +30,8 @@
 		"explanation": "Service Mapping uses Discovery credentials configured for CI classes or aliases so MID Server probes can authenticate to mapped hosts.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/create-a-service-map.html"
-		]
+		],
+		"domain": "Service Mapping Configuration"
 	},
 	{
 		"trackCode": "CIS-SM",
@@ -45,7 +47,8 @@
 		"explanation": "Service map records associate application services with entry points, discovered dependencies, and the schedule governing map updates.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html"
-		]
+		],
+		"domain": "Service Mapping Configuration"
 	},
 	{
 		"trackCode": "CIS-SM",
@@ -61,7 +64,8 @@
 		"explanation": "Schedules define the cadence at which service maps rerun mapping logic to keep dependency views current as infrastructure changes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html"
-		]
+		],
+		"domain": "Service Mapping Configuration"
 	},
 	{
 		"trackCode": "CIS-SM",
@@ -75,10 +79,14 @@
 			"Incident problem task templates assigned to the service desk tier-one queue"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Service groups organize related services and can share mapping configuration such as schedules and governance policies for consistent operations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html"
-		]
+		],
+		"domain": "Service Mapping Configuration"
 	}
 ]

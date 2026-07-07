@@ -13,13 +13,14 @@
 		"explanation": "Digital transformation strategy highlights unified workflows and experiences that scale innovation—not superficial UI changes or narrow IT metrics.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOE",
 		"order": 11,
 		"questionType": "multi",
-		"prompt": "Given a case study outlining siloed demand intake across departments, which elements belong in a documented ServiceNow platform strategy? (Choose two.)",
+		"prompt": "When customizations block upgrades, siloed demand intake across departments, which elements belong in a documented ServiceNow platform strategy? (Choose two.)",
 		"choices": [
 			"Current-state pain points and stakeholder map",
 			"Target outcomes and guiding principles for platform use",
@@ -27,11 +28,15 @@
 			"A fixed list of admin UI themes for each business unit"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Strategy documents capture organizational context, pain, outcomes, and principles; low-level technical artifacts belong in delivery plans, not the strategy itself.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOE",
@@ -47,7 +52,8 @@
 		"explanation": "Executive decisions require transparent trade-offs linking cost, resources, timing, and strategic alignment—not shortcuts based on price or convenience alone.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOE",
@@ -67,14 +73,24 @@
 			"Directional bets aligned to market and technology trends"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			}
 		],
 		"explanation": "Roadmaps progress from concrete near-term plans to thematic mid-term capabilities and long-range directional alignment.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOE",
@@ -90,6 +106,7 @@
 		"explanation": "Enterprise BI integration requires governed, consistent data exchange so analytics teams can trust platform-sourced metrics.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	}
 ]

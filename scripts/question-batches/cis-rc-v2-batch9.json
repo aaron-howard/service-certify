@@ -13,7 +13,8 @@
 		"explanation": "Attestation frequency is configured on the control or its policy statement; the platform then generates attestation assessments to owners on that recurring schedule.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/attestations.html"
-		]
+		],
+		"domain": "Policy and Compliance"
 	},
 	{
 		"trackCode": "CIS-RC",
@@ -29,7 +30,8 @@
 		"explanation": "Many-to-many mapping between citations and policy statements lets one internal requirement, and its controls, provide evidence for multiple regulatory frameworks at once.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-statements.html"
-		]
+		],
+		"domain": "Policy and Compliance"
 	},
 	{
 		"trackCode": "CIS-RC",
@@ -45,7 +47,8 @@
 		"explanation": "Issues support risk acceptance closure, capturing the rationale and approval trail when management chooses to tolerate a control gap rather than remediate immediately.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-issues.html"
-		]
+		],
+		"domain": "Policy and Compliance"
 	},
 	{
 		"trackCode": "CIS-RC",
@@ -59,11 +62,15 @@
 			"Update sets packaging developer configuration changes between instances"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "The compliance library holds authority documents and the policy statements mapped to their citations; SLAs and update sets are platform artifacts outside the library.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/authority-documents.html"
-		]
+		],
+		"domain": "Policy and Compliance"
 	},
 	{
 		"trackCode": "CIS-RC",
@@ -79,6 +86,7 @@
 		"explanation": "Policy and Compliance provides dashboards and overview modules that aggregate control compliance, open issues, and attestation completion for management visibility.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management.html"
-		]
+		],
+		"domain": "Policy and Compliance"
 	}
 ]

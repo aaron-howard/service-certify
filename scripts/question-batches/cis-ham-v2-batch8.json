@@ -14,7 +14,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/it-asset-management.html",
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
-		]
+		],
+		"domain": "Practical Management of IT Assets"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -31,7 +32,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/product-catalog/c_ModelCategories.html",
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/normalize-hardware-models.html"
-		]
+		],
+		"domain": "Practical Management of IT Assets"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -48,7 +50,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/it-asset-management.html",
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/hardware-normalization.html"
-		]
+		],
+		"domain": "Practical Management of IT Assets"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -65,7 +68,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/hardware-normalization.html",
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/consumable-model-fields.html"
-		]
+		],
+		"domain": "Practical Management of IT Assets"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -79,11 +83,15 @@
 			"Virtual Agent conversation transcripts from employee self-service chats"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 2],
+		"correctIndexes": [
+			0,
+			2
+		],
 		"explanation": "Discovery and procurement/receiving provide authoritative hardware attributes; event correlation and chat transcripts are not asset attribute sources.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html",
 			"https://www.servicenow.com/docs/r/it-asset-management/it-asset-management.html"
-		]
+		],
+		"domain": "Practical Management of IT Assets"
 	}
 ]

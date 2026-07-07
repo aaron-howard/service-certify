@@ -13,7 +13,8 @@
 		"explanation": "Verified remediation should close vulnerable items in a resolved state that documents how exposure was eliminated.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/vulnerability-response/close-out-remediation.html"
-		]
+		],
+		"domain": "Automating Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -29,7 +30,8 @@
 		"explanation": "Deferred state preserves visibility of accepted risk while maintaining traceability to the governing exception record.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/vulnerability-response/vulnerability-exceptions.html"
-		]
+		],
+		"domain": "Automating Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -45,7 +47,8 @@
 		"explanation": "Documented close reasons explain why findings were dismissed and support later reassessment if conditions change.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/vulnerability-response/false-positive-management.html"
-		]
+		],
+		"domain": "Automating Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -58,13 +61,18 @@
 			"Manual CSV export to spreadsheet for offline review"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1, 2],
+		"correctIndexes": [
+			0,
+			1,
+			2
+		],
 		"questionType": "multi",
 		"explanation": "Classification, assignment, and remediation task rules automate categorization, routing, and grouping; spreadsheet export is a manual workaround.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/vulnerability-response/classification-rules.html",
 			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-task-rules.html"
-		]
+		],
+		"domain": "Automating Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -80,6 +88,7 @@
 		"explanation": "Cancelling stale approvals keeps vulnerable item state aligned with the remediation task disposition and prevents orphaned review work.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/vulnerability-response/false-positive-management.html"
-		]
+		],
+		"domain": "Automating Vulnerability Response"
 	}
 ]

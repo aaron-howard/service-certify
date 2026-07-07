@@ -13,7 +13,8 @@
 		"explanation": "When classification data changes, reapply assignment rules realigns ownership on open items without waiting for new scanner imports.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/vulnerability-response/assignment-rules.html"
-		]
+		],
+		"domain": "Tools to Manage Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -29,7 +30,8 @@
 		"explanation": "Cohesive task groups let one team execute a single remediation pattern across many related vulnerable items.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-task-rules.html"
-		]
+		],
+		"domain": "Tools to Manage Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -45,7 +47,8 @@
 		"explanation": "Match First prevents lower-priority rules from overriding a higher-priority grouping decision on the same record.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-task-rules.html"
-		]
+		],
+		"domain": "Tools to Manage Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -61,7 +64,8 @@
 		"explanation": "The IT Remediation Workspace exposes operational actions such as exceptions, change requests, and false positive disposition for assigned remediation work.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/vulnerability-response/it-remediation-workspace.html"
-		]
+		],
+		"domain": "Tools to Manage Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -77,6 +81,7 @@
 		"explanation": "The sn_sec_rem.rerun_task_rules property must be active before assignment and remediation task rules can be reapplied on existing vulnerable items.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-task-rules.html"
-		]
+		],
+		"domain": "Tools to Manage Vulnerability Response"
 	}
 ]

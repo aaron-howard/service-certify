@@ -4,6 +4,8 @@ import type { QuestionType } from './questionTypes';
 
 /** Bank distribution for 75 questions (45 official + 30 buffer). */
 
+export const CIS_VR_BANK_SIZE = 75;
+
 export const CIS_VR_DOMAIN_TARGETS = {
 	'VR Applications and Modules': 19,
 	'Getting Data into Vulnerability Response': 19,
@@ -11,6 +13,16 @@ export const CIS_VR_DOMAIN_TARGETS = {
 	'Automating Vulnerability Response': 15,
 	'VR Dashboards and Reports': 5
 } as const;
+
+export type CisVrDomain = keyof typeof CIS_VR_DOMAIN_TARGETS;
+
+export function domainForOrder(order: number): CisVrDomain {
+	if (order <= 18) return 'VR Applications and Modules';
+	if (order <= 37) return 'Getting Data into Vulnerability Response';
+	if (order <= 54) return 'Tools to Manage Vulnerability Response';
+	if (order <= 69) return 'Automating Vulnerability Response';
+	return 'VR Dashboards and Reports';
+}
 
 export const BANNED_CHOICE_PREFIXES = [
 	'Typically,',
@@ -49,6 +61,7 @@ export type CisVrQuestionRow = {
 	prompt: string;
 	choices: string[];
 	sourceUrls: string[];
+	domain?: string;
 	questionType?: QuestionType;
 	correctIndexes?: number[];
 	correctIndex?: number;
@@ -117,12 +130,42 @@ export function validateCisVrQuestion(q: CisVrQuestionRow): string[] {
 	return issues;
 }
 
+export function validateCisVrDomainTags(rows: CisVrQuestionRow[]): string[] {
+	const issues: string[] = [];
+	const domainCounts = Object.fromEntries(
+		Object.keys(CIS_VR_DOMAIN_TARGETS).map((d) => [d, 0])
+	) as Record<string, number>;
+
+	for (const q of rows) {
+		if (q.trackCode !== 'CIS-VR') continue;
+		if (!q.domain) {
+			issues.push(`order ${q.order}: missing domain tag`);
+			continue;
+		}
+		const expected = domainForOrder(q.order);
+		if (q.domain !== expected) {
+			issues.push(`order ${q.order}: domain ${q.domain} does not match order quota ${expected}`);
+		}
+		domainCounts[q.domain]++;
+	}
+
+	for (const [domain, target] of Object.entries(CIS_VR_DOMAIN_TARGETS)) {
+		if (domainCounts[domain] !== target) {
+			issues.push(`domain ${domain}: expected ${target}, got ${domainCounts[domain] ?? 0}`);
+		}
+	}
+
+	return issues;
+}
+
 export function validateCisVrTrack(rows: CisVrQuestionRow[]): string[] {
 	const issues: string[] = [];
 
 	for (const q of rows) {
 		issues.push(...validateCisVrQuestion(q));
 	}
+
+	issues.push(...validateCisVrDomainTags(rows));
 
 	const openerCounts = new Map<string, number>();
 	for (const q of rows) {

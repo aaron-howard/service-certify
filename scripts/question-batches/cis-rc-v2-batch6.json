@@ -2,81 +2,86 @@
 	{
 		"trackCode": "CIS-RC",
 		"order": 25,
-		"prompt": "Where are the records evaluated by an entity filter physically stored while the filter is active?",
+		"prompt": "A GRC design workshop debates whether to scope entities by entity type or by class. What is the key difference between the two approaches?",
 		"choices": [
-			"They remain in their original source table; the entity framework references them rather than moving the data",
-			"They are copied into a staging import set table and transformed into the sn_grc scope every hour",
-			"They are exported to an external content service and streamed back through a MID Server",
-			"They are duplicated into a rotating archive table that purges non-matching rows each weekend"
+			"The class approach ties entity generation to an entire table or CI class, while entity types use filters to define flexible, condition-based groupings",
+			"Entity types can reference only CMDB tables, while the class approach can reference any table in the instance including custom ones",
+			"The class approach requires a custom scripted REST API, while entity types require importing an XML template for each grouping",
+			"Entity types are read-only after creation, while class-based records can be modified freely at any time by any GRC user"
 		],
 		"correctIndex": 0,
-		"explanation": "Entity filters point at existing tables and evaluate their records in place; entities reference the source records without relocating or duplicating the underlying data.",
+		"explanation": "Class-based scoping maps all records of a table or CI class to entities, whereas entity types with filters let implementers define precise, condition-driven membership.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/entity-filters.html"
-		]
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-entities.html"
+		],
+		"domain": "Entity Framework"
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 26,
-		"prompt": "A customer wants every record of the cmdb_ci_service table to become an entity with no additional conditions. Which scoping approach fits this requirement with the least configuration?",
+		"prompt": "In the entity architecture, what happens when a record in the source table matches the conditions of an active entity filter?",
 		"choices": [
-			"Writing a scheduled script include that inserts entity records for each service every night",
-			"Creating one entity filter per service record so ownership can differ across departments",
-			"Using the class-based approach so the whole table maps to entities of a matching entity type",
-			"Building a Flow Designer flow triggered on service creation that calls a custom subflow"
+			"The matching record is deleted from the source table and recreated in the sn_grc scope",
+			"The record is flagged for manual review and remains outside GRC until an admin approves it",
+			"An email digest is queued so risk managers can decide whether to build an entity by hand",
+			"An entity is created or associated for that record, making it available for controls and risks"
 		],
-		"correctIndex": 2,
-		"explanation": "When an entire table or CI class should become entities, class-based scoping is the simplest option; filters add value only when conditional membership is needed.",
+		"correctIndex": 3,
+		"explanation": "Entity filters evaluate source-table records against their conditions; matches result in entities that inherit applicable content through their entity types.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-entities.html"
-		]
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/entity-filters.html"
+		],
+		"domain": "Entity Framework"
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 27,
-		"prompt": "How does the entity framework support hierarchical relationships such as a business unit containing multiple departments?",
+		"prompt": "Why is the entity framework considered the foundation shared by Policy and Compliance Management and Risk Management?",
 		"choices": [
-			"Hierarchies are unsupported, so implementers must flatten all organizational structures before go-live",
-			"Entities support parent-child relationships so risk and compliance posture can roll up through the hierarchy",
-			"Each level of hierarchy requires installing a separate GRC scoped application from the Store",
-			"Hierarchies exist only for vendors and cannot be applied to internal organizational structures"
+			"It stores the license entitlements that determine how many users can open GRC modules concurrently",
+			"It provides the common objects against which both controls and risks are generated and monitored",
+			"It replaces the platform workflow engine with a GRC-specific state machine for all task records",
+			"It encrypts compliance evidence attachments before they are written to the instance database"
 		],
 		"correctIndex": 1,
-		"explanation": "Entities can be related in parent-child structures, enabling aggregation and rollup of compliance and risk information across organizational levels.",
+		"explanation": "Both applications operate on entities: policy statements generate controls per entity and risk statements generate risks per entity, so the entity model underpins each.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-entities.html"
-		]
+		],
+		"domain": "Entity Framework"
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 28,
-		"prompt": "During testing, an implementer notices that no entities were generated after activating a new entity filter. Which cause should be investigated first?",
+		"prompt": "An implementer must ensure that only production Windows servers in the CMDB become GRC entities. Which configuration achieves this?",
 		"choices": [
-			"The filter conditions do not match any records in the selected source table",
-			"The instance is missing the Performance Analytics license required for entity generation",
-			"The CMDB identification engine rejected the entities due to duplicate serial numbers",
-			"The entity table reached its maximum row count and silently discarded the inserts"
+			"An entity filter on the Windows server class table with conditions restricting results to production environment records",
+			"A scheduled script that copies every cmdb_ci record into the entity table each night without conditions",
+			"A UI policy on the entity form that hides non-production servers from list views for compliance users",
+			"An ACL that denies read access to development servers so they are skipped during entity generation"
 		],
 		"correctIndex": 0,
-		"explanation": "The most common cause of an empty result is filter conditions that exclude all source records, so validating the condition against the table is the first check.",
+		"explanation": "Entity filters combine a source table with filter conditions, so scoping the Windows server class to production records generates exactly the intended entities.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/entity-filters.html"
-		]
+		],
+		"domain": "Entity Framework"
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 29,
-		"prompt": "Which outcome results from associating a risk statement with an entity type that contains twelve entities?",
+		"prompt": "Attestations and issues for a payment processing service should route to the accountable business contact. Which entity role receives that work by default?",
 		"choices": [
-			"A single shared risk record is created and all twelve entities reference it jointly",
-			"Twelve risk records are generated, one scoped to each entity in the entity type",
-			"No records are created until each entity owner manually accepts the statement",
-			"The risk statement is converted into twelve policy statements for compliance tracking"
+			"The entity owner accountable for controls and risks on that entity",
+			"The instance administrator who manages update sets and clone schedules",
+			"The external auditor who signs the final engagement report each cycle",
+			"The platform capacity planner who monitors database growth trends"
 		],
-		"correctIndex": 1,
-		"explanation": "Content association is per entity: each entity in the type receives its own risk record generated from the shared risk statement definition.",
+		"correctIndex": 0,
+		"explanation": "Entity owners are accountable for their entities and typically receive attestation, issue, and review assignments for related controls and risks.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/risk-management-overview.html"
-		]
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-entities.html"
+		],
+		"domain": "Entity Framework"
 	}
 ]

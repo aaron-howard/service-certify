@@ -13,7 +13,8 @@
 		"explanation": "Return status from patch orchestration keeps vulnerability records accurate and supports reliable close-out decisions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-workflows.html"
-		]
+		],
+		"domain": "Automating Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -29,7 +30,8 @@
 		"explanation": "Time-bounded exceptions with review cadence ensure leadership reassesses risk instead of silently extending exposure.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/vulnerability-response/vulnerability-exceptions.html"
-		]
+		],
+		"domain": "Automating Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -45,7 +47,8 @@
 		"explanation": "Duplicate VI detection on remediation tasks prevents inconsistent state and redundant work across grouped findings.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-task-rules.html"
-		]
+		],
+		"domain": "Automating Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -61,7 +64,8 @@
 		"explanation": "State change approvals enforce governance checkpoints before disposition changes take effect on vulnerable items.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/vulnerability-response/vulnerability-exceptions.html"
-		]
+		],
+		"domain": "Automating Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -77,6 +81,7 @@
 		"explanation": "Effective automation reduces handoffs and keeps newly imported findings progressing through governed workflows.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-workflows.html"
-		]
+		],
+		"domain": "Automating Vulnerability Response"
 	}
 ]

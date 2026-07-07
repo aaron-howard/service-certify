@@ -13,7 +13,8 @@
 		"explanation": "Corporate alignment starts by showing how platform investments advance enterprise strategic goals with measurable impact.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOE",
@@ -29,7 +30,8 @@
 		"explanation": "Pilot-based delivery with focused OCM satisfies urgency while building adoption patterns that scale with subsequent releases.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOE",
@@ -51,15 +53,28 @@
 			"Delivery teams sequencing work across teams"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Strategy artifacts serve distinct audiences: executives for direction, leaders for capability alignment, finance for ROI, and teams for sequencing.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOE",
@@ -75,7 +90,8 @@
 		"explanation": "When ROI is questioned, revisiting agreed baselines and transparent progress reporting rebuilds sponsor confidence.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOE",
@@ -91,6 +107,7 @@
 		"explanation": "Documented strategy ties organizational pain and outcomes to principles, phased delivery, and accountable owners.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	}
 ]

@@ -13,7 +13,8 @@
 		"explanation": "Customization-heavy tables often degrade performance through script and query patterns; profiling those behaviors addresses root cause more reliably than blind capacity increases.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Data"
 	},
 	{
 		"trackCode": "CPOP",
@@ -29,7 +30,8 @@
 		"explanation": "Governed remediation with owner accountability and measurable CMDB Health targets closes data gaps that Discovery schedules alone cannot guarantee.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
-		]
+		],
+		"domain": "Data"
 	},
 	{
 		"trackCode": "CPOP",
@@ -45,7 +47,8 @@
 		"explanation": "Rotation with governed archival preserves compliance retention while keeping active table size within performance tolerances.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Data"
 	},
 	{
 		"trackCode": "CPOP",
@@ -59,11 +62,15 @@
 			"Defer reconciliation until after all feeds are live in production"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Integration feeds need IRE precedence rules and steward ownership so overlapping writes do not erode CMDB trust or performance through duplicate remediation work.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
-		]
+		],
+		"domain": "Data"
 	},
 	{
 		"trackCode": "CPOP",
@@ -85,14 +92,27 @@
 			"Forecasts storage and query impact from rising record counts"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Platform owners align monitoring, indexing, job scheduling, and growth analytics to distinct performance requirements rather than treating capacity as a single lever.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Data"
 	}
 ]

@@ -2,83 +2,92 @@
 	{
 		"trackCode": "CIS-SP",
 		"order": 20,
-		"prompt": "An MSP administrator working in the parent TOP domain creates an incident while impersonating a tenant workflow. Can users in a child tenant domain see that incident by default?",
+		"prompt": "MSP operators must work with tenant incident data without making the MSP domain a parent of tenant domains. Which relationship grants that cross-hierarchy data access?",
 		"choices": [
-			"No, data in a parent domain is not visible to users in child domains below it",
-			"Yes, child domains always inherit visibility to all parent domain records",
-			"Yes, but only when the incident priority is set to Critical",
-			"No, unless the incident sys_domain field is set to global"
+			"A contains domain relationship from MSP to the tenant domain",
+			"Promoting the MSP domain to primary over TOP",
+			"Assigning every tenant user to the MSP domain",
+			"Setting sys_domain to global on all tenant incidents"
 		],
 		"correctIndex": 0,
-		"explanation": "Data visibility rises up the hierarchy—parents see child data—but child domain users cannot see records that exist only in a parent domain above them.",
+		"explanation": "Contains domains relate domains outside strict parent-child hierarchy and grant the containing domain visibility to contained domain data without inheriting MSP process logic into tenants.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/bp-domain-hierarchy.html"
-		]
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainVisibility.html"
+		],
+		"domain": "Data Separation/Visibility"
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 21,
-		"prompt": "An ACME ITIL user with domain_expand_scope edits an incident in the ACME APJ child domain with record scope active. Which users appear when selecting Assigned to?",
+		"prompt": "An SP security review compares visibility domains and contains domains for granting MSP technicians access to a restricted customer domain. What is the key distinction?",
 		"choices": [
-			"Users with the required role in the incident's domain or global only",
-			"All active users across every tenant domain on the instance",
-			"Only users who share the same company as the assigned-to field",
-			"Users in parent domains above the incident domain but not the incident domain itself"
+			"Visibility domains grant explicit user or group access; contains domains grant an entire domain access to another domain's data",
+			"Visibility domains affect process inheritance; contains domains affect UI themes only",
+			"Contains domains apply only to process tables; visibility domains apply only to task tables",
+			"Visibility domains are inherited by child domains; contains domains are never used with the domain picker"
 		],
 		"correctIndex": 0,
-		"explanation": "With record scope active, reference fields constrain choices to the record's domain and global; toggling to session scope expands to the user's domain and child domains.",
+		"explanation": "Visibility domains are user-to-domain or group-to-domain grants, while contains domains are domain-to-domain relationships that make contained data visible to users in the containing domain.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/bp-terms-conditions.html"
-		]
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainVisibility.html"
+		],
+		"domain": "Data Separation/Visibility"
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 22,
-		"prompt": "A change task is created from a change request assigned to the ACME tenant domain. Which domain value applies to the new change task record?",
+		"questionType": "multi",
+		"prompt": "In which domains can a user see an assignment group? (Choose three.)",
 		"choices": [
-			"The change task inherits the domain of the parent change request record",
-			"The change task always inherits the creating user's home domain",
-			"The change task is assigned to global unless manually updated",
-			"The change task domain is determined by the assignment group only"
+			"The parent domain of the assignment group's domain",
+			"Child domains of the assignment group's domain",
+			"Domains granted through visibility domain configuration on the user's group membership",
+			"Domains linked through a contains relationship to the assignment group's domain"
 		],
-		"correctIndex": 0,
-		"explanation": "Related child records inherit the parent record's domain by default, so a change task created from an ACME change request stays in the ACME domain.",
+		"correctIndex": 1,
+		"correctIndexes": [
+			1,
+			2,
+			3
+		],
+		"explanation": "Assignment groups are domain-separated data visible in the group's domain, child domains, and any domains granted through visibility or contains relationships—not in parent domains above the group.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/c_DomainAssignment.html"
-		]
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainVisibility.html"
+		],
+		"domain": "Data Separation/Visibility"
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 23,
-		"questionType": "multi",
-		"prompt": "Which properties define a domain-separated ServiceNow application for service provider deployments? (Choose three.)",
+		"prompt": "An SP process administrator needs to view all process override records across the domain hierarchy from a process table. What role is required to use the Expand Domain Scope feature?",
 		"choices": [
-			"Data separation so tenants see only authorized records",
-			"Business logic separation supporting tenant-specific policies and overrides",
-			"Hierarchical modeling with nested multitenancy and parent access to child resources",
-			"Mandatory separate MID Server infrastructure per tenant domain"
+			"domain_admin",
+			"domain_expand_scope",
+			"admin",
+			"security_admin"
 		],
-		"correctIndex": 0,
-		"correctIndexes": [0, 1, 2],
-		"explanation": "Domain-separated applications provide data separation, business logic separation, hierarchical modeling, UI separation, and cross-customer intelligence—not separate MID infrastructure per tenant.",
+		"correctIndex": 1,
+		"explanation": "Users with the domain_expand_scope role can expand domain scope on process tables to see override records across the hierarchy and toggle between record and session scope on forms.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/bp-dom-sep-definition.html"
-		]
+			"https://www.servicenow.com/docs/r/platform-security/bp-terms-conditions.html"
+		],
+		"domain": "Data Separation/Visibility"
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 24,
-		"prompt": "A developer proposes adding sys_domain to the Dictionary Entry [sys_dictionary] table for tenant-specific field labels. What does ServiceNow recommend?",
+		"prompt": "An instance architect plans broad visibility domain grants for dozens of MSP support groups. Why do ServiceNow recommended practices discourage excessive visibility domain use?",
 		"choices": [
-			"Do not domain-separate platform sys_ tables because it can produce unexpected results",
-			"Domain-separate all sys_ tables to maximize tenant isolation",
-			"Domain-separate sys_dictionary but never sys_properties",
-			"Use visibility domains on sys_dictionary instead of sys_domain"
+			"Visibility domains add OR conditions to queries and should be a last resort after hierarchy and contains design",
+			"Visibility domains disable ACL evaluation for affected tables entirely",
+			"Visibility domains force all affected users into the global domain session scope",
+			"Visibility domains prevent the domain picker from listing child domains"
 		],
 		"correctIndex": 0,
-		"explanation": "ServiceNow warns against domain-separating platform tables with the sys_ prefix, including sys_dictionary and sys_properties, due to unpredictable platform behavior.",
+		"explanation": "Visibility domains expand database queries with OR conditions that can degrade performance; recommended practice favors proper hierarchy and contains relationships first.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/c_DomainAssignment.html"
-		]
+			"https://www.servicenow.com/docs/r/platform-security/bp-contains-domain-visibility.html"
+		],
+		"domain": "Data Separation/Visibility"
 	}
 ]

@@ -13,12 +13,13 @@
 		"explanation": "The CMDB stores CIs and their relationships so ITSM teams can understand infrastructure dependencies, integrity, and service context.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/c_ITILConfigurationManagement.html"
-		]
+		],
+		"domain": "Configuration Management Database"
 	},
 	{
 		"trackCode": "CIS-ITSM",
 		"order": 76,
-		"prompt": "Which role is required to create a new CI class in CI Class Manager?",
+		"prompt": "Architecture standards require new CI classes for an application platform without granting every developer admin access. Which CMDB governance model should be used?",
 		"choices": [
 			"sn_cmdb_admin or admin",
 			"service_viewer without CMDB workspace permissions",
@@ -29,7 +30,8 @@
 		"explanation": "Creating a CI class in CI Class Manager requires sn_cmdb_admin or admin, along with dictionary access when editing class attributes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/t_CreateCIType.html"
-		]
+		],
+		"domain": "Configuration Management Database"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -45,7 +47,8 @@
 		"explanation": "Manual CI creation in CMDB Workspace applies Identification and Reconciliation Engine rules and sets Discovery source to Manual via IRE.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/create-ci-manual-cmdb-workspace.html"
-		]
+		],
+		"domain": "Configuration Management Database"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -61,7 +64,8 @@
 		"explanation": "CI Class Manager can synchronize Managed by Group across all CIs in a class unless a Technology management offering overrides group assignment.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/common-service-data-model-csdm/csdm-data-synchronize-enable.html"
-		]
+		],
+		"domain": "Configuration Management Database"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -77,6 +81,7 @@
 		"explanation": "Core CMDB features include Health for compliance monitoring, IRE for data integrity, and Data Manager for bulk lifecycle operations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/c_ITILConfigurationManagement.html"
-		]
+		],
+		"domain": "Configuration Management Database"
 	}
 ]

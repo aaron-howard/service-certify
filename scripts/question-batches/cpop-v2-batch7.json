@@ -11,11 +11,15 @@
 			"Elimination of code review for any app built outside IT"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Citizen development succeeds with defined scope, training, and escalation paths—not unchecked admin rights or absent review.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/application-development.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOP",
@@ -31,7 +35,8 @@
 		"explanation": "Data and encryption practices require protected fields, secure transport, and governed keys—not plaintext storage or insecure key sharing.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOP",
@@ -47,7 +52,8 @@
 		"explanation": "Citizen development scope should permit low-risk work in controlled scopes with review, not global edits or production bypass.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/application-development.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOP",
@@ -63,7 +69,8 @@
 		"explanation": "CoEI outcomes include governed delivery, tracked KPIs, and structured innovation—not zero customization or reporting delays.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOP",
@@ -85,14 +92,27 @@
 			"Coordinate cross-team visibility on active work items"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Agile platform capabilities address backlog management, pipeline promotion, automated validation, and team collaboration for iterative delivery.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/application-development.html"
-		]
+		],
+		"domain": "Strategy"
 	}
 ]

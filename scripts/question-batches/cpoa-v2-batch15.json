@@ -13,7 +13,8 @@
 		"explanation": "Admin and Configuration services provide the tooling to configure instances consistently, manage users, and apply standardized setup patterns.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Technology"
 	},
 	{
 		"trackCode": "CPOA",
@@ -29,7 +30,8 @@
 		"explanation": "Integration Services emphasize managed connections, reusable integration patterns, and API-based connectivity rather than ad hoc bespoke endpoints.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/integrate-applications/integrationhub/integrationhub.html"
-		]
+		],
+		"domain": "Technology"
 	},
 	{
 		"trackCode": "CPOA",
@@ -51,15 +53,28 @@
 			"Verify critical capabilities and integrations immediately after production upgrade"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Testing spans in-cycle validation on upgraded baselines, between-release regression, skipped-update verification, and post-cutover hypercare checks.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/upgrade-center.html"
-		]
+		],
+		"domain": "Technology"
 	},
 	{
 		"trackCode": "CPOA",
@@ -75,7 +90,8 @@
 		"explanation": "Security and Compliance services combine access management, hardening tools such as Security Center, and audit capabilities for governance and regulatory needs.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/security-center/sec-center-v2.html"
-		]
+		],
+		"domain": "Technology"
 	},
 	{
 		"trackCode": "CPOA",
@@ -89,11 +105,15 @@
 			"Enable live outbound email from the cloned instance to speed user acceptance testing"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Clone governance requires profile design for data handling and approved windows with safeguards that prevent unintended external impact from cloned environments.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/instance-clone.html",
 			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/clone-data-preservation.html"
-		]
+		],
+		"domain": "Technology"
 	}
 ]

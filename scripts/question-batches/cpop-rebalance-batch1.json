@@ -1,0 +1,570 @@
+[
+	{
+		"trackCode": "CPOP",
+		"order": 5,
+		"prompt": "The CoEI is preparing the next three-year platform roadmap for executive review. Which input set should the platform owner prioritize before recommending investment waves?",
+		"choices": [
+			"Business objectives, current adoption metrics, dependency readiness, and open risk or compliance gaps",
+			"Every open incident sorted by oldest create date without linking to strategic outcomes",
+			"A complete export of all sys_script records regardless of business priority",
+			"Informal developer preferences without connecting them to portfolio funding themes"
+		],
+		"correctIndex": 0,
+		"explanation": "Strategic roadmap planning starts with business objectives, measured adoption, readiness, and risk posture so investment waves align to outcomes executives fund.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "Strategy"
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 6,
+		"questionType": "match",
+		"prompt": "Match each strategic planning artifact to the executive question it helps answer during CoEI roadmap prioritization.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Business objective statement",
+			"Capability roadmap",
+			"Investment theme",
+			"Success measure"
+		],
+		"matchRightItems": [
+			"What outcome must the platform investment support?",
+			"Which capabilities will be delivered in what sequence?",
+			"Which funding priorities align to enterprise strategy?",
+			"How will progress be validated after go-live?"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Strategic planning artifacts connect objectives, sequenced capabilities, investment themes, and measurable success criteria for executive decision-making.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "Strategy"
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 7,
+		"prompt": "A prior platform wave delivered automation on schedule but business KPIs did not improve. How should the CoEI adjust the next wave strategy?",
+		"choices": [
+			"Reprioritize the roadmap around outcome baselines, value targets, and measurable adoption metrics before funding new scope",
+			"Repeat the same delivery pattern because schedule adherence proves the strategy succeeded",
+			"Remove executive reporting until every technical defect is closed",
+			"Shift all remaining budget to additional automation without revisiting business outcomes"
+		],
+		"correctIndex": 0,
+		"explanation": "Strategy adjusts when delivery success does not produce business value by resetting outcome baselines, targets, and measurable adoption before new investment.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "Strategy"
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 20,
+		"prompt": "The CoEI must sequence HR, ITSM, and employee experience capabilities with limited funding this year. Which strategic prioritization approach should the platform owner recommend?",
+		"choices": [
+			"Rank waves by business value, dependency readiness, shared platform leverage, and measurable outcome potential",
+			"Fund every requested capability in parallel so no department waits",
+			"Select the wave with the lowest license cost regardless of business impact",
+			"Defer all sequencing decisions until every legacy system is retired"
+		],
+		"correctIndex": 0,
+		"explanation": "Portfolio sequencing weighs value, dependencies, reuse, and measurable outcomes against capacity rather than parallel funding or cost alone.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "Strategy"
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 21,
+		"prompt": "Finance asks for a business case before approving a major ServiceNow capability expansion. Which elements should the platform owner include?",
+		"choices": [
+			"Outcome baselines, expected benefits, implementation cost, dependencies, and risk mitigations tied to strategic objectives",
+			"A list of every open developer task without linking to business priorities",
+			"Vendor marketing slides as the sole justification for funding",
+			"A commitment to skip success measurement because delivery velocity is the only goal"
+		],
+		"correctIndex": 0,
+		"explanation": "Business cases combine outcome baselines, benefits, cost, dependencies, and risks aligned to strategy—not undifferentiated task lists or vendor collateral alone.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "Strategy"
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 22,
+		"prompt": "Executive sponsors want to improve employee self-service but disagree on whether to invest in portal redesign or process automation first. Which strategic response should the platform owner provide?",
+		"choices": [
+			"Compare expected outcomes, adoption impact, reuse of existing platform investments, and total cost of ownership for each option",
+			"Approve both initiatives immediately without evaluating sequencing or capacity",
+			"Default to portal redesign because visual changes are easiest to demonstrate",
+			"Postpone the decision until user satisfaction reaches one hundred percent"
+		],
+		"correctIndex": 0,
+		"explanation": "Strategic investment decisions compare outcomes, adoption impact, reuse, and cost before committing limited CoEI capacity.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "Strategy"
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 23,
+		"questionType": "multi",
+		"prompt": "The portfolio board asks which criteria should gate funding for the next platform release train. Which strategic controls should the platform owner recommend? (Choose two.)",
+		"choices": [
+			"Documented business outcomes with baseline and target KPIs for the proposed scope",
+			"Dependency and capacity analysis showing the organization can absorb the change",
+			"Approval based solely on which department submitted the request first",
+			"Funding without success measures because configuration completion equals value"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Release train funding requires outcome baselines, targets, and realistic capacity analysis—not first-come scheduling or completion-only metrics.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "Strategy"
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 24,
+		"questionType": "match",
+		"prompt": "Match each CoEI strategy decision to the evidence the platform owner should provide executives.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Approve a roadmap wave",
+			"Defer a capability",
+			"Retire a legacy workflow",
+			"Expand product scope"
+		],
+		"matchRightItems": [
+			"Benefit hypothesis, cost range, dependencies, and outcome measures",
+			"Capacity conflict, readiness gap, or risk that makes timing unrealistic",
+			"Migration readiness, support model, and downstream impact analysis",
+			"Entitlement coverage, integration fit, and reuse of shared platform patterns"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Executive strategy decisions require evidence for funding, deferral, retirement, and scope expansion rather than unsupported approvals.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "Strategy"
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 30,
+		"questionType": "multi",
+		"prompt": "Leadership wants to fund a low-code innovation program through the CoEI. Which strategic investment criteria should the platform owner establish? (Choose two.)",
+		"choices": [
+			"Prioritize use cases with measurable business outcomes and reuse potential across departments",
+			"Define funding gates tied to guardrails, risk tier, and escalation paths for higher-impact apps",
+			"Fund every idea equally regardless of value, risk, or supportability",
+			"Eliminate all standards so teams can innovate without CoEI oversight"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Innovation investment requires value-based prioritization and risk-tiered funding gates—not undifferentiated funding or absent standards.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "Strategy"
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 32,
+		"prompt": "A department proposes building a custom app when an existing catalog capability could be extended. Which strategic guidance should the platform owner provide?",
+		"choices": [
+			"Evaluate build versus extend using business outcomes, total cost of ownership, reuse, and long-term support burden",
+			"Approve the custom build immediately to avoid cross-team coordination",
+			"Reject all custom work without reviewing whether shared investments can be extended",
+			"Defer the decision until the department completes an unrelated certification program"
+		],
+		"correctIndex": 0,
+		"explanation": "Strategic platform decisions weigh outcomes, cost, reuse, and support before approving net-new build scope.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "Strategy"
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 38,
+		"prompt": "Quarterly reviews show strong project delivery but flat self-service adoption. Which strategic response fits CoEI guidance for the next planning cycle?",
+		"choices": [
+			"Diagnose adoption barriers and reprioritize the roadmap to include outcome targets and value realization milestones",
+			"Report only on-time delivery metrics and omit usage feedback from executive materials",
+			"Pause all new features indefinitely because adoption cannot change after one slow quarter",
+			"Shift every developer to incident queue assignment without adjusting strategy"
+		],
+		"correctIndex": 0,
+		"explanation": "Strategy balances delivery with value realization by surfacing adoption gaps and reprioritizing around measurable outcome milestones.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "Strategy"
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 62,
+		"questionType": "match",
+		"prompt": "Match each ServiceNow Support Portal resource to how a platform owner uses it during upgrade planning.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Release notes",
+			"Known error articles",
+			"Product documentation",
+			"Support cases"
+		],
+		"matchRightItems": [
+			"Identify new features and breaking changes before scheduling the upgrade window",
+			"Review documented defects that may affect the targeted version",
+			"Validate configuration guidance for capabilities being deployed",
+			"Escalate blockers with vendor engineering when internal remediation stalls"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Support Portal resources support sequenced upgrade planning: release awareness, defect review, implementation guidance, and vendor escalation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		],
+		"domain": "Technology"
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 68,
+		"prompt": "Operations reports intermittent discovery failures after a family upgrade. Which technology component should the platform owner verify first?",
+		"choices": [
+			"MID Server connectivity, credentials, and version compatibility with the upgraded instance",
+			"Homepage theme contrast settings on the employee service portal",
+			"Catalog item short description character limits for requesters",
+			"Virtual Agent dialog script naming conventions in sub-production"
+		],
+		"correctIndex": 0,
+		"explanation": "Discovery and integration workloads depend on healthy MID Server connectivity and version alignment after platform changes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/mid-server/mid-server.html"
+		],
+		"domain": "Technology"
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 74,
+		"prompt": "Before a major store release, delivery leads ask how to regression-test custom applications efficiently. Which platform technology capability should the platform owner recommend?",
+		"choices": [
+			"Automated Test Framework test suites executed in sub-production before promotion",
+			"Manual spot checks on production only after the release window opens",
+			"Disabling all business rules during testing to avoid false failures",
+			"Skipping automated tests because update sets already capture every change"
+		],
+		"correctIndex": 0,
+		"explanation": "Automated Test Framework supports repeatable regression coverage in lower environments, reducing production surprises after platform or application updates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/automated-test-framework.html"
+		],
+		"domain": "Technology"
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 78,
+		"questionType": "match",
+		"prompt": "Match each Now Platform service area to its primary technical characteristic.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Platform Core",
+			"Admin and Configuration",
+			"Integration Services",
+			"Security and Compliance"
+		],
+		"matchRightItems": [
+			"Foundational runtime, data model, and workflow engine shared by all applications",
+			"Instance administration, user access, and system configuration tooling",
+			"APIs, spokes, and orchestration for connecting external systems",
+			"Hardening, access controls, and audit capabilities for regulatory alignment"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Platform service areas divide core runtime, administration, integration, and security responsibilities that platform owners must understand.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html"
+		],
+		"domain": "Technology"
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 86,
+		"prompt": "Executive sponsors ask how CMDB data quality affects platform investment decisions. Which data strategy response should the platform owner provide?",
+		"choices": [
+			"Trusted configuration and service data enable accurate impact analysis, reporting, and governed automation investments",
+			"CMDB quality matters only for hardware asset tracking and not service workflows",
+			"Populating the CMDB once at go-live eliminates all future data stewardship needs",
+			"Defer all data governance until every CI reaches one hundred percent completeness"
+		],
+		"correctIndex": 0,
+		"explanation": "Data strategy connects CMDB quality to impact analysis, trustworthy reporting, and automation decisions platform owners must defend to sponsors.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
+		],
+		"domain": "Data"
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 90,
+		"prompt": "The enterprise is formalizing a platform governance council with no documented charter. Which governance action should the platform owner take first?",
+		"choices": [
+			"Publish a charter defining board scope, decision rights, escalation paths, and delegated authority by decision type",
+			"Let each product team decide standards locally until executives object",
+			"Move all design decisions to finance because funding authority covers every platform choice",
+			"Cancel governance forums until the backlog volume decreases"
+		],
+		"correctIndex": 0,
+		"explanation": "ServiceNow governance requires a chartered operating model with explicit decision rights and escalation paths so decisions occur at the right level.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
+		],
+		"domain": "ServiceNow Governance"
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 91,
+		"prompt": "A new cohort of platform builders must reach role-based certification before taking on scoped application work. Which ServiceNow enablement resource should the platform owner recommend?",
+		"choices": [
+			"ServiceNow Learning paths and role-based certification aligned to builder and admin personas",
+			"Unrestricted production admin access so learners can experiment without guidance",
+			"Third-party exam prep forums as the sole source of platform standards",
+			"Disabling all training because update sets document every required skill"
+		],
+		"correctIndex": 0,
+		"explanation": "ServiceNow Learning provides official role-based paths and certifications that platform owners use to standardize enablement before teams take on delivery responsibilities.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html"
+		],
+		"domain": "ServiceNow Governance"
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 92,
+		"questionType": "match",
+		"prompt": "Match each ServiceNow product family to the governance scenario where a platform owner should reference it.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"IT Service Management",
+			"Customer Service Management",
+			"HR Service Delivery",
+			"Cloud Governance Suite"
+		],
+		"matchRightItems": [
+			"Prioritizing employee and technology service workflows under shared platform standards",
+			"Evaluating external customer case management against enterprise product portfolio fit",
+			"Aligning lifecycle events and employee services to licensed entitlements",
+			"Demonstrating data stewardship and compliance practices during an audit"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Platform governance references major product families and Cloud Governance Suite practices when evaluating portfolio fit, entitlements, and compliance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html",
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
+		],
+		"domain": "ServiceNow Governance"
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 95,
+		"prompt": "Portfolio leaders ask which ServiceNow applications should remain on the shared platform versus point solutions. Which governance factor should the platform owner weigh most heavily?",
+		"choices": [
+			"Whether the capability fits the enterprise product portfolio, integration standards, and subscription entitlements",
+			"Whether the requesting team prefers a standalone vendor with no ServiceNow connector",
+			"Whether the solution uses the newest UI theme regardless of data model alignment",
+			"Whether the vendor offered a promotional discount unrelated to lifecycle support"
+		],
+		"correctIndex": 0,
+		"explanation": "Application portfolio governance evaluates fit to the ServiceNow product portfolio, integration standards, and licensed entitlements—not preferences or unrelated promotions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html",
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
+		],
+		"domain": "ServiceNow Governance"
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 96,
+		"questionType": "multi",
+		"prompt": "The platform governance council is establishing operating model responsibilities. Which assignments should the platform owner document? (Choose two.)",
+		"choices": [
+			"Strategic forum sets enterprise guardrails and investment themes for the platform",
+			"Portfolio forum prioritizes demand and capacity across business programs",
+			"Technical forum replaces all change advisory board approvals for production outages",
+			"Strategic forum performs daily incident queue assignment for every support team"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Strategic governance sets direction and guardrails while portfolio governance prioritizes programs; technical governance supports quality without replacing incident operations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html",
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "ServiceNow Governance"
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 97,
+		"questionType": "match",
+		"prompt": "Match each ServiceNow governance capability to the platform owner responsibility it supports.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Demand governance board",
+			"Subscription management",
+			"ServiceNow Support Portal",
+			"Technical coding standards"
+		],
+		"matchRightItems": [
+			"Prioritizes platform demand against capacity and value criteria",
+			"Tracks entitled products and role consumption against contracted limits",
+			"Provides official documentation, release notes, and vendor support escalation",
+			"Enforces secure development and promotion patterns for custom applications"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Platform governance spans demand prioritization, subscription oversight, vendor support resources, and technical delivery standards.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/demand-governance.html",
+			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
+		],
+		"domain": "ServiceNow Governance"
+	},
+	{
+		"trackCode": "CPOP",
+		"order": 99,
+		"prompt": "As the CPOP bank reaches its final orders, which outcome best summarizes a mature ServiceNow governance model for a professional platform owner?",
+		"choices": [
+			"Predictable delivery with controlled risk, verified entitlements, and measurable value",
+			"Unlimited customization without standards to maximize team autonomy",
+			"All development performed directly in production to eliminate environment cost",
+			"Complete elimination of KPI reviews once initial adoption targets are met"
+		],
+		"correctIndex": 0,
+		"explanation": "Mature platform governance balances predictable delivery and controlled risk with verified licensing and value transparency—not unconstrained customization or abandoned measurement.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html",
+			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
+		],
+		"domain": "ServiceNow Governance"
+	}
+]

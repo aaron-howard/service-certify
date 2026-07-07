@@ -13,7 +13,8 @@
 		"explanation": "SAE adds section navigation, template reuse, score normalization, and portal support for modern assessment delivery.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-sae-using.html"
-		]
+		],
+		"domain": "Assessment Configuration"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -29,7 +30,8 @@
 		"explanation": "Scoring rules group engagements or third parties and apply criteria tables that aggregate assessment scores with configured methods.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/vendor-ratings-scoring.html"
-		]
+		],
+		"domain": "Assessment Configuration"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -42,12 +44,16 @@
 			"sn_publications_publication catalog for knowledge article publishing"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"questionType": "multi",
 		"explanation": "External assessments live on sn_vdr_risk_asmt_assessment while asmt_assessment_instance stores the completed questionnaire responses.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
-		]
+		],
+		"domain": "Assessment Configuration"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -63,7 +69,8 @@
 		"explanation": "Issue-generation rules on SAE questionnaire templates can create issues or workflow tasks when assessment results meet defined conditions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-sae-using.html"
-		]
+		],
+		"domain": "Assessment Configuration"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -79,6 +86,7 @@
 		"explanation": "Categories under asmt_metric_type organize metrics into control domains that assessors and vendors navigate during completion.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
-		]
+		],
+		"domain": "Assessment Configuration"
 	}
 ]

@@ -13,12 +13,13 @@
 		"explanation": "Executive persuasion combines quantified pain, expected outcomes, and credible comparisons—not technical detail or indefinite delay.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOE",
 		"order": 26,
-		"prompt": "Given a case study where finance and operations each maintain separate KPI definitions, how should the platform owner align ServiceNow data with enterprise BI strategy?",
+		"prompt": "For global innovation champions, finance and operations each maintain separate KPI definitions, how should the platform owner align ServiceNow data with enterprise BI strategy?",
 		"choices": [
 			"Establish a governed metric catalog with agreed definitions before publishing datasets to the BI layer",
 			"Allow each department to export raw tables on demand without shared definitions",
@@ -29,7 +30,8 @@
 		"explanation": "BI integration succeeds when platform data uses enterprise-governed definitions so analytics teams trust cross-functional reporting.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOE",
@@ -45,7 +47,8 @@
 		"explanation": "Effective OCM adapts enablement to regional roles and champions rather than one-size-fits-all mandates or halted delivery.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOE",
@@ -67,15 +70,28 @@
 			"Connect platform usage to agreed business outcome metrics"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "OCM spans impact analysis, champion networks, readiness measurement, and tying adoption to validated business benefits.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOE",
@@ -89,10 +105,14 @@
 			"Individual developer task assignments for the first sprint only"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Strategy documents articulate outcomes and principles; sprint-level technical tasks belong in delivery backlogs, not executive strategy artifacts.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	}
 ]

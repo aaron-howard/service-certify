@@ -2,57 +2,6 @@
 	{
 		"trackCode": "CIS-SM",
 		"order": 55,
-		"prompt": "Discovery runs are delayed even though schedules show Active status. ECC Queue shows a growing backlog on the discovery topic. What should be verified first?",
-		"choices": [
-			"Whether assigned MID Servers are Up, validated, and processing queued probe work",
-			"Whether all identification rules were deleted from the cmdb_ci_server class",
-			"Whether service candidates were rejected in the Service Mapping Workspace",
-			"Whether CMDB Health tasks were closed without remediation evidence"
-		],
-		"correctIndex": 0,
-		"explanation": "ECC backlog on discovery topics usually indicates MID Server availability or processing issues that must be resolved before schedules complete.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/mid-server/ecc-queue.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/troubleshoot-discovery-with-ecc-queue.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SM",
-		"order": 56,
-		"prompt": "An operations team configures Event Management to reduce noise before operators act. When an event rule matches defined conditions, what record type does it create?",
-		"choices": [
-			"Alert record that operators review and correlate in Event Management",
-			"Discovery schedule that rescans the affected subnet on the next interval",
-			"Identification entry that merges duplicate cmdb_ci_computer records",
-			"Service map entry point that launches top-down dependency tracing"
-		],
-		"correctIndex": 0,
-		"explanation": "Event rules evaluate incoming events and create alerts when configured conditions are met, enabling governed alert handling downstream.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/event-management/exploring-event-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/task/configure-event-rules.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SM",
-		"order": 57,
-		"prompt": "Service Mapping administrators need to confirm which TCP ports a database host exposes for entry point design. Which Discovery result type provides that detail?",
-		"choices": [
-			"IP service records listing open ports and detected services on the host",
-			"Reconciliation rule entries defining attribute precedence by datasource",
-			"CMDB Health KPI widgets showing duplicate CI counts by class",
-			"Machine learning confidence scores on pending service candidates"
-		],
-		"correctIndex": 0,
-		"explanation": "IP service discovery captures port and service information that teams use to validate entry points and dependency paths during mapping.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html",
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SM",
-		"order": 58,
 		"prompt": "Before enabling credential-based Discovery for a new datacenter, which credential practice best supports both security and mapping accuracy?",
 		"choices": [
 			"Share one domain administrator account across every schedule and environment",
@@ -65,11 +14,12 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/t_ConfigureDiscoveryCredentials.html",
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
-		]
+		],
+		"domain": "Discovery Configuration"
 	},
 	{
 		"trackCode": "CIS-SM",
-		"order": 59,
+		"order": 56,
 		"prompt": "A customer wants to accelerate service map creation using observed traffic patterns. Which Service Mapping capability proposes likely application services for review?",
 		"choices": [
 			"Machine learning service candidates surfaced for mapper validation",
@@ -82,6 +32,61 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-get-started.html",
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
-		]
+		],
+		"domain": "Machine Learning"
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 57,
+		"prompt": "Which workspace is designed for reviewing machine learning service candidates and managing map onboarding tasks in one place?",
+		"choices": [
+			"Service Mapping Workspace with candidate queues and validation actions",
+			"CMDB Data Manager workspace focused on orphaned relationship cleanup",
+			"Event Management alert workspace for connector troubleshooting only",
+			"Discovery Status dashboard limited to ECC queue throughput metrics"
+		],
+		"correctIndex": 0,
+		"explanation": "Service Mapping Workspace centralizes candidate review, map tasks, and onboarding progress for ML-assisted mapping workflows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-get-started.html"
+		],
+		"domain": "Machine Learning"
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 58,
+		"prompt": "A mapper sees a high-confidence service candidate that conflicts with the documented architecture diagram. What is the recommended next step?",
+		"choices": [
+			"Accept every candidate automatically to maximize map coverage quickly",
+			"Validate the candidate with the service owner before accepting or rejecting it",
+			"Delete the underlying CI records so the candidate cannot reappear",
+			"Disable machine learning mapping globally until the next major release"
+		],
+		"correctIndex": 1,
+		"explanation": "ML candidates accelerate onboarding but require architectural and ownership validation before they influence production service maps.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/validate-service-map-results.html"
+		],
+		"domain": "Machine Learning"
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 59,
+		"prompt": "When should a team choose ML-powered mapping over manual top-down entry point design for a new application?",
+		"choices": [
+			"When no discovery data exists and all CIs are created manually each week",
+			"When traffic and discovery signals exist but documented entry points are incomplete",
+			"When the goal is to disable CMDB identification rules for faster imports",
+			"When every dependency must be drawn without any automated suggestions"
+		],
+		"correctIndex": 1,
+		"explanation": "ML mapping is most valuable when technical signals are available but formal entry points or architecture documentation are incomplete.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/getting-started-service-mapping.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
+		],
+		"domain": "Machine Learning"
 	}
 ]

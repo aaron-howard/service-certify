@@ -14,7 +14,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/data-visualizations.html",
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DashboardsAndWidgets.html"
-		]
+		],
+		"domain": "Data Visualization and Dashboards"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -31,7 +32,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html",
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
-		]
+		],
+		"domain": "Data Visualization and Dashboards"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -48,7 +50,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/performance-analytics-performance.html",
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
-		]
+		],
+		"domain": "Data Visualization and Dashboards"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -65,7 +68,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/kpi-details.html",
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html"
-		]
+		],
+		"domain": "Data Visualization and Dashboards"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -79,11 +83,15 @@
 			"Preferring the visualization with the highest number of breakdown elements"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Effective visualization selection matches chart type to the decision and whether stakeholders need trends, comparisons, or a current snapshot.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/data-visualizations.html",
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DashboardsAndWidgets.html"
-		]
+		],
+		"domain": "Data Visualization and Dashboards"
 	}
 ]

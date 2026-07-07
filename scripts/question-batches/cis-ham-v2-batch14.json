@@ -13,7 +13,8 @@
 		"explanation": "Asset audits compare expected inventory to scanned or verified results, producing evidence for compliance reviews.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-audit-record-fields.html"
-		]
+		],
+		"domain": "Operational Integration of IT Asset Management Processes"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -29,7 +30,8 @@
 		"explanation": "Documented custody transactions create an auditable chain for assignments, returns, and stockroom movements.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/manage-hardware-assets.html"
-		]
+		],
+		"domain": "Operational Integration of IT Asset Management Processes"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -45,7 +47,8 @@
 		"explanation": "Recurring mismatches require process fixes at the stage where records diverge, not one-time data deletes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
-		]
+		],
+		"domain": "Operational Integration of IT Asset Management Processes"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -58,17 +61,22 @@
 			"Unfiltered screenshots of unrelated incident queues"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1, 2],
+		"correctIndexes": [
+			0,
+			1,
+			2
+		],
 		"questionType": "multi",
 		"explanation": "Audit evidence should include controls, traceable transactions, and documented remediation of exceptions rather than unrelated operational views.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/audit-results.html"
-		]
+		],
+		"domain": "Operational Integration of IT Asset Management Processes"
 	},
 	{
 		"trackCode": "CIS-HAM",
 		"order": 69,
-		"prompt": "Asset managers need a single pane to monitor stock rules, procurement requests, and contract renewals. Which interface is designed for this?",
+		"prompt": "Operations wants one workspace to monitor stock rules, open transfer orders, and upcoming contract renewals. Which interface should asset managers use?",
 		"choices": [
 			"The Asset operations view in Hardware Asset Workspace",
 			"The Event Management alert console exclusively",
@@ -79,6 +87,7 @@
 		"explanation": "The Asset operations view consolidates operational tasks such as stock rules, orders, sourcing, and contract renewals in the workspace.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-operations-view.html"
-		]
+		],
+		"domain": "Operational Integration of IT Asset Management Processes"
 	}
 ]

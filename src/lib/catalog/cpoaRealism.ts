@@ -14,6 +14,17 @@ export const CPOA_DOMAIN_TARGETS = {
 
 export const CPOA_BANK_SIZE = 100;
 
+export type CpoaDomain = keyof typeof CPOA_DOMAIN_TARGETS;
+
+export function domainForOrder(order: number): CpoaDomain {
+	if (order <= 20) return 'Strategy';
+	if (order <= 36) return 'People';
+	if (order <= 52) return 'Process';
+	if (order <= 75) return 'Technology';
+	if (order <= 86) return 'Data';
+	return 'ServiceNow Governance';
+}
+
 export const BANNED_CHOICE_PREFIXES = [
 	'Typically,',
 	'Operationally,',
@@ -40,6 +51,7 @@ export type CpoaQuestionRow = {
 	prompt: string;
 	choices: string[];
 	sourceUrls: string[];
+	domain?: string;
 	questionType?: QuestionType;
 	correctIndexes?: number[];
 	correctIndex?: number;
@@ -109,11 +121,41 @@ export function validateCpoaQuestion(q: CpoaQuestionRow): string[] {
 	return issues;
 }
 
+export function validateCpoaDomainTags(rows: CpoaQuestionRow[]): string[] {
+	const issues: string[] = [];
+	const domainCounts = Object.fromEntries(
+		Object.keys(CPOA_DOMAIN_TARGETS).map((d) => [d, 0])
+	) as Record<string, number>;
+
+	for (const q of rows) {
+		if (q.trackCode !== 'CPOA') return issues;
+		if (!q.domain) {
+			issues.push(`order ${q.order}: missing domain tag`);
+			continue;
+		}
+		const expected = domainForOrder(q.order);
+		if (q.domain !== expected) {
+			issues.push(`order ${q.order}: domain ${q.domain} does not match order quota ${expected}`);
+		}
+		domainCounts[q.domain]++;
+	}
+
+	for (const [domain, target] of Object.entries(CPOA_DOMAIN_TARGETS)) {
+		if (domainCounts[domain] !== target) {
+			issues.push(`domain ${domain}: expected ${target}, got ${domainCounts[domain] ?? 0}`);
+		}
+	}
+
+	return issues;
+}
+
 export function validateCpoaTrack(rows: CpoaQuestionRow[]): string[] {
 	const issues: string[] = [];
 	for (const q of rows) {
 		issues.push(...validateCpoaQuestion(q));
 	}
+
+	issues.push(...validateCpoaDomainTags(rows));
 
 	const openerCounts = new Map<string, number>();
 	for (const q of rows) {
