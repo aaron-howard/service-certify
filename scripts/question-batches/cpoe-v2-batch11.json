@@ -13,7 +13,8 @@
 		"explanation": "Executive licensing decisions require TCO modeling that accounts for entitlements, growth, and renewal paths—not shortcuts based on first-year price alone.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
-		]
+		],
+		"domain": "Cost/Resource Planning"
 	},
 	{
 		"trackCode": "CPOE",
@@ -29,7 +30,8 @@
 		"explanation": "Implementation cost comparisons must expose labor, timeline, risk, and sustainment trade-offs so executives can fund the model that meets outcomes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Cost/Resource Planning"
 	},
 	{
 		"trackCode": "CPOE",
@@ -51,15 +53,28 @@
 			"Fund localization work tied to regional go-live commitments"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Cost planning artifacts translate technical delivery needs into executive decision support: licensing, implementation, capacity, and localization funding.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
-		]
+		],
+		"domain": "Cost/Resource Planning"
 	},
 	{
 		"trackCode": "CPOE",
@@ -75,7 +90,8 @@
 		"explanation": "Translation spend should follow regional rollout priorities and measurable adoption rather than unfunded global scope or absent governance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
-		]
+		],
+		"domain": "Cost/Resource Planning"
 	},
 	{
 		"trackCode": "CPOE",
@@ -89,10 +105,14 @@
 			"Assuming zero ongoing maintenance after initial connection testing"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Integration TCO includes infrastructure, partner labor, and sustainment; skipping validation or maintenance underestimates long-term cost and risk.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
-		]
+		],
+		"domain": "Cost/Resource Planning"
 	}
 ]

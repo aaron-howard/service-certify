@@ -14,7 +14,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html",
 			"https://www.servicenow.com/docs/r/application-development/application-development.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	},
 	{
 		"trackCode": "CPOP",
@@ -30,7 +31,8 @@
 		"explanation": "Scoped applications with clear ownership preserve upgradeability and reuse better than unmanaged global customizations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/application-development.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	},
 	{
 		"trackCode": "CPOP",
@@ -46,7 +48,8 @@
 		"explanation": "Coding best practices keep credentials out of client scripts and route access through governed server-side abstractions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	},
 	{
 		"trackCode": "CPOP",
@@ -60,11 +63,15 @@
 			"Mandatory use of global scope for all new integrations regardless of ownership"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Sustainable technical governance combines automated quality gates with human review—not uncontrolled production access or global scope defaults.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/application-development.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	},
 	{
 		"trackCode": "CPOP",
@@ -86,15 +93,28 @@
 			"Blocks common vulnerabilities such as injection and exposed credentials"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Platform owners map scoped packaging, collision review, performance gates, and secure coding checklists to distinct technical risks in custom delivery.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/application-development.html",
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	}
 ]

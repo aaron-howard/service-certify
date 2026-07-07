@@ -2,7 +2,7 @@
 	{
 		"trackCode": "CIS-ITSM",
 		"order": 20,
-		"prompt": "What defines when a problem record can automatically move from the New to the Assess state?",
+		"prompt": "Problem coordinators want valid new problems to enter assessment without manual state clicks on every record. Which workflow design should govern the New to Assess transition?",
 		"choices": [
 			"Problem state UI action",
 			"ProblemUtils script include",
@@ -14,7 +14,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/problem-management/problem-mgmt-lifecycle.html",
 			"https://www.servicenow.com/docs/r/it-service-management/problem-management/assess-a-problem.html"
-		]
+		],
+		"domain": "Problem Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -30,7 +31,8 @@
 		"explanation": "Problems are created to identify and permanently fix underlying causes, especially after recurring incidents or major incident resolution.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/problem-management/exploring-problem-management.html"
-		]
+		],
+		"domain": "Problem Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -47,7 +49,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/problem-management/exploring-problem-management.html",
 			"https://www.servicenow.com/docs/r/it-service-management/problem-management/create-known-error-from-problem.html"
-		]
+		],
+		"domain": "Problem Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -63,7 +66,8 @@
 		"explanation": "Known error articles capture root cause and workaround information in Knowledge Management to help teams and users address recurring symptoms.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/problem-management/create-known-error-from-problem.html"
-		]
+		],
+		"domain": "Problem Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -80,6 +84,7 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/problem-management/fix-a-change.html",
 			"https://www.servicenow.com/docs/r/it-service-management/problem-management/problem-mgmt-lifecycle.html"
-		]
+		],
+		"domain": "Problem Management"
 	}
 ]

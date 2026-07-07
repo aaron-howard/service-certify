@@ -2,7 +2,7 @@
 	{
 		"trackCode": "CPOE",
 		"order": 35,
-		"prompt": "Given a case study following a merger, two legacy organizations maintain conflicting service catalogs. How should the platform owner document the unified strategy?",
+		"prompt": "When HR and Finance duplicate cohorts, a merger, two legacy organizations maintain conflicting service catalogs. How should the platform owner document the unified strategy?",
 		"choices": [
 			"Capture harmonization principles, phased catalog convergence, and accountable owners per business unit",
 			"Publish only technical import scripts without business rationale or transition plan",
@@ -13,7 +13,8 @@
 		"explanation": "Post-merger strategy documents principles, phased convergence, and ownership—not technical scripts alone or indefinite delay.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOE",
@@ -29,7 +30,8 @@
 		"explanation": "Enterprise BI integration requires governed data products with clear lineage and stewardship—not ad hoc access or manual rework.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOE",
@@ -51,15 +53,28 @@
 			"Orchestrate adoption, training, and stakeholder readiness activities"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Sponsorship spans executive advocacy, business outcome ownership, platform direction, and change orchestration—each with distinct accountabilities.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOE",
@@ -73,11 +88,16 @@
 			"Complete retirement of every legacy system before any pilot begins"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1, 2],
+		"correctIndexes": [
+			0,
+			1,
+			2
+		],
 		"explanation": "OCM readiness includes sponsor messaging, role-based enablement, and feedback loops—not mandatory full legacy retirement before pilots.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOE",
@@ -93,6 +113,7 @@
 		"explanation": "Shared services ROI depends on common data and fulfillment foundations before domain expansion, with checkpoints at each stage.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Strategy"
 	}
 ]

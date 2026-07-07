@@ -2,16 +2,46 @@
 
 import type { QuestionType } from './questionTypes';
 
-/** Bank distribution for 90 questions scaled 1.5x from the 60-question official exam. */
+export const CIS_SIR_BANK_SIZE = 90;
 
 export const CIS_SIR_DOMAIN_TARGETS = {
-	'SIR Overview and Data Visualization': 14,
-	'Security Incident Creation and Threat Intelligence': 12,
+	'SIR Overview and Data Visualization': 10,
+	'Incident Response Strategy': 11,
+	'Implementation Planning': 9,
+	'Security Incident Creation and Threat Intelligence': 11,
 	'Security Incident and Threat Intelligence Integrations': 13,
 	'Security Incident Response Management': 13,
-	'Risk Calculations and Post Incident Response': 11,
-	'Automation and Standard Processes': 27
+	'Risk Calculations and Post Incident Response': 9,
+	'Automation and Standard Processes': 14
 } as const;
+
+export type CisSirDomain = keyof typeof CIS_SIR_DOMAIN_TARGETS;
+
+export function domainForOrder(order: number): CisSirDomain {
+	if (order <= 9) return 'SIR Overview and Data Visualization';
+	if (order <= 20) return 'Incident Response Strategy';
+	if (order <= 29) return 'Implementation Planning';
+	if (order <= 40) return 'Security Incident Creation and Threat Intelligence';
+	if (order <= 53) return 'Security Incident and Threat Intelligence Integrations';
+	if (order <= 66) return 'Security Incident Response Management';
+	if (order <= 75) return 'Risk Calculations and Post Incident Response';
+	return 'Automation and Standard Processes';
+}
+
+export const CIS_SIR_SCENARIO_MIN_RATIO = 0.7;
+
+export function isScenarioStylePrompt(prompt: string): boolean {
+	const trimmed = prompt.trim();
+	if (trimmed.length >= 90) return true;
+	if (
+		/^(A |An |The |Your |During |When |After |Before |If |Given |While |Upon |How can|How do|How does|How is|How are|How should|Why should|Why would|Which practice|Which approach|Which configuration|Which design|Which two|Choose two|What happens|What should|A CIO|A CISO|A SOC|A municipal|A stakeholder|A business|An organization|An implementer|An analyst|Leadership |Operations |Several |Two )/i.test(
+			trimmed
+		)
+	) {
+		return true;
+	}
+	return false;
+}
 
 export const BANNED_CHOICE_PREFIXES = [
 	'Typically,',
@@ -56,6 +86,7 @@ export type CisSirQuestionRow = {
 	prompt: string;
 	choices: string[];
 	sourceUrls: string[];
+	domain?: string;
 	questionType?: QuestionType;
 	correctIndexes?: number[];
 	correctIndex?: number;
@@ -124,12 +155,56 @@ export function validateCisSirQuestion(q: CisSirQuestionRow): string[] {
 	return issues;
 }
 
+export function validateCisSirScenarioRatio(rows: CisSirQuestionRow[]): string[] {
+	const sir = rows.filter((q) => q.trackCode === 'CIS-SIR');
+	if (sir.length === 0) return [];
+	const scenarioCount = sir.filter((q) => isScenarioStylePrompt(q.prompt)).length;
+	const ratio = scenarioCount / sir.length;
+	if (ratio < CIS_SIR_SCENARIO_MIN_RATIO) {
+		return [
+			`scenario-style prompts ${scenarioCount}/${sir.length} (${Math.round(ratio * 100)}%) below minimum ${Math.round(CIS_SIR_SCENARIO_MIN_RATIO * 100)}%`
+		];
+	}
+	return [];
+}
+
+export function validateCisSirDomainTags(rows: CisSirQuestionRow[]): string[] {
+	const issues: string[] = [];
+	const domainCounts = Object.fromEntries(
+		Object.keys(CIS_SIR_DOMAIN_TARGETS).map((d) => [d, 0])
+	) as Record<string, number>;
+
+	for (const q of rows) {
+		if (q.trackCode !== 'CIS-SIR') continue;
+		if (!q.domain) {
+			issues.push(`order ${q.order}: missing domain tag`);
+			continue;
+		}
+		const expected = domainForOrder(q.order);
+		if (q.domain !== expected) {
+			issues.push(`order ${q.order}: domain ${q.domain} does not match order quota ${expected}`);
+		}
+		domainCounts[q.domain]++;
+	}
+
+	for (const [domain, target] of Object.entries(CIS_SIR_DOMAIN_TARGETS)) {
+		if (domainCounts[domain] !== target) {
+			issues.push(`domain ${domain}: expected ${target}, got ${domainCounts[domain] ?? 0}`);
+		}
+	}
+
+	return issues;
+}
+
 export function validateCisSirTrack(rows: CisSirQuestionRow[]): string[] {
 	const issues: string[] = [];
 
 	for (const q of rows) {
 		issues.push(...validateCisSirQuestion(q));
 	}
+
+	issues.push(...validateCisSirScenarioRatio(rows));
+	issues.push(...validateCisSirDomainTags(rows));
 
 	const openerCounts = new Map<string, number>();
 	for (const q of rows) {

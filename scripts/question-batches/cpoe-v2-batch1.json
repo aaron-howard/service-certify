@@ -2,7 +2,7 @@
 	{
 		"trackCode": "CPOE",
 		"order": 0,
-		"prompt": "Given a case study where the CFO prioritizes measurable ROI within two fiscal quarters while the CIO emphasizes platform consolidation, which approach best aligns both C-Suite needs when selecting an initial ServiceNow capability set?",
+		"prompt": "During executive portfolio planning, the CFO prioritizes measurable ROI within two fiscal quarters while the CIO emphasizes platform consolidation, which approach best aligns both C-Suite needs when selecting an initial ServiceNow capability set?",
 		"choices": [
 			"Lead with high-visibility outcomes tied to cost avoidance and phased consolidation on a shared data model",
 			"Deploy every licensed product simultaneously to maximize subscription utilization in quarter one",
@@ -13,12 +13,13 @@
 		"explanation": "Platform owners balance executive financial expectations with technical consolidation by sequencing capabilities that demonstrate ROI early while building toward a unified platform vision.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOE",
 		"order": 1,
-		"prompt": "Given a scenario where sponsors question whether ServiceNow can support enterprise analytics, how should the platform owner connect the platform strategy to the overall business intelligence strategy?",
+		"prompt": "For enterprise analytics strategy, sponsors question whether ServiceNow can support enterprise analytics, how should the platform owner connect the platform strategy to the overall business intelligence strategy?",
 		"choices": [
 			"Position ServiceNow as a system of action that feeds trusted operational data into the enterprise BI layer",
 			"Replace the corporate data warehouse entirely with ServiceNow reporting widgets",
@@ -29,7 +30,8 @@
 		"explanation": "ServiceNow delivers workflow and operational data; integrating with enterprise BI ensures executives see platform value within broader intelligence and decision-making frameworks.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOE",
@@ -51,15 +53,28 @@
 			"KPIs used to validate strategic progress"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Vision artifacts must translate platform work into executive language: outcomes, sequenced capabilities, investment focus, and measurable success criteria.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOE",
@@ -75,13 +90,14 @@
 		"explanation": "Strategy starts with understanding organizational pain and aligning stakeholders on shared outcomes before committing to platform capabilities or sequencing.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOE",
 		"order": 4,
 		"questionType": "multi",
-		"prompt": "Given a scenario where low adoption threatens a major ServiceNow rollout, which organizational change management orchestrations should the platform owner prioritize? (Choose two.)",
+		"prompt": "When adoption risk emerges, low adoption threatens a major ServiceNow rollout, which organizational change management orchestrations should the platform owner prioritize? (Choose two.)",
 		"choices": [
 			"Executive sponsorship with visible communication of business value",
 			"Role-based enablement aligned to new ways of working",
@@ -89,10 +105,14 @@
 			"Skipping feedback loops to accelerate go-live dates"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Adoption requires visible sponsorship and targeted enablement; removing legacy access without support or ignoring feedback undermines OCM goals.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	}
 ]

@@ -14,7 +14,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/audit-management/c_AuditTasks.html",
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
-		]
+		],
+		"domain": "Audit and Advanced Audit"
 	},
 	{
 		"trackCode": "CIS-RC",
@@ -31,7 +32,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/audit-management/c_AuditTasks.html",
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
-		]
+		],
+		"domain": "Audit and Advanced Audit"
 	},
 	{
 		"trackCode": "CIS-RC",
@@ -47,7 +49,8 @@
 		"explanation": "Audit tasks are the work items auditors execute during fieldwork, including testing and evidence collection.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/audit-management/c_AuditTasks.html"
-		]
+		],
+		"domain": "Audit and Advanced Audit"
 	},
 	{
 		"trackCode": "CIS-RC",
@@ -61,12 +64,16 @@
 			"Discovery classification"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Audit engagements progress through planning and fieldwork before reporting consolidates results and observations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/audit-management/c_AuditTasks.html",
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
-		]
+		],
+		"domain": "Audit and Advanced Audit"
 	},
 	{
 		"trackCode": "CIS-RC",
@@ -83,6 +90,7 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/audit-management/c_AuditTasks.html",
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/remediate-control-failures.html"
-		]
+		],
+		"domain": "Audit and Advanced Audit"
 	}
 ]

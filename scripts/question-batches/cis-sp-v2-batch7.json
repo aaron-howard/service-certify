@@ -2,83 +2,92 @@
 	{
 		"trackCode": "CIS-SP",
 		"order": 30,
-		"prompt": "A domain manager must maintain approval routing for catalog requests without changing global flows. Which process separation concept applies?",
+		"prompt": "An MSP administrator working in the parent TOP domain creates an incident while impersonating a tenant workflow. Can users in a child tenant domain see that incident by default?",
 		"choices": [
-			"Data-driven processes that domain managers can extend within governed boundaries",
-			"Global-only flow authoring that prohibits any domain customization",
-			"Clone preserver records that snapshot catalog items before upgrades",
-			"Performance analytics indicators that replace workflow conditions"
+			"No, data in a parent domain is not visible to users in child domains below it",
+			"Yes, child domains always inherit visibility to all parent domain records",
+			"Yes, but only when the incident priority is set to Critical",
+			"No, unless the incident sys_domain field is set to global"
 		],
 		"correctIndex": 0,
-		"explanation": "Data-driven processes allow designated domain managers to maintain selected workflow elements while instance owners govern broader platform process design.",
+		"explanation": "Data visibility rises up the hierarchy—parents see child data—but child domain users cannot see records that exist only in a parent domain above them.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
-		]
+			"https://www.servicenow.com/docs/r/platform-security/bp-domain-hierarchy.html"
+		],
+		"domain": "Data Separation/Visibility"
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 31,
-		"prompt": "Which is a process-separated entity?",
+		"prompt": "An ACME ITIL user with domain_expand_scope edits an incident in the ACME APJ child domain with record scope active. Which users appear when selecting Assigned to?",
 		"choices": [
-			"Tasks",
-			"Script Includes",
-			"System Properties",
-			"Email Notifications"
+			"Users with the required role in the incident's domain or global only",
+			"All active users across every tenant domain on the instance",
+			"Only users who share the same company as the assigned-to field",
+			"Users in parent domains above the incident domain but not the incident domain itself"
 		],
-		"correctIndex": 3,
-		"explanation": "Email notifications are process-separated and can be overridden per domain. Tasks and script includes are data-separated, and system properties are global.",
+		"correctIndex": 0,
+		"explanation": "With record scope active, reference fields constrain choices to the record's domain and global; toggling to session scope expands to the user's domain and child domains.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
-		]
+			"https://www.servicenow.com/docs/r/platform-security/bp-terms-conditions.html"
+		],
+		"domain": "Data Separation/Visibility"
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 32,
-		"prompt": "A global administrator reviewing UI policies needs to see override records created in child domains. Which related link should be used on the process table list?",
+		"prompt": "A change task is created from a change request assigned to the ACME tenant domain. Which domain value applies to the new change task record?",
 		"choices": [
-			"Expand Domain Scope",
-			"Run Point Scan",
-			"Export to XML",
-			"Merge Update Sets"
+			"The change task inherits the domain of the parent change request record",
+			"The change task always inherits the creating user's home domain",
+			"The change task is assigned to global unless manually updated",
+			"The change task domain is determined by the assignment group only"
 		],
 		"correctIndex": 0,
-		"explanation": "Expand Domain Scope on process tables in the global domain reveals override records and domain-specific process logic maintained by delegated administrators.",
+		"explanation": "Related child records inherit the parent record's domain by default, so a change task created from an ACME change request stays in the ACME domain.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
-		]
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainAssignment.html"
+		],
+		"domain": "Data Separation/Visibility"
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 33,
-		"prompt": "An administrator opens the Business Rules list while impersonating a child domain. Which records appear by default?",
+		"questionType": "multi",
+		"prompt": "Which properties define a domain-separated ServiceNow application for service provider deployments? (Choose three.)",
 		"choices": [
-			"Every business rule stored anywhere on the instance including all overrides",
-			"Only process records relevant to the selected domain and its inherited logic",
-			"Exclusively rules created in the global domain with no domain copies",
-			"Rules captured in the current update set regardless of domain ownership"
+			"Data separation so tenants see only authorized records",
+			"Business logic separation supporting tenant-specific policies and overrides",
+			"Hierarchical modeling with nested multitenancy and parent access to child resources",
+			"Mandatory separate MID Server infrastructure per tenant domain"
 		],
-		"correctIndex": 1,
-		"explanation": "Process table views from a domain show records applicable to that domain; global administrators use Expand Domain Scope to audit overrides across the hierarchy.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1,
+			2
+		],
+		"explanation": "Domain-separated applications provide data separation, business logic separation, hierarchical modeling, UI separation, and cross-customer intelligence—not separate MID infrastructure per tenant.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
-		]
+			"https://www.servicenow.com/docs/r/platform-security/bp-dom-sep-definition.html"
+		],
+		"domain": "Data Separation/Visibility"
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 34,
-		"questionType": "multi",
-		"prompt": "A domain team must stop using a process override without deleting the parent global record. Which approaches align with domain separation best practices? (Choose two.)",
+		"prompt": "A developer proposes adding sys_domain to the Dictionary Entry [sys_dictionary] table for tenant-specific field labels. What does ServiceNow recommend?",
 		"choices": [
-			"Set the override condition to false so it never evaluates",
-			"Set a condition of sys_id is empty on the override record",
-			"Mark the override inactive and expect the platform to ignore it automatically",
-			"Delete the global parent record so the override becomes standalone"
+			"Do not domain-separate platform sys_ tables because it can produce unexpected results",
+			"Domain-separate all sys_ tables to maximize tenant isolation",
+			"Domain-separate sys_dictionary but never sys_properties",
+			"Use visibility domains on sys_dictionary instead of sys_domain"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
-		"explanation": "Inactive override records are ignored; deactivation is achieved by conditions that never evaluate, such as false or sys_id is empty, while preserving the parent record.",
+		"explanation": "ServiceNow warns against domain-separating platform tables with the sys_ prefix, including sys_dictionary and sys_properties, due to unpredictable platform behavior.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/australia-platform-security/page/administer/company-and-domain-separation/concept/c_DomainSeparation.html"
-		]
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainAssignment.html"
+		],
+		"domain": "Data Separation/Visibility"
 	}
 ]

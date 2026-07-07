@@ -88,7 +88,7 @@ export type CisDiscoQuestionRow = {
 	prompt: string;
 	choices: string[];
 	sourceUrls: string[];
-	domain?: CisDiscoDomain;
+	domain?: string;
 	questionType?: QuestionType;
 	correctIndexes?: number[];
 	correctIndex?: number;

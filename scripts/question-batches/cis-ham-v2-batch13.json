@@ -13,7 +13,8 @@
 		"explanation": "Asset put away tasks track movement of in-stock assets to specific locations within a stockroom.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/create-asset-put-away-task.html"
-		]
+		],
+		"domain": "Operational Integration of IT Asset Management Processes"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -29,7 +30,8 @@
 		"explanation": "Transfer order flows can be edited or extended to add approvals and checkpoints that match organizational controls.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/asset-management/transfer-order-flows.html"
-		]
+		],
+		"domain": "Operational Integration of IT Asset Management Processes"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -45,7 +47,8 @@
 		"explanation": "Stock rules trigger restocking workflows based on threshold, stock rule type, and activated procurement integrations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/asset-management/c_StockRules.html"
-		]
+		],
+		"domain": "Operational Integration of IT Asset Management Processes"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -61,7 +64,8 @@
 		"explanation": "Audit results highlight exceptions that should be investigated and corrected to restore inventory accuracy.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/audit-results.html"
-		]
+		],
+		"domain": "Operational Integration of IT Asset Management Processes"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -77,6 +81,7 @@
 		"explanation": "Hardware assets expose contract fields for lease, service, and warranty relationships used throughout the lifecycle.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-record-fields.html"
-		]
+		],
+		"domain": "Operational Integration of IT Asset Management Processes"
 	}
 ]

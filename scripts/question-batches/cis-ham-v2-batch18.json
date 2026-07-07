@@ -13,7 +13,8 @@
 		"explanation": "Standard retirement processes govern disposal steps and financial updates needed for compliance and audit readiness.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/dispose-hardware-assets.html"
-		]
+		],
+		"domain": "Financial Management of IT Assets"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -29,7 +30,8 @@
 		"explanation": "Reuse optimization is measured by how effectively recoverable hardware returns to service rather than triggering new spend.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/manage-hardware-assets.html"
-		]
+		],
+		"domain": "Financial Management of IT Assets"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -42,12 +44,17 @@
 			"MID Server licensing fees unrelated to the asset lifecycle"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1, 2],
+		"correctIndexes": [
+			0,
+			1,
+			2
+		],
 		"questionType": "multi",
 		"explanation": "Asset TCO sums capital and operational expense lines on the asset, including costs rolled up from child assets when applicable.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-mgmt-tco.html"
-		]
+		],
+		"domain": "Financial Management of IT Assets"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -63,7 +70,8 @@
 		"explanation": "Task rate cards standardize cost capture so closing workflow tasks create expense lines that roll into asset TCO.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/create-ham-task-rate-card.html"
-		]
+		],
+		"domain": "Financial Management of IT Assets"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -79,6 +87,7 @@
 		"explanation": "Hardware Asset Workspace TCO reports compare asset or model costs against benchmarks for capital planning decisions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/create-ham-tco-report.html"
-		]
+		],
+		"domain": "Financial Management of IT Assets"
 	}
 ]

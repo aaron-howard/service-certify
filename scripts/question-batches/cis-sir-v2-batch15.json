@@ -2,88 +2,91 @@
 	{
 		"trackCode": "CIS-SIR",
 		"order": 70,
-		"prompt": "A team is standing up fully automated phishing handling for reported email messages. Which process type should they create first?",
+		"prompt": "A security incident record matches several calculator conditions after enrichment completes. What do Security Incident Calculators do in that situation?",
 		"choices": [
-			"Automated phishing process linked to parsing rules and playbook execution",
-			"Manual malware process requiring analyst initiation for every alert",
-			"Failed login manual process for brute-force events without automation",
-			"Discovery schedule process for nightly CMDB subnet scanning"
+			"Set specific field values on the incident according to matched calculator rules",
+			"Delete related observables to reduce table storage consumption",
+			"Disable every playbook tied to the incident category permanently",
+			"Convert the incident record automatically into a standard change request"
 		],
 		"correctIndex": 0,
-		"explanation": "Automated phishing processes combine email parsing validation with playbook-driven response for user-reported messages.",
+		"explanation": "Security incident calculators update record values such as severity or business impact when their pre-defined conditions match.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/create-process-automated-phishing.html",
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/using-automated-phishing-playbook.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/setup-assistant-reference.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/calculate-si-severity.html"
+		],
+		"domain": "Risk Calculations and Post Incident Response"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 71,
-		"prompt": "An orchestration action should run only when a specific configuration item appears on the security incident. Which configuration defines that scope?",
+		"prompt": "Several calculators in a Business Impact calculator group could apply to the same incident. How does the platform choose which calculator runs?",
 		"choices": [
-			"Trigger conditions scoped to the affected configuration item on the incident",
-			"Discovery credentials assigned to the MID Server cluster for the subnet",
-			"Service catalog approval workflows for employee laptop requests",
-			"CMDB health KPI thresholds for duplicate CI remediation tasks"
+			"The first matching calculator in the ordered group runs and remaining calculators are skipped",
+			"All calculators execute simultaneously and resulting values are averaged together",
+			"Calculators run only after manual analyst approval on each target field",
+			"Calculator groups are ignored unless the legacy risk score property is disabled"
 		],
 		"correctIndex": 0,
-		"explanation": "Trigger conditions restrict when orchestration actions and flows execute based on incident fields such as affected CIs.",
+		"explanation": "Calculator groups evaluate in order; the first calculator whose trigger logic matches is applied and subsequent calculators in the group are not run.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/define-trigger-conditions.html",
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/understand-trigger-conditions-work-with-configuration-item.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/setup-assistant-reference.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/calculate-si-severity.html"
+		],
+		"domain": "Risk Calculations and Post Incident Response"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 72,
-		"questionType": "multi",
-		"prompt": "Which two elements are configured when defining trigger conditions for SecOps orchestration actions? (Choose two.)",
+		"prompt": "An administrator must configure weighted criteria for dynamic security incident risk scoring. Which workspace navigation path opens Risk Score Calculator rules?",
 		"choices": [
-			"Filter criteria that determine when the action may execute",
-			"Target table and fields evaluated against the security incident record",
-			"Discovery schedule frequency for MID Server subnet scanning",
-			"Service catalog item price and fulfillment group assignment"
+			"Security Incident Response Workspace Administration Rules Engine Risk Score Calculator Rule",
+			"Discovery schedule editor under MID Server configuration settings",
+			"Service Portal widget theme designer for employee self-service",
+			"CMDB class manager extension attributes panel for custom CI classes"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
-		"explanation": "Trigger conditions specify which records qualify and which field values must match before an orchestration action runs.",
+		"explanation": "Risk Score Calculator rules are managed from the SIR Workspace Administration Rules Engine with criteria builder or script options.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/define-trigger-conditions.html",
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/verify-the-configured-trigger-conditions.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/define-risk-score-calculator-rules-sir.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/risk-score-calculator-related-tables.html"
+		],
+		"domain": "Risk Calculations and Post Incident Response"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 73,
-		"prompt": "An EDR integration must quarantine endpoints directly from a security incident record. Which capability launches those external response actions?",
+		"prompt": "After a high-severity breach is closed, leadership requires documented lessons learned and corrective actions. Which SIR practice fulfills that requirement?",
 		"choices": [
-			"SecOps orchestration workflows invoked from Security Incident Response",
-			"CMDB identification rules merging duplicate computer CI records",
-			"Service Mapping ML candidate queues for application onboarding",
-			"Hardware asset disposal workflows in IT Asset Management"
+			"Post-incident review capturing outcomes and tracked improvement tasks",
+			"Immediate deletion of child response tasks to reduce table growth",
+			"Skipping timeline validation to accelerate quarterly metric reporting",
+			"Archiving the incident record before root cause analysis begins"
 		],
 		"correctIndex": 0,
-		"explanation": "Orchestration workflows integrate external security tools so responders execute containment actions without leaving the incident record.",
+		"explanation": "Post-incident review formalizes lessons learned and links corrective work so response programs improve after major events.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/sec-inc-resp-orchestration-workflows.html",
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/sir-orch-workflow-templates.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-post-incident-review.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/t_PerformPostIncidentReview.html"
+		],
+		"domain": "Risk Calculations and Post Incident Response"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 74,
-		"prompt": "Malware alerts from a SIEM should spawn investigation tasks without manual analyst entry. Which playbook type supports that automation model?",
+		"prompt": "Facilitators prepare materials for a formal post-incident review session. Which artifact is most essential to the discussion?",
 		"choices": [
-			"Automated malware playbook tied to ingestion and category rules",
-			"Manual phishing playbook requiring analyst initiation for every email",
-			"Failed login manual playbook for password spray events only",
-			"Discovery schedule playbook refreshing CMDB relationships nightly"
+			"A validated timeline covering detections, actions, decisions, and communications",
+			"A list of responder display names without timestamps or task references",
+			"An unrelated open vulnerability export from the prior month",
+			"A single post-closure screenshot of the incident form header only"
 		],
 		"correctIndex": 0,
-		"explanation": "Automated malware playbooks create response tasks when qualifying alerts or incidents match configured criteria.",
+		"explanation": "A validated timeline supports accountable root-cause analysis and identifies process gaps during post-incident review.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/using-automated-malware-playbook.html",
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/create-process-automated-malware.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-post-incident-review.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/exploring-security-incident-response-workspace.html"
+		],
+		"domain": "Risk Calculations and Post Incident Response"
 	}
 ]

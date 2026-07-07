@@ -2,83 +2,95 @@
 	{
 		"trackCode": "CIS-SP",
 		"order": 5,
-		"prompt": "An SP platform team is preparing a new domain-separated instance for tenant onboarding. Which prerequisite must be completed before domain extensions and MSP demo data are available?",
+		"prompt": "An MSP with two hundred small customers and three large enterprises designs its ServiceNow architecture. Which segmentation strategy fits the mixed customer base?",
 		"choices": [
-			"Activation of the Domain Support - Domain Extensions Installer plugin by ServiceNow personnel",
-			"Installation of a separate MID Server per tenant domain",
-			"Enabling the Customer Service Management plugin on every child domain",
-			"Creating a contains relationship between global and every tenant domain"
+			"Domain separation for the small customers with dedicated instances evaluated for enterprises needing full isolation",
+			"One dedicated instance per small customer with all enterprises sharing a single global domain",
+			"A single global domain for all customers with visibility controlled only by assignment groups",
+			"Separate production instances for every customer regardless of size or requirements"
 		],
 		"correctIndex": 0,
-		"explanation": "The Domain Support - Domain Extensions Installer plugin must be activated by ServiceNow personnel and includes MSP extension capabilities required for SP domain separation.",
+		"explanation": "MSP architecture decisions weigh tenant count, isolation needs, and lifecycle independence; domain separation scales for many similar tenants while dedicated instances suit customers requiring full isolation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/bp-domain-sep-recommended.html"
-		]
+			"https://www.servicenow.com/docs/r/platform-security/bp-domain-sep-recommended.html",
+			"https://www.servicenow.com/docs/r/platform-security/bp-dom-sep-definition.html"
+		],
+		"domain": "MSP Operations Strategy"
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 6,
-		"prompt": "Task and user records with no explicit domain assignment are landing in global on a new SP instance. Which configuration prevents unintended cross-tenant visibility?",
+		"prompt": "A service provider structures its domain hierarchy so tenants can be grouped by service tier and region. What hierarchy design principle supports that segmentation?",
 		"choices": [
-			"Designate a default domain so unassigned records inherit the intended tenant scope",
-			"Disable the domain picker for all non-admin users",
-			"Move every table to process separation level 3 before go-live",
-			"Set all companies to the global domain until tenants request access"
+			"Model organizational groupings as intermediate parent domains with customer tenants as children beneath them",
+			"Place every tenant directly under global with no intermediate structure or grouping",
+			"Create one domain per user so segmentation follows individual accounts",
+			"Use contains relationships instead of hierarchy for all tenant placement decisions"
 		],
 		"correctIndex": 0,
-		"explanation": "Without a default domain, unassigned records go to global where they may be visible broadly; setting a default domain routes new records to the intended scope.",
+		"explanation": "Intermediate parent domains let providers apply shared processes and reporting by segment while each customer tenant remains isolated below its group.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/bp-default-domain.html"
-		]
+			"https://www.servicenow.com/docs/r/platform-security/bp-domain-hierarchy.html"
+		],
+		"domain": "MSP Operations Strategy"
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 7,
-		"prompt": "A scoped application stores tenant-specific fulfillment data that must not leak across customers. Which field identifies the domain ownership of each record?",
+		"prompt": "Customers on premium contracts require faster response targets than standard-tier tenants sharing the same instance. How should the MSP manage SLA definitions across domains?",
 		"choices": [
-			"sys_domain on the table storing the tenant data",
-			"sys_scope on the application record only",
-			"company on the user who last updated the record",
-			"sys_overrides on every operational table by default"
+			"Maintain SLA definitions as process-separated records with tenant-specific overrides per contract tier",
+			"Apply one global SLA definition to every tenant regardless of contract terms",
+			"Track response targets only in spreadsheets outside the platform to avoid domain complexity",
+			"Disable SLA engines for standard tenants so premium breaches are easier to identify"
 		],
 		"correctIndex": 0,
-		"explanation": "Each domain-separated record is assigned a single domain stored in sys_domain; custom tables must add this field to participate in data separation.",
+		"explanation": "SLA definitions are process-separated, so providers can override targets per tenant domain while retaining shared defaults for common tiers.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/c_DomainAssignment.html"
-		]
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html",
+			"https://www.servicenow.com/docs/r/platform-security/bp-dom-sep-definition.html"
+		],
+		"domain": "MSP Operations Strategy"
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 8,
-		"prompt": "In a parent-child domain hierarchy, an SP administrator configures business rules globally and tenant incidents in child domains. How do process definitions and operational data flow in this model?",
+		"prompt": "Finance asks the MSP platform team to support per-customer billing based on service consumption. Which platform capability supports a chargeback model on a domain-separated instance?",
 		"choices": [
-			"Process definitions flow down the hierarchy; data visibility rises up to parent domains",
-			"Both process definitions and data flow upward from child to parent only",
-			"Data flows down to child domains; process definitions rise up to parents",
-			"Process and data both flow horizontally across peer domains by default"
+			"Domain and company attribution on operational records enabling per-tenant usage reporting",
+			"Removing sys_domain from task tables so billing queries run faster",
+			"A single shared report that counts all incidents without tenant segmentation",
+			"Manual monthly record counts performed by each tenant administrator"
 		],
 		"correctIndex": 0,
-		"explanation": "Domain hierarchy design applies process inheritance downward while parent domains can access data in their domain and child domains below them in the hierarchy.",
+		"explanation": "Because records carry domain and company context, providers can report consumption per tenant and feed usage data into billing and chargeback processes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/bp-domain-hierarchy.html"
-		]
+			"https://www.servicenow.com/docs/r/platform-security/bp-dom-sep-definition.html",
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainAssignment.html"
+		],
+		"domain": "MSP Operations Strategy"
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 9,
 		"questionType": "multi",
-		"prompt": "When a new operational record is created on a domain-separated instance, which sources can populate the sys_domain field? (Choose three.)",
+		"prompt": "Which factors should drive an MSP's decision between domain separation and dedicated instances for a new customer? (Choose two.)",
 		"choices": [
-			"The company specified on the record when the table includes Company",
-			"A business rule that sets sys_domain during insert",
-			"The domain of the parent record for related child records",
-			"The sys_updated_by user reference field on the form"
+			"The customer's isolation, compliance, and independent release cycle requirements",
+			"The provider's ability to operate shared processes and cross-customer intelligence at scale",
+			"The alphabetical position of the customer name in the account list",
+			"The number of dashboard portlets requested by the customer's executives"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1, 2],
-		"explanation": "sys_domain can be set from company mapping, business rules, parent record inheritance, modules, form templates, or the creating user's domain when no other rule applies.",
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Architecture selection weighs customer isolation and lifecycle needs against provider efficiencies from shared operations on a domain-separated instance.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/c_DomainAssignment.html"
-		]
+			"https://www.servicenow.com/docs/r/platform-security/bp-domain-sep-recommended.html",
+			"https://www.servicenow.com/docs/r/platform-security/bp-dom-sep-definition.html"
+		],
+		"domain": "MSP Operations Strategy"
 	}
 ]

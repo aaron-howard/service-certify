@@ -13,7 +13,8 @@
 		"explanation": "HRSD leverages core platform services—tasks, ACLs, catalog, flows—within dedicated HR scoped applications.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
-		]
+		],
+		"domain": "HR System Architecture"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -29,7 +30,8 @@
 		"explanation": "Document templates merge HR case and profile fields to produce standardized employee communications.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/document-management-for-hr.html"
-		]
+		],
+		"domain": "HR System Architecture"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -45,7 +47,8 @@
 		"explanation": "Employee Document Management centralizes HR files while enforcing confidentiality through HR security controls.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/employee-document-management.html"
-		]
+		],
+		"domain": "HR System Architecture"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -61,12 +64,13 @@
 		"explanation": "HR core roles such as sn_hr_core.basic grant access to HR case workspaces and related HR tables per the HR security model.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
-		]
+		],
+		"domain": "HR System Architecture"
 	},
 	{
 		"trackCode": "CIS-HR",
 		"order": 19,
-		"prompt": "What is the function of the hr_case_template table in the HR architecture?",
+		"prompt": "Benefits agents handle hundreds of similar leave extension requests each month. How should HR standardize intake and handling for those recurring cases?",
 		"choices": [
 			"Predefine recurring case fields and handling patterns for consistent fulfillment",
 			"Store encrypted payroll bank details",
@@ -77,6 +81,7 @@
 		"explanation": "Case templates standardize intake and processing for common HR scenarios, reducing variability across COEs.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-templates.html"
-		]
+		],
+		"domain": "HR System Architecture"
 	}
 ]

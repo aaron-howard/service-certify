@@ -13,7 +13,8 @@
 		"explanation": "Technical services model infrastructure or middleware layers that application services depend on within the mapped topology.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/application-services.html"
-		]
+		],
+		"domain": "Service Mapping Configuration"
 	},
 	{
 		"trackCode": "CIS-SM",
@@ -29,7 +30,8 @@
 		"explanation": "Successful Service Mapping engagements start with readiness assessment, scoped application service selection, and stakeholder alignment before configuration.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
-		]
+		],
+		"domain": "Service Mapping Configuration"
 	},
 	{
 		"trackCode": "CIS-SM",
@@ -43,11 +45,15 @@
 			"Convert all mapped CIs to manual records with no discovery updates permitted"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Production mapping requires working credentials and validated entry points so discovery can authenticate and start from accurate topology anchors.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/create-a-service-map.html"
-		]
+		],
+		"domain": "Service Mapping Configuration"
 	},
 	{
 		"trackCode": "CIS-SM",
@@ -63,7 +69,8 @@
 		"explanation": "Tag-based mapping uses standardized tag keys and values on cloud or CMDB CIs to associate resources with application services automatically.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/tag-based-service-mapping.html"
-		]
+		],
+		"domain": "Service Mapping Configuration"
 	},
 	{
 		"trackCode": "CIS-SM",
@@ -79,6 +86,7 @@
 		"explanation": "Tag governance establishes standards and accountability so mapping rules reliably associate cloud resources with intended application services.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/cloud-tag-governance.html"
-		]
+		],
+		"domain": "Service Mapping Configuration"
 	}
 ]

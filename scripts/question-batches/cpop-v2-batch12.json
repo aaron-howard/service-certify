@@ -13,7 +13,8 @@
 		"explanation": "The product owner is accountable for value delivery, including when accepted increments reach users; developers and the scrum master do not own release timing decisions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Process"
 	},
 	{
 		"trackCode": "CPOP",
@@ -29,7 +30,8 @@
 		"explanation": "Preview collisions must be inspected and resolved intentionally so the correct version of each record is committed; auto-accepting or discarding work risks losing changes and destabilizing test.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/system-update-sets.html"
-		]
+		],
+		"domain": "Process"
 	},
 	{
 		"trackCode": "CPOP",
@@ -51,16 +53,29 @@
 			"Verify functionality, monitor for defects, and close the release"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "The promotion pipeline sequences build in development, validation in test, controlled commit in production, and verification afterward—each stage exists to catch issues before users are affected.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/system-update-sets.html",
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
-		]
+		],
+		"domain": "Process"
 	},
 	{
 		"trackCode": "CPOP",
@@ -74,11 +89,15 @@
 			"Sprint planning: a session where stakeholders vote to reopen stories accepted in prior sprints"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Reviews showcase the increment for stakeholder feedback and retrospectives improve team process; stand-ups are team-led synchronization, and planning selects new work rather than reopening accepted stories.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Process"
 	},
 	{
 		"trackCode": "CPOP",
@@ -95,6 +114,7 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/system-update-sets.html",
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
-		]
+		],
+		"domain": "Process"
 	}
 ]

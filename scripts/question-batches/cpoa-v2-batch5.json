@@ -13,7 +13,8 @@
 		"explanation": "Strategy balances delivery with adoption; associate platform owners should surface usage gaps and reprioritize enablement rather than ignoring user experience.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOA",
@@ -29,7 +30,8 @@
 		"explanation": "Champion networks extend enablement beyond launch by connecting peers, surfacing friction early, and reinforcing new ways of working.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "People"
 	},
 	{
 		"trackCode": "CPOA",
@@ -45,7 +47,8 @@
 		"explanation": "Targeted training and clear escalation paths help new builders contribute safely without granting unnecessary privileged access on day one.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
-		]
+		],
+		"domain": "People"
 	},
 	{
 		"trackCode": "CPOA",
@@ -59,11 +62,15 @@
 			"Withdraw from the discussion because platform owners never mediate business conflict"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Associate platform owners help stakeholders align through structured discovery and appropriate executive escalation rather than parallel conflicting solutions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "People"
 	},
 	{
 		"trackCode": "CPOA",
@@ -85,14 +92,27 @@
 			"Defines process outcomes and signs off on fit-for-purpose design"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Successful rollouts clarify people responsibilities across sponsorship, local enablement, technical operations, and business ownership.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "People"
 	}
 ]

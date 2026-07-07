@@ -2,81 +2,87 @@
 	{
 		"trackCode": "CIS-SM",
 		"order": 10,
-		"prompt": "A Parse File operation in Pattern Designer is most appropriate when the pattern must do what?",
+		"prompt": "A CIO asks how mapping waves should be sequenced across fifty business services. What rollout design principle should guide wave planning?",
 		"choices": [
-			"Read configuration or log file contents from a target host and extract dependency details",
-			"Generate PDF reports of service map topology for executive dashboard consumption",
-			"Import software entitlement records from a publisher CSV into the SAM application",
-			"Convert event management alert rules into service map entry point definitions"
+			"Group services by business criticality, dependency readiness, and owner availability for validation",
+			"Map alphabetically by service name without considering credentials or architectural documentation",
+			"Complete every subnet globally before onboarding any application service to production maps",
+			"Defer all waves until machine learning accepts every candidate without human review"
 		],
 		"correctIndex": 0,
-		"explanation": "Parse File steps retrieve file content—such as application config files—and parse structured data needed for identification or connection mapping.",
+		"explanation": "Wave planning prioritizes critical services with prepared entry points, access, and stakeholder engagement rather than arbitrary ordering.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/create-a-service-map.html"
+		],
+		"domain": "Service Design Strategy"
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 11,
-		"prompt": "WMI-based scripting steps in Service Mapping patterns are commonly used to collect what information from Windows hosts?",
+		"prompt": "During top-down Service Mapping, no Pattern Identification Section matches the discovered process on a host. What application CI type is created for that component?",
 		"choices": [
-			"Running processes, services, and configuration attributes queried through Windows Management Instrumentation",
-			"OAuth tokens from Azure Active Directory for cloud tag synchronization workflows",
-			"SNMP trap definitions exported from third-party network monitoring appliances",
-			"Change calendar entries linked to maintenance windows in the ITSM application"
+			"A generic application CI representing the unmatched process until a pattern is assigned",
+			"A business service record linked directly to the cmdb_ci_computer record with full dependency rollup",
+			"A discovery error log entry that blocks all further mapping on the subnet and disables MID Server probes",
+			"A manual relationship stub with no CI created in the CMDB"
 		],
 		"correctIndex": 0,
-		"explanation": "WMI steps query Windows hosts for process lists, service details, and other OS-level data used to identify applications and connections.",
+		"explanation": "When identification sections do not match, Service Mapping creates a generic application so the topology can continue while the pattern gap is resolved.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/c-UsingPatternsForHorizontalDiscovery.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/pattern-based-discovery.html"
+		],
+		"domain": "Service Mapping Pattern Design"
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 12,
-		"prompt": "SSH-based pattern steps require which prerequisite before they can execute successfully on a Linux host?",
+		"prompt": "On a service map, a CI node displays a yellow triangle warning icon. What does this indicator most commonly represent?",
 		"choices": [
-			"A valid SSH Discovery credential with permissions to run the configured commands on the target",
-			"An active Event Management connector subscribed to the host syslog stream",
-			"A business service record in the Operational Status of Retired state",
-			"A tag-based mapping rule published to the cloud provider resource group"
+			"The CI was retired from the CMDB and should be removed from the map manually by the service owner",
+			"A credential or authentication failure prevented Service Mapping from accessing the host",
+			"The application service reached end-of-life and mapping was permanently disabled",
+			"A pending change request blocked all discovery probes until approval completes"
 		],
-		"correctIndex": 0,
-		"explanation": "SSH steps depend on Discovery credentials that authenticate to the host and authorize execution of the remote commands defined in the pattern.",
+		"correctIndex": 1,
+		"explanation": "The yellow triangle on a mapped CI typically signals a credential error or access failure encountered while collecting dependency data.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/create-a-service-map.html"
+		],
+		"domain": "Service Mapping Pattern Design"
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 13,
-		"prompt": "Regular expression operations in Service Mapping patterns are typically used to do what?",
+		"prompt": "A mapped host shows repeated credential failures during the latest service map run. What is the first corrective action?",
 		"choices": [
-			"Extract ports, paths, or connection strings from command output or configuration text",
-			"Calculate CMDB health scores based on duplicate CI counts per discovery schedule and reconciliation policy",
-			"Assign incident assignment groups based on mapped application service criticality",
-			"Generate machine learning training labels for tag-based service classification"
+			"Delete the service map and recreate it without any entry points configured",
+			"Disable all identification rules globally so mapping skips authentication entirely on every MID Server",
+			"Verify the Discovery credential assigned to the CI class is valid and permitted on the target host",
+			"Convert the entry point CI class to cmdb_ci_business_app to bypass credential checks"
 		],
-		"correctIndex": 0,
-		"explanation": "Regex parsing isolates structured tokens—such as IP addresses, ports, or URLs—from unstructured command or file output for connection mapping.",
+		"correctIndex": 2,
+		"explanation": "Credential errors are resolved by confirming the correct Discovery credential is assigned, active, and authorized on the target system.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/create-a-service-map.html"
+		],
+		"domain": "Service Mapping Pattern Design"
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 14,
-		"prompt": "SNMP-based steps in a Service Mapping pattern depend on what target-side configuration?",
+		"prompt": "In Pattern Designer, why would an implementer enable debug mode while building a new Service Mapping pattern?",
 		"choices": [
-			"SNMP agent enabled on the device with a community string or credential matching Discovery settings",
-			"SSH key exchange configured on the MID Server for privileged command execution",
-			"WMI firewall rules allowing remote registry access from every subnet in scope",
-			"Azure resource tags formatted with the service-mapping namespace prefix"
+			"To permanently disable pattern versioning so production and sandbox stay synchronized",
+			"To bypass MID Server execution and run all steps only on the instance server",
+			"To inspect step-by-step execution output and variable values during pattern testing",
+			"To auto-publish the pattern to all MID Servers without a manual content update"
 		],
-		"correctIndex": 0,
-		"explanation": "SNMP steps require an accessible SNMP agent and credentials or community strings configured consistently with Discovery credential records.",
+		"correctIndex": 2,
+		"explanation": "Debug mode exposes detailed execution traces so implementers can validate step logic, variable assignments, and parsing results before promotion.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
+		],
+		"domain": "Service Mapping Pattern Design"
 	}
 ]

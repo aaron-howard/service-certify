@@ -13,7 +13,8 @@
 		"explanation": "The scrum master facilitates process and removes impediments, including protecting the team from distractions that threaten sprint commitments.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/application-development.html"
-		]
+		],
+		"domain": "Process"
 	},
 	{
 		"trackCode": "CPOA",
@@ -29,7 +30,8 @@
 		"explanation": "Backlog prioritization is the product owner's responsibility; the team owns how work is done, not what comes first.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/application-development.html"
-		]
+		],
+		"domain": "Process"
 	},
 	{
 		"trackCode": "CPOA",
@@ -45,7 +47,8 @@
 		"explanation": "Production-first changes skip controlled build, test, and approval steps, increasing defect risk and weakening auditability.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
-		]
+		],
+		"domain": "Process"
 	},
 	{
 		"trackCode": "CPOA",
@@ -59,11 +62,15 @@
 			"Skipping test whenever the developer is confident in the change"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Safe SDLC promotion requires conflict-free change packages and documented test evidence; bypassing test or editing production defeats governance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/system-update-sets.html"
-		]
+		],
+		"domain": "Process"
 	},
 	{
 		"trackCode": "CPOA",
@@ -85,14 +92,27 @@
 			"Provide requirements input and feedback during sprint reviews"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Agile role clarity keeps delivery healthy: the product owner owns value, the scrum master owns facilitation, the team owns execution, and stakeholders contribute feedback.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/application-development.html"
-		]
+		],
+		"domain": "Process"
 	}
 ]

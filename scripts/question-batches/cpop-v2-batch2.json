@@ -13,7 +13,8 @@
 		"explanation": "The Support Portal centralizes official documentation, release notes, defect information, and customer support interactions for licensed products.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOP",
@@ -35,15 +36,28 @@
 			"Escalate blockers with vendor engineering when internal remediation stalls"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Platform owners leverage portal resources proactively for release awareness, defect risk, implementation guidance, and vendor escalation.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOP",
@@ -59,7 +73,8 @@
 		"explanation": "CoEI retrospectives should address adoption gaps with enablement and feedback, not rely solely on automation metrics or delayed training.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOP",
@@ -75,7 +90,8 @@
 		"explanation": "A missing innovation pipeline requires structured intake and prioritization; abandoning standards or shifting accountability does not restore CoEI balance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOP",
@@ -89,10 +105,14 @@
 			"Skip success criteria because the request appears straightforward"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Solution design starts with outcomes and reuse assessment; premature custom builds or absent success criteria increase delivery risk.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	}
 ]

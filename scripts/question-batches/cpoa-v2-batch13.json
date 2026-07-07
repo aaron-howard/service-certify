@@ -13,7 +13,8 @@
 		"explanation": "The Support Portal centralizes official documentation, defect information, release content, and customer support interactions for licensed products.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Technology"
 	},
 	{
 		"trackCode": "CPOA",
@@ -29,7 +30,8 @@
 		"explanation": "Organizations with unified governance and limited isolation needs typically benefit from one production instance with disciplined promotion paths.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html"
-		]
+		],
+		"domain": "Technology"
 	},
 	{
 		"trackCode": "CPOA",
@@ -51,15 +53,28 @@
 			"Escalate blockers with vendor engineering when internal remediation stalls"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Support Portal resources support a sequenced approach: release awareness, defect review, implementation guidance, and vendor escalation.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Technology"
 	},
 	{
 		"trackCode": "CPOA",
@@ -75,7 +90,8 @@
 		"explanation": "Testing inside the upgrade cycle occurs in sub-production so customization impact is validated on the new baseline before production workloads are affected.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/upgrade-center.html"
-		]
+		],
+		"domain": "Technology"
 	},
 	{
 		"trackCode": "CPOA",
@@ -89,10 +105,14 @@
 			"Permanent deferral of all future patches until the next family upgrade"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Patch promotion requires validated test evidence and governed change approval with rollback planning before touching production.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html"
-		]
+		],
+		"domain": "Technology"
 	}
 ]

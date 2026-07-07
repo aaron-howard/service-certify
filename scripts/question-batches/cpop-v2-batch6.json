@@ -13,7 +13,8 @@
 		"explanation": "Cross-domain processes require scenario tests that exercise data dependencies and roles; isolated or cosmetic checks miss integration failures.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/application-development.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOP",
@@ -27,11 +28,15 @@
 			"Remove dependency mapping to simplify project documentation"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Process reliability depends on documented data dependencies and quality gates; ignoring dependencies or assuming self-healing leads to failures.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOP",
@@ -47,7 +52,8 @@
 		"explanation": "Regulatory compliance requires mapped controls, auditable evidence, and governed data handling—not weakened logging or uncontrolled exports.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOP",
@@ -63,7 +69,8 @@
 		"explanation": "Secure integrations use authenticated, least-privilege connections and encryption; embedded credentials or open endpoints violate security standards.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOP",
@@ -85,14 +92,27 @@
 			"Require code review and scanning before production promotion"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Platform owners orchestrate compliance evidence, RBAC, data protection, and secure development gates as complementary security practices.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
-		]
+		],
+		"domain": "Strategy"
 	}
 ]

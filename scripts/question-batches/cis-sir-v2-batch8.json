@@ -2,81 +2,88 @@
 	{
 		"trackCode": "CIS-SIR",
 		"order": 35,
-		"prompt": "A team needs a bespoke REST integration not available as a store template. Which starting point is appropriate?",
+		"prompt": "When child security incidents accumulate MITRE ATT&CK techniques during investigation, what does rollup to the parent provide?",
 		"choices": [
-			"Integration Hub spoke or custom inbound/outbound actions mapped to security incidents",
-			"Discovery pattern designer steps that SSH into arbitrary external API endpoints",
-			"Catalog record producers that create incidents from employee hardware requests",
-			"Project demand workflows that score strategic themes without security context"
+			"A consolidated view of tactics and techniques for parent-level reporting and analysis",
+			"Automatic deletion of child records after the parent incident is assigned",
+			"Immediate closure of all related vulnerabilities without remediation tasks",
+			"Conversion of every child incident into a standard IT service request"
 		],
 		"correctIndex": 0,
-		"explanation": "Custom integrations typically use Integration Hub spokes or scripted inbound and outbound actions tied to SIR tables.",
+		"explanation": "Rolling up MITRE ATT&CK details from child incidents gives analysts a unified adversary behavior picture at the parent level.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integrate-security-tools.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/map-security-incidents-to-mitre-attack.html"
+		],
+		"domain": "Security Incident Creation and Threat Intelligence"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 36,
-		"prompt": "During integration testing, sample alerts create incidents with blank priority and category. What should be adjusted?",
+		"prompt": "Why do security teams associate MITRE ATT&CK tactics and techniques with a security incident record?",
 		"choices": [
-			"Inbound action field maps and default values on the integration configuration",
-			"Discovery credentials assigned to unrelated Linux server CI classes",
-			"Catalog variable sets on password reset self-service catalog items",
-			"HR case assignment rules for employee relocation approval chains"
+			"To add structured adversary behavior context that supports prioritization and investigation",
+			"To automatically patch every endpoint without analyst review or validation",
+			"To replace vulnerability scanning tools across the entire security stack",
+			"To normalize software publisher names for annual license audit reporting"
 		],
 		"correctIndex": 0,
-		"explanation": "Field mapping and default values on inbound actions ensure required incident attributes populate during automated creation.",
+		"explanation": "MITRE ATT&CK alignment enriches incidents with standardized threat behavior context for defensive planning and consistent analysis.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integration-configurations.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/mitre-attack-defend-graph-sir.html"
+		],
+		"domain": "Security Incident Creation and Threat Intelligence"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 37,
-		"prompt": "Which test validates that a CrowdStrike detection integration updates existing incidents instead of duplicating them?",
+		"prompt": "Which field type on a security incident best stores file hashes and domains identified during initial analysis?",
 		"choices": [
-			"Send repeated detections for the same endpoint and confirm correlation updates one record",
-			"Run horizontal discovery against the CrowdStrike cloud API subnet range",
-			"Submit catalog requests for laptops and verify fulfillment task generation",
-			"Create portfolio demands and confirm financial plan task rollup behavior"
+			"Indicators of compromise linked through threat intelligence observables",
+			"Discovery credentials used for MID Server authentication to Linux hosts",
+			"Catalog variables captured during employee laptop provisioning requests",
+			"Financial plan task codes tied to portfolio investment approvals"
 		],
 		"correctIndex": 0,
-		"explanation": "Repeated detection tests confirm correlation and update logic keeps a single incident current rather than creating duplicates.",
+		"explanation": "IOCs such as hashes and domains are captured as observables and linked to incidents for enrichment and downstream correlation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-correlation.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/threat-intelligence-in-sir.html"
+		],
+		"domain": "Security Incident Creation and Threat Intelligence"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 38,
-		"prompt": "Before promoting an integration to production, which governance step reduces run-time response risk?",
+		"prompt": "Vulnerability scan results tie to an active command-and-control indicator on the same incident. What analysis step connects threat intelligence with exposure?",
 		"choices": [
-			"Validate mappings in a subproduction instance with representative alert samples",
-			"Disable all ACLs on security tables so testers can edit every field",
-			"Delete existing production incidents to simplify correlation testing",
-			"Skip change control because store integrations are always read-only"
+			"Correlate affected CIs and CVE findings with matched observables to prioritize remediation",
+			"Close the incident immediately because vulnerability scans run on a fixed schedule",
+			"Delete observables to reduce table storage before any analyst review occurs",
+			"Convert vulnerability groups into catalog items for employee self-service checkout"
 		],
 		"correctIndex": 0,
-		"explanation": "Subproduction validation with realistic payloads catches mapping and correlation defects before production cutover.",
+		"explanation": "Threat and vulnerability correlation links active indicators with exposed assets so teams prioritize patching and containment on high-risk systems.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integration-configurations.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/threat-intelligence-in-sir.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/respond-to-a-security-incident.html"
+		],
+		"domain": "Security Incident Creation and Threat Intelligence"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 39,
-		"prompt": "An analyst opens the Security Incident Response Workspace to work a critical phishing case. What does the workspace provide?",
+		"prompt": "During triage, observables match both a published CVE and a known attack campaign. How should analysts use dynamic risk scoring?",
 		"choices": [
-			"Contextual incident details, related tasks, evidence, and response tools in one view",
-			"A catalog checkout flow for ordering replacement hardware for affected users",
-			"A discovery dashboard listing MID Server heartbeat status by datacenter",
-			"A project financial plan editor for reallocating portfolio investment funds"
+			"Apply risk score calculator rules that weight intelligence matches, asset criticality, and exposure",
+			"Ignore calculator output and assign the lowest priority to reduce queue volume",
+			"Disable all calculators permanently and rely on alphabetical incident sorting",
+			"Manually set identical risk scores on every open incident for perceived fairness"
 		],
 		"correctIndex": 0,
-		"explanation": "The SIR Workspace consolidates incident context, tasks, and response actions so analysts can investigate without leaving the screen.",
+		"explanation": "Dynamic risk scoring combines threat intelligence, vulnerability context, and asset impact so analysts prioritize the highest-risk incidents first.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-workspace.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/define-risk-score-calculator-rules-sir.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/threat-intelligence-in-sir.html"
+		],
+		"domain": "Security Incident Creation and Threat Intelligence"
 	}
 ]

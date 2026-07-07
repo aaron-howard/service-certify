@@ -2,7 +2,7 @@
 	{
 		"trackCode": "CIS-ITSM",
 		"order": 45,
-		"prompt": "Which role is required to create and manage blackout and maintenance schedules in Simplified Change Management?",
+		"prompt": "Change managers in multiple regions must define blackout and maintenance windows without granting full change admin rights. Which access model should the program design?",
 		"choices": [
 			"sn_itsm_chg_admin.change_schedules_config",
 			"catalog_admin without Change Management schedule permissions",
@@ -13,7 +13,8 @@
 		"explanation": "The change_schedules_config role on sn_itsm_chg_admin grants access to configure blackout and maintenance schedules from the Change schedules console.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/configure-schedules-for-simplified-change-management.html"
-		]
+		],
+		"domain": "Change Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -29,12 +30,13 @@
 		"explanation": "Maintenance windows designate periods when changes are expected and permitted; blackout schedules define critical periods when changes are blocked.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/configure-schedules-for-simplified-change-management.html"
-		]
+		],
+		"domain": "Change Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
 		"order": 47,
-		"prompt": "When creating a change schedule in Simplified Change Management, which scope option applies the schedule to a specific class of configuration items such as all Windows servers?",
+		"prompt": "Database and application teams need different change enforcement rules for their CI classes. How should schedule scope be designed for a Windows server maintenance window?",
 		"choices": [
 			"All CIs across the organization without class filtering",
 			"CI class",
@@ -45,7 +47,8 @@
 		"explanation": "Schedule scope can target all CIs, a specific CI class, or change request attributes; CI class limits enforcement to CIs in the selected class.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/configure-schedules-for-simplified-change-management.html"
-		]
+		],
+		"domain": "Change Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -61,7 +64,8 @@
 		"explanation": "Active blackout and maintenance schedules feed conflict detection and downstream change enforcement once marked configured.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/configure-schedules-for-simplified-change-management.html"
-		]
+		],
+		"domain": "Change Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -77,6 +81,7 @@
 		"explanation": "The default Change request state change notification emails the original requester on key state transitions; it does not notify the user who performed the state update.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/change-management/configure-state-change-notifications.html"
-		]
+		],
+		"domain": "Change Management"
 	}
 ]

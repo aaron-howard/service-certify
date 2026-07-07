@@ -10,12 +10,16 @@
 			"Modify Kernel"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"questionType": "multi",
 		"explanation": "Personal dashboard copies support Add Content and Change Layout actions; Delete Content and kernel options are not standard dashboard personalization controls.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-reporting-and-analytics.html"
-		]
+		],
+		"domain": "Core HR Applications and Employee Center"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -31,7 +35,8 @@
 		"explanation": "Employee Center delivers a consolidated self-service experience including HR services, knowledge, and journeys.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/employee-center/employee-center-overview.html"
-		]
+		],
+		"domain": "Core HR Applications and Employee Center"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -47,7 +52,8 @@
 		"explanation": "HR approvals add authorized checkpoints for policy-sensitive case and service actions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-approvals.html"
-		]
+		],
+		"domain": "Core HR Applications and Employee Center"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -63,7 +69,8 @@
 		"explanation": "Catalog variable mapping transfers employee answers onto HR case columns during submission.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-services-overview.html"
-		]
+		],
+		"domain": "Core HR Applications and Employee Center"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -79,6 +86,7 @@
 		"explanation": "HR criteria evaluates employee and profile attributes to determine service visibility and eligibility.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-criteria.html"
-		]
+		],
+		"domain": "Core HR Applications and Employee Center"
 	}
 ]

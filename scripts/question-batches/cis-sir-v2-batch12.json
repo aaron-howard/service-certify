@@ -2,86 +2,91 @@
 	{
 		"trackCode": "CIS-SIR",
 		"order": 55,
-		"prompt": "A security incident record matches several calculator conditions after enrichment completes. What do Security Incident Calculators do in that situation?",
+		"prompt": "Incidents tagged as ransomware should route immediately to the Tier 2 SOC team. Which configuration enforces this?",
 		"choices": [
-			"Set specific field values on the incident according to matched calculator rules",
-			"Delete related observables to reduce table storage consumption",
-			"Disable every playbook tied to the incident category permanently",
-			"Convert the incident record automatically into a standard change request"
+			"Security incident assignment rules keyed on security tags and priority",
+			"Discovery schedules that probe ransomware-affected subnets every hour",
+			"Catalog approval workflows for employee mobile device enrollment requests",
+			"Project demand scoring thresholds for unrelated strategic portfolio themes"
 		],
 		"correctIndex": 0,
-		"explanation": "Security incident calculators update record values such as severity or business impact when their pre-defined conditions match.",
+		"explanation": "Assignment rules use attributes such as security tags and priority to route incidents to the appropriate response groups.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/setup-assistant-reference.html",
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/calculate-si-severity.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/assign-security-incident-roles.html"
+		],
+		"domain": "Security Incident Response Management"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 56,
-		"prompt": "Several calculators in a Business Impact calculator group could apply to the same incident. How does the platform choose which calculator runs?",
+		"prompt": "A security architect needs consistent classification labels across incidents and playbooks. Which SIR artifact should be standardized?",
 		"choices": [
-			"The first matching calculator in the ordered group runs and remaining calculators are skipped",
-			"All calculators execute simultaneously and resulting values are averaged together",
-			"Calculators run only after manual analyst approval on each target field",
-			"Calculator groups are ignored unless the legacy risk score property is disabled"
+			"Security tags with governed values used by rules, dashboards, and automation",
+			"Discovery identification sections for mapping printer hardware models",
+			"Catalog variable names on laptop provisioning request line items",
+			"Project milestone codes on unrelated portfolio investment work plans"
 		],
 		"correctIndex": 0,
-		"explanation": "Calculator groups evaluate in order; the first calculator whose trigger logic matches is applied and subsequent calculators in the group are not run.",
+		"explanation": "Governed security tags provide consistent classification that drives assignment, reporting, and automated response logic.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/setup-assistant-reference.html",
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/calculate-si-severity.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-tags.html"
+		],
+		"domain": "Security Incident Response Management"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 57,
-		"prompt": "An administrator must configure weighted criteria for dynamic security incident risk scoring. Which workspace navigation path opens Risk Score Calculator rules?",
+		"prompt": "What is the default security incident process definition provided with Security Incident Response?",
 		"choices": [
-			"Security Incident Response Workspace Administration Rules Engine Risk Score Calculator Rule",
-			"Discovery schedule editor under MID Server configuration settings",
-			"Service Portal widget theme designer for employee self-service",
-			"CMDB class manager extension attributes panel for custom CI classes"
+			"ITIL incident management workflow copied from the ITSM foundation application",
+			"NIST Stateful process definition aligned to detect-triage-respond phases",
+			"Standard change workflow for normal and emergency production changes",
+			"Problem management workflow focused on permanent root cause elimination"
 		],
-		"correctIndex": 0,
-		"explanation": "Risk Score Calculator rules are managed from the SIR Workspace Administration Rules Engine with criteria builder or script options.",
+		"correctIndex": 1,
+		"explanation": "SIR ships with the NIST Stateful process definition as the default lifecycle model for security incidents.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/define-risk-score-calculator-rules-sir.html",
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/risk-score-calculator-related-tables.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-process-definitions.html"
+		],
+		"domain": "Security Incident Response Management"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 58,
-		"prompt": "After a high-severity breach is closed, leadership requires documented lessons learned and corrective actions. Which SIR practice fulfills that requirement?",
+		"questionType": "multi",
+		"prompt": "Which two security incident task types support structured investigation and remediation work in SIR? (Choose two.)",
 		"choices": [
-			"Post-incident review capturing outcomes and tracked improvement tasks",
-			"Immediate deletion of child response tasks to reduce table growth",
-			"Skipping timeline validation to accelerate quarterly metric reporting",
-			"Archiving the incident record before root cause analysis begins"
+			"Investigation tasks for evidence collection and analysis activities",
+			"Remediation tasks for containment and eradication actions on affected assets",
+			"Catalog fulfillment tasks for employee laptop shipping and imaging",
+			"Discovery error tasks for MID Server subnet probe failure logging"
 		],
 		"correctIndex": 0,
-		"explanation": "Post-incident review formalizes lessons learned and links corrective work so response programs improve after major events.",
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "SIR uses investigation tasks for analytical work and remediation tasks for active response actions on affected systems.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-post-incident-review.html",
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/t_PerformPostIncidentReview.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-task-types.html"
+		],
+		"domain": "Security Incident Response Management"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 59,
-		"prompt": "Facilitators prepare materials for a formal post-incident review session. Which artifact is most essential to the discussion?",
+		"prompt": "A lead analyst reassigns a critical incident and adds containment tasks from the workspace. Which management capability is in use?",
 		"choices": [
-			"A validated timeline covering detections, actions, decisions, and communications",
-			"A list of responder display names without timestamps or task references",
-			"An unrelated open vulnerability export from the prior month",
-			"A single post-closure screenshot of the incident form header only"
+			"SIR Workspace incident management with task creation and assignment controls",
+			"Service Catalog manager publishing new employee onboarding request items",
+			"Discovery status board monitoring horizontal scan completion percentages",
+			"Project workspace demand conversion for portfolio investment approvals"
 		],
 		"correctIndex": 0,
-		"explanation": "A validated timeline supports accountable root-cause analysis and identifies process gaps during post-incident review.",
+		"explanation": "Analysts manage incidents directly in the SIR Workspace by updating ownership and creating response tasks during active investigations.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-post-incident-review.html",
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/exploring-security-incident-response-workspace.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/respond-to-a-security-incident.html"
+		],
+		"domain": "Security Incident Response Management"
 	}
 ]

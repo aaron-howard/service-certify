@@ -13,12 +13,13 @@
 		"explanation": "Normalization runs only for domains where Domain Asset Process Settings has Run asset process enabled; default is TOP/Default domain only.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/hardware-normalization.html"
-		]
+		],
+		"domain": "Practical Management of IT Assets"
 	},
 	{
 		"trackCode": "CIS-HAM",
 		"order": 41,
-		"prompt": "What is a common risk when model categories are misconfigured for hardware CIs?",
+		"prompt": "Discovery creates server CIs that generate laptop-class assets with wrong financial workflows. What risk does that model category misconfiguration create?",
 		"choices": [
 			"Incorrect asset class creation leading to wrong workflows and financial treatment",
 			"Permanent deletion of all CMDB relationship rules for discovered infrastructure classes",
@@ -29,7 +30,8 @@
 		"explanation": "Model category drives asset class selection and process behavior, so misclassification can cause operational and financial errors downstream.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/product-catalog/c_ModelCategories.html"
-		]
+		],
+		"domain": "Practical Management of IT Assets"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -45,7 +47,8 @@
 		"explanation": "Catalog-linked fulfillment coordinates request, inventory, assignment, and lifecycle tracking in one controlled HAM process.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/service-catalog-var-form-fields.html"
-		]
+		],
+		"domain": "Practical Management of IT Assets"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -62,7 +65,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/service-catalog-var-form-fields.html",
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/exploring-ham.html"
-		]
+		],
+		"domain": "Practical Management of IT Assets"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -79,6 +83,7 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/manage-hardware-assets.html",
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/exploring-ham.html"
-		]
+		],
+		"domain": "Practical Management of IT Assets"
 	}
 ]

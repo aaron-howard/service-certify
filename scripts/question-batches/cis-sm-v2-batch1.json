@@ -2,81 +2,91 @@
 	{
 		"trackCode": "CIS-SM",
 		"order": 0,
-		"prompt": "During top-down Service Mapping, no Pattern Identification Section matches the discovered process on a host. What application CI type is created for that component?",
+		"prompt": "An enterprise architect designs a three-tier payment application for Service Mapping. What service topology approach should define web, application, and database layers?",
 		"choices": [
-			"A generic application CI representing the unmatched process until a pattern is assigned",
-			"A business service record linked directly to the cmdb_ci_computer record with full dependency rollup",
-			"A discovery error log entry that blocks all further mapping on the subnet and disables MID Server probes",
-			"A manual relationship stub with no CI created in the CMDB"
+			"Model each tier as linked application services with explicit entry points and dependency direction",
+			"Map only the web tier and ignore middleware and database dependencies until phase two",
+			"Create one business service record with no application services or entry points configured",
+			"Represent every process on every host as a separate business service without relationships"
 		],
 		"correctIndex": 0,
-		"explanation": "When identification sections do not match, Service Mapping creates a generic application so the topology can continue while the pattern gap is resolved.",
+		"explanation": "Multi-tier designs should express each layer as application services with clear entry points so dependency tracing follows the architecture.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/pattern-based-discovery.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/business-services-and-application-services.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/create-a-service-map.html"
+		],
+		"domain": "Service Design Strategy"
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 1,
-		"prompt": "What is the role of Pattern Identification Sections in a Service Mapping pattern?",
+		"prompt": "A municipal agency must map citizen-facing portals that share a common API gateway. What dependency mapping strategy should the implementer use?",
 		"choices": [
-			"They define how downstream connection probes authenticate to external SaaS APIs only across all cloud regions",
-			"They evaluate collected process and configuration data to decide whether the pattern applies to a CI",
-			"They schedule recurring horizontal discovery runs against every subnet in the range",
-			"They replace entry point records by auto-generating URLs from DNS zone transfers"
+			"Map the shared gateway once and relate each consumer application service to the shared dependency",
+			"Duplicate the gateway CI for every portal so each map appears isolated in CMDB",
+			"Exclude shared infrastructure because Service Mapping cannot represent common components",
+			"Disable reconciliation on gateway CIs so each scan creates a new record"
 		],
-		"correctIndex": 1,
-		"explanation": "Identification sections contain conditional logic that determines if a discovered component matches the pattern before connection and extension steps execute.",
+		"correctIndex": 0,
+		"explanation": "Shared components should be modeled once with accurate relationships so multiple application maps reference the same dependency topology.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-patterns-overview.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/business-services-and-application-services.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
+		],
+		"domain": "Service Design Strategy"
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 2,
-		"prompt": "On a service map, a CI node displays a yellow triangle warning icon. What does this indicator most commonly represent?",
+		"prompt": "After the first mapping wave, service owners report outdated maps whenever deployments change. What governance model should keep topology current?",
 		"choices": [
-			"The CI was retired from the CMDB and should be removed from the map manually by the service owner",
-			"A credential or authentication failure prevented Service Mapping from accessing the host",
-			"The application service reached end-of-life and mapping was permanently disabled",
-			"A pending change request blocked all discovery probes until approval completes"
+			"Scheduled map refresh, owner review cycles, and change-controlled updates to entry points and patterns",
+			"Freeze all maps after go-live and prohibit any discovery or schedule changes",
+			"Delete service maps after each release and rebuild them manually in spreadsheets",
+			"Accept every ML candidate automatically without owner validation to maximize coverage"
 		],
-		"correctIndex": 1,
-		"explanation": "The yellow triangle on a mapped CI typically signals a credential error or access failure encountered while collecting dependency data.",
+		"correctIndex": 0,
+		"explanation": "Service map governance combines refresh schedules, ownership accountability, and controlled changes so topology stays aligned with production.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/create-a-service-map.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/validate-service-map-results.html"
+		],
+		"domain": "Service Design Strategy"
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 3,
-		"prompt": "A mapped host shows repeated credential failures during the latest service map run. What is the first corrective action?",
+		"prompt": "During an architecture workshop, teams debate where to start tracing a complex ERP landscape. What design decision should drive entry point selection?",
 		"choices": [
-			"Delete the service map and recreate it without any entry points configured",
-			"Disable all identification rules globally so mapping skips authentication entirely on every MID Server",
-			"Verify the Discovery credential assigned to the CI class is valid and permitted on the target host",
-			"Convert the entry point CI class to cmdb_ci_business_app to bypass credential checks"
+			"Known user-facing or integration entry CIs with validated credentials and documented ownership",
+			"Every printer CI discovered on office subnets regardless of application relevance",
+			"Random hosts selected from the largest discovery schedule without architectural input",
+			"Only retired CIs so mapping avoids touching production systems"
 		],
-		"correctIndex": 2,
-		"explanation": "Credential errors are resolved by confirming the correct Discovery credential is assigned, active, and authorized on the target system.",
+		"correctIndex": 0,
+		"explanation": "Entry point selection should follow architecture and ownership input, starting from validated CIs that represent real service boundaries.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/create-a-service-map.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/create-a-service-map.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
+		],
+		"domain": "Service Design Strategy"
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 4,
-		"prompt": "In Pattern Designer, why would an implementer enable debug mode while building a new Service Mapping pattern?",
+		"prompt": "A program manager scopes phase one of Service Mapping for a hybrid cloud estate. How should application boundaries be defined?",
 		"choices": [
-			"To permanently disable pattern versioning so production and sandbox stay synchronized",
-			"To bypass MID Server execution and run all steps only on the instance server",
-			"To inspect step-by-step execution output and variable values during pattern testing",
-			"To auto-publish the pattern to all MID Servers without a manual content update"
+			"Prioritize in-scope business services with owners, supported credentials, and agreed dependency depth",
+			"Include every subnet discovered globally before validating a single service map",
+			"Exclude cloud resources because maps only support on-premise cmdb_ci_computer records",
+			"Defer all boundary decisions until every ML candidate is accepted automatically"
 		],
-		"correctIndex": 2,
-		"explanation": "Debug mode exposes detailed execution traces so implementers can validate step logic, variable assignments, and parsing results before promotion.",
+		"correctIndex": 0,
+		"explanation": "Phased boundary definition focuses on services with ownership and access readiness rather than attempting enterprise-wide coverage immediately.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/business-services-and-application-services.html"
+		],
+		"domain": "Service Design Strategy"
 	}
 ]

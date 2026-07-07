@@ -2,59 +2,24 @@
 	{
 		"trackCode": "CIS-SIR",
 		"order": 85,
-		"questionType": "multi",
-		"prompt": "Which two benefits does SecOps process automation deliver when flows execute on security incidents? (Choose two.)",
+		"prompt": "Malware alerts from a SIEM should spawn investigation tasks without manual analyst entry. Which playbook type supports that automation model?",
 		"choices": [
-			"Reduced manual handoffs through automated task and enrichment steps",
-			"Consistent execution of approved response procedures across analyst shifts",
-			"Permanent removal of analyst review from every incident category",
-			"Automatic closure of all incidents regardless of containment evidence"
+			"Automated malware playbook tied to ingestion and category rules",
+			"Manual phishing playbook requiring analyst initiation for every email",
+			"Failed login manual playbook for password spray events only",
+			"Discovery schedule playbook refreshing CMDB relationships nightly"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
-		"explanation": "Process automation speeds handoffs and standardizes response, but analysts still govern categories that require judgment and validated closure.",
+		"explanation": "Automated malware playbooks create response tasks when qualifying alerts or incidents match configured criteria.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/cj-sir-about-flows.html",
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/sec-inc-resp-orchestration-workflows.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/using-automated-malware-playbook.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/create-process-automated-malware.html"
+		],
+		"domain": "Automation and Standard Processes"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 86,
-		"prompt": "An analyst confirms a phishing incident and must start the approved response workflow from the record. Which action should they take in SIR Workspace?",
-		"choices": [
-			"Run the phishing playbook from the Playbooks area on the incident record",
-			"Rebuild CMDB relationships manually before any response task is created",
-			"Disable discovery schedules globally to prevent CI updates during triage",
-			"Convert the incident to a hardware catalog request for endpoint replacement"
-		],
-		"correctIndex": 0,
-		"explanation": "Analysts launch playbooks directly from the incident record in SIR Workspace to execute structured phishing response tasks.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/run-phishing-playbook.html",
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/sir-workspace-playbooks.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SIR",
-		"order": 87,
-		"prompt": "End users click Report Phish on suspicious email messages forwarded to the security team mailbox. What happens next in the automated pipeline?",
-		"choices": [
-			"Parsing rules validate the message and can create or update a security incident",
-			"Discovery probes scan the sender subnet before any record is created",
-			"CMDB reconciliation merges duplicate email server CI records first",
-			"Service catalog checkout assigns a laptop replacement to the reporter"
-		],
-		"correctIndex": 0,
-		"explanation": "Report-phish email processing applies organizational parsing rules that validate submissions and initiate incident or playbook workflows.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/report-phish-email.html",
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/getting-started-phishing-playbook.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SIR",
-		"order": 88,
 		"prompt": "Leadership wants visibility into automation bottlenecks across phishing and malware response paths. Which analytics capability supports that review?",
 		"choices": [
 			"SIR process mining dashboards showing workflow timing and variant analysis",
@@ -67,7 +32,49 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/security-incident-response/sir-process-mining.html",
 			"https://www.servicenow.com/docs/r/security-management/security-incident-response/reports-and-metrics.html"
-		]
+		],
+		"domain": "Automation and Standard Processes"
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 87,
+		"prompt": "An analyst confirms a phishing incident and must start the approved response workflow from the record. Which action should they take in SIR Workspace?",
+		"choices": [
+			"Run the phishing playbook from the Playbooks area on the incident record",
+			"Rebuild CMDB relationships manually before any response task is created",
+			"Disable discovery schedules globally to prevent CI updates during triage",
+			"Convert the incident to a hardware catalog request for endpoint replacement"
+		],
+		"correctIndex": 0,
+		"explanation": "Analysts launch playbooks directly from the incident record in SIR Workspace to execute structured phishing response tasks.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/run-phishing-playbook.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/sir-workspace-playbooks.html"
+		],
+		"domain": "Automation and Standard Processes"
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 88,
+		"questionType": "multi",
+		"prompt": "Which two benefits does SecOps process automation deliver when flows execute on security incidents? (Choose two.)",
+		"choices": [
+			"Reduced manual handoffs through automated task and enrichment steps",
+			"Consistent execution of approved response procedures across analyst shifts",
+			"Permanent removal of analyst review from every incident category",
+			"Automatic closure of all incidents regardless of containment evidence"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Process automation speeds handoffs and standardizes response, but analysts still govern categories that require judgment and validated closure.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/cj-sir-about-flows.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/sec-inc-resp-orchestration-workflows.html"
+		],
+		"domain": "Automation and Standard Processes"
 	},
 	{
 		"trackCode": "CIS-SIR",
@@ -84,6 +91,7 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/security-incident-response/flow-designer-and-phishing-response.html",
 			"https://www.servicenow.com/docs/r/security-management/security-incident-response/getting-started-with-processes.html"
-		]
+		],
+		"domain": "Automation and Standard Processes"
 	}
 ]

@@ -2,7 +2,7 @@
 	{
 		"trackCode": "CPOE",
 		"order": 190,
-		"prompt": "Given a scenario where a prior access review identified orphaned privileged roles, the audit committee expects measurable progress before year-end. What should the platform owner deliver?",
+		"prompt": "When dormant admins surface, a prior access review identified orphaned privileged roles, the audit committee expects measurable progress before year-end. What should the platform owner deliver?",
 		"choices": [
 			"Documented revocation of excess access, root-cause analysis, and preventive controls with attestation metrics for leadership",
 			"A verbal assurance that roles will be reviewed eventually without remediation evidence",
@@ -13,7 +13,8 @@
 		"explanation": "Audit committees expect demonstrated remediation, causal analysis, and preventive controls—not deferred promises or blanket suspensions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
-		]
+		],
+		"domain": "Compliance and Security"
 	},
 	{
 		"trackCode": "CPOE",
@@ -29,7 +30,8 @@
 		"explanation": "Regulatory alignment for sensitive data requires classification-driven protection, access restrictions, and validated evidence—not generic or incomplete controls.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
-		]
+		],
+		"domain": "Compliance and Security"
 	},
 	{
 		"trackCode": "CPOE",
@@ -43,11 +45,15 @@
 			"Granting compliance analysts permanent admin access for convenience"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Platform owners add compliance value through visible control health metrics and active risk committee engagement—not audit avoidance or excessive privileged access.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
-		]
+		],
+		"domain": "Compliance and Security"
 	},
 	{
 		"trackCode": "CPOE",
@@ -69,20 +75,33 @@
 			"Defines a path back to compliant state with measurable milestones"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Exception governance elements each serve regulatory alignment: limiting duration, mitigating risk, documenting accountability, and planning return to compliance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
-		]
+		],
+		"domain": "Compliance and Security"
 	},
 	{
 		"trackCode": "CPOE",
 		"order": 194,
-		"prompt": "Given a scenario where enterprise architects are underutilized in platform decisions, the CIO wants stronger innovation governance. How should the platform owner engage enterprise architecture?",
+		"prompt": "For HIPAA-aligned go-live, enterprise architects are underutilized in platform decisions, the CIO wants stronger innovation governance. How should the platform owner engage enterprise architecture?",
 		"choices": [
 			"Embed architects in demand intake, design reviews, and capability roadmapping with decision rights on cross-domain patterns",
 			"Limit architect involvement to post-production documentation only",
@@ -93,6 +112,7 @@
 		"explanation": "Enterprise architecture adds innovation value when engaged early in demand, design, and roadmap decisions—not relegated to after-the-fact documentation.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Innovation"
 	}
 ]

@@ -2,40 +2,6 @@
 	{
 		"trackCode": "CIS-SM",
 		"order": 80,
-		"prompt": "An engagement lead completes CMDB cleanup and wants a final gate before onboarding ten new application services. Which readiness check is most appropriate?",
-		"choices": [
-			"CMDB Health review confirming acceptable scores with closed critical remediation tasks",
-			"Immediate production rollout of every ML candidate without owner sign-off",
-			"Deletion of all reconciliation rules to speed Discovery imports",
-			"Disabling MID Server validation to reduce project timeline"
-		],
-		"correctIndex": 0,
-		"explanation": "A CMDB Health gate verifies data quality is sufficient before expanding Service Mapping scope to additional services.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-health-dashboard.html",
-			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SM",
-		"order": 81,
-		"prompt": "During engagement planning, stakeholders debate which applications belong in phase one. Which scoping principle best limits early risk?",
-		"choices": [
-			"Start with high-value services that have owners, credentials, and validated entry points",
-			"Map every subnet in the enterprise before validating a single service map",
-			"Exclude CMDB readiness checks so mapping can begin immediately",
-			"Defer all discovery until every ML candidate is accepted automatically"
-		],
-		"correctIndex": 0,
-		"explanation": "Phased scoping around critical services with known ownership and access reduces onboarding risk and builds trust in map accuracy.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html",
-			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/create-a-service-map.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SM",
-		"order": 82,
 		"prompt": "A shared database supports three application services in scope for Service Mapping. How should licensing and scope be handled?",
 		"choices": [
 			"Model the shared component once and map dependent services to the shared CI relationships",
@@ -48,11 +14,12 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html",
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/business-services-and-application-services.html"
-		]
+		],
+		"domain": "Service Mapping Engagement Readiness"
 	},
 	{
 		"trackCode": "CIS-SM",
-		"order": 83,
+		"order": 81,
 		"prompt": "Which MID Server requirement is essential before a multi-datacenter Service Mapping engagement goes live?",
 		"choices": [
 			"Validated MID Servers in each required zone with Discovery and mapping capabilities enabled",
@@ -65,11 +32,12 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/mid-server/mid-server.html",
 			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/mid-server-for-discovery.html"
-		]
+		],
+		"domain": "Service Mapping Engagement Readiness"
 	},
 	{
 		"trackCode": "CIS-SM",
-		"order": 84,
+		"order": 82,
 		"prompt": "Security reviewers ask how Service Mapping credentials will be governed during the project. Which answer best aligns with engagement readiness guidance?",
 		"choices": [
 			"Use least-privilege credential aliases, store secrets securely, and test access before production mapping",
@@ -82,6 +50,43 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html",
 			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/t_ConfigureDiscoveryCredentials.html"
-		]
+		],
+		"domain": "Service Mapping Engagement Readiness"
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 83,
+		"prompt": "Procurement asks which ServiceNow licenses are required before expanding ML-powered Service Mapping to a new business unit. What should the engagement lead verify?",
+		"choices": [
+			"Appropriate ITOM Service Mapping entitlements and subscribed capacity for scoped CIs and services",
+			"Only ITSM incident licenses because maps are stored entirely outside CMDB",
+			"Hardware Asset Management licenses for every server CI regardless of mapping scope",
+			"Event Management licenses exclusively, with no Service Mapping subscription"
+		],
+		"correctIndex": 0,
+		"explanation": "Service Mapping engagements require valid ITOM Service Mapping licensing aligned to the CIs and services included in project scope.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-get-started.html"
+		],
+		"domain": "Service Mapping Engagement Readiness"
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 84,
+		"prompt": "Executives want proof that Service Mapping investment improves operations. Which use case most directly connects maps to incident outcomes?",
+		"choices": [
+			"Service map visibility on incidents helps analysts understand blast radius and reduce Mean Time to Resolve",
+			"Maps automatically close all P1 incidents without analyst involvement",
+			"Discovery schedules run hourly solely to increase CMDB record counts",
+			"Event rules suppress every warning so dashboards show zero open alerts"
+		],
+		"correctIndex": 0,
+		"explanation": "Integrating service maps with Incident Management gives responders dependency context that speeds diagnosis and lowers MTTR.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-kpis.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
+		],
+		"domain": "Service Mapping Engagement Readiness"
 	}
 ]

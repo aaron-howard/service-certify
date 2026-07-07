@@ -13,23 +13,25 @@
 		"explanation": "Employee Center portal artifacts, themes, and widgets are maintained in the HR Service Portal scoped application.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/employee-center/employee-center-overview.html"
-		]
+		],
+		"domain": "HR System Architecture"
 	},
 	{
 		"trackCode": "CIS-HR",
 		"order": 11,
-		"prompt": "What relationship exists between hr_task records and hr_case records?",
+		"prompt": "A complex parental leave case requires document review, payroll coordination, and manager approval tasks. How should fulfillment work be structured?",
 		"choices": [
-			"HR tasks are child fulfillment work items linked to a parent HR case",
-			"HR tasks replace hr_case records after closure",
-			"HR tasks store CMDB CI identifiers only",
-			"HR tasks are import set staging rows"
+			"HR tasks as child fulfillment work items linked to the parent HR case",
+			"Separate incident records that replace the HR case after submission",
+			"Import set staging rows without assignees or case linkage",
+			"CMDB CI records storing only employee asset identifiers"
 		],
 		"correctIndex": 0,
 		"explanation": "Fulfillment and lifecycle work break down into HR task records associated with the originating HR case.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-management.html"
-		]
+		],
+		"domain": "HR System Architecture"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -45,7 +47,8 @@
 		"explanation": "Scoped application development keeps HR customizations isolated, exportable in update sets, and aligned with ServiceNow upgrade paths.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
-		]
+		],
+		"domain": "HR System Architecture"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -61,22 +64,24 @@
 		"explanation": "HR Integrations scope artifacts support authoritative employee and organizational data exchange with external HR systems.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
-		]
+		],
+		"domain": "HR System Architecture"
 	},
 	{
 		"trackCode": "CIS-HR",
 		"order": 14,
-		"prompt": "Which table stores lifecycle event definitions used by Journey Designer?",
+		"prompt": "Journey Designer must version onboarding and offboarding definitions separately from case templates. Where should lifecycle event records be maintained?",
 		"choices": [
-			"sn_hr_le_lifecycle_event",
-			"sys_email_account",
-			"sc_cat_item",
-			"sysapproval_approver"
+			"Lifecycle event records in the Lifecycle Events scope such as sn_hr_le_lifecycle_event",
+			"sys_email_account records in the global email administration module",
+			"sc_cat_item records in the service catalog without HR linkage",
+			"sysapproval_approver records detached from HR workflows"
 		],
 		"correctIndex": 0,
 		"explanation": "Lifecycle event records define milestone transitions such as onboarding and offboarding orchestrated through Journey Designer.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
-		]
+		],
+		"domain": "HR System Architecture"
 	}
 ]

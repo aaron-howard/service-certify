@@ -2,84 +2,92 @@
 	{
 		"trackCode": "CIS-PA",
 		"order": 10,
-		"prompt": "An indicator source must count resolved change requests closed last month. Which indicator source field identifies the underlying transactional table?",
+		"prompt": "Service desk leadership wants a KPI for first-contact resolution that is specific, measurable, and tied to a business outcome. Which SMART KPI design should the PA team propose?",
 		"choices": [
-			"Facts table",
-			"Report source refresh timestamp",
-			"Breakdown matrix",
-			"Widget data visualization type"
+			"Percentage of incidents resolved at first contact without reassignment, measured weekly by assignment group with a defined target",
+			"A single open-incident count with no target, breakdown, or documented business owner",
+			"Average handle time only, because any numeric field qualifies as a strategic KPI",
+			"Manual monthly estimates entered by team leads without indicator source validation"
 		],
 		"correctIndex": 0,
-		"explanation": "The facts table on an indicator source specifies the ServiceNow table or database view whose filtered records feed associated indicators.",
+		"explanation": "SMART KPIs define a clear metric, measurement method, ownership context, and target so stakeholders can act on trends credibly.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_IndicatorSources.html"
-		]
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/designing-pa-solution.html"
+		],
+		"domain": "KPI Design and Strategy"
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 11,
-		"prompt": "A daily incident KPI should reflect records opened today. Which indicator source condition pattern follows PA best practice?",
+		"prompt": "IT operations must report customer satisfaction, service stability, and process efficiency on one executive view. Which analytics approach should the program use?",
 		"choices": [
-			"[Opened][on][Today] on the Incident facts table",
-			"[Number][is][Active] without any date filter on the source",
-			"[Assigned to][is][Empty] as the only filter with monthly frequency",
-			"Dot-walk to [Caller ID][Name][contains][VIP] on every source"
+			"A balanced scorecard grouping leading and lagging KPIs across perspectives on a governed dashboard",
+			"One giant list report exported nightly with no targets or dimensional analysis",
+			"Separate spreadsheets maintained by each manager without shared definitions",
+			"A single manual indicator updated quarterly without breakdown segmentation"
 		],
 		"correctIndex": 0,
-		"explanation": "Indicator sources should include at least one date-related condition aligned to the collection frequency, such as Opened on Today for daily incident KPIs.",
+		"explanation": "Balanced scorecard design organizes complementary KPIs so executives see performance holistically rather than isolated metrics.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_IndicatorSources.html"
-		]
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/designing-pa-solution.html"
+		],
+		"domain": "KPI Design and Strategy"
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 12,
-		"prompt": "Where are indicator scores stored?",
+		"prompt": "A change manager wants early warning of backlog growth before SLA breaches appear. Which indicator mix should the analytics roadmap prioritize?",
 		"choices": [
-			"pa_scores (legacy table only)",
-			"pa_scores_l1 and pa_scores_l2",
-			"sys_audit for every collected snapshot",
-			"pa_indicator_definition staging tables"
+			"Leading indicators such as open change volume trends paired with lagging indicators such as successful change rate",
+			"Only lagging indicators measured after incidents are closed, with no proactive workload signals",
+			"Random manual KPIs chosen by each team without linking to process outcomes",
+			"Breakdown sources without any automated indicators or collection schedule"
 		],
-		"correctIndex": 1,
-		"explanation": "Current PA score data is stored in pa_scores_l1 for indicator scores and pa_scores_l2 for breakdown scores; pa_scores is the legacy table.",
+		"correctIndex": 0,
+		"explanation": "Effective analytics roadmaps combine leading indicators that signal emerging issues with lagging indicators that confirm results.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_IndicatorSources.html"
-		]
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/designing-pa-solution.html"
+		],
+		"domain": "KPI Design and Strategy"
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 13,
-		"prompt": "A KPI must divide one automated indicator by another to produce a percentage. Which indicator type implements that calculation?",
+		"prompt": "Stakeholders disagree on which incident KPIs matter most for the first release. How should the PA lead facilitate alignment?",
 		"choices": [
-			"Formula indicator referencing other indicators",
-			"Manual indicator entered on a weekly scoresheet only",
-			"External indicator fed exclusively by JDBC without scores",
-			"Breakdown source scripted with no facts table"
+			"Run a KPI workshop mapping business goals to candidate measurements and document owners before technical build",
+			"Implement every available out-of-box indicator so users can delete unwanted KPIs later",
+			"Defer all KPI decisions until dashboards are published in production",
+			"Let developers select KPIs based solely on table field availability"
 		],
 		"correctIndex": 0,
-		"explanation": "Formula indicators compute values from arithmetic or functions applied to other indicators, including ratios and percentages.",
+		"explanation": "Stakeholder workshops and KPI Composer artifacts align sponsors on priority measurements, ownership, and release scope before configuration.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/formula-indicators.html"
-		]
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/designing-pa-solution.html"
+		],
+		"domain": "KPI Design and Strategy"
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 14,
 		"questionType": "multi",
-		"prompt": "Which settings are defined when creating an indicator source? (Choose three.)",
+		"prompt": "Which practices strengthen KPI selection and validation before indicators are automated? (Choose two.)",
 		"choices": [
-			"Facts table or reused report source",
-			"Filter conditions on the selected table records",
-			"Valid for frequency aligned to the collection calendar",
-			"Dashboard role restrictions for widget consumers",
-			"KPI Composer project task assignee groups"
+			"Confirm each KPI maps to a documented business goal and accountable owner",
+			"Validate that source data can support the measurement at the intended frequency",
+			"Skip target definition so teams can interpret raw numbers subjectively",
+			"Publish dashboards before reviewing indicator source filter accuracy"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1, 2],
-		"explanation": "Indicator sources require a facts table or report source, filtering conditions, and a frequency; dashboard roles and KPI Composer assignees are configured elsewhere.",
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "KPI validation ties metrics to business intent, ownership, and feasible source data before collection and visualization go live.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_IndicatorSources.html"
-		]
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/designing-pa-solution.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/workflow-automated-indicators.html"
+		],
+		"domain": "KPI Design and Strategy"
 	}
 ]

@@ -13,7 +13,8 @@
 		"explanation": "Legacy deprecation data management requires migration, archival, retention governance, CI lifecycle updates, and verified cutover—not ad hoc exports or orphaned records.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/configuration-management.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	},
 	{
 		"trackCode": "CPOE",
@@ -29,7 +30,8 @@
 		"explanation": "Deprecation workshops map services, CIs, integrations, and timelines with accountable owners so retirement does not create invisible gaps.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	},
 	{
 		"trackCode": "CPOE",
@@ -43,16 +45,20 @@
 			"Skip change records because the legacy system is already marked obsolete"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Deprecation governance updates CI lifecycle and relationships after validated migration and applies compliant retention policies—not reactive fixes or skipped change control.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	},
 	{
 		"trackCode": "CPOE",
 		"order": 148,
-		"prompt": "Given a scenario where audit requires proof that retired assets no longer appear in active service maps, how should the platform owner demonstrate compliance?",
+		"prompt": "When reliability drives CMDB policy, audit requires proof that retired assets no longer appear in active service maps, how should the platform owner demonstrate compliance?",
 		"choices": [
 			"Provide reconciliation reports showing lifecycle transitions, relationship removals, and before-and-after service mapping evidence",
 			"Submit a verbal confirmation that administrators deleted records manually",
@@ -63,7 +69,8 @@
 		"explanation": "Audit compliance for deprecation requires documented lifecycle transitions, relationship cleanup, and service mapping evidence—not informal claims or unfiltered dumps.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/deduplicate-cis.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	},
 	{
 		"trackCode": "CPOE",
@@ -85,14 +92,27 @@
 			"Apply legal retention schedules and purge rules to archived records"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Legacy deprecation data management progresses through inventory, validated migration, relationship cleanup, and governed archival—not skipped phases or orphaned topology.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	}
 ]

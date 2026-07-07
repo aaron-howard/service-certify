@@ -13,7 +13,8 @@
 		"explanation": "Application security managers in AVR oversee application vulnerable items, coordinate remediation with development teams, and align with Security Champion workflows.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/application-vulnerability-response/avr-landing.html"
-		]
+		],
+		"domain": "VR Applications and Modules"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -29,7 +30,8 @@
 		"explanation": "Developers receive application vulnerable item and remediation task assignments through AVR workflows when findings from scanners such as Veracode require code-level fixes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/application-vulnerability-response/avr-landing.html"
-		]
+		],
+		"domain": "VR Applications and Modules"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -45,7 +47,8 @@
 		"explanation": "Vulnerability Response applications manage and use CSDM-aligned CMDB data so scanner findings can be tied to authoritative configuration items and service context.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
-		]
+		],
+		"domain": "VR Applications and Modules"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -61,7 +64,8 @@
 		"explanation": "Application Vulnerability Response is a separately subscribed feature of the Vulnerability Response product family for managing application vulnerable items.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/application-vulnerability-response/avr-landing.html"
-		]
+		],
+		"domain": "VR Applications and Modules"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -77,6 +81,7 @@
 		"explanation": "Container Vulnerability Response imports CVITs and enriches findings with Kubernetes runtime context through container security product integrations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/container-vulnerability-response/cvr-landing.html"
-		]
+		],
+		"domain": "VR Applications and Modules"
 	}
 ]

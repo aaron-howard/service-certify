@@ -2,83 +2,96 @@
 	{
 		"trackCode": "CIS-SP",
 		"order": 10,
-		"prompt": "MSP operators must work with tenant incident data without making the MSP domain a parent of tenant domains. Which relationship grants that cross-hierarchy data access?",
+		"prompt": "An MSP wants to benchmark incident trends across all customers while keeping tenant data isolated. Which capability of the multitenant architecture supports that goal?",
 		"choices": [
-			"A contains domain relationship from MSP to the tenant domain",
-			"Promoting the MSP domain to primary over TOP",
-			"Assigning every tenant user to the MSP domain",
-			"Setting sys_domain to global on all tenant incidents"
+			"Cross-customer intelligence where parent domain operators analyze aggregated data across child tenants",
+			"Copying every tenant's incidents into the global domain each night for reporting",
+			"Granting all tenants visibility into each other's records for transparency",
+			"Disabling data separation on reporting tables during business hours"
 		],
 		"correctIndex": 0,
-		"explanation": "Contains domains relate domains outside strict parent-child hierarchy and grant the containing domain visibility to contained domain data without inheriting MSP process logic into tenants.",
+		"explanation": "Parent domains can access child tenant data, letting the provider produce cross-customer analytics and benchmarking without breaking tenant isolation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/c_DomainVisibility.html"
-		]
+			"https://www.servicenow.com/docs/r/platform-security/bp-dom-sep-definition.html",
+			"https://www.servicenow.com/docs/r/platform-security/bp-domain-hierarchy.html"
+		],
+		"domain": "MSP Operations Strategy"
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 11,
-		"prompt": "An SP security review compares visibility domains and contains domains for granting MSP technicians access to a restricted customer domain. What is the key distinction?",
+		"prompt": "A provider's shared service desk works incidents for forty tenants from one MSP operations domain. Which operating model decision keeps technicians productive without weakening tenant isolation?",
 		"choices": [
-			"Visibility domains grant explicit user or group access; contains domains grant an entire domain access to another domain's data",
-			"Visibility domains affect process inheritance; contains domains affect UI themes only",
-			"Contains domains apply only to process tables; visibility domains apply only to task tables",
-			"Visibility domains are inherited by child domains; contains domains are never used with the domain picker"
+			"Grant the MSP operations domain access to tenant data through governed contains or visibility design",
+			"Assign every technician a separate user account in each of the forty tenant domains",
+			"Move all tenant incidents into the MSP domain so technicians avoid the domain picker",
+			"Give technicians the admin role so domain restrictions no longer apply to them"
 		],
 		"correctIndex": 0,
-		"explanation": "Visibility domains are user-to-domain or group-to-domain grants, while contains domains are domain-to-domain relationships that make contained data visible to users in the containing domain.",
+		"explanation": "A shared service desk model uses governed cross-domain access so MSP staff work tenant records in place while tenants keep isolated data ownership.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/c_DomainVisibility.html"
-		]
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainVisibility.html",
+			"https://www.servicenow.com/docs/r/platform-security/bp-contains-domain-visibility.html"
+		],
+		"domain": "MSP Operations Strategy"
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 12,
 		"questionType": "multi",
-		"prompt": "In which domains can a user see an assignment group? (Choose three.)",
+		"prompt": "An MSP defines SLA governance for tenants sharing one instance. Which practices support consistent multi-tenant SLA operations? (Choose two.)",
 		"choices": [
-			"The parent domain of the assignment group's domain",
-			"Child domains of the assignment group's domain",
-			"Domains granted through visibility domain configuration on the user's group membership",
-			"Domains linked through a contains relationship to the assignment group's domain"
+			"Standardize baseline SLA definitions globally and override per tenant only where contracts differ",
+			"Report SLA attainment per tenant domain so account teams see customer-specific performance",
+			"Let each technician create personal SLA definitions without change control",
+			"Suppress SLA breach notifications for tenants on lower-cost contracts"
 		],
-		"correctIndex": 1,
-		"correctIndexes": [1, 2, 3],
-		"explanation": "Assignment groups are domain-separated data visible in the group's domain, child domains, and any domains granted through visibility or contains relationships—not in parent domains above the group.",
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Multi-tenant SLA governance combines shared baselines with contract-driven overrides and per-tenant attainment reporting for account accountability.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/c_DomainVisibility.html"
-		]
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html",
+			"https://www.servicenow.com/docs/r/platform-security/bp-dom-sep-definition.html"
+		],
+		"domain": "MSP Operations Strategy"
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 13,
-		"prompt": "An SP process administrator needs to view all process override records across the domain hierarchy from a process table. What role is required to use the Expand Domain Scope feature?",
+		"prompt": "A new customer signs with the MSP and must be operational in two weeks. Which onboarding sequence establishes the tenant correctly?",
 		"choices": [
-			"domain_admin",
-			"domain_expand_scope",
-			"admin",
-			"security_admin"
+			"Create the tenant domain and company mapping, load foundational data, configure process overrides, then validate separation",
+			"Load all users into global first and move them into a domain after go-live",
+			"Configure process overrides before the tenant domain or company record exists",
+			"Grant the customer admin access to the instance so they self-provision the domain"
 		],
-		"correctIndex": 1,
-		"explanation": "Users with the domain_expand_scope role can expand domain scope on process tables to see override records across the hierarchy and toggle between record and session scope on forms.",
+		"correctIndex": 0,
+		"explanation": "Tenant onboarding follows a repeatable sequence: establish the domain and company linkage, load foundational data into that scope, apply tenant-specific processes, and validate isolation before go-live.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/bp-terms-conditions.html"
-		]
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/task/plan-domain-separation-implementation.html",
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainAssignment.html"
+		],
+		"domain": "Customer Onboarding and Tenant Lifecycle"
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 14,
-		"prompt": "An instance architect plans broad visibility domain grants for dozens of MSP support groups. Why do ServiceNow recommended practices discourage excessive visibility domain use?",
+		"prompt": "The MSP onboards several tenants each month and wants domain creation to be consistent and fast. Which automation pattern reduces manual onboarding effort?",
 		"choices": [
-			"Visibility domains add OR conditions to queries and should be a last resort after hierarchy and contains design",
-			"Visibility domains disable ACL evaluation for affected tables entirely",
-			"Visibility domains force all affected users into the global domain session scope",
-			"Visibility domains prevent the domain picker from listing child domains"
+			"Automate domain creation from the company record so new customers receive a correctly placed tenant domain",
+			"Have administrators hand-build each domain hierarchy node and retype company details",
+			"Reuse one existing tenant domain for every new customer to avoid hierarchy growth",
+			"Create domains only after the first incident is logged for the new customer"
 		],
 		"correctIndex": 0,
-		"explanation": "Visibility domains expand database queries with OR conditions that can degrade performance; recommended practice favors proper hierarchy and contains relationships first.",
+		"explanation": "Automating domain generation from company records standardizes tenant creation, reduces errors, and keeps hierarchy placement consistent across onboardings.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/bp-contains-domain-visibility.html"
-		]
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainAssignment.html",
+			"https://www.servicenow.com/docs/r/customer-service-management/domain-separation-customer-service.html"
+		],
+		"domain": "Customer Onboarding and Tenant Lifecycle"
 	}
 ]

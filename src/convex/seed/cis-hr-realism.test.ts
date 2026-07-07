@@ -1,12 +1,17 @@
 import { describe, expect, it } from 'vitest';
 import { DEV_PRACTICE_QUESTIONS } from '../../convex/seed/devQuestionBank';
 import {
+	type CisHrQuestionRow,
 	BANNED_CHOICE_PREFIXES,
 	BANNED_STEM_PREFIXES,
+	CIS_HR_BANK_SIZE,
+	CIS_HR_DOMAIN_TARGETS,
 	STEM_OPENER_CAP,
 	containsBannedChoicePrefix,
 	containsBannedStemPrefix,
+	domainForOrder,
 	fourWordOpener,
+	isScenarioStylePrompt,
 	validateCisHrTrack
 } from '$lib/catalog/cisHrRealism';
 
@@ -28,7 +33,25 @@ describe('CIS-HR v2 realism (full track)', () => {
 	});
 
 	it('passes shared realism validation', () => {
-		expect(validateCisHrTrack(proofBatch)).toEqual([]);
+		expect(validateCisHrTrack(proofBatch as CisHrQuestionRow[])).toEqual([]);
+	});
+
+	it('meets scenario-style minimum across the v2 bank', () => {
+		const scenarioCount = proofBatch.filter((q) => isScenarioStylePrompt(q.prompt)).length;
+		expect(scenarioCount / CIS_HR_BANK_SIZE).toBeGreaterThanOrEqual(0.65);
+	});
+
+	it('tags each question with the expected domain for its order', () => {
+		const domainCounts = Object.fromEntries(
+			Object.keys(CIS_HR_DOMAIN_TARGETS).map((d) => [d, 0])
+		) as Record<string, number>;
+		for (const q of proofBatch) {
+			expect(q.domain).toBe(domainForOrder(q.order));
+			domainCounts[q.domain!]++;
+		}
+		for (const [domain, target] of Object.entries(CIS_HR_DOMAIN_TARGETS)) {
+			expect(domainCounts[domain]).toBe(target);
+		}
 	});
 
 	it('does not use banned choice wrapper prefixes', () => {

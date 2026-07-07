@@ -2,89 +2,86 @@
 	{
 		"trackCode": "CIS-SIR",
 		"order": 50,
-		"prompt": "Leadership asks how quickly raw alerts become triaged security incident records. Which metric best answers that question?",
+		"prompt": "A team needs a bespoke REST integration not available as a store template. Which starting point is appropriate?",
 		"choices": [
-			"Mean time to detect from threat occurrence to actionable case creation",
-			"Total analyst comment count per closed incident record",
-			"Number of dashboard portlets on the CISO overview page",
-			"Average age of resolved HR onboarding cases last quarter"
+			"Integration Hub spoke or custom inbound/outbound actions mapped to security incidents",
+			"Discovery pattern designer steps that SSH into arbitrary external API endpoints",
+			"Catalog record producers that create incidents from employee hardware requests",
+			"Project demand workflows that score strategic themes without security context"
 		],
 		"correctIndex": 0,
-		"explanation": "Mean time to detect measures how rapidly threats are recognized and converted into managed security incidents.",
+		"explanation": "Custom integrations typically use Integration Hub spokes or scripted inbound and outbound actions tied to SIR tables.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/reports-and-metrics.html",
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-security-analyst-overview-dashboard.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integrate-security-tools.html"
+		],
+		"domain": "Security Incident and Threat Intelligence Integrations"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 51,
-		"prompt": "A program manager reviews containment performance after several major incidents. Which metric tracks time from identification to successful containment?",
+		"prompt": "During integration testing, sample alerts create incidents with blank priority and category. What should be adjusted?",
 		"choices": [
-			"Mean time to restore from backup completion timestamps",
-			"Mean time to contain from incident identification to containment",
-			"Change advisory board approval cycle duration averages",
-			"Vulnerability scan window length per discovery schedule"
+			"Inbound action field maps and default values on the integration configuration",
+			"Discovery credentials assigned to unrelated Linux server CI classes",
+			"Catalog variable sets on password reset self-service catalog items",
+			"HR case assignment rules for employee relocation approval chains"
 		],
-		"correctIndex": 1,
-		"explanation": "Mean time to contain reflects operational speed in limiting attacker impact once an incident is identified.",
+		"correctIndex": 0,
+		"explanation": "Field mapping and default values on inbound actions ensure required incident attributes populate during automated creation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/reports-and-metrics.html",
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-security-incident-manager-dashboard.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integration-configurations.html"
+		],
+		"domain": "Security Incident and Threat Intelligence Integrations"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 52,
-		"questionType": "multi",
-		"prompt": "Who are key reporting audiences for Security Incident Response dashboards and metrics? (Choose three.)",
+		"prompt": "Which test validates that a CrowdStrike detection integration updates existing incidents instead of duplicating them?",
 		"choices": [
-			"Security Analysts reviewing operational triage and task backlogs",
-			"Security Managers tracking team performance and SLA adherence",
-			"CIOs and CISOs reviewing executive risk and trend summaries",
-			"Facilities and HR staff approving office supply requisitions"
+			"Send repeated detections for the same endpoint and confirm correlation updates one record",
+			"Run horizontal discovery against the CrowdStrike cloud API subnet range",
+			"Submit catalog requests for laptops and verify fulfillment task generation",
+			"Create portfolio demands and confirm financial plan task rollup behavior"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1, 2],
-		"explanation": "Analyst, manager, and executive dashboards serve operational, supervisory, and leadership audiences; facilities and HR requisitions are unrelated to SIR reporting.",
+		"explanation": "Repeated detection tests confirm correlation and update logic keeps a single incident current rather than creating duplicates.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-security-analyst-overview-dashboard.html",
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-security-incident-manager-dashboard.html",
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-ciso-dashboard-overview.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-correlation.html"
+		],
+		"domain": "Security Incident and Threat Intelligence Integrations"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 53,
-		"prompt": "Reopen rates for closed security incidents climb steadily over several weeks. What is the most likely root cause?",
+		"prompt": "Before promoting an integration to production, which governance step reduces run-time response risk?",
 		"choices": [
-			"Containment or eradication was incomplete and closure validation is too weak",
-			"Threat intelligence enrichment feeds were disabled during the period",
-			"Shift handover templates were recently updated for the SOC",
-			"Process definition selector was switched from Stateful to Open"
+			"Validate mappings in a subproduction instance with representative alert samples",
+			"Disable all ACLs on security tables so testers can edit every field",
+			"Delete existing production incidents to simplify correlation testing",
+			"Skip change control because store integrations are always read-only"
 		],
 		"correctIndex": 0,
-		"explanation": "Rising reopen rates usually indicate premature closure or unresolved root issues that fail post-closure validation.",
+		"explanation": "Subproduction validation with realistic payloads catches mapping and correlation defects before production cutover.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/reports-and-metrics.html",
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-post-incident-review.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integration-configurations.html"
+		],
+		"domain": "Security Incident and Threat Intelligence Integrations"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 54,
-		"prompt": "Executives request a quarterly view of security response effectiveness. Which reporting approach best supports that review?",
+		"prompt": "An analyst opens the Security Incident Response Workspace to work a critical phishing case. What does the workspace provide?",
 		"choices": [
-			"Trend MTTD, MTTC, MTTR, severity distribution, and repeat rates with risk narrative",
-			"Raw monthly incident totals without severity or category segmentation",
-			"Analyst comment volume grouped by weekday across the quarter",
-			"One-time static screenshots of individual incident form headers"
+			"Contextual incident details, related tasks, evidence, and response tools in one view",
+			"A catalog checkout flow for ordering replacement hardware for affected users",
+			"A discovery dashboard listing MID Server heartbeat status by datacenter",
+			"A project financial plan editor for reallocating portfolio investment funds"
 		],
 		"correctIndex": 0,
-		"explanation": "Executive reporting should combine response time trends, severity patterns, and repeat incident context to show program maturity.",
+		"explanation": "The SIR Workspace consolidates incident context, tasks, and response actions so analysts can investigate without leaving the screen.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-ciso-dashboard-overview.html",
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/reports-and-metrics.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-workspace.html"
+		],
+		"domain": "Security Incident Response Management"
 	}
 ]

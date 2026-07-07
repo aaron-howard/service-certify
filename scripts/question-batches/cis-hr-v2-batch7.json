@@ -13,7 +13,8 @@
 		"explanation": "Branding settings customize the Employee Center look and feel to match organizational identity guidelines.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/employee-center/employee-center-overview.html"
-		]
+		],
+		"domain": "Core HR Applications and Employee Center"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -29,7 +30,8 @@
 		"explanation": "Knowledge visibility on Employee Center is controlled by Can Read and Cannot Read user criteria attached to the article.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-knowledge-management.html"
-		]
+		],
+		"domain": "Core HR Applications and Employee Center"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -45,7 +47,8 @@
 		"explanation": "Record producers present catalog-style forms that insert records such as hr_case directly on submission.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-services-overview.html"
-		]
+		],
+		"domain": "Core HR Applications and Employee Center"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -61,7 +64,8 @@
 		"explanation": "Skills on users and groups allow routing engines to match HR cases with agents who have the required expertise.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-routing.html"
-		]
+		],
+		"domain": "Core HR Applications and Employee Center"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -77,6 +81,7 @@
 		"explanation": "HR administrator roles provide access to configure services, criteria, templates, and operational HR settings.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
-		]
+		],
+		"domain": "Core HR Applications and Employee Center"
 	}
 ]

@@ -13,7 +13,8 @@
 		"explanation": "Formula indicators combine values from other indicators using expressions, which suits ratio KPIs built from existing automated metrics.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_FormulaIndicators.html"
-		]
+		],
+		"domain": "Configure Indicators and Indicator Sources"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -29,7 +30,8 @@
 		"explanation": "Dot-walk conditions are valid only when each referenced table and field in the path exists and is accessible during indicator source evaluation.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_IndicatorSources.html"
-		]
+		],
+		"domain": "Configure Indicators and Indicator Sources"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -45,7 +47,8 @@
 		"explanation": "Breakdown mappings define how records from the indicator source relate to dimensional values supplied by a breakdown source.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_BreakdownMappings.html"
-		]
+		],
+		"domain": "Configure Indicators and Indicator Sources"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -62,7 +65,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_BreakdownMappings.html",
 			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_ConfigureBreakdownSources.html"
-		]
+		],
+		"domain": "Configure Indicators and Indicator Sources"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -76,11 +80,15 @@
 			"Spotlight benchmark comparison record"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Segmentation requires a breakdown source that supplies dimension values and a mapping that ties indicator records to those values.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html",
 			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_BreakdownMappings.html"
-		]
+		],
+		"domain": "Configure Breakdowns and Breakdown Sources"
 	}
 ]

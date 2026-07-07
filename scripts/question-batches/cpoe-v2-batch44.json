@@ -2,7 +2,7 @@
 	{
 		"trackCode": "CPOE",
 		"order": 215,
-		"prompt": "Given a scenario where champion forums have become irregular and backlog conversion is stalling, the platform owner must reset cadence discipline. Which operating rhythm best restores input-to-delivery flow?",
+		"prompt": "When citizen development scales, champion forums have become irregular and backlog conversion is stalling, the platform owner must reset cadence discipline. Which operating rhythm best restores input-to-delivery flow?",
 		"choices": [
 			"Monthly champion councils with pre-submitted use cases, same-day scoring, and published SLA for CoEI handoff",
 			"Annual champion gatherings without structured intake or documented follow-up actions",
@@ -13,7 +13,8 @@
 		"explanation": "Champion cadence restores delivery flow through regular councils, pre-submitted intake, scoring, and defined CoEI handoff SLAs—not irregular or disconnected forums.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
-		]
+		],
+		"domain": "Innovation"
 	},
 	{
 		"trackCode": "CPOE",
@@ -29,7 +30,8 @@
 		"explanation": "Benchmark data should drive implementation by prioritizing high-impact manual processes with ROI models tied to identified gaps—not be ignored or replaced by anecdote.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Innovation"
 	},
 	{
 		"trackCode": "CPOE",
@@ -45,7 +47,8 @@
 		"explanation": "CoEI playbook scaling preserves core guardrails centrally while allowing reviewed regional appendices—not uncontrolled rewrites or headquarters-only access.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
-		]
+		],
+		"domain": "Innovation"
 	},
 	{
 		"trackCode": "CPOE",
@@ -59,11 +62,15 @@
 			"Delegate all integration decisions to individual citizen developers without oversight"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Stronger architecture engagement requires published integration standards and CoEI intake participation—not waived reviews or ungoverned citizen developer decisions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Innovation"
 	},
 	{
 		"trackCode": "CPOE",
@@ -85,14 +92,27 @@
 			"Ensures business sponsors acknowledge accountability before apps enter shared environments"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Citizen development controls address distinct risks: certification for skill gaps, scoped roles for privilege exposure, promotion gates for stability, and attestation for sponsor accountability.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
-		]
+		],
+		"domain": "Innovation"
 	}
 ]

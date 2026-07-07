@@ -14,7 +14,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-governance.html",
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-register.html"
-		]
+		],
+		"domain": "Risk and Advanced Risk"
 	},
 	{
 		"trackCode": "CIS-RC",
@@ -31,7 +32,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-data-governance.html",
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-governance.html"
-		]
+		],
+		"domain": "Risk and Advanced Risk"
 	},
 	{
 		"trackCode": "CIS-RC",
@@ -48,7 +50,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-response-and-treatment.html",
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/remediate-control-failures.html"
-		]
+		],
+		"domain": "Risk and Advanced Risk"
 	},
 	{
 		"trackCode": "CIS-RC",
@@ -65,7 +68,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/manage-risk-records.html",
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-register.html"
-		]
+		],
+		"domain": "Risk and Advanced Risk"
 	},
 	{
 		"trackCode": "CIS-RC",
@@ -82,6 +86,7 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-impl-overview.html",
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/compliance-dashboards.html"
-		]
+		],
+		"domain": "Risk and Advanced Risk"
 	}
 ]

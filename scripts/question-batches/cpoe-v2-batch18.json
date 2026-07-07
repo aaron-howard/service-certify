@@ -13,12 +13,13 @@
 		"explanation": "Wave planning uses pilot learning and repeatable gates to scale safely; big-bang or arbitrary sequencing ignores dependencies and operational readiness.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Implementation and Delivery"
 	},
 	{
 		"trackCode": "CPOE",
 		"order": 86,
-		"prompt": "Given a case study where a critical catalog release moves to production Friday evening, what post-deployment activity should the platform owner mandate during hypercare?",
+		"prompt": "After license true-up variance, a critical catalog release moves to production Friday evening, what post-deployment activity should the platform owner mandate during hypercare?",
 		"choices": [
 			"Monitor key transactions, validate integrations, and staff escalation paths for the first business days",
 			"Close the change record immediately and disband the support bridge",
@@ -29,7 +30,8 @@
 		"explanation": "Hypercare focuses on monitored validation and staffed escalation immediately after release—not premature closure or starting the next deployment.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Implementation and Delivery"
 	},
 	{
 		"trackCode": "CPOE",
@@ -43,11 +45,15 @@
 			"Deferral of training until six months after go-live"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Release readiness requires accepted scope and rehearsed rollback and communications; skipping tests or delaying training undermines delivery quality.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Implementation and Delivery"
 	},
 	{
 		"trackCode": "CPOE",
@@ -69,15 +75,28 @@
 			"When peer advocates can model success within each business unit"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Adoption recovery combines sponsor messaging, hands-on enablement, process redesign, and local champions depending on the root barrier.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Implementation and Delivery"
 	},
 	{
 		"trackCode": "CPOE",
@@ -93,6 +112,7 @@
 		"explanation": "Executive risk communication includes outcome impact, mitigation choices, and a clear recommendation—not concealment or blame without options.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Implementation and Delivery"
 	}
 ]

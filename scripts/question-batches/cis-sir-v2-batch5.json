@@ -2,81 +2,91 @@
 	{
 		"trackCode": "CIS-SIR",
 		"order": 20,
-		"prompt": "An organization wants incidents auto-tagged as ransomware when certain observables match threat feed entries. Which SIR feature supports this?",
+		"prompt": "After eradication tasks complete, analysts must confirm no re-infection before closure. What validation practice should gate incident closure?",
 		"choices": [
-			"Security tags applied through threat intelligence and classification rules",
-			"Discovery identification rules that create printer CI records automatically",
-			"Service catalog client scripts that validate mobile phone number formats",
-			"Project workspace demand scoring thresholds for strategic portfolio themes"
+			"Post-containment monitoring, control verification, and documented closure criteria review",
+			"Immediate closure once the incident commander updates the priority field manually",
+			"Archiving all child tasks before root cause analysis or lessons learned begin",
+			"Skipping timeline validation to accelerate quarterly executive metric reporting"
 		],
 		"correctIndex": 0,
-		"explanation": "Security tags classify incidents based on intelligence matches and configured rules to drive routing and response playbooks.",
+		"explanation": "Closure validation confirms eradication effectiveness and monitors for recurrence before security incidents are marked complete.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-tags.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/respond-to-a-security-incident.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-post-incident-review.html"
+		],
+		"domain": "Incident Response Strategy"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 21,
-		"prompt": "Before analysts can enrich incidents with external reputation data, what must be configured in Threat Intelligence?",
+		"prompt": "A municipal agency plans its first SIR deployment across three SOC shifts. How should the implementer sequence rollout?",
 		"choices": [
-			"Active threat feeds and lookup sources with valid credentials and schedules",
-			"Discovery schedules on every datacenter subnet with elevated SNMP strings",
-			"Catalog fulfillment workflows for password reset self-service items",
-			"HR case assignment rules for employee relocation request routing"
+			"Pilot with one shift and core integrations, then expand playbooks, training, and coverage",
+			"Enable every automation and integration in production on day one without validation",
+			"Deploy only executive dashboards before any analyst workspace or process configuration",
+			"Skip sub-production testing because store integrations are always read-only"
 		],
 		"correctIndex": 0,
-		"explanation": "Threat intelligence feeds and lookup configurations must be active so SIR can query external sources during incident enrichment.",
+		"explanation": "Phased SIR rollout validates workflows with a pilot group before expanding integrations, automation, and analyst adoption across shifts.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/threat-intelligence-in-sir.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/getting-started-with-processes.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/setup-assistant-reference.html"
+		],
+		"domain": "Implementation Planning"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 22,
-		"prompt": "A SIEM correlation rule fires on lateral movement activity. How should SIR receive the event for structured response?",
+		"prompt": "Architecture review maps SIEM alerts, SOAR playbooks, and threat feeds into SIR. What planning artifact should document that integration design?",
 		"choices": [
-			"Through an inbound integration action that creates or updates a security incident",
-			"By emailing the alert to a personal inbox with no platform record created",
-			"By opening a facilities work order for badge access review only",
-			"By logging a project risk without linking to any security incident table"
+			"An integration roadmap covering data flows, ownership, environments, and cutover milestones",
+			"A list of dashboard portlet colors without inbound or outbound action definitions",
+			"Discovery schedule intervals for printer CI identification on office subnets only",
+			"Service catalog item descriptions for employee mobile device enrollment requests"
 		],
 		"correctIndex": 0,
-		"explanation": "SIEM integrations use inbound actions to automatically create or update security incidents from correlated alerts.",
+		"explanation": "Integration planning documents alert sources, orchestration touchpoints, and phased deployment so SIEM, SOAR, and TI align with SIR workflows.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integrate-security-tools.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integrate-security-tools.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integration-configurations.html"
+		],
+		"domain": "Implementation Planning"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 23,
-		"prompt": "When child security incidents accumulate MITRE ATT&CK techniques during investigation, what does rollup to the parent provide?",
+		"prompt": "Analysts resist new SIR workspace workflows after a major incident strained the SOC. What change management approach improves adoption?",
 		"choices": [
-			"A consolidated view of tactics and techniques for parent-level reporting and analysis",
-			"Automatic deletion of child records after the parent incident is assigned",
-			"Immediate closure of all related vulnerabilities without remediation tasks",
-			"Conversion of every child incident into a standard IT service request"
+			"Role-based training, runbook walkthroughs, and feedback loops tied to live response drills",
+			"Mandate immediate closure of all legacy spreadsheets without any hands-on practice",
+			"Disable playbooks until every analyst completes unrelated HR compliance courses",
+			"Remove workspace access for senior analysts so junior staff learn through trial alone"
 		],
 		"correctIndex": 0,
-		"explanation": "Rolling up MITRE ATT&CK details from child incidents gives analysts a unified adversary behavior picture at the parent level.",
+		"explanation": "SIR adoption improves when teams receive targeted training, practice with runbooks, and refine workflows based on operational feedback.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/map-security-incidents-to-mitre-attack.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-workspace.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/getting-started-with-processes.html"
+		],
+		"domain": "Implementation Planning"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 24,
-		"prompt": "During Major Security Incident Management, which practice keeps business and technical stakeholders aligned in real time?",
+		"prompt": "The CISO wants monthly proof that SIR investment is working. Which KPI set should the program report?",
 		"choices": [
-			"War-room operations with shared timeline, tasks, and communication in SIR",
-			"Disabling all integrations until the incident reaches closed state",
-			"Routing every update through annual compliance attestation workflows",
-			"Assigning all response tasks to a single catalog administrator only"
+			"Mean time to detect, mean time to contain, reopen rate, and severity trend analysis",
+			"Total analyst comment count per incident without severity or category segmentation",
+			"Number of dashboard portlets on the executive homepage without workflow context",
+			"Average age of resolved HR onboarding cases unrelated to security operations"
 		],
 		"correctIndex": 0,
-		"explanation": "MSIM war-room operations centralize coordination, tasks, and communications so cross-functional teams share a single response view.",
+		"explanation": "SIR program KPIs track detection speed, containment effectiveness, closure quality, and severity patterns to demonstrate operational maturity.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-war-room-operations.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/reports-and-metrics.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-operations-metrics.html"
+		],
+		"domain": "Implementation Planning"
 	}
 ]

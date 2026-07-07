@@ -2,34 +2,38 @@
 	{
 		"trackCode": "CIS-PA",
 		"order": 0,
-		"prompt": "A new Platform Analytics engagement must explain how KPIs reach executive dashboards. Which sequence best describes how PA solution components connect?",
+		"prompt": "Executive sponsors ask how incident, change, and request KPIs will roll up before any technical build starts. Which KPI framework design should the PA lead present?",
 		"choices": [
-			"Indicator sources filter facts tables, indicators aggregate scores, breakdowns segment results, and widgets visualize scores on dashboards",
-			"Dashboards define indicator source conditions before any facts table is selected",
-			"Breakdown sources replace indicator sources during the first data collection run",
-			"Targets create indicator records automatically from unfiltered table exports"
+			"Business goals mapped to measurements through KPI Composer, then indicator sources, indicators, breakdowns, and governed dashboards",
+			"Dashboard wireframes published before stakeholders agree on any measurable outcomes",
+			"Breakdown sources created first so indicator definitions can be inferred later from segment names",
+			"Manual score entry for every KPI until automated collection is proven unnecessary"
 		],
 		"correctIndex": 0,
-		"explanation": "PA builds from filtered facts through indicators and breakdowns to collected scores that widgets and dashboards present to stakeholders.",
+		"explanation": "PA solution design connects business goals to measurements first, then builds filtered facts, KPIs, dimensions, and dashboards in a governed sequence.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/workflow-automated-indicators.html"
-		]
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/workflow-automated-indicators.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/designing-pa-solution.html"
+		],
+		"domain": "Architecture and Deployment"
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 1,
-		"prompt": "During a greenfield PA deployment, the technical team is ready to build KPIs from incident data. Which implementation step comes first in the standard bottom-up workflow?",
+		"prompt": "A greenfield PA program must prioritize analytics investments before developers create indicator sources. Which KPI strategy step should come first?",
 		"choices": [
-			"Create indicator sources for each relevant record subset on the Incident table",
-			"Publish executive dashboards before any indicator definitions exist",
-			"Schedule data collection jobs before identifying the facts table",
-			"Configure breakdown matrices before searching for existing indicator sources"
+			"Facilitate stakeholder workshops to define goals, critical success factors, and candidate measurements in KPI Composer",
+			"Schedule nightly collection jobs before identifying which tables support the business questions",
+			"Clone every out-of-box dashboard so executives have visuals during the first week",
+			"Create scripted breakdown sources for all tables before validating any KPI definitions"
 		],
 		"correctIndex": 0,
-		"explanation": "Technical PA implementation starts by identifying tables and creating indicator sources that filter record subsets before indicators and collection jobs are defined.",
+		"explanation": "Analytics strategy begins with agreed business outcomes and measurement design; technical indicator implementation follows once KPIs are validated.",
 		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/designing-pa-solution.html",
 			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/workflow-automated-indicators.html"
-		]
+		],
+		"domain": "Architecture and Deployment"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -45,7 +49,8 @@
 		"explanation": "PA delivers recurring score snapshots and trend visualizations on dashboards so executives can monitor performance over time without manual reporting.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/designing-pa-solution.html"
-		]
+		],
+		"domain": "Architecture and Deployment"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -61,7 +66,8 @@
 		"explanation": "pa_power_user creates indicators, breakdowns, and PA widgets; pa_data_collector owns indicator sources and data collection jobs.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/r_PARoles.html"
-		]
+		],
+		"domain": "Architecture and Deployment"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -76,10 +82,15 @@
 			"Update sets that version-control widget CSS themes"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1, 2],
+		"correctIndexes": [
+			0,
+			1,
+			2
+		],
 		"explanation": "Indicator sources, indicators, and breakdowns form the core PA data model; MID Server clusters and update sets are not PA solution components.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/workflow-automated-indicators.html"
-		]
+		],
+		"domain": "Architecture and Deployment"
 	}
 ]

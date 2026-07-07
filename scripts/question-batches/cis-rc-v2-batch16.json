@@ -2,86 +2,90 @@
 	{
 		"trackCode": "CIS-RC",
 		"order": 75,
-		"prompt": "A mitigation project finishes and controls test effective. What must the risk owner do before closing treatment?",
+		"prompt": "Security operations feeds vulnerability findings into the GRC program. Which integration pattern adds the most monitoring value?",
 		"choices": [
-			"Reassess residual risk and document updated exposure with supporting evidence",
-			"Delete inherent scores so only qualitative notes remain",
-			"Archive the risk framework containing the statement",
-			"Disable future assessments for the affected business entity"
+			"Ingest operational signals from IT and security systems to enrich control and risk context",
+			"Import static policy PDFs quarterly without structured fields",
+			"Disable integrations to force manual spreadsheet reviews",
+			"Route all vulnerability records to catalog fulfillment workflows"
 		],
 		"correctIndex": 0,
-		"explanation": "Post-treatment reassessment confirms residual exposure reflects implemented controls before closure.",
+		"explanation": "Integrated telemetry makes continuous monitoring timely and connects operational events to control objectives.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-response-and-treatment.html",
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-review-process.html"
-		]
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/control-testing-and-evidence.html"
+		],
+		"domain": "Common Elements and Extended Capabilities"
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 76,
-		"prompt": "Reporting shows many high risks missing owners or treatment plans. Which data quality control has the highest impact?",
+		"prompt": "A content subscription delivers updated regulatory mappings mid-year. What should administrators do before activating the update?",
 		"choices": [
-			"Required owner, rating, treatment plan, and review cadence fields on risk records",
-			"Optional free-text status values without validation rules",
-			"Storing risk notes exclusively in external file shares",
-			"Allowing duplicate risk statements with identical titles"
+			"Review release notes, assess impact on scoped citations and controls, then apply under change control",
+			"Overwrite production mappings immediately without testing",
+			"Reject all subscription updates to avoid rework",
+			"Delete existing authority documents prior to import"
 		],
 		"correctIndex": 0,
-		"explanation": "Mandatory core fields and review cadence enforce consistent lifecycle data for reliable risk reporting.",
+		"explanation": "Regulatory content updates require impact review so scoped compliance artifacts remain accurate and testable.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-data-governance.html",
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-register.html"
-		]
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/policy-lifecycle-management.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
+		],
+		"domain": "Common Elements and Extended Capabilities"
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 77,
-		"prompt": "A new GRC instance needs baseline policies, controls, and risk libraries quickly. Which extended capability accelerates that setup?",
+		"prompt": "The CFO asks for a single view of compliance posture across departments. Which common-elements artifact should be configured?",
 		"choices": [
-			"Install and configure GRC content packs aligned to the target regulatory profile",
-			"Build every control manually without imported templates",
-			"Disable scoped applications so all tables remain global",
-			"Import employee records from HR as authority documents"
+			"GRC scorecards aggregating control effectiveness and exception trends",
+			"Discovery status dashboard for subnet classification errors",
+			"Service catalog request volume by category",
+			"MID Server heartbeat report for integration nodes"
 		],
 		"correctIndex": 0,
-		"explanation": "GRC content packs deliver starter policy, compliance, and risk artifacts that teams tailor to the organization.",
+		"explanation": "GRC scorecards consolidate compliance and control metrics for executive oversight across the program.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html",
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/c_GRCControls.html"
-		]
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/compliance-dashboards.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
+		],
+		"domain": "Common Elements and Extended Capabilities"
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 78,
-		"prompt": "Legal notifies the team that a federal citation changed effective next month. Which common-elements workflow helps maintain compliance coverage?",
+		"prompt": "Internal audit plans next year's engagements with limited staff. Which approach should the audit director use to prioritize coverage?",
 		"choices": [
-			"Regulatory change management with impact analysis on citations, controls, and tests",
-			"Immediate deletion of all mapped controls without stakeholder review",
-			"Suspending every attestation campaign until the following year",
-			"Ignoring citation updates until an external audit requests evidence"
+			"Risk-based audit planning that ranks auditable areas by inherent risk, control maturity, and regulatory exposure",
+			"Test every control in the instance regardless of materiality or prior results",
+			"Defer all engagements until compliance finishes every attestation campaign",
+			"Rotate departments alphabetically without analyzing risk drivers"
 		],
 		"correctIndex": 0,
-		"explanation": "Regulatory change management tracks obligation updates and drives governed adjustments to controls and testing.",
+		"explanation": "Risk-based audit planning focuses limited resources on areas where control failure would cause the greatest harm.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/policy-lifecycle-management.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/audit-management/c_AuditTasks.html",
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
-		]
+		],
+		"domain": "Audit and Advanced Audit"
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 79,
-		"prompt": "Compliance operations wants automated alerts when encryption control indicators breach thresholds. Which design supports continuous monitoring?",
+		"prompt": "Testers must gather evidence for automated access-control procedures during fieldwork. Which workflow design supports repeatable collection?",
 		"choices": [
-			"Control indicators tied to objectives with threshold-based exception creation",
-			"Annual manual evidence uploads stored as unattached files",
-			"Email-only summaries with no structured control records",
-			"Static control tests executed once during initial implementation"
+			"Audit tasks with linked evidence requests, attachments, and reviewer approval before sign-off",
+			"Ad hoc screenshots stored on personal drives without engagement linkage",
+			"Deletion of failed tests so evidence requirements disappear from the plan",
+			"Email-only confirmations with no record in Audit Management"
 		],
 		"correctIndex": 0,
-		"explanation": "Automated control indicators generate exceptions when telemetry shows drift from expected control operation.",
+		"explanation": "Structured audit tasks and evidence workflows preserve traceability from procedure execution through reviewer approval.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/control-testing-and-evidence.html",
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/compliance-metrics.html"
-		]
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/audit-management/c_AuditTasks.html"
+		],
+		"domain": "Audit and Advanced Audit"
 	}
 ]

@@ -13,7 +13,8 @@
 		"explanation": "Tiering assessments evaluate inherent risk indicators and assign tiers that determine assessment depth, cadence, and monitoring intensity.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
-		]
+		],
+		"domain": "Assessment Configuration"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -29,7 +30,8 @@
 		"explanation": "The Inherent Risk Questionnaire collects engagement information used to calculate inherent risk scores and assign vendor tiering before full assessments.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-requesting-tpr-due-diligence.html"
-		]
+		],
+		"domain": "Assessment Configuration"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -46,7 +48,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html",
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/create-questionnaire-template.html"
-		]
+		],
+		"domain": "Assessment Configuration"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -60,11 +63,15 @@
 			"Known error (problem) storing documented workarounds for recurring platform configuration defects"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "External assessments are parent records on the assessment table; each sent questionnaire creates an instance record linked to the respondent.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
-		]
+		],
+		"domain": "Assessment Configuration"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -80,6 +87,7 @@
 		"explanation": "Assessment templates package questionnaire selections and scoring configuration for repeatable vendor risk evaluations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
-		]
+		],
+		"domain": "Assessment Configuration"
 	}
 ]

@@ -3,9 +3,11 @@ import { DEV_PRACTICE_QUESTIONS } from '../../convex/seed/devQuestionBank';
 import {
 	BANNED_CHOICE_PREFIXES,
 	BANNED_STEM_PREFIXES,
+	CIS_TPRM_DOMAIN_TARGETS,
 	STEM_OPENER_CAP,
 	containsBannedChoicePrefix,
 	containsBannedStemPrefix,
+	domainForOrder,
 	fourWordOpener,
 	validateCisTprmTrack
 } from '$lib/catalog/cisTprmRealism';
@@ -60,6 +62,19 @@ describe('CIS-TPRM v2 realism (full track)', () => {
 		for (const q of proofBatch) {
 			expect(q.sourceUrls.length).toBeGreaterThan(0);
 			expect(q.sourceUrls.every((url) => url.startsWith('https://'))).toBe(true);
+		}
+	});
+
+	it('tags each question with the official blueprint domain for its order', () => {
+		const counts = Object.fromEntries(
+			Object.keys(CIS_TPRM_DOMAIN_TARGETS).map((d) => [d, 0])
+		) as Record<string, number>;
+		for (const q of proofBatch) {
+			expect(q.domain).toBe(domainForOrder(q.order));
+			counts[q.domain!]++;
+		}
+		for (const [domain, target] of Object.entries(CIS_TPRM_DOMAIN_TARGETS)) {
+			expect(counts[domain]).toBe(target);
 		}
 	});
 

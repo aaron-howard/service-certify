@@ -13,7 +13,8 @@
 		"explanation": "Risk intelligence integrations import external provider scores that offer insight into third-party trustworthiness and can trigger event-driven reassessment rules.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-riskintelprvdr-overview.html"
-		]
+		],
+		"domain": "TPRM Fundamentals and Review"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -29,7 +30,8 @@
 		"explanation": "Risk intelligence scores are stored on the sn_vdr_risk_asmt_security_score table and associated with third-party organizations in the portfolio.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
-		]
+		],
+		"domain": "TPRM Fundamentals and Review"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -45,7 +47,8 @@
 		"explanation": "TPRM risk intelligence reports allow teams to request and manage external provider scores that supplement periodic assessment evidence.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-riskintel-using.html"
-		]
+		],
+		"domain": "TPRM Fundamentals and Review"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -61,7 +64,8 @@
 		"explanation": "TPRM event-driven rules respond to risk intelligence rating changes by triggering assessments, creating remediation work, and notifying stakeholders.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/rm-assessment-integration.html"
-		]
+		],
+		"domain": "TPRM Fundamentals and Review"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -77,6 +81,7 @@
 		"explanation": "The GRC Vendor Management Workspace is the primary interface for managing third parties, engagements, assessments, and related risk activities.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/third-party-risk-mgt-landing-page.html"
-		]
+		],
+		"domain": "TPRM Fundamentals and Review"
 	}
 ]

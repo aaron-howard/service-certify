@@ -2,18 +2,19 @@
 	{
 		"trackCode": "CIS-HR",
 		"order": 80,
-		"prompt": "Which role name pattern identifies HR delegated developers in scoped apps?",
+		"prompt": "Nightly employee imports show duplicate profiles and missing managers. Which practice improves HR integration data quality?",
 		"choices": [
-			"sn_hr_core.delegated_developer or equivalent scoped developer role",
-			"itil_admin only",
-			"asset only",
-			"sn_incident_read only"
+			"Coalesce keys, transform maps, and reconciliation reports before enabling downstream HR criteria",
+			"Delete all hr_profile records after each failed import row",
+			"Disable Journey Designer triggers until every employee completes training",
+			"Grant all users hr_admin to manually fix records in production"
 		],
 		"correctIndex": 0,
-		"explanation": "Scoped delegated developer roles grant development privileges within HR applications under administrative oversight.",
+		"explanation": "Import reconciliation validates employee keys and reference fields so eligibility and routing use trustworthy profile data.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
-		]
+		],
+		"domain": "Integration Strategy"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -29,56 +30,60 @@
 		"explanation": "Eligibility rules gate catalog exposure; ACLs and contextual case security enforce data access after submission.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-criteria.html"
-		]
+		],
+		"domain": "Integration Strategy"
 	},
 	{
 		"trackCode": "CIS-HR",
 		"order": 82,
-		"prompt": "Which controls help managers see only HR cases for their direct reports?",
+		"prompt": "A payroll connector fails mid-batch and leaves partial employee updates. How should integration operations respond?",
 		"choices": [
-			"Contextual security rules and HR criteria based on management hierarchy",
-			"Global read ACL with no conditions",
-			"Public case dashboards",
-			"Unrestricted COE membership"
+			"Use error queues, retry policies, and alerting so failed rows are corrected before dependent journeys run",
+			"Ignore failed rows because HR agents will notice missing profiles eventually",
+			"Disable all integrations permanently after the first failure",
+			"Delete successful rows to force a full reload without logs"
 		],
 		"correctIndex": 0,
-		"explanation": "Manager visibility is constrained by contextual rules referencing reporting relationships and case participation.",
+		"explanation": "Integration error handling preserves data integrity by isolating failed records and preventing downstream lifecycle errors.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
-		]
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+		],
+		"domain": "Integration Strategy"
 	},
 	{
 		"trackCode": "CIS-HR",
 		"order": 83,
-		"prompt": "Which security mechanisms protect employee self-service submissions on Employee Center? (Choose two.)",
+		"prompt": "A global enterprise operates in twelve countries with different payroll providers. Which HRSD design supports multi-country employee servicing?",
 		"choices": [
-			"HR criteria on services",
-			"Authenticated employee sessions",
-			"Unauthenticated guest case access",
-			"Global table delete ACL for all users"
+			"Company and country-aware HR profiles, criteria, and COE routing aligned to local policy and integrations",
+			"A single global HR profile with all payroll fields editable by every employee",
+			"One COE handling every country without localized services or integrations",
+			"Employee Center guest access so contractors bypass HR criteria entirely"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
-		"questionType": "multi",
-		"explanation": "Employees authenticate to Employee Center and HR criteria limits which services they may view or request.",
+		"explanation": "Multi-country HR programs combine localized profiles, eligibility, and integration endpoints while sharing common platform governance.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
-		]
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-profile-management.html",
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+		],
+		"domain": "Integration Strategy"
 	},
 	{
 		"trackCode": "CIS-HR",
 		"order": 84,
-		"prompt": "How should teams protect HR data during implementation across environments?",
+		"prompt": "Open enrollment requires verifying dependents and coverage tier before employees submit benefits changes. How should eligibility be enforced?",
 		"choices": [
-			"Use anonymized or masked data in sub-production and restrict elevated roles",
-			"Copy production HR cases with full PII to all dev instances",
-			"Disable ACLs in test to save time",
-			"Share admin passwords for efficiency"
+			"HR criteria on benefits services combined with profile attributes and guided intake variables",
+			"Global read access to every employee benefits case for all managers",
+			"Removal of HR tasks so enrollment happens only by email",
+			"Automatic approval of every benefits request without documentation"
 		],
 		"correctIndex": 0,
-		"explanation": "Data masking and least-privilege roles reduce privacy exposure while configurations are built and tested.",
+		"explanation": "Benefits enrollment uses HR criteria and structured intake to ensure only eligible employees access the correct services and fields.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
-		]
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-criteria.html",
+			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-services-overview.html"
+		],
+		"domain": "Integration Strategy"
 	}
 ]

@@ -11,11 +11,15 @@
 			"GRC: Knowledge Management"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "GRC: Profiles and GRC: Risk Management are scoped applications within the GRC product suite; incident and knowledge management are core platform applications, not GRC scopes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-overview.html"
-		]
+		],
+		"domain": "GRC Overview"
 	},
 	{
 		"trackCode": "CIS-RC",
@@ -31,7 +35,8 @@
 		"explanation": "Indicators run automated or manual checks against live platform data, giving ongoing visibility into control health instead of point-in-time spreadsheet snapshots.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/indicators.html"
-		]
+		],
+		"domain": "GRC Overview"
 	},
 	{
 		"trackCode": "CIS-RC",
@@ -47,7 +52,8 @@
 		"explanation": "An authority document such as a regulation or standard is decomposed into citations, each representing a discrete requirement that policy statements can address.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/authority-documents.html"
-		]
+		],
+		"domain": "GRC Overview"
 	},
 	{
 		"trackCode": "CIS-RC",
@@ -63,7 +69,8 @@
 		"explanation": "Entities are the organizational objects that risk and compliance activities are performed against, including departments, services, processes, and vendors.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-entities.html"
-		]
+		],
+		"domain": "GRC Overview"
 	},
 	{
 		"trackCode": "CIS-RC",
@@ -79,6 +86,7 @@
 		"explanation": "GRC: Profiles is the foundational scoped application that provides entities and shared GRC components required by the other GRC applications.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-overview.html"
-		]
+		],
+		"domain": "GRC Overview"
 	}
 ]

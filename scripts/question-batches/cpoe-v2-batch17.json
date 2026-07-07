@@ -13,7 +13,8 @@
 		"explanation": "Low adoption recovery requires targeted diagnosis, enablement, and visible sponsor messaging—not forced cutover or hiding metrics from leadership.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Implementation and Delivery"
 	},
 	{
 		"trackCode": "CPOE",
@@ -29,13 +30,14 @@
 		"explanation": "Enterprise releases need regression, performance, and integration testing in representative environments—not isolated unit checks or post-production UAT.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Implementation and Delivery"
 	},
 	{
 		"trackCode": "CPOE",
 		"order": 82,
 		"questionType": "multi",
-		"prompt": "Given a scenario where IT, HR, and finance each maintain separate delivery teams on one instance, which focus areas should the platform owner coordinate across teams? (Choose two.)",
+		"prompt": "During final strategy review, iT, HR, and finance each maintain separate delivery teams on one instance, which focus areas should the platform owner coordinate across teams? (Choose two.)",
 		"choices": [
 			"Shared data standards and integration patterns that prevent duplicate master records",
 			"Release calendar alignment so changes do not conflict during the same maintenance window",
@@ -43,11 +45,15 @@
 			"Separate upgrade schedules per team without enterprise regression planning"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Multi-team platform ownership requires coordinated data standards and release timing; isolated scopes and uncoordinated upgrades increase risk and rework.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Implementation and Delivery"
 	},
 	{
 		"trackCode": "CPOE",
@@ -69,15 +75,28 @@
 			"Access controls and sensitive data handling meet policy requirements"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Each testing discipline targets a distinct release risk: business fit, scalability, functional stability, and security compliance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Implementation and Delivery"
 	},
 	{
 		"trackCode": "CPOE",
@@ -93,6 +112,7 @@
 		"explanation": "Cross-team value reporting ties each product line's outcomes to enterprise KPIs and shared milestones—not activity metrics or delayed disclosure.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Implementation and Delivery"
 	}
 ]

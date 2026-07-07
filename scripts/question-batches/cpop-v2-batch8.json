@@ -13,7 +13,8 @@
 		"explanation": "Recommended CoEI sequencing progresses from sponsorship through governance, enablement, and measurement—not product-first or audit-only approaches.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOP",
@@ -29,7 +30,8 @@
 		"explanation": "Store release decisions balance value against test evidence, calendar constraints, and recovery options—not automatic skip/apply or marketing alone.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOP",
@@ -51,15 +53,28 @@
 			"Self-service resolution paths need current, approved content"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Critical processes depend on governed CMDB, identity, catalog, and knowledge data; platform owners must ensure quality and ownership for each.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOP",
@@ -75,7 +90,8 @@
 		"explanation": "Platform owners should transparently address mixed results by combining delivery credit with adoption remediation and measurable enablement goals.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOP",
@@ -89,10 +105,14 @@
 			"Ignore corporate blackout dates because platform work is always exempt"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Freeze planning requires pre-freeze validation and controlled emergency capacity; late untested upgrades or ignoring blackouts increase operational risk.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Strategy"
 	}
 ]

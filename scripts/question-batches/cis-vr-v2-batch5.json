@@ -13,7 +13,8 @@
 		"explanation": "NVD and CWE data should be imported before third-party scanner products so third-party library entries can reference enriched CVE, CWE, and CPE metadata.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/nvd-vuln-integration.html"
-		]
+		],
+		"domain": "Getting Data into Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -29,7 +30,8 @@
 		"explanation": "Third-party scanners populate the Third-Party Vulnerability Entries table; vulnerable items reference those library entries when detections are imported.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/tenableIntegration.html"
-		]
+		],
+		"domain": "Getting Data into Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -45,7 +47,8 @@
 		"explanation": "Third-party identifiers such as Qualys QIDs reference vendor library entries that in turn map to NVD CVE records when NVD integration data is present.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/nvd-vuln-integration.html"
-		]
+		],
+		"domain": "Getting Data into Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -61,7 +64,8 @@
 		"explanation": "CWE integration imports weakness enumeration data that enriches vulnerability context, especially for Application Vulnerability Response and third-party library cross-references.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/nvd-vuln-integration.html"
-		]
+		],
+		"domain": "Getting Data into Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -77,6 +81,7 @@
 		"explanation": "Vulnerability Response uses CI lookup rules to match scanner-reported asset data with CMDB configuration items when vulnerable items are created.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/mstvm-integration.html"
-		]
+		],
+		"domain": "Getting Data into Vulnerability Response"
 	}
 ]

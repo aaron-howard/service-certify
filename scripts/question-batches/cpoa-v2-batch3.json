@@ -13,7 +13,8 @@
 		"explanation": "Automated Test Framework supports repeatable regression coverage in lower environments, reducing production surprises after platform or application updates.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/automated-test-framework.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOA",
@@ -29,7 +30,8 @@
 		"explanation": "Platform strategy tied to ITSM outcomes depends on trustworthy CI and dependency data so teams can assess blast radius during changes and incidents.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/configuration-management/cmdb.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOA",
@@ -45,7 +47,8 @@
 		"explanation": "Data strategy at associate level focuses on agreed ownership rules and prioritized cleanup so downstream processes trust shared records.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/common-service-data-model/csdm.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOA",
@@ -59,11 +62,15 @@
 			"Skip lifecycle reviews because citizen apps are always low risk"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Citizen development scales with reusable templates, training, and clear escalation paths—not blanket admin access or absent lifecycle oversight.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOA",
@@ -85,14 +92,27 @@
 			"Teams detect regressions or adoption gaps after go-live"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "SDLC benefits come from connecting intake, testing, controlled promotion, and post-release feedback rather than skipping any stage.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/application-development.html"
-		]
+		],
+		"domain": "Strategy"
 	}
 ]

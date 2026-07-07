@@ -70,7 +70,7 @@ export type CisDfQuestionRow = {
 	prompt: string;
 	choices: string[];
 	sourceUrls: string[];
-	domain?: CisDfDomain;
+	domain?: string;
 	contentDifficulty?: CisDfContentDifficulty;
 	questionType?: QuestionType;
 	correctIndexes?: number[];

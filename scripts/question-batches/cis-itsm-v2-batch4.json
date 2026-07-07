@@ -13,7 +13,8 @@
 		"explanation": "Incident categorization assigns a category and at least one subcategory to support routing, reporting, and prioritization during logging.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/incident-management/incident-management-process.html"
-		]
+		],
+		"domain": "Incident Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -30,7 +31,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/incident-management/work-on-incidents.html",
 			"https://www.servicenow.com/docs/r/it-service-management/service-level-management/service-level-management-concepts.html"
-		]
+		],
+		"domain": "Incident Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -46,7 +48,8 @@
 		"explanation": "Agents use the CMDB during investigation because it contains configuration items and relationships that aid diagnosis and impact analysis.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/incident-management/work-on-incidents.html"
-		]
+		],
+		"domain": "Incident Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -62,7 +65,8 @@
 		"explanation": "When the Caller field is populated, the show related incidents icon appears so agents can view incidents for the same caller; the Incidents by Same Caller related list provides another research option.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/incident-management/work-on-incidents.html"
-		]
+		],
+		"domain": "Incident Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -78,6 +82,7 @@
 		"explanation": "The Summary tab uses a card layout to unify impacted services, affected CIs, outages, locations, child incidents, communication tasks, and related major incident activity.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/incident-management/mi-workbench-summary-tab.html"
-		]
+		],
+		"domain": "Incident Management"
 	}
 ]

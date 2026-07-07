@@ -2,7 +2,7 @@
 	{
 		"trackCode": "CPOE",
 		"order": 180,
-		"prompt": "Given a scenario where quarterly access reviews reveal persistent over-provisioned admin roles, what should the platform owner prioritize to strengthen regulatory alignment?",
+		"prompt": "When ServiceNow deprecates patterns, quarterly access reviews reveal persistent over-provisioned admin roles, what should the platform owner prioritize to strengthen regulatory alignment?",
 		"choices": [
 			"Implement least-privilege role design, automated certification workflows, and executive reporting on overdue attestations",
 			"Extend review cycles to annual intervals to reduce stakeholder burden",
@@ -13,7 +13,8 @@
 		"explanation": "Sustainable compliance requires least-privilege design, automated certification, and visible attestation metrics—not weakened review cadence or blanket approvals.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
-		]
+		],
+		"domain": "Compliance and Security"
 	},
 	{
 		"trackCode": "CPOE",
@@ -29,7 +30,8 @@
 		"explanation": "Separation of duties preserves change integrity while just-in-time emergency elevation with audit trace balances control and response speed.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
-		]
+		],
+		"domain": "Compliance and Security"
 	},
 	{
 		"trackCode": "CPOE",
@@ -43,11 +45,15 @@
 			"Purging audit records after thirty days regardless of regulatory retention requirements"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Auditors expect durable privileged-action logs and integrated security monitoring—not truncated retention or suppressed failure evidence.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
-		]
+		],
+		"domain": "Compliance and Security"
 	},
 	{
 		"trackCode": "CPOE",
@@ -63,7 +69,8 @@
 		"explanation": "Governed integration identity, encryption, and conformance testing enable partner workflows safely—turning security design into a business enabler rather than a late-stage blocker.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
-		]
+		],
+		"domain": "Compliance and Security"
 	},
 	{
 		"trackCode": "CPOE",
@@ -85,14 +92,27 @@
 			"Limits exposure window when third-party credentials are compromised"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Each security control maps to a distinct compliance outcome: identity assurance, data protection, authorization enforcement, and integration hygiene.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
-		]
+		],
+		"domain": "Compliance and Security"
 	}
 ]

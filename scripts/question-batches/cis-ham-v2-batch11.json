@@ -13,7 +13,8 @@
 		"explanation": "Catalog-driven hardware fulfillment integrates with HAM so fulfilled items become governed asset records tied to the requester.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/service-catalog-var-form-fields.html"
-		]
+		],
+		"domain": "Practical Management of IT Assets"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -29,7 +30,8 @@
 		"explanation": "Consumable models support quantity-based inventory tracking, while serialized hardware uses individual asset records with custody fields.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
-		]
+		],
+		"domain": "Practical Management of IT Assets"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -45,7 +47,8 @@
 		"explanation": "Disposal workflows capture controlled retirement steps, including vendor processing and compliance evidence for retired hardware.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/dispose-hardware-assets.html"
-		]
+		],
+		"domain": "Practical Management of IT Assets"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -61,7 +64,8 @@
 		"explanation": "Contract and warranty fields on hardware assets document coverage used for support entitlement and renewal planning.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-record-fields.html"
-		]
+		],
+		"domain": "Practical Management of IT Assets"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -77,6 +81,7 @@
 		"explanation": "Receiving discrepancies should be recorded and reconciled so inventory balances and custody history remain trustworthy.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/transfer-stockrooms.html"
-		]
+		],
+		"domain": "Practical Management of IT Assets"
 	}
 ]

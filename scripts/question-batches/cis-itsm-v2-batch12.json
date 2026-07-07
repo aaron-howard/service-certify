@@ -2,66 +2,72 @@
 	{
 		"trackCode": "CIS-ITSM",
 		"order": 55,
-		"prompt": "What capability does Service Catalog provide for IT service request fulfillment?",
+		"prompt": "IT leadership wants to compare current, planned, and retired services before approving new investments. Which portfolio strategy should Service Portfolio Management support?",
 		"choices": [
-			"Customize self-service portals and standardize request fulfillment for catalog offerings",
-			"Replace incident assignment groups with catalog categories automatically",
-			"Auto-close Resolved incidents after the configured autoclose interval",
-			"Discover configuration items exclusively through MID Server schedules"
+			"Organize services into portfolios with taxonomy that tracks current, future, and past offerings for planning decisions",
+			"Track only open incidents by assignment group without linking services to business outcomes",
+			"Report emergency change volume as the sole indicator of portfolio health",
+			"Store discovery payloads as portfolio nodes without service commitment records"
 		],
 		"correctIndex": 0,
-		"explanation": "Service Catalog lets organizations publish catalog items through portals and standardize how requests are captured and fulfilled.",
+		"explanation": "Service portfolios provide a strategic view of current, future, and retired services so leaders can evaluate spending and business impact.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/servicenow-platform/service-catalog/exploring-service-catalog.html"
-		]
+			"https://www.servicenow.com/docs/r/it-service-management/service-portfolio-management/SPM2-service-portfolios.html"
+		],
+		"domain": "Service Portfolio Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
 		"order": 56,
-		"prompt": "When an end user submits a record producer from the service catalog, what type of record is generated?",
+		"prompt": "A legacy collaboration service must be retired while a replacement offering launches. How should the service lifecycle be managed in SPM?",
 		"choices": [
-			"A task-based record such as an incident, not a Requested Item record",
-			"A Requested Item [sc_req_item] record with an automatic purchase order",
-			"A service portfolio taxonomy node on the spm_taxonomy_node table",
-			"A CAB approval record for normal change authorization only"
+			"Move the retiring service through portfolio lifecycle states while onboarding the replacement offering with updated commitments",
+			"Delete all taxonomy nodes immediately without documenting customer impact",
+			"Convert the service record into an incident category and disable catalog fulfillment",
+			"Retire the service only in Discovery schedules without updating portfolio taxonomy"
 		],
 		"correctIndex": 0,
-		"explanation": "Record producers look like catalog items but create task-based records directly; standard catalog processes use catalog items to create requested items.",
+		"explanation": "Portfolio management tracks services from introduction through retirement so transitions are governed and visible to stakeholders.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/servicenow-platform/service-catalog/c_RecordProducer.html"
-		]
+			"https://www.servicenow.com/docs/r/it-service-management/service-portfolio-management/SPM2-service-portfolios.html",
+			"https://www.servicenow.com/docs/r/it-service-management/service-portfolio-management/define-SPM2-service-commitments.html"
+		],
+		"domain": "Service Portfolio Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
 		"order": 57,
-		"prompt": "Why are variables defined on a catalog item in Service Catalog?",
+		"prompt": "Finance asks which digital services deliver the highest business value relative to operating cost. Which SPM analysis should portfolio owners provide?",
 		"choices": [
-			"To capture customer choices and structure the catalog item form shown during ordering",
-			"To replace catalog UI policies and client scripts on every item permanently",
-			"To store CMDB identification and reconciliation rule definitions",
-			"To configure emergency change stakeholder notifications automatically"
+			"Service commitments, consumption metrics, and portfolio analytics tied to business outcomes and ROI indicators",
+			"Count of catalog client scripts per item without service context",
+			"Number of CMDB classes created manually during the quarter only",
+			"Average incident autoclose interval grouped by assignment group"
 		],
 		"correctIndex": 0,
-		"explanation": "Catalog variables collect user input during ordering, define the item form layout, and can be passed through fulfillment tasks.",
+		"explanation": "Portfolio analytics and defined service commitments help assess value, performance, and investment trade-offs across offerings.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/servicenow-platform/service-catalog/c_ServiceCatalogVariables.html"
-		]
+			"https://www.servicenow.com/docs/r/it-service-management/service-portfolio-management/define-SPM2-service-commitments.html"
+		],
+		"domain": "Service Portfolio Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
 		"order": 58,
-		"prompt": "What is the purpose of an order guide in Service Catalog?",
+		"prompt": "Several offerings missed SLA targets last quarter while duplicate services consume support budget. How should portfolio health be evaluated?",
 		"choices": [
-			"To submit one service catalog request that can generate multiple ordered catalog items",
-			"To create task-based incident records directly without request tracking",
-			"To replace all catalog variables with hard-coded field values permanently",
-			"To bypass approval and fulfillment workflows for every catalog item"
+			"Review portfolio dashboards for commitment breaches, overlapping services, and lifecycle status across taxonomy nodes",
+			"Disable all service catalog items until incident volume returns to baseline",
+			"Remove portfolio_viewer access so stakeholders cannot see underperforming services",
+			"Convert every service offering into a Standard change template automatically"
 		],
 		"correctIndex": 0,
-		"explanation": "An order guide lets customers complete one request that orders several related catalog items, with variables cascaded to the included items.",
+		"explanation": "Portfolio health reviews combine service performance, commitment adherence, and lifecycle positioning to guide improvement decisions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/servicenow-platform/service-catalog/c_ServiceCatalogOrderGuides.html"
-		]
+			"https://www.servicenow.com/docs/r/it-service-management/service-portfolio-management/SPM2-service-portfolios.html",
+			"https://www.servicenow.com/docs/r/it-service-management/service-portfolio-management/r_InstalledWSPM2.html"
+		],
+		"domain": "Service Portfolio Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -77,6 +83,7 @@
 		"explanation": "Ordering from the catalog creates a Request to track the order; each catalog item in that request generates its own Requested Item record.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/service-catalog/c_RequestingAServiceCatalogItem.html"
-		]
+		],
+		"domain": "Service Catalog and Request Management"
 	}
 ]

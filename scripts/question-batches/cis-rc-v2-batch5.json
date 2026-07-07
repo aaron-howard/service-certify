@@ -2,83 +2,88 @@
 	{
 		"trackCode": "CIS-RC",
 		"order": 20,
-		"prompt": "An implementer must ensure that only production Windows servers in the CMDB become GRC entities. Which configuration achieves this?",
+		"prompt": "Legacy authority documents and control matrices live in shared drives. What should the migration plan prioritize before cutover?",
 		"choices": [
-			"An entity filter on the Windows server class table with conditions restricting results to production environment records",
-			"A scheduled script that copies every cmdb_ci record into the entity table each night without conditions",
-			"A UI policy on the entity form that hides non-production servers from list views for compliance users",
-			"An ACL that denies read access to development servers so they are skipped during entity generation"
+			"Data mapping workshops, validation samples, and governed import sequences with rollback criteria",
+			"Immediate deletion of source files once the first import job starts",
+			"Manual re-entry without traceability to prior evidence",
+			"Postponing migration until after the first external audit completes"
 		],
 		"correctIndex": 0,
-		"explanation": "Entity filters combine a source table with filter conditions, so scoping the Windows server class to production records generates exactly the intended entities.",
+		"explanation": "GRC data migration requires mapped fields, validated samples, and change control so imported obligations remain traceable and testable.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/entity-filters.html"
-		]
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/manage-authority-documents-and-citations.html"
+		],
+		"domain": "Implementation Planning"
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 21,
-		"prompt": "What role do entity owners play in the GRC entity framework?",
+		"prompt": "Control owners currently attest in email threads and will move to ServiceNow campaigns. Which change management activity has the highest impact?",
 		"choices": [
-			"They approve every platform upgrade before GRC plugins can be patched to a new family release",
-			"They are limited to viewing dashboards and cannot receive any assigned GRC work",
-			"They configure the instance-wide scoring methodology used for all risk calculations",
-			"They are accountable for the entity and typically receive attestation and issue work related to its controls and risks"
+			"Role-based training, communication plans, and pilot attestations with feedback before enterprise rollout",
+			"Silent activation of campaigns without notifying owners",
+			"Disabling legacy evidence stores on day one without transition guidance",
+			"Assigning every attestation to the GRC administrator permanently"
 		],
-		"correctIndex": 3,
-		"explanation": "The entity owner is the accountable person for an entity; assignment of attestations, issues, and reviews for that entity's controls and risks flows to them by default.",
+		"correctIndex": 0,
+		"explanation": "Organizational change management prepares owners for new workflows, reducing failed attestations and adoption resistance.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-entities.html"
-		]
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/attestations.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
+		],
+		"domain": "Implementation Planning"
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 22,
-		"prompt": "A department record used as an entity is deactivated in its source table, and the entity filter no longer matches it. How does the entity framework handle the related entity?",
+		"prompt": "Stakeholders from legal, IT, and operations disagree on entity granularity during design workshops. What should the implementation lead facilitate?",
 		"choices": [
-			"The entity and all of its historical controls, risks, and issues are hard-deleted immediately from the instance",
-			"The entity is flagged as no longer matching so it can be retired while preserving its compliance history",
-			"The entity remains fully active forever because filters are evaluated only once at creation time",
-			"The source record is automatically reactivated by the filter to keep the entity association valid"
+			"Structured workshops documenting scope decisions, ownership impacts, and agreed entity boundaries",
+			"Deferring all decisions until developers finish configuration in sub-production",
+			"Selecting the largest possible entity count to maximize licensed record usage",
+			"Excluding business stakeholders until user acceptance testing begins"
 		],
-		"correctIndex": 1,
-		"explanation": "When a source record stops matching, the framework marks the entity for retirement rather than deleting it, preserving the audit trail of past compliance activity.",
+		"correctIndex": 0,
+		"explanation": "Stakeholder engagement workshops surface constraints early so entity design aligns with operational accountability.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/entity-filters.html"
-		]
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-entities.html"
+		],
+		"domain": "Implementation Planning"
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 23,
-		"prompt": "Which statement about associating content with entity types is correct?",
+		"prompt": "Go-live is two weeks away. Which readiness assessment best confirms the GRC program can operate in production?",
 		"choices": [
-			"Policy statements can only be associated with individual entities one at a time, never at the type level",
-			"Associating a policy statement with an entity type generates controls for the entities in that type",
-			"Entity types accept risk statements but reject policy statements, which attach directly to authority documents",
-			"Content associations require deactivating the entity type and rebuilding it from an XML import"
+			"Validate roles, sample attestations, indicator results, and escalation paths with control owners in a pilot entity set",
+			"Confirm only that GRC plugins appear active in the application navigator",
+			"Skip owner testing because content packs supply default workflows",
+			"Delay readiness checks until the first audit engagement is scheduled"
 		],
-		"correctIndex": 1,
-		"explanation": "Associating policy statements or risk statements at the entity type level cascades to member entities, generating the corresponding controls and risks.",
+		"correctIndex": 0,
+		"explanation": "Readiness assessments exercise end-to-end workflows with real owners before enterprise activation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-entities.html"
-		]
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/control-testing-and-evidence.html"
+		],
+		"domain": "Implementation Planning"
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 24,
-		"questionType": "multi",
-		"prompt": "Which two examples are commonly modeled as entities in a GRC implementation? (Choose two.)",
+		"prompt": "When creating an entity filter, which field is mandatory?",
 		"choices": [
-			"A business service supporting a regulated process",
-			"A vendor providing outsourced data processing",
-			"A UI theme applied to the platform login page",
-			"A scheduled clone of production down to a sub-production instance"
+			"Source table",
+			"Description",
+			"Owned by",
+			"Parent entity type"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
-		"explanation": "Business services and vendors are typical entities because risk and compliance obligations attach to them; UI themes and clone schedules are platform administration items.",
+		"explanation": "An entity filter must specify the source table whose records will be evaluated by the filter conditions; other fields are optional metadata.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-entities.html"
-		]
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/entity-filters.html"
+		],
+		"domain": "Entity Framework"
 	}
 ]

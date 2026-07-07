@@ -14,7 +14,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade/concept/skipped-updates.html",
 			"https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html"
-		]
+		],
+		"domain": "Technology"
 	},
 	{
 		"trackCode": "CPOP",
@@ -31,7 +32,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/concept/upgrade-governance.html",
 			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html"
-		]
+		],
+		"domain": "Technology"
 	},
 	{
 		"trackCode": "CPOP",
@@ -53,16 +55,29 @@
 			"Control business risk with defined go/no-go gates and documented recovery paths"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Upgrade sequencing moves from readiness review through staged validation, conflict resolution, and governed production cutover to reduce surprise and rollback frequency.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/task/plan-instance-upgrade.html",
 			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/concept/upgrade-readiness-dashboard.html"
-		]
+		],
+		"domain": "Technology"
 	},
 	{
 		"trackCode": "CPOP",
@@ -76,12 +91,16 @@
 			"A policy allowing developers to self-schedule production patches without change records"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Patch schedules need published windows tied to blackout policy plus intake deadlines that leave time for regression and security validation before deployment.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html",
 			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/concept/upgrade-center.html"
-		]
+		],
+		"domain": "Technology"
 	},
 	{
 		"trackCode": "CPOP",
@@ -98,6 +117,7 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/upgrade-center/concept/upgrade-readiness-dashboard.html",
 			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/monitoring/concept/monitoring-and-logging.html"
-		]
+		],
+		"domain": "Technology"
 	}
 ]

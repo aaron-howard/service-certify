@@ -13,7 +13,8 @@
 		"explanation": "The sam_developer role extends SAM access with script writing capabilities on the platform for custom automation and rule development.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-roles.html"
-		]
+		],
+		"domain": "SAM Overview and Fundamentals"
 	},
 	{
 		"trackCode": "CIS-SAM",
@@ -29,7 +30,8 @@
 		"explanation": "SAM focuses on reconciling license rights against installed and consumed software so organizations can defend audit positions and optimize spend.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/software-asset-management-overview.html"
-		]
+		],
+		"domain": "SAM Overview and Fundamentals"
 	},
 	{
 		"trackCode": "CIS-SAM",
@@ -45,7 +47,8 @@
 		"explanation": "SAM process architecture flows from discovery evidence through normalization into software models, then reconciliation evaluates entitlement position.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-process-overview.html"
-		]
+		],
+		"domain": "SAM Overview and Fundamentals"
 	},
 	{
 		"trackCode": "CIS-SAM",
@@ -61,7 +64,8 @@
 		"explanation": "Valid entitlement import errors include zero purchased rights, missing publisher part numbers, and missing software models. A minimum threshold of 20 is not a documented import validation rule.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/entitlement-import-error-fields.html"
-		]
+		],
+		"domain": "SAM Overview and Fundamentals"
 	},
 	{
 		"trackCode": "CIS-SAM",
@@ -77,6 +81,7 @@
 		"explanation": "The sam role is the base Software Asset Management application role used by analysts performing routine entitlement and compliance work.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-roles.html"
-		]
+		],
+		"domain": "SAM Overview and Fundamentals"
 	}
 ]

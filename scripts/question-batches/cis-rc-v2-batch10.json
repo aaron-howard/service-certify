@@ -13,7 +13,8 @@
 		"explanation": "Citations break authority documents into testable requirements that drive control design and compliance testing.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/manage-authority-documents-and-citations.html"
-		]
+		],
+		"domain": "Policy and Compliance"
 	},
 	{
 		"trackCode": "CIS-RC",
@@ -30,7 +31,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/manage-authority-documents-and-citations.html",
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/policy-lifecycle-management.html"
-		]
+		],
+		"domain": "Policy and Compliance"
 	},
 	{
 		"trackCode": "CIS-RC",
@@ -47,7 +49,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/c_GRCControls.html",
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/policy-compliance-overview.html"
-		]
+		],
+		"domain": "Policy and Compliance"
 	},
 	{
 		"trackCode": "CIS-RC",
@@ -64,7 +67,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/c_GRCControls.html",
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/manage-common-controls.html"
-		]
+		],
+		"domain": "Policy and Compliance"
 	},
 	{
 		"trackCode": "CIS-RC",
@@ -78,11 +82,15 @@
 			"Audit Engagement table for external audit planning and fieldwork"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Policy and Compliance scoped applications require Control and Citation scope tables so compliance data is partitioned correctly.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/c_GRCControls.html",
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
-		]
+		],
+		"domain": "Policy and Compliance"
 	}
 ]
