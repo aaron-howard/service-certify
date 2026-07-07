@@ -13,7 +13,8 @@
 		"explanation": "Conflict detection evaluates CIs, planned dates, maintenance windows, blackout schedules, and other active changes to surface scheduling conflicts.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/change-management/c_ConflictDetection.html"
-		]
+		],
+		"domain": "Problem Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -29,7 +30,8 @@
 		"explanation": "Standard changes are frequently implemented, pre-approved procedures that do not require group-level or CAB authorization on each request.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/change-management/change-types.html"
-		]
+		],
+		"domain": "Problem Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -45,7 +47,8 @@
 		"explanation": "Emergency changes address urgent fix-on-fail or fail-or-fail situations and move quickly to Authorize state for CAB approval group review.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/change-management/change-types.html"
-		]
+		],
+		"domain": "Problem Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -61,7 +64,8 @@
 		"explanation": "Normal changes follow the prescriptive lifecycle with assessments and approvals such as peer review, change management, and CAB authorization.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/change-management/change-types.html"
-		]
+		],
+		"domain": "Problem Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -78,6 +82,7 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/change-management/t_CreateBlkoutMaintSched.html",
 			"https://www.servicenow.com/docs/r/it-service-management/change-management/c_ConflictDetection.html"
-		]
+		],
+		"domain": "Change Management"
 	}
 ]

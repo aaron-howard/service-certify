@@ -13,7 +13,8 @@
 		"explanation": "True-up costs should be validated against reconciled position and optimization options such as reclaim before purchasing additional rights.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/license-workbench.html"
-		]
+		],
+		"domain": "Practical Management of Software Compliance"
 	},
 	{
 		"trackCode": "CIS-SAM",
@@ -29,7 +30,8 @@
 		"explanation": "Entitlement data quality is foundational; import errors must be corrected so reconciliation reflects accurate purchased rights.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/manage-software-entitlements.html"
-		]
+		],
+		"domain": "Practical Management of Software Compliance"
 	},
 	{
 		"trackCode": "CIS-SAM",
@@ -45,7 +47,8 @@
 		"explanation": "Model retirement governs end-of-life products by preventing new demand while existing installs are managed through retirement workflows.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/now-assist-for-software-asset-management-sam/calculated-lifecycles.html"
-		]
+		],
+		"domain": "Practical Management of Software Compliance"
 	},
 	{
 		"trackCode": "CIS-SAM",
@@ -58,12 +61,18 @@
 			"Contract-backed purchased quantities aligned to publisher terms"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1, 2, 3],
+		"correctIndexes": [
+			0,
+			1,
+			2,
+			3
+		],
 		"questionType": "multi",
 		"explanation": "Reconciliation compares entitlements, allocations, and normalized installs using metric rules derived from contractual terms.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
-		]
+		],
+		"domain": "Practical Management of Software Compliance"
 	},
 	{
 		"trackCode": "CIS-SAM",
@@ -79,6 +88,7 @@
 		"explanation": "Contract changes must be reflected in entitlement records with traceable effective dates so reconciliation stays aligned with current rights.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/software-entitlement-best-practices.html"
-		]
+		],
+		"domain": "Practical Management of Software Compliance"
 	}
 ]

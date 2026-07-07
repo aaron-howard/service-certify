@@ -13,7 +13,8 @@
 		"explanation": "PMO engagement includes reconciling duplicate demand and aligning work to shared priorities so capacity is not wasted on redundant delivery.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOA",
@@ -29,7 +30,8 @@
 		"explanation": "Coding best practices favor scoped implementations and reusable patterns that reduce risk of platform-wide side effects from global changes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/application-development.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOA",
@@ -45,7 +47,8 @@
 		"explanation": "Platform owners advocate for inclusive experiences and should address accessibility findings before scaling a workspace that excludes part of the workforce.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-user-interface/platform-user-interface.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOA",
@@ -59,11 +62,15 @@
 			"A guideline to store integration secrets in public wiki pages for visibility"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Foundational governance covers consistent delivery mechanics and secure development; unaudited production edits and exposed secrets undermine enterprise control.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOA",
@@ -85,14 +92,27 @@
 			"Records are kept only as long as policy and compliance require"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Data strategy ties ownership, measurable quality, integration discipline, and retention to trustworthy platform decisions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/common-service-data-model/csdm.html"
-		]
+		],
+		"domain": "Strategy"
 	}
 ]

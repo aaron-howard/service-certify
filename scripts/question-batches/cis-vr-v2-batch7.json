@@ -13,7 +13,8 @@
 		"explanation": "Discovered items represent scanner-ingested asset observations that are matched to CIs through lookup rules before or alongside vulnerable item creation.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/tenableIntegration.html"
-		]
+		],
+		"domain": "Getting Data into Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -29,7 +30,8 @@
 		"explanation": "Starting in recent VR releases, administrators can reapply CI lookup rules on selected discovered items to reconcile unmatched CIs when CMDB data changes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/reapply-reconcile-unmatched-discovered-items.html"
-		]
+		],
+		"domain": "Getting Data into Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -45,7 +47,8 @@
 		"explanation": "Security Operations integration guidance recommends vulnerability data frameworks, import sets, and transforms to normalize and correlate multi-source scan data consistently.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/security-operations/c_BestPractisesIntegrations.html"
-		]
+		],
+		"domain": "Getting Data into Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -61,7 +64,8 @@
 		"explanation": "Scanner integration setup checklists require asset or host tag imports before creating Vulnerability Response assignment or remediation rules that depend on tag values.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/install-and-configure-r7.html"
-		]
+		],
+		"domain": "Getting Data into Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -77,6 +81,7 @@
 		"explanation": "Third-party library entries such as Qualys QIDs reference CVE records in the NVD library, providing enriched context on vulnerable items after NVD import.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/nvd-vuln-integration.html"
-		]
+		],
+		"domain": "Getting Data into Vulnerability Response"
 	}
 ]

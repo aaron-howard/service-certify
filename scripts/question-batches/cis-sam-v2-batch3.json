@@ -2,83 +2,94 @@
 	{
 		"trackCode": "CIS-SAM",
 		"order": 10,
-		"prompt": "When different contract terms apply to the same software model, how should a SAM administrator structure entitlement records?",
+		"prompt": "Finance asks for a three-year SAM roadmap before funding additional headcount. Which planning artifact should the SAM lead deliver first?",
 		"choices": [
-			"Create separate entitlement records by metric, term, or restriction so reconciliation applies the correct rules",
-			"Merge all rights into one entitlement and track term differences in the short description field only",
-			"Store contract terms exclusively on procurement requests and omit them from entitlement records",
-			"Convert named-user licenses into hardware asset records to simplify metric tracking"
+			"A phased strategy covering discovery coverage, entitlement maturity, optimization targets, and audit readiness milestones",
+			"A complete inventory of every dashboard widget without linking actions to outcomes",
+			"MID Server patch schedules with no connection to software normalization goals",
+			"A list of admin users who can edit entitlement records without process context"
 		],
 		"correctIndex": 0,
-		"explanation": "Different licensing terms and metrics require separate entitlement records to preserve accurate compliance logic and audit traceability.",
+		"explanation": "SAM strategy roadmaps sequence foundational data work, compliance operations, and optimization so investments align to measurable business outcomes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/software-entitlement-best-practices.html"
-		]
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/software-asset-management-overview.html"
+		],
+		"domain": "SAM Strategy and Optimization"
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 11,
-		"prompt": "Before a publisher true-up, a SAM manager must verify the legal measurement basis for license rights. Which entitlement attributes are most critical to confirm first?",
+		"prompt": "Reconciliation shows six publishers with reclaimable installs worth $400K annually. Which optimization approach should leadership prioritize?",
 		"choices": [
-			"License metric and purchased rights quantity aligned to contract terms",
-			"Number of attachments on unrelated software model records in the catalog",
-			"UI policy names configured on the entitlement form layout",
-			"Color theme settings applied to the entitlement list view"
+			"Targeted reclamation campaigns on high-cost titles with verified usage data before renewal negotiations",
+			"Purchase additional buffer licenses for every under-licensed product immediately",
+			"Disable discovery for publishers showing surplus entitlements",
+			"Delete install records until compliance dashboards show zero gaps"
 		],
 		"correctIndex": 0,
-		"explanation": "License metric and purchased rights define how consumption is counted against contractual entitlements, directly driving compliance calculations.",
+		"explanation": "Optimization prioritizes measurable savings from reclamation and right-sizing using reconciled position data rather than reactive purchasing.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/manage-software-entitlements.html"
-		]
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/software-reclamation.html",
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/license-workbench.html"
+		],
+		"domain": "SAM Strategy and Optimization"
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 12,
-		"questionType": "multi",
-		"prompt": "Which two platform roles are commonly assigned to SAM team members who need more than read-only access? (Choose two.)",
+		"prompt": "Procurement enters true-up negotiations with a strategic publisher next month. Which SAM deliverable gives the strongest negotiating position?",
 		"choices": [
-			"The sam role for day-to-day Software Asset Management operational tasks",
-			"The sam_admin role for full SAM configuration and entitlement administration",
-			"The sam_user role for read-only SAM dashboard and report consumption",
-			"The itil role for incident and change management without SAM module access"
+			"Reconciled Effective License Position with documented entitlement evidence and remediation history",
+			"Unnormalized discovery export sorted by install name without contract linkage",
+			"Catalog request volume for the publisher without consumption metrics",
+			"Average time to close unrelated infrastructure change requests"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
-		"explanation": "The sam role supports day-to-day SAM operations while sam_admin provides full administrative control; sam_user is read-only and itil covers ITSM modules.",
+		"explanation": "Vendor negotiations rely on defensible license position built from reconciled entitlements, allocations, and normalized installs.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-roles.html"
-		]
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/entitlement-audit-preparation.html"
+		],
+		"domain": "SAM Strategy and Optimization"
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 13,
-		"prompt": "A SAM team is importing entitlements from a spreadsheet for the first time. What happens when an Entitlement Import Error record is corrected and saved?",
+		"prompt": "The CIO wants quarterly proof that SAM reduces financial exposure. Which KPI set best demonstrates program value?",
 		"choices": [
-			"The entitlement is created and the error status changes to Fixed with fields becoming read-only",
-			"The import file is automatically re-uploaded and all prior entitlements are deleted",
-			"The error record is permanently deleted without creating an entitlement record",
-			"The software model is removed from the catalog until the next content update runs"
+			"Compliance risk trend, realized optimization savings, and aging of open remediation items",
+			"Total discovery probe count regardless of normalization outcomes",
+			"Number of users assigned the sam_admin role",
+			"Volume of entitlement imports completed without reference to error resolution"
 		],
 		"correctIndex": 0,
-		"explanation": "When an import error is resolved, the platform creates the entitlement and marks the error Fixed; related errors using the same publisher part number may also auto-resolve.",
+		"explanation": "SAM KPIs connect operational maturity to reduced audit exposure and measurable cost recovery from optimization.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/import-software-entitlements.html"
-		]
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/license-workbench.html",
+			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-model-data-quality-kpis.html"
+		],
+		"domain": "SAM Strategy and Optimization"
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 14,
-		"prompt": "During entitlement import, a row fails because the Publisher part number field does not match any existing record. What is the recommended remediation?",
+		"questionType": "multi",
+		"prompt": "Which two deliverables should a year-one SAM optimization roadmap include? (Choose two.)",
 		"choices": [
-			"Create or map the publisher part number to the correct software model before reprocessing the import row",
-			"Delete the import error and ignore all rows referencing that publisher permanently",
-			"Change the license metric to Per Device so the part number validation is bypassed",
-			"Convert the entitlement to a hardware asset record to avoid software model requirements"
+			"Reclamation targets for high-cost publishers with verified usage baselines",
+			"Renewal negotiation playbooks backed by reconciled Effective License Position data",
+			"Immediate retirement of every perpetual license without contract review",
+			"Suspension of all discovery schedules until optimization savings are realized"
 		],
 		"correctIndex": 0,
-		"explanation": "Publisher part numbers link import rows to licensable products; missing part numbers must be created or mapped so entitlements associate with the correct software model.",
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Optimization roadmaps prioritize measurable reclamation and data-driven renewal strategies before broad technical changes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/entitlement-import-error-fields.html"
-		]
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/software-reclamation.html",
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/license-workbench.html"
+		],
+		"domain": "SAM Strategy and Optimization"
 	}
 ]

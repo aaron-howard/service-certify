@@ -2,19 +2,20 @@
 	{
 		"trackCode": "CIS-PA",
 		"order": 85,
-		"prompt": "A municipal IT team deploys Platform Analytics for directors using Next Experience. Which rollout step validates the visualization experience?",
+		"prompt": "Monthly service reviews require explaining why a KPI trend changed direction over the last six periods. Which advanced visualization approach supports that analysis?",
 		"choices": [
-			"Confirm directors can open governed dashboards from Next Experience with correct role-based filter defaults",
-			"Migrate all PA tables to external BI before enabling any in-platform widgets",
-			"Disable drill-down on every widget so navigation never leaves the home page",
-			"Require directors to use classic UI only because Next Experience cannot render PA content"
+			"Time-series trend widgets with breakdown filters and KPI Details to inspect contributing records",
+			"A single-value widget showing only the latest score with no historical context",
+			"Static dashboard screenshots emailed before each meeting without live drill-down",
+			"Deletion of prior-period scores so the chart always flatlines at the current value"
 		],
 		"correctIndex": 0,
-		"explanation": "Next Experience rollout for PA should verify that target audiences reach the right dashboards with authorized filter defaults before broad communication.",
+		"explanation": "Trend visualizations with dimensional filters and drill-down explain score movement using historical PA snapshots and underlying records.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html",
 			"https://www.servicenow.com/docs/bundle/zurich-platform-user-interface/page/administer/navigation/concept/c_NextExperienceUnifiedNavigation.html"
-		]
+		],
+		"domain": "Advanced Analytics"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -31,7 +32,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_PAContentPacks.html",
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
-		]
+		],
+		"domain": "Administration and Advanced Implementation Solutions"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -48,7 +50,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html",
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/optimized-data-collection.html"
-		]
+		],
+		"domain": "Administration and Advanced Implementation Solutions"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -65,7 +68,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_PAStakeholderSpotlight.html",
 			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_BuildAStakeholderSpotlight.html"
-		]
+		],
+		"domain": "Administration and Advanced Implementation Solutions"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -79,11 +83,15 @@
 			"Skip ownership assignment because Spotlight tiles self-correct when processes change"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Production promotion should capture content pack lineage and tune collection schedules for load while keeping indicator governance and ownership intact.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_PAContentPacks.html",
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
-		]
+		],
+		"domain": "Administration and Advanced Implementation Solutions"
 	}
 ]

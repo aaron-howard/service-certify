@@ -13,7 +13,8 @@
 		"explanation": "Employee Center provides self-service search, ticket creation, catalog browsing, and simplified visibility into the employee's requests, incidents, and tasks.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/employee-experience-employee-center.html"
-		]
+		],
+		"domain": "Service Catalog and Request Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -29,7 +30,8 @@
 		"explanation": "Open IT Ticket launches the Create incident with Now Assist record producer so employees can describe the issue and review suggested solutions before submitting.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/open-ticket-native-ai-itsm.html"
-		]
+		],
+		"domain": "Service Catalog and Request Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -45,7 +47,8 @@
 		"explanation": "Employees use Browse catalogs in Employee Center to find commonly requested items, enter item details, and submit or save the request as a draft.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/submit-cat-request-native-ai-itsm.html"
-		]
+		],
+		"domain": "Service Catalog and Request Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -61,7 +64,8 @@
 		"explanation": "Search and Now Assist are deflection steps; if generated solutions do not resolve the issue, the employee can continue with incident creation or status checking.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/search-solution-native-ai-itsm.html"
-		]
+		],
+		"domain": "Service Catalog and Request Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -77,6 +81,7 @@
 		"explanation": "Now Support chat offers self-serve troubleshooting through Now Assist and allows escalation to a live agent through chat commands or the Support options menu.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/get-support-using-chat.html"
-		]
+		],
+		"domain": "Service Catalog and Request Management"
 	}
 ]

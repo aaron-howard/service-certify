@@ -13,39 +13,44 @@
 		"explanation": "Major Security Incident Management provides the collaborative response model for high-impact incidents such as ransomware and large-scale breaches.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/security-incident-response/major-security-incident-management.html"
-		]
+		],
+		"domain": "Incident Response Strategy"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 16,
-		"prompt": "Why do security teams associate MITRE ATT&CK tactics and techniques with a security incident record?",
+		"prompt": "Suspected lateral movement is detected while forensic collection tools are still deploying. What strategic trade-off should the incident commander prioritize?",
 		"choices": [
-			"To add structured adversary behavior context that supports prioritization and investigation",
-			"To automatically patch every endpoint without analyst review or validation",
-			"To replace vulnerability scanning tools across the entire security stack",
-			"To normalize software publisher names for annual license audit reporting"
+			"Segment high-risk subnets quickly while continuing targeted evidence collection on key hosts",
+			"Delay all containment until every endpoint has a full disk image completed",
+			"Close the parent incident and open separate IT incidents for each affected host",
+			"Disable threat intelligence feeds until the investigation reaches closed state"
 		],
 		"correctIndex": 0,
-		"explanation": "MITRE ATT&CK alignment enriches incidents with standardized threat behavior context for defensive planning and consistent analysis.",
+		"explanation": "Live intrusions require balancing rapid containment to stop spread with sufficient evidence collection on priority systems for root-cause analysis.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/mitre-attack-defend-graph-sir.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/respond-to-a-security-incident.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/manage-major-security-incidents.html"
+		],
+		"domain": "Incident Response Strategy"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 17,
-		"prompt": "During triage, an analyst links a suspicious IP address to a security incident. Which capability enriched that indicator?",
+		"prompt": "A confirmed phishing campaign targets executive credentials across the organization. What containment sequence should run before declaring eradication complete?",
 		"choices": [
-			"Threat intelligence lookup against configured feeds and observables",
-			"Discovery horizontal scan results from the previous subnet probe",
-			"Service catalog approval history for the affected user account",
-			"Project portfolio demand scoring for unrelated strategic initiatives"
+			"Revoke sessions, reset credentials, quarantine malicious messages, and validate mailbox rules",
+			"Notify all employees by public social media post before any technical action occurs",
+			"Delete every security incident record and recreate them under a new assignment group",
+			"Disable SIR integrations permanently until the next annual compliance audit cycle"
 		],
 		"correctIndex": 0,
-		"explanation": "Threat intelligence integrations and lookups enrich observables such as IP addresses with reputation and context during incident triage.",
+		"explanation": "Phishing containment addresses credential exposure, malicious content, and persistence mechanisms before analysts confirm eradication is complete.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/threat-intelligence-in-sir.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/using-automated-phishing-playbook.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/respond-to-a-security-incident.html"
+		],
+		"domain": "Incident Response Strategy"
 	},
 	{
 		"trackCode": "CIS-SIR",
@@ -61,22 +66,25 @@
 		"explanation": "Parent and child security incidents let teams parallelize host-level investigations while maintaining consolidated oversight.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/security-incident-response/manage-major-security-incidents.html"
-		]
+		],
+		"domain": "Incident Response Strategy"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 19,
-		"prompt": "Which field type on a security incident best stores file hashes and domains identified during initial analysis?",
+		"prompt": "Leadership asks whether to notify regulators during an active intrusion with potential citizen data exposure. What criteria should drive escalation decisions?",
 		"choices": [
-			"Indicators of compromise linked through threat intelligence observables",
-			"Discovery credentials used for MID Server authentication to Linux hosts",
-			"Catalog variables captured during employee laptop provisioning requests",
-			"Financial plan task codes tied to portfolio investment approvals"
+			"Confirmed data categories affected, regulatory timelines, legal guidance, and breach scope",
+			"Analyst preference for dashboard color themes and weekly shift rotation schedules",
+			"Discovery MID Server heartbeat intervals across unrelated office subnets",
+			"Service catalog item popularity rankings for employee hardware requests"
 		],
 		"correctIndex": 0,
-		"explanation": "IOCs such as hashes and domains are captured as observables and linked to incidents for enrichment and downstream correlation.",
+		"explanation": "Regulatory escalation depends on confirmed data impact, applicable notification requirements, and coordinated legal and executive guidance.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/threat-intelligence-in-sir.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/major-security-incident-management.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-war-room-operations.html"
+		],
+		"domain": "Incident Response Strategy"
 	}
 ]

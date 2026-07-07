@@ -13,7 +13,8 @@
 		"explanation": "Governed promotion uses captured change packages—update sets or app repo versions—previewed in test and approved before production commit.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/system-update-sets.html"
-		]
+		],
+		"domain": "Process"
 	},
 	{
 		"trackCode": "CPOA",
@@ -29,7 +30,8 @@
 		"explanation": "Waterfall defers demonstrable increments, delaying feedback and adaptation—problematic for platform programs that benefit from iterative validation.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/application-development.html"
-		]
+		],
+		"domain": "Process"
 	},
 	{
 		"trackCode": "CPOA",
@@ -45,7 +47,8 @@
 		"explanation": "Agile SDLC emphasizes short iterations and frequent stakeholder feedback, improving alignment as platform capabilities evolve.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/application-development.html"
-		]
+		],
+		"domain": "Process"
 	},
 	{
 		"trackCode": "CPOA",
@@ -59,11 +62,15 @@
 			"Sprint planning: reopen stories already accepted in prior sprints for re-voting"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Reviews showcase increments for feedback and retrospectives improve process; stand-ups synchronize the team and planning selects new sprint work.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/application-development.html"
-		]
+		],
+		"domain": "Process"
 	},
 	{
 		"trackCode": "CPOA",
@@ -85,15 +92,28 @@
 			"Verify functionality and monitor for defects after go-live"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "The promotion path sequences build, validation, controlled commit, and post-release verification to reduce production risk.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/system-update-sets.html",
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
-		]
+		],
+		"domain": "Process"
 	}
 ]

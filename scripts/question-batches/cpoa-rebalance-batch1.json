@@ -1,0 +1,438 @@
+[
+	{
+		"trackCode": "CPOA",
+		"order": 1,
+		"prompt": "Finance asks why a major platform initiative needs external security assessment budget before approval. Which strategic justification should the associate platform owner provide?",
+		"choices": [
+			"Independent assessment validates risk posture and supports investment decisions tied to compliance obligations",
+			"External testing eliminates the need for any internal security team involvement afterward",
+			"Security assessments should occur only after production defects are reported by users",
+			"Budget for assessments is optional because cloud hosting removes all customer responsibility"
+		],
+		"correctIndex": 0,
+		"explanation": "Platform owners connect security assessment investment to risk validation and compliance drivers that executives weigh during portfolio funding decisions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html",
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		],
+		"domain": "Strategy"
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 5,
+		"prompt": "A department requests funding for a custom integration that duplicates an existing catalog capability. Which strategic response should the associate platform owner recommend first?",
+		"choices": [
+			"Facilitate a business case review comparing reuse, total cost of ownership, and expected outcomes before approving new build",
+			"Approve the build immediately because duplicate solutions increase team autonomy",
+			"Reject all custom work without reviewing whether existing investments can be extended",
+			"Defer the decision indefinitely until every legacy system is retired"
+		],
+		"correctIndex": 0,
+		"explanation": "Associate platform owners evaluate investment requests against reuse options, cost, and measurable outcomes before adding redundant scope to the roadmap.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "Strategy"
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 8,
+		"questionType": "multi",
+		"prompt": "The executive sponsor asks which strategic platform risks should appear on the quarterly roadmap review. (Choose two.)",
+		"choices": [
+			"Adoption gaps on funded capabilities that undermine expected business value",
+			"Open compliance or audit findings that constrain new scope until remediated",
+			"Individual developer preference for a specific script editor color theme",
+			"Count of personal dashboards created without linking to enterprise priorities"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Strategic roadmap reviews surface adoption and compliance risks that affect value realization—not cosmetic preferences or unrelated usage counts.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "Strategy"
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 10,
+		"prompt": "Leadership approved three platform waves but capacity covers only two this year. Which strategic sequencing decision should the associate platform owner recommend?",
+		"choices": [
+			"Prioritize waves with highest business value, dependency readiness, and measurable adoption targets",
+			"Execute all three waves concurrently to avoid revisiting priorities next year",
+			"Delay every wave until all teams complete unrelated certification programs",
+			"Select waves based solely on which department submitted requests first"
+		],
+		"correctIndex": 0,
+		"explanation": "Roadmap sequencing weighs business value, readiness, and adoption potential against available capacity rather than first-come scheduling or parallel overload.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "Strategy"
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 12,
+		"prompt": "Business leaders disagree on whether a new employee service should launch on the shared platform or a standalone tool. Which strategic alignment step should the associate platform owner take first?",
+		"choices": [
+			"Document business outcomes, integration needs, and total cost of ownership for each option against enterprise platform standards",
+			"Select the standalone tool because it avoids any shared governance review",
+			"Default to the platform without validating whether outcomes justify shared investment",
+			"Postpone the decision until every unrelated project in the portfolio completes"
+		],
+		"correctIndex": 0,
+		"explanation": "Platform strategy decisions compare outcomes, integration fit, and cost against enterprise standards before committing shared capacity.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "Strategy"
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 14,
+		"questionType": "match",
+		"prompt": "Match each strategic planning input to the executive question it helps answer during roadmap prioritization.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Documented business objectives",
+			"Current adoption and usage metrics",
+			"Portfolio capacity forecast",
+			"Open risk and compliance gaps"
+		],
+		"matchRightItems": [
+			"What outcomes must platform investments support this cycle?",
+			"Are funded capabilities actually consumed by target audiences?",
+			"How much change can teams absorb without overloading delivery?",
+			"Which issues must be resolved before new scope is approved?"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Strategic planning connects objectives, measured adoption, capacity, and risk posture so executives can prioritize investments with evidence.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "Strategy"
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 16,
+		"prompt": "Two teams propose competing solutions for the same business outcome with different build and license costs. Which strategic guidance should the associate platform owner provide?",
+		"choices": [
+			"Compare expected value, reuse of existing platform investments, and ongoing support burden before recommending one path",
+			"Approve both solutions in parallel so teams can decide later which to retire",
+			"Select the option with the lowest initial license quote without validating fulfillment impact",
+			"Defer all decisions until a new vendor completes an unrelated proof of concept"
+		],
+		"correctIndex": 0,
+		"explanation": "Investment tradeoffs weigh value, reuse, and long-term support—not parallel builds or price alone.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "Strategy"
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 18,
+		"questionType": "multi",
+		"prompt": "The sponsor requests a business case for expanding self-service on the Now Platform. Which elements should the associate platform owner include? (Choose two.)",
+		"choices": [
+			"Baseline adoption metrics and target improvement tied to measurable business outcomes",
+			"Estimated effort, dependencies, and risk mitigations for the proposed roadmap wave",
+			"A list of every open developer task regardless of business priority",
+			"A commitment to skip user feedback because delivery velocity is the only success measure"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Business cases combine outcome baselines, targets, effort, dependencies, and risks— not undifferentiated task lists or ignored adoption feedback.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "Strategy"
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 19,
+		"questionType": "match",
+		"prompt": "Match each value realization element to the strategic outcome it supports for platform ownership.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Outcome baseline",
+			"Adoption target",
+			"Investment theme alignment",
+			"Executive review cadence"
+		],
+		"matchRightItems": [
+			"Establishes the starting point before funding new platform scope",
+			"Defines how success will be measured after capabilities go live",
+			"Connects proposed work to enterprise priority areas sponsors fund",
+			"Ensures progress is revisited on a schedule rather than only at go-live"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Value realization links baselines, adoption targets, investment themes, and recurring review so platform programs demonstrate measurable progress.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "Strategy"
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 59,
+		"prompt": "Before a major store release, the delivery lead asks how to regression-test custom applications efficiently. Which associate-level technology capability should the platform owner recommend?",
+		"choices": [
+			"Automated Test Framework test suites executed in sub-production before promotion",
+			"Manual spot checks on production only after the release window opens",
+			"Disabling all business rules during testing to avoid false failures",
+			"Skipping automated tests because update sets already capture every change"
+		],
+		"correctIndex": 0,
+		"explanation": "Automated Test Framework supports repeatable regression coverage in lower environments, reducing production surprises after platform or application updates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/application-development/automated-test-framework.html"
+		],
+		"domain": "Technology"
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 67,
+		"questionType": "match",
+		"prompt": "Match each ServiceNow product family to the primary business capability it supports on the Now Platform.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"IT Service Management",
+			"Customer Service Management",
+			"HR Service Delivery",
+			"Security Operations"
+		],
+		"matchRightItems": [
+			"Employee and technology service delivery with incident, change, and request workflows",
+			"External customer case management and omnichannel service experiences",
+			"Employee lifecycle services such as onboarding and workplace requests",
+			"Security incident response and vulnerability workflow orchestration"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Associate platform owners recognize major product families and the business capabilities each supports when guiding portfolio and licensing decisions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/product/service-catalog/concept/c_ServiceCatalog.html"
+		],
+		"domain": "Technology"
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 72,
+		"prompt": "Operations reports intermittent discovery failures after an upgrade. Which technology component should the associate platform owner verify first?",
+		"choices": [
+			"MID Server connectivity, credentials, and version compatibility with the upgraded instance",
+			"Homepage theme contrast settings on the employee service portal",
+			"Catalog item short description character limits for requesters",
+			"Virtual Agent dialog script naming conventions in sub-production"
+		],
+		"correctIndex": 0,
+		"explanation": "Discovery and integration workloads depend on healthy MID Server connectivity and version alignment after platform changes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/mid-server/mid-server.html"
+		],
+		"domain": "Technology"
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 76,
+		"prompt": "Before expanding application service mapping, a platform owner discovers location and company records are incomplete. Which data governance principle explains why those records must be corrected first?",
+		"choices": [
+			"Transactional data that records daily incident volume by assignment group",
+			"Foundational data that provides organizational context for downstream CMDB modeling",
+			"Analytical data stored only in Performance Analytics indicator snapshots",
+			"Ephemeral session data cleared automatically after each user logout event"
+		],
+		"correctIndex": 1,
+		"explanation": "CSDM foundation data such as companies and locations establishes organizational context that application services and configuration items depend on.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/common-service-data-model/concept/csdm-foundation-data.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/common-service-data-model/concept/csdm-overview.html"
+		],
+		"domain": "Data"
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 88,
+		"questionType": "match",
+		"prompt": "Match each Now Platform governance capability to the associate platform owner responsibility it supports.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"Cloud Governance Suite",
+			"Subscription management",
+			"Platform governance council",
+			"ServiceNow Support Portal"
+		],
+		"matchRightItems": [
+			"Aligns data stewardship, compliance, and configuration standards across the estate",
+			"Tracks entitled products and role consumption against contracted limits",
+			"Sets enterprise guardrails and prioritizes portfolio investment themes",
+			"Provides official documentation, release notes, and vendor support escalation"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Platform governance spans data and compliance tooling, subscription oversight, council direction, and vendor support resources platform owners must coordinate.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/cloud-governance-suite/concept/cloud-governance-suite.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-administration/concept/platform-governance.html"
+		],
+		"domain": "ServiceNow Governance"
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 95,
+		"prompt": "A new cohort of platform builders must reach role-based certification before taking on scoped application work. Which ServiceNow enablement resource should the associate platform owner recommend?",
+		"choices": [
+			"ServiceNow Learning paths and role-based certification aligned to builder and admin personas",
+			"Unrestricted production admin access so learners can experiment without guidance",
+			"Third-party exam prep forums as the sole source of platform standards",
+			"Disabling all training because update sets document every required skill"
+		],
+		"correctIndex": 0,
+		"explanation": "ServiceNow Learning provides official role-based paths and certifications that platform owners use to standardize enablement before teams take on delivery responsibilities.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-administration/concept/platform-governance.html",
+			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html"
+		],
+		"domain": "ServiceNow Governance"
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 96,
+		"prompt": "Portfolio leaders ask which ServiceNow applications should remain on the shared platform versus point solutions. Which governance factor should the associate platform owner weigh most heavily?",
+		"choices": [
+			"Whether the capability fits the enterprise product portfolio, integration standards, and subscription entitlements",
+			"Whether the requesting team prefers a standalone vendor with no ServiceNow connector",
+			"Whether the solution uses the newest UI theme regardless of data model alignment",
+			"Whether the vendor offered a promotional discount unrelated to lifecycle support"
+		],
+		"correctIndex": 0,
+		"explanation": "Application portfolio governance evaluates fit to the ServiceNow product portfolio, integration standards, and licensed entitlements—not preferences or unrelated promotions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/cloud-governance-suite/concept/cloud-governance-suite.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-administration/concept/platform-governance.html"
+		],
+		"domain": "ServiceNow Governance"
+	},
+	{
+		"trackCode": "CPOA",
+		"order": 97,
+		"questionType": "match",
+		"prompt": "Match each ServiceNow ecosystem component to the governance scenario where a platform owner should reference it.",
+		"choices": [],
+		"correctIndex": 0,
+		"matchLeftItems": [
+			"ITSM and CSM shared data model",
+			"IntegrationHub store spoke",
+			"ServiceNow Learning certification path",
+			"Cloud Governance Suite"
+		],
+		"matchRightItems": [
+			"Aligning employee and customer service records under common platform standards",
+			"Selecting a reusable integration pattern instead of an unsupported custom script",
+			"Verifying builders meet role-based skills before scoped delivery begins",
+			"Demonstrating data stewardship and compliance practices during an audit"
+		],
+		"correctMatches": [
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
+		],
+		"explanation": "Platform governance references shared data models, standard integrations, official learning paths, and Cloud Governance Suite practices across common ownership scenarios.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/cloud-governance-suite/concept/cloud-governance-suite.html",
+			"https://www.servicenow.com/docs/bundle/washingtondc-integrate-applications/page/administer/integration-hub/concept/integration-hub.html"
+		],
+		"domain": "ServiceNow Governance"
+	}
+]

@@ -2,7 +2,7 @@
 	{
 		"trackCode": "CPOE",
 		"order": 195,
-		"prompt": "Given a case study where business units demand faster workflow delivery, the platform owner must scale citizen development safely. Which approach best balances innovation with governance?",
+		"prompt": "When access reviews fail, business units demand faster workflow delivery, the platform owner must scale citizen development safely. Which approach best balances innovation with governance?",
 		"choices": [
 			"Provide approved templates, scoped roles, guardrail training, and a governed intake path for citizen-built applications",
 			"Grant all business users admin access to eliminate delivery bottlenecks",
@@ -13,7 +13,8 @@
 		"explanation": "Citizen development scales through templates, scoped access, training, and governed intake—not unrestricted admin rights or outright prohibition.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
-		]
+		],
+		"domain": "Innovation"
 	},
 	{
 		"trackCode": "CPOE",
@@ -29,7 +30,8 @@
 		"explanation": "CoEI scaling requires consistent playbooks and guardrails with federated execution and regional champions—not centralized bottlenecks or ungoverned local experiments.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Innovation"
 	},
 	{
 		"trackCode": "CPOE",
@@ -43,11 +45,15 @@
 			"Tracking only the number of new applications without adoption or outcome metrics"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Innovation maturity combines objective benchmarking and governed automation—not unmeasured app counts or skipping validation through pilots.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
-		]
+		],
+		"domain": "Innovation"
 	},
 	{
 		"trackCode": "CPOE",
@@ -63,7 +69,8 @@
 		"explanation": "Effective champions bridge business demand and platform governance through coaching, pattern reuse, and structured escalation—not unchecked admin access or disconnected advocacy.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Innovation"
 	},
 	{
 		"trackCode": "CPOE",
@@ -85,14 +92,27 @@
 			"Targets high-volume manual work using objective performance comparisons"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Innovation practices deliver distinct outcomes: architectural alignment, democratized delivery, scalable CoEI methods, and data-driven automation priorities.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
-		]
+		],
+		"domain": "Innovation"
 	}
 ]

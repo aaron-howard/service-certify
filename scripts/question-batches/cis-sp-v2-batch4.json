@@ -2,83 +2,96 @@
 	{
 		"trackCode": "CIS-SP",
 		"order": 15,
-		"prompt": "A domain administrator must place a contractor user in the Initech domain even though the user's company maps to a different tenant domain. Which field supports that manual domain override on the user record?",
+		"prompt": "During onboarding, a tenant requests custom form behavior that conflicts with the provider's shared baseline. How should the MSP handle tenant customization requests?",
 		"choices": [
-			"Managed domain on the user record in a managed domain configuration",
-			"sys_overrides on the user record",
-			"Default domain on the Company record",
-			"Primary check box on the Domain record"
+			"Evaluate the request against governance standards and implement it as a domain-scoped override where approved",
+			"Apply the change directly to global records so all tenants receive it immediately",
+			"Reject all customization because domain separation prohibits tenant-specific behavior",
+			"Let the tenant edit global UI policies themselves with a temporary admin role"
 		],
 		"correctIndex": 0,
-		"explanation": "In a managed domain, the Managed domain field lets administrators manually select the user's domain instead of inheriting automatically from the company record.",
+		"explanation": "Tenant customizations should pass provider governance and land as domain-scoped overrides so shared baselines remain intact for other customers.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/bp-terms-conditions.html"
-		]
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html",
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/task/plan-domain-separation-implementation.html"
+		],
+		"domain": "Customer Onboarding and Tenant Lifecycle"
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 16,
-		"prompt": "An MSP engineer selects the ACME domain from the domain picker before triaging incidents. Which data becomes visible in list and form views for that session?",
+		"prompt": "A customer contract ends and the MSP must decommission the tenant. Which offboarding approach protects data obligations and instance health?",
 		"choices": [
-			"Records in the ACME domain and its child domains based on session scope",
-			"Records in the ACME domain and all parent domains above ACME",
-			"Only records explicitly tagged global regardless of hierarchy",
-			"All records in every domain where the user holds the itil role"
+			"Extract and archive tenant data per contract, deactivate users and access, then retire the domain and its overrides",
+			"Delete the tenant domain immediately so its records disappear from all queries",
+			"Reassign the departing tenant's records to another active customer domain",
+			"Leave the domain, users, and integrations active indefinitely in case the customer returns"
 		],
 		"correctIndex": 0,
-		"explanation": "Session scope reflects the selected domain and its child domains; users see data in their home or picked domain plus domains below them in the hierarchy.",
+		"explanation": "Tenant decommissioning follows contractual data handling, access removal, and orderly retirement of the domain and its process overrides.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/bp-domain-picker-config-process.html"
-		]
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/task/plan-domain-separation-implementation.html",
+			"https://www.servicenow.com/docs/r/platform-security/bp-dom-sep-definition.html"
+		],
+		"domain": "Customer Onboarding and Tenant Lifecycle"
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 17,
-		"prompt": "Performance review shows slow list queries after an SP team added many contains relationships across tenant domains. What is the underlying cause?",
+		"prompt": "A growing tenant outgrows the shared instance and must migrate to a dedicated instance. What migration consideration is most important for the MSP?",
 		"choices": [
-			"Contains relationships add OR conditions to domain queries, increasing query complexity",
-			"Contains relationships move all contained records into the global domain",
-			"Contains relationships disable domain path indexing on affected tables",
-			"Contains relationships require a separate MID Server per contained domain"
+			"Export the tenant's domain-scoped data and configuration completely while excluding other tenants' records",
+			"Clone the entire shared instance to the new environment including every other customer's data",
+			"Move only global process records because tenant data cannot leave the source instance",
+			"Recreate the tenant's history manually by retyping closed records into the new instance"
 		],
 		"correctIndex": 0,
-		"explanation": "Each contains relationship adds OR conditions to database queries; broad contains design can significantly impact instance performance at scale.",
+		"explanation": "Tenant migration requires cleanly extracting the domain's data and configuration without exposing co-tenant records, then rebuilding equivalent processes on the target.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/bp-contains-domain-visibility.html"
-		]
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/task/plan-domain-separation-implementation.html",
+			"https://www.servicenow.com/docs/r/platform-security/bp-domain-sep-recommended.html"
+		],
+		"domain": "Customer Onboarding and Tenant Lifecycle"
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 18,
-		"prompt": "MSP technicians in a shared support group need persistent access to the Initech tenant domain without individual user configuration. Where should the architect define that access?",
+		"prompt": "Before a new tenant goes live, the MSP runs an onboarding validation. Which check most directly confirms data separation is working?",
 		"choices": [
-			"Visibility domains related list on the support group record",
-			"Contains domains related list on each incident record",
-			"sys_overrides field on the Group table definition",
-			"Primary check box on the Initech domain record"
+			"Verify tenant users see only their domain's records and cannot query other tenants' data",
+			"Confirm the tenant logo renders correctly on the login page for all users",
+			"Count the number of business rules in global and compare to last month",
+			"Ensure every tenant user holds the domain_admin role before first login"
 		],
 		"correctIndex": 0,
-		"explanation": "Assigning visibility domains to a group grants all group members access to the specified domain; users inherit group visibility domains through membership.",
+		"explanation": "Go-live validation exercises tenant user sessions to prove visibility boundaries hold, confirming domain assignment and ACL behavior before production use.",
 		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/task/plan-domain-separation-implementation.html",
 			"https://www.servicenow.com/docs/r/platform-security/c_DomainVisibility.html"
-		]
+		],
+		"domain": "Customer Onboarding and Tenant Lifecycle"
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 19,
 		"questionType": "multi",
-		"prompt": "Which statements describe characteristics of a contains domain relationship? (Choose three.)",
+		"prompt": "Which activities belong to ongoing tenant lifecycle management on a domain-separated MSP instance? (Choose two.)",
 		"choices": [
-			"It is a many-to-many domain-to-domain relationship independent of parent-child hierarchy",
-			"It grants visibility to data in the contained domain without affecting process flow",
-			"Visibility through contains is controlled by the domain picker selection",
-			"It automatically makes the containing domain the parent of the contained domain"
+			"Reviewing tenant-specific overrides and access grants as the customer's services change",
+			"Planning tenant offboarding steps including data archival and domain retirement",
+			"Renaming the global domain after each new customer signs a contract",
+			"Rebuilding the entire domain hierarchy whenever any single tenant churns"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1, 2],
-		"explanation": "Contains domains are many-to-many data visibility links outside hierarchy, do not change process inheritance, and respect domain picker context when viewing contained data.",
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Tenant lifecycle management maintains overrides and access as services evolve and executes orderly offboarding; it does not require destabilizing the shared hierarchy.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-security/c_DomainVisibility.html"
-		]
+			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/task/plan-domain-separation-implementation.html",
+			"https://www.servicenow.com/docs/r/platform-security/bp-domain-hierarchy.html"
+		],
+		"domain": "Customer Onboarding and Tenant Lifecycle"
 	}
 ]

@@ -13,7 +13,8 @@
 		"explanation": "Poor CI correlation usually indicates matching rule gaps or reconciliation issues that must be corrected before assignment and remediation can succeed.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/vulnerability-response/map-vulnerabilities-to-cis.html"
-		]
+		],
+		"domain": "Tools to Manage Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -29,7 +30,8 @@
 		"explanation": "Classification rules normalize data at ingestion so assignment and other configurations can reference stable classification values rather than re-evaluating heavy conditions per record.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/vulnerability-response/classification-rules.html"
-		]
+		],
+		"domain": "Tools to Manage Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -39,13 +41,14 @@
 			"Vulnerability assignment rules using classification and classification type fields on vulnerable items",
 			"Catalog client scripts that execute when end users submit standard service catalog requests",
 			"Discovery classification probes configured for SNMP-enabled network printer subnets",
-			"HR onboarding workflows that assign employee cases by department and location codes"
+			"Facilities space management floor plans for office seating assignment tracking"
 		],
 		"correctIndex": 0,
 		"explanation": "Assignment rules evaluate vulnerable item attributes—including classification values set earlier—to route work to the correct remediation group.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/vulnerability-response/assignment-rules.html"
-		]
+		],
+		"domain": "Tools to Manage Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -61,7 +64,8 @@
 		"explanation": "Remediation task rules create actionable task groupings so teams remediate related findings together using consistent ownership and fix patterns.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-task-rules.html"
-		]
+		],
+		"domain": "Tools to Manage Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -77,6 +81,7 @@
 		"explanation": "Remediation target rules derive due dates from vulnerability lifecycle dates so SLA targets align with when exposure was identified or updated.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-target-rules.html"
-		]
+		],
+		"domain": "Tools to Manage Vulnerability Response"
 	}
 ]

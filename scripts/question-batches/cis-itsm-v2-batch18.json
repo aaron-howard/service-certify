@@ -1,82 +1,73 @@
 [
 	{
 		"trackCode": "CIS-ITSM",
-		"order": 85,
-		"prompt": "An open incident has widespread business impact and requires coordinated response beyond routine incident handling. What should happen first?",
-		"choices": [
-			"Initiate major incident procedures with accelerated response and stakeholder communications",
-			"Convert every related incident to a Standard change template without approval",
-			"Close all open incidents as duplicates without agent review",
-			"Disable SLA and inactivity monitor tracking for the assignment group"
-		],
-		"correctIndex": 0,
-		"explanation": "Major incidents use a separate high-priority procedure with shorter timescales, resource coordination, and communication plans for significant business disruption.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-service-management/incident-management/major-incident-management.html"
-		]
-	},
-	{
-		"trackCode": "CIS-ITSM",
 		"order": 86,
-		"prompt": "When a problem coordinator selects Fix during root cause investigation, what happens to the problem record?",
+		"prompt": "A global ITSM program must deploy Incident, Problem, and Change processes across four regions over twelve months. Which rollout strategy reduces operational risk?",
 		"choices": [
-			"The problem state changes to Fix in Progress so a change request can implement the permanent fix",
-			"The problem is automatically closed with Risk accepted as the resolution code",
-			"All related incidents are resolved without entering resolution information",
-			"The problem returns directly to New and skips further investigation"
+			"Phase by region and process with pilot validation, defined cutover milestones, and rollback plans before scaling",
+			"Enable every ITSM application globally on day one without user acceptance testing",
+			"Deploy only in production while disabling sub-production validation environments",
+			"Skip CAB design because emergency changes will cover all early defects"
 		],
 		"correctIndex": 0,
-		"explanation": "Fix moves the problem to Fix in Progress so the coordinator can create or link change requests to apply the permanent resolution.",
+		"explanation": "Phased ITSM rollouts validate process design, integrations, and training in pilots before expanding to additional regions and functions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-service-management/problem-management/investigate-root-cause.html"
-		]
+			"https://www.servicenow.com/docs/r/it-service-management/incident-management/incident-management-process.html",
+			"https://www.servicenow.com/docs/r/it-service-management/change-management/using-change-management.html"
+		],
+		"domain": "Implementation and Strategy"
 	},
 	{
 		"trackCode": "CIS-ITSM",
 		"order": 87,
-		"prompt": "When a problem has no permanent fix and the organization accepts the residual risk, which action is appropriate on the problem record?",
+		"prompt": "Legacy ticketing data and CMDB exports must load before decommissioning the previous tool. Which migration strategy should the implementation team use?",
 		"choices": [
-			"Click Accept Risk to close or resolve the problem with a Risk accepted resolution code",
-			"Create an Emergency change request from every related incident automatically",
-			"Mark Duplicate and move related records to a catalog Requested Item",
-			"Disable the Update Problem State to Assess business rule permanently"
+			"Cleanse and map historical incidents, problems, changes, and CIs with reconciliation validation before cutover",
+			"Import all closed tickets with duplicate callers and fix data only after go-live",
+			"Ask agents to re-create five years of records manually in ServiceNow",
+			"Disable identification rules during migration and never reconcile duplicates"
 		],
 		"correctIndex": 0,
-		"explanation": "Accept Risk closes or resolves the problem when no permanent fix is available and the organization formally accepts the remaining risk.",
+		"explanation": "ITSM migrations require field mapping, data cleansing, and reconciliation so operational processes start with trustworthy records.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-service-management/problem-management/investigate-root-cause.html"
-		]
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/c_ITILConfigurationManagement.html"
+		],
+		"domain": "Implementation and Strategy"
 	},
 	{
 		"trackCode": "CIS-ITSM",
 		"order": 88,
-		"prompt": "Why would a problem coordinator associate multiple configuration items with a problem record?",
+		"prompt": "Executive sponsors want measurable success six months after ITSM go-live. Which KPI set should the program define upfront?",
 		"choices": [
-			"To identify all CIs affected by the same underlying problem issue",
-			"To replace CMDB identification rules for the cmdb_ci class entirely",
-			"To auto-generate Standard change templates for every affected user",
-			"To bypass the Assess and Root Cause Analysis states on the problem"
+			"Incident resolution time, change success rate, problem recurrence reduction, and catalog fulfillment SLA adherence",
+			"Count of UI policies created on unrelated platform tables",
+			"Number of discovery probes installed without linking to service outcomes",
+			"Total catalog items visible regardless of fulfillment performance"
 		],
 		"correctIndex": 0,
-		"explanation": "Affected and Impacted Services/CIs related lists document every configuration item impacted by the same root issue for analysis and remediation.",
+		"explanation": "ITSM KPIs align process performance with business outcomes across incident, change, problem, and request fulfillment domains.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-service-management/problem-management/add-multiple-cis-to-problem.html"
-		]
+			"https://www.servicenow.com/docs/r/it-service-management/incident-management/incident-management-process.html",
+			"https://www.servicenow.com/docs/r/it-service-management/problem-management/exploring-problem-management.html"
+		],
+		"domain": "Implementation and Strategy"
 	},
 	{
 		"trackCode": "CIS-ITSM",
 		"order": 89,
-		"prompt": "After a permanent fix is verified on a problem record, what sequence completes the problem lifecycle?",
+		"prompt": "Agents revert to email and spreadsheets two weeks after launch. Which governance and adoption approach should the ITSM lead implement?",
 		"choices": [
-			"Click Resolve to move the problem to Resolved, then Complete to close it with Fix Applied as the resolution code",
-			"Click Accept Risk immediately without documenting any resolution notes",
-			"Mark Duplicate to merge the problem into a catalog Requested Item record",
-			"Revert the linked change request to New without post-implementation review"
+			"Define process owners, role-based training, communication plans, and enforcement of standard workflows in ServiceNow",
+			"Remove all approvals so changes and incidents close faster regardless of policy",
+			"Disable the service catalog to force users back to unstructured email only",
+			"Grant every user admin access to reduce permission-related frustration"
 		],
 		"correctIndex": 0,
-		"explanation": "Resolve records Fix Applied in the Resolved state; Complete then moves the problem to Closed with the same resolution code.",
+		"explanation": "Sustainable ITSM adoption combines clear process governance, stakeholder communications, and training tied to defined roles and workflows.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-service-management/problem-management/resolve-and-complete-problem.html"
-		]
+			"https://www.servicenow.com/docs/r/it-service-management/change-management/using-change-management.html",
+			"https://www.servicenow.com/docs/r/it-service-management/incident-management/incident-management-process.html"
+		],
+		"domain": "Implementation and Strategy"
 	}
 ]

@@ -13,12 +13,13 @@
 		"explanation": "Champions sustain adoption by validating demand, mentoring builders, and escalating compliance risks—not through marketing-only roles or unchecked admin access.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
-		]
+		],
+		"domain": "Innovation"
 	},
 	{
 		"trackCode": "CPOE",
 		"order": 206,
-		"prompt": "Given a scenario where the platform owner must justify automation investment to the CFO, benchmarking data from peer instances is available. How should benchmarking inform the implementation strategy?",
+		"prompt": "When architects are underused, the platform owner must justify automation investment to the CFO, benchmarking data from peer instances is available. How should benchmarking inform the implementation strategy?",
 		"choices": [
 			"Compare key health and process metrics against similar industries, rank gaps by ROI potential, and tie funding requests to quantified improvement targets",
 			"Publish benchmark charts in a quarterly newsletter without linking findings to funded work items",
@@ -29,7 +30,8 @@
 		"explanation": "Benchmarking drives implementation strategy when gaps are ranked by ROI and linked to funded targets—not when used for reporting alone or punitive comparisons.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Innovation"
 	},
 	{
 		"trackCode": "CPOE",
@@ -45,7 +47,8 @@
 		"explanation": "Automation scaling requires scored prioritization by volume, quality, compliance, and reuse—not arbitrary ordering, release delays, or sponsor noise alone.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
-		]
+		],
+		"domain": "Innovation"
 	},
 	{
 		"trackCode": "CPOE",
@@ -59,11 +62,15 @@
 			"Prohibiting citizen developers from accessing any shared integration endpoints"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Citizen development aligns with enterprise architecture through pattern reviews and reusable approved assets—not through waived standards or blocked integrations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Innovation"
 	},
 	{
 		"trackCode": "CPOE",
@@ -85,14 +92,27 @@
 			"Collects grassroots automation ideas and returns prioritized epics with guardrail assignments"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 1 },
-			{ "left": 1, "right": 3 },
-			{ "left": 2, "right": 0 },
-			{ "left": 3, "right": 2 }
+			{
+				"left": 0,
+				"right": 1
+			},
+			{
+				"left": 1,
+				"right": 3
+			},
+			{
+				"left": 2,
+				"right": 0
+			},
+			{
+				"left": 3,
+				"right": 2
+			}
 		],
 		"explanation": "Each forum converts distinct inputs to outputs: architecture validates patterns, the guild prioritizes grassroots ideas, CoEI releases playbooks, and champions aggregate regional demand.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
-		]
+		],
+		"domain": "Innovation"
 	}
 ]

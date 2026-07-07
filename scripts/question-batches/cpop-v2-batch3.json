@@ -13,7 +13,8 @@
 		"explanation": "Department requests require discovery of stakeholders, outcomes, and dependencies before product selection or licensing decisions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOP",
@@ -29,7 +30,8 @@
 		"explanation": "Product line decisions require entitlement status, intended use, dependencies, and version compatibility—not unrelated device or financial data.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOP",
@@ -43,11 +45,15 @@
 			"Assumption that skipping all updates eliminates any future maintenance work"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Update decisions weigh defect impact and test/rollback readiness; individual preference or permanent deferral are not sound criteria.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOP",
@@ -63,7 +69,8 @@
 		"explanation": "End-of-year freezes require front-loading planned changes and limiting the period to controlled emergency work, not bypassing governance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOP",
@@ -85,14 +92,27 @@
 			"Can we recover quickly if the update causes disruption?"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Release decisions combine defect awareness, test evidence, calendar constraints, and recovery planning.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Strategy"
 	}
 ]

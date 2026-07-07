@@ -14,7 +14,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/user-administration/concept/c_LDAPIntegration.html",
 			"https://www.servicenow.com/docs/bundle/washingtondc-integrate-applications/page/administer/integration-hub/concept/integration-hub.html"
-		]
+		],
+		"domain": "Technology"
 	},
 	{
 		"trackCode": "CPOA",
@@ -31,7 +32,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/common-service-data-model/concept/csdm-foundation-data.html",
 			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/common-service-data-model/concept/csdm-overview.html"
-		]
+		],
+		"domain": "Data"
 	},
 	{
 		"trackCode": "CPOA",
@@ -48,7 +50,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/reporting/concept/reporting-overview.html",
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
-		]
+		],
+		"domain": "Data"
 	},
 	{
 		"trackCode": "CPOA",
@@ -70,16 +73,29 @@
 			"Trend-based KPIs with targets that signal sustained improvement or decline"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Platform owners distinguish foundation data, transactional records, ad hoc reporting, and PA indicators because each supports different governance and decision-making needs.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/common-service-data-model/concept/csdm-overview.html",
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
-		]
+		],
+		"domain": "Data"
 	},
 	{
 		"trackCode": "CPOA",
@@ -93,11 +109,15 @@
 			"Replace all CMDB foundation data reviews because strategy workspace supersedes CSDM"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Strategic Planning Workspace gains value when initiatives connect to measurable outcomes with baselines and recurring KPI review—not isolated technical metrics or abandoned data stewardship.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/washingtondc-impact/page/impact/strategic-planning-workspace/concept/strategic-planning-workspace.html",
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
-		]
+		],
+		"domain": "Data"
 	}
 ]

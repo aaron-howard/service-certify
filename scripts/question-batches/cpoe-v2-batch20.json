@@ -13,12 +13,13 @@
 		"explanation": "Value realization reporting contrasts agreed baselines with current KPIs and explains variance— not isolated utilization or delayed disclosure.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Implementation and Delivery"
 	},
 	{
 		"trackCode": "CPOE",
 		"order": 96,
-		"prompt": "Given a scenario where sponsors debate pilot scope versus enterprise rollout for a new employee service, which delivery approach should the platform owner recommend?",
+		"prompt": "When product lines compete, sponsors debate pilot scope versus enterprise rollout for a new employee service, which delivery approach should the platform owner recommend?",
 		"choices": [
 			"Pilot with a representative population, validate outcomes, then scale using a repeatable playbook",
 			"Deploy enterprise-wide on day one to maximize subscription consumption immediately",
@@ -29,7 +30,8 @@
 		"explanation": "Pilot-then-scale validates outcomes with real users before enterprise rollout; big-bang or IT-only pilots fail to de-risk business adoption.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Implementation and Delivery"
 	},
 	{
 		"trackCode": "CPOE",
@@ -43,11 +45,15 @@
 			"Internal team seating charts for the platform center of excellence"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Executive briefings emphasize outcome progress, risks, and decisions needed—not low-level change logs or administrative trivia.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Implementation and Delivery"
 	},
 	{
 		"trackCode": "CPOE",
@@ -69,15 +75,28 @@
 			"Immediate confirmation that core paths work after deployment completes"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Testing activities align to delivery phases: early build checks, formal acceptance, capacity validation, and post-deploy smoke confirmation.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Implementation and Delivery"
 	},
 	{
 		"trackCode": "CPOE",
@@ -93,6 +112,7 @@
 		"explanation": "Cross-team value delivery needs shared governance, domain scorecards, and dependency reviews—not siloed roadmaps or license-based favoritism.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Implementation and Delivery"
 	}
 ]

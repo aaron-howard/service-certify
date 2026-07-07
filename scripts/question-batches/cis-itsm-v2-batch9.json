@@ -13,12 +13,13 @@
 		"explanation": "CAB setup identifies members who review and approve significant changes as part of governed Change Management.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/configure-cab-change-management.html"
-		]
+		],
+		"domain": "Change Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
 		"order": 41,
-		"prompt": "What is the CAB workbench used for in Change Management?",
+		"prompt": "A weekly CAB meeting must review pending normal changes and recent implementations in one workspace. Which Change Management capability should facilitators use?",
 		"choices": [
 			"Discovering configuration items using MID Server schedules only",
 			"Reviewing and authorizing change requests and reviewing recently implemented changes",
@@ -29,7 +30,8 @@
 		"explanation": "The CAB workbench supports CAB meeting workflows to review, authorize, and retrospectively assess change requests.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/change-management/using-cab-workbench-cf.html"
-		]
+		],
+		"domain": "Change Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -45,7 +47,8 @@
 		"explanation": "Risk survey answers produce a score that maps to risk levels and automatically routes the change to the matching approval workflow.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/configure-risk-change-mgmt.html"
-		]
+		],
+		"domain": "Change Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -61,7 +64,8 @@
 		"explanation": "Assess covers peer and technical approval; Authorize is where Change Management and the CAB schedule and authorize the change before Scheduled and Implement states.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/change-management/c_ChangeStateModel.html"
-		]
+		],
+		"domain": "Change Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -77,6 +81,7 @@
 		"explanation": "Approved change requests move to Scheduled; rejected approvals return the change request to New.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/change-management/t_ProcessAChangeRequest.html"
-		]
+		],
+		"domain": "Change Management"
 	}
 ]

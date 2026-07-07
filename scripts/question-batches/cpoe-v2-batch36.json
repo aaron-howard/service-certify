@@ -2,7 +2,7 @@
 	{
 		"trackCode": "CPOE",
 		"order": 175,
-		"prompt": "Given a case study where a healthcare enterprise must demonstrate HIPAA-aligned controls on the Now Platform before go-live, how should the platform owner align regulatory requirements with platform capabilities?",
+		"prompt": "When CMDB accuracy blocks mapping, a healthcare enterprise must demonstrate HIPAA-aligned controls on the Now Platform before go-live, how should the platform owner align regulatory requirements with platform capabilities?",
 		"choices": [
 			"Map required safeguards to native security features, documented roles, audit evidence, and governed data flows with legal and risk partners",
 			"Rely on vendor marketing materials without mapping controls to organizational policies",
@@ -13,7 +13,8 @@
 		"explanation": "Regulatory alignment requires translating policy obligations into concrete platform controls, roles, and evidence—not post-launch handoffs or vendor claims alone.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
-		]
+		],
+		"domain": "Compliance and Security"
 	},
 	{
 		"trackCode": "CPOE",
@@ -29,7 +30,8 @@
 		"explanation": "Audit contribution means supplying structured, control-aligned evidence and remediation tracking that auditors can reconcile to policy—not unstructured data dumps or deferred engagement.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
-		]
+		],
+		"domain": "Compliance and Security"
 	},
 	{
 		"trackCode": "CPOE",
@@ -43,11 +45,15 @@
 			"Granting broad admin access to accelerate citizen development without review"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Strong authentication and data protection can expand safe self-service and approved global workflows—turning security controls into enablers rather than blockers.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
-		]
+		],
+		"domain": "Compliance and Security"
 	},
 	{
 		"trackCode": "CPOE",
@@ -63,7 +69,8 @@
 		"explanation": "Cross-border compliance requires deliberate domain, residency, and integration design validated with privacy stakeholders—not undifferentiated global data pools.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/c_DomainSeparation.html"
-		]
+		],
+		"domain": "Compliance and Security"
 	},
 	{
 		"trackCode": "CPOE",
@@ -85,14 +92,27 @@
 			"Accelerates external review with pre-organized control evidence"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Compliance artifacts serve distinct executive and audit purposes: mapping controls, certifying access, tracking exceptions, and packaging evidence for efficient review.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
-		]
+		],
+		"domain": "Compliance and Security"
 	}
 ]

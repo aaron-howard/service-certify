@@ -13,7 +13,8 @@
 		"explanation": "Request-to-entitlement integration prevents over-deployment by checking rights at intake before software is provisioned.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/manage-software-entitlements.html"
-		]
+		],
+		"domain": "Operational Integration of Software Processes"
 	},
 	{
 		"trackCode": "CIS-SAM",
@@ -29,7 +30,8 @@
 		"explanation": "Audit defensibility requires traceable entitlement provenance and documented reconciliation logic for compliance positions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/entitlement-audit-preparation.html"
-		]
+		],
+		"domain": "Operational Integration of Software Processes"
 	},
 	{
 		"trackCode": "CIS-SAM",
@@ -45,38 +47,41 @@
 		"explanation": "Unreclaimed inactive allocations reduce license reuse and drive unnecessary purchases despite available rights.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/license-workbench.html"
-		]
+		],
+		"domain": "Operational Integration of Software Processes"
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 83,
-		"prompt": "Compliance positions fluctuate sharply after ad hoc edits to reconciliation logic. What is the most likely root cause?",
+		"prompt": "IT operations adds hundreds of Microsoft 365 subscriptions billed by active seat count. Which SAM approach tracks cloud subscription entitlements accurately?",
 		"choices": [
-			"Uncontrolled changes to reconciliation rules and model mappings without governed testing",
-			"Monthly executive review of exception aging with documented owners",
-			"Stable publisher pack versions promoted through change control",
-			"Segmented compliance dashboards reviewed by business unit leaders"
+			"Model subscription entitlements with term dates, seat counts, and usage signals linked to reconciliation",
+			"Exclude SaaS products from SAM because discovery cannot find install evidence",
+			"Track subscriptions only in procurement email threads without structured records",
+			"Convert every subscription into a perpetual device license by default"
 		],
 		"correctIndex": 0,
-		"explanation": "Unmanaged rule and mapping changes create volatility that undermines trust in SAM compliance outputs.",
+		"explanation": "Cloud subscription management requires term-based entitlement records and usage-aware reconciliation rather than traditional install-only counting.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-normalization-rules.html"
-		]
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/subscription-entitlements.html"
+		],
+		"domain": "Cloud and SaaS Management"
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 84,
-		"prompt": "Which governance control most strengthens long-term SAM audit readiness when extending the program?",
+		"prompt": "Finance reports rising SaaS spend while utilization dashboards show many inactive assigned seats. What is the best SAM optimization response?",
 		"choices": [
-			"Retain entitlement provenance, approval history, and reconciliation change records over time",
-			"Purge historical reconciliation snapshots every month to reduce table size",
-			"Allow entitlement quantity edits without audit fields or approval tracking",
-			"Maintain compliance calculations exclusively in external spreadsheets"
+			"Review usage patterns and reclaim or downgrade underutilized subscriptions through governed workflows",
+			"Purchase enterprise tiers for every SaaS product to simplify licensing",
+			"Disable subscription reconciliation until renewal season",
+			"Delete entitlement records to reset utilization metrics to zero"
 		],
 		"correctIndex": 0,
-		"explanation": "Long-term audit readiness depends on preserved evidence of rights, approvals, and how compliance positions were calculated.",
+		"explanation": "SaaS optimization uses usage data to reclaim or right-size subscriptions while preserving governed access for active consumers.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/entitlement-audit-preparation.html"
-		]
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/subscription-entitlements.html"
+		],
+		"domain": "Cloud and SaaS Management"
 	}
 ]

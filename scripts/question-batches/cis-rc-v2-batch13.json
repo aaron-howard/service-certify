@@ -14,7 +14,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-response-and-treatment.html",
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-data-governance.html"
-		]
+		],
+		"domain": "Risk and Advanced Risk"
 	},
 	{
 		"trackCode": "CIS-RC",
@@ -31,7 +32,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-response-and-treatment.html",
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-data-governance.html"
-		]
+		],
+		"domain": "Risk and Advanced Risk"
 	},
 	{
 		"trackCode": "CIS-RC",
@@ -45,12 +47,16 @@
 			"Discovery credentials for subnet scanning"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Assessment campaigns require a consistent methodology and clear entity scope so results are comparable across units.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-review-process.html",
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/business-entities-and-risk.html"
-		]
+		],
+		"domain": "Risk and Advanced Risk"
 	},
 	{
 		"trackCode": "CIS-RC",
@@ -67,7 +73,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/business-entities-and-risk.html",
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/manage-risk-records.html"
-		]
+		],
+		"domain": "Risk and Advanced Risk"
 	},
 	{
 		"trackCode": "CIS-RC",
@@ -84,6 +91,7 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-governance.html",
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-response-and-treatment.html"
-		]
+		],
+		"domain": "Risk and Advanced Risk"
 	}
 ]

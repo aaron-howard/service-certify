@@ -13,7 +13,8 @@
 		"explanation": "Requesting approval moves the due diligence record to Awaiting approval and notifies assigned approvers to review submitted evidence.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-approving.html"
-		]
+		],
+		"domain": "Third-party Supporting Processes"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -29,7 +30,8 @@
 		"explanation": "Due diligence approvals require TPR manager group membership so authorized stakeholders can accept or reject the request.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-approving.html"
-		]
+		],
+		"domain": "Third-party Supporting Processes"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -45,7 +47,8 @@
 		"explanation": "The due diligence request enters Ready for TPRM approval only after all assessments in the package have been closed.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-approving.html"
-		]
+		],
+		"domain": "Third-party Supporting Processes"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -61,7 +64,8 @@
 		"explanation": "Issues on sn_vdr_risk_asmt_issue become inactive when moved to Closed, removing them from active remediation tracking.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
-		]
+		],
+		"domain": "Third-party Supporting Processes"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -77,6 +81,7 @@
 		"explanation": "Third-party risk issues begin in New and progress through analysis, optional vendor collaboration, review, and closure.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-workflow-in-workspace.html"
-		]
+		],
+		"domain": "Third-party Supporting Processes"
 	}
 ]

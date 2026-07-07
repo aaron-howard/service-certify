@@ -2,7 +2,7 @@
 	{
 		"trackCode": "CIS-HAM",
 		"order": 15,
-		"prompt": "What does an asset lifecycle state represent in Hardware Asset Management?",
+		"prompt": "An asset marked In use still appears available in a stockroom pick list. Which lifecycle control failed?",
 		"choices": [
 			"The operational stage such as in stock, in use, or retired that drives allowed actions",
 			"The discovery schedule interval assigned to the asset subnet for horizontal scans",
@@ -13,7 +13,8 @@
 		"explanation": "Lifecycle states reflect where an asset sits in its managed process and often gate workflows, approvals, and financial treatment.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
-		]
+		],
+		"domain": "Data Integrity Attributes and Data Sources"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -29,7 +30,8 @@
 		"explanation": "State transition controls should enforce consistency so retired assets are cleared from active assignment and inventory views.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
-		]
+		],
+		"domain": "Data Integrity Attributes and Data Sources"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -45,12 +47,13 @@
 		"explanation": "Governed workflows ensure lifecycle transitions occur with policy-compliant controls and complete audit records.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
-		]
+		],
+		"domain": "Data Integrity Attributes and Data Sources"
 	},
 	{
 		"trackCode": "CIS-HAM",
 		"order": 18,
-		"prompt": "How do ServiceNow docs distinguish assets from configuration items (CIs)?",
+		"prompt": "Finance tracks laptop costs in HAM while service mapping uses CMDB records. How should implementers explain the asset versus CI distinction to stakeholders?",
 		"choices": [
 			"Assets focus on financial ownership while CIs in the CMDB support service delivery visibility",
 			"Assets exist only for consumables while CIs exist only for servers and network gear",
@@ -61,7 +64,8 @@
 		"explanation": "Assets emphasize financial and inventory ownership; CIs in the CMDB represent items used to deliver services and require synchronized governance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
-		]
+		],
+		"domain": "Data Integrity Attributes and Data Sources"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -77,6 +81,7 @@
 		"explanation": "Delayed sync creates assets through a scheduled job so large CI creation batches complete quickly while assets populate asynchronously.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
-		]
+		],
+		"domain": "Data Integrity Attributes and Data Sources"
 	}
 ]

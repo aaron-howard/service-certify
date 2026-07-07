@@ -2,83 +2,86 @@
 	{
 		"trackCode": "CIS-SAM",
 		"order": 40,
-		"prompt": "A SAM manager must prioritize remediation before a vendor true-up. Which report best supports this effort?",
+		"prompt": "A SAM team resolves an Entitlement Import Error and saves the corrected row. What outcome should they expect in the platform?",
 		"choices": [
-			"Entitlement versus install position report filtered to high-cost publishers",
-			"CMDB duplicate configuration item report with no publisher grouping applied",
-			"Daily change request calendar listing scheduled deployments without license context",
-			"Open incident list assigned to software teams without entitlement metrics"
+			"The entitlement is created and the error status changes to Fixed with fields becoming read-only",
+			"The import file is automatically re-uploaded and all prior entitlements are deleted",
+			"The error record is permanently deleted without creating an entitlement record",
+			"The software model is removed from the catalog until the next content update runs"
 		],
 		"correctIndex": 0,
-		"explanation": "True-up preparation starts with a publisher-focused compliance position report that highlights financial exposure from under-licensed products.",
+		"explanation": "When an import error is resolved, the platform creates the entitlement and marks the error Fixed; related errors using the same publisher part number may also auto-resolve.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/software-compliance-overview.html"
-		]
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/import-software-entitlements.html"
+		],
+		"domain": "Data Integrity Attributes and Sources"
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 41,
-		"questionType": "multi",
-		"prompt": "Reconciliation results show non-compliance for a software model. Which two remediation actions can address the gap? (Choose two.)",
+		"prompt": "During entitlement import, a row fails because the Publisher part number field does not match any existing record. What is the recommended remediation?",
 		"choices": [
-			"Purchase additional rights to cover discovered consumption",
-			"Remove unlicensed installs that exceed available entitlements",
-			"Disable all discovery schedules until the next fiscal quarter begins",
-			"Delete the software model record to reset normalization status"
+			"Create or map the publisher part number to the correct software model before reprocessing the import row",
+			"Delete the import error and ignore all rows referencing that publisher permanently",
+			"Change the license metric to Per Device so the part number validation is bypassed",
+			"Convert the entitlement to a hardware asset record to avoid software model requirements"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
-		"explanation": "Non-compliance is remediated by either acquiring additional license rights or removing installs that exceed entitlements, aligning consumption with purchased rights.",
+		"explanation": "Publisher part numbers link import rows to licensable products; missing part numbers must be created or mapped so entitlements associate with the correct software model.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconciliation-remediation.html"
-		]
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/entitlement-import-error-fields.html"
+		],
+		"domain": "Data Integrity Attributes and Sources"
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 42,
-		"prompt": "Reconciliation shows a publisher is over-licensed with unused entitlements. What is the most appropriate SAM response?",
+		"prompt": "A publisher audits by named user, but the entitlement is configured with a per-device metric. What is the likely compliance outcome?",
 		"choices": [
-			"Evaluate reclamation opportunities and adjust future purchase quantities during renewal planning",
-			"Immediately delete all entitlement records to reset the compliance dashboard to zero",
-			"Disable reconciliation for that publisher to preserve the current license position",
-			"Convert unused entitlements into hardware asset records for stockroom inventory"
+			"Potential over- or under-counting because the measurement basis does not match contract terms",
+			"More accurate reconciliation because device counts are simpler to collect than user counts",
+			"No impact because SAM automatically converts all license metrics during reconciliation",
+			"All installations become compliant by default when discovery data is normalized"
 		],
 		"correctIndex": 0,
-		"explanation": "Over-licensed positions indicate reclaimable or reducible spend; SAM teams should plan reclamation and right-size renewals rather than ignore surplus rights.",
+		"explanation": "Metric mismatch between contract rights and SAM configuration produces inaccurate compliance results and increases audit dispute risk.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/software-reclamation.html"
-		]
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/configure-license-metrics.html"
+		],
+		"domain": "Data Integrity Attributes and Sources"
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 43,
-		"prompt": "A compliance analyst needs to allocate available entitlements to users who require the software. Which SAM action assigns rights to individual users?",
+		"prompt": "When different contract terms apply to the same software model, how should a SAM administrator structure entitlement records?",
 		"choices": [
-			"Create allocations on the entitlement record for authorized users or devices",
-			"Run a hardware asset transfer order to move licenses between stockroom locations",
-			"Submit a catalog request to auto-provision entitlements without SAM review",
-			"Update the software model normalization status to Manually normalized"
+			"Create separate entitlement records by metric, term, or restriction so reconciliation applies the correct rules",
+			"Merge all rights into one entitlement and track term differences in the short description field only",
+			"Store contract terms exclusively on procurement requests and omit them from entitlement records",
+			"Convert named-user licenses into hardware asset records to simplify metric tracking"
 		],
 		"correctIndex": 0,
-		"explanation": "Allocations link purchased entitlement rights to specific users or devices, tracking consumption against available license pools.",
+		"explanation": "Different licensing terms and metrics require separate entitlement records to preserve accurate compliance logic and audit traceability.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/manage-software-entitlements.html"
-		]
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/software-entitlement-best-practices.html"
+		],
+		"domain": "Data Integrity Attributes and Sources"
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 44,
-		"prompt": "After remediation, a SAM administrator reruns reconciliation. What outcome confirms the compliance gap was resolved?",
+		"prompt": "Before reconciliation, a SAM analyst must confirm purchased rights are modeled correctly for audit defense. What does each entitlement record represent in that comparison?",
 		"choices": [
-			"The software model shows a compliant or balanced license position matching contract terms",
-			"The discovery schedule status changes to inactive for all related publishers",
-			"The entitlement import error list contains only Ignored status records",
-			"The software model normalization status changes to Match not found"
+			"A contractual right to use software that reconciliation compares against discovered consumption",
+			"A discovered installation awaiting normalization to a software model record",
+			"A one-time approval ticket authorizing software install on a single device only",
+			"A workflow task record tracking license reclamation campaign progress exclusively"
 		],
 		"correctIndex": 0,
-		"explanation": "Successful remediation is verified when reconciliation shows the entitlement position aligns with installed and allocated consumption for the software model.",
+		"explanation": "Entitlements represent use rights and form the licensed side of the comparison performed during reconciliation against installed software.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/validate-reconciliation-results.html"
-		]
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/software-entitlements-overview.html"
+		],
+		"domain": "Data Integrity Attributes and Sources"
 	}
 ]

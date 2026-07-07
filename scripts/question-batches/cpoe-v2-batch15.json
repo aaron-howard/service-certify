@@ -13,7 +13,8 @@
 		"explanation": "Executive TCO views span licensing, delivery, integration, localization, and sustainment with ROI milestones—not narrow or incomplete cost slices.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Cost/Resource Planning"
 	},
 	{
 		"trackCode": "CPOE",
@@ -29,7 +30,8 @@
 		"explanation": "Shared localization governance reduces rework and controls spend through coordinated glossaries, prioritized content, and release-train review cycles.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
-		]
+		],
+		"domain": "Cost/Resource Planning"
 	},
 	{
 		"trackCode": "CPOE",
@@ -51,15 +53,28 @@
 			"Reserve OCM budget proportional to process change across solution areas"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Workstream dependencies dictate funding order: data, identity, integration, and adoption investments must precede dependent capability delivery.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
-		]
+		],
+		"domain": "Cost/Resource Planning"
 	},
 	{
 		"trackCode": "CPOE",
@@ -73,11 +88,15 @@
 			"Complete list of UI macros without linkage to funding decisions"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Cost phase exit requires executive-ready licensing forecasts and capacity plans; low-level technical inventories do not satisfy funding governance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
-		]
+		],
+		"domain": "Cost/Resource Planning"
 	},
 	{
 		"trackCode": "CPOE",
@@ -93,6 +112,7 @@
 		"explanation": "The final cost-planning step bridges approved funding to implementation by mapping capacity to release trains and dependencies—setting up the delivery phase.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Cost/Resource Planning"
 	}
 ]

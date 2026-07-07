@@ -50,6 +50,17 @@ Multi-select allowed with `questionType: "multi"` and `correctIndexes`.
 | 14 | 65–69 | Automating VR | **DONE** |
 | 15 | 70–74 | VR Dashboards and Reports | **DONE** |
 
+## Jul 2026 rebalance (domain content alignment)
+
+Orders **38–41** and **53** were rewritten for **Tools to Manage VR** (state roll-up/roll-down, change
+requests, third-party defect workflows, IT Remediation actions). Orders **55–59**, **61**, **65–68** strengthen
+**Automating VR** (stale detection, classification automation, bidirectional patch integration, exception
+governance). Application module questions **0–2**, **9–11**, **13**, **15–18** were refocused on operational
+usage; NVD intake content moved to data integration orders **20–21**, **25–26** in
+`cis-vr-rebalance-batch1.json`.
+
+Domain tags enforced via `domainForOrder()` in `cisVrRealism.ts` and `scripts/tag-cis-vr-domains.mjs`.
+
 ---
 
 ## Merge and validate

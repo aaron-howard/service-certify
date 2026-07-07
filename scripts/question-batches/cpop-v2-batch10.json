@@ -14,7 +14,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html",
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
-		]
+		],
+		"domain": "People"
 	},
 	{
 		"trackCode": "CPOP",
@@ -36,15 +37,28 @@
 			"Portal and catalog deflection rate versus assisted channels"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Each KPI must trace to its objective: satisfaction scores for experience goals, unit cost for efficiency goals, restoration time for availability goals, and deflection rate for self-service goals.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "People"
 	},
 	{
 		"trackCode": "CPOP",
@@ -60,7 +74,8 @@
 		"explanation": "Sponsor identification looks for the leader whose authority spans every affected function and who owns the business outcome; operational managers, developers, and partners lack that mandate.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "People"
 	},
 	{
 		"trackCode": "CPOP",
@@ -74,11 +89,15 @@
 			"Report the absent owners to human resources for failing to attend scheduled meetings"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Disengagement is a stakeholder management signal: re-engage individually and recalibrate the stakeholder analysis and communication plan rather than excluding or punishing participants.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "People"
 	},
 	{
 		"trackCode": "CPOP",
@@ -95,6 +114,7 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html",
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "People"
 	}
 ]

@@ -4,81 +4,89 @@
 		"order": 20,
 		"prompt": "During Service Mapping pattern troubleshooting, MID Server logs are most useful for diagnosing which issue class?",
 		"choices": [
-			"Probe execution failures, connectivity timeouts, and credential errors during pattern runs",
-			"Software entitlement import errors from publisher part number mismatches",
-			"Change advisory board approval delays on standard change templates",
-			"Knowledge article versioning conflicts in the self-service portal"
+			"Probe execution failures, authentication errors, and step-level pattern exceptions",
+			"Catalog checkout fulfillment delays for employee laptop imaging requests",
+			"HR case assignment rules for employee relocation approval chains",
+			"Project financial plan baselines compared to portfolio investment actuals"
 		],
 		"correctIndex": 0,
-		"explanation": "MID Server logs capture probe and pattern execution details, making them essential when diagnosing access, timeout, or parsing failures.",
+		"explanation": "MID Server logs capture pattern execution details that help isolate credential, connectivity, and parsing failures during mapping.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-pattern-best-practices.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
+		],
+		"domain": "Service Mapping Pattern Design"
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 21,
 		"prompt": "Before broad deployment, why should a custom Service Mapping pattern be tested against a single known host?",
 		"choices": [
-			"To validate identification and connection output against expected topology before scaling scope",
-			"To permanently lock the pattern version so content updates cannot be applied",
-			"To bypass CMDB reconciliation for all CIs discovered during the test run",
-			"To auto-assign business service ownership from the host assignment group field"
+			"To validate identification, connection, and variable logic on a controlled target before scale rollout",
+			"To bypass CMDB identification rules so every test creates duplicate CI records",
+			"To disable debug output until the pattern runs against the entire enterprise subnet",
+			"To ensure the pattern never creates generic application CIs during testing"
 		],
 		"correctIndex": 0,
-		"explanation": "Controlled single-host testing confirms pattern logic produces accurate CIs and relationships before running against production entry points.",
+		"explanation": "Single-host testing confirms pattern behavior and credentials on a known system before risking inaccurate maps at scale.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
-		]
+		],
+		"domain": "Service Mapping Pattern Design"
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 22,
 		"prompt": "After ServiceNow publishes updated pattern library content, what action may be required in a customer instance?",
 		"choices": [
-			"Review and merge vendor pattern updates with custom copies while preserving local extensions",
-			"Delete all service maps so Discovery recreates business services from event rules",
-			"Disable MID Server clustering to force single-node pattern execution",
-			"Convert all entry points to tag-based mapping rules regardless of architecture"
+			"Review and apply pattern updates, then retest extended custom patterns for compatibility",
+			"Delete all custom patterns automatically because library updates remove local copies",
+			"Disable all MID Servers until every service map is rebuilt from scratch manually",
+			"Remove discovery schedules permanently because patterns no longer require probes"
 		],
 		"correctIndex": 0,
-		"explanation": "Pattern library updates can overwrite or merge with instance patterns, so teams review customizations and reconcile versions after content refresh.",
+		"explanation": "Pattern library updates may require administrators to merge or retest custom extensions so mapping behavior stays correct after upgrades.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/manage-discovery-pattern-versions.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-patterns-overview.html"
+		],
+		"domain": "Service Mapping Pattern Design"
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 23,
-		"prompt": "How do horizontal Discovery patterns differ from Service Mapping patterns in purpose?",
+		"questionType": "multi",
+		"prompt": "Which two validations are recommended before promoting a custom Service Mapping pattern to production? (Choose two.)",
 		"choices": [
-			"Horizontal patterns inventory and classify CIs broadly, while Service Mapping patterns build application dependency topologies",
-			"Horizontal patterns run only on cloud resources, while Service Mapping patterns run only on mainframes",
-			"Horizontal patterns replace CMDB relationships, while Service Mapping patterns disable identification rules",
-			"Horizontal patterns require machine learning, while Service Mapping patterns prohibit credential use"
+			"Successful test runs on representative hosts with expected CI and relationship output",
+			"Documented rollback plan and version control for the extended pattern",
+			"Immediate deletion of all generic application CIs across the CMDB",
+			"Disabling reconciliation rules so duplicate records simplify troubleshooting"
 		],
 		"correctIndex": 0,
-		"explanation": "Horizontal discovery populates CMDB inventory; Service Mapping patterns extend that foundation to map how applications connect across infrastructure.",
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Production promotion requires validated test results plus controlled versioning so custom pattern changes can be managed safely.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/c-UsingPatternsForHorizontalDiscovery.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
+		],
+		"domain": "Service Mapping Pattern Design"
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 24,
-		"questionType": "multi",
-		"prompt": "Which two validations are recommended before promoting a custom Service Mapping pattern to production? (Choose two.)",
+		"prompt": "A Connection Section references a temporary variable that was never populated by an earlier step. What symptom appears during mapping?",
 		"choices": [
-			"Debug-mode testing confirms identification and connection steps produce expected CIs on a known host",
-			"A peer review verifies credential references and parsing logic for fragile command output",
-			"All horizontal discovery schedules are disabled globally for thirty days",
-			"Every business service record is converted to a manual CI relationship import"
+			"Downstream connection steps fail or skip because required parsed values are empty",
+			"Discovery schedules stop running until the variable is added to the CMDB schema",
+			"Event Management suppresses all alerts for the affected CI class permanently",
+			"Service catalog checkout assigns laptops to analysts investigating the pattern"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
-		"explanation": "Production promotion requires verified pattern output on representative targets and review of credentials and parsing logic to prevent map quality regressions.",
+		"explanation": "Unpopulated pattern variables break connection logic that depends on parsed data from earlier identification or extension steps.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-pattern-best-practices.html"
-		]
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
+		],
+		"domain": "Service Mapping Pattern Design"
 	}
 ]

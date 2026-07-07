@@ -4,6 +4,8 @@ import type { QuestionType } from './questionTypes';
 
 /** Bank distribution for 90 questions scaled 1.5x from the 60-question official exam. */
 
+export const CIS_TPRM_BANK_SIZE = 90;
+
 export const CIS_TPRM_DOMAIN_TARGETS = {
 	'TPRM Fundamentals and Review': 20,
 	'Core Configuration': 13,
@@ -12,6 +14,17 @@ export const CIS_TPRM_DOMAIN_TARGETS = {
 	'Third-party Supporting Processes': 11,
 	'Other Application Relationships': 5
 } as const;
+
+export type CisTprmDomain = keyof typeof CIS_TPRM_DOMAIN_TARGETS;
+
+export function domainForOrder(order: number): CisTprmDomain {
+	if (order <= 19) return 'TPRM Fundamentals and Review';
+	if (order <= 32) return 'Core Configuration';
+	if (order <= 62) return 'Assessment Configuration';
+	if (order <= 73) return 'Third-party Portal';
+	if (order <= 84) return 'Third-party Supporting Processes';
+	return 'Other Application Relationships';
+}
 
 export const BANNED_CHOICE_PREFIXES = [
 	'Typically,',
@@ -50,6 +63,7 @@ export type CisTprmQuestionRow = {
 	prompt: string;
 	choices: string[];
 	sourceUrls: string[];
+	domain?: string;
 	questionType?: QuestionType;
 	correctIndexes?: number[];
 	correctIndex?: number;
@@ -118,12 +132,42 @@ export function validateCisTprmQuestion(q: CisTprmQuestionRow): string[] {
 	return issues;
 }
 
+export function validateCisTprmDomainTags(rows: CisTprmQuestionRow[]): string[] {
+	const issues: string[] = [];
+	const domainCounts = Object.fromEntries(
+		Object.keys(CIS_TPRM_DOMAIN_TARGETS).map((d) => [d, 0])
+	) as Record<string, number>;
+
+	for (const q of rows) {
+		if (q.trackCode !== 'CIS-TPRM') continue;
+		if (!q.domain) {
+			issues.push(`order ${q.order}: missing domain tag`);
+			continue;
+		}
+		const expected = domainForOrder(q.order);
+		if (q.domain !== expected) {
+			issues.push(`order ${q.order}: domain ${q.domain} does not match order quota ${expected}`);
+		}
+		domainCounts[q.domain]++;
+	}
+
+	for (const [domain, target] of Object.entries(CIS_TPRM_DOMAIN_TARGETS)) {
+		if (domainCounts[domain] !== target) {
+			issues.push(`domain ${domain}: expected ${target}, got ${domainCounts[domain] ?? 0}`);
+		}
+	}
+
+	return issues;
+}
+
 export function validateCisTprmTrack(rows: CisTprmQuestionRow[]): string[] {
 	const issues: string[] = [];
 
 	for (const q of rows) {
 		issues.push(...validateCisTprmQuestion(q));
 	}
+
+	issues.push(...validateCisTprmDomainTags(rows));
 
 	const openerCounts = new Map<string, number>();
 	for (const q of rows) {

@@ -2,18 +2,19 @@
 	{
 		"trackCode": "CIS-HR",
 		"order": 65,
-		"prompt": "What is stored in a lifecycle event template?",
+		"prompt": "A multinational program needs consistent onboarding across regions with local variations. How should lifecycle event templates accelerate that design?",
 		"choices": [
-			"Reusable activity sets, triggers, and mappings for common employee transitions",
-			"Encrypted employee SSN values",
-			"CMDB discovery credentials",
-			"Software installation media"
+			"Reusable activity sets, triggers, and mappings cloned from templates for standard employee transitions",
+			"Encrypted employee SSN values stored directly in journey activities",
+			"CMDB discovery credentials embedded in each activity set",
+			"Software installation media attached to lifecycle notifications"
 		],
 		"correctIndex": 0,
 		"explanation": "Templates accelerate journey implementation by providing starting configurations for standard lifecycle scenarios.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
-		]
+		],
+		"domain": "HR Journeys"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -29,28 +30,30 @@
 		"explanation": "Offboarding journeys coordinate HR, IT, and security steps when employment ends.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
-		]
+		],
+		"domain": "HR Journeys"
 	},
 	{
 		"trackCode": "CIS-HR",
 		"order": 67,
-		"prompt": "How does Journey Designer relate to Workflow Studio flows in HR implementations?",
+		"prompt": "Promotion activities must notify payroll and update case records automatically. How should Journey Designer integrate with Workflow Studio?",
 		"choices": [
-			"Journey activities may invoke or integrate with flows for automated HR processing",
-			"Journey Designer replaces all platform security",
-			"Workflow Studio cannot interact with HR tables",
-			"Journey Designer only edits CMDB classes"
+			"Journey activities invoke or integrate with flows for automated HR processing and notifications",
+			"Journey Designer replaces all platform security controls globally",
+			"Workflow Studio cannot interact with HR tables or profiles",
+			"Journey Designer only edits CMDB classes without HR context"
 		],
 		"correctIndex": 0,
 		"explanation": "Lifecycle orchestration can call automated flows for notifications, approvals, and system updates within journeys.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
-		]
+		],
+		"domain": "HR Journeys"
 	},
 	{
 		"trackCode": "CIS-HR",
 		"order": 68,
-		"prompt": "Which lifecycle components must be configured before employees can be enrolled in a journey? (Choose two.)",
+		"prompt": "Before enrolling employees in a new hire journey, which components must be configured? (Choose two.)",
 		"choices": [
 			"Trigger conditions",
 			"Activity sets",
@@ -58,12 +61,16 @@
 			"MID Server clusters"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"questionType": "multi",
 		"explanation": "Lifecycle events require trigger conditions to start and activity sets defining the work; CMDB identification and MID Server clusters are unrelated.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
-		]
+		],
+		"domain": "HR Journeys"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -79,6 +86,7 @@
 		"explanation": "Field mappings propagate hire date, location, and role details into tasks agents and partners must complete.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
-		]
+		],
+		"domain": "HR Journeys"
 	}
 ]

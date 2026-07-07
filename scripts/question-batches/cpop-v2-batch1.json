@@ -13,7 +13,8 @@
 		"explanation": "Lifecycle Events in HR Service Delivery orchestrate onboarding journeys across HR, IT, and facilities tasks such as account creation, access, and equipment fulfillment.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/human-resources/hr-service-delivery.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOP",
@@ -29,7 +30,8 @@
 		"explanation": "The CoEI sets direction, governance, and innovation priorities that connect platform investment to measurable business value rather than operating transactional queues.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOP",
@@ -45,7 +47,8 @@
 		"explanation": "Platform owners translate department objectives into capabilities such as orchestrated workflows and trusted reporting that accelerate close cycles with visibility.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOP",
@@ -67,15 +70,28 @@
 			"Evidence-based refinement of platform investments"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "ServiceNow recommends sequencing CoEI work from sponsorship and vision through governance, enablement, and continuous measurement.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOP",
@@ -89,10 +105,14 @@
 			"Change KPI definitions each sprint to maximize favorable trend lines"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Effective KPIs map to business objectives with baselines, targets, and ownership; technical metrics alone or shifting definitions undermine strategic alignment.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	}
 ]

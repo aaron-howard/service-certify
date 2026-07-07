@@ -1,6 +1,11 @@
 import { describe, expect, it } from 'vitest';
 import { DEV_PRACTICE_QUESTIONS } from '../../convex/seed/devQuestionBank';
-import { CPOA_BANK_SIZE, validateCpoaTrack } from '$lib/catalog/cpoaRealism';
+import {
+	CPOA_BANK_SIZE,
+	CPOA_DOMAIN_TARGETS,
+	domainForOrder,
+	validateCpoaTrack
+} from '$lib/catalog/cpoaRealism';
 
 const TRACK = 'CPOA';
 const V2_ORDERS = Array.from({ length: CPOA_BANK_SIZE }, (_, i) => i);
@@ -15,6 +20,21 @@ describe('CPOA v2 realism', () => {
 
 	it('passes CPOA realism validation', () => {
 		expect(validateCpoaTrack(rows)).toEqual([]);
+	});
+
+	it('tags every question with the domain quota for its order slot', () => {
+		const counts = Object.fromEntries(
+			Object.keys(CPOA_DOMAIN_TARGETS).map((d) => [d, 0])
+		) as Record<string, number>;
+
+		for (const q of rows) {
+			expect(q.domain).toBe(domainForOrder(q.order));
+			counts[q.domain!]++;
+		}
+
+		for (const [domain, target] of Object.entries(CPOA_DOMAIN_TARGETS)) {
+			expect(counts[domain]).toBe(target);
+		}
 	});
 
 	it('includes match, multi, and single item types', () => {

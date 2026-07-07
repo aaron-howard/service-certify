@@ -13,7 +13,8 @@
 		"explanation": "Maintaining a canonical model record avoids fragmented reporting and inconsistent lifecycle controls across equivalent hardware.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/manage-hardware-models.html"
-		]
+		],
+		"domain": "Data Integrity Attributes and Data Sources"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -29,7 +30,8 @@
 		"explanation": "Revert Normalization clears applied normalization, deactivates the rule, and allows the next job run to re-evaluate models with active rules.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/hardware-normalization.html"
-		]
+		],
+		"domain": "Data Integrity Attributes and Data Sources"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -45,12 +47,13 @@
 		"explanation": "The Exclude from content service option prevents a model's data from being shared with the Hardware Asset Management Content Service.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/create-hardware-consumable-model.html"
-		]
+		],
+		"domain": "Data Integrity Attributes and Data Sources"
 	},
 	{
 		"trackCode": "CIS-HAM",
 		"order": 28,
-		"prompt": "Which report helps identify overall hardware model normalization progress?",
+		"prompt": "A normalization program lead needs weekly executive visibility into manufacturer standardization progress. Which report should they publish?",
 		"choices": [
 			"Hardware Product Overall Normalization Status",
 			"Discovery Status dashboard for all subnets scoped to infrastructure classes",
@@ -61,13 +64,14 @@
 		"explanation": "The Hardware Product Overall Normalization Status report summarizes normalization progress across hardware models in the estate.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/hardware-normalization.html"
-		]
+		],
+		"domain": "Data Integrity Attributes and Data Sources"
 	},
 	{
 		"trackCode": "CIS-HAM",
 		"order": 29,
 		"questionType": "multi",
-		"prompt": "Which two fields are examples of normalization-related values on a hardware model? (Choose two.)",
+		"prompt": "An auditor asks which model fields prove normalization ran successfully on a laptop SKU. Which two fields should you show? (Choose two.)",
 		"choices": [
 			"Normalized Manufacturer",
 			"Model Number",
@@ -75,11 +79,15 @@
 			"Stockroom Manager"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 2],
+		"correctIndexes": [
+			0,
+			2
+		],
 		"explanation": "Normalized Manufacturer and Normalized Product are populated by the normalization job; Model Number and Stockroom Manager are not normalization output fields.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/hardware-normalization.html",
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/normalize-hardware-models.html"
-		]
+		],
+		"domain": "Data Integrity Attributes and Data Sources"
 	}
 ]

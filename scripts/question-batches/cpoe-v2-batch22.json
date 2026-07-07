@@ -13,12 +13,13 @@
 		"explanation": "Executive communications during rollout issues must translate technical status into business impact, actions, timelines, and explicit leadership decisions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Implementation and Delivery"
 	},
 	{
 		"trackCode": "CPOE",
 		"order": 106,
-		"prompt": "Given a scenario where inbound integration jobs fail silently after a ServiceNow release, what troubleshooting step should the platform owner champion first?",
+		"prompt": "After a Friday production release, inbound integration jobs fail silently after a ServiceNow release, what troubleshooting step should the platform owner champion first?",
 		"choices": [
 			"Review integration logs, compare pre- and post-release configurations, and validate credential and endpoint health",
 			"Rollback the entire instance to the prior major version without impact analysis",
@@ -29,7 +30,8 @@
 		"explanation": "Silent integration failures after release typically require coordinated log analysis and configuration comparison—not blind rollbacks or siloed troubleshooting.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Implementation and Delivery"
 	},
 	{
 		"trackCode": "CPOE",
@@ -43,11 +45,15 @@
 			"Separate data models per team to avoid collaboration overhead"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Multi-team delivery requires shared release visibility and governance forums; uncoordinated deployments and fragmented data models increase conflict and rework.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
-		]
+		],
+		"domain": "Implementation and Delivery"
 	},
 	{
 		"trackCode": "CPOE",
@@ -69,15 +75,28 @@
 			"Verify critical paths function immediately after deployment"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Each testing layer serves a distinct purpose: regression for change safety, SIT for integrations, UAT for business fit, and smoke tests for post-deploy confidence.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/automated-test-framework/atf-overview.html"
-		]
+		],
+		"domain": "Implementation and Delivery"
 	},
 	{
 		"trackCode": "CPOE",
@@ -93,6 +112,7 @@
 		"explanation": "Cutover decisions require impact-based go/no-go analysis with remediation and rollback options—not arbitrary thresholds or indefinite delay.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/australia/install-and-upgrade/concept/c_UpgradeFallbackPlanning.html"
-		]
+		],
+		"domain": "Implementation and Delivery"
 	}
 ]

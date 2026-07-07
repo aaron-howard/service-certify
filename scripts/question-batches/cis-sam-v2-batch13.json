@@ -13,7 +13,8 @@
 		"explanation": "Catalog fulfillment should validate entitlement availability so provisioning does not create unlicensed deployments.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
-		]
+		],
+		"domain": "Practical Management of Software Compliance"
 	},
 	{
 		"trackCode": "CIS-SAM",
@@ -29,7 +30,8 @@
 		"explanation": "Procurement integration creates traceable entitlement records so purchased rights are available for allocation and reconciliation.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/manage-software-entitlements.html"
-		]
+		],
+		"domain": "Practical Management of Software Compliance"
 	},
 	{
 		"trackCode": "CIS-SAM",
@@ -45,7 +47,8 @@
 		"explanation": "Duplicate installs may or may not violate license terms depending on metric and contract; validation against rules precedes remediation.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/validate-software-model-mappings.html"
-		]
+		],
+		"domain": "Practical Management of Software Compliance"
 	},
 	{
 		"trackCode": "CIS-SAM",
@@ -61,7 +64,8 @@
 		"explanation": "Scheduled reconciliation and reporting maintain current compliance posture and reduce surprise exposure at renewal or audit time.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/validate-reconciliation-results.html"
-		]
+		],
+		"domain": "Practical Management of Software Compliance"
 	},
 	{
 		"trackCode": "CIS-SAM",
@@ -70,13 +74,14 @@
 		"choices": [
 			"License Workbench or compliance dashboard segmented by publisher with spend and position trends",
 			"Alphabetical list of all discovery models without entitlement totals",
-			"Count of open incidents assigned to the SAM team this month",
-			"Hardware warranty expiration report filtered by stockroom location"
+			"Total number of CMDB classes with discovery enabled",
+			"Count of catalog items published without entitlement linkage"
 		],
 		"correctIndex": 0,
 		"explanation": "Publisher-segmented spend and compliance views connect financial exposure to license position for informed budget decisions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/license-workbench.html"
-		]
+		],
+		"domain": "Practical Management of Software Compliance"
 	}
 ]

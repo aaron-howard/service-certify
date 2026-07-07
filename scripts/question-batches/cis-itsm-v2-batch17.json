@@ -2,83 +2,105 @@
 	{
 		"trackCode": "CIS-ITSM",
 		"order": 80,
-		"prompt": "During incident investigation, the team determines the underlying cause is a widespread error affecting multiple users. What is the recommended next step?",
+		"prompt": "Multiple discovery sources and manual updates create conflicting server records. Which CMDB strategy should restore trustworthy configuration data?",
 		"choices": [
-			"Create a problem record from the incident and associate it with the incident",
-			"Convert the incident directly to a catalog requested item without request tracking",
-			"Close the incident and disable the inactivity monitor for the caller",
-			"Run CMDB identification rules manually for every related configuration item"
+			"Apply Identification and Reconciliation rules with data governance ownership and CMDB Health monitoring",
+			"Disable IRE and allow each team to maintain duplicate CI records independently",
+			"Convert all server CIs into catalog requested items without relationships",
+			"Delete manual CIs automatically whenever Discovery finds a hostname match"
 		],
 		"correctIndex": 0,
-		"explanation": "When an incident stems from an error or widespread issue, Problem Management is initiated by creating a problem from the incident and linking the records.",
+		"explanation": "CMDB data governance combines IRE reconciliation, stewardship roles, and Health dashboards to deduplicate and validate CI records.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-service-management/incident-management/t_PromoteAnIncident.html",
-			"https://www.servicenow.com/docs/r/it-service-management/incident-management/work-on-incidents.html"
-		]
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/c_ITILConfigurationManagement.html"
+		],
+		"domain": "Configuration Management Database"
 	},
 	{
 		"trackCode": "CIS-ITSM",
 		"order": 81,
-		"prompt": "During incident resolution, the team determines an infrastructure change is required. What action can be taken from the incident form?",
+		"prompt": "Operations receives duplicate Linux server CIs from two discovery feeds with different serial numbers. What reconciliation approach should administrators take?",
 		"choices": [
-			"Create Normal, Standard, or Emergency Change from the incident context menu",
-			"Submit an order guide that generates Requested Item records without a Request record",
-			"Mark the incident as duplicate and delete the associated problem record",
-			"Disable all SLA definitions on the Incident table for the assignment group"
+			"Tune identification rules and merge duplicates using IRE before dependent incidents reference the wrong CI",
+			"Ignore duplicates because incident assignment groups do not use the CMDB",
+			"Retire every CI record weekly and rely on callers to identify affected systems",
+			"Disable relationship rules so duplicates cannot be detected"
 		],
 		"correctIndex": 0,
-		"explanation": "When resolution requires a controlled infrastructure or service modification, a change record can be created from the incident and linked in Related Records.",
+		"explanation": "Reconciliation and deduplication through IRE prevents fragmented CI data that breaks impact analysis across ITSM processes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-service-management/incident-management/t_PromoteAnIncident.html"
-		]
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/c_ITILConfigurationManagement.html"
+		],
+		"domain": "Configuration Management Database"
 	},
 	{
 		"trackCode": "CIS-ITSM",
 		"order": 82,
-		"prompt": "When planning a change request, why should affected CIs be added and Impacted Services refreshed on the change record?",
+		"prompt": "A network outage incident requires understanding downstream application impact. Which CMDB capability should the resolver use first?",
 		"choices": [
-			"To identify dependent CIs and populate impacted services based on the primary configuration item",
-			"To auto-close all open incidents for the change requester without agent review",
-			"To replace CAB authorization with pre-approved Standard change templates",
-			"To bypass conflict detection for every Normal change in the instance"
+			"Dependency mapping and service relationships to identify affected applications and business services",
+			"Catalog order guides that submit multiple requested items in one request",
+			"Problem Accept Risk workflow without linking configuration items",
+			"Emergency change templates that bypass CAB authorization automatically"
 		],
 		"correctIndex": 0,
-		"explanation": "Affected CIs and Refresh Impacted Services help assess CI and service impact so dependency and offering relationships are visible before implementation.",
+		"explanation": "CI and service dependency maps support impact analysis so incident and problem teams understand blast radius before changes are made.",
 		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/c_ITILConfigurationManagement.html",
 			"https://www.servicenow.com/docs/r/it-service-management/change-management/c_AffectedCIsAndImpactedServices.html"
-		]
+		],
+		"domain": "Configuration Management Database"
 	},
 	{
 		"trackCode": "CIS-ITSM",
 		"order": 83,
-		"prompt": "After a problem coordinator confirms a valid problem during assessment, which state does the problem enter next?",
+		"prompt": "During incident diagnosis, agents need authoritative configuration context on the affected server. How should CMDB integrate with Incident Management?",
 		"choices": [
-			"The problem enters the Root Cause Analysis state",
-			"Closed with Risk accepted as the resolution code",
-			"New awaiting the Update Problem State to Assess business rule",
-			"Scheduled waiting for the planned start date"
+			"Relate the incident to affected CIs and use CMDB data for diagnosis, assignment, and service impact visibility",
+			"Store incident notes only on cmdb_ci records and delete the incident after linking",
+			"Disable CMDB lookups so agents rely solely on caller descriptions",
+			"Convert every incident into a manual CI record without task linkage"
 		],
 		"correctIndex": 0,
-		"explanation": "Confirming a valid problem during Assess moves it into Root Cause Analysis for investigation and proposed fix identification.",
+		"explanation": "Linking incidents to CIs connects operational records with configuration context for faster diagnosis and accurate service impact.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-service-management/problem-management/assess-a-problem.html"
-		]
+			"https://www.servicenow.com/docs/r/it-service-management/incident-management/work-on-incidents.html",
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/c_ITILConfigurationManagement.html"
+		],
+		"domain": "Configuration Management Database"
 	},
 	{
 		"trackCode": "CIS-ITSM",
 		"order": 84,
-		"prompt": "In the normal change lifecycle, what happens during the Review state after implementation work is complete?",
+		"prompt": "A normal change will patch database clusters that support multiple business services. Which CMDB practice should change planners follow before implementation?",
 		"choices": [
-			"The change requester determines whether the change was successful during post-implementation review",
-			"The change is auto-approved and moves directly to Closed without documentation",
-			"All catalog variables are disabled on related Requested Item records",
-			"Emergency changes skip Authorize and move back to New automatically"
+			"Add affected CIs, refresh impacted services, and review dependency relationships for downstream impact",
+			"Submit the change without CI relationships to speed CAB approval",
+			"Retire all related CIs before scheduling the change window",
+			"Disable conflict detection because maintenance windows override enforcement"
 		],
 		"correctIndex": 0,
-		"explanation": "Review follows Implement so the requester can verify success, conduct post-implementation review, and close the change when complete.",
+		"explanation": "Change planning uses affected CIs and impacted services populated from CMDB relationships to assess risk before authorization.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-service-management/change-management/c_ChangeStateModel.html",
-			"https://www.servicenow.com/docs/r/it-service-management/change-management/t_ProcessAChangeRequest.html"
-		]
+			"https://www.servicenow.com/docs/r/it-service-management/change-management/c_AffectedCIsAndImpactedServices.html"
+		],
+		"domain": "Configuration Management Database"
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 85,
+		"prompt": "Decommissioned hardware still appears in incident and change records. Which CMDB lifecycle practice should prevent orphaned operational work?",
+		"choices": [
+			"Retire or delete CIs through governed lifecycle states after verifying no open incidents or changes depend on them",
+			"Leave retired CIs active indefinitely to preserve historical discovery timestamps only",
+			"Convert retired CIs into catalog variables on every requested item",
+			"Disable CMDB Health so retirement queues are never reviewed"
+		],
+		"correctIndex": 0,
+		"explanation": "CI lifecycle management retires obsolete configuration records while coordinating open ITSM work that still references those assets.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/c_ITILConfigurationManagement.html"
+		],
+		"domain": "Configuration Management Database"
 	}
 ]

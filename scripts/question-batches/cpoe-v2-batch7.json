@@ -2,7 +2,7 @@
 	{
 		"trackCode": "CPOE",
 		"order": 30,
-		"prompt": "Given a case study where year-one funding covers only foundational ITSM and identity capabilities, how should the platform owner sequence ROI for a three-year roadmap?",
+		"prompt": "When automation funding is challenged, year-one funding covers only foundational ITSM and identity capabilities, how should the platform owner sequence ROI for a three-year roadmap?",
 		"choices": [
 			"Deliver measurable service improvements in year one, then fund dependent domains at value gates",
 			"Defer all user-facing capabilities until year three regardless of early wins available",
@@ -13,7 +13,8 @@
 		"explanation": "ROI sequencing invests in foundational capabilities first, demonstrates value early, and funds downstream domains at agreed gates.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOE",
@@ -29,7 +30,8 @@
 		"explanation": "New executive sponsors need aligned, visible outcomes connected to their priorities—not distant architecture or unfunded ambition.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOE",
@@ -45,7 +47,8 @@
 		"explanation": "Employee experience vision ties platform work to measurable lifecycle outcomes—not cosmetic changes or unsupported big-bang replacement.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOE",
@@ -59,11 +62,15 @@
 			"Technical jargon without translation to business outcomes or financial impact"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Executive persuasion requires transparent scenarios with trade-offs and honest risk discussion—not single options or untranslated technical detail.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	},
 	{
 		"trackCode": "CPOE",
@@ -85,14 +92,27 @@
 			"Show how initiatives connect to agreed outcome metrics"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Roadmap artifacts support distinct executive decisions: prioritization, funding, sequencing, and benefits accountability.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Strategy"
 	}
 ]

@@ -2,86 +2,94 @@
 	{
 		"trackCode": "CIS-PA",
 		"order": 60,
-		"prompt": "An admin runs historic data collection for a new indicator. What outcome should they expect after the job completes successfully?",
+		"prompt": "A new KPI definition must be consistent across development and production instances. Which governance standard should the PA CoE publish?",
 		"choices": [
-			"Prior-period scores are populated so trend analysis is available before ongoing schedules accumulate history",
-			"All breakdown mappings are removed and must be recreated manually",
-			"Future scheduled collections are disabled until the backfill is deleted",
-			"Dashboard widgets switch to real-time transactional queries instead of stored scores"
+			"Documented naming conventions, filter patterns, targets, owners, and promotion checklist for indicators and sources",
+			"Allow each developer to invent unique KPI names without a catalog or review",
+			"Prohibit reuse of indicator sources to avoid any shared configuration",
+			"Store KPI definitions only in email threads without version control"
 		],
 		"correctIndex": 0,
-		"explanation": "Historic collection backfills past intervals so stakeholders can analyze trends immediately rather than waiting for recurring jobs to build history.",
+		"explanation": "Metric definition standards and promotion controls keep KPI meaning consistent as analytics content moves between environments.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/task/t_RunHistoricalDataCollection.html"
-		]
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+		],
+		"domain": "Data Governance and Quality"
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 61,
-		"prompt": "Which collection configuration property specifies the user context under which a data collector job executes its queries?",
+		"prompt": "Sensitive HR KPIs must be visible only to authorized HR analytics roles. Which access control design should the program implement?",
 		"choices": [
-			"Run as",
-			"Benchmark group",
-			"Breakdown relation",
-			"Target type"
+			"Combine PA roles, dashboard audiences, and ACL-aware Run as users on collector jobs for governed visibility",
+			"Grant pa_admin to every dashboard viewer to eliminate permission errors",
+			"Publish all KPIs on public homepages without role restrictions",
+			"Disable ACLs on facts tables so collection always returns complete datasets"
 		],
 		"correctIndex": 0,
-		"explanation": "The Run as user on a collector job determines ACL and domain visibility applied when indicator sources are evaluated during collection.",
+		"explanation": "PA security combines role design, dashboard sharing, and collection context so sensitive KPIs remain visible only to authorized consumers.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html"
-		]
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/r_PARoles.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+		],
+		"domain": "Data Governance and Quality"
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 62,
-		"prompt": "Scores for one indicator on a shared collector job are consistently lower than a matching list report. What should be compared first?",
+		"prompt": "Audit asks how the organization proves PA scores match underlying transactional records. What validation process should be in place?",
 		"choices": [
-			"Indicator source conditions and the Run as user on the collector job versus the report viewer",
-			"Dashboard widget color palette and legend position settings",
-			"Whether the indicator uses a relative target instead of a fixed target",
-			"Whether the breakdown source uses a scripted element generator"
+			"Periodic reconciliation of indicator sources against controlled list reports with documented variance thresholds",
+			"Trust scores without review because widgets always query live transactional tables",
+			"Delete historical scores whenever auditors request evidence",
+			"Disable KPI Details drill-down to prevent record-level inspection"
 		],
 		"correctIndex": 0,
-		"explanation": "Collection results reflect source filters and the Run as user's access; mismatches with list reports often trace to different conditions or security context.",
+		"explanation": "Governed reconciliation between collected scores and source data supports compliance and stakeholder confidence in KPI accuracy.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_IndicatorSources.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html"
-		]
+			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_KPIDetails.html"
+		],
+		"domain": "Data Governance and Quality"
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 63,
-		"prompt": "A stakeholder needs to compare open incident volume across assignment groups for the current period. Which Platform Analytics visualization fits best?",
+		"prompt": "Source data from a legacy integration frequently arrives late, causing KPI drift. Which reliability practice should the analytics team adopt?",
 		"choices": [
-			"A breakdown column or bar chart showing segmented counts by assignment group",
-			"A single-value widget with no breakdown applied",
-			"A pivot list sorted by sys_created_on without indicator scores",
-			"A static image widget pinned to the dashboard header"
+			"Monitor integration freshness, document source SLAs, and adjust collection schedules after data arrival patterns are understood",
+			"Ignore integration delays because PA automatically backfills missing transactional rows",
+			"Convert every affected KPI to manual entry without investigating root cause",
+			"Remove all date filters from indicator sources to maximize record counts"
 		],
 		"correctIndex": 0,
-		"explanation": "Breakdown column and bar charts display comparative segmented counts, making them suitable for comparing volumes across groups.",
+		"explanation": "Source reliability governance tracks upstream data timeliness and aligns collection expectations with when facts are trustworthy.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DashboardsAndWidgets.html",
-			"https://www.servicenow.com/docs/r/now-intelligence/data-visualizations.html"
-		]
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html",
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollection.html"
+		],
+		"domain": "Data Governance and Quality"
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 64,
 		"questionType": "multi",
-		"prompt": "Which statements describe unified filters in the Platform Analytics experience? (Choose two.)",
+		"prompt": "Which controls support compliant Platform Analytics governance in regulated environments? (Choose two.)",
 		"choices": [
-			"They can apply consistently across multiple data visualizations on a dashboard",
-			"They let consumers refine views by shared dimensions such as date range or assignment group",
-			"They replace the need for indicator sources and data collection jobs",
-			"They are available only on Core UI dashboards outside Next Experience"
+			"Restrict indicator and source edits to authorized PA roles with change review",
+			"Maintain audit evidence for KPI definition changes and production promotions",
+			"Allow all consumers to edit indicator aggregation scripts in production",
+			"Disable job monitoring so collection failures do not create audit noise"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
-		"explanation": "Unified filters provide shared filtering across Platform Analytics visualizations so dashboard consumers slice multiple widgets with the same criteria.",
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "Regulated programs require role-based change control and traceable promotion history for analytics definitions that drive decisions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/now-intelligence/unified-filters.html",
-			"https://www.servicenow.com/docs/r/now-intelligence/par-workspace.html"
-		]
+			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+		],
+		"domain": "Data Governance and Quality"
 	}
 ]

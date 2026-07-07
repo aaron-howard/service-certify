@@ -13,7 +13,8 @@
 		"explanation": "Scripted indicators support custom score logic when table conditions and standard aggregation types are insufficient for the KPI.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/workflow-automated-indicators.html"
-		]
+		],
+		"domain": "Configure Indicators and Indicator Sources"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -29,7 +30,8 @@
 		"explanation": "Manual indicators capture metrics that cannot be derived from ServiceNow transactional data, with contributors entering scores on a defined cadence.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/workflow-automated-indicators.html"
-		]
+		],
+		"domain": "Configure Indicators and Indicator Sources"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -45,7 +47,8 @@
 		"explanation": "Override record collection on the indicator source sets a source-specific maximum, overriding the com.snc.pa.dc.max_row_count_indicator_source property.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_IndicatorSources.html"
-		]
+		],
+		"domain": "Configure Indicators and Indicator Sources"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -61,7 +64,8 @@
 		"explanation": "Real-time or current-state scores require qualifying conditions on the indicator or indicator source so collections reflect the intended record subset.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_IndicatorSources.html"
-		]
+		],
+		"domain": "Configure Indicators and Indicator Sources"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -76,10 +80,15 @@
 			"pa_spotlight_viewer CRUD all indicator sources and collection scripts"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1, 2],
+		"correctIndexes": [
+			0,
+			1,
+			2
+		],
 		"explanation": "pa_data_collector owns sources and jobs, pa_power_user builds indicators and visualizations, and pa_admin has full PA administration; pa_viewer and pa_spotlight_viewer do not create sources.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/r_PARoles.html"
-		]
+		],
+		"domain": "Configure Indicators and Indicator Sources"
 	}
 ]

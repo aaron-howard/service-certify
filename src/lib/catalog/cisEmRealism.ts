@@ -97,7 +97,7 @@ export type CisEmQuestionRow = {
 	prompt: string;
 	choices: string[];
 	sourceUrls: string[];
-	domain?: CisEmDomain;
+	domain?: string;
 	questionType?: QuestionType;
 	correctIndexes?: number[];
 	correctIndex?: number;

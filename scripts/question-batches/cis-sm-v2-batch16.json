@@ -14,45 +14,12 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_ReconciliationRules.html",
 			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/identification-and-reconciliation.html"
-		]
+		],
+		"domain": "Configuration Management Database"
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 76,
-		"prompt": "Service Mapping needs a custom cmdb_ci_load_balancer class with unique identification keys. Which CMDB utility supports that design?",
-		"choices": [
-			"CI Class Manager to define the class, attributes, and identification entries",
-			"Discovery schedule editor to increase probe concurrency for VIP ranges",
-			"Alert management rule to bind monitoring events to load balancer CIs",
-			"Service Portal widget to display map thumbnails on incident forms"
-		],
-		"correctIndex": 0,
-		"explanation": "CI Class Manager is the supported interface for extending CMDB classes and aligning identification behavior with mapping requirements.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/vancouver/cmdb/concept/cmdb-class-hierarchy.html",
-			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-data-manager.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SM",
-		"order": 77,
-		"prompt": "CMDB Health shows many stale relationships blocking accurate impact analysis. Which remediation path is most appropriate?",
-		"choices": [
-			"Use CMDB Health and Data Manager tasks to retire stale CIs and fix relationships",
-			"Delete all cmdb_rel_ci records globally and rebuild maps from scratch",
-			"Turn off Discovery until every business service has an assigned owner",
-			"Accept all ML candidates without owner review to overwrite stale links"
-		],
-		"correctIndex": 0,
-		"explanation": "CMDB Health and Data Manager provide governed remediation workflows for stale CIs and relationships that distort service maps.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-health-dashboard.html",
-			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-data-manager.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SM",
-		"order": 78,
 		"questionType": "multi",
 		"prompt": "Which two IRE components work together to prevent duplicate CIs from multiple feeds? (Choose two.)",
 		"choices": [
@@ -62,16 +29,20 @@
 			"Discovery clusters that assign MID Server failover groups"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Identification finds or creates the CI match while reconciliation governs attribute updates, together reducing duplicate and conflicting records.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_IdentificationAndReconciliationEngine.html",
 			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/identification-and-reconciliation.html"
-		]
+		],
+		"domain": "Configuration Management Database"
 	},
 	{
 		"trackCode": "CIS-SM",
-		"order": 79,
+		"order": 77,
 		"prompt": "Mapped services still show orphan middleware CIs with no upstream application dependency. Which CMDB tool helps locate and remediate those orphans?",
 		"choices": [
 			"CMDB Data Manager views and tasks focused on orphaned or stale CIs",
@@ -84,6 +55,43 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-data-manager.html",
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
-		]
+		],
+		"domain": "Configuration Management Database"
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 78,
+		"prompt": "An administrator must extend the CMDB schema with a new CI class for a custom middleware tier used in maps. Which tool should they use?",
+		"choices": [
+			"CI Class Manager to define classes, attributes, and identification behavior",
+			"Event rule designer to correlate monitoring alerts by severity",
+			"Discovery schedule wizard to assign MID Server clusters by region",
+			"Service candidate queue to accept ML proposals automatically"
+		],
+		"correctIndex": 0,
+		"explanation": "CI Class Manager governs CMDB class hierarchy and attributes so identification and mapping logic can target the correct CI types.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-data-manager.html",
+			"https://www.servicenow.com/docs/r/configuration-management/vancouver/cmdb/concept/cmdb-class-hierarchy.html"
+		],
+		"domain": "Configuration Management Database"
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 79,
+		"prompt": "During engagement planning, stakeholders debate which applications belong in phase one. Which scoping principle best limits early risk?",
+		"choices": [
+			"Start with high-value services that have owners, credentials, and validated entry points",
+			"Map every subnet in the enterprise before validating a single service map",
+			"Exclude CMDB readiness checks so mapping can begin immediately",
+			"Defer all discovery until every ML candidate is accepted automatically"
+		],
+		"correctIndex": 0,
+		"explanation": "Phased scoping around critical services with known ownership and access reduces onboarding risk and builds trust in map accuracy.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/create-a-service-map.html"
+		],
+		"domain": "Service Mapping Engagement Readiness"
 	}
 ]

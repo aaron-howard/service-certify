@@ -9,16 +9,19 @@ Base URL: `https://raw.githubusercontent.com/ServiceNow/ServiceNowDocs/australia
 
 ---
 
-## Exam domain quotas (90 questions = 60 official × 1.5)
+## Exam domain quotas (90 questions — realism-rebalanced Jul 2026)
 
-| # | Domain | % | Bank | Orders |
-|---|--------|---|------|--------|
-| 1 | Service Mapping Pattern Design | 30% | 27 | 0–26 |
-| 2 | Service Mapping Configuration | 20% | 18 | 27–44 |
-| 3 | Discovery Configuration | 15% | 14 | 45–58 |
-| 4 | Machine Learning | 10% | 9 | 59–67 |
-| 5 | Configuration Management Database | 15% | 13 | 68–80 |
-| 6 | Service Mapping Engagement Readiness | 10% | 9 | 81–89 |
+| # | Domain | Bank | Orders |
+|---|--------|------|--------|
+| 1 | Service Design Strategy | 11 | 0–10 |
+| 2 | Service Mapping Pattern Design | 18 | 11–28 |
+| 3 | Service Mapping Configuration | 13 | 29–41 |
+| 4 | Discovery Configuration | 14 | 42–55 |
+| 5 | Machine Learning | 13 | 56–68 |
+| 6 | Configuration Management Database | 10 | 69–78 |
+| 7 | Service Mapping Engagement Readiness | 11 | 79–89 |
+
+Target **≥70% scenario-style** stems (see `cisSmRealism.ts`).
 
 ---
 
@@ -35,43 +38,46 @@ Multi-select allowed with `questionType: "multi"` and `correctIndexes`.
 
 | Batch | Orders | Domain | Status |
 |-------|--------|--------|--------|
-| 1 | 0–4 | Pattern Design | **DONE** |
-| 2 | 5–9 | Pattern Design | **DONE** |
-| 3 | 10–14 | Pattern Design | **DONE** |
+| 1 | 0–4 | Service Design Strategy | **DONE** |
+| 2 | 5–9 | Service Design Strategy | **DONE** |
+| 3 | 10–14 | Service Design (10) + Pattern Design (11–14) | **DONE** |
 | 4 | 15–19 | Pattern Design | **DONE** |
 | 5 | 20–24 | Pattern Design | **DONE** |
-| 6 | 25–29 | Pattern Design (25–26) + SM Configuration (27–29) | **DONE** |
-| 7 | 30–34 | SM Configuration | **DONE** |
-| 8 | 35–39 | SM Configuration | **DONE** |
-| 9 | 40–44 | SM Configuration | **DONE** |
+| 6 | 25–28 Pattern + Config (29) | **DONE** |
+| 7 | 30–34 | Service Mapping Configuration | **DONE** |
+| 8 | 35–39 | Service Mapping Configuration | **DONE** |
+| 9 | 40–41 Config + Discovery (42–44) | **DONE** |
 | 10 | 45–49 | Discovery Configuration | **DONE** |
 | 11 | 50–54 | Discovery Configuration | **DONE** |
-| 12 | 55–59 | Discovery (55–58) + Machine Learning (59) | **DONE** |
+| 12 | 55 Discovery + ML (56–59) | **DONE** |
 | 13 | 60–64 | Machine Learning | **DONE** |
-| 14 | 65–69 | Machine Learning (65–67) + CMDB (68–69) | **DONE** |
-| 15 | 70–74 | CMDB | **DONE** |
-| 16 | 75–79 | CMDB | **DONE** |
-| 17 | 80–84 | CMDB (80) + Engagement Readiness (81–84) | **DONE** |
-| 18 | 85–89 | Engagement Readiness | **DONE** |
+| 14 | 65–68 ML + CMDB (69) | **DONE** |
+| 15 | 70–74 | Configuration Management Database | **DONE** |
+| 16 | 75–78 CMDB + Engagement (79) | **DONE** |
+| 17 | 80–84 | Service Mapping Engagement Readiness | **DONE** |
+| 18 | 85–89 | Service Mapping Engagement Readiness | **DONE** |
 
 ---
 
 ## Official samples to embed
 
-1. Generic application when no Pattern Identification Section matches (single)
-2. Credential error on service map displays yellow triangle icon (single)
-3. Discovery authentication errors occur during Classification phase (single)
-4. Event Rule in Event Management creates an Alert (single)
-5. Reclassify cmdb_ci_server to cmdb_ci_win_server is a Class Upgrade (single)
-6. Service map visibility improves Incident Management Mean Time to Resolve (single)
+1. Generic application when no Pattern Identification Section matches (order 11, single)
+2. Credential error on service map displays yellow triangle icon (order 12, single)
+3. Discovery authentication errors occur during Classification phase (order 44, single)
+4. Event Rule in Event Management creates an Alert (order 53, single)
+5. Reclassify cmdb_ci_server to cmdb_ci_win_server is a Class Upgrade (order 72, single)
+6. Service map visibility improves Incident Management Mean Time to Resolve (order 84, single)
 
 ---
 
 ## Merge and validate
 
 ```bash
+node scripts/tag-cis-sm-domains.mjs
 node scripts/extract-questions-from-transcripts.mjs --merge-batches scripts/question-batches/cis-sm-v2-batch*.json
+node scripts/balance-choice-lengths.mjs
+node scripts/rebalance-question-choices.mjs
 node scripts/lint-cis-sm-realism.mjs --orders=0-89
-npm test -- --run src/convex/seed/cis-sm-realism.test.ts src/convex/seed/trackQuality.test.ts src/convex/seed/devQuestionBank.test.ts
+npm test -- --run src/convex/seed/cis-sm-realism.test.ts src/convex/seed/trackQuality.test.ts
 # After merge: npm run seed:dev:questions
 ```

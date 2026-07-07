@@ -2,57 +2,6 @@
 	{
 		"trackCode": "CIS-SM",
 		"order": 60,
-		"prompt": "Which workspace is designed for reviewing machine learning service candidates and managing map onboarding tasks in one place?",
-		"choices": [
-			"Service Mapping Workspace with candidate queues and validation actions",
-			"CMDB Data Manager workspace focused on orphaned relationship cleanup",
-			"Event Management alert workspace for connector troubleshooting only",
-			"Discovery Status dashboard limited to ECC queue throughput metrics"
-		],
-		"correctIndex": 0,
-		"explanation": "Service Mapping Workspace centralizes candidate review, map tasks, and onboarding progress for ML-assisted mapping workflows.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html",
-			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-get-started.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SM",
-		"order": 61,
-		"prompt": "A mapper sees a high-confidence service candidate that conflicts with the documented architecture diagram. What is the recommended next step?",
-		"choices": [
-			"Accept every candidate automatically to maximize map coverage quickly",
-			"Validate the candidate with the service owner before accepting or rejecting it",
-			"Delete the underlying CI records so the candidate cannot reappear",
-			"Disable machine learning mapping globally until the next major release"
-		],
-		"correctIndex": 1,
-		"explanation": "ML candidates accelerate onboarding but require architectural and ownership validation before they influence production service maps.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html",
-			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/validate-service-map-results.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SM",
-		"order": 62,
-		"prompt": "When should a team choose ML-powered mapping over manual top-down entry point design for a new application?",
-		"choices": [
-			"When no discovery data exists and all CIs are created manually each week",
-			"When traffic and discovery signals exist but documented entry points are incomplete",
-			"When the goal is to disable CMDB identification rules for faster imports",
-			"When every dependency must be drawn without any automated suggestions"
-		],
-		"correctIndex": 1,
-		"explanation": "ML mapping is most valuable when technical signals are available but formal entry points or architecture documentation are incomplete.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/getting-started-service-mapping.html",
-			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
-		]
-	},
-	{
-		"trackCode": "CIS-SM",
-		"order": 63,
 		"questionType": "multi",
 		"prompt": "Which two inputs most improve machine learning service mapping accuracy? (Choose two.)",
 		"choices": [
@@ -62,16 +11,20 @@
 			"Disabling reconciliation so every scan creates new CI records"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "ML mapping depends on trustworthy CMDB identity plus reliable discovery and traffic evidence to propose meaningful service candidates.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html",
 			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/identification-and-reconciliation.html"
-		]
+		],
+		"domain": "Machine Learning"
 	},
 	{
 		"trackCode": "CIS-SM",
-		"order": 64,
+		"order": 61,
 		"prompt": "Which governance metric best tracks whether ML service candidate review is improving map quality?",
 		"choices": [
 			"Total ECC queue entries processed per hour regardless of outcomes",
@@ -84,6 +37,61 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-kpis.html",
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html"
-		]
+		],
+		"domain": "Machine Learning"
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 62,
+		"prompt": "After mappers reject several ML suggestions for the same application tier, what adjustment most directly improves future candidate quality?",
+		"choices": [
+			"Feed accepted versus rejected outcomes back into review standards and discovery scope tuning",
+			"Remove all identification rules so every CI import creates a new record",
+			"Disable Service Mapping Workspace access for application owners",
+			"Increase discovery schedule frequency without reviewing credential coverage"
+		],
+		"correctIndex": 0,
+		"explanation": "Iterative feedback on accepted and rejected candidates helps teams refine discovery inputs and governance so ML proposals align with architecture.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-kpis.html"
+		],
+		"domain": "Machine Learning"
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 63,
+		"prompt": "Machine learning analysis surfaces recurring traffic between a load balancer tier and three application clusters. What topology recommendation should the mapper evaluate?",
+		"choices": [
+			"Proposed application services grouping the clustered dependencies with shared entry points for validation",
+			"Immediate deletion of all generic application CIs without owner review",
+			"Disabling discovery schedules globally until ML confidence reaches one hundred percent",
+			"Conversion of every traffic flow into a separate business service without relationships"
+		],
+		"correctIndex": 0,
+		"explanation": "ML topology recommendations propose candidate service groupings from traffic patterns that mappers validate against known architecture before acceptance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-get-started.html"
+		],
+		"domain": "Machine Learning"
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 64,
+		"prompt": "Several maps show repeated generic application CIs for the same middleware process. How can ML-assisted pattern suggestions help?",
+		"choices": [
+			"Recommend identification refinements or pattern assignments to replace generic placeholders",
+			"Automatically retire every cmdb_ci_computer record on affected subnets",
+			"Disable reconciliation rules so duplicate CIs simplify future scans",
+			"Remove all entry points until generic CIs disappear from CMDB Health reports"
+		],
+		"correctIndex": 0,
+		"explanation": "ML can highlight recurring generic applications and suggest pattern improvements so dependency tracing uses accurate CI classification.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/pattern-based-discovery.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html"
+		],
+		"domain": "Machine Learning"
 	}
 ]

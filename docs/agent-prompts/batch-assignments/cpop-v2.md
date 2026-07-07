@@ -88,3 +88,30 @@ npm run check
 ```
 
 After merge: remove legacy CPOP orders >= 100 if surplus exists.
+
+---
+
+## Domain rebalance (Jul 2026 standalone realism review)
+
+Standalone analysis flagged **Governance** as missing by content classification and **People**
+over-represented because Strategy orders 0–39 contained adoption, agile, UX, and stakeholder
+content. **Technology** was under-recognized because Support Portal and platform infrastructure
+topics appeared in Strategy slots.
+
+**Remediation:** `cpop-rebalance-batch1.json` (23 rewrites) + domain tags on all batches.
+
+| Orders | Change |
+|--------|--------|
+| 5–7, 20–24, 30, 32, 38 | Strategy: roadmap, business case, portfolio sequencing, value realization (removed Support Portal, Scrum/agile, UX, citizen-dev enablement) |
+| 62, 68, 74, 78 | Technology: Support Portal, MID Server, ATF, platform service areas |
+| 86 | Data: CMDB quality tied to investment and automation decisions |
+| 90–92, 95–97, 99 | Governance: council charter, NOW Learning, product portfolio, demand board, subscription governance |
+
+```bash
+node scripts/tag-cpop-domains.mjs
+node scripts/extract-questions-from-transcripts.mjs --merge-batches scripts/question-batches/cpop-v2-batch*.json scripts/question-batches/cpop-rebalance-batch1.json
+node scripts/balance-choice-lengths.mjs
+node scripts/rebalance-question-choices.mjs
+node scripts/lint-cpop-realism.mjs --orders=0-99
+npm test -- --run src/convex/seed/cpop-realism.test.ts
+```

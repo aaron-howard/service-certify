@@ -2,7 +2,7 @@
 	{
 		"trackCode": "CIS-PA",
 		"order": 45,
-		"prompt": "When is a scripted breakdown source the best option?",
+		"prompt": "Segmentation must combine assignment group, VIP flag, and custom business tier not stored on one field. Which breakdown dimension strategy should the PA team choose?",
 		"choices": [
 			"When dimension values must be generated dynamically beyond what table fields alone provide",
 			"When every breakdown mapping must remain a default field mapping",
@@ -13,7 +13,8 @@
 		"explanation": "Scripted breakdown sources support custom logic to build segment lists when field-based sources cannot supply the needed dimensional values.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_CreateScriptedBreakdowns.html"
-		]
+		],
+		"domain": "Configure Breakdowns and Breakdown Sources"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -29,12 +30,13 @@
 		"explanation": "Breakdown mappings must identify the indicator source field whose values correspond to entries in the location breakdown source.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_BreakdownMappings.html"
-		]
+		],
+		"domain": "Configure Breakdowns and Breakdown Sources"
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 47,
-		"prompt": "In a breakdown matrix linked to an indicator, what does excluding a breakdown value accomplish?",
+		"prompt": "A scorecard shows noisy segments that executives never review and slows collection. How should the team optimize the breakdown matrix?",
 		"choices": [
 			"Prevents collection of scores for that segment on the indicator",
 			"Deletes the breakdown source record from the instance",
@@ -45,7 +47,8 @@
 		"explanation": "Excluded matrix rows tell PA not to collect breakdown scores for those values on the associated indicator while leaving the source intact.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html"
-		]
+		],
+		"domain": "Configure Breakdowns and Breakdown Sources"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -61,7 +64,8 @@
 		"explanation": "Bucket groups translate continuous numeric data into named ranges that improve readability in breakdown analysis and widgets.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html"
-		]
+		],
+		"domain": "Configure Breakdowns and Breakdown Sources"
 	},
 	{
 		"trackCode": "CIS-PA",
@@ -75,11 +79,15 @@
 			"They store historical indicator score snapshots over time"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Breakdown sources define dimensional values and support multiple creation methods; indicator sources and score storage remain separate PA artifacts.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html",
 			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_ConfigureBreakdownSources.html"
-		]
+		],
+		"domain": "Data Collection"
 	}
 ]

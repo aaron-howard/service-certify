@@ -13,7 +13,8 @@
 		"explanation": "Named-user metrics require user-level allocations so consumption can be measured against purchased rights during reconciliation.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/manage-software-entitlements.html"
-		]
+		],
+		"domain": "Practical Management of Software Compliance"
 	},
 	{
 		"trackCode": "CIS-SAM",
@@ -29,7 +30,8 @@
 		"explanation": "An over-licensed position indicates surplus rights that can be reclaimed or reallocated to reduce spend and true-up exposure.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/validate-reconciliation-results.html"
-		]
+		],
+		"domain": "Practical Management of Software Compliance"
 	},
 	{
 		"trackCode": "CIS-SAM",
@@ -42,12 +44,18 @@
 			"Remove Unlicensed Installs"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1, 2, 3],
+		"correctIndexes": [
+			0,
+			1,
+			2,
+			3
+		],
 		"questionType": "multi",
 		"explanation": "SAM reconciliation remediation supports creating or removing allocations, purchasing additional rights, and removing unlicensed installations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
-		]
+		],
+		"domain": "Practical Management of Software Compliance"
 	},
 	{
 		"trackCode": "CIS-SAM",
@@ -63,7 +71,8 @@
 		"explanation": "Under-licensed positions are remediated by acquiring additional rights or removing unauthorized installs through governed workflows.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
-		]
+		],
+		"domain": "Practical Management of Software Compliance"
 	},
 	{
 		"trackCode": "CIS-SAM",
@@ -79,6 +88,7 @@
 		"explanation": "Unauthorized installs should be removed or covered by legitimate entitlements and allocations to restore compliance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
-		]
+		],
+		"domain": "Practical Management of Software Compliance"
 	}
 ]

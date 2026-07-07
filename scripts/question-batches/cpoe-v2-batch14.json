@@ -13,7 +13,8 @@
 		"explanation": "Cross-solution dependencies require funding shared platform capabilities before dependent streams to avoid parallel spend on blocked work.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
-		]
+		],
+		"domain": "Cost/Resource Planning"
 	},
 	{
 		"trackCode": "CPOE",
@@ -29,13 +30,14 @@
 		"explanation": "License optimization maps fulfillment types and product entitlements to real usage patterns rather than artificial user reduction or over-licensing.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
-		]
+		],
+		"domain": "Cost/Resource Planning"
 	},
 	{
 		"trackCode": "CPOE",
 		"order": 67,
 		"questionType": "multi",
-		"prompt": "Given a scenario where resource forecasts missed two consecutive quarters, which inputs should the platform owner recalibrate? (Choose two.)",
+		"prompt": "During year-one funding review, resource forecasts missed two consecutive quarters, which inputs should the platform owner recalibrate? (Choose two.)",
 		"choices": [
 			"Velocity trends and unplanned production support demand on platform teams",
 			"Partner contract utilization versus committed hours by workstream",
@@ -43,11 +45,15 @@
 			"Count of scheduled town halls regardless of delivery output"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Forecast accuracy improves when teams incorporate velocity shifts, unplanned support load, and partner utilization—not activity metrics unrelated to capacity.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
-		]
+		],
+		"domain": "Cost/Resource Planning"
 	},
 	{
 		"trackCode": "CPOE",
@@ -69,15 +75,28 @@
 			"Negotiate partner and vendor contracts aligned to approved scope and rates"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Cost planning succeeds when platform owners, finance, delivery, and procurement each own distinct forecast and funding responsibilities.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
-		]
+		],
+		"domain": "Cost/Resource Planning"
 	},
 	{
 		"trackCode": "CPOE",
@@ -93,6 +112,7 @@
 		"explanation": "Third-party SOW approval requires explicit scope, assumptions, change control, and sustainment terms so executives understand total integration cost.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
-		]
+		],
+		"domain": "Cost/Resource Planning"
 	}
 ]

@@ -2,7 +2,7 @@
 	{
 		"trackCode": "CIS-ITSM",
 		"order": 0,
-		"prompt": "In the base platform configuration, what automatically happens to a standard incident that remains in the Resolved state after the configured auto-close interval elapses?",
+		"prompt": "Operations wants predictable incident closure without agents manually closing every Resolved ticket. Which closure strategy should they design for standard incidents?",
 		"choices": [
 			"The incident is automatically moved to a Closed state",
 			"A notification is sent to the assignment group manager requesting review of the incident record",
@@ -13,7 +13,8 @@
 		"explanation": "When auto-closure is enabled, the Autoclose Incidents scheduled job runs the Incident Autoclose business rule to close Resolved incidents after the glide.ui.autoclose.time interval.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/incident-management/configure-incident-auto-close.html"
-		]
+		],
+		"domain": "Incident Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -29,7 +30,8 @@
 		"explanation": "When the on-hold reason is Awaiting Caller and the caller updates the incident, the platform clears the on-hold reason and sets the state to In Progress.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/incident-management/c_IncidentManagementStateModel.html"
-		]
+		],
+		"domain": "Incident Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -45,12 +47,13 @@
 		"explanation": "Incident identification is the first lifecycle step: the service desk decides if the issue is an unplanned service interruption (incident) or a standard request before logging and categorizing it.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/incident-management/incident-management-process.html"
-		]
+		],
+		"domain": "Incident Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
 		"order": 3,
-		"prompt": "In a standard ServiceNow Incident Management configuration, how is incident priority determined?",
+		"prompt": "A CIO requires consistent response targets across teams with different urgency definitions. How should the organization design the incident priority matrix?",
 		"choices": [
 			"From impact and urgency values interpreted through configured priority rules",
 			"From the number of related problem records linked to the incident",
@@ -61,7 +64,8 @@
 		"explanation": "After categorization, incidents are prioritized using impact and urgency so SLA response targets can be applied consistently.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/incident-management/incident-management-process.html"
-		]
+		],
+		"domain": "Incident Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -77,6 +81,7 @@
 		"explanation": "Parent-child synchronization sets child incidents to Resolved when the parent resolves and copies resolution notes into the child activity log; child incidents are not auto-closed with the parent.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/incident-management/parent-child-state-sync.html"
-		]
+		],
+		"domain": "Incident Management"
 	}
 ]

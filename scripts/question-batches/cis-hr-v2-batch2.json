@@ -2,18 +2,19 @@
 	{
 		"trackCode": "CIS-HR",
 		"order": 5,
-		"prompt": "Which parent table does hr_case extend in the HR data model?",
+		"prompt": "Custom HR case workflows must inherit assignment, state, and work notes behavior from platform task standards. Which table hierarchy should architects preserve?",
 		"choices": [
-			"task",
-			"cmdb_ci",
-			"sc_request",
-			"kb_knowledge"
+			"hr_case extending the task table for standard task fields and workflow behavior",
+			"hr_case extending cmdb_ci for configuration item lifecycle only",
+			"hr_case extending sc_request for catalog-only fulfillment without tasks",
+			"hr_case as a standalone table with no parent inheritance"
 		],
 		"correctIndex": 0,
 		"explanation": "HR cases inherit task fields such as assignment, state, and work notes from the task table hierarchy.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-management.html"
-		]
+		],
+		"domain": "HR System Architecture"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -29,7 +30,8 @@
 		"explanation": "Scoped applications segment HR Core, Integrations, Lifecycle Events, and portal experiences so teams can upgrade and govern changes independently.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
-		]
+		],
+		"domain": "HR System Architecture"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -45,23 +47,25 @@
 		"explanation": "HRSD plugins install core HR tables, roles, Employee Center, and lifecycle capabilities required for the HR suite.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
-		]
+		],
+		"domain": "HR System Architecture"
 	},
 	{
 		"trackCode": "CIS-HR",
 		"order": 8,
-		"prompt": "What is recorded on the hr_service table?",
+		"prompt": "Employee Center must expose paid leave, payroll inquiry, and relocation offerings with consistent routing. How should those offerings be modeled in Core HR?",
 		"choices": [
-			"A definable HR offering employees can request through Employee Center",
-			"A network discovery schedule definition",
-			"A payroll calculation rule set",
-			"A CMDB identification rule"
+			"As HR services representing catalog-style offerings that drive case creation and fulfillment",
+			"As network discovery schedules tied to employee subnets",
+			"As payroll calculation rule sets stored on CMDB classes",
+			"As CMDB identification rules for hardware asset reconciliation"
 		],
 		"correctIndex": 0,
 		"explanation": "HR services represent catalog-style offerings that drive case creation, routing, and fulfillment configuration.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-services-overview.html"
-		]
+		],
+		"domain": "HR System Architecture"
 	},
 	{
 		"trackCode": "CIS-HR",
@@ -77,6 +81,7 @@
 		"explanation": "COEs such as Benefits or Employee Relations partition HR work for routing, reporting, and operational ownership.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-centers-of-excellence.html"
-		]
+		],
+		"domain": "HR System Architecture"
 	}
 ]

@@ -2,83 +2,86 @@
 	{
 		"trackCode": "CIS-PA",
 		"order": 15,
-		"prompt": "An automated indicator on open incidents should count matching records each day. Which aggregation approach applies on the indicator?",
+		"prompt": "Finance asks which incident KPIs justify PA licensing cost in the first year. Which business case element should the analytics lead document?",
 		"choices": [
-			"Count aggregation on records returned by the indicator source",
-			"Sum of breakdown element weights without a facts table",
-			"Average of sys_updated_on timestamps across all tables",
-			"Scripted export that bypasses indicator score tables"
+			"Mapped business outcomes, baseline pain points, and measurable KPIs with expected decision impact",
+			"A list of every available widget type without linking metrics to goals",
+			"Developer estimates for scripted breakdown sources only, with no stakeholder sign-off",
+			"Historical spreadsheet attachments with no defined owners or targets"
 		],
 		"correctIndex": 0,
-		"explanation": "Automated indicators aggregate records from their indicator source; count is the standard aggregation when the KPI measures record volume.",
+		"explanation": "Credible PA business cases connect investment to outcomes leaders will track through governed KPIs and dashboards.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/workflow-automated-indicators.html"
-		]
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/designing-pa-solution.html"
+		],
+		"domain": "KPI Design and Strategy"
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 16,
-		"prompt": "Two indicators share Incidents.Open but one KPI needs only P1 incidents. Where should that additional P1 filter be applied?",
+		"prompt": "After a KPI workshop, several teams claim ownership of the same backlog metric. Which governance practice should the PA program establish?",
 		"choices": [
-			"Additional conditions on the individual indicator record",
-			"Replacement of the shared indicator source facts table",
-			"Global system property com.snc.pa.dc.disable_filtering",
-			"Dashboard visualization color scheme settings"
+			"Assign a single accountable KPI owner and document definition standards in a governed metric catalog",
+			"Allow every dashboard consumer to edit indicator formulas without review",
+			"Delete duplicate KPIs silently without notifying stakeholders",
+			"Disable targets so ownership disputes cannot be tracked"
 		],
 		"correctIndex": 0,
-		"explanation": "Shared indicator sources carry high-level filters; indicator-specific conditions refine subsets for individual KPIs on the same source.",
+		"explanation": "Metric ownership and definition standards prevent conflicting KPI versions and clarify who interprets trends and drives improvement actions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_IndicatorSources.html"
-		]
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/designing-pa-solution.html"
+		],
+		"domain": "KPI Design and Strategy"
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 17,
-		"prompt": "Which field type is frequently used in Indicator Source Conditions?",
+		"prompt": "Release one must deliver value in six weeks but twenty KPIs were requested. How should the analytics roadmap prioritize delivery?",
 		"choices": [
-			"URL",
-			"Phone Number",
-			"Duration",
-			"Date-Time"
+			"Implement the highest-impact KPIs tied to agreed goals first, then phase additional metrics with validated source data",
+			"Build all requested KPIs simultaneously regardless of source readiness or collection load",
+			"Delay every KPI until every breakdown source is scripted",
+			"Publish empty dashboards and add indicators only after user complaints"
 		],
-		"correctIndex": 3,
-		"explanation": "Indicator source conditions typically include date-related filters on Date-Time fields such as Opened on Today or Closed on This month.",
+		"correctIndex": 0,
+		"explanation": "Analytics roadmaps sequence KPI delivery by business priority, data readiness, and stakeholder value rather than attempting every metric at once.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_IndicatorSources.html"
-		]
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/designing-pa-solution.html"
+		],
+		"domain": "KPI Design and Strategy"
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 18,
-		"prompt": "When standard count or sum aggregation cannot express a KPI, what PA feature lets implementers customize how scores are calculated from source records?",
+		"prompt": "Operations and HR both want employee-related KPIs on shared platforms. Which stakeholder alignment approach reduces conflicting definitions?",
 		"choices": [
-			"Aggregation script on the indicator",
-			"MID Server script include invoked at login",
-			"UI policy that hides invalid breakdown elements",
-			"Report color palette assigned to the data collector job"
+			"Facilitate cross-functional KPI review sessions and publish approved definitions before indicator build",
+			"Let each department create identical KPI names with different filters and no review",
+			"Hide KPI definitions from consumers so only developers understand calculations",
+			"Convert every cross-domain request into a manual indicator by default"
 		],
 		"correctIndex": 0,
-		"explanation": "Aggregation scripts on indicators allow custom score calculations when built-in aggregation types do not meet the KPI requirement.",
+		"explanation": "Cross-functional KPI alignment ensures shared terminology, approved definitions, and consistent targets before technical implementation begins.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/workflow-automated-indicators.html"
-		]
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/designing-pa-solution.html"
+		],
+		"domain": "KPI Design and Strategy"
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 19,
-		"questionType": "multi",
-		"prompt": "Which practices help keep indicator sources efficient and reusable across multiple KPIs? (Choose two.)",
+		"prompt": "After collection jobs run, where does Platform Analytics persist indicator and breakdown scores for trending and widgets?",
 		"choices": [
-			"Minimize the number of sources by sharing high-level date and status filters",
-			"Place reusable subset filters on the source and indicator-specific filters on each indicator",
-			"Create a separate source for every indicator even when conditions overlap",
-			"Remove all date conditions so jobs scan entire tables each run"
+			"pa_scores_l1 for indicator scores and pa_scores_l2 for breakdown scores",
+			"sys_audit entries only, with no dedicated PA score tables",
+			"Widget configuration records on the sp_dashboard table",
+			"Breakdown source staging tables without historical snapshots"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
-		"explanation": "Fewer shared sources improve collection efficiency; high-level filters belong on the source while KPI-specific refinements stay on individual indicators.",
+		"explanation": "Current PA score data is stored in pa_scores_l1 for indicator scores and pa_scores_l2 for breakdown scores; pa_scores is the legacy table.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_IndicatorSources.html"
-		]
+		],
+		"domain": "Configure Indicators and Indicator Sources"
 	}
 ]

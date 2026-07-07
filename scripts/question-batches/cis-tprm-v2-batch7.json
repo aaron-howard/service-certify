@@ -13,7 +13,8 @@
 		"explanation": "Engagement level risk ratings translate numeric assessment scores into qualitative tiers such as Critical, High, Moderate, Low, and Minor.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
-		]
+		],
+		"domain": "Core Configuration"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -29,7 +30,8 @@
 		"explanation": "Third-party risk issues track assessment findings and remediation work; issues remain active until findings are resolved and closed.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
-		]
+		],
+		"domain": "Core Configuration"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -45,7 +47,8 @@
 		"explanation": "Manual risk associations influence posture and scoring; automated assessment triggers require configured TPRM rules such as event-driven management rules.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-add-risks-tp.html"
-		]
+		],
+		"domain": "Core Configuration"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -62,7 +65,8 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html",
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-requesting-tpr-due-diligence.html"
-		]
+		],
+		"domain": "Assessment Configuration"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -79,6 +83,7 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/create-int-assess-form.html",
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-properties-configure.html"
-		]
+		],
+		"domain": "Assessment Configuration"
 	}
 ]

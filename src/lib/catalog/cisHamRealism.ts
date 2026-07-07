@@ -4,13 +4,40 @@ import type { QuestionType } from './questionTypes';
 
 /** Bank distribution for 90 questions scaled 1.5x from the 60-question official exam. */
 
+export const CIS_HAM_BANK_SIZE = 90;
+
 export const CIS_HAM_DOMAIN_TARGETS = {
-	'IT Asset Management Overview and Fundamentals': 18,
-	'Data Integrity Attributes and Data Sources': 24,
-	'Practical Management of IT Assets': 27,
-	'Operational Integration of IT Asset Management Processes': 16,
-	'Financial Management of IT Assets': 5
+	'IT Asset Management Overview and Fundamentals': 14,
+	'Data Integrity Attributes and Data Sources': 20,
+	'Practical Management of IT Assets': 23,
+	'Operational Integration of IT Asset Management Processes': 22,
+	'Financial Management of IT Assets': 11
 } as const;
+
+export type CisHamDomain = keyof typeof CIS_HAM_DOMAIN_TARGETS;
+
+export function domainForOrder(order: number): CisHamDomain {
+	if (order <= 13) return 'IT Asset Management Overview and Fundamentals';
+	if (order <= 33) return 'Data Integrity Attributes and Data Sources';
+	if (order <= 56) return 'Practical Management of IT Assets';
+	if (order <= 78) return 'Operational Integration of IT Asset Management Processes';
+	return 'Financial Management of IT Assets';
+}
+
+export const CIS_HAM_SCENARIO_MIN_RATIO = 0.65;
+
+export function isScenarioStylePrompt(prompt: string): boolean {
+	const trimmed = prompt.trim();
+	if (trimmed.length >= 90) return true;
+	if (
+		/^(A |An |The |Your |During |When |After |Before |If |Given |While |Upon |Finance |Security |Internal |Imported |Leadership |Operations |Procurement |Audit |Discovery |CMDB |IT |Two |Several |Extended |Infrastructure |Receiving |Normalization |Warehouse |Why would|Why link|Why should|Which report|Which practice|Which system|Which HAM|Which asset|Which interface|Which items|Which cost|Which receiving|A CIO|A CFO|A SaaS|A hardware|A legacy|A regional|A fulfillment|A data|A new|A utilities|An employee|An executive|An administrator|An implementer|An auditor|Which two|Choose two|How should|What should)/i.test(
+			trimmed
+		)
+	) {
+		return true;
+	}
+	return false;
+}
 
 export const BANNED_CHOICE_PREFIXES = [
 	'Typically,',
@@ -45,7 +72,23 @@ export const BANNED_STEM_PREFIXES = [
 export const BANNED_STEM_PATTERNS = [
 	/^what is the primary purpose of/i,
 	/^what is the primary objective of/i,
-	/^what is the main purpose of/i
+	/^what is the main purpose of/i,
+	/^according to servicenow it asset management documentation, which statement best defines/i,
+	/^which product areas are included in the servicenow it asset management suite/i,
+	/^what capability does the hardware asset management application add/i,
+	/^which stages does servicenow documentation include in the hardware asset lifecycle/i,
+	/^what does a model category configuration determine/i,
+	/^what is an asset bundle in hardware asset management/i,
+	/^what does an asset lifecycle state represent/i,
+	/^how do servicenow docs distinguish assets from configuration items/i,
+	/^what does enabling glide\.asset\.create_ci_with_ire allow/i,
+	/^what does cmdb success advisor for hardware asset management help/i,
+	/^what is the primary goal of hardware model normalization/i,
+	/^what does the ham - hardware normalization scheduled job update/i,
+	/^which of the following are examples of consumable assets in hardware asset management/i,
+	/^when multiple assets ship under one transfer order, which flow handles/i,
+	/^which plugin dependency is activated when the hardware asset management application is enabled/i,
+	/^how does base itsm asset management differ from the hardware asset management application/i
 ] as const;
 
 export const STEM_OPENER_CAP = 4;
@@ -56,6 +99,7 @@ export type CisHamQuestionRow = {
 	prompt: string;
 	choices: string[];
 	sourceUrls: string[];
+	domain?: string;
 	questionType?: QuestionType;
 	correctIndexes?: number[];
 	correctIndex?: number;
@@ -124,12 +168,43 @@ export function validateCisHamQuestion(q: CisHamQuestionRow): string[] {
 	return issues;
 }
 
+export function validateCisHamScenarioRatio(rows: CisHamQuestionRow[]): string[] {
+	const ham = rows.filter((q) => q.trackCode === 'CIS-HAM');
+	if (ham.length === 0) return [];
+	const scenarioCount = ham.filter((q) => isScenarioStylePrompt(q.prompt)).length;
+	const ratio = scenarioCount / ham.length;
+	if (ratio < CIS_HAM_SCENARIO_MIN_RATIO) {
+		return [
+			`scenario-style prompts ${scenarioCount}/${ham.length} (${Math.round(ratio * 100)}%) below minimum ${Math.round(CIS_HAM_SCENARIO_MIN_RATIO * 100)}%`
+		];
+	}
+	return [];
+}
+
+export function validateCisHamDomainTags(rows: CisHamQuestionRow[]): string[] {
+	const issues: string[] = [];
+	for (const q of rows) {
+		if (q.trackCode !== 'CIS-HAM') continue;
+		if (!q.domain) {
+			issues.push(`order ${q.order}: missing domain tag`);
+			continue;
+		}
+		if (q.domain !== domainForOrder(q.order)) {
+			issues.push(`order ${q.order}: domain ${q.domain} does not match order quota ${domainForOrder(q.order)}`);
+		}
+	}
+	return issues;
+}
+
 export function validateCisHamTrack(rows: CisHamQuestionRow[]): string[] {
 	const issues: string[] = [];
 
 	for (const q of rows) {
 		issues.push(...validateCisHamQuestion(q));
 	}
+
+	issues.push(...validateCisHamScenarioRatio(rows));
+	issues.push(...validateCisHamDomainTags(rows));
 
 	const openerCounts = new Map<string, number>();
 	for (const q of rows) {

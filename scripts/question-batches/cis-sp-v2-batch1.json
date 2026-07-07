@@ -13,7 +13,8 @@
 		"explanation": "Domain separation (Multitenant Platform Architecture) segregates data, UI, and business logic on one instance and supports nested tenant hierarchies with cross-tenant intelligence.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/bp-dom-sep-definition.html"
-		]
+		],
+		"domain": "Initial Domain Setup and Service Provider Architecture"
 	},
 	{
 		"trackCode": "CIS-SP",
@@ -29,7 +30,8 @@
 		"explanation": "Domain Admin > Domain Map displays the configured domain hierarchy so administrators can review parent-child structure before adding tenants.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/bp-domain-hierarchy.html"
-		]
+		],
+		"domain": "Initial Domain Setup and Service Provider Architecture"
 	},
 	{
 		"trackCode": "CIS-SP",
@@ -45,7 +47,8 @@
 		"explanation": "Assigning users to a company mapped to a domain automatically places the user in that domain; records they create inherit the same domain.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/c_DomainAssignment.html"
-		]
+		],
+		"domain": "Initial Domain Setup and Service Provider Architecture"
 	},
 	{
 		"trackCode": "CIS-SP",
@@ -61,7 +64,8 @@
 		"explanation": "Separate instances provide stronger isolation and independent lifecycle management when domain separation on a shared instance cannot meet customer separation requirements.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/bp-domain-sep-recommended.html"
-		]
+		],
+		"domain": "Initial Domain Setup and Service Provider Architecture"
 	},
 	{
 		"trackCode": "CIS-SP",
@@ -75,10 +79,15 @@
 			"It appears as the top-level domain in Domain Map"
 		],
 		"correctIndex": 1,
-		"correctIndexes": [1, 2, 3],
+		"correctIndexes": [
+			1,
+			2,
+			3
+		],
 		"explanation": "The primary domain is the single top-level node in Domain Map with no parent; selecting a new primary replaces the previous designation.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/t_SelectAPrimaryDomain.html"
-		]
+		],
+		"domain": "Initial Domain Setup and Service Provider Architecture"
 	}
 ]

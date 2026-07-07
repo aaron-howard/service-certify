@@ -2,7 +2,7 @@
 	{
 		"trackCode": "CIS-HAM",
 		"order": 10,
-		"prompt": "What does a model category configuration determine for a hardware CI class?",
+		"prompt": "Discovery creates Linux server CIs but no asset records appear in HAM reports. Which model category setting should the administrator verify first?",
 		"choices": [
 			"Whether an asset is created from a CI and which asset class is used",
 			"Which discovery credential alias runs on the MID Server for subnet scans",
@@ -13,7 +13,8 @@
 		"explanation": "Model categories associate CI classes with asset classes and control whether platform asset creation occurs from discovered or manual CIs.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/product-catalog/c_ModelCategories.html"
-		]
+		],
+		"domain": "IT Asset Management Overview and Fundamentals"
 	},
 	{
 		"trackCode": "CIS-HAM",
@@ -27,17 +28,21 @@
 			"Disable stockroom inventory tracking for all serialized hardware assets"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 2],
+		"correctIndexes": [
+			0,
+			2
+		],
 		"explanation": "Governed model maintenance and normalized model references preserve reporting integrity and predictable lifecycle behavior at scale.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/hardware-normalization.html",
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/manage-hardware-models.html"
-		]
+		],
+		"domain": "IT Asset Management Overview and Fundamentals"
 	},
 	{
 		"trackCode": "CIS-HAM",
 		"order": 12,
-		"prompt": "In Hardware Asset Management, stockrooms primarily support which operational need?",
+		"prompt": "A field services team receives returned laptops into a central warehouse before redeployment. Which HAM capability supports that operational model?",
 		"choices": [
 			"Track physical or logical inventory locations for receiving, storing, and issuing assets",
 			"Replace assignment groups on incident and change records for fulfillment routing",
@@ -48,12 +53,13 @@
 		"explanation": "Stockrooms represent controlled inventory locations that support accurate on-hand balances and fulfillment from receiving through issue.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/manage-your-stockrooms.html"
-		]
+		],
+		"domain": "IT Asset Management Overview and Fundamentals"
 	},
 	{
 		"trackCode": "CIS-HAM",
 		"order": 13,
-		"prompt": "What is an asset bundle in Hardware Asset Management?",
+		"prompt": "A new hire kit must ship laptop, dock, and peripherals as one deployable package from stock. How should HAM represent that kit?",
 		"choices": [
 			"A managed package of related in-stock hardware and consumable assets treated as one entity",
 			"A discovery feed that imports vendor advanced shipment notifications without stockroom context",
@@ -64,12 +70,13 @@
 		"explanation": "Asset bundles group existing in-stock assets into a single managed package for deployment, allocation, and lifecycle handling.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-bundles-concept.html"
-		]
+		],
+		"domain": "IT Asset Management Overview and Fundamentals"
 	},
 	{
 		"trackCode": "CIS-HAM",
 		"order": 14,
-		"prompt": "Which HAM benefit supports receiving assets into stockrooms using mobile devices?",
+		"prompt": "Warehouse staff receive pallets at the dock without desktop access. Which HAM capability supports barcode scanning from mobile devices?",
 		"choices": [
 			"Mobile asset scanning for receiving and on-site audit validation",
 			"Automated software reclamation from unused installations across the estate",
@@ -80,6 +87,7 @@
 		"explanation": "Mobile asset scanning enables receiving and audit activities at the stockroom or user location using barcode or RFID capture.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/exploring-ham.html"
-		]
+		],
+		"domain": "Data Integrity Attributes and Data Sources"
 	}
 ]

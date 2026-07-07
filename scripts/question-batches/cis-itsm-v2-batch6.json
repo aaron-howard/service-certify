@@ -13,7 +13,8 @@
 		"explanation": "Root Cause Analysis problem tasks assign SMEs to investigate the underlying cause and identify a proposed fix for the parent problem.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/problem-management/create-problem-task.html"
-		]
+		],
+		"domain": "Problem Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -29,12 +30,13 @@
 		"explanation": "Relating multiple incidents to one problem consolidates work when several tickets stem from the same root issue.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/problem-management/add-multiple-incidents-to-problem.html"
-		]
+		],
+		"domain": "Problem Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
 		"order": 27,
-		"prompt": "When a workaround is communicated on a problem record, what is the expected outcome for related incidents?",
+		"prompt": "A workaround is published for a known error but related incidents keep reopening. How should the known error library be managed until the permanent fix is implemented?",
 		"choices": [
 			"All related incidents are automatically closed in the Resolved state",
 			"Notification is sent to related incidents that a workaround is available",
@@ -45,7 +47,8 @@
 		"explanation": "Communicating a workaround documents the temporary restoration steps and notifies related incidents so agents and users can apply the workaround.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/problem-management/communicate-workaround.html"
-		]
+		],
+		"domain": "Problem Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -61,7 +64,8 @@
 		"explanation": "Mark Duplicate closes the duplicate problem and moves configured related task records to the existing problem per problem management properties.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/problem-management/assess-a-problem.html"
-		]
+		],
+		"domain": "Problem Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -78,6 +82,7 @@
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/change-management/t_CreateAChange.html",
 			"https://www.servicenow.com/docs/r/it-service-management/change-management/using-change-management.html"
-		]
+		],
+		"domain": "Problem Management"
 	}
 ]

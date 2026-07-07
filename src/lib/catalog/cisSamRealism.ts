@@ -2,15 +2,44 @@
 
 import type { QuestionType } from './questionTypes';
 
-/** Bank distribution for 90 questions scaled 1.5x from the 60-question official exam. */
+export const CIS_SAM_BANK_SIZE = 90;
 
 export const CIS_SAM_DOMAIN_TARGETS = {
-	'Software Asset Core Overview and Fundamentals': 13,
-	'Data Integrity Attributes and Sources': 25,
-	'Practical Management of Software Compliance': 27,
-	'Operational Integration of Software Processes': 12,
-	'Extending SAM': 13
+	'SAM Overview and Fundamentals': 10,
+	'SAM Strategy and Optimization': 11,
+	'Implementation Planning': 9,
+	'Data Integrity Attributes and Sources': 18,
+	'Practical Management of Software Compliance': 22,
+	'Operational Integration of Software Processes': 13,
+	'Cloud and SaaS Management': 7
 } as const;
+
+export type CisSamDomain = keyof typeof CIS_SAM_DOMAIN_TARGETS;
+
+export function domainForOrder(order: number): CisSamDomain {
+	if (order <= 9) return 'SAM Overview and Fundamentals';
+	if (order <= 20) return 'SAM Strategy and Optimization';
+	if (order <= 29) return 'Implementation Planning';
+	if (order <= 47) return 'Data Integrity Attributes and Sources';
+	if (order <= 69) return 'Practical Management of Software Compliance';
+	if (order <= 82) return 'Operational Integration of Software Processes';
+	return 'Cloud and SaaS Management';
+}
+
+export const CIS_SAM_SCENARIO_MIN_RATIO = 0.7;
+
+export function isScenarioStylePrompt(prompt: string): boolean {
+	const trimmed = prompt.trim();
+	if (trimmed.length >= 90) return true;
+	if (
+		/^(A |An |The |Your |During |When |After |Before |If |Given |While |Upon |How can|How do|How does|How is|How are|How should|Why should|Why would|Which practice|Which approach|Which configuration|Which design|Which two|Choose two|What happens|What should|A CIO|A CFO|A SAM|A publisher|A municipal|A stakeholder|A business|An organization|An implementer|Finance |Procurement |Leadership |Operations |Several |Two )/i.test(
+			trimmed
+		)
+	) {
+		return true;
+	}
+	return false;
+}
 
 export const BANNED_CHOICE_PREFIXES = [
 	'Typically,',
@@ -22,7 +51,9 @@ export const BANNED_CHOICE_PREFIXES = [
 	'In this scenario,',
 	'Practically speaking,',
 	'In most deployments,',
-	'Under normal policy'
+	'Under normal policy',
+	'Describes the outcome where',
+	'Captures the choice stating'
 ] as const;
 
 export const BANNED_STEM_PREFIXES = [
@@ -38,7 +69,11 @@ export const BANNED_STEM_PREFIXES = [
 export const BANNED_STEM_PATTERNS = [
 	/^what is the primary purpose of/i,
 	/^what is the primary objective of/i,
-	/^what is the main purpose of/i
+	/^what is the main purpose of/i,
+	/^which role grants script writing capabilities\?/i,
+	/^which value is not a valid normalization status/i,
+	/^which message is not a valid import error reason/i,
+	/^in sam, what does an entitlement record primarily represent/i
 ] as const;
 
 export const STEM_OPENER_CAP = 4;
@@ -49,6 +84,7 @@ export type CisSamQuestionRow = {
 	prompt: string;
 	choices: string[];
 	sourceUrls: string[];
+	domain?: string;
 	questionType?: QuestionType;
 	correctIndexes?: number[];
 	correctIndex?: number;
@@ -86,8 +122,8 @@ export function validateCisSamQuestion(q: CisSamQuestionRow): string[] {
 	}
 
 	const normalized = q.choices.map((c) => c.trim().toLowerCase());
-	if (new Set(normalized).size !== 4) {
-		issues.push(`order ${q.order}: duplicate choices in question`);
+	if (q.choices.length < 4 || new Set(normalized).size !== q.choices.length) {
+		issues.push(`order ${q.order}: needs at least four unique choices`);
 	}
 
 	if (!Array.isArray(q.sourceUrls) || q.sourceUrls.length === 0) {
@@ -103,7 +139,7 @@ export function validateCisSamQuestion(q: CisSamQuestionRow): string[] {
 			if (new Set(sorted).size !== sorted.length) {
 				issues.push(`order ${q.order}: duplicate correctIndexes`);
 			}
-			if (sorted.some((i) => i < 0 || i > 3)) {
+			if (sorted.some((i) => i < 0 || i >= q.choices.length)) {
 				issues.push(`order ${q.order}: correctIndexes out of range`);
 			}
 			if (q.correctIndex !== undefined && q.correctIndex !== sorted[0]) {
@@ -117,12 +153,56 @@ export function validateCisSamQuestion(q: CisSamQuestionRow): string[] {
 	return issues;
 }
 
+export function validateCisSamScenarioRatio(rows: CisSamQuestionRow[]): string[] {
+	const sam = rows.filter((q) => q.trackCode === 'CIS-SAM');
+	if (sam.length === 0) return [];
+	const scenarioCount = sam.filter((q) => isScenarioStylePrompt(q.prompt)).length;
+	const ratio = scenarioCount / sam.length;
+	if (ratio < CIS_SAM_SCENARIO_MIN_RATIO) {
+		return [
+			`scenario-style prompts ${scenarioCount}/${sam.length} (${Math.round(ratio * 100)}%) below minimum ${Math.round(CIS_SAM_SCENARIO_MIN_RATIO * 100)}%`
+		];
+	}
+	return [];
+}
+
+export function validateCisSamDomainTags(rows: CisSamQuestionRow[]): string[] {
+	const issues: string[] = [];
+	const domainCounts = Object.fromEntries(
+		Object.keys(CIS_SAM_DOMAIN_TARGETS).map((d) => [d, 0])
+	) as Record<string, number>;
+
+	for (const q of rows) {
+		if (q.trackCode !== 'CIS-SAM') continue;
+		if (!q.domain) {
+			issues.push(`order ${q.order}: missing domain tag`);
+			continue;
+		}
+		const expected = domainForOrder(q.order);
+		if (q.domain !== expected) {
+			issues.push(`order ${q.order}: domain ${q.domain} does not match order quota ${expected}`);
+		}
+		domainCounts[q.domain]++;
+	}
+
+	for (const [domain, target] of Object.entries(CIS_SAM_DOMAIN_TARGETS)) {
+		if (domainCounts[domain] !== target) {
+			issues.push(`domain ${domain}: expected ${target}, got ${domainCounts[domain] ?? 0}`);
+		}
+	}
+
+	return issues;
+}
+
 export function validateCisSamTrack(rows: CisSamQuestionRow[]): string[] {
 	const issues: string[] = [];
 
 	for (const q of rows) {
 		issues.push(...validateCisSamQuestion(q));
 	}
+
+	issues.push(...validateCisSamScenarioRatio(rows));
+	issues.push(...validateCisSamDomainTags(rows));
 
 	const openerCounts = new Map<string, number>();
 	for (const q of rows) {

@@ -2,7 +2,7 @@
 	{
 		"trackCode": "CPOE",
 		"order": 125,
-		"prompt": "Given a case study where a global enterprise runs monthly major releases, weekly patches, and emergency hotfixes through one shared maintenance window, which release cadence governance model should the platform owner establish?",
+		"prompt": "For pilot scope decisions, a global enterprise runs monthly major releases, weekly patches, and emergency hotfixes through one shared maintenance window, which release cadence governance model should the platform owner establish?",
 		"choices": [
 			"Tier releases by risk and impact with separate intake paths, blackout rules, and board-approved exception criteria for hotfixes",
 			"Schedule every change type into the same weekly slot without distinguishing severity or rollback requirements",
@@ -13,7 +13,8 @@
 		"explanation": "Complex release cadence governance separates risk tiers, defines intake and blackout rules, and governs hotfix exceptions so stability and business urgency coexist.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	},
 	{
 		"trackCode": "CPOE",
@@ -29,7 +30,8 @@
 		"explanation": "Release conflicts require transparent impact analysis and board adjudication with deferral and compensating controls—not ungoverned overrides or audit violations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	},
 	{
 		"trackCode": "CPOE",
@@ -43,16 +45,20 @@
 			"A policy allowing production pushes whenever developers finish coding"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
+		"correctIndexes": [
+			0,
+			1
+		],
 		"explanation": "Scalable release governance relies on a shared calendar with readiness gates and risk-tiered approval paths—not informal agreements or ungoverned deployments.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	},
 	{
 		"trackCode": "CPOE",
 		"order": 128,
-		"prompt": "Given a scenario where two business units insist their revenue-critical fixes cannot wait for the next train, what should the platform owner bring to the executive platform board?",
+		"prompt": "After go-live performance issues, two business units insist their revenue-critical fixes cannot wait for the next train, what should the platform owner bring to the executive platform board?",
 		"choices": [
 			"Comparative risk assessment, customer impact data, resource cost of an expedited path, and recommended sequencing with guardrails",
 			"A request to bypass all testing because both fixes are labeled urgent",
@@ -63,7 +69,8 @@
 		"explanation": "Executive board escalation requires evidence-based risk, impact, and cost trade-offs with governed expedite options—not untested or unrecorded deployments.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	},
 	{
 		"trackCode": "CPOE",
@@ -85,14 +92,27 @@
 			"Controlled exception handling when business continuity requires immediate remediation"
 		],
 		"correctMatches": [
-			{ "left": 0, "right": 0 },
-			{ "left": 1, "right": 1 },
-			{ "left": 2, "right": 2 },
-			{ "left": 3, "right": 3 }
+			{
+				"left": 0,
+				"right": 0
+			},
+			{
+				"left": 1,
+				"right": 1
+			},
+			{
+				"left": 2,
+				"right": 2
+			},
+			{
+				"left": 3,
+				"right": 3
+			}
 		],
 		"explanation": "Release cadence governance ties calendar visibility, intake deadlines, risk tiers, and hotfix paths to coordinated, validated, and appropriately governed change.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/demand-governance.html"
-		]
+		],
+		"domain": "ServiceNow Governance"
 	}
 ]

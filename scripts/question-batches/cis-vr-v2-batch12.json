@@ -13,7 +13,8 @@
 		"explanation": "False positive closure preserves audit history while recording why the finding was determined not to represent actionable exposure.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/vulnerability-response/false-positive-management.html"
-		]
+		],
+		"domain": "Automating Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -29,7 +30,8 @@
 		"explanation": "Exception requests formalize temporary risk acceptance with approvers, justification, and time bounds until remediation becomes feasible.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/vulnerability-response/vulnerability-exceptions.html"
-		]
+		],
+		"domain": "Automating Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -45,7 +47,8 @@
 		"explanation": "Vulnerability Exception Management connects to ServiceNow GRC so policy exceptions follow enterprise governance workflows and evidence requirements.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/vulnerability-response/grc-exception-management.html"
-		]
+		],
+		"domain": "Automating Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -61,7 +64,8 @@
 		"explanation": "Expiring exceptions must be reassessed so accepted risk does not continue without accountable review and updated remediation plans.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/vulnerability-response/vulnerability-exceptions.html"
-		]
+		],
+		"domain": "Automating Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
@@ -77,6 +81,7 @@
 		"explanation": "Exception rules automate deferral for known accepted-risk scenarios, reducing repetitive manual exception submissions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/vulnerability-response/exception-rules.html"
-		]
+		],
+		"domain": "Automating Vulnerability Response"
 	}
 ]

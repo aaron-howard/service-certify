@@ -2,55 +2,59 @@
 	{
 		"trackCode": "CIS-SAM",
 		"order": 85,
-		"prompt": "Finance leadership wants to avoid surprise true-up invoices. Which extending SAM practice is most effective?",
+		"prompt": "An IaaS team provisions cloud instances with bring-your-own-license software. Which SAM practice prevents license leakage in hybrid environments?",
 		"choices": [
-			"Run periodic reconciliations and remediate shortfalls before renewal events",
-			"Exclude SaaS subscriptions from SAM scope until audit notices arrive",
-			"Treat compliance exceptions as permanent without revalidation dates",
-			"Defer all entitlement updates until the vendor initiates an audit"
+			"Track cloud-hosted installs and BYOL entitlements with the same normalization and reconciliation rules as on-premises assets",
+			"Exclude cloud instances from discovery because they are outside corporate data centers",
+			"Treat every cloud install as automatically licensed by the hosting provider",
+			"Disable reconciliation for publishers that offer both perpetual and cloud metrics"
 		],
 		"correctIndex": 0,
-		"explanation": "Proactive reconciliation and remediation reduce financial shock at renewal or audit by addressing gaps early.",
+		"explanation": "Hybrid cloud SAM requires consistent discovery, normalization, and entitlement tracking for software running in cloud infrastructure.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
-		]
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/software-asset-management-overview.html"
+		],
+		"domain": "Cloud and SaaS Management"
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 86,
-		"prompt": "A SAM team plans remediation for multiple under-licensed publishers. Which reporting view best prioritizes effort?",
+		"prompt": "A product team adopts a usage-based SaaS API priced by monthly active users. Which metric design supports accurate compliance monitoring?",
 		"choices": [
-			"Compliance position segmented by publisher, business unit, and risk severity with cost exposure",
-			"Complete list of every software model in the catalog without compliance status",
-			"Count of non-SAM catalog items submitted this quarter",
-			"Discovery schedule frequency by MID Server without install context"
+			"Configure subscription entitlements and consumption rules aligned to the vendor's usage-based billing metric",
+			"Apply per-device metrics because API services do not require user tracking",
+			"Skip entitlement modeling until the vendor sends an audit notice",
+			"Count catalog requests as a proxy for API consumption"
 		],
 		"correctIndex": 0,
-		"explanation": "Segmentation by publisher, ownership, and severity helps target remediation on the highest-impact compliance gaps.",
+		"explanation": "Usage-based cloud services require entitlement and consumption models that mirror vendor billing units for defensible compliance.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/validate-reconciliation-results.html"
-		]
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/subscription-entitlements.html",
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/configure-license-metrics.html"
+		],
+		"domain": "Cloud and SaaS Management"
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 87,
-		"prompt": "Why should SAM compliance exceptions include expiration dates and scheduled revalidation?",
+		"prompt": "A enterprise agreement moves from perpetual datacenter licenses to term-based cloud subscriptions for the same product suite. Which SAM transition step is most critical?",
 		"choices": [
-			"Temporary risk acceptance must be reviewed so exceptions do not become permanent control bypasses",
-			"Expiration dates eliminate the need to maintain entitlement records",
-			"Revalidation replaces reconciliation for publishers under exception",
-			"Exceptions with expiry dates automatically purchase missing licenses"
+			"Retire perpetual entitlements, create term-based subscription records, and validate renewal dates before the next reconciliation cycle",
+			"Keep perpetual entitlements active indefinitely while cloud usage is tracked in spreadsheets only",
+			"Remove all software models for the publisher so installs appear unmatched",
+			"Disable discovery for cloud tenants because subscription metrics never use install evidence"
 		],
 		"correctIndex": 0,
-		"explanation": "Time-bound exceptions force periodic review and prevent long-term erosion of compliance governance.",
+		"explanation": "Cloud migration requires updating entitlement structures from perpetual to term-based records so reconciliation reflects current subscription rights.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/software-entitlement-best-practices.html"
-		]
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/subscription-entitlements.html"
+		],
+		"domain": "Cloud and SaaS Management"
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 88,
-		"prompt": "A SaaS portfolio shows high subscription counts but low active usage. Which extending SAM action best reduces spend?",
+		"prompt": "A SaaS portfolio shows high subscription counts but low active usage across design tools. Which action best reduces spend without increasing audit risk?",
 		"choices": [
 			"Review usage patterns and reclaim or down-tier underutilized subscriptions through approved workflows",
 			"Upgrade every subscription to enterprise tier for uniform licensing",
@@ -58,25 +62,28 @@
 			"Ignore subscription usage because SaaS is outside SAM scope"
 		],
 		"correctIndex": 0,
-		"explanation": "Usage-driven SaaS optimization with governed workflows recovers spend while preserving necessary service access.",
+		"explanation": "Usage-driven SaaS optimization with governed workflows recovers spend while preserving necessary service access and audit evidence.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/subscription-entitlements.html"
-		]
+		],
+		"domain": "Cloud and SaaS Management"
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 89,
-		"prompt": "Which scenario best indicates mature SAM process extension across the organization?",
+		"prompt": "Leadership asks whether cloud and on-premises software can share one compliance dashboard. Which SAM design supports that goal?",
 		"choices": [
-			"Reconciliations complete on schedule, exceptions are revalidated, and renewals use verified compliance data",
-			"Compliance reports are generated only when external auditors request them",
-			"Unmatched discovery titles accumulate without assigned normalization owners",
-			"Emergency admin overrides are required for routine entitlement updates"
+			"Unified reconciliation and reporting across subscription and perpetual entitlements with consistent publisher segmentation",
+			"Separate manual spreadsheets for cloud because SAM cannot model subscriptions",
+			"Report only on-premises installs until every SaaS vendor completes audit",
+			"Disable cloud subscription imports to simplify dashboard totals"
 		],
 		"correctIndex": 0,
-		"explanation": "Maturity appears in predictable operations, governed exceptions, and data-driven renewal and optimization decisions.",
+		"explanation": "Mature SAM programs reconcile cloud and on-premises rights in a unified view so governance sees total publisher exposure and optimization opportunities.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
-		]
+			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/license-workbench.html",
+			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/subscription-entitlements.html"
+		],
+		"domain": "Cloud and SaaS Management"
 	}
 ]

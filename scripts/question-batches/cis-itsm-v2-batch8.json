@@ -13,7 +13,8 @@
 		"explanation": "The Availability setting on the Normal change model controls whether users can select Normal when creating a new change request in Simplified Change Management.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/configure-normal-change-model-scm.html"
-		]
+		],
+		"domain": "Change Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -29,7 +30,8 @@
 		"explanation": "The Emergency change model configuration console defines who may submit emergency changes, notifications, approvals, and automatic task creation behavior.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/configure-emergency-change-model-scm.html"
-		]
+		],
+		"domain": "Change Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -45,7 +47,8 @@
 		"explanation": "Standard changes are pre-approved and accessed through templates; requesters choose a template to create the change rather than picking Standard from the change type picker.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/configure-standard-change-model-scm.html"
-		]
+		],
+		"domain": "Change Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -61,7 +64,8 @@
 		"explanation": "Copy change behavior is controlled through Change Properties, including enable copy and the comma-separated list of attributes copied from the originating change.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/change-management/configure-copy-change-request.html"
-		]
+		],
+		"domain": "Change Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
@@ -77,6 +81,7 @@
 		"explanation": "com.snc.change_request.copy.related_lists controls copying of default related lists such as Affected CIs, Impacted Services/CIs, and Change Tasks.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/change-management/configure-copy-change-request.html"
-		]
+		],
+		"domain": "Change Management"
 	}
 ]

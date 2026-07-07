@@ -13,7 +13,8 @@
 		"explanation": "Security Operations dashboards surface operational and executive KPIs such as open critical incidents and containment metrics for targeted audiences.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-reporting.html"
-		]
+		],
+		"domain": "SIR Overview and Data Visualization"
 	},
 	{
 		"trackCode": "CIS-SIR",
@@ -29,7 +30,8 @@
 		"explanation": "Grouped bar or column charts on filtered incident reports are standard for showing priority distribution trends over time.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-reporting.html"
-		]
+		],
+		"domain": "SIR Overview and Data Visualization"
 	},
 	{
 		"trackCode": "CIS-SIR",
@@ -43,11 +45,16 @@
 			"Facilities coordinators who manage building access badge provisioning"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1, 2],
+		"correctIndexes": [
+			0,
+			1,
+			2
+		],
 		"explanation": "SIR reporting targets security practitioners, SOC leadership, and executive security stakeholders rather than unrelated operational teams.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-reporting.html"
-		]
+		],
+		"domain": "SIR Overview and Data Visualization"
 	},
 	{
 		"trackCode": "CIS-SIR",
@@ -63,7 +70,8 @@
 		"explanation": "Incident volume trends are built from the Security Incident table with date filters and weekly grouping on the opened field.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-operations-metrics.html"
-		]
+		],
+		"domain": "SIR Overview and Data Visualization"
 	},
 	{
 		"trackCode": "CIS-SIR",
@@ -79,6 +87,7 @@
 		"explanation": "Containment and triage duration metrics directly reflect how quickly the SOC validates and limits incident impact.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-operations-metrics.html"
-		]
+		],
+		"domain": "SIR Overview and Data Visualization"
 	}
 ]

@@ -13,7 +13,8 @@
 		"explanation": "Engagements represent the third-party service relationship and connect assessments, issues, and scoring to that context.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
-		]
+		],
+		"domain": "Assessment Configuration"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -29,7 +30,8 @@
 		"explanation": "Event-driven management rules trigger assessments and related due diligence activities when configured conditions are met.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
-		]
+		],
+		"domain": "Assessment Configuration"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -45,7 +47,8 @@
 		"explanation": "Scoring rules aggregate assessment results to engagements and third parties using engagement level risk ratings and vendor scoring rules.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/vendor-ratings-scoring.html"
-		]
+		],
+		"domain": "Assessment Configuration"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -61,7 +64,8 @@
 		"explanation": "The third-party portal gives vendors a secure channel to respond to assessments, upload evidence, and track tasks.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-reference.html"
-		]
+		],
+		"domain": "Third-party Portal"
 	},
 	{
 		"trackCode": "CIS-TPRM",
@@ -77,6 +81,7 @@
 		"explanation": "Third-party contacts receive vendor_contact for portal access and snc_external to restrict them from the full internal instance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-roles.html"
-		]
+		],
+		"domain": "Third-party Portal"
 	}
 ]

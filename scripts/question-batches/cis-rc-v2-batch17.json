@@ -2,58 +2,60 @@
 	{
 		"trackCode": "CIS-RC",
 		"order": 80,
-		"prompt": "Security operations feeds vulnerability findings into the GRC program. Which integration pattern adds the most monitoring value?",
+		"prompt": "Before fieldwork begins, audit managers must confirm which controls belong in scope for a SOC 2 engagement. Which activity establishes that boundary?",
 		"choices": [
-			"Ingest operational signals from IT and security systems to enrich control and risk context",
-			"Import static policy PDFs quarterly without structured fields",
-			"Disable integrations to force manual spreadsheet reviews",
-			"Route all vulnerability records to catalog fulfillment workflows"
+			"Risk assessment and scoping workshops that define the control universe aligned to engagement objectives",
+			"Immediate testing of every control in the compliance library without prioritization",
+			"Importing all authority documents regardless of service relevance",
+			"Closing prior-year observations before validating scope with stakeholders"
 		],
 		"correctIndex": 0,
-		"explanation": "Integrated telemetry makes continuous monitoring timely and connects operational events to control objectives.",
+		"explanation": "Audit scoping uses risk assessment and stakeholder input to define the control population that fieldwork will test.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html",
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/control-testing-and-evidence.html"
-		]
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/audit-management/c_AuditTasks.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
+		],
+		"domain": "Audit and Advanced Audit"
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 81,
-		"prompt": "A content subscription delivers updated regulatory mappings mid-year. What should administrators do before activating the update?",
+		"prompt": "Fieldwork identifies a recurring segregation-of-duties gap on a payment application. How should auditors document the result?",
 		"choices": [
-			"Review release notes, assess impact on scoped citations and controls, then apply under change control",
-			"Overwrite production mappings immediately without testing",
-			"Reject all subscription updates to avoid rework",
-			"Delete existing authority documents prior to import"
+			"Create an audit observation linked to the tested control with severity, evidence, and recommended action",
+			"Delete the failed test so the gap does not appear on engagement dashboards",
+			"Convert the finding into a catalog request without audit traceability",
+			"Close the engagement early and omit the deficiency from working papers"
 		],
 		"correctIndex": 0,
-		"explanation": "Regulatory content updates require impact review so scoped compliance artifacts remain accurate and testable.",
+		"explanation": "Audit observations capture deficiencies with evidence and severity so remediation can be tracked through closure.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/policy-lifecycle-management.html",
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
-		]
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/audit-management/c_AuditTasks.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/remediate-control-failures.html"
+		],
+		"domain": "Audit and Advanced Audit"
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 82,
-		"prompt": "The CFO asks for a single view of compliance posture across departments. Which common-elements artifact should be configured?",
+		"prompt": "The audit committee requests a consolidated report after fieldwork completes. Which deliverable satisfies that request in Audit Management?",
 		"choices": [
-			"GRC scorecards aggregating control effectiveness and exception trends",
-			"Discovery status dashboard for subnet classification errors",
-			"Service catalog request volume by category",
-			"MID Server heartbeat report for integration nodes"
+			"An audit report summarizing scope, procedures, observations, and management responses",
+			"A raw export of every GRC table without narrative context",
+			"A list of inactive assignment groups sorted alphabetically",
+			"A discovery classification summary for infrastructure subnets"
 		],
 		"correctIndex": 0,
-		"explanation": "GRC scorecards consolidate compliance and control metrics for executive oversight across the program.",
+		"explanation": "Audit reports consolidate engagement results, observations, and management responses for governance review.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/compliance-dashboards.html",
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
-		]
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/audit-management/c_AuditTasks.html"
+		],
+		"domain": "Audit and Advanced Audit"
 	},
 	{
 		"trackCode": "CIS-RC",
 		"order": 83,
-		"prompt": "Program managers need cross-module reporting spanning policy tests, risk treatments, and open issues. Which approach meets that need?",
+		"prompt": "Program managers need cross-module reporting spanning policy tests, risk treatments, and open audit issues. Which approach meets that need?",
 		"choices": [
 			"Unified GRC dashboards and reports with consistent definitions across modules",
 			"Separate offline spreadsheets maintained by each module lead",
@@ -61,11 +63,12 @@
 			"Ad hoc list exports with different filters for every meeting"
 		],
 		"correctIndex": 0,
-		"explanation": "Shared GRC reporting definitions provide consistent oversight across policy, risk, and remediation workflows.",
+		"explanation": "Shared GRC reporting definitions provide consistent oversight across policy, risk, audit, and remediation workflows.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/compliance-dashboards.html",
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-impl-overview.html"
-		]
+		],
+		"domain": "Audit and Advanced Audit"
 	},
 	{
 		"trackCode": "CIS-RC",
@@ -79,11 +82,16 @@
 			"sn_incident.write"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1, 2],
+		"correctIndexes": [
+			0,
+			1,
+			2
+		],
 		"explanation": "The sn_audit.user role inherits sn_grc.reader, sn_compliance.reader, and sn_risk.reader so auditors can view GRC data across modules.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/audit-management/c_AuditTasks.html",
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
-		]
+		],
+		"domain": "Audit and Advanced Audit"
 	}
 ]

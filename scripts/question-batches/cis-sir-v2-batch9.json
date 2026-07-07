@@ -2,83 +2,92 @@
 	{
 		"trackCode": "CIS-SIR",
 		"order": 40,
-		"prompt": "Incidents tagged as ransomware should route immediately to the Tier 2 SOC team. Which configuration enforces this?",
+		"prompt": "A hunting team surfaces suspicious PowerShell activity that did not generate a SIEM alert. How should SIR ingest that lead for structured response?",
 		"choices": [
-			"Security incident assignment rules keyed on security tags and priority",
-			"Discovery schedules that probe ransomware-affected subnets every hour",
-			"Catalog approval workflows for employee mobile device enrollment requests",
-			"Project demand scoring thresholds for unrelated strategic portfolio themes"
+			"Create a security incident with observables and link hunting findings for triage and enrichment",
+			"Store findings only in chat channels until an integration automatically creates a record",
+			"Open a facilities work order for badge review without any security incident record",
+			"Log the activity in a project risk register unrelated to security operations tables"
 		],
 		"correctIndex": 0,
-		"explanation": "Assignment rules use attributes such as security tags and priority to route incidents to the appropriate response groups.",
+		"explanation": "Threat hunting findings should enter SIR as incidents with observables so teams apply enrichment, assignment, and response workflows consistently.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/assign-security-incident-roles.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/create-a-security-incident.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/threat-intelligence-in-sir.html"
+		],
+		"domain": "Security Incident Creation and Threat Intelligence"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 41,
-		"prompt": "A security architect needs consistent classification labels across incidents and playbooks. Which SIR artifact should be standardized?",
+		"prompt": "Where are pre-built third-party integrations for Security Incident Response configured on the instance?",
 		"choices": [
-			"Security tags with governed values used by rules, dashboards, and automation",
-			"Discovery identification sections for mapping printer hardware models",
-			"Catalog variable names on laptop provisioning request line items",
-			"Project milestone codes on unrelated portfolio investment work plans"
+			"Integration Configurations module in Security Operations",
+			"MID Server cluster properties under System Definition",
+			"Service Catalog Designer under IT Service Management",
+			"CMDB Data Manager under Configuration Management"
 		],
 		"correctIndex": 0,
-		"explanation": "Governed security tags provide consistent classification that drives assignment, reporting, and automated response logic.",
+		"explanation": "The Integration Configurations module lists and configures pre-built SIR integrations with external security tools.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-tags.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integration-configurations.html"
+		],
+		"domain": "Security Incident and Threat Intelligence Integrations"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 42,
-		"prompt": "What is the default security incident process definition provided with Security Incident Response?",
+		"prompt": "When connecting a SIEM to Security Incident Response, what does a typical inbound integration action accomplish?",
 		"choices": [
-			"ITIL incident management workflow copied from the ITSM foundation application",
-			"NIST Stateful process definition aligned to detect-triage-respond phases",
-			"Standard change workflow for normal and emergency production changes",
-			"Problem management workflow focused on permanent root cause elimination"
+			"Creates or updates security incidents from normalized SIEM alert payloads",
+			"Replaces the CMDB with SIEM asset inventory as the sole source of truth",
+			"Disables all analyst ACLs so every user can edit security incidents",
+			"Converts vulnerability groups into catalog items for employee checkout"
 		],
-		"correctIndex": 1,
-		"explanation": "SIR ships with the NIST Stateful process definition as the default lifecycle model for security incidents.",
+		"correctIndex": 0,
+		"explanation": "Inbound SIEM integration actions map alert data to security incident fields for automated creation and enrichment.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-process-definitions.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integrate-security-tools.html"
+		],
+		"domain": "Security Incident and Threat Intelligence Integrations"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 43,
 		"questionType": "multi",
-		"prompt": "Which two security incident task types support structured investigation and remediation work in SIR? (Choose two.)",
+		"prompt": "Which two integration categories are commonly configured in SIR Integration Configurations? (Choose two.)",
 		"choices": [
-			"Investigation tasks for evidence collection and analysis activities",
-			"Remediation tasks for containment and eradication actions on affected assets",
-			"Catalog fulfillment tasks for employee laptop shipping and imaging",
-			"Discovery error tasks for MID Server subnet probe failure logging"
+			"SIEM and security analytics platforms that send correlated alerts",
+			"Endpoint detection and response tools that export detection events",
+			"Payroll systems that calculate employee overtime accrual balances",
+			"Facilities management tools that track HVAC maintenance schedules"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [0, 1],
-		"explanation": "SIR uses investigation tasks for analytical work and remediation tasks for active response actions on affected systems.",
+		"correctIndexes": [
+			0,
+			1
+		],
+		"explanation": "SIR pre-built integrations focus on security tools such as SIEM and EDR platforms that feed incidents and observables into the platform.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-task-types.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integration-configurations.html"
+		],
+		"domain": "Security Incident and Threat Intelligence Integrations"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 44,
-		"prompt": "A lead analyst reassigns a critical incident and adds containment tasks from the workspace. Which management capability is in use?",
+		"prompt": "A security team wants phishing reports submitted through email to create SIR records automatically. Which integration pattern applies?",
 		"choices": [
-			"SIR Workspace incident management with task creation and assignment controls",
-			"Service Catalog manager publishing new employee onboarding request items",
-			"Discovery status board monitoring horizontal scan completion percentages",
-			"Project workspace demand conversion for portfolio investment approvals"
+			"Email integration with inbound actions that parse messages into security incidents",
+			"Discovery pattern extensions that probe mailbox servers for open ports",
+			"Catalog record producers that fulfill laptop requests from email templates",
+			"Change management inbound actions that open normal changes from messages"
 		],
 		"correctIndex": 0,
-		"explanation": "Analysts manage incidents directly in the SIR Workspace by updating ownership and creating response tasks during active investigations.",
+		"explanation": "Email integrations use inbound actions to transform reported phishing messages into triage-ready security incidents.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/respond-to-a-security-incident.html"
-		]
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/integrate-security-tools.html"
+		],
+		"domain": "Security Incident and Threat Intelligence Integrations"
 	}
 ]
