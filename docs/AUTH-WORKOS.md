@@ -1,6 +1,8 @@
 # WorkOS Authentication Setup
 
-Service Certify uses **WorkOS** for OAuth authentication with social logins (Google, Microsoft, GitHub, Facebook).
+**Last updated:** 2026-07-10
+
+Service Certify uses **WorkOS** for OAuth authentication with social logins (**Google, Microsoft, GitHub**). Redirect URIs are built from the request origin (`{origin}/auth/callback`) — no public WorkOS env vars are required.
 
 ## Quick Start
 
@@ -25,22 +27,29 @@ In WorkOS dashboard → Redirect URIs:
 ```env
 WORKOS_API_KEY=sk_test_...
 WORKOS_CLIENT_ID=client_...
-PUBLIC_WORKOS_CLIENT_ID=client_...
-PUBLIC_WORKOS_REDIRECT_URI=http://localhost:5173/auth/callback
+PUBLIC_CONVEX_URL=https://your-deployment.convex.cloud
 ```
 
 **Vercel (Settings → Environment Variables):**
 ```
 WORKOS_API_KEY=sk_test_...
 WORKOS_CLIENT_ID=client_...
-PUBLIC_WORKOS_CLIENT_ID=client_...
-PUBLIC_WORKOS_REDIRECT_URI=https://yourdomain.vercel.app/auth/callback
+PUBLIC_CONVEX_URL=https://your-prod-deployment.convex.cloud
+```
+
+**Convex env** (dashboard or CLI — required for full mock + admin bootstrap):
+```bash
+npx convex env set WORKOS_CLIENT_ID client_...
+npx convex env set ADMIN_EMAILS you@example.com
 ```
 
 ### 4. Test Locally
 
 ```bash
-# Start dev server
+# Terminal 1: Convex
+npm run convex:dev
+
+# Terminal 2: SvelteKit
 npm run dev
 
 # Open http://localhost:5173/auth/signin
@@ -84,16 +93,15 @@ User clicks "Sign in with Google"
 
 ## Available Providers
 
-WorkOS supports these OAuth providers out-of-the-box:
+Wired in `src/lib/workos.server.ts` (`OAUTH_PROVIDERS`):
 
-| Provider | Setup |
-|----------|-------|
-| **Google** | Auto-configured in WorkOS |
-| **Microsoft** | Auto-configured in WorkOS |
-| **GitHub** | Auto-configured in WorkOS |
-| **Facebook** | Auto-configured in WorkOS |
+| Provider | Status |
+|----------|--------|
+| **Google** | Enabled |
+| **Microsoft** | Enabled |
+| **GitHub** | Enabled |
 
-No additional OAuth apps needed! WorkOS handles all provider integrations.
+Enable each provider in the WorkOS dashboard. Adding Facebook (or others) would require extending `OAUTH_PROVIDERS` and the sign-in UI.
 
 ---
 
@@ -259,8 +267,9 @@ WorkOS also supports email/password via "Passwordless" flow. See [WorkOS docs](h
 - Prod: `https://yourdomain.com/auth/callback`
 
 ### "Invalid client ID"
-- Ensure `PUBLIC_WORKOS_CLIENT_ID` is set in `.env.local`
+- Ensure `WORKOS_CLIENT_ID` is set in `.env.local` (and Vercel)
 - Must be the **Client ID**, not API Key
+- For full mock, also set the same value in **Convex** env as `WORKOS_CLIENT_ID`
 
 ### "User not found after callback"
 - Check that `createOrUpdateUser` mutation ran successfully
@@ -278,17 +287,21 @@ WorkOS also supports email/password via "Passwordless" flow. See [WorkOS docs](h
 After setup:
 
 1. ✅ Create WorkOS account and get API key
-2. ✅ Set environment variables locally + Vercel
+2. ✅ Set environment variables locally + Vercel (+ Convex)
 3. ✅ Test sign-in flow locally: `npm run dev`
 4. ✅ Deploy to Vercel and test with production URL
-5. ✅ Wire auth to protected routes (dashboard, grading)
-6. ✅ Add user profile / settings page (future)
+5. ✅ Wire auth to full-mock gating (admin role)
+6. ⏳ Add user profile / settings page (future)
+7. ⏳ Persist practice progress to `userProgress` (future)
+8. ✅ Harden Convex user mutations/queries (JWT + identity match)
 
 ---
 
 ## Related
 
-- [[docs/TESTING.md]] — E2E test auth flows
+- [auth-setup.md](./auth-setup.md) — Short checklist
+- [PRODUCTION_READINESS_AUDIT.md](./PRODUCTION_READINESS_AUDIT.md)
+- [TESTING.md](./TESTING.md) — Unit / E2E testing
 - WorkOS: [Documentation](https://workos.com/docs)
 - OAuth: [RFC 6749](https://tools.ietf.org/html/rfc6749)
 
@@ -319,8 +332,8 @@ npx convex env set WORKOS_CLIENT_ID client_01XXXXXXXXXXXXXXXXXXXXXXXX
 Convex uses this to validate WorkOS JWTs for full mock access (`mode=full`).
 
 4. Sign in at `/auth/signin` with an allowlisted email.
-4. Confirm in the [Convex dashboard](https://dashboard.convex.dev) → **Data** → `users` that your row has `role: "admin"`.
-5. Open any exam detail page — you should see **Start Full Mock**.
+5. Confirm in the [Convex dashboard](https://dashboard.convex.dev) → **Data** → `users` that your row has `role: "admin"`.
+6. Open any exam detail page — you should see **Start Full Mock**.
 
 ### How roles work
 
@@ -347,13 +360,16 @@ The browser Convex client calls `/api/auth/convex-token` to attach your WorkOS s
 - ✅ WorkOS SDK installed
 - ✅ Auth routes created (signin, callback, signout)
 - ✅ Convex schema with users table
-- ✅ Auth mutations (create/update user)
-- ✅ Sign-in UI with social buttons
+- ✅ Auth mutations (create/update user, deleteAccount)
+- ✅ Sign-in UI with social buttons (Google, Microsoft, GitHub)
 - ✅ Convex client auth via `/api/auth/convex-token`
 - ✅ Admin role on `users` table with `ADMIN_EMAILS` bootstrap
 - ✅ Full mock practice (`mode=full`) gated to admins in Convex
-- ⏳ User profile page (coming: future phase)
+- ✅ User sync mutations require WorkOS JWT (`setAuth` from SvelteKit)
+- ⏳ User profile / settings page
+- ⏳ Account deletion UI (mutation exists)
+- ⏳ Progress persistence + real dashboard data
 
 ## Note
 
-This is a **server-side OAuth flow**. The access token never reaches the browser—only an httpOnly cookie is set. This is the most secure approach for traditional web apps.
+This is a **server-side OAuth flow**. The access token is stored in an httpOnly cookie (not exposed to client JS). Redirect URI is derived from `url.origin` at request time.

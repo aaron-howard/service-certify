@@ -2,30 +2,32 @@
 
 Quick reference guides for on-call responders. Choose the runbook matching your symptoms.
 
+**Launch / cutover checklist:** [PRODUCTION_READINESS_AUDIT.md](../PRODUCTION_READINESS_AUDIT.md)
+
 ## Runbook Index
 
 | Symptom | Runbook | Severity | ETA |
 |---------|---------|----------|-----|
-| **App won't load, 500 error** | [[RUNBOOK-ROLLBACK-VERCEL]] | 🔴 P1 | 2-5 min |
-| **Questions don't load, Convex timeout** | [[RUNBOOK-RESTART-CONVEX]] | 🟡 P2 | 5 min |
-| **Data missing or corrupted** | [[RUNBOOK-RESTORE-BACKUP]] | 🔴 P0 | 30 min |
-| **Performance degraded (slow API)** | See notes below | 🟡 P2 | 15 min |
-| **Too many errors in logs** | See notes below | 🟡 P2 | 10 min |
+| **App won't load, 500 error** | [RUNBOOK-ROLLBACK-VERCEL](./RUNBOOK-ROLLBACK-VERCEL.md) | P1 | 2-5 min |
+| **Questions don't load, Convex timeout** | [RUNBOOK-RESTART-CONVEX](./RUNBOOK-RESTART-CONVEX.md) | P2 | 5 min |
+| **Data missing or corrupted** | [RUNBOOK-RESTORE-BACKUP](./RUNBOOK-RESTORE-BACKUP.md) | P0 | 30 min |
+| **Performance degraded (slow API)** | See notes below | P2 | 15 min |
+| **Too many errors in logs** | See notes below | P2 | 10 min |
 
 ## Common Scenarios
 
 ### "The site is down"
 1. Check Vercel dashboard for deployment status
-2. If **Failed**: Use [[RUNBOOK-ROLLBACK-VERCEL]]
+2. If **Failed**: Use [RUNBOOK-ROLLBACK-VERCEL](./RUNBOOK-ROLLBACK-VERCEL.md)
 3. If **Succeeded**: Check Convex health (see below)
 
 ### "Convex queries are timing out"
-1. Use [[RUNBOOK-RESTART-CONVEX]]
+1. Use [RUNBOOK-RESTART-CONVEX](./RUNBOOK-RESTART-CONVEX.md)
 2. Check Convex dashboard for rate limits or resource exhaustion
 
 ### "Users report missing data"
 1. Check Convex data browser for deleted documents
-2. Use [[RUNBOOK-RESTORE-BACKUP]] to recover
+2. Use [RUNBOOK-RESTORE-BACKUP](./RUNBOOK-RESTORE-BACKUP.md) to recover
 
 ### "Performance is slow"
 1. Check Vercel Analytics (LCP, FCP trends)

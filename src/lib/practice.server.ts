@@ -9,7 +9,6 @@ export type PracticeQuestionRow = {
 	questionType?: 'single' | 'multi' | 'match';
 	matchLeftItems?: string[];
 	matchRightItems?: string[];
-	explanation: string;
 };
 
 /** Load practice questions with the user's WorkOS JWT (server-side, httpOnly cookie). */
