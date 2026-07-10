@@ -59,7 +59,6 @@
 		"@fontsource-variable/manrope": "^5.2.8",
 		"@fontsource-variable/material-symbols-outlined": "^5.2.45",
 		"@sentry/svelte": "^10.61.0",
-		"@sentry/tracing": "^7.120.4",
 		"@upstash/redis": "^1.38.0",
 		"@vercel/speed-insights": "^2.0.0",
 		"@workos-inc/node": "^10.7.0",
