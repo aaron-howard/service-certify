@@ -291,8 +291,8 @@ After setup:
 3. ✅ Test sign-in flow locally: `npm run dev`
 4. ✅ Deploy to Vercel and test with production URL
 5. ✅ Wire auth to full-mock gating (admin role)
-6. ⏳ Add user profile / settings page (future)
-7. ⏳ Persist practice progress to `userProgress` (future)
+6. ✅ Add user profile / settings page (`/settings`)
+7. ✅ Persist practice progress to `userProgress` (on grade + dashboard)
 8. ✅ Harden Convex user mutations/queries (JWT + identity match)
 
 ---
@@ -366,9 +366,9 @@ The browser Convex client calls `/api/auth/convex-token` to attach your WorkOS s
 - ✅ Admin role on `users` table with `ADMIN_EMAILS` bootstrap
 - ✅ Full mock practice (`mode=full`) gated to admins in Convex
 - ✅ User sync mutations require WorkOS JWT (`setAuth` from SvelteKit)
-- ⏳ User profile / settings page
-- ⏳ Account deletion UI (mutation exists)
-- ⏳ Progress persistence + real dashboard data
+- ✅ User profile / settings page (`/settings`) with account deletion
+- ✅ Practice progress persistence + dashboard
+- ✅ Account deletion UI (calls `deleteAccount`, then sign-out)
 
 ## Note
 
