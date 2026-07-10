@@ -117,9 +117,12 @@
 				applicable law.
 			</p>
 			<p class="mt-3 text-on-surface-variant">
-				You may sign out of your account at any time. Authentication is managed through your
-				chosen OAuth provider; you can revoke Service Certify's access through that provider's
-				security settings.
+				You may sign out of your account at any time. Signed-in users can delete their Service
+				Certify profile and practice progress from
+				<a class="text-primary-container underline hover:text-primary" href="/settings"
+					>Account settings</a
+				>. Authentication is managed through your chosen OAuth provider; you can revoke Service
+				Certify's access through that provider's security settings.
 			</p>
 		</section>
 

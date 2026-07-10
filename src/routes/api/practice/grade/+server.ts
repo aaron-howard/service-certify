@@ -11,14 +11,15 @@ import type { RequestHandler } from '@sveltejs/kit';
  * POST /api/practice/grade
  * Body: { trackCode: string, mode?: 'sample' | 'full', answers: { order: number, selectedIndex: number }[] }
  */
-export const POST: RequestHandler = async ({ request, cookies }) => {
-	const clientIp = request.headers.get('x-forwarded-for') || 'unknown';
+export const POST: RequestHandler = async ({ request, cookies, locals }) => {
+	const clientIp = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown';
+	const rateLimitKey = locals.workosUserId ?? clientIp;
 
 	try {
-		await rateLimit(clientIp, {
+		await rateLimit(rateLimitKey, {
 			windowSeconds: 60,
 			maxRequests: 10,
-			keyPrefix: 'grade:'
+			keyPrefix: locals.workosUserId ? 'grade:user:' : 'grade:ip:'
 		});
 	} catch {
 		return new Response(

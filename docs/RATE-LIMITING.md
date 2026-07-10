@@ -56,7 +56,7 @@ for i in {1..1100}; do curl https://service-certify.com/api/health; done
 | Endpoint | Limit | Window | Notes |
 |----------|-------|--------|-------|
 | **GET /api/health** | 1000 req | 60 sec | For monitoring services |
-| **POST /api/practice/grade** | 10 submissions | 60 sec | Prevent rapid grading abuse |
+| **POST /api/practice/grade** | 10 submissions | 60 sec | Keyed by WorkOS user id when signed in, otherwise client IP |
 
 ## Using in Your Code
 
@@ -206,9 +206,12 @@ For Service Certify at launch:
 Instead of just IP address, you can rate limit by:
 
 ```typescript
-// Rate limit per user ID (auth is live; prefer this over IP when available)
-const userId = locals.user?.id ?? clientIp;
-await rateLimit(userId, { maxRequests: 50 }); // 50 per user/minute
+// Rate limit per user ID when signed in (grade API uses workosUserId)
+const rateLimitKey = locals.workosUserId ?? clientIp;
+await rateLimit(rateLimitKey, {
+	maxRequests: 10,
+	keyPrefix: locals.workosUserId ? 'grade:user:' : 'grade:ip:'
+});
 
 // Rate limit per API key
 const apiKey = request.headers.get('x-api-key');
