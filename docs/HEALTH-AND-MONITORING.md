@@ -148,9 +148,10 @@ Your app now has:
 1. Review error types in dashboard
 2. Filter browser extension errors (auto-filtered)
 3. Fix the most common errors
-4. Increase sampling rate (Phase C+)
+4. Increase sampling rate once traffic is stable
 
 ## Related
 
-- [[SENTRY-SETUP]] — Error tracking configuration
-- Production readiness audit: See observability section
+- [SENTRY-SETUP.md](./SENTRY-SETUP.md) — Error tracking configuration
+- [PRODUCTION_READINESS_AUDIT.md](./PRODUCTION_READINESS_AUDIT.md) — Observability + launch checklist
+- [RATE-LIMITING.md](./RATE-LIMITING.md)

@@ -140,7 +140,7 @@ ctx.auth.getUserIdentity(); // Logs to Convex dashboard
 
 ## Best Practices
 
-1. **Set user context after sign-in** (Phase C):
+1. **Set user context after sign-in** (recommended once DSN is live):
    ```typescript
    setSentryUser(user.id, user.email);
    ```
@@ -168,4 +168,5 @@ To temporarily disable Sentry:
 
 - [Sentry docs](https://docs.sentry.io/platforms/javascript/guides/svelte/)
 - [Sentry + Vercel integration](https://vercel.com/integrations/sentry)
-- Production readiness audit: See [[PRODUCTION_READINESS_AUDIT.md]] → Observability section
+- [PRODUCTION_READINESS_AUDIT.md](./PRODUCTION_READINESS_AUDIT.md) — Observability section
+- [HEALTH-AND-MONITORING.md](./HEALTH-AND-MONITORING.md)
