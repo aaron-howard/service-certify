@@ -38,7 +38,11 @@
 				Service Certify uses secure OAuth sign-in through Google, Microsoft, or GitHub. If you have
 				trouble signing in, try clearing your browser cache, using a private/incognito window, or
 				revoking and re-authorizing access through your identity provider's security settings. To
-				request account deletion, email us from the address linked to your account.
+				delete your account and practice progress, use
+				<a class="text-primary-container underline hover:text-primary" href="/settings"
+					>Account settings</a
+				>
+				while signed in, or email us from the address linked to your account.
 			</p>
 
 			<h3 class="mb-2 mt-6 font-semibold text-on-surface">Membership and billing</h3>

@@ -31,9 +31,18 @@ test.describe('Accessibility (WCAG 2.1 AA)', () => {
 		await expect(page.getByRole('main')).toBeVisible();
 	});
 
-	test('dashboard page should be accessible', async ({ page }) => {
+	test('dashboard redirects anonymous users to accessible sign-in', async ({ page }) => {
 		await page.goto('/dashboard');
+		await expect(page).toHaveURL(/\/auth\/signin/);
 		await expect(page.getByRole('main')).toBeVisible();
+		await expect(page.getByRole('heading', { name: 'Welcome Back' })).toBeVisible();
+	});
+
+	test('settings redirects anonymous users to accessible sign-in', async ({ page }) => {
+		await page.goto('/settings');
+		await expect(page).toHaveURL(/\/auth\/signin/);
+		await expect(page.getByRole('main')).toBeVisible();
+		await expect(page.getByRole('heading', { name: 'Welcome Back' })).toBeVisible();
 	});
 
 	test('should have proper heading hierarchy', async ({ page }) => {

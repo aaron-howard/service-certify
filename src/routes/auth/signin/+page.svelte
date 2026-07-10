@@ -32,7 +32,7 @@
 	<title>Sign In — Service Certify</title>
 </svelte:head>
 
-<main class="min-h-screen flex items-center justify-center bg-surface px-4">
+<div class="flex min-h-[calc(100vh-7.25rem)] items-center justify-center bg-surface px-4">
 	<div class="w-full max-w-md">
 		<div class="bg-surface-container rounded-lg border border-outline p-8 shadow-lg">
 			<h1 class="text-3xl font-bold mb-2 text-on-surface">Welcome Back</h1>
@@ -78,4 +78,4 @@
 			</div>
 		</div>
 	</div>
-</main>
+</div>
