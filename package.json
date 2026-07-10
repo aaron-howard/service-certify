@@ -62,7 +62,7 @@
 		"@upstash/redis": "^1.38.0",
 		"@vercel/speed-insights": "^2.0.0",
 		"@workos-inc/node": "^10.7.0",
-		"convex": "^1.41.0",
+		"convex": "^1.42.1",
 		"convex-svelte": "^0.14.0"
 	}
 }
