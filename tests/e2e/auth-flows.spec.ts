@@ -51,4 +51,18 @@ test.describe('Auth flows', () => {
 			await expect(practiceEmptyState(page)).toBeVisible();
 		}
 	});
+
+	test('dashboard redirects anonymous users to sign-in', async ({ page }) => {
+		await page.goto('/dashboard');
+		await expect(page).toHaveURL(/\/auth\/signin/);
+		const url = new URL(page.url());
+		expect(url.searchParams.get('redirect')).toBe('/dashboard');
+	});
+
+	test('settings redirects anonymous users to sign-in', async ({ page }) => {
+		await page.goto('/settings');
+		await expect(page).toHaveURL(/\/auth\/signin/);
+		const url = new URL(page.url());
+		expect(url.searchParams.get('redirect')).toBe('/settings');
+	});
 });
