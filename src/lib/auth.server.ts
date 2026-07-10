@@ -39,7 +39,8 @@ export function buildConvexUserSyncPayload(
 /** Resolve the signed-in user from WorkOS session cookies set in hooks.server.ts. */
 export async function getSessionUser(locals: App.Locals): Promise<SessionUser | null> {
 	const userId = locals.workosUserId;
-	if (!userId) return null;
+	const workosToken = locals.workosToken;
+	if (!userId || !workosToken) return null;
 
 	const workos = getWorkOS();
 	if (!workos) return null;
@@ -47,7 +48,7 @@ export async function getSessionUser(locals: App.Locals): Promise<SessionUser | 
 	try {
 		const user = await workos.userManagement.getUser(userId);
 		const syncPayload = buildConvexUserSyncPayload(user);
-		const convexUser = await ensureConvexUser(syncPayload);
+		const convexUser = await ensureConvexUser({ ...syncPayload, workosToken });
 
 		return {
 			id: user.id,

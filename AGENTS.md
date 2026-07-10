@@ -12,6 +12,13 @@ Convex agent skills for common tasks can be installed by running
 
 <!-- convex-ai-end -->
 
+## Project docs
+
+- Launch checklist: [`docs/PRODUCTION_READINESS_AUDIT.md`](./docs/PRODUCTION_READINESS_AUDIT.md)
+- Architecture: [`docs/architecture.md`](./docs/architecture.md)
+- Auth: [`docs/AUTH-WORKOS.md`](./docs/AUTH-WORKOS.md)
+- Doc index: [`docs/README.md`](./docs/README.md)
+
 ## Cursor Cloud specific instructions
 
 ### Services

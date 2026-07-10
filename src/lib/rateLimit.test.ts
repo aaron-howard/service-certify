@@ -1,9 +1,12 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest';
-import { checkRateLimit, getRateLimitStatus } from './rateLimit';
+import {
+	checkRateLimit,
+	getRateLimitStatus,
+	unavailableRateLimitResult
+} from './rateLimit';
 
 describe('Rate Limiter', () => {
 	beforeEach(() => {
-		// Reset rate limiter state before each test
 		vi.clearAllMocks();
 	});
 
@@ -29,14 +32,12 @@ describe('Rate Limiter', () => {
 			expect(result.resetIn).toBeLessThanOrEqual(60);
 		});
 
-		it('should gracefully degrade when Redis is not configured', async () => {
-			// Rate limiter should allow all requests if Redis is not available
+		it('should fail open when Redis is not configured outside production', async () => {
 			const result = await checkRateLimit('fallback-test', {
 				windowSeconds: 60,
 				maxRequests: 10
 			});
 
-			// Should allow request even if Redis down
 			expect(result.allowed).toBe(true);
 		});
 
@@ -53,8 +54,24 @@ describe('Rate Limiter', () => {
 				keyPrefix: 'grade:'
 			});
 
-			// Different prefixes should track separately
 			expect(result1.current + result2.current).toBeLessThanOrEqual(200);
+		});
+	});
+
+	describe('unavailableRateLimitResult', () => {
+		it('fails open outside production', () => {
+			const result = unavailableRateLimitResult(10, 60, false);
+			expect(result.allowed).toBe(true);
+			expect(result.current).toBe(0);
+			expect(result.limit).toBe(10);
+		});
+
+		it('fails closed in production', () => {
+			const result = unavailableRateLimitResult(10, 60, true);
+			expect(result.allowed).toBe(false);
+			expect(result.current).toBe(10);
+			expect(result.limit).toBe(10);
+			expect(result.resetIn).toBe(60);
 		});
 	});
 
@@ -70,14 +87,13 @@ describe('Rate Limiter', () => {
 				maxRequests: 50
 			});
 
-			// Calling status should not increase count
 			expect(status1.current).toBe(status2.current);
 		});
 
 		it('should have correct default values', async () => {
 			const result = await getRateLimitStatus('defaults-test');
 
-			expect(result.limit).toBe(100); // default maxRequests
+			expect(result.limit).toBe(100);
 			expect(result.resetIn).toBeDefined();
 		});
 	});

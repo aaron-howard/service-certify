@@ -324,16 +324,17 @@ Example checklist:
 
 ## Phase-Specific Testing
 
-**Phase B (now):** Focus on critical paths
+**Current (soft-launch MVP):** Focus on critical paths
 - Rate limiting utility
 - Input validation
 - Health endpoint
-- Seed data
+- Seed / question-bank quality gates
+- Catalog + practice E2E (static / sample flows)
 
-**Phase C (auth):** Add user-focused tests
-- Authentication flows
-- Protected endpoints
-- User progress tracking
+**Auth (extend coverage):**
+- Authentication flows (WorkOS) in E2E
+- Protected full-mock endpoints
+- User progress tracking (once write path exists)
 
 **Phase D (payments):** Add integration tests
 - Payment processing
@@ -348,6 +349,6 @@ Example checklist:
 
 ## Related
 
-- [[docs/TESTING.md]] — This file
-- Production readiness audit: See testing section
+- [E2E-AND-A11Y.md](./E2E-AND-A11Y.md)
+- [PRODUCTION_READINESS_AUDIT.md](./PRODUCTION_READINESS_AUDIT.md) — Testing gaps
 - CI/CD: `.github/workflows/ci.yml` runs tests

@@ -5,47 +5,17 @@ import { env } from '$env/dynamic/private';
  * Rate limiter using Upstash Redis with sliding window algorithm.
  *
  * Initialize once at app startup, then use in route handlers or mutations.
+ *
+ * Behavior without Redis credentials:
+ * - Non-production: fail open (allow traffic) so local/CI works without Upstash
+ * - Production (`VERCEL_ENV=production`): fail closed (deny) — Upstash is required
  */
 
 let redis: Redis | null = null;
 let warnedMissingCredentials = false;
 
-function isProductionEnvironment(): boolean {
+export function isProductionEnvironment(): boolean {
 	return env.VERCEL_ENV === 'production';
-}
-
-/**
- * Initialize the rate limiter with Upstash Redis credentials.
- * Call this once on server startup.
- */
-export function initRateLimit() {
-	const url = env.UPSTASH_REDIS_REST_URL;
-	const token = env.UPSTASH_REDIS_REST_TOKEN;
-
-	if (!url || !token) {
-		if (isProductionEnvironment() && !warnedMissingCredentials) {
-			warnedMissingCredentials = true;
-			console.warn(
-				'Rate limiting disabled: UPSTASH_REDIS_REST_URL or UPSTASH_REDIS_REST_TOKEN not configured'
-			);
-		}
-		return;
-	}
-
-	try {
-		redis = new Redis({ url, token });
-	} catch (error) {
-		console.error('Failed to initialize rate limiter:', error);
-	}
-}
-
-interface RateLimitOptions {
-	/** Window in seconds (default: 60) */
-	windowSeconds?: number;
-	/** Max requests per window (default: 100) */
-	maxRequests?: number;
-	/** Optional custom key prefix (default: 'rate-limit:') */
-	keyPrefix?: string;
 }
 
 interface RateLimitResult {
@@ -57,6 +27,80 @@ interface RateLimitResult {
 	limit: number;
 	/** Seconds until window resets */
 	resetIn: number;
+}
+
+function allowWhenUnavailable(maxRequests: number, windowSeconds: number): RateLimitResult {
+	return {
+		allowed: true,
+		current: 0,
+		limit: maxRequests,
+		resetIn: windowSeconds
+	};
+}
+
+function denyWhenUnavailable(maxRequests: number, windowSeconds: number): RateLimitResult {
+	return {
+		allowed: false,
+		current: maxRequests,
+		limit: maxRequests,
+		resetIn: windowSeconds
+	};
+}
+
+/** Fail open in non-prod; fail closed in production when Redis is missing or errors. */
+export function unavailableRateLimitResult(
+	maxRequests: number,
+	windowSeconds: number,
+	production = isProductionEnvironment()
+): RateLimitResult {
+	return production
+		? denyWhenUnavailable(maxRequests, windowSeconds)
+		: allowWhenUnavailable(maxRequests, windowSeconds);
+}
+
+function fallbackWhenUnavailable(maxRequests: number, windowSeconds: number) {
+	return unavailableRateLimitResult(maxRequests, windowSeconds);
+}
+
+/**
+ * Initialize the rate limiter with Upstash Redis credentials.
+ * Call this once on server startup.
+ */
+export function initRateLimit() {
+	const url = env.UPSTASH_REDIS_REST_URL;
+	const token = env.UPSTASH_REDIS_REST_TOKEN;
+
+	if (!url || !token) {
+		if (!warnedMissingCredentials) {
+			warnedMissingCredentials = true;
+			if (isProductionEnvironment()) {
+				console.error(
+					'Rate limiting unavailable in production: UPSTASH_REDIS_REST_URL or UPSTASH_REDIS_REST_TOKEN not configured. Requests will be denied.'
+				);
+			} else {
+				console.warn(
+					'Rate limiting disabled: UPSTASH_REDIS_REST_URL or UPSTASH_REDIS_REST_TOKEN not configured (fail-open outside production)'
+				);
+			}
+		}
+		return;
+	}
+
+	try {
+		redis = new Redis({ url, token });
+	} catch (error) {
+		console.error('Failed to initialize rate limiter:', error);
+		redis = null;
+	}
+}
+
+interface RateLimitOptions {
+	/** Window in seconds (default: 60) */
+	windowSeconds?: number;
+	/** Max requests per window (default: 100) */
+	maxRequests?: number;
+	/** Optional custom key prefix (default: 'rate-limit:') */
+	keyPrefix?: string;
 }
 
 /**
@@ -76,14 +120,8 @@ export async function checkRateLimit(
 	const keyPrefix = options.keyPrefix ?? 'rate-limit:';
 	const key = `${keyPrefix}${identifier}`;
 
-	// If Redis not configured, allow all requests (graceful degradation)
 	if (!redis) {
-		return {
-			allowed: true,
-			current: 0,
-			limit: maxRequests,
-			resetIn: windowSeconds
-		};
+		return fallbackWhenUnavailable(maxRequests, windowSeconds);
 	}
 
 	try {
@@ -108,9 +146,15 @@ export async function checkRateLimit(
 
 		// Calculate when window resets (oldest entry + windowSeconds)
 		const oldest = await redis.zrange(key, 0, 0, { withScores: true });
-		const resetIn = oldest.length > 0
-			? Math.ceil(((oldest[0] as any).score as number + windowSeconds * 1000 - now) / 1000)
-			: windowSeconds;
+		const resetIn =
+			oldest.length > 0
+				? Math.ceil(
+						(((oldest[0] as { score?: number }).score as number) +
+							windowSeconds * 1000 -
+							now) /
+							1000
+					)
+				: windowSeconds;
 
 		return {
 			allowed,
@@ -120,13 +164,7 @@ export async function checkRateLimit(
 		};
 	} catch (error) {
 		console.error('Rate limit check error:', error);
-		// On error, allow request (fail open, not fail closed)
-		return {
-			allowed: true,
-			current: 0,
-			limit: maxRequests,
-			resetIn: windowSeconds
-		};
+		return fallbackWhenUnavailable(maxRequests, windowSeconds);
 	}
 }
 
@@ -138,16 +176,13 @@ export async function checkRateLimit(
  * @param options - Rate limit configuration
  * @returns { allowed, current, limit, resetIn } or throws 429 response
  */
-export async function rateLimit(
-	identifier: string,
-	options: RateLimitOptions = {}
-) {
+export async function rateLimit(identifier: string, options: RateLimitOptions = {}) {
 	const result = await checkRateLimit(identifier, options);
 
 	if (!result.allowed) {
 		const error = new Error('Too Many Requests');
-		(error as any).status = 429;
-		(error as any).headers = {
+		(error as { status?: number; headers?: Record<string, string> }).status = 429;
+		(error as { status?: number; headers?: Record<string, string> }).headers = {
 			'Retry-After': String(result.resetIn),
 			'X-RateLimit-Limit': String(result.limit),
 			'X-RateLimit-Remaining': String(Math.max(0, result.limit - result.current)),
@@ -173,12 +208,7 @@ export async function getRateLimitStatus(
 	const key = `${keyPrefix}${identifier}`;
 
 	if (!redis) {
-		return {
-			allowed: true,
-			current: 0,
-			limit: maxRequests,
-			resetIn: windowSeconds
-		};
+		return fallbackWhenUnavailable(maxRequests, windowSeconds);
 	}
 
 	try {
@@ -191,9 +221,15 @@ export async function getRateLimitStatus(
 
 		// Get oldest entry for reset time
 		const oldest = await redis.zrange(key, 0, 0, { withScores: true });
-		const resetIn = oldest.length > 0
-			? Math.ceil(((oldest[0] as any).score as number + windowSeconds * 1000 - now) / 1000)
-			: windowSeconds;
+		const resetIn =
+			oldest.length > 0
+				? Math.ceil(
+						(((oldest[0] as { score?: number }).score as number) +
+							windowSeconds * 1000 -
+							now) /
+							1000
+					)
+				: windowSeconds;
 
 		return {
 			allowed,
@@ -203,11 +239,6 @@ export async function getRateLimitStatus(
 		};
 	} catch (error) {
 		console.error('Rate limit status error:', error);
-		return {
-			allowed: true,
-			current: 0,
-			limit: maxRequests,
-			resetIn: windowSeconds
-		};
+		return fallbackWhenUnavailable(maxRequests, windowSeconds);
 	}
 }
