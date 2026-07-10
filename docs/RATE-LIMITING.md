@@ -101,9 +101,13 @@ console.log(`Reset in ${status.resetIn} seconds`);
 ### Graceful Degradation
 
 If Upstash is down or not configured:
-- Rate limiting silently disables (logs warning)
-- All requests are allowed (fail open, not fail closed)
-- App continues to work normally
+
+| Environment | Behavior |
+|-------------|----------|
+| **Local / Preview / CI** (`VERCEL_ENV` ≠ `production`) | Fail **open** — requests allowed; warning logged |
+| **Production** (`VERCEL_ENV=production`) | Fail **closed** — requests denied with 429 until Upstash is configured |
+
+**Production requires** `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN` on Vercel.
 
 ## Customizing Limits
 
@@ -202,8 +206,8 @@ For Service Certify at launch:
 Instead of just IP address, you can rate limit by:
 
 ```typescript
-// Rate limit per user ID (once auth is enabled, Phase C)
-const userId = ctx.auth.getUserIdentity()?.subject;
+// Rate limit per user ID (auth is live; prefer this over IP when available)
+const userId = locals.user?.id ?? clientIp;
 await rateLimit(userId, { maxRequests: 50 }); // 50 per user/minute
 
 // Rate limit per API key
@@ -217,6 +221,6 @@ await rateLimit(key, { maxRequests: 100 });
 
 ## Related
 
-- [[HEALTH-AND-MONITORING]] — Health checks + monitoring
-- Production readiness audit: See reliability section
+- [HEALTH-AND-MONITORING.md](./HEALTH-AND-MONITORING.md) — Health checks + monitoring
+- [PRODUCTION_READINESS_AUDIT.md](./PRODUCTION_READINESS_AUDIT.md) — Reliability / P0 Upstash requirement
 - Convex guidelines: Input validation + mutation constraints

@@ -59,6 +59,7 @@ function limitQuestionsForSession(
 	});
 }
 
+/** Map DB rows to client-safe practice payloads (no answers or explanations). */
 function mapQuestionRows(rows: Awaited<ReturnType<typeof loadQuestionsForTrack>>) {
 	return rows.map((row) => ({
 		order: row.order,
@@ -66,12 +67,11 @@ function mapQuestionRows(rows: Awaited<ReturnType<typeof loadQuestionsForTrack>>
 		choices: row.choices,
 		questionType: row.questionType ?? 'single',
 		matchLeftItems: row.matchLeftItems,
-		matchRightItems: row.matchRightItems,
-		explanation: row.explanation
+		matchRightItems: row.matchRightItems
 	}));
 }
 
-/** Practice prompts without answer keys (safe to load before submit). */
+/** Practice prompts without answer keys or explanations (safe to load before submit). */
 export const listByTrackCode = query({
 	args: {
 		trackCode: v.string(),

@@ -5,7 +5,8 @@ import { isAdminUser, resolveUserRole, getAuthenticatedUser } from './lib/author
 
 /**
  * Get or create user from WorkOS identity.
- * Called after successful OAuth callback.
+ * Requires a valid WorkOS JWT (`setAuth`); identity.subject must match workosId.
+ * Called after successful OAuth callback and on session refresh.
  */
 export const createOrUpdateUser = mutation({
 	args: {
@@ -16,6 +17,16 @@ export const createOrUpdateUser = mutation({
 		provider: v.optional(v.string())
 	},
 	handler: async (ctx, args) => {
+		const identity = await ctx.auth.getUserIdentity();
+		if (!identity) {
+			throw new Error('Not authenticated');
+		}
+		if (identity.subject !== args.workosId) {
+			throw new Error('workosId does not match authenticated identity');
+		}
+		if (identity.email && identity.email.toLowerCase() !== args.email.toLowerCase()) {
+			throw new Error('email does not match authenticated identity');
+		}
 		if (!args.workosId || !args.email) {
 			throw new Error('Missing required fields: workosId, email');
 		}
@@ -45,7 +56,15 @@ export const createOrUpdateUser = mutation({
 			}
 
 			await ctx.db.patch(existing._id, patch);
-			return existing._id;
+			const updated = await ctx.db.get(existing._id);
+			const role = resolveUserRole(updated?.role ?? existing.role);
+			return {
+				userId: existing._id,
+				role,
+				name: updated?.name ?? args.name,
+				profileImage: updated?.profileImage ?? args.profileImage,
+				provider: updated?.provider ?? args.provider
+			};
 		}
 
 		const role = isAdminEmail(args.email) ? 'admin' : 'user';
@@ -59,7 +78,13 @@ export const createOrUpdateUser = mutation({
 			createdAt: Date.now()
 		});
 
-		return userId;
+		return {
+			userId,
+			role,
+			name: args.name,
+			profileImage: args.profileImage,
+			provider: args.provider
+		};
 	}
 });
 
@@ -79,11 +104,20 @@ export const getCurrentUser = query({
 });
 
 /**
- * Get user by email.
+ * Get the authenticated user's own profile by email.
+ * Requires JWT; only returns a row when email matches the signed-in identity.
  */
 export const getUserByEmail = query({
 	args: { email: v.string() },
 	handler: async (ctx, args) => {
+		const identity = await ctx.auth.getUserIdentity();
+		if (!identity) {
+			throw new Error('Not authenticated');
+		}
+		if (!identity.email || identity.email.toLowerCase() !== args.email.toLowerCase()) {
+			throw new Error('Cannot look up another user');
+		}
+
 		const user = await ctx.db
 			.query('users')
 			.withIndex('by_email', (q) => q.eq('email', args.email))

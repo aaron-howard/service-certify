@@ -11,7 +11,7 @@ export default defineSchema({
 		name: v.optional(v.string()),
 		// Profile picture URL from OAuth provider
 		profileImage: v.optional(v.string()),
-		// OAuth provider (google, microsoft, github, facebook)
+		// OAuth provider (google, microsoft, github)
 		provider: v.optional(v.string()),
 		// Application role (default user; admin unlocks full practice)
 		role: v.optional(v.union(v.literal('user'), v.literal('admin'))),

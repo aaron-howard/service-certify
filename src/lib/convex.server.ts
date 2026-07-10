@@ -2,9 +2,6 @@ import { ConvexHttpClient } from 'convex/browser';
 import { api } from '$convex/_generated/api';
 import { env as publicEnv } from '$env/dynamic/public';
 
-let client: ConvexHttpClient | null = null;
-let clientUrl: string | null = null;
-
 export type ConvexUserSession = {
 	role: 'user' | 'admin';
 	name?: string;
@@ -12,28 +9,30 @@ export type ConvexUserSession = {
 	provider?: string;
 };
 
-/** Server-side Convex HTTP client for auth sync and session role lookup. */
-export function getConvexHttpClient(): ConvexHttpClient | null {
-	const convexUrl = publicEnv.PUBLIC_CONVEX_URL;
-	if (!convexUrl) {
-		return null;
-	}
-
-	if (!client || clientUrl !== convexUrl) {
-		client = new ConvexHttpClient(convexUrl);
-		clientUrl = convexUrl;
-	}
-	return client;
-}
-
-export async function syncUserToConvex(args: {
+export type ConvexUserSyncArgs = {
 	workosId: string;
 	email: string;
 	name?: string;
 	profileImage?: string;
 	provider?: string;
-}): Promise<void> {
-	const convex = getConvexHttpClient();
+	/** WorkOS access token — required so Convex can verify identity via setAuth. */
+	workosToken: string;
+};
+
+/** Fresh HTTP client per call so setAuth cannot race across concurrent requests. */
+function createAuthedClient(workosToken: string): ConvexHttpClient | null {
+	const convexUrl = publicEnv.PUBLIC_CONVEX_URL;
+	if (!convexUrl) {
+		return null;
+	}
+	const client = new ConvexHttpClient(convexUrl);
+	client.setAuth(workosToken);
+	return client;
+}
+
+export async function syncUserToConvex(args: ConvexUserSyncArgs): Promise<void> {
+	const { workosToken, ...profile } = args;
+	const convex = createAuthedClient(workosToken);
 	if (!convex) {
 		console.error(
 			'syncUserToConvex skipped: PUBLIC_CONVEX_URL is not set in SvelteKit env (.env.local or Vercel env vars)'
@@ -42,7 +41,7 @@ export async function syncUserToConvex(args: {
 	}
 
 	try {
-		await convex.mutation(api.auth.createOrUpdateUser, args);
+		await convex.mutation(api.auth.createOrUpdateUser, profile);
 	} catch (error) {
 		console.error('syncUserToConvex failed:', error);
 		throw error;
@@ -50,27 +49,27 @@ export async function syncUserToConvex(args: {
 }
 
 /** Sync profile to Convex and return the stored user (creates or updates every time). */
-export async function ensureConvexUser(args: {
-	workosId: string;
-	email: string;
-	name?: string;
-	profileImage?: string;
-	provider?: string;
-}): Promise<ConvexUserSession> {
-	const convex = getConvexHttpClient();
+export async function ensureConvexUser(args: ConvexUserSyncArgs): Promise<ConvexUserSession> {
+	const { workosToken, ...profile } = args;
+	const convex = createAuthedClient(workosToken);
 	if (!convex) return { role: 'user' };
 
 	try {
-		await convex.mutation(api.auth.createOrUpdateUser, args);
-		const user = await convex.query(api.auth.getUserByEmail, { email: args.email });
+		const result = await convex.mutation(api.auth.createOrUpdateUser, profile);
+		const role: ConvexUserSession['role'] = result.role === 'admin' ? 'admin' : 'user';
 		return {
-			role: user?.role ?? 'user',
-			name: user?.name ?? args.name,
-			profileImage: user?.profileImage ?? args.profileImage,
-			provider: user?.provider ?? args.provider
+			role,
+			name: result.name ?? profile.name,
+			profileImage: result.profileImage ?? profile.profileImage,
+			provider: result.provider ?? profile.provider
 		};
 	} catch (error) {
 		console.error('ensureConvexUser failed:', error);
-		return { role: 'user', name: args.name, profileImage: args.profileImage, provider: args.provider };
+		return {
+			role: 'user',
+			name: profile.name,
+			profileImage: profile.profileImage,
+			provider: profile.provider
+		};
 	}
 }

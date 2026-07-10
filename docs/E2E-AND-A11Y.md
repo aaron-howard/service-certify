@@ -273,11 +273,11 @@ E2E tests should run in CI pipeline, but **only after unit tests**:
 
 ## Related
 
-- [[docs/TESTING.md]] — Unit & integration testing
+- [TESTING.md](./TESTING.md) — Unit & integration testing
+- [PRODUCTION_READINESS_AUDIT.md](./PRODUCTION_READINESS_AUDIT.md) — Testing gaps (auth E2E still outstanding)
 - [Playwright docs](https://playwright.dev)
 - [axe DevTools](https://www.deque.com/axe/devtools/)
 - [WCAG 2.1 Guidelines](https://www.w3.org/WAI/WCAG21/quickref/)
-- Production readiness audit: See testing section
 
 ## Next Steps
 
@@ -286,6 +286,7 @@ E2E tests should run in CI pipeline, but **only after unit tests**:
 2. ✅ Run `npm run test:e2e` locally
 3. ✅ Fix any A11y failures
 4. ✅ Test on real mobile device (if possible)
+5. ⏳ Add WorkOS / full-mock auth E2E coverage (see production audit P1)
 
 **Post-Launch:**
 1. Monitor E2E test failures in CI

@@ -63,7 +63,7 @@ export const GET: RequestHandler = async ({ url, cookies }) => {
 		const syncPayload = buildConvexUserSyncPayload(user, oauthProvider);
 
 		try {
-			await syncUserToConvex(syncPayload);
+			await syncUserToConvex({ ...syncPayload, workosToken: token.accessToken });
 		} catch (syncError) {
 			// OAuth succeeded; log sync failure but still sign the user in.
 			console.error('Convex user sync failed after OAuth:', syncError);
