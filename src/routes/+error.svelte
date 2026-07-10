@@ -11,5 +11,8 @@
 	<h1 class="font-headline mt-4 text-2xl font-bold text-primary">
 		{page.error?.message ?? 'Something went wrong'}
 	</h1>
+	{#if page.error?.errorId}
+		<p class="mt-2 text-sm text-on-surface-variant">Reference: {page.error.errorId}</p>
+	{/if}
 	<a href="/" class="mt-8 font-bold text-secondary hover:underline">Back to home</a>
 </div>

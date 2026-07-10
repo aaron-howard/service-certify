@@ -286,10 +286,11 @@ E2E tests should run in CI pipeline, but **only after unit tests**:
 2. ✅ Run `npm run test:e2e` locally
 3. ✅ Fix any A11y failures
 4. ✅ Test on real mobile device (if possible)
-5. ⏳ Add WorkOS / full-mock auth E2E coverage (see production audit P1)
+5. ✅ Auth E2E: sign-in UI, full-mock redirect gate, sample without auth (`tests/e2e/auth-flows.spec.ts`)
 
 **Post-Launch:**
 1. Monitor E2E test failures in CI
 2. Add tests for new features
 3. Increase coverage to ~80% critical paths
 4. Schedule monthly A11y audit with tools like eShop or Monsido
+5. Optional: staging E2E with WorkOS test credentials for full OAuth round-trip

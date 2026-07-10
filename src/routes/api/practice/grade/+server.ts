@@ -103,6 +103,8 @@ export const POST: RequestHandler = async ({ request, cookies }) => {
 		});
 	} catch (error) {
 		console.error('Grade mutation error:', error);
+		const { captureException } = await import('$lib/sentry');
+		captureException(error, { phase: 'practice_grade', trackCode, mode: practiceMode });
 		return new Response(
 			JSON.stringify({
 				error: error instanceof Error ? error.message : 'Failed to grade answers'

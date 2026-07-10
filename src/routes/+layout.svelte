@@ -11,6 +11,7 @@
 	import { ConvexClient } from 'convex/browser';
 	import { setConvexClientContext } from 'convex-svelte';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
+	import { clearSentryUser, setSentryUser } from '$lib/sentry';
 
 	let { children, data } = $props();
 
@@ -38,6 +39,16 @@
 	}
 
 	injectSpeedInsights();
+
+	$effect(() => {
+		if (!browser) return;
+		const user = data.user;
+		if (user) {
+			setSentryUser(user.id, user.email);
+		} else {
+			clearSentryUser();
+		}
+	});
 
 	$effect(() => () => convexClient.close());
 </script>

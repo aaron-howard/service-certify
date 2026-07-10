@@ -1,26 +1,25 @@
 import * as Sentry from '@sentry/svelte';
+import { version } from '../../package.json';
 
 /**
  * Initialize Sentry for error tracking and performance monitoring.
  * Call this once on app startup (client or server).
+ * No-ops when DSN is unset (local/CI without Sentry).
  */
 export function initSentry() {
-	// Only initialize if DSN is configured (prevents errors in development without Sentry)
 	let dsn = '';
 	let environment = 'development';
 
-	// Try to get DSN and environment from various sources
 	if (typeof import.meta !== 'undefined' && import.meta.env) {
 		dsn = import.meta.env.VITE_SENTRY_DSN || '';
 		environment = import.meta.env.MODE || 'development';
 	}
 
-	// Fallback for server-side: read from global if available
 	if (!dsn) {
-		const proc = typeof globalThis !== 'undefined' ? (globalThis as any).process : undefined;
+		const proc = typeof globalThis !== 'undefined' ? (globalThis as { process?: { env?: Record<string, string | undefined> } }).process : undefined;
 		if (proc?.env) {
 			dsn = proc.env.SENTRY_DSN || '';
-			environment = proc.env.NODE_ENV || 'development';
+			environment = proc.env.VERCEL_ENV || proc.env.NODE_ENV || 'development';
 		}
 	}
 
@@ -29,18 +28,14 @@ export function initSentry() {
 	Sentry.init({
 		dsn,
 		environment,
-		tracesSampleRate: 0.1,
-		release: '0.0.1',
+		tracesSampleRate: environment === 'production' ? 0.1 : 1.0,
+		release: `service-certify@${version}`,
 		ignoreErrors: [
-			// Browser extension errors
 			'top.GLOBALS',
-			// Random plugins/extensions
-			'Can\'t find variable: ZiteReader',
+			"Can't find variable: ZiteReader",
 			'jigsaw is not defined',
 			'ComboSearch is not defined',
-			// Facebook errors
 			'fb_xd_fragment',
-			// Chrome extensions
 			'chrome-extension://',
 			'moz-extension://'
 		]
@@ -49,7 +44,7 @@ export function initSentry() {
 
 /**
  * Set user context for error tracking.
- * Call this after authentication (when user identity is known).
+ * Call after authentication when user identity is known.
  */
 export function setSentryUser(userId: string, email?: string) {
 	Sentry.setUser({
@@ -58,23 +53,24 @@ export function setSentryUser(userId: string, email?: string) {
 	});
 }
 
-/**
- * Clear user context on logout.
- */
+/** Clear user context on logout / anonymous session. */
 export function clearSentryUser() {
 	Sentry.setUser(null);
 }
 
-/**
- * Capture a message (info, warning, error).
- */
+/** Capture a message (info, warning, error). */
 export function captureMessage(message: string, level: 'info' | 'warning' | 'error' = 'info') {
 	Sentry.captureMessage(message, level);
 }
 
-/**
- * Capture an exception.
- */
-export function captureException(error: unknown) {
+/** Capture an exception (no-op if Sentry was never initialized). */
+export function captureException(error: unknown, context?: Record<string, unknown>) {
+	if (context) {
+		Sentry.withScope((scope) => {
+			scope.setExtras(context);
+			Sentry.captureException(error);
+		});
+		return;
+	}
 	Sentry.captureException(error);
 }

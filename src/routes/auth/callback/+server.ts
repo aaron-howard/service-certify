@@ -67,6 +67,8 @@ export const GET: RequestHandler = async ({ url, cookies }) => {
 		} catch (syncError) {
 			// OAuth succeeded; log sync failure but still sign the user in.
 			console.error('Convex user sync failed after OAuth:', syncError);
+			const { captureException } = await import('$lib/sentry');
+			captureException(syncError, { phase: 'oauth_convex_sync' });
 		}
 	} catch (err) {
 		console.error('Token exchange error:', err);
