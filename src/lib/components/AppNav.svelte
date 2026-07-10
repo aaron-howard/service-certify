@@ -44,7 +44,12 @@
 
 		<div class="hidden items-center gap-4 md:flex">
 			{#if user}
-				<div class="flex items-center gap-3">
+				<a
+					href="/settings"
+					class="flex items-center gap-3 rounded-md transition-opacity hover:opacity-90"
+					title="Account settings"
+					data-testid="nav-settings"
+				>
 					{#if user.profileImage}
 						<img
 							src={user.profileImage}
@@ -63,7 +68,7 @@
 					<span class="max-w-[12rem] truncate text-sm font-medium text-on-surface" title={user.email}>
 						{user.name}
 					</span>
-				</div>
+				</a>
 				<a
 					href="/auth/signout"
 					class="text-sm font-medium text-on-surface-variant transition-transform hover:text-primary active:scale-95"
@@ -131,6 +136,9 @@
 					{/if}
 					<span class="font-medium text-primary">{user.name}</span>
 				</div>
+				<a class="font-medium text-primary" href="/settings" onclick={() => (menuOpen = false)}
+					>Settings</a
+				>
 				<a class="font-medium text-primary" href="/auth/signout" onclick={() => (menuOpen = false)}
 					>Sign Out</a
 				>

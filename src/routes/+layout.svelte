@@ -6,6 +6,7 @@
 	import DisclaimBanner from '$lib/components/DisclaimBanner.svelte';
 	import AppNav from '$lib/components/AppNav.svelte';
 	import AppFooter from '$lib/components/AppFooter.svelte';
+	import SiteMeta from '$lib/components/SiteMeta.svelte';
 	import { browser } from '$app/environment';
 	import { env } from '$env/dynamic/public';
 	import { ConvexClient } from 'convex/browser';
@@ -52,6 +53,8 @@
 
 	$effect(() => () => convexClient.close());
 </script>
+
+<SiteMeta />
 
 <div
 	class="flex min-h-screen flex-col bg-surface font-body text-on-surface selection:bg-secondary-container selection:text-on-secondary-container"
