@@ -1,9 +1,10 @@
 import { mutation, query } from './_generated/server';
 import type { QueryCtx } from './_generated/server';
 import { v } from 'convex/values';
-import { requireAdmin } from './lib/authorization';
+import { requireAdmin, getAuthenticatedUser } from './lib/authorization';
 import { applyModeLimit, validateAnswersForMode } from './lib/practiceAccess';
 import { getOfficialQuestionCount } from './catalog/examQuestionPolicy';
+import { recordPracticeSession } from './userProgress';
 
 const practiceModeValidator = v.union(v.literal('sample'), v.literal('full'));
 
@@ -210,9 +211,22 @@ export const gradeAnswers = mutation({
 			});
 		}
 
+		const total = answers.length;
+		const scorePercent = total > 0 ? (correct / total) * 100 : 0;
+
+		// Persist progress when the grader is signed in (sample or full).
+		const user = await getAuthenticatedUser(ctx);
+		if (user) {
+			await recordPracticeSession(ctx, {
+				userId: user._id,
+				trackCode,
+				scorePercent
+			});
+		}
+
 		return {
 			correct,
-			total: answers.length,
+			total,
 			results
 		};
 	}

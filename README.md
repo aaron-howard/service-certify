@@ -44,7 +44,7 @@ Launch checklist: [`docs/PRODUCTION_READINESS_AUDIT.md`](./docs/PRODUCTION_READI
 | Variable | Required | Description |
 | -------- | -------- | ----------- |
 | `PUBLIC_CONVEX_URL` | For live data / user sync | Convex deployment URL. Without it, catalog can still render from static data; practice questions and OAuth→Convex user sync will not work. |
-| `PUBLIC_APP_URL` | Optional | Canonical public site URL for links/metadata (not wired in `src/` yet). |
+| `PUBLIC_APP_URL` | Optional | Canonical public site URL for Open Graph / canonical links (`SiteMeta`). |
 | `WORKOS_API_KEY` | For auth | WorkOS API key (`sk_…`). |
 | `WORKOS_CLIENT_ID` | For auth | WorkOS client ID (`client_…`). Also set in **Convex** env for full-mock JWT validation. |
 | `VITE_SENTRY_DSN` / `SENTRY_DSN` | Optional | Sentry error tracking (client / server). |
@@ -78,7 +78,8 @@ See [`.env.example`](./.env.example) for a template. **Do not commit** `.env` or
 | `/exams` | Catalog (search + filters) | Static catalog; Convex optional |
 | `/exams/[slug]` | Exam detail | Sample vs full-mock CTAs |
 | `/exams/[slug]/practice` | Practice session | Requires Convex for questions |
-| `/dashboard` | Readiness / performance shell | Placeholder metrics (progress not persisted yet) |
+| `/dashboard` | Readiness / performance | Auth-gated; live progress from Convex |
+| `/settings` | Account profile + delete | Auth-gated |
 | `/membership` | Plans placeholder | Phase D — checkout not wired |
 | `/auth/signin` | WorkOS social sign-in | |
 

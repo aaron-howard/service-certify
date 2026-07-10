@@ -121,10 +121,10 @@ Without Convex, the UI still runs using static catalog data; practice questions 
 
 | Item | Status | Impact |
 |------|--------|--------|
-| **Progress persistence** | Schema only | Dashboard is mock; no session history |
+| **Progress persistence** | Active | Written on authenticated `gradeAnswers`; shown on `/dashboard` |
 | **Membership / payments** | Placeholder | Phase D |
 | **File / blob storage** | Not used | Would use Convex file storage if needed |
-| **User profile page** | Not built | Nav shows avatar from OAuth when present |
+| **User profile page** | `/settings` | OAuth profile fields; account deletion |
 | **Transactional email** | Not used | Support via mailto |
 | **Health depth** | Convex ping only | Does not check WorkOS or Redis |
 
