@@ -2,7 +2,7 @@
 
 **Date:** 2026-07-10  
 **Scope:** Soft-launch MVP (practice exams + auth + ops). Membership/payments are tracked as Phase D, not launch blockers.  
-**Status:** Soft-launch code P0 security items addressed on `fix/p0-security-hardening`; remaining P0 is manual prod ops (env + seed).
+**Status:** Soft-launch code P0 done (merged); P1 code (Sentry hooks/user context + auth E2E) on `fix/p1-observability-e2e`. Remaining soft-launch work is mostly manual ops.
 
 This is the living checklist referenced by monitoring, testing, and rate-limiting docs. Update it when launch criteria change.
 
@@ -15,7 +15,7 @@ This is the living checklist referenced by monitoring, testing, and rate-limitin
 | Core practice UX | Ready | Catalog, detail, practice (single/multi/match), grade API |
 | Question bank | Ready | 22 tracks, v2 rewrites complete, bank targets met |
 | Auth (WorkOS) | Mostly ready | JWT required for user sync; profile page and progress writes still pending |
-| Observability | Code ready | Needs DSN / Speed Insights / uptime monitor activation |
+| Observability | Code ready | `handleError` + user context wired; set DSN / Speed Insights / uptime in dashboards |
 | Rate limiting | Code ready | Fail-closed in production without Upstash; configure Redis for prod |
 | Payments / membership | Not started | `/membership` placeholder; Phase D |
 | Dashboard / progress | Shell only | Fake UI; `userProgress` table unused for writes |
@@ -47,6 +47,9 @@ This is the living checklist referenced by monitoring, testing, and rate-limitin
 - [x] Vercel deploy path (`@sveltejs/adapter-vercel`)
 - [x] `GET /api/health` (Convex connectivity check)
 - [x] Sentry client/server init (DSN optional)
+- [x] SvelteKit `handleError` → Sentry (`hooks.client.ts` / `hooks.server.ts`)
+- [x] Sentry user context from layout session (`setSentryUser` / `clearSentryUser`)
+- [x] Auth E2E: sign-in UI, full-mock redirect gate, sample without auth
 - [x] Vercel Speed Insights wired in layout
 - [x] Upstash rate limiting on health + grade routes
 - [x] Vitest unit tests + Playwright E2E/a11y
@@ -69,13 +72,14 @@ This is the living checklist referenced by monitoring, testing, and rate-limitin
 
 ### P1 — Observability & release hygiene
 
-| Item | Detail |
-|------|--------|
-| Configure Sentry DSN | `VITE_SENTRY_DSN` + `SENTRY_DSN` in Vercel; wire `handleError` / user context |
-| Enable Speed Insights | Vercel dashboard → Analytics |
-| External uptime monitor | Point at `/api/health` (UptimeRobot or similar) |
-| GitHub branch protection | Require PR + `check-and-build` + `npm-audit` on `main` — see [BRANCH-PROTECTION-SETUP.md](./BRANCH-PROTECTION-SETUP.md) |
-| Auth E2E coverage | Sign-in / protected full-mock paths not covered in CI today |
+| Item | Detail | Status |
+|------|--------|--------|
+| Wire Sentry `handleError` + user context | Client/server hooks + layout session sync | Fixed on `fix/p1-observability-e2e` |
+| Auth E2E coverage | Sign-in UI, anonymous full-mock redirect, sample without auth | Fixed on `fix/p1-observability-e2e` |
+| Configure Sentry DSN | Set `VITE_SENTRY_DSN` + `SENTRY_DSN` in Vercel | Ops (manual) |
+| Enable Speed Insights | Vercel dashboard → Analytics | Ops (manual) |
+| External uptime monitor | Point at `/api/health` (UptimeRobot or similar) | Ops (manual) |
+| GitHub branch protection | Require PR + `check-and-build` + `npm-audit` on `main` — see [BRANCH-PROTECTION-SETUP.md](./BRANCH-PROTECTION-SETUP.md) | Ops (manual) |
 
 ### P2 — Product completeness (soft launch can ship without these)
 
@@ -85,7 +89,6 @@ This is the living checklist referenced by monitoring, testing, and rate-limitin
 | Persist practice progress | `userProgress` schema exists; no write path; dashboard is static mock |
 | Account deletion UI | `deleteAccount` mutation exists; no user-facing flow |
 | Wire `PUBLIC_APP_URL` | Documented for canonical/metadata; unused in `src/` today |
-| Sentry user context after sign-in | Best practice once DSN is live |
 | Per-user rate limit keys | Currently IP-based |
 
 ---
@@ -126,8 +129,9 @@ Copy into a launch ticket:
 - **Static fallback:** Without `PUBLIC_CONVEX_URL`, catalog can still render from `src/lib/data/`; practice questions will not load.
 - **Seed difficulty tag:** Questions are seeded with `difficulty: 'dev'` — naming is historical; bank is the production content source today.
 - **Health check is shallow:** Only pings Convex `/version`; does not verify WorkOS or Redis.
-- **No startup env validation:** Missing prod vars degrade silently (auth error UI, rate limit off, empty practice).
+- **No startup env validation:** Missing prod vars degrade (auth error UI, rate limit 429 in prod without Upstash, empty practice).
 - **Architecture docs historically lagged** auth implementation — corrected in [architecture.md](./architecture.md) (Jul 2026).
+- **Full OAuth E2E** is not automated in CI (requires WorkOS credentials); gate + sign-in UI are covered.
 
 ---
 

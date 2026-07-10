@@ -32,6 +32,8 @@ export const load: PageServerLoad = async ({ params, url, parent, cookies }) => 
 			questionsError =
 				err instanceof Error ? err.message : 'Could not load full mock questions';
 			console.error('Full mock question load failed:', err);
+			const { captureException } = await import('$lib/sentry');
+			captureException(err, { phase: 'full_mock_load', trackCode: exam.code });
 		}
 	}
 

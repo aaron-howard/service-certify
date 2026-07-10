@@ -140,23 +140,21 @@ ctx.auth.getUserIdentity(); // Logs to Convex dashboard
 
 ## Best Practices
 
-1. **Set user context after sign-in** (recommended once DSN is live):
+1. **User context is wired automatically** after sign-in via `+layout.svelte` (`setSentryUser` / `clearSentryUser`). Ensure DSN is set so events include the user.
+
+2. **Unexpected errors** are captured by SvelteKit `handleError` in `hooks.client.ts` and `hooks.server.ts` (includes an `errorId` shown on `+error.svelte`).
+
+3. **Capture intentional failures** in route handlers when you catch and recover:
    ```typescript
-   setSentryUser(user.id, user.email);
+   import { captureException } from '$lib/sentry';
+   captureException(error, { phase: 'practice_grade' });
    ```
 
-2. **Capture intentional errors** (e.g., validation failures):
-   ```typescript
-   if (!email.includes('@')) {
-     captureMessage('Invalid email format', 'warning');
-   }
-   ```
+4. **Review issues weekly** — Prioritize high-count errors
 
-3. **Review issues weekly** — Prioritize high-count errors
+5. **Set up alerts** once you have steady traffic
 
-4. **Set up alerts** once you have steady traffic
-
-5. **Use sourcemaps** for minified production builds (Sentry does this automatically via Vercel integration)
+6. **Use sourcemaps** for minified production builds (Sentry does this automatically via Vercel integration)
 
 ## Disabling Sentry
 
