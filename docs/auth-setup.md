@@ -27,10 +27,6 @@ For the full setup guide (env vars, redirect URIs, admin bootstrap, troubleshoot
 
 | Item | Notes |
 |------|--------|
-| User profile / settings page | Not built |
-| Progress writes | `userProgress` table unused for writes |
-| Account deletion UI | `deleteAccount` mutation exists; no UI |
-| Harden public user APIs | Done — JWT required on create/update and email lookup |
 | Membership / billing | Phase D — link subscriptions to authenticated user when added |
 
 ## Related

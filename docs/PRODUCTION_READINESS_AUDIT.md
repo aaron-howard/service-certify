@@ -2,7 +2,7 @@
 
 **Date:** 2026-07-10  
 **Scope:** Soft-launch MVP (practice exams + auth + ops). Membership/payments are tracked as Phase D, not launch blockers.  
-**Status:** Soft-launch code P0 done (merged); P1 code (Sentry hooks/user context + auth E2E) on `fix/p1-observability-e2e`. Remaining soft-launch work is mostly manual ops.
+**Status:** Soft-launch code P0–P2 addressed (P2 on `feat/p2-product-completeness`). Remaining soft-launch work is mostly manual ops (env, seed, Sentry DSN, uptime, branch protection).
 
 This is the living checklist referenced by monitoring, testing, and rate-limiting docs. Update it when launch criteria change.
 
@@ -18,8 +18,8 @@ This is the living checklist referenced by monitoring, testing, and rate-limitin
 | Observability | Code ready | `handleError` + user context wired; set DSN / Speed Insights / uptime in dashboards |
 | Rate limiting | Code ready | Fail-closed in production without Upstash; configure Redis for prod |
 | Payments / membership | Not started | `/membership` placeholder; Phase D |
-| Dashboard / progress | Shell only | Fake UI; `userProgress` table unused for writes |
-| Docs | Updated | This audit + architecture/auth docs refreshed Jul 2026 |
+| Dashboard / progress | Ready | Auth-gated dashboard; progress written on grade |
+| Docs | Updated | Audit + architecture/auth docs refreshed Jul 2026 |
 
 ---
 
@@ -50,6 +50,10 @@ This is the living checklist referenced by monitoring, testing, and rate-limitin
 - [x] SvelteKit `handleError` → Sentry (`hooks.client.ts` / `hooks.server.ts`)
 - [x] Sentry user context from layout session (`setSentryUser` / `clearSentryUser`)
 - [x] Auth E2E: sign-in UI, full-mock redirect gate, sample without auth
+- [x] Settings page (`/settings`) with profile + account deletion
+- [x] Practice progress persistence (`userProgress`) + live dashboard
+- [x] `PUBLIC_APP_URL` canonical / Open Graph tags
+- [x] Per-user grade rate-limit keys when signed in
 - [x] Vercel Speed Insights wired in layout
 - [x] Upstash rate limiting on health + grade routes
 - [x] Vitest unit tests + Playwright E2E/a11y
@@ -83,13 +87,13 @@ This is the living checklist referenced by monitoring, testing, and rate-limitin
 
 ### P2 — Product completeness (soft launch can ship without these)
 
-| Item | Detail |
-|------|--------|
-| User profile / settings page | Documented as future in [AUTH-WORKOS.md](./AUTH-WORKOS.md) |
-| Persist practice progress | `userProgress` schema exists; no write path; dashboard is static mock |
-| Account deletion UI | `deleteAccount` mutation exists; no user-facing flow |
-| Wire `PUBLIC_APP_URL` | Documented for canonical/metadata; unused in `src/` today |
-| Per-user rate limit keys | Currently IP-based |
+| Item | Detail | Status |
+|------|--------|--------|
+| User profile / settings page | `/settings` with profile + delete account | Fixed on `feat/p2-product-completeness` |
+| Persist practice progress | `gradeAnswers` upserts `userProgress`; dashboard lists it | Fixed on `feat/p2-product-completeness` |
+| Account deletion UI | Settings delete flow calls `auth.deleteAccount` | Fixed on `feat/p2-product-completeness` |
+| Wire `PUBLIC_APP_URL` | Canonical + OG tags via `SiteMeta` when set | Fixed on `feat/p2-product-completeness` |
+| Per-user rate limit keys | Grade API uses WorkOS user id when signed in | Fixed on `feat/p2-product-completeness` |
 
 ---
 
