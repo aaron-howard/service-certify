@@ -87,6 +87,7 @@
 						</a>
 						<a
 							href="/exams/{exam.slug}/practice"
+							data-testid="try-sample-practice"
 							class="block w-full rounded-md border-2 border-primary-fixed py-4 text-center text-lg font-bold text-primary transition-all hover:bg-primary-fixed/10"
 						>
 							Try Sample Practice
@@ -94,6 +95,7 @@
 						{#if isAdmin}
 							<a
 								href="/exams/{exam.slug}/practice?mode=full"
+								data-testid="start-full-mock"
 								class="block w-full rounded-md bg-primary py-4 text-center text-lg font-bold text-on-primary transition-all hover:brightness-110 active:scale-[0.98]"
 							>
 								Start Full Mock
