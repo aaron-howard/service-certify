@@ -1,15 +1,20 @@
+import * as Sentry from '@sentry/sveltekit';
 import { initSentry, captureException } from '$lib/sentry';
 import type { HandleClientError } from '@sveltejs/kit';
 
 /** Runs once when the client app starts (SvelteKit calls this explicitly). */
 export function init() {
-	initSentry();
+	initSentry({
+		integrations: [Sentry.replayIntegration()],
+		replaysSessionSampleRate: 0.1,
+		replaysOnErrorSampleRate: 1.0
+	});
 }
 
 /**
  * Capture unexpected client-side errors in Sentry.
  */
-export const handleError: HandleClientError = async ({ error, event, status, message }) => {
+const clientErrorHandler: HandleClientError = async ({ error, event, status, message }) => {
 	const errorId = crypto.randomUUID();
 	captureException(error, {
 		errorId,
@@ -23,3 +28,5 @@ export const handleError: HandleClientError = async ({ error, event, status, mes
 		errorId
 	};
 };
+
+export const handleError = Sentry.handleErrorWithSentry(clientErrorHandler);

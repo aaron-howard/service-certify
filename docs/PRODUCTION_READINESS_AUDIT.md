@@ -80,7 +80,7 @@ This is the living checklist referenced by monitoring, testing, and rate-limitin
 |------|--------|--------|
 | Wire Sentry `handleError` + user context | Client/server hooks + layout session sync | Fixed on `fix/p1-observability-e2e` |
 | Auth E2E coverage | Sign-in UI, anonymous full-mock redirect, sample without auth | Fixed on `fix/p1-observability-e2e` |
-| Configure Sentry DSN | Set `VITE_SENTRY_DSN` + `SENTRY_DSN` in Vercel | Ops (manual) |
+| Configure Sentry DSN | Install Vercel→Sentry integration (or set DSN + `SENTRY_AUTH_TOKEN`) | Ops (manual) |
 | Enable Speed Insights | Vercel dashboard → Analytics | Ops (manual) |
 | External uptime monitor | Point at `/api/health` (UptimeRobot or similar) | Ops (manual) |
 | GitHub branch protection | Require PR + `check-and-build` + `npm-audit` on `main` — see [BRANCH-PROTECTION-SETUP.md](./BRANCH-PROTECTION-SETUP.md) | Ops (manual) |
@@ -119,7 +119,7 @@ Copy into a launch ticket:
 5. [ ] Vercel env: `WORKOS_API_KEY`, `WORKOS_CLIENT_ID`
 6. [ ] Convex env: `WORKOS_CLIENT_ID`, `ADMIN_EMAILS`
 7. [ ] Upstash: `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN` on Vercel
-8. [ ] Sentry: `VITE_SENTRY_DSN`, `SENTRY_DSN` on Vercel
+8. [ ] Sentry: Vercel→Sentry integration linked (DSN + auth token) or manual env vars
 9. [ ] Speed Insights enabled in Vercel
 10. [ ] Uptime monitor on `https://<prod>/api/health`
 11. [ ] Branch protection on `main` configured
