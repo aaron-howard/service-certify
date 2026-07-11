@@ -98,6 +98,11 @@ export function initSentry(extras: SentryInitExtras = {}) {
 	Sentry.init(initOptions as Parameters<typeof Sentry.init>[0]);
 }
 
+/** Whether handleError should report this status to Sentry. */
+export function shouldCaptureHttpError(status: number): boolean {
+	return status !== 404;
+}
+
 /**
  * Set user context for error tracking.
  * Call after authentication when user identity is known.
