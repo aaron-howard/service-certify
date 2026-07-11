@@ -37,9 +37,24 @@ export function initSentry() {
 			'ComboSearch is not defined',
 			'fb_xd_fragment',
 			'chrome-extension://',
-			'moz-extension://'
-		]
+			'moz-extension://',
+			/^Not found:/i
+		],
+		beforeSend(event) {
+			// Drop expected route misses (scanner probes, typos) — keep real failures.
+			if (event.extra?.status === 404) return null;
+			const values = event.exception?.values ?? [];
+			if (values.some((v) => typeof v.value === 'string' && /^Not found:/i.test(v.value))) {
+				return null;
+			}
+			return event;
+		}
 	});
+}
+
+/** Whether handleError should report this status to Sentry. */
+export function shouldCaptureHttpError(status: number): boolean {
+	return status !== 404;
 }
 
 /**

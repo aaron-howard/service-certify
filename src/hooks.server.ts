@@ -1,4 +1,4 @@
-import { initSentry, captureException } from '$lib/sentry';
+import { initSentry, captureException, shouldCaptureHttpError } from '$lib/sentry';
 import { initRateLimit } from '$lib/rateLimit';
 import type { Handle, HandleServerError } from '@sveltejs/kit';
 
@@ -10,15 +10,18 @@ initRateLimit();
 
 /**
  * Capture unexpected server errors in Sentry (expected `error()` calls are skipped by SvelteKit).
+ * 404s are omitted — missing routes and scanner probes are not actionable.
  */
 export const handleError: HandleServerError = async ({ error, event, status, message }) => {
 	const errorId = crypto.randomUUID();
-	captureException(error, {
-		errorId,
-		status,
-		message,
-		path: event.url.pathname
-	});
+	if (shouldCaptureHttpError(status)) {
+		captureException(error, {
+			errorId,
+			status,
+			message,
+			path: event.url.pathname
+		});
+	}
 
 	return {
 		message: status === 404 ? message : 'Something went wrong',
