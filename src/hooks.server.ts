@@ -1,6 +1,6 @@
 import * as Sentry from '@sentry/sveltekit';
 import { sequence } from '@sveltejs/kit/hooks';
-import { captureException } from '$lib/sentry';
+import { captureException, shouldCaptureHttpError } from '$lib/sentry';
 import { initRateLimit } from '$lib/rateLimit';
 import type { Handle, HandleServerError } from '@sveltejs/kit';
 

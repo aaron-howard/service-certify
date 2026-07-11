@@ -1,5 +1,5 @@
 import * as Sentry from '@sentry/sveltekit';
-import { initSentry, captureException } from '$lib/sentry';
+import { initSentry, captureException, shouldCaptureHttpError } from '$lib/sentry';
 import type { HandleClientError } from '@sveltejs/kit';
 
 /** Runs once when the client app starts (SvelteKit calls this explicitly). */
