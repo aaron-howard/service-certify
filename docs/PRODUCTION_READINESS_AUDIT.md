@@ -83,7 +83,7 @@ This is the living checklist referenced by monitoring, testing, and rate-limitin
 | Configure Sentry DSN | Install Vercel→Sentry integration (or set DSN + `SENTRY_AUTH_TOKEN`) | Ops (manual) |
 | Enable Speed Insights | Vercel dashboard → Analytics | Ops (manual) |
 | External uptime monitor | Point at `/api/health` (UptimeRobot or similar) | Ops (manual) |
-| GitHub branch protection | Require PR + `check-and-build` + `npm-audit` on `main` — see [BRANCH-PROTECTION-SETUP.md](./BRANCH-PROTECTION-SETUP.md) | Ops (manual) |
+| GitHub branch protection | Require PR + `check-and-build` + `e2e-tests` + `npm-audit` on `main` — see [BRANCH-PROTECTION-SETUP.md](./BRANCH-PROTECTION-SETUP.md) | Ops (manual) |
 
 ### P2 — Product completeness (soft launch can ship without these)
 
