@@ -1,17 +1,17 @@
-import { initSentry, captureException } from '$lib/sentry';
+import * as Sentry from '@sentry/sveltekit';
+import { sequence } from '@sveltejs/kit/hooks';
+import { captureException } from '$lib/sentry';
 import { initRateLimit } from '$lib/rateLimit';
 import type { Handle, HandleServerError } from '@sveltejs/kit';
 
-// Initialize Sentry for server-side error tracking
-initSentry();
-
-// Initialize rate limiting (requires UPSTASH_REDIS_REST_URL and token)
+// Rate limiting (requires UPSTASH_REDIS_REST_URL and token).
+// Sentry server init lives in instrumentation.server.ts (earliest possible).
 initRateLimit();
 
 /**
  * Capture unexpected server errors in Sentry (expected `error()` calls are skipped by SvelteKit).
  */
-export const handleError: HandleServerError = async ({ error, event, status, message }) => {
+const serverErrorHandler: HandleServerError = async ({ error, event, status, message }) => {
 	const errorId = crypto.randomUUID();
 	captureException(error, {
 		errorId,
@@ -26,11 +26,13 @@ export const handleError: HandleServerError = async ({ error, event, status, mes
 	};
 };
 
+export const handleError = Sentry.handleErrorWithSentry(serverErrorHandler);
+
 /**
  * Middleware to handle WorkOS authentication.
  * Exchanges WorkOS token for Convex JWT if present.
  */
-export const handle: Handle = async ({ event, resolve }) => {
+const appHandle: Handle = async ({ event, resolve }) => {
 	// Get WorkOS token from cookies
 	const workosToken = event.cookies.get('workos_token');
 	const workosUserId = event.cookies.get('workos_user_id');
@@ -63,3 +65,6 @@ export const handle: Handle = async ({ event, resolve }) => {
 
 	return response;
 };
+
+/** Sentry request handler first so traces wrap auth + security middleware. */
+export const handle = sequence(Sentry.sentryHandle(), appHandle);
