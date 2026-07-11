@@ -47,7 +47,8 @@ Launch checklist: [`docs/PRODUCTION_READINESS_AUDIT.md`](./docs/PRODUCTION_READI
 | `PUBLIC_APP_URL` | Optional | Canonical public site URL for Open Graph / canonical links (`SiteMeta`). |
 | `WORKOS_API_KEY` | For auth | WorkOS API key (`sk_…`). |
 | `WORKOS_CLIENT_ID` | For auth | WorkOS client ID (`client_…`). Also set in **Convex** env for full-mock JWT validation. |
-| `VITE_SENTRY_DSN` / `SENTRY_DSN` | Optional | Sentry error tracking (client / server). |
+| `VITE_SENTRY_DSN` / `PUBLIC_SENTRY_DSN` / `NEXT_PUBLIC_SENTRY_DSN` / `SENTRY_DSN` | Optional | Sentry DSN (Vercel integration sets `NEXT_PUBLIC_SENTRY_DSN`). |
+| `SENTRY_AUTH_TOKEN` / `SENTRY_ORG` / `SENTRY_PROJECT` | Optional | Source map upload on Vercel builds (from Sentry integration). |
 | `UPSTASH_REDIS_REST_URL` / `UPSTASH_REDIS_REST_TOKEN` | Required in production | Rate limiting; fail-closed in prod if unset; fail-open locally. |
 
 **Convex-only env** (not in `.env.local`): `ADMIN_EMAILS`, `WORKOS_CLIENT_ID` — see [`docs/AUTH-WORKOS.md`](./docs/AUTH-WORKOS.md).

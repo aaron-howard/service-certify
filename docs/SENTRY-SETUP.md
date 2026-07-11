@@ -1,170 +1,124 @@
 # Error Tracking with Sentry
 
-Service Certify uses **Sentry** to automatically capture and report errors from both client and server.
+Service Certify uses **Sentry** (`@sentry/sveltekit`) to capture client and server errors, performance traces, and session replays on Vercel.
 
-## Quick Setup (5 minutes)
+## Quick Setup
 
-### 1. Create Sentry Project
+### Option A — Vercel → Sentry integration (recommended)
 
-1. Go to [sentry.io](https://sentry.io) and sign up (free tier available)
-2. Click **Create Project** → Select **Svelte** template
-3. Copy your **DSN** (looks like: `https://key@sentry.io/12345`)
+1. Install [Sentry for Vercel](https://vercel.com/integrations/sentry) and link this project.
+2. The integration injects build/runtime env vars into Vercel:
+   - `NEXT_PUBLIC_SENTRY_DSN` — project DSN (Next.js-oriented name; this app reads it)
+   - `SENTRY_AUTH_TOKEN` — source map / release upload
+   - `SENTRY_ORG` / `SENTRY_PROJECT` — org and project slugs
+3. Redeploy so the new variables apply.
+4. Confirm Production **and** Preview include `SENTRY_AUTH_TOKEN` if preview builds should upload source maps (the integration sometimes scopes tokens to Production only).
 
-### 2. Add DSN to Environment
+This app also accepts `VITE_SENTRY_DSN`, `PUBLIC_SENTRY_DSN`, and `SENTRY_DSN` if you set them manually.
 
-**For local development:**
+### Option B — Manual DSN
+
+1. Create a Sentry project (SvelteKit template).
+2. Copy the DSN into Vercel / `.env.local`:
+
 ```bash
-cp .env.example .env.local
-# Edit .env.local and add:
-VITE_SENTRY_DSN=https://key@sentry.io/12345
-SENTRY_DSN=https://key@sentry.io/12345
+# Client (any one of these)
+VITE_SENTRY_DSN=https://key@o0.ingest.sentry.io/12345
+# or PUBLIC_SENTRY_DSN=...
+# or NEXT_PUBLIC_SENTRY_DSN=...  (Vercel integration default)
+
+# Server fallback (optional if a public DSN var is already set)
+SENTRY_DSN=https://key@o0.ingest.sentry.io/12345
+
+# Source maps on Vercel builds (from the integration, or create an org auth token)
+SENTRY_AUTH_TOKEN=sntrys_...
+SENTRY_ORG=your-org
+SENTRY_PROJECT=your-project
 ```
 
-**For Vercel (production):**
-1. Go to Vercel dashboard → Your Project → Settings → Environment Variables
-2. Add two variables:
-   - Name: `VITE_SENTRY_DSN` → Value: `https://key@sentry.io/12345`
-   - Name: `SENTRY_DSN` → Value: `https://key@sentry.io/12345`
-3. Redeploy: Deployments → Latest → Redeploy
+3. Redeploy after changing Vercel env vars.
 
-### 3. Verify It Works
+### Verify
 
-1. Start dev server: `npm run dev`
-2. Open browser console and trigger an error:
-   ```javascript
-   throw new Error("Test error");
-   ```
-3. Go to [sentry.io](https://sentry.io) → Your Project → Issues
-4. You should see the error appear within 10 seconds
+1. Deploy or run locally with a DSN set.
+2. Trigger a real app error (not a browser-console `throw` — those are sandboxed).
+3. Check [sentry.io](https://sentry.io) → Issues within ~10 seconds.
 
 ## What Gets Tracked
 
 ### Automatically Captured
-- ✅ Unhandled JavaScript errors
-- ✅ Unhandled promise rejections
-- ✅ Network errors (fetch failures)
-- ✅ Convex query/mutation failures
-- ✅ Page load performance (LCP, FCP, FID)
-- ✅ 10% of normal sessions (performance replay)
-- ✅ 100% of error sessions (full session replay for debugging)
+- Unhandled JavaScript errors and promise rejections
+- SvelteKit `handleError` (client + server) with an `errorId` shown on `+error.svelte`
+- Server request tracing via `Sentry.sentryHandle()` and experimental SvelteKit instrumentation
+- Session Replay: 10% of sessions, 100% of sessions with an error
+- Performance traces (10% in production, 100% otherwise)
 
 ### What's NOT Captured (Privacy)
-- ❌ Sensitive form data (passwords, credit cards)
-- ❌ PII (logged automatically masked)
-- ❌ Browser extension errors (filtered)
-- ❌ Analytics cookies (Vercel separately)
+- Sensitive form data (passwords, payment fields)
+- Browser extension noise (filtered via `ignoreErrors`)
 
 ## Manual Error Tracking
-
-In your code, you can manually capture errors or messages:
 
 ```typescript
 import { captureException, captureMessage, setSentryUser } from '$lib/sentry';
 
-// Capture an error
 try {
-  // ... code ...
+  // ...
 } catch (error) {
-  captureException(error);
+  captureException(error, { phase: 'practice_grade' });
 }
 
-// Capture a message
 captureMessage('User started practice session', 'info');
-
-// Set user context (after sign-in)
 setSentryUser(userId, userEmail);
 ```
 
-## Dashboard Tour
+## How the Vercel integration wires in
 
-**Issues:** All errors grouped by type  
-- Click an issue to see full stack trace
-- View affected users and affected transactions
-- Create alerts when errors spike
+| Integration env var | Used for |
+|---------------------|----------|
+| `NEXT_PUBLIC_SENTRY_DSN` | Runtime DSN (client + server fallback) |
+| `SENTRY_AUTH_TOKEN` | Vite plugin uploads source maps during `npm run build` |
+| `SENTRY_ORG` / `SENTRY_PROJECT` | Release + artifact association |
 
-**Performance:** Transaction traces  
-- Track slow page loads
-- Identify N+1 queries or network bottlenecks
+Source maps are **not** automatic from the Vercel integration alone — the app must run `@sentry/sveltekit`'s Vite plugin (`vite.config.ts`, `adapter: 'vercel'`). Upload is enabled only when `SENTRY_AUTH_TOKEN` is present so local/CI builds without Sentry still succeed.
 
-**Replays:** Video-like playback of user sessions  
-- See exactly what user did before error
-- Timeline correlates with console logs
+## Architecture (code)
 
-**Alerts:** Notify team of critical issues  
-- New issue alert
-- Error spike alert (>100% increase)
-- Custom threshold alerts
-
-## Pricing
-
-| Plan | Cost | Includes |
-|------|------|----------|
-| **Free** | $0 | 5K errors/month, 1 hour replays |
-| **Team** | $29/mo | 10M errors/month, sessions, custom metrics |
-| **Business** | Custom | Unlimited, dedicated support |
-
-**Estimate for Service Certify at launch:**
-- ~100 errors/month (assuming good quality)
-- ~500 users × 1 session/month = 500 replays
-- **Cost: Free tier** ✅
+| File | Role |
+|------|------|
+| `src/instrumentation.server.ts` | Earliest server `Sentry.init` |
+| `src/hooks.client.ts` | Client init + `handleErrorWithSentry` |
+| `src/hooks.server.ts` | `sequence(sentryHandle(), …)` + `handleErrorWithSentry` |
+| `src/lib/sentry.ts` | DSN resolution, user helpers, `captureException` |
+| `vite.config.ts` | `sentrySvelteKit({ adapter: 'vercel' })` |
+| `svelte.config.js` | `experimental.instrumentation` / `tracing` + CSP for ingest/replay |
 
 ## Troubleshooting
 
 **Errors not appearing?**
-- Verify DSN is set: `echo $VITE_SENTRY_DSN`
-- Check browser console for Sentry warnings
-- Make sure Vercel is redeployed (env vars don't retroactively apply)
+- Confirm a DSN is set on the deployment (`NEXT_PUBLIC_SENTRY_DSN` or `VITE_SENTRY_DSN` / `SENTRY_DSN`).
+- Redeploy after adding env vars (they do not apply to old deployments).
+- Check the browser Network tab for requests to `*.ingest*.sentry.io` (ad blockers often block them).
+- Ensure CSP allows ingest hosts and `worker-src 'self' blob:` (already configured in `svelte.config.js`).
+
+**Source maps missing / minified stacks?**
+- Confirm `SENTRY_AUTH_TOKEN`, `SENTRY_ORG`, and `SENTRY_PROJECT` exist on the Vercel environment that ran the build.
+- Check the Vercel build log for Sentry upload lines; missing auth token skips upload by design.
+- Adapter must be Node (default `@sveltejs/adapter-vercel`) — Edge is not supported by the SvelteKit Sentry SDK.
+
+**Build fails mentioning Sentry auth?**
+- Either add `SENTRY_AUTH_TOKEN` for that environment, or leave it unset (upload stays off when the token is absent).
 
 **Too many errors?**
-- Errors are often from browser extensions or ad blockers
-- Sentry filters common harmless errors automatically
-- If real errors, check Convex logs for source
-
-**Privacy concerns?**
-- Sentry's free tier can self-host (enterprise)
-- Data retention: 90 days by default
-- Can configure data scrubbing rules per project
-
-## Integration with Convex
-
-Sentry automatically captures Convex errors:
-- Query failures appear in Issues
-- Mutation timeouts tracked
-- Performance traces show Convex latency
-
-If you need custom Convex logging (e.g., `console.log` inside mutations), those won't reach Sentry (Convex runtime isolation). Use Convex's own logging instead:
-```typescript
-// In your Convex function
-ctx.auth.getUserIdentity(); // Logs to Convex dashboard
-```
-
-## Best Practices
-
-1. **User context is wired automatically** after sign-in via `+layout.svelte` (`setSentryUser` / `clearSentryUser`). Ensure DSN is set so events include the user.
-
-2. **Unexpected errors** are captured by SvelteKit `handleError` in `hooks.client.ts` and `hooks.server.ts` (includes an `errorId` shown on `+error.svelte`).
-
-3. **Capture intentional failures** in route handlers when you catch and recover:
-   ```typescript
-   import { captureException } from '$lib/sentry';
-   captureException(error, { phase: 'practice_grade' });
-   ```
-
-4. **Review issues weekly** — Prioritize high-count errors
-
-5. **Set up alerts** once you have steady traffic
-
-6. **Use sourcemaps** for minified production builds (Sentry does this automatically via Vercel integration)
+- Extension/ad-blocker noise is filtered; review Convex logs for real backend failures.
 
 ## Disabling Sentry
 
-To temporarily disable Sentry:
-- Delete `VITE_SENTRY_DSN` from environment variables
-- Sentry gracefully no-ops if DSN is missing
+Remove or empty the DSN env vars. Init and helpers no-op when no DSN is resolved.
 
 ## Related
 
-- [Sentry docs](https://docs.sentry.io/platforms/javascript/guides/svelte/)
-- [Sentry + Vercel integration](https://vercel.com/integrations/sentry)
+- [Sentry SvelteKit docs](https://docs.sentry.io/platforms/javascript/guides/sveltekit/)
+- [Sentry + Vercel integration](https://docs.sentry.io/integrations/deployment/vercel/)
 - [PRODUCTION_READINESS_AUDIT.md](./PRODUCTION_READINESS_AUDIT.md) — Observability section
 - [HEALTH-AND-MONITORING.md](./HEALTH-AND-MONITORING.md)

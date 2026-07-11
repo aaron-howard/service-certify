@@ -1,55 +1,101 @@
-import * as Sentry from '@sentry/svelte';
+import * as Sentry from '@sentry/sveltekit';
 import { version } from '../../package.json';
 
+type ProcessEnv = Record<string, string | undefined>;
+
+function processEnv(): ProcessEnv | undefined {
+	const proc =
+		typeof globalThis !== 'undefined'
+			? (globalThis as { process?: { env?: ProcessEnv } }).process
+			: undefined;
+	return proc?.env;
+}
+
 /**
- * Initialize Sentry for error tracking and performance monitoring.
- * Call this once on app startup (client or server).
- * No-ops when DSN is unset (local/CI without Sentry).
+ * Resolve DSN from app env vars and the Vercel → Sentry integration.
+ *
+ * Vercel Marketplace / Sentry integration injects `NEXT_PUBLIC_SENTRY_DSN`
+ * (Next.js-oriented). We also accept SvelteKit/Vite names used in this repo.
  */
-export function initSentry() {
-	let dsn = '';
-	let environment = 'development';
-
+export function resolveSentryDsn(): string {
 	if (typeof import.meta !== 'undefined' && import.meta.env) {
-		dsn = import.meta.env.VITE_SENTRY_DSN || '';
-		environment = import.meta.env.MODE || 'development';
+		const fromVite =
+			import.meta.env.VITE_SENTRY_DSN ||
+			import.meta.env.PUBLIC_SENTRY_DSN ||
+			import.meta.env.NEXT_PUBLIC_SENTRY_DSN ||
+			'';
+		if (fromVite) return String(fromVite);
 	}
 
-	if (!dsn) {
-		const proc = typeof globalThis !== 'undefined' ? (globalThis as { process?: { env?: Record<string, string | undefined> } }).process : undefined;
-		if (proc?.env) {
-			dsn = proc.env.SENTRY_DSN || '';
-			environment = proc.env.VERCEL_ENV || proc.env.NODE_ENV || 'development';
-		}
+	const env = processEnv();
+	if (!env) return '';
+
+	return (
+		env.SENTRY_DSN ||
+		env.NEXT_PUBLIC_SENTRY_DSN ||
+		env.VITE_SENTRY_DSN ||
+		env.PUBLIC_SENTRY_DSN ||
+		''
+	);
+}
+
+export function resolveSentryEnvironment(): string {
+	const env = processEnv();
+	if (env?.VERCEL_ENV) return env.VERCEL_ENV;
+	if (env?.NODE_ENV) return env.NODE_ENV;
+	if (typeof import.meta !== 'undefined' && import.meta.env?.MODE) {
+		return String(import.meta.env.MODE);
 	}
+	return 'development';
+}
 
-	if (!dsn) return;
+const ignoreErrors = [
+	'top.GLOBALS',
+	"Can't find variable: ZiteReader",
+	'jigsaw is not defined',
+	'ComboSearch is not defined',
+	'fb_xd_fragment',
+	'chrome-extension://',
+	'moz-extension://'
+];
 
-	Sentry.init({
+export type SentryInitExtras = {
+	/** Client-only options (e.g. Session Replay). Do not pass from server. */
+	integrations?: unknown[];
+	replaysSessionSampleRate?: number;
+	replaysOnErrorSampleRate?: number;
+};
+
+/**
+ * Shared Sentry.init options for client and server.
+ * Returns null when no DSN is configured (local/CI without Sentry).
+ */
+export function getSentryInitOptions(extras: SentryInitExtras = {}) {
+	const dsn = resolveSentryDsn();
+	if (!dsn) return null;
+
+	const environment = resolveSentryEnvironment();
+	return {
 		dsn,
 		environment,
 		tracesSampleRate: environment === 'production' ? 0.1 : 1.0,
 		release: `service-certify@${version}`,
-		ignoreErrors: [
-			'top.GLOBALS',
-			"Can't find variable: ZiteReader",
-			'jigsaw is not defined',
-			'ComboSearch is not defined',
-			'fb_xd_fragment',
-			'chrome-extension://',
-			'moz-extension://',
-			/^Not found:/i
-		],
-		beforeSend(event) {
-			// Drop expected route misses (scanner probes, typos) — keep real failures.
-			if (event.extra?.status === 404) return null;
-			const values = event.exception?.values ?? [];
-			if (values.some((v) => typeof v.value === 'string' && /^Not found:/i.test(v.value))) {
-				return null;
-			}
-			return event;
-		}
-	});
+		ignoreErrors,
+		...extras
+	};
+}
+
+/**
+ * Initialize Sentry for error tracking and performance monitoring.
+ * Call once on app startup (client or server). No-ops when DSN is unset.
+ *
+ * Pass client-only extras (replay) from `hooks.client.ts` — the Node/server
+ * build of `@sentry/sveltekit` does not export `replayIntegration`.
+ */
+export function initSentry(extras: SentryInitExtras = {}) {
+	const initOptions = getSentryInitOptions(extras);
+	if (!initOptions) return;
+	Sentry.init(initOptions as Parameters<typeof Sentry.init>[0]);
 }
 
 /** Whether handleError should report this status to Sentry. */
