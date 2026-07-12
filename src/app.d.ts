@@ -24,6 +24,7 @@ declare global {
 		}
 		interface PageData {
 			user: import('$lib/auth.server').SessionUser | null;
+			deployEnvironment: import('$lib/deployEnvironment').DeployEnvironment;
 		}
 		// interface PageState {}
 		// interface Platform {}
