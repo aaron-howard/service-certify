@@ -9,8 +9,7 @@
 	import SiteMeta from '$lib/components/SiteMeta.svelte';
 	import { browser } from '$app/environment';
 	import { env } from '$env/dynamic/public';
-	import { ConvexClient } from 'convex/browser';
-	import { setConvexClientContext } from 'convex-svelte';
+	import { setupConvex } from 'convex-svelte';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 	import { clearSentryUser, setSentryUser } from '$lib/sentry';
 
@@ -21,10 +20,9 @@
 	const convexUrl: string = convexConfigured
 		? env.PUBLIC_CONVEX_URL!
 		: 'https://placeholder.invalid.convex.cloud';
-	const convexClient = new ConvexClient(convexUrl, {
+	const convexClient = setupConvex(convexUrl, {
 		disabled: !browser || !convexConfigured
 	});
-	setConvexClientContext(convexClient);
 
 	if (browser && convexConfigured) {
 		convexClient.setAuth(async () => {
@@ -51,7 +49,6 @@
 		}
 	});
 
-	$effect(() => () => convexClient.close());
 </script>
 
 <SiteMeta />
