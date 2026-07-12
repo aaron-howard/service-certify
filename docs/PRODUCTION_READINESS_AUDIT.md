@@ -115,16 +115,19 @@ Copy into a launch ticket:
 1. [ ] Convex **prod** deployment linked; `PUBLIC_CONVEX_URL` set on Vercel (Production)
 2. [ ] `npx convex deploy --prod` (or CI equivalent) succeeded
 3. [ ] Prod seed: tracks + questions (`seed:prod` or documented prod seed path)
-4. [ ] WorkOS redirect URI includes production origin `/auth/callback`
-5. [ ] Vercel env: `WORKOS_API_KEY`, `WORKOS_CLIENT_ID`
-6. [ ] Convex env: `WORKOS_CLIENT_ID`, `ADMIN_EMAILS`
-7. [ ] Upstash: `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN` on Vercel
-8. [ ] Sentry: Vercel→Sentry integration linked (DSN + auth token) or manual env vars
-9. [ ] Speed Insights enabled in Vercel
-10. [ ] Uptime monitor on `https://<prod>/api/health`
-11. [ ] Branch protection on `main` configured
-12. [ ] Smoke test: catalog → sample practice → grade; admin full mock; sign-in/out
-13. [ ] Rollback runbook validated on a preview deployment
+4. [ ] WorkOS **production** redirect URI includes production origin `/auth/callback`
+5. [ ] WorkOS **staging** redirect URIs for localhost + preview (see [WORKOS-ENVIRONMENTS.md](./WORKOS-ENVIRONMENTS.md))
+6. [ ] WorkOS production branding configured (copy from staging, set display name **Service Certify**)
+7. [ ] Vercel env: `WORKOS_API_KEY` (`sk_live_` prod), `WORKOS_CLIENT_ID` — scoped by environment
+8. [ ] Convex env: `WORKOS_CLIENT_ID`, `ADMIN_EMAILS` (prod deployment)
+9. [ ] `npm run verify:workos-env` passes with production-scoped vars
+10. [ ] Upstash: `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN` on Vercel
+11. [ ] Sentry: Vercel→Sentry integration linked (DSN + auth token) or manual env vars
+12. [ ] Speed Insights enabled in Vercel
+13. [ ] Uptime monitor on `https://<prod>/api/health`
+14. [ ] Branch protection on `main` configured
+15. [ ] Smoke test: catalog → sample practice → grade; admin full mock; sign-in/out
+16. [ ] Rollback runbook validated on a preview deployment
 
 ---
 

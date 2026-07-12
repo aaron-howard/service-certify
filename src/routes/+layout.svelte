@@ -4,6 +4,7 @@
 	import '@fontsource-variable/manrope/wght.css';
 	import '@fontsource-variable/inter/wght.css';
 	import DisclaimBanner from '$lib/components/DisclaimBanner.svelte';
+	import DeployEnvBanner from '$lib/components/DeployEnvBanner.svelte';
 	import AppNav from '$lib/components/AppNav.svelte';
 	import AppFooter from '$lib/components/AppFooter.svelte';
 	import SiteMeta from '$lib/components/SiteMeta.svelte';
@@ -14,6 +15,8 @@
 	import { clearSentryUser, setSentryUser } from '$lib/sentry';
 
 	let { children, data } = $props();
+
+	const showDeployBanner = $derived(data.deployEnvironment !== 'production');
 
 	const convexConfigured =
 		typeof env.PUBLIC_CONVEX_URL === 'string' && env.PUBLIC_CONVEX_URL.length > 0;
@@ -58,10 +61,11 @@
 >
 	<header class="fixed inset-x-0 top-0 z-50">
 		<DisclaimBanner />
+		<DeployEnvBanner deployEnvironment={data.deployEnvironment} />
 		<AppNav user={data.user} />
 	</header>
 
-	<main class="flex-1 pt-[7.25rem]">
+	<main class="flex-1 {showDeployBanner ? 'pt-[9.25rem]' : 'pt-[7.25rem]'}">
 		{@render children()}
 	</main>
 
