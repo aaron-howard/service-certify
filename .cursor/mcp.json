@@ -27,6 +27,14 @@
 		},
 		"workos": {
 			"url": "https://mcp.workos.com/mcp"
+		},
+		"semgrep": {
+			"command": "semgrep",
+			"args": ["mcp"],
+			"env": {
+				"SEMGREP_APP_TOKEN": "${env:SEMGREP_APP_TOKEN}"
+			},
+			"envFile": "${workspaceFolder}/.env.mcp.local"
 		}
 	}
 }
