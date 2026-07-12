@@ -353,6 +353,17 @@ Convex uses this to validate WorkOS JWTs for full mock access (`mode=full`).
 
 The browser Convex client calls `/api/auth/convex-token` to attach your WorkOS session to Convex requests. Practice `mode=full` requires a valid admin session.
 
+### Step-up authentication (account deletion)
+
+Deleting an account requires a **fresh WorkOS authentication** within the last 5 minutes:
+
+1. On `/settings`, click **Verify identity to delete** → `/auth/step-up?intent=delete-account`
+2. WorkOS AuthKit re-authenticates the user (`max_age=0`) via their original provider
+3. After callback, the settings page shows the delete confirmation form
+4. `POST /api/account/delete` validates `auth_time` on the access token before calling Convex `deleteAccount`
+
+Sign-in still uses direct OAuth providers (Google, Microsoft, GitHub). Step-up uses the AuthKit provider because `max_age` is only supported on AuthKit authorize flows.
+
 ---
 
 ## Implementation Status
@@ -369,6 +380,7 @@ The browser Convex client calls `/api/auth/convex-token` to attach your WorkOS s
 - ✅ User profile / settings page (`/settings`) with account deletion
 - ✅ Practice progress persistence + dashboard
 - ✅ Account deletion UI (calls `deleteAccount`, then sign-out)
+- ✅ Step-up authentication before account deletion (WorkOS AuthKit `max_age`)
 
 ## Note
 

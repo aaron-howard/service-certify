@@ -2,12 +2,9 @@
 	import { browser } from '$app/environment';
 	import { goto } from '$app/navigation';
 	import { env } from '$env/dynamic/public';
-	import { useConvexClient } from 'convex-svelte';
-	import { api } from '$convex/_generated/api.js';
 
 	let { data } = $props();
 
-	const convex = useConvexClient();
 	const convexConfigured =
 		typeof env.PUBLIC_CONVEX_URL === 'string' && env.PUBLIC_CONVEX_URL.length > 0;
 
@@ -15,17 +12,43 @@
 	let deleteError = $state<string | null>(null);
 	let confirmText = $state('');
 
+	const canSubmitDelete = $derived(
+		confirmText.trim().toLowerCase() === 'delete' &&
+			convexConfigured &&
+			data.deleteAuthFresh &&
+			!deleting
+	);
+
 	async function deleteAccount() {
 		if (confirmText.trim().toLowerCase() !== 'delete') return;
 		if (!convexConfigured) {
 			deleteError = 'Convex is not configured; cannot delete account data.';
 			return;
 		}
+		if (!data.deleteAuthFresh) {
+			deleteError = 'Verify your identity before deleting your account.';
+			return;
+		}
 
 		deleting = true;
 		deleteError = null;
 		try {
-			await convex.mutation(api.auth.deleteAccount, {});
+			const response = await fetch('/api/account/delete', { method: 'POST' });
+			const body = (await response.json()) as {
+				error?: string;
+				message?: string;
+				stepUpUrl?: string;
+			};
+
+			if (response.status === 403 && body.error === 'step_up_required' && body.stepUpUrl) {
+				await goto(body.stepUpUrl);
+				return;
+			}
+
+			if (!response.ok) {
+				throw new Error(body.message ?? body.error ?? 'Could not delete account');
+			}
+
 			await goto('/auth/signout');
 		} catch (e) {
 			deleteError = e instanceof Error ? e.message : 'Could not delete account';
@@ -122,9 +145,26 @@
 				This does not revoke OAuth access at your identity provider — you can do that in Google,
 				Microsoft, or GitHub security settings.
 			</p>
+			{#if !data.deleteAuthFresh}
+				<p class="mt-4 text-sm text-on-surface-variant">
+					For your security, confirm your identity with your sign-in provider before deleting your
+					account.
+				</p>
+				<a
+					href={data.stepUpUrl}
+					class="mt-4 inline-block rounded-md border-2 border-error px-6 py-2 font-bold text-error transition-all hover:bg-error/10"
+					data-testid="verify-identity-delete"
+				>
+					Verify identity to delete
+				</a>
+			{:else if data.stepUpCompleted}
+				<p class="mt-4 text-sm text-secondary" role="status">
+					Identity verified. You can delete your account within the next few minutes.
+				</p>
+			{/if}
 			{#if !browser}
 				<p class="mt-4 text-on-surface-variant">Loading…</p>
-			{:else}
+			{:else if data.deleteAuthFresh}
 				<label class="mt-4 block text-sm font-medium text-on-surface" for="confirm-delete">
 					Type <span class="font-bold">delete</span> to confirm
 				</label>
@@ -142,7 +182,7 @@
 				<button
 					type="button"
 					class="mt-4 rounded-md bg-error px-6 py-2 font-bold text-on-error transition-opacity disabled:cursor-not-allowed disabled:opacity-50"
-					disabled={deleting || confirmText.trim().toLowerCase() !== 'delete' || !convexConfigured}
+					disabled={!canSubmitDelete}
 					data-testid="delete-account-button"
 					onclick={deleteAccount}
 				>

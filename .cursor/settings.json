@@ -5,6 +5,9 @@
     },
     "convex": {
       "enabled": true
+    },
+    "workos": {
+      "enabled": true
     }
   }
 }
