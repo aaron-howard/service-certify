@@ -1,0 +1,32 @@
+{
+	"mcpServers": {
+		"convex": {
+			"command": "npx",
+			"args": [
+				"-y",
+				"convex@latest",
+				"mcp",
+				"start",
+				"--project-dir",
+				"${workspaceFolder}",
+				"--env-file",
+				"${workspaceFolder}/.env.convex"
+			],
+			"env": {
+				"CONVEX_DEPLOY_KEY": "${env:CONVEX_DEPLOY_KEY}"
+			}
+		},
+		"upstash": {
+			"command": "npx",
+			"args": ["-y", "@upstash/mcp-server@latest"],
+			"env": {
+				"UPSTASH_EMAIL": "${env:UPSTASH_EMAIL}",
+				"UPSTASH_API_KEY": "${env:UPSTASH_API_KEY}"
+			},
+			"envFile": "${workspaceFolder}/.env.mcp.local"
+		},
+		"workos": {
+			"url": "https://mcp.workos.com/mcp"
+		}
+	}
+}
