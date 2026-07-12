@@ -29,6 +29,7 @@ export const GET: RequestHandler = async ({ url, cookies }) => {
 	}
 
 	const secure = url.protocol === 'https:';
+	const stepUpIntent = cookies.get('auth_step_up_intent');
 
 	try {
 		const token = await workos.userManagement.authenticateWithCode({
@@ -60,6 +61,10 @@ export const GET: RequestHandler = async ({ url, cookies }) => {
 			cookies.delete('auth_provider', { path: '/' });
 		}
 
+		if (stepUpIntent) {
+			cookies.delete('auth_step_up_intent', { path: '/' });
+		}
+
 		const syncPayload = buildConvexUserSyncPayload(user, oauthProvider);
 
 		try {
@@ -79,6 +84,10 @@ export const GET: RequestHandler = async ({ url, cookies }) => {
 	if (postAuthRedirect?.startsWith('/')) {
 		cookies.delete('auth_redirect', { path: '/' });
 		throw redirect(302, postAuthRedirect);
+	}
+
+	if (stepUpIntent === 'delete-account') {
+		throw redirect(302, '/settings?step_up=delete-account');
 	}
 
 	throw redirect(302, '/dashboard');

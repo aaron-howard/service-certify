@@ -44,3 +44,22 @@ export function getOAuthAuthorizationUrl(
 		redirectUri: workOSRedirectUri(origin)
 	});
 }
+
+/** AuthKit authorize URL for step-up (re-authentication). Requires `maxAge` on WorkOS AuthKit flows. */
+export function getAuthKitStepUpAuthorizationUrl(
+	origin: string,
+	options: { maxAge: number; loginHint?: string; state?: string }
+): string | null {
+	const workos = getWorkOS();
+	const clientId = getWorkOSClientId();
+	if (!workos || !clientId) return null;
+
+	return workos.userManagement.getAuthorizationUrl({
+		clientId,
+		provider: 'authkit',
+		redirectUri: workOSRedirectUri(origin),
+		maxAge: options.maxAge,
+		loginHint: options.loginHint,
+		state: options.state
+	});
+}
