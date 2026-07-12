@@ -28,7 +28,9 @@
 </script>
 
 <div
-	class="flex flex-col gap-3 border-t border-outline-variant/15 bg-surface-container-lowest/95 px-4 py-4 sm:flex-row sm:items-center sm:justify-between"
+	class="sticky bottom-0 z-40 flex flex-col gap-3 border-t border-outline-variant/15 bg-surface-container-lowest/95 px-4 py-4 pb-[max(1rem,env(safe-area-inset-bottom))] backdrop-blur-md sm:flex-row sm:items-center sm:justify-between"
+	role="navigation"
+	aria-label="Question navigation"
 >
 	<div class="flex items-center gap-2">
 		<button

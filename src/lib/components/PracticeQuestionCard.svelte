@@ -68,7 +68,7 @@
 
 <article
 	data-testid="practice-question"
-	class="rounded-xl bg-surface-container-lowest p-8 shadow-[0px_4px_24px_rgba(0,0,0,0.04)]"
+	class="rounded-xl bg-surface-container-lowest p-4 shadow-[0px_4px_24px_rgba(0,0,0,0.04)] sm:p-8"
 >
 	<div class="mb-6 flex items-start justify-between gap-4">
 		<h2 class="font-headline text-lg font-bold text-primary">
