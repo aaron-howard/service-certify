@@ -32,6 +32,25 @@
 	}: Props = $props();
 
 	let draggingLeft = $state<number | null>(null);
+	/** Mobile / keyboard: tap a left item, then a right target to pair. */
+	let selectedLeft = $state<number | null>(null);
+
+	function selectLeft(leftIdx: number) {
+		if (disabled) return;
+		selectedLeft = selectedLeft === leftIdx ? null : leftIdx;
+	}
+
+	function tapRight(rightIdx: number) {
+		if (disabled) return;
+		if (selectedLeft !== null) {
+			setPair(selectedLeft, rightIdx);
+			selectedLeft = null;
+			return;
+		}
+		// Tap right without a selected left: pick the first unmatched left.
+		const unmatched = leftItems.findIndex((_, i) => selections[i] === undefined);
+		if (unmatched >= 0) setPair(unmatched, rightIdx);
+	}
 
 	function rightForLeft(leftIdx: number): number | undefined {
 		return selections[leftIdx];
@@ -106,25 +125,31 @@
 	Match each item on the left to the correct option on the right
 </p>
 
-<div class="grid gap-6 md:grid-cols-2">
+<div class="grid gap-4 sm:gap-6 md:grid-cols-2">
 	<div>
 		<p class="mb-2 text-xs font-bold uppercase tracking-wider text-on-surface-variant">Items</p>
-		<ul class="space-y-2">
+		<ul class="space-y-2" role="list">
 			{#each leftItems as label, leftIdx}
 				{@const status = pairStatus(leftIdx)}
-				<li
-					role="listitem"
-					draggable={!disabled}
-					ondragstart={(e) => onDragStart(leftIdx, e)}
-					ondragend={() => (draggingLeft = null)}
-					class="flex items-center justify-between gap-2 rounded-lg border border-outline-variant/30 bg-surface-container-high/80 px-4 py-3 text-sm {status ===
-					'correct'
-						? 'ring-2 ring-secondary'
-						: ''} {status === 'wrong' ? 'ring-2 ring-error' : ''} {!disabled
-						? 'cursor-grab active:cursor-grabbing'
-						: ''}"
-				>
-					<span class="text-on-surface">{label}</span>
+				<li role="listitem">
+					<button
+						type="button"
+						draggable={!disabled}
+						ondragstart={(e) => onDragStart(leftIdx, e)}
+						ondragend={() => (draggingLeft = null)}
+						disabled={disabled}
+						aria-pressed={selectedLeft === leftIdx}
+						class="flex w-full items-center justify-between gap-2 rounded-lg border border-outline-variant/30 bg-surface-container-high/80 px-3 py-2.5 text-left text-sm sm:px-4 sm:py-3 {status ===
+						'correct'
+							? 'ring-2 ring-secondary'
+							: ''} {status === 'wrong' ? 'ring-2 ring-error' : ''} {selectedLeft === leftIdx
+							? 'ring-2 ring-primary'
+							: ''} {!disabled
+							? 'cursor-grab active:cursor-grabbing'
+							: 'cursor-default opacity-90'}"
+						onclick={() => selectLeft(leftIdx)}
+					>
+						<span class="text-on-surface">{label}</span>
 					{#if rightForLeft(leftIdx) !== undefined}
 						<span class="text-xs text-secondary">
 							→ {rightItems[rightForLeft(leftIdx)!]}
@@ -135,14 +160,26 @@
 						</span>
 					{/if}
 					{#if !disabled && rightForLeft(leftIdx) !== undefined}
-						<button
-							type="button"
-							class="text-xs text-on-surface-variant hover:text-error"
-							onclick={() => clearLeft(leftIdx)}
+						<span
+							role="button"
+							tabindex="0"
+							class="shrink-0 text-xs text-on-surface-variant hover:text-error"
+							onclick={(e) => {
+								e.stopPropagation();
+								clearLeft(leftIdx);
+							}}
+							onkeydown={(e) => {
+								if (e.key === 'Enter' || e.key === ' ') {
+									e.preventDefault();
+									e.stopPropagation();
+									clearLeft(leftIdx);
+								}
+							}}
 						>
 							Clear
-						</button>
+						</span>
 					{/if}
+					</button>
 				</li>
 			{/each}
 		</ul>
@@ -152,26 +189,30 @@
 		<p class="mb-2 text-xs font-bold uppercase tracking-wider text-on-surface-variant">
 			Matches
 		</p>
-		<ul class="space-y-2">
+		<ul class="space-y-2" role="list">
 			{#each rightItems as label, rightIdx}
 				{@const highlight = rightHighlight(rightIdx)}
-				<li
-					role="listitem"
-					ondragover={(e) => e.preventDefault()}
-					ondrop={(e) => onDropRight(rightIdx, e)}
-					class="rounded-lg border border-dashed border-outline-variant/50 bg-surface-container-low px-4 py-3 text-sm transition-colors {highlight ===
-					'correct'
-						? 'ring-2 ring-secondary'
-						: ''} {highlight === 'wrong' ? 'ring-2 ring-error' : ''} {!disabled
-						? 'hover:border-secondary/60'
-						: ''}"
-				>
-					<span class="text-on-surface">{label}</span>
+				<li role="listitem">
+					<button
+						type="button"
+						disabled={disabled}
+						ondragover={(e) => e.preventDefault()}
+						ondrop={(e) => onDropRight(rightIdx, e)}
+						class="w-full rounded-lg border border-dashed border-outline-variant/50 bg-surface-container-low px-3 py-2.5 text-left text-sm transition-colors sm:px-4 sm:py-3 {highlight ===
+						'correct'
+							? 'ring-2 ring-secondary'
+							: ''} {highlight === 'wrong' ? 'ring-2 ring-error' : ''} {!disabled
+							? 'hover:border-secondary/60'
+							: 'cursor-default opacity-90'}"
+						onclick={() => tapRight(rightIdx)}
+					>
+						<span class="text-on-surface">{label}</span>
+					</button>
 				</li>
 			{/each}
 		</ul>
 		<p class="mt-2 text-xs text-on-surface-variant">
-			Drag an item from the left and drop it on the matching target, or tap an item then a target.
+			Drag from the left and drop on a match, or tap a left item then tap its match.
 		</p>
 	</div>
 </div>

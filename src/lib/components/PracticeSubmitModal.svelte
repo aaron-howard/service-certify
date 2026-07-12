@@ -8,6 +8,19 @@
 	};
 
 	let { open, unansweredCount, submitting = false, onConfirm, onCancel }: Props = $props();
+
+	let dialogEl = $state<HTMLDivElement | null>(null);
+	let previousFocus = $state<HTMLElement | null>(null);
+
+	$effect(() => {
+		if (!open) {
+			previousFocus?.focus();
+			previousFocus = null;
+			return;
+		}
+		previousFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+		queueMicrotask(() => dialogEl?.focus());
+	});
 </script>
 
 {#if open}
@@ -18,13 +31,20 @@
 		onkeydown={(e) => e.key === 'Escape' && onCancel?.()}
 	>
 		<div
+			bind:this={dialogEl}
 			class="w-full max-w-md rounded-xl bg-surface-container-lowest p-6 shadow-xl"
 			role="dialog"
 			tabindex="-1"
 			aria-modal="true"
 			aria-labelledby="submit-modal-title"
 			onclick={(e) => e.stopPropagation()}
-			onkeydown={(e) => e.stopPropagation()}
+			onkeydown={(e) => {
+				if (e.key === 'Escape') {
+					onCancel?.();
+					return;
+				}
+				e.stopPropagation();
+			}}
 		>
 			<h3 id="submit-modal-title" class="font-headline text-lg font-bold text-primary">
 				Submit exam?
