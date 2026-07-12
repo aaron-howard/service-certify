@@ -85,8 +85,29 @@ function parseFirstJsonArray(text) {
 	return null;
 }
 
-function escapeRegExp(text) {
-	return text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+function matchGlob(name, pattern) {
+	const parts = pattern.split('*');
+	if (parts.length === 1) return name === pattern;
+
+	let pos = 0;
+	for (let i = 0; i < parts.length; i++) {
+		const part = parts[i];
+		if (part === '' && i === 0) continue;
+		if (i === 0) {
+			if (!name.startsWith(part)) return false;
+			pos = part.length;
+			continue;
+		}
+		if (i === parts.length - 1) {
+			const idx = name.lastIndexOf(part);
+			if (idx === -1 || idx < pos) return false;
+			return idx + part.length === name.length;
+		}
+		const idx = name.indexOf(part, pos);
+		if (idx === -1) return false;
+		pos = idx + part.length;
+	}
+	return true;
 }
 
 function extractLargestJsonArrayFromJsonl(filePath) {
@@ -132,14 +153,9 @@ function resolveBatchFiles() {
 			if (pattern.includes('*')) {
 				const dir = path.dirname(pattern);
 				const base = path.basename(pattern);
-				const safePattern = base
-					.split('*')
-					.map((part) => escapeRegExp(part))
-					.join('.*');
-				const re = new RegExp('^' + safePattern + '$');
 				return fs
 					.readdirSync(dir === '.' ? batchesDir : dir)
-					.filter((f) => re.test(f))
+					.filter((f) => matchGlob(f, base))
 					.map((f) => path.join(dir === '.' ? batchesDir : dir, f))
 					.sort();
 			}

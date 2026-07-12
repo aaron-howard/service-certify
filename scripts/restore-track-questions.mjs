@@ -138,7 +138,7 @@ function restoreTrack(trackCode, bank) {
 	const restoredOrders = new Set(restored.map((q) => q.order));
 	const stillMissing = [...existingOrders].filter((o) => !restoredOrders.has(o));
 	if (stillMissing.length) {
-		console.warn(`Warning: ${trackCode} could not restore orders:`, stillMissing.join(', '));
+		console.warn(`Warning: ${trackCode} could not restore orders: ${stillMissing.join(', ')}`);
 	}
 
 	for (const q of restored) {
