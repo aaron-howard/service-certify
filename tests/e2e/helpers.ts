@@ -23,7 +23,7 @@ export async function gotoFirstPractice(page: Page) {
 }
 
 export function practiceQuestionHeading(page: Page) {
-	return page.locator('article h2').first();
+	return page.getByTestId('practice-question').locator('h2').first();
 }
 
 /** Practice page empty state when Convex is missing or the track has no seeded questions. */
@@ -33,14 +33,50 @@ export function practiceEmptyState(page: Page) {
 
 /** Wait until the practice page shows questions or a documented empty state. */
 export async function waitForPracticeContent(page: Page) {
-	await expect(practiceQuestionHeading(page).or(practiceEmptyState(page))).toBeVisible({
+	await expect(
+		page.getByTestId('practice-start').or(practiceQuestionHeading(page)).or(practiceEmptyState(page))
+	).toBeVisible({
 		timeout: 10000
 	});
+}
+
+/** Start the exam from the intro screen if present. */
+export async function startPracticeExam(page: Page) {
+	const startBtn = page.getByTestId('practice-start');
+	if (await startBtn.isVisible().catch(() => false)) {
+		await startBtn.click();
+		await expect(page.getByTestId('practice-question')).toBeVisible();
+	}
 }
 
 /** Practice page shows Convex questions or a documented empty state when Convex is not configured. */
 export async function hasPracticeQuestions(page: Page) {
 	await waitForPracticeContent(page);
 	if (await practiceEmptyState(page).isVisible().catch(() => false)) return false;
-	return practiceQuestionHeading(page).isVisible().catch(() => false);
+	return (
+		(await page.getByTestId('practice-start').isVisible().catch(() => false)) ||
+		(await practiceQuestionHeading(page).isVisible().catch(() => false))
+	);
+}
+
+/** Answer every question by selecting the first choice and advancing with Next. */
+export async function answerAllPracticeQuestions(page: Page) {
+	await startPracticeExam(page);
+	const totalText = await page.getByTestId('practice-position').textContent();
+	const match = totalText?.match(/of (\d+)/);
+	const total = match ? Number(match[1]) : 1;
+
+	for (let i = 0; i < total; i++) {
+		const radio = page.getByTestId('practice-question').locator('input[type="radio"]').first();
+		const checkbox = page.getByTestId('practice-question').locator('input[type="checkbox"]').first();
+		if (await radio.isVisible().catch(() => false)) {
+			await radio.click();
+		} else if (await checkbox.isVisible().catch(() => false)) {
+			await checkbox.click();
+		}
+
+		if (i < total - 1) {
+			await page.getByTestId('practice-next').click();
+		}
+	}
 }

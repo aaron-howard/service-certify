@@ -2,14 +2,17 @@
 	import { browser } from '$app/environment';
 	import { env } from '$env/dynamic/public';
 	import MaterialIcon from '$lib/components/MaterialIcon.svelte';
-	import MatchQuestion from '$lib/components/MatchQuestion.svelte';
-	import { getPracticeTimeSeconds } from '$lib/catalog/examQuestionPolicy';
+	import PracticeQuestionCard from '$lib/components/PracticeQuestionCard.svelte';
+	import PracticeQuestionNav from '$lib/components/PracticeQuestionNav.svelte';
+	import PracticeQuestionPalette from '$lib/components/PracticeQuestionPalette.svelte';
+	import PracticeSubmitModal from '$lib/components/PracticeSubmitModal.svelte';
+	import { getOfficialExamDurationMinutes, getPracticeTimeSeconds } from '$lib/catalog/examQuestionPolicy';
 	import {
 		displayIndexToOriginal,
-		originalIndexToDisplay,
 		shuffleChoicesForDisplay,
 		shuffleMatchForDisplay
 	} from '$lib/practice/choiceShuffle';
+	import { clampIndex, questionStatus, unansweredIndexes } from '$lib/practice/sessionNav';
 	import { useConvexClient, useQuery } from 'convex-svelte';
 	import { api } from '$convex/_generated/api.js';
 
@@ -57,6 +60,8 @@
 		isCorrect: boolean;
 		explanation: string;
 	};
+
+	type Phase = 'intro' | 'live' | 'review' | 'summary';
 
 	const convexConfigured =
 		typeof env.PUBLIC_CONVEX_URL === 'string' && env.PUBLIC_CONVEX_URL.length > 0;
@@ -115,10 +120,27 @@
 	});
 
 	const questionsLoadError = $derived(
-		isFullMock ? data.questionsError : bank.error?.message ?? null
+		isFullMock ? data.questionsError : (bank.error?.message ?? null)
 	);
 	const questionsLoading = $derived(isFullMock ? false : bank.isLoading);
 
+	const examDurationMinutes = $derived(
+		isFullMock
+			? getOfficialExamDurationMinutes(exam.code)
+			: Math.round(
+					getPracticeTimeSeconds({
+						trackCode: exam.code,
+						questionCount: questions.length || 1,
+						mode
+					}) / 60
+				)
+	);
+
+	let phase = $state<Phase>('intro');
+	let currentIndex = $state(0);
+	let paletteOpen = $state(false);
+	let submitModalOpen = $state(false);
+	let flagged = $state<Set<number>>(new Set());
 	let remaining = $state(90 * 60);
 	let selected = $state<Record<number, number>>({});
 	let selectedMulti = $state<Record<number, number[]>>({});
@@ -129,6 +151,16 @@
 	let score = $state<{ correct: number; total: number } | null>(null);
 	let gradedByOrder = $state<Record<number, GradeResult>>({});
 	let interval: ReturnType<typeof setInterval> | null = null;
+
+	const currentQuestion = $derived(questions[currentIndex]);
+	const answeredCount = $derived(questions.filter((q) => isAnsweredById(q.id)).length);
+	const progressPct = $derived(
+		questions.length === 0 ? 0 : Math.round((answeredCount / questions.length) * 100)
+	);
+	const unansweredCount = $derived(
+		unansweredIndexes(questions.length, (i) => isAnsweredById(questions[i]?.id)).length
+	);
+	const inReview = $derived(phase === 'review');
 
 	$effect(() => {
 		const n = questions.length;
@@ -141,7 +173,7 @@
 	});
 
 	$effect(() => {
-		if (!browser || questions.length === 0 || submitted) {
+		if (!browser || questions.length === 0 || submitted || phase !== 'live') {
 			if (interval) {
 				clearInterval(interval);
 				interval = null;
@@ -176,11 +208,40 @@
 			: selected[q.id] !== undefined;
 	}
 
-	const answeredCount = $derived(questions.filter((q) => isAnswered(q)).length);
+	function isAnsweredById(id: number | undefined): boolean {
+		if (id === undefined) return false;
+		const q = questions.find((item) => item.id === id);
+		return q ? isAnswered(q) : false;
+	}
 
-	const progressPct = $derived(
-		questions.length === 0 ? 0 : Math.round((answeredCount / questions.length) * 100)
-	);
+	function isAnsweredAtIndex(index: number): boolean {
+		const q = questions[index];
+		return q ? isAnswered(q) : false;
+	}
+
+	function paletteStatus(index: number) {
+		return questionStatus(index, isAnsweredAtIndex, flagged);
+	}
+
+	function toggleFlag() {
+		const next = new Set(flagged);
+		if (next.has(currentIndex)) next.delete(currentIndex);
+		else next.add(currentIndex);
+		flagged = next;
+	}
+
+	function goTo(index: number) {
+		currentIndex = clampIndex(index, questions.length);
+	}
+
+	function startExam() {
+		phase = 'live';
+		currentIndex = 0;
+	}
+
+	function resultFor(order: number): GradeResult | undefined {
+		return gradedByOrder[order];
+	}
 
 	function toggleMulti(q: Q, displayIdx: number) {
 		const current = selectedMulti[q.id] ?? [];
@@ -190,29 +251,13 @@
 		selectedMulti = { ...selectedMulti, [q.id]: next };
 	}
 
-	function resultFor(order: number): GradeResult | undefined {
-		return gradedByOrder[order];
-	}
-
-	/** Correct choice indexes in display space for highlighting after grade. */
-	function displayCorrectIndexes(q: Q, graded: GradeResult): number[] {
-		return graded.correctIndexes.map((original) =>
-			originalIndexToDisplay(original, q.permutation)
-		);
-	}
-
-	function isChoiceCorrect(q: Q, graded: GradeResult, displayIdx: number): boolean {
-		return displayCorrectIndexes(q, graded).includes(displayIdx);
-	}
-
-	function isChoiceSelected(q: Q, displayIdx: number): boolean {
-		return q.questionType === 'multi'
-			? (selectedMulti[q.id]?.includes(displayIdx) ?? false)
-			: selected[q.id] === displayIdx;
+	function requestSubmit() {
+		submitModalOpen = true;
 	}
 
 	async function submit() {
 		if (!browser || !env.PUBLIC_CONVEX_URL || grading) return;
+		submitModalOpen = false;
 		grading = true;
 		gradeError = null;
 		try {
@@ -278,6 +323,7 @@
 			score = { correct: graded.correct, total: graded.total };
 			gradedByOrder = Object.fromEntries(graded.results.map((r) => [r.order, r]));
 			submitted = true;
+			phase = 'summary';
 			if (interval) {
 				clearInterval(interval);
 				interval = null;
@@ -288,13 +334,18 @@
 			grading = false;
 		}
 	}
+
+	function beginReview() {
+		phase = 'review';
+		currentIndex = 0;
+	}
 </script>
 
 <svelte:head>
 	<title>Practice: {exam.code} | Service Certify</title>
 </svelte:head>
 
-<div class="min-h-[calc(100vh-8rem)] bg-surface-container-low">
+<div class="flex min-h-[calc(100vh-8rem)] flex-col bg-surface-container-low">
 	<div
 		class="sticky top-[7.25rem] z-40 border-b border-outline-variant/15 bg-surface-container-lowest/90 shadow-ambient backdrop-blur-md"
 	>
@@ -302,40 +353,58 @@
 			<div>
 				<p class="text-xs font-bold uppercase tracking-widest text-secondary">
 					{isFullMock ? 'Full mock' : 'Sample practice'}
+					{#if phase === 'review'}
+						· Review
+					{/if}
 				</p>
 				<p class="font-headline font-bold text-primary">{exam.code} — {exam.shortTitle}</p>
 			</div>
-			<div class="flex items-center gap-6">
-				<div class="flex items-center gap-2 text-on-surface-variant">
-					<MaterialIcon name="timer" class="text-secondary" />
-					<span class="font-mono text-lg font-bold text-primary">{formatTime(remaining)}</span>
-				</div>
-				{#if questions.length > 0}
-					<div class="hidden w-40 sm:block">
-						<div class="h-1.5 w-full overflow-hidden rounded-full bg-secondary-container">
-							<div
-								class="h-full rounded-full bg-secondary transition-all"
-								style="width: {progressPct}%"
-							></div>
+			{#if questions.length > 0 && (phase === 'live' || phase === 'review')}
+				<div class="flex flex-wrap items-center gap-4 sm:gap-6">
+					<p class="text-sm font-bold text-primary" data-testid="practice-position">
+						Question {currentIndex + 1} of {questions.length}
+					</p>
+					{#if phase === 'live'}
+						<div class="flex items-center gap-2 text-on-surface-variant">
+							<MaterialIcon name="timer" class="text-secondary" />
+							<span class="font-mono text-lg font-bold text-primary">{formatTime(remaining)}</span>
 						</div>
-						<p
-							class="mt-1 text-center text-[10px] font-bold uppercase tracking-wider text-on-surface-variant"
+						<div class="hidden w-32 sm:block">
+							<div class="h-1.5 w-full overflow-hidden rounded-full bg-secondary-container">
+								<div
+									class="h-full rounded-full bg-secondary transition-all"
+									style="width: {progressPct}%"
+								></div>
+							</div>
+							<p
+								class="mt-1 text-center text-[10px] font-bold uppercase tracking-wider text-on-surface-variant"
+							>
+								{answeredCount}/{questions.length} answered
+							</p>
+						</div>
+						<button
+							type="button"
+							data-testid="practice-flag"
+							class="rounded-md border border-outline-variant/30 px-3 py-1.5 text-xs font-bold uppercase tracking-wider transition-colors {flagged.has(
+								currentIndex
+							)
+								? 'border-amber-500/50 bg-amber-500/10 text-primary'
+								: 'text-on-surface-variant hover:bg-surface-container-high'}"
+							onclick={toggleFlag}
 						>
-							{progressPct}% answered
-						</p>
-					</div>
-				{/if}
-			</div>
+							{flagged.has(currentIndex) ? 'Flagged' : 'Flag for review'}
+						</button>
+					{/if}
+				</div>
+			{/if}
 		</div>
 	</div>
 
-	<div class="mx-auto max-w-5xl px-6 py-10">
+	<div class="mx-auto w-full max-w-5xl flex-1 px-6 py-10">
 		{#if questionsLoading}
 			<p class="text-center text-on-surface-variant">Loading practice questions…</p>
 		{:else if questionsLoadError}
-			<p class="text-center text-error">
-				{questionsLoadError}
-			</p>
+			<p class="text-center text-error">{questionsLoadError}</p>
 			{#if isFullMock}
 				<p class="mt-2 text-center text-sm text-on-surface-variant">
 					Try signing out and back in. If this persists, confirm
@@ -349,136 +418,128 @@
 			</p>
 		{:else if questions.length === 0}
 			<p class="text-center text-on-surface-variant">
-				No practice questions for <code class="text-primary">{exam.code}</code> yet. An admin can load the
-				dev bank with <code class="text-primary">npm run seed:dev:questions</code>.
+				No practice questions for <code class="text-primary">{exam.code}</code> yet. An admin can load
+				the dev bank with <code class="text-primary">npm run seed:dev:questions</code>.
 			</p>
-		{:else}
-			{#each questions as q, i}
-				{@const graded = resultFor(q.id)}
-				<article
-					class="mb-10 rounded-xl bg-surface-container-lowest p-8 shadow-[0px_4px_24px_rgba(0,0,0,0.04)]"
+		{:else if phase === 'intro'}
+			<div class="mx-auto max-w-xl rounded-xl bg-surface-container-lowest p-8 shadow-ambient">
+				<h2 class="font-headline text-2xl font-bold text-primary">Before you begin</h2>
+				<ul class="mt-4 space-y-2 text-sm text-on-surface-variant">
+					<li>
+						<strong class="text-primary">{questions.length}</strong> question{questions.length === 1
+							? ''
+							: 's'}
+					</li>
+					<li>
+						<strong class="text-primary">{examDurationMinutes}</strong> minute time limit
+					</li>
+					<li>One question shown at a time — use Previous, Next, or the question palette</li>
+					<li>Flag questions for review and submit when ready</li>
+				</ul>
+				<button
+					type="button"
+					data-testid="practice-start"
+					class="mt-8 w-full rounded-md bg-secondary py-3 font-bold text-on-secondary hover:opacity-90"
+					onclick={startExam}
 				>
-					<div class="mb-6 flex items-start justify-between gap-4">
-						<h2 class="font-headline text-lg font-bold text-primary">
-							<span class="text-secondary">Q{i + 1}.</span>
-							{q.prompt}
-						</h2>
-					</div>
-					{#if q.questionType === 'multi'}
-						<p class="mb-3 text-xs font-bold uppercase tracking-wider text-secondary">
-							Select all that apply
-						</p>
-					{/if}
-					{#if q.questionType === 'match' && q.matchLeftItems && q.matchRightItems}
-						<MatchQuestion
-							leftItems={q.matchLeftItems}
-							rightItems={q.matchRightItems}
-							leftPermutation={q.matchLeftPermutation ?? []}
-							rightPermutation={q.matchRightPermutation ?? []}
-							selections={selectedMatch[q.id] ?? {}}
-							disabled={submitted || grading}
-							submitted={submitted}
-							correctMatches={graded?.correctMatches ?? []}
-							onchange={(next) => {
-								selectedMatch = { ...selectedMatch, [q.id]: next };
-							}}
-						/>
-					{:else}
-					<ul class="space-y-3">
-						{#each q.choices as choice, idx}
-							{@const showCorrect = submitted && graded && isChoiceCorrect(q, graded, idx)}
-							{@const showWrong =
-								submitted &&
-								graded &&
-								isChoiceSelected(q, idx) &&
-								!isChoiceCorrect(q, graded, idx)}
-							<li>
-								<label
-									class="flex cursor-pointer items-start gap-3 rounded-lg bg-surface-container-high/80 p-4 transition-colors hover:bg-surface-container-high {showCorrect
-										? 'ring-2 ring-secondary'
-										: ''} {showWrong ? 'ring-2 ring-error' : ''}"
-								>
-									{#if q.questionType === 'multi'}
-										<input
-											type="checkbox"
-											name="q{q.id}"
-											class="mt-1 rounded border-outline text-secondary focus:ring-secondary"
-											disabled={submitted || grading}
-											checked={isChoiceSelected(q, idx)}
-											onchange={() => toggleMulti(q, idx)}
-										/>
-									{:else}
-										<input
-											type="radio"
-											name="q{q.id}"
-											class="mt-1 border-outline text-secondary focus:ring-secondary"
-											disabled={submitted || grading}
-											checked={selected[q.id] === idx}
-											onchange={() => {
-												selected = { ...selected, [q.id]: idx };
-											}}
-										/>
-									{/if}
-									<span class="text-sm leading-relaxed text-on-surface">{choice}</span>
-								</label>
-							</li>
-						{/each}
-					</ul>
-					{/if}
-					{#if submitted && graded}
-						<div
-							class="mt-6 rounded-lg border border-secondary-container/40 bg-secondary-container/15 p-4 text-sm text-on-surface-variant"
-						>
-							<p class="font-bold text-primary">Explanation</p>
-							<p class="mt-1 leading-relaxed">{graded.explanation}</p>
-						</div>
-					{/if}
-				</article>
-			{/each}
+					Start exam
+				</button>
+			</div>
+		{:else if phase === 'summary' && score}
+			<div class="mx-auto max-w-xl rounded-xl bg-primary px-8 py-8 text-center text-white shadow-lg">
+				<p class="font-label text-xs uppercase tracking-widest text-on-primary-container">
+					{isFullMock ? 'Your mock score' : 'Your sample score'}
+				</p>
+				<p class="font-headline text-4xl font-extrabold">
+					{score.correct}/{score.total}
+				</p>
+				<p class="mt-3 text-sm text-on-primary-container">
+					Review each question with explanations to reinforce weak areas.
+				</p>
+				<div class="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
+					<button
+						type="button"
+						data-testid="practice-review"
+						class="rounded-md bg-secondary px-6 py-2.5 text-sm font-bold text-on-secondary"
+						onclick={beginReview}
+					>
+						Review answers
+					</button>
+					<a
+						href="/exams/{exam.slug}"
+						class="rounded-md border border-white/30 px-6 py-2.5 text-sm font-bold text-white"
+					>
+						Back to exam details
+					</a>
+				</div>
+				{#if !isFullMock}
+					<a
+						href="/membership"
+						class="mt-4 inline-block text-sm font-bold text-on-primary-container underline"
+					>
+						View membership for full timed mocks
+					</a>
+				{/if}
+			</div>
+		{:else if currentQuestion}
+			<PracticeQuestionCard
+				question={currentQuestion}
+				questionNumber={currentIndex + 1}
+				selected={selected[currentQuestion.id]}
+				selectedMulti={selectedMulti[currentQuestion.id] ?? []}
+				matchSelections={selectedMatch[currentQuestion.id] ?? {}}
+				disabled={inReview || grading}
+				submitted={inReview || submitted}
+				graded={resultFor(currentQuestion.id)}
+				onSelectSingle={(idx) => {
+					selected = { ...selected, [currentQuestion.id]: idx };
+				}}
+				onToggleMulti={(idx) => toggleMulti(currentQuestion, idx)}
+				onMatchChange={(next) => {
+					selectedMatch = { ...selectedMatch, [currentQuestion.id]: next };
+				}}
+			/>
 		{/if}
 
 		{#if gradeError}
-			<p class="mb-4 text-center text-sm text-error">{gradeError}</p>
+			<p class="mt-4 text-center text-sm text-error">{gradeError}</p>
 		{/if}
+	</div>
 
-		<div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
+	{#if questions.length > 0 && (phase === 'live' || phase === 'review')}
+		<PracticeQuestionNav
+			{currentIndex}
+			total={questions.length}
+			disabled={grading}
+			showSubmit={phase === 'live'}
+			submitting={grading}
+			onPrevious={() => goTo(currentIndex - 1)}
+			onNext={() => goTo(currentIndex + 1)}
+			onSubmit={requestSubmit}
+			onOpenPalette={() => (paletteOpen = true)}
+		/>
+	{:else if phase === 'intro'}
+		<div class="border-t border-outline-variant/15 px-6 py-4">
 			<a href="/exams/{exam.slug}" class="text-sm font-bold text-secondary hover:underline">
 				← Back to exam details
 			</a>
-			{#if questions.length > 0 && !submitted}
-				<button
-					type="button"
-					class="rounded-md bg-secondary px-10 py-3 font-bold text-on-secondary transition-opacity hover:opacity-90 disabled:opacity-40"
-					disabled={answeredCount < questions.length || grading}
-					onclick={submit}
-				>
-					{grading ? 'Grading…' : 'Submit answers'}
-				</button>
-			{:else if score}
-				<div class="rounded-xl bg-primary px-8 py-4 text-center text-white shadow-lg">
-					<p class="font-label text-xs uppercase tracking-widest text-on-primary-container">
-						{isFullMock ? 'Your mock score' : 'Your sample score'}
-					</p>
-					<p class="font-headline text-3xl font-extrabold">
-						{score.correct}/{score.total}
-					</p>
-					{#if isFullMock}
-						<p class="mt-2 text-sm text-on-primary-container">
-							Full mock complete. Review explanations below to reinforce weak areas.
-						</p>
-					{:else}
-						<p class="mt-2 text-sm text-on-primary-container">
-							Full timed mocks and deeper analytics are included with membership.
-						</p>
-						<a
-							href="/membership"
-							class="mt-4 inline-block rounded-md bg-secondary px-6 py-2 text-sm font-bold text-on-secondary"
-						>
-							View membership
-						</a>
-					{/if}
-				</div>
-			{/if}
 		</div>
-	</div>
+	{/if}
+
+	<PracticeQuestionPalette
+		open={paletteOpen}
+		total={questions.length}
+		{currentIndex}
+		statusFor={paletteStatus}
+		onSelect={goTo}
+		onClose={() => (paletteOpen = false)}
+	/>
+
+	<PracticeSubmitModal
+		open={submitModalOpen}
+		{unansweredCount}
+		submitting={grading}
+		onConfirm={submit}
+		onCancel={() => (submitModalOpen = false)}
+	/>
 </div>

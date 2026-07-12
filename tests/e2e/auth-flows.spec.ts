@@ -46,7 +46,7 @@ test.describe('Auth flows', () => {
 		await gotoFirstPractice(page);
 
 		if (await hasPracticeQuestions(page)) {
-			await expect(page.locator('article h2').first()).toBeVisible();
+			await expect(page.getByTestId('practice-start')).toBeVisible();
 		} else {
 			await expect(practiceEmptyState(page)).toBeVisible();
 		}
