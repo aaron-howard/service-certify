@@ -1,6 +1,7 @@
 import { ConvexHttpClient } from 'convex/browser';
 import { api } from '$convex/_generated/api';
 import { env as publicEnv } from '$env/dynamic/public';
+import { isAccessTokenExpired } from '$lib/workos-session';
 
 export type ConvexUserSession = {
 	role: 'user' | 'admin';
@@ -51,6 +52,14 @@ export async function syncUserToConvex(args: ConvexUserSyncArgs): Promise<void> 
 /** Sync profile to Convex and return the stored user (creates or updates every time). */
 export async function ensureConvexUser(args: ConvexUserSyncArgs): Promise<ConvexUserSession> {
 	const { workosToken, ...profile } = args;
+	if (isAccessTokenExpired(workosToken)) {
+		return {
+			role: 'user',
+			name: profile.name,
+			profileImage: profile.profileImage,
+			provider: profile.provider
+		};
+	}
 	const convex = createAuthedClient(workosToken);
 	if (!convex) return { role: 'user' };
 
