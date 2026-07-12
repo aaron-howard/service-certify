@@ -1,8 +1,10 @@
 # WorkOS Authentication Setup
 
-**Last updated:** 2026-07-10
+**Last updated:** 2026-07-12
 
 Service Certify uses **WorkOS** for OAuth authentication with social logins (**Google, Microsoft, GitHub**). Redirect URIs are built from the request origin (`{origin}/auth/callback`) — no public WorkOS env vars are required.
+
+**Projects, staging vs production, and per-environment branding:** [WORKOS-ENVIRONMENTS.md](./WORKOS-ENVIRONMENTS.md)
 
 ## Quick Start
 
@@ -17,9 +19,14 @@ Service Certify uses **WorkOS** for OAuth authentication with social logins (**G
 
 ### 2. Configure Redirect URIs
 
-In WorkOS dashboard → Redirect URIs:
+In WorkOS dashboard → Redirect URIs (per environment — see [WORKOS-ENVIRONMENTS.md](./WORKOS-ENVIRONMENTS.md)):
+
+**Staging** (local + Vercel preview):
 - **Local dev:** `http://localhost:5173/auth/callback`
-- **Production:** `https://yourdomain.com/auth/callback` (Vercel URL)
+- **Preview:** `https://<preview-host>/auth/callback` or wildcard if enabled
+
+**Production:**
+- **Live site:** `https://yourdomain.com/auth/callback` (HTTPS required)
 
 ### 3. Set Environment Variables
 
@@ -31,8 +38,11 @@ PUBLIC_CONVEX_URL=https://your-deployment.convex.cloud
 ```
 
 **Vercel (Settings → Environment Variables):**
+
+Scope staging keys to **Development** + **Preview**; production keys to **Production** only. Full matrix: [WORKOS-ENVIRONMENTS.md](./WORKOS-ENVIRONMENTS.md).
+
 ```
-WORKOS_API_KEY=sk_test_...
+WORKOS_API_KEY=sk_test_...   # or sk_live_... on Production
 WORKOS_CLIENT_ID=client_...
 PUBLIC_CONVEX_URL=https://your-prod-deployment.convex.cloud
 ```

@@ -27,6 +27,7 @@
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"verify:workos-env": "node scripts/verify-workos-env.mjs",
 		"seed:dev": "convex run --push --env-file .env.convex internal.seed.apply",
 		"seed:dev:questions": "convex run --push --env-file .env.convex internal.seed.devQuestions",
 		"seed:prod": "convex run --deployment prod internal.seed.apply && convex run --deployment prod internal.seed.devQuestions",

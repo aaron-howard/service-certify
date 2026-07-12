@@ -16,6 +16,7 @@ Welcome to the Service Certify docs. Use this directory to understand how the ap
 
 **Auth?**
 - [`AUTH-WORKOS.md`](./AUTH-WORKOS.md) — Full WorkOS setup, admin bootstrap, troubleshooting
+- [`WORKOS-ENVIRONMENTS.md`](./WORKOS-ENVIRONMENTS.md) — Projects, staging vs prod, branding, env var matrix
 - [`auth-setup.md`](./auth-setup.md) — Short checklist + outstanding auth work
 
 **Observability & reliability?**
@@ -60,6 +61,7 @@ docs/
 ├── PRODUCTION_READINESS_AUDIT.md  ← Launch checklist (done / remaining / Phase D)
 ├── architecture.md                ← System design and data flow
 ├── AUTH-WORKOS.md                 ← WorkOS OAuth + admin full mock
+├── WORKOS-ENVIRONMENTS.md         ← Staging vs prod, branding, env matrix
 ├── auth-setup.md                  ← Short auth checklist
 ├── HEALTH-AND-MONITORING.md       ← Health endpoint + Speed Insights
 ├── SENTRY-SETUP.md                ← Sentry DSN setup
