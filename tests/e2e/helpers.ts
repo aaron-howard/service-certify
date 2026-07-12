@@ -14,6 +14,12 @@ export async function gotoFirstExam(page: Page) {
 	await page.waitForURL(/\/exams\/[^/]+$/);
 }
 
+export async function gotoPractice(page: Page, slug: string, mode: 'sample' | 'full' = 'sample') {
+	const query = mode === 'full' ? '?mode=full' : '';
+	await page.goto(`/exams/${slug}/practice${query}`);
+	await waitForPracticeContent(page);
+}
+
 export async function gotoFirstPractice(page: Page) {
 	await gotoFirstExam(page);
 	const practiceBtn = page.locator('a:has-text("Practice"), button:has-text("Practice")').first();
@@ -49,6 +55,78 @@ export async function startPracticeExam(page: Page) {
 	}
 }
 
+/** Parse "Question X of Y" from the practice header. */
+export async function getPracticeQuestionTotal(page: Page): Promise<number> {
+	const totalText = await page.getByTestId('practice-position').textContent();
+	const match = totalText?.match(/of (\d+)/);
+	return match ? Number(match[1]) : 1;
+}
+
+/** Parse current 1-based question number from the practice header. */
+export async function getPracticeQuestionNumber(page: Page): Promise<number> {
+	const totalText = await page.getByTestId('practice-position').textContent();
+	const match = totalText?.match(/Question (\d+)/);
+	return match ? Number(match[1]) : 1;
+}
+
+/** Answer the visible question (radio, checkbox, or first match pair). */
+export async function answerCurrentPracticeQuestion(page: Page) {
+	const card = page.getByTestId('practice-question');
+	const radio = card.locator('input[type="radio"]').first();
+	const checkbox = card.locator('input[type="checkbox"]').first();
+	const matchLeft = card.getByRole('button', { name: /./ }).first();
+
+	if (await radio.isVisible().catch(() => false)) {
+		await radio.click();
+		return;
+	}
+	if (await checkbox.isVisible().catch(() => false)) {
+		await checkbox.click();
+		return;
+	}
+	// Match: tap first left item, then first right target.
+	const leftButtons = card.locator('ul').first().getByRole('button');
+	const rightButtons = card.locator('ul').nth(1).getByRole('button');
+	if ((await leftButtons.count()) > 0 && (await rightButtons.count()) > 0) {
+		await leftButtons.first().click();
+		await rightButtons.first().click();
+	}
+}
+
+/** Open the question palette via footer button. */
+export async function openPracticePalette(page: Page) {
+	await page.getByTestId('practice-palette-toggle').click();
+	await expect(page.getByTestId('practice-palette')).toBeVisible();
+}
+
+/** Submit through the confirmation modal. */
+export async function confirmPracticeSubmit(page: Page) {
+	await page.getByTestId('practice-submit').click();
+	await expect(page.getByTestId('practice-submit-confirm')).toBeVisible();
+	await page.getByTestId('practice-submit-confirm').click();
+}
+
+/** Force timer expiry via localStorage draft (requires an active live session draft). */
+export async function expirePracticeTimerDraft(
+	page: Page,
+	trackCode: string,
+	mode: 'sample' | 'full' = 'sample'
+) {
+	const key = `service-certify:practice:${trackCode}:${mode}`;
+	await page.evaluate((storageKey) => {
+		const raw = localStorage.getItem(storageKey);
+		if (!raw) throw new Error('No practice draft to expire');
+		const draft = JSON.parse(raw) as { remaining: number; phase: string };
+		draft.remaining = 0;
+		draft.phase = 'live';
+		localStorage.setItem(storageKey, JSON.stringify(draft));
+	}, key);
+	await page.reload();
+	await expect(page.getByTestId('practice-question').or(page.getByText(/Your sample score/i))).toBeVisible({
+		timeout: 15000
+	});
+}
+
 /** Practice page shows Convex questions or a documented empty state when Convex is not configured. */
 export async function hasPracticeQuestions(page: Page) {
 	await waitForPracticeContent(page);
@@ -62,18 +140,10 @@ export async function hasPracticeQuestions(page: Page) {
 /** Answer every question by selecting the first choice and advancing with Next. */
 export async function answerAllPracticeQuestions(page: Page) {
 	await startPracticeExam(page);
-	const totalText = await page.getByTestId('practice-position').textContent();
-	const match = totalText?.match(/of (\d+)/);
-	const total = match ? Number(match[1]) : 1;
+	const total = await getPracticeQuestionTotal(page);
 
 	for (let i = 0; i < total; i++) {
-		const radio = page.getByTestId('practice-question').locator('input[type="radio"]').first();
-		const checkbox = page.getByTestId('practice-question').locator('input[type="checkbox"]').first();
-		if (await radio.isVisible().catch(() => false)) {
-			await radio.click();
-		} else if (await checkbox.isVisible().catch(() => false)) {
-			await checkbox.click();
-		}
+		await answerCurrentPracticeQuestion(page);
 
 		if (i < total - 1) {
 			await page.getByTestId('practice-next').click();

@@ -12,31 +12,53 @@
 
 	let { open, total, currentIndex, statusFor, onSelect, onClose }: Props = $props();
 
+	let dialogEl = $state<HTMLDivElement | null>(null);
+	let previousFocus = $state<HTMLElement | null>(null);
+
 	const statusClass: Record<QuestionStatus, string> = {
 		unanswered: 'border-outline-variant/40 bg-surface-container-high text-on-surface-variant',
 		answered: 'border-secondary/40 bg-secondary-container/30 text-primary',
 		flagged: 'border-amber-500/50 bg-amber-500/10 text-primary'
 	};
+
+	$effect(() => {
+		if (!open) {
+			previousFocus?.focus();
+			previousFocus = null;
+			return;
+		}
+		previousFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+		queueMicrotask(() => dialogEl?.focus());
+	});
 </script>
 
 {#if open}
 	<div
-		class="fixed inset-0 z-50 flex items-end justify-center bg-black/40 p-4 sm:items-center"
+		class="fixed inset-0 z-50 flex items-end justify-center bg-black/40 p-0 sm:items-center sm:p-4"
 		role="presentation"
 		onclick={() => onClose?.()}
 		onkeydown={(e) => e.key === 'Escape' && onClose?.()}
 	>
 		<div
-			class="max-h-[80vh] w-full max-w-lg overflow-y-auto rounded-xl bg-surface-container-lowest p-6 shadow-xl"
+			bind:this={dialogEl}
+			class="max-h-[85vh] w-full max-w-lg overflow-y-auto rounded-t-2xl bg-surface-container-lowest p-6 shadow-xl sm:max-h-[80vh] sm:rounded-xl"
 			role="dialog"
 			tabindex="-1"
 			aria-modal="true"
-			aria-label="Question navigator"
+			aria-labelledby="practice-palette-title"
 			onclick={(e) => e.stopPropagation()}
-			onkeydown={(e) => e.stopPropagation()}
+			onkeydown={(e) => {
+				if (e.key === 'Escape') {
+					onClose?.();
+					return;
+				}
+				e.stopPropagation();
+			}}
 		>
 			<div class="mb-4 flex items-center justify-between">
-				<h3 class="font-headline text-lg font-bold text-primary">All questions</h3>
+				<h3 id="practice-palette-title" class="font-headline text-lg font-bold text-primary">
+					All questions
+				</h3>
 				<button
 					type="button"
 					class="text-sm font-bold text-secondary hover:underline"
