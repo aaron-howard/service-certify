@@ -1,10 +1,12 @@
 import { test, expect } from '@playwright/test';
 import {
+	answerAllPracticeQuestions,
 	examCardLinks,
 	gotoFirstExam,
 	gotoFirstPractice,
 	hasPracticeQuestions,
-	practiceEmptyState
+	practiceEmptyState,
+	startPracticeExam
 } from './helpers';
 
 /**
@@ -44,7 +46,7 @@ test.describe('Critical User Flows', () => {
 		await gotoFirstPractice(page);
 
 		if (await hasPracticeQuestions(page)) {
-			await expect(page.locator('article h2').first()).toBeVisible();
+			await expect(page.getByTestId('practice-start')).toBeVisible();
 		} else {
 			await expect(practiceEmptyState(page)).toBeVisible();
 		}
@@ -58,7 +60,8 @@ test.describe('Critical User Flows', () => {
 			return;
 		}
 
-		const firstChoice = page.locator('article input[type="radio"]').first();
+		await startPracticeExam(page);
+		const firstChoice = page.getByTestId('practice-question').locator('input[type="radio"]').first();
 		await firstChoice.click();
 		await expect(firstChoice).toBeChecked();
 	});
@@ -71,23 +74,15 @@ test.describe('Critical User Flows', () => {
 			return;
 		}
 
-		const radios = page.locator('article input[type="radio"]');
-		const articles = page.locator('article');
-		const articleCount = await articles.count();
+		await answerAllPracticeQuestions(page);
 
-		for (let i = 0; i < articleCount; i++) {
-			const radio = articles.nth(i).locator('input[type="radio"]').first();
-			if (await radio.isVisible()) {
-				await radio.click();
-			}
-		}
-
-		const submitBtn = page.locator('button:has-text("Submit")');
+		const submitBtn = page.getByTestId('practice-submit');
 		if (await submitBtn.isVisible()) {
 			await submitBtn.click();
+			await page.getByTestId('practice-submit-confirm').click();
 			await expect(page.getByText(/Your sample score/i)).toBeVisible({ timeout: 10000 });
 		} else {
-			expect(await radios.count()).toBeGreaterThan(0);
+			await expect(page.getByTestId('practice-question')).toBeVisible();
 		}
 	});
 
