@@ -16,6 +16,7 @@
 	} from '$lib/practice/choiceShuffle';
 	import { clampIndex, questionStatus, unansweredIndexes } from '$lib/practice/sessionNav';
 	import { getTimerWarningLevel, timerWarningMessage } from '$lib/practice/examTimer';
+	import { isTypingTarget, practiceKeyAction } from '$lib/practice/sessionKeyboard';
 	import {
 		clearSessionDraft,
 		draftStorageKey,
@@ -436,7 +437,44 @@
 		phase = 'review';
 		currentIndex = 0;
 	}
+
+	function onWindowKeydown(e: KeyboardEvent) {
+		const action = practiceKeyAction(
+			e.key,
+			{
+				phase,
+				currentIndex,
+				total: questions.length,
+				disabled: grading,
+				paletteOpen,
+				submitModalOpen
+			},
+			{ typing: isTypingTarget(e.target) }
+		);
+		if (!action) return;
+		e.preventDefault();
+		switch (action) {
+			case 'previous':
+				goTo(currentIndex - 1);
+				break;
+			case 'next':
+				goTo(currentIndex + 1);
+				break;
+			case 'flag':
+				toggleFlag();
+				break;
+			case 'palette':
+				paletteOpen = true;
+				break;
+			case 'closeModal':
+				paletteOpen = false;
+				submitModalOpen = false;
+				break;
+		}
+	}
 </script>
+
+<svelte:window onkeydown={onWindowKeydown} />
 
 <svelte:head>
 	<title>Practice: {exam.code} | Service Certify</title>
@@ -446,7 +484,7 @@
 	<div
 		class="sticky top-[7.25rem] z-40 border-b border-outline-variant/15 bg-surface-container-lowest/90 shadow-ambient backdrop-blur-md"
 	>
-		<div class="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-4 px-6 py-4">
+		<div class="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-3 px-4 py-3 sm:gap-4 sm:px-6 sm:py-4">
 			<div>
 				<p class="text-xs font-bold uppercase tracking-widest text-secondary">
 					{isFullMock ? 'Full mock' : 'Sample practice'}
@@ -519,7 +557,10 @@
 		{/if}
 	</div>
 
-	<div class="mx-auto w-full max-w-5xl flex-1 px-6 py-10">
+	<div class="mx-auto w-full max-w-5xl flex-1 px-4 py-6 sm:px-6 sm:py-10 {phase === 'live' ||
+	phase === 'review'
+		? 'pb-28'
+		: ''}">
 		{#if questionsLoading || waitingForSession}
 			<p class="text-center text-on-surface-variant">Loading practice questions…</p>
 		{:else if questionsLoadError}
@@ -556,6 +597,15 @@
 					<li>Flag questions for review and submit when ready</li>
 					<li>Your progress is saved locally if you refresh during the exam</li>
 				</ul>
+				<div class="mt-6 rounded-lg border border-outline-variant/20 bg-surface-container-high/50 p-4">
+					<p class="text-xs font-bold uppercase tracking-wider text-secondary">Keyboard shortcuts</p>
+					<ul class="mt-2 space-y-1 text-xs text-on-surface-variant">
+						<li><kbd class="rounded border border-outline-variant/40 px-1.5 py-0.5 font-mono text-[10px]">←</kbd> / <kbd class="rounded border border-outline-variant/40 px-1.5 py-0.5 font-mono text-[10px]">→</kbd> Previous / Next question</li>
+						<li><kbd class="rounded border border-outline-variant/40 px-1.5 py-0.5 font-mono text-[10px]">F</kbd> Flag for review</li>
+						<li><kbd class="rounded border border-outline-variant/40 px-1.5 py-0.5 font-mono text-[10px]">P</kbd> Open question palette</li>
+						<li><kbd class="rounded border border-outline-variant/40 px-1.5 py-0.5 font-mono text-[10px]">Esc</kbd> Close dialogs</li>
+					</ul>
+				</div>
 				<button
 					type="button"
 					data-testid="practice-start"
