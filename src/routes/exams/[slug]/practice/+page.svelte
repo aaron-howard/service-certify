@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
+	import { goto } from '$app/navigation';
+	import { page } from '$app/state';
 	import { env } from '$env/dynamic/public';
 	import MaterialIcon from '$lib/components/MaterialIcon.svelte';
 	import PracticeQuestionCard from '$lib/components/PracticeQuestionCard.svelte';
@@ -13,6 +15,16 @@
 		shuffleMatchForDisplay
 	} from '$lib/practice/choiceShuffle';
 	import { clampIndex, questionStatus, unansweredIndexes } from '$lib/practice/sessionNav';
+	import { getTimerWarningLevel, timerWarningMessage } from '$lib/practice/examTimer';
+	import {
+		clearSessionDraft,
+		draftStorageKey,
+		loadSessionDraft,
+		parseQuestionFromUrl,
+		saveSessionDraft,
+		shouldSyncQuestionUrl,
+		urlWithQuestionIndex
+	} from '$lib/practice/sessionDraft';
 	import { useConvexClient, useQuery } from 'convex-svelte';
 	import { api } from '$convex/_generated/api.js';
 
@@ -21,12 +33,7 @@
 	const mode = $derived(data.mode as 'sample' | 'full');
 	const isFullMock = $derived(mode === 'full');
 	const convex = useConvexClient();
-	const sessionSeed = $derived(
-		data.sessionSeed ??
-			(typeof crypto !== 'undefined' && 'randomUUID' in crypto
-				? crypto.randomUUID()
-				: `mock-${Date.now()}`)
-	);
+	let activeSessionSeed = $state('');
 
 	const bank = useQuery(
 		api.practiceQuestions.listByTrackCode,
@@ -81,7 +88,7 @@
 			if (questionType === 'match') {
 				const leftItems = r.matchLeftItems ?? [];
 				const rightItems = r.matchRightItems ?? [];
-				const shuffled = shuffleMatchForDisplay(leftItems, rightItems, sessionSeed, r.order);
+				const shuffled = shuffleMatchForDisplay(leftItems, rightItems, activeSessionSeed, r.order);
 				return {
 					id: r.order,
 					prompt: r.prompt,
@@ -96,7 +103,7 @@
 			}
 			const { choices, permutation } = shuffleChoicesForDisplay(
 				r.choices,
-				sessionSeed,
+				activeSessionSeed,
 				r.order
 			);
 			return {
@@ -114,6 +121,8 @@
 			return toDisplayQuestions(data.serverQuestions);
 		}
 
+		if (!activeSessionSeed) return [];
+
 		const rows = bank.data;
 		if (!rows?.length) return [];
 		return toDisplayQuestions(rows);
@@ -123,6 +132,9 @@
 		isFullMock ? data.questionsError : (bank.error?.message ?? null)
 	);
 	const questionsLoading = $derived(isFullMock ? false : bank.isLoading);
+	const waitingForSession = $derived(
+		!isFullMock && convexConfigured && !activeSessionSeed && !questionsLoadError
+	);
 
 	const examDurationMinutes = $derived(
 		isFullMock
@@ -150,9 +162,13 @@
 	let gradeError = $state<string | null>(null);
 	let score = $state<{ correct: number; total: number } | null>(null);
 	let gradedByOrder = $state<Record<number, GradeResult>>({});
+	let autoSubmitTriggered = $state(false);
+	let draftHydrated = $state(false);
 	let interval: ReturnType<typeof setInterval> | null = null;
 
 	const currentQuestion = $derived(questions[currentIndex]);
+	const timerWarningLevel = $derived(getTimerWarningLevel(remaining));
+	const timerWarning = $derived(timerWarningMessage(timerWarningLevel));
 	const answeredCount = $derived(questions.filter((q) => isAnsweredById(q.id)).length);
 	const progressPct = $derived(
 		questions.length === 0 ? 0 : Math.round((answeredCount / questions.length) * 100)
@@ -161,15 +177,76 @@
 		unansweredIndexes(questions.length, (i) => isAnsweredById(questions[i]?.id)).length
 	);
 	const inReview = $derived(phase === 'review');
+	const draftKey = $derived(draftStorageKey(exam.code, mode));
 
 	$effect(() => {
-		const n = questions.length;
-		if (n === 0) return;
-		remaining = getPracticeTimeSeconds({
+		if (activeSessionSeed) return;
+		if (data.sessionSeed) {
+			activeSessionSeed = data.sessionSeed;
+			return;
+		}
+		if (!browser) return;
+		const draft = loadSessionDraft(draftStorageKey(exam.code, mode));
+		activeSessionSeed =
+			draft?.sessionSeed ??
+			(typeof crypto !== 'undefined' && 'randomUUID' in crypto
+				? crypto.randomUUID()
+				: `mock-${Date.now()}`);
+	});
+
+	$effect(() => {
+		if (!browser || draftHydrated || questions.length === 0 || !activeSessionSeed) return;
+		draftHydrated = true;
+
+		const draft = loadSessionDraft(draftKey);
+		if (draft && draft.sessionSeed === activeSessionSeed && draft.phase === 'live') {
+			phase = 'live';
+			currentIndex = clampIndex(draft.currentIndex, questions.length);
+			remaining = Math.max(0, draft.remaining);
+			selected = { ...draft.selected };
+			selectedMulti = { ...draft.selectedMulti };
+			selectedMatch = { ...draft.selectedMatch };
+			flagged = new Set(draft.flagged);
+		} else {
+			remaining = getPracticeTimeSeconds({
+				trackCode: exam.code,
+				questionCount: questions.length,
+				mode
+			});
+		}
+
+		if (phase === 'live' || phase === 'review') {
+			const fromUrl = parseQuestionFromUrl(page.url.searchParams.get('q'));
+			if (fromUrl !== null) {
+				currentIndex = clampIndex(fromUrl, questions.length);
+			}
+		}
+	});
+
+	$effect(() => {
+		if (!browser || !draftHydrated || phase !== 'live' || submitted) return;
+		saveSessionDraft(draftKey, {
+			version: 1,
 			trackCode: exam.code,
-			questionCount: n,
-			mode
+			mode,
+			sessionSeed: activeSessionSeed,
+			phase: 'live',
+			currentIndex,
+			remaining,
+			selected,
+			selectedMulti,
+			selectedMatch,
+			flagged: [...flagged],
+			updatedAt: Date.now()
 		});
+	});
+
+	$effect(() => {
+		if (!browser || questions.length === 0) return;
+		if (phase !== 'live' && phase !== 'review') return;
+		if (!shouldSyncQuestionUrl(page.url, currentIndex)) return;
+		const next = urlWithQuestionIndex(page.url, currentIndex);
+		void goto(next, { replaceState: true, keepFocus: true, noScroll: true });
 	});
 
 	$effect(() => {
@@ -189,6 +266,21 @@
 				interval = null;
 			}
 		};
+	});
+
+	$effect(() => {
+		if (
+			remaining !== 0 ||
+			phase !== 'live' ||
+			submitted ||
+			grading ||
+			autoSubmitTriggered ||
+			questions.length === 0
+		) {
+			return;
+		}
+		autoSubmitTriggered = true;
+		void submit();
 	});
 
 	function formatTime(s: number) {
@@ -255,8 +347,41 @@
 		submitModalOpen = true;
 	}
 
+	function buildAnswerPayload(q: Q) {
+		if (q.questionType === 'match') {
+			const pairs = selectedMatch[q.id] ?? {};
+			const leftPerm = q.matchLeftPermutation ?? [];
+			const rightPerm = q.matchRightPermutation ?? [];
+			const entries = Object.entries(pairs);
+			const matchAnswers =
+				entries.length > 0
+					? entries.map(([displayLeft, displayRight]) => ({
+							left: displayIndexToOriginal(Number(displayLeft), leftPerm),
+							right: displayIndexToOriginal(Number(displayRight), rightPerm)
+						}))
+					: [{ left: 0, right: 0 }];
+			return { order: q.id, selectedIndex: 0, matchAnswers };
+		}
+		if (q.questionType === 'multi') {
+			const displaySel = selectedMulti[q.id] ?? [];
+			const originalSel = (displaySel.length > 0 ? displaySel : [0])
+				.map((d) => displayIndexToOriginal(d, q.permutation))
+				.sort((a, b) => a - b);
+			return {
+				order: q.id,
+				selectedIndex: originalSel[0] ?? 0,
+				selectedIndexes: originalSel
+			};
+		}
+		const displayIdx = selected[q.id] ?? 0;
+		return {
+			order: q.id,
+			selectedIndex: displayIndexToOriginal(displayIdx, q.permutation)
+		};
+	}
+
 	async function submit() {
-		if (!browser || !env.PUBLIC_CONVEX_URL || grading) return;
+		if (!browser || !env.PUBLIC_CONVEX_URL || grading || submitted) return;
 		submitModalOpen = false;
 		grading = true;
 		gradeError = null;
@@ -264,37 +389,8 @@
 			const payload = {
 				trackCode: exam.code,
 				mode,
-				...(isFullMock ? { sessionSeed } : {}),
-				answers: questions.map((q) => {
-					if (q.questionType === 'match') {
-						const pairs = selectedMatch[q.id] ?? {};
-						const leftPerm = q.matchLeftPermutation ?? [];
-						const rightPerm = q.matchRightPermutation ?? [];
-						return {
-							order: q.id,
-							selectedIndex: 0,
-							matchAnswers: Object.entries(pairs).map(([displayLeft, displayRight]) => ({
-								left: displayIndexToOriginal(Number(displayLeft), leftPerm),
-								right: displayIndexToOriginal(Number(displayRight), rightPerm)
-							}))
-						};
-					}
-					if (q.questionType === 'multi') {
-						const displaySel = selectedMulti[q.id] ?? [];
-						const originalSel = displaySel
-							.map((d) => displayIndexToOriginal(d, q.permutation))
-							.sort((a, b) => a - b);
-						return {
-							order: q.id,
-							selectedIndex: originalSel[0] ?? 0,
-							selectedIndexes: originalSel
-						};
-					}
-					return {
-						order: q.id,
-						selectedIndex: displayIndexToOriginal(selected[q.id]!, q.permutation)
-					};
-				})
+				...(isFullMock ? { sessionSeed: activeSessionSeed } : {}),
+				answers: questions.map((q) => buildAnswerPayload(q))
 			};
 
 			type GradeResponse = {
@@ -324,6 +420,7 @@
 			gradedByOrder = Object.fromEntries(graded.results.map((r) => [r.order, r]));
 			submitted = true;
 			phase = 'summary';
+			clearSessionDraft(draftKey);
 			if (interval) {
 				clearInterval(interval);
 				interval = null;
@@ -367,7 +464,17 @@
 					{#if phase === 'live'}
 						<div class="flex items-center gap-2 text-on-surface-variant">
 							<MaterialIcon name="timer" class="text-secondary" />
-							<span class="font-mono text-lg font-bold text-primary">{formatTime(remaining)}</span>
+							<span
+								class="font-mono text-lg font-bold {timerWarningLevel === 'one_minute' ||
+								timerWarningLevel === 'expired'
+									? 'text-error'
+									: timerWarningLevel === 'five_minutes'
+										? 'text-amber-600'
+										: 'text-primary'}"
+								data-testid="practice-timer"
+							>
+								{formatTime(remaining)}
+							</span>
 						</div>
 						<div class="hidden w-32 sm:block">
 							<div class="h-1.5 w-full overflow-hidden rounded-full bg-secondary-container">
@@ -398,10 +505,22 @@
 				</div>
 			{/if}
 		</div>
+		{#if phase === 'live' && timerWarning}
+			<div
+				class="border-t px-6 py-2 text-center text-sm font-bold {timerWarningLevel === 'one_minute' ||
+				timerWarningLevel === 'expired'
+					? 'border-error/30 bg-error/10 text-error'
+					: 'border-amber-500/30 bg-amber-500/10 text-primary'}"
+				data-testid="practice-timer-warning"
+				role="status"
+			>
+				{timerWarning}
+			</div>
+		{/if}
 	</div>
 
 	<div class="mx-auto w-full max-w-5xl flex-1 px-6 py-10">
-		{#if questionsLoading}
+		{#if questionsLoading || waitingForSession}
 			<p class="text-center text-on-surface-variant">Loading practice questions…</p>
 		{:else if questionsLoadError}
 			<p class="text-center text-error">{questionsLoadError}</p>
@@ -435,6 +554,7 @@
 					</li>
 					<li>One question shown at a time — use Previous, Next, or the question palette</li>
 					<li>Flag questions for review and submit when ready</li>
+					<li>Your progress is saved locally if you refresh during the exam</li>
 				</ul>
 				<button
 					type="button"
