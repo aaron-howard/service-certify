@@ -65,9 +65,13 @@ export default defineSchema({
 		explanation: v.string(),
 		// Reference URLs for learning — expected 0-10 URLs, 10-500 chars each
 		sourceUrls: v.array(v.string()),
+		// Official blueprint domain tag (when present in seed bank)
+		domain: v.optional(v.string()),
 		// Question difficulty level (currently only 'dev' for development)
 		difficulty: v.optional(v.literal('dev'))
-	}).index('by_trackCode', ['trackCode']),
+	})
+		.index('by_trackCode', ['trackCode'])
+		.index('by_trackCode_and_domain', ['trackCode', 'domain']),
 
 	userProgress: defineTable({
 		// Reference to user
