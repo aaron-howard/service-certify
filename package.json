@@ -28,6 +28,7 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"verify:workos-env": "node scripts/verify-workos-env.mjs",
+		"verify:upstash": "node scripts/verify-upstash-ratelimit.mjs",
 		"verify:convex-auth-env": "node scripts/verify-convex-auth-env.mjs",
 		"verify:convex-auth-env:prod": "node scripts/verify-convex-auth-env.mjs --prod",
 		"seed:dev": "convex run --push --env-file .env.convex internal.seed.apply",
