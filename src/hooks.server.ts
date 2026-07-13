@@ -2,7 +2,7 @@ import * as Sentry from '@sentry/sveltekit';
 import { sequence } from '@sveltejs/kit/hooks';
 import { captureException, shouldCaptureHttpError } from '$lib/sentry';
 import { initRateLimit } from '$lib/rateLimit';
-import { clearWorkOsAuthCookies, isAccessTokenExpired } from '$lib/workos-session';
+import { resolveWorkOsSession } from '$lib/workos-session';
 import type { Handle, HandleServerError } from '@sveltejs/kit';
 
 // Rate limiting (requires UPSTASH_REDIS_REST_URL and token).
@@ -37,14 +37,11 @@ export const handleError = Sentry.handleErrorWithSentry(serverErrorHandler);
  * Exchanges WorkOS token for Convex JWT if present.
  */
 const appHandle: Handle = async ({ event, resolve }) => {
-	const workosToken = event.cookies.get('workos_token');
-	const workosUserId = event.cookies.get('workos_user_id');
-
-	if (workosToken && isAccessTokenExpired(workosToken)) {
-		clearWorkOsAuthCookies(event.cookies);
-	} else if (workosToken && workosUserId) {
-		event.locals.workosToken = workosToken;
-		event.locals.workosUserId = workosUserId;
+	const secure = event.url.protocol === 'https:';
+	const session = await resolveWorkOsSession(event.cookies, secure);
+	if (session) {
+		event.locals.workosToken = session.accessToken;
+		event.locals.workosUserId = session.userId;
 	}
 	const response = await resolve(event);
 

@@ -1,11 +1,11 @@
-import { clearWorkOsAuthCookies, isAccessTokenExpired } from '$lib/workos-session';
+import { resolveWorkOsSession } from '$lib/workos-session';
 import type { RequestHandler } from '@sveltejs/kit';
 
 /** Return the WorkOS access token from the httpOnly session cookie for Convex setAuth. */
-export const GET: RequestHandler = async ({ cookies }) => {
-	const token = cookies.get('workos_token');
-	if (!token || isAccessTokenExpired(token)) {
-		if (token) clearWorkOsAuthCookies(cookies);
+export const GET: RequestHandler = async ({ cookies, url }) => {
+	const secure = url.protocol === 'https:';
+	const session = await resolveWorkOsSession(cookies, secure);
+	if (!session) {
 		return new Response(JSON.stringify({ error: 'Not authenticated' }), {
 			status: 401,
 			headers: {
@@ -15,7 +15,7 @@ export const GET: RequestHandler = async ({ cookies }) => {
 		});
 	}
 
-	return new Response(JSON.stringify({ token }), {
+	return new Response(JSON.stringify({ token: session.accessToken }), {
 		status: 200,
 		headers: {
 			'Content-Type': 'application/json',
