@@ -122,23 +122,28 @@ export const PHASE1_TRACK_DOC_SOURCES: TrackDocSource[] = [
 		officialName: 'Certified Implementation Specialist - IT Service Management',
 		publications: ['it-service-management', 'it-operations-management'],
 		domains: [
-			{ name: 'Incident Management', weight: '25%', publications: ['it-service-management'] },
-			{ name: 'Problem Management', weight: '15%', publications: ['it-service-management'] },
-			{ name: 'Change Management', weight: '25%', publications: ['it-service-management'] },
+			{ name: 'Incident Management', weight: '22%', publications: ['it-service-management'] },
+			{ name: 'Problem Management', weight: '16%', publications: ['it-service-management'] },
+			{ name: 'Change Management', weight: '18%', publications: ['it-service-management'] },
 			{
 				name: 'Service Portfolio Management',
-				weight: '5%',
+				weight: '10%',
 				publications: ['it-service-management']
 			},
 			{
 				name: 'Service Catalog and Request Management',
-				weight: '25%',
+				weight: '18%',
 				publications: ['it-service-management']
 			},
 			{
 				name: 'Configuration Management Database',
-				weight: '5%',
+				weight: '12%',
 				publications: ['it-operations-management']
+			},
+			{
+				name: 'Implementation and Strategy',
+				weight: '4%',
+				publications: ['it-service-management', 'it-operations-management']
 			}
 		]
 	}
@@ -218,24 +223,39 @@ export const PHASE3_TRACK_DOC_SOURCES: TrackDocSource[] = [
 				publications: ['now-intelligence', 'platform-administration']
 			},
 			{
+				name: 'KPI Design and Strategy',
+				weight: '11%',
+				publications: ['now-intelligence', 'platform-administration']
+			},
+			{
 				name: 'Configure Indicators and Indicator Sources',
-				weight: '25%',
+				weight: '17%',
 				publications: ['now-intelligence']
 			},
 			{
 				name: 'Configure Breakdowns and Breakdown Sources',
-				weight: '25%',
+				weight: '17%',
 				publications: ['now-intelligence']
 			},
 			{ name: 'Data Collection', weight: '10%', publications: ['now-intelligence'] },
 			{
+				name: 'Data Governance and Quality',
+				weight: '8%',
+				publications: ['now-intelligence', 'platform-administration']
+			},
+			{
 				name: 'Data Visualization and Dashboards',
-				weight: '25%',
+				weight: '16%',
+				publications: ['now-intelligence']
+			},
+			{
+				name: 'Advanced Analytics',
+				weight: '7%',
 				publications: ['now-intelligence']
 			},
 			{
 				name: 'Administration and Advanced Implementation Solutions',
-				weight: '5%',
+				weight: '4%',
 				publications: ['now-intelligence', 'platform-administration']
 			}
 		]
@@ -253,27 +273,37 @@ export const PHASE3_TRACK_DOC_SOURCES: TrackDocSource[] = [
 		domains: [
 			{
 				name: 'Initial Domain Setup and Service Provider Architecture',
+				weight: '7%',
+				publications: ['platform-administration', 'integrate-applications']
+			},
+			{
+				name: 'MSP Operations Strategy',
+				weight: '11%',
+				publications: ['platform-administration']
+			},
+			{
+				name: 'Customer Onboarding and Tenant Lifecycle',
 				weight: '9%',
 				publications: ['platform-administration', 'integrate-applications']
 			},
 			{
 				name: 'Data Separation/Visibility',
-				weight: '24%',
+				weight: '20%',
 				publications: ['platform-administration']
 			},
 			{
 				name: 'Process Separation',
-				weight: '36%',
+				weight: '25%',
 				publications: ['platform-administration']
 			},
 			{
 				name: 'Foundational Data Management',
-				weight: '20%',
+				weight: '15%',
 				publications: ['platform-administration', 'integrate-applications']
 			},
 			{
 				name: 'Domain Support in Applications',
-				weight: '11%',
+				weight: '13%',
 				publications: [
 					'it-service-management',
 					'knowledge-management',
@@ -487,17 +517,18 @@ export const PHASE6_TRACK_DOC_SOURCES: TrackDocSource[] = [
 		officialName: 'Certified Implementation Specialist - Risk and Compliance',
 		publications: ['governance-risk-compliance'],
 		domains: [
-			{ name: 'GRC Overview', weight: '11.67%', publications: ['governance-risk-compliance'] },
-			{ name: 'Implementation Planning', weight: '5%', publications: ['governance-risk-compliance'] },
-			{ name: 'Entity Framework', weight: '20%', publications: ['governance-risk-compliance'] },
-			{ name: 'Policy and Compliance', weight: '25%', publications: ['governance-risk-compliance'] },
-			{ name: 'Risk and Advanced Risk', weight: '25%', publications: ['governance-risk-compliance'] },
+			{ name: 'GRC Overview', weight: '9%', publications: ['governance-risk-compliance'] },
+			{ name: 'Governance Strategy', weight: '10%', publications: ['governance-risk-compliance'] },
+			{ name: 'Implementation Planning', weight: '8%', publications: ['governance-risk-compliance'] },
+			{ name: 'Entity Framework', weight: '13%', publications: ['governance-risk-compliance'] },
+			{ name: 'Policy and Compliance', weight: '22%', publications: ['governance-risk-compliance'] },
+			{ name: 'Risk and Advanced Risk', weight: '18%', publications: ['governance-risk-compliance'] },
 			{
 				name: 'Common Elements and Extended Capabilities',
-				weight: '8.33%',
+				weight: '7%',
 				publications: ['governance-risk-compliance']
 			},
-			{ name: 'Audit and Advanced Audit', weight: '5%', publications: ['governance-risk-compliance'] }
+			{ name: 'Audit and Advanced Audit', weight: '13%', publications: ['governance-risk-compliance'] }
 		]
 	},
 	{
@@ -507,12 +538,22 @@ export const PHASE6_TRACK_DOC_SOURCES: TrackDocSource[] = [
 		domains: [
 			{
 				name: 'SIR Overview and Data Visualization',
-				weight: '15%',
+				weight: '11%',
 				publications: ['security-incident-response', 'security-management']
 			},
 			{
+				name: 'Incident Response Strategy',
+				weight: '12%',
+				publications: ['security-incident-response', 'security-management']
+			},
+			{
+				name: 'Implementation Planning',
+				weight: '10%',
+				publications: ['security-incident-response']
+			},
+			{
 				name: 'Security Incident Creation and Threat Intelligence',
-				weight: '14%',
+				weight: '12%',
 				publications: ['security-incident-response']
 			},
 			{
@@ -522,17 +563,17 @@ export const PHASE6_TRACK_DOC_SOURCES: TrackDocSource[] = [
 			},
 			{
 				name: 'Security Incident Response Management',
-				weight: '15%',
+				weight: '14%',
 				publications: ['security-incident-response']
 			},
 			{
 				name: 'Risk Calculations and Post Incident Response',
-				weight: '12%',
+				weight: '10%',
 				publications: ['security-incident-response']
 			},
 			{
 				name: 'Automation and Standard Processes',
-				weight: '30%',
+				weight: '17%',
 				publications: ['security-incident-response']
 			}
 		]
@@ -543,33 +584,38 @@ export const PHASE6_TRACK_DOC_SOURCES: TrackDocSource[] = [
 		publications: ['it-operations-management', 'service-mapping', 'discovery'],
 		domains: [
 			{
+				name: 'Service Design Strategy',
+				weight: '12%',
+				publications: ['service-mapping', 'it-operations-management']
+			},
+			{
 				name: 'Service Mapping Pattern Design',
-				weight: '30%',
+				weight: '20%',
 				publications: ['service-mapping', 'it-operations-management']
 			},
 			{
 				name: 'Service Mapping Configuration',
-				weight: '20%',
+				weight: '14%',
 				publications: ['service-mapping']
 			},
 			{
 				name: 'Discovery Configuration',
-				weight: '15%',
+				weight: '16%',
 				publications: ['discovery', 'it-operations-management']
 			},
 			{
 				name: 'Machine Learning',
-				weight: '10%',
+				weight: '14%',
 				publications: ['service-mapping']
 			},
 			{
 				name: 'Configuration Management Database',
-				weight: '15%',
+				weight: '11%',
 				publications: ['cmdb', 'it-operations-management']
 			},
 			{
 				name: 'Service Mapping Engagement Readiness',
-				weight: '10%',
+				weight: '13%',
 				publications: ['service-mapping']
 			}
 		]
@@ -583,28 +629,38 @@ export const PHASE7_TRACK_DOC_SOURCES: TrackDocSource[] = [
 		publications: ['it-asset-management', 'software-asset-management'],
 		domains: [
 			{
-				name: 'Software Asset Core Overview and Fundamentals',
-				weight: '14%',
+				name: 'SAM Overview and Fundamentals',
+				weight: '11%',
 				publications: ['it-asset-management', 'software-asset-management']
 			},
 			{
+				name: 'SAM Strategy and Optimization',
+				weight: '12%',
+				publications: ['software-asset-management']
+			},
+			{
+				name: 'Implementation Planning',
+				weight: '10%',
+				publications: ['software-asset-management']
+			},
+			{
 				name: 'Data Integrity Attributes and Sources',
-				weight: '28%',
+				weight: '20%',
 				publications: ['software-asset-management']
 			},
 			{
 				name: 'Practical Management of Software Compliance',
-				weight: '30%',
+				weight: '24%',
 				publications: ['software-asset-management']
 			},
 			{
 				name: 'Operational Integration of Software Processes',
-				weight: '13%',
+				weight: '14%',
 				publications: ['software-asset-management']
 			},
 			{
-				name: 'Extending SAM',
-				weight: '15%',
+				name: 'Cloud and SaaS Management',
+				weight: '9%',
 				publications: ['software-asset-management']
 			}
 		]
@@ -768,12 +824,12 @@ export const PHASE8_TRACK_DOC_SOURCES: TrackDocSource[] = [
 		domains: [
 			{
 				name: 'HR System Architecture',
-				weight: '30%',
+				weight: '24%',
 				publications: ['employee-service-management', 'human-resources']
 			},
 			{
 				name: 'Core HR Applications and Employee Center',
-				weight: '30%',
+				weight: '36%',
 				publications: ['employee-service-management', 'employee-center', 'human-resources']
 			},
 			{
@@ -783,8 +839,18 @@ export const PHASE8_TRACK_DOC_SOURCES: TrackDocSource[] = [
 			},
 			{
 				name: 'Platform, Role, and Contextual Security',
-				weight: '20%',
+				weight: '6%',
 				publications: ['platform-security', 'employee-service-management', 'human-resources']
+			},
+			{
+				name: 'Integration Strategy',
+				weight: '10%',
+				publications: ['employee-service-management', 'human-resources', 'integrate-applications']
+			},
+			{
+				name: 'Implementation and Change Management',
+				weight: '4%',
+				publications: ['employee-service-management', 'human-resources']
 			}
 		]
 	}
@@ -792,7 +858,12 @@ export const PHASE8_TRACK_DOC_SOURCES: TrackDocSource[] = [
 
 export const ALL_TRACK_DOC_SOURCES: TrackDocSource[] = [
 	...PHASE1_TRACK_DOC_SOURCES,
-	...PHASE3_TRACK_DOC_SOURCES
+	...PHASE3_TRACK_DOC_SOURCES,
+	...PHASE4_TRACK_DOC_SOURCES,
+	...PHASE5_TRACK_DOC_SOURCES,
+	...PHASE6_TRACK_DOC_SOURCES,
+	...PHASE7_TRACK_DOC_SOURCES,
+	...PHASE8_TRACK_DOC_SOURCES
 ];
 
 export function getTrackDocSource(trackCode: string): TrackDocSource | undefined {
