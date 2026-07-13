@@ -63,6 +63,12 @@ export async function ensureConvexUser(args: ConvexUserSyncArgs): Promise<Convex
 	const convex = createAuthedClient(workosToken);
 	if (!convex) return { role: 'user' };
 
+	const baseSession = {
+		name: profile.name,
+		profileImage: profile.profileImage,
+		provider: profile.provider
+	};
+
 	try {
 		const result = await convex.mutation(api.auth.createOrUpdateUser, profile);
 		const role: ConvexUserSession['role'] = result.role === 'admin' ? 'admin' : 'user';
@@ -72,13 +78,23 @@ export async function ensureConvexUser(args: ConvexUserSyncArgs): Promise<Convex
 			profileImage: result.profileImage ?? profile.profileImage,
 			provider: result.provider ?? profile.provider
 		};
-	} catch (error) {
-		console.error('ensureConvexUser failed:', error);
-		return {
-			role: 'user',
-			name: profile.name,
-			profileImage: profile.profileImage,
-			provider: profile.provider
-		};
+	} catch (mutationError) {
+		console.error('ensureConvexUser mutation failed:', mutationError);
+		// Fall back to stored role when profile sync fails but JWT auth still works.
+		try {
+			const user = await convex.query(api.auth.getCurrentUser, {});
+			if (user) {
+				const role: ConvexUserSession['role'] = user.role === 'admin' ? 'admin' : 'user';
+				return {
+					role,
+					name: user.name ?? profile.name,
+					profileImage: user.profileImage ?? profile.profileImage,
+					provider: user.provider ?? profile.provider
+				};
+			}
+		} catch (queryError) {
+			console.error('ensureConvexUser getCurrentUser fallback failed:', queryError);
+		}
+		return { role: 'user', ...baseSession };
 	}
 }

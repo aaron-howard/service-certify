@@ -3,7 +3,10 @@ import {
 	getJwtAuthTimeSeconds,
 	getJwtExpirySeconds,
 	isAccessTokenExpired,
-	isRecentAuthentication
+	isRecentAuthentication,
+	resolveWorkOsSession,
+	WORKOS_ACCESS_COOKIE,
+	WORKOS_USER_COOKIE
 } from './workos-session';
 
 function jwtWithClaims(claims: Record<string, unknown>): string {
@@ -55,5 +58,32 @@ describe('workos-session', () => {
 	it('rejects auth_time outside max age', () => {
 		const authTime = Math.floor(Date.now() / 1000) - 600;
 		expect(isRecentAuthentication(jwtWithClaims({ auth_time: authTime }), 300)).toBe(false);
+	});
+
+	it('resolveWorkOsSession returns null when no auth cookies are set', async () => {
+		const cookies = {
+			get: () => undefined,
+			set: () => undefined,
+			delete: () => undefined
+		};
+		await expect(resolveWorkOsSession(cookies, false)).resolves.toBeNull();
+	});
+
+	it('resolveWorkOsSession returns a valid access token without refresh', async () => {
+		const exp = Math.floor(Date.now() / 1000) + 3600;
+		const accessToken = jwtWithExp(exp);
+		const cookies = {
+			get: (name: string) => {
+				if (name === WORKOS_ACCESS_COOKIE) return accessToken;
+				if (name === WORKOS_USER_COOKIE) return 'user_01TEST';
+				return undefined;
+			},
+			set: () => undefined,
+			delete: () => undefined
+		};
+		await expect(resolveWorkOsSession(cookies, false)).resolves.toEqual({
+			accessToken,
+			userId: 'user_01TEST'
+		});
 	});
 });
