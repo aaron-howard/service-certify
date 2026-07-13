@@ -40,16 +40,18 @@ UPSTASH_REDIS_REST_TOKEN=your_token_here
 
 ### 5. Verify
 
-Test rate limiting:
+Prove live Upstash connectivity and sliding-window denial (not the fail-open unit tests):
+
 ```bash
-# Should work (under limit)
-curl https://service-certify.com/api/health
+# Phase A: hits your real Upstash DB (requires UPSTASH_* in .env.local)
+# Phase B: if npm run dev is up, also proves POST /api/practice/grade → 429 after 10 reqs
+npm run verify:upstash
 
-# Repeat rapidly 1000+ times
-for i in {1..1100}; do curl https://service-certify.com/api/health; done
-
-# Should get 429 Too Many Requests after 1000 requests in 60 seconds
+# Optional: point Phase B at another origin
+VERIFY_BASE_URL=http://localhost:5173 npm run verify:upstash
 ```
+
+Do **not** hammer `/api/health` (1000/min) just to verify limits — that burns free-tier command quota. The verify script uses a tiny ZSET probe plus the grade route’s 10/min IP limit.
 
 ## Current Rate Limits
 
