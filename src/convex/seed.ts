@@ -46,6 +46,7 @@ export const devQuestions = internalMutation({
 				...(q.correctMatches ? { correctMatches: q.correctMatches.map((p) => ({ ...p })) } : {}),
 				explanation: q.explanation,
 				sourceUrls: q.sourceUrls,
+				...(q.domain ? { domain: q.domain } : {}),
 				difficulty: 'dev'
 			});
 		}
