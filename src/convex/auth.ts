@@ -2,6 +2,7 @@ import { mutation, query } from './_generated/server';
 import { v } from 'convex/values';
 import { isAdminEmail } from './lib/adminEmails';
 import { isAdminUser, resolveUserRole, getAuthenticatedUser } from './lib/authorization';
+import { canonicalAuthEmail, workosUserIdFromIdentity } from './lib/workosIdentity';
 
 /**
  * Get or create user from WorkOS identity.
@@ -21,13 +22,14 @@ export const createOrUpdateUser = mutation({
 		if (!identity) {
 			throw new Error('Not authenticated');
 		}
-		if (identity.subject !== args.workosId) {
+
+		const identityWorkosId = workosUserIdFromIdentity(identity);
+		if (!identityWorkosId || identityWorkosId !== args.workosId) {
 			throw new Error('workosId does not match authenticated identity');
 		}
-		if (identity.email && identity.email.toLowerCase() !== args.email.toLowerCase()) {
-			throw new Error('email does not match authenticated identity');
-		}
-		if (!args.workosId || !args.email) {
+
+		const email = canonicalAuthEmail(identity, args.email);
+		if (!args.workosId || !email) {
 			throw new Error('Missing required fields: workosId, email');
 		}
 
@@ -44,14 +46,14 @@ export const createOrUpdateUser = mutation({
 				provider?: string;
 				role?: 'admin';
 			} = {
-				email: args.email,
+				email,
 				name: args.name,
 				profileImage: args.profileImage,
 				provider: args.provider
 			};
 
 			// Promote allowlisted emails; never downgrade admins on profile sync.
-			if (!isAdminUser(existing) && isAdminEmail(args.email)) {
+			if (!isAdminUser(existing) && isAdminEmail(email)) {
 				patch.role = 'admin';
 			}
 
@@ -67,10 +69,10 @@ export const createOrUpdateUser = mutation({
 			};
 		}
 
-		const role = isAdminEmail(args.email) ? 'admin' : 'user';
+		const role = isAdminEmail(email) ? 'admin' : 'user';
 		const userId = await ctx.db.insert('users', {
 			workosId: args.workosId,
-			email: args.email,
+			email,
 			name: args.name,
 			profileImage: args.profileImage,
 			provider: args.provider,

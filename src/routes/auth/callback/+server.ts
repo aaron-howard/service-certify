@@ -2,6 +2,7 @@ import { redirect } from '@sveltejs/kit';
 import type { RequestHandler } from '@sveltejs/kit';
 import { getWorkOS, getWorkOSClientId, isWorkOSConfigured, type OAuthProviderSlug } from '$lib/workos.server';
 import { buildConvexUserSyncPayload } from '$lib/auth.server';
+import { setWorkOsAuthCookies } from '$lib/workos-session';
 
 export const GET: RequestHandler = async ({ url, cookies }) => {
 	if (!isWorkOSConfigured()) {
@@ -37,23 +38,17 @@ export const GET: RequestHandler = async ({ url, cookies }) => {
 			clientId
 		});
 
-		cookies.set('workos_token', token.accessToken, {
-			httpOnly: true,
-			secure,
-			sameSite: 'lax',
-			path: '/',
-			maxAge: 7 * 24 * 60 * 60
-		});
-
 		const user = await workos.userManagement.getUser(token.user.id);
 
-		cookies.set('workos_user_id', user.id, {
-			httpOnly: true,
-			secure,
-			sameSite: 'lax',
-			path: '/',
-			maxAge: 7 * 24 * 60 * 60
-		});
+		setWorkOsAuthCookies(
+			cookies,
+			{
+				accessToken: token.accessToken,
+				refreshToken: token.refreshToken,
+				userId: user.id
+			},
+			secure
+		);
 
 		const { syncUserToConvex } = await import('$lib/convex.server');
 		const oauthProvider = cookies.get('auth_provider') as OAuthProviderSlug | undefined;

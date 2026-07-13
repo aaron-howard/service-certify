@@ -1,6 +1,7 @@
 import type { Doc } from '../_generated/dataModel';
 import type { MutationCtx, QueryCtx } from '../_generated/server';
 import { isAdminEmail } from './adminEmails';
+import { workosUserIdFromIdentity } from './workosIdentity';
 
 export type UserRole = 'user' | 'admin';
 
@@ -23,10 +24,15 @@ export async function getAuthenticatedUser(
 	const identity = await ctx.auth.getUserIdentity();
 	if (!identity) return null;
 
-	let user = await ctx.db
-		.query('users')
-		.withIndex('by_workosId', (q) => q.eq('workosId', identity.subject))
-		.unique();
+	const workosId = workosUserIdFromIdentity(identity);
+	let user: Doc<'users'> | null = null;
+
+	if (workosId) {
+		user = await ctx.db
+			.query('users')
+			.withIndex('by_workosId', (q) => q.eq('workosId', workosId))
+			.unique();
+	}
 
 	if (!user && identity.email) {
 		user = await ctx.db

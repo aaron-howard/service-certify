@@ -405,6 +405,7 @@
 			if (isFullMock) {
 				const response = await fetch('/api/practice/grade', {
 					method: 'POST',
+					credentials: 'same-origin',
 					headers: { 'Content-Type': 'application/json' },
 					body: JSON.stringify(payload)
 				});

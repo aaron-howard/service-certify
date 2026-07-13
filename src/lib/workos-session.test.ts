@@ -1,10 +1,24 @@
+import type { Cookies } from '@sveltejs/kit';
 import { describe, expect, it } from 'vitest';
 import {
 	getJwtAuthTimeSeconds,
 	getJwtExpirySeconds,
 	isAccessTokenExpired,
-	isRecentAuthentication
+	isRecentAuthentication,
+	resolveWorkOsSession,
+	WORKOS_ACCESS_COOKIE,
+	WORKOS_USER_COOKIE
 } from './workos-session';
+
+function mockCookies(overrides: Partial<Pick<Cookies, 'get' | 'set' | 'delete'>>): Cookies {
+	return {
+		get: overrides.get ?? (() => undefined),
+		set: overrides.set ?? (() => undefined),
+		delete: overrides.delete ?? (() => undefined),
+		getAll: () => [],
+		serialize: () => ''
+	};
+}
 
 function jwtWithClaims(claims: Record<string, unknown>): string {
 	const header = Buffer.from(JSON.stringify({ alg: 'none', typ: 'JWT' })).toString('base64url');
@@ -55,5 +69,25 @@ describe('workos-session', () => {
 	it('rejects auth_time outside max age', () => {
 		const authTime = Math.floor(Date.now() / 1000) - 600;
 		expect(isRecentAuthentication(jwtWithClaims({ auth_time: authTime }), 300)).toBe(false);
+	});
+
+	it('resolveWorkOsSession returns null when no auth cookies are set', async () => {
+		await expect(resolveWorkOsSession(mockCookies({}), false)).resolves.toBeNull();
+	});
+
+	it('resolveWorkOsSession returns a valid access token without refresh', async () => {
+		const exp = Math.floor(Date.now() / 1000) + 3600;
+		const accessToken = jwtWithExp(exp);
+		const cookies = mockCookies({
+			get: (name) => {
+				if (name === WORKOS_ACCESS_COOKIE) return accessToken;
+				if (name === WORKOS_USER_COOKIE) return 'user_01TEST';
+				return undefined;
+			}
+		});
+		await expect(resolveWorkOsSession(cookies, false)).resolves.toEqual({
+			accessToken,
+			userId: 'user_01TEST'
+		});
 	});
 });
