@@ -1,5 +1,20 @@
 import type { Cookies } from '@sveltejs/kit';
 
+export const WORKOS_ACCESS_COOKIE = 'workos_token';
+export const WORKOS_REFRESH_COOKIE = 'workos_refresh_token';
+export const WORKOS_USER_COOKIE = 'workos_user_id';
+
+const AUTH_COOKIE_MAX_AGE_SECONDS = 7 * 24 * 60 * 60;
+
+const authCookieOptions = (secure: boolean) =>
+	({
+		httpOnly: true,
+		secure,
+		sameSite: 'lax',
+		path: '/',
+		maxAge: AUTH_COOKIE_MAX_AGE_SECONDS
+	}) as const;
+
 type WorkOsAccessTokenPayload = {
 	exp?: unknown;
 	auth_time?: unknown;
@@ -53,7 +68,84 @@ export function isAccessTokenExpired(token: string, leewaySeconds = 30): boolean
 	return Date.now() >= (exp - leewaySeconds) * 1000;
 }
 
+export function setWorkOsAuthCookies(
+	cookies: Cookies,
+	tokens: { accessToken: string; refreshToken?: string; userId: string },
+	secure: boolean
+): void {
+	const opts = authCookieOptions(secure);
+	cookies.set(WORKOS_ACCESS_COOKIE, tokens.accessToken, opts);
+	cookies.set(WORKOS_USER_COOKIE, tokens.userId, opts);
+	if (tokens.refreshToken) {
+		cookies.set(WORKOS_REFRESH_COOKIE, tokens.refreshToken, opts);
+	}
+}
+
 export function clearWorkOsAuthCookies(cookies: Cookies): void {
-	cookies.delete('workos_token', { path: '/' });
-	cookies.delete('workos_user_id', { path: '/' });
+	cookies.delete(WORKOS_ACCESS_COOKIE, { path: '/' });
+	cookies.delete(WORKOS_USER_COOKIE, { path: '/' });
+	cookies.delete(WORKOS_REFRESH_COOKIE, { path: '/' });
+}
+
+export type ResolvedWorkOsSession = {
+	accessToken: string;
+	userId: string;
+};
+
+/**
+ * Return a valid access token, refreshing with the httpOnly refresh cookie when needed.
+ * Clears auth cookies when refresh is impossible or fails.
+ */
+export async function resolveWorkOsSession(
+	cookies: Cookies,
+	secure: boolean
+): Promise<ResolvedWorkOsSession | null> {
+	const userId = cookies.get(WORKOS_USER_COOKIE);
+	const accessToken = cookies.get(WORKOS_ACCESS_COOKIE);
+
+	if (!userId) {
+		if (accessToken) clearWorkOsAuthCookies(cookies);
+		return null;
+	}
+
+	if (accessToken && !isAccessTokenExpired(accessToken)) {
+		return { accessToken, userId };
+	}
+
+	const refreshToken = cookies.get(WORKOS_REFRESH_COOKIE);
+	if (!refreshToken) {
+		clearWorkOsAuthCookies(cookies);
+		return null;
+	}
+
+	const { getWorkOS, getWorkOSClientId } = await import('$lib/workos.server');
+	const workos = getWorkOS();
+	const clientId = getWorkOSClientId();
+	if (!workos || !clientId) {
+		clearWorkOsAuthCookies(cookies);
+		return null;
+	}
+
+	try {
+		const response = await workos.userManagement.authenticateWithRefreshToken({
+			refreshToken,
+			clientId
+		});
+
+		setWorkOsAuthCookies(
+			cookies,
+			{
+				accessToken: response.accessToken,
+				refreshToken: response.refreshToken ?? refreshToken,
+				userId: response.user.id
+			},
+			secure
+		);
+
+		return { accessToken: response.accessToken, userId: response.user.id };
+	} catch (error) {
+		console.error('WorkOS token refresh failed:', error);
+		clearWorkOsAuthCookies(cookies);
+		return null;
+	}
 }

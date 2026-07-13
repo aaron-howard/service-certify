@@ -15,6 +15,7 @@ import type * as catalog_tracksCanonical from "../catalog/tracksCanonical.js";
 import type * as lib_adminEmails from "../lib/adminEmails.js";
 import type * as lib_authorization from "../lib/authorization.js";
 import type * as lib_practiceAccess from "../lib/practiceAccess.js";
+import type * as lib_workosIdentity from "../lib/workosIdentity.js";
 import type * as practiceQuestions from "../practiceQuestions.js";
 import type * as seed from "../seed.js";
 import type * as seed_devQuestionBank from "../seed/devQuestionBank.js";
@@ -35,6 +36,7 @@ declare const fullApi: ApiFromModules<{
   "lib/adminEmails": typeof lib_adminEmails;
   "lib/authorization": typeof lib_authorization;
   "lib/practiceAccess": typeof lib_practiceAccess;
+  "lib/workosIdentity": typeof lib_workosIdentity;
   practiceQuestions: typeof practiceQuestions;
   seed: typeof seed;
   "seed/devQuestionBank": typeof seed_devQuestionBank;

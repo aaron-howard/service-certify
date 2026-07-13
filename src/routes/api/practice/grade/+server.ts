@@ -2,6 +2,7 @@ import { rateLimit } from '$lib/rateLimit';
 import { api } from '$convex/_generated/api';
 import { ConvexHttpClient } from 'convex/browser';
 import { env as publicEnv } from '$env/dynamic/public';
+import { resolveWorkOsSession } from '$lib/workos-session';
 import type { RequestHandler } from '@sveltejs/kit';
 
 /**
@@ -11,7 +12,7 @@ import type { RequestHandler } from '@sveltejs/kit';
  * POST /api/practice/grade
  * Body: { trackCode: string, mode?: 'sample' | 'full', answers: { order: number, selectedIndex: number }[] }
  */
-export const POST: RequestHandler = async ({ request, cookies, locals }) => {
+export const POST: RequestHandler = async ({ request, cookies, locals, url }) => {
 	const clientIp = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown';
 	const rateLimitKey = locals.workosUserId ?? clientIp;
 
@@ -78,14 +79,23 @@ export const POST: RequestHandler = async ({ request, cookies, locals }) => {
 		const convex = new ConvexHttpClient(convexUrl);
 
 		if (practiceMode === 'full') {
-			const workosToken = cookies.get('workos_token');
-			if (!workosToken) {
-				return new Response(JSON.stringify({ error: 'Not authenticated' }), {
-					status: 401,
-					headers: { 'Content-Type': 'application/json' }
-				});
+			const secure = url.protocol === 'https:';
+			const session =
+				locals.workosToken && locals.workosUserId
+					? { accessToken: locals.workosToken, userId: locals.workosUserId }
+					: await resolveWorkOsSession(cookies, secure);
+			if (!session) {
+				return new Response(
+					JSON.stringify({
+						error: 'Your session expired. Sign in again to submit your full mock exam.'
+					}),
+					{
+						status: 401,
+						headers: { 'Content-Type': 'application/json' }
+					}
+				);
 			}
-			convex.setAuth(workosToken);
+			convex.setAuth(session.accessToken);
 		}
 
 		const result = await convex.mutation(api.practiceQuestions.gradeAnswers, {
