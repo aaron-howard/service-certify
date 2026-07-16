@@ -1,7 +1,7 @@
 # Authentication setup
 
 **Status:** WorkOS is implemented (Phase C complete for core auth).  
-**Last updated:** 2026-07-10
+**Last updated:** 2026-07-16
 
 Service Certify uses **WorkOS** for OAuth (Google, Microsoft, GitHub). Session cookies live in SvelteKit; Convex stores the app `users` row and enforces admin-only full mock exams.
 

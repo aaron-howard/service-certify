@@ -26,7 +26,7 @@ Convex agent skills for common tasks can be installed by running
 | Service | Command | Notes |
 |---------|---------|-------|
 | SvelteKit dev server | `npm run dev` | Vite at http://localhost:5173 |
-| Convex backend | `npm run convex:dev` | Requires `PUBLIC_CONVEX_URL` in `.env.local` |
+| Convex backend | `npm run convex:dev` | Uses `.env.convex`; set `PUBLIC_CONVEX_URL` in `.env.local` for the app |
 
 ### Key dev commands
 
@@ -36,7 +36,6 @@ Convex agent skills for common tasks can be installed by running
 
 ### Caveats
 
-- The app runs **without Convex** using static data from `src/lib/data/`. Practice questions and live catalog queries require a Convex deployment (`PUBLIC_CONVEX_URL`).
-- `svelte-check` emits a single warning about missing `@types/node` type definitions — this is benign and does not block the build.
+- The app runs **without Convex** using static data from `src/lib/data/`. The exam catalog is static; Convex is required for practice questions, OAuth→Convex user sync, and progress persistence (`PUBLIC_CONVEX_URL`).
 - The `postinstall` script runs `patch-package` which applies a patch to `@sveltejs/adapter-vercel` for Windows symlink compat. This is safe on Linux.
-- When Convex is configured, run `npm run seed:dev` and `npm run seed:dev:questions` to populate dev data (tracks + practice questions).
+- When Convex is configured, run `npm run seed:dev` and `npm run seed:dev:questions` to populate dev data (tracks + practice questions). Seed commands use `--env-file .env.convex`.
