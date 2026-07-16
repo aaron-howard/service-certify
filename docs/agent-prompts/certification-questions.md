@@ -101,4 +101,4 @@ After updating the bank:
 npm run seed:dev:questions
 ```
 
-Requires a Convex deployment in `.env.local` (same as `npm run seed:dev`). Scripts use `convex run --push` so code is pushed before the internal mutation runs.
+Requires a Convex deployment. `npm run seed:dev:questions` uses `--env-file .env.convex` (see `package.json`). Set `PUBLIC_CONVEX_URL` in `.env.local` for the SvelteKit app.

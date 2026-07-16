@@ -114,7 +114,7 @@ Your app now has:
 | **Errors** | Sentry | ✅ `handleError` + user context wired — configure DSN in Vercel |
 | **Performance** | Vercel Speed Insights | ✅ Wired — activate in dashboard |
 | **Availability** | `/api/health` endpoint | ✅ Live — add external uptime monitor |
-| **Security** | CodeQL + branch protection | ✅ CI present — enable branch protection in GitHub UI |
+| **Security** | Branch protection + `npm audit` CI | ✅ CI workflows present — enable branch protection in GitHub UI |
 
 ## Setting Up Alerts
 

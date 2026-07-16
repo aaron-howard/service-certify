@@ -2,6 +2,8 @@
 
 Service Certify uses **Vitest** for fast, modern testing with TypeScript support.
 
+**Current baseline (Jul 2026):** 45 test files, **362 tests** — run `npm test` to verify.
+
 ## Quick Start
 
 ### Run Tests
@@ -20,7 +22,7 @@ npm test src/lib/rateLimit.test.ts
 npm test -- --grep "Rate Limit"
 
 # Generate coverage report
-npm test:coverage
+npm run test:coverage
 ```
 
 ### View UI Dashboard
@@ -50,16 +52,19 @@ src/
     └── api/
         └── health/
             ├── +server.ts
-            └── +server.test.ts
+            └── __tests__/
+                └── health.test.ts
 ```
 
 ## Current Test Coverage
 
-| Module | Coverage | Tests |
-|--------|----------|-------|
-| **rateLimit.ts** | 80%+ | Unit tests for rate limiting logic |
-| **practiceQuestions** | 70%+ | Input validation tests |
-| **health endpoint** | 60%+ | Response format + status tests |
+| Area | Tests |
+|------|-------|
+| **Rate limiting** | `rateLimit.test.ts` |
+| **Practice / grading** | `practiceQuestions.test.ts`, choice shuffle, grade API |
+| **Health endpoint** | `health/__tests__/health.test.ts` |
+| **Question bank quality** | `devQuestionBank.test.ts`, `trackQuality.test.ts`, per-track `*Realism.test.ts` |
+| **Auth / progress** | Authorization helpers, `userProgress` |
 
 **Goal: 70%+ coverage for critical paths**
 
@@ -312,7 +317,7 @@ When adding features:
 2. Test inputs (valid, invalid, edge cases)
 3. Test outputs (correct type, structure, values)
 4. Test errors (graceful degradation)
-5. Run `npm test:coverage` to check coverage
+5. Run `npm run test:coverage` to check coverage
 6. Commit tests with your feature
 
 Example checklist:
@@ -332,9 +337,9 @@ Example checklist:
 - Catalog + practice E2E (static / sample flows)
 
 **Auth (extend coverage):**
-- Authentication flows (WorkOS) in E2E
+- Authentication flows (WorkOS) in E2E (`tests/e2e/auth-flows.spec.ts`)
 - Protected full-mock endpoints
-- User progress tracking (once write path exists)
+- User progress tracking (implemented via `recordPracticeSession` on grade)
 
 **Phase D (payments):** Add integration tests
 - Payment processing

@@ -53,7 +53,7 @@ If still failing:
 
 - [ ] Convex dashboard shows green health status
 - [ ] Open `/exams` → exam catalog loads
-- [ ] Open `/exams/[any-slug]` → questions load
+- [ ] Open `/exams/[any-slug]/practice` → questions load
 - [ ] Console has no ConvexError messages
 
 ## Rollback

@@ -1,6 +1,6 @@
 # System Architecture
 
-**Last updated:** 2026-07-10
+**Last updated:** 2026-07-16
 
 ## Overview
 
@@ -20,8 +20,10 @@ Service Certify is a three-tier web application for practicing ServiceNow certif
 │  ┌──────────────────────────────────────────────────────────────┐   │
 │  │ SvelteKit Server (Node ≥22.11, SSR + API routes)             │   │
 │  │ • WorkOS OAuth session cookies                               │   │
-│  │ • Routes: /, /exams, /exams/[slug], /practice, /dashboard,   │   │
-│  │   /membership, /auth/*, /api/health, /api/practice/grade     │   │
+│  │ • Routes: /, /exams, /exams/[slug], /exams/[slug]/practice,  │   │
+│  │   /dashboard, /settings, /membership, /terms, /privacy,      │   │
+│  │   /support, /auth/*, /api/health, /api/practice/grade,       │   │
+│  │   /api/auth/convex-token, /api/account/delete                │   │
 │  │ • Rate limiting (Upstash) on health + grade                  │   │
 │  └──────────────────────────────────────────────────────────────┘   │
 └────────────────────────────┬────────────────────────────────────────┘
@@ -40,7 +42,7 @@ Service Certify is a three-tier web application for practicing ServiceNow certif
 │  • users (workosId, email, role, …)                                  │
 │  • certificationTracks                                               │
 │  • practiceQuestions (single / multi / match)                        │
-│  • userProgress (schema ready; writes not wired yet)                 │
+│  • userProgress (written on authenticated gradeAnswers)              │
 └──────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -54,7 +56,7 @@ Service Certify is a three-tier web application for practicing ServiceNow certif
 2. **Open exam detail** → Static exam metadata + CTA for sample or full mock.
 3. **Practice session** → Client loads questions via Convex `listByTrackCode` (`mode=sample` public, up to 3 questions; `mode=full` requires admin JWT).
 4. **Submit** → `POST /api/practice/grade` (IP rate-limited) → Convex `gradeAnswers` → score + explanations returned to client.
-5. **Progress** → Not persisted yet. `userProgress` table exists for a future write path; `/dashboard` is a UI shell with placeholder metrics.
+5. **Progress** → Authenticated `gradeAnswers` calls `recordPracticeSession` in `userProgress.ts`; `/dashboard` lists live progress via `listForCurrentUser`.
 
 ### Authentication (implemented)
 

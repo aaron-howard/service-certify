@@ -94,7 +94,7 @@ The export script validates every question against the schema:
 ```
 📊 QUALITY EXPORT SUMMARY
 ============================================================
-Total Questions: 2,100
+Total Questions: 2,072
 Exported at: 2026-07-06T15:30:00Z
 
 📚 By Track Code:
@@ -109,12 +109,12 @@ Exported at: 2026-07-06T15:30:00Z
   match: 5 (0.2%)
 
 🔗 Source URLs:
-  With URLs: 2,100
+  With URLs: 2,072
   Missing URLs: 0
   Average per question: 1.05
 
 📝 Explanations:
-  Valid: 2,100
+  Valid: 2,072
   Missing: 0
   Too short (<20 chars): 0
   Too long (>3000 chars): 0
