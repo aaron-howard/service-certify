@@ -1,8 +1,8 @@
 # Production Readiness Audit
 
-**Date:** 2026-07-10  
+**Date:** 2026-07-16  
 **Scope:** Soft-launch MVP (practice exams + auth + ops). Membership/payments are tracked as Phase D, not launch blockers.  
-**Status:** Soft-launch code P0–P2 addressed (P2 on `feat/p2-product-completeness`). Remaining soft-launch work is mostly manual ops (env, seed, Sentry DSN, uptime, branch protection).
+**Status:** Soft-launch code P0–P2 merged to `main`. Remaining soft-launch work is mostly manual ops (env, seed, Sentry DSN, uptime, branch protection).
 
 This is the living checklist referenced by monitoring, testing, and rate-limiting docs. Update it when launch criteria change.
 
@@ -14,12 +14,12 @@ This is the living checklist referenced by monitoring, testing, and rate-limitin
 |------|--------|-------|
 | Core practice UX | Ready | Catalog, detail, practice (single/multi/match), grade API |
 | Question bank | Ready | 22 tracks, v2 rewrites complete, bank targets met |
-| Auth (WorkOS) | Mostly ready | JWT required for user sync; profile page and progress writes still pending |
+| Auth (WorkOS) | Ready | JWT required for user sync; `/settings` profile + account deletion; progress writes on grade |
 | Observability | Code ready | `handleError` + user context wired; set DSN / Speed Insights / uptime in dashboards |
 | Rate limiting | Code ready | Fail-closed in production without Upstash; configure Redis for prod |
 | Payments / membership | Not started | `/membership` placeholder; Phase D |
 | Dashboard / progress | Ready | Auth-gated dashboard; progress written on grade |
-| Docs | Updated | Audit + architecture/auth docs refreshed Jul 2026 |
+| Docs | Updated | Audit + architecture/auth docs refreshed 2026-07-16 |
 
 ---
 
@@ -56,9 +56,12 @@ This is the living checklist referenced by monitoring, testing, and rate-limitin
 - [x] Per-user grade rate-limit keys when signed in
 - [x] Vercel Speed Insights wired in layout
 - [x] Upstash rate limiting on health + grade routes
-- [x] Vitest unit tests + Playwright E2E/a11y
-- [x] CI: check, test, build, e2e, npm-audit
+- [x] Vitest unit tests (362) + Playwright E2E/a11y
+- [x] CI workflows: `CI` (check-and-build, e2e-tests) + `Security audit` (npm-audit)
 - [x] Runbooks: Vercel rollback, Convex restart, backup restore
+- [x] Strip pre-submit answer leakage (`listByTrackCode` omits explanations before grade)
+- [x] Harden public Convex auth APIs (`createOrUpdateUser` / `getUserByEmail` require WorkOS JWT)
+- [x] Require Upstash in production (rate limits fail closed when Redis env is unset)
 
 ---
 
@@ -68,9 +71,6 @@ This is the living checklist referenced by monitoring, testing, and rate-limitin
 
 | Item | Detail | Status |
 |------|--------|--------|
-| Strip pre-submit answer leakage | `listByTrackCode` must not return `explanation` before grade | Fixed on `fix/p0-security-hardening` |
-| Harden public Convex auth APIs | `createOrUpdateUser` / `getUserByEmail` require WorkOS JWT; sync uses `setAuth` | Fixed on `fix/p0-security-hardening` |
-| Require Upstash in production | Rate limits fail **closed** when Redis env is unset in production | Fixed on `fix/p0-security-hardening` |
 | Prod WorkOS + Convex env | Redirect URIs, `WORKOS_*`, `ADMIN_EMAILS`, `WORKOS_CLIENT_ID` in Convex, `PUBLIC_CONVEX_URL` on Vercel | Ops (manual) |
 | Seed production question bank | `npm run seed:prod` (or equivalent) against prod Convex | Ops (manual) |
 
@@ -78,22 +78,10 @@ This is the living checklist referenced by monitoring, testing, and rate-limitin
 
 | Item | Detail | Status |
 |------|--------|--------|
-| Wire Sentry `handleError` + user context | Client/server hooks + layout session sync | Fixed on `fix/p1-observability-e2e` |
-| Auth E2E coverage | Sign-in UI, anonymous full-mock redirect, sample without auth | Fixed on `fix/p1-observability-e2e` |
 | Configure Sentry DSN | Install Vercel→Sentry integration (or set DSN + `SENTRY_AUTH_TOKEN`) | Ops (manual) |
 | Enable Speed Insights | Vercel dashboard → Analytics | Ops (manual) |
 | External uptime monitor | Point at `/api/health` (UptimeRobot or similar) | Ops (manual) |
 | GitHub branch protection | Require PR + `check-and-build` + `e2e-tests` + `npm-audit` on `main` — see [BRANCH-PROTECTION-SETUP.md](./BRANCH-PROTECTION-SETUP.md) | Ops (manual) |
-
-### P2 — Product completeness (soft launch can ship without these)
-
-| Item | Detail | Status |
-|------|--------|--------|
-| User profile / settings page | `/settings` with profile + delete account | Fixed on `feat/p2-product-completeness` |
-| Persist practice progress | `gradeAnswers` upserts `userProgress`; dashboard lists it | Fixed on `feat/p2-product-completeness` |
-| Account deletion UI | Settings delete flow calls `auth.deleteAccount` | Fixed on `feat/p2-product-completeness` |
-| Wire `PUBLIC_APP_URL` | Canonical + OG tags via `SiteMeta` when set | Fixed on `feat/p2-product-completeness` |
-| Per-user rate limit keys | Grade API uses WorkOS user id when signed in | Fixed on `feat/p2-product-completeness` |
 
 ---
 
