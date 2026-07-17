@@ -1,6 +1,6 @@
 # Service Certify
 
-ServiceNow certification **practice** platform: browse exam tracks, open detail pages, and run multiple-choice practice sessions. The UI is a **SvelteKit** app; live catalog and question data can be backed by **Convex**. Visual design comes from the Stitch HTML prototypes in [`stitch_service_certify_prd/`](./stitch_service_certify_prd/) and the **Editorial Architect** tokens in [`stitch_service_certify_prd/stitch_service_certify_prd/nexus_academy/DESIGN.md`](./stitch_service_certify_prd/stitch_service_certify_prd/nexus_academy/DESIGN.md).
+ServiceNow certification **practice** platform: browse exam tracks, open detail pages, and run multiple-choice practice sessions. The UI is a **SvelteKit** app; the exam catalog is static (`src/lib/data/exams.ts`), while practice questions, auth sync, and progress require **Convex** when configured. Visual design comes from the Stitch HTML prototypes in [`stitch_service_certify_prd/`](./stitch_service_certify_prd/) and the **Editorial Architect** tokens in [`stitch_service_certify_prd/stitch_service_certify_prd/nexus_academy/DESIGN.md`](./stitch_service_certify_prd/stitch_service_certify_prd/nexus_academy/DESIGN.md).
 
 ## Requirements
 
@@ -13,9 +13,11 @@ ServiceNow certification **practice** platform: browse exam tracks, open detail 
 ```bash
 npm install
 cp .env.example .env.local
-# Edit .env.local: set PUBLIC_CONVEX_URL after linking Convex (see below).
+# Edit .env.local: set PUBLIC_CONVEX_URL (see .env.convex for the shared dev deployment URL).
 npm run dev
 ```
+
+Convex CLI commands (`npm run convex:dev`, `seed:dev`, `seed:dev:questions`) use **`.env.convex`** via `--env-file` (see `package.json`). Copy the deployment URL from `.env.convex` into `.env.local` as `PUBLIC_CONVEX_URL`.
 
 For a full backend loop, use **two terminals**:
 
@@ -63,8 +65,12 @@ See [`.env.example`](./.env.example) for a template. **Do not commit** `.env` or
 | `npm run build` | Production build (Vercel adapter) |
 | `npm run preview` | Preview the production build locally |
 | `npm run check` | Typecheck + Svelte diagnostics |
-| `npm run test` | Vitest unit tests |
+| `npm run test` | Vitest unit tests (45 files, 362 tests) |
 | `npm run test:e2e` | Playwright E2E |
+| `npm run test:a11y` | Playwright accessibility spec only |
+| `npm run verify:workos-env` | Validate WorkOS env vars |
+| `npm run verify:upstash` | Validate Upstash rate-limit env |
+| `npm run verify:convex-auth-env` | Validate Convex auth env |
 | `npm run convex:dev` | Convex dev (deploy + watch) |
 | `npm run convex:codegen` | Regenerate Convex client types |
 | `npm run seed:dev` | Seed tracks (`internal.seed.apply`, `--push`) |
@@ -82,7 +88,18 @@ See [`.env.example`](./.env.example) for a template. **Do not commit** `.env` or
 | `/dashboard` | Readiness / performance | Auth-gated; live progress from Convex |
 | `/settings` | Account profile + delete | Auth-gated |
 | `/membership` | Plans placeholder | Phase D — checkout not wired |
+| `/terms` | Terms of Service | |
+| `/privacy` | Privacy Policy | |
+| `/support` | Support / contact | |
 | `/auth/signin` | WorkOS social sign-in | |
+| `/auth/login` | OAuth provider redirect | `GET ?provider=google\|microsoft\|github` |
+| `/auth/callback` | OAuth callback | Server route |
+| `/auth/signout` | Sign-out | Server route |
+| `/auth/step-up` | Step-up auth | Account deletion flow |
+| `/api/health` | Health check | Convex connectivity |
+| `/api/practice/grade` | Grade practice answers | Rate-limited |
+| `/api/auth/convex-token` | Convex JWT | Browser client auth |
+| `/api/account/delete` | Account deletion | `POST`, step-up gated |
 
 ## Stack
 

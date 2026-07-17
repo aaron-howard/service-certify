@@ -28,8 +28,10 @@ npm run test:e2e -- --debug
 ```
 tests/
 └── e2e/
+    ├── auth-flows.spec.ts        ← Sign-in UI, full-mock gate, sample without auth
+    ├── practice-exam.spec.ts     ← Practice session flows
     ├── critical-flows.spec.ts    ← Main user journeys
-    └── accessibility.spec.ts      ← A11y checks (WCAG 2.1 AA)
+    └── accessibility.spec.ts     ← A11y checks (WCAG 2.1 AA)
 ```
 
 ### Critical User Flows Tested
@@ -249,20 +251,40 @@ npm run test:e2e -- --trace on
 ## Performance Notes
 
 - Tests run headless (no GUI) → ~50% faster
-- Parallelized across browsers (Chromium, Firefox, WebKit)
+- **Local:** parallelized across Chromium, Firefox, and WebKit (`playwright.config.ts`)
+- **CI:** Chromium only (30 spec cases); Firefox/WebKit run locally
 - Each test starts fresh (isolation)
-- Failed tests retry once (reduces flakes)
+- Failed tests retry twice on CI (`retries: 2`); no retries locally
 
 ## CI/CD Integration
 
-E2E tests should run in CI pipeline, but **only after unit tests**:
+E2E tests run in the **`CI`** workflow as a separate job from build/unit tests:
 
 ```yaml
-# .github/workflows/ci.yml
-- run: npm test              # Fast (unit tests)
-- run: npm run build         # Ensure builds
-- run: npm run test:e2e      # Slow (E2E)
+# .github/workflows/ci.yml (simplified; see full workflow for checkout, Node setup, etc.)
+jobs:
+  check-and-build:
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm ci
+      - run: npm run check
+      - run: npm test
+      - run: npm run build
+  e2e-tests:
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm ci
+      - run: npx playwright install --with-deps
+      - run: npm run test:e2e
 ```
+
+The **`Security audit`** workflow runs `npm audit --audit-level=moderate` as part of CI to verify dependencies.
 
 ## Known Limitations
 
@@ -274,7 +296,7 @@ E2E tests should run in CI pipeline, but **only after unit tests**:
 ## Related
 
 - [TESTING.md](./TESTING.md) — Unit & integration testing
-- [PRODUCTION_READINESS_AUDIT.md](./PRODUCTION_READINESS_AUDIT.md) — Testing gaps (auth E2E still outstanding)
+- [PRODUCTION_READINESS_AUDIT.md](./PRODUCTION_READINESS_AUDIT.md) — Testing status (auth E2E gate covered; full OAuth round-trip not in CI)
 - [Playwright docs](https://playwright.dev)
 - [axe DevTools](https://www.deque.com/axe/devtools/)
 - [WCAG 2.1 Guidelines](https://www.w3.org/WAI/WCAG21/quickref/)

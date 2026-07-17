@@ -2,7 +2,7 @@
 
 Welcome to the Service Certify docs. Use this directory to understand how the app is built and how to operate it.
 
-**Last updated:** 2026-07-10
+**Last updated:** 2026-07-16
 
 ## For Developers
 

@@ -1,8 +1,8 @@
 # WorkOS Authentication Setup
 
-**Last updated:** 2026-07-12
+**Last updated:** 2026-07-16
 
-Service Certify uses **WorkOS** for OAuth authentication with social logins (**Google, Microsoft, GitHub**). Redirect URIs are built from the request origin (`{origin}/auth/callback`) — no public WorkOS env vars are required.
+Service Certify uses **WorkOS** for OAuth authentication with social logins (**Google, Microsoft, GitHub**). Redirect URIs are built from the request origin (`{origin}/auth/callback`). Server-side `WORKOS_API_KEY` and `WORKOS_CLIENT_ID` are required for auth; no `PUBLIC_WORKOS_*` client vars are needed.
 
 **Projects, staging vs production, and per-environment branding:** [WORKOS-ENVIRONMENTS.md](./WORKOS-ENVIRONMENTS.md)
 
@@ -155,91 +155,67 @@ export const gradeAnswers = mutation({
 
 ### Require Authentication
 
+Use the session user from the root layout — do not read cookies directly:
+
 ```typescript
 // src/routes/dashboard/+page.server.ts
+import { redirect } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 
-export const load: PageServerLoad = async ({ cookies, redirect }) => {
-  const workosToken = cookies.get('workos_token');
-  
-  if (!workosToken) {
-    throw redirect(302, '/auth/signin');
+export const load: PageServerLoad = async ({ parent, url }) => {
+  const { user } = await parent();
+  if (!user) {
+    throw redirect(302, `/auth/signin?redirect=${encodeURIComponent(url.pathname)}`);
   }
-  
-  // User is authenticated
-  return {};
+  return { user };
 };
 ```
 
-### Redirect Authenticated Users
-
-```typescript
-// src/routes/auth/signin/+page.server.ts
-export const load: PageServerLoad = async ({ cookies, redirect }) => {
-  const workosToken = cookies.get('workos_token');
-  
-  if (workosToken) {
-    throw redirect(302, '/dashboard');
-  }
-};
-```
+The same pattern is used on `/settings`. Full mock access is enforced in Convex (`listByTrackCode`, `gradeAnswers` with `mode=full`), not only in the UI.
 
 ---
 
 ## Tracking User Progress
 
-Once authenticated, track practice session performance:
+Authenticated `gradeAnswers` calls `recordPracticeSession` in `src/convex/userProgress.ts`:
 
 ```typescript
-// src/convex/practiceQuestions.ts - update gradeAnswers
-export const gradeAnswers = mutation({
-  args: { trackCode: v.string(), answers: v.array(answerValidator) },
-  handler: async (ctx, { trackCode, answers }) => {
-    const identity = await ctx.auth.getUserIdentity();
-    if (!identity) throw new Error('Not authenticated');
+// src/convex/userProgress.ts (simplified)
+export async function recordPracticeSession(ctx, { userId, trackCode, scorePercent }) {
+  const score = Math.max(0, Math.min(100, Math.round(scorePercent)));
+  const existing = await ctx.db
+    .query('userProgress')
+    .withIndex('by_userId_and_trackCode', (q) =>
+      q.eq('userId', userId).eq('trackCode', trackCode)
+    )
+    .unique();
 
-    // Grade the answers (existing logic)
-    const results = /* ... grading ... */;
-    const score = (results.correct / results.total) * 100;
-
-    // Get user
-    const user = await ctx.db
-      .query('users')
-      .withIndex('by_workosId', q => q.eq('workosId', identity.subject))
-      .unique();
-
-    if (!user) throw new Error('User not found');
-
-    // Update or create progress record
-    const existing = await ctx.db
-      .query('userProgress')
-      .withIndex('by_userId_and_trackCode', q =>
-        q.eq('userId', user._id).eq('trackCode', trackCode)
-      )
-      .unique();
-
-    if (existing) {
-      await ctx.db.patch(existing._id, {
-        sessionsCompleted: existing.sessionsCompleted + 1,
-        bestScore: Math.max(existing.bestScore, score),
-        averageScore: (existing.averageScore + score) / 2,
-        lastAttemptedAt: Date.now()
-      });
-    } else {
-      await ctx.db.insert('userProgress', {
-        userId: user._id,
-        trackCode,
-        sessionsCompleted: 1,
-        bestScore: score,
-        averageScore: score,
-        lastAttemptedAt: Date.now()
-      });
-    }
-
-    return results;
+  if (!existing) {
+    await ctx.db.insert('userProgress', {
+      userId, trackCode,
+      sessionsCompleted: 1,
+      bestScore: score,
+      averageScore: score,
+      lastAttemptedAt: Date.now()
+    });
+    return;
   }
-});
+
+  const sessionsCompleted = existing.sessionsCompleted + 1;
+  const averageScore = Math.round(
+    (existing.averageScore * existing.sessionsCompleted + score) / sessionsCompleted
+  );
+
+  await ctx.db.patch(existing._id, {
+    sessionsCompleted,
+    bestScore: Math.max(existing.bestScore, score),
+    averageScore,
+    lastAttemptedAt: Date.now()
+  });
+}
 ```
+
+The dashboard reads progress via `api.userProgress.listForCurrentUser`.
 
 ---
 

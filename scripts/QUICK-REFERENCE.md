@@ -3,7 +3,7 @@
 ## One-Liner Export & Analyze
 
 ```bash
-# Set your Convex URL first
+# Set your Convex URL first (export scripts use CONVEX_URL, not PUBLIC_CONVEX_URL)
 export CONVEX_URL="https://your-deployment.convex.cloud"
 
 # Export questions
@@ -40,7 +40,7 @@ xdg-open quality-report.html # Linux
 
 ### If All Good ✅
 ```
-Total Questions: 2,100
+Total Questions: 2,072
 No quality issues found!
   ✓ 100% have source URLs
   ✓ 100% have explanations
@@ -76,7 +76,7 @@ Recommendations:
 
 | Error | Fix |
 |-------|-----|
-| `CONVEX_URL not set` | `export CONVEX_URL="https://..."` |
+| `CONVEX_URL not set` | `export CONVEX_URL="https://..."` (SvelteKit uses `PUBLIC_CONVEX_URL` in `.env.local`) |
 | `Authentication failed` | Use `--admin` flag |
 | `Input file not found` | Run export first, then analyze |
 | `Module not found` | `npm install convex` |
@@ -116,7 +116,7 @@ Recommendations:
 
 ## Common Finds
 
-From analysis of 22 exams (2,100+ questions):
+From analysis of 22 exams (2,072 questions):
 
 | Issue | Found In | Count |
 |-------|----------|-------|
