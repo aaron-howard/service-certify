@@ -8,6 +8,9 @@
     },
     "workos": {
       "enabled": true
+    },
+    "redis-development": {
+      "enabled": true
     }
   }
 }
