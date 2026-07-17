@@ -261,20 +261,30 @@ npm run test:e2e -- --trace on
 E2E tests run in the **`CI`** workflow as a separate job from build/unit tests:
 
 ```yaml
-# .github/workflows/ci.yml
+# .github/workflows/ci.yml (simplified; see full workflow for checkout, Node setup, etc.)
 jobs:
   check-and-build:
     steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm ci
       - run: npm run check
       - run: npm test
       - run: npm run build
   e2e-tests:
     steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm ci
       - run: npx playwright install --with-deps
       - run: npm run test:e2e
 ```
 
-The **`Security audit`** workflow runs `npm audit` separately.
+The **`Security audit`** workflow runs `npm audit --audit-level=moderate` as part of CI to verify dependencies.
 
 ## Known Limitations
 

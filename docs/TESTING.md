@@ -337,9 +337,10 @@ Example checklist:
 - Catalog + practice E2E (static / sample flows)
 
 **Auth (extend coverage):**
-- Authentication flows (WorkOS) in E2E (`tests/e2e/auth-flows.spec.ts`)
+- Authentication flows (WorkOS mocked UI, not live OAuth) in E2E (`tests/e2e/auth-flows.spec.ts`)
 - Protected full-mock endpoints
 - User progress tracking (implemented via `recordPracticeSession` on grade)
+- *Note: CI tests mocked provider redirects; manual staging E2E with WorkOS test credentials available for full OAuth round-trip validation*
 
 **Phase D (payments):** Add integration tests
 - Payment processing
