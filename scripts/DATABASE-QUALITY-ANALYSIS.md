@@ -104,9 +104,9 @@ Exported at: 2026-07-06T15:30:00Z
   ...
 
 ❓ By Question Type:
-  single: 2,050 (97.6%)
-  multi: 45 (2.1%)
-  match: 5 (0.2%)
+  single: 2,024 (97.7%)
+  multi: 44 (2.1%)
+  match: 4 (0.2%)
 
 🔗 Source URLs:
   With URLs: 2,072
