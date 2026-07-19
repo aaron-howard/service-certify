@@ -34,6 +34,7 @@ Welcome to the Service Certify docs. Use this directory to understand how the ap
 
 **CI / GitHub?**
 - [`BRANCH-PROTECTION-SETUP.md`](./BRANCH-PROTECTION-SETUP.md) — Manual branch protection on `main`
+- [GitHub Wiki](https://github.com/aaron-howard/service-certify/wiki) — Contributor orientation (source: [`wiki/`](../wiki/))
 
 **Question bank?**
 - [`agent-prompts/certification-questions.md`](./agent-prompts/certification-questions.md) — Authoring / merge / seed pipeline
