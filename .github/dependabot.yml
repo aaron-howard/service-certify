@@ -15,6 +15,7 @@ updates:
     labels:
       - dependencies
       - javascript
+      - github-actions 
     commit-message:
       prefix: "chore(deps)"
     groups:
