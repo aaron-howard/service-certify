@@ -1,4 +1,4 @@
-import { rateLimit } from '$lib/rateLimit';
+import { rateLimit, RateLimitError } from '$lib/rateLimit';
 import { api } from '$convex/_generated/api';
 import { ConvexHttpClient } from 'convex/browser';
 import { env as publicEnv } from '$env/dynamic/public';
@@ -22,7 +22,32 @@ export const POST: RequestHandler = async ({ request, cookies, locals, url }) =>
 			maxRequests: 10,
 			keyPrefix: locals.workosUserId ? 'grade:user:' : 'grade:ip:'
 		});
-	} catch {
+	} catch (error) {
+		const limiterUnavailable =
+			error instanceof RateLimitError && error.outcome === 'limiter_unavailable';
+
+		if (limiterUnavailable) {
+			// Upstash is unreachable or misconfigured. Surface it as a dependency failure so it
+			// reaches Sentry instead of hiding behind a "you submitted too fast" message.
+			const { captureException } = await import('$lib/sentry');
+			captureException(error, { phase: 'practice_grade_rate_limiter_unavailable' });
+
+			return new Response(
+				JSON.stringify({
+					error:
+						'Grading is temporarily unavailable. Your answers are still on this page — please try submitting again in a moment.',
+					retryAfter: 60
+				}),
+				{
+					status: 503,
+					headers: {
+						'Content-Type': 'application/json',
+						'Retry-After': '60'
+					}
+				}
+			);
+		}
+
 		return new Response(
 			JSON.stringify({
 				error: 'Too many practice submissions. Please wait before submitting again.',

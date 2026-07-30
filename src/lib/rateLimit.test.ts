@@ -2,7 +2,9 @@ import { describe, it, expect, beforeEach, vi } from 'vitest';
 import {
 	checkRateLimit,
 	getRateLimitStatus,
-	unavailableRateLimitResult
+	unavailableRateLimitResult,
+	sanitizeCredential,
+	RateLimitError
 } from './rateLimit';
 
 describe('Rate Limiter', () => {
@@ -72,6 +74,66 @@ describe('Rate Limiter', () => {
 			expect(result.current).toBe(10);
 			expect(result.limit).toBe(10);
 			expect(result.resetIn).toBe(60);
+		});
+
+		it('reports limiter_unavailable regardless of fail-open or fail-closed', () => {
+			expect(unavailableRateLimitResult(10, 60, false).outcome).toBe('limiter_unavailable');
+			expect(unavailableRateLimitResult(10, 60, true).outcome).toBe('limiter_unavailable');
+		});
+	});
+
+	describe('sanitizeCredential', () => {
+		it('strips surrounding double quotes copied from a dotenv file', () => {
+			expect(sanitizeCredential('"AbCdEf123"')).toBe('AbCdEf123');
+		});
+
+		it('strips surrounding single quotes', () => {
+			expect(sanitizeCredential("'AbCdEf123'")).toBe('AbCdEf123');
+		});
+
+		it('trims surrounding whitespace and newlines', () => {
+			expect(sanitizeCredential('  AbCdEf123\n')).toBe('AbCdEf123');
+			expect(sanitizeCredential('" AbCdEf123 "')).toBe('AbCdEf123');
+		});
+
+		it('leaves a clean value untouched', () => {
+			expect(sanitizeCredential('https://example.upstash.io')).toBe(
+				'https://example.upstash.io'
+			);
+		});
+
+		it('does not strip unbalanced quotes that may be part of the value', () => {
+			expect(sanitizeCredential('"AbCdEf123')).toBe('"AbCdEf123');
+		});
+
+		it('returns an empty string for missing values', () => {
+			expect(sanitizeCredential(undefined)).toBe('');
+			expect(sanitizeCredential(null)).toBe('');
+		});
+	});
+
+	describe('RateLimitError', () => {
+		it('uses 429 when the caller genuinely exceeded the limit', () => {
+			const error = new RateLimitError({
+				allowed: false,
+				current: 10,
+				limit: 10,
+				resetIn: 42,
+				outcome: 'limit_exceeded'
+			});
+
+			expect(error.status).toBe(429);
+			expect(error.outcome).toBe('limit_exceeded');
+			expect(error.headers['Retry-After']).toBe('42');
+			expect(error.headers['X-RateLimit-Remaining']).toBe('0');
+		});
+
+		it('uses 503 when the limiter itself is unavailable', () => {
+			const error = new RateLimitError(unavailableRateLimitResult(10, 60, true));
+
+			expect(error.status).toBe(503);
+			expect(error.outcome).toBe('limiter_unavailable');
+			expect(error.message).toBe('Rate limiter unavailable');
 		});
 	});
 
