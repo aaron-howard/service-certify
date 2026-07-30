@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, vi } from 'vitest';
+import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import {
 	checkRateLimit,
 	getRateLimitStatus,
@@ -187,5 +187,83 @@ describe('Rate Limiter', () => {
 
 			expect(result.resetIn).toBeLessThanOrEqual(3600);
 		});
+	});
+});
+
+describe('initRateLimit and failure diagnostics', () => {
+	beforeEach(() => {
+		vi.resetModules();
+	});
+
+	afterEach(() => {
+		vi.doUnmock('$env/dynamic/private');
+		vi.doUnmock('@upstash/redis');
+		vi.restoreAllMocks();
+	});
+
+	it('rejects UPSTASH_REDIS_REST_URL that is not http:// or https://', async () => {
+		const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+		const Redis = vi.fn();
+
+		vi.doMock('$env/dynamic/private', () => ({
+			env: {
+				UPSTASH_REDIS_REST_URL: 'ftp://bad.example',
+				UPSTASH_REDIS_REST_TOKEN: 'tok',
+				VERCEL_ENV: 'preview'
+			}
+		}));
+		vi.doMock('@upstash/redis', () => ({ Redis }));
+
+		const { initRateLimit, checkRateLimit } = await import('./rateLimit');
+		initRateLimit();
+
+		expect(errorSpy).toHaveBeenCalledWith(
+			expect.stringContaining('must start with http:// or https://')
+		);
+		expect(Redis).not.toHaveBeenCalled();
+
+		const result = await checkRateLimit('diag-scheme', {
+			windowSeconds: 60,
+			maxRequests: 10
+		});
+		expect(result.outcome).toBe('limiter_unavailable');
+		expect(result.allowed).toBe(true);
+	});
+
+	it('logs a credential-specific warning when Upstash returns WRONGPASS', async () => {
+		const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+		const authError = new Error(
+			'WRONGPASS invalid or missing auth token. See https://docs.upstash.com/redis/troubleshooting/http_unauthorized for details.'
+		);
+
+		vi.doMock('$env/dynamic/private', () => ({
+			env: {
+				UPSTASH_REDIS_REST_URL: 'https://example.upstash.io',
+				UPSTASH_REDIS_REST_TOKEN: 'bad-token',
+				VERCEL_ENV: 'preview'
+			}
+		}));
+		vi.doMock('@upstash/redis', () => ({
+			Redis: class {
+				zremrangebyscore = vi.fn().mockRejectedValue(authError);
+				zcard = vi.fn();
+				zadd = vi.fn();
+				expire = vi.fn();
+				zrange = vi.fn();
+				zcount = vi.fn();
+			}
+		}));
+
+		const { initRateLimit, checkRateLimit } = await import('./rateLimit');
+		initRateLimit();
+		const result = await checkRateLimit('diag-auth', {
+			windowSeconds: 60,
+			maxRequests: 10
+		});
+
+		expect(result.outcome).toBe('limiter_unavailable');
+		expect(errorSpy).toHaveBeenCalledWith(
+			expect.stringContaining('Upstash rejected the credentials')
+		);
 	});
 });

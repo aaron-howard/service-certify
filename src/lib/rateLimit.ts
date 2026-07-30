@@ -134,7 +134,7 @@ export function initRateLimit() {
 
 	if (!/^https?:\/\//.test(url)) {
 		console.error(
-			`Rate limiting unavailable: UPSTASH_REDIS_REST_URL must start with https:// (got "${url.slice(0, 12)}…").`
+			`Rate limiting unavailable: UPSTASH_REDIS_REST_URL must start with http:// or https:// (got "${url.slice(0, 12)}…").`
 		);
 		return;
 	}
