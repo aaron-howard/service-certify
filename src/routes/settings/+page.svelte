@@ -109,7 +109,7 @@
 					</div>
 				</div>
 				<p class="mt-4 text-on-surface-variant">
-					Name and photo come from your OAuth provider (Google, Microsoft, or GitHub). Update them
+					Name and photo come from your OAuth provider (Google or Microsoft). Update them
 					there, then sign out and back in to refresh.
 				</p>
 			</div>
@@ -142,8 +142,8 @@
 			<h2 class="font-headline mb-3 text-xl font-bold text-error">Delete account</h2>
 			<p class="text-on-surface-variant">
 				Permanently removes your Service Certify profile and practice progress from our database.
-				This does not revoke OAuth access at your identity provider — you can do that in Google,
-				Microsoft, or GitHub security settings.
+				This does not revoke OAuth access at your identity provider — you can do that in Google
+				or Microsoft security settings.
 			</p>
 			{#if !data.deleteAuthFresh}
 				<p class="mt-4 text-sm text-on-surface-variant">

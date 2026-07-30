@@ -92,7 +92,7 @@ See [`.env.example`](./.env.example) for a template. **Do not commit** `.env` or
 | `/privacy` | Privacy Policy | |
 | `/support` | Support / contact | |
 | `/auth/signin` | WorkOS social sign-in | |
-| `/auth/login` | OAuth provider redirect | `GET ?provider=google\|microsoft\|github` |
+| `/auth/login` | OAuth provider redirect | `GET ?provider=google\|microsoft` |
 | `/auth/callback` | OAuth callback | Server route |
 | `/auth/signout` | Sign-out | Server route |
 | `/auth/step-up` | Step-up auth | Account deletion flow |
