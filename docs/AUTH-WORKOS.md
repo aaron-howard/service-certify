@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-07-16
 
-Service Certify uses **WorkOS** for OAuth authentication with social logins (**Google, Microsoft, GitHub**). Redirect URIs are built from the request origin (`{origin}/auth/callback`). Server-side `WORKOS_API_KEY` and `WORKOS_CLIENT_ID` are required for auth; no `PUBLIC_WORKOS_*` client vars are needed.
+Service Certify uses **WorkOS** for OAuth authentication with social logins (**Google, Microsoft**). Redirect URIs are built from the request origin (`{origin}/auth/callback`). Server-side `WORKOS_API_KEY` and `WORKOS_CLIENT_ID` are required for auth; no `PUBLIC_WORKOS_*` client vars are needed.
 
 **Projects, staging vs production, and per-environment branding:** [WORKOS-ENVIRONMENTS.md](./WORKOS-ENVIRONMENTS.md)
 
@@ -109,9 +109,8 @@ Wired in `src/lib/workos.server.ts` (`OAUTH_PROVIDERS`):
 |----------|--------|
 | **Google** | Enabled |
 | **Microsoft** | Enabled |
-| **GitHub** | Enabled |
 
-Enable each provider in the WorkOS dashboard. Adding Facebook (or others) would require extending `OAUTH_PROVIDERS` and the sign-in UI.
+Enable each provider in the WorkOS dashboard. Adding another provider would require extending `OAUTH_PROVIDERS` and the sign-in UI.
 
 ---
 
@@ -332,8 +331,8 @@ Convex uses this to validate WorkOS JWTs for full mock access (`mode=full`).
 ### Profile fields (`name`, `provider`, `profileImage`)
 
 - **`name`** — from WorkOS `firstName`/`lastName`, then WorkOS `name` (common for Microsoft), then a formatted email local-part fallback.
-- **`provider`** — set from the sign-in button you used (`google`, `microsoft`, `github`).
-- **`profileImage`** — URL from your OAuth provider when available (shown in the nav avatar). There is no manual photo upload; it comes from Microsoft/Google/GitHub.
+- **`provider`** — set from the sign-in button you used (`google`, `microsoft`).
+- **`profileImage`** — URL from your OAuth provider when available (shown in the nav avatar). There is no manual photo upload; it comes from Microsoft/Google.
 
 ### Convex auth wiring
 
@@ -348,7 +347,7 @@ Deleting an account requires a **fresh WorkOS authentication** within the last 5
 3. After callback, the settings page shows the delete confirmation form
 4. `POST /api/account/delete` validates `auth_time` on the access token before calling Convex `deleteAccount`
 
-Sign-in still uses direct OAuth providers (Google, Microsoft, GitHub). Step-up uses the AuthKit provider because `max_age` is only supported on AuthKit authorize flows.
+Sign-in still uses direct OAuth providers (Google, Microsoft). Step-up uses the AuthKit provider because `max_age` is only supported on AuthKit authorize flows.
 
 ---
 
@@ -358,7 +357,7 @@ Sign-in still uses direct OAuth providers (Google, Microsoft, GitHub). Step-up u
 - ✅ Auth routes created (signin, callback, signout)
 - ✅ Convex schema with users table
 - ✅ Auth mutations (create/update user, deleteAccount)
-- ✅ Sign-in UI with social buttons (Google, Microsoft, GitHub)
+- ✅ Sign-in UI with social buttons (Google, Microsoft)
 - ✅ Convex client auth via `/api/auth/convex-token`
 - ✅ Admin role on `users` table with `ADMIN_EMAILS` bootstrap
 - ✅ Full mock practice (`mode=full`) gated to admins in Convex

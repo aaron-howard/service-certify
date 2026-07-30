@@ -34,7 +34,7 @@ This is the living checklist referenced by monitoring, testing, and rate-limitin
 - [x] Quality gates: track quality + per-track realism tests
 
 ### Auth
-- [x] WorkOS OAuth (Google, Microsoft, GitHub)
+- [x] WorkOS OAuth (Google, Microsoft)
 - [x] Session cookies + `/auth/signin`, `/auth/callback`, `/auth/signout`
 - [x] Convex `users` table + `ADMIN_EMAILS` bootstrap
 - [x] Full mock (`mode=full`) gated to admins in Convex

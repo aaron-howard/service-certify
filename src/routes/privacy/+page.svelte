@@ -33,7 +33,7 @@
 			<h3 class="mb-2 font-semibold text-on-surface">Account information</h3>
 			<p class="text-on-surface-variant">
 				When you sign in through our authentication provider, we receive information from your
-				chosen identity provider (Google, Microsoft, or GitHub), including your email address, display
+				chosen identity provider (Google or Microsoft), including your email address, display
 				name, profile picture URL, and the provider used to authenticate. We store this information
 				in our backend database to maintain your account and associate your practice exam progress
 				with you.
@@ -74,8 +74,8 @@
 			</p>
 			<ul class="list-disc space-y-3 pl-5 text-on-surface-variant">
 				<li>
-					<strong class="text-on-surface">WorkOS</strong> — Handles OAuth authentication with Google,
-					Microsoft, and GitHub. WorkOS processes your sign-in credentials and profile information during
+					<strong class="text-on-surface">WorkOS</strong> — Handles OAuth authentication with Google
+					and Microsoft. WorkOS processes your sign-in credentials and profile information during
 					authentication.
 				</li>
 				<li>
