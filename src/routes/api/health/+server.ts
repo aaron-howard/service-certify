@@ -25,11 +25,17 @@ export const GET: RequestHandler = async ({ request }): Promise<Response> => {
 	const clientIp = request.headers.get('x-forwarded-for') || 'unknown';
 	let rateLimiterMessage: string | undefined;
 	try {
-		await rateLimit(clientIp, {
+		const result = await rateLimit(clientIp, {
 			windowSeconds: 60,
 			maxRequests: 1000,
 			keyPrefix: 'health:'
 		});
+
+		// Outside production the limiter fails open, so a broken Upstash still allows the
+		// request and never throws. Inspect the outcome or the check silently reports "ok".
+		if (result.outcome === 'limiter_unavailable') {
+			rateLimiterMessage = 'Upstash unreachable or misconfigured (request allowed: fail-open)';
+		}
 	} catch (error) {
 		if (error instanceof RateLimitError && error.outcome === 'limit_exceeded') {
 			return new Response(JSON.stringify({ error: 'Too many requests' }), {
