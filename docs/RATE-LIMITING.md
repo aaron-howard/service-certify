@@ -38,6 +38,11 @@ UPSTASH_REDIS_REST_TOKEN=your_token_here
 3. Click **Save**
 4. Redeploy: Deployments → Latest → **Redeploy**
 
+> **Paste the raw value, not the `.env.local` line.** If the stored value keeps its
+> surrounding quotes (`"gQAA…"`) or leading whitespace, Upstash rejects every command with
+> `WRONGPASS invalid or missing auth token`. `initRateLimit()` now strips a matching quote
+> pair and trims whitespace, but the URL and token must still belong to the same database.
+
 ### 5. Verify
 
 Prove live Upstash connectivity and sliding-window denial (not the fail-open unit tests):
@@ -59,6 +64,34 @@ Do **not** hammer `/api/health` (1000/min) just to verify limits — that burns 
 |----------|-------|--------|-------|
 | **GET /api/health** | 1000 req | 60 sec | For monitoring services |
 | **POST /api/practice/grade** | 10 submissions | 60 sec | Keyed by WorkOS user id when signed in, otherwise client IP |
+
+## 429 vs 503: never conflate them
+
+`rateLimit()` throws a `RateLimitError` carrying an `outcome`:
+
+| `outcome` | Meaning | Route response |
+|-----------|---------|----------------|
+| `limit_exceeded` | The caller really did exceed the limit | **429** — ask the client to back off |
+| `limiter_unavailable` | Upstash is unconfigured, misconfigured, or unreachable, so the real count is unknown | **503** — a dependency failure, reported to Sentry |
+
+Denying with a 429 when Upstash is broken sends users a "you're going too fast" message for a
+server-side outage, and it hides the incident from monitoring. Always branch on `outcome`:
+
+```typescript
+import { rateLimit, RateLimitError } from '$lib/rateLimit';
+
+try {
+  await rateLimit(key, { windowSeconds: 60, maxRequests: 10 });
+} catch (error) {
+  if (error instanceof RateLimitError && error.outcome === 'limiter_unavailable') {
+    return new Response('…temporarily unavailable…', { status: 503 });
+  }
+  return new Response('…too many requests…', { status: 429 });
+}
+```
+
+`GET /api/health` follows the same rule: it reports `checks.rateLimiter.status: "error"` and
+an overall `degraded` status instead of returning a misleading 429.
 
 ## Using in Your Code
 
@@ -179,6 +212,23 @@ If you see sustained 429 errors:
 1. Check env vars are set: `echo $UPSTASH_REDIS_REST_URL`
 2. Verify Upstash database is running (dashboard → Status)
 3. Check Vercel logs: Deployments → Latest → Runtime logs
+4. Hit `/api/health` and read `checks.rateLimiter` — `error` means Upstash is not answering
+
+**`WRONGPASS invalid or missing auth token` in the logs?**
+
+The credentials reached Upstash but were rejected. In order of likelihood:
+1. The stored value has surrounding quotes or stray whitespace (see step 4 above)
+2. `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN` are from **different** databases
+3. The token was rotated in the Upstash dashboard but not updated in Vercel
+
+Confirm the pair works before redeploying:
+
+```bash
+curl -s -H "Authorization: Bearer $UPSTASH_REDIS_REST_TOKEN" "$UPSTASH_REDIS_REST_URL/ping"
+# expected: {"result":"PONG"}
+```
+
+Remember env var changes only take effect on the **next deployment** — update the value, then redeploy.
 
 **Getting 429 too often?**
 1. Increase `maxRequests` for the endpoint
