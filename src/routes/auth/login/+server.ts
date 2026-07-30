@@ -3,8 +3,7 @@ import type { RequestHandler } from '@sveltejs/kit';
 import {
 	getOAuthAuthorizationUrl,
 	isWorkOSConfigured,
-	type OAuthProviderSlug,
-	OAUTH_PROVIDERS
+	toOAuthProviderSlug
 } from '$lib/workos.server';
 
 export const GET: RequestHandler = async ({ url, cookies }) => {
@@ -12,9 +11,9 @@ export const GET: RequestHandler = async ({ url, cookies }) => {
 		throw redirect(302, '/auth/signin?error=workos_not_configured');
 	}
 
-	const provider = url.searchParams.get('provider') as OAuthProviderSlug | null;
+	const provider = toOAuthProviderSlug(url.searchParams.get('provider'));
 
-	if (!provider || !(provider in OAUTH_PROVIDERS)) {
+	if (!provider) {
 		throw redirect(302, '/auth/signin?error=invalid_provider');
 	}
 
