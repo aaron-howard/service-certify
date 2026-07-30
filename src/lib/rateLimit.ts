@@ -13,10 +13,20 @@ import { env } from '$env/dynamic/private';
 
 let redis: Redis | null = null;
 let warnedMissingCredentials = false;
+let warnedRedisFailure = false;
 
 export function isProductionEnvironment(): boolean {
 	return env.VERCEL_ENV === 'production';
 }
+
+/**
+ * Why a request was allowed or denied.
+ *
+ * `limiter_unavailable` means we never learned the real request count — Upstash is
+ * unconfigured, misconfigured, or unreachable. Callers must not report that as a
+ * 429, or users see "slow down" when the actual problem is server-side.
+ */
+export type RateLimitOutcome = 'allowed' | 'limit_exceeded' | 'limiter_unavailable';
 
 interface RateLimitResult {
 	/** Whether the request is allowed */
@@ -27,6 +37,8 @@ interface RateLimitResult {
 	limit: number;
 	/** Seconds until window resets */
 	resetIn: number;
+	/** Why the request was allowed or denied */
+	outcome: RateLimitOutcome;
 }
 
 function allowWhenUnavailable(maxRequests: number, windowSeconds: number): RateLimitResult {
@@ -34,7 +46,8 @@ function allowWhenUnavailable(maxRequests: number, windowSeconds: number): RateL
 		allowed: true,
 		current: 0,
 		limit: maxRequests,
-		resetIn: windowSeconds
+		resetIn: windowSeconds,
+		outcome: 'limiter_unavailable'
 	};
 }
 
@@ -43,7 +56,8 @@ function denyWhenUnavailable(maxRequests: number, windowSeconds: number): RateLi
 		allowed: false,
 		current: maxRequests,
 		limit: maxRequests,
-		resetIn: windowSeconds
+		resetIn: windowSeconds,
+		outcome: 'limiter_unavailable'
 	};
 }
 
@@ -63,12 +77,44 @@ function fallbackWhenUnavailable(maxRequests: number, windowSeconds: number) {
 }
 
 /**
+ * Env values pasted from a dotenv file often keep their surrounding quotes, and
+ * Upstash rejects `Bearer "token"` with an opaque `WRONGPASS` error. Strip the
+ * wrapper so a copy/paste artifact can't disable rate limiting.
+ */
+export function sanitizeCredential(value: string | undefined | null): string {
+	const trimmed = (value ?? '').trim();
+	const quoted =
+		trimmed.length >= 2 &&
+		((trimmed.startsWith('"') && trimmed.endsWith('"')) ||
+			(trimmed.startsWith("'") && trimmed.endsWith("'")));
+	return quoted ? trimmed.slice(1, -1).trim() : trimmed;
+}
+
+/** Log Upstash failures once per instance, calling out credential problems explicitly. */
+function logRedisFailure(error: unknown) {
+	const message = error instanceof Error ? error.message : String(error);
+	const isAuthFailure = /WRONGPASS|NOPERM|unauthorized/i.test(message);
+
+	if (isAuthFailure && !warnedRedisFailure) {
+		warnedRedisFailure = true;
+		console.error(
+			`Rate limiting unavailable: Upstash rejected the credentials (${message}). ` +
+				'Verify UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN match the same database ' +
+				'and were stored without surrounding quotes or whitespace.'
+		);
+		return;
+	}
+
+	console.error('Rate limit check error:', error);
+}
+
+/**
  * Initialize the rate limiter with Upstash Redis credentials.
  * Call this once on server startup.
  */
 export function initRateLimit() {
-	const url = env.UPSTASH_REDIS_REST_URL;
-	const token = env.UPSTASH_REDIS_REST_TOKEN;
+	const url = sanitizeCredential(env.UPSTASH_REDIS_REST_URL);
+	const token = sanitizeCredential(env.UPSTASH_REDIS_REST_TOKEN);
 
 	if (!url || !token) {
 		if (!warnedMissingCredentials) {
@@ -83,6 +129,13 @@ export function initRateLimit() {
 				);
 			}
 		}
+		return;
+	}
+
+	if (!/^https?:\/\//.test(url)) {
+		console.error(
+			`Rate limiting unavailable: UPSTASH_REDIS_REST_URL must start with http:// or https:// (got "${url.slice(0, 12)}…").`
+		);
 		return;
 	}
 
@@ -160,11 +213,40 @@ export async function checkRateLimit(
 			allowed,
 			current: Math.min(current, maxRequests),
 			limit: maxRequests,
-			resetIn: Math.max(0, resetIn)
+			resetIn: Math.max(0, resetIn),
+			outcome: allowed ? 'allowed' : 'limit_exceeded'
 		};
 	} catch (error) {
-		console.error('Rate limit check error:', error);
+		logRedisFailure(error);
 		return fallbackWhenUnavailable(maxRequests, windowSeconds);
+	}
+}
+
+/**
+ * Thrown by `rateLimit()` when a request must not proceed.
+ *
+ * Check `outcome` before choosing a status: a `limiter_unavailable` denial is a
+ * server-side dependency failure (503), not a client sending too many requests (429).
+ */
+export class RateLimitError extends Error {
+	readonly outcome: RateLimitOutcome;
+	readonly status: number;
+	readonly headers: Record<string, string>;
+	readonly result: RateLimitResult;
+
+	constructor(result: RateLimitResult) {
+		const limiterUnavailable = result.outcome === 'limiter_unavailable';
+		super(limiterUnavailable ? 'Rate limiter unavailable' : 'Too Many Requests');
+		this.name = 'RateLimitError';
+		this.outcome = result.outcome;
+		this.status = limiterUnavailable ? 503 : 429;
+		this.result = result;
+		this.headers = {
+			'Retry-After': String(result.resetIn),
+			'X-RateLimit-Limit': String(result.limit),
+			'X-RateLimit-Remaining': String(Math.max(0, result.limit - result.current)),
+			'X-RateLimit-Reset': String(Math.floor(Date.now() / 1000) + result.resetIn)
+		};
 	}
 }
 
@@ -174,21 +256,13 @@ export async function checkRateLimit(
  *
  * @param identifier - Unique identifier (e.g., client IP)
  * @param options - Rate limit configuration
- * @returns { allowed, current, limit, resetIn } or throws 429 response
+ * @returns the rate limit result, or throws `RateLimitError` when the request must be denied
  */
 export async function rateLimit(identifier: string, options: RateLimitOptions = {}) {
 	const result = await checkRateLimit(identifier, options);
 
 	if (!result.allowed) {
-		const error = new Error('Too Many Requests');
-		(error as { status?: number; headers?: Record<string, string> }).status = 429;
-		(error as { status?: number; headers?: Record<string, string> }).headers = {
-			'Retry-After': String(result.resetIn),
-			'X-RateLimit-Limit': String(result.limit),
-			'X-RateLimit-Remaining': String(Math.max(0, result.limit - result.current)),
-			'X-RateLimit-Reset': String(Math.floor(Date.now() / 1000) + result.resetIn)
-		};
-		throw error;
+		throw new RateLimitError(result);
 	}
 
 	return result;
@@ -235,10 +309,11 @@ export async function getRateLimitStatus(
 			allowed,
 			current,
 			limit: maxRequests,
-			resetIn: Math.max(0, resetIn)
+			resetIn: Math.max(0, resetIn),
+			outcome: allowed ? 'allowed' : 'limit_exceeded'
 		};
 	} catch (error) {
-		console.error('Rate limit status error:', error);
+		logRedisFailure(error);
 		return fallbackWhenUnavailable(maxRequests, windowSeconds);
 	}
 }

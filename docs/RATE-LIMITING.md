@@ -38,6 +38,11 @@ UPSTASH_REDIS_REST_TOKEN=your_token_here
 3. Click **Save**
 4. Redeploy: Deployments → Latest → **Redeploy**
 
+> **Paste the raw value, not the `.env.local` line.** If the stored value keeps its
+> surrounding quotes (`"gQAA…"`) or leading whitespace, Upstash rejects every command with
+> `WRONGPASS invalid or missing auth token`. `initRateLimit()` now strips a matching quote
+> pair and trims whitespace, but the URL and token must still belong to the same database.
+
 ### 5. Verify
 
 Prove live Upstash connectivity and sliding-window denial (not the fail-open unit tests):
@@ -60,12 +65,48 @@ Do **not** hammer `/api/health` (1000/min) just to verify limits — that burns 
 | **GET /api/health** | 1000 req | 60 sec | For monitoring services |
 | **POST /api/practice/grade** | 10 submissions | 60 sec | Keyed by WorkOS user id when signed in, otherwise client IP |
 
+## 429 vs 503: never conflate them
+
+`rateLimit()` throws a `RateLimitError` carrying an `outcome`:
+
+| `outcome` | Meaning | Route response |
+|-----------|---------|----------------|
+| `limit_exceeded` | The caller really did exceed the limit | **429** — ask the client to back off |
+| `limiter_unavailable` | Upstash is unconfigured, misconfigured, or unreachable, so the real count is unknown | **503** — a dependency failure (the practice grading route also reports this to Sentry) |
+
+Denying with a 429 when Upstash is broken sends users a "you're going too fast" message for a
+server-side outage, and it hides the incident from monitoring. Always branch on `outcome`.
+Sentry reporting is **not** automatic for every `RateLimitError` consumer — `/api/practice/grade`
+opts in explicitly; other routes should do the same if they need outage visibility:
+
+```typescript
+import { rateLimit, RateLimitError } from '$lib/rateLimit';
+
+try {
+  await rateLimit(key, { windowSeconds: 60, maxRequests: 10 });
+} catch (error) {
+  if (error instanceof RateLimitError && error.outcome === 'limiter_unavailable') {
+    return new Response('…temporarily unavailable…', { status: 503 });
+  }
+  if (error instanceof RateLimitError && error.outcome === 'limit_exceeded') {
+    return new Response('…too many requests…', { status: 429 });
+  }
+  // Unrelated failure — do not masquerade as a rate limit
+  throw error;
+}
+```
+
+`GET /api/health` follows the same rule: it reports `checks.rateLimiter.status: "error"`
+("rate limiter unavailable" — unreachable Upstash, or missing / malformed / failed-init
+credentials; read `checks.rateLimiter.message` for the specific cause) and an overall
+`degraded` status instead of returning a misleading 429.
+
 ## Using in Your Code
 
 ### Basic Rate Limit Check
 
 ```typescript
-import { rateLimit } from '$lib/rateLimit';
+import { rateLimit, RateLimitError } from '$lib/rateLimit';
 
 // In a route handler:
 export const POST: RequestHandler = async ({ request }) => {
@@ -78,8 +119,19 @@ export const POST: RequestHandler = async ({ request }) => {
       keyPrefix: 'my-route:'  // Custom key prefix
     });
   } catch (error) {
-    // Rate limit exceeded, return 429
-    return new Response('Too many requests', { status: 429 });
+    if (error instanceof RateLimitError && error.outcome === 'limit_exceeded') {
+      return new Response('Too many requests', {
+        status: error.status,
+        headers: error.headers
+      });
+    }
+    if (error instanceof RateLimitError && error.outcome === 'limiter_unavailable') {
+      return new Response('Rate limiter unavailable', {
+        status: error.status,
+        headers: error.headers
+      });
+    }
+    throw error;
   }
 
   // Process request here
@@ -107,7 +159,7 @@ If Upstash is down or not configured:
 | Environment | Behavior |
 |-------------|----------|
 | **Local / Preview / CI** (`VERCEL_ENV` ≠ `production`) | Fail **open** — requests allowed; warning logged |
-| **Production** (`VERCEL_ENV=production`) | Fail **closed** — requests denied with 429 until Upstash is configured |
+| **Production** (`VERCEL_ENV=production`) | Fail **closed** — requests denied with **503** (`limiter_unavailable`) until Upstash is configured |
 
 **Production requires** `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN` on Vercel.
 
@@ -179,6 +231,32 @@ If you see sustained 429 errors:
 1. Check env vars are set: `echo $UPSTASH_REDIS_REST_URL`
 2. Verify Upstash database is running (dashboard → Status)
 3. Check Vercel logs: Deployments → Latest → Runtime logs
+4. Hit `/api/health` and read `checks.rateLimiter` — `status: "error"` means the rate
+   limiter is unavailable (unreachable Upstash, or missing / malformed / failed-init
+   credentials). Inspect `checks.rateLimiter.message` for the specific cause.
+
+**`WRONGPASS invalid or missing auth token` in the logs?**
+
+The credentials reached Upstash but were rejected. In order of likelihood:
+1. The stored value has surrounding quotes or stray whitespace (see step 4 above)
+2. `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN` are from **different** databases
+3. The token was rotated in the Upstash dashboard but not updated in Vercel
+
+Confirm the pair works before redeploying. Run this only in a trusted environment (your
+machine or a private CI secret store). Prefer a header file or stdin so the token is not
+visible in process listings / shell history; if it was ever pasted into a shared log or
+chat, rotate it in the Upstash dashboard and update Vercel.
+
+```bash
+# Write the Authorization header to a temp file (mode 600), then pass it with -H @file
+umask 077
+printf 'Authorization: Bearer %s\n' "$UPSTASH_REDIS_REST_TOKEN" > /tmp/upstash-auth.hdr
+curl -s -H @/tmp/upstash-auth.hdr "$UPSTASH_REDIS_REST_URL/ping"
+rm -f /tmp/upstash-auth.hdr
+# expected: {"result":"PONG"}
+```
+
+Remember env var changes only take effect on the **next deployment** — update the value, then redeploy.
 
 **Getting 429 too often?**
 1. Increase `maxRequests` for the endpoint

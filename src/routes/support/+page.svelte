@@ -35,7 +35,7 @@
 
 			<h3 class="mb-2 font-semibold text-on-surface">Account and sign-in</h3>
 			<p class="text-on-surface-variant">
-				Service Certify uses secure OAuth sign-in through Google, Microsoft, or GitHub. If you have
+				Service Certify uses secure OAuth sign-in through Google or Microsoft. If you have
 				trouble signing in, try clearing your browser cache, using a private/incognito window, or
 				revoking and re-authorizing access through your identity provider's security settings. To
 				delete your account and practice progress, use

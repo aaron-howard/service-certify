@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-07-12
 
-Service Certify uses WorkOS AuthKit for OAuth (Google, Microsoft, GitHub). WorkOS separates **staging** and **production** environments inside a **project**. This doc maps those WorkOS tiers to how we deploy the app (local, Vercel preview, Vercel production) and how to configure per-environment branding.
+Service Certify signs users in through **direct WorkOS OAuth providers** (Google, Microsoft). **AuthKit** is used only for step-up re-authentication before sensitive actions such as account deletion, because `max_age` is supported only on AuthKit authorize flows. WorkOS separates **staging** and **production** environments inside a **project**. This doc maps those WorkOS tiers to how we deploy the app (local, Vercel preview, Vercel production) and how to configure per-environment branding.
 
 See also: [AUTH-WORKOS.md](./AUTH-WORKOS.md) (OAuth flow, admin bootstrap, step-up auth).
 
@@ -53,7 +53,7 @@ No code change is required for project organization — this is dashboard-only u
 | `https://*.vercel.app/auth/callback` | Vercel preview deployments (wildcard if enabled on your plan) |
 | Or add each preview URL explicitly | If wildcards are not available |
 
-**OAuth providers:** Enable Google, Microsoft, GitHub (same as today).
+**OAuth providers:** Enable Google and Microsoft. Disable any existing GitHub connection so dashboard config matches `OAUTH_PROVIDERS`.
 
 **Branding** (Branding in dashboard — per environment):
 
@@ -75,6 +75,8 @@ No code change is required for project organization — this is dashboard-only u
 | URI | Purpose |
 |-----|---------|
 | `https://<your-production-domain>/auth/callback` | Live site (HTTPS required) |
+
+**OAuth providers:** Enable Google and Microsoft. Disable any existing GitHub connection so dashboard config matches `OAUTH_PROVIDERS`.
 
 **Branding:**
 
