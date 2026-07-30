@@ -1,6 +1,11 @@
 import { redirect } from '@sveltejs/kit';
 import type { RequestHandler } from '@sveltejs/kit';
-import { getWorkOS, getWorkOSClientId, isWorkOSConfigured, type OAuthProviderSlug } from '$lib/workos.server';
+import {
+	getWorkOS,
+	getWorkOSClientId,
+	isWorkOSConfigured,
+	toOAuthProviderSlug
+} from '$lib/workos.server';
 import { buildConvexUserSyncPayload } from '$lib/auth.server';
 import { setWorkOsAuthCookies } from '$lib/workos-session';
 
@@ -51,8 +56,9 @@ export const GET: RequestHandler = async ({ url, cookies }) => {
 		);
 
 		const { syncUserToConvex } = await import('$lib/convex.server');
-		const oauthProvider = cookies.get('auth_provider') as OAuthProviderSlug | undefined;
-		if (oauthProvider) {
+		const rawOAuthProvider = cookies.get('auth_provider');
+		const oauthProvider = toOAuthProviderSlug(rawOAuthProvider);
+		if (rawOAuthProvider) {
 			cookies.delete('auth_provider', { path: '/' });
 		}
 
