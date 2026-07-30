@@ -23,10 +23,11 @@ export const POST: RequestHandler = async ({ request, cookies, locals, url }) =>
 			keyPrefix: locals.workosUserId ? 'grade:user:' : 'grade:ip:'
 		});
 	} catch (error) {
-		const limiterUnavailable =
-			error instanceof RateLimitError && error.outcome === 'limiter_unavailable';
+		if (!(error instanceof RateLimitError)) {
+			throw error;
+		}
 
-		if (limiterUnavailable) {
+		if (error.outcome === 'limiter_unavailable') {
 			// Upstash is unreachable or misconfigured. Surface it as a dependency failure so it
 			// reaches Sentry instead of hiding behind a "you submitted too fast" message.
 			const { captureException } = await import('$lib/sentry');
@@ -36,13 +37,13 @@ export const POST: RequestHandler = async ({ request, cookies, locals, url }) =>
 				JSON.stringify({
 					error:
 						'Grading is temporarily unavailable. Your answers are still on this page — please try submitting again in a moment.',
-					retryAfter: 60
+					retryAfter: error.result.resetIn
 				}),
 				{
-					status: 503,
+					status: error.status,
 					headers: {
 						'Content-Type': 'application/json',
-						'Retry-After': '60'
+						...error.headers
 					}
 				}
 			);
@@ -51,15 +52,14 @@ export const POST: RequestHandler = async ({ request, cookies, locals, url }) =>
 		return new Response(
 			JSON.stringify({
 				error: 'Too many practice submissions. Please wait before submitting again.',
-				retryAfter: 60
+				retryAfter: error.result.resetIn
 			}),
 			{
-				status: 429,
+				status: error.status,
 				headers: {
 					'Content-Type': 'application/json',
-					'Retry-After': '60',
-					'X-RateLimit-Limit': '10',
-					'X-RateLimit-Window': '60s'
+					'X-RateLimit-Window': '60s',
+					...error.headers
 				}
 			}
 		);
