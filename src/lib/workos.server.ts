@@ -4,8 +4,7 @@ import { env } from '$env/dynamic/private';
 /** Slugs used in `/auth/login?provider=` → WorkOS provider identifiers. */
 export const OAUTH_PROVIDERS = {
 	google: 'GoogleOAuth',
-	microsoft: 'MicrosoftOAuth',
-	github: 'GitHubOAuth'
+	microsoft: 'MicrosoftOAuth'
 } as const;
 
 export type OAuthProviderSlug = keyof typeof OAUTH_PROVIDERS;

@@ -12,7 +12,7 @@ test.describe('Auth flows', () => {
 		await expect(page.getByRole('heading', { name: 'Welcome Back' })).toBeVisible();
 		await expect(page.getByTestId('signin-provider-google')).toBeVisible();
 		await expect(page.getByTestId('signin-provider-microsoft')).toBeVisible();
-		await expect(page.getByTestId('signin-provider-github')).toBeVisible();
+		await expect(page.getByTestId('signin-provider-github')).toHaveCount(0);
 	});
 
 	test('sign-in provider links include redirect when present', async ({ page }) => {
