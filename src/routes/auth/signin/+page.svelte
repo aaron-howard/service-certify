@@ -5,8 +5,7 @@
 
 	const providers = [
 		{ id: 'google', name: 'Google', icon: '🔍' },
-		{ id: 'microsoft', name: 'Microsoft', icon: '◻️' },
-		{ id: 'github', name: 'GitHub', icon: '🐙' }
+		{ id: 'microsoft', name: 'Microsoft', icon: '◻️' }
 	] as const;
 
 	const loginHref = (providerId: string) => {
