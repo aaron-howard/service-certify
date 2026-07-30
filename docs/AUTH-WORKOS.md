@@ -110,7 +110,7 @@ Wired in `src/lib/workos.server.ts` (`OAUTH_PROVIDERS`):
 | **Google** | Enabled |
 | **Microsoft** | Enabled |
 
-Enable each provider in the WorkOS dashboard. Adding another provider (e.g. GitHub) would require extending `OAUTH_PROVIDERS` and the sign-in UI.
+Enable each provider in the WorkOS dashboard. Adding another provider would require extending `OAUTH_PROVIDERS` and the sign-in UI.
 
 ---
 

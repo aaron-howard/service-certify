@@ -9,6 +9,23 @@ export const OAUTH_PROVIDERS = {
 
 export type OAuthProviderSlug = keyof typeof OAUTH_PROVIDERS;
 
+/**
+ * Narrow untrusted input (query param, cookie) to a supported provider slug.
+ *
+ * `auth_provider` is httpOnly, but that only stops scripts from reading it — a client can
+ * still send any value in the request header. Unknown values — including the legacy
+ * `"github"` slug — become `undefined` so they are never persisted as a user's provider.
+ *
+ * Uses an own-property check: `in` would also match inherited keys like `constructor`.
+ */
+export function toOAuthProviderSlug(
+	value: string | undefined | null
+): OAuthProviderSlug | undefined {
+	return value && Object.hasOwn(OAUTH_PROVIDERS, value)
+		? (value as OAuthProviderSlug)
+		: undefined;
+}
+
 export function isWorkOSConfigured(): boolean {
 	return Boolean(env.WORKOS_API_KEY && env.WORKOS_CLIENT_ID);
 }
