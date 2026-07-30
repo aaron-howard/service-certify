@@ -49,7 +49,7 @@
 			<h2 class="font-headline mb-3 text-xl font-bold text-primary">3. Accounts and Authentication</h2>
 			<p class="text-on-surface-variant">
 				Access to certain features requires an account authenticated through our identity provider
-				(WorkOS) using Google, Microsoft, or GitHub. You are responsible for maintaining the security
+				(WorkOS) using Google or Microsoft. You are responsible for maintaining the security
 				of your account credentials with your identity provider and for all activity that occurs under
 				your account.
 			</p>

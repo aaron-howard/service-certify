@@ -60,7 +60,7 @@ Service Certify is a three-tier web application for practicing ServiceNow certif
 
 ### Authentication (implemented)
 
-1. **Sign in** → WorkOS OAuth (Google / Microsoft / GitHub) → httpOnly session cookies.
+1. **Sign in** → WorkOS OAuth (Google / Microsoft) → httpOnly session cookies.
 2. **User sync** → SvelteKit calls Convex `createOrUpdateUser` after callback (and on subsequent requests when Convex URL is set).
 3. **Convex JWT** → Browser client uses `/api/auth/convex-token` so full-mock queries can verify admin identity.
 4. **Admin bootstrap** → `ADMIN_EMAILS` Convex env promotes allowlisted emails to `role: "admin"` on login.
