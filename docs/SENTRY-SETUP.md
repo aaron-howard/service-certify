@@ -104,6 +104,30 @@ Source maps are **not** automatic from the Vercel integration alone — the app 
 
 ## Alert rules (soft-launch required)
 
+### Automated (recommended)
+
+Create both production email alerts with the idempotent setup script:
+
+```bash
+# Org auth token with alerts:write (Vercel source-map tokens usually lack this scope)
+SENTRY_AUTH_TOKEN=sntrys_... \
+SENTRY_ALERT_EMAIL=aaron.howard@dallas.gov \
+npm run setup:sentry-alerts
+```
+
+Defaults: org `ajhmh-mq`, project `service-certify`, region `us`.
+
+| Rule | When | Notify |
+|------|------|--------|
+| **New issue in production** | First seen, `environment=production` | Member email if resolvable, else Issue Owners → Active Members |
+| **Error spike in production** | **>20 events in 10 minutes**, `environment=production` | Same |
+
+After running, open [Alerts](https://ajhmh-mq.sentry.io/alerts/rules/) and use **Send test notification** once.
+
+Script: [`scripts/setup-sentry-alerts.mjs`](../scripts/setup-sentry-alerts.mjs).
+
+### Manual (UI)
+
 In Sentry → **Alerts** for project `service-certify`:
 
 1. **New issue** — filter `environment:production` → notify email
