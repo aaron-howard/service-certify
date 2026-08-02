@@ -55,6 +55,8 @@ No code change is required for project organization — this is dashboard-only u
 
 **OAuth providers:** Enable Google and Microsoft. Disable any existing GitHub connection so dashboard config matches `OAUTH_PROVIDERS`.
 
+**JWT template:** Under Authentication → Features → JWT Template, include `"aud": "<this environment's WORKOS_CLIENT_ID>"` so Convex `auth.config.ts` can validate access tokens (avoids `NoAuthProvider` on `/auth/callback`).
+
 **Branding** (Branding in dashboard — per environment):
 
 | Field | Suggested staging value |
@@ -77,6 +79,8 @@ No code change is required for project organization — this is dashboard-only u
 | `https://<your-production-domain>/auth/callback` | Live site (HTTPS required) |
 
 **OAuth providers:** Enable Google and Microsoft. Disable any existing GitHub connection so dashboard config matches `OAUTH_PROVIDERS`.
+
+**JWT template:** Same as staging — `"aud": "<production WORKOS_CLIENT_ID>"` in Authentication → Features → JWT Template.
 
 **Branding:**
 

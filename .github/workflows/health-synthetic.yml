@@ -1,0 +1,66 @@
+name: Health synthetic
+
+# Lean availability probe for production dependencies (Convex + Upstash).
+# Uses the Vercel deployment hostname because Cloudflare Bot Fight Mode
+# challenges unattended requests to www.service-certify.com/api/health.
+on:
+  schedule:
+    - cron: "17 * * * *" # hourly
+  workflow_dispatch:
+  push:
+    branches: [main, master]
+    paths:
+      - ".github/workflows/health-synthetic.yml"
+      - "src/routes/api/health/**"
+
+permissions:
+  contents: read
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Probe /api/health
+        env:
+          HEALTH_URL: https://service-certify.vercel.app/api/health
+        run: |
+          set -euo pipefail
+          response="$(mktemp)"
+          http_code="$(curl -sS -o "$response" -w "%{http_code}" \
+            --max-time 15 \
+            -H "Accept: application/json" \
+            -H "User-Agent: service-certify-health-synthetic/1.0" \
+            "$HEALTH_URL")"
+
+          echo "HTTP $http_code from $HEALTH_URL"
+          cat "$response"
+          echo
+
+          if [ "$http_code" != "200" ]; then
+            echo "::error::Expected HTTP 200, got $http_code"
+            exit 1
+          fi
+
+          RESPONSE_FILE="$response" python3 - <<'PY'
+          import json, os, sys
+          path = os.environ["RESPONSE_FILE"]
+          with open(path, encoding="utf-8") as f:
+              data = json.load(f)
+          errors = []
+          if data.get("status") != "ok":
+              errors.append(f'status={data.get("status")!r} (expected "ok")')
+          checks = data.get("checks") or {}
+          for name in ("convex", "rateLimiter"):
+              check = checks.get(name) or {}
+              if check.get("status") != "ok":
+                  errors.append(
+                      f'checks.{name}.status={check.get("status")!r} message={check.get("message")!r}'
+                  )
+          if errors:
+              print("Health payload failed:")
+              for err in errors:
+                  print(f"  - {err}")
+              sys.exit(1)
+          print("Health checks ok: status, convex, rateLimiter")
+          PY

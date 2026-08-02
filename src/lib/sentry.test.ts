@@ -29,6 +29,45 @@ describe('resolveSentryDsn', () => {
 	});
 });
 
+describe('resolveSentryRelease', () => {
+	afterEach(() => {
+		vi.unstubAllEnvs();
+		vi.resetModules();
+	});
+
+	it('uses a short Vercel git SHA when present', async () => {
+		vi.stubEnv('VERCEL_GIT_COMMIT_SHA', 'abcdef0123456789deadbeef');
+		const { resolveSentryRelease } = await import('./sentry');
+		expect(resolveSentryRelease()).toBe('service-certify@abcdef012345');
+	});
+
+	it('falls back to package version when SHA is missing', async () => {
+		vi.stubEnv('VERCEL_GIT_COMMIT_SHA', '');
+		const { resolveSentryRelease } = await import('./sentry');
+		expect(resolveSentryRelease()).toMatch(/^service-certify@/);
+	});
+});
+
+describe('shouldCaptureHttpError', () => {
+	it('skips 404 and 405 scanner noise', async () => {
+		const { shouldCaptureHttpError } = await import('./sentry');
+		expect(shouldCaptureHttpError(404)).toBe(false);
+		expect(shouldCaptureHttpError(405)).toBe(false);
+		expect(shouldCaptureHttpError(500)).toBe(true);
+		expect(shouldCaptureHttpError(503)).toBe(true);
+	});
+});
+
+describe('isBotNoiseError', () => {
+	it('detects SvelteKit no-form-actions 405 messages', async () => {
+		const { isBotNoiseError } = await import('./sentry');
+		expect(isBotNoiseError(new Error('POST method not allowed. No form actions exist for this page'))).toBe(
+			true
+		);
+		expect(isBotNoiseError(new Error('Rate limiter unavailable'))).toBe(false);
+	});
+});
+
 describe('getSentryInitOptions', () => {
 	afterEach(() => {
 		vi.unstubAllEnvs();
@@ -51,6 +90,7 @@ describe('getSentryInitOptions', () => {
 
 	it('merges client extras when DSN is present', async () => {
 		vi.stubEnv('SENTRY_DSN', 'https://key@o0.ingest.sentry.io/1');
+		vi.stubEnv('VERCEL_GIT_COMMIT_SHA', '1234567890abffffffffffff');
 		const { getSentryInitOptions } = await import('./sentry');
 		const opts = getSentryInitOptions({
 			replaysOnErrorSampleRate: 1.0,
@@ -59,7 +99,8 @@ describe('getSentryInitOptions', () => {
 		if (opts) {
 			expect(opts.dsn).toBeTruthy();
 			expect(opts.replaysOnErrorSampleRate).toBe(1.0);
-			expect(opts.release).toMatch(/^service-certify@/);
+			expect(opts.release).toBe('service-certify@1234567890ab');
+			expect(typeof opts.beforeSend).toBe('function');
 		}
 	});
 });
