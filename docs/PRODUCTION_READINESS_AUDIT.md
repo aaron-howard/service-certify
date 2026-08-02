@@ -79,7 +79,7 @@ This is the living checklist referenced by monitoring, testing, and rate-limitin
 | Item | Detail | Status |
 |------|--------|--------|
 | Configure Sentry DSN | Install Vercel→Sentry integration (or set DSN + `SENTRY_AUTH_TOKEN`) | Done (env present on Vercel) |
-| Sentry alert rules | New issue + error spike in `production` → email — `npm run sentry:login` then `npm run setup:sentry-alerts` ([SENTRY-SETUP.md](./SENTRY-SETUP.md)) | Ops — CLI device login + script ready |
+| Sentry alert rules | New issue + error spike in `production` → email — `npm run sentry:login` then `npm run setup:sentry-alerts` ([SENTRY-SETUP.md](./SENTRY-SETUP.md)) | Done (rules 17374739 + 17374741; email mr.aaronjhoward@gmail.com) |
 | Ignore SERVICE-CERTIFY-6 | Mark ignored in Sentry (“scanner noise”); app also drops 405 | Ops (manual) + code |
 | Sentry release SHA | `service-certify@<git-sha>` via `VERCEL_GIT_COMMIT_SHA` | Done (code) |
 | Enable Speed Insights | Vercel dashboard → Analytics → Speed Insights | Done (enabled; confirmed 2026-08-02) |
@@ -116,7 +116,7 @@ Copy into a launch ticket:
 9. [ ] `npm run verify:workos-env` passes with production-scoped vars
 10. [ ] Upstash: `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN` on Vercel
 11. [x] Sentry: Vercel→Sentry integration linked (DSN + auth token) or manual env vars
-12. [ ] Sentry alert rules: `npm run sentry:login` → `npm run setup:sentry-alerts` + ignore SERVICE-CERTIFY-6
+12. [x] Sentry alert rules: `npm run sentry:login` → `npm run setup:sentry-alerts` (ignore SERVICE-CERTIFY-6 still manual)
 13. [x] Speed Insights enabled in Vercel and showing CWV data
 14. [ ] Better Stack uptime on `https://service-certify.vercel.app/api/health` (JSON asserts)
 15. [ ] WorkOS staging + production JWT templates include `"aud": "<client id>"`

@@ -6,7 +6,7 @@
  *
  * Rules (idempotent by name):
  *   1. New issue in production → email Issue Owners (fallthrough Active Members)
- *   2. Error spike in production (>20 events / 10m) → email Issue Owners
+ *   2. Error spike in production (>20 events / 15m) → email Issue Owners
  *
  * Usage:
  *   npx sentry auth login          # one-time terminal device login
@@ -175,7 +175,12 @@ function resolveMemberId(org, email) {
 }
 
 function listRules(org, project) {
-	const { stdout } = runSentry(['alert', 'issues', 'list', `${org}/${project}`], { json: true });
+	// Prefer classic project rules API — `sentry alert issues list` returns workflow-engine
+	// alerts, while `sentry alert issues create` still writes classic /projects/.../rules/.
+	const { stdout } = runSentry(
+		['api', `projects/${org}/${project}/rules/?per_page=100`],
+		{ json: true }
+	);
 	const body = parseJson(stdout);
 	if (Array.isArray(body)) return body;
 	if (body && Array.isArray(body.data)) return body.data;
@@ -204,8 +209,16 @@ function createRule(org, project, payload) {
 	if (payload.filterMatch) {
 		args.push('--filter-match', payload.filterMatch);
 	}
-	const { stdout } = runSentry(args, { json: true });
-	return parseJson(stdout);
+	const { status, stdout, stderr } = runSentry(args, { json: true, allowFail: true });
+	if (status === 0) return parseJson(stdout);
+
+	const detail = `${stderr}\n${stdout}`;
+	// Race / prior partial run: treat exact-name duplicates as success.
+	if (/exact duplicate/i.test(detail) || /already exists/i.test(detail)) {
+		const existing = listRules(org, project).find((r) => r.name === payload.name);
+		if (existing) return existing;
+	}
+	throw new Error(`sentry ${args.join(' ')} failed (exit ${status}):\n${detail.trim()}`);
 }
 
 function ensureRule(org, project, existing, payload) {
@@ -245,7 +258,8 @@ function spikeRule(action) {
 			{
 				id: 'sentry.rules.conditions.event_frequency.EventFrequencyCondition',
 				value: 20,
-				interval: '10m',
+				// EventFrequencyCondition allows 1m/5m/15m/1h/… (not 10m)
+				interval: '15m',
 				comparisonType: 'count'
 			}
 		],

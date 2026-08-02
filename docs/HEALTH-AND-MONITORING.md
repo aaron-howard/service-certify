@@ -146,7 +146,7 @@ If metrics degrade:
 | Layer | Tool | Status |
 |-------|------|--------|
 | **Errors** | Sentry | ✅ Wired (DSN + release SHA + 404/405 noise filter) |
-| **Alerts** | Sentry alert rules | ⬜ Run `npm run setup:sentry-alerts` with `SENTRY_AUTH_TOKEN` (alerts:write) — see [SENTRY-SETUP.md](./SENTRY-SETUP.md) |
+| **Alerts** | Sentry alert rules | ✅ Soft-launch rules created (new issue + spike → email); see [SENTRY-SETUP.md](./SENTRY-SETUP.md) |
 | **Performance** | Vercel Speed Insights | ✅ Wired + enabled in Vercel Analytics (confirmed 2026-08-02) |
 | **Availability** | Better Stack → `/api/health` | ⬜ Create monitor (use Vercel hostname; see Cloudflare caveat) |
 | **Synthetic** | GitHub Actions `Health synthetic` | ✅ Hourly JSON probe |
@@ -163,7 +163,7 @@ npm run sentry:login   # terminal device code → approve in browser
 SENTRY_ALERT_EMAIL=aaron.howard@dallas.gov npm run setup:sentry-alerts
 ```
 
-Creates **New issue in production** and **Error spike in production** (>20 / 10m) → email.
+Creates **New issue in production** and **Error spike in production** (>20 / 15m) → email.
 Details: [SENTRY-SETUP.md](./SENTRY-SETUP.md). Optionally ignore SERVICE-CERTIFY-6 scanner noise in the Sentry UI.
 
 ### Better Stack (uptime)
