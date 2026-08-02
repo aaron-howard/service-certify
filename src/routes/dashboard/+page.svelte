@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
-	import { env } from '$env/dynamic/public';
 	import MaterialIcon from '$lib/components/MaterialIcon.svelte';
 	import { exams } from '$lib/data/exams';
 	import { useQuery } from 'convex-svelte';
@@ -8,16 +7,17 @@
 
 	let { data } = $props();
 
-	const convexConfigured =
-		typeof env.PUBLIC_CONVEX_URL === 'string' && env.PUBLIC_CONVEX_URL.length > 0;
-
+	// Live updates after hydration; SSR `data.progress` paints immediately.
 	const progressQuery = useQuery(
 		api.userProgress.listForCurrentUser,
-		() => (browser && convexConfigured ? {} : 'skip')
+		() => (browser && data.convexConfigured ? {} : 'skip')
 	);
 
-	const progressRows = $derived(progressQuery.data ?? []);
-	const loading = $derived(progressQuery.isLoading && !progressQuery.data);
+	const progressRows = $derived(progressQuery.data ?? data.progress);
+	const loading = $derived(
+		data.convexConfigured && progressQuery.isLoading && progressQuery.data === undefined && data.progress.length === 0
+	);
+	const hasProgress = $derived(progressRows.length > 0);
 
 	function examForTrack(trackCode: string) {
 		return exams.find((e) => e.code === trackCode);
@@ -64,11 +64,11 @@
 				Welcome back{#if data.user?.name}, {data.user.name.split(/\s+/)[0]}{/if}.
 			</h1>
 			<p class="mt-6 max-w-xl text-lg leading-relaxed text-on-surface-variant">
-				{#if !convexConfigured}
+				{#if !data.convexConfigured}
 					Connect Convex to sync practice progress across sessions.
 				{:else if loading}
 					Loading your practice history…
-				{:else if progressRows.length === 0}
+				{:else if !hasProgress}
 					No graded practice sessions yet. Start a sample from the exam catalog to build your
 					readiness profile.
 				{:else}
@@ -105,17 +105,21 @@
 					<a href="/exams" class="text-sm font-semibold text-secondary hover:underline">View all exams</a>
 				</div>
 
-				{#if !convexConfigured}
-					<div class="rounded-xl bg-surface-container-low p-8 text-on-surface-variant">
+				{#if !data.convexConfigured}
+					<div class="min-h-40 rounded-xl bg-surface-container-low p-8 text-on-surface-variant">
 						<p>
 							Set <code class="text-sm">PUBLIC_CONVEX_URL</code> and seed questions to enable live
 							progress tracking.
 						</p>
 					</div>
 				{:else if loading}
-					<div class="rounded-xl bg-surface-container-low p-8 text-on-surface-variant">Loading…</div>
-				{:else if progressRows.length === 0}
-					<div class="rounded-xl bg-surface-container-low p-8">
+					<div class="min-h-40 space-y-4" aria-busy="true" aria-live="polite">
+						{#each [1, 2] as _}
+							<div class="h-36 animate-pulse rounded-xl bg-surface-container-low"></div>
+						{/each}
+					</div>
+				{:else if !hasProgress}
+					<div class="min-h-40 rounded-xl bg-surface-container-low p-8">
 						<p class="text-on-surface-variant">
 							Your graded sessions will appear here. Try a sample practice to get started.
 						</p>
@@ -182,33 +186,41 @@
 				<div class="absolute bottom-0 right-0 h-64 w-64 rounded-full bg-secondary/10 blur-[100px]"></div>
 				<div class="relative z-10">
 					<h2 class="font-headline mb-8 text-2xl font-bold">Performance summary</h2>
-					<div class="grid grid-cols-1 gap-8 md:grid-cols-3">
-						<div>
-							<p class="font-label mb-2 text-xs uppercase tracking-widest text-on-primary-container">
-								Avg. score
-							</p>
-							<p class="font-headline text-3xl font-bold">
-								{overallAverage === null ? '—' : `${overallAverage}%`}
-							</p>
-							<p class="mt-2 text-xs text-slate-400">Across tracks with activity</p>
+					{#if loading}
+						<div class="grid grid-cols-1 gap-8 md:grid-cols-3" aria-busy="true">
+							{#each [1, 2, 3] as _}
+								<div class="h-16 animate-pulse rounded-lg bg-white/10"></div>
+							{/each}
 						</div>
-						<div>
-							<p class="font-label mb-2 text-xs uppercase tracking-widest text-on-primary-container">
-								Best score
-							</p>
-							<p class="font-headline text-3xl font-bold">
-								{bestOverall === null ? '—' : `${bestOverall}%`}
-							</p>
-							<p class="mt-2 text-xs text-slate-400">Personal best</p>
+					{:else}
+						<div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+							<div>
+								<p class="font-label mb-2 text-xs uppercase tracking-widest text-on-primary-container">
+									Avg. score
+								</p>
+								<p class="font-headline text-3xl font-bold">
+									{overallAverage === null ? '—' : `${overallAverage}%`}
+								</p>
+								<p class="mt-2 text-xs text-slate-400">Across tracks with activity</p>
+							</div>
+							<div>
+								<p class="font-label mb-2 text-xs uppercase tracking-widest text-on-primary-container">
+									Best score
+								</p>
+								<p class="font-headline text-3xl font-bold">
+									{bestOverall === null ? '—' : `${bestOverall}%`}
+								</p>
+								<p class="mt-2 text-xs text-slate-400">Personal best</p>
+							</div>
+							<div>
+								<p class="font-label mb-2 text-xs uppercase tracking-widest text-on-primary-container">
+									Sessions
+								</p>
+								<p class="font-headline text-3xl font-bold">{totalSessions}</p>
+								<p class="mt-2 text-xs text-slate-400">Graded practice attempts</p>
+							</div>
 						</div>
-						<div>
-							<p class="font-label mb-2 text-xs uppercase tracking-widest text-on-primary-container">
-								Sessions
-							</p>
-							<p class="font-headline text-3xl font-bold">{totalSessions}</p>
-							<p class="mt-2 text-xs text-slate-400">Graded practice attempts</p>
-						</div>
-					</div>
+					{/if}
 				</div>
 			</section>
 		</div>

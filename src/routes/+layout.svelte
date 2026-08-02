@@ -1,6 +1,7 @@
 <script lang="ts">
 	import './layout.css';
-	import '@fontsource-variable/material-symbols-outlined/full.css';
+	// wght axis only (~727KB) — avoid full.css (~3.8MB) which tanks LCP/INP on authenticated pages.
+	import '@fontsource-variable/material-symbols-outlined/wght.css';
 	import '@fontsource-variable/manrope/wght.css';
 	import '@fontsource-variable/inter/wght.css';
 	import DisclaimBanner from '$lib/components/DisclaimBanner.svelte';
