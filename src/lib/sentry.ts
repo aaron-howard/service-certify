@@ -12,6 +12,34 @@ function processEnv(): ProcessEnv | undefined {
 }
 
 /**
+ * Prefer the Vercel git SHA so each deploy is a distinct Sentry release.
+ * Falls back to package.json version when SHA is unavailable (local/CI).
+ */
+export function resolveSentryRelease(): string {
+	const env = processEnv();
+	const sha = env?.VERCEL_GIT_COMMIT_SHA?.trim();
+	if (sha) {
+		return `service-certify@${sha.slice(0, 12)}`;
+	}
+	return `service-certify@${version}`;
+}
+
+const BOT_NOISE_ERROR_PATTERNS = [/No form actions exist for this page/i, /Method Not Allowed/i];
+
+/** Drop known scanner/bot noise that still slips past status filtering. */
+export function isBotNoiseError(error: unknown): boolean {
+	const message =
+		error instanceof Error
+			? error.message
+			: typeof error === 'string'
+				? error
+				: error && typeof error === 'object' && 'message' in error
+					? String((error as { message: unknown }).message)
+					: '';
+	return BOT_NOISE_ERROR_PATTERNS.some((pattern) => pattern.test(message));
+}
+
+/**
  * Resolve DSN from app env vars and the Vercel → Sentry integration.
  *
  * Vercel Marketplace / Sentry integration injects `NEXT_PUBLIC_SENTRY_DSN`
@@ -79,8 +107,14 @@ export function getSentryInitOptions(extras: SentryInitExtras = {}) {
 		dsn,
 		environment,
 		tracesSampleRate: environment === 'production' ? 0.1 : 1.0,
-		release: `service-certify@${version}`,
+		release: resolveSentryRelease(),
 		ignoreErrors,
+		beforeSend(event: { message?: string }, hint: { originalException?: unknown }) {
+			if (isBotNoiseError(hint.originalException ?? event.message)) {
+				return null;
+			}
+			return event;
+		},
 		...extras
 	};
 }
@@ -98,9 +132,12 @@ export function initSentry(extras: SentryInitExtras = {}) {
 	Sentry.init(initOptions as Parameters<typeof Sentry.init>[0]);
 }
 
-/** Whether handleError should report this status to Sentry. */
+/**
+ * Whether handleError should report this status to Sentry.
+ * Skip 404 (missing routes) and 405 (scanner POSTs to pages without form actions).
+ */
 export function shouldCaptureHttpError(status: number): boolean {
-	return status !== 404;
+	return status !== 404 && status !== 405;
 }
 
 /**
