@@ -1,6 +1,7 @@
 import type { Cookies } from '@sveltejs/kit';
 import { describe, expect, it } from 'vitest';
 import {
+	getJwtAuthDiagnostics,
 	getJwtAuthTimeSeconds,
 	getJwtExpirySeconds,
 	isAccessTokenExpired,
@@ -53,6 +54,21 @@ describe('workos-session', () => {
 	it('reads auth_time from a JWT payload', () => {
 		const authTime = 1_700_000_000;
 		expect(getJwtAuthTimeSeconds(jwtWithClaims({ auth_time: authTime }))).toBe(authTime);
+	});
+
+	it('exposes iss/aud diagnostics without requiring a subject', () => {
+		const token = jwtWithClaims({
+			iss: 'https://api.workos.com',
+			aud: 'client_test'
+		});
+		expect(getJwtAuthDiagnostics(token)).toEqual({
+			iss: 'https://api.workos.com',
+			aud: 'client_test',
+			hasAud: true
+		});
+		expect(getJwtAuthDiagnostics(jwtWithClaims({ iss: 'https://api.workos.com' })).hasAud).toBe(
+			false
+		);
 	});
 
 	it('treats missing auth_time as stale', () => {

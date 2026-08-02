@@ -18,6 +18,8 @@ const authCookieOptions = (secure: boolean) =>
 type WorkOsAccessTokenPayload = {
 	exp?: unknown;
 	auth_time?: unknown;
+	iss?: unknown;
+	aud?: unknown;
 };
 
 function decodeJwtPayload(token: string): WorkOsAccessTokenPayload | null {
@@ -30,6 +32,27 @@ function decodeJwtPayload(token: string): WorkOsAccessTokenPayload | null {
 	} catch {
 		return null;
 	}
+}
+
+/**
+ * Non-secret JWT claims for Sentry / logs when Convex rejects a WorkOS token.
+ * Never returns the raw token or subject.
+ */
+export function getJwtAuthDiagnostics(token: string): {
+	iss?: string;
+	aud?: string;
+	hasAud: boolean;
+} {
+	const payload = decodeJwtPayload(token);
+	const iss = typeof payload?.iss === 'string' ? payload.iss : undefined;
+	const audRaw = payload?.aud;
+	const aud =
+		typeof audRaw === 'string'
+			? audRaw
+			: Array.isArray(audRaw) && typeof audRaw[0] === 'string'
+				? audRaw[0]
+				: undefined;
+	return { iss, aud, hasAud: Boolean(aud) };
 }
 
 /** Decode JWT `exp` (seconds since epoch). Returns null if the payload cannot be read. */

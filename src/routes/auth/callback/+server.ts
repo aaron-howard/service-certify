@@ -74,7 +74,24 @@ export const GET: RequestHandler = async ({ url, cookies }) => {
 			// OAuth succeeded; log sync failure but still sign the user in.
 			console.error('Convex user sync failed after OAuth:', syncError);
 			const { captureException } = await import('$lib/sentry');
-			captureException(syncError, { phase: 'oauth_convex_sync' });
+			const { getJwtAuthDiagnostics } = await import('$lib/workos-session');
+			const jwtDiagnostics = getJwtAuthDiagnostics(token.accessToken);
+			const syncMessage =
+				syncError instanceof Error
+					? syncError.message
+					: typeof syncError === 'string'
+						? syncError
+						: '';
+			captureException(syncError, {
+				phase: 'oauth_convex_sync',
+				errorCode: /NoAuthProvider/i.test(syncMessage) ? 'NoAuthProvider' : undefined,
+				jwtIss: jwtDiagnostics.iss,
+				// Never log the raw audience (it is the client ID); only whether it was present.
+				jwtHasAud: jwtDiagnostics.hasAud,
+				hint: !jwtDiagnostics.hasAud
+					? 'WorkOS JWT missing aud claim; set JWT template aud to WORKOS_CLIENT_ID'
+					: undefined
+			});
 		}
 	} catch (err) {
 		console.error('Token exchange error:', err);
