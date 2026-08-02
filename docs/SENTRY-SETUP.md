@@ -126,7 +126,7 @@ Defaults: org `ajhmh-mq`, project `service-certify`.
 | Rule | When | Notify |
 |------|------|--------|
 | **New issue in production** | First seen, `environment=production` | Member email if resolvable, else Issue Owners → Active Members |
-| **Error spike in production** | **>20 events in 10 minutes**, `environment=production` | Same |
+| **Error spike in production** | **>20 events in 15 minutes**, `environment=production` | Same |
 
 After running, open [Alerts](https://ajhmh-mq.sentry.io/alerts/rules/) and use **Send test notification** once.
 
@@ -146,7 +146,7 @@ npm run setup:sentry-alerts
 In Sentry → **Alerts** for project `service-certify`:
 
 1. **New issue** — filter `environment:production` → notify email
-2. **Error spike** — e.g. more than **20 events in 10 minutes** in production → notify email
+2. **Error spike** — e.g. more than **20 events in 15 minutes** in production → notify email
 3. Use Sentry’s “Send test notification” to confirm delivery
 
 ### Known noise issue
