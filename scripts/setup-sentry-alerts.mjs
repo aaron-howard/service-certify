@@ -2,31 +2,32 @@
 /**
  * Create soft-launch Sentry issue alert rules for service-certify.
  *
+ * Uses the official `sentry` CLI (device-code OAuth via `sentry auth login`).
+ *
  * Rules (idempotent by name):
  *   1. New issue in production → email Issue Owners (fallthrough Active Members)
  *   2. Error spike in production (>20 events / 10m) → email Issue Owners
  *
  * Usage:
- *   SENTRY_AUTH_TOKEN=sntrys_... npm run setup:sentry-alerts
+ *   npx sentry auth login          # one-time terminal device login
+ *   npm run setup:sentry-alerts
  *
  * Optional env:
  *   SENTRY_ORG=ajhmh-mq
  *   SENTRY_PROJECT=service-certify
- *   SENTRY_REGION=us          # us → us.sentry.io, de → de.sentry.io, omit → sentry.io
  *   SENTRY_ALERT_EMAIL=you@example.com  # prefer Member email when resolvable
+ *   SENTRY_AUTH_TOKEN=sntrys_...        # optional override; normally use CLI login
  *
- * Token scopes: alerts:write (or org:write / org:admin).
- * The Vercel source-map token often lacks alerts:write — create an org auth token.
- *
- * Loads SENTRY_* from the environment and from .env.local if present.
- * Exits 0 on success; exits 1 on failure or missing credentials.
+ * Exits 0 on success; exits 1 on failure or missing auth.
  */
 
 import { existsSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
+import { spawnSync } from 'node:child_process';
 
 const ROOT = resolve(import.meta.dirname, '..');
 const ENV_LOCAL = resolve(ROOT, '.env.local');
+const SENTRY_BIN = resolve(ROOT, 'node_modules/.bin/sentry');
 
 const DEFAULT_ORG = 'ajhmh-mq';
 const DEFAULT_PROJECT = 'service-certify';
@@ -56,30 +57,81 @@ function loadEnvLocal() {
 	}
 }
 
-function apiBase(region) {
-	if (!region || region === 'global') return 'https://sentry.io/api/0';
-	return `https://${region}.sentry.io/api/0`;
+function ensureSentryBin() {
+	if (!existsSync(SENTRY_BIN)) {
+		throw new Error(
+			`Missing ${SENTRY_BIN}. Run: npm install\n` +
+				'Then authenticate: npx sentry auth login'
+		);
+	}
 }
 
-async function sentryFetch(base, path, token, options = {}) {
-	const res = await fetch(`${base}${path}`, {
-		...options,
-		headers: {
-			Authorization: `Bearer ${token}`,
-			'Content-Type': 'application/json',
-			...(options.headers ?? {})
-		}
+function runSentry(args, { json = false, allowFail = false } = {}) {
+	const fullArgs = json ? [...args, '--json'] : args;
+	const result = spawnSync(SENTRY_BIN, fullArgs, {
+		encoding: 'utf8',
+		env: process.env,
+		cwd: ROOT
 	});
-	const text = await res.text();
-	let body = null;
-	if (text) {
-		try {
-			body = JSON.parse(text);
-		} catch {
-			body = text;
-		}
+	if (result.error) throw result.error;
+	if (result.status !== 0 && !allowFail) {
+		const detail = (result.stderr || result.stdout || '').trim();
+		throw new Error(`sentry ${args.join(' ')} failed (exit ${result.status}):\n${detail}`);
 	}
-	return { res, body };
+	return {
+		status: result.status ?? 1,
+		stdout: result.stdout ?? '',
+		stderr: result.stderr ?? ''
+	};
+}
+
+function parseJson(stdout) {
+	const text = stdout.trim();
+	if (!text) return null;
+	try {
+		return JSON.parse(text);
+	} catch {
+		// Some CLI versions wrap payloads; try last JSON object/array
+		const startObj = text.indexOf('{');
+		const startArr = text.indexOf('[');
+		const start =
+			startObj === -1 ? startArr : startArr === -1 ? startObj : Math.min(startObj, startArr);
+		if (start === -1) throw new Error(`Expected JSON from sentry CLI, got:\n${text}`);
+		return JSON.parse(text.slice(start));
+	}
+}
+
+function requireAuth() {
+	const status = runSentry(['auth', 'status'], { allowFail: true });
+	if (status.status === 0) {
+		const who = runSentry(['auth', 'whoami'], { allowFail: true });
+		if (who.status === 0 && who.stdout.trim()) {
+			console.log(`Authenticated: ${who.stdout.trim().split('\n')[0]}`);
+		} else {
+			console.log('Authenticated via sentry CLI');
+		}
+		return;
+	}
+
+	if (process.env.SENTRY_AUTH_TOKEN?.trim()) {
+		console.log('Using SENTRY_AUTH_TOKEN from environment');
+		return;
+	}
+
+	console.error(`Not authenticated with Sentry.
+
+In this terminal (or any shell on this machine), run:
+
+  npx sentry auth login
+
+1. Open the URL shown
+2. Enter the device code
+3. Approve access for org ajhmh-mq
+
+Then re-run:
+
+  npm run setup:sentry-alerts`);
+	process.exit(1);
 }
 
 function emailAction(memberId) {
@@ -98,6 +150,76 @@ function emailAction(memberId) {
 	};
 }
 
+function resolveMemberId(org, email) {
+	if (!email) return null;
+	const { status, stdout, stderr } = runSentry(
+		['api', `organizations/${org}/members/`],
+		{ json: true, allowFail: true }
+	);
+	if (status !== 0) {
+		console.warn(`Could not list org members; falling back to IssueOwners.\n${stderr || stdout}`);
+		return null;
+	}
+	const body = parseJson(stdout);
+	const members = Array.isArray(body) ? body : [];
+	const match = members.find((m) => {
+		const memberEmail = m.email ?? m.user?.email;
+		return typeof memberEmail === 'string' && memberEmail.toLowerCase() === email.toLowerCase();
+	});
+	const userId = match?.user?.id ?? match?.userId ?? match?.id;
+	if (!userId) {
+		console.warn(`No org member found for ${email}; falling back to IssueOwners.`);
+		return null;
+	}
+	return userId;
+}
+
+function listRules(org, project) {
+	const { stdout } = runSentry(['alert', 'issues', 'list', `${org}/${project}`], { json: true });
+	const body = parseJson(stdout);
+	if (Array.isArray(body)) return body;
+	if (body && Array.isArray(body.data)) return body.data;
+	return [];
+}
+
+function createRule(org, project, payload) {
+	const args = [
+		'alert',
+		'issues',
+		'create',
+		`${org}/${project}`,
+		'--name',
+		payload.name,
+		'--action-match',
+		payload.actionMatch,
+		'--frequency',
+		String(payload.frequency),
+		'--environment',
+		payload.environment,
+		'--condition',
+		JSON.stringify(payload.conditions),
+		'--action',
+		JSON.stringify(payload.actions)
+	];
+	if (payload.filterMatch) {
+		args.push('--filter-match', payload.filterMatch);
+	}
+	const { stdout } = runSentry(args, { json: true });
+	return parseJson(stdout);
+}
+
+function ensureRule(org, project, existing, payload) {
+	const found = existing.find((r) => r.name === payload.name);
+	if (found) {
+		console.log(`✓ Already exists: ${payload.name} (id=${found.id})`);
+		return { created: false, rule: found };
+	}
+	const rule = createRule(org, project, payload);
+	const id = rule?.id ?? rule?.data?.id ?? '?';
+	console.log(`✓ Created: ${payload.name} (id=${id})`);
+	return { created: true, rule };
+}
+
 function newIssueRule(action) {
 	return {
 		name: NEW_ISSUE_NAME,
@@ -108,7 +230,6 @@ function newIssueRule(action) {
 		conditions: [
 			{ id: 'sentry.rules.conditions.first_seen_event.FirstSeenEventCondition' }
 		],
-		filters: [],
 		actions: [action]
 	};
 }
@@ -128,99 +249,27 @@ function spikeRule(action) {
 				comparisonType: 'count'
 			}
 		],
-		filters: [],
 		actions: [action]
 	};
 }
 
-async function resolveMemberId(base, org, token, email) {
-	if (!email) return null;
-	const { res, body } = await sentryFetch(base, `/organizations/${org}/members/`, token);
-	if (!res.ok) {
-		console.warn(`Could not list org members (${res.status}); falling back to IssueOwners.`);
-		return null;
-	}
-	const members = Array.isArray(body) ? body : [];
-	const match = members.find((m) => {
-		const memberEmail = m.email ?? m.user?.email;
-		return typeof memberEmail === 'string' && memberEmail.toLowerCase() === email.toLowerCase();
-	});
-	const userId = match?.user?.id ?? match?.userId ?? match?.id;
-	if (!userId) {
-		console.warn(`No org member found for ${email}; falling back to IssueOwners.`);
-		return null;
-	}
-	return userId;
-}
-
-async function listRules(base, org, project, token) {
-	const { res, body } = await sentryFetch(base, `/projects/${org}/${project}/rules/`, token);
-	if (!res.ok) {
-		const detail =
-			typeof body === 'object' && body && 'detail' in body ? body.detail : JSON.stringify(body);
-		throw new Error(`List rules failed (${res.status}): ${detail}`);
-	}
-	return Array.isArray(body) ? body : [];
-}
-
-async function createRule(base, org, project, token, payload) {
-	const { res, body } = await sentryFetch(base, `/projects/${org}/${project}/rules/`, token, {
-		method: 'POST',
-		body: JSON.stringify(payload)
-	});
-	if (!res.ok) {
-		const detail = typeof body === 'string' ? body : JSON.stringify(body, null, 2);
-		throw new Error(`Create rule "${payload.name}" failed (${res.status}): ${detail}`);
-	}
-	return body;
-}
-
-async function ensureRule(base, org, project, token, existing, payload) {
-	const found = existing.find((r) => r.name === payload.name);
-	if (found) {
-		console.log(`✓ Already exists: ${payload.name} (id=${found.id})`);
-		return { created: false, rule: found };
-	}
-	const rule = await createRule(base, org, project, token, payload);
-	console.log(`✓ Created: ${payload.name} (id=${rule.id})`);
-	return { created: true, rule };
-}
-
 async function main() {
 	loadEnvLocal();
+	ensureSentryBin();
+	requireAuth();
 
-	const token = process.env.SENTRY_AUTH_TOKEN?.trim();
 	const org = (process.env.SENTRY_ORG || DEFAULT_ORG).trim();
 	const project = (process.env.SENTRY_PROJECT || DEFAULT_PROJECT).trim();
-	const region = (process.env.SENTRY_REGION || 'us').trim();
 	const alertEmail = (
 		process.env.SENTRY_ALERT_EMAIL ||
 		process.env.ADMIN_EMAIL ||
 		''
 	).trim();
 
-	if (!token) {
-		console.error(`Missing SENTRY_AUTH_TOKEN.
-
-Create an Organization Auth Token at:
-  https://${org}.sentry.io/settings/auth-tokens/
-
-Required scopes: alerts:write (or org:write)
-
-Then run:
-  SENTRY_AUTH_TOKEN=sntrys_... npm run setup:sentry-alerts
-
-Optional:
-  SENTRY_ALERT_EMAIL=aaron.howard@dallas.gov npm run setup:sentry-alerts`);
-		process.exit(1);
-	}
-
-	const base = apiBase(region);
-	console.log(`Sentry API: ${base}`);
 	console.log(`Org/project: ${org}/${project}`);
 	if (alertEmail) console.log(`Prefer email member: ${alertEmail}`);
 
-	const memberId = await resolveMemberId(base, org, token, alertEmail || null);
+	const memberId = resolveMemberId(org, alertEmail || null);
 	const action = emailAction(memberId);
 	if (memberId) {
 		console.log(`Email target: Member ${memberId}`);
@@ -228,14 +277,11 @@ Optional:
 		console.log('Email target: IssueOwners → ActiveMembers');
 	}
 
-	const existing = await listRules(base, org, project, token);
+	const existing = listRules(org, project);
 	const results = [];
-	results.push(await ensureRule(base, org, project, token, existing, newIssueRule(action)));
-	// Refresh names after possible create so spike doesn't collide with a renamed list
-	const afterNew = results[0].created
-		? await listRules(base, org, project, token)
-		: existing;
-	results.push(await ensureRule(base, org, project, token, afterNew, spikeRule(action)));
+	results.push(ensureRule(org, project, existing, newIssueRule(action)));
+	const afterNew = results[0].created ? listRules(org, project) : existing;
+	results.push(ensureRule(org, project, afterNew, spikeRule(action)));
 
 	const created = results.filter((r) => r.created).length;
 	console.log('');

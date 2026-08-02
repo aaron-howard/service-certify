@@ -159,9 +159,8 @@ If metrics degrade:
 ### Sentry Alerts (required for soft launch)
 
 ```bash
-SENTRY_AUTH_TOKEN=sntrys_... \
-SENTRY_ALERT_EMAIL=aaron.howard@dallas.gov \
-npm run setup:sentry-alerts
+npm run sentry:login   # terminal device code → approve in browser
+SENTRY_ALERT_EMAIL=aaron.howard@dallas.gov npm run setup:sentry-alerts
 ```
 
 Creates **New issue in production** and **Error spike in production** (>20 / 10m) → email.
