@@ -104,10 +104,49 @@ Source maps are **not** automatic from the Vercel integration alone — the app 
 
 ## Alert rules (soft-launch required)
 
+### Automated (recommended) — terminal device login
+
+Uses the official [`sentry` CLI](https://cli.sentry.dev/) OAuth device flow (no need to paste a long-lived token into chat).
+
+```bash
+# 1) Authenticate once in this environment (prints a URL + device code)
+npm run sentry:login
+
+# 2) Create both soft-launch alert rules (idempotent)
+SENTRY_ALERT_EMAIL=aaron.howard@dallas.gov npm run setup:sentry-alerts
+
+# Optional checks
+npm run sentry:whoami
+```
+
+Credentials are stored under `~/.sentry/` on the machine that ran login. Cloud agents can then run `setup:sentry-alerts` without a pasted token.
+
+Defaults: org `ajhmh-mq`, project `service-certify`.
+
+| Rule | When | Notify |
+|------|------|--------|
+| **New issue in production** | First seen, `environment=production` | Member email if resolvable, else Issue Owners → Active Members |
+| **Error spike in production** | **>20 events in 15 minutes**, `environment=production` | Same |
+
+After running, open [Alerts](https://ajhmh-mq.sentry.io/alerts/rules/) and use **Send test notification** once.
+
+Script: [`scripts/setup-sentry-alerts.mjs`](../scripts/setup-sentry-alerts.mjs).
+
+### Token override (CI / no interactive login)
+
+```bash
+# Org auth token with alerts:write (Vercel source-map tokens usually lack this scope)
+SENTRY_AUTH_TOKEN=sntrys_... \
+SENTRY_ALERT_EMAIL=aaron.howard@dallas.gov \
+npm run setup:sentry-alerts
+```
+
+### Manual (UI)
+
 In Sentry → **Alerts** for project `service-certify`:
 
 1. **New issue** — filter `environment:production` → notify email
-2. **Error spike** — e.g. more than **20 events in 10 minutes** in production → notify email
+2. **Error spike** — e.g. more than **20 events in 15 minutes** in production → notify email
 3. Use Sentry’s “Send test notification” to confirm delivery
 
 ### Known noise issue

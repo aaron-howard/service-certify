@@ -146,8 +146,8 @@ If metrics degrade:
 | Layer | Tool | Status |
 |-------|------|--------|
 | **Errors** | Sentry | ✅ Wired (DSN + release SHA + 404/405 noise filter) |
-| **Alerts** | Sentry alert rules | ⬜ Configure: new issue + error spike → email (see [SENTRY-SETUP.md](./SENTRY-SETUP.md)) |
-| **Performance** | Vercel Speed Insights | ✅ Wired — confirm enabled in Vercel Analytics |
+| **Alerts** | Sentry alert rules | ✅ Soft-launch rules created (new issue + spike → email); see [SENTRY-SETUP.md](./SENTRY-SETUP.md) |
+| **Performance** | Vercel Speed Insights | ✅ Wired + enabled in Vercel Analytics (confirmed 2026-08-02) |
 | **Availability** | Better Stack → `/api/health` | ⬜ Create monitor (use Vercel hostname; see Cloudflare caveat) |
 | **Synthetic** | GitHub Actions `Health synthetic` | ✅ Hourly JSON probe |
 | **Abuse** | Upstash rate limits | ✅ Health + grade routes |
@@ -158,11 +158,13 @@ If metrics degrade:
 
 ### Sentry Alerts (required for soft launch)
 
-1. Go to [sentry.io](https://sentry.io) → org → project **service-certify** → **Alerts**
-2. Create:
-   - **New issue** in `environment:production` → email
-   - **Error spike** (e.g. more than 20 events in 10 minutes) in production → email
-3. Optionally ignore / inbound-filter `No form actions exist for this page` (also dropped in app `beforeSend`)
+```bash
+npm run sentry:login   # terminal device code → approve in browser
+SENTRY_ALERT_EMAIL=aaron.howard@dallas.gov npm run setup:sentry-alerts
+```
+
+Creates **New issue in production** and **Error spike in production** (>20 / 15m) → email.
+Details: [SENTRY-SETUP.md](./SENTRY-SETUP.md). Optionally ignore SERVICE-CERTIFY-6 scanner noise in the Sentry UI.
 
 ### Better Stack (uptime)
 

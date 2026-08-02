@@ -15,7 +15,7 @@ This is the living checklist referenced by monitoring, testing, and rate-limitin
 | Core practice UX | Ready | Catalog, detail, practice (single/multi/match), grade API |
 | Question bank | Ready | 22 tracks, v2 rewrites complete, bank targets met |
 | Auth (WorkOS) | Ready | JWT required for user sync; `/settings` profile + account deletion; progress writes on grade |
-| Observability | Mostly ready | Sentry + health synthetic + release SHA wired; finish Better Stack, Sentry alert rules, Speed Insights enable, WorkOS JWT `aud` |
+| Observability | Mostly ready | Sentry + health synthetic + release SHA + Speed Insights enabled; finish Better Stack, Sentry alert rules apply, WorkOS JWT `aud` |
 | Rate limiting | Code ready | Fail-closed in production without Upstash; configure Redis for prod |
 | Payments / membership | Not started | `/membership` placeholder; Phase D |
 | Dashboard / progress | Ready | Auth-gated dashboard; progress written on grade |
@@ -79,10 +79,10 @@ This is the living checklist referenced by monitoring, testing, and rate-limitin
 | Item | Detail | Status |
 |------|--------|--------|
 | Configure Sentry DSN | Install Vercel→Sentry integration (or set DSN + `SENTRY_AUTH_TOKEN`) | Done (env present on Vercel) |
-| Sentry alert rules | New issue + error spike in `production` → email — see [SENTRY-SETUP.md](./SENTRY-SETUP.md) | Ops (manual) |
+| Sentry alert rules | New issue + error spike in `production` → email — `npm run sentry:login` then `npm run setup:sentry-alerts` ([SENTRY-SETUP.md](./SENTRY-SETUP.md)) | Done (rules 17374739 + 17374741; email mr.aaronjhoward@gmail.com) |
 | Ignore SERVICE-CERTIFY-6 | Mark ignored in Sentry (“scanner noise”); app also drops 405 | Ops (manual) + code |
 | Sentry release SHA | `service-certify@<git-sha>` via `VERCEL_GIT_COMMIT_SHA` | Done (code) |
-| Enable Speed Insights | Vercel dashboard → Analytics → Speed Insights | Ops (manual) — confirm data flowing |
+| Enable Speed Insights | Vercel dashboard → Analytics → Speed Insights | Done (enabled; confirmed 2026-08-02) |
 | External uptime monitor | Better Stack on `https://service-certify.vercel.app/api/health` (not www — Cloudflare challenges bots) | Ops (manual) |
 | Health synthetic CI | Hourly GitHub Action `.github/workflows/health-synthetic.yml` | Done (code) |
 | WorkOS JWT `aud` for Convex | JWT template must include `"aud": "<WORKOS_CLIENT_ID>"` — fixes SERVICE-CERTIFY-7 | Ops (manual) + `auth.config.ts` |
@@ -116,8 +116,8 @@ Copy into a launch ticket:
 9. [ ] `npm run verify:workos-env` passes with production-scoped vars
 10. [ ] Upstash: `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN` on Vercel
 11. [x] Sentry: Vercel→Sentry integration linked (DSN + auth token) or manual env vars
-12. [ ] Sentry alert rules (new issue + spike → email) + ignore SERVICE-CERTIFY-6
-13. [ ] Speed Insights enabled in Vercel and showing CWV data
+12. [x] Sentry alert rules: `npm run sentry:login` → `npm run setup:sentry-alerts` (ignore SERVICE-CERTIFY-6 still manual)
+13. [x] Speed Insights enabled in Vercel and showing CWV data
 14. [ ] Better Stack uptime on `https://service-certify.vercel.app/api/health` (JSON asserts)
 15. [ ] WorkOS staging + production JWT templates include `"aud": "<client id>"`
 16. [ ] Branch protection on `main` configured
