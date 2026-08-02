@@ -53,6 +53,33 @@ npx convex env set WORKOS_CLIENT_ID client_...
 npx convex env set ADMIN_EMAILS you@example.com
 ```
 
+### 3b. WorkOS JWT template (`aud` claim) — required for Convex
+
+Convex validates WorkOS access tokens via [`src/convex/auth.config.ts`](../src/convex/auth.config.ts) and **requires** an `aud` claim that matches `WORKOS_CLIENT_ID` when the issuer is the shared `https://api.workos.com` value.
+
+WorkOS access tokens may omit `aud` by default. If they do, Convex returns:
+
+```text
+NoAuthProvider: No auth provider found matching the given token
+```
+
+(seen in production as Sentry [SERVICE-CERTIFY-7](https://ajhmh-mq.sentry.io/issues/SERVICE-CERTIFY-7) on `GET /auth/callback`).
+
+**Fix in both WorkOS environments (staging + production):**
+
+1. Open [WorkOS Dashboard](https://dashboard.workos.com) → **Authentication** → **Features** → **JWT Template**
+2. Ensure the template includes your Client ID as audience, for example:
+
+```json
+{
+  "aud": "client_..."
+}
+```
+
+Use the Client ID for that same WorkOS environment. Save, then sign in again (existing sessions may still lack `aud` until re-issued).
+
+3. Deploy Convex after any `auth.config.ts` change: `npx convex deploy` (prod) / `npx convex dev` (dev).
+
 ### 4. Test Locally
 
 ```bash
@@ -263,6 +290,7 @@ WorkOS also supports email/password via "Passwordless" flow. See [WorkOS docs](h
 
 ### OAuth provider not showing
 - Verify provider is enabled in WorkOS dashboard
+- If Sentry/logs show `NoAuthProvider` on callback: confirm the WorkOS JWT template includes `"aud": "<WORKOS_CLIENT_ID>"` and that Convex `WORKOS_CLIENT_ID` matches the SvelteKit Client ID for that environment
 - Check WorkOS logs for errors
 
 ---

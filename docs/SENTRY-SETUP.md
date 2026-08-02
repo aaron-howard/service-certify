@@ -53,9 +53,18 @@ SENTRY_PROJECT=your-project
 - Session Replay: 10% of sessions, 100% of sessions with an error
 - Performance traces (10% in production, 100% otherwise)
 
-### What's NOT Captured (Privacy)
+### Releases
+Each Vercel deploy sets `release` to `service-certify@<12-char-git-sha>` from `VERCEL_GIT_COMMIT_SHA` ([`src/lib/sentry.ts`](../src/lib/sentry.ts)). Local/CI builds without that env fall back to `service-certify@<package.json version>`.
+
+Source maps uploaded during `npm run build` (when `SENTRY_AUTH_TOKEN` is set) associate with the same release via `sentrySvelteKit` in [`vite.config.ts`](../vite.config.ts).
+
+**Verify after deploy:** open a production issue in Sentry and confirm the **Release** field shows a short SHA, not a static `0.0.1`.
+
+### What's NOT Captured (Privacy / noise)
 - Sensitive form data (passwords, payment fields)
 - Browser extension noise (filtered via `ignoreErrors`)
+- HTTP **404** and **405** from `handleError` (`shouldCaptureHttpError`)
+- Scanner “No form actions exist for this page” messages (`beforeSend`)
 
 ## Manual Error Tracking
 
@@ -93,6 +102,18 @@ Source maps are **not** automatic from the Vercel integration alone — the app 
 | `vite.config.ts` | `sentrySvelteKit({ adapter: 'vercel' })` |
 | `svelte.config.js` | `experimental.instrumentation` / `tracing` + CSP for ingest/replay |
 
+## Alert rules (soft-launch required)
+
+In Sentry → **Alerts** for project `service-certify`:
+
+1. **New issue** — filter `environment:production` → notify email
+2. **Error spike** — e.g. more than **20 events in 10 minutes** in production → notify email
+3. Use Sentry’s “Send test notification” to confirm delivery
+
+### Known noise issue
+
+[SERVICE-CERTIFY-6](https://ajhmh-mq.sentry.io/issues/SERVICE-CERTIFY-6) (`POST /` 405 from bots) should be **Ignored** in Sentry with reason “scanner noise”. The app also drops these via `shouldCaptureHttpError(405)` and `beforeSend`.
+
 ## Troubleshooting
 
 **Errors not appearing?**
@@ -109,8 +130,14 @@ Source maps are **not** automatic from the Vercel integration alone — the app 
 **Build fails mentioning Sentry auth?**
 - Either add `SENTRY_AUTH_TOKEN` for that environment, or leave it unset (upload stays off when the token is absent).
 
+**Release still shows package version after deploy?**
+- Confirm the deployment ran on Vercel (so `VERCEL_GIT_COMMIT_SHA` is injected).
+- Open a new issue after the deploy — older events keep the old release label.
+
 **Too many errors?**
-- Extension/ad-blocker noise is filtered; review Convex logs for real backend failures.
+- Extension/ad-blocker noise is filtered; 405 bot POSTs are dropped.
+- Review Convex logs for real backend failures.
+- `NoAuthProvider` on `/auth/callback` → see [AUTH-WORKOS.md](./AUTH-WORKOS.md) JWT `aud` template.
 
 ## Disabling Sentry
 

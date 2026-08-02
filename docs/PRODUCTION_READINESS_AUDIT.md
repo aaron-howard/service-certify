@@ -15,7 +15,7 @@ This is the living checklist referenced by monitoring, testing, and rate-limitin
 | Core practice UX | Ready | Catalog, detail, practice (single/multi/match), grade API |
 | Question bank | Ready | 22 tracks, v2 rewrites complete, bank targets met |
 | Auth (WorkOS) | Ready | JWT required for user sync; `/settings` profile + account deletion; progress writes on grade |
-| Observability | Code ready | `handleError` + user context wired; set DSN / Speed Insights / uptime in dashboards |
+| Observability | Mostly ready | Sentry + health synthetic + release SHA wired; finish Better Stack, Sentry alert rules, Speed Insights enable, WorkOS JWT `aud` |
 | Rate limiting | Code ready | Fail-closed in production without Upstash; configure Redis for prod |
 | Payments / membership | Not started | `/membership` placeholder; Phase D |
 | Dashboard / progress | Ready | Auth-gated dashboard; progress written on grade |
@@ -78,9 +78,14 @@ This is the living checklist referenced by monitoring, testing, and rate-limitin
 
 | Item | Detail | Status |
 |------|--------|--------|
-| Configure Sentry DSN | Install Vercel→Sentry integration (or set DSN + `SENTRY_AUTH_TOKEN`) | Ops (manual) |
-| Enable Speed Insights | Vercel dashboard → Analytics | Ops (manual) |
-| External uptime monitor | Point at `/api/health` (UptimeRobot or similar) | Ops (manual) |
+| Configure Sentry DSN | Install Vercel→Sentry integration (or set DSN + `SENTRY_AUTH_TOKEN`) | Done (env present on Vercel) |
+| Sentry alert rules | New issue + error spike in `production` → email — see [SENTRY-SETUP.md](./SENTRY-SETUP.md) | Ops (manual) |
+| Ignore SERVICE-CERTIFY-6 | Mark ignored in Sentry (“scanner noise”); app also drops 405 | Ops (manual) + code |
+| Sentry release SHA | `service-certify@<git-sha>` via `VERCEL_GIT_COMMIT_SHA` | Done (code) |
+| Enable Speed Insights | Vercel dashboard → Analytics → Speed Insights | Ops (manual) — confirm data flowing |
+| External uptime monitor | Better Stack on `https://service-certify.vercel.app/api/health` (not www — Cloudflare challenges bots) | Ops (manual) |
+| Health synthetic CI | Hourly GitHub Action `.github/workflows/health-synthetic.yml` | Done (code) |
+| WorkOS JWT `aud` for Convex | JWT template must include `"aud": "<WORKOS_CLIENT_ID>"` — fixes SERVICE-CERTIFY-7 | Ops (manual) + `auth.config.ts` |
 | GitHub branch protection | Require PR + `check-and-build` + `e2e-tests` + `npm-audit` on `main` — see [BRANCH-PROTECTION-SETUP.md](./BRANCH-PROTECTION-SETUP.md) | Ops (manual) |
 
 ---
@@ -110,12 +115,15 @@ Copy into a launch ticket:
 8. [ ] Convex env: `WORKOS_CLIENT_ID`, `ADMIN_EMAILS` (prod deployment)
 9. [ ] `npm run verify:workos-env` passes with production-scoped vars
 10. [ ] Upstash: `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN` on Vercel
-11. [ ] Sentry: Vercel→Sentry integration linked (DSN + auth token) or manual env vars
-12. [ ] Speed Insights enabled in Vercel
-13. [ ] Uptime monitor on `https://<prod>/api/health`
-14. [ ] Branch protection on `main` configured
-15. [ ] Smoke test: catalog → sample practice → grade; admin full mock; sign-in/out
-16. [ ] Rollback runbook validated on a preview deployment
+11. [x] Sentry: Vercel→Sentry integration linked (DSN + auth token) or manual env vars
+12. [ ] Sentry alert rules (new issue + spike → email) + ignore SERVICE-CERTIFY-6
+13. [ ] Speed Insights enabled in Vercel and showing CWV data
+14. [ ] Better Stack uptime on `https://service-certify.vercel.app/api/health` (JSON asserts)
+15. [ ] WorkOS staging + production JWT templates include `"aud": "<client id>"`
+16. [ ] Branch protection on `main` configured
+17. [ ] Smoke test: catalog → sample practice → grade; admin full mock; sign-in/out (watch for NoAuthProvider)
+18. [ ] Rollback runbook validated on a preview deployment
+19. [ ] Confirm `Health synthetic` workflow is green on schedule
 
 ---
 
@@ -123,7 +131,8 @@ Copy into a launch ticket:
 
 - **Static fallback:** Without `PUBLIC_CONVEX_URL`, catalog can still render from `src/lib/data/`; practice questions will not load.
 - **Seed difficulty tag:** Questions are seeded with `difficulty: 'dev'` — naming is historical; bank is the production content source today.
-- **Health check is shallow:** Only pings Convex `/version`; does not verify WorkOS or Redis.
+- **Health check covers Convex + Upstash**, not WorkOS/OAuth. Cloudflare Bot Fight challenges unattended hits to `www`; use the Vercel hostname for probes.
+- **Grafana / Loki / OTEL:** not used; Sentry + Vercel + health synthetics are the stack.
 - **No startup env validation:** Missing prod vars degrade (auth error UI, rate limit 429 in prod without Upstash, empty practice).
 - **Architecture docs historically lagged** auth implementation — corrected in [architecture.md](./architecture.md) (Jul 2026).
 - **Full OAuth E2E** is not automated in CI (requires WorkOS credentials); gate + sign-in UI are covered.

@@ -6,7 +6,7 @@ Service Certify includes health check endpoints and performance monitoring integ
 
 **Endpoint:** `GET /api/health`
 
-Monitor application uptime and critical dependencies.
+Monitor application uptime and critical dependencies (Convex + Upstash rate limiter).
 
 ### Response Format
 
@@ -19,6 +19,9 @@ Monitor application uptime and critical dependencies.
   "checks": {
     "convex": {
       "status": "ok"
+    },
+    "rateLimiter": {
+      "status": "ok"
     }
   }
 }
@@ -29,31 +32,64 @@ Monitor application uptime and critical dependencies.
 | Code | Status | Meaning |
 |------|--------|---------|
 | **200** | `"ok"` | All systems operational |
-| **503** | `"degraded"` | One or more checks failed (e.g., Convex unreachable) |
+| **503** | `"degraded"` | One or more checks failed (Convex and/or rate limiter) |
+
+### Cloudflare caveat (important)
+
+`https://www.service-certify.com/api/health` is behind **Cloudflare Bot Fight Mode**. Unattended probes (curl, GitHub Actions, many uptime agents) receive a **403 challenge HTML** page instead of JSON.
+
+For automated monitoring, use the Vercel hostname (not challenged):
+
+```text
+https://service-certify.vercel.app/api/health
+```
+
+Prefer allowing `/api/health` through Cloudflare (WAF/Bot Fight skip for that path, or authenticated origin pulls) if you want the custom domain as the probe target.
 
 ### Using for Uptime Monitoring
 
+**Primary: Better Stack (Uptime)**
+
+1. Create a monitor for `https://service-certify.vercel.app/api/health`
+2. Expect **HTTP 200** and latency **&lt; 2s**
+3. Assert JSON when supported:
+   - `status == "ok"`
+   - `checks.convex.status == "ok"`
+   - `checks.rateLimiter.status == "ok"`
+4. Notify **email** on failure (Slack optional later)
+
 **Vercel Analytics (built-in):**
-- Vercel automatically monitors 200 responses
-- Visit Vercel dashboard → Analytics for uptime metrics
+- Visit Vercel dashboard → Analytics for traffic / availability signals
 
-**External uptime monitoring (e.g., UptimeRobot, Ping.com):**
-1. Sign up for free tier
-2. Configure monitor: `https://service-certify.com/api/health`
-3. Alert if response is not 200 or takes >2s
-
-**Example curl:**
+**Example curl (Vercel hostname):**
 ```bash
-curl -i https://service-certify.com/api/health
+curl -i https://service-certify.vercel.app/api/health
 # Should return 200 with JSON payload
 ```
 
 ### Check Details
 
-**Convex connectivity:** Attempts to reach `https://your-deployment.convex.cloud/version` with 2-second timeout
+**Convex connectivity:** Attempts to reach `$PUBLIC_CONVEX_URL/version` with a 2-second timeout
 - If `PUBLIC_CONVEX_URL` not configured → status `"error"`
 - If unreachable → status `"error"` with error message
 - Otherwise → status `"ok"`
+
+**Rate limiter:** Runs a lightweight Upstash check via `rateLimit()`
+- Production fail-closed misconfig → `checks.rateLimiter.status: "error"` and overall `degraded`
+- Preview/local fail-open still reports `limiter_unavailable` as an error on the check so monitoring sees broken credentials
+
+## GitHub Actions synthetic
+
+Workflow: [`.github/workflows/health-synthetic.yml`](../.github/workflows/health-synthetic.yml)
+
+| | |
+|--|--|
+| **Schedule** | Hourly (+ on push to the workflow/health route, + manual dispatch) |
+| **Target** | `https://service-certify.vercel.app/api/health` |
+| **Pass** | HTTP 200 and JSON `status` / `checks.convex` / `checks.rateLimiter` all `"ok"` |
+| **Does not cover** | OAuth login, grading, WorkOS (no secrets in CI) |
+
+Better Stack watches continuously with paging; the GitHub synthetic is a second signal that fails CI/cron visibly when dependencies break.
 
 ## Vercel Speed Insights
 
@@ -79,7 +115,7 @@ This automatically tracks:
 2. Click **Analytics** tab
 3. Scroll to **Speed Insights**
 4. Click **Enable Speed Insights**
-5. Wait ~5 minutes for data to appear
+5. Wait ~5 minutes for data to appear after real browser traffic
 
 ### Viewing Metrics
 
@@ -95,7 +131,7 @@ Aim for these thresholds (Google Core Web Vitals):
 
 | Metric | Target | Current |
 |--------|--------|---------|
-| LCP | < 2.5s | TBD |
+| LCP | < 2.5s | TBD (confirm in Vercel after enable) |
 | INP | < 200ms | TBD |
 | CLS | < 0.1 | TBD |
 
@@ -107,23 +143,30 @@ If metrics degrade:
 
 ## Production Monitoring Stack
 
-Your app now has:
-
 | Layer | Tool | Status |
 |-------|------|--------|
-| **Errors** | Sentry | ✅ `handleError` + user context wired — configure DSN in Vercel |
-| **Performance** | Vercel Speed Insights | ✅ Wired — activate in dashboard |
-| **Availability** | `/api/health` endpoint | ✅ Live — add external uptime monitor |
-| **Security** | Branch protection + `npm audit` CI | ✅ CI workflows present — enable branch protection in GitHub UI |
+| **Errors** | Sentry | ✅ Wired (DSN + release SHA + 404/405 noise filter) |
+| **Alerts** | Sentry alert rules | ⬜ Configure: new issue + error spike → email (see [SENTRY-SETUP.md](./SENTRY-SETUP.md)) |
+| **Performance** | Vercel Speed Insights | ✅ Wired — confirm enabled in Vercel Analytics |
+| **Availability** | Better Stack → `/api/health` | ⬜ Create monitor (use Vercel hostname; see Cloudflare caveat) |
+| **Synthetic** | GitHub Actions `Health synthetic` | ✅ Hourly JSON probe |
+| **Abuse** | Upstash rate limits | ✅ Health + grade routes |
+| **Security** | Branch protection + `npm audit` CI | ✅ CI workflows present |
+| **Metrics/logs platform** | Grafana / Loki / OTEL | ❌ Not used (out of scope) |
 
 ## Setting Up Alerts
 
-### Sentry Alerts (errors spike)
+### Sentry Alerts (required for soft launch)
 
-1. Go to [sentry.io](https://sentry.io) → Your Project → Alerts
-2. Click **Create Alert Rule**
-3. Condition: `Error count > 100 per day`
-4. Action: Notify team via Slack/email
+1. Go to [sentry.io](https://sentry.io) → org → project **service-certify** → **Alerts**
+2. Create:
+   - **New issue** in `environment:production` → email
+   - **Error spike** (e.g. more than 20 events in 10 minutes) in production → email
+3. Optionally ignore / inbound-filter `No form actions exist for this page` (also dropped in app `beforeSend`)
+
+### Better Stack (uptime)
+
+See “Using for Uptime Monitoring” above.
 
 ### Vercel Alerts (performance degrades)
 
@@ -133,25 +176,30 @@ Your app now has:
 
 ## Troubleshooting
 
-**Health endpoint returns 503 (Convex degraded)?**
-1. Check Convex status: [status.convex.dev](https://status.convex.dev)
-2. Verify `PUBLIC_CONVEX_URL` in Vercel env vars
-3. See [[RUNBOOK-RESTART-CONVEX]] for recovery steps
+**Health endpoint returns 503 (degraded)?**
+1. Read `checks.convex` / `checks.rateLimiter` messages in the JSON body
+2. Convex: [status.convex.dev](https://status.convex.dev) + `PUBLIC_CONVEX_URL`
+3. Rate limiter: Upstash credentials / [RATE-LIMITING.md](./RATE-LIMITING.md)
+4. See [[RUNBOOK-RESTART-CONVEX]] for Convex recovery
+
+**Probe gets Cloudflare HTML / 403?**
+1. Switch the monitor URL to `https://service-certify.vercel.app/api/health`
+2. Or configure Cloudflare to skip bot challenges for `/api/health`
 
 **Speed Insights shows no data?**
 1. Ensure it's enabled in Vercel dashboard
-2. Generate traffic (visit site in browser)
+2. Generate traffic (visit site in a real browser)
 3. Wait 5-10 minutes for data to aggregate
 4. Check if traffic is coming from real users (not bots)
 
 **Sentry shows too many errors?**
-1. Review error types in dashboard
+1. Confirm 405 bot POSTs are ignored (app filter + optional Sentry ignore on SERVICE-CERTIFY-6)
 2. Filter browser extension errors (auto-filtered)
-3. Fix the most common errors
-4. Increase sampling rate once traffic is stable
+3. Fix the most common real errors (e.g. auth sync / grade)
 
 ## Related
 
-- [SENTRY-SETUP.md](./SENTRY-SETUP.md) — Error tracking configuration
+- [SENTRY-SETUP.md](./SENTRY-SETUP.md) — Error tracking, releases, alert rules
 - [PRODUCTION_READINESS_AUDIT.md](./PRODUCTION_READINESS_AUDIT.md) — Observability + launch checklist
 - [RATE-LIMITING.md](./RATE-LIMITING.md)
+- [AUTH-WORKOS.md](./AUTH-WORKOS.md) — WorkOS JWT `aud` requirement for Convex
