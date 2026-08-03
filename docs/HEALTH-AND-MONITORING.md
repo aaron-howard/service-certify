@@ -16,6 +16,9 @@ Monitor application uptime and critical dependencies (Convex + Upstash rate limi
   "timestamp": "2026-06-25T15:30:45.123Z",
   "uptime": 3600,
   "environment": "production",
+  "version": "0.1.0",
+  "revision": "1f1e66b983bd",
+  "versionId": "0.1.0+1f1e66b983bd",
   "checks": {
     "convex": {
       "status": "ok"
@@ -26,6 +29,14 @@ Monitor application uptime and critical dependencies (Convex + Upstash rate limi
   }
 }
 ```
+
+| Field | Meaning |
+|-------|---------|
+| `version` | Semver from `package.json` |
+| `revision` | Short git SHA (`VERCEL_GIT_COMMIT_SHA`) when available |
+| `versionId` | Compact `version` or `version+revision` |
+
+See [RELEASES.md](./RELEASES.md) for tagging and GitHub Releases.
 
 ### Response Codes
 

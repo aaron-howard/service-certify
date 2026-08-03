@@ -54,11 +54,11 @@ SENTRY_PROJECT=your-project
 - Performance traces (10% in production, 100% otherwise)
 
 ### Releases
-Each Vercel deploy sets `release` to `service-certify@<12-char-git-sha>` from `VERCEL_GIT_COMMIT_SHA` ([`src/lib/sentry.ts`](../src/lib/sentry.ts)). Local/CI builds without that env fall back to `service-certify@<package.json version>`.
+Each Vercel deploy sets `release` to `service-certify@<semver>+<12-char-git-sha>` from `package.json` + `VERCEL_GIT_COMMIT_SHA` ([`src/lib/appVersion.ts`](../src/lib/appVersion.ts)). Local/CI builds without a SHA fall back to `service-certify@<semver>`.
 
 Source maps uploaded during `npm run build` (when `SENTRY_AUTH_TOKEN` is set) associate with the same release via `sentrySvelteKit` in [`vite.config.ts`](../vite.config.ts).
 
-**Verify after deploy:** open a production issue in Sentry and confirm the **Release** field shows a short SHA, not a static `0.0.1`.
+**Verify after deploy:** open a production issue in Sentry and confirm the **Release** field looks like `service-certify@0.1.0+<sha>`, not a bare placeholder.
 
 ### What's NOT Captured (Privacy / noise)
 - Sensitive form data (passwords, payment fields)
@@ -169,9 +169,10 @@ In Sentry → **Alerts** for project `service-certify`:
 **Build fails mentioning Sentry auth?**
 - Either add `SENTRY_AUTH_TOKEN` for that environment, or leave it unset (upload stays off when the token is absent).
 
-**Release still shows package version after deploy?**
+**Release missing the `+sha` suffix after deploy?**
 - Confirm the deployment ran on Vercel (so `VERCEL_GIT_COMMIT_SHA` is injected).
 - Open a new issue after the deploy — older events keep the old release label.
+- Product versioning / tags: [RELEASES.md](./RELEASES.md)
 
 **Too many errors?**
 - Extension/ad-blocker noise is filtered; 405 bot POSTs are dropped.

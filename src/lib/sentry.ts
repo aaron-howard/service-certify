@@ -1,5 +1,5 @@
 import * as Sentry from '@sentry/sveltekit';
-import { version } from '../../package.json';
+import { resolveSentryReleaseName } from './appVersion';
 
 type ProcessEnv = Record<string, string | undefined>;
 
@@ -12,16 +12,11 @@ function processEnv(): ProcessEnv | undefined {
 }
 
 /**
- * Prefer the Vercel git SHA so each deploy is a distinct Sentry release.
- * Falls back to package.json version when SHA is unavailable (local/CI).
+ * Sentry release: `service-certify@<semver>+<12-char-sha>` on Vercel,
+ * or `service-certify@<semver>` locally / without a commit SHA.
  */
 export function resolveSentryRelease(): string {
-	const env = processEnv();
-	const sha = env?.VERCEL_GIT_COMMIT_SHA?.trim();
-	if (sha) {
-		return `service-certify@${sha.slice(0, 12)}`;
-	}
-	return `service-certify@${version}`;
+	return resolveSentryReleaseName();
 }
 
 const BOT_NOISE_ERROR_PATTERNS = [/No form actions exist for this page/i, /Method Not Allowed/i];
