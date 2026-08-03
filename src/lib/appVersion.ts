@@ -2,6 +2,7 @@ import { version as packageVersion } from '../../package.json';
 
 type ProcessEnv = Record<string, string | undefined>;
 
+/** Read `process.env` when running under Node (undefined in some browser contexts). */
 function processEnv(): ProcessEnv | undefined {
 	const proc =
 		typeof globalThis !== 'undefined'
@@ -17,9 +18,22 @@ export function getAppVersion(): string {
 
 /**
  * Short git SHA for the running deploy.
- * Prefer Vercel’s commit SHA; fall back to empty when unavailable (local/CI).
+ *
+ * Preference order:
+ * 1. `import.meta.env.VITE_GIT_COMMIT_SHA` (build-time, client + server bundles)
+ * 2. `VERCEL_GIT_COMMIT_SHA` (runtime Node / Vercel)
+ * 3. `GITHUB_SHA` (runtime Node / GitHub Actions)
+ *
+ * Returns empty string when none are set (local/dev without a commit SHA).
  */
 export function getAppRevision(): string {
+	if (typeof import.meta !== 'undefined' && import.meta.env) {
+		const fromVite = import.meta.env.VITE_GIT_COMMIT_SHA;
+		if (typeof fromVite === 'string' && fromVite.trim()) {
+			return fromVite.trim().slice(0, 12);
+		}
+	}
+
 	const env = processEnv();
 	const sha = env?.VERCEL_GIT_COMMIT_SHA?.trim() || env?.GITHUB_SHA?.trim() || '';
 	return sha ? sha.slice(0, 12) : '';

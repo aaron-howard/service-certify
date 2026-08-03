@@ -6,6 +6,8 @@ interface ImportMetaEnv {
 	readonly PUBLIC_SENTRY_DSN?: string;
 	/** Injected by the Vercel → Sentry integration (Next.js-oriented name). */
 	readonly NEXT_PUBLIC_SENTRY_DSN?: string;
+	/** Build-time short git SHA from vite.config.ts (Vercel/GitHub). */
+	readonly VITE_GIT_COMMIT_SHA?: string;
 }
 
 interface ImportMeta {

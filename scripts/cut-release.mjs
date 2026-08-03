@@ -68,6 +68,15 @@ function main() {
 		throw new Error(`Refusing to tag from branch "${branch}" (expected "${ALLOW_BRANCH}")`);
 	}
 
+	run('git', ['fetch', 'origin', ALLOW_BRANCH]);
+	const localHead = run('git', ['rev-parse', 'HEAD']);
+	const remoteHead = run('git', ['rev-parse', `origin/${ALLOW_BRANCH}`]);
+	if (localHead !== remoteHead) {
+		throw new Error(
+			`Local ${ALLOW_BRANCH} (${localHead.slice(0, 12)}) is not up to date with origin/${ALLOW_BRANCH} (${remoteHead.slice(0, 12)})`
+		);
+	}
+
 	const dirty = run('git', ['status', '--porcelain']);
 	if (dirty) {
 		throw new Error('Working tree is dirty; commit or stash before tagging');

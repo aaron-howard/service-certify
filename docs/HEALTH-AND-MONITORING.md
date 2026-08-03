@@ -33,7 +33,7 @@ Monitor application uptime and critical dependencies (Convex + Upstash rate limi
 | Field | Meaning |
 |-------|---------|
 | `version` | Semver from `package.json` |
-| `revision` | Short git SHA (`VERCEL_GIT_COMMIT_SHA`) when available |
+| `revision` | Short git SHA: build-time `VITE_GIT_COMMIT_SHA`, else `VERCEL_GIT_COMMIT_SHA`, else `GITHUB_SHA`; empty when none are set |
 | `versionId` | Compact `version` or `version+revision` |
 
 See [RELEASES.md](./RELEASES.md) for tagging and GitHub Releases.
