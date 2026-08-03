@@ -91,17 +91,20 @@ describe('getSentryInitOptions', () => {
 
 	it('merges client extras when DSN is present', async () => {
 		vi.stubEnv('SENTRY_DSN', 'https://key@o0.ingest.sentry.io/1');
+		vi.stubEnv('NEXT_PUBLIC_SENTRY_DSN', '');
+		vi.stubEnv('VITE_SENTRY_DSN', '');
+		vi.stubEnv('PUBLIC_SENTRY_DSN', '');
 		vi.stubEnv('VERCEL_GIT_COMMIT_SHA', '1234567890abffffffffffff');
+		vi.stubEnv('GITHUB_SHA', '');
 		const { getSentryInitOptions } = await import('./sentry');
 		const opts = getSentryInitOptions({
 			replaysOnErrorSampleRate: 1.0,
 			replaysSessionSampleRate: 0.1
 		});
-		if (opts) {
-			expect(opts.dsn).toBeTruthy();
-			expect(opts.replaysOnErrorSampleRate).toBe(1.0);
-			expect(opts.release).toMatch(/^service-certify@\d+\.\d+\.\d+\+1234567890ab$/);
-			expect(typeof opts.beforeSend).toBe('function');
-		}
+		expect(opts).not.toBeNull();
+		expect(opts!.dsn).toBeTruthy();
+		expect(opts!.replaysOnErrorSampleRate).toBe(1.0);
+		expect(opts!.release).toMatch(/^service-certify@\d+\.\d+\.\d+\+1234567890ab$/);
+		expect(typeof opts!.beforeSend).toBe('function');
 	});
 });

@@ -6,7 +6,7 @@ Service Certify uses **semver** in `package.json` for the human release channel,
 | Signal | Source | Example |
 |--------|--------|---------|
 | Product version | `package.json` → `/api/health.version` | `0.1.0` |
-| Deploy revision | `VERCEL_GIT_COMMIT_SHA` → `/api/health.revision` | `1f1e66b983bd` |
+| Deploy revision | Build-time `VITE_GIT_COMMIT_SHA`, else `VERCEL_GIT_COMMIT_SHA`, else `GITHUB_SHA` → `/api/health.revision` | `1f1e66b983bd` |
 | Compact id | `/api/health.versionId` | `0.1.0+1f1e66b983bd` |
 | Sentry release | `service-certify@<semver>+<sha>` | `service-certify@0.1.0+1f1e66b983bd` |
 | GitHub Release | Annotated tag `vX.Y.Z` | [v0.1.0](https://github.com/aaron-howard/service-certify/releases/tag/v0.1.0) |

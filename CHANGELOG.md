@@ -17,7 +17,7 @@ this tag marks the human-facing release channel.
 - WorkOS AuthKit sign-in, Convex user sync, settings/account deletion, dashboard progress
 - Grade API with Upstash rate limiting; health endpoint with Convex + rate-limiter checks
 - Sentry error/performance/replay wiring; Vercel Speed Insights
-- Soft-launch Sentry alert automation (`npm run sentry:login` / `setup:sentry-alerts`)
+- Soft-launch Sentry alert automation (`npm run sentry:login` / `npm run setup:sentry-alerts`)
 - Semver + git revision on `/api/health` (`version`, `revision`, `versionId`)
 - Release process: `CHANGELOG.md`, `docs/RELEASES.md`, tag → GitHub Release workflow
 
