@@ -76,6 +76,10 @@ See [`.env.example`](./.env.example) for a template. **Do not commit** `.env` or
 | `npm run seed:dev` | Seed tracks (`internal.seed.apply`, `--push`) |
 | `npm run seed:dev:questions` | Seed practice questions (`internal.seed.devQuestions`, `--push`) |
 | `npm run seed:prod` | Seed tracks + questions on prod Convex deployment |
+| `npm run release:tag` | Create local annotated tag `vX.Y.Z` from `package.json` |
+| `npm run release:tag:push` | Tag + push (publishes GitHub Release via workflow) |
+
+Versioning / releases: [`docs/RELEASES.md`](./docs/RELEASES.md), [`CHANGELOG.md`](./CHANGELOG.md).
 
 ## Routes
 

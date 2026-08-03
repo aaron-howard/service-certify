@@ -1,3 +1,4 @@
+import { getAppRevision, getAppVersion, getAppVersionId } from '$lib/appVersion';
 import { rateLimit, RateLimitError } from '$lib/rateLimit';
 import type { RequestHandler } from '@sveltejs/kit';
 
@@ -6,6 +7,12 @@ interface HealthResponse {
 	timestamp: string;
 	uptime: number;
 	environment: string;
+	/** Semver from package.json */
+	version: string;
+	/** Short git SHA when available (Vercel / CI) */
+	revision: string;
+	/** Compact identity: `0.1.0` or `0.1.0+abcdef012345` */
+	versionId: string;
 	checks: {
 		convex: {
 			status: 'ok' | 'error';
@@ -62,6 +69,9 @@ export const GET: RequestHandler = async ({ request }): Promise<Response> => {
 		timestamp: new Date().toISOString(),
 		uptime,
 		environment: nodeEnv,
+		version: getAppVersion(),
+		revision: getAppRevision(),
+		versionId: getAppVersionId(),
 		checks: {
 			convex: { status: 'ok' },
 			rateLimiter: { status: 'ok' }

@@ -81,7 +81,8 @@ This is the living checklist referenced by monitoring, testing, and rate-limitin
 | Configure Sentry DSN | Install Vercel→Sentry integration (or set DSN + `SENTRY_AUTH_TOKEN`) | Done (env present on Vercel) |
 | Sentry alert rules | New issue + error spike in `production` → email — `npm run sentry:login` then `npm run setup:sentry-alerts` ([SENTRY-SETUP.md](./SENTRY-SETUP.md)) | Done (rules 17374739 + 17374741; email mr.aaronjhoward@gmail.com) |
 | Ignore SERVICE-CERTIFY-6 | Mark ignored in Sentry (“scanner noise”); app also drops 405 | Ops (manual) + code |
-| Sentry release SHA | `service-certify@<git-sha>` via `VERCEL_GIT_COMMIT_SHA` | Done (code) |
+| Sentry release id | `service-certify@<semver>+<git-sha>` via package.json + `VERCEL_GIT_COMMIT_SHA` | Done (code) |
+| Semver / GitHub Releases | `package.json` version + tag `v*` → Release workflow ([RELEASES.md](./RELEASES.md)) | In progress (0.1.0 soft-launch cut) |
 | Enable Speed Insights | Vercel dashboard → Analytics → Speed Insights | Done (enabled; confirmed 2026-08-02) |
 | External uptime monitor | Better Stack on `https://service-certify.vercel.app/api/health` (not www — Cloudflare challenges bots) | Ops (manual) |
 | Health synthetic CI | Hourly GitHub Action `.github/workflows/health-synthetic.yml` | Done (code) |

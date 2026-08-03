@@ -1,7 +1,7 @@
 {
 	"name": "service-certify",
 	"private": true,
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"license": "MIT",
 	"type": "module",
 	"engines": {
@@ -34,6 +34,8 @@
 		"sentry:login": "sentry auth login",
 		"sentry:whoami": "sentry auth whoami",
 		"setup:sentry-alerts": "node scripts/setup-sentry-alerts.mjs",
+		"release:tag": "node scripts/cut-release.mjs",
+		"release:tag:push": "node scripts/cut-release.mjs --push",
 		"seed:dev": "convex run --push --env-file .env.convex internal.seed.apply",
 		"seed:dev:questions": "convex run --push --env-file .env.convex internal.seed.devQuestions",
 		"seed:prod": "convex run --deployment prod internal.seed.apply && convex run --deployment prod internal.seed.devQuestions",
