@@ -1,8 +1,35 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+
+vi.mock('$lib/rateLimit', () => {
+	class RateLimitError extends Error {
+		outcome: string;
+		constructor(message: string, outcome = 'limit_exceeded') {
+			super(message);
+			this.outcome = outcome;
+		}
+	}
+
+	return {
+		rateLimit: vi.fn(async () => ({
+			allowed: true,
+			current: 1,
+			limit: 1000,
+			resetIn: 60,
+			outcome: 'allowed' as const
+		})),
+		RateLimitError
+	};
+});
 
 describe('Health Endpoint', () => {
 	beforeEach(() => {
 		vi.clearAllMocks();
+	});
+
+	afterEach(() => {
+		vi.unstubAllEnvs();
+		vi.unstubAllGlobals();
+		vi.resetModules();
 	});
 
 	describe('Response format', () => {
@@ -12,6 +39,9 @@ describe('Health Endpoint', () => {
 				timestamp: new Date().toISOString(),
 				uptime: 3600,
 				environment: 'production',
+				version: '0.1.0',
+				revision: 'abcdef012345',
+				versionId: '0.1.0+abcdef012345',
 				checks: {
 					convex: { status: 'ok' as const }
 				}
@@ -21,6 +51,9 @@ describe('Health Endpoint', () => {
 			expect(response).toHaveProperty('timestamp');
 			expect(response).toHaveProperty('uptime');
 			expect(response).toHaveProperty('environment');
+			expect(response).toHaveProperty('version');
+			expect(response).toHaveProperty('revision');
+			expect(response).toHaveProperty('versionId');
 			expect(response).toHaveProperty('checks');
 			expect(response.checks).toHaveProperty('convex');
 		});
@@ -43,6 +76,38 @@ describe('Health Endpoint', () => {
 			const uptime = 3600;
 
 			expect(uptime).toBeGreaterThanOrEqual(0);
+		});
+	});
+
+	describe('GET handler version metadata', () => {
+		it('returns version, revision, and versionId from the live route', async () => {
+			vi.stubEnv('PUBLIC_CONVEX_URL', 'https://example.convex.cloud');
+			vi.stubEnv('VERCEL_GIT_COMMIT_SHA', 'abcdef0123456789deadbeef');
+			vi.stubEnv('GITHUB_SHA', '');
+			vi.stubEnv('NODE_ENV', 'test');
+
+			vi.stubGlobal(
+				'fetch',
+				vi.fn(async () => new Response('ok', { status: 200 }))
+			);
+
+			const { GET } = await import('../+server');
+			const response = await GET({
+				request: new Request('https://example.test/api/health')
+			} as Parameters<typeof GET>[0]);
+
+			expect(response.status).toBe(200);
+			const body = (await response.json()) as {
+				version: string;
+				revision: string;
+				versionId: string;
+				status: string;
+			};
+
+			expect(body.status).toBe('ok');
+			expect(body.version).toMatch(/^\d+\.\d+\.\d+/);
+			expect(body.revision).toBe('abcdef012345');
+			expect(body.versionId).toBe(`${body.version}+abcdef012345`);
 		});
 	});
 

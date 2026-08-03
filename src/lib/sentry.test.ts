@@ -35,16 +35,17 @@ describe('resolveSentryRelease', () => {
 		vi.resetModules();
 	});
 
-	it('uses a short Vercel git SHA when present', async () => {
+	it('includes semver and a short Vercel git SHA when present', async () => {
 		vi.stubEnv('VERCEL_GIT_COMMIT_SHA', 'abcdef0123456789deadbeef');
 		const { resolveSentryRelease } = await import('./sentry');
-		expect(resolveSentryRelease()).toBe('service-certify@abcdef012345');
+		expect(resolveSentryRelease()).toMatch(/^service-certify@\d+\.\d+\.\d+\+abcdef012345$/);
 	});
 
 	it('falls back to package version when SHA is missing', async () => {
 		vi.stubEnv('VERCEL_GIT_COMMIT_SHA', '');
+		vi.stubEnv('GITHUB_SHA', '');
 		const { resolveSentryRelease } = await import('./sentry');
-		expect(resolveSentryRelease()).toMatch(/^service-certify@/);
+		expect(resolveSentryRelease()).toMatch(/^service-certify@\d+\.\d+\.\d+$/);
 	});
 });
 
@@ -90,17 +91,20 @@ describe('getSentryInitOptions', () => {
 
 	it('merges client extras when DSN is present', async () => {
 		vi.stubEnv('SENTRY_DSN', 'https://key@o0.ingest.sentry.io/1');
+		vi.stubEnv('NEXT_PUBLIC_SENTRY_DSN', '');
+		vi.stubEnv('VITE_SENTRY_DSN', '');
+		vi.stubEnv('PUBLIC_SENTRY_DSN', '');
 		vi.stubEnv('VERCEL_GIT_COMMIT_SHA', '1234567890abffffffffffff');
+		vi.stubEnv('GITHUB_SHA', '');
 		const { getSentryInitOptions } = await import('./sentry');
 		const opts = getSentryInitOptions({
 			replaysOnErrorSampleRate: 1.0,
 			replaysSessionSampleRate: 0.1
 		});
-		if (opts) {
-			expect(opts.dsn).toBeTruthy();
-			expect(opts.replaysOnErrorSampleRate).toBe(1.0);
-			expect(opts.release).toBe('service-certify@1234567890ab');
-			expect(typeof opts.beforeSend).toBe('function');
-		}
+		expect(opts).not.toBeNull();
+		expect(opts!.dsn).toBeTruthy();
+		expect(opts!.replaysOnErrorSampleRate).toBe(1.0);
+		expect(opts!.release).toMatch(/^service-certify@\d+\.\d+\.\d+\+1234567890ab$/);
+		expect(typeof opts!.beforeSend).toBe('function');
 	});
 });
