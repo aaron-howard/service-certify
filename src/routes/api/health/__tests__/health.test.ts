@@ -12,6 +12,9 @@ describe('Health Endpoint', () => {
 				timestamp: new Date().toISOString(),
 				uptime: 3600,
 				environment: 'production',
+				version: '0.1.0',
+				revision: 'abcdef012345',
+				versionId: '0.1.0+abcdef012345',
 				checks: {
 					convex: { status: 'ok' as const }
 				}
@@ -21,6 +24,9 @@ describe('Health Endpoint', () => {
 			expect(response).toHaveProperty('timestamp');
 			expect(response).toHaveProperty('uptime');
 			expect(response).toHaveProperty('environment');
+			expect(response).toHaveProperty('version');
+			expect(response).toHaveProperty('revision');
+			expect(response).toHaveProperty('versionId');
 			expect(response).toHaveProperty('checks');
 			expect(response.checks).toHaveProperty('convex');
 		});

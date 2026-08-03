@@ -34,6 +34,7 @@ Welcome to the Service Certify docs. Use this directory to understand how the ap
 
 **CI / GitHub?**
 - [`BRANCH-PROTECTION-SETUP.md`](./BRANCH-PROTECTION-SETUP.md) — Manual branch protection on `main`
+- [`RELEASES.md`](./RELEASES.md) — Semver, tags, GitHub Releases, health `versionId`
 - [GitHub Wiki](https://github.com/aaron-howard/service-certify/wiki) — Contributor orientation (source: [`wiki/`](../wiki/))
 
 **Question bank?**
@@ -71,6 +72,7 @@ docs/
 ├── TESTING.md                     ← Vitest
 ├── E2E-AND-A11Y.md                ← Playwright + a11y
 ├── BRANCH-PROTECTION-SETUP.md     ← GitHub protection rules
+├── RELEASES.md                    ← Semver + GitHub Releases
 ├── adr/
 │   ├── ADR-001-convex-backend.md
 │   ├── ADR-002-sveltekit-frontend.md
