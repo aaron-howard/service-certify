@@ -49,8 +49,12 @@ function assertChangelogHasVersion(version) {
 		throw new Error('CHANGELOG.md is missing');
 	}
 	const text = readFileSync(changelogPath, 'utf8');
-	const heading = new RegExp(`^## \\[${version.replace(/\./g, '\\.')}\\]`, 'm');
-	if (!heading.test(text)) {
+	// Literal line match — avoid RegExp built from version (CodeQL js/incomplete-sanitization).
+	const headingPrefix = `## [${version}]`;
+	const hasHeading = text.split(/\r?\n/).some(
+		(line) => line === headingPrefix || line.startsWith(`${headingPrefix} `)
+	);
+	if (!hasHeading) {
 		throw new Error(`CHANGELOG.md has no "## [${version}]" section`);
 	}
 }
