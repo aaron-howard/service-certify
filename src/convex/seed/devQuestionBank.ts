@@ -425,14 +425,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A developer must pick server-side enforcement for validating a field value on insert and client-side hiding of a field when a checkbox is cleared. Select the two mechanisms that match each need.",
 		"choices": [
 			"A before Business Rule to validate the field value during database insert",
-			"A client script onSubmit to permanently delete related records on the server",
 			"A UI Policy to hide the dependent field when the checkbox condition is false",
+			"A client script onSubmit to permanently delete related records on the server",
 			"A UI Policy to execute a GlideRecord query against an external database"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			2
+			1
 		],
 		"explanation": "Business Rules run server-side on database events for validation; UI Policies declaratively control field visibility on the client based on conditions.",
 		"sourceUrls": [
@@ -852,14 +852,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which record operations can an Access Control rule restrict on a table? (Choose two.)",
 		"choices": [
 			"execute",
-			"report",
+			"create",
 			"delete",
-			"create"
+			"report"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"correctIndexes": [
-			2,
-			3
+			1,
+			2
 		],
 		"questionType": "multi",
 		"explanation": "ACLs secure CRUD-style operations such as create, read, write, and delete. Execute and report are not ACL operation types.",
@@ -1048,10 +1048,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 64,
 		"prompt": "Which Business Rule configurations run logic after the database transaction commits? (Choose two.)",
 		"choices": [
-			"After insert with After checked",
-			"Before update with Before checked",
+			"Async with Advanced checked",
 			"Display with Display checked",
-			"Async with Advanced checked"
+			"Before update with Before checked",
+			"After insert with After checked"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -1118,14 +1118,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which elements are required to compose a functioning Flow Designer flow? (Choose two.)",
 		"choices": [
 			"A trigger that starts execution",
-			"A client-side g_form API call",
 			"One or more actions that perform steps",
-			"A transform map coalesce field"
+			"A transform map coalesce field",
+			"A client-side g_form API call"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			2
+			1
 		],
 		"questionType": "multi",
 		"explanation": "Every flow needs a trigger (record, schedule, etc.) and actions that execute the automation steps.",
@@ -1282,9 +1282,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 78,
 		"prompt": "After executing RESTMessageV2.execute(), which methods retrieve the HTTP results? (Choose two.)",
 		"choices": [
-			"addInfoMessage()",
-			"getStatusCode()",
 			"setMandatory()",
+			"getStatusCode()",
+			"addInfoMessage()",
 			"getBody()"
 		],
 		"correctIndex": 1,
@@ -1447,10 +1447,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 88,
 		"prompt": "Which source control operations are available for a scoped app linked to Git in Studio? (Choose two.)",
 		"choices": [
-			"Commit local changes to a branch",
-			"Disable the instance authentication realm",
 			"Apply remote repository changes into the instance",
-			"Rename the sys_user table globally"
+			"Rename the sys_user table globally",
+			"Commit local changes to a branch",
+			"Disable the instance authentication realm"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -1605,14 +1605,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which two CSM records represent customer-owned product instances that agents associate with cases? (Choose two.)",
 		"choices": [
 			"Install base item",
-			"Case type configuration",
 			"Sold product",
-			"Product model"
+			"Product model",
+			"Case type configuration"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			2
+			1
 		],
 		"explanation": "Install base items and sold products both represent customer-owned product instances, while product models are catalog definitions and case type configuration defines case workflows.",
 		"sourceUrls": [
@@ -2222,15 +2222,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "When CSM is integrated with Incident Management, which two events synchronize information to the case work notes? (Choose two.)",
 		"choices": [
-			"Deletion of the related account record from the CMDB",
+			"Incident state changes",
 			"Resolution notes when the incident is resolved or closed",
 			"Creation of a new product model from the incident form",
-			"Incident state changes"
+			"Deletion of the related account record from the CMDB"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"correctIndexes": [
-			1,
-			3
+			0,
+			1
 		],
 		"explanation": "Work notes sync from the incident to the case when incident state changes and when the incident is resolved or closed with resolution notes; additional comments also sync but product models and account deletion are unrelated.",
 		"sourceUrls": [
@@ -2398,14 +2398,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which two elements does a targeted communication in CSM require the implementer to define before it can be sent? (Choose two.)",
 		"choices": [
 			"A mandatory change advisory board approval recorded on every outbound customer message",
-			"A discovery schedule that scans customer devices before any communication is released",
+			"The message content or template delivered to the selected recipients",
 			"The audience or recipient list that determines who receives the communication",
-			"The message content or template delivered to the selected recipients"
+			"A discovery schedule that scans customer devices before any communication is released"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"correctIndexes": [
-			2,
-			3
+			1,
+			2
 		],
 		"explanation": "Targeted communications need a defined audience (recipients) and message content or template; they do not require CAB approval or discovery schedules.",
 		"sourceUrls": [
@@ -2725,10 +2725,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which two components make the CSM Configurable Workspace adaptable to an organization's process without heavy custom code? (Choose two.)",
 		"choices": [
-			"Configurable list and form layouts tailored to agent roles and case types",
-			"Hard-coded client scripts on classic case forms instead of workspace declarative actions",
+			"Contextual side panels and declarative actions defined for the workspace experience",
 			"Separate scoped applications per agent role duplicating the same workspace configuration",
-			"Contextual side panels and declarative actions defined for the workspace experience"
+			"Hard-coded client scripts on classic case forms instead of workspace declarative actions",
+			"Configurable list and form layouts tailored to agent roles and case types"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -2935,9 +2935,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which two practices strengthen a self-service strategy that deflects cases while keeping customers satisfied? (Choose two.)",
 		"choices": [
 			"Publishing high-quality, findable knowledge articles for common customer questions",
-			"Disabling case creation on the portal so customers cannot log issues themselves",
+			"Hiding all knowledge from the portal so customers must always call a live agent",
 			"Offering guided self-service catalog items so customers resolve routine requests independently",
-			"Hiding all knowledge from the portal so customers must always call a live agent"
+			"Disabling case creation on the portal so customers cannot log issues themselves"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -3140,16 +3140,16 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which table attributes on a CI record are commonly used for operational reporting and multisource governance? (Choose three.)",
 		"choices": [
 			"discovery_source indicating which data source last influenced the CI",
-			"sys_updated_by on the import set row staging table exclusively",
-			"install_status reflecting the CI lifecycle stage in the CMDB",
 			"last_discovered timestamp showing when discovery last updated the CI",
+			"install_status reflecting the CI lifecycle stage in the CMDB",
+			"sys_updated_by on the import set row staging table exclusively",
 			"short_description from the caller's most recent incident only"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			2,
-			3
+			1,
+			2
 		],
 		"explanation": "Discovery source, last discovered, and install status are core CMDB attributes for source traceability, freshness, and lifecycle reporting; incident short descriptions and staging metadata are not CI governance fields.",
 		"sourceUrls": [
@@ -3378,17 +3378,17 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which attributes are strong candidates for identification rule identifier entries on hardware server classes? (Choose three.)",
 		"choices": [
-			"Class name combined with other stable identifiers such as UUID or asset tag",
-			"Serial number when reliably reported by authoritative sources",
-			"Manufacturer and model when used as part of a defined identifier entry",
 			"Short description free-text entered by callers on related incidents",
+			"Class name combined with other stable identifiers such as UUID or asset tag",
+			"Manufacturer and model when used as part of a defined identifier entry",
+			"Serial number when reliably reported by authoritative sources",
 			"Widget drilldown color preferences on CMDB dashboards"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
 			1,
-			2
+			2,
+			3
 		],
 		"explanation": "Identifier entries should combine stable, source-reported attributes like serial number, class, UUID, asset tag, manufacturer, and model; incident text and UI preferences are not identification keys.",
 		"sourceUrls": [
@@ -3457,17 +3457,17 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which ingestion methods can populate CMDB CI records while participating in Identification and Reconciliation? (Choose three.)",
 		"choices": [
-			"ServiceNow Discovery and Service Mapping probes",
-			"IntegrationHub ETL or spoke flows writing through IRE APIs",
 			"Import sets with transform maps targeting CMDB tables",
+			"Knowledge article publishing that replaces cmdb_ci records",
+			"ServiceNow Discovery and Service Mapping probes",
 			"Ad hoc direct table updates that bypass IRE for every insert",
-			"Knowledge article publishing that replaces cmdb_ci records"
+			"IntegrationHub ETL or spoke flows writing through IRE APIs"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1,
-			2
+			2,
+			4
 		],
 		"explanation": "Discovery, import sets, and IntegrationHub ETL can feed IRE-governed CMDB updates; bypassing IRE or using knowledge articles are not valid CMDB ingestion paths.",
 		"sourceUrls": [
@@ -3580,10 +3580,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which practices improve asset-to-CI alignment and compliance identifier quality during ingestion? (Choose two.)",
 		"choices": [
-			"Skip reconciliation rules so asset and discovery sources overwrite each other freely",
 			"Store compliance identifiers only in incident work notes without CMDB fields",
-			"Populate authoritative serial numbers and asset tags on alm_asset before CI creation",
-			"Use IRE identification on serial-number classes when enabling asset-driven CI creation"
+			"Skip reconciliation rules so asset and discovery sources overwrite each other freely",
+			"Use IRE identification on serial-number classes when enabling asset-driven CI creation",
+			"Populate authoritative serial numbers and asset tags on alm_asset before CI creation"
 		],
 		"correctIndex": 2,
 		"correctIndexes": [
@@ -3703,14 +3703,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Finance marks a laptop asset Retired in HAM and expects the linked configuration item to reflect the same lifecycle change on key status fields. Which two CI fields synchronize from the asset update? (Choose two.)",
 		"choices": [
 			"Hardware Status",
+			"Operational status",
 			"Install Status",
-			"Asset tag",
-			"Operational status"
+			"Asset tag"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			2
 		],
 		"explanation": "Asset-to-CI synchronization updates Install Status and Hardware Status on the related configuration item when asset state changes.",
 		"sourceUrls": [
@@ -3825,10 +3825,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which two practices improve asset-to-CI synchronization quality during hardware ingestion? (Choose two.)",
 		"choices": [
-			"Load assets and CIs into unrelated tables without reference fields",
+			"Disable Identification and Reconciliation for all hardware classes",
 			"Align asset and CI classes so related records share consistent identifiers",
 			"Configure field synchronization maps for state attributes that must stay aligned",
-			"Disable Identification and Reconciliation for all hardware classes"
+			"Load assets and CIs into unrelated tables without reference fields"
 		],
 		"correctIndex": 1,
 		"correctIndexes": [
@@ -3951,14 +3951,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which two roles are typically involved in CMDB data governance accountability? (Choose two.)",
 		"choices": [
 			"evt_mgmt_operator who triages monitoring alerts without CMDB access",
-			"catalog_admin who maintains service catalog item variables only",
+			"CMDB administrator who owns platform configuration and health policies",
 			"Data steward who resolves quality issues for assigned CI domains",
-			"CMDB administrator who owns platform configuration and health policies"
+			"catalog_admin who maintains service catalog item variables only"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"correctIndexes": [
-			2,
-			3
+			1,
+			2
 		],
 		"explanation": "CMDB administrators configure governance controls while data stewards remediate quality issues within their assigned configuration domains.",
 		"sourceUrls": [
@@ -4073,10 +4073,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which two CMDB Health metrics most directly indicate deduplication problems? (Choose two.)",
 		"choices": [
-			"Duplicate CI records sharing the same identification keys",
+			"Orphan CIs with no valid upstream or downstream relationships",
 			"SMTP failure counts on scheduled report subscriptions",
 			"Widget drilldown latency on operational dashboards",
-			"Orphan CIs with no valid upstream or downstream relationships"
+			"Duplicate CI records sharing the same identification keys"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -4197,14 +4197,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which two controls reduce duplicate CIs when multiple governed sources update the same class? (Choose two.)",
 		"choices": [
 			"Strong identification entries evaluated in priority order",
-			"Disabling CMDB Health KPIs to avoid false positives",
 			"Loading all sources directly into cmdb_ci without IRE",
-			"Reconciliation rules with datasource precedence on key attributes"
+			"Reconciliation rules with datasource precedence on key attributes",
+			"Disabling CMDB Health KPIs to avoid false positives"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			3
+			2
 		],
 		"explanation": "Identification prevents duplicate CI creation while reconciliation governs which source updates each attribute after a match is found.",
 		"sourceUrls": [
@@ -4265,15 +4265,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "A CMDB program is enabling multisource governance before SCCM and Discovery feeds run in parallel on server classes. Which prerequisites must be in place before CMDB 360 can capture per-source attribute history? (Choose two.)",
 		"choices": [
-			"Set glide.identification_engine.multisource_enabled to true",
-			"Activate the ITOM Discovery License plugin on the instance",
 			"Convert cmdb_ci tables to non-CMDB application tables",
-			"Disable all static reconciliation rules for every CI class"
+			"Set glide.identification_engine.multisource_enabled to true",
+			"Disable all static reconciliation rules for every CI class",
+			"Activate the ITOM Discovery License plugin on the instance"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			3
 		],
 		"explanation": "CMDB 360 requires the ITOM Discovery License and the multisource_enabled property; disabling reconciliation or converting CMDB tables is not part of enablement.",
 		"sourceUrls": [
@@ -4325,15 +4325,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which two CMDB Health dashboard signals most strongly indicate a duplicate CI problem? (Choose two.)",
 		"choices": [
-			"Growing backlog of open de-duplication tasks generated by health jobs",
+			"Higher count of MID Server clusters provisioned in the datacenter",
 			"Increased number of catalog items published to the service portal",
-			"Declining correctness scores tied to duplicate-related health tests",
-			"Higher count of MID Server clusters provisioned in the datacenter"
+			"Growing backlog of open de-duplication tasks generated by health jobs",
+			"Declining correctness scores tied to duplicate-related health tests"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"correctIndexes": [
-			0,
-			2
+			2,
+			3
 		],
 		"explanation": "Duplicate issues surface through health test failures, declining correctness, and de-duplication tasks—not infrastructure or catalog volume metrics.",
 		"sourceUrls": [
@@ -4566,10 +4566,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which two CMDB Data Foundations dashboard tabs focus on CSDM alignment and third-party import integrity? (Choose two.)",
 		"choices": [
-			"ITSM Processes metrics for incident assignment group coverage only",
-			"Data Management Practices metrics for properly configured imported data",
 			"Customizations metrics for excessive UI theme changes on forms",
-			"Best Practices metrics for services, relationships, and intended table usage"
+			"Best Practices metrics for services, relationships, and intended table usage",
+			"ITSM Processes metrics for incident assignment group coverage only",
+			"Data Management Practices metrics for properly configured imported data"
 		],
 		"correctIndex": 1,
 		"correctIndexes": [
@@ -4771,14 +4771,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which two artifacts connect business critical success factors to measurable CMDB govern outcomes? (Choose two.)",
 		"choices": [
 			"KPI trees linking program goals to health metrics and remediation owners",
-			"One-time spreadsheet exports stored outside the platform without owners",
 			"Health scorecards with threshold alerts reviewed by data stewards",
+			"One-time spreadsheet exports stored outside the platform without owners",
 			"Disabled CMDB Get Well jobs to reduce visible non-compliance counts"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			2
+			1
 		],
 		"explanation": "CSFs become govern outcomes when mapped to KPI trees and steward-reviewed scorecards—not offline exports or suppressed metric jobs.",
 		"sourceUrls": [
@@ -5051,15 +5051,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which two statements accurately describe CMDB business value for service and operations leaders? (Choose two.)",
 		"choices": [
-			"CMDB value depends only on maximizing total CI count regardless of ownership or quality",
+			"Business value requires disabling reconciliation so every source can freely overwrite attributes",
 			"Governed configuration data supports portfolio decisions by connecting services to supporting technology",
-			"Accurate CI relationships improve blast-radius analysis during incidents and planned changes",
-			"Business value requires disabling reconciliation so every source can freely overwrite attributes"
+			"CMDB value depends only on maximizing total CI count regardless of ownership or quality",
+			"Accurate CI relationships improve blast-radius analysis during incidents and planned changes"
 		],
 		"correctIndex": 1,
 		"correctIndexes": [
 			1,
-			2
+			3
 		],
 		"explanation": "CMDB business value stems from trustworthy relationships and service linkage that inform impact and portfolio decisions—not unchecked record volume or ungoverned updates.",
 		"sourceUrls": [
@@ -5173,8 +5173,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which two Unified Map capabilities help incident and change teams during live investigations? (Choose two.)",
 		"choices": [
-			"Automatic retirement of stale CIs without governance review",
 			"Direct replacement of all identification rules with map layout preferences",
+			"Automatic retirement of stale CIs without governance review",
 			"Contextual side panel modules such as Related items and Changes for the selected CI",
 			"Hierarchical visualization of CI relationships centered on a chosen home node"
 		],
@@ -5297,9 +5297,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which two CMDB insight practices help sustain data foundation improvements after initial remediation? (Choose two.)",
 		"choices": [
 			"Remove ownership fields to simplify certification workflows",
-			"Monitor Data Foundations metric trends through PA widgets and prioritize by calculated priority score",
+			"Reuse saved queries and playbooks so teams apply consistent investigation and fix patterns",
 			"Disable CMDB Get Well collection jobs once scores reach one hundred percent once",
-			"Reuse saved queries and playbooks so teams apply consistent investigation and fix patterns"
+			"Monitor Data Foundations metric trends through PA widgets and prioritize by calculated priority score"
 		],
 		"correctIndex": 1,
 		"correctIndexes": [
@@ -5394,14 +5394,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "During stakeholder mapping for CSDM, which two roles should be identified before detailed service modeling workshops? (Choose two.)",
 		"choices": [
 			"Business service owners accountable for consumer-facing outcomes",
-			"External auditors who will never interact with service records",
+			"Technical service or application owners responsible for supporting CIs and relationships",
 			"Every instance user with the admin role regardless of domain expertise",
-			"Technical service or application owners responsible for supporting CIs and relationships"
+			"External auditors who will never interact with service records"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			3
+			1
 		],
 		"explanation": "Effective CSDM stakeholder mapping names business and technical ownership; broad admin access or passive audit contacts do not substitute for service accountability.",
 		"sourceUrls": [
@@ -5995,14 +5995,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which two validations are recommended before promoting a custom horizontal discovery pattern to production? (Choose two.)",
 		"choices": [
 			"Debug-mode testing confirms identification steps produce expected CIs on a known target host",
-			"Every business service record is converted to a manual CI relationship import",
 			"All discovery schedules are disabled globally for thirty days during promotion",
-			"A peer review verifies credential references and parsing logic for fragile command output"
+			"A peer review verifies credential references and parsing logic for fragile command output",
+			"Every business service record is converted to a manual CI relationship import"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			3
+			2
 		],
 		"explanation": "Production promotion requires verified pattern output on representative targets and review of credentials and parsing logic to prevent CMDB quality regressions.",
 		"sourceUrls": [
@@ -6424,15 +6424,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Stakeholders require sign-off after the first production discovery wave. Which CMDB Health metrics best validate data quality? (Choose two.)",
 		"choices": [
-			"MID Server memory utilization during off-peak maintenance windows",
-			"Duplicate CI counts trending down after identification tuning",
 			"Completeness scores for in-scope CI classes populated by discovery",
-			"Count of service catalog requests submitted by discovery operators"
+			"Duplicate CI counts trending down after identification tuning",
+			"Count of service catalog requests submitted by discovery operators",
+			"MID Server memory utilization during off-peak maintenance windows"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"correctIndexes": [
-			1,
-			2
+			0,
+			1
 		],
 		"explanation": "Completeness and duplicate metrics directly reflect whether discovery identification and updates are producing trustworthy CMDB data.",
 		"sourceUrls": [
@@ -6564,15 +6564,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 57,
 		"prompt": "Which IRE components govern how Discovery data updates the CMDB? (Choose two.)",
 		"choices": [
+			"Identification rules that locate or create CI records",
 			"Discovery behavior settings that tune ICMP timeout intervals",
-			"ECC queue topics that transport probe payloads to MID Servers",
 			"Reconciliation rules that apply source precedence to attributes",
-			"Identification rules that locate or create CI records"
+			"ECC queue topics that transport probe payloads to MID Servers"
 		],
-		"correctIndex": 2,
+		"correctIndex": 0,
 		"correctIndexes": [
-			2,
-			3
+			0,
+			2
 		],
 		"questionType": "multi",
 		"explanation": "IRE uses identification rules to match or create CIs and reconciliation rules to merge attribute updates from discovery and other sources.",
@@ -6773,10 +6773,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 69,
 		"prompt": "Which artifacts demonstrate Discovery Engagement Readiness before go-live? (Choose two.)",
 		"choices": [
-			"Complete service mapping dependency graphs for all business capabilities globally",
-			"Signed scope document with network, cloud, and operational ownership contacts",
 			"Production incident major incident process workflow diagrams for every team",
-			"Tested credentials and validated MID Server connectivity to scoped targets"
+			"Tested credentials and validated MID Server connectivity to scoped targets",
+			"Complete service mapping dependency graphs for all business capabilities globally",
+			"Signed scope document with network, cloud, and operational ownership contacts"
 		],
 		"correctIndex": 1,
 		"correctIndexes": [
@@ -6882,15 +6882,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which customer challenges does ServiceNow Event Management help address? (Choose three.)",
 		"choices": [
 			"Understanding the current state of IT infrastructure from monitoring signals",
-			"Deprecating configuration items the organization does not own",
 			"Automating and prioritizing remediation tasks and notifications",
-			"Consolidating multiple monitoring tools into a single management system"
+			"Consolidating multiple monitoring tools into a single management system",
+			"Deprecating configuration items the organization does not own"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			2,
-			3
+			1,
+			2
 		],
 		"explanation": "Event Management addresses visibility gaps, remediation automation, and tool consolidation. Deprecating CIs the organization does not own is not a documented customer challenge for the product.",
 		"sourceUrls": [
@@ -6973,15 +6973,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "On which operating system platforms can a MID Server run to support Event Management integrations? (Choose two.)",
 		"choices": [
-			"Android consumer tablets",
+			"Apple iOS mobile devices",
 			"Microsoft Windows Server",
-			"Linux System",
-			"Apple iOS mobile devices"
+			"Android consumer tablets",
+			"Linux System"
 		],
 		"correctIndex": 1,
 		"correctIndexes": [
 			1,
-			2
+			3
 		],
 		"explanation": "MID Servers support Microsoft Windows Server and Linux System platforms for secure communication between external networks and the ServiceNow instance.",
 		"sourceUrls": [
@@ -7460,9 +7460,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 33,
 		"prompt": "Which factors contribute to the alert priority score used to rank open alerts? (Choose three.)",
 		"choices": [
-			"Number of impacted business services",
-			"Alert severity level",
 			"CI type weight mapping",
+			"Alert severity level",
+			"Number of impacted business services",
 			"Catalog item recurring price"
 		],
 		"correctIndex": 0,
@@ -7551,15 +7551,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 38,
 		"prompt": "Which inputs does Probable Root Cause Analysis evaluate when ranking likely causes? (Choose three.)",
 		"choices": [
-			"Transfer order shipment status between stockrooms",
-			"Change requests linked to topology or application services",
 			"Active alerts and alert groups on affected CIs",
-			"CI topology relationships from CMDB data"
+			"CI topology relationships from CMDB data",
+			"Transfer order shipment status between stockrooms",
+			"Change requests linked to topology or application services"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"correctIndexes": [
+			0,
 			1,
-			2,
 			3
 		],
 		"questionType": "multi",
@@ -7714,13 +7714,13 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"choices": [
 			"ServiceNow schedules MID Server retrieval from the external monitoring API",
 			"SNMP trap listeners on the instance replace all pull connector definitions",
-			"The external tool initiates delivery through a generic inbound_event REST endpoint",
-			"Event collection schedule in seconds controls polling frequency from the source"
+			"Event collection schedule in seconds controls polling frequency from the source",
+			"The external tool initiates delivery through a generic inbound_event REST endpoint"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			3
+			2
 		],
 		"questionType": "multi",
 		"explanation": "Pull connectors use scheduled MID Server collection with a configurable Event collection schedule; push sources send events inbound instead of being polled.",
@@ -7906,16 +7906,16 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 58,
 		"prompt": "Which stages describe the Metric Intelligence processing pipeline? (Choose three.)",
 		"choices": [
+			"Retire hardware assets when stockroom quantity falls below minimum",
 			"Collect raw metric data from supported monitoring connectors",
 			"Analyze series to detect anomalies against projected bounds",
-			"Map metrics to CIs using event rules and CMDB identification",
-			"Retire hardware assets when stockroom quantity falls below minimum"
+			"Map metrics to CIs using event rules and CMDB identification"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
 			1,
-			2
+			2,
+			3
 		],
 		"questionType": "multi",
 		"explanation": "Metric Intelligence captures connector data, binds metrics to CIs through the identification engine, then analyzes time series for threshold and anomaly outcomes.",
@@ -7949,14 +7949,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A multi-region FSM rollout must separate qualification reviewers from dispatch schedulers while sharing territory coverage. Which group types should the architect configure under Field Service > Group Management? (Choose two.)",
 		"choices": [
 			"Qualifier Groups",
-			"Problem Management Coordinator Groups",
 			"Dispatch Groups",
-			"Change Advisory Board Groups"
+			"Change Advisory Board Groups",
+			"Problem Management Coordinator Groups"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			2
+			1
 		],
 		"explanation": "Field Service Management uses Qualifier Groups and Dispatch Groups under Group Management, along with Work Groups for agents, to align skills and resources to field tasks.",
 		"sourceUrls": [
@@ -8072,15 +8072,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "A dispatcher wants agent positions updated on the dispatch map in near real time. Which two items must be enabled to track field agents? (Choose two.)",
 		"choices": [
-			"The Location history map report scheduled to run once per week only",
+			"The Geolocation plugin activated on the instance",
 			"The sn_fsm_customer_ex.work.management.cx.share_agent_details property set to true",
-			"The Field technician feedback survey enabled for every closed work order",
-			"The Geolocation plugin activated on the instance"
+			"The Location history map report scheduled to run once per week only",
+			"The Field technician feedback survey enabled for every closed work order"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"correctIndexes": [
-			1,
-			3
+			0,
+			1
 		],
 		"explanation": "Agent tracking on dispatch maps requires Geolocation and the share agent details property, which updates the map with the agent's latest location.",
 		"sourceUrls": [
@@ -8777,10 +8777,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 48,
 		"prompt": "Which capabilities does the automated scheduling engine provide in Field Service Management? (Choose two.)",
 		"choices": [
-			"Auto-assign tasks using agent skills, availability, and travel constraints",
-			"Replace dispatcher workspace functions for all assignment decisions permanently",
 			"Reorganize schedules in real time when tasks are canceled or delayed",
-			"Remove territory membership checks from every scheduling run by default"
+			"Remove territory membership checks from every scheduling run by default",
+			"Auto-assign tasks using agent skills, availability, and travel constraints",
+			"Replace dispatcher workspace functions for all assignment decisions permanently"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -8869,8 +8869,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"choices": [
 			"Automated CMDB reconciliation schedules for every configuration item class",
 			"Global LDAP synchronization rules for external contractor user accounts",
-			"Source table mapping to populate work order fields from originating records",
-			"Standalone work order task templates linked with filtering conditions"
+			"Standalone work order task templates linked with filtering conditions",
+			"Source table mapping to populate work order fields from originating records"
 		],
 		"correctIndex": 2,
 		"correctIndexes": [
@@ -9613,22 +9613,21 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"trackCode": "CIS-HAM",
 		"order": 6,
 		"questionType": "multi",
-		"prompt": "A new HAM program must separate day-to-day stockroom operators from workspace administrators. Which roles should be assigned? (Choose two.)",
+		"prompt": "A new HAM program must separate day-to-day stockroom operators from Hardware Asset Workspace administrators. Which roles should be assigned? (Choose two.)",
 		"choices": [
-			"The asset role for day-to-day hardware asset and stockroom operations",
-			"The evt_mgmt_admin role for Event Management connector administration only",
+			"The inventory_user role for day-to-day stock information and stockroom operations",
 			"The ham_admin role for full Hardware Asset Management administration",
-			"The itil role for incident and change management without HAM module access"
+			"The evt_mgmt_admin role for Event Management connector administration only",
+			"The itil role for incident and change work without HAM workspace administration"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			2
+			1
 		],
-		"explanation": "The asset role supports routine HAM operations while ham_admin provides full administrative access to HAM features and workspace configuration.",
+		"explanation": "Hardware Asset Workspace roles document inventory_user for stock information access and ham_admin for all HAM features. The asset role manages hardware and consumable records, but inventory_user is the stockroom-operator role called out for stock access; itil does not grant HAM administration.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/ham-landing-page.html",
-			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/create-hardware-consumable-model.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/ham-workspace-roles.html"
 		],
 		"domain": "IT Asset Management Overview and Fundamentals"
 	},
@@ -9862,15 +9861,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 	{
 		"trackCode": "CIS-HAM",
 		"order": 20,
-		"prompt": "CMDB integration requires governed CI creation when assets are received with serial numbers. Which property enables IRE-based CI creation from assets?",
+		"prompt": "Administrators want CIs created from assets through the CMDB Identification and Reconciliation Engine. Which system property enables that behavior?",
 		"choices": [
-			"Immediate retirement of assets without approval workflows or disposal evidence",
-			"Automatic software entitlement imports from vendor spreadsheets without model mapping",
-			"Use of the CMDB Identification and Reconciliation engine for eligible CI classes",
-			"Bypass of stockroom receiving checkpoints for all open transfer orders"
+			"glide.cmdb.skip_ire_for_every_hardware_class",
+			"glide.discovery.only_create_assets_without_ci",
+			"glide.asset.create_ci_with_ire",
+			"sn_hamp.disable_all_asset_ci_links"
 		],
 		"correctIndex": 2,
-		"explanation": "When enabled, eligible CI classes with serial-number identification and no dependent relationships can be created from assets through IRE.",
+		"explanation": "glide.asset.create_ci_with_ire enables CI creation from assets using IRE for eligible hardware CI subclasses. The other properties are not the documented switch for IRE-based CI creation from assets.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
 		],
@@ -9879,15 +9878,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 	{
 		"trackCode": "CIS-HAM",
 		"order": 21,
-		"prompt": "HAM administrators see incomplete model category coverage in operational dashboards. Which advisor should they review for hardware data quality recommendations?",
+		"prompt": "Hardware asset data quality is drifting after a bulk import. Which advisor helps monitor and improve hardware asset data quality in HAM?",
 		"choices": [
-			"Event Management connector template inheritance for third-party monitoring tools",
-			"Incident major incident declaration thresholds across assignment groups",
-			"Software license true-up exposure by publisher for subscription renewals only",
-			"Hardware asset data coverage, attribute completeness, and recommended integrations"
+			"Event Management connector diagnostics for alert storms",
+			"Only the Knowledge homepage trending widget without CMDB health checks",
+			"Agile story points reports for development velocity",
+			"CMDB Success Advisor for Hardware Asset Management (HAM)"
 		],
 		"correctIndex": 3,
-		"explanation": "CMDB Success Advisor for HAM surfaces data quality insights and integration recommendations for hardware model categories.",
+		"explanation": "CMDB Success Advisor for HAM monitors and improves hardware asset data quality. Knowledge widgets, Event Management diagnostics, and Agile velocity reports do not provide that HAM data-quality guidance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
 		],
@@ -10020,14 +10019,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "An auditor asks which model fields prove normalization ran successfully on a laptop SKU. Which two fields should you show? (Choose two.)",
 		"choices": [
 			"Stockroom Manager",
+			"Model Number",
 			"Normalized Manufacturer",
-			"Normalized Product",
-			"Model Number"
+			"Normalized Product"
 		],
-		"correctIndex": 1,
+		"correctIndex": 2,
 		"correctIndexes": [
-			1,
-			2
+			2,
+			3
 		],
 		"explanation": "Normalized Manufacturer and Normalized Product are populated by the normalization job; Model Number and Stockroom Manager are not normalization output fields.",
 		"sourceUrls": [
@@ -10039,15 +10038,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 	{
 		"trackCode": "CIS-HAM",
 		"order": 30,
-		"prompt": "For which CI classes can IRE create CIs from assets when glide.asset.create_ci_with_ire is enabled?",
+		"prompt": "When glide.asset.create_ci_with_ire is enabled, which CI classes can IRE create from assets?",
 		"choices": [
 			"Only retired assets marked for disposal in the hardware asset disposal workflow",
 			"All CI classes regardless of identification rules or dependent relationship requirements",
 			"Only consumable model categories without serialized assets in any stockroom",
-			"Classes with identification rules on serial number and no dependent CI relationships"
+			"Hardware CI subclasses (cmdb_ci_hardware) with a serial-number identification rule and no dependent CI relationships"
 		],
 		"correctIndex": 3,
-		"explanation": "IRE-based CI creation from assets applies to CI classes that identify on serial number and have no dependent CI class relationships.",
+		"explanation": "Docs state glide.asset.create_ci_with_ire affects CI classes that identify on serial number and have no dependent relationships, and that the property applies to classes extended from cmdb_ci_hardware. It does not apply to every CI class or to consumable-only categories.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
 		],
@@ -10199,10 +10198,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which two are valid data sources for trustworthy hardware asset attributes? (Choose two.)",
 		"choices": [
-			"Discovery scans of deployed equipment",
-			"Event Management alert correlation policies for infrastructure monitoring",
+			"Procurement and receiving transactions linked to purchase orders",
 			"Virtual Agent conversation transcripts from employee self-service chats",
-			"Procurement and receiving transactions linked to purchase orders"
+			"Event Management alert correlation policies for infrastructure monitoring",
+			"Discovery scans of deployed equipment"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -10306,11 +10305,11 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 	{
 		"trackCode": "CIS-HAM",
 		"order": 45,
-		"prompt": "A global rollout must track keyboards, mice, and cables by quantity while laptops remain serialized assets. Which model strategy supports 500+ consumable SKUs? (Choose three.)",
+		"prompt": "A global rollout must track keyboards, mice, and pencils by quantity while laptops remain serialized assets. Which items are common consumable examples? (Choose three.)",
 		"choices": [
 			"Mouse",
 			"Laptop",
-			"CD",
+			"Pencil",
 			"Keyboard"
 		],
 		"correctIndex": 0,
@@ -10320,9 +10319,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			3
 		],
 		"questionType": "multi",
-		"explanation": "Consumables such as CDs, keyboards, and mice are tracked by quantity rather than as individually serialized hardware assets. Laptops are serialized hardware assets, not consumables.",
+		"explanation": "Consumable lifecycle docs list mouse devices, computer keyboards, and pencils as common consumables tracked as groups by quantity. Laptops are serialized hardware assets, not consumables.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/consumable-model-fields.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/asset-management/c_FollowLifeCycleConsumbl.html"
 		],
 		"domain": "Practical Management of IT Assets"
 	},
@@ -10533,17 +10532,17 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 	{
 		"trackCode": "CIS-HAM",
 		"order": 58,
-		"prompt": "An asset reaches end of life and must be removed from active assignment pools. Which state change aligns with standard retirement practice?",
+		"prompt": "An asset reaches end of life and enters the disposal workflow. Which state and substate does HAM set when disposal begins?",
 		"choices": [
 			"Archive the stockroom instead of updating the asset record",
-			"Move the asset to a retired or disposed substate following approval",
+			"State Retired with Substate Pending disposal",
 			"Convert the asset record into a consumable model without review",
-			"Leave the asset in In use while deleting the assigned user reference"
+			"Leave the asset In use while deleting the assigned user reference"
 		],
 		"correctIndex": 1,
-		"explanation": "Controlled retirement updates asset state and substate so financial, compliance, and inventory views reflect removal from service.",
+		"explanation": "Creating a disposal order changes the asset state to Retired and the substate to Pending disposal. Archiving stockrooms, converting to consumables, or leaving In use does not complete governed disposal.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/dispose-hardware-assets.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/create-disposal-order.html"
 		],
 		"domain": "Operational Integration of IT Asset Management Processes"
 	},
@@ -10705,16 +10704,16 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 68,
 		"prompt": "Which items should be included in an internal HAM audit evidence package? (Choose three.)",
 		"choices": [
-			"Sample transaction logs for assignments and transfers",
 			"Approved policy controls and attestation sign-offs",
-			"Exception remediation records with closure evidence",
-			"Unfiltered screenshots of unrelated incident queues"
+			"Sample transaction logs for assignments and transfers",
+			"Unfiltered screenshots of unrelated incident queues",
+			"Exception remediation records with closure evidence"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
 			1,
-			2
+			3
 		],
 		"questionType": "multi",
 		"explanation": "Audit evidence should include controls, traceable transactions, and documented remediation of exceptions rather than unrelated operational views.",
@@ -10726,7 +10725,7 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 	{
 		"trackCode": "CIS-HAM",
 		"order": 69,
-		"prompt": "Operations wants one workspace to monitor stock rules, open transfer orders, and upcoming contract renewals. Which interface should asset managers use?",
+		"prompt": "Operations wants one workspace view for stock rules, procurement sourcing requests, and contract renewal requests. Which interface should asset managers use?",
 		"choices": [
 			"The Knowledge homepage without asset analytics",
 			"The Agile Development board for scrum teams",
@@ -10734,9 +10733,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"The Asset operations view in Hardware Asset Workspace"
 		],
 		"correctIndex": 3,
-		"explanation": "The Asset operations view consolidates operational tasks such as stock rules, orders, sourcing, and contract renewals in the workspace.",
+		"explanation": "Asset operations view covers stock rules, stock orders, procurement sourcing requests, and contract renewal requests. Open transfer orders are monitored from Inventory view, not as the primary Asset operations consolidation for those three workstreams.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-operations-view.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-operations-view.html",
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/inventory-view.html"
 		],
 		"domain": "Operational Integration of IT Asset Management Processes"
 	},
@@ -10886,34 +10886,34 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 	{
 		"trackCode": "CIS-HAM",
 		"order": 78,
-		"prompt": "Security policy requires certified destruction of storage media when high-risk laptops retire. How should HAM support compliance?",
+		"prompt": "Security policy requires certified destruction of storage media when high-risk laptops retire. How should HAM capture that compliance evidence?",
 		"choices": [
-			"Use governed retirement workflows that capture disposal vendor certificates and link evidence to the asset record",
+			"Create a disposal order, attach disposal documentation to the order, and set Certificate of disposal to Yes",
 			"Convert retired laptops back to In stock without sanitization checks",
 			"Delete asset records immediately without disposal documentation to reduce table size",
 			"Track disposal only in email threads without updating lifecycle states"
 		],
 		"correctIndex": 0,
-		"explanation": "Disposal governance depends on verifiable retirement records showing policy steps and vendor certification were followed.",
+		"explanation": "Disposal-order docs require attaching disposal documentation to the order and marking Certificate of disposal Yes when complete. Email-only tracking or deleting records without documentation does not meet the governed disposal flow.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/dispose-hardware-assets.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/create-disposal-order.html"
 		],
 		"domain": "Operational Integration of IT Asset Management Processes"
 	},
 	{
 		"trackCode": "CIS-HAM",
 		"order": 79,
-		"prompt": "Finance capitalizes 10,000 laptops using five-year straight-line depreciation. Which HAM configuration supports accurate monthly depreciation postings?",
+		"prompt": "Finance capitalizes 10,000 laptops using five-year straight-line depreciation. Which HAM configuration supports accurate depreciation tracking?",
 		"choices": [
 			"Depreciation calculated from discovery probe timestamps rather than purchase dates",
-			"Depreciation methods and schedules on hardware models or assets aligned to the capitalization policy and useful life",
+			"Straight Line depreciation and effective date on the model or asset; the Calculate Depreciation job updates values daily",
 			"Manual journal entries only with no depreciation fields on asset records",
 			"Immediate full expense at receipt with no lifecycle financial tracking"
 		],
 		"correctIndex": 1,
-		"explanation": "HAM depreciation configuration on models and assets supports consistent financial treatment across large standardized hardware estates.",
+		"explanation": "Asset depreciation docs configure the depreciation method and effective date on models/assets, and the Calculate Depreciation scheduled job updates depreciation fields daily—not only via monthly manual journals.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-depreciation.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/asset-management/t_AddingDepreciationToAnAsset.html"
 		],
 		"domain": "Financial Management of IT Assets"
 	},
@@ -10941,18 +10941,18 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which of the following are considered operational expenses for hardware assets? (Choose three.)",
 		"choices": [
-			"Maintenance agreement costs",
-			"Replacement parts",
+			"The one-time capitalized purchase cost of the asset",
 			"Resource costs for support",
-			"Delivery costs for initial purchase shipment"
+			"Maintenance agreement costs",
+			"Replacement parts"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
 			1,
-			2
+			2,
+			3
 		],
-		"explanation": "Operational expenses include ongoing maintenance, parts, and support labor. Initial delivery of purchased hardware is typically capital-related rather than operational expense in TCO context.",
+		"explanation": "For serialized assets, capital cost is recorded once; subsequent expense lines such as maintenance, parts, and support are operational. The one-time capitalized purchase cost is capital, not operational expense.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-mgmt-tco.html"
 		],
@@ -11051,19 +11051,19 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 87,
 		"prompt": "Which cost elements contribute to asset Total Cost of Ownership in HAM? (Choose three.)",
 		"choices": [
-			"MID Server licensing fees unrelated to the asset lifecycle",
-			"Expense lines aggregated from child assets on complex bundles",
 			"Initial purchase cost recorded as a capital expense line",
-			"Operational expense lines from maintenance and support tasks"
+			"Operational expense lines from maintenance and support tasks",
+			"MID Server licensing fees unrelated to the asset lifecycle",
+			"Expense lines incurred on child assets that roll up to the parent asset TCO"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"correctIndexes": [
+			0,
 			1,
-			2,
 			3
 		],
 		"questionType": "multi",
-		"explanation": "Asset TCO sums capital and operational expense lines on the asset, including costs rolled up from child assets when applicable.",
+		"explanation": "TCO sums capital and operational expense lines on an asset, and costs on child assets roll up to the parent. TCO is not calculated for bundle assets themselves; MID Server licensing unrelated to the asset lifecycle is not an asset expense line.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-mgmt-tco.html"
 		],
@@ -11790,8 +11790,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which options allow an HR Administrator to configure a personal copy of the HR Case Dashboard? (Choose two.)",
 		"choices": [
 			"Add Content",
-			"Delete Content",
 			"Modify Kernel",
+			"Delete Content",
 			"Change Layout"
 		],
 		"correctIndex": 0,
@@ -12270,15 +12270,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 68,
 		"prompt": "Before enrolling employees in a new hire journey, which components must be configured? (Choose two.)",
 		"choices": [
+			"MID Server clusters",
 			"Activity sets",
-			"Trigger conditions",
 			"CMDB identification rules",
-			"MID Server clusters"
+			"Trigger conditions"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			3
 		],
 		"questionType": "multi",
 		"explanation": "Lifecycle events require trigger conditions to start and activity sets defining the work; CMDB identification and MID Server clusters are unrelated.",
@@ -14273,10 +14273,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which artifacts are foundational Performance Analytics solution components an implementer configures before dashboards go live? (Choose three.)",
 		"choices": [
 			"Indicator sources that filter facts table records",
-			"Breakdowns that segment scores by dimensions such as assignment group",
 			"Indicators that define what is measured and how scores aggregate",
-			"MID Server clusters dedicated to each indicator frequency",
-			"Update sets that version-control widget CSS themes"
+			"Breakdowns that segment scores by dimensions such as assignment group",
+			"Update sets that version-control widget CSS themes",
+			"MID Server clusters dedicated to each indicator frequency"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -14347,15 +14347,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which tasks complete deployment of a new automated indicator with ongoing collection? (Choose two.)",
 		"choices": [
-			"Delete all pa_scores_l1 rows before running the first source preview",
+			"Convert the indicator to manual entry after the first successful collection",
 			"Activate a scheduled job aligned to indicator frequency for ongoing collection",
-			"Run an unscheduled job to backfill historical scores when source data exists",
-			"Convert the indicator to manual entry after the first successful collection"
+			"Delete all pa_scores_l1 rows before running the first source preview",
+			"Run an unscheduled job to backfill historical scores when source data exists"
 		],
 		"correctIndex": 1,
 		"correctIndexes": [
 			1,
-			2
+			3
 		],
 		"explanation": "New indicators typically get a one-time historical backfill job plus an active scheduled job for recurring collection at the indicator frequency.",
 		"sourceUrls": [
@@ -14454,9 +14454,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which practices strengthen KPI selection and validation before indicators are automated? (Choose two.)",
 		"choices": [
-			"Confirm each KPI maps to a documented business goal and accountable owner",
-			"Publish dashboards before reviewing indicator source filter accuracy",
 			"Validate that source data can support the measurement at the intended frequency",
+			"Publish dashboards before reviewing indicator source filter accuracy",
+			"Confirm each KPI maps to a documented business goal and accountable owner",
 			"Skip target definition so teams can interpret raw numbers subjectively"
 		],
 		"correctIndex": 0,
@@ -14630,16 +14630,16 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which Performance Analytics roles match typical deployment responsibilities? (Choose three.)",
 		"choices": [
-			"pa_admin provides full administrative access including dependency assessment",
-			"pa_data_collector manages indicator sources and data collection jobs",
-			"pa_viewer creates indicator sources and schedules collection jobs",
 			"pa_power_user creates indicators, breakdowns, and PA widgets",
-			"pa_spotlight_viewer CRUD all indicator sources and collection scripts"
+			"pa_spotlight_viewer CRUD all indicator sources and collection scripts",
+			"pa_data_collector manages indicator sources and data collection jobs",
+			"pa_admin provides full administrative access including dependency assessment",
+			"pa_viewer creates indicator sources and schedules collection jobs"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1,
+			2,
 			3
 		],
 		"explanation": "pa_data_collector owns sources and jobs, pa_power_user builds indicators and visualizations, and pa_admin has full PA administration; pa_viewer and pa_spotlight_viewer do not create sources.",
@@ -14723,15 +14723,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which elements are typically configured when creating an automated indicator backed by platform data? (Choose three.)",
 		"choices": [
 			"Indicator source table and conditions",
-			"SMTP relay server for dashboard email",
 			"Aggregate field and function",
-			"Indicator frequency setting on the collector job"
+			"Indicator frequency setting on the collector job",
+			"SMTP relay server for dashboard email"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			2,
-			3
+			1,
+			2
 		],
 		"explanation": "Automated indicators require a source definition, aggregation settings, and a collection frequency; mail relay is unrelated to indicator configuration.",
 		"sourceUrls": [
@@ -14874,9 +14874,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"choices": [
 			"Short Description",
 			"Assignment Group",
-			"State",
+			"Category",
 			"Last updated",
-			"Category"
+			"State"
 		],
 		"correctIndex": 1,
 		"correctIndexes": [
@@ -14999,10 +14999,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which actions help limit breakdown collection to meaningful segments? (Choose two.)",
 		"choices": [
-			"Delete all historical indicator scores each week",
 			"Remove all conditions from the indicator source",
-			"Filter breakdown source values to an active or in-scope subset",
-			"Configure breakdown matrix exclusions for irrelevant values"
+			"Delete all historical indicator scores each week",
+			"Configure breakdown matrix exclusions for irrelevant values",
+			"Filter breakdown source values to an active or in-scope subset"
 		],
 		"correctIndex": 2,
 		"correctIndexes": [
@@ -15091,14 +15091,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which statements about breakdown sources are correct? (Choose two.)",
 		"choices": [
 			"They supply the dimension values used to segment indicator scores",
-			"They replace indicator sources for automated score collection",
 			"They may be field-based, scripted, or use bucket groups depending on requirements",
+			"They replace indicator sources for automated score collection",
 			"They store historical indicator score snapshots over time"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			2
+			1
 		],
 		"explanation": "Breakdown sources define dimensional values and support multiple creation methods; indicator sources and score storage remain separate PA artifacts.",
 		"sourceUrls": [
@@ -15165,9 +15165,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "When building a scripted breakdown source, which practices help keep segmented scores accurate? (Choose two.)",
 		"choices": [
-			"Run the script only when a user opens a dashboard widget on demand",
-			"Return stable element labels that align with how stakeholders interpret the dimension",
 			"Disable breakdown mappings so the script replaces all indicator source logic",
+			"Return stable element labels that align with how stakeholders interpret the dimension",
+			"Run the script only when a user opens a dashboard widget on demand",
 			"Validate script output against expected cardinality before promoting to production"
 		],
 		"correctIndex": 1,
@@ -15277,8 +15277,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which practices improve data quality before KPI scores are trusted by executives? (Choose two.)",
 		"choices": [
 			"Disable breakdown mappings whenever scores differ slightly from ad hoc spreadsheets",
-			"Validate indicator source filters against representative list reports and document expected counts",
 			"Review Run as user context on collector jobs to ensure ACL visibility matches reporting expectations",
+			"Validate indicator source filters against representative list reports and document expected counts",
 			"Skip source preview because collection jobs always self-correct bad filters"
 		],
 		"correctIndex": 1,
@@ -15370,10 +15370,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which controls support compliant Platform Analytics governance in regulated environments? (Choose two.)",
 		"choices": [
-			"Restrict indicator and source edits to authorized PA roles with change review",
+			"Maintain audit evidence for KPI definition changes and production promotions",
 			"Disable job monitoring so collection failures do not create audit noise",
 			"Allow all consumers to edit indicator aggregation scripts in production",
-			"Maintain audit evidence for KPI definition changes and production promotions"
+			"Restrict indicator and source edits to authorized PA roles with change review"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -15465,14 +15465,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "When selecting a Platform Analytics visualization for an executive briefing, which criteria should guide the choice? (Choose two.)",
 		"choices": [
 			"The decision question the audience must answer from the metric",
-			"Whether the view needs trend, comparison, or current-state emphasis",
 			"Using a different chart type for every widget regardless of data shape",
-			"Preferring the visualization with the highest number of breakdown elements"
+			"Preferring the visualization with the highest number of breakdown elements",
+			"Whether the view needs trend, comparison, or current-state emphasis"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"explanation": "Effective visualization selection matches chart type to the decision and whether stakeholders need trends, comparisons, or a current snapshot.",
 		"sourceUrls": [
@@ -15541,15 +15541,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which capabilities are available from KPI Details in the Platform Analytics experience? (Choose two.)",
 		"choices": [
-			"Run historic data collection jobs directly from the widget header",
+			"Review trend movement and breakdown contributions for the selected KPI",
 			"Evaluate target and threshold status for the displayed score",
-			"Edit indicator source table names without pa_admin access",
-			"Review trend movement and breakdown contributions for the selected KPI"
+			"Run historic data collection jobs directly from the widget header",
+			"Edit indicator source table names without pa_admin access"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"correctIndexes": [
-			1,
-			3
+			0,
+			1
 		],
 		"explanation": "KPI Details focuses on interpreting the KPI through trends, breakdown context, and target status rather than on administrative collection tasks.",
 		"sourceUrls": [
@@ -15655,14 +15655,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "When rolling out interactive dashboard filters to multiple PA audiences, which practices reduce misinterpretation risk? (Choose two.)",
 		"choices": [
 			"Hide threshold coloring on all widgets so filtered segments always appear green",
-			"Allow every viewer to edit indicator source conditions directly from the filter panel",
+			"Test filter defaults and visibility with representative user roles before production cutover",
 			"Map each filter to governed breakdown dimensions tied to the same indicator context",
-			"Test filter defaults and visibility with representative user roles before production cutover"
+			"Allow every viewer to edit indicator source conditions directly from the filter panel"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"correctIndexes": [
-			2,
-			3
+			1,
+			2
 		],
 		"explanation": "Filter rollouts should validate role-specific behavior and align filters to governed breakdowns so segmented views remain accurate and authorized.",
 		"sourceUrls": [
@@ -15749,10 +15749,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which advanced Platform Analytics capabilities help teams move from descriptive reporting to actionable insight? (Choose two.)",
 		"choices": [
-			"Replacing all indicators with ad hoc list reports on every dashboard row",
-			"KPI Details drill-down from widgets to contributing records for rapid investigation",
 			"Removing targets and thresholds so every score appears neutral gray",
-			"AI-assisted analytics experiences that surface relevant KPIs and trends in Next Experience workspaces"
+			"AI-assisted analytics experiences that surface relevant KPIs and trends in Next Experience workspaces",
+			"Replacing all indicators with ad hoc list reports on every dashboard row",
+			"KPI Details drill-down from widgets to contributing records for rapid investigation"
 		],
 		"correctIndex": 1,
 		"correctIndexes": [
@@ -15845,14 +15845,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "When promoting Platform Analytics from pilot to production, which administrative practices reduce long-term maintenance risk? (Choose two.)",
 		"choices": [
 			"Document content pack versions, customized artifacts, and rollback plans before production import",
-			"Schedule advanced collection jobs after reviewing instance load and indicator source complexity",
 			"Allow unrestricted editing of indicator sources by all dashboard consumers without review",
+			"Schedule advanced collection jobs after reviewing instance load and indicator source complexity",
 			"Skip ownership assignment because Spotlight tiles self-correct when processes change"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			2
 		],
 		"explanation": "Production promotion should capture content pack lineage and tune collection schedules for load while keeping indicator governance and ownership intact.",
 		"sourceUrls": [
@@ -15869,8 +15869,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"choices": [
 			"GRC: Profiles",
 			"GRC: Risk Management",
-			"GRC: Incident Management",
-			"GRC: Knowledge Management"
+			"GRC: Knowledge Management",
+			"GRC: Incident Management"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -16165,9 +16165,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which two groups form the core implementation team for a GRC engagement? (Choose two.)",
 		"choices": [
-			"End-user hardware support technicians",
-			"Risk and compliance experts",
 			"External regulator liaisons",
+			"Risk and compliance experts",
+			"End-user hardware support technicians",
 			"ServiceNow developer team"
 		],
 		"correctIndex": 1,
@@ -16496,15 +16496,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which two tables are in the scope of the Policy and Compliance Management application? (Choose two.)",
 		"choices": [
-			"Citation",
+			"Asset",
 			"Incident",
-			"Control",
-			"Asset"
+			"Citation",
+			"Control"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"correctIndexes": [
-			0,
-			2
+			2,
+			3
 		],
 		"explanation": "Control and Citation are Policy and Compliance Management scoped tables; Incident and Asset belong to core platform applications outside the GRC scope.",
 		"sourceUrls": [
@@ -16621,9 +16621,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which two artifacts are part of the Policy and Compliance Management compliance library? (Choose two.)",
 		"choices": [
 			"Update sets packaging developer configuration changes between instances",
-			"Authority documents imported or created to represent external regulations and standards",
+			"Policy statements that express internal requirements derived from citations",
 			"Service level agreements measuring incident response times for the help desk",
-			"Policy statements that express internal requirements derived from citations"
+			"Authority documents imported or created to represent external regulations and standards"
 		],
 		"correctIndex": 1,
 		"correctIndexes": [
@@ -16731,14 +16731,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "When configuring Policy and Compliance scope tables for a scoped GRC application, which two tables must be included? (Choose two.)",
 		"choices": [
 			"Control table for compliance control definitions and testing evidence",
-			"Citation table for regulatory and policy obligation references",
 			"Entity table for CMDB configuration item inventory records",
+			"Citation table for regulatory and policy obligation references",
 			"Audit Engagement table for external audit planning and fieldwork"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			2
 		],
 		"explanation": "Policy and Compliance scoped applications require Control and Citation scope tables so compliance data is partitioned correctly.",
 		"sourceUrls": [
@@ -16858,10 +16858,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "When scoping a Risk Management application, which two scope tables must be configured? (Choose two.)",
 		"choices": [
-			"Risk Framework",
 			"Risk Statement",
-			"Control Test",
-			"Authority Document"
+			"Risk Framework",
+			"Authority Document",
+			"Control Test"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -16972,8 +16972,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Before launching an enterprise risk assessment campaign, which two elements must be defined? (Choose two.)",
 		"choices": [
 			"Final audit report distribution list",
-			"Assessment methodology and scoring criteria",
 			"In-scope business entities for the campaign",
+			"Assessment methodology and scoring criteria",
 			"Discovery credentials for subnet scanning"
 		],
 		"correctIndex": 1,
@@ -17370,15 +17370,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which three roles does the sn_audit.user role inherit for cross-module GRC read access? (Choose three.)",
 		"choices": [
-			"sn_compliance.reader",
-			"sn_grc.reader",
 			"sn_incident.write",
-			"sn_risk.reader"
+			"sn_risk.reader",
+			"sn_grc.reader",
+			"sn_compliance.reader"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
 			1,
+			2,
 			3
 		],
 		"explanation": "The sn_audit.user role inherits sn_grc.reader, sn_compliance.reader, and sn_risk.reader so auditors can view GRC data across modules.",
@@ -17449,8 +17449,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"choices": [
 			"Planning",
 			"Fieldwork",
-			"Software reclamation",
-			"Discovery classification"
+			"Discovery classification",
+			"Software reclamation"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -17729,14 +17729,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which two deliverables should a year-one SAM optimization roadmap include? (Choose two.)",
 		"choices": [
 			"Reclamation targets for high-cost publishers with verified usage baselines",
-			"Renewal negotiation playbooks backed by reconciled Effective License Position data",
 			"Immediate retirement of every perpetual license without contract review",
+			"Renewal negotiation playbooks backed by reconciled Effective License Position data",
 			"Suspension of all discovery schedules until optimization savings are realized"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			2
 		],
 		"explanation": "Optimization roadmaps prioritize measurable reclamation and data-driven renewal strategies before broad technical changes.",
 		"sourceUrls": [
@@ -17820,15 +17820,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Before renewing a volume agreement, which two analyses give finance the strongest negotiation data? (Choose two.)",
 		"choices": [
-			"Mean time to resolve unrelated infrastructure incidents",
+			"Effective License Position comparing normalized consumption to purchased rights",
 			"Reconciled over-licensed positions showing surplus entitlements available for reduction",
-			"Discovery probe frequency by subnet without entitlement context",
-			"Effective License Position comparing normalized consumption to purchased rights"
+			"Mean time to resolve unrelated infrastructure incidents",
+			"Discovery probe frequency by subnet without entitlement context"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"correctIndexes": [
-			1,
-			3
+			0,
+			1
 		],
 		"explanation": "Renewal negotiations use reconciled position and over-licensed analysis to right-size commitments while maintaining audit defensibility.",
 		"sourceUrls": [
@@ -18132,14 +18132,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which two data elements are required to resolve a Publisher part number not found entitlement import error? (Choose two.)",
 		"choices": [
 			"A hardware asset tag matching the discovery serial number",
-			"An incident record linked to the import error for ITSM tracking",
+			"A valid publisher part number mapped to the software model",
 			"A software model associated with the licensable product",
-			"A valid publisher part number mapped to the software model"
+			"An incident record linked to the import error for ITSM tracking"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"correctIndexes": [
-			2,
-			3
+			1,
+			2
 		],
 		"explanation": "Import errors for missing publisher part numbers are resolved by ensuring the part number exists and maps to the correct software model for the product.",
 		"sourceUrls": [
@@ -18322,10 +18322,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 48,
 		"prompt": "In the License Workbench publisher view, which calculations are provided? (Choose all that apply.)",
 		"choices": [
-			"Total Spend",
+			"Over-licensed amount",
 			"True-up Cost",
 			"Potential Savings",
-			"Over-licensed amount"
+			"Total Spend"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -18398,9 +18398,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "When remediating reconciliation results in SAM, which remediation options are available? (Choose all that apply.)",
 		"choices": [
 			"Create Allocations",
-			"Remove Allocations",
 			"Purchase Rights",
-			"Remove Unlicensed Installs"
+			"Remove Unlicensed Installs",
+			"Remove Allocations"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -18506,10 +18506,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 58,
 		"prompt": "Which data elements are required inputs for SAM reconciliation to produce an accurate compliance position? (Choose all that apply.)",
 		"choices": [
+			"Normalized software entitlements with correct license metrics",
 			"Discovered installations mapped to software models",
-			"Contract-backed purchased quantities aligned to publisher terms",
 			"Active allocations linking rights to users or devices",
-			"Normalized software entitlements with correct license metrics"
+			"Contract-backed purchased quantities aligned to publisher terms"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -18666,10 +18666,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 67,
 		"prompt": "Which platform areas commonly integrate with SAM operational workflows? (Choose all that apply.)",
 		"choices": [
-			"Service catalog software request and fulfillment",
-			"Procurement purchase orders and contracts",
 			"Change management for SAM configuration updates",
-			"Discovery and normalization feeding install records"
+			"Discovery and normalization feeding install records",
+			"Service catalog software request and fulfillment",
+			"Procurement purchase orders and contracts"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -19191,16 +19191,16 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which three groups are primary audiences for Security Incident Response reporting dashboards? (Choose three.)",
 		"choices": [
+			"Security Managers who oversee SOC operations and staffing",
 			"CIOs and CISOs who need executive visibility into security posture",
 			"Security Analysts who perform day-to-day triage and investigation",
-			"Facilities coordinators who manage building access badge provisioning",
-			"Security Managers who oversee SOC operations and staffing"
+			"Facilities coordinators who manage building access badge provisioning"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
 			1,
-			3
+			2
 		],
 		"explanation": "SIR reporting targets security practitioners, SOC leadership, and executive security stakeholders rather than unrelated operational teams.",
 		"sourceUrls": [
@@ -19831,14 +19831,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which two integration categories are commonly configured in SIR Integration Configurations? (Choose two.)",
 		"choices": [
 			"Facilities management tools that track HVAC maintenance schedules",
-			"Payroll systems that calculate employee overtime accrual balances",
+			"Endpoint detection and response tools that export detection events",
 			"SIEM and security analytics platforms that send correlated alerts",
-			"Endpoint detection and response tools that export detection events"
+			"Payroll systems that calculate employee overtime accrual balances"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"correctIndexes": [
-			2,
-			3
+			1,
+			2
 		],
 		"explanation": "SIR pre-built integrations focus on security tools such as SIEM and EDR platforms that feed incidents and observables into the platform.",
 		"sourceUrls": [
@@ -20090,10 +20090,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which two security incident task types support structured investigation and remediation work in SIR? (Choose two.)",
 		"choices": [
-			"Discovery error tasks for MID Server subnet probe failure logging",
 			"Catalog fulfillment tasks for employee laptop shipping and imaging",
-			"Investigation tasks for evidence collection and analysis activities",
-			"Remediation tasks for containment and eradication actions on affected assets"
+			"Discovery error tasks for MID Server subnet probe failure logging",
+			"Remediation tasks for containment and eradication actions on affected assets",
+			"Investigation tasks for evidence collection and analysis activities"
 		],
 		"correctIndex": 2,
 		"correctIndexes": [
@@ -20254,15 +20254,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Who are key reporting audiences for Security Incident Response dashboards and metrics? (Choose three.)",
 		"choices": [
 			"CIOs and CISOs reviewing executive risk and trend summaries",
-			"Facilities and HR staff approving office supply requisitions",
+			"Security Managers tracking team performance and SLA adherence",
 			"Security Analysts reviewing operational triage and task backlogs",
-			"Security Managers tracking team performance and SLA adherence"
+			"Facilities and HR staff approving office supply requisitions"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			2,
-			3
+			1,
+			2
 		],
 		"explanation": "Analyst, manager, and executive dashboards serve operational, supervisory, and leadership audiences; facilities and HR requisitions are unrelated to SIR reporting.",
 		"sourceUrls": [
@@ -20494,10 +20494,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which two capabilities differentiate playbooks from runbooks in Security Incident Response? (Choose two.)",
 		"choices": [
-			"Playbooks orchestrate automated task creation and workflow routing",
 			"Runbooks link tasks to knowledge articles for guided manual execution",
-			"Playbooks replace all analyst judgment for every incident category",
-			"Runbooks automatically close incidents without validation evidence"
+			"Playbooks orchestrate automated task creation and workflow routing",
+			"Runbooks automatically close incidents without validation evidence",
+			"Playbooks replace all analyst judgment for every incident category"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -20648,10 +20648,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which two benefits does SecOps process automation deliver when flows execute on security incidents? (Choose two.)",
 		"choices": [
-			"Reduced manual handoffs through automated task and enrichment steps",
-			"Permanent removal of analyst review from every incident category",
+			"Consistent execution of approved response procedures across analyst shifts",
 			"Automatic closure of all incidents regardless of containment evidence",
-			"Consistent execution of approved response procedures across analyst shifts"
+			"Permanent removal of analyst review from every incident category",
+			"Reduced manual handoffs through automated task and enrichment steps"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -21093,13 +21093,13 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"choices": [
 			"Documented rollback plan and version control for the extended pattern",
 			"Disabling reconciliation rules so duplicate records simplify troubleshooting",
-			"Successful test runs on representative hosts with expected CI and relationship output",
-			"Immediate deletion of all generic application CIs across the CMDB"
+			"Immediate deletion of all generic application CIs across the CMDB",
+			"Successful test runs on representative hosts with expected CI and relationship output"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			2
+			3
 		],
 		"explanation": "Production promotion requires validated test results plus controlled versioning so custom pattern changes can be managed safely.",
 		"sourceUrls": [
@@ -21283,15 +21283,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which two elements are typically associated when defining a service group in Service Mapping? (Choose two.)",
 		"choices": [
-			"Incident problem task templates assigned to the service desk tier-one queue",
+			"Related application services or technical services grouped for operational visibility",
 			"Shared mapping schedules or policies applied to the grouped services across all mapped entry points",
-			"Software publisher part numbers used during entitlement reconciliation",
-			"Related application services or technical services grouped for operational visibility"
+			"Incident problem task templates assigned to the service desk tier-one queue",
+			"Software publisher part numbers used during entitlement reconciliation"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"correctIndexes": [
-			1,
-			3
+			0,
+			1
 		],
 		"explanation": "Service groups organize related services and can share mapping configuration such as schedules and governance policies for consistent operations.",
 		"sourceUrls": [
@@ -21339,8 +21339,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which two configuration steps should be completed before running a full service map against production entry points? (Choose two.)",
 		"choices": [
-			"Convert all mapped CIs to manual records with no discovery updates permitted",
 			"Disable CMDB identification and reconciliation rules across all CI classes",
+			"Convert all mapped CIs to manual records with no discovery updates permitted",
 			"Assign valid Discovery credentials to the CI classes probed during mapping",
 			"Define and validate entry points with application owners for the target service"
 		],
@@ -21412,10 +21412,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which two indicators suggest a service map requires credential review? (Choose two.)",
 		"choices": [
-			"Every CI on the map shows identical software model normalization labels",
 			"The service map schedule completed faster than the previous run with no topology changes",
-			"Multiple CIs display yellow triangle warning icons after the latest map run",
-			"Discovery logs show authentication failures for hosts referenced by entry points"
+			"Every CI on the map shows identical software model normalization labels",
+			"Discovery logs show authentication failures for hosts referenced by entry points",
+			"Multiple CIs display yellow triangle warning icons after the latest map run"
 		],
 		"correctIndex": 2,
 		"correctIndexes": [
@@ -21560,14 +21560,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which two Discovery phases directly follow successful probing in the PCIE sequence? (Choose two.)",
 		"choices": [
 			"Identification",
-			"Classification",
+			"Schedule definition",
 			"Alert correlation",
-			"Schedule definition"
+			"Classification"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"explanation": "After Probe completes, Discovery classifies devices into CI classes and then identifies whether each result matches an existing CI or requires creation.",
 		"sourceUrls": [
@@ -21762,8 +21762,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which two inputs most improve machine learning service mapping accuracy? (Choose two.)",
 		"choices": [
-			"High-quality CMDB identifiers and stable CI relationships",
 			"Validated network traffic and discovery coverage for mapped subnets",
+			"High-quality CMDB identifiers and stable CI relationships",
 			"Randomized hostname prefixes that change after every deployment",
 			"Disabling reconciliation so every scan creates new CI records"
 		],
@@ -22056,14 +22056,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which two IRE components work together to prevent duplicate CIs from multiple feeds? (Choose two.)",
 		"choices": [
 			"Event rules that create alerts from monitoring tool payloads",
-			"Discovery clusters that assign MID Server failover groups",
+			"Reconciliation rules that apply datasource precedence after a match",
 			"Identification rules that match incoming records to existing CIs",
-			"Reconciliation rules that apply datasource precedence after a match"
+			"Discovery clusters that assign MID Server failover groups"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"correctIndexes": [
-			2,
-			3
+			1,
+			2
 		],
 		"explanation": "Identification finds or creates the CI match while reconciliation governs attribute updates, together reducing duplicate and conflicting records.",
 		"sourceUrls": [
@@ -22474,15 +22474,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which factors should drive an MSP's decision between domain separation and dedicated instances for a new customer? (Choose two.)",
 		"choices": [
+			"The number of dashboard portlets requested by the customer's executives",
 			"The provider's ability to operate shared processes and cross-customer intelligence at scale",
-			"The customer's isolation, compliance, and independent release cycle requirements",
 			"The alphabetical position of the customer name in the account list",
-			"The number of dashboard portlets requested by the customer's executives"
+			"The customer's isolation, compliance, and independent release cycle requirements"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			3
 		],
 		"explanation": "Architecture selection weighs customer isolation and lifecycle needs against provider efficiencies from shared operations on a domain-separated instance.",
 		"sourceUrls": [
@@ -22533,14 +22533,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "An MSP defines SLA governance for tenants sharing one instance. Which practices support consistent multi-tenant SLA operations? (Choose two.)",
 		"choices": [
-			"Suppress SLA breach notifications for tenants on lower-cost contracts",
-			"Report SLA attainment per tenant domain so account teams see customer-specific performance",
 			"Standardize baseline SLA definitions globally and override per tenant only where contracts differ",
-			"Let each technician create personal SLA definitions without change control"
+			"Let each technician create personal SLA definitions without change control",
+			"Report SLA attainment per tenant domain so account teams see customer-specific performance",
+			"Suppress SLA breach notifications for tenants on lower-cost contracts"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"correctIndexes": [
-			1,
+			0,
 			2
 		],
 		"explanation": "Multi-tenant SLA governance combines shared baselines with contract-driven overrides and per-tenant attainment reporting for account accountability.",
@@ -22664,10 +22664,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which activities belong to ongoing tenant lifecycle management on a domain-separated MSP instance? (Choose two.)",
 		"choices": [
-			"Reviewing tenant-specific overrides and access grants as the customer's services change",
+			"Planning tenant offboarding steps including data archival and domain retirement",
 			"Rebuilding the entire domain hierarchy whenever any single tenant churns",
 			"Renaming the global domain after each new customer signs a contract",
-			"Planning tenant offboarding steps including data archival and domain retirement"
+			"Reviewing tenant-specific overrides and access grants as the customer's services change"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -22723,8 +22723,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"choices": [
 			"Child domains of the assignment group's domain",
 			"The parent domain of the assignment group's domain",
-			"Domains granted through visibility domain configuration on the user's group membership",
-			"Domains linked through a contains relationship to the assignment group's domain"
+			"Domains linked through a contains relationship to the assignment group's domain",
+			"Domains granted through visibility domain configuration on the user's group membership"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -22846,16 +22846,16 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which statements describe characteristics of a contains domain relationship? (Choose three.)",
 		"choices": [
+			"It automatically makes the containing domain the parent of the contained domain",
 			"It grants visibility to data in the contained domain without affecting process flow",
-			"It is a many-to-many domain-to-domain relationship independent of parent-child hierarchy",
 			"Visibility through contains is controlled by the domain picker selection",
-			"It automatically makes the containing domain the parent of the contained domain"
+			"It is a many-to-many domain-to-domain relationship independent of parent-child hierarchy"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
 			1,
-			2
+			2,
+			3
 		],
 		"explanation": "Contains domains are many-to-many data visibility links outside hierarchy, do not change process inheritance, and respect domain picker context when viewing contained data.",
 		"sourceUrls": [
@@ -22920,16 +22920,16 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which properties define a domain-separated ServiceNow application for service provider deployments? (Choose three.)",
 		"choices": [
-			"Business logic separation supporting tenant-specific policies and overrides",
-			"Data separation so tenants see only authorized records",
+			"Mandatory separate MID Server infrastructure per tenant domain",
 			"Hierarchical modeling with nested multitenancy and parent access to child resources",
-			"Mandatory separate MID Server infrastructure per tenant domain"
+			"Business logic separation supporting tenant-specific policies and overrides",
+			"Data separation so tenants see only authorized records"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
 			1,
-			2
+			2,
+			3
 		],
 		"explanation": "Domain-separated applications provide data separation, business logic separation, hierarchical modeling, UI separation, and cross-customer intelligence—not separate MID infrastructure per tenant.",
 		"sourceUrls": [
@@ -23012,9 +23012,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which process artifacts can domain administrators create or override within their domain? (Choose two.)",
 		"choices": [
 			"CMDB class models that redefine the global data schema",
-			"UI policies that govern form behavior for domain users",
+			"Email notifications tailored to domain-specific workflows",
 			"System properties that apply instance-wide to every domain",
-			"Email notifications tailored to domain-specific workflows"
+			"UI policies that govern form behavior for domain users"
 		],
 		"correctIndex": 1,
 		"correctIndexes": [
@@ -23068,14 +23068,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A domain team must stop using a process override without deleting the parent global record. Which approaches align with domain separation best practices? (Choose two.)",
 		"choices": [
 			"Set the override condition to false so it never evaluates",
+			"Set a condition of sys_id is empty on the override record",
 			"Mark the override inactive and expect the platform to ignore it automatically",
-			"Delete the global parent record so the override becomes standalone",
-			"Set a condition of sys_id is empty on the override record"
+			"Delete the global parent record so the override becomes standalone"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			3
+			1
 		],
 		"explanation": "Inactive override records are ignored; deactivation is achieved by conditions that never evaluate, such as false or sys_id is empty, while preserving the parent record.",
 		"sourceUrls": [
@@ -23140,10 +23140,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which automation types are process-separated and can be overridden per domain? (Choose two.)",
 		"choices": [
-			"Flows authored for domain-specific fulfillment steps",
 			"Client scripts that control on-load form behavior",
-			"Task records stored on operational tables",
-			"System dictionary entries that define the physical schema"
+			"Flows authored for domain-specific fulfillment steps",
+			"System dictionary entries that define the physical schema",
+			"Task records stored on operational tables"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -23249,8 +23249,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A service provider is promoting update sets between domain-separated sub-production and production instances. Which practices reduce deployment risk? (Choose two.)",
 		"choices": [
 			"Force all captured records into the global domain to simplify comparison",
-			"Verify captured records retain the intended domain before committing the update set",
 			"Test process overrides in the target domain with expand scope audits after promotion",
+			"Verify captured records retain the intended domain before committing the update set",
 			"Skip regression of business rules because domains isolate logic automatically"
 		],
 		"correctIndex": 1,
@@ -23342,10 +23342,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "A recurring tenant location import must update existing rows instead of creating duplicates. Which transform map settings should the implementation team configure? (Choose two.)",
 		"choices": [
-			"Mark stable natural keys as coalesce fields on the transform map",
-			"Disable transform scripts to prevent any field mapping from executing",
+			"Map the domain column so updates stay within the correct tenant scope",
 			"Set Run business rules to false on every production import run",
-			"Map the domain column so updates stay within the correct tenant scope"
+			"Disable transform scripts to prevent any field mapping from executing",
+			"Mark stable natural keys as coalesce fields on the transform map"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -23476,15 +23476,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which practices improve repeatable foundational data migrations across tenant domains? (Choose two.)",
 		"choices": [
+			"Remove coalesce fields after the first successful dry run to speed imports",
 			"Define completeness and referential integrity gates before cutover to production",
-			"Version transform maps and data quality scripts so rehearsal runs produce predictable outcomes",
 			"Edit production records manually during each test without documenting changes",
-			"Remove coalesce fields after the first successful dry run to speed imports"
+			"Version transform maps and data quality scripts so rehearsal runs produce predictable outcomes"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			3
 		],
 		"explanation": "Repeatable tenant migrations depend on versioned transform logic and measurable quality gates rather than ad hoc production edits.",
 		"sourceUrls": [
@@ -23571,14 +23571,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which statements correctly describe Standard domain separation support in supported applications? (Choose two.)",
 		"choices": [
 			"Indicates the application has no sys_domain column on its primary data tables",
-			"Permits tenants to modify core application source code for each domain",
+			"Includes Basic-level tenant data routing at application run time",
 			"Allows service provider administrators to configure per-tenant process behavior for defined use cases",
-			"Includes Basic-level tenant data routing at application run time"
+			"Permits tenants to modify core application source code for each domain"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"correctIndexes": [
-			2,
-			3
+			1,
+			2
 		],
 		"explanation": "Standard support builds on Basic data routing and adds provider-managed per-tenant process configuration without tenant source-code changes.",
 		"sourceUrls": [
@@ -23683,8 +23683,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"choices": [
 			"Assume every application provides Enhanced tenant self-administration by default",
 			"Disable process overrides globally to simplify initial catalog and knowledge deployments",
-			"Review each application's documented support level before promising tenant-specific behavior",
-			"Pilot domain-aware workflows with representative tenants before enterprise-wide cutover"
+			"Pilot domain-aware workflows with representative tenants before enterprise-wide cutover",
+			"Review each application's documented support level before promising tenant-specific behavior"
 		],
 		"correctIndex": 2,
 		"correctIndexes": [
@@ -23705,14 +23705,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which two plugins are included in the PPM Standard plugin bundle for Strategic Portfolio Management? (Choose two.)",
 		"choices": [
 			"Project Portfolio Suite",
-			"Financial Planning",
 			"Hardware Asset Management",
+			"Financial Planning",
 			"Security Incident Response"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			2
+			1
 		],
 		"explanation": "The PPM Standard bundle includes Project Portfolio Suite and Financial Planning as core SPM foundation plugins.",
 		"sourceUrls": [
@@ -24322,10 +24322,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which two demand states indicate that intake evaluation is underway but funding has not yet been approved? (Choose two.)",
 		"choices": [
-			"Qualified",
-			"Cancelled",
+			"Assessment In Progress",
 			"Closed Complete",
-			"Assessment In Progress"
+			"Cancelled",
+			"Qualified"
 		],
 		"correctIndex": 1,
 		"correctIndexes": [
@@ -25144,10 +25144,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which two ServiceNow security applications commonly integrate with SPM for vulnerability and incident visibility? (Choose two.)",
 		"choices": [
-			"Security Incident Response for managing security incident workflows",
+			"Discovery for MID Server heartbeat interval configuration tuning",
 			"Vulnerability Response for grouping and remediating vulnerable items",
 			"Hardware Asset Management for disposal certificate generation only",
-			"Discovery for MID Server heartbeat interval configuration tuning"
+			"Security Incident Response for managing security incident workflows"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -25217,14 +25217,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which two fields on the Third-party Contact form are required to designate the main liaison and deliver automated portal credentials? (Choose two.)",
 		"choices": [
 			"Primary contact checkbox flag identifying the main liaison for the third-party organization",
-			"Time Zone field defining the preferred regional offset for scheduled assessment reminders",
 			"Email address used to send portal login credentials and notification links to the external user",
-			"Department field listing the organizational unit name at the vendor company headquarters"
+			"Department field listing the organizational unit name at the vendor company headquarters",
+			"Time Zone field defining the preferred regional offset for scheduled assessment reminders"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			2
+			1
 		],
 		"explanation": "Every third party must have a primary contact designated, and the email field triggers the automated notification containing portal login credentials.",
 		"sourceUrls": [
@@ -25290,8 +25290,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which two roles are commonly involved in the TPRM due diligence approval workflow after questionnaire responses are reviewed? (Choose two.)",
 		"choices": [
-			"Third-party risk manager who oversees the due diligence process and approves or rejects requests",
 			"Third-party risk approver who validates assessment outcomes at configured approval levels",
+			"Third-party risk manager who oversees the due diligence process and approves or rejects requests",
 			"Field service dispatcher who assigns mobile technicians to on-site vendor hardware repairs",
 			"Catalog administrator who publishes employee-facing service catalog items for internal requests"
 		],
@@ -25398,14 +25398,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which two outcomes represent strategic benefits of consolidating third-party risk management in ServiceNow TPRM? (Choose two.)",
 		"choices": [
 			"Automatic removal of procurement teams from contract negotiation activities",
-			"Elimination of all regulatory obligations for vendor relationships",
+			"Centralized portfolio visibility across third parties, engagements, scores, and remediation status",
 			"Reduced manual assessment burden through automated workflows and standardized questionnaires",
-			"Centralized portfolio visibility across third parties, engagements, scores, and remediation status"
+			"Elimination of all regulatory obligations for vendor relationships"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"correctIndexes": [
-			2,
-			3
+			1,
+			2
 		],
 		"explanation": "TPRM automates assessment workflows and centralizes third-party portfolio data so teams gain consistent visibility and lower manual program costs.",
 		"sourceUrls": [
@@ -25572,10 +25572,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which two contact form fields help personalize the Third-party Portal experience for external users? (Choose two.)",
 		"choices": [
-			"Language preference for displaying portal content in the contact's preferred locale",
-			"Depreciation method for calculating hardware asset value over the procurement lifecycle",
+			"Time Zone setting for scheduling assessment reminders and due date notifications",
 			"Change type for categorizing infrastructure deployment requests in the CAB approval queue",
-			"Time Zone setting for scheduling assessment reminders and due date notifications"
+			"Depreciation method for calculating hardware asset value over the procurement lifecycle",
+			"Language preference for displaying portal content in the contact's preferred locale"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -25836,14 +25836,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which two tables are involved when a TPRM assessment questionnaire is sent to a third-party contact? (Choose two.)",
 		"choices": [
 			"Third-party risk assessment (sn_vdr_risk_asmt_assessment) as the parent assessment record",
+			"Software asset (alm_asset) tracking licensed application installations across the enterprise CMDB",
 			"Known error (problem) storing documented workarounds for recurring platform configuration defects",
-			"Questionnaire instance (asmt_assessment_instance) representing the sent questionnaire to the respondent",
-			"Software asset (alm_asset) tracking licensed application installations across the enterprise CMDB"
+			"Questionnaire instance (asmt_assessment_instance) representing the sent questionnaire to the respondent"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			2
+			3
 		],
 		"explanation": "External assessments are parent records on the assessment table; each sent questionnaire creates an instance record linked to the respondent.",
 		"sourceUrls": [
@@ -26080,13 +26080,13 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"choices": [
 			"sn_publications_publication catalog for knowledge article publishing workflows",
 			"sn_vdr_risk_asmt_assessment external assessment header record",
-			"asmt_assessment_instance questionnaire response instance linked to the assessment",
-			"alm_hardware asset record used for warranty tracking on procured devices"
+			"alm_hardware asset record used for warranty tracking on procured devices",
+			"asmt_assessment_instance questionnaire response instance linked to the assessment"
 		],
 		"correctIndex": 1,
 		"correctIndexes": [
 			1,
-			2
+			3
 		],
 		"explanation": "External assessments live on sn_vdr_risk_asmt_assessment while asmt_assessment_instance stores the completed questionnaire responses.",
 		"sourceUrls": [
@@ -26321,10 +26321,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which two actions can a third-party contact perform from the third-party portal? (Choose two.)",
 		"choices": [
-			"Approve internal due diligence requests as TPR manager",
-			"Manage Third-party Contacts for their company engagement",
+			"Edit scoring rules on sn_vdr_risk_asmt_vendor_risk_scoring_rule configuration records",
 			"Respond to a Third-party Risk Assessment assigned to their organization",
-			"Edit scoring rules on sn_vdr_risk_asmt_vendor_risk_scoring_rule configuration records"
+			"Manage Third-party Contacts for their company engagement",
+			"Approve internal due diligence requests as TPR manager"
 		],
 		"correctIndex": 1,
 		"correctIndexes": [
@@ -26752,13 +26752,13 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"choices": [
 			"Application Vulnerability Response for application vulnerable items from tools such as Veracode DAST",
 			"Discovery classification probes for SNMP-enabled network printer hardware identification",
-			"Container Vulnerability Response for container vulnerable items from runtime security integrations",
-			"Security Incident Response war room workflows for phishing email triage and major incidents"
+			"Security Incident Response war room workflows for phishing email triage and major incidents",
+			"Container Vulnerability Response for container vulnerable items from runtime security integrations"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			2
+			3
 		],
 		"questionType": "multi",
 		"explanation": "Application Vulnerability Response manages AVITs for application findings and Container Vulnerability Response manages CVITs for container image and runtime detections.",
@@ -27083,13 +27083,13 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"choices": [
 			"Employee payroll systems importing salary bands for remediation owner assignment routing",
 			"National Vulnerability Database feeds importing authoritative CVE and CPE metadata",
-			"Facilities management systems importing office seating plans for CMDB dependency mapping",
-			"Third-party vulnerability scanners importing detection findings about in-scope assets"
+			"Third-party vulnerability scanners importing detection findings about in-scope assets",
+			"Facilities management systems importing office seating plans for CMDB dependency mapping"
 		],
 		"correctIndex": 1,
 		"correctIndexes": [
 			1,
-			3
+			2
 		],
 		"explanation": "Vulnerability Response pulls CVE knowledge from the NVD and detection data from third-party scanner integrations, then reconciles findings with CMDB assets.",
 		"sourceUrls": [
@@ -27104,14 +27104,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which two statements accurately describe NIST NVD vulnerability data feeds used by Vulnerability Response? (Choose two.)",
 		"choices": [
 			"Each feed contains only vulnerabilities that share the same CVSS base score numeric value",
-			"NVD feeds exclude CPE data and cannot enrich third-party vulnerability library entries",
+			"Modified feeds include vulnerabilities published or updated within the previous eight days",
 			"Year feeds organize CVE records by the four-digit year prefix in the CVE identifier",
-			"Modified feeds include vulnerabilities published or updated within the previous eight days"
+			"NVD feeds exclude CPE data and cannot enrich third-party vulnerability library entries"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"correctIndexes": [
-			2,
-			3
+			1,
+			2
 		],
 		"explanation": "NVD year feeds group CVE data by identifier year prefix, and the modified feed tracks recently published or changed entries within an eight-day window.",
 		"sourceUrls": [
@@ -27583,10 +27583,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 49,
 		"prompt": "Which VR configuration types drive automated triage and routing on vulnerable items? (Choose two.)",
 		"choices": [
-			"LDAP synchronization scheduled jobs",
-			"Classification rules applied during vulnerability entry ingestion",
 			"Password expiration business rules",
-			"Assignment rules that route vulnerable items to remediation groups"
+			"Assignment rules that route vulnerable items to remediation groups",
+			"LDAP synchronization scheduled jobs",
+			"Classification rules applied during vulnerability entry ingestion"
 		],
 		"correctIndex": 1,
 		"correctIndexes": [
@@ -27659,14 +27659,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Which three actions can remediation owners perform from the IT Remediation Workspace on assigned work? (Choose three.)",
 		"choices": [
 			"Request a vulnerability exception with approver sign-off and expiration tracking",
-			"Configure NVD feed synchronization schedules and MID Server credential stores",
 			"Mark a finding as false positive with a documented close reason on the record",
+			"Configure NVD feed synchronization schedules and MID Server credential stores",
 			"Create a change request linked to the remediation task for governed patch deployment"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			2,
+			1,
 			3
 		],
 		"explanation": "Remediation owners request exceptions, create linked change requests, and disposition false positives from the IT Remediation Workspace; NVD configuration is an admin function.",
@@ -27833,15 +27833,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 63,
 		"prompt": "Which VR automation features reduce manual triage on incoming findings? (Choose three.)",
 		"choices": [
-			"Remediation task rules that group items into shared tasks",
-			"Assignment rules that set remediation owner groups on items",
 			"Manual CSV export to spreadsheet for offline review",
-			"Classification rules that categorize scanner intake records"
+			"Remediation task rules that group items into shared tasks",
+			"Classification rules that categorize scanner intake records",
+			"Assignment rules that set remediation owner groups on items"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
 			1,
+			2,
 			3
 		],
 		"questionType": "multi",
@@ -28010,9 +28010,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 73,
 		"prompt": "The CISO wants executive visibility into VR program health without operational detail overload. Which dashboard design choices meet that need? (Choose two.)",
 		"choices": [
-			"High-level overview tiles summarizing critical exposure and remediation trend direction",
-			"Full editable remediation task lists with every technical field exposed on one screen",
 			"Single clear health indicators such as overdue critical backlog or SLA attainment rate",
+			"Full editable remediation task lists with every technical field exposed on one screen",
+			"High-level overview tiles summarizing critical exposure and remediation trend direction",
 			"Raw scanner export files attached as the primary visualization on the landing page"
 		],
 		"correctIndex": 0,
@@ -28103,14 +28103,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "The PMO is scheduling the next portfolio planning cycle and wants platform demand included. Which practices should the associate platform owner recommend? (Choose two.)",
 		"choices": [
 			"Submit platform initiatives with business value, dependencies, and capacity estimates",
-			"Align proposed work to enterprise priorities documented in the portfolio intake process",
 			"Bypass the PMO intake form to accelerate individual team requests",
+			"Align proposed work to enterprise priorities documented in the portfolio intake process",
 			"Exclude upgrade and maintenance work because only new features belong in portfolio planning"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			2
 		],
 		"explanation": "PMO engagement requires structured demand with value and dependencies tied to enterprise priorities; bypassing intake or omitting maintenance creates planning blind spots.",
 		"sourceUrls": [
@@ -28218,15 +28218,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "The executive sponsor asks which strategic platform risks should appear on the quarterly roadmap review. (Choose two.)",
 		"choices": [
-			"Count of personal dashboards created without linking to enterprise priorities",
-			"Adoption gaps on funded capabilities that undermine expected business value",
 			"Open compliance or audit findings that constrain new scope until remediated",
-			"Individual developer preference for a specific script editor color theme"
+			"Adoption gaps on funded capabilities that undermine expected business value",
+			"Individual developer preference for a specific script editor color theme",
+			"Count of personal dashboards created without linking to enterprise priorities"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"correctIndexes": [
-			1,
-			2
+			0,
+			1
 		],
 		"explanation": "Strategic roadmap reviews surface adoption and compliance risks that affect value realization—not cosmetic preferences or unrelated usage counts.",
 		"sourceUrls": [
@@ -28341,8 +28341,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "The CoEI wants to expand citizen development safely next quarter. Which enablement steps should the associate platform owner support? (Choose two.)",
 		"choices": [
 			"Grant elevated admin access to every requester to remove delivery bottlenecks",
-			"Publish starter templates and approved scope patterns for common departmental use cases",
 			"Provide training on intake, testing expectations, and escalation when apps need admin support",
+			"Publish starter templates and approved scope patterns for common departmental use cases",
 			"Skip lifecycle reviews because citizen apps are always low risk"
 		],
 		"correctIndex": 1,
@@ -28456,10 +28456,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "The sponsor requests a business case for expanding self-service on the Now Platform. Which elements should the associate platform owner include? (Choose two.)",
 		"choices": [
-			"Baseline adoption metrics and target improvement tied to measurable business outcomes",
-			"A list of every open developer task regardless of business priority",
+			"Estimated effort, dependencies, and risk mitigations for the proposed roadmap wave",
 			"A commitment to skip user feedback because delivery velocity is the only success measure",
-			"Estimated effort, dependencies, and risk mitigations for the proposed roadmap wave"
+			"A list of every open developer task regardless of business priority",
+			"Baseline adoption metrics and target improvement tied to measurable business outcomes"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -28573,14 +28573,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Two departments disagree on which application should be the system of record for employee requests. Which people practices should the associate platform owner apply? (Choose two.)",
 		"choices": [
 			"Facilitate a stakeholder session to document requirements and decision criteria",
-			"Withdraw from the discussion because platform owners never mediate business conflict",
 			"Escalate unresolved conflict to executive sponsors with fact-based options",
-			"Implement both solutions in production without alignment to end the debate quickly"
+			"Implement both solutions in production without alignment to end the debate quickly",
+			"Withdraw from the discussion because platform owners never mediate business conflict"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			2
+			1
 		],
 		"explanation": "Associate platform owners help stakeholders align through structured discovery and appropriate executive escalation rather than parallel conflicting solutions.",
 		"sourceUrls": [
@@ -28731,15 +28731,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Executive sponsors seem disengaged midway through a ServiceNow program. Which sponsorship engagement actions should the platform owner take? (Choose two.)",
 		"choices": [
+			"Pause all enablement until a new steering committee is formed from scratch",
 			"Schedule focused sponsor briefings with concise evidence of progress and remaining risks",
-			"Reconfirm business outcomes, baseline metrics, and visible wins tied to sponsor priorities",
 			"Remove sponsors from communications so delivery teams can work without interference",
-			"Pause all enablement until a new steering committee is formed from scratch"
+			"Reconfirm business outcomes, baseline metrics, and visible wins tied to sponsor priorities"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			3
 		],
 		"explanation": "Re-engaging sponsors requires refreshed outcome alignment and concise evidence of value; excluding sponsors or halting enablement undermines adoption.",
 		"sourceUrls": [
@@ -28805,14 +28805,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "The communications lead asks which factors must be defined in a platform rollout communication plan. Which elements should the platform owner include? (Choose two.)",
 		"choices": [
 			"A single generic email sent once with no follow-up schedule",
-			"Technical table schemas without linking messages to business outcomes",
+			"Cadence and accountable owners for each communication stream",
 			"Target audiences mapped to message content and delivery channels",
-			"Cadence and accountable owners for each communication stream"
+			"Technical table schemas without linking messages to business outcomes"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"correctIndexes": [
-			2,
-			3
+			1,
+			2
 		],
 		"explanation": "Communication plans define who receives what, through which channels, on what schedule, and who owns each stream—not one-off generic notices.",
 		"sourceUrls": [
@@ -28922,8 +28922,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"choices": [
 			"Treat production as the default workspace for all configuration experiments",
 			"Skip test validation whenever the change appears small or low risk",
-			"Build and capture changes in a dedicated development instance before promotion",
-			"Validate promoted packages in a test instance with regression coverage"
+			"Validate promoted packages in a test instance with regression coverage",
+			"Build and capture changes in a dedicated development instance before promotion"
 		],
 		"correctIndex": 2,
 		"correctIndexes": [
@@ -29038,14 +29038,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A squad new to Scrum asks which ceremony purposes are correct for ServiceNow delivery. Which pairings should the platform owner confirm? (Choose two.)",
 		"choices": [
 			"Sprint review: demonstrate completed work and gather stakeholder feedback",
-			"Retrospective: inspect team process and agree improvements for the next sprint",
 			"Daily stand-up: a session where the product owner assigns every task for the day",
+			"Retrospective: inspect team process and agree improvements for the next sprint",
 			"Sprint planning: reopen stories already accepted in prior sprints for re-voting"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			2
 		],
 		"explanation": "Reviews showcase increments for feedback and retrospectives improve process; stand-ups synchronize the team and planning selects new sprint work.",
 		"sourceUrls": [
@@ -29154,15 +29154,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Before promoting a release package from test to production, which SDLC controls should the platform owner require? (Choose two.)",
 		"choices": [
-			"Committing directly on production to shorten the release calendar",
-			"Documented UAT and regression sign-off in the sub-production environment",
 			"Preview-validated update sets or app versions with collisions resolved",
-			"Skipping test whenever the developer is confident in the change"
+			"Documented UAT and regression sign-off in the sub-production environment",
+			"Skipping test whenever the developer is confident in the change",
+			"Committing directly on production to shorten the release calendar"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"correctIndexes": [
-			1,
-			2
+			0,
+			1
 		],
 		"explanation": "Safe SDLC promotion requires conflict-free change packages and documented test evidence; bypassing test or editing production defeats governance.",
 		"sourceUrls": [
@@ -29313,15 +29313,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "A team maintains seeded reference data in sub-production that must survive recurring production clones. Which capabilities should the platform owner configure? (Choose two.)",
 		"choices": [
+			"Clone data preservers for the protected reference tables",
 			"Unrestricted admin access for every developer in the cloned target",
-			"Automatic rollback of all plugins after each clone completes",
 			"Clone exclusions for tables that should not overwrite preserved datasets",
-			"Clone data preservers for the protected reference tables"
+			"Automatic rollback of all plugins after each clone completes"
 		],
-		"correctIndex": 2,
+		"correctIndex": 0,
 		"correctIndexes": [
-			2,
-			3
+			0,
+			2
 		],
 		"explanation": "Data preservers protect designated datasets during clones while exclusions prevent unwanted tables from overwriting preserved reference data.",
 		"sourceUrls": [
@@ -29352,10 +29352,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which are features in ServiceNow Security Center? (Choose two.)",
 		"choices": [
-			"Security hardening",
-			"Catalog item bundling",
+			"Security metrics",
 			"Update set batch preview",
-			"Security metrics"
+			"Catalog item bundling",
+			"Security hardening"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -29547,14 +29547,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "After a security patch is applied in test, which next steps should the platform owner require before production deployment? (Choose two.)",
 		"choices": [
 			"Approved change record with defined rollback criteria and maintenance window",
-			"Permanent deferral of all future patches until the next family upgrade",
+			"Documented regression results for affected integrations and critical workflows",
 			"Immediate production deployment without change tracking to minimize delay",
-			"Documented regression results for affected integrations and critical workflows"
+			"Permanent deferral of all future patches until the next family upgrade"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			3
+			1
 		],
 		"explanation": "Patch promotion requires validated test evidence and governed change approval with rollback planning before touching production.",
 		"sourceUrls": [
@@ -29664,10 +29664,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which compliance-related resources does ServiceNow provide for platform owners evaluating vendor security posture? (Choose two.)",
 		"choices": [
-			"Third-party audit reports and certification summaries in the TRUST Center",
 			"Shared responsibility model documentation describing customer and provider duties",
-			"Unrestricted production credential sharing guides for all integrations",
-			"Instructions to disable all audit logs to simplify compliance reviews"
+			"Third-party audit reports and certification summaries in the TRUST Center",
+			"Instructions to disable all audit logs to simplify compliance reviews",
+			"Unrestricted production credential sharing guides for all integrations"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -29755,14 +29755,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Before requesting a production clone, which preparations align with platform owner technology governance? (Choose two.)",
 		"choices": [
-			"Enable live outbound email from the cloned instance to speed user acceptance testing",
-			"Verify maintenance window approval and post-clone integration suspension plans",
 			"Define clone profile requirements including data preservers, exclusions, and cleanup scripts",
-			"Skip clone profiles to minimize duration regardless of data sensitivity"
+			"Skip clone profiles to minimize duration regardless of data sensitivity",
+			"Verify maintenance window approval and post-clone integration suspension plans",
+			"Enable live outbound email from the cloned instance to speed user acceptance testing"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"correctIndexes": [
-			1,
+			0,
 			2
 		],
 		"explanation": "Clone governance requires profile design for data handling and approved windows with safeguards that prevent unintended external impact from cloned environments.",
@@ -29876,10 +29876,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Leadership adopted Strategic Planning Workspace to connect platform investments to business outcomes. Which practices should the platform owner establish? (Choose two.)",
 		"choices": [
-			"Link strategic objectives to measurable platform KPIs reviewed on a regular cadence",
+			"Define value-driven metrics with baselines before funding new platform initiatives",
 			"Replace all CMDB foundation data reviews because strategy workspace supersedes CSDM",
 			"Track only technical uptime metrics without tying them to business objectives",
-			"Define value-driven metrics with baselines before funding new platform initiatives"
+			"Link strategic objectives to measurable platform KPIs reviewed on a regular cadence"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -30037,15 +30037,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "A service desk manager needs both a weekly trend of mean time to resolve and a same-day list of breached incidents for escalation. Which capability pairing should the platform owner recommend? (Choose two.)",
 		"choices": [
-			"IntegrationHub flow that deletes resolved incidents to improve trend appearance",
+			"Strategic Planning Workspace initiative record replacing all operational dashboards",
 			"Operational report filtered to breached incidents exported for the current day",
-			"Performance Analytics indicator tracking resolution time with weekly aggregation",
-			"Strategic Planning Workspace initiative record replacing all operational dashboards"
+			"IntegrationHub flow that deletes resolved incidents to improve trend appearance",
+			"Performance Analytics indicator tracking resolution time with weekly aggregation"
 		],
 		"correctIndex": 1,
 		"correctIndexes": [
 			1,
-			2
+			3
 		],
 		"explanation": "Trend monitoring belongs in Performance Analytics while point-in-time breach lists are operational reports—each serves a distinct associate-level analytics need.",
 		"sourceUrls": [
@@ -30238,9 +30238,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Before the annual subscription true-up, which inputs should the platform owner validate with procurement? (Choose two.)",
 		"choices": [
-			"Active plugin and product activation compared against contracted SKU coverage",
-			"Total number of homepage themes configured per business unit portal",
 			"Growth trends in specialized roles such as approvers and fulfillment agents",
+			"Total number of homepage themes configured per business unit portal",
+			"Active plugin and product activation compared against contracted SKU coverage",
 			"Average handle time for chat sessions unrelated to licensed products"
 		],
 		"correctIndex": 0,
@@ -30343,8 +30343,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"choices": [
 			"Technical forum replaces all change advisory board approvals for production outages",
 			"Strategic forum performs daily incident queue assignment for every support team",
-			"Strategic forum sets enterprise guardrails and investment themes for the platform",
-			"Portfolio forum prioritizes demand and capacity across business programs"
+			"Portfolio forum prioritizes demand and capacity across business programs",
+			"Strategic forum sets enterprise guardrails and investment themes for the platform"
 		],
 		"correctIndex": 2,
 		"correctIndexes": [
@@ -30626,15 +30626,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "When customizations block upgrades, siloed demand intake across departments, which elements belong in a documented ServiceNow platform strategy? (Choose two.)",
 		"choices": [
+			"Detailed script includes for every planned customization",
 			"Target outcomes and guiding principles for platform use",
 			"Current-state pain points and stakeholder map",
-			"Detailed script includes for every planned customization",
 			"A fixed list of admin UI themes for each business unit"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			2
 		],
 		"explanation": "Strategy documents capture organizational context, pain, outcomes, and principles; low-level technical artifacts belong in delivery plans, not the strategy itself.",
 		"sourceUrls": [
@@ -30796,15 +30796,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "A board sponsor challenges the ServiceNow strategy because prior programs delivered features without measurable adoption. Which strategy controls should the platform owner introduce? (Choose two.)",
 		"choices": [
+			"Outcome baselines and target KPIs approved before funding each roadmap increment",
 			"Delivery status reports that count completed stories without linking to business value",
-			"Program closure criteria based only on whether configuration reached production",
 			"Executive review cadence that compares adoption, value realization, and unresolved risks",
-			"Outcome baselines and target KPIs approved before funding each roadmap increment"
+			"Program closure criteria based only on whether configuration reached production"
 		],
-		"correctIndex": 2,
+		"correctIndex": 0,
 		"correctIndexes": [
-			2,
-			3
+			0,
+			2
 		],
 		"explanation": "Strategy governance needs agreed baselines, value targets, and recurring executive review so delivery is measured by adoption and outcomes, not only completed scope.",
 		"sourceUrls": [
@@ -30818,10 +30818,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Given a scenario planning a platform vision for a federated enterprise, which outcomes should appear in the strategy document? (Choose two.)",
 		"choices": [
-			"Consistent employee and customer experiences across business units",
+			"Shared data definitions that reduce reconciliation effort",
 			"Maximum number of isolated custom applications per department",
 			"Elimination of all governance boards to speed decisions",
-			"Shared data definitions that reduce reconciliation effort"
+			"Consistent employee and customer experiences across business units"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -31046,14 +31046,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "When formalizing a multi-year platform strategy after discovery workshops, which elements should appear in the published document? (Choose two.)",
 		"choices": [
 			"Target outcomes linked to enterprise strategic priorities",
+			"Complete list of planned script includes for every release train",
 			"Guiding principles that constrain future design decisions",
-			"Individual developer task assignments for the first sprint only",
-			"Complete list of planned script includes for every release train"
+			"Individual developer task assignments for the first sprint only"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			2
 		],
 		"explanation": "Strategy documents articulate outcomes and principles; sprint-level technical tasks belong in delivery backlogs, not executive strategy artifacts.",
 		"sourceUrls": [
@@ -31118,15 +31118,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "When presenting platform investment options to the C-Suite, which persuasion elements strengthen the recommendation? (Choose two.)",
 		"choices": [
+			"Technical jargon without translation to business outcomes or financial impact",
 			"Documented risks with mitigation plans tied to executive decision criteria",
 			"Explicit trade-offs among cost, speed, and capability depth for each scenario",
-			"A single option presented without alternatives to reduce meeting duration",
-			"Technical jargon without translation to business outcomes or financial impact"
+			"A single option presented without alternatives to reduce meeting duration"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			2
 		],
 		"explanation": "Executive persuasion requires transparent scenarios with trade-offs and honest risk discussion—not single options or untranslated technical detail.",
 		"sourceUrls": [
@@ -31260,16 +31260,16 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Before launching a major ServiceNow capability wave, which OCM readiness factors should the platform owner validate? (Choose three.)",
 		"choices": [
-			"Executive messaging aligned to the outcomes users should expect",
-			"Training and support paths tailored to affected roles and regions",
 			"Feedback channels to capture adoption issues during early rollout",
-			"Complete retirement of every legacy system before any pilot begins"
+			"Complete retirement of every legacy system before any pilot begins",
+			"Executive messaging aligned to the outcomes users should expect",
+			"Training and support paths tailored to affected roles and regions"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1,
-			2
+			2,
+			3
 		],
 		"explanation": "OCM readiness includes sponsor messaging, role-based enablement, and feedback loops—not mandatory full legacy retirement before pilots.",
 		"sourceUrls": [
@@ -31334,10 +31334,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "When updating the platform strategy document for an annual review, which sections should the platform owner refresh? (Choose two.)",
 		"choices": [
-			"Daily stand-up notes from the development team for the prior week",
-			"Progress against success measures and revised outcome targets",
 			"Individual performance ratings for every contractor on the program",
-			"Capability roadmap adjustments reflecting new enterprise priorities"
+			"Capability roadmap adjustments reflecting new enterprise priorities",
+			"Daily stand-up notes from the development team for the prior week",
+			"Progress against success measures and revised outcome targets"
 		],
 		"correctIndex": 1,
 		"correctIndexes": [
@@ -31477,14 +31477,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "The CFO asks how licensing choices affect implementation cost before approving the next fiscal budget. Which factors should the platform owner include in the analysis? (Choose two.)",
 		"choices": [
 			"Product entitlements mapped to planned capabilities and required user populations",
-			"Professional services and internal labor estimates tied to each delivery wave",
 			"Historical color preferences for portal themes across business units",
+			"Professional services and internal labor estimates tied to each delivery wave",
 			"Informal chat opinions about vendor popularity without cost data"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			2
 		],
 		"explanation": "Licensing cost analysis connects entitlements and populations to capability plans plus implementation labor—not cosmetic or anecdotal factors.",
 		"sourceUrls": [
@@ -31708,10 +31708,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "For siloed demand intake, license true-up charges exceeded forecast, which inputs should the platform owner revisit with finance? (Choose two.)",
 		"choices": [
-			"Number of UI themes configured per business unit",
-			"User role mix and fulfillment-type growth against contracted entitlements",
+			"Historical incident ticket volume unrelated to subscription metrics",
 			"Product SKU coverage for capabilities actually in production use",
-			"Historical incident ticket volume unrelated to subscription metrics"
+			"User role mix and fulfillment-type growth against contracted entitlements",
+			"Number of UI themes configured per business unit"
 		],
 		"correctIndex": 1,
 		"correctIndexes": [
@@ -31868,9 +31868,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Finance requests a breakdown of implementation spend before approving phase two. Which categories belong in the platform owner's cost model? (Choose two.)",
 		"choices": [
 			"Executive parking reimbursements unrelated to delivery activities",
-			"Discovery and design workshops with business and technical stakeholders",
+			"Configuration, testing, data migration, and hypercare support labor",
 			"Legacy desktop software licenses that will not integrate with ServiceNow",
-			"Configuration, testing, data migration, and hypercare support labor"
+			"Discovery and design workshops with business and technical stakeholders"
 		],
 		"correctIndex": 1,
 		"correctIndexes": [
@@ -31941,14 +31941,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "During year-one funding review, resource forecasts missed two consecutive quarters, which inputs should the platform owner recalibrate? (Choose two.)",
 		"choices": [
 			"Velocity trends and unplanned production support demand on platform teams",
+			"Partner contract utilization versus committed hours by workstream",
 			"Number of knowledge articles published without measuring author effort",
-			"Count of scheduled town halls regardless of delivery output",
-			"Partner contract utilization versus committed hours by workstream"
+			"Count of scheduled town halls regardless of delivery output"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			3
+			1
 		],
 		"explanation": "Forecast accuracy improves when teams incorporate velocity shifts, unplanned support load, and partner utilization—not activity metrics unrelated to capacity.",
 		"sourceUrls": [
@@ -32099,15 +32099,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Before closing the Cost/Resource Planning phase, which artifacts should the platform owner confirm are executive-ready? (Choose two.)",
 		"choices": [
+			"Detailed script library for every planned client-side extension",
 			"Resource capacity plan with partner and internal FTE assumptions by wave",
 			"Multi-year license and true-up forecast tied to adoption milestones",
-			"Detailed script library for every planned client-side extension",
 			"Complete list of UI macros without linkage to funding decisions"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			2
 		],
 		"explanation": "Cost phase exit requires executive-ready licensing forecasts and capacity plans; low-level technical inventories do not satisfy funding governance.",
 		"sourceUrls": [
@@ -32173,8 +32173,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "For ESG workflow reporting, three product lines compete for the same implementation budget, which resource allocation principles should the platform owner apply? (Choose two.)",
 		"choices": [
 			"Allocate budget proportionally by loudest stakeholder without scoring criteria",
-			"Prioritize work that unlocks shared platform capabilities used by multiple teams",
 			"Fund initiatives with documented ROI and dependency alignment to the roadmap",
+			"Prioritize work that unlocks shared platform capabilities used by multiple teams",
 			"Reserve all capacity for cosmetic portal changes until backlog is cleared"
 		],
 		"correctIndex": 1,
@@ -32288,10 +32288,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "During final strategy review, iT, HR, and finance each maintain separate delivery teams on one instance, which focus areas should the platform owner coordinate across teams? (Choose two.)",
 		"choices": [
-			"Release calendar alignment so changes do not conflict during the same maintenance window",
+			"Shared data standards and integration patterns that prevent duplicate master records",
 			"Independent custom scopes with no cross-team design reviews or standards",
 			"Separate upgrade schedules per team without enterprise regression planning",
-			"Shared data standards and integration patterns that prevent duplicate master records"
+			"Release calendar alignment so changes do not conflict during the same maintenance window"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -32405,14 +32405,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Given a scenario preparing for a cross-domain ServiceNow release, which implementation readiness factors should the platform owner validate? (Choose two.)",
 		"choices": [
 			"Rollback and communication plans aligned to the release calendar",
-			"Deferral of training until six months after go-live",
 			"Approval to skip regression testing when the change set is small",
-			"Business sign-off on acceptance criteria for in-scope workflows"
+			"Business sign-off on acceptance criteria for in-scope workflows",
+			"Deferral of training until six months after go-live"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			3
+			2
 		],
 		"explanation": "Release readiness requires accepted scope and rehearsed rollback and communications; skipping tests or delaying training undermines delivery quality.",
 		"sourceUrls": [
@@ -32520,15 +32520,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "When forecasts miss repeatedly, a platform upgrade and custom application release occur in the same window, which testing scope items should the platform owner require? (Choose two.)",
 		"choices": [
-			"Elimination of UAT to meet the maintenance window deadline",
+			"Automated regression of critical business flows across affected domains",
 			"Smoke validation of integrations and scheduled jobs after deployment",
 			"Testing limited to the developer who authored the largest change set",
-			"Automated regression of critical business flows across affected domains"
+			"Elimination of UAT to meet the maintenance window deadline"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"correctIndexes": [
-			1,
-			3
+			0,
+			1
 		],
 		"explanation": "Combined releases need broad regression and post-deploy integration checks; skipping UAT or solo testing leaves enterprise risk unvalidated.",
 		"sourceUrls": [
@@ -32637,14 +32637,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A sponsor wants to accelerate go-live by reducing test scope on a regulated implementation. Which delivery safeguards should the platform owner defend? (Choose two.)",
 		"choices": [
 			"Elimination of audit evidence because testing was already performed by developers",
-			"Production deployment before defect triage so teams can learn from live users",
+			"Business acceptance evidence tied to launch criteria and rollback decisions",
 			"Risk-based regression coverage for critical workflows, integrations, and security controls",
-			"Business acceptance evidence tied to launch criteria and rollback decisions"
+			"Production deployment before defect triage so teams can learn from live users"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"correctIndexes": [
-			2,
-			3
+			1,
+			2
 		],
 		"explanation": "Implementation leadership protects risk-based testing and acceptance evidence, especially for regulated launches where speed cannot replace launch readiness.",
 		"sourceUrls": [
@@ -32752,10 +32752,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Before promoting a major platform release to production, which validation activities should the platform owner require? (Choose two.)",
 		"choices": [
-			"Automated test suite execution covering changed workflows and integrations",
-			"Skipping regression testing to meet an arbitrary launch date",
+			"Business sign-off from process owners on acceptance criteria for affected domains",
 			"Deploying directly to production without a rollback plan",
-			"Business sign-off from process owners on acceptance criteria for affected domains"
+			"Skipping regression testing to meet an arbitrary launch date",
+			"Automated test suite execution covering changed workflows and integrations"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -32984,15 +32984,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "A major rollout experiences widespread login failures on day one. Which executive communication actions should the platform owner take immediately? (Choose two.)",
 		"choices": [
-			"Wait until root cause is fully confirmed before informing any stakeholders",
+			"Activate a coordinated incident response with clear internal and external messaging owners",
 			"Notify sponsors with confirmed user impact scope and estimated recovery timeline",
-			"Blame the identity provider publicly without internal verification",
-			"Activate a coordinated incident response with clear internal and external messaging owners"
+			"Wait until root cause is fully confirmed before informing any stakeholders",
+			"Blame the identity provider publicly without internal verification"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"correctIndexes": [
-			1,
-			3
+			0,
+			1
 		],
 		"explanation": "Critical rollout failures demand prompt sponsor notification and coordinated messaging; silence or premature blame undermines trust and recovery.",
 		"sourceUrls": [
@@ -33100,8 +33100,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Before each platform upgrade in a regulated enterprise, which testing activities should the platform owner require? (Choose two.)",
 		"choices": [
-			"Skip clone testing when the vendor marks the release as low risk",
 			"Deploy to production first and backfill test evidence afterward",
+			"Skip clone testing when the vendor marks the release as low risk",
 			"Execute ATF suites against customized workflows in a clone environment",
 			"Review vendor release notes for breaking changes affecting governed integrations"
 		],
@@ -33260,10 +33260,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Technical debt is accumulating across custom applications and CMDB data quality is declining. Which governance actions should the platform owner prioritize? (Choose two.)",
 		"choices": [
-			"Grant all developers admin access to accelerate ungoverned fixes",
-			"Create a visible technical debt register with remediation priorities tied to business risk",
 			"Ignore debt until a major upgrade forces emergency remediation",
-			"Establish CMDB data ownership with health KPIs reviewed by a governance board"
+			"Establish CMDB data ownership with health KPIs reviewed by a governance board",
+			"Grant all developers admin access to accelerate ungoverned fixes",
+			"Create a visible technical debt register with remediation priorities tied to business risk"
 		],
 		"correctIndex": 1,
 		"correctIndexes": [
@@ -33361,8 +33361,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"choices": [
 			"A published release calendar with intake deadlines tied to dependency and test readiness gates",
 			"Risk-tiered change categories with defined approval paths and rollback expectations",
-			"Verbal stand-up agreements that replace documented release criteria",
-			"A policy allowing production pushes whenever developers finish coding"
+			"A policy allowing production pushes whenever developers finish coding",
+			"Verbal stand-up agreements that replace documented release criteria"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -33383,13 +33383,13 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"choices": [
 			"Independent product roadmaps that consume shared capacity without cross-domain prioritization",
 			"Portfolio governance that scores demand across product families using enterprise value and capacity constraints",
-			"First-come production scheduling for any team with a funded business sponsor",
-			"Architecture governance that enforces shared data, integration, and experience standards across domains"
+			"Architecture governance that enforces shared data, integration, and experience standards across domains",
+			"First-come production scheduling for any team with a funded business sponsor"
 		],
 		"correctIndex": 1,
 		"correctIndexes": [
 			1,
-			3
+			2
 		],
 		"explanation": "Cross-product ServiceNow governance coordinates portfolio demand and architecture standards across ITSM, CSM, HRSD, and other platform domains.",
 		"sourceUrls": [
@@ -33598,10 +33598,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "The enterprise values customer-obsessed service delivery and cost transparency. Which CMDB governance actions should the platform owner prioritize? (Choose two.)",
 		"choices": [
-			"Publish data quality scorecards with remediation owners reviewed at governance cadences",
-			"Exclude financial attributes from CI records to simplify data entry",
+			"Link business services to supporting CIs so impact analysis reflects customer-facing outcomes",
 			"Defer all discovery integration until CMDB completeness reaches one hundred percent",
-			"Link business services to supporting CIs so impact analysis reflects customer-facing outcomes"
+			"Exclude financial attributes from CI records to simplify data entry",
+			"Publish data quality scorecards with remediation owners reviewed at governance cadences"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -33853,14 +33853,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A legacy ERP module will be decommissioned while dependent workflows remain in ServiceNow. Which deprecation governance actions should the platform owner enforce? (Choose two.)",
 		"choices": [
 			"Establish retention and purge policies for archived records per compliance requirements",
-			"Ignore integration endpoints until users report broken transactions",
+			"Update CI lifecycle states and retire relationships after validated data migration",
 			"Skip change records because the legacy system is already marked obsolete",
-			"Update CI lifecycle states and retire relationships after validated data migration"
+			"Ignore integration endpoints until users report broken transactions"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			3
+			1
 		],
 		"explanation": "Deprecation governance updates CI lifecycle and relationships after validated migration and applies compliant retention policies—not reactive fixes or skipped change control.",
 		"sourceUrls": [
@@ -33988,13 +33988,13 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"choices": [
 			"Count of slide decks created for executives without outcome measures",
 			"Demand cycle time segmented by risk tier with board decisions and rework rates",
-			"Total number of governance meetings held regardless of decision quality",
-			"Release adherence, exception volume, and defect escape trends after governance decisions"
+			"Release adherence, exception volume, and defect escape trends after governance decisions",
+			"Total number of governance meetings held regardless of decision quality"
 		],
 		"correctIndex": 1,
 		"correctIndexes": [
 			1,
-			3
+			2
 		],
 		"explanation": "Governance effectiveness is measured through throughput, decision quality, release adherence, exceptions, and escaped defects—not meeting volume.",
 		"sourceUrls": [
@@ -34146,10 +34146,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "When CMDB proposals lack mapping, cSDM-aligned service mapping, which governance investments should the platform owner secure? (Choose two.)",
 		"choices": [
-			"Named data stewards for foundation classes with escalation paths for quality defects",
-			"Immediate retirement of every discovery connector before ownership is assigned",
 			"Service mapping workshops that tie technical CIs to business services and owners",
-			"Exemption from executive reporting until CMDB completeness reaches one hundred percent"
+			"Exemption from executive reporting until CMDB completeness reaches one hundred percent",
+			"Named data stewards for foundation classes with escalation paths for quality defects",
+			"Immediate retirement of every discovery connector before ownership is assigned"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -34296,10 +34296,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "A SOC 2 readiness review asks how ServiceNow control evidence will be sustained across the audit period. Which practices should the platform owner establish? (Choose two.)",
 		"choices": [
-			"Control evidence calendar with owners, sample criteria, and retention expectations",
-			"Ad hoc evidence collection only after auditors select samples",
+			"Continuous monitoring dashboards for access, change, incident, and vulnerability controls",
 			"Deletion of exceptions after closure so reports show no historical issues",
-			"Continuous monitoring dashboards for access, change, incident, and vulnerability controls"
+			"Ad hoc evidence collection only after auditors select samples",
+			"Control evidence calendar with owners, sample criteria, and retention expectations"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -34494,15 +34494,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "The risk committee asks how ongoing compliance will be monitored after go-live. Which activities should the platform owner commit to? (Choose two.)",
 		"choices": [
-			"Annual deletion of audit tables to control database growth",
+			"Automated alerting on policy violations such as unauthorized exports or failed login spikes",
 			"Quarterly control effectiveness reviews with metrics for access, changes, and data protection",
-			"Exclusive reliance on user self-attestation without system evidence",
-			"Automated alerting on policy violations such as unauthorized exports or failed login spikes"
+			"Annual deletion of audit tables to control database growth",
+			"Exclusive reliance on user self-attestation without system evidence"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"correctIndexes": [
-			1,
-			3
+			0,
+			1
 		],
 		"explanation": "Ongoing compliance monitoring combines periodic control reviews and automated violation alerting—not audit destruction or self-attestation alone.",
 		"sourceUrls": [
@@ -34550,9 +34550,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Executive sponsors ask how security investments on the platform can create business advantage, not only reduce risk. Which options best support that narrative? (Choose two.)",
 		"choices": [
-			"Multi-factor authentication and risk-based sign-on that enable secure self-service for employees and partners",
-			"Disabling audit logs to reduce storage costs and simplify troubleshooting",
 			"Encryption and data protection that unlock approved cross-border workflows previously blocked by legal review",
+			"Disabling audit logs to reduce storage costs and simplify troubleshooting",
+			"Multi-factor authentication and risk-based sign-on that enable secure self-service for employees and partners",
 			"Granting broad admin access to accelerate citizen development without review"
 		],
 		"correctIndex": 0,
@@ -34667,9 +34667,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "An external auditor evaluates platform logging and monitoring for a regulated workload. Which practices should the platform owner highlight as audit contributions? (Choose two.)",
 		"choices": [
 			"Purging audit records after thirty days regardless of regulatory retention requirements",
-			"Immutable audit trails for privileged actions with retention aligned to policy",
+			"Security event monitoring integrated with enterprise SIEM correlation rules",
 			"Disabling login failure logging to reduce noise in support queues",
-			"Security event monitoring integrated with enterprise SIEM correlation rules"
+			"Immutable audit trails for privileged actions with retention aligned to policy"
 		],
 		"correctIndex": 1,
 		"correctIndexes": [
@@ -34766,8 +34766,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Legal approves a cross-border ServiceNow rollout only if data residency and integration controls are demonstrable. Which controls should the platform owner include? (Choose two.)",
 		"choices": [
 			"Data classification mapped to residency rules, domain boundaries, and approved replication paths",
-			"Unlogged exports to regional spreadsheets for local teams during hypercare",
 			"One global unrestricted data pool so reporting is easier for executives",
+			"Unlogged exports to regional spreadsheets for local teams during hypercare",
 			"Integration patterns with encryption, least-privilege credentials, logging, and contractual processing terms"
 		],
 		"correctIndex": 0,
@@ -34788,15 +34788,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "A regulated enterprise prepares for an annual compliance assessment of the Now Platform. Which platform owner actions most strengthen audit readiness? (Choose two.)",
 		"choices": [
-			"Run pre-audit dry runs that validate log retention, role certifications, and exception remediation status",
-			"Maintain a current control matrix mapping policies to platform configurations and evidence owners",
 			"Disable security plugins temporarily to improve instance performance during the audit window",
-			"Restrict auditor access until all findings from prior years are fully remediated"
+			"Run pre-audit dry runs that validate log retention, role certifications, and exception remediation status",
+			"Restrict auditor access until all findings from prior years are fully remediated",
+			"Maintain a current control matrix mapping policies to platform configurations and evidence owners"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			3
 		],
 		"explanation": "Audit readiness depends on maintained control mappings and proactive dry runs—not performance shortcuts or withholding auditor engagement.",
 		"sourceUrls": [
@@ -34905,8 +34905,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "The enterprise compliance program asks the platform owner to demonstrate ongoing governance value. Which contributions best satisfy that request? (Choose two.)",
 		"choices": [
 			"Eliminating change records for low-risk updates to reduce audit volume",
-			"Quarterly control health dashboards tied to remediation SLAs and executive risk reporting",
 			"Participation in enterprise risk committees with platform-specific control test results",
+			"Quarterly control health dashboards tied to remediation SLAs and executive risk reporting",
 			"Granting compliance analysts permanent admin access for convenience"
 		],
 		"correctIndex": 1,
@@ -35020,10 +35020,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Executive sponsors want measurable innovation outcomes across the platform program. Which practices should the platform owner institutionalize? (Choose two.)",
 		"choices": [
-			"Instance and process benchmarks compared against peer cohorts to identify improvement opportunities",
-			"Eliminating pilot programs to deploy all ideas directly to production",
+			"Automation of repeatable platform operations with guardrails for sensitive actions",
 			"Tracking only the number of new applications without adoption or outcome metrics",
-			"Automation of repeatable platform operations with guardrails for sensitive actions"
+			"Eliminating pilot programs to deploy all ideas directly to production",
+			"Instance and process benchmarks compared against peer cohorts to identify improvement opportunities"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -35154,14 +35154,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "After privileged access findings, innovation champions operate in twelve countries, the platform owner must standardize their operating model. Which elements should every champion chapter implement? (Choose two.)",
 		"choices": [
 			"A recurring forum cadence that converts business ideas into scored backlog items for the CoEI intake process",
-			"Exclusive focus on internal hackathons without follow-through into production readiness gates",
 			"Documented playbooks for reusing approved integrations, flows, and data models across similar use cases",
-			"Permanent delegation of unrestricted admin rights so champions can bypass security review queues"
+			"Permanent delegation of unrestricted admin rights so champions can bypass security review queues",
+			"Exclusive focus on internal hackathons without follow-through into production readiness gates"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			2
+			1
 		],
 		"explanation": "Champion chapters sustain innovation through structured cadence, backlog conversion, and reusable playbooks—not unchecked admin access or disconnected hackathon activity.",
 		"sourceUrls": [
@@ -35269,15 +35269,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Executive leadership asks the platform owner to align citizen development with enterprise architecture standards. Which practices should be institutionalized? (Choose two.)",
 		"choices": [
-			"Waiving design standards for citizen apps to maximize the count of new applications launched each quarter",
+			"Prohibiting citizen developers from accessing any shared integration endpoints",
 			"A curated library of approved connectors, data models, and workflow templates for citizen builders to reuse",
-			"Mandatory architecture pattern reviews for citizen apps that integrate with shared data domains or external systems",
-			"Prohibiting citizen developers from accessing any shared integration endpoints"
+			"Waiving design standards for citizen apps to maximize the count of new applications launched each quarter",
+			"Mandatory architecture pattern reviews for citizen apps that integrate with shared data domains or external systems"
 		],
 		"correctIndex": 1,
 		"correctIndexes": [
 			1,
-			2
+			3
 		],
 		"explanation": "Citizen development aligns with enterprise architecture through pattern reviews and reusable approved assets—not through waived standards or blocked integrations.",
 		"sourceUrls": [
@@ -35385,10 +35385,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "The implementation leadership team wants innovation metrics that justify continued platform investment. Which measurement practices should the platform owner adopt? (Choose two.)",
 		"choices": [
-			"Report only the total number of developer licenses purchased without utilization analysis",
-			"Benchmark instance health scores and adoption indexes against anonymized peer cohorts each quarter",
+			"Measure success exclusively by counting CoEI slide decks delivered to executives",
 			"Track cycle-time and error-rate improvements on automated processes against pre-automation baselines",
-			"Measure success exclusively by counting CoEI slide decks delivered to executives"
+			"Benchmark instance health scores and adoption indexes against anonymized peer cohorts each quarter",
+			"Report only the total number of developer licenses purchased without utilization analysis"
 		],
 		"correctIndex": 1,
 		"correctIndexes": [
@@ -35502,9 +35502,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Integration sprawl threatens innovation velocity at a healthcare system. The CIO asks the platform owner to strengthen enterprise architecture engagement. Which actions should be prioritized? (Choose two.)",
 		"choices": [
 			"Delegate all integration decisions to individual citizen developers without oversight",
-			"Publish integration standards with approved API patterns and data exchange models for all platform teams",
+			"Embed architects in CoEI intake to assess cross-domain impacts before work is funded",
 			"Eliminate architecture review for projects under a fixed dollar threshold without risk assessment",
-			"Embed architects in CoEI intake to assess cross-domain impacts before work is funded"
+			"Publish integration standards with approved API patterns and data exchange models for all platform teams"
 		],
 		"correctIndex": 1,
 		"correctIndexes": [
@@ -35721,14 +35721,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A department sponsor asks how platform KPIs should tie to stated business objectives. Which practices should the platform owner endorse? (Choose two.)",
 		"choices": [
 			"Select metrics that directly reflect objective outcomes such as cycle time or adoption",
-			"Publish baseline and target values with accountable owners for each KPI",
 			"Track only technical uptime metrics without linking them to business results",
+			"Publish baseline and target values with accountable owners for each KPI",
 			"Change KPI definitions each sprint to maximize favorable trend lines"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			2
 		],
 		"explanation": "Effective KPIs map to business objectives with baselines, targets, and ownership; technical metrics alone or shifting definitions undermine strategic alignment.",
 		"sourceUrls": [
@@ -35836,15 +35836,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Facilities leadership requests a solution for space reservations tied to move requests. Which design steps should the platform owner guide the team through? (Choose two.)",
 		"choices": [
-			"Evaluate reuse of existing catalog, workflow, and CMDB patterns on the instance",
-			"Confirm business outcomes, actors, and data needed before selecting products",
 			"Commit to custom global-scope code before stakeholder interviews conclude",
-			"Skip success criteria because the request appears straightforward"
+			"Evaluate reuse of existing catalog, workflow, and CMDB patterns on the instance",
+			"Skip success criteria because the request appears straightforward",
+			"Confirm business outcomes, actors, and data needed before selecting products"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			3
 		],
 		"explanation": "Solution design starts with outcomes and reuse assessment; premature custom builds or absent success criteria increase delivery risk.",
 		"sourceUrls": [
@@ -35893,8 +35893,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "The release calendar includes a family store update during a critical business period. Which factors should guide the platform owner's update-versus-skip decision? (Choose two.)",
 		"choices": [
 			"Availability of a single developer preference without stakeholder review",
-			"Severity of fixes and features relative to open defects affecting production",
 			"Readiness of regression testing and rollback plans in non-production environments",
+			"Severity of fixes and features relative to open defects affecting production",
 			"Assumption that skipping all updates eliminates any future maintenance work"
 		],
 		"correctIndex": 1,
@@ -36068,15 +36068,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "The CoEI wants a single pipeline for ideas spanning projects, operations, and platform engineering. Which capture practices should the platform owner implement? (Choose three.)",
 		"choices": [
-			"Common submission form with business outcome and urgency fields",
-			"Regular triage forum with representatives from delivery and operations",
+			"Status visibility so submitters know disposition of their requests",
 			"Mandatory rejection of any idea not tied to a licensed product SKU",
-			"Status visibility so submitters know disposition of their requests"
+			"Regular triage forum with representatives from delivery and operations",
+			"Common submission form with business outcome and urgency fields"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1,
+			2,
 			3
 		],
 		"explanation": "Effective intake uses standardized forms, cross-functional triage, and transparent status; rejecting non-SKU ideas prematurely blocks legitimate improvements.",
@@ -36224,10 +36224,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Operations reports that a fulfillment workflow fails when related CI records are stale. Which data dependency practices should the platform owner reinforce? (Choose two.)",
 		"choices": [
-			"Remove dependency mapping to simplify project documentation",
+			"Assume integrations will self-heal without ownership or monitoring",
 			"Document upstream and downstream tables required for each critical process",
 			"Establish data quality checks before workflow stages that rely on CMDB accuracy",
-			"Assume integrations will self-heal without ownership or monitoring"
+			"Remove dependency mapping to simplify project documentation"
 		],
 		"correctIndex": 1,
 		"correctIndexes": [
@@ -36323,14 +36323,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Leadership wants to fund a low-code innovation program through the CoEI. Which strategic investment criteria should the platform owner establish? (Choose two.)",
 		"choices": [
-			"Define funding gates tied to guardrails, risk tier, and escalation paths for higher-impact apps",
-			"Fund every idea equally regardless of value, risk, or supportability",
+			"Eliminate all standards so teams can innovate without CoEI oversight",
 			"Prioritize use cases with measurable business outcomes and reuse potential across departments",
-			"Eliminate all standards so teams can innovate without CoEI oversight"
+			"Define funding gates tied to guardrails, risk tier, and escalation paths for higher-impact apps",
+			"Fund every idea equally regardless of value, risk, or supportability"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
+			1,
 			2
 		],
 		"explanation": "Innovation investment requires value-based prioritization and risk-tiered funding gates—not undifferentiated funding or absent standards.",
@@ -36535,8 +36535,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"choices": [
 			"Schedule major untested upgrades during the final week of December",
 			"Ignore corporate blackout dates because platform work is always exempt",
-			"Complete regression of changes before the freeze window opens",
-			"Reserve capacity for emergency fixes with pre-approved rollback procedures"
+			"Reserve capacity for emergency fixes with pre-approved rollback procedures",
+			"Complete regression of changes before the freeze window opens"
 		],
 		"correctIndex": 2,
 		"correctIndexes": [
@@ -36590,14 +36590,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "An enterprise service transformation program has secured the COO as executive sponsor. Which engagement methods keep that sponsor actively invested in the program? (Choose two.)",
 		"choices": [
 			"Recurring steering committee briefings that tie platform progress to business outcome metrics",
-			"Direct escalation requests when cross-departmental roadblocks stall the roadmap",
 			"Copying the sponsor on every incident notification the platform generates",
+			"Direct escalation requests when cross-departmental roadblocks stall the roadmap",
 			"Asking the sponsor to personally review each update set before promotion"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			2
 		],
 		"explanation": "Sponsors stay engaged through outcome-focused governance forums and by being asked to clear obstacles only they can remove; flooding them with operational noise erodes engagement.",
 		"sourceUrls": [
@@ -36750,8 +36750,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Six months into a platform program, process owners in two departments have quietly stopped attending governance meetings. Which stakeholder management practices should the platform owner apply? (Choose two.)",
 		"choices": [
-			"Meet each disengaged owner individually to surface concerns and reconnect the roadmap to their priorities",
 			"Refresh the stakeholder map and communication plan so cadence and content match each group's influence and interest",
+			"Meet each disengaged owner individually to surface concerns and reconnect the roadmap to their priorities",
 			"Remove both departments from the roadmap so meetings run faster with fewer voices",
 			"Report the absent owners to human resources for failing to attend scheduled meetings"
 		],
@@ -36885,10 +36885,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Before a release wave moves from the test instance to production, which controls should the platform owner require in the promotion process? (Choose two.)",
 		"choices": [
-			"Committing changes directly on production during business hours for faster feedback",
-			"Completed and preview-validated update sets or app repo versions with conflicts resolved before commit",
+			"Skipping the test instance whenever the developer is confident in the change",
 			"User acceptance and regression testing signed off in the sub-production environment",
-			"Skipping the test instance whenever the developer is confident in the change"
+			"Completed and preview-validated update sets or app repo versions with conflicts resolved before commit",
+			"Committing changes directly on production during business hours for faster feedback"
 		],
 		"correctIndex": 1,
 		"correctIndexes": [
@@ -36985,10 +36985,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "A platform owner is formalizing sprint ceremonies for a team new to Agile delivery on ServiceNow. Which pairings of ceremony and purpose are correct? (Choose two.)",
 		"choices": [
-			"Daily stand-up: a status report where the product owner assigns the day's tasks to each developer",
 			"Sprint planning: a session where stakeholders vote to reopen stories accepted in prior sprints",
-			"Sprint review: demonstrate the completed increment to stakeholders and gather feedback",
-			"Retrospective: inspect how the team worked and agree on process improvements"
+			"Daily stand-up: a status report where the product owner assigns the day's tasks to each developer",
+			"Retrospective: inspect how the team worked and agree on process improvements",
+			"Sprint review: demonstrate the completed increment to stakeholders and gather feedback"
 		],
 		"correctIndex": 2,
 		"correctIndexes": [
@@ -37105,14 +37105,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "The operations team is building a patch governance calendar for the next quarter. Which elements should the platform owner require in the published schedule? (Choose two.)",
 		"choices": [
 			"Defined intake cutoff dates so regression and security review finish before deployment",
-			"A policy allowing developers to self-schedule production patches without change records",
+			"Patch release windows aligned to maintenance blackout rules and dependency test completion",
 			"Verbal team agreements replacing documented rollback expectations for hotfixes",
-			"Patch release windows aligned to maintenance blackout rules and dependency test completion"
+			"A policy allowing developers to self-schedule production patches without change records"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			3
+			1
 		],
 		"explanation": "Patch schedules need published windows tied to blackout policy plus intake deadlines that leave time for regression and security validation before deployment.",
 		"sourceUrls": [
@@ -37242,9 +37242,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "An audit team asks how the platform owner verifies patch contents before production deployment. Which evidence types should be included in the standard review packet? (Choose two.)",
 		"choices": [
-			"Screenshots of unrelated legacy systems retained for historical reference",
-			"Regression test results showing critical business scenarios passed in sub-production",
 			"Marketing slide decks describing unrelated product roadmaps",
+			"Regression test results showing critical business scenarios passed in sub-production",
+			"Screenshots of unrelated legacy systems retained for historical reference",
 			"Vendor patch documentation listing fixed defects, security items, and affected modules"
 		],
 		"correctIndex": 1,
@@ -37503,15 +37503,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "After adopting multiple production instances, the platform owner must explain increased maintenance requirements to the CIO. Which obligations should be highlighted? (Choose two.)",
 		"choices": [
+			"Independent upgrade and patch calendars with regression completed per instance",
 			"Complete elimination of sub-production environments because each production node is isolated",
-			"Shared super-user credentials across all instances to simplify on-call response",
 			"Synchronized configuration baselines and drift monitoring across each production boundary",
-			"Independent upgrade and patch calendars with regression completed per instance"
+			"Shared super-user credentials across all instances to simplify on-call response"
 		],
-		"correctIndex": 2,
+		"correctIndex": 0,
 		"correctIndexes": [
-			2,
-			3
+			0,
+			2
 		],
 		"explanation": "Multiple production instances multiply upgrade cycles and require baseline synchronization and drift control—they do not remove non-production testing or justify shared privileged accounts.",
 		"sourceUrls": [
@@ -37560,10 +37560,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Given escalating attachment storage and audit log volume, which ServiceNow capabilities should the platform owner leverage to meet retention requirements while protecting performance? (Choose two.)",
 		"choices": [
-			"Table rotation and archival policies aligned to regulatory retention windows",
-			"Disabling all audit records on high-volume transactional tables",
+			"Performance Analytics indicators to monitor table growth trends over time",
 			"Exporting every table nightly to flat files stored on application nodes",
-			"Performance Analytics indicators to monitor table growth trends over time"
+			"Disabling all audit records on high-volume transactional tables",
+			"Table rotation and archival policies aligned to regulatory retention windows"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -37694,14 +37694,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "Multiple product teams propose new integrations that write CI attributes nightly. Which CMDB data governance practices should the platform owner mandate before approving the feeds? (Choose two.)",
 		"choices": [
 			"Documented authoritative source precedence in IRE for overlapping attributes",
+			"Defer reconciliation until after all feeds are live in production",
 			"Named data stewards accountable for class-level quality on affected CI types",
-			"Unrestricted write access for every integration account to accelerate delivery",
-			"Defer reconciliation until after all feeds are live in production"
+			"Unrestricted write access for every integration account to accelerate delivery"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			2
 		],
 		"explanation": "Integration feeds need IRE precedence rules and steward ownership so overlapping writes do not erode CMDB trust or performance through duplicate remediation work.",
 		"sourceUrls": [
@@ -37837,15 +37837,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Before the annual subscription true-up, which inputs should the platform owner validate with procurement and product owners? (Choose two.)",
 		"choices": [
+			"Average incident ticket count unrelated to subscription metrics",
 			"Growth trends in specialized roles such as approvers and fulfillment agents",
-			"Production plugin activation against contracted SKU coverage",
 			"Total number of UI themes deployed per business unit",
-			"Average incident ticket count unrelated to subscription metrics"
+			"Production plugin activation against contracted SKU coverage"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			3
 		],
 		"explanation": "True-up readiness depends on matching activated capabilities and role growth to contracted SKUs—not cosmetic or unrelated operational metrics.",
 		"sourceUrls": [
@@ -37921,14 +37921,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "The platform governance council is establishing operating model responsibilities. Which assignments should the platform owner document? (Choose two.)",
 		"choices": [
 			"Strategic forum performs daily incident queue assignment for every support team",
-			"Technical forum replaces all change advisory board approvals for production outages",
+			"Portfolio forum prioritizes demand and capacity across business programs",
 			"Strategic forum sets enterprise guardrails and investment themes for the platform",
-			"Portfolio forum prioritizes demand and capacity across business programs"
+			"Technical forum replaces all change advisory board approvals for production outages"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"correctIndexes": [
-			2,
-			3
+			1,
+			2
 		],
 		"explanation": "Strategic governance sets direction and guardrails while portfolio governance prioritizes programs; technical governance supports quality without replacing incident operations.",
 		"sourceUrls": [
@@ -37987,10 +37987,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "Which controls should the platform owner require in the technical governance standard for custom application delivery? (Choose two.)",
 		"choices": [
-			"Mandatory use of global scope for all new integrations regardless of ownership",
-			"Automated linting and static code analysis in the CI pipeline before merge",
 			"Unlimited direct production editing for certified developers during incidents",
-			"Peer review checkpoints with documented approval for production-bound changes"
+			"Peer review checkpoints with documented approval for production-bound changes",
+			"Mandatory use of global scope for all new integrations regardless of ownership",
+			"Automated linting and static code analysis in the CI pipeline before merge"
 		],
 		"correctIndex": 1,
 		"correctIndexes": [
@@ -38252,14 +38252,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "A new analyst joins the Service Desk group, which has the itil role assigned to it. Which statements about role assignment through groups are correct? (Choose two.)",
 		"choices": [
 			"Roles granted to a group are inherited by every member of that group",
-			"Adding the analyst to the group gives them itil without touching their user record's role list directly",
 			"Roles can only ever be assigned one user at a time",
-			"Group membership removes any roles the user was granted individually"
+			"Group membership removes any roles the user was granted individually",
+			"Adding the analyst to the group gives them itil without touching their user record's role list directly"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"questionType": "multi",
 		"explanation": "Assigning roles to groups is the recommended practice: members inherit the group's roles automatically, and membership changes manage access without editing individual role assignments. Inherited roles supplement, not replace, directly granted ones.",
@@ -38417,15 +38417,15 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 24,
 		"prompt": "The service desk logs many printer incidents with nearly identical field values. Which statements about record templates are true? (Choose two.)",
 		"choices": [
-			"Templates only work on records created through inbound email",
+			"Templates permanently lock the fields they populate against later edits",
 			"A template can prefill multiple field values on a new record with one selection",
-			"Templates can be made visible to specific users or groups that need them",
-			"Templates permanently lock the fields they populate against later edits"
+			"Templates only work on records created through inbound email",
+			"Templates can be made visible to specific users or groups that need them"
 		],
 		"correctIndex": 1,
 		"correctIndexes": [
 			1,
-			2
+			3
 		],
 		"questionType": "multi",
 		"explanation": "Templates populate predefined field values to speed up repetitive record creation and can be shared with individuals or groups. The values remain editable, and templates apply to forms generally, not just email-created records.",
@@ -38648,14 +38648,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"order": 38,
 		"prompt": "An administrator is building an email notification for reopened incidents. Which configuration areas on the notification record determine when it fires and who gets it? (Choose two.)",
 		"choices": [
-			"The number of columns shown on the incident list layout",
-			"The recipient configuration, which can target specific users, groups, or people referenced in fields on the record",
 			"The triggering definition, such as record conditions or an event, on the notification's When to send settings",
-			"The instance's cloning schedule for sub-production environments"
+			"The instance's cloning schedule for sub-production environments",
+			"The recipient configuration, which can target specific users, groups, or people referenced in fields on the record",
+			"The number of columns shown on the incident list layout"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"correctIndexes": [
-			1,
+			0,
 			2
 		],
 		"questionType": "multi",
@@ -38735,8 +38735,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"choices": [
 			"Every flow must be written entirely in server-side script with no visual editor",
 			"Flows can only run against the incident table",
-			"A trigger starts the flow, such as a record being created or updated, or a schedule",
-			"Actions and flow logic define the steps executed after the trigger fires"
+			"Actions and flow logic define the steps executed after the trigger fires",
+			"A trigger starts the flow, such as a record being created or updated, or a schedule"
 		],
 		"correctIndex": 2,
 		"correctIndexes": [
@@ -38884,14 +38884,14 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "You are onboarding security auditors who need read-only CMDB access. Which statements about groups and roles are correct? (Choose two.)",
 		"choices": [
 			"Roles assigned to a group apply to every member of that group",
-			"Roles can only be granted by importing update sets",
 			"A user may hold multiple roles simultaneously",
-			"Groups automatically delete ACL rules they reference"
+			"Groups automatically delete ACL rules they reference",
+			"Roles can only be granted by importing update sets"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			2
+			1
 		],
 		"explanation": "Users accumulate roles directly and through group membership; groups distribute roles but do not manage ACL lifecycle.",
 		"sourceUrls": [
@@ -38921,8 +38921,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "A new analytics team needs workspace access next week. Which administrator actions should you complete? (Choose three.)",
 		"choices": [
-			"Create or verify user records and assign appropriate roles",
 			"Grant table and field access through ACLs or scoped application access",
+			"Create or verify user records and assign appropriate roles",
 			"Delete all business rules globally before go-live",
 			"Share or publish reports and dashboards they require"
 		],
@@ -39136,10 +39136,10 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"questionType": "multi",
 		"prompt": "You are hardening data quality on a custom table. Which dictionary attributes directly constrain user input? (Choose two.)",
 		"choices": [
-			"Mandatory",
-			"Homepage theme",
 			"Max length",
-			"Catalog picture icon"
+			"Catalog picture icon",
+			"Mandatory",
+			"Homepage theme"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -39462,9 +39462,9 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"prompt": "An update set retrieved on test contains customization artifacts. Which record types are commonly included? (Choose two.)",
 		"choices": [
 			"End-user password values",
-			"Business Rules",
+			"UI Policies",
 			"Every historical incident row",
-			"UI Policies"
+			"Business Rules"
 		],
 		"correctIndex": 1,
 		"correctIndexes": [

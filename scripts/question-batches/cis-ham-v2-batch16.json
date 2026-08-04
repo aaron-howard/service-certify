@@ -1,89 +1,89 @@
 [
-	{
-		"trackCode": "CIS-HAM",
-		"order": 75,
-		"prompt": "Infrastructure teams deploy Windows and Linux VMs in AWS and Azure alongside on-premises servers. How should HAM track those hybrid assets?",
-		"choices": [
-			"Combine Discovery and cloud inventory feeds with normalized models and lifecycle states for virtual and physical hardware assets",
-			"Track only on-premises serial numbers and ignore cloud instances in the asset table",
-			"Convert every VM into a consumable quantity without CI or asset linkage",
-			"Disable model normalization for cloud-discovered records to speed imports"
-		],
-		"correctIndex": 0,
-		"explanation": "Modern HAM programs reconcile Discovery and cloud source data into governed hardware models with consistent lifecycle tracking.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/it-asset-management.html",
-			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
-		],
-		"domain": "Operational Integration of IT Asset Management Processes"
-	},
-	{
-		"trackCode": "CIS-HAM",
-		"order": 76,
-		"prompt": "A SaaS team procures 5,000 collaboration seats while HAM manages corporate laptops. Which ITAM approach prevents duplicate spend and orphan assignments?",
-		"choices": [
-			"Coordinate SAM subscription records with HAM hardware assets through shared requester, cost center, and lifecycle governance",
-			"Track SaaS seats only in spreadsheets outside ServiceNow to avoid SAM licensing",
-			"Disable HAM catalog fulfillment whenever SAM records exist for the same user",
-			"Retire laptop assets automatically when any SaaS subscription is activated"
-		],
-		"correctIndex": 0,
-		"explanation": "Integrated ITAM connects SAM subscription management with HAM hardware custody and financial ownership for complete spend visibility.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/it-asset-management.html"
-		],
-		"domain": "Operational Integration of IT Asset Management Processes"
-	},
-	{
-		"trackCode": "CIS-HAM",
-		"order": 77,
-		"prompt": "Audit findings show laptops assigned without a documented owner or custodian. Which governance framework should HAM implement?",
-		"choices": [
-			"Define asset owner, custodian, and requestor roles with workflow enforcement and exception approval for policy deviations",
-			"Allow any user with the itil role to edit asset ownership fields without approval",
-			"Remove ownership fields from asset forms to simplify data entry",
-			"Assign every asset to a single generic user account permanently"
-		],
-		"correctIndex": 0,
-		"explanation": "Asset governance assigns accountable roles and controlled workflows so custody and financial responsibility remain auditable.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/manage-hardware-assets.html",
-			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
-		],
-		"domain": "Operational Integration of IT Asset Management Processes"
-	},
-	{
-		"trackCode": "CIS-HAM",
-		"order": 78,
-		"prompt": "Security policy requires certified destruction of storage media when high-risk laptops retire. How should HAM support compliance?",
-		"choices": [
-			"Use governed retirement workflows that capture disposal vendor certificates and link evidence to the asset record",
-			"Delete asset records immediately without disposal documentation to reduce table size",
-			"Convert retired laptops back to In stock without sanitization checks",
-			"Track disposal only in email threads without updating lifecycle states"
-		],
-		"correctIndex": 0,
-		"explanation": "Disposal governance depends on verifiable retirement records showing policy steps and vendor certification were followed.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/dispose-hardware-assets.html"
-		],
-		"domain": "Operational Integration of IT Asset Management Processes"
-	},
-	{
-		"trackCode": "CIS-HAM",
-		"order": 79,
-		"prompt": "Finance capitalizes 10,000 laptops using five-year straight-line depreciation. Which HAM configuration supports accurate monthly depreciation postings?",
-		"choices": [
-			"Depreciation methods and schedules on hardware models or assets aligned to the capitalization policy and useful life",
-			"Manual journal entries only with no depreciation fields on asset records",
-			"Immediate full expense at receipt with no lifecycle financial tracking",
-			"Depreciation calculated from discovery probe timestamps rather than purchase dates"
-		],
-		"correctIndex": 0,
-		"explanation": "HAM depreciation configuration on models and assets supports consistent financial treatment across large standardized hardware estates.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-depreciation.html"
-		],
-		"domain": "Financial Management of IT Assets"
-	}
+  {
+    "trackCode": "CIS-HAM",
+    "order": 75,
+    "prompt": "Infrastructure teams deploy Windows and Linux VMs in AWS and Azure alongside on-premises servers. How should HAM track those hybrid assets?",
+    "choices": [
+      "Combine Discovery and cloud inventory feeds with normalized models and lifecycle states for virtual and physical hardware assets",
+      "Track only on-premises serial numbers and ignore cloud instances in the asset table",
+      "Convert every VM into a consumable quantity without CI or asset linkage",
+      "Disable model normalization for cloud-discovered records to speed imports"
+    ],
+    "correctIndex": 0,
+    "explanation": "Modern HAM programs reconcile Discovery and cloud source data into governed hardware models with consistent lifecycle tracking.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-asset-management/it-asset-management.html",
+      "https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
+    ],
+    "domain": "Operational Integration of IT Asset Management Processes"
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 76,
+    "prompt": "A SaaS team procures 5,000 collaboration seats while HAM manages corporate laptops. Which ITAM approach prevents duplicate spend and orphan assignments?",
+    "choices": [
+      "Coordinate SAM subscription records with HAM hardware assets through shared requester, cost center, and lifecycle governance",
+      "Track SaaS seats only in spreadsheets outside ServiceNow to avoid SAM licensing",
+      "Disable HAM catalog fulfillment whenever SAM records exist for the same user",
+      "Retire laptop assets automatically when any SaaS subscription is activated"
+    ],
+    "correctIndex": 0,
+    "explanation": "Integrated ITAM connects SAM subscription management with HAM hardware custody and financial ownership for complete spend visibility.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-asset-management/it-asset-management.html"
+    ],
+    "domain": "Operational Integration of IT Asset Management Processes"
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 77,
+    "prompt": "Audit findings show laptops assigned without a documented owner or custodian. Which governance framework should HAM implement?",
+    "choices": [
+      "Define asset owner, custodian, and requestor roles with workflow enforcement and exception approval for policy deviations",
+      "Allow any user with the itil role to edit asset ownership fields without approval",
+      "Remove ownership fields from asset forms to simplify data entry",
+      "Assign every asset to a single generic user account permanently"
+    ],
+    "correctIndex": 0,
+    "explanation": "Asset governance assigns accountable roles and controlled workflows so custody and financial responsibility remain auditable.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/manage-hardware-assets.html",
+      "https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
+    ],
+    "domain": "Operational Integration of IT Asset Management Processes"
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 78,
+    "prompt": "Security policy requires certified destruction of storage media when high-risk laptops retire. How should HAM capture that compliance evidence?",
+    "choices": [
+      "Create a disposal order, attach disposal documentation to the order, and set Certificate of disposal to Yes",
+      "Convert retired laptops back to In stock without sanitization checks",
+      "Delete asset records immediately without disposal documentation to reduce table size",
+      "Track disposal only in email threads without updating lifecycle states"
+    ],
+    "correctIndex": 0,
+    "explanation": "Disposal-order docs require attaching disposal documentation to the order and marking Certificate of disposal Yes when complete. Email-only tracking or deleting records without documentation does not meet the governed disposal flow.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/create-disposal-order.html"
+    ],
+    "domain": "Operational Integration of IT Asset Management Processes"
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 79,
+    "prompt": "Finance capitalizes 10,000 laptops using five-year straight-line depreciation. Which HAM configuration supports accurate depreciation tracking?",
+    "choices": [
+      "Depreciation calculated from discovery probe timestamps rather than purchase dates",
+      "Straight Line depreciation and effective date on the model or asset; the Calculate Depreciation job updates values daily",
+      "Manual journal entries only with no depreciation fields on asset records",
+      "Immediate full expense at receipt with no lifecycle financial tracking"
+    ],
+    "correctIndex": 1,
+    "explanation": "Asset depreciation docs configure the depreciation method and effective date on models/assets, and the Calculate Depreciation scheduled job updates depreciation fields daily—not only via monthly manual journals.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-asset-management/asset-management/t_AddingDepreciationToAnAsset.html"
+    ],
+    "domain": "Financial Management of IT Assets"
+  }
 ]

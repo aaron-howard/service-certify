@@ -480,32 +480,33 @@ export const PHASE5_TRACK_DOC_SOURCES: TrackDocSource[] = [
 	{
 		trackCode: 'CIS-HAM',
 		officialName: 'Certified Implementation Specialist - Hardware Asset Management',
-		publications: ['it-asset-management', 'hardware-asset-management'],
+		// ServiceNowDocs: HAM lives under markdown/it-asset-management/hardware-asset-management/
+		publications: ['it-asset-management'],
 		domains: [
 			{
 				name: 'IT Asset Management Overview and Fundamentals',
 				weight: '20%',
-				publications: ['it-asset-management', 'hardware-asset-management']
+				publications: ['it-asset-management']
 			},
 			{
 				name: 'Data Integrity Attributes and Data Sources',
 				weight: '27%',
-				publications: ['hardware-asset-management']
+				publications: ['it-asset-management']
 			},
 			{
 				name: 'Practical Management of IT Assets',
 				weight: '30%',
-				publications: ['hardware-asset-management']
+				publications: ['it-asset-management']
 			},
 			{
 				name: 'Operational Integration of IT Asset Management Processes',
 				weight: '18%',
-				publications: ['hardware-asset-management']
+				publications: ['it-asset-management']
 			},
 			{
 				name: 'Financial Management of IT Assets',
 				weight: '5%',
-				publications: ['hardware-asset-management']
+				publications: ['it-asset-management']
 			}
 		]
 	}

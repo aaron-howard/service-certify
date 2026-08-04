@@ -1,97 +1,97 @@
 [
-	{
-		"trackCode": "CIS-HAM",
-		"order": 80,
-		"prompt": "IT leadership wants each department charged for the laptops and support costs its users consume. Which financial model should HAM implement?",
-		"choices": [
-			"Cost allocation or chargeback using cost centers, expense lines, and rate cards tied to assigned assets and support tasks",
-			"A flat global fee with no linkage between assets and departmental cost centers",
-			"Capitalize every device to a single enterprise cost center regardless of user department",
-			"Bill departments only when incidents are opened for device failures"
-		],
-		"correctIndex": 0,
-		"explanation": "Chargeback models use asset cost centers, operational expense lines, and task rate cards to allocate hardware and support spend to consuming departments.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-mgmt-tco.html",
-			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/create-ham-task-rate-card.html"
-		],
-		"domain": "Financial Management of IT Assets"
-	},
-	{
-		"trackCode": "CIS-HAM",
-		"order": 81,
-		"questionType": "multi",
-		"prompt": "Which of the following are considered operational expenses for hardware assets? (Choose three.)",
-		"choices": [
-			"Maintenance agreement costs",
-			"Replacement parts",
-			"Resource costs for support",
-			"Delivery costs for initial purchase shipment"
-		],
-		"correctIndex": 0,
-		"correctIndexes": [
-			0,
-			1,
-			2
-		],
-		"explanation": "Operational expenses include ongoing maintenance, parts, and support labor. Initial delivery of purchased hardware is typically capital-related rather than operational expense in TCO context.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-mgmt-tco.html"
-		],
-		"domain": "Financial Management of IT Assets"
-	},
-	{
-		"trackCode": "CIS-HAM",
-		"order": 82,
-		"prompt": "A hardware planner must forecast a three-year laptop budget for 8,000 users. Which analysis inputs should HAM provide?",
-		"choices": [
-			"Refresh age targets, model TCO benchmarks, warranty coverage, and projected operational expense trends from asset analytics",
-			"Count of open incidents only without asset age or cost data",
-			"Discovery probe success rates as the sole budget driver",
-			"Number of catalog categories visible on the employee portal"
-		],
-		"correctIndex": 0,
-		"explanation": "Budget forecasting combines lifecycle age, TCO benchmarks, support costs, and refresh policies to project multi-year hardware spend.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/create-ham-tco-report.html",
-			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-mgmt-tco.html"
-		],
-		"domain": "Financial Management of IT Assets"
-	},
-	{
-		"trackCode": "CIS-HAM",
-		"order": 83,
-		"prompt": "Two laptop models have similar purchase price but one has higher repair costs and shorter warranty coverage. Which decision approach should finance use?",
-		"choices": [
-			"Compare projected TCO including capital, maintenance, and support expenses using HAM analytics before standardizing the model",
-			"Select the lowest purchase price model without reviewing operational expense history",
-			"Mandate the oldest model in inventory to minimize procurement effort",
-			"Ignore warranty data because support costs are tracked outside ServiceNow"
-		],
-		"correctIndex": 0,
-		"explanation": "TCO analysis compares capital and operational costs—including maintenance and support—to inform refresh and standardization decisions.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-mgmt-tco.html",
-			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/create-ham-tco-report.html"
-		],
-		"domain": "Financial Management of IT Assets"
-	},
-	{
-		"trackCode": "CIS-HAM",
-		"order": 84,
-		"prompt": "Extended warranty quotes arrive for 500 servers nearing support expiration. How should HAM support the ROI decision?",
-		"choices": [
-			"Compare warranty cost against historical maintenance expense and remaining useful life on the asset and model TCO reports",
-			"Approve every extended warranty automatically without reviewing asset age or repair history",
-			"Retire all servers immediately when the original warranty expires",
-			"Track warranty decisions only in email without updating contract fields on assets"
-		],
-		"correctIndex": 0,
-		"explanation": "Warranty ROI analysis weighs contract cost against maintenance history, asset age, and TCO projections available in HAM financial views.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-record-fields.html",
-			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-mgmt-tco.html"
-		],
-		"domain": "Financial Management of IT Assets"
-	}
+  {
+    "trackCode": "CIS-HAM",
+    "order": 80,
+    "prompt": "IT leadership wants each department charged for the laptops and support costs its users consume. Which financial model should HAM implement?",
+    "choices": [
+      "Cost allocation or chargeback using cost centers, expense lines, and rate cards tied to assigned assets and support tasks",
+      "A flat global fee with no linkage between assets and departmental cost centers",
+      "Capitalize every device to a single enterprise cost center regardless of user department",
+      "Bill departments only when incidents are opened for device failures"
+    ],
+    "correctIndex": 0,
+    "explanation": "Chargeback models use asset cost centers, operational expense lines, and task rate cards to allocate hardware and support spend to consuming departments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-mgmt-tco.html",
+      "https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/create-ham-task-rate-card.html"
+    ],
+    "domain": "Financial Management of IT Assets"
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 81,
+    "prompt": "Which of the following are considered operational expenses for hardware assets? (Choose three.)",
+    "choices": [
+      "The one-time capitalized purchase cost of the asset",
+      "Resource costs for support",
+      "Maintenance agreement costs",
+      "Replacement parts"
+    ],
+    "correctIndex": 1,
+    "explanation": "For serialized assets, capital cost is recorded once; subsequent expense lines such as maintenance, parts, and support are operational. The one-time capitalized purchase cost is capital, not operational expense.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-mgmt-tco.html"
+    ],
+    "domain": "Financial Management of IT Assets",
+    "questionType": "multi",
+    "correctIndexes": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 82,
+    "prompt": "A hardware planner must forecast a three-year laptop budget for 8,000 users. Which analysis inputs should HAM provide?",
+    "choices": [
+      "Refresh age targets, model TCO benchmarks, warranty coverage, and projected operational expense trends from asset analytics",
+      "Count of open incidents only without asset age or cost data",
+      "Discovery probe success rates as the sole budget driver",
+      "Number of catalog categories visible on the employee portal"
+    ],
+    "correctIndex": 0,
+    "explanation": "Budget forecasting combines lifecycle age, TCO benchmarks, support costs, and refresh policies to project multi-year hardware spend.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/create-ham-tco-report.html",
+      "https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-mgmt-tco.html"
+    ],
+    "domain": "Financial Management of IT Assets"
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 83,
+    "prompt": "Two laptop models have similar purchase price but one has higher repair costs and shorter warranty coverage. Which decision approach should finance use?",
+    "choices": [
+      "Compare projected TCO including capital, maintenance, and support expenses using HAM analytics before standardizing the model",
+      "Select the lowest purchase price model without reviewing operational expense history",
+      "Mandate the oldest model in inventory to minimize procurement effort",
+      "Ignore warranty data because support costs are tracked outside ServiceNow"
+    ],
+    "correctIndex": 0,
+    "explanation": "TCO analysis compares capital and operational costs—including maintenance and support—to inform refresh and standardization decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-mgmt-tco.html",
+      "https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/create-ham-tco-report.html"
+    ],
+    "domain": "Financial Management of IT Assets"
+  },
+  {
+    "trackCode": "CIS-HAM",
+    "order": 84,
+    "prompt": "Extended warranty quotes arrive for 500 servers nearing support expiration. How should HAM support the ROI decision?",
+    "choices": [
+      "Compare warranty cost against historical maintenance expense and remaining useful life on the asset and model TCO reports",
+      "Approve every extended warranty automatically without reviewing asset age or repair history",
+      "Retire all servers immediately when the original warranty expires",
+      "Track warranty decisions only in email without updating contract fields on assets"
+    ],
+    "correctIndex": 0,
+    "explanation": "Warranty ROI analysis weighs contract cost against maintenance history, asset age, and TCO projections available in HAM financial views.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-record-fields.html",
+      "https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/asset-mgmt-tco.html"
+    ],
+    "domain": "Financial Management of IT Assets"
+  }
 ]
