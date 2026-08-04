@@ -1,96 +1,95 @@
 [
-	{
-		"trackCode": "CIS-PA",
-		"order": 55,
-		"prompt": "In the Performance Analytics collection process, what happens immediately after a data collector job reads records from an indicator source?",
-		"choices": [
-			"Indicator scores and breakdown values are calculated and persisted for the collection period",
-			"The indicator source table is truncated so the next run starts with empty data",
-			"Dashboard widgets are republished to every user homepage automatically",
-			"Breakdown relations are regenerated from sys_dictionary entries"
-		],
-		"correctIndex": 0,
-		"explanation": "Collection jobs query the configured source, compute indicator and breakdown scores for the period, and store the results for trending and visualization.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectionJobs.html"
-		],
-		"domain": "Data Collection"
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 56,
-		"prompt": "A platform team needs incident KPI scores captured every hour instead of daily without creating a second data collector job. Which change on the existing job meets the schedule requirement?",
-		"choices": [
-			"Set Collection frequency to hourly on the job definition",
-			"Set widget refresh interval to one hour on related dashboards",
-			"Set Run as user to an hourly scheduled integration user",
-			"Set benchmark comparison window to the last hour only"
-		],
-		"correctIndex": 0,
-		"explanation": "Collection frequency on the data collector job controls how often recurring scores are gathered; adjusting it changes the schedule without duplicating jobs.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/task/t_ScheduleDataCollection.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html"
-		],
-		"domain": "Data Collection"
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 57,
-		"prompt": "A data collector job shows repeated failures in the job log while scores remain stale. What is the most appropriate first troubleshooting step?",
-		"choices": [
-			"Review job log errors and validate indicator source conditions and query performance",
-			"Delete all historical scores for the indicator and disable breakdowns permanently",
-			"Convert every automated indicator on the job to manual entry",
-			"Remove the job from the schedule and rely on real-time list reports instead"
-		],
-		"correctIndex": 0,
-		"explanation": "Job logs surface execution errors; validating source filters, permissions, and query efficiency addresses the most common collection failure causes.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/task/t_MonitorCollectionJobs.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/performance-analytics-performance.html"
-		],
-		"domain": "Data Collection"
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 58,
-		"prompt": "Historic backfill is requested for several indicators. Which source condition makes a KPI a poor candidate because past intervals cannot be reconstructed reliably?",
-		"choices": [
-			"Open incidents not updated in the last 90 days using rolling sys_updated_on conditions",
-			"Incidents closed last month using a fixed Closed date on the period boundary",
-			"New incidents opened today with Opened on Today for daily collection",
-			"Changes implemented last week filtered by a Completed date in the prior period"
-		],
-		"correctIndex": 0,
-		"explanation": "Rolling time-window conditions on fields such as sys_updated_on depend on values that change during a record lifecycle, so past intervals cannot be reliably recalculated.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/task/t_RunHistoricalDataCollection.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollection.html"
-		],
-		"domain": "Data Governance and Quality"
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 59,
-		"questionType": "multi",
-		"prompt": "Which practices improve data quality before KPI scores are trusted by executives? (Choose two.)",
-		"choices": [
-			"Validate indicator source filters against representative list reports and document expected counts",
-			"Review Run as user context on collector jobs to ensure ACL visibility matches reporting expectations",
-			"Disable breakdown mappings whenever scores differ slightly from ad hoc spreadsheets",
-			"Skip source preview because collection jobs always self-correct bad filters"
-		],
-		"correctIndex": 0,
-		"correctIndexes": [
-			0,
-			1
-		],
-		"explanation": "Source validation and collection security context are foundational data quality checks before scores drive executive decisions.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_IndicatorSources.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html"
-		],
-		"domain": "Data Governance and Quality"
-	}
+  {
+    "trackCode": "CIS-PA",
+    "order": 55,
+    "prompt": "In the Performance Analytics collection process, what happens immediately after a data collector job reads records from an indicator source?",
+    "choices": [
+      "Indicator scores and breakdown values are calculated and persisted for the collection period",
+      "The indicator source table is truncated so the next run starts with empty data",
+      "Dashboard widgets are republished to every user homepage automatically",
+      "Breakdown relations are regenerated from sys_dictionary entries"
+    ],
+    "correctIndex": 0,
+    "explanation": "Collection jobs query the configured source, compute indicator and breakdown scores for the period, and store the results for trending and visualization.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectionJobs.html"
+    ],
+    "domain": "Data Collection"
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 56,
+    "prompt": "A platform team needs incident KPI scores captured about every hour instead of daily without creating a second data collector job. Which change on the existing job meets the schedule requirement?",
+    "choices": [
+      "Set benchmark comparison window to the last hour only",
+      "Set widget refresh interval to one hour on related dashboards",
+      "Set Run to Periodically and Repeat Interval to about one hour, ensuring indicator frequency supports that period",
+      "Set Run as user to an hourly scheduled integration user"
+    ],
+    "correctIndex": 2,
+    "explanation": "Job scheduling uses the Run field. Periodically with a Repeat Interval controls how often the job runs. There is no documented “Collection frequency = hourly” field; widget refresh and Run as do not set collection cadence.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/t_CreatASchedDataCollJob.html"
+    ],
+    "domain": "Data Collection"
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 57,
+    "prompt": "A data collector job shows repeated failures in the job log while scores remain stale. What is the most appropriate first troubleshooting step?",
+    "choices": [
+      "Review job log errors and validate indicator source conditions and query performance",
+      "Delete all historical scores for the indicator and disable breakdowns permanently",
+      "Convert every automated indicator on the job to manual entry",
+      "Remove the job from the schedule and rely on real-time list reports instead"
+    ],
+    "correctIndex": 0,
+    "explanation": "Job logs surface execution errors; validating source filters, permissions, and query efficiency addresses the most common collection failure causes.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/task/t_MonitorCollectionJobs.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/performance-analytics-performance.html"
+    ],
+    "domain": "Data Collection"
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 58,
+    "prompt": "Historic backfill is requested for several indicators. Which source condition makes a KPI a poor candidate because past intervals cannot be reconstructed reliably?",
+    "choices": [
+      "Open incidents not updated in the last 90 days using rolling sys_updated_on conditions",
+      "Incidents closed last month using a fixed Closed date on the period boundary",
+      "New incidents opened today with Opened on Today for daily collection",
+      "Changes implemented last week filtered by a Completed date in the prior period"
+    ],
+    "correctIndex": 0,
+    "explanation": "Rolling time-window conditions on fields such as sys_updated_on depend on values that change during a record lifecycle, so past intervals cannot be reliably recalculated.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/task/t_RunHistoricalDataCollection.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollection.html"
+    ],
+    "domain": "Data Governance and Quality"
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 59,
+    "prompt": "Which practices improve data quality before KPI scores are trusted by executives? (Choose two.)",
+    "choices": [
+      "Validate indicator source filters against representative list reports and document expected counts",
+      "Disable breakdown mappings whenever scores differ slightly from ad hoc spreadsheets",
+      "Reconcile collected scores to source-list previews while remembering collection does not apply ACLs",
+      "Skip source preview because collection jobs always self-correct bad filters"
+    ],
+    "correctIndex": 0,
+    "explanation": "Source validation against list reports is foundational. Collection jobs follow domain of Run as but ACLs and business rules do not apply, so “ACL-aware Run as” is incorrect. Skipping preview or disabling mappings for minor spreadsheet variance is poor practice.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/t_CreatASchedDataCollJob.html",
+      "https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_IndicatorSources.html"
+    ],
+    "domain": "Data Governance and Quality",
+    "questionType": "multi",
+    "correctIndexes": [
+      0,
+      2
+    ]
+  }
 ]

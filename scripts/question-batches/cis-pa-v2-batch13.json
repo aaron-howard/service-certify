@@ -1,95 +1,95 @@
 [
-	{
-		"trackCode": "CIS-PA",
-		"order": 60,
-		"prompt": "A new KPI definition must be consistent across development and production instances. Which governance standard should the PA CoE publish?",
-		"choices": [
-			"Documented naming conventions, filter patterns, targets, owners, and promotion checklist for indicators and sources",
-			"Allow each developer to invent unique KPI names without a catalog or review",
-			"Prohibit reuse of indicator sources to avoid any shared configuration",
-			"Store KPI definitions only in email threads without version control"
-		],
-		"correctIndex": 0,
-		"explanation": "Metric definition standards and promotion controls keep KPI meaning consistent as analytics content moves between environments.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
-		],
-		"domain": "Data Governance and Quality"
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 61,
-		"prompt": "Sensitive HR KPIs must be visible only to authorized HR analytics roles. Which access control design should the program implement?",
-		"choices": [
-			"Combine PA roles, dashboard audiences, and ACL-aware Run as users on collector jobs for governed visibility",
-			"Grant pa_admin to every dashboard viewer to eliminate permission errors",
-			"Publish all KPIs on public homepages without role restrictions",
-			"Disable ACLs on facts tables so collection always returns complete datasets"
-		],
-		"correctIndex": 0,
-		"explanation": "PA security combines role design, dashboard sharing, and collection context so sensitive KPIs remain visible only to authorized consumers.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/r_PARoles.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
-		],
-		"domain": "Data Governance and Quality"
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 62,
-		"prompt": "Audit asks how the organization proves PA scores match underlying transactional records. What validation process should be in place?",
-		"choices": [
-			"Periodic reconciliation of indicator sources against controlled list reports with documented variance thresholds",
-			"Trust scores without review because widgets always query live transactional tables",
-			"Delete historical scores whenever auditors request evidence",
-			"Disable KPI Details drill-down to prevent record-level inspection"
-		],
-		"correctIndex": 0,
-		"explanation": "Governed reconciliation between collected scores and source data supports compliance and stakeholder confidence in KPI accuracy.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_IndicatorSources.html",
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_KPIDetails.html"
-		],
-		"domain": "Data Governance and Quality"
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 63,
-		"prompt": "Source data from a legacy integration frequently arrives late, causing KPI drift. Which reliability practice should the analytics team adopt?",
-		"choices": [
-			"Monitor integration freshness, document source SLAs, and adjust collection schedules after data arrival patterns are understood",
-			"Ignore integration delays because PA automatically backfills missing transactional rows",
-			"Convert every affected KPI to manual entry without investigating root cause",
-			"Remove all date filters from indicator sources to maximize record counts"
-		],
-		"correctIndex": 0,
-		"explanation": "Source reliability governance tracks upstream data timeliness and aligns collection expectations with when facts are trustworthy.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollection.html"
-		],
-		"domain": "Data Governance and Quality"
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 64,
-		"questionType": "multi",
-		"prompt": "Which controls support compliant Platform Analytics governance in regulated environments? (Choose two.)",
-		"choices": [
-			"Restrict indicator and source edits to authorized PA roles with change review",
-			"Maintain audit evidence for KPI definition changes and production promotions",
-			"Allow all consumers to edit indicator aggregation scripts in production",
-			"Disable job monitoring so collection failures do not create audit noise"
-		],
-		"correctIndex": 0,
-		"correctIndexes": [
-			0,
-			1
-		],
-		"explanation": "Regulated programs require role-based change control and traceable promotion history for analytics definitions that drive decisions.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
-		],
-		"domain": "Data Governance and Quality"
-	}
+  {
+    "trackCode": "CIS-PA",
+    "order": 60,
+    "prompt": "A new KPI definition must be consistent across development and production instances. Which governance standard should the PA CoE publish?",
+    "choices": [
+      "Documented naming conventions, filter patterns, targets, owners, and promotion checklist for indicators and sources",
+      "Allow each developer to invent unique KPI names without a catalog or review",
+      "Prohibit reuse of indicator sources to avoid any shared configuration",
+      "Store KPI definitions only in email threads without version control"
+    ],
+    "correctIndex": 0,
+    "explanation": "Metric definition standards and promotion controls keep KPI meaning consistent as analytics content moves between environments.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+    ],
+    "domain": "Data Governance and Quality"
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 61,
+    "prompt": "Sensitive HR KPIs must be visible only to authorized HR analytics roles. Which access control design should the program implement?",
+    "choices": [
+      "Disable ACLs on facts tables so collection always returns complete datasets",
+      "Grant pa_admin to every dashboard viewer to eliminate permission errors",
+      "Combine PA roles, indicator access controls, and dashboard sharing or audiences for governed visibility",
+      "Publish all KPIs on public homepages without role restrictions"
+    ],
+    "correctIndex": 2,
+    "explanation": "Visibility is governed with PA roles, indicator permissions, and dashboard sharing/audiences. Run as on collector jobs controls domain context only—ACLs do not apply to collection. Broad pa_admin grants and public publishing defeat least privilege.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/r_PARoles.html",
+      "https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/t_CreatASchedDataCollJob.html"
+    ],
+    "domain": "Data Governance and Quality"
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 62,
+    "prompt": "Audit asks how the organization proves PA scores match underlying transactional records. What validation process should be in place?",
+    "choices": [
+      "Periodic reconciliation of indicator sources against controlled list reports with documented variance thresholds",
+      "Trust scores without review because widgets always query live transactional tables",
+      "Delete historical scores whenever auditors request evidence",
+      "Disable KPI Details drill-down to prevent record-level inspection"
+    ],
+    "correctIndex": 0,
+    "explanation": "Governed reconciliation between collected scores and source data supports compliance and stakeholder confidence in KPI accuracy.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_IndicatorSources.html",
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_KPIDetails.html"
+    ],
+    "domain": "Data Governance and Quality"
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 63,
+    "prompt": "Source data from a legacy integration frequently arrives late, causing KPI drift. Which reliability practice should the analytics team adopt?",
+    "choices": [
+      "Monitor integration freshness, document source SLAs, and adjust collection schedules after data arrival patterns are understood",
+      "Ignore integration delays because PA automatically backfills missing transactional rows",
+      "Convert every affected KPI to manual entry without investigating root cause",
+      "Remove all date filters from indicator sources to maximize record counts"
+    ],
+    "correctIndex": 0,
+    "explanation": "Source reliability governance tracks upstream data timeliness and aligns collection expectations with when facts are trustworthy.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollection.html"
+    ],
+    "domain": "Data Governance and Quality"
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 64,
+    "questionType": "multi",
+    "prompt": "Which controls support compliant Platform Analytics governance in regulated environments? (Choose two.)",
+    "choices": [
+      "Restrict indicator and source edits to authorized PA roles with change review",
+      "Maintain audit evidence for KPI definition changes and production promotions",
+      "Allow all consumers to edit indicator aggregation scripts in production",
+      "Disable job monitoring so collection failures do not create audit noise"
+    ],
+    "correctIndex": 0,
+    "correctIndexes": [
+      0,
+      1
+    ],
+    "explanation": "Regulated programs require role-based change control and traceable promotion history for analytics definitions that drive decisions.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+    ],
+    "domain": "Data Governance and Quality"
+  }
 ]

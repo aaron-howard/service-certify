@@ -1,97 +1,96 @@
 [
-	{
-		"trackCode": "CIS-PA",
-		"order": 80,
-		"prompt": "Operations leadership wants forward-looking backlog projections on an incident KPI dashboard. Which advanced analytics capability should the PA team enable?",
-		"choices": [
-			"Forecasting and trend analysis on time-series indicator scores with documented confidence context",
-			"Manual spreadsheet extrapolation attached to each widget as a static image",
-			"Real-time list reports that replace all stored PA snapshots permanently",
-			"Deletion of historical scores so only the current day displays on charts"
-		],
-		"correctIndex": 0,
-		"explanation": "PA forecasting uses collected score history to project trends so leaders can anticipate workload rather than react only to past periods.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html",
-			"https://www.servicenow.com/docs/r/now-intelligence/data-visualizations.html"
-		],
-		"domain": "Advanced Analytics"
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 81,
-		"prompt": "A critical incident KPI suddenly spikes without an obvious operational event. Which analytic approach helps detect abnormal score movement quickly?",
-		"choices": [
-			"Anomaly detection or threshold alerts on indicator trends with investigation via KPI Details",
-			"Ignore the spike until executives request a manual explanation weeks later",
-			"Disable targets so abnormal coloring never appears on widgets",
-			"Convert the KPI to manual entry to avoid automated monitoring"
-		],
-		"correctIndex": 0,
-		"explanation": "Anomaly detection and threshold signaling highlight unexpected KPI movement so teams investigate root causes before service impact spreads.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html",
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_KPIDetails.html"
-		],
-		"domain": "Advanced Analytics"
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 82,
-		"prompt": "Directors want to compare regional incident performance against enterprise benchmarks in one review. Which comparative analytics design should be used?",
-		"choices": [
-			"Benchmark-enabled widgets or breakdown comparisons that show segment performance relative to defined targets or peer groups",
-			"Separate dashboards per region with incompatible filters and no shared targets",
-			"Raw record lists without aggregated scores or time context",
-			"Static PDF exports emailed after each collection job completes"
-		],
-		"correctIndex": 0,
-		"explanation": "Comparative analytics contextualize KPI results against benchmarks or peer segments so leaders evaluate relative performance credibly.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
-		],
-		"domain": "Advanced Analytics"
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 83,
-		"prompt": "Problem management wants to identify which assignment groups are likely to miss SLA targets next month. Which predictive analytics pattern applies?",
-		"choices": [
-			"Use trend and forecast signals on leading workload KPIs combined with SLA breach history by segment",
-			"Wait for breaches to occur and only then create retrospective manual indicators",
-			"Remove breakdowns because predictive views require a single global number only",
-			"Disable collection jobs during forecasting pilots to reduce database load permanently"
-		],
-		"correctIndex": 0,
-		"explanation": "Predictive analytics combines historical score trends with segmented context to anticipate outcomes before lagging KPIs confirm failure.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html",
-			"https://www.servicenow.com/docs/r/now-intelligence/data-visualizations.html"
-		],
-		"domain": "Advanced Analytics"
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 84,
-		"questionType": "multi",
-		"prompt": "Which advanced Platform Analytics capabilities help teams move from descriptive reporting to actionable insight? (Choose two.)",
-		"choices": [
-			"AI-assisted analytics experiences that surface relevant KPIs and trends in Next Experience workspaces",
-			"KPI Details drill-down from widgets to contributing records for rapid investigation",
-			"Replacing all indicators with ad hoc list reports on every dashboard row",
-			"Removing targets and thresholds so every score appears neutral gray"
-		],
-		"correctIndex": 0,
-		"correctIndexes": [
-			0,
-			1
-		],
-		"explanation": "Modern PA programs combine intelligent surfacing of metrics with record-level drill-down so consumers interpret and act on score movement quickly.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/now-intelligence/par-workspace.html",
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_KPIDetails.html"
-		],
-		"domain": "Advanced Analytics"
-	}
+  {
+    "trackCode": "CIS-PA",
+    "order": 80,
+    "prompt": "Operations leadership wants forward-looking backlog projections on an incident KPI dashboard. Which advanced analytics capability should the PA team enable?",
+    "choices": [
+      "Manual score entry only with no time-series history",
+      "Forecasting on time-series indicator scores using configured forecast methods and periods",
+      "Real-time CMDB relationship maps without historical scores",
+      "Static PDF exports refreshed quarterly by email"
+    ],
+    "correctIndex": 1,
+    "explanation": "Forecasting uses historical indicator scores with configured methods, periods, and display as a dotted line. Docs do not describe a separate “documented confidence context” requirement for enabling forecasts.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_ForecastingData.html"
+    ],
+    "domain": "Advanced Analytics"
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 81,
+    "prompt": "A critical incident KPI suddenly spikes without an obvious operational event. Which analytic approach helps detect abnormal score movement quickly?",
+    "choices": [
+      "Anomaly detection or threshold alerts on indicator trends with investigation via KPI Details",
+      "Ignore the spike until executives request a manual explanation weeks later",
+      "Disable targets so abnormal coloring never appears on widgets",
+      "Convert the KPI to manual entry to avoid automated monitoring"
+    ],
+    "correctIndex": 0,
+    "explanation": "Anomaly detection and threshold signaling highlight unexpected KPI movement so teams investigate root causes before service impact spreads.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html",
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_KPIDetails.html"
+    ],
+    "domain": "Advanced Analytics"
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 82,
+    "prompt": "Directors want to compare regional incident performance against enterprise benchmarks in one review. Which comparative analytics design should be used?",
+    "choices": [
+      "Benchmark-enabled widgets or breakdown comparisons that show segment performance relative to defined targets or peer groups",
+      "Separate dashboards per region with incompatible filters and no shared targets",
+      "Raw record lists without aggregated scores or time context",
+      "Static PDF exports emailed after each collection job completes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Comparative analytics contextualize KPI results against benchmarks or peer segments so leaders evaluate relative performance credibly.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
+    ],
+    "domain": "Advanced Analytics"
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 83,
+    "prompt": "Problem management wants to identify which assignment groups are likely to miss SLA targets next month. Which predictive analytics pattern applies?",
+    "choices": [
+      "Use trend and forecast signals on leading workload KPIs combined with SLA breach history by segment",
+      "Wait for breaches to occur and only then create retrospective manual indicators",
+      "Remove breakdowns because predictive views require a single global number only",
+      "Disable collection jobs during forecasting pilots to reduce database load permanently"
+    ],
+    "correctIndex": 0,
+    "explanation": "Predictive analytics combines historical score trends with segmented context to anticipate outcomes before lagging KPIs confirm failure.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html",
+      "https://www.servicenow.com/docs/r/now-intelligence/data-visualizations.html"
+    ],
+    "domain": "Advanced Analytics"
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 84,
+    "questionType": "multi",
+    "prompt": "Which advanced Platform Analytics capabilities help teams move from descriptive reporting to actionable insight? (Choose two.)",
+    "choices": [
+      "AI-assisted analytics experiences that surface relevant KPIs and trends in Next Experience workspaces",
+      "KPI Details drill-down from widgets to contributing records for rapid investigation",
+      "Replacing all indicators with ad hoc list reports on every dashboard row",
+      "Removing targets and thresholds so every score appears neutral gray"
+    ],
+    "correctIndex": 0,
+    "correctIndexes": [
+      0,
+      1
+    ],
+    "explanation": "Modern PA programs combine intelligent surfacing of metrics with record-level drill-down so consumers interpret and act on score movement quickly.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/now-intelligence/par-workspace.html",
+      "https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_KPIDetails.html"
+    ],
+    "domain": "Advanced Analytics"
+  }
 ]

@@ -1,97 +1,95 @@
 [
-	{
-		"trackCode": "CIS-PA",
-		"order": 85,
-		"prompt": "Monthly service reviews require explaining why a KPI trend changed direction over the last six periods. Which advanced visualization approach supports that analysis?",
-		"choices": [
-			"Time-series trend widgets with breakdown filters and KPI Details to inspect contributing records",
-			"A single-value widget showing only the latest score with no historical context",
-			"Static dashboard screenshots emailed before each meeting without live drill-down",
-			"Deletion of prior-period scores so the chart always flatlines at the current value"
-		],
-		"correctIndex": 0,
-		"explanation": "Trend visualizations with dimensional filters and drill-down explain score movement using historical PA snapshots and underlying records.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html",
-			"https://www.servicenow.com/docs/bundle/zurich-platform-user-interface/page/administer/navigation/concept/c_NextExperienceUnifiedNavigation.html"
-		],
-		"domain": "Advanced Analytics"
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 86,
-		"prompt": "A new PA implementation team needs starter indicators, breakdowns, and dashboards aligned to ITSM processes. Which artifact accelerates time to value?",
-		"choices": [
-			"A blank instance with every analytics plugin disabled until manual scripting is complete",
-			"A Platform Analytics content pack installed and configured through guided setup before customization",
-			"A personal developer instance clone without documentation of dependent indicator relationships",
-			"An update set containing only UI themes with no indicator or dashboard definitions"
-		],
-		"correctIndex": 1,
-		"explanation": "Platform Analytics content packs deliver prebuilt indicators, breakdowns, and dashboards that teams tailor through guided setup instead of building from scratch.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_PAContentPacks.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
-		],
-		"domain": "Administration and Advanced Implementation Solutions"
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 87,
-		"prompt": "Historical scores are required for a revamped incident KPI, but collection started only last week. Which advanced collection scenario addresses the gap?",
-		"choices": [
-			"Wait for six months of daily collections before showing any dashboard widgets to users",
-			"Convert the indicator to manual entry and ask agents to recreate past months from memory",
-			"Run a historical backfill data collection job for the indicator across the required prior periods",
-			"Disable snapshots permanently so the KPI always recalculates live from open incidents only"
-		],
-		"correctIndex": 2,
-		"explanation": "Historical backfill collection populates prior-period snapshots so trend widgets reflect performance before the indicator went live.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/optimized-data-collection.html"
-		],
-		"domain": "Administration and Advanced Implementation Solutions"
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 88,
-		"prompt": "A CIO wants a quarterly Stakeholder Spotlight highlighting five enterprise KPIs with target context. What should the PA administrator configure first?",
-		"choices": [
-			"Publish every indicator on the instance to Spotlight without reviewing threshold relevance",
-			"Remove target definitions so Spotlight tiles show only raw numbers without status coloring",
-			"Grant Spotlight edit rights to all dashboard viewers so they can swap KPIs during meetings",
-			"Select governed high-impact indicators with defined targets and owners for the Spotlight group layout"
-		],
-		"correctIndex": 3,
-		"explanation": "Stakeholder Spotlight credibility starts with curated KPIs that have clear ownership, targets, and business relevance before layout and publishing.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_PAStakeholderSpotlight.html",
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_BuildAStakeholderSpotlight.html"
-		],
-		"domain": "Administration and Advanced Implementation Solutions"
-	},
-	{
-		"trackCode": "CIS-PA",
-		"order": 89,
-		"questionType": "multi",
-		"prompt": "When promoting Platform Analytics from pilot to production, which administrative practices reduce long-term maintenance risk? (Choose two.)",
-		"choices": [
-			"Document content pack versions, customized artifacts, and rollback plans before production import",
-			"Schedule advanced collection jobs after reviewing instance load and indicator source complexity",
-			"Allow unrestricted editing of indicator sources by all dashboard consumers without review",
-			"Skip ownership assignment because Spotlight tiles self-correct when processes change"
-		],
-		"correctIndex": 0,
-		"correctIndexes": [
-			0,
-			1
-		],
-		"explanation": "Production promotion should capture content pack lineage and tune collection schedules for load while keeping indicator governance and ownership intact.",
-		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_PAContentPacks.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
-		],
-		"domain": "Administration and Advanced Implementation Solutions"
-	}
+  {
+    "trackCode": "CIS-PA",
+    "order": 85,
+    "prompt": "Monthly service reviews require explaining why a KPI trend changed direction over the last six periods. Which advanced visualization approach supports that analysis?",
+    "choices": [
+      "Time-series trend widgets with breakdown filters and KPI Details to inspect contributing records",
+      "A single-value widget showing only the latest score with no historical context",
+      "Static dashboard screenshots emailed before each meeting without live drill-down",
+      "Deletion of prior-period scores so the chart always flatlines at the current value"
+    ],
+    "correctIndex": 0,
+    "explanation": "Trend visualizations with dimensional filters and drill-down explain score movement using historical PA snapshots and underlying records.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html",
+      "https://www.servicenow.com/docs/bundle/zurich-platform-user-interface/page/administer/navigation/concept/c_NextExperienceUnifiedNavigation.html"
+    ],
+    "domain": "Advanced Analytics"
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 86,
+    "prompt": "A new PA implementation team needs starter indicators, breakdowns, and dashboards aligned to ITSM processes. Which artifact accelerates time to value?",
+    "choices": [
+      "A personal developer instance clone without documentation of dependent indicator relationships",
+      "An update set containing only UI themes with no indicator or dashboard definitions",
+      "A Platform Analytics Solution installed from the Solution Library, then validated for sources and collection jobs",
+      "A blank instance with every analytics plugin disabled until manual scripting is complete"
+    ],
+    "correctIndex": 2,
+    "explanation": "Platform Analytics Solutions from the Solution Library deliver prebuilt dashboards and PA components. Install from PA Solution Library > Solutions, then validate dependent sources and jobs before customization.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/install-content.html",
+      "https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/r_AvailableContentPacks.html"
+    ],
+    "domain": "Administration and Advanced Implementation Solutions"
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 87,
+    "prompt": "Historical scores are required for a revamped incident KPI, but collection started only last week. Which advanced collection scenario addresses the gap?",
+    "choices": [
+      "Wait for six months of daily collections before showing any dashboard widgets to users",
+      "Convert the indicator to manual entry and ask agents to recreate past months from memory",
+      "Run a historical backfill data collection job for the indicator across the required prior periods",
+      "Disable snapshots permanently so the KPI always recalculates live from open incidents only"
+    ],
+    "correctIndex": 2,
+    "explanation": "Historical backfill collection populates prior-period snapshots so trend widgets reflect performance before the indicator went live.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html",
+      "https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/optimized-data-collection.html"
+    ],
+    "domain": "Administration and Advanced Implementation Solutions"
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 88,
+    "prompt": "Operations wants to surface incidents that need attention using multiple weighted criteria such as age and reassignment count, not priority alone. What should the PA administrator configure?",
+    "choices": [
+      "Set up Spotlight on an indicator's records with weighted criteria and a scheduled evaluation job",
+      "Grant Spotlight edit rights to all dashboard viewers so they can swap KPIs during meetings",
+      "Remove target definitions so Spotlight tiles show only raw numbers without status coloring",
+      "Publish every indicator on the instance to Spotlight without reviewing threshold relevance"
+    ],
+    "correctIndex": 0,
+    "explanation": "Spotlight ranks table records associated with an indicator using multiple weighted criteria and scheduled jobs; results appear in Spotlight interactive analysis. It is not a Stakeholder KPI tile layout for five enterprise KPIs.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/now-intelligence/spotlight/spotlight.html"
+    ],
+    "domain": "Administration and Advanced Implementation Solutions"
+  },
+  {
+    "trackCode": "CIS-PA",
+    "order": 89,
+    "prompt": "After activating a Platform Analytics Solution, which follow-up steps keep scores current? (Choose two.)",
+    "choices": [
+      "Run historical data collection once for the new indicators' lookback window",
+      "Delete indicator sources so dashboards query live lists only",
+      "Activate a periodic collection job whose Run schedule matches indicator frequency",
+      "Disable all collection jobs so scores remain frozen at install time"
+    ],
+    "correctIndex": 0,
+    "explanation": "Solution install guidance is to run historical collection once, then schedule periodic collection aligned to indicator frequency. Freezing jobs or deleting sources prevents ongoing analytics.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/collect-data-nowintel-solutions.html"
+    ],
+    "domain": "Administration and Advanced Implementation Solutions",
+    "questionType": "multi",
+    "correctIndexes": [
+      0,
+      2
+    ]
+  }
 ]
