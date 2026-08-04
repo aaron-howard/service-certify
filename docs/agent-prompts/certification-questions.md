@@ -2,7 +2,9 @@
 
 Use this template when spinning up **one subagent per track** or **one subagent per batch of tracks** to expand the dev question bank in [`src/convex/seed/devQuestionBank.ts`](../../src/convex/seed/devQuestionBank.ts).
 
-Track-to-publication mappings live in [`src/lib/catalog/trackDocSources.ts`](../../src/lib/catalog/trackDocSources.ts). Batch topic assignments for Phase 1 are in [`batch-assignments/phase1-csa-cad-cis-itsm.md`](batch-assignments/phase1-csa-cad-cis-itsm.md).
+For the full generation/audit methodology, tracks config, and structural validator, see [`question-gen/METHODOLOGY.md`](../../question-gen/METHODOLOGY.md) and the Cursor skill `.cursor/skills/servicenow-exam-question-gen/SKILL.md`.
+
+Track-to-publication mappings live in [`src/lib/catalog/trackDocSources.ts`](../../src/lib/catalog/trackDocSources.ts) (mirrored in [`question-gen/tracks.config.json`](../../question-gen/tracks.config.json)). Batch topic assignments for Phase 1 are in [`batch-assignments/phase1-csa-cad-cis-itsm.md`](batch-assignments/phase1-csa-cad-cis-itsm.md).
 
 ## Compliance
 

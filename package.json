@@ -41,7 +41,10 @@
 		"seed:prod": "convex run --deployment prod internal.seed.apply && convex run --deployment prod internal.seed.devQuestions",
 		"convex:dev": "convex dev --env-file .env.convex",
 		"convex:select-dev": "convex deployment select gregarious-iguana-339",
-		"convex:codegen": "convex codegen"
+		"convex:codegen": "convex codegen",
+		"validate:questions": "node question-gen/validate.mjs --seed",
+		"validate:questions:banks": "node question-gen/validate.mjs",
+		"export:question-banks": "node question-gen/export-banks.mjs"
 	},
 	"devDependencies": {
 		"@axe-core/playwright": "^4.12.1",

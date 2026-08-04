@@ -30,6 +30,11 @@ Thumbs.db
 !.env.convex
 !.env.mcp.example
 
+# Regenerable question-gen bank exports (source of truth: src/convex/seed/devQuestionBank.ts)
+question-gen/banks/*.json
+!question-gen/banks/.gitkeep
+
+
 # Tooling / caches
 .eslintcache
 *.tsbuildinfo

@@ -1,0 +1,2 @@
+# Exported bank JSON files are regenerable and gitignored.
+# Run: npm run export:question-banks

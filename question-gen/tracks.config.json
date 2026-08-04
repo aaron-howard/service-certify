@@ -1,0 +1,1916 @@
+{
+  "$schemaComment": "Mirrored from src/lib/catalog/trackDocSources.ts + examQuestionPolicy.ts. Domain names MUST match trackDocSources / exams.ts blueprint names.",
+  "docsFamily": "australia",
+  "docsRepo": "https://github.com/ServiceNow/ServiceNowDocs",
+  "bankBuffer": 30,
+  "tracks": [
+    {
+      "examSlug": "csa",
+      "trackCode": "CSA",
+      "officialName": "Certified System Administrator",
+      "docsFamily": "australia",
+      "publications": [
+        "platform-administration",
+        "now-platform",
+        "platform-user-interface",
+        "platform-security",
+        "integrate-applications",
+        "it-service-management",
+        "knowledge-management"
+      ],
+      "domains": [
+        {
+          "name": "Platform Overview and Navigation",
+          "weight": "7%",
+          "publications": [
+            "now-platform",
+            "platform-user-interface"
+          ]
+        },
+        {
+          "name": "Instance Configuration",
+          "weight": "10%",
+          "publications": [
+            "platform-administration",
+            "now-platform"
+          ]
+        },
+        {
+          "name": "Configuring Applications for Collaboration",
+          "weight": "20%",
+          "publications": [
+            "platform-user-interface",
+            "platform-administration"
+          ]
+        },
+        {
+          "name": "Self Service and Automation",
+          "weight": "20%",
+          "publications": [
+            "it-service-management",
+            "knowledge-management",
+            "now-platform"
+          ]
+        },
+        {
+          "name": "Database Management and Platform Security",
+          "weight": "30%",
+          "publications": [
+            "platform-security",
+            "platform-administration",
+            "integrate-applications"
+          ]
+        },
+        {
+          "name": "Data Migration and Integration",
+          "weight": "13%",
+          "publications": [
+            "platform-administration",
+            "integrate-applications"
+          ]
+        }
+      ],
+      "officialCount": 60,
+      "targetCount": 90,
+      "keywords": [
+        "administration",
+        "applications",
+        "automation",
+        "cannot",
+        "collaboration",
+        "configuration",
+        "configuring",
+        "data",
+        "database",
+        "instance",
+        "integrate",
+        "integration",
+        "interface",
+        "knowledge",
+        "management",
+        "migration",
+        "must",
+        "navigation",
+        "overview",
+        "platform",
+        "property",
+        "role",
+        "security",
+        "self"
+      ]
+    },
+    {
+      "examSlug": "cad",
+      "trackCode": "CAD",
+      "officialName": "Certified Application Developer",
+      "docsFamily": "australia",
+      "publications": [
+        "application-development",
+        "hyperautomation-low-code",
+        "build-workflows",
+        "integrate-applications",
+        "api-reference"
+      ],
+      "domains": [
+        {
+          "name": "Designing and Creating an Application",
+          "weight": "20%",
+          "publications": [
+            "application-development",
+            "now-platform"
+          ]
+        },
+        {
+          "name": "Application User Interface",
+          "weight": "20%",
+          "publications": [
+            "application-development",
+            "platform-user-interface"
+          ]
+        },
+        {
+          "name": "Security and Restricting Access",
+          "weight": "20%",
+          "publications": [
+            "application-development",
+            "platform-security"
+          ]
+        },
+        {
+          "name": "Application Automation",
+          "weight": "20%",
+          "publications": [
+            "application-development",
+            "hyperautomation-low-code",
+            "build-workflows"
+          ]
+        },
+        {
+          "name": "Working with External Data",
+          "weight": "10%",
+          "publications": [
+            "integrate-applications",
+            "application-development"
+          ]
+        },
+        {
+          "name": "Managing Applications",
+          "weight": "10%",
+          "publications": [
+            "application-development"
+          ]
+        }
+      ],
+      "officialCount": 60,
+      "targetCount": 90,
+      "keywords": [
+        "access",
+        "application",
+        "applications",
+        "automation",
+        "build",
+        "cannot",
+        "code",
+        "creating",
+        "data",
+        "designing",
+        "development",
+        "external",
+        "hyperautomation",
+        "integrate",
+        "interface",
+        "managing",
+        "must",
+        "property",
+        "reference",
+        "restricting",
+        "role",
+        "security",
+        "table",
+        "user"
+      ]
+    },
+    {
+      "examSlug": "cis-itsm",
+      "trackCode": "CIS-ITSM",
+      "officialName": "Certified Implementation Specialist - IT Service Management",
+      "docsFamily": "australia",
+      "publications": [
+        "it-service-management",
+        "it-operations-management"
+      ],
+      "domains": [
+        {
+          "name": "Incident Management",
+          "weight": "22%",
+          "publications": [
+            "it-service-management"
+          ]
+        },
+        {
+          "name": "Problem Management",
+          "weight": "16%",
+          "publications": [
+            "it-service-management"
+          ]
+        },
+        {
+          "name": "Change Management",
+          "weight": "18%",
+          "publications": [
+            "it-service-management"
+          ]
+        },
+        {
+          "name": "Service Portfolio Management",
+          "weight": "10%",
+          "publications": [
+            "it-service-management"
+          ]
+        },
+        {
+          "name": "Service Catalog and Request Management",
+          "weight": "18%",
+          "publications": [
+            "it-service-management"
+          ]
+        },
+        {
+          "name": "Configuration Management Database",
+          "weight": "12%",
+          "publications": [
+            "it-operations-management"
+          ]
+        },
+        {
+          "name": "Implementation and Strategy",
+          "weight": "4%",
+          "publications": [
+            "it-service-management",
+            "it-operations-management"
+          ]
+        }
+      ],
+      "officialCount": 60,
+      "targetCount": 90,
+      "keywords": [
+        "cannot",
+        "catalog",
+        "change",
+        "configuration",
+        "database",
+        "implementation",
+        "incident",
+        "management",
+        "must",
+        "operations",
+        "portfolio",
+        "problem",
+        "property",
+        "request",
+        "role",
+        "service",
+        "strategy",
+        "table",
+        "workflow"
+      ]
+    },
+    {
+      "examSlug": "cis-df",
+      "trackCode": "CIS-DF",
+      "officialName": "Certified Implementation Specialist - Data Foundations (CMDB and CSDM)",
+      "docsFamily": "australia",
+      "publications": [
+        "it-operations-management",
+        "configuration-management-database",
+        "common-service-data-model",
+        "integrate-applications",
+        "discovery"
+      ],
+      "domains": [
+        {
+          "name": "Configuration",
+          "weight": "15%",
+          "publications": [
+            "configuration-management-database",
+            "it-operations-management"
+          ]
+        },
+        {
+          "name": "Ingest",
+          "weight": "19%",
+          "publications": [
+            "integrate-applications",
+            "discovery",
+            "it-operations-management"
+          ]
+        },
+        {
+          "name": "Govern",
+          "weight": "35%",
+          "publications": [
+            "configuration-management-database",
+            "it-operations-management"
+          ]
+        },
+        {
+          "name": "Insight",
+          "weight": "20%",
+          "publications": [
+            "configuration-management-database",
+            "it-operations-management"
+          ]
+        },
+        {
+          "name": "CSDM Fundamentals",
+          "weight": "11%",
+          "publications": [
+            "common-service-data-model",
+            "servicenow-platform"
+          ]
+        }
+      ],
+      "officialCount": 75,
+      "targetCount": 105,
+      "keywords": [
+        "applications",
+        "cannot",
+        "common",
+        "configuration",
+        "csdm",
+        "data",
+        "database",
+        "discovery",
+        "fundamentals",
+        "govern",
+        "ingest",
+        "insight",
+        "integrate",
+        "management",
+        "model",
+        "must",
+        "operations",
+        "property",
+        "role",
+        "service",
+        "table",
+        "workflow"
+      ]
+    },
+    {
+      "examSlug": "cis-pa",
+      "trackCode": "CIS-PA",
+      "officialName": "Certified Implementation Specialist - Platform Analytics",
+      "docsFamily": "australia",
+      "publications": [
+        "now-intelligence",
+        "platform-administration"
+      ],
+      "domains": [
+        {
+          "name": "Architecture and Deployment",
+          "weight": "10%",
+          "publications": [
+            "now-intelligence",
+            "platform-administration"
+          ]
+        },
+        {
+          "name": "KPI Design and Strategy",
+          "weight": "11%",
+          "publications": [
+            "now-intelligence",
+            "platform-administration"
+          ]
+        },
+        {
+          "name": "Configure Indicators and Indicator Sources",
+          "weight": "17%",
+          "publications": [
+            "now-intelligence"
+          ]
+        },
+        {
+          "name": "Configure Breakdowns and Breakdown Sources",
+          "weight": "17%",
+          "publications": [
+            "now-intelligence"
+          ]
+        },
+        {
+          "name": "Data Collection",
+          "weight": "10%",
+          "publications": [
+            "now-intelligence"
+          ]
+        },
+        {
+          "name": "Data Governance and Quality",
+          "weight": "8%",
+          "publications": [
+            "now-intelligence",
+            "platform-administration"
+          ]
+        },
+        {
+          "name": "Data Visualization and Dashboards",
+          "weight": "16%",
+          "publications": [
+            "now-intelligence"
+          ]
+        },
+        {
+          "name": "Advanced Analytics",
+          "weight": "7%",
+          "publications": [
+            "now-intelligence"
+          ]
+        },
+        {
+          "name": "Administration and Advanced Implementation Solutions",
+          "weight": "4%",
+          "publications": [
+            "now-intelligence",
+            "platform-administration"
+          ]
+        }
+      ],
+      "officialCount": 60,
+      "targetCount": 90,
+      "keywords": [
+        "administration",
+        "advanced",
+        "analytics",
+        "architecture",
+        "breakdown",
+        "breakdowns",
+        "cannot",
+        "collection",
+        "configure",
+        "dashboards",
+        "data",
+        "deployment",
+        "design",
+        "governance",
+        "implementation",
+        "indicator",
+        "indicators",
+        "intelligence",
+        "must",
+        "platform",
+        "property",
+        "quality",
+        "role",
+        "solutions"
+      ]
+    },
+    {
+      "examSlug": "cis-sp",
+      "trackCode": "CIS-SP",
+      "officialName": "Certified Implementation Specialist - Service Provider",
+      "docsFamily": "australia",
+      "publications": [
+        "platform-administration",
+        "integrate-applications",
+        "it-service-management",
+        "knowledge-management",
+        "service-portal"
+      ],
+      "domains": [
+        {
+          "name": "Initial Domain Setup and Service Provider Architecture",
+          "weight": "7%",
+          "publications": [
+            "platform-administration",
+            "integrate-applications"
+          ]
+        },
+        {
+          "name": "MSP Operations Strategy",
+          "weight": "11%",
+          "publications": [
+            "platform-administration"
+          ]
+        },
+        {
+          "name": "Customer Onboarding and Tenant Lifecycle",
+          "weight": "9%",
+          "publications": [
+            "platform-administration",
+            "integrate-applications"
+          ]
+        },
+        {
+          "name": "Data Separation/Visibility",
+          "weight": "20%",
+          "publications": [
+            "platform-administration"
+          ]
+        },
+        {
+          "name": "Process Separation",
+          "weight": "25%",
+          "publications": [
+            "platform-administration"
+          ]
+        },
+        {
+          "name": "Foundational Data Management",
+          "weight": "15%",
+          "publications": [
+            "platform-administration",
+            "integrate-applications"
+          ]
+        },
+        {
+          "name": "Domain Support in Applications",
+          "weight": "13%",
+          "publications": [
+            "it-service-management",
+            "knowledge-management",
+            "service-portal",
+            "platform-administration"
+          ]
+        }
+      ],
+      "officialCount": 45,
+      "targetCount": 75,
+      "keywords": [
+        "administration",
+        "applications",
+        "architecture",
+        "cannot",
+        "customer",
+        "data",
+        "domain",
+        "foundational",
+        "initial",
+        "integrate",
+        "knowledge",
+        "lifecycle",
+        "management",
+        "must",
+        "onboarding",
+        "operations",
+        "platform",
+        "portal",
+        "process",
+        "property",
+        "provider",
+        "role",
+        "separation",
+        "service"
+      ]
+    },
+    {
+      "examSlug": "cpoa",
+      "trackCode": "CPOA",
+      "officialName": "Certified Platform Owner Associate",
+      "docsFamily": "australia",
+      "publications": [
+        "platform-administration",
+        "now-platform",
+        "impact",
+        "application-development",
+        "platform-security",
+        "integrate-applications",
+        "cloud-governance-suite",
+        "servicenow-platform",
+        "it-operations-management"
+      ],
+      "domains": [
+        {
+          "name": "Strategy",
+          "weight": "21.4%",
+          "publications": [
+            "impact",
+            "platform-administration"
+          ]
+        },
+        {
+          "name": "People",
+          "weight": "15.7%",
+          "publications": [
+            "impact",
+            "servicenow-platform"
+          ]
+        },
+        {
+          "name": "Process",
+          "weight": "15.7%",
+          "publications": [
+            "application-development",
+            "platform-administration"
+          ]
+        },
+        {
+          "name": "Technology",
+          "weight": "22.9%",
+          "publications": [
+            "platform-administration",
+            "platform-security"
+          ]
+        },
+        {
+          "name": "Data",
+          "weight": "11.4%",
+          "publications": [
+            "platform-administration",
+            "cloud-governance-suite"
+          ]
+        },
+        {
+          "name": "ServiceNow Governance",
+          "weight": "12.9%",
+          "publications": [
+            "platform-administration",
+            "cloud-governance-suite"
+          ]
+        }
+      ],
+      "officialCount": 70,
+      "targetCount": 100,
+      "keywords": [
+        "administration",
+        "application",
+        "applications",
+        "cannot",
+        "cloud",
+        "data",
+        "development",
+        "governance",
+        "impact",
+        "integrate",
+        "management",
+        "must",
+        "operations",
+        "people",
+        "platform",
+        "process",
+        "property",
+        "role",
+        "security",
+        "servicenow",
+        "strategy",
+        "suite",
+        "table",
+        "technology"
+      ]
+    },
+    {
+      "examSlug": "cpop",
+      "trackCode": "CPOP",
+      "officialName": "Certified Platform Owner Professional",
+      "docsFamily": "australia",
+      "publications": [
+        "platform-administration",
+        "platform-security",
+        "application-development",
+        "cloud-governance-suite",
+        "impact",
+        "servicenow-platform"
+      ],
+      "domains": [
+        {
+          "name": "Strategy",
+          "weight": "40%",
+          "publications": [
+            "impact",
+            "platform-administration"
+          ]
+        },
+        {
+          "name": "People",
+          "weight": "10%",
+          "publications": [
+            "impact",
+            "servicenow-platform"
+          ]
+        },
+        {
+          "name": "Process",
+          "weight": "10%",
+          "publications": [
+            "application-development",
+            "platform-administration"
+          ]
+        },
+        {
+          "name": "Technology",
+          "weight": "20%",
+          "publications": [
+            "platform-administration",
+            "platform-security"
+          ]
+        },
+        {
+          "name": "Data",
+          "weight": "10%",
+          "publications": [
+            "platform-administration",
+            "cloud-governance-suite"
+          ]
+        },
+        {
+          "name": "ServiceNow Governance",
+          "weight": "10%",
+          "publications": [
+            "platform-administration",
+            "cloud-governance-suite"
+          ]
+        }
+      ],
+      "officialCount": 70,
+      "targetCount": 100,
+      "keywords": [
+        "administration",
+        "application",
+        "cannot",
+        "cloud",
+        "data",
+        "development",
+        "governance",
+        "impact",
+        "must",
+        "people",
+        "platform",
+        "process",
+        "property",
+        "role",
+        "security",
+        "servicenow",
+        "strategy",
+        "suite",
+        "table",
+        "technology",
+        "workflow"
+      ]
+    },
+    {
+      "examSlug": "cpoe",
+      "trackCode": "CPOE",
+      "officialName": "Certified Platform Owner Expert",
+      "docsFamily": "australia",
+      "publications": [
+        "platform-administration",
+        "platform-security",
+        "servicenow-platform",
+        "impact",
+        "cloud-governance-suite"
+      ],
+      "domains": [
+        {
+          "name": "Strategy",
+          "weight": "21.20%",
+          "publications": [
+            "impact",
+            "platform-administration"
+          ]
+        },
+        {
+          "name": "Cost/Resource Planning",
+          "weight": "14.48%",
+          "publications": [
+            "platform-administration",
+            "cloud-governance-suite"
+          ]
+        },
+        {
+          "name": "Implementation and Delivery",
+          "weight": "19.26%",
+          "publications": [
+            "platform-administration",
+            "impact"
+          ]
+        },
+        {
+          "name": "ServiceNow Governance",
+          "weight": "17.60%",
+          "publications": [
+            "platform-administration",
+            "cloud-governance-suite"
+          ]
+        },
+        {
+          "name": "Compliance and Security",
+          "weight": "14.76%",
+          "publications": [
+            "platform-security"
+          ]
+        },
+        {
+          "name": "Innovation",
+          "weight": "12.70%",
+          "publications": [
+            "impact",
+            "servicenow-platform"
+          ]
+        }
+      ],
+      "officialCount": 192,
+      "targetCount": 222,
+      "keywords": [
+        "administration",
+        "cannot",
+        "cloud",
+        "compliance",
+        "cost",
+        "delivery",
+        "governance",
+        "impact",
+        "implementation",
+        "innovation",
+        "must",
+        "planning",
+        "platform",
+        "property",
+        "resource",
+        "role",
+        "security",
+        "servicenow",
+        "strategy",
+        "suite",
+        "table",
+        "workflow"
+      ]
+    },
+    {
+      "examSlug": "cis-disco",
+      "trackCode": "CIS-DISCO",
+      "officialName": "Certified Implementation Specialist - Discovery",
+      "docsFamily": "australia",
+      "publications": [
+        "it-operations-management",
+        "discovery"
+      ],
+      "domains": [
+        {
+          "name": "Discovery Pattern Design",
+          "weight": "35%",
+          "publications": [
+            "discovery",
+            "it-operations-management"
+          ]
+        },
+        {
+          "name": "Discovery Configuration",
+          "weight": "35%",
+          "publications": [
+            "discovery",
+            "it-operations-management"
+          ]
+        },
+        {
+          "name": "Configuration Management Database",
+          "weight": "15%",
+          "publications": [
+            "cmdb",
+            "it-operations-management"
+          ]
+        },
+        {
+          "name": "Discovery Engagement Readiness",
+          "weight": "15%",
+          "publications": [
+            "discovery"
+          ]
+        }
+      ],
+      "officialCount": 45,
+      "targetCount": 75,
+      "keywords": [
+        "cannot",
+        "configuration",
+        "database",
+        "design",
+        "discovery",
+        "engagement",
+        "management",
+        "must",
+        "operations",
+        "pattern",
+        "property",
+        "readiness",
+        "role",
+        "table",
+        "workflow"
+      ]
+    },
+    {
+      "examSlug": "cis-em",
+      "trackCode": "CIS-EM",
+      "officialName": "Certified Implementation Specialist - Event Management",
+      "docsFamily": "australia",
+      "publications": [
+        "it-operations-management",
+        "event-management"
+      ],
+      "domains": [
+        {
+          "name": "Event Management Overview",
+          "weight": "7%",
+          "publications": [
+            "event-management",
+            "it-operations-management"
+          ]
+        },
+        {
+          "name": "Architecture and Discovery",
+          "weight": "10%",
+          "publications": [
+            "event-management",
+            "it-operations-management"
+          ]
+        },
+        {
+          "name": "Event Configuration and Use",
+          "weight": "27%",
+          "publications": [
+            "event-management"
+          ]
+        },
+        {
+          "name": "Alerts and Tasks",
+          "weight": "30%",
+          "publications": [
+            "event-management"
+          ]
+        },
+        {
+          "name": "Event Sources",
+          "weight": "16%",
+          "publications": [
+            "event-management"
+          ]
+        },
+        {
+          "name": "Metric Intelligence",
+          "weight": "10%",
+          "publications": [
+            "event-management"
+          ]
+        }
+      ],
+      "officialCount": 30,
+      "targetCount": 60,
+      "keywords": [
+        "alerts",
+        "architecture",
+        "cannot",
+        "configuration",
+        "discovery",
+        "event",
+        "intelligence",
+        "management",
+        "metric",
+        "must",
+        "operations",
+        "overview",
+        "property",
+        "role",
+        "sources",
+        "table",
+        "tasks",
+        "workflow"
+      ]
+    },
+    {
+      "examSlug": "cis-ham",
+      "trackCode": "CIS-HAM",
+      "officialName": "Certified Implementation Specialist - Hardware Asset Management",
+      "docsFamily": "australia",
+      "publications": [
+        "it-asset-management",
+        "hardware-asset-management"
+      ],
+      "domains": [
+        {
+          "name": "IT Asset Management Overview and Fundamentals",
+          "weight": "20%",
+          "publications": [
+            "it-asset-management",
+            "hardware-asset-management"
+          ]
+        },
+        {
+          "name": "Data Integrity Attributes and Data Sources",
+          "weight": "27%",
+          "publications": [
+            "hardware-asset-management"
+          ]
+        },
+        {
+          "name": "Practical Management of IT Assets",
+          "weight": "30%",
+          "publications": [
+            "hardware-asset-management"
+          ]
+        },
+        {
+          "name": "Operational Integration of IT Asset Management Processes",
+          "weight": "18%",
+          "publications": [
+            "hardware-asset-management"
+          ]
+        },
+        {
+          "name": "Financial Management of IT Assets",
+          "weight": "5%",
+          "publications": [
+            "hardware-asset-management"
+          ]
+        }
+      ],
+      "officialCount": 60,
+      "targetCount": 90,
+      "keywords": [
+        "asset",
+        "assets",
+        "attributes",
+        "cannot",
+        "data",
+        "financial",
+        "fundamentals",
+        "hardware",
+        "integration",
+        "integrity",
+        "management",
+        "must",
+        "operational",
+        "overview",
+        "practical",
+        "processes",
+        "property",
+        "role",
+        "sources",
+        "table",
+        "workflow"
+      ]
+    },
+    {
+      "examSlug": "cis-rc",
+      "trackCode": "CIS-RC",
+      "officialName": "Certified Implementation Specialist - Risk and Compliance",
+      "docsFamily": "australia",
+      "publications": [
+        "governance-risk-compliance"
+      ],
+      "domains": [
+        {
+          "name": "GRC Overview",
+          "weight": "9%",
+          "publications": [
+            "governance-risk-compliance"
+          ]
+        },
+        {
+          "name": "Governance Strategy",
+          "weight": "10%",
+          "publications": [
+            "governance-risk-compliance"
+          ]
+        },
+        {
+          "name": "Implementation Planning",
+          "weight": "8%",
+          "publications": [
+            "governance-risk-compliance"
+          ]
+        },
+        {
+          "name": "Entity Framework",
+          "weight": "13%",
+          "publications": [
+            "governance-risk-compliance"
+          ]
+        },
+        {
+          "name": "Policy and Compliance",
+          "weight": "22%",
+          "publications": [
+            "governance-risk-compliance"
+          ]
+        },
+        {
+          "name": "Risk and Advanced Risk",
+          "weight": "18%",
+          "publications": [
+            "governance-risk-compliance"
+          ]
+        },
+        {
+          "name": "Common Elements and Extended Capabilities",
+          "weight": "7%",
+          "publications": [
+            "governance-risk-compliance"
+          ]
+        },
+        {
+          "name": "Audit and Advanced Audit",
+          "weight": "13%",
+          "publications": [
+            "governance-risk-compliance"
+          ]
+        }
+      ],
+      "officialCount": 60,
+      "targetCount": 90,
+      "keywords": [
+        "advanced",
+        "audit",
+        "cannot",
+        "capabilities",
+        "common",
+        "compliance",
+        "elements",
+        "entity",
+        "extended",
+        "framework",
+        "governance",
+        "implementation",
+        "must",
+        "overview",
+        "planning",
+        "policy",
+        "property",
+        "risk",
+        "role",
+        "strategy",
+        "table",
+        "workflow"
+      ]
+    },
+    {
+      "examSlug": "cis-sir",
+      "trackCode": "CIS-SIR",
+      "officialName": "Certified Implementation Specialist - Security Incident Response",
+      "docsFamily": "australia",
+      "publications": [
+        "security-management",
+        "security-incident-response"
+      ],
+      "domains": [
+        {
+          "name": "SIR Overview and Data Visualization",
+          "weight": "11%",
+          "publications": [
+            "security-incident-response",
+            "security-management"
+          ]
+        },
+        {
+          "name": "Incident Response Strategy",
+          "weight": "12%",
+          "publications": [
+            "security-incident-response",
+            "security-management"
+          ]
+        },
+        {
+          "name": "Implementation Planning",
+          "weight": "10%",
+          "publications": [
+            "security-incident-response"
+          ]
+        },
+        {
+          "name": "Security Incident Creation and Threat Intelligence",
+          "weight": "12%",
+          "publications": [
+            "security-incident-response"
+          ]
+        },
+        {
+          "name": "Security Incident and Threat Intelligence Integrations",
+          "weight": "14%",
+          "publications": [
+            "security-incident-response"
+          ]
+        },
+        {
+          "name": "Security Incident Response Management",
+          "weight": "14%",
+          "publications": [
+            "security-incident-response"
+          ]
+        },
+        {
+          "name": "Risk Calculations and Post Incident Response",
+          "weight": "10%",
+          "publications": [
+            "security-incident-response"
+          ]
+        },
+        {
+          "name": "Automation and Standard Processes",
+          "weight": "17%",
+          "publications": [
+            "security-incident-response"
+          ]
+        }
+      ],
+      "officialCount": 60,
+      "targetCount": 90,
+      "keywords": [
+        "automation",
+        "calculations",
+        "cannot",
+        "creation",
+        "data",
+        "implementation",
+        "incident",
+        "integrations",
+        "intelligence",
+        "management",
+        "must",
+        "overview",
+        "planning",
+        "post",
+        "processes",
+        "property",
+        "response",
+        "risk",
+        "role",
+        "security",
+        "standard",
+        "strategy",
+        "table",
+        "threat"
+      ]
+    },
+    {
+      "examSlug": "cis-sm",
+      "trackCode": "CIS-SM",
+      "officialName": "Certified Implementation Specialist - Service Mapping",
+      "docsFamily": "australia",
+      "publications": [
+        "it-operations-management",
+        "service-mapping",
+        "discovery"
+      ],
+      "domains": [
+        {
+          "name": "Service Design Strategy",
+          "weight": "12%",
+          "publications": [
+            "service-mapping",
+            "it-operations-management"
+          ]
+        },
+        {
+          "name": "Service Mapping Pattern Design",
+          "weight": "20%",
+          "publications": [
+            "service-mapping",
+            "it-operations-management"
+          ]
+        },
+        {
+          "name": "Service Mapping Configuration",
+          "weight": "14%",
+          "publications": [
+            "service-mapping"
+          ]
+        },
+        {
+          "name": "Discovery Configuration",
+          "weight": "16%",
+          "publications": [
+            "discovery",
+            "it-operations-management"
+          ]
+        },
+        {
+          "name": "Machine Learning",
+          "weight": "14%",
+          "publications": [
+            "service-mapping"
+          ]
+        },
+        {
+          "name": "Configuration Management Database",
+          "weight": "11%",
+          "publications": [
+            "cmdb",
+            "it-operations-management"
+          ]
+        },
+        {
+          "name": "Service Mapping Engagement Readiness",
+          "weight": "13%",
+          "publications": [
+            "service-mapping"
+          ]
+        }
+      ],
+      "officialCount": 60,
+      "targetCount": 90,
+      "keywords": [
+        "cannot",
+        "configuration",
+        "database",
+        "design",
+        "discovery",
+        "engagement",
+        "learning",
+        "machine",
+        "management",
+        "mapping",
+        "must",
+        "operations",
+        "pattern",
+        "property",
+        "readiness",
+        "role",
+        "service",
+        "strategy",
+        "table",
+        "workflow"
+      ]
+    },
+    {
+      "examSlug": "cis-sam",
+      "trackCode": "CIS-SAM",
+      "officialName": "Certified Implementation Specialist - Software Asset Management",
+      "docsFamily": "australia",
+      "publications": [
+        "it-asset-management",
+        "software-asset-management"
+      ],
+      "domains": [
+        {
+          "name": "SAM Overview and Fundamentals",
+          "weight": "11%",
+          "publications": [
+            "it-asset-management",
+            "software-asset-management"
+          ]
+        },
+        {
+          "name": "SAM Strategy and Optimization",
+          "weight": "12%",
+          "publications": [
+            "software-asset-management"
+          ]
+        },
+        {
+          "name": "Implementation Planning",
+          "weight": "10%",
+          "publications": [
+            "software-asset-management"
+          ]
+        },
+        {
+          "name": "Data Integrity Attributes and Sources",
+          "weight": "20%",
+          "publications": [
+            "software-asset-management"
+          ]
+        },
+        {
+          "name": "Practical Management of Software Compliance",
+          "weight": "24%",
+          "publications": [
+            "software-asset-management"
+          ]
+        },
+        {
+          "name": "Operational Integration of Software Processes",
+          "weight": "14%",
+          "publications": [
+            "software-asset-management"
+          ]
+        },
+        {
+          "name": "Cloud and SaaS Management",
+          "weight": "9%",
+          "publications": [
+            "software-asset-management"
+          ]
+        }
+      ],
+      "officialCount": 60,
+      "targetCount": 90,
+      "keywords": [
+        "asset",
+        "attributes",
+        "cannot",
+        "cloud",
+        "compliance",
+        "data",
+        "fundamentals",
+        "implementation",
+        "integration",
+        "integrity",
+        "management",
+        "must",
+        "operational",
+        "optimization",
+        "overview",
+        "planning",
+        "practical",
+        "processes",
+        "property",
+        "role",
+        "saas",
+        "software",
+        "sources",
+        "strategy"
+      ]
+    },
+    {
+      "examSlug": "cis-spm",
+      "trackCode": "CIS-SPM",
+      "officialName": "Certified Implementation Specialist - Strategic Portfolio Management",
+      "docsFamily": "australia",
+      "publications": [
+        "it-business-management",
+        "strategic-portfolio-management"
+      ],
+      "domains": [
+        {
+          "name": "SPM Implementation Overview",
+          "weight": "2%",
+          "publications": [
+            "it-business-management"
+          ]
+        },
+        {
+          "name": "SPM Financials",
+          "weight": "10%",
+          "publications": [
+            "it-business-management"
+          ]
+        },
+        {
+          "name": "Resource Management",
+          "weight": "23%",
+          "publications": [
+            "it-business-management"
+          ]
+        },
+        {
+          "name": "Idea and Demand",
+          "weight": "18%",
+          "publications": [
+            "it-business-management"
+          ]
+        },
+        {
+          "name": "Project Management",
+          "weight": "30%",
+          "publications": [
+            "it-business-management"
+          ]
+        },
+        {
+          "name": "Timecard Management",
+          "weight": "5%",
+          "publications": [
+            "it-business-management"
+          ]
+        },
+        {
+          "name": "Portfolio Planning Workspace",
+          "weight": "8%",
+          "publications": [
+            "it-business-management"
+          ]
+        },
+        {
+          "name": "SPM Platform Analytics and Dashboards",
+          "weight": "2%",
+          "publications": [
+            "it-business-management"
+          ]
+        },
+        {
+          "name": "SPM Better Together",
+          "weight": "2%",
+          "publications": [
+            "it-business-management"
+          ]
+        }
+      ],
+      "officialCount": 60,
+      "targetCount": 90,
+      "keywords": [
+        "analytics",
+        "better",
+        "business",
+        "cannot",
+        "dashboards",
+        "demand",
+        "financials",
+        "idea",
+        "implementation",
+        "management",
+        "must",
+        "overview",
+        "planning",
+        "platform",
+        "portfolio",
+        "project",
+        "property",
+        "resource",
+        "role",
+        "strategic",
+        "table",
+        "timecard",
+        "together",
+        "workflow"
+      ]
+    },
+    {
+      "examSlug": "cis-tprm",
+      "trackCode": "CIS-TPRM",
+      "officialName": "Certified Implementation Specialist - Third-Party Risk Management",
+      "docsFamily": "australia",
+      "publications": [
+        "governance-risk-compliance",
+        "third-party-risk-management"
+      ],
+      "domains": [
+        {
+          "name": "TPRM Fundamentals and Review",
+          "weight": "23%",
+          "publications": [
+            "governance-risk-compliance",
+            "third-party-risk-management"
+          ]
+        },
+        {
+          "name": "Core Configuration",
+          "weight": "14%",
+          "publications": [
+            "third-party-risk-management"
+          ]
+        },
+        {
+          "name": "Assessment Configuration",
+          "weight": "33%",
+          "publications": [
+            "third-party-risk-management"
+          ]
+        },
+        {
+          "name": "Third-party Portal",
+          "weight": "12%",
+          "publications": [
+            "third-party-risk-management"
+          ]
+        },
+        {
+          "name": "Third-party Supporting Processes",
+          "weight": "12%",
+          "publications": [
+            "third-party-risk-management"
+          ]
+        },
+        {
+          "name": "Other Application Relationships",
+          "weight": "6%",
+          "publications": [
+            "governance-risk-compliance"
+          ]
+        }
+      ],
+      "officialCount": 60,
+      "targetCount": 90,
+      "keywords": [
+        "application",
+        "assessment",
+        "cannot",
+        "compliance",
+        "configuration",
+        "core",
+        "fundamentals",
+        "governance",
+        "management",
+        "must",
+        "other",
+        "party",
+        "portal",
+        "processes",
+        "property",
+        "relationships",
+        "review",
+        "risk",
+        "role",
+        "supporting",
+        "table",
+        "third",
+        "tprm",
+        "workflow"
+      ]
+    },
+    {
+      "examSlug": "cis-vr",
+      "trackCode": "CIS-VR",
+      "officialName": "Certified Implementation Specialist - Vulnerability Response",
+      "docsFamily": "australia",
+      "publications": [
+        "vulnerability-response",
+        "security-management",
+        "now-intelligence"
+      ],
+      "domains": [
+        {
+          "name": "VR Applications and Modules",
+          "weight": "25%",
+          "publications": [
+            "vulnerability-response",
+            "security-management"
+          ]
+        },
+        {
+          "name": "Getting Data into Vulnerability Response",
+          "weight": "25%",
+          "publications": [
+            "vulnerability-response"
+          ]
+        },
+        {
+          "name": "Tools to Manage Vulnerability Response",
+          "weight": "23%",
+          "publications": [
+            "vulnerability-response"
+          ]
+        },
+        {
+          "name": "Automating Vulnerability Response",
+          "weight": "20%",
+          "publications": [
+            "vulnerability-response"
+          ]
+        },
+        {
+          "name": "VR Dashboards and Reports",
+          "weight": "7%",
+          "publications": [
+            "vulnerability-response",
+            "now-intelligence"
+          ]
+        }
+      ],
+      "officialCount": 45,
+      "targetCount": 75,
+      "keywords": [
+        "applications",
+        "automating",
+        "cannot",
+        "dashboards",
+        "data",
+        "getting",
+        "intelligence",
+        "into",
+        "manage",
+        "management",
+        "modules",
+        "must",
+        "property",
+        "reports",
+        "response",
+        "role",
+        "security",
+        "table",
+        "tools",
+        "vulnerability",
+        "workflow"
+      ]
+    },
+    {
+      "examSlug": "cis-csm",
+      "trackCode": "CIS-CSM",
+      "officialName": "Certified Implementation Specialist - Customer Service Management",
+      "docsFamily": "australia",
+      "publications": [
+        "customer-service-management",
+        "knowledge-management",
+        "now-intelligence"
+      ],
+      "domains": [
+        {
+          "name": "CSM Foundational Data Model",
+          "weight": "27%",
+          "publications": [
+            "customer-service-management"
+          ]
+        },
+        {
+          "name": "CSM Configuration",
+          "weight": "38%",
+          "publications": [
+            "customer-service-management"
+          ]
+        },
+        {
+          "name": "Case Management",
+          "weight": "17%",
+          "publications": [
+            "customer-service-management"
+          ]
+        },
+        {
+          "name": "CSM Workspace Portals Analytics and Reporting",
+          "weight": "8%",
+          "publications": [
+            "customer-service-management",
+            "now-intelligence"
+          ]
+        },
+        {
+          "name": "CSM Best Practices and Knowledge Management",
+          "weight": "10%",
+          "publications": [
+            "customer-service-management",
+            "knowledge-management"
+          ]
+        }
+      ],
+      "officialCount": 60,
+      "targetCount": 90,
+      "keywords": [
+        "analytics",
+        "best",
+        "cannot",
+        "case",
+        "configuration",
+        "customer",
+        "data",
+        "foundational",
+        "intelligence",
+        "knowledge",
+        "management",
+        "model",
+        "must",
+        "portals",
+        "practices",
+        "property",
+        "reporting",
+        "role",
+        "service",
+        "table",
+        "workflow",
+        "workspace"
+      ]
+    },
+    {
+      "examSlug": "cis-fsm",
+      "trackCode": "CIS-FSM",
+      "officialName": "Certified Implementation Specialist - Field Service Management",
+      "docsFamily": "australia",
+      "publications": [
+        "field-service-management",
+        "now-platform",
+        "mobile-platform"
+      ],
+      "domains": [
+        {
+          "name": "Field Service Management Fundamentals",
+          "weight": "42%",
+          "publications": [
+            "field-service-management"
+          ]
+        },
+        {
+          "name": "Implementation Planning",
+          "weight": "3%",
+          "publications": [
+            "field-service-management",
+            "now-platform"
+          ]
+        },
+        {
+          "name": "Implementing Field Service Processes",
+          "weight": "52%",
+          "publications": [
+            "field-service-management"
+          ]
+        },
+        {
+          "name": "Implementing Related Processes",
+          "weight": "3%",
+          "publications": [
+            "field-service-management",
+            "mobile-platform"
+          ]
+        }
+      ],
+      "officialCount": 60,
+      "targetCount": 90,
+      "keywords": [
+        "cannot",
+        "field",
+        "fundamentals",
+        "implementation",
+        "implementing",
+        "management",
+        "mobile",
+        "must",
+        "planning",
+        "platform",
+        "processes",
+        "property",
+        "related",
+        "role",
+        "service",
+        "table",
+        "workflow"
+      ]
+    },
+    {
+      "examSlug": "cis-hr",
+      "trackCode": "CIS-HR",
+      "officialName": "Certified Implementation Specialist - Human Resources",
+      "docsFamily": "australia",
+      "publications": [
+        "employee-service-management",
+        "human-resources",
+        "employee-center",
+        "platform-security"
+      ],
+      "domains": [
+        {
+          "name": "HR System Architecture",
+          "weight": "24%",
+          "publications": [
+            "employee-service-management",
+            "human-resources"
+          ]
+        },
+        {
+          "name": "Core HR Applications and Employee Center",
+          "weight": "36%",
+          "publications": [
+            "employee-service-management",
+            "employee-center",
+            "human-resources"
+          ]
+        },
+        {
+          "name": "HR Journeys",
+          "weight": "20%",
+          "publications": [
+            "employee-service-management",
+            "human-resources"
+          ]
+        },
+        {
+          "name": "Platform, Role, and Contextual Security",
+          "weight": "6%",
+          "publications": [
+            "platform-security",
+            "employee-service-management",
+            "human-resources"
+          ]
+        },
+        {
+          "name": "Integration Strategy",
+          "weight": "10%",
+          "publications": [
+            "employee-service-management",
+            "human-resources",
+            "integrate-applications"
+          ]
+        },
+        {
+          "name": "Implementation and Change Management",
+          "weight": "4%",
+          "publications": [
+            "employee-service-management",
+            "human-resources"
+          ]
+        }
+      ],
+      "officialCount": 60,
+      "targetCount": 90,
+      "keywords": [
+        "applications",
+        "architecture",
+        "cannot",
+        "center",
+        "change",
+        "contextual",
+        "core",
+        "employee",
+        "human",
+        "implementation",
+        "integration",
+        "journeys",
+        "management",
+        "must",
+        "platform",
+        "property",
+        "resources",
+        "role",
+        "security",
+        "service",
+        "strategy",
+        "system",
+        "table",
+        "workflow"
+      ]
+    }
+  ]
+}
